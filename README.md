@@ -18,6 +18,27 @@
 - **Радиационная обстановка:** COSRAD; здесь фиксируются сценарии, параметры и происхождение данных
 - **RTL/FPGA:** SystemVerilog + iVerilog + Vivado
 
+## Tool access boundary
+
+- **Cloud ChatGPT Work:** прямой доступ к GitHub и Scite при подключённых коннекторах; нет прямого доступа к локальной Zotero Desktop library, локальным COSRAD/Vivado/Python данным и файловой системе рабочего ПК.
+- **Local Codex / local research environment:** локальный Git clone, Zotero Desktop + local API, Python/Jupyter, COSRAD, SystemVerilog/iVerilog, Vivado и локальные datasets.
+- `literature/zotero_exports/references.bib` используется как cloud-visible snapshot библиографии и не заменяет Zotero master library.
+
+## AI-agent governance
+
+Canonical инструкции ИИ-ролей находятся в `docs/agents/`:
+
+- `00_GLOBAL_OPERATING_RULES.md` — общие правила;
+- `01_ORCHESTRATOR.md` — Research Orchestrator;
+- `02_LITERATURE_SCOUT.md` — Literature Scout;
+- `03_PAPER_ANALYST.md` — Paper Analyst;
+- `04_EVIDENCE_AUDITOR.md` — Evidence Auditor;
+- `05_SCIENTIFIC_REVIEWER.md` — Scientific Reviewer;
+- `06_WRITING_PUBLICATIONS.md` — Writing & Publications;
+- `07_RESEARCH_ENGINEER_LOCAL.md` — локальный Research Engineer / Codex.
+
+Перед существенной работой агент должен читать общие правила и свою role card. Инструкции в GitHub являются canonical; DOCX в ChatGPT Project — удобный snapshot.
+
 ## Исследовательские сущности
 
 Используются стабильные идентификаторы:
@@ -33,9 +54,11 @@
 - `FIG-xxx` — Figure
 - `ART-xxx` — Article/publication
 
+Кандидатные Research Questions до утверждения используют временные идентификаторы `C-RQ-xx`.
+
 ## Структура
 
-- `docs/` — research specification, Research Questions, журнал исследования, решения, гипотезы, claims
+- `docs/` — research specification, Research Questions, журнал исследования, решения, гипотезы, claims и инструкции ИИ-агентов
 - `literature/` — только экспорты/мосты из Zotero; не PDF-библиотека
 - `model/` — аналитические и символические модели
 - `simulation/` — вычислительные модели и тесты
@@ -54,11 +77,13 @@
 4. Значимые научные решения фиксируются как `DEC-ID`.
 5. Непроверенные утверждения не помещаются в `results/` как установленные результаты.
 6. `main` содержит только согласованное текущее состояние; рискованные изменения выполняются в отдельных ветках.
+7. Chat history не является canonical research storage.
 
 ## Текущая стадия
 
 - **Infrastructure setup:** завершён.
 - **Zotero setup:** завершён; Zotero является master-хранилищем внешней научной литературы.
+- **AI-agent operating model:** настроен в `docs/agents/`.
 - **Research Specification:** `v0.2-draft`.
 - **Текущая фаза:** подготовка Initial RQ Package.
 - **Следующий gate:** утверждение 3–5 priority RQ и подготовка targeted literature mapping protocol.
