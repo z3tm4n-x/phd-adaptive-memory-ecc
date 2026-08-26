@@ -10,7 +10,14 @@
 
 - GitHub repository setup: complete.
 - Zotero setup: complete.
+- AI-agent operating model: complete; canonical role instructions are in `docs/agents/`.
 - Research Specification: `v0.2-draft`.
+
+## Tool access boundary
+
+- Cloud ChatGPT Work: GitHub + Scite via connectors; no direct access to local Zotero Desktop or local research toolchain.
+- Local Codex / research environment: local Git, Zotero Desktop/local API, Python/Jupyter, COSRAD, SystemVerilog/iVerilog, Vivado, local datasets.
+- Zotero operations requested from Cloud Work are transferred through structured handoffs.
 
 ## Active gate
 
@@ -18,7 +25,7 @@
 
 ## Active Research Questions
 
-Окончательные `RQ-xxx` пока не зарегистрированы. Готовится кандидатный пакет.
+Окончательные `RQ-xxx` пока не зарегистрированы. Готовится кандидатный пакет `C-RQ-xx`.
 
 ## Active hypotheses
 
@@ -34,12 +41,13 @@
 
 ## Next actions
 
-1. Сформировать 12–15 кандидатных Research Questions.
-2. Выбрать 3–5 priority RQ на основании зависимостей и ожидаемого снижения научной неопределённости.
-3. После утверждения зарегистрировать priority RQ в Git.
+1. В `00 ORCHESTRATOR` сформировать 12–15 кандидатных Research Questions без запуска литературного поиска.
+2. Построить dependency graph и выбрать 3–5 priority RQ.
+3. После пользовательского утверждения зарегистрировать priority RQ в `docs/questions/`.
 4. Подготовить targeted literature mapping protocol для каждого priority RQ.
-5. Только после этого начать targeted literature mapping.
+5. Передать первый утверждённый RQ в `01 LITERATURE SCOUT`.
+6. Только после этого начать targeted literature discovery.
 
 ## Notes
 
-Этот файл должен оставаться коротким. Он отражает текущее состояние, а не историю проекта.
+Этот файл должен оставаться коротким. Он отражает текущее canonical state, а не историю проекта.
