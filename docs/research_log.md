@@ -20,3 +20,11 @@
 - Текущая фаза изменена на подготовку Initial RQ Package.
 - Следующий gate: утверждение 3–5 priority RQ и подготовка targeted literature mapping protocol.
 - Окончательные `RQ-xxx` и гипотезы пока не зарегистрированы.
+
+### AI-agent operating model established
+
+- Создан canonical каталог `docs/agents/` с общими правилами и role cards для Orchestrator, Literature Scout, Paper Analyst, Evidence Auditor, Scientific Reviewer, Writing & Publications и Local Research Engineer/Codex.
+- Зафиксирована иерархия источников истины: Zotero — внешняя литература; GitHub — собственное состояние исследования; primary sources + Scite — evidence layer; chat — временный рабочий контекст.
+- Зафиксирована граница доступа: Cloud Work имеет прямой доступ к GitHub/Scite при подключённых коннекторах, но не к локальной Zotero Desktop library и локальному engineering toolchain.
+- Для операций Zotero из Cloud Work введён structured handoff в локальный Codex/Zotero.
+- Кандидатные Research Questions используют `C-RQ-xx`; постоянные `RQ-xxx` назначаются только после утверждения.
