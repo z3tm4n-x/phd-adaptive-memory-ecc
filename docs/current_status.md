@@ -4,7 +4,7 @@
 
 ## Current phase
 
-Подготовка Initial RQ Package.
+Targeted literature mapping — pilot preparation.
 
 ## Infrastructure status
 
@@ -21,15 +21,21 @@
 
 ## Active gate
 
-Утвердить 3–5 priority Research Questions и подготовить для них targeted literature mapping protocol.
+Выполнить пилотный targeted literature mapping для RQ-001 и принять воспроизводимый Literature Scout handoff до запуска mapping остальных RQ.
 
 ## Active Research Questions
 
-Окончательные `RQ-xxx` пока не зарегистрированы. Готовится кандидатный пакет `C-RQ-xx`.
+- RQ-001 — reliability event, metric and evaluation horizon — OPEN.
+- RQ-002 — minimum adequate SRAM radiation error model — OPEN.
+- RQ-003 — ECC abstraction and baseline code class — OPEN.
+- RQ-004 — online observables for adaptation — OPEN.
+- RQ-005 — measurable resource-cost vector — OPEN.
+
+Canonical cards находятся в `docs/questions/`; утверждённые protocols — в `docs/literature_mapping/`. Литературный поиск ещё не запускался.
 
 ## Active hypotheses
 
-Пока не заведены. Гипотезы формируются только после initial literature mapping.
+Пока не заведены. Гипотезы формируются только после initial literature mapping и evidence review.
 
 ## Confirmed own results
 
@@ -37,16 +43,15 @@
 
 ## Current blockers
 
-Инфраструктурных блокеров нет. Источник оперативной информации для адаптации, состав управляемых параметров и функция ресурсных затрат остаются осознанными открытыми исследовательскими вопросами.
+Инфраструктурных блокеров нет. Научные неизвестные зафиксированы в RQ-001…RQ-005. Для RQ-002 действует decision gate: если MCU/MBU или spatial correlation существенны либо их исключение не обосновано, C-RQ-05 должен быть зарегистрирован как обязательный RQ до основной reliability model.
 
 ## Next actions
 
-1. В `00 ORCHESTRATOR` сформировать 12–15 кандидатных Research Questions без запуска литературного поиска.
-2. Построить dependency graph и выбрать 3–5 priority RQ.
-3. После пользовательского утверждения зарегистрировать priority RQ в `docs/questions/`.
-4. Подготовить targeted literature mapping protocol для каждого priority RQ.
-5. Передать первый утверждённый RQ в `01 LITERATURE SCOUT`.
-6. Только после этого начать targeted literature discovery.
+1. Передать RQ-001 и `docs/literature_mapping/RQ-001_protocol.md` Literature Scout как pilot task.
+2. Выполнить только discovery/screening, не формируя HYP и не объявляя ответ на RQ.
+3. Получить reproducible search log, screened candidate table, 2–5 seed papers, gaps и structured Zotero/Paper Analyst handoffs.
+4. Проверить качество пилотного handoff и при необходимости скорректировать protocol pattern.
+5. Затем выполнять mapping в порядке RQ-002 → RQ-003 → RQ-004 → RQ-005.
 
 ## Notes
 
