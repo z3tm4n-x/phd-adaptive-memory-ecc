@@ -8,8 +8,12 @@ Title:
 Question:
 Why it matters:
 Scope:
+Exclusions:
+Dependencies:
 Status: OPEN | INVESTIGATING | ANSWERED | CLOSED-NO-ANSWER
 Evidence needed:
+Answer / decision criterion:
+Next action:
 Related PAPER/CLM/HYP/EXP:
 Answer:
 Confidence:

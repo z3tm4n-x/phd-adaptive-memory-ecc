@@ -35,7 +35,7 @@
 
 ## Структура
 
-- `docs/` — research specification, журнал исследования, решения, гипотезы, claims
+- `docs/` — research specification, Research Questions, журнал исследования, решения, гипотезы, claims
 - `literature/` — только экспорты/мосты из Zotero; не PDF-библиотека
 - `model/` — аналитические и символические модели
 - `simulation/` — вычислительные модели и тесты
@@ -57,4 +57,8 @@
 
 ## Текущая стадия
 
-**Infrastructure setup.** Следующий содержательный milestone — `Research Specification v1.0`.
+- **Infrastructure setup:** завершён.
+- **Zotero setup:** завершён; Zotero является master-хранилищем внешней научной литературы.
+- **Research Specification:** `v0.2-draft`.
+- **Текущая фаза:** подготовка Initial RQ Package.
+- **Следующий gate:** утверждение 3–5 priority RQ и подготовка targeted literature mapping protocol.

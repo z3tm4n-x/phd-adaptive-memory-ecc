@@ -4,19 +4,25 @@
 
 ## Current phase
 
-Infrastructure setup → preparation for Research Specification v1.0.
+Подготовка Initial RQ Package.
 
-## Active milestone
+## Infrastructure status
 
-Создать и согласовать `Research Specification v1.0`.
+- GitHub repository setup: complete.
+- Zotero setup: complete.
+- Research Specification: `v0.2-draft`.
+
+## Active gate
+
+Утвердить 3–5 priority Research Questions и подготовить для них targeted literature mapping protocol.
 
 ## Active Research Questions
 
-Пока не заведены.
+Окончательные `RQ-xxx` пока не зарегистрированы. Готовится кандидатный пакет.
 
 ## Active hypotheses
 
-Пока не заведены.
+Пока не заведены. Гипотезы формируются только после initial literature mapping.
 
 ## Confirmed own results
 
@@ -24,14 +30,15 @@ Infrastructure setup → preparation for Research Specification v1.0.
 
 ## Current blockers
 
-Нет инфраструктурных блокеров со стороны GitHub.
+Инфраструктурных блокеров нет. Источник оперативной информации для адаптации, состав управляемых параметров и функция ресурсных затрат остаются осознанными открытыми исследовательскими вопросами.
 
 ## Next actions
 
-1. Завершить настройку Zotero как master-библиотеки.
-2. Создать `Research Specification v1.0`.
-3. Сформировать первые Research Questions.
-4. Начать targeted literature mapping.
+1. Сформировать 12–15 кандидатных Research Questions.
+2. Выбрать 3–5 priority RQ на основании зависимостей и ожидаемого снижения научной неопределённости.
+3. После утверждения зарегистрировать priority RQ в Git.
+4. Подготовить targeted literature mapping protocol для каждого priority RQ.
+5. Только после этого начать targeted literature mapping.
 
 ## Notes
 
