@@ -1,20 +1,60 @@
 # PhD Research — Adaptive Memory ECC
 
-Research repository for the PhD dissertation in speciality **2.3.2 — Computing Systems and Their Elements**.
+Репозиторий исследовательской части кандидатской диссертации по специальности **2.3.2 «Вычислительные системы и их элементы»**.
 
-**Working topic:**  
-«Разработка методов адаптивного управления системами коррекции ошибок в цифровой памяти вычислительных систем».
+**Рабочая тема:** «Разработка методов адаптивного управления системами коррекции ошибок в цифровой памяти вычислительных систем».
+
+## Назначение репозитория
+
+Этот репозиторий — master-хранилище **собственных исследовательских артефактов**: моделей, кода, конфигураций экспериментов, результатов, графиков, RTL и технической документации.
+
+Он **не является** библиотекой научных публикаций. Внешняя литература и библиографические метаданные хранятся в Zotero.
 
 ## Canonical systems
 
-- **Literature and bibliographic metadata:** Zotero
-- **Research orchestration and analysis:** ChatGPT Project / Work
-- **Code, models, experiment definitions, approved results and provenance:** this Git repository
-- **Radiation-environment data/scenarios:** COSRAD, with provenance recorded here
-- **RTL/FPGA verification:** SystemVerilog + iVerilog + Vivado
+- **Литература и библиография:** Zotero
+- **Оркестрация исследования и анализ:** ChatGPT Project / Work
+- **Код, модели, эксперименты, результаты и provenance:** этот Git-репозиторий
+- **Радиационная обстановка:** COSRAD; здесь фиксируются сценарии, параметры и происхождение данных
+- **RTL/FPGA:** SystemVerilog + iVerilog + Vivado
 
-## Current phase
+## Исследовательские сущности
 
-Infrastructure setup.
+Используются стабильные идентификаторы:
 
-The repository is intentionally kept free of unverified scientific claims. Research content will be added only as traceable artefacts (RQ, HYP, EXP, RES, etc.).
+- `RQ-xxx` — Research Question
+- `PAPER-xxx` — карточка публикации
+- `CLM-xxx` — Claim
+- `EVD-xxx` — Evidence record
+- `HYP-xxx` — Hypothesis
+- `DEC-xxx` — Research decision
+- `EXP-xxx` — Experiment
+- `RES-xxx` — Research result
+- `FIG-xxx` — Figure
+- `ART-xxx` — Article/publication
+
+## Структура
+
+- `docs/` — research specification, журнал исследования, решения, гипотезы, claims
+- `literature/` — только экспорты/мосты из Zotero; не PDF-библиотека
+- `model/` — аналитические и символические модели
+- `simulation/` — вычислительные модели и тесты
+- `cosrad/` — обработка и provenance COSRAD-сценариев
+- `experiments/` — спецификации и manifests экспериментов
+- `results/` — утверждённые таблицы, данные малого объёма и графики
+- `rtl/` — RTL, testbench, constraints и scripts
+- `papers/` — материалы публикаций
+- `thesis/` — материалы диссертации
+
+## Правила
+
+1. Не коммитить большие raw datasets, waveforms, generated Vivado projects и Zotero database.
+2. Любой существенный эксперимент должен иметь `EXP-ID`, конфигурацию и связь с commit SHA.
+3. Любой утверждённый собственный вывод должен иметь `RES-ID` и ссылаться на воспроизводимый эксперимент/вывод.
+4. Значимые научные решения фиксируются как `DEC-ID`.
+5. Непроверенные утверждения не помещаются в `results/` как установленные результаты.
+6. `main` содержит только согласованное текущее состояние; рискованные изменения выполняются в отдельных ветках.
+
+## Текущая стадия
+
+**Infrastructure setup.** Следующий содержательный milestone — `Research Specification v1.0`.

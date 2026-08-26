@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary / logs
+*.tmp
+*.temp
+*.bak
+*.log
+~$*
+
+# Simulation outputs
+*.vcd
+*.fst
+*.wlf
+*.ghw
+*.lxt
+*.lxt2
+
+# Compiled HDL / binaries
+*.o
+*.obj
+*.exe
+*.out
+*.so
+*.dll
+*.a
+
+# Vivado generated artefacts
+.Xil/
+*.cache/
+*.runs/
+*.gen/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.jou
+*.str
+*.dcp
+*.bit
+*.bin
+
+# Large/raw research data (store externally; keep manifests/provenance in Git)
+**/raw/*
+**/generated/*
+**/waveforms/*
+
+# Zotero library/database and PDF library must not live here
+zotero.sqlite*
+*.zotero-ft-cache
+literature/pdfs/
+
+# Office temporary files
+~$*.docx
+~$*.xlsx
+~$*.pptx
