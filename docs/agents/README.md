@@ -16,6 +16,10 @@ This directory contains the canonical operating rules and role cards for the dis
 
 8. `07_RESEARCH_ENGINEER_LOCAL.md` — Codex/local engineering, Zotero Desktop, Python, COSRAD, RTL, iVerilog, Vivado.
 
+## Project bootstrap
+
+9. `08_PROJECT_BOOTSTRAP.md` — short ChatGPT Project Instructions block plus one-time startup messages for each persistent agent chat.
+
 ## Usage rule
 
 Each agent should read `00_GLOBAL_OPERATING_RULES.md` plus its own role card before substantial work. Role cards in GitHub are canonical; Project-level DOCX copies are convenience snapshots for Cloud Work.
