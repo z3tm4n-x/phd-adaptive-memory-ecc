@@ -82,8 +82,11 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 ## Текущая стадия
 
 - **Infrastructure setup:** завершён.
-- **Zotero setup:** завершён; Zotero является master-хранилищем внешней научной литературы.
+- **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
 - **AI-agent operating model:** настроен в `docs/agents/`.
 - **Research Specification:** `v0.2-draft`.
-- **Текущая фаза:** подготовка Initial RQ Package.
-- **Следующий gate:** утверждение 3–5 priority RQ и подготовка targeted literature mapping protocol.
+- **Текущая фаза:** RQ-001 claim-level evidence review preparation.
+- **Accepted Paper Cards:** `PAPER-001…003` in `docs/paper_cards/`.
+- **Initial evidence synthesis:** `docs/evidence_synthesis/RQ-001_initial_evidence_synthesis.md`; not a final RQ answer.
+- **Active gate:** Evidence Auditor review of `RQ001-EA-CAND-01…12`; no `CLM-xxx` yet.
+- **Constraint:** RQ-002 remains queued until the RQ-001 audit gate is reviewed.

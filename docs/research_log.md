@@ -72,3 +72,25 @@
 - Paper Analyst создаёт отдельную Paper Card для каждого источника.
 - Затем Orchestrator строит extraction matrix `event × metric × aggregation × horizon × assumptions` и определяет последующий evidence-review scope.
 - RQ-002 не запускается до первичного evidence synthesis по RQ-001.
+### RQ-001 Paper Cards formally accepted
+
+- Research Orchestrator проверил три draft full-text Paper Cards по 19-section contract, source/inference discipline, page/equation provenance, scope limits и relevance to RQ-001.
+- C45 принят как `PAPER-001` (`CORE`): Tausch, 2009.
+- C46 принят как `PAPER-002` (`CORE`): Baeg, Wen, Wong, 2009.
+- C38 принят как `PAPER-003` (`CORE`): Lee, Baeg, Reviriego, 2011.
+- Внутренняя неоднозначность row-level wording в `PAPER-003` сохранена явно и не разрешена предположением.
+- Acceptance относится к качеству аналитических карт; stochastic, architecture, mapping, illustrative-threshold и scrubbing assumptions публикаций не стали допущениями проекта.
+
+### RQ-001 initial cross-paper evidence synthesis
+
+- Создана canonical matrix `event × metric/units × aggregation × independent variable × horizon × ECC/decoder × scrubbing × statistics × mapping × mechanism × double-counting × limitations`.
+- Зафиксировано согласие трёх papers относительно existential codeword event beyond correction capability, но выявлены несовместимые aggregate objects и horizons: upset count, elapsed time и deterministic scrub interval.
+- Зафиксировано, что C45 исключает harmful direct MBU из основной формулы, а C46/C38 объединяют MCU-bearing arrivals и independent accumulation без сохранения causal provenance.
+- Initial synthesis признан возможным, но final answer на RQ-001 не сформулирован; numerical reliability threshold остаётся `TBD`.
+- До claim-level Evidence Auditor review дополнительные Paper Cards не требуются.
+
+### Next gate: RQ-001 claim-level evidence audit
+
+- Для Evidence Auditor отобраны 12 atomic candidate claims `RQ001-EA-CAND-01…12`; permanent `CLM-xxx` не создавались.
+- Аудит должен проверить actual citation context, corrections/editorial concerns, scope match и strongest supporting/limiting evidence.
+- RQ-001 переведён в `INVESTIGATING`; RQ-002 остаётся в очереди до review этого gate.

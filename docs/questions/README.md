@@ -48,4 +48,14 @@ Literature Scout discovery для RQ-001 завершён в текущем до
 - [Pilot report](../literature_mapping/RQ-001_literature_mapping_pilot_2026-08-26.md)
 - [Completion delta](../literature_mapping/RQ-001_literature_mapping_completion_delta_2026-08-27.md)
 
-eLibrary coverage отложена из-за отсутствия доступа у Literature Scout и остаётся явным coverage limitation. Активный gate — Zotero reconciliation, full-text Paper Cards по C45/C46/C38 и extraction matrix для RQ-001. RQ-002 остаётся в очереди до первичного evidence synthesis по RQ-001.
+eLibrary coverage отложена из-за отсутствия доступа у Literature Scout и остаётся явным coverage limitation.
+
+Принятые full-text Paper Cards:
+
+- [PAPER-001](../paper_cards/PAPER-001-tausch-2009.md) — C45, Tausch, 2009;
+- [PAPER-002](../paper_cards/PAPER-002-baeg-wen-wong-2009.md) — C46, Baeg, Wen, Wong, 2009;
+- [PAPER-003](../paper_cards/PAPER-003-lee-baeg-reviriego-2011.md) — C38, Lee, Baeg, Reviriego, 2011.
+
+Canonical matrix and initial synthesis: [RQ-001 initial evidence synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
+
+Active gate — claim-level Evidence Auditor review of 12 atomic candidate claims. RQ-001 remains `INVESTIGATING`; no `CLM-xxx`, final answer or numerical threshold has been accepted. Additional Paper Cards are not required before this audit. RQ-002 remains queued.

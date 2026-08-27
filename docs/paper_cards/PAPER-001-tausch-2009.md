@@ -1,10 +1,13 @@
-# Paper Card — C45 (draft for acceptance)
+# PAPER-001 — Tausch (2009): Simplified Birthday Statistics and Hamming EDAC
 
-**PAPER-ID:** `TBD` — permanent identifier is not assigned before acceptance  
+**PAPER-ID:** `PAPER-001`  
 **Candidate identity:** `C45`  
 **Related RQ:** `RQ-001`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommended class after deep read:** `CORE`  
+**Status:** `ACCEPTED — CORE`  
+**Accepted:** 2026-08-27  
+**Accepted by:** Research Orchestrator  
+**Classification:** `CORE`  
+**Acceptance scope:** analytical card accepted as complete and traceable; source assumptions are not adopted as project assumptions  
 **Zotero item key:** `UNKNOWN` — not provided to Paper Analyst  
 **Full text used:** `Simplified Birthday Statistics and Hamming EDAC.pdf`, complete article, pp. 474–478  
 **Attachment trace:** `file_000000004bd4820a930a97f38d89ba22`; SHA-256 `ee8dff2ed8e0d614c7cf22bb143a80b10122a623f7fb3237155cf52f84175b9d`  
@@ -219,7 +222,7 @@ These are candidate statements only; no `CLM-xxx` is created.
 
 ## Final disposition
 
-- **Recommendation:** `CORE` for `RQ-001`.
+- **Disposition:** `ACCEPTED — CORE` for `RQ-001`.
 - **Confidence:** high for the extracted definitions and formulas; medium for transfer to other memory layouts.
 - **Evidence gaps:** time-domain arrival law, scrubbing/reset semantics, decoder outcomes, explicit mapping `W`, and a mutually exclusive direct-MBU/accumulation partition.
 - **Next action:** Orchestrator acceptance and permanent `PAPER-xxx` assignment; candidate claims, if retained, go to Evidence Auditor rather than being accepted automatically.

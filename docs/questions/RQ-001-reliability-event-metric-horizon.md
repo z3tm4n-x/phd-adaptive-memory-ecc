@@ -2,7 +2,7 @@
 
 **Title:** Reliability event, metric and evaluation horizon for ECC-protected SRAM  
 **Source candidate:** C-RQ-01  
-**Status:** OPEN  
+**Status:** INVESTIGATING  
 **Registered:** 2026-08-26
 
 ## Question
@@ -65,21 +65,47 @@ Literature Scout discovery зафиксирован как `SUFFICIENT FOR PAPER
 - eLibrary coverage: `DEFERRED / UNKNOWN`; не блокирует текущий gate.
 - Mapping не является ответом на RQ-001.
 
+## Accepted Paper Cards
+
+- [PAPER-001 — Tausch, 2009](../paper_cards/PAPER-001-tausch-2009.md), source candidate C45, `CORE`.
+- [PAPER-002 — Baeg, Wen, Wong, 2009](../paper_cards/PAPER-002-baeg-wen-wong-2009.md), source candidate C46, `CORE`.
+- [PAPER-003 — Lee, Baeg, Reviriego, 2011](../paper_cards/PAPER-003-lee-baeg-reviriego-2011.md), source candidate C38, `CORE`.
+
+Acceptance applies to the traceability and completeness of the Paper Cards. It does not promote paper assumptions, illustrative thresholds or fitted parameters to project requirements.
+
+## Initial evidence synthesis
+
+- [Canonical cross-paper extraction matrix](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
+- An initial evidence synthesis is possible, but it is explicitly `NOT A FINAL ANSWER`.
+- Across the three papers, the primitive event is an existential word state beyond correction capability, while aggregation, horizon, scrubbing semantics and statistical assumptions differ materially.
+- No additional Paper Card is required before claim-level Evidence Auditor review.
+
+## Remaining evidence gaps
+
+- physical multi-error word state vs DUE/SDC/miscorrection vs system-visible service loss;
+- exact aggregate object and codeword→system rule;
+- sequential scrub semantics and word exposure age;
+- mission aggregation across scrub cycles;
+- mutually exclusive direct-MCU and independent-accumulation partition;
+- provenance for a numerical reliability threshold (`TBD`).
+
 ## Next action
 
-После Zotero reconciliation и получения полных текстов передать C45, C46 и C38 Paper Analyst. Получить три отдельные Paper Cards и построить extraction matrix `event × metric × aggregation × horizon × assumptions`.
+Передать Evidence Auditor `PAPER-001…003`, canonical synthesis и exact atomic candidate claims `RQ001-EA-CAND-01…12`. Получить claim-level status, supporting/contrasting evidence, citation context, corrections/editorial checks and scope assessment. Не создавать `CLM-xxx` до отдельного acceptance.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-002, RQ-003.
-- Priority candidates for Paper Analyst: C45, C46, C38.
-- Permanent `PAPER-xxx` IDs: TBD после создания и принятия Paper Cards.
+- Related papers: `PAPER-001`, `PAPER-002`, `PAPER-003`.
+- Candidate audit inputs: `RQ001-EA-CAND-01…12` — temporary, not permanent claims.
 - CLM/EVD/HYP/EXP: не создавались.
 
 ## Answer
 
-UNKNOWN.
+`PARTIAL — INITIAL EVIDENCE SYNTHESIS ONLY.`
+
+The three-paper synthesis supports a candidate primitive codeword event and proves that aggregation and horizon must be explicit. The final project event, metric, aggregate object and horizon remain unresolved pending evidence audit and system-requirement provenance.
 
 ## Confidence
 
-Не оценивалась.
+Medium for the bounded three-paper synthesis; not assessed for a final RQ-001 answer.

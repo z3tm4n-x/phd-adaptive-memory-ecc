@@ -1,10 +1,13 @@
-# Paper Card — C38 (draft for acceptance)
+# PAPER-003 — Lee, Baeg, and Reviriego (2011): Memory Reliability Model for Accumulated and Clustered Soft Errors
 
-**PAPER-ID:** `TBD` — permanent identifier is not assigned before acceptance  
+**PAPER-ID:** `PAPER-003`  
 **Candidate identity:** `C38`  
 **Related RQ:** `RQ-001`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommended class after deep read:** `CORE`  
+**Status:** `ACCEPTED — CORE`  
+**Accepted:** 2026-08-27  
+**Accepted by:** Research Orchestrator  
+**Classification:** `CORE`  
+**Acceptance scope:** analytical card accepted as complete and traceable; source assumptions are not adopted as project assumptions  
 **Zotero item key:** `UNKNOWN` — not provided to Paper Analyst  
 **Full text used:** `Memory Reliability Model for Accumulated.pdf`, complete article, pp. 2483–2492  
 **Attachment trace:** `file_000000001510820aa3fc6c3fc4e3cd2b`; SHA-256 `cae5d2ad30dffcdbb4281cbcf911a004c06e30fe53c87c9e9542185deeacf1ae`  
@@ -295,7 +298,7 @@ These are candidate statements only; no `CLM-xxx` is created.
 
 ## Final disposition
 
-- **Recommendation:** `CORE` for `RQ-001`.
+- **Disposition:** `ACCEPTED — CORE` for `RQ-001`.
 - **Confidence:** high for extracted equations, aggregation, and stated test setup; medium for the authors’ broad predictive interpretation because validation is architecture-assumed and in-sample.
 - **Evidence gaps:** mutually exclusive mechanism partition, real physical mapping, decoder outcomes, sequential scrub semantics, uncertainty propagation, and external validation.
-- **Next action:** Orchestrator acceptance and permanent `PAPER-xxx` assignment; send retained candidate claims to Evidence Auditor rather than accepting them automatically.
+- **Next action:** use this accepted card in the RQ-001 cross-paper synthesis and audit only the retained atomic candidate claims; no `CLM-xxx` is created by card acceptance.

@@ -1,10 +1,13 @@
-# Paper Card — C46 (draft for acceptance)
+# PAPER-002 — Baeg, Wen, and Wong (2009): SRAM Interleaving Distance Selection With a Soft Error Failure Model
 
-**PAPER-ID:** `TBD` — permanent identifier is not assigned before acceptance  
+**PAPER-ID:** `PAPER-002`  
 **Candidate identity:** `C46`  
 **Related RQ:** `RQ-001`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommended class after deep read:** `CORE`  
+**Status:** `ACCEPTED — CORE`  
+**Accepted:** 2026-08-27  
+**Accepted by:** Research Orchestrator  
+**Classification:** `CORE`  
+**Acceptance scope:** analytical card accepted as complete and traceable; source assumptions are not adopted as project assumptions  
 **Zotero item key:** `UNKNOWN` — not provided to Paper Analyst  
 **Full text used:** `SRAM Interleaving Distance Selection With a Soft.pdf`, complete article, pp. 2111–2118  
 **Attachment trace:** `file_0000000004f8820abbf3ef3558daaea5`; SHA-256 `2a0cda0c7470510ec86e93348d2c3e42185b050a118ae539b67a1129e6cebf0f`  
@@ -271,7 +274,7 @@ These are candidate statements only; no `CLM-xxx` is created.
 
 ## Final disposition
 
-- **Recommendation:** `CORE` for `RQ-001`.
+- **Disposition:** `ACCEPTED — CORE` for `RQ-001`.
 - **Confidence:** high for equations, event definition, aggregation boundary, and bound condition; medium for interpretation of the proprietary 45 nm comparison.
 - **Evidence gaps:** explicit topology-to-codeword map, mechanism-separated failure rates, decoder outcomes, multi-block aggregation, and an operational scrub process.
-- **Next action:** Orchestrator acceptance and permanent `PAPER-xxx` assignment; send retained candidate claims to Evidence Auditor rather than accepting them automatically.
+- **Next action:** use this accepted card in the RQ-001 cross-paper synthesis and audit only the retained atomic candidate claims; no `CLM-xxx` is created by card acceptance.

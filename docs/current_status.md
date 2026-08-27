@@ -4,7 +4,7 @@
 
 ## Current phase
 
-RQ-001 evidence extraction — Paper Analyst preparation.
+RQ-001 claim-level evidence review — Evidence Auditor handoff preparation.
 
 ## Infrastructure status
 
@@ -21,42 +21,61 @@ RQ-001 evidence extraction — Paper Analyst preparation.
 
 ## Active gate
 
-Завершить Zotero handoff для принятых RQ-001 candidates, получить full-text Paper Cards по C45, C46 и C38 и построить extraction matrix `event × metric × aggregation × horizon × assumptions`.
+Выполнить claim-level Evidence Auditor review для двенадцати atomic candidate claims из `docs/evidence_synthesis/RQ-001_initial_evidence_synthesis.md`. До результата аудита не назначать `CLM-xxx`, не формулировать окончательный ответ на RQ-001 и не начинать RQ-002.
 
 ## Active Research Questions
 
-- RQ-001 — reliability event, metric and evaluation horizon — OPEN.
-- RQ-002 — minimum adequate SRAM radiation error model — OPEN.
-- RQ-003 — ECC abstraction and baseline code class — OPEN.
-- RQ-004 — online observables for adaptation — OPEN.
-- RQ-005 — measurable resource-cost vector — OPEN.
+- RQ-001 — reliability event, metric and evaluation horizon — `INVESTIGATING`.
+- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / QUEUED`.
+- RQ-003 — ECC abstraction and baseline code class — `OPEN / QUEUED`.
+- RQ-004 — online observables for adaptation — `OPEN / QUEUED`.
+- RQ-005 — measurable resource-cost vector — `OPEN / QUEUED`.
 
-RQ-001 Literature Scout discovery принят как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`. Pilot и completion-delta reports находятся в `docs/literature_mapping/`. Это не является ответом на RQ-001.
+RQ-001 Literature Scout discovery остаётся `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`. eLibrary coverage отложена и не блокирует текущий gate.
 
-## Active hypotheses
+## Accepted RQ-001 Paper Cards
 
-Пока не заведены. Гипотезы формируются только после paper-level extraction и evidence review.
+- `PAPER-001` — Tausch, 2009 — `CORE`.
+- `PAPER-002` — Baeg, Wen, Wong, 2009 — `CORE`.
+- `PAPER-003` — Lee, Baeg, Reviriego, 2011 — `CORE`.
+
+Все три карты приняты как traceable full-text analyses. Это не означает принятие их stochastic, architecture, mapping или scrubbing assumptions как допущений проекта.
+
+## Initial evidence synthesis
+
+- Canonical matrix: `docs/evidence_synthesis/RQ-001_initial_evidence_synthesis.md`.
+- Первичный synthesis возможен: три papers дают сопоставимые определения event/metric/aggregation/horizon и выявляют существенные несовместимости.
+- Final answer на RQ-001 отсутствует.
+- Дополнительные Paper Cards до Evidence Auditor stage не требуются.
+
+## Active hypotheses and claims
+
+- Постоянные `HYP-xxx` не заведены.
+- Постоянные `CLM-xxx` не заведены.
+- Для Evidence Auditor отобраны двенадцать atomic candidate claims `RQ001-EA-CAND-01…12`; это временные audit inputs, не утверждённые claims.
 
 ## Confirmed own results
 
-Пока отсутствуют. Literature mapping является discovery artefact, а не подтверждённым собственным научным результатом.
+Пока отсутствуют. Paper Cards и evidence synthesis являются literature-analysis artefacts, а не собственными `RES-xxx`.
 
-## Current blockers
+## Current blockers / unknowns
 
-- Формальные reliability event, metric, aggregation level и horizon для проекта остаются `UNKNOWN` до анализа полных текстов.
-- Numerical reliability threshold остаётся `TBD` до появления traceable system/mission requirement.
-- eLibrary недоступна Literature Scout и по решению пользователя отложена как coverage limitation; она не блокирует текущий gate.
-- Для Paper Analyst необходимы проверенные полные тексты C45, C46 и C38 в Zotero или через иной законный доступ.
+- Project reliability event: physical codeword state vs DUE/SDC/miscorrection vs system-visible service loss — `UNKNOWN`.
+- Exact aggregation boundary and codeword→bank/array/system rule — `UNKNOWN`.
+- Operational sequential-scrubbing semantics and nonuniform word exposure age — `PARTIAL / UNRESOLVED`.
+- Mission aggregation across scrub cycles and nonstationary conditions — `UNKNOWN`.
+- Mutually exclusive direct-MCU vs independent-accumulation partition — `UNRESOLVED`.
+- Numerical reliability threshold — `TBD` pending traceable system/mission requirement.
+- eLibrary — `DEFERRED / UNKNOWN COVERAGE`.
 
 ## Next actions
 
-1. Выполнить Zotero handoffs из pilot и completion-delta reports с duplicate/metadata/PDF checks.
-2. Получить verified full text для C45, C46 и C38.
-3. Передать эту тройку Paper Analyst и получить отдельную Paper Card на каждый источник.
-4. Построить сравнительную extraction matrix `event × metric × aggregation × horizon × assumptions`.
-5. После matrix решить, нужны ли дополнительные Paper Cards и какие конкретные claims передавать Evidence Auditor.
-6. Не запускать RQ-002 до первичного evidence synthesis по RQ-001.
+1. Передать Evidence Auditor canonical synthesis, `PAPER-001…003`, `RQ-001` и exact atomic claims `RQ001-EA-CAND-01…12`.
+2. Получить для каждого claim supporting, contrasting/limiting and contextual evidence, correction/editorial checks, scope match and status.
+3. После аудита решить, какие claims принимаются и получают `CLM-xxx`, а какие уточняются или отклоняются.
+4. Затем выбрать candidate project event/metric/aggregation/horizon либо заказать только gap-specific Paper Card.
+5. Не запускать RQ-002 до review этого gate.
 
 ## Notes
 
-Этот файл отражает текущее canonical state. RQ-001 discovery может быть переоткрыт только при конкретном paper-level evidence gap либо после восстановления доступа к eLibrary.
+Illustrative thresholds и scrub intervals из `PAPER-002`/`PAPER-003` не являются требованиями проекта. Upset-count horizon из `PAPER-001` не смешивается с elapsed-time, scrub-cycle или mission horizon.
