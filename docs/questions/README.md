@@ -58,4 +58,6 @@ eLibrary coverage отложена из-за отсутствия доступа
 
 Canonical matrix and initial synthesis: [RQ-001 initial evidence synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
 
-Active gate — claim-level Evidence Auditor review of 12 atomic candidate claims. RQ-001 remains `INVESTIGATING`; no `CLM-xxx`, final answer or numerical threshold has been accepted. Additional Paper Cards are not required before this audit. RQ-002 remains queued.
+[Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md) принят с отложенным `RQ001-EA-CAND-10`. Permanent claim registry содержит [`CLM-001…008`](../claims/README.md).
+
+Active gate: approve or amend the [RQ-001 provisional definition package](../evidence_synthesis/RQ-001_provisional_definition_package.md). Until then RQ-001 remains `INVESTIGATING`, RQ-002 remains queued, and the numerical reliability threshold remains `TBD`.

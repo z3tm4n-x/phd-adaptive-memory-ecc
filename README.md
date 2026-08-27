@@ -85,8 +85,10 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
 - **AI-agent operating model:** настроен в `docs/agents/`.
 - **Research Specification:** `v0.2-draft`.
-- **Текущая фаза:** RQ-001 claim-level evidence review preparation.
+- **Текущая фаза:** RQ-001 provisional definition approval.
 - **Accepted Paper Cards:** `PAPER-001…003` in `docs/paper_cards/`.
-- **Initial evidence synthesis:** `docs/evidence_synthesis/RQ-001_initial_evidence_synthesis.md`; not a final RQ answer.
-- **Active gate:** Evidence Auditor review of `RQ001-EA-CAND-01…12`; no `CLM-xxx` yet.
-- **Constraint:** RQ-002 remains queued until the RQ-001 audit gate is reviewed.
+- **Evidence Audit:** accepted with `RQ001-EA-CAND-10` deferred.
+- **Accepted claims:** `CLM-001…008` in `docs/claims/`.
+- **Provisional package:** `docs/evidence_synthesis/RQ-001_provisional_definition_package.md`.
+- **Active gate:** user approval or amendment of the proposed event, metric, aggregate and horizon semantics.
+- **Constraint:** RQ-002 remains queued until this gate is completed; the numerical reliability threshold remains `TBD`.

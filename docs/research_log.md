@@ -94,3 +94,29 @@
 - Для Evidence Auditor отобраны 12 atomic candidate claims `RQ001-EA-CAND-01…12`; permanent `CLM-xxx` не создавались.
 - Аудит должен проверить actual citation context, corrections/editorial concerns, scope match и strongest supporting/limiting evidence.
 - RQ-001 переведён в `INVESTIGATING`; RQ-002 остаётся в очереди до review этого gate.
+
+### RQ-001 Evidence Audit accepted with limitation
+
+- Canonical Evidence Audit `RQ-001-EVIDENCE-AUDIT-01` принят после Orchestrator review.
+- Поддержаны `RQ001-EA-CAND-01…09`, `11` и `12` в зафиксированных scope и confidence.
+- `RQ001-EA-CAND-10` признан `PARTIALLY_SUPPORTED` и отложен: отсутствие word-specific exposure-age state подтверждено, но synchronous/effective global-reset interpretation не принято.
+- Scite statement counts не использованы как evidence; contextual audit sources требуют Zotero reconciliation до цитирования в publication text.
+- Опечатка `seven exact claims` в initial synthesis исправлена на `twelve exact claims`.
+- Новые Paper Cards, literature search, `EVD`, `HYP` и `RES` не создавались.
+
+### RQ-001 permanent claims registered
+
+- `CLM-001` — count horizon requires arrival and repair semantics before time interpretation.
+- `CLM-002` — harmful same-particle MBU is outside the main PAPER-001 equation.
+- `CLM-003`/`CLM-004` — PAPER-002/PAPER-003 totals do not preserve failed-word mechanism provenance.
+- `CLM-005`/`CLM-006` — adding an unpartitioned direct-MCU term overlaps those totals under matched event, scope, horizon and units.
+- `CLM-007` — PAPER-002 upper-bound reading is conditional on MCU span relative to interleaving distance.
+- `CLM-008` — the audited papers model multiplicity beyond ECC capability, not decoder or service outcome.
+- Candidate facts 01–03 remain traceable through the Paper Cards and matrix rather than redundant permanent claims.
+
+### Next gate: RQ-001 provisional definition approval
+
+- Подготовлен `docs/evidence_synthesis/RQ-001_provisional_definition_package.md`.
+- Package proposes `E_cap(A,H)`, `F_A(H)`, a controller-protected SRAM aggregate, layered horizon semantics and separation from DUE/SDC/system consequences.
+- `H_req` and `ε_req` remain `TBD`; illustrative values from the papers are not project requirements.
+- Until explicit approval, RQ-001 remains `INVESTIGATING` and RQ-002 remains queued.

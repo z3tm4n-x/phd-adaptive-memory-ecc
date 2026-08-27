@@ -2,7 +2,7 @@
 
 **Title:** Reliability event, metric and evaluation horizon for ECC-protected SRAM  
 **Source candidate:** C-RQ-01  
-**Status:** INVESTIGATING  
+**Status:** INVESTIGATING — PROVISIONAL DEFINITION PENDING  
 **Registered:** 2026-08-26
 
 ## Question
@@ -34,14 +34,8 @@
 
 - `docs/research_spec.md` версии `v0.2-draft`;
 - утверждённая цель диссертационного проекта;
-- системные или mission requirements, если они существуют и доступны.
-
-## Evidence needed
-
-- первичные публикации с reliability models для ECC-protected memory и scrubbing;
-- определения failure/reliability events и временных горизонтов в сопоставимых исследованиях;
-- системные или mission requirements с явным provenance;
-- допущения, используемые при агрегировании codeword-level событий.
+- системные или mission requirements, если они существуют и доступны;
+- RQ-003 for concrete ECC/decoder outcomes.
 
 ## Answer / decision criterion
 
@@ -53,59 +47,59 @@ RQ считается отвеченным, когда зафиксирован�
 4. временной горизонт;
 5. необходимые допущения и provenance каждого ограничения.
 
-Если конкретный численный threshold не задан источниками или системными требованиями, он остаётся `TBD`; численное значение не изобретается.
+Если конкретный numerical threshold не задан источниками или системными требованиями, он остаётся `TBD`.
 
-## Literature mapping status
+## Evidence workflow
 
-Literature Scout discovery зафиксирован как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
+- Literature Scout discovery: `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
+- eLibrary: `DEFERRED / UNKNOWN COVERAGE`.
+- Accepted Paper Cards: [PAPER-001](../paper_cards/PAPER-001-tausch-2009.md), [PAPER-002](../paper_cards/PAPER-002-baeg-wen-wong-2009.md), [PAPER-003](../paper_cards/PAPER-003-lee-baeg-reviriego-2011.md).
+- [Initial cross-paper synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
+- [Accepted Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md): 11 candidates supported; CAND-10 partially supported/deferred.
 
-- [Pilot report](../literature_mapping/RQ-001_literature_mapping_pilot_2026-08-26.md)
-- [Completion delta](../literature_mapping/RQ-001_literature_mapping_completion_delta_2026-08-27.md)
-- Cumulative candidate register: 53 records — 24 `CORE`, 16 `RELATED`, 3 `BACKGROUND`, 10 `REJECT`.
-- eLibrary coverage: `DEFERRED / UNKNOWN`; не блокирует текущий gate.
-- Mapping не является ответом на RQ-001.
+## Accepted claims
 
-## Accepted Paper Cards
+- [CLM-001](../claims/CLM-001-upset-count-horizon-requires-time-model.md)
+- [CLM-002](../claims/CLM-002-harmful-mbu-outside-paper001-model.md)
+- [CLM-003](../claims/CLM-003-paper002-loses-mechanism-provenance.md)
+- [CLM-004](../claims/CLM-004-paper003-loses-mechanism-provenance.md)
+- [CLM-005](../claims/CLM-005-paper002-direct-term-overlap.md)
+- [CLM-006](../claims/CLM-006-paper003-direct-term-overlap.md)
+- [CLM-007](../claims/CLM-007-paper002-upper-bound-condition.md)
+- [CLM-008](../claims/CLM-008-multiplicity-not-decoder-service-outcome.md)
 
-- [PAPER-001 — Tausch, 2009](../paper_cards/PAPER-001-tausch-2009.md), source candidate C45, `CORE`.
-- [PAPER-002 — Baeg, Wen, Wong, 2009](../paper_cards/PAPER-002-baeg-wen-wong-2009.md), source candidate C46, `CORE`.
-- [PAPER-003 — Lee, Baeg, Reviriego, 2011](../paper_cards/PAPER-003-lee-baeg-reviriego-2011.md), source candidate C38, `CORE`.
+Candidate source facts 01–03 remain in their Paper Cards; CAND-10 is deferred and has no permanent `CLM-ID`.
 
-Acceptance applies to the traceability and completeness of the Paper Cards. It does not promote paper assumptions, illustrative thresholds or fitted parameters to project requirements.
+## Provisional definition package
 
-## Initial evidence synthesis
+[Review package](../evidence_synthesis/RQ-001_provisional_definition_package.md) — `PROPOSED / PENDING USER APPROVAL`.
 
-- [Canonical cross-paper extraction matrix](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
-- An initial evidence synthesis is possible, but it is explicitly `NOT A FINAL ANSWER`.
-- Across the three papers, the primitive event is an existential word state beyond correction capability, while aggregation, horizon, scrubbing semantics and statistical assumptions differ materially.
-- No additional Paper Card is required before claim-level Evidence Auditor review.
+It proposes:
 
-## Remaining evidence gaps
+- primitive event: ECC capability exceedance in at least one codeword;
+- primary metric: cumulative first-passage probability `F_A(H)`;
+- default aggregate: complete SRAM region protected by the modeled controller;
+- separate upset-count, per-codeword exposure and reporting/mission horizons;
+- no automatic equivalence between capability exceedance and DUE/SDC/system failure;
+- numerical requirement remains `TBD`.
 
-- physical multi-error word state vs DUE/SDC/miscorrection vs system-visible service loss;
-- exact aggregate object and codeword→system rule;
-- sequential scrub semantics and word exposure age;
-- mission aggregation across scrub cycles;
-- mutually exclusive direct-MCU and independent-accumulation partition;
-- provenance for a numerical reliability threshold (`TBD`).
+None of these proposed project choices is accepted until the approval gate is completed.
 
 ## Next action
 
-Передать Evidence Auditor `PAPER-001…003`, canonical synthesis и exact atomic candidate claims `RQ001-EA-CAND-01…12`. Получить claim-level status, supporting/contrasting evidence, citation context, corrections/editorial checks and scope assessment. Не создавать `CLM-xxx` до отдельного acceptance.
+Approve, amend or reject the six explicit decisions in `RQ-001_provisional_definition_package.md`. If approved, record RQ-001 as `PARTIALLY ANSWERED / OPEN DEPENDENCIES` and release RQ-002 from the queue.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-002, RQ-003.
-- Related papers: `PAPER-001`, `PAPER-002`, `PAPER-003`.
-- Candidate audit inputs: `RQ001-EA-CAND-01…12` — temporary, not permanent claims.
-- CLM/EVD/HYP/EXP: не создавались.
+- PAPER: `PAPER-001…003`.
+- CLM: `CLM-001…008`.
+- HYP/EXP: none.
 
 ## Answer
 
-`PARTIAL — INITIAL EVIDENCE SYNTHESIS ONLY.`
-
-The three-paper synthesis supports a candidate primitive codeword event and proves that aggregation and horizon must be explicit. The final project event, metric, aggregate object and horizon remain unresolved pending evidence audit and system-requirement provenance.
+`PARTIAL — PROVISIONAL DEFINITION PENDING APPROVAL.`
 
 ## Confidence
 
-Medium for the bounded three-paper synthesis; not assessed for a final RQ-001 answer.
+High for the audited bounded statements; medium for the proposed project definition until its assumptions and open dependencies are accepted explicitly.

@@ -13,6 +13,7 @@
 - `claims/` — реестр ключевых утверждений и их статуса;
 - `hypotheses/` — формализованные проверяемые гипотезы;
 - `paper_cards/` — принятые traceable analyses внешних публикаций;
-- `evidence_synthesis/` — cross-paper matrices and bounded evidence syntheses for active RQ.
+- `evidence_synthesis/` — cross-paper matrices and bounded evidence syntheses for active RQ;
+- `evidence_audits/` — accepted claim-level audits and their Orchestrator dispositions.
 
 Документация должна фиксировать **решения и состояние знания**, а не дублировать содержимое чатов ChatGPT.

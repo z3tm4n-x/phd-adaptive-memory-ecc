@@ -137,11 +137,21 @@ These are audit inputs only. No `CLM-xxx` is created or accepted by this documen
 12. **RQ001-EA-CAND-12 — modeled outcome class.**  
     `[SOURCE SYNTHESIS]` `PAPER-001`, `PAPER-002` and `PAPER-003` define failure through erroneous-bit multiplicity beyond modeled correction capability rather than through an observed decoder output or system-visible loss-of-service event.
 
+## 8.1 Orchestrator disposition after Evidence Audit
+
+The canonical [Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md) is accepted with a limitation:
+
+- `RQ001-EA-CAND-01…03` remain source facts in the accepted Paper Cards and this matrix; separate permanent claim records would be redundant.
+- `RQ001-EA-CAND-04…09`, `11` and `12` are registered as [`CLM-001…008`](../claims/README.md).
+- `RQ001-EA-CAND-10` is partially supported and deferred: omission of word-specific exposure age is supported, while the stronger effective-global-reset interpretation is not accepted.
+- No numerical reliability threshold, hypothesis, evidence record or project result is created by this disposition.
+- No additional Paper Card or new literature search is ordered at this gate.
+
 ## 9. Additional Paper Card decision
 
 **Decision:** no additional Paper Cards are required before the Evidence Auditor stage.
 
-**Rationale:** the three accepted cards cover the minimum comparative dimensions needed for an initial synthesis and expose the remaining disagreements. The next uncertainty reduction comes from checking the seven exact claims and their citation context, not from broadening the paper batch.
+**Rationale:** the three accepted cards cover the minimum comparative dimensions needed for an initial synthesis and expose the remaining disagreements. The next uncertainty reduction comes from checking the twelve exact claims and their citation context, not from broadening the paper batch.
 
 Additional full-text cards may be requested only after audit if a named gap remains material. The permitted gap-specific categories are:
 
@@ -153,14 +163,15 @@ This is not an active search order.
 
 ## 10. Next gate
 
-`RQ-001 EVIDENCE AUDIT — CLAIM-LEVEL VALIDATION`.
+`RQ-001 PROVISIONAL DEFINITION — USER APPROVAL`.
 
-Completion requires:
+The [provisional definition package](RQ-001_provisional_definition_package.md) asks for explicit approval or amendment of:
 
-1. an Evidence Auditor assessment for `RQ001-EA-CAND-01…12` as twelve separate atomic propositions;
-2. correction/editorial-concern and citation-context checks for the three accepted sources;
-3. strongest supporting and limiting/contrasting evidence for each claim;
-4. a decision on whether any claim should receive a permanent `CLM-xxx` identifier;
-5. an Orchestrator decision on the candidate project event, metric, aggregation level and horizon, with unresolved elements kept `UNKNOWN`/`TBD`.
+1. the primitive ECC capability-exceedance event `E_cap(A,H)`;
+2. the cumulative first-passage metric `F_A(H)`;
+3. the complete controller-protected SRAM region as the default aggregate;
+4. separate upset-count, per-codeword exposure and reporting/mission horizons;
+5. separation of the physical capability-exceedance event from DUE, SDC and system-visible consequences;
+6. the post-approval status `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
 
-`RQ-001` remains `INVESTIGATING`; `RQ-002` must not start before this gate is reviewed.
+The numerical requirement `F_A(H_req) ≤ ε_req` retains both `H_req` and `ε_req` as `TBD` until traceable system or mission requirements exist. `RQ-001` remains `INVESTIGATING` and `RQ-002` remains queued until this approval gate is completed.
