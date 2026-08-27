@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM  
 **Source candidate:** C-RQ-02  
-**Status:** `OPEN — ACTIVE GATE / TARGETED MAPPING NOT STARTED`  
+**Status:** `OPEN — ACTIVE GATE / HANDOFF READY / SEARCH NOT STARTED`  
 **Registered:** 2026-08-26  
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -71,9 +71,9 @@ RQ is answerable when:
 
 ## Active gate / next action
 
-Prepare the exact Literature Scout handoff and then execute [`RQ-002_protocol.md`](../literature_mapping/RQ-002_protocol.md). During screening, collect explicit evidence for the C-RQ-05 escalation rule.
+Prepare the exact Literature Scout handoff and execute the expanded cross-publisher [`RQ-002_protocol.md`](../literature_mapping/RQ-002_protocol.md): IEEE Xplore; one independent cross-publisher index or explicit public fallback; targeted ScienceDirect/SpringerLink; Scite/ResearchRabbit expansion; NASA NTRS supplemental coverage. During screening, collect explicit evidence for the C-RQ-05 escalation rule.
 
-The mapping has not been started by the gate-opening decision. eLibrary remains `DEFERRED / UNKNOWN COVERAGE` because it is unavailable to Literature Scout.
+The mapping has not started. eLibrary remains `DEFERRED / UNKNOWN COVERAGE` because it is unavailable to Literature Scout.
 
 ## Related PAPER/CLM/HYP/EXP
 

@@ -4,7 +4,7 @@
 
 ## Current phase
 
-RQ-002 targeted literature mapping — handoff preparation.
+RQ-002 targeted literature mapping — handoff ready / search not started.
 
 ## Infrastructure status
 
@@ -15,12 +15,12 @@ RQ-002 targeted literature mapping — handoff preparation.
 
 ## Active gate
 
-Prepare and run the targeted Literature Scout handoff defined by `docs/literature_mapping/RQ-002_protocol.md`. The gate is open, but no RQ-002 literature search has been started by the DEC-001 recording commit.
+Issue and run the targeted Literature Scout handoff defined by `docs/literature_mapping/RQ-002_protocol.md`. Mandatory coverage is IEEE Xplore plus an independent cross-publisher route and targeted ScienceDirect/SpringerLink searches; Scite/ResearchRabbit provide expansion, NASA NTRS is supplemental, and eLibrary remains deferred. No RQ-002 search has started yet.
 
 ## Active Research Questions
 
 - RQ-001 — reliability event, metric and evaluation horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
-- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / ACTIVE GATE / MAPPING NOT STARTED`.
+- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / ACTIVE GATE / HANDOFF READY / SEARCH NOT STARTED`.
 - RQ-003 — ECC abstraction and baseline code class — `OPEN / QUEUED`.
 - RQ-004 — online observables for adaptation — `OPEN / QUEUED`.
 - RQ-005 — measurable resource-cost vector — `OPEN / QUEUED`.
@@ -66,7 +66,7 @@ The C-RQ-05 escalation gate remains mandatory if MCU/MBU or spatial correlation 
 
 ## Next actions
 
-1. Issue the exact RQ-002 Literature Scout handoff using `docs/literature_mapping/RQ-002_protocol.md` and DEC-001 as its input contract.
+1. Issue the exact RQ-002 Literature Scout handoff using the expanded cross-publisher `docs/literature_mapping/RQ-002_protocol.md` and DEC-001 as its input contract.
 2. Do not assume Poisson arrivals, independence, stationarity or negligible MCU/MBU before evidence screening.
 3. Apply the C-RQ-05 escalation rule during screening.
 4. Keep RQ-001 open and revisit DEC-001 only under its explicit revisit conditions.

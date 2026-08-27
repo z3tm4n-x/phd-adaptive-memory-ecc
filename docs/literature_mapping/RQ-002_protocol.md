@@ -1,7 +1,7 @@
 # Targeted Literature Mapping Protocol — RQ-002
 
 **Related RQ:** RQ-002  
-**Status:** READY — SEARCH NOT STARTED — DEC-001 ALIGNED  
+**Status:** READY — SEARCH NOT STARTED — DEC-001 ALIGNED — CROSS-PUBLISHER SCOPE  
 **Owner role:** Literature Scout  
 **Prepared:** 2026-08-26
 
@@ -14,6 +14,8 @@
 Картировать эмпирически поддержанные model classes и допущения о arrival process, accumulation, non-stationarity, MCU/MBU и correlations, чтобы выбрать минимально достаточную error model и проверить decision gate по C-RQ-05.
 
 Mapping должен уменьшить неопределённость, необходимую для принятия решения по RQ-002; он не должен превращаться в общий обзор темы и не считается ответом на RQ.
+
+IEEE Xplore is a mandatory anchor but not a sufficient sole source. The search must include an independent cross-publisher route and targeted non-IEEE publisher coverage to reduce publisher/database bias.
 
 ## Input contract from DEC-001
 
@@ -42,6 +44,52 @@ Literature Scout must identify which state variables and assumptions each model 
 
 Термины используются как concept blocks. Literature Scout может менять только синтаксис конкретной базы; смысловые блоки, фактически выполненная строка и причина изменения фиксируются в search log.
 
+## Search-source coverage and access rules
+
+### Mandatory routes
+
+1. **IEEE Xplore** — primary anchor for IEEE TNS, IEEE reliability/device journals and IEEE-hosted conference proceedings.
+2. **Independent cross-publisher index** — execute at least one of:
+   - Scopus — preferred when accessible;
+   - Web of Science Core Collection — accepted equivalent;
+   - Engineering Village Compendex/Inspec — accepted engineering/physics equivalent.
+3. **Targeted publisher backfill**:
+   - ScienceDirect;
+   - SpringerLink.
+4. **Secondary discovery and citation expansion**:
+   - Scite;
+   - ResearchRabbit after seed selection.
+
+### Supplemental route
+
+- NASA NTRS/NEPP-related public records for test reports, mission context and technical evidence. A technical report remains `RELATED` or `BACKGROUND` unless a peer-reviewed publication identity is verified.
+
+### Access fallback
+
+At the start of execution, record `ACCESSIBLE`, `PARTIAL` or `UNAVAILABLE` for every route.
+
+If Scopus, Web of Science and Compendex/Inspec are all unavailable:
+
+- do not claim that a cross-publisher index was searched;
+- execute public metadata fallback through Crossref and/or OpenAlex;
+- execute the targeted ScienceDirect and SpringerLink searches below;
+- record the resulting coverage limitation explicitly;
+- use public web/Google Scholar only as a locator or sensitivity check, not as a reproducible primary database and not as a stopping-criterion substitute.
+
+Publisher search, metadata discovery, citation expansion and full-text evidence are distinct layers. Discovery inclusion never implies that full text was checked.
+
+### Targeted non-IEEE venues
+
+At minimum, search/filter for relevant records in:
+
+- `Microelectronics Reliability`;
+- `Nuclear Instruments and Methods in Physics Research Section B`;
+- `Radiation Physics and Chemistry`;
+- `Journal of Electronic Testing`;
+- `Science China Technological Sciences`.
+
+Additional venues may be added only when a candidate or citation chain exposes a relevant model/evidence category; the exact reason is logged.
+
 ## IEEE Xplore search strings
 
 Запускать строки отдельно, начиная с наиболее специфичной. Точный executed query, дата, filters и число результатов сохраняются в search log.
@@ -52,6 +100,73 @@ Literature Scout must identify which state variables and assumptions each model 
 4. ("radiation induced errors" OR "single event effects") AND SRAM AND (clustering OR burst OR correlation OR independence) AND (model OR measurement)
 
 Если интерфейс не поддерживает данную форму Boolean syntax, строка разбивается на эквивалентные запросы без смыслового расширения; все выполненные варианты документируются.
+
+## Independent cross-publisher index search strings
+
+### Scopus — preferred syntax
+
+Run separately and preserve exact executed syntax, filters, hit counts and export date.
+
+1. `SCOPUS-Q1: TITLE-ABS-KEY(SRAM AND ("single event upset" OR SEU OR "soft error") AND ("stochastic model" OR "statistical model" OR "Poisson process" OR "upset rate"))`
+2. `SCOPUS-Q2: TITLE-ABS-KEY(SRAM AND ("multiple cell upset" OR MCU OR "multiple bit upset" OR MBU) AND ("spatial correlation" OR topology OR cluster* OR multiplicity OR distribution))`
+3. `SCOPUS-Q3: TITLE-ABS-KEY((SRAM OR "static random access memory") AND (radiation OR neutron OR proton OR "heavy ion") AND (nonstationary OR "non-stationary" OR "time-varying" OR burst OR clustering))`
+4. `SCOPUS-Q4: TITLE-ABS-KEY(SRAM AND (scrub* OR repair OR accumulation) AND ("error process" OR "arrival process" OR reliability) AND (ECC OR "error correction"))`
+
+### Web of Science / Compendex / Inspec substitute
+
+If Scopus is unavailable, translate SCOPUS-Q1…Q4 without semantic expansion:
+
+- Web of Science: use `TS=(...)` with the same concept blocks;
+- Compendex/Inspec: search title/abstract/controlled terms with the same concept blocks.
+
+Record the exact platform-specific executed query. Interface-driven syntax changes are allowed; silent concept changes are not.
+
+### Public metadata fallback
+
+Only when all three subscription indexes are unavailable, execute these concept queries through Crossref and/or OpenAlex:
+
+1. `SRAM "single event upset" stochastic model`
+2. `SRAM "multiple cell upset" spatial correlation topology`
+3. `SRAM radiation nonstationary time-varying upset rate`
+4. `SRAM error accumulation scrubbing ECC reliability`
+
+The fallback does not establish equivalence to Scopus/WoS/Compendex coverage.
+
+## Targeted ScienceDirect search strings
+
+Run across ScienceDirect, then repeat with relevant journal filters where supported:
+
+1. `SRAM AND "single event upset" AND ("stochastic model" OR "statistical model" OR "upset rate")`
+2. `SRAM AND ("multiple cell upset" OR MCU OR MBU) AND ("spatial correlation" OR topology OR multiplicity)`
+3. `SRAM AND radiation AND (nonstationary OR "time-varying" OR clustering OR burst)`
+4. `SRAM AND ("Poisson process" OR "arrival process") AND ("soft error" OR upset)`
+
+Mandatory journal-filter checks:
+
+- `Microelectronics Reliability`;
+- `Nuclear Instruments and Methods in Physics Research Section B`;
+- `Radiation Physics and Chemistry`.
+
+## Targeted SpringerLink search strings
+
+1. `SRAM "multiple cell upset" spatial correlation`
+2. `SRAM "single event upset" stochastic model`
+3. `SRAM radiation upset multiplicity topology`
+4. `SRAM soft error accumulation scrubbing ECC`
+
+Mandatory journal-filter/title checks:
+
+- `Journal of Electronic Testing`;
+- `Science China Technological Sciences`.
+
+## NASA NTRS supplemental search strings
+
+1. `SRAM "multiple cell upset" radiation`
+2. `SRAM SEU test heavy ion proton neutron`
+3. `SRAM "soft error rate" model`
+4. `SRAM scrubbing reliability radiation`
+
+Record document type and peer-review status. Do not promote a presentation/report to peer-reviewed evidence by implication.
 
 ## eLibrary search concepts/strings
 
@@ -109,15 +224,25 @@ Literature Scout must identify which state variables and assumptions each model 
 
 ## Screening procedure
 
-1. Создать search-log entry для каждой database/query pair: database, дата, exact query, filters, hits.
-2. Дедуплицировать по DOI; при отсутствии DOI — по нормализованным title + year + first author.
-3. Выполнить title/metadata screening по inclusion/exclusion criteria.
-4. Выполнить abstract screening без глубокого claim-level анализа.
-5. Классифицировать каждый screened item как `CORE`, `RELATED`, `BACKGROUND` или `REJECT`; для `REJECT` и пограничных случаев записать reason.
-6. Построить coverage matrix «evidence category → candidate papers».
-7. Выбрать 2–5 seed papers по правилам ниже.
-8. Выполнить ограниченное expansion через ResearchRabbit, затем повторить deduplication и screening.
-9. Для принятых records подготовить structured `HANDOFF TO ZOTERO`; глубокое чтение передать Paper Analyst.
+1. Выполнить access test и создать source-coverage table: route, platform, access status, limitation.
+2. Создать search-log entry для каждой database/query pair: database, дата, exact executed query, filters, hits and export/screening route.
+3. Дедуплицировать across all routes по DOI; при отсутствии DOI — по normalized title + year + first author.
+4. Выполнить title/metadata screening по inclusion/exclusion criteria.
+5. Выполнить abstract screening без глубокого claim-level анализа.
+6. Для каждого record сохранить discovery route, publisher/platform, document type и verified/unverified peer-review status.
+7. Классифицировать каждый screened item как `CORE`, `RELATED`, `BACKGROUND` или `REJECT`; для `REJECT` и пограничных случаев записать reason.
+8. Построить coverage matrix «evidence category → candidate papers» по категориям:
+   - arrival/count process;
+   - stationarity/nonstationarity;
+   - MCU/MBU multiplicity distribution;
+   - spatial topology/correlation;
+   - direct-event vs independent-accumulation provenance;
+   - mapping/partition implications for `E_cap`;
+   - initial state, exposure age and scrub-state variables;
+   - empirical validation and domain of validity.
+9. Выбрать 2–5 seed papers по правилам ниже.
+10. Выполнить ограниченное expansion через ResearchRabbit, затем повторить deduplication и screening.
+11. Для принятых records подготовить structured `HANDOFF TO ZOTERO`; глубокое чтение передать Paper Analyst.
 
 ## Seed-paper selection criteria
 
@@ -129,6 +254,7 @@ Literature Scout must identify which state variables and assumptions each model 
 - Прямое соответствие RQ-002, а не только общая тематическая близость.
 - Достаточная прозрачность assumptions, methods или measured quantities.
 - Совокупность 2–5 seeds должна покрывать разные релевантные подходы, а не дублировать один cluster.
+- Если найден сильный non-IEEE source, как минимум один seed должен представлять cross-publisher evidence; отсутствие такого seed требует явного объяснения.
 
 ## ResearchRabbit expansion rule
 
@@ -158,12 +284,16 @@ Literature Scout только находит и классифицирует и�
 
 Mapping для RQ-002 может быть остановлен, когда одновременно выполнены условия:
 
-- все заранее определённые IEEE Xplore strings выполнены и воспроизводимо записаны; eLibrary explicitly recorded as `DEFERRED / UNKNOWN COVERAGE` under the current access constraint;
+- все заранее определённые IEEE Xplore strings выполнены и воспроизводимо записаны;
+- выполнен минимум один independent cross-publisher index route; если все subscription indexes unavailable, выполнен и явно ограничен Crossref/OpenAlex fallback;
+- выполнены targeted ScienceDirect and SpringerLink searches, включая mandatory journal checks;
+- NASA NTRS supplemental route выполнен либо документирована техническая недоступность;
+- eLibrary explicitly recorded as `DEFERRED / UNKNOWN COVERAGE` under the current access constraint;
 - каждая evidence category имеет хотя бы один plausible candidate либо явно зарегистрированный gap;
 - выбраны 2–5 strong seeds либо документировано, почему это невозможно;
 - выполнен предусмотренный ResearchRabbit expansion;
 - два последовательных search/expansion batches не добавили новую model/definition/measurement category;
-- подготовлены candidate table, gaps и handoffs.
+- подготовлены source-coverage table, candidate table, gaps and handoffs.
 
 Decision-gate coverage обязательна: нельзя завершить mapping, не указав, найдено ли evidence за/против существенности MCU/MBU/spatial correlation или остаётся ли этот вопрос UNKNOWN.
 
@@ -174,10 +304,10 @@ Decision-gate coverage обязательна: нельзя завершить m
 Literature Scout возвращает:
 
 1. `Task ID`, `Related RQ`, дату и использованные databases.
-2. Search log: exact strings, filters, hits, screened и included counts.
-3. Candidate table: title, authors, year, venue, DOI/identifier, discovery route, classification и reason.
+2. Source-access/coverage table and search log: exact strings, filters, hits, screened and included counts for every route.
+3. Candidate table: RQ2 candidate ID, title, authors, year, venue, DOI/identifier, discovery route, publisher/platform, document type, peer-review status, classification and reason.
 4. Список 2–5 seed papers и обоснование выбора.
-5. Coverage matrix по требуемым evidence categories, including compatibility with the DEC-001 event/window/initial-state/domain contract.
+5. Coverage matrix по восьми predefined evidence categories, including compatibility with the DEC-001 event/window/initial-state/domain contract and the C-RQ-05 escalation gate.
 6. Термины/синонимы, обнаруженные в источниках, и предложения по корректировке queries.
 7. Явные gaps, conflicts и пограничные exclusions без объявления окончательного ответа на RQ.
 8. Structured `HANDOFF TO ZOTERO` для принятых records.
@@ -188,6 +318,8 @@ Literature Scout возвращает:
 
 - Не принимать Poisson process, independence или stationarity как факт без evidence.
 - Не запускать eLibrary в текущем Literature Scout cycle; фиксировать `DEFERRED / UNKNOWN COVERAGE`.
+- Не считать IEEE Xplore единственным достаточным source route.
+- Не утверждать, что Scopus/WoS/Compendex был searched, если доступ отсутствовал; use explicit fallback labeling.
 - Если decision gate срабатывает либо исключение MCU/MBU/correlation нельзя обосновать, явно рекомендовать регистрацию permanent RQ из C-RQ-05 до основной reliability model.
 - Не создавать HYP, CLM или EVD на стадии discovery.
 - Не изменять `docs/research_spec.md`.

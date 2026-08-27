@@ -142,3 +142,15 @@
 - RQ-002 literature search was not started in this recording step.
 - Next action: issue the exact Literature Scout handoff from `docs/literature_mapping/RQ-002_protocol.md` and apply the C-RQ-05 MCU/MBU/spatial-correlation escalation rule.
 
+### RQ-002 protocol expanded before Literature Scout launch
+
+- IEEE Xplore retained as mandatory anchor but rejected as the sole sufficient database route for RQ-002.
+- Added a mandatory independent cross-publisher route: Scopus preferred; Web of Science or Compendex/Inspec accepted substitutes.
+- Added public Crossref/OpenAlex fallback when all subscription indexes are inaccessible, with an explicit coverage limitation.
+- Added targeted ScienceDirect and SpringerLink searches, including mandatory checks of non-IEEE reliability/radiation/testing venues.
+- Added NASA NTRS as a supplemental technical-evidence route; report/presentation status must not be confused with peer review.
+- Scite remains secondary discovery/context and ResearchRabbit remains bounded citation expansion.
+- eLibrary remains `DEFERRED / UNKNOWN COVERAGE` and must not be queried by Literature Scout in this cycle.
+- Stopping criterion now requires cross-publisher coverage, targeted publisher backfill, source-access reporting and the eight-category DEC-001 compatibility matrix.
+- Exact Literature Scout launch handoff is ready against the expanded protocol.
+- RQ-002 literature search had not started when this protocol update was recorded.
