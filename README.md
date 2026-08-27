@@ -88,6 +88,6 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
 - **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
 - **Numerical reliability requirement:** `TBD`.
-- **Current phase:** RQ-002 targeted literature mapping handoff ready; search not started.
-- **Active gate:** launch Literature Scout against the expanded cross-publisher `docs/literature_mapping/RQ-002_protocol.md`.
+- **Current phase:** RQ-002 targeted literature mapping; corrected handoff issued and Literature Scout launched.
+- **Active gate:** receive and assess the bounded Scout report against `docs/literature_mapping/RQ-002_protocol.md`, including mandatory anchors, exact Zebrev arXiv-v2 control, model-class sensitivity and the C-RQ-05 gate.
 - **Constraint:** RQ-003 retains decoder-outcome semantics; RQ-001 remains open.

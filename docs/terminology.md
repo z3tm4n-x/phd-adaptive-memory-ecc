@@ -10,13 +10,29 @@
 | scrubbing | периодическое чтение/коррекция/перезапись содержимого памяти | working | уточнить терминологию по литературе |
 | SEU | Single-Event Upset | working | TBD |
 | MCU / MBU | Multiple-Cell / Multiple-Bit Upset | working | уточнить используемое обозначение |
+| protection domain | explicitly declared controller-managed SRAM domain aggregated under one reliability contract | accepted working definition | DEC-001 |
+| reporting window | interval over which occurrence of the declared event is reported | accepted working definition | DEC-001; distinct from upset-count, word-exposure and mission horizons |
 
 ## Symbols
 
 | Symbol | Meaning | Unit | Status |
 |---|---|---|---|
-| TBD | TBD | TBD | TBD |
+| \(E_{\mathrm{cap}}(A;t_0,T)\) | Event that at least one codeword in \(A\) exceeds its declared ECC correction capability at some time in \(H(t_0,T)\) | event / dimensionless | accepted working definition, DEC-001 |
+| \(A\) | Explicitly declared controller-managed SRAM protection domain | set of codewords | accepted working definition, DEC-001 |
+| \(A_j\) | Homogeneous member of the explicit disjoint partition \(A=\biguplus_j A_j\) used before quantitative aggregation when ECC, \(W\), arrival, bank/block or scrubbing semantics differ | set of codewords | accepted working definition, DEC-001 |
+| \(W\) | Declared physical-cell-to-ECC-codeword mapping, including any interleaving semantics required by the model | mapping | `TBD` target; required model input |
+| \(N_w(t)\) | Current number of distinct erroneous bit cells in codeword \(w\) at time \(t\), under the declared correction/writeback semantics | count | accepted working definition, DEC-001 |
+| \(t_c(w)\) | Number of distinct erroneous bits the declared ECC configuration guarantees to correct in codeword \(w\) | count | accepted working definition; concrete semantics remain RQ-003 |
+| \(\tau_A(t_0)\) | First time at or after \(t_0\) when any codeword in \(A\) satisfies \(N_w(t)>t_c(w)\) | declared time unit | accepted working definition, DEC-001 |
+| \(t_0\) | Start time / origin of a reporting window | declared time unit | accepted notation, DEC-001 |
+| \(T\) | Non-negative duration of a reporting window | declared time unit | accepted notation, DEC-001 |
+| \(H(t_0,T)\) | Reporting window \([t_0,t_0+T]\) | time interval | accepted working definition, DEC-001 |
+| \(F_A(t_0,T;\mu_{t_0})\) | Probability that \(\tau_A(t_0)\le t_0+T\), conditional on the declared initial state/distribution | probability / dimensionless | accepted general metric, DEC-001 |
+| \(F_A(t_0,T)\) | Restricted abbreviation of \(F_A(t_0,T;\mu_{t_0})\) when \(\mu_{t_0}\) is fixed explicitly elsewhere in the quantitative model | probability / dimensionless | accepted shorthand restriction, DEC-001 |
+| \(\mu_{t_0}\) | Declared initial state or state distribution at \(t_0\), covering every state variable required by the quantitative model | state or probability distribution | mandatory model specification, DEC-001 |
+| \(H_{\mathrm{req}}\) | Required reporting window, including its origin and duration | time interval | `TBD`; requires traceable system/mission provenance |
+| \(\varepsilon_{\mathrm{req}}\) | Required upper bound for the declared reliability metric | probability / dimensionless | `TBD`; no numerical value assigned |
 
 ## Rule
 
-Новый термин или обозначение, используемое в нескольких документах/моделях, должно сначала быть согласовано здесь.
+Новый термин или обозначение, используемое в нескольких документах/моделях, должно сначала быть согласовано здесь. RQ-002 may add notation only after the corresponding model concept is accepted; parallel symbols must not be introduced silently.

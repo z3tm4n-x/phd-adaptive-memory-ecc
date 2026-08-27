@@ -1,9 +1,9 @@
 # RQ-002 — Minimum adequate model of radiation-induced errors in SRAM
 
-**Title:** Minimum adequate model of radiation-induced errors in SRAM  
-**Source candidate:** C-RQ-02  
-**Status:** `OPEN — ACTIVE GATE / HANDOFF READY / SEARCH NOT STARTED`  
-**Registered:** 2026-08-26  
+**Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
+**Source candidate:** C-RQ-02<br>
+**Status:** `OPEN — ACTIVE GATE / LITERATURE SCOUT LAUNCHED`<br>
+**Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
 ## Question
@@ -23,6 +23,9 @@
 - levels bit/cell, codeword, partition and controller-managed domain;
 - assumptions, parameters and validity domain of every model class;
 - state variables required for the DEC-001 initial-state and exposure semantics.
+- minimal post-mapping representation of one radiation event required to compute `E_cap` under accumulation and scrubbing;
+- uncertainty propagation, empirical identifiability, domain of validity and computational tractability for adaptive scrubbing;
+- explicit/parameterized post-`E_cap` correction, writeback, reset and scrub semantics rather than one hard-coded consequence.
 
 ## Exclusions
 
@@ -32,6 +35,8 @@
 - conversion of specific COSRAD outputs into an online controller signal;
 - adaptive policy selection;
 - automatic reinterpretation of `E_cap` as a decoder or system outcome.
+- permanent faults, cumulative TID degradation, destructive SEE/SEFI and other persistent mechanisms unless a later evidence-based scope decision reopens them;
+- general inspection/maintenance/control prior art, which is a separate non-blocking backlog task.
 
 ## Input contract from RQ-001 / DEC-001
 
@@ -47,6 +52,8 @@ Candidate models must be evaluated against:
 
 RQ-003 remains responsible for concrete ECC/decoder-outcome semantics.
 
+`E_cap` and `τ_A` describe the underlying physical/codeword state. The future controller acts only on observable information; the dependency `RQ-003 outcome semantics ↔ RQ-004 observables/estimation` is recorded but not resolved here.
+
 ## Evidence needed
 
 - primary irradiation studies for SRAM;
@@ -55,6 +62,8 @@ RQ-003 remains responsible for concrete ECC/decoder-outcome semantics.
 - evidence that tests independence, stationarity and spatial/temporal correlation assumptions;
 - model-validation studies in comparable conditions;
 - evidence on mechanism provenance and topology needed to calculate `E_cap`;
+- evidence on the information lost when reducing full physical topology + `W` to joint marks, marginal per-word multiplicities or a scalar rate;
+- uncertainty in physical-event classification and whether it propagates into reliability results;
 - evidence sufficient to trigger or dismiss the C-RQ-05 escalation gate.
 
 ## Answer / decision criterion
@@ -66,20 +75,24 @@ RQ is answerable when:
 3. a minimum adequate model or a small justified alternative set is selected;
 4. excluded effects and bounds are explicit;
 5. compatibility with the DEC-001 event, domain, window and initial-state contract is demonstrated.
+6. the minimum arrival-process representation, event/mark representation, accumulation state and scrub/reset semantics are stated;
+7. experimentally identifiable parameters, unresolved uncertainties, validation needs and computational feasibility are stated;
+8. outputs required by RQ-003, RQ-004 and the first quantitative prototype are explicit.
 
 **Decision gate:** if evidence shows that MCU/MBU or spatial correlation materially changes the structure or probability of `E_cap`, or their exclusion cannot be justified or bounded, C-RQ-05 must be promoted to a mandatory permanent RQ and answered before the main reliability model is built.
 
 ## Active gate / next action
 
-Prepare the exact Literature Scout handoff and execute the expanded cross-publisher [`RQ-002_protocol.md`](../literature_mapping/RQ-002_protocol.md): IEEE Xplore; one independent cross-publisher index or explicit public fallback; targeted ScienceDirect/SpringerLink; Scite/ResearchRabbit expansion; NASA NTRS supplemental coverage. During screening, collect explicit evidence for the C-RQ-05 escalation rule.
+Execute task `RQ-002-LITERATURE-MAPPING-01` against the corrected cross-publisher [`RQ-002_protocol.md`](../literature_mapping/RQ-002_protocol.md). The cycle includes explicit disposition of C32, C51, C52, Zebrev-2015, exact `arXiv:1704.07271v2`, its separately controlled RADECS identity and all mandatory model/representation questions. During screening, collect explicit evidence for the C-RQ-05 escalation rule and the [novelty protection gate](../novelty_workflow.md).
 
-The mapping has not started. eLibrary remains `DEFERRED / UNKNOWN COVERAGE` because it is unavailable to Literature Scout.
+The Literature Scout handoff has been issued. eLibrary remains `DEFERRED / UNKNOWN COVERAGE` because it is unavailable to Literature Scout.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-001, RQ-003.
 - Input decision: `DEC-001`.
 - Conditional dependency: C-RQ-05.
+- Non-blocking future task: control prior-art threat in [`research_backlog.md`](../research_backlog.md).
 - PAPER/CLM/EVD/HYP/EXP: TBD after targeted literature mapping.
 
 ## Answer

@@ -154,3 +154,29 @@
 - Stopping criterion now requires cross-publisher coverage, targeted publisher backfill, source-access reporting and the eight-category DEC-001 compatibility matrix.
 - Exact Literature Scout launch handoff is ready against the expanded protocol.
 - RQ-002 literature search had not started when this protocol update was recorded.
+
+### Pre-RQ-002 external-review correction accepted
+
+- External-advisor review classified as `UNVERIFIED`: it supplies adversarial search targets but is not `SOURCE`, project evidence or a research decision.
+- DEC-001 was not revised and RQ-001 was not reopened.
+- Mandatory RQ-002 anchors added: C32, C51, C52, Zebrev-2015, exact `arXiv:1704.07271v2`, and the separately controlled related RADECS DOI identity.
+- Exact-version control and a 15-question Paper Analyst extraction target were added for the extended Zebrev arXiv v2 source.
+- Direct same-particle, independent accumulation and ambiguous/false test classification must now be compared at physical, spatial, post-`W` and rate/recombination levels.
+- Candidate model-class sensitivity and the minimum post-mapping event-representation hierarchy were added without preselecting Poisson, Cox, PDMP, marked processes, association or marginal `q_k`.
+- The active failure domain remains transient radiation-induced upsets; permanent faults, cumulative TID degradation and destructive/persistent effects remain out of scope pending a separate decision.
+- Canonical DEC-001 symbols were registered in `docs/terminology.md`; no new numerical requirement was assigned.
+
+### Novelty and post-mapping throughput gates registered
+
+- Created `docs/novelty_workflow.md`: claims used for novelty assessment require a separate adversarial gap-closure pass, and scope-limited claims cannot become general literature claims by downstream use.
+- `CLM-002…006` remain valid only over `PAPER-001…003`; a mandatory RQ-002 novelty-threat matrix must cover the strongest mechanism-partition threats before any general novelty statement.
+- Created `docs/research_backlog.md` with a separate, non-blocking future inspection/maintenance/control prior-art task covering the Barlow/Proschan/Keller line and specified reliability/OR venues.
+- Registered the post-RQ-002 throughput gate: select decisive deep reads, bound model alternatives, build a minimal quantitative prototype, define the first discriminating `EXP` and target the first verifiable `RES` before another broad discovery cycle.
+- Registered future specialty/implementation alignment and the non-blocking publication trigger after the first independent `RES`.
+
+### RQ-002 Literature Scout launched
+
+- Task `RQ-002-LITERATURE-MAPPING-01` was issued against the corrected protocol.
+- eLibrary remains `DEFERRED / UNKNOWN COVERAGE` and is not part of this Scout cycle.
+- The next Orchestrator gate is acceptance of the reproducible mapping report, mandatory-anchor/version dispositions, C-RQ-05 assessment, novelty-threat matrix and bounded Paper Analyst handoff.
+- No new `RQ`, `HYP`, `CLM`, `EVD`, `DEC`, `EXP` or `RES` was created by this launch.

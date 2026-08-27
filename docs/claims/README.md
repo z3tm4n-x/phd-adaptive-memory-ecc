@@ -18,3 +18,9 @@
 | [CLM-008](CLM-008-multiplicity-not-decoder-service-outcome.md) | Multiplicity is not decoder/service outcome | INFERENCE | SUPPORTED | RQ-001 |
 
 `CLM-001…008` were accepted from `RQ001-EA-CAND-04…09, 11, 12` after [RQ-001 Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md). Candidate facts `01…03` remain in the Paper Cards and matrix; candidate `10` is deferred.
+
+## Novelty-use guardrail
+
+`CLM-002…006` retain their accepted scope over `PAPER-001…003`. They do not establish a general literature claim about mechanism separation, novelty or unavoidable double counting.
+
+Any claim whose `Intended use` / `Used in` includes novelty assessment must pass the separate [adversarial novelty workflow](../novelty_workflow.md) before it can support a literature-level novelty statement. Scope is preserved across role handoffs; downstream use never broadens a claim automatically.
