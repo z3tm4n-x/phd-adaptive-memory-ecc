@@ -1,10 +1,10 @@
 # Current Status
 
-**Updated:** 2026-08-26
+**Updated:** 2026-08-27
 
 ## Current phase
 
-Targeted literature mapping — pilot preparation.
+RQ-001 evidence extraction — Paper Analyst preparation.
 
 ## Infrastructure status
 
@@ -21,7 +21,7 @@ Targeted literature mapping — pilot preparation.
 
 ## Active gate
 
-Выполнить пилотный targeted literature mapping для RQ-001 и принять воспроизводимый Literature Scout handoff до запуска mapping остальных RQ.
+Завершить Zotero handoff для принятых RQ-001 candidates, получить full-text Paper Cards по C45, C46 и C38 и построить extraction matrix `event × metric × aggregation × horizon × assumptions`.
 
 ## Active Research Questions
 
@@ -31,28 +31,32 @@ Targeted literature mapping — pilot preparation.
 - RQ-004 — online observables for adaptation — OPEN.
 - RQ-005 — measurable resource-cost vector — OPEN.
 
-Canonical cards находятся в `docs/questions/`; утверждённые protocols — в `docs/literature_mapping/`. Литературный поиск ещё не запускался.
+RQ-001 Literature Scout discovery принят как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`. Pilot и completion-delta reports находятся в `docs/literature_mapping/`. Это не является ответом на RQ-001.
 
 ## Active hypotheses
 
-Пока не заведены. Гипотезы формируются только после initial literature mapping и evidence review.
+Пока не заведены. Гипотезы формируются только после paper-level extraction и evidence review.
 
 ## Confirmed own results
 
-Пока отсутствуют.
+Пока отсутствуют. Literature mapping является discovery artefact, а не подтверждённым собственным научным результатом.
 
 ## Current blockers
 
-Инфраструктурных блокеров нет. Научные неизвестные зафиксированы в RQ-001…RQ-005. Для RQ-002 действует decision gate: если MCU/MBU или spatial correlation существенны либо их исключение не обосновано, C-RQ-05 должен быть зарегистрирован как обязательный RQ до основной reliability model.
+- Формальные reliability event, metric, aggregation level и horizon для проекта остаются `UNKNOWN` до анализа полных текстов.
+- Numerical reliability threshold остаётся `TBD` до появления traceable system/mission requirement.
+- eLibrary недоступна Literature Scout и по решению пользователя отложена как coverage limitation; она не блокирует текущий gate.
+- Для Paper Analyst необходимы проверенные полные тексты C45, C46 и C38 в Zotero или через иной законный доступ.
 
 ## Next actions
 
-1. Передать RQ-001 и `docs/literature_mapping/RQ-001_protocol.md` Literature Scout как pilot task.
-2. Выполнить только discovery/screening, не формируя HYP и не объявляя ответ на RQ.
-3. Получить reproducible search log, screened candidate table, 2–5 seed papers, gaps и structured Zotero/Paper Analyst handoffs.
-4. Проверить качество пилотного handoff и при необходимости скорректировать protocol pattern.
-5. Затем выполнять mapping в порядке RQ-002 → RQ-003 → RQ-004 → RQ-005.
+1. Выполнить Zotero handoffs из pilot и completion-delta reports с duplicate/metadata/PDF checks.
+2. Получить verified full text для C45, C46 и C38.
+3. Передать эту тройку Paper Analyst и получить отдельную Paper Card на каждый источник.
+4. Построить сравнительную extraction matrix `event × metric × aggregation × horizon × assumptions`.
+5. После matrix решить, нужны ли дополнительные Paper Cards и какие конкретные claims передавать Evidence Auditor.
+6. Не запускать RQ-002 до первичного evidence synthesis по RQ-001.
 
 ## Notes
 
-Этот файл должен оставаться коротким. Он отражает текущее canonical state, а не историю проекта.
+Этот файл отражает текущее canonical state. RQ-001 discovery может быть переоткрыт только при конкретном paper-level evidence gap либо после восстановления доступа к eLibrary.

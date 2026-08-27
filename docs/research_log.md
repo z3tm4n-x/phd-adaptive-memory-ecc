@@ -46,3 +46,29 @@
 - Dependency-aware order: RQ-001 → RQ-002 → RQ-003 → RQ-004 → RQ-005.
 - RQ-001 выбран пилотом Literature Scout, поскольку его event/metric/horizon определяют evidence targets и decision semantics для последующих reliability и ECC questions.
 - Новый active gate: принять воспроизводимый Literature Scout handoff по RQ-001 перед масштабированием mapping.
+
+## 2026-08-27
+
+### RQ-001 Literature Scout outputs registered
+
+- Pilot report от 2026-08-26 и completion-delta report от 2026-08-27 сохранены в `docs/literature_mapping/` без редактирования содержания.
+- После delta candidate register содержит 53 записи: 24 `CORE`, 16 `RELATED`, 3 `BACKGROUND`, 10 `REJECT`.
+- Выполнены исходные IEEE Xplore queries, refinement queries, Scite bibliographic/editorial-signal checks и bounded ResearchRabbit expansion.
+- Abstract-level mapping не интерпретируется как paper-level evidence и не отвечает на RQ-001.
+
+### RQ-001 discovery disposition
+
+- Пользователь решил пока не выполнять eLibrary search, поскольку eLibrary недоступна Literature Scout.
+- eLibrary зафиксирована как `DEFERRED / UNKNOWN COVERAGE`, но не как нулевой результат и не как блокер текущего gate.
+- Исходный protocol stopping criterion полностью не выполнен: eLibrary отсутствует, а refinement/expansion добавили новые категории.
+- Orchestrator принял discovery как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`, поскольку все основные RQ-001 evidence dimensions имеют candidates, а оставшаяся неопределённость требует full-text extraction.
+- Это явное stop-and-handoff decision, а не утверждение saturation, completeness, research gap или ответа на RQ.
+- Numerical reliability threshold остаётся `TBD`; `HYP`, `CLM`, `EVD` и `RES` не создавались.
+
+### Next gate: RQ-001 full-text extraction
+
+- Выполнить Zotero handoffs из обоих Literature Scout reports.
+- Получить verified full text для C45, C46 и C38.
+- Paper Analyst создаёт отдельную Paper Card для каждого источника.
+- Затем Orchestrator строит extraction matrix `event × metric × aggregation × horizon × assumptions` и определяет последующий evidence-review scope.
+- RQ-002 не запускается до первичного evidence synthesis по RQ-001.

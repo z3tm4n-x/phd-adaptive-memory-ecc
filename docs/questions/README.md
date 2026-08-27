@@ -39,4 +39,13 @@ RQ-xxx-short-title.md
 4. RQ-004 — определить online observables.
 5. RQ-005 — зафиксировать measurable resource-cost vector.
 
-RQ-005 literature mapping может получить предварительный parallel pass после пилота, но окончательное решение зависит от RQ-001, RQ-003 и RQ-004. Пилотный Literature Scout запускается для RQ-001.
+RQ-005 literature mapping может получить предварительный parallel pass, но окончательное решение зависит от RQ-001, RQ-003 и RQ-004.
+
+## RQ-001 evidence workflow
+
+Literature Scout discovery для RQ-001 завершён в текущем доступном source scope и принят как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`:
+
+- [Pilot report](../literature_mapping/RQ-001_literature_mapping_pilot_2026-08-26.md)
+- [Completion delta](../literature_mapping/RQ-001_literature_mapping_completion_delta_2026-08-27.md)
+
+eLibrary coverage отложена из-за отсутствия доступа у Literature Scout и остаётся явным coverage limitation. Активный gate — Zotero reconciliation, full-text Paper Cards по C45/C46/C38 и extraction matrix для RQ-001. RQ-002 остаётся в очереди до первичного evidence synthesis по RQ-001.

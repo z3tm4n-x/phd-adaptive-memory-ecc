@@ -55,14 +55,26 @@ RQ считается отвеченным, когда зафиксирован�
 
 Если конкретный численный threshold не задан источниками или системными требованиями, он остаётся `TBD`; численное значение не изобретается.
 
+## Literature mapping status
+
+Literature Scout discovery зафиксирован как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
+
+- [Pilot report](../literature_mapping/RQ-001_literature_mapping_pilot_2026-08-26.md)
+- [Completion delta](../literature_mapping/RQ-001_literature_mapping_completion_delta_2026-08-27.md)
+- Cumulative candidate register: 53 records — 24 `CORE`, 16 `RELATED`, 3 `BACKGROUND`, 10 `REJECT`.
+- eLibrary coverage: `DEFERRED / UNKNOWN`; не блокирует текущий gate.
+- Mapping не является ответом на RQ-001.
+
 ## Next action
 
-Передать `docs/literature_mapping/RQ-001_protocol.md` Literature Scout для пилотного targeted literature mapping.
+После Zotero reconciliation и получения полных текстов передать C45, C46 и C38 Paper Analyst. Получить три отдельные Paper Cards и построить extraction matrix `event × metric × aggregation × horizon × assumptions`.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-002, RQ-003.
-- PAPER/CLM/EVD/HYP/EXP: TBD после targeted literature mapping.
+- Priority candidates for Paper Analyst: C45, C46, C38.
+- Permanent `PAPER-xxx` IDs: TBD после создания и принятия Paper Cards.
+- CLM/EVD/HYP/EXP: не создавались.
 
 ## Answer
 

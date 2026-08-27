@@ -1,9 +1,10 @@
 # Targeted Literature Mapping Protocol — RQ-001
 
 **Related RQ:** RQ-001  
-**Status:** READY — SEARCH NOT STARTED  
+**Status:** EXECUTED — SUFFICIENT FOR PAPER ANALYSIS; NOT EXHAUSTIVE  
 **Owner role:** Literature Scout  
-**Prepared:** 2026-08-26
+**Prepared:** 2026-08-26  
+**Disposition reviewed:** 2026-08-27
 
 ## Research Question
 
@@ -170,3 +171,34 @@ Literature Scout возвращает:
 - Не создавать HYP, CLM или EVD на стадии discovery.
 - Не изменять `docs/research_spec.md`.
 - Не объявлять novelty/gap или ответ на RQ-001 только по результатам mapping.
+
+
+## Execution record and orchestration disposition
+
+Canonical Literature Scout outputs:
+
+- [Pilot report](RQ-001_literature_mapping_pilot_2026-08-26.md) — executed 2026-08-26;
+- [Completion delta](RQ-001_literature_mapping_completion_delta_2026-08-27.md) — executed 2026-08-27.
+
+Cumulative screened register after the completion delta:
+
+- `CORE`: 24;
+- `RELATED`: 16;
+- `BACKGROUND`: 3;
+- `REJECT`: 10;
+- total candidates: 53.
+
+**Discovery disposition:** `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
+
+The original stopping criterion was not fully met: eLibrary queries were not executed and the completed refinement/expansion batches added new categories. On 2026-08-27 the user explicitly deferred eLibrary because it is unavailable to Literature Scout. The Orchestrator therefore accepted the current mapping as sufficient for full-text extraction, while preserving the following limitations:
+
+- no claim of search saturation or exhaustiveness is made;
+- Russian/eLibrary coverage remains unknown;
+- the mapping does not answer RQ-001;
+- event, metric, aggregation and horizon remain `UNKNOWN`;
+- numerical reliability threshold remains `TBD`;
+- no `HYP`, `CLM` or `EVD` is created from abstract-level screening.
+
+This is an explicit orchestration stop-and-handoff decision, not evidence that no additional literature exists. Discovery may be reopened only when Paper Analyst identifies a specific missing definition/model, or when eLibrary access becomes available.
+
+**Next handoff:** after Zotero reconciliation and full-text acquisition, Paper Analyst creates separate Paper Cards for C45, C46 and C38.
