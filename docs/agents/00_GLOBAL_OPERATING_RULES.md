@@ -85,6 +85,18 @@ Use stable identifiers after acceptance:
 
 Candidate Research Questions must use temporary `C-RQ-xx` identifiers until accepted. Do not consume permanent IDs for disposable candidates.
 
+### Paper Card lifecycle
+
+Literature Scout candidate IDs such as `C38` identify discovery records; they are not permanent Paper IDs.
+
+The normal lifecycle is:
+
+`Cxx → full-text analysis → DRAFT Paper Card → Orchestrator acceptance → PAPER-xxx`.
+
+Paper Analyst must not assign a permanent `PAPER-xxx` identifier. A draft Paper Card is an analytical artefact, not accepted evidence. Candidate statements inside a draft card remain candidate claims until they are explicitly accepted for Evidence Auditor review.
+
+No agent may silently upgrade a candidate RQ, Paper Card, Claim, Evidence record, Hypothesis, Decision, or Result to accepted canonical state outside the active workflow.
+
 ## 7. GitHub write policy
 
 Agents may read canonical state whenever needed.
@@ -144,7 +156,28 @@ GitHub / Zotero / Scite / local files / chat only
 
 Handoffs should transfer structured state, not long chat transcripts.
 
-## 10. Completion discipline
+## 10. Artefact proportionality rule
+
+Do not create a research artefact merely because a template exists.
+
+Before requesting or creating an artefact, ask:
+
+1. Will it close a defined evidence gap?
+2. Will it change or enable a research decision?
+3. Is it required for reproducibility or traceability?
+
+If the answer to all three is no, do not create the artefact.
+
+The depth of documentation must be proportional to scientific importance. Typical default:
+
+- `CORE` source selected for evidence extraction → full Paper Card;
+- `RELATED` source → targeted extraction only when needed;
+- `BACKGROUND` source → Zotero metadata/notes are normally sufficient;
+- `REJECT` → screening record only.
+
+Do not optimize for number of artefacts, papers, pages, commits, or generated text.
+
+## 11. Completion discipline
 
 For substantial tasks, report:
 

@@ -43,6 +43,28 @@ Citation-network expansion after seed papers:
 
 - ResearchRabbit.
 
+## Iterative search discipline
+
+The first mapping report for an RQ may be consolidated. Every additional search cycle must be **delta-only** unless the Orchestrator explicitly requests a consolidated report.
+
+A delta report contains only:
+
+- newly executed queries or search routes;
+- new or reclassified candidates;
+- changed evidence coverage;
+- newly discovered evidence/model categories;
+- saturation/stopping result;
+- updated Zotero/Paper Analyst handoffs.
+
+Do not repeat unchanged candidate tables, search logs, or background explanations.
+
+Do not launch another discovery cycle merely because additional papers exist. A new cycle requires at least one of:
+
+- a specific uncovered evidence category;
+- a concrete evidence gap returned by Paper Analyst/Orchestrator;
+- failure of a protocol stopping criterion;
+- explicit Orchestrator decision.
+
 ## Scite boundary
 
 At Scout stage Scite is a secondary discovery and sanity-check layer. Use it to:
@@ -73,6 +95,8 @@ Use:
 
 Record the reason for rejecting borderline material when it may matter later.
 
+Classification controls depth; it does not imply that every accepted record must receive a full Paper Card. Full deep reads are reserved for `CORE` sources selected to answer a concrete evidence need. `RELATED` sources normally receive targeted extraction only when required; `BACKGROUND` normally remains Zotero-level context.
+
 ## Seed-paper policy
 
 Do not optimize for maximum paper count. The first objective is to identify a small number of strong seed papers that expose terminology, methods, citations, and research groups.
@@ -91,7 +115,7 @@ A Scout handoff should include:
 - proposed seed papers and why;
 - unresolved terminology/search gaps;
 - `HANDOFF TO ZOTERO` if records need local import;
-- recommended papers for Paper Analyst.
+- recommended papers for Paper Analyst tied to explicit extraction questions.
 
 ## Prohibited behavior
 
@@ -99,4 +123,5 @@ A Scout handoff should include:
 - do not infer full-paper conclusions from title/abstract;
 - do not declare a research gap from a small discovery sample;
 - do not confuse “highly cited” with “correct”;
-- do not deep-read every candidate before triage.
+- do not deep-read every candidate before triage;
+- do not keep expanding recursively after the stopping criterion is satisfied without a new decision.

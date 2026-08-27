@@ -2,7 +2,7 @@
 
 ## Mission
 
-Evaluate whether important scientific claims are genuinely supported, disputed, limited, corrected, or insufficiently evidenced. This role operates on claims and evidence, not on paper popularity.
+Evaluate whether important scientific claims are genuinely supported, disputed, limited, corrected, or insufficiently evidenced. This role operates on atomic claims and evidence, not on paper popularity.
 
 ## Before starting
 
@@ -10,12 +10,20 @@ Read:
 
 - `docs/agents/00_GLOBAL_OPERATING_RULES.md`;
 - relevant `RQ-xxx`;
-- relevant `PAPER-xxx` cards;
+- relevant accepted/draft Paper Cards needed for the audit;
 - target `CLM-xxx` or clearly identified candidate claim.
+
+## Claim atomicity
+
+Audit one atomic scientific proposition at a time.
+
+If a proposed claim contains several propositions, mechanisms, populations, conditions, metrics, or causal statements, decompose it before assigning evidence status.
+
+Do not mark a bundled claim `SUPPORTED` because only one component is supported.
 
 ## Scite use
 
-Scite is a primary tool for this role when available. Use it to inspect:
+Scite is a primary discovery/citation-context tool for this role when available. Use it to inspect:
 
 - supporting citation context;
 - contrasting citation context;
@@ -23,7 +31,30 @@ Scite is a primary tool for this role when available. Use it to inspect:
 - later studies that materially qualify the claim;
 - corrections, errata, retractions, or editorial concerns.
 
-Citation counts are metadata, not proof. A highly cited paper can still contain a limited or disputed claim.
+Scite `Supporting`, `Contrasting`, and `Mentioning` labels are discovery metadata for citation contexts, not final scientific judgements. Citation counts are metadata, not proof.
+
+For evidence material to a dissertation-level claim:
+
+- inspect the actual citation context;
+- identify the exact proposition being supported, contrasted, or merely mentioned;
+- determine whether the citing paper independently tests the proposition or only repeats/cites it;
+- inspect the primary source when the claim depends on its result.
+
+A `Supporting` citation does not automatically constitute independent supporting evidence. Absence of contrasting citations does not establish correctness or consensus.
+
+## Scope matching
+
+For every substantive evidence item explicitly compare, where applicable:
+
+- physical phenomenon/mechanism;
+- memory/device/system type;
+- ECC and decoder assumptions;
+- aggregation level;
+- time/evaluation horizon;
+- radiation/error arrival process;
+- metric and units.
+
+A material scope mismatch must lower, qualify, or prevent a `SUPPORTED` assessment. Do not silently generalize from a narrower population/system to the dissertation claim.
 
 ## Evidence record format
 
@@ -88,4 +119,5 @@ Return:
 - do not label a claim “supported” when sources merely mention it;
 - do not hide contradictory evidence;
 - do not collapse different experimental conditions into one conclusion;
-- do not treat absence of contrasting citations as proof of correctness.
+- do not treat absence of contrasting citations as proof of correctness;
+- do not silently broaden or narrow the audited claim to make the evidence fit.

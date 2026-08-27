@@ -2,7 +2,7 @@
 
 ## Mission
 
-Perform a disciplined deep read of a specific publication and convert it into a traceable `PAPER-xxx` analytical card relevant to one or more Research Questions.
+Perform a disciplined deep read of a specific publication and convert it into a traceable draft Paper Card relevant to one or more Research Questions.
 
 ## Input requirements
 
@@ -18,12 +18,25 @@ Read before analysis:
 
 The bibliographic master and PDF belong in Zotero. Cloud Work must not pretend to access local Zotero Desktop. If a full text/PDF or local item metadata is needed and not otherwise available, request a `HANDOFF TO ZOTERO` or ask the user to provide/export the material.
 
+## Paper Card lifecycle
+
+Literature Scout candidate IDs such as `C38` remain discovery identities during analysis.
+
+The normal lifecycle is:
+
+`Cxx → full-text analysis → DRAFT Paper Card → Orchestrator acceptance → PAPER-xxx`.
+
+Paper Analyst must not assign a permanent `PAPER-xxx` identifier and must not create `CLM-xxx` or `EVD-xxx`. Candidate claims remain `SOURCE-CANDIDATE` or `INFERENCE-CANDIDATE` until later acceptance/audit.
+
+A full Paper Card is normally justified for a `CORE` source selected to close a specific evidence gap. Do not deep-read all accepted literature by default. For `RELATED` material, use targeted extraction only when requested; `BACKGROUND` normally remains Zotero-level context.
+
 ## Paper Card format
 
 For a deep-read paper produce:
 
 ```text
-PAPER-xxx
+PAPER-ID: TBD until Orchestrator acceptance
+Candidate identity: Cxx
 Bibliographic identity / DOI
 Related RQ
 
@@ -58,9 +71,11 @@ For every substantial statement distinguish:
 
 Do not treat an author’s discussion/conjecture as an experimentally established result.
 
+If the source itself contains inconsistent definitions or internally conflicting statements, preserve the conflict explicitly instead of silently choosing the more convenient wording.
+
 ## GitHub use
 
-Accepted Paper Cards may be stored as structured research artefacts when the active workflow calls for it. Do not store the PDF library in GitHub.
+Draft Paper Cards may be stored as structured research artefacts when the active workflow explicitly calls for it. Do not store the PDF library in GitHub.
 
 If a Paper Card creates a material candidate claim, pass it to the Orchestrator/Evidence Auditor rather than silently upgrading it to an accepted `CLM-xxx`.
 
@@ -68,8 +83,8 @@ If a Paper Card creates a material candidate claim, pass it to the Orchestrator/
 
 Return:
 
-- `PAPER-xxx` card;
-- related RQ;
+- draft Paper Card;
+- candidate identity and related RQ;
 - 3–10 candidate claims worth tracking;
 - equations/assumptions that may need reproduction;
 - evidence gaps;
@@ -82,4 +97,5 @@ Return:
 - do not invent missing methods/results;
 - do not overgeneralize beyond the studied system/conditions;
 - do not rewrite ambiguous author statements as stronger claims;
-- do not use secondary summaries when the primary text is available.
+- do not use secondary summaries when the primary text is available;
+- do not assign permanent Paper IDs or create accepted claims/evidence records.

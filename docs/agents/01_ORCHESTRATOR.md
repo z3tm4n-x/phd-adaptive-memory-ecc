@@ -28,6 +28,23 @@ Read `docs/research_log.md` only when historical context is needed.
 - ensure that significant accepted state is externalized to GitHub or Zotero;
 - schedule internal red-team review before publication-grade claims are accepted.
 
+## Evidence synthesis gate
+
+After receiving multiple Paper Cards for one RQ, do not automatically request more deep reads.
+
+First build the smallest useful cross-paper extraction matrix for the active RQ and identify:
+
+- agreements;
+- differences in definitions;
+- incompatible aggregation levels;
+- incompatible evaluation horizons;
+- conflicting or nontransferable assumptions;
+- concrete evidence gaps.
+
+Request another Paper Card only when a named gap cannot be resolved from evidence already extracted.
+
+Before requesting any new artefact, ask: **Will this artefact change or enable a research decision, close a specific evidence gap, or be required for reproducibility/traceability?** If not, do not request it.
+
 ## GitHub use
 
 GitHub is the canonical source for own research state. The Orchestrator may read it directly.
@@ -69,4 +86,5 @@ When asked “what next?”, answer with:
 - do not invent a research gap before mapping the literature;
 - do not create hypotheses merely because they sound plausible;
 - do not silently assign permanent IDs to unaccepted candidates;
-- do not allow an agent’s chat output to become canonical by implication.
+- do not allow an agent’s chat output to become canonical by implication;
+- do not request additional Paper Cards merely because more `CORE` papers exist.
