@@ -84,11 +84,10 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **Infrastructure setup:** завершён.
 - **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
 - **AI-agent operating model:** настроен в `docs/agents/`.
-- **Research Specification:** `v0.2-draft`.
-- **Текущая фаза:** RQ-001 provisional definition approval.
-- **Accepted Paper Cards:** `PAPER-001…003` in `docs/paper_cards/`.
-- **Evidence Audit:** accepted with `RQ001-EA-CAND-10` deferred.
-- **Accepted claims:** `CLM-001…008` in `docs/claims/`.
-- **Provisional package:** `docs/evidence_synthesis/RQ-001_provisional_definition_package.md`.
-- **Active gate:** user approval or amendment of the proposed event, metric, aggregate and horizon semantics.
-- **Constraint:** RQ-002 remains queued until this gate is completed; the numerical reliability threshold remains `TBD`.
+- **Research Specification:** `v0.3-draft`.
+- **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
+- **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
+- **Numerical reliability requirement:** `TBD`.
+- **Current phase:** RQ-002 targeted literature mapping handoff preparation.
+- **Active gate:** execute `docs/literature_mapping/RQ-002_protocol.md`; search has not yet started.
+- **Constraint:** RQ-003 retains decoder-outcome semantics; RQ-001 remains open.

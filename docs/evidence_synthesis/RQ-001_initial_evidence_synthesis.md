@@ -161,17 +161,12 @@ Additional full-text cards may be requested only after audit if a named gap rema
 
 This is not an active search order.
 
-## 10. Next gate
+## 10. Orchestrator decision and downstream gate
 
-`RQ-001 PROVISIONAL DEFINITION — USER APPROVAL`.
+The evidence-audit and approval gates are complete.
 
-The [provisional definition package](RQ-001_provisional_definition_package.md) asks for explicit approval or amendment of:
-
-1. the primitive ECC capability-exceedance event `E_cap(A,H)`;
-2. the cumulative first-passage metric `F_A(H)`;
-3. the complete controller-protected SRAM region as the default aggregate;
-4. separate upset-count, per-codeword exposure and reporting/mission horizons;
-5. separation of the physical capability-exceedance event from DUE, SDC and system-visible consequences;
-6. the post-approval status `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
-
-The numerical requirement `F_A(H_req) ≤ ε_req` retains both `H_req` and `ε_req` as `TBD` until traceable system or mission requirements exist. `RQ-001` remains `INVESTIGATING` and `RQ-002` remains queued until this approval gate is completed.
+- [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md) records the accepted working event, metric, declared/partitioned protection domain and horizon semantics.
+- RQ-001 is `PARTIALLY ANSWERED / OPEN DEPENDENCIES`, not closed.
+- CAND-10 remains deferred.
+- Decoder/system outcomes and numerical requirements remain `OPEN/TBD`.
+- The next active gate is RQ-002 targeted literature mapping; no RQ-002 search is started by this document.

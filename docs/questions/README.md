@@ -25,8 +25,8 @@ RQ-xxx-short-title.md
 
 | Permanent ID | Source candidate | Short title | Status | Mapping protocol |
 |---|---|---|---|---|
-| [RQ-001](RQ-001-reliability-event-metric-horizon.md) | C-RQ-01 | Reliability event, metric and horizon | OPEN | [Protocol](../literature_mapping/RQ-001_protocol.md) |
-| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN | [Protocol](../literature_mapping/RQ-002_protocol.md) |
+| [RQ-001](RQ-001-reliability-event-metric-horizon.md) | C-RQ-01 | Reliability event, metric and horizon | PARTIALLY ANSWERED / OPEN DEPENDENCIES | [Protocol](../literature_mapping/RQ-001_protocol.md) |
+| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / ACTIVE GATE | [Protocol](../literature_mapping/RQ-002_protocol.md) |
 | [RQ-003](RQ-003-ecc-abstraction-baseline-class.md) | C-RQ-04 | ECC abstraction and baseline class | OPEN | [Protocol](../literature_mapping/RQ-003_protocol.md) |
 | [RQ-004](RQ-004-online-observables-for-adaptation.md) | C-RQ-06 | Online observables for adaptation | OPEN | [Protocol](../literature_mapping/RQ-004_protocol.md) |
 | [RQ-005](RQ-005-resource-cost-vector.md) | C-RQ-10 | Measurable resource-cost vector | OPEN | [Protocol](../literature_mapping/RQ-005_protocol.md) |
@@ -41,23 +41,17 @@ RQ-xxx-short-title.md
 
 RQ-005 literature mapping может получить предварительный parallel pass, но окончательное решение зависит от RQ-001, RQ-003 и RQ-004.
 
-## RQ-001 evidence workflow
+## RQ-001 disposition and RQ-002 gate
 
-Literature Scout discovery для RQ-001 завершён в текущем доступном source scope и принят как `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`:
+RQ-001 discovery was accepted as `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`; eLibrary remains deferred/unknown coverage.
 
-- [Pilot report](../literature_mapping/RQ-001_literature_mapping_pilot_2026-08-26.md)
-- [Completion delta](../literature_mapping/RQ-001_literature_mapping_completion_delta_2026-08-27.md)
+Accepted evidence:
 
-eLibrary coverage отложена из-за отсутствия доступа у Literature Scout и остаётся явным coverage limitation.
+- [PAPER-001…003](../paper_cards/README.md);
+- [initial cross-paper synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md);
+- [Evidence Audit 01](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md);
+- [CLM-001…008](../claims/README.md).
 
-Принятые full-text Paper Cards:
+[DEC-001](../decisions/DEC-001-rq001-reliability-contract.md) records the accepted event, metric, protection-domain/partition and horizon contract. RQ-001 is `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; it is not closed, and the numerical reliability requirement remains `TBD`.
 
-- [PAPER-001](../paper_cards/PAPER-001-tausch-2009.md) — C45, Tausch, 2009;
-- [PAPER-002](../paper_cards/PAPER-002-baeg-wen-wong-2009.md) — C46, Baeg, Wen, Wong, 2009;
-- [PAPER-003](../paper_cards/PAPER-003-lee-baeg-reviriego-2011.md) — C38, Lee, Baeg, Reviriego, 2011.
-
-Canonical matrix and initial synthesis: [RQ-001 initial evidence synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
-
-[Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md) принят с отложенным `RQ001-EA-CAND-10`. Permanent claim registry содержит [`CLM-001…008`](../claims/README.md).
-
-Active gate: approve or amend the [RQ-001 provisional definition package](../evidence_synthesis/RQ-001_provisional_definition_package.md). Until then RQ-001 remains `INVESTIGATING`, RQ-002 remains queued, and the numerical reliability threshold remains `TBD`.
+RQ-002 is now the active gate. Its [targeted mapping protocol](../literature_mapping/RQ-002_protocol.md) is ready for a Literature Scout handoff; the mapping has not yet started.

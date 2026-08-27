@@ -120,3 +120,25 @@
 - Package proposes `E_cap(A,H)`, `F_A(H)`, a controller-protected SRAM aggregate, layered horizon semantics and separation from DUE/SDC/system consequences.
 - `H_req` and `ε_req` remain `TBD`; illustrative values from the papers are not project requirements.
 - Until explicit approval, RQ-001 remains `INVESTIGATING` and RQ-002 remains queued.
+
+### DEC-001 accepted — RQ-001 working reliability contract
+
+- Пользователь утвердил все шесть решений RQ-001 с уточнениями notation and aggregation.
+- `E_cap` принят как primitive ECC-capability-exceedance event; automatic equivalence to DUE, SDC, miscorrection or system-visible failure запрещена.
+- General reporting window фиксируется как \(H(t_0,T)=[t_0,t_0+T]\); metric сохраняет start time и declared initial state/distribution: \(F_A(t_0,T;\mu_{t_0})\).
+- `F_A(T)` разрешена только как сокращённая форма при явном time origin и initial state.
+- Default aggregate — explicitly declared controller-managed protection domain \(A\); heterogeneous ECC, \(W\), arrival, bank/block or scrubbing semantics require partitioning before quantitative aggregation.
+- Per-codeword/sequential exposure semantics classified as `WORKING DEFINITION / MODELING REQUIREMENT`, not literature fact; CAND-10 remains deferred.
+- Decoder/system outcomes, \(H_{\mathrm{req}}\) and \(\varepsilon_{\mathrm{req}}\) remain `OPEN/TBD`.
+- Decision зарегистрирован как `DEC-001`; numerical reliability requirement, `HYP`, `EVD` and `RES` не создавались.
+
+### RQ-001 partial disposition and RQ-002 gate opening
+
+- RQ-001 переведён в `PARTIALLY ANSWERED / OPEN DEPENDENCIES` and remains open.
+- Research Specification advanced to `v0.3-draft` to record the accepted working contract.
+- RQ-002 gate открыт with DEC-001 as its event/metric/domain input contract.
+- RQ-003 retains responsibility for decoder-outcome semantics.
+- RQ-002 protocol aligned with DEC-001; eLibrary explicitly remains `DEFERRED / UNKNOWN COVERAGE` for Literature Scout.
+- RQ-002 literature search was not started in this recording step.
+- Next action: issue the exact Literature Scout handoff from `docs/literature_mapping/RQ-002_protocol.md` and apply the C-RQ-05 MCU/MBU/spatial-correlation escalation rule.
+

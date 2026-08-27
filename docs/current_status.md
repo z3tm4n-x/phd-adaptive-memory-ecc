@@ -4,79 +4,75 @@
 
 ## Current phase
 
-RQ-001 provisional definition — user approval gate.
+RQ-002 targeted literature mapping — handoff preparation.
 
 ## Infrastructure status
 
 - GitHub repository setup: complete.
 - Zotero setup: complete.
 - AI-agent operating model: complete; canonical role instructions are in `docs/agents/`.
-- Research Specification: `v0.2-draft`.
+- Research Specification: `v0.3-draft`.
 
 ## Active gate
 
-Review and approve/amend/reject `docs/evidence_synthesis/RQ-001_provisional_definition_package.md`. Until approval, RQ-001 remains `INVESTIGATING`, RQ-002 remains queued, and no project numerical reliability threshold is assigned.
+Prepare and run the targeted Literature Scout handoff defined by `docs/literature_mapping/RQ-002_protocol.md`. The gate is open, but no RQ-002 literature search has been started by the DEC-001 recording commit.
 
 ## Active Research Questions
 
-- RQ-001 — reliability event, metric and evaluation horizon — `INVESTIGATING / PROVISIONAL DEFINITION PENDING`.
-- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / QUEUED`.
+- RQ-001 — reliability event, metric and evaluation horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
+- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / ACTIVE GATE / MAPPING NOT STARTED`.
 - RQ-003 — ECC abstraction and baseline code class — `OPEN / QUEUED`.
 - RQ-004 — online observables for adaptation — `OPEN / QUEUED`.
 - RQ-005 — measurable resource-cost vector — `OPEN / QUEUED`.
 
-## RQ-001 evidence state
+## Accepted RQ-001 decision
 
-- Literature discovery: `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
-- eLibrary: `DEFERRED / UNKNOWN COVERAGE`; not a blocker for the current gate.
-- Accepted Paper Cards: `PAPER-001`, `PAPER-002`, `PAPER-003`, all `CORE`.
-- Cross-paper synthesis: complete as an initial, non-final synthesis.
-- Evidence Audit `RQ-001-EVIDENCE-AUDIT-01`: accepted with limitation.
-- Audit result: 11 candidate propositions supported; `RQ001-EA-CAND-10` partially supported and deferred.
-- Synthesis typo `seven exact claims` corrected to `twelve exact claims`.
+[DEC-001](decisions/DEC-001-rq001-reliability-contract.md) records:
 
-## Accepted claims
+- primitive event `E_cap` as ECC capability exceedance, not an automatic DUE/SDC/miscorrection/system-failure label;
+- reporting window \(H(t_0,T)=[t_0,t_0+T]\);
+- general metric \(F_A(t_0,T;\mu_{t_0})\), with the initial state/distribution required by every quantitative model;
+- an explicitly declared controller-managed SRAM protection domain \(A\);
+- mandatory partitioning of \(A\) when ECC, mapping \(W\), arrival, bank/block or scrubbing semantics differ;
+- distinct upset-count, per-codeword exposure, reporting and mission horizons;
+- sequential exposure as a working modeling requirement, not a literature-established fact.
 
-- `CLM-001` — count horizon requires an arrival and repair model before time interpretation.
-- `CLM-002` — harmful same-particle MBU is outside the main PAPER-001 equation.
-- `CLM-003`/`CLM-004` — PAPER-002/PAPER-003 analytical totals lose failed-word mechanism provenance.
-- `CLM-005`/`CLM-006` — an unpartitioned direct-MCU term overlaps those totals under matched scope/horizon/units.
-- `CLM-007` — PAPER-002 upper-bound interpretation is conditional on MCU span relative to ID.
-- `CLM-008` — the analyzed papers model multiplicity beyond capability, not decoder/service outcome.
+## RQ-001 open dependencies
 
-Candidate source facts `RQ001-EA-CAND-01…03` remain in Paper Cards and the matrix rather than receiving redundant `CLM` records.
+- concrete ECC/decoder outcomes — RQ-003;
+- adequate error-arrival/correlation model — RQ-002;
+- target physical mapping \(W\);
+- nonstationary mission aggregation;
+- system-visible consequence model;
+- \(H_{\mathrm{req}}\) and \(\varepsilon_{\mathrm{req}}\) — `TBD` pending traceable requirements;
+- CAND-10 remains deferred.
 
-## Deferred claim
+## RQ-002 input contract
 
-`RQ001-EA-CAND-10` is not accepted as a permanent claim. Its missing word-specific exposure-age component is supported, while the stronger effective-global-reset interpretation requires the primary periodic-maintenance derivation or equivalent scrub-state evidence.
+RQ-002 must evaluate candidate error models by whether they can produce the declared `E_cap` metric for:
+
+- a stated reporting window and initial state/distribution;
+- an explicitly declared or partitioned protection domain;
+- direct same-particle and independent-accumulation mechanisms without untracked overlap;
+- stationary and nonstationary scenarios within stated validity domains.
+
+The C-RQ-05 escalation gate remains mandatory if MCU/MBU or spatial correlation is material or cannot be safely excluded/bounded.
 
 ## Active hypotheses and own results
 
 - No `HYP-xxx` has been registered.
 - No `RES-xxx` has been registered.
-- Paper Cards, claims and evidence audits are literature-analysis artefacts, not own experimental results.
-
-## Current unknowns / TBD
-
-- Approval of the proposed primitive event `E_cap(A,H)` — pending.
-- Approval of primary metric `F_A(H)` and aggregation boundary — pending.
-- Exact ECC/decoder outcomes — RQ-003 dependency.
-- Target physical mapping `W` and error process — later RQ-002/RQ-003 work.
-- Mission aggregation for nonstationary conditions — unresolved.
-- System-visible consequence model — unresolved.
-- Numerical requirement `H_req` and `ε_req` — `TBD` pending traceable requirements.
-- Sequential scrub implementation details — unresolved; global reset is not adopted as a literature-established fact.
+- `DEC-001` is a research decision, not an own experimental result.
 
 ## Next actions
 
-1. Review the six approval questions in the provisional definition package.
-2. If approved, record the accepted RQ-001 working definition and status `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
-3. Only after that gate may RQ-002 begin with the accepted event/metric contract as input.
-4. Revisit the deferred scrub-abstraction claim only if it changes the selected model or decision.
-5. Reconcile six contextual audit sources with Zotero before they are used as cited evidence in publication text; no automatic Paper Cards.
+1. Issue the exact RQ-002 Literature Scout handoff using `docs/literature_mapping/RQ-002_protocol.md` and DEC-001 as its input contract.
+2. Do not assume Poisson arrivals, independence, stationarity or negligible MCU/MBU before evidence screening.
+3. Apply the C-RQ-05 escalation rule during screening.
+4. Keep RQ-001 open and revisit DEC-001 only under its explicit revisit conditions.
+5. Do not assign a numerical reliability requirement without traceable provenance.
 
 ## Notes
 
-- Illustrative thresholds and scrub intervals from `PAPER-002`/`PAPER-003` are not project requirements.
-- Upset-count, per-codeword exposure, scrub-cycle and mission horizons remain distinct.
-- No new literature search is active.
+- eLibrary remains deferred where Literature Scout lacks access; an unavailable database is recorded as unknown coverage, not as zero results.
+- No new literature search is active at the end of this commit.

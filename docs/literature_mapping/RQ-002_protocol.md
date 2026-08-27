@@ -1,7 +1,7 @@
 # Targeted Literature Mapping Protocol — RQ-002
 
 **Related RQ:** RQ-002  
-**Status:** READY — SEARCH NOT STARTED  
+**Status:** READY — SEARCH NOT STARTED — DEC-001 ALIGNED  
 **Owner role:** Literature Scout  
 **Prepared:** 2026-08-26
 
@@ -14,6 +14,21 @@
 Картировать эмпирически поддержанные model classes и допущения о arrival process, accumulation, non-stationarity, MCU/MBU и correlations, чтобы выбрать минимально достаточную error model и проверить decision gate по C-RQ-05.
 
 Mapping должен уменьшить неопределённость, необходимую для принятия решения по RQ-002; он не должен превращаться в общий обзор темы и не считается ответом на RQ.
+
+## Input contract from DEC-001
+
+Every candidate model must be assessed against the accepted RQ-001 contract:
+
+- primitive event `E_cap(A;t0,T)`;
+- general metric `F_A(t0,T; μ_t0)`;
+- explicit reporting window and initial state/distribution;
+- explicitly declared controller-managed SRAM protection domain `A`;
+- partitioning before aggregation when ECC, mapping `W`, arrival process, bank/block or scrubbing semantics differ;
+- distinct upset-count, per-codeword exposure, reporting and mission layers;
+- no automatic equivalence between `E_cap` and DUE/SDC/miscorrection/system-visible failure.
+
+Literature Scout must identify which state variables and assumptions each model needs to calculate the accepted event/metric. Decoder-outcome semantics remain with RQ-003.
+
 
 ## Concepts and synonyms
 
@@ -39,6 +54,9 @@ Mapping должен уменьшить неопределённость, нео
 Если интерфейс не поддерживает данную форму Boolean syntax, строка разбивается на эквивалентные запросы без смыслового расширения; все выполненные варианты документируются.
 
 ## eLibrary search concepts/strings
+
+**Current execution disposition:** `DEFERRED / UNKNOWN COVERAGE`. eLibrary is unavailable to Literature Scout and must not be queried in this cycle. The strings below are retained for a future local/authorized handoff; lack of access is not a zero-result finding and does not block the bounded IEEE Xplore/Scite/ResearchRabbit mapping.
+
 
 Искать по русским и английским терминам; при ограничениях интерфейса выполнять concept blocks отдельно и записывать точную фактическую строку.
 
@@ -131,6 +149,8 @@ ResearchRabbit используется только после выбора 2�
 - Frequency/distribution и spatial structure MCU/MBU.
 - Domain of validity по device technology, geometry и radiation environment.
 - Evidence, достаточный для decision gate: материально ли MCU/MBU или spatial correlation меняют структуру/вероятность reliability event RQ-001.
+- State variables needed to specify `μ_t0`, including accumulated errors, word exposure ages and scrubber state where relevant.
+- Evidence on when a controller-managed domain must be partitioned and how dependence across partitions is represented.
 
 Literature Scout только находит и классифицирует источники. Claim extraction выполняет Paper Analyst; достаточность и конфликты evidence проверяет Evidence Auditor.
 
@@ -138,7 +158,7 @@ Literature Scout только находит и классифицирует и�
 
 Mapping для RQ-002 может быть остановлен, когда одновременно выполнены условия:
 
-- все заранее определённые IEEE Xplore и eLibrary strings выполнены и воспроизводимо записаны;
+- все заранее определённые IEEE Xplore strings выполнены и воспроизводимо записаны; eLibrary explicitly recorded as `DEFERRED / UNKNOWN COVERAGE` under the current access constraint;
 - каждая evidence category имеет хотя бы один plausible candidate либо явно зарегистрированный gap;
 - выбраны 2–5 strong seeds либо документировано, почему это невозможно;
 - выполнен предусмотренный ResearchRabbit expansion;
@@ -157,7 +177,7 @@ Literature Scout возвращает:
 2. Search log: exact strings, filters, hits, screened и included counts.
 3. Candidate table: title, authors, year, venue, DOI/identifier, discovery route, classification и reason.
 4. Список 2–5 seed papers и обоснование выбора.
-5. Coverage matrix по требуемым evidence categories.
+5. Coverage matrix по требуемым evidence categories, including compatibility with the DEC-001 event/window/initial-state/domain contract.
 6. Термины/синонимы, обнаруженные в источниках, и предложения по корректировке queries.
 7. Явные gaps, conflicts и пограничные exclusions без объявления окончательного ответа на RQ.
 8. Structured `HANDOFF TO ZOTERO` для принятых records.
@@ -167,6 +187,7 @@ Literature Scout возвращает:
 ## Execution constraints
 
 - Не принимать Poisson process, independence или stationarity как факт без evidence.
+- Не запускать eLibrary в текущем Literature Scout cycle; фиксировать `DEFERRED / UNKNOWN COVERAGE`.
 - Если decision gate срабатывает либо исключение MCU/MBU/correlation нельзя обосновать, явно рекомендовать регистрацию permanent RQ из C-RQ-05 до основной reliability model.
 - Не создавать HYP, CLM или EVD на стадии discovery.
 - Не изменять `docs/research_spec.md`.

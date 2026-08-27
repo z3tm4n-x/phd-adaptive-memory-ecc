@@ -2,8 +2,9 @@
 
 **Title:** Reliability event, metric and evaluation horizon for ECC-protected SRAM  
 **Source candidate:** C-RQ-01  
-**Status:** INVESTIGATING — PROVISIONAL DEFINITION PENDING  
-**Registered:** 2026-08-26
+**Status:** `PARTIALLY ANSWERED — OPEN DEPENDENCIES`  
+**Registered:** 2026-08-26  
+**Decision recorded:** 2026-08-27 as [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
 ## Question
 
@@ -15,91 +16,104 @@
 
 ## Scope
 
-- состояния исхода: исправимая ошибка, обнаруженная неисправимая ошибка и иные релевантные исходы;
-- уровень агрегации: codeword, bank, memory array или system-visible memory service;
-- накопление ошибок между scrub cycles;
-- форма метрики: вероятность, частота, риск или иная проверяемая величина;
-- временной горизонт: scrub interval, operating interval или mission horizon;
-- правила агрегирования от codeword к целевому уровню системы.
+- primitive ECC-capability-exceedance event;
+- codeword and controller-managed protection-domain aggregation;
+- reporting-window and initial-state semantics;
+- per-codeword exposure under scrubbing;
+- separation from decoder and system-visible outcomes;
+- form, but not numerical value, of a future reliability constraint.
 
 ## Exclusions
 
-- произвольное назначение численного reliability requirement;
-- выбор стохастической модели радиационно-индуцированных ошибок;
-- окончательный выбор класса ECC;
-- определение resource-cost vector или adaptive policy;
-- привязка к конкретной платформе при отсутствии системных требований.
+- arbitrary numerical reliability requirement;
+- selection of the stochastic radiation-error model;
+- final ECC/decoder choice;
+- resource-cost vector or adaptive policy;
+- target-platform parameters without provenance.
 
-## Dependencies
+## Evidence basis
 
-- `docs/research_spec.md` версии `v0.2-draft`;
-- утверждённая цель диссертационного проекта;
-- системные или mission requirements, если они существуют и доступны;
-- RQ-003 for concrete ECC/decoder outcomes.
-
-## Answer / decision criterion
-
-RQ считается отвеченным, когда зафиксированы:
-
-1. формальное reliability event;
-2. измеримая метрика;
-3. уровень агрегации;
-4. временной горизонт;
-5. необходимые допущения и provenance каждого ограничения.
-
-Если конкретный numerical threshold не задан источниками или системными требованиями, он остаётся `TBD`.
-
-## Evidence workflow
-
-- Literature Scout discovery: `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
+- Literature discovery: `SUFFICIENT FOR PAPER ANALYSIS — NOT EXHAUSTIVE`.
 - eLibrary: `DEFERRED / UNKNOWN COVERAGE`.
 - Accepted Paper Cards: [PAPER-001](../paper_cards/PAPER-001-tausch-2009.md), [PAPER-002](../paper_cards/PAPER-002-baeg-wen-wong-2009.md), [PAPER-003](../paper_cards/PAPER-003-lee-baeg-reviriego-2011.md).
 - [Initial cross-paper synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
-- [Accepted Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md): 11 candidates supported; CAND-10 partially supported/deferred.
+- [Accepted Evidence Audit](../evidence_audits/RQ-001_EVIDENCE_AUDIT_01.md).
+- Accepted claims: [CLM-001…008](../claims/README.md).
+- Approved definition package: [record](../evidence_synthesis/RQ-001_provisional_definition_package.md).
 
-## Accepted claims
+## Partial answer accepted by DEC-001
 
-- [CLM-001](../claims/CLM-001-upset-count-horizon-requires-time-model.md)
-- [CLM-002](../claims/CLM-002-harmful-mbu-outside-paper001-model.md)
-- [CLM-003](../claims/CLM-003-paper002-loses-mechanism-provenance.md)
-- [CLM-004](../claims/CLM-004-paper003-loses-mechanism-provenance.md)
-- [CLM-005](../claims/CLM-005-paper002-direct-term-overlap.md)
-- [CLM-006](../claims/CLM-006-paper003-direct-term-overlap.md)
-- [CLM-007](../claims/CLM-007-paper002-upper-bound-condition.md)
-- [CLM-008](../claims/CLM-008-multiplicity-not-decoder-service-outcome.md)
+### Primitive event
 
-Candidate source facts 01–03 remain in their Paper Cards; CAND-10 is deferred and has no permanent `CLM-ID`.
+For reporting window \(H(t_0,T)=[t_0,t_0+T]\),
 
-## Provisional definition package
+\[
+E_{\mathrm{cap}}(A;t_0,T)=
+\{\exists t\in H(t_0,T),\ \exists w\in A:N_w(t)>t_c(w)\}.
+\]
 
-[Review package](../evidence_synthesis/RQ-001_provisional_definition_package.md) — `PROPOSED / PENDING USER APPROVAL`.
+This is an ECC-capability-exceedance state. It is not automatically DUE, SDC, miscorrection or system-visible failure.
 
-It proposes:
+### Metric
 
-- primitive event: ECC capability exceedance in at least one codeword;
-- primary metric: cumulative first-passage probability `F_A(H)`;
-- default aggregate: complete SRAM region protected by the modeled controller;
-- separate upset-count, per-codeword exposure and reporting/mission horizons;
-- no automatic equivalence between capability exceedance and DUE/SDC/system failure;
-- numerical requirement remains `TBD`.
+With declared initial state/distribution \(\mu_{t_0}\),
 
-None of these proposed project choices is accepted until the approval gate is completed.
+\[
+F_A(t_0,T;\mu_{t_0})
+=
+\Pr_{\mu_{t_0}}\{\tau_A(t_0)\le t_0+T\}.
+\]
+
+`F_A(t0,T)` is shorthand only when \(\mu_{t_0}\) is fixed elsewhere. `F_A(T)=Pr{τ_A≤T}` is allowed only for an explicit time origin and initial state/distribution. Nonstationary models retain start-time semantics.
+
+### Aggregate
+
+\(A\) is an explicitly declared controller-managed SRAM protection domain. If ECC, mapping \(W\), arrival process, bank/block semantics or scrubbing/correction semantics differ within \(A\), use an explicit disjoint partition \(A=\biguplus_j A_j\) before quantitative aggregation. Dependence between partitions must be modeled.
+
+### Horizons
+
+Upset-count, per-codeword exposure, reporting-window and mission horizons remain distinct. Per-codeword/sequential exposure is a `WORKING DEFINITION / MODELING REQUIREMENT`, not a literature-established fact. CAND-10 remains deferred.
+
+### Requirement boundary
+
+A future requirement may use
+
+\[
+F_A(t_{0,\mathrm{req}},T_{\mathrm{req}};\mu_{t_{0,\mathrm{req}}})
+\le \varepsilon_{\mathrm{req}},
+\]
+
+but \(H_{\mathrm{req}}\), \(\varepsilon_{\mathrm{req}}\), decoder outcomes and system consequences remain `OPEN/TBD`.
+
+## Dependencies / unresolved elements
+
+- RQ-002 — error-arrival, multiplicity, correlation and nonstationarity model.
+- RQ-003 — ECC capability and decoder-outcome semantics.
+- Target mapping \(W\) and target architecture.
+- Mission aggregation and system consequence model.
+- Traceable system/mission reliability requirement.
+- Deferred CAND-10 if its resolution materially changes exposure semantics.
+
+## Answer / decision criterion
+
+The primitive event, metric form, domain/partition rule and horizon semantics are answered at working-definition level. RQ-001 remains open until dependencies needed for quantitative use and decoder/system interpretation are resolved or explicitly bounded.
 
 ## Next action
 
-Approve, amend or reject the six explicit decisions in `RQ-001_provisional_definition_package.md`. If approved, record RQ-001 as `PARTIALLY ANSWERED / OPEN DEPENDENCIES` and release RQ-002 from the queue.
+Use DEC-001 as the input contract for RQ-002. Revisit RQ-001 after RQ-002 and RQ-003 decisions or when traceable system requirements become available.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-002, RQ-003.
 - PAPER: `PAPER-001…003`.
 - CLM: `CLM-001…008`.
+- DEC: `DEC-001`.
 - HYP/EXP: none.
 
 ## Answer
 
-`PARTIAL — PROVISIONAL DEFINITION PENDING APPROVAL.`
+`PARTIAL.` The project adopts `E_cap`, `F_A(t0,T; μ_t0)`, an explicitly declared and, where necessary, partitioned controller-managed domain \(A\), and layered horizon semantics. Decoder/system outcomes and numerical requirements remain open.
 
 ## Confidence
 
-High for the audited bounded statements; medium for the proposed project definition until its assumptions and open dependencies are accepted explicitly.
+High that the decision is traceable to the bounded evidence and explicit project constraints. Model adequacy remains unassessed until RQ-002 and RQ-003 are answered.

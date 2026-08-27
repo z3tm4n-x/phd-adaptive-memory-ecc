@@ -1,6 +1,6 @@
 # Research Specification
 
-**Version:** 0.2-draft  
+**Version:** 0.3-draft  
 **Status:** WORKING DRAFT
 
 > Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
@@ -36,18 +36,15 @@
 
 ## 6. Исследовательские вопросы
 
-Первые `RQ-xxx` будут сформированы после стабилизации разделов 2–10 этой спецификации.
+Утверждён начальный пакет `RQ-001…RQ-005`; актуальные статусы фиксируются в `docs/current_status.md`.
 
-Предварительные направления вопросов:
+- `RQ-001` — reliability event, metric and horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; working contract recorded as `DEC-001`.
+- `RQ-002` — minimum adequate radiation-induced SRAM error model — active next gate.
+- `RQ-003` — ECC abstraction and decoder outcomes.
+- `RQ-004` — online observables for adaptation.
+- `RQ-005` — measurable resource-cost vector without premature scalarization.
 
-- выбор актуальной модели ECC для исследования: SEC, SEC-DED и возможное обобщение на другие коды;
-- способы получения/оценивания информации о текущей радиационной обстановке или интенсивности ошибок;
-- состав адаптируемых параметров системы защиты;
-- корректная комплексная функция ресурсных затрат;
-- модели возникновения и накопления ошибок в SRAM между циклами восстановления;
-- роль одиночных и многобитных ошибок и необходимость interleaving;
-- критерии сравнения fixed и adaptive strategies;
-- требования к аппаратной реализации адаптивного контроллера.
+RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
 
 ## 7. Исходные допущения
 
@@ -72,6 +69,18 @@
 ### 7.5. Стационарность и распределение ошибок
 
 **TBD.** Не принимать заранее пуассоновскую, независимую или иную конкретную модель как установленную. Модель должна быть выбрана и обоснована на основании литературы и требований к применимости.
+
+### 7.6. Reliability event, aggregate and horizon contract
+
+**WORKING DEFINITION / DEC-001.** Primitive event — `E_cap`: existence, within reporting window \(H(t_0,T)=[t_0,t_0+T]\), of at least one codeword in declared controller-managed SRAM protection domain \(A\) whose current distinct-error multiplicity exceeds the declared ECC correction capability.
+
+**WORKING DEFINITION.** General metric — \(F_A(t_0,T;\mu_{t_0})\). The initial state/distribution \(\mu_{t_0}\) and nonstationary start-time semantics are mandatory parts of a quantitative model. \(F_A(T)\) is only a shorthand for an explicit origin and initial state.
+
+**WORKING DEFINITION.** If ECC, mapping \(W\), arrival process, bank/block semantics or scrubbing semantics differ inside \(A\), partition \(A\) before aggregation and state the dependence model between partitions.
+
+**WORKING DEFINITION / MODELING REQUIREMENT.** Upset-count, per-codeword exposure, reporting-window and mission horizons remain distinct. Sequential exposure semantics are not claimed as a literature-established fact; CAND-10 remains deferred.
+
+**TBD.** `E_cap` is not automatically DUE, SDC, miscorrection or system-visible failure. Decoder outcomes belong to RQ-003. \(H_{\mathrm{req}}\) and \(\varepsilon_{\mathrm{req}}\) require traceable system/mission provenance.
 
 ## 8. Входные параметры и наблюдаемые величины
 
@@ -110,6 +119,8 @@ COSRAD рассматривается как источник предметно
 ## 10. Критерии и ограничения
 
 **SOURCE.** Базовое ограничение — заданное требование к вероятности неисправимой ошибки. Базовая цель оптимизации — минимизация затрат ресурсов на восстановление.
+
+**WORKING DEFINITION / DEC-001.** Пока decoder/system semantics не определены, quantitative reliability contract uses `E_cap` and \(F_A(t_0,T;\mu_{t_0})\). A future constraint may use \(F_A(t_{0,\mathrm{req}},T_{\mathrm{req}};\mu_{t_{0,\mathrm{req}}})\le\varepsilon_{\mathrm{req}}\), but the reporting window, initial state and numerical bound remain `TBD` until traceable requirements are available.
 
 **TBD — ключевой исследовательский вопрос.** Функция затрат пока не фиксируется. Необходимо определить, какие компоненты являются существенными и измеримыми:
 
@@ -201,3 +212,4 @@ COSRAD рассматривается как источник предметно
 
 - `0.1-draft` — создан каркас документа.
 - `0.2-draft` — зафиксированы рабочие границы: SRAM, стартовый класс SEC/SEC-DED, определение scrubbing, обязательная RTL/FPGA-верификация; источник управляющей информации, расширенный набор механизмов защиты и функция затрат оставлены как осознанные открытые вопросы исследования.
+- `0.3-draft` — зарегистрирован DEC-001: primitive ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics; RQ-001 переведён в PARTIALLY ANSWERED, открыт gate RQ-002.
