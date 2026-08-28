@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
 **Source candidate:** C-RQ-02<br>
-**Status:** `OPEN — ACTIVE GATE / LITERATURE SCOUT LAUNCHED`<br>
+**Status:** `OPEN — ACTIVE GATE / MAPPING ACCEPTED — PAPER ANALYST BATCH READY`<br>
 **Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -83,17 +83,22 @@ RQ is answerable when:
 
 ## Active gate / next action
 
-Execute task `RQ-002-LITERATURE-MAPPING-01` against the corrected cross-publisher [`RQ-002_protocol.md`](../literature_mapping/RQ-002_protocol.md). The cycle includes explicit disposition of C32, C51, C52, Zebrev-2015, exact `arXiv:1704.07271v2`, its separately controlled RADECS identity and all mandatory model/representation questions. During screening, collect explicit evidence for the C-RQ-05 escalation rule and the [novelty protection gate](../novelty_workflow.md).
+The canonical [initial mapping report](../literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md) is accepted as sufficient for bounded decisive full-text analysis, but not as proof of saturation or as a final answer to RQ-002. ResearchRabbit and incomplete OpenAlex fallback coverage remain explicit non-blocking access limitations.
 
-The Literature Scout handoff has been issued. eLibrary remains `DEFERRED / UNKNOWN COVERAGE` because it is unavailable to Literature Scout.
+Execute `RQ-002-PA-BATCH-01` over C001, exact C005 with C006 version comparison, C008, C011 and C020. Paper Analyst must use actual full texts, return Draft Paper Cards and populate the common model-selection extraction fields without assigning permanent `PAPER` or `CLM` IDs.
+
+The C-RQ-05 escalation condition is operationally triggered because topology, interleaving and mapping `W` cannot be safely excluded or bounded at discovery depth. Permanent promotion requires explicit user acceptance and must occur before the main quantitative reliability model is built.
+
+eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-search cycle is authorized without a named gap that blocks model selection, adequacy, validation or the first quantitative experiment.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-001, RQ-003.
 - Input decision: `DEC-001`.
-- Conditional dependency: C-RQ-05.
+- Conditional dependency: C-RQ-05 — escalation condition triggered; permanent promotion pending explicit acceptance.
 - Non-blocking future task: control prior-art threat in [`research_backlog.md`](../research_backlog.md).
-- PAPER/CLM/EVD/HYP/EXP: TBD after targeted literature mapping.
+- Mapping report: [`RQ-002_literature_mapping_initial_2026-08-27.md`](../literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md).
+- PAPER/CLM/EVD/HYP/EXP: TBD after bounded full-text analysis and Orchestrator acceptance.
 
 ## Answer
 

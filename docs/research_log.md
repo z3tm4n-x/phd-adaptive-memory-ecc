@@ -180,3 +180,13 @@
 - eLibrary remains `DEFERRED / UNKNOWN COVERAGE` and is not part of this Scout cycle.
 - The next Orchestrator gate is acceptance of the reproducible mapping report, mandatory-anchor/version dispositions, C-RQ-05 assessment, novelty-threat matrix and bounded Paper Analyst handoff.
 - No new `RQ`, `HYP`, `CLM`, `EVD`, `DEC`, `EXP` or `RES` was created by this launch.
+
+### RQ-002 initial literature mapping accepted with access limitations
+
+- The Literature Scout report was stored canonically as `docs/literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md` and accepted as sufficient for bounded decisive full-text reads.
+- The report is not treated as proof of saturation or as an answer to RQ-002: ResearchRabbit was unavailable and OpenAlex F4–F9 were not completed.
+- All mandatory anchors received explicit dispositions, including exact `arXiv:1704.07271v2` and the separately controlled RADECS DOI identity.
+- Discovery evidence operationally triggers the C-RQ-05 escalation condition because topology, interleaving and mapping `W` cannot yet be safely excluded or bounded. No permanent RQ was created; explicit user acceptance remains required.
+- Five decision-enabling Paper Analyst work units were selected: C001; C005 with C006 version comparison; C008; C011; and C020.
+- No second general literature cycle, model selection, numerical reliability requirement, `PAPER`, `CLM`, `HYP`, `DEC`, `EXP` or `RES` was created by this disposition.
+- Next gate: `RQ-002-PA-BATCH-01`, followed by Orchestrator acceptance and a bounded cross-paper model-selection matrix.
