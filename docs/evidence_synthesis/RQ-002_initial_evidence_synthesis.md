@@ -1,6 +1,25 @@
-# DRAFT — RQ-002 Paper Analyst Batch 01 Extraction Matrix
+# RQ-002 — Initial cross-paper evidence synthesis
 
-## 1. Task metadata
+**Status:** `INITIAL EVIDENCE SYNTHESIS — ACCEPTED INPUTS / NOT A FINAL ANSWER`<br>
+**Accepted:** 2026-08-28<br>
+**Related RQ:** `RQ-002`<br>
+**Accepted inputs:** [PAPER-004](../paper_cards/PAPER-004-clemente-rezaei-franco-2022.md), [PAPER-005](../paper_cards/PAPER-005-zebrev-2017-arxiv-v2.md), [PAPER-006](../paper_cards/PAPER-006-moindjie-et-al-2017.md), [PAPER-007](../paper_cards/PAPER-007-ogden-mascagni-2017.md), [PAPER-008](../paper_cards/PAPER-008-gomi-et-al-2026.md)<br>
+**Companion version:** `RQ2-C006`, DOI `10.1109/RADECS.2017.8696217`, is controlled inside `PAPER-005` and does not receive a separate Paper Card<br>
+**Model selection:** `NOT YET DECIDED`
+
+Paper Card acceptance means that the analytical cards are complete, traceable and suitable for cross-paper reasoning. It does not adopt any paper's process, mapping, ECC, scrub, observation or validation assumptions as project assumptions. Statements explicitly marked as synthesis or inference remain candidate propositions until the required audit/decision gate.
+
+## 1. Formal Paper Card disposition and task metadata
+
+| Permanent ID | Candidate | Disposition | Decision-enabling contribution | Preserved caveat |
+|---|---|---|---|---|
+| `PAPER-004` | RQ2-C001 — Clemente, Rezaei, Franco, 2022 | `ACCEPTED — CORE` | Conditional independent-accumulation/occupancy model, repeat-hit cancellation and ideal scrub partition | Count horizon only; direct same-particle mechanism excluded; no explicit `W`, general initial state or first passage |
+| `PAPER-005` | RQ2-C005 — Zebrev et al., arXiv v2, with RQ2-C006 comparison | `ACCEPTED — CORE` | Multiplicity-resolved physical-event partition, ECC vulnerability recombination and exact limits of the simple SEC-DED scrubbing example | No explicit `W`; Eq. (15) disjointness not proved; `β≪1`; companion C006 is a separate publication version but not a separate analytical card |
+| `PAPER-006` | RQ2-C008 — Moindjie et al., 2017 | `ACCEPTED — CORE` | Empirical multiplicity-indexed event-rate representation and event-rate/bit-rate distinction | HPP/independence assumed; no topology, mapping, state or formal GOF |
+| `PAPER-007` | RQ2-C011 — Ogden and Mascagni, 2017 | `ACCEPTED — CORE` | Parent-event topology, deterministic interleaving and event-driven accumulation/scrubbing in one simulator | One technology/organization; simplified ECC; synchronous scrub and stationary inputs |
+| `PAPER-008` | RQ2-C020 — Gomi et al., 2026 | `ACCEPTED — CORE` | Quasi-event-wise topology, observation/classification trade-off and particle-provenance evidence | No ECC propagation, exact experimental particle identity or operational reset model |
+
+No card is rejected. No `CLM`, `EVD`, `HYP`, `DEC`, `EXP` or `RES` is created by Paper Card acceptance.
 
 | Field | Value |
 |---|---|
@@ -11,9 +30,9 @@
 | Provenance-correction task/base | `RQ-002-PA-BATCH-01-CORRECTION-01`; `ed2a938aa5cc733e1a311116d8bf7b79e7c01e4e` |
 | Full-text gate | Passed for C005, C006, C001, C011, C008, and C020 |
 | Scope | Five decision-enabling work units; no final model selection |
-| Permanent identifiers | None created |
+| Permanent identifiers | `PAPER-004…PAPER-008`; RQ2-C006 remains a controlled companion version inside `PAPER-005` |
 
-`[SOURCE]` C005 was verified against the versioned arXiv:1704.07271v2 record and official v2 PDF. The analyzed attachment is byte-different from the official PDF but has byte-identical raw extracted text and the same five-page/eight-figure/equation inventory. C006 was read as a separate IEEE RADECS publication identity and compared field by field in the C005 Draft Paper Card. Because C006 adds no independent analytical content beyond the common Eqs. (1)–(14), no separate C006 full card was created.
+`[SOURCE]` RQ2-C005 was verified against the versioned arXiv:1704.07271v2 record and official v2 PDF. The analyzed attachment is byte-different from the official PDF but has byte-identical raw extracted text and the same five-page/eight-figure/equation inventory. RQ2-C006 was read as a separate IEEE RADECS publication identity and compared field by field in `PAPER-005`. Because RQ2-C006 adds no independent analytical content beyond the common Eqs. (1)–(14), no separate full card was created.
 
 ## 2. Full-text identity and integrity
 
@@ -30,7 +49,7 @@
 
 ## 3. Common extraction matrix — process and event representation
 
-| Field | C005 Zebrev | C001 Clemente | C011 Ogden | C008 Moindjie | C020 Gomi |
+| Field | `PAPER-005` — C005 Zebrev | `PAPER-004` — C001 Clemente | `PAPER-007` — C011 Ogden | `PAPER-006` — C008 Moindjie | `PAPER-008` — C020 Gomi |
 |---|---|---|---|---|---|
 | Primitive arrival object | `[SOURCE]` Physical ion strike, marked by upset multiplicity `n`. | `[SOURCE]` Independent uniformly located cell hit/bit flip `(x,y)`. | `[SOURCE]` SEE with time, type, severity, location, and optional topology. | `[SOURCE]` RT-detected single-particle event, classified by simultaneous multiplicity. | `[SOURCE]` Quasi-event-wise macro upset record; physical direct event is neutron-induced SEU. |
 | Count/arrival process | `[SOURCE]` Flux/cross-section rate integral; Poisson only for conditional multiplicity, not time. | `[SOURCE]` Conditional on total hits `m`; Poisson counts false MBUs, not arrivals. | `[SOURCE]` Constant-`λ` Bernoulli time steps plus compound-Poisson upset-count model. | `[SOURCE]` Independent HPP `N_i(t)` by multiplicity and Poisson superposition. | `[SOURCE]` Poisson arrivals only for within-scan false-grouping bound; no fitted mission process. |
@@ -47,7 +66,7 @@
 
 ## 4. Common extraction matrix — mapping, state, and repair
 
-| Field | C005 | C001 | C011 | C008 | C020 |
+| Field | `PAPER-005` | `PAPER-004` | `PAPER-007` | `PAPER-006` | `PAPER-008` |
 |---|---|---|---|---|---|
 | Physical-cell-to-codeword mapping | `[SOURCE]` No `W`; assumes half of 2-fold MCUs enter one word. | `[SOURCE]` Ideal statistical interleaving; `(address,bit)` only. | `[SOURCE]` Deterministic regular `ID` architecture. | `[UNKNOWN]` None. | `[SOURCE]` Physical macro coordinates, but no ECC mapping. |
 | Representation after `W` | `[SOURCE]` Scalar `R_w(n≥1/2)` only. | `[SOURCE]` Final word occupancy/multiplicity. | `[SOURCE]` Explicit affected physical cells/logical words in simulator. | `[UNKNOWN]` None. | `[INFERENCE]` Can be derived externally from addresses if exact `W` is provided. |
@@ -64,7 +83,7 @@
 
 ## 5. Common extraction matrix — evidence, validity, and contract fit
 
-| Field | C005 | C001 | C011 | C008 | C020 |
+| Field | `PAPER-005` | `PAPER-004` | `PAPER-007` | `PAPER-006` | `PAPER-008` |
 |---|---|---|---|---|---|
 | Uncertainty treatment | `[SOURCE]` No full propagation. | `[SOURCE]` Monte Carlo 95% standard-error bars; sparse experiments. | `[SOURCE]` Kruskal–Wallis tests; no input-parameter uncertainty propagation. | `[SOURCE]` Count uncertainty discussed; sparse-tail insufficiency; no full CIs/GOF. | `[SOURCE]` Standard errors; no full classification/model uncertainty propagation. |
 | Empirical validation | `[SOURCE]` Ground/on-orbit multiplicity comparisons; scrub example not validated. | `[SOURCE]` Monte Carlo plus sparse irradiation-count comparisons. | `[SOURCE]` S2P vs related WRCSER; T2P vs S2P controlled simulation. | `[SOURCE]` Long real-time field tests; one cross-site prediction. | `[SOURCE]` Beam experiment plus PHITS comparisons. |
@@ -117,11 +136,11 @@ These are synthesis statements, not permanent claims.
 
 | Source | Native unit/aggregation |
 |---|---|
-| C005 | Per-bit/per-cell physical event rate → multiplicity → abstract ECC/system rate. |
-| C001 | Cell hits → final logical-word pattern → at least one word in memory. |
-| C011 | Parent SEE → physical cells under regular `ID` → logical words/rows → modeled device `F(t)`. |
-| C008 | Detected physical event → multiplicity-specific rate per Mbit exposure; no word/array capability event. |
-| C020 | Detected/simulated physical event → cell pattern/cross section; no logical-word/domain reliability. |
+| `PAPER-005` | Per-bit/per-cell physical event rate → multiplicity → abstract ECC/system rate. |
+| `PAPER-004` | Cell hits → final logical-word pattern → at least one word in memory. |
+| `PAPER-007` | Parent SEE → physical cells under regular `ID` → logical words/rows → modeled device `F(t)`. |
+| `PAPER-006` | Detected physical event → multiplicity-specific rate per Mbit exposure; no word/array capability event. |
+| `PAPER-008` | Detected/simulated physical event → cell pattern/cross section; no logical-word/domain reliability. |
 
 `[INFERENCE]` Numerical values from these levels cannot be pooled until the target domain `A`, mapping `W`, mechanism partition, and event definition are aligned.
 
@@ -129,11 +148,11 @@ These are synthesis statements, not permanent claims.
 
 | Source | Horizon |
 |---|---|
-| C005 | Rate integral plus one ideal scrub interval `t_s` under `β≪1`. |
-| C001 | Total accumulated hit/upset count, optionally partitioned into equal scrub segments. |
-| C011 | Discrete simulation time `0…T` with global STI phase. |
-| C008 | Long calendar/exposure windows normalized in Mbit·h; rate assumed constant. |
-| C020 | Nanosecond full-scan observation window for false association; irradiation fluence/cross section for event statistics. |
+| `PAPER-005` | Rate integral plus one ideal scrub interval `t_s` under `β≪1`. |
+| `PAPER-004` | Total accumulated hit/upset count, optionally partitioned into equal scrub segments. |
+| `PAPER-007` | Discrete simulation time `0…T` with global STI phase. |
+| `PAPER-006` | Long calendar/exposure windows normalized in Mbit·h; rate assumed constant. |
+| `PAPER-008` | Nanosecond full-scan observation window for false association; irradiation fluence/cross section for event statistics. |
 
 `[INFERENCE]` None may be treated as the DEC-001 reporting window without an explicit conversion and state/repair semantics.
 
@@ -141,11 +160,11 @@ These are synthesis statements, not permanent claims.
 
 | Work unit | Result | Decision-enabling contribution | Remaining blocker/gap |
 |---|---|---|---|
-| WU1 C005/C006 | COMPLETE | Physical multiplicity partition; exact interpretation/limits of Eqs. (15)–(19); verified version differences. | No explicit `W`; Eq. (15) non-overlap not proven; no validation outside `β≪1`. |
-| WU2 C001 | COMPLETE | Conditional independent-accumulation state/count model; repeat-hit cancellation; ideal scrub partition. | No temporal process, direct MCU, arbitrary `μ_t0`, first passage, or realistic word age. |
-| WU3 C011 | COMPLETE | Parent-mark/topography versus row-depth reduction under deterministic `ID`; explicit event-driven accumulation/scrub. | One simulated technology/organization; simplified ECC; no nonstationarity/uncertainty cost study. |
-| WU4 C008 | COMPLETE | Empirical multiplicity-indexed HPP construction and neutron/alpha rates; event-rate/bit-rate separation. | No formal GOF/independence test, topology, mapping, state, or tail precision. |
-| WU5 C020 | COMPLETE | Observation/classification model evidence; event-wise topology; pseudo-MCU bound; PHITS provenance. | No ECC propagation, exact experimental particle identity, operational reset semantics, or full uncertainty model. |
+| WU1 `PAPER-005` / C006 | COMPLETE | Physical multiplicity partition; exact interpretation/limits of Eqs. (15)–(19); verified version differences. | No explicit `W`; Eq. (15) non-overlap not proven; no validation outside `β≪1`. |
+| WU2 `PAPER-004` | COMPLETE | Conditional independent-accumulation state/count model; repeat-hit cancellation; ideal scrub partition. | No temporal process, direct MCU, arbitrary `μ_t0`, first passage, or realistic word age. |
+| WU3 `PAPER-007` | COMPLETE | Parent-mark/topography versus row-depth reduction under deterministic `ID`; explicit event-driven accumulation/scrub. | One simulated technology/organization; simplified ECC; no nonstationarity/uncertainty cost study. |
+| WU4 `PAPER-006` | COMPLETE | Empirical multiplicity-indexed HPP construction and neutron/alpha rates; event-rate/bit-rate separation. | No formal GOF/independence test, topology, mapping, state, or tail precision. |
+| WU5 `PAPER-008` | COMPLETE | Observation/classification model evidence; event-wise topology; pseudo-MCU bound; PHITS provenance. | No ECC propagation, exact experimental particle identity, operational reset semantics, or full uncertainty model. |
 
 ## 12. Unresolved model-selection gaps
 
@@ -166,21 +185,21 @@ No alternative is selected here.
 
 | Alternative family | Supported element(s) | Required augmentation / reason it remains conditional |
 |---|---|---|
-| Multiplicity-indexed marked HPP | C008 empirical `λ_i`; C005 multiplicity partition. | Must add post-`W` joint mark, nonstationarity test, state/repair, and uncertainty. |
-| Time-varying marked Poisson/NHPP | Compatible with C005 rate integrals and DEC-001 windows. | No batch source validates time-varying intensity on target scales. |
-| Compound marked Poisson | C011 represents clustered event sizes and parent marks. | Marginal cluster-size law alone is insufficient when topology/`W` matters. |
-| Event-driven Monte Carlo with physical/post-`W` marks | C011 and C020 support topology/provenance and explicit state updates. | Needs target mapping, calibrated event distribution, computational study, and general initial state. |
-| Analytic occupancy model for independent accumulation plus a separate direct-event layer | C001 supplies accumulation kernel; C005/C008/C020 supply candidate direct layers. | Must define disjoint recombination, first-passage state, realistic scrubbing, and mapping. |
-| Discrete-time scan/repair state model | C020 provides scan windows; C001/C011 show reset effects. | Exact target scan/writeback semantics and word-age distribution are absent. |
-| Observation-aware latent-event model | C020 provides false-merge/split evidence; C001/C008 expose provenance limitations. | Requires identifiable classification-error parameters and validation data. |
+| Multiplicity-indexed marked HPP | `PAPER-006` empirical `λ_i`; `PAPER-005` multiplicity partition. | Must add post-`W` joint mark, nonstationarity test, state/repair, and uncertainty. |
+| Time-varying marked Poisson/NHPP | Compatible with `PAPER-005` rate integrals and DEC-001 windows. | No batch source validates time-varying intensity on target scales. |
+| Compound marked Poisson | `PAPER-007` represents clustered event sizes and parent marks. | Marginal cluster-size law alone is insufficient when topology/`W` matters. |
+| Event-driven Monte Carlo with physical/post-`W` marks | `PAPER-007` and `PAPER-008` support topology/provenance and explicit state updates. | Needs target mapping, calibrated event distribution, computational study, and general initial state. |
+| Analytic occupancy model for independent accumulation plus a separate direct-event layer | `PAPER-004` supplies an accumulation kernel; `PAPER-005`, `PAPER-006` and `PAPER-008` supply candidate direct layers. | Must define disjoint recombination, first-passage state, realistic scrubbing, and mapping. |
+| Discrete-time scan/repair state model | `PAPER-008` provides scan windows; `PAPER-004` and `PAPER-007` show reset effects. | Exact target scan/writeback semantics and word-age distribution are absent. |
+| Observation-aware latent-event model | `PAPER-008` provides false-merge/split evidence; `PAPER-004` and `PAPER-006` expose provenance limitations. | Requires identifiable classification-error parameters and validation data. |
 
 ## 14. Alternatives narrowed or ruled insufficient as stand-alone models
 
 - `[INFERENCE]` **Unmarked bit-level HPP alone is insufficient** when one parent can upset multiple mapped codewords or topology affects codeword multiplicity.
 - `[INFERENCE]` **Marginal multiplicity probabilities `q_k` alone are insufficient** unless the target `W` makes topology irrelevant or a conservative bound is separately justified.
-- `[INFERENCE]` **C001's clean count-conditioned occupancy model alone is insufficient** for general `F_A(t0,T;μ_t0)` because it has no time law/direct events/general initial state.
-- `[INFERENCE]` **C005 Eq. (15) alone is insufficient as an exact direct-plus-accumulation partition** because disjointness is not established and validity is restricted to `β≪1`.
-- `[INFERENCE]` **Static bitmap clusters alone are insufficient as physical-event observations** without an association/error model, as shown by C020.
+- `[INFERENCE]` **`PAPER-004`'s clean count-conditioned occupancy model alone is insufficient** for general `F_A(t0,T;μ_t0)` because it has no time law/direct events/general initial state.
+- `[INFERENCE]` **`PAPER-005` Eq. (15) alone is insufficient as an exact direct-plus-accumulation partition** because disjointness is not established and validity is restricted to `β≪1`.
+- `[INFERENCE]` **Static bitmap clusters alone are insufficient as physical-event observations** without an association/error model, as shown by `PAPER-008`.
 - `[INFERENCE]` **A clean-start, synchronous-scrub `F(t)` alone is insufficient** for heterogeneous sequential word ages required by a general controller-managed domain.
 
 ## 15. Evidence gaps requiring later named work
@@ -201,18 +220,45 @@ These are gaps only; no new RQ/HYP/EXP is created.
 
 No Zotero operation was performed. The following structured handoff is prepared because version identity and metadata provenance matter for later acceptance.
 
-| Candidate(s) | Target collection | Required action | Duplicate policy / expected result |
+| Accepted card / candidate(s) | Target collection | Required action | Duplicate policy / expected result |
 |---|---|---|---|
-| C005 / C006 | `DISSERTATION / RQ / RQ-002` | Preserve C005 exact arXiv v2 and C006 RADECS DOI publication as separate related items; attach the exact analyzed PDFs and version notes. | Do not merge by title/authors. Match C005 by versioned arXiv ID and C006 by DOI; record their verified content relationship. |
-| C001 | `DISSERTATION / RQ / RQ-002` | Verify DOI, volume/issue/pages, and attach the analyzed publisher PDF. | DOI-first deduplication; one item with exact attachment/version note. |
-| C011 | `DISSERTATION / RQ / RQ-002` | Verify DOI, volume/issue/pages, and attach the analyzed publisher PDF. | DOI-first deduplication; one item with exact attachment/version note. |
-| C008 | `DISSERTATION / RQ / RQ-002` | Reconcile final volume/issue/pages from publisher metadata while retaining the analyzed Article-in-Press PDF as a versioned attachment. | DOI-first deduplication; do not replace or relabel the analyzed PDF without preserving its accepted-version identity. |
-| C020 | `DISSERTATION / RQ / RQ-002` | Verify DOI/current-version date and attach the analyzed publisher PDF. | DOI-first deduplication; one item with exact attachment/version note. |
+| `PAPER-005` / RQ2-C005 and companion RQ2-C006 | `DISSERTATION / RQ / RQ-002` | Preserve exact arXiv v2 and the RADECS DOI publication as separate related items; attach the exact analyzed PDFs and version/checksum notes. | Do not merge by title/authors. Match C005 by versioned arXiv ID and C006 by DOI; record their verified content relationship. |
+| `PAPER-004` / RQ2-C001 | `DISSERTATION / RQ / RQ-002` | Verify DOI, volume/issue/pages, and attach the analyzed publisher PDF. | DOI-first deduplication; one item with exact attachment/version note. |
+| `PAPER-007` / RQ2-C011 | `DISSERTATION / RQ / RQ-002` | Verify DOI, volume/issue/pages, and attach the analyzed publisher PDF. | DOI-first deduplication; one item with exact attachment/version note. |
+| `PAPER-006` / RQ2-C008 | `DISSERTATION / RQ / RQ-002` | Reconcile final volume/issue/pages from publisher metadata while retaining the analyzed Article-in-Press PDF as a versioned attachment. | DOI-first deduplication; do not replace or relabel the analyzed PDF without preserving its accepted-version identity. |
+| `PAPER-008` / RQ2-C020 | `DISSERTATION / RQ / RQ-002` | Verify DOI/current-version date and attach the analyzed publisher PDF. | DOI-first deduplication; one item with exact attachment/version note. |
 
-**Required tags:** `RQ-002`, `paper-analyst`, `full-text-verified`, candidate ID, and `draft-paper-card`.  
-**Metadata checks:** exact title, author order, year, venue, DOI/arXiv version, pagination/version, and attachment checksum.  
+**Required tags:** `RQ-002`, permanent `PAPER-xxx`, candidate ID, `paper-card-accepted`, and `full-text-verified`.
+**Metadata checks:** exact title, author order, year, venue, DOI/arXiv version, pagination/version, and attachment checksum.
 **PDF expectation:** PDFs remain Zotero attachments only; none are committed to GitHub.
 
-## 17. Completion statement
+## 17. Orchestrator disposition and downstream gate
+
+The five Paper Cards and this initial synthesis are accepted for the RQ-002 model-selection gate.
 
 `[INFERENCE]` The batch narrows the admissible structure: a quantitative RQ-002 candidate must distinguish physical parent events from sequential state accumulation, declare or apply `W`, carry enough post-mapping dependence for capability evaluation, expose the repair/initial-state semantics, and treat observation uncertainty explicitly when using bitmap data. It does **not** determine which admissible process family should become the project model and does not answer RQ-002.
+
+- No additional Paper Card or general literature cycle is authorized merely because other `CORE` sources remain unread.
+- No process family, event representation, mapping reduction or observation model is selected by this synthesis.
+- Candidate synthesis propositions that will carry a model-selection decision must pass a bounded Evidence Auditor gate.
+- The C-RQ-05 escalation condition remains triggered; permanent promotion still requires explicit PI acceptance before the main quantitative reliability model is fixed.
+- Parameterized prototype work may proceed before numerical `H_req` or `ε_req` exists, but it must report sensitivity rather than claim satisfaction of an unstated requirement.
+
+## 18. Candidate propositions for bounded Evidence Auditor review
+
+These identifiers are audit handles, not permanent `CLM` or `EVD` IDs. Intended use is **RQ-002 model selection and first-prototype specification only**, not a general literature-level novelty statement.
+
+| Candidate | Atomic proposition to audit | Accepted-source scope | Decision enabled |
+|---|---|---|---|
+| `RQ002-EA-CAND-01` | Physical parent event, cell upset/bit flip, logical codeword-error pattern and `E_cap` are distinct objects; moving between them requires declared mapping and aggregation operations. | `PAPER-004…008` | Define primitive arrival and state interfaces. |
+| `RQ002-EA-CAND-02` | Same-particle multi-cell impact and sequential accumulation from independent arrivals are represented by different mechanisms; recombination requires an explicit non-overlap rule or a quantified overlap approximation. | `PAPER-004`, `PAPER-005`, `PAPER-007`, `PAPER-008` | Require mechanism provenance in the model. |
+| `RQ002-EA-CAND-03` | Physical upset multiplicity alone does not determine ECC-word impact for an arbitrary mapping `W`; topology/mapping may be reduced only under a stated exactness, bound or approximation condition. | `PAPER-005`, `PAPER-007`, `PAPER-008` | Trigger C-RQ-05 and representation ladder. |
+| `RQ002-EA-CAND-04` | Marginal per-word multiplicity distributions are not generally sufficient for domain-level `F_A` when one parent event may jointly affect multiple codewords; sufficiency requires retained joint dependence, a proof of irrelevance or a valid bound. | `PAPER-005`, `PAPER-007`, with DEC-001 contract | Decide minimum post-`W` mark. |
+| `RQ002-EA-CAND-05` | Accumulation state and reliability output depend on correction/writeback/reset semantics; global clean reset, correctable-word-only reset and event-wise rewrite are not interchangeable model operations. | `PAPER-004`, `PAPER-006`, `PAPER-007` | Parameterize restoration semantics and state. |
+| `RQ002-EA-CAND-06` | A clean-start final-state or count-conditioned failure probability is not generally equivalent to the DEC-001 first-passage metric `F_A(t0,T; μ_t0)` without additional trajectory, initial-state and repair assumptions. | `PAPER-004`, `PAPER-005`, `PAPER-007`, DEC-001 | Prevent invalid metric substitution. |
+| `RQ002-EA-CAND-07` | An unmarked scalar bit/upset HPP is inadequate for `E_cap` in regimes where parent-event clustering or post-`W` topology changes codeword multiplicity. | `PAPER-006`, `PAPER-007`, `PAPER-008` | Reject scalar-rate-only model in the stated regime. |
+| `RQ002-EA-CAND-08` | The `PAPER-005` Eq. (15) SEC-DED result is a low-`β` additive approximation; the source does not prove disjoint sample spaces for its two terms and does not establish validity beyond `β≪1`. | `PAPER-005` exact arXiv v2 | Prevent adoption as an exact mechanism partition. |
+| `RQ002-EA-CAND-09` | Static or quasi-event bitmap grouping can misassociate independent arrivals and direct events; latent physical-event inference from such observations requires an explicit classification/observation-error model. | `PAPER-004`, `PAPER-006`, `PAPER-008` | Require an observable-to-latent interface. |
+| `RQ002-EA-CAND-10` | None of `PAPER-004…008` validates a time-varying arrival intensity at the adaptive-restoration decision-window scale; stationarity versus nonstationarity remains a named evidence/model-validation gap rather than a settled model choice. | `PAPER-004…008` only | Keep HPP/NHPP alternatives bounded and explicit. |
+
+For every candidate, the auditor must preserve the source scope, identify the strongest limitation or counterexample, and return `SUPPORTED`, `PARTIALLY_SUPPORTED`, `DISPUTED`, `INSUFFICIENT` or `NOT_VERIFIED`. No permanent claim or evidence ID is assigned automatically.

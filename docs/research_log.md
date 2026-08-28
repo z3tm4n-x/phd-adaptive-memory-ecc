@@ -190,3 +190,26 @@
 - Five decision-enabling Paper Analyst work units were selected: C001; C005 with C006 version comparison; C008; C011; and C020.
 - No second general literature cycle, model selection, numerical reliability requirement, `PAPER`, `CLM`, `HYP`, `DEC`, `EXP` or `RES` was created by this disposition.
 - Next gate: `RQ-002-PA-BATCH-01`, followed by Orchestrator acceptance and a bounded cross-paper model-selection matrix.
+
+## 2026-08-28
+
+### RQ-002 Paper Analyst Batch 01 formally accepted
+
+- Provenance corrections in base commit `314b040de3bd8096ba1114edf1dc165da06e2360` were verified; no blocking identity issue remains.
+- Five complete, traceable full-text cards were accepted: RQ2-C001 → `PAPER-004`, RQ2-C005 → `PAPER-005`, RQ2-C008 → `PAPER-006`, RQ2-C011 → `PAPER-007`, and RQ2-C020 → `PAPER-008`.
+- RQ2-C006 remains a controlled peer-reviewed companion identity inside `PAPER-005`; it did not receive a separate `PAPER` ID because the accepted work unit is the exact arXiv-v2/RADECS version comparison rather than two independent analytical cards.
+- Acceptance covers analytical-card quality, identity control, extraction completeness and fitness for synthesis. It does not adopt source assumptions, accept candidate claims, select an error-process family or establish novelty.
+- The cross-paper matrix was accepted as `docs/evidence_synthesis/RQ-002_initial_evidence_synthesis.md`. It preserves differences in primitive event, arrival law, topology, mapping `W`, accumulation state, repair, observation error, aggregation and horizon.
+- The batch narrows but does not resolve the alternatives: marked HPP/NHPP, compound/event-driven models, direct-plus-accumulation constructions, scan/repair state models and observation-aware latent-event models remain conditional.
+- C-RQ-05 escalation is confirmed by full-text evidence; permanent promotion remains an explicit PI decision.
+- No additional Paper Card or broad discovery cycle is authorized without a named gap that blocks model selection, adequacy, validation or the first own-result experiment.
+
+### PI scientific-direction update accepted as DEC-002
+
+- The approved dissertation core remains adaptive control of the memory-restoration period under a declared/parameterized reliability requirement and measurable restoration-resource cost.
+- `DEC-002` records one integrated causal architecture: radiation-test evidence → identifiable device-error representation → mapping `W`/ECC → ECC-level reliability → observable risk → adaptive restoration decision.
+- The working scientific problem is to establish the sufficiency, observability and quantitative price of information reduction between radiation testing and the adaptive decision; richer event information is not presumed superior.
+- Applicable Russian normative practice is elevated to a primary practical baseline. No normative deficiency may be claimed before controlled document extraction.
+- Identification/mapping, normative-practice and adaptive-control prior-art threats remain separate. Chen/IHP/Potsdam stays an active close threat for the control layer; Franco/Zebrev/Ogden/Gomi and related sources cover different layers.
+- Missing numerical `H_req`/`ε_req`, final observables, final cost scalarization or hardware selection do not block a parameterized representation-sensitivity prototype.
+- `DEC-001` and RQ-001 remain unchanged. No new `RQ`, `CLM`, `HYP`, `EXP` or `RES` was created automatically.

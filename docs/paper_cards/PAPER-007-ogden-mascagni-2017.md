@@ -1,11 +1,16 @@
-# Draft Paper Card — RQ2-C011
+# PAPER-007 — Ogden and Mascagni (2017): Soft-error event topography and memory reliability
 
-**PAPER-ID:** `TBD until Orchestrator acceptance`  
-**Candidate identity:** `RQ2-C011`  
-**Related RQ:** `RQ-002`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommendation:** `CORE`  
-**Exact full-text identity:** IEEE Transactions on Reliability, vol. 66, no. 4, pp. 966–979, Dec. 2017  
+**PAPER-ID:** `PAPER-007`<br>
+**Candidate identity:** `RQ2-C011`<br>
+**Related RQ:** `RQ-002`<br>
+**Status:** `ACCEPTED — CORE`<br>
+**Accepted:** 2026-08-28<br>
+**Accepted by:** Research Orchestrator<br>
+**Classification:** `CORE`<br>
+**Acceptance scope:** analytical card accepted as complete and traceable; the simulated technology, topology library, regular interleaving and synchronous-scrub assumptions are not adopted as project assumptions<br>
+**Zotero item key:** `UNKNOWN` — not provided to Paper Analyst<br>
+**Evidence level in this card:** full-text analysis only; candidate claims remain unaudited<br>
+**Exact full-text identity:** IEEE Transactions on Reliability, vol. 66, no. 4, pp. 966–979, Dec. 2017<br>
 **Full text used:** `ogden2017.pdf`; SHA-256 `b5b8cb55ee16fe4d50c199b21eb9facfef9a9f70d9a6c68c2d503acee9ecec71`
 
 ## Bibliographic identity

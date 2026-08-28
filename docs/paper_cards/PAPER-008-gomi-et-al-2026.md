@@ -1,11 +1,16 @@
-# Draft Paper Card — RQ2-C020
+# PAPER-008 — Gomi et al. (2026): Quasi-event-wise neutron MCU measurement and simulation
 
-**PAPER-ID:** `TBD until Orchestrator acceptance`  
-**Candidate identity:** `RQ2-C020`  
-**Related RQ:** `RQ-002`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommendation:** `CORE`  
-**Exact full-text identity:** IEEE Transactions on Nuclear Science, vol. 73, no. 8, pp. 2935–2947, Aug. 2026; current version dated 18 Aug. 2026  
+**PAPER-ID:** `PAPER-008`<br>
+**Candidate identity:** `RQ2-C020`<br>
+**Related RQ:** `RQ-002`<br>
+**Status:** `ACCEPTED — CORE`<br>
+**Accepted:** 2026-08-28<br>
+**Accepted by:** Research Orchestrator<br>
+**Classification:** `CORE`<br>
+**Acceptance scope:** analytical card accepted as complete and traceable; the tested SRAMs, PHITS configuration, quasi-event classification and scan assumptions are not adopted as project assumptions<br>
+**Zotero item key:** `UNKNOWN` — not provided to Paper Analyst<br>
+**Evidence level in this card:** full-text analysis only; candidate claims remain unaudited<br>
+**Exact full-text identity:** IEEE Transactions on Nuclear Science, vol. 73, no. 8, pp. 2935–2947, Aug. 2026; current version dated 18 Aug. 2026<br>
 **Full text used:** `1eaada2bae473033ae4e87dcffe3cecf.pdf`; SHA-256 `9facf0f6086bc82557c7d18dbfa36ce7edcc2375e8cb63a49f6ec2576d586e2e`
 
 ## Bibliographic identity

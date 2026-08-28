@@ -1,11 +1,16 @@
-# Draft Paper Card — RQ2-C001
+# PAPER-004 — Clemente, Rezaei, Franco (2022): ECC reliability against accumulated multiple events
 
-**PAPER-ID:** `TBD until Orchestrator acceptance`  
-**Candidate identity:** `RQ2-C001`  
-**Related RQ:** `RQ-002`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommendation:** `CORE`  
-**Exact full-text identity:** IEEE Transactions on Nuclear Science, vol. 69, no. 2, pp. 169–180, Feb. 2022  
+**PAPER-ID:** `PAPER-004`<br>
+**Candidate identity:** `RQ2-C001`<br>
+**Related RQ:** `RQ-002`<br>
+**Status:** `ACCEPTED — CORE`<br>
+**Accepted:** 2026-08-28<br>
+**Accepted by:** Research Orchestrator<br>
+**Classification:** `CORE`<br>
+**Acceptance scope:** analytical card accepted as complete and traceable; the count-conditioned occupancy model, ideal interleaving and reset assumptions are not adopted as project assumptions<br>
+**Zotero item key:** `UNKNOWN` — not provided to Paper Analyst<br>
+**Evidence level in this card:** full-text analysis only; candidate claims remain unaudited<br>
+**Exact full-text identity:** IEEE Transactions on Nuclear Science, vol. 69, no. 2, pp. 169–180, Feb. 2022<br>
 **Full text used:** `Reliability of Error Correction Codes Against Multiple.pdf`; SHA-256 `9b5caea4b2f97787389a1b08dc699ade7ea61a8116bf1ba7a196980dd11bfbf0`
 
 ## Bibliographic identity

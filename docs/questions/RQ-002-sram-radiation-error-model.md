@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
 **Source candidate:** C-RQ-02<br>
-**Status:** `OPEN — ACTIVE GATE / MAPPING ACCEPTED — PAPER ANALYST BATCH READY`<br>
+**Status:** `OPEN — INITIAL EVIDENCE SYNTHESIS ACCEPTED / MODEL-SELECTION GATE`<br>
 **Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -54,6 +54,8 @@ RQ-003 remains responsible for concrete ECC/decoder-outcome semantics.
 
 `E_cap` and `τ_A` describe the underlying physical/codeword state. The future controller acts only on observable information; the dependency `RQ-003 outcome semantics ↔ RQ-004 observables/estimation` is recorded but not resolved here.
 
+Under the integrated project roadmap, RQ-002 supplies the device-error representation consumed by the ECC-aware reliability layer and, through it, the adaptive-control decision. It must therefore distinguish information sufficient in principle from information identifiable in realistic radiation-test observations. This dependency does not turn RQ-002 into the complete adaptive-control problem and does not make richer event information preferable by assumption.
+
 ## Evidence needed
 
 - primary irradiation studies for SRAM;
@@ -81,13 +83,29 @@ RQ is answerable when:
 
 **Decision gate:** if evidence shows that MCU/MBU or spatial correlation materially changes the structure or probability of `E_cap`, or their exclusion cannot be justified or bounded, C-RQ-05 must be promoted to a mandatory permanent RQ and answered before the main reliability model is built.
 
+## Accepted initial evidence synthesis
+
+The canonical [initial mapping report](../literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md), five accepted Paper Cards and [initial cross-paper synthesis](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md) are sufficient to enter bounded model selection. They are not proof of search saturation and do not constitute a final answer to RQ-002. ResearchRabbit and incomplete OpenAlex fallback coverage remain explicit non-blocking access limitations.
+
+Accepted inputs:
+
+- [PAPER-004](../paper_cards/PAPER-004-clemente-rezaei-franco-2022.md) — independent accumulation/occupancy;
+- [PAPER-005](../paper_cards/PAPER-005-zebrev-2017-arxiv-v2.md) — multiplicity partition and controlled C005/C006 comparison;
+- [PAPER-006](../paper_cards/PAPER-006-moindjie-et-al-2017.md) — multiplicity-indexed event rates;
+- [PAPER-007](../paper_cards/PAPER-007-ogden-mascagni-2017.md) — topology, mapping and event-driven state;
+- [PAPER-008](../paper_cards/PAPER-008-gomi-et-al-2026.md) — quasi-event observation/classification and topology.
+
+The synthesis rules out, as unsupported stand-alone choices, an unmarked scalar bit-arrival rate, a clean count-conditioned occupancy model and the simple low-`β` additive expression. It retains a bounded alternative set rather than selecting HPP, NHPP, compound/marked, observation-aware or event-driven models prematurely.
+
 ## Active gate / next action
 
-The canonical [initial mapping report](../literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md) is accepted as sufficient for bounded decisive full-text analysis, but not as proof of saturation or as a final answer to RQ-002. ResearchRabbit and incomplete OpenAlex fallback coverage remain explicit non-blocking access limitations.
+1. Audit only the cross-paper propositions that will carry the model-selection decision.
+2. Bound the remaining arrival, event-mark, state/repair and observation alternatives.
+3. Define a parameterized prototype that compares information-representation levels through `W` and reports their effect on `F_A` and an adaptive restoration decision.
+4. Do not wait for numerical `H_req` or `ε_req`; use parameter sweeps and do not claim requirement satisfaction.
+5. Do not authorize another general literature cycle without a named gap that blocks model selection, validation or the first prototype.
 
-Execute `RQ-002-PA-BATCH-01` over C001, exact C005 with C006 version comparison, C008, C011 and C020. Paper Analyst must use actual full texts, return Draft Paper Cards and populate the common model-selection extraction fields without assigning permanent `PAPER` or `CLM` IDs.
-
-The C-RQ-05 escalation condition is operationally triggered because topology, interleaving and mapping `W` cannot be safely excluded or bounded at discovery depth. Permanent promotion requires explicit user acceptance and must occur before the main quantitative reliability model is built.
+The C-RQ-05 escalation condition is confirmed by full-text synthesis because topology, interleaving and mapping `W` cannot be safely excluded or replaced by a scalar multiplicity without a declared validity argument. Permanent promotion requires explicit PI acceptance and must occur before the main quantitative reliability model is fixed.
 
 eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-search cycle is authorized without a named gap that blocks model selection, adequacy, validation or the first quantitative experiment.
 
@@ -98,7 +116,9 @@ eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-sea
 - Conditional dependency: C-RQ-05 — escalation condition triggered; permanent promotion pending explicit acceptance.
 - Non-blocking future task: control prior-art threat in [`research_backlog.md`](../research_backlog.md).
 - Mapping report: [`RQ-002_literature_mapping_initial_2026-08-27.md`](../literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md).
-- PAPER/CLM/EVD/HYP/EXP: TBD after bounded full-text analysis and Orchestrator acceptance.
+- Accepted Paper Cards: `PAPER-004…PAPER-008`.
+- Evidence synthesis: [`RQ-002_initial_evidence_synthesis.md`](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md).
+- CLM/EVD/HYP/EXP: none created at this gate.
 
 ## Answer
 

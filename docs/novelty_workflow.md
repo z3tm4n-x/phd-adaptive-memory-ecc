@@ -25,6 +25,38 @@ The pass must:
 
 Using a claim in a novelty assessment does not widen its evidential scope. Scope must be preserved unchanged in every role handoff and downstream artefact unless a separately checked source supports the broader statement.
 
+## Integrated-method novelty gate
+
+The working architecture in `DEC-002` contains distinct novelty-threat layers that must be checked separately before they are recombined into a contribution statement:
+
+1. **radiation-test identification and event representation** — including Franco, Zebrev, Ogden, Gomi and related work;
+2. **normative calculation practice** — including the applicable Russian radiation-hardness document set supplied or identified by the PI;
+3. **ECC-aware reliability and mapping** — including mechanism partition, physical-to-logical mapping `W`, accumulation and restoration semantics;
+4. **adaptive control** — including the Chen/IHP/Potsdam line and the separately registered inspection/maintenance/checking-policy threat.
+
+Evidence that narrows one layer does not establish novelty in another. In particular:
+
+- radiation variation or prediction followed by scrub-frequency adjustment is not, by itself, an admissible novelty claim;
+- a limitation of one analytical model is not a deficiency of normative practice;
+- a richer radiation-event representation is not presumed superior until its effect on ECC-level reliability or the adaptive decision is quantified;
+- three scientific layers in the project architecture do not automatically become three independent novelty claims.
+
+Any eventual integrated novelty statement must show a load-bearing distinction from both the closest technical prior art and applicable normative practice, and must connect that distinction to a quantitatively testable engineering or control decision.
+
+## Normative-baseline rule
+
+Applicable Russian normative documents are primary practical baselines, not background-only citations. Before asserting that a normative chain loses required information, the adversarial pass must extract from controlled document versions:
+
+- the primitive measured/test quantity;
+- event grouping or multiplicity semantics;
+- retained cross sections and uncertainty;
+- convolution with the radiation environment;
+- rate and probability definitions, aggregation level and horizon;
+- treatment of ECC, mapping `W`, accumulation and restoration, if present;
+- the intended applicability domain.
+
+If a required document has not been supplied or its version is uncontrolled, the result is `UNKNOWN`, not a normative deficiency.
+
 ## RQ-002 mechanism-partition novelty protection gate
 
 `CLM-002…006` remain valid only in their accepted scope over `PAPER-001…003`. They must not be used to assert that the literature generally fails to separate direct same-particle codeword errors from independent accumulation, that the project mechanism partition is novel, or that existing models necessarily double count.
@@ -67,4 +99,4 @@ No permanent `CLM`, `DEC`, `HYP`, `RES` or novelty statement is created automati
 
 ## Related pending task
 
-The separate future control-layer prior-art threat is recorded in [`research_backlog.md`](research_backlog.md). It is not part of RQ-002 and does not block the RQ-002 Literature Scout cycle.
+The separate future control-layer prior-art threats and the document-bounded Russian normative-baseline task are recorded in [`research_backlog.md`](research_backlog.md). They do not reopen RQ-001 or block bounded RQ-002 model-selection/prototype work, but they must be completed before the corresponding literature-level novelty or normative-deficiency statement.

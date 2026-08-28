@@ -1,6 +1,6 @@
 # Research Specification
 
-**Version:** 0.3-draft  
+**Version:** 0.4-draft<br>
 **Status:** WORKING DRAFT
 
 > Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
@@ -34,17 +34,31 @@
 
 **WORKING DEFINITION.** В ходе исследования цель может быть уточнена от управления только периодом scrubbing к более общей задаче адаптивного проектирования/управления сбоеустойчивостью SRAM, если анализ литературы и результаты моделирования покажут обоснованность такого расширения.
 
+### 5.1. Интегрированная архитектура метода
+
+**WORKING DEFINITION / DEC-002.** Адаптивное управление остаётся центральным предметом диссертации. Радиационно-экспериментальная и стохастическая части формируют обоснованные входы для ECC-level reliability assessment, а не заменяют control layer.
+
+Текущая причинно-расчётная архитектура:
+
+`radiation tests → experimentally justified device-error representation → transformation through memory/ECC organization W → ECC-level reliability model → current/future risk assessment from online information → adaptive memory-restoration decision`.
+
+Идентификация, ECC-aware reliability и adaptive control рассматриваются как три связанные слоя одного метода. Научная задача на их интерфейсе — установить, какая информация достаточна в принципе, какая реально идентифицируема из тестовых наблюдений и как её редукция изменяет reliability output и управляющее решение. Более богатое представление не считается автоматически необходимым или лучшим.
+
+**TBD.** Эта архитектура является roadmap decision, а не утверждённым novelty claim. Её отличие от нормативной практики и closest prior art должно быть проверено отдельно.
+
 ## 6. Исследовательские вопросы
 
 Утверждён начальный пакет `RQ-001…RQ-005`; актуальные статусы фиксируются в `docs/current_status.md`.
 
 - `RQ-001` — reliability event, metric and horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; working contract recorded as `DEC-001`.
-- `RQ-002` — minimum adequate radiation-induced SRAM error model — active next gate.
+- `RQ-002` — minimum adequate radiation-induced SRAM error model — initial evidence synthesis accepted; bounded model-selection gate active.
 - `RQ-003` — ECC abstraction and decoder outcomes.
 - `RQ-004` — online observables for adaptation.
 - `RQ-005` — measurable resource-cost vector without premature scalarization.
 
 RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
+
+The C-RQ-05 escalation is confirmed by RQ-002 full-text synthesis; permanent promotion remains an explicit PI decision. An integrated adaptive-control RQ must later consume the outputs of RQ-002…RQ-005 rather than duplicate or replace them.
 
 ## 7. Исходные допущения
 
@@ -138,6 +152,10 @@ COSRAD рассматривается как источник предметно
 
 **TBD.** Baselines должны быть выбраны после обзора литературы. Минимально предполагается наличие fixed/non-adaptive strategy для сравнения с предлагаемым adaptive approach.
 
+**WORKING DEFINITION / DEC-002.** Applicable Russian normative practice is a primary engineering baseline for the radiation-test → cross-section → environment convolution → event-rate/probability chain. Initial bounded targets are РД 134-0175-2009 and РД 134-0174-2009 after exact PI-provided documents are available. No deficiency is presumed before extraction.
+
+Chen/IHP/Potsdam is an active closest-prior-art threat for the adaptive-control layer. Zebrev/Ogden/Gomi/Franco and related sources address a different identification/event-representation/mapping threat layer. The layers must be compared separately before any integrated novelty statement.
+
 Не фиксировать конкретные baseline algorithms до подтверждения их распространённости и корректности для выбранной модели памяти.
 
 ## 12. Проверяемые гипотезы
@@ -159,6 +177,8 @@ COSRAD рассматривается как источник предметно
 7. аппаратная RTL-реализация выбранного метода;
 8. функциональная верификация SystemVerilog/iVerilog;
 9. синтез и оценка аппаратных затрат/временных характеристик в Vivado.
+
+The first bounded quantitative prototype should compare a declared hierarchy of device-error representations through the same `W`, ECC state and scrub semantics, then measure the change in `F_A` and in a parameterized restoration decision. Unknown numerical reliability requirements may be swept; they must not be invented.
 
 ## 14. Критерии воспроизводимости
 
@@ -184,6 +204,8 @@ COSRAD рассматривается как источник предметно
 
 **WORKING DEFINITION.** Конкретные формулировки научной новизны не фиксируются до анализа состояния области и получения собственных результатов.
 
+**WORKING DEFINITION / DEC-002.** Expected results must remain connected across the full chain. A candidate result on information reduction is scientifically useful only if it quantifies an effect, bound or invariance relevant to ECC-level reliability and the downstream adaptive decision.
+
 ## 16. Связь результатов с публикациями и диссертацией
 
 Планируется 3–5 научных статей, однако статьи не рассматриваются как независимые от исследования задачи. Каждая публикация должна соответствовать завершённому и проверенному исследовательскому результату (`RES-xxx`) либо связанной группе результатов.
@@ -201,15 +223,18 @@ COSRAD рассматривается как источник предметно
 5. Как определить функцию/вектор ресурсных затрат так, чтобы он отражал реальную цену adaptive scrubbing и был измерим в моделировании и RTL/FPGA-реализации?
 6. Насколько существенны MCU/MBU и interleaving для выбранного уровня абстракции?
 7. Какие fixed/adaptive approaches являются корректными baselines для сравнения?
+8. Какая информация о physical radiation event достаточна после `W`, какая реально идентифицируема из тестовых наблюдений и как её редукция влияет на `F_A` и adaptive decision?
+9. Что сохраняет и агрегирует применимая российская нормативная цепочка расчёта, и достаточны ли её выходы для ECC-aware reliability/adaptive control?
 
 ### Средний приоритет
 
-8. Какие метрики аппаратной реализации необходимы для доказательства практической реализуемости метода?
-9. Как связать COSRAD-сценарии с параметрами модели ошибок памяти без необоснованных преобразований?
-10. Какой уровень обобщения результатов между различными организациями SRAM и ECC-кодами достижим без потери строгости?
+10. Какие метрики аппаратной реализации необходимы для доказательства практической реализуемости метода?
+11. Как связать COSRAD-сценарии с параметрами модели ошибок памяти без необоснованных преобразований?
+12. Какой уровень обобщения результатов между различными организациями SRAM и ECC-кодами достижим без потери строгости?
 
 ## Change log
 
 - `0.1-draft` — создан каркас документа.
 - `0.2-draft` — зафиксированы рабочие границы: SRAM, стартовый класс SEC/SEC-DED, определение scrubbing, обязательная RTL/FPGA-верификация; источник управляющей информации, расширенный набор механизмов защиты и функция затрат оставлены как осознанные открытые вопросы исследования.
 - `0.3-draft` — зарегистрирован DEC-001: primitive ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics; RQ-001 переведён в PARTIALLY ANSWERED, открыт gate RQ-002.
+- `0.4-draft` — зарегистрирован DEC-002: сохранён adaptive-control core и введена единая evidence-to-decision architecture; information sufficiency отделена от experimental identifiability; Russian normative practice and layered closest-prior-art threats made explicit baselines; RQ-002 advanced to bounded model-selection after accepted Paper Cards and synthesis.

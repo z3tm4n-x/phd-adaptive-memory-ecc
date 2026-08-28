@@ -1,14 +1,19 @@
-# Draft Paper Card — RQ2-C005
+# PAPER-005 — Zebrev et al. (2017): MCU partitioning and simple SEC-DED scrubbing
 
-**PAPER-ID:** `TBD until Orchestrator acceptance`  
-**Candidate identity:** `RQ2-C005`  
-**Related RQ:** `RQ-002`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommendation:** `CORE`  
-**Exact primary version:** arXiv:1704.07271v2, 15 Oct. 2017, 5 pages  
-**Companion identity:** `RQ2-C006`, DOI `10.1109/RADECS.2017.8696217`  
-**Full text used:** `Multiple_Cell_Event_Partitioning_for_Sim(5).pdf`; SHA-256 `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e`  
-**Official arXiv v2 comparator:** `1704.07271v2.pdf`, retrieved from the versioned arXiv record; SHA-256 `03fc5bc397c68bfb613174f2fd7b5123a27cca0831530000ba3870206f7782ac`  
+**PAPER-ID:** `PAPER-005`<br>
+**Candidate identity:** `RQ2-C005`<br>
+**Related RQ:** `RQ-002`<br>
+**Status:** `ACCEPTED — CORE`<br>
+**Accepted:** 2026-08-28<br>
+**Accepted by:** Research Orchestrator<br>
+**Classification:** `CORE`<br>
+**Acceptance scope:** analytical card and controlled C005/C006 version comparison accepted as complete and traceable; the low-`β` SEC-DED approximation, scalar mapping factor and Eq. (15) recombination are not adopted as project assumptions<br>
+**Zotero item key:** `UNKNOWN` — not provided to Paper Analyst<br>
+**Evidence level in this card:** full-text analysis only; candidate claims and the inferred overlap risk remain unaudited<br>
+**Exact primary version:** arXiv:1704.07271v2, 15 Oct. 2017, 5 pages<br>
+**Companion identity:** `RQ2-C006`, DOI `10.1109/RADECS.2017.8696217`<br>
+**Full text used:** `Multiple_Cell_Event_Partitioning_for_Sim(5).pdf`; SHA-256 `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e`<br>
+**Official arXiv v2 comparator:** `1704.07271v2.pdf`, retrieved from the versioned arXiv record; SHA-256 `03fc5bc397c68bfb613174f2fd7b5123a27cca0831530000ba3870206f7782ac`<br>
 **Companion full text used:** `Multiple_Cell_Event_Partitioning_for_Simulation_of_Soft_Error_Rates_in_Space_Systems_with_Embedded_Error_Correcting_Codes.pdf`; SHA-256 `2cd3aa55ca715b8e3687fe411ad89b6ea01f6278c98423baa367fd38fc5bcc42`
 
 ## Bibliographic identity

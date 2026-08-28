@@ -13,8 +13,16 @@ A permanent `PAPER-xxx` identifier means that the card has passed Orchestrator r
 | [PAPER-001](PAPER-001-tausch-2009.md) | C45 | Tausch, 2009, DOI `10.1109/TNS.2009.2012710` | RQ-001 | CORE | ACCEPTED |
 | [PAPER-002](PAPER-002-baeg-wen-wong-2009.md) | C46 | Baeg, Wen, Wong, 2009, DOI `10.1109/TNS.2009.2015312` | RQ-001 | CORE | ACCEPTED |
 | [PAPER-003](PAPER-003-lee-baeg-reviriego-2011.md) | C38 | Lee, Baeg, Reviriego, 2011, DOI `10.1109/TNS.2011.2164555` | RQ-001 | CORE | ACCEPTED |
+| [PAPER-004](PAPER-004-clemente-rezaei-franco-2022.md) | RQ2-C001 | Clemente, Rezaei, Franco, 2022, DOI `10.1109/TNS.2022.3143652` | RQ-002 | CORE | ACCEPTED |
+| [PAPER-005](PAPER-005-zebrev-2017-arxiv-v2.md) | RQ2-C005 | Zebrev et al., exact `arXiv:1704.07271v2`; includes controlled RQ2-C006 RADECS comparison | RQ-002 | CORE | ACCEPTED |
+| [PAPER-006](PAPER-006-moindjie-et-al-2017.md) | RQ2-C008 | Moindjie et al., 2017, DOI `10.1016/j.microrel.2017.07.045` | RQ-002 | CORE | ACCEPTED |
+| [PAPER-007](PAPER-007-ogden-mascagni-2017.md) | RQ2-C011 | Ogden, Mascagni, 2017, DOI `10.1109/TR.2017.2765484` | RQ-002 | CORE | ACCEPTED |
+| [PAPER-008](PAPER-008-gomi-et-al-2026.md) | RQ2-C020 | Gomi et al., 2026, DOI `10.1109/TNS.2026.3675003` | RQ-002 | CORE | ACCEPTED |
 
-Cross-paper synthesis: [RQ-001 initial evidence synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md).
+Cross-paper syntheses:
+
+- [RQ-001 initial evidence synthesis](../evidence_synthesis/RQ-001_initial_evidence_synthesis.md);
+- [RQ-002 initial evidence synthesis](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md).
 
 ## Candidate claims
 

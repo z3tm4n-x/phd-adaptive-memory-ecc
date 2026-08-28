@@ -84,10 +84,11 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **Infrastructure setup:** завершён.
 - **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
 - **AI-agent operating model:** настроен в `docs/agents/`.
-- **Research Specification:** `v0.3-draft`.
+- **Research Specification:** `v0.4-draft`.
 - **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
 - **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
+- **Integrated roadmap:** `DEC-002` — radiation-test evidence, mapping `W`, ECC-level reliability and adaptive restoration control are one causal method; representation loss and observability are evaluated explicitly.
 - **Numerical reliability requirement:** `TBD`.
-- **Current phase:** RQ-002 targeted literature mapping; corrected handoff issued and Literature Scout launched.
-- **Active gate:** receive and assess the bounded Scout report against `docs/literature_mapping/RQ-002_protocol.md`, including mandatory anchors, exact Zebrev arXiv-v2 control, model-class sensitivity and the C-RQ-05 gate.
-- **Constraint:** RQ-003 retains decoder-outcome semantics; RQ-001 remains open.
+- **Current phase:** RQ-002 bounded model selection after acceptance of `PAPER-004…008` and the initial cross-paper evidence synthesis.
+- **Active gate:** audit decision-carrying propositions, bound model alternatives and specify the first parameterized experiment on the effect of event-information reduction on ECC-level reliability and an eventual adaptive decision.
+- **Constraint:** no second broad literature cycle without a named blocker; RQ-003 retains decoder-outcome semantics, C-RQ-05 awaits explicit PI promotion and RQ-001/DEC-001 remain unchanged.

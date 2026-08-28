@@ -1,11 +1,16 @@
-# Draft Paper Card — RQ2-C008
+# PAPER-006 — Moindjie et al. (2017): Multiplicity-indexed Poisson event rates
 
-**PAPER-ID:** `TBD until Orchestrator acceptance`  
-**Candidate identity:** `RQ2-C008`  
-**Related RQ:** `RQ-002`  
-**Status:** `DRAFT — FULL-TEXT DEEP READ COMPLETED`  
-**Recommendation:** `CORE`  
-**Exact full-text version:** Elsevier “Article in Press,” received 28 May 2017, accepted 8 July 2017, 5 pages  
+**PAPER-ID:** `PAPER-006`<br>
+**Candidate identity:** `RQ2-C008`<br>
+**Related RQ:** `RQ-002`<br>
+**Status:** `ACCEPTED — CORE`<br>
+**Accepted:** 2026-08-28<br>
+**Accepted by:** Research Orchestrator<br>
+**Classification:** `CORE`<br>
+**Acceptance scope:** analytical card accepted as complete and traceable for the analyzed Article-in-Press version; homogeneous-Poisson, independence and detector-association assumptions are not adopted as project assumptions<br>
+**Zotero item key:** `UNKNOWN` — final publisher metadata reconciliation remains a Zotero action<br>
+**Evidence level in this card:** full-text analysis only; candidate claims remain unaudited<br>
+**Exact full-text version:** Elsevier “Article in Press,” received 28 May 2017, accepted 8 July 2017, 5 pages<br>
 **Full text used:** `moindjie2017.pdf`; SHA-256 `48efb6837b8c323f474247d33da6243fa9c4200b8d49a570e91f9e5cad887b3f0`
 
 ## Bibliographic identity

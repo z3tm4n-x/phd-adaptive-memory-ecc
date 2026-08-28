@@ -9,3 +9,4 @@
 | DEC-ID | Decision | Related RQ | Status | Date |
 |---|---|---|---|---|
 | [DEC-001](DEC-001-rq001-reliability-contract.md) | RQ-001 working reliability event, metric, aggregate and horizon semantics | RQ-001 | ACCEPTED / REVISIT CONDITIONS OPEN | 2026-08-27 |
+| [DEC-002](DEC-002-integrated-evidence-to-adaptive-control-roadmap.md) | Integrated radiation-test evidence → ECC reliability → adaptive-control research architecture | RQ-002…RQ-005 / future control RQ | ACCEPTED — PI DIRECTION / ROADMAP DECISION | 2026-08-28 |
