@@ -1,0 +1,121 @@
+# EXP-001 — Event-representation reduction sensitivity
+
+**Status:** `PLANNED / IMPLEMENTATION HANDOFF READY`<br>
+**Registered:** 2026-08-28<br>
+**Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
+
+## Objective
+
+Quantify how successive reductions of one radiation event from full physical topology through `W` to joint, marginal and scalar representations change:
+
+1. DEC-001 `F_A(t0,T;μ_t0)` under accumulation and periodic scrubbing; and
+2. a parameterized restoration-regime decision made from that reliability assessment.
+
+The experiment is intended to determine exactness, bounds, approximation error and decision sensitivity. It does not assume that richer information is always useful or that a reduced model is inadequate.
+
+## Related RQ/HYP
+
+- RQ-001 — event/metric/domain/horizon contract;
+- RQ-002 — arrival/event/state representation;
+- RQ-006 — mapping `W` and representation sufficiency;
+- RQ-003/RQ-004 — future interface checks only;
+- HYP: none registered at planning time.
+
+## Code commit
+
+`TBD` after the first implementation commit. The implementation must not report results until this field, configuration and environment manifest are fixed.
+
+## Configuration
+
+The Research Engineer must create versioned config files under `simulation/configs/EXP-001/`. At minimum they must declare:
+
+- `A`: word count/partition and bits per word;
+- `W`: deterministic physical-cell-to-word mapping, with named no-interleaving and interleaved synthetic variants;
+- ECC capability `t_c(w)` without DUE/SDC reinterpretation;
+- event topology/multiplicity distribution and parent-event mark;
+- temporal arrival scenario and intensity parameters;
+- physical bit-update semantics, including repeat-hit/toggle treatment;
+- initial state or `μ_t0`;
+- scrub schedule, correction/writeback/reset transition and reporting window;
+- representation level `L0…L3`;
+- candidate scrub periods and parameterized `ε` grid;
+- seeds, run count and statistical precision rule.
+
+No numerical value in the initial config is a project reliability requirement or a device parameter unless separately sourced.
+
+## Input data / provenance
+
+Phase 1 uses synthetic, fully declared inputs only. The event stream is generated once per seed and reused across representation levels whenever coupling is mathematically valid. Russian normative documents, COSRAD data and device test records are not calibration inputs for Phase 1.
+
+Later target-specific configurations require separate provenance and are outside this first run.
+
+## Random seeds
+
+`TBD in config`. Use a deterministic seed list, common random numbers across `L0…L3` where valid, and enough independent runs to meet the predeclared confidence/precision criterion. One seed cannot support a scientific result.
+
+## Baselines / representation levels
+
+| Level | Representation | Required behavior |
+|---|---|---|
+| `L0` | full physical topology + explicit `W` | event-driven reference |
+| `L1` | joint post-`W` codeword-impact mark with parent provenance | must reproduce the `L0` state update exactly for the same events |
+| `L2` | marginal per-word multiplicities plus declared reconstruction/dependence rule | tested reduction; no assumed bias direction |
+| `L3` | scalar/unmarked event or upset rate | coarse comparator; no assumed adequacy |
+
+Optional source-inspired low-`β` or occupancy formulas may be added only as separately labelled comparators with their source assumptions; they are not reference truth.
+
+## Metrics
+
+- `F_A(t0,T;μ_t0)` and confidence interval for each configuration;
+- absolute and relative error against `L0/L1`;
+- paired trajectory/event disagreement where common event streams are available;
+- false-safe classification over the swept `ε`: reduced model reports feasible while reference is infeasible;
+- false-conservative classification: reduced model reports infeasible while reference is feasible;
+- feasible set of candidate `T_scrub` values under each representation;
+- difference in maximal feasible `T_scrub` or an explicitly declared alternative decision rule;
+- scrub-operation count as an experiment-local resource proxy, reported separately from reliability;
+- runtime and memory use for computational-feasibility comparison.
+
+## Procedure
+
+1. **Deterministic unit cases.** Construct single-event and two-event traces with known post-`W` word states, repeat hits, immediate capability exceedance and accumulation across a scrub boundary.
+2. **Lossless-interface check.** For identical event traces, verify exact state/event equivalence of `L0` and `L1` for every deterministic test and then under randomized streams.
+3. **Representation comparison.** Compare `L2` and `L3` with `L0/L1` across single-cell, compact multi-cell and spatially separated event classes and at least two `W` variants.
+4. **Temporal sensitivity.** Repeat the comparison under one constant-rate marked HPP scenario and one explicitly synthetic deterministic time-varying intensity/NHPP scenario. Do not infer empirical adequacy of either family.
+5. **Initial-state and scrub sensitivity.** Include a clean initial state and at least one declared non-clean `μ_t0`; sweep candidate scrub periods under one explicit periodic scrub transition.
+6. **Decision comparison.** Sweep `ε`, compute feasible scrub-period sets and record false-safe/false-conservative and selected-period discrepancies.
+7. **Robustness and cost.** Report precision, seed sensitivity, runtime and memory scaling. Keep raw outputs outside Git; commit configs, manifests, tests and bounded aggregate tables.
+
+## Expected falsification / acceptance criterion
+
+The experiment implementation is invalid if `L0` and `L1` disagree for the same physical event stream under the declared state semantics. Such a disagreement means the proposed joint post-`W` mark is not lossless or the implementation is incorrect.
+
+For `L2` and `L3`, no preferred result is specified. A valid result may show exact agreement in a restricted domain, a conservative/non-conservative bound, measurable error, or control-decision invariance/change. Every result must state the tested domain and uncertainty.
+
+The first `RES-xxx` may be proposed only after:
+
+- deterministic tests pass;
+- statistical precision is met;
+- the Scientific Reviewer checks the configuration, fairness of common inputs and interpretation;
+- the statement is limited to the tested representations and validity domain.
+
+## Output locations
+
+- implementation: `simulation/src/`;
+- tests: `simulation/tests/`;
+- configs: `simulation/configs/EXP-001/`;
+- run manifests: `experiments/manifests/EXP-001/`;
+- bounded aggregate outputs/figures after review: `results/` with a future `RES-xxx` link;
+- large/raw outputs: local external path recorded in the manifest, not committed.
+
+## Explicit non-claims
+
+EXP-001 does not by itself establish:
+
+- a target SRAM radiation model;
+- the empirical correctness of HPP or NHPP;
+- a deficiency in Russian normative practice;
+- a final ECC/decoder outcome model;
+- a numerical reliability requirement;
+- the final resource-cost objective;
+- novelty of the integrated adaptive-control method.

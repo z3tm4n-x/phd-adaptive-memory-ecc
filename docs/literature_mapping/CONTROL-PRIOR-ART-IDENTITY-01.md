@@ -8,6 +8,19 @@
 **Required scientific base:** `c55ba6447e6b1104a5f7ae7af9d3b072c44a6c02`  
 **Report commit base:** `1961ec77d11b3d0ee56009d41b1cb361cfb1f369` (`main`, checked immediately before the one-file write)  
 **Evidence level:** identity resolution and bounded feature screening; not novelty adjudication or a Paper Card.  
+**Orchestrator status:** `ACCEPTED — IDENTITY/DISCOVERY ONLY`<br>
+
+## Orchestrator acceptance boundary
+
+The publication-family identity, DOI chain and version relationships are accepted as a discovery record. The report correctly resolves the ambiguous Chen/IHP/Potsdam reference and supplies a bounded full-text handoff. Its discovery-level feature descriptions are **not** accepted as paper-level evidence, permanent claims or a novelty conclusion.
+
+The next controlled targets are:
+
+1. the 2025 JETTA article, DOI `10.1007/s10836-025-06183-5`, as the consolidated source;
+2. the 2023 DFT paper, DOI `10.1109/DFT59622.2023.10313560`, as the earliest explicit controller disclosure;
+3. the 2024 LATS paper, DOI `10.1109/LATS62223.2024.10534594`, as the distinct dynamic-fault-injection/evaluation branch.
+
+These three sources require a feature-by-feature full-text Paper Analyst comparison before any adaptive-control novelty statement. The 2020/2022 prediction papers remain upstream context and become separate deep-read targets only if the three-source comparison leaves a named observation/prediction-interface gap.
 
 ## 1. Disposition
 

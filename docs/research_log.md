@@ -213,3 +213,46 @@
 - Identification/mapping, normative-practice and adaptive-control prior-art threats remain separate. Chen/IHP/Potsdam stays an active close threat for the control layer; Franco/Zebrev/Ogden/Gomi and related sources cover different layers.
 - Missing numerical `H_req`/`ε_req`, final observables, final cost scalarization or hardware selection do not block a parameterized representation-sensitivity prototype.
 - `DEC-001` and RQ-001 remain unchanged. No new `RQ`, `CLM`, `HYP`, `EXP` or `RES` was created automatically.
+
+### RQ-002 Evidence Audit 01 accepted with limitation
+
+- Draft audit commit `1961ec77d11b3d0ee56009d41b1cb361cfb1f369` was reviewed against the Evidence Auditor role contract and accepted canonically as `docs/evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md`.
+- `RQ002-EA-CAND-01…03` and `05…10` are accepted only in the report's precise scoped wording.
+- `RQ002-EA-CAND-04` remains `PARTIALLY_SUPPORTED`: marginal per-word statistics cannot be assumed sufficient, but universal insufficiency is not established. Joint-versus-marginal sufficiency becomes an experiment target.
+- No permanent `CLM`/`EVD` was created. No additional Paper Card or general RQ-002 literature cycle is required before the first prototype.
+
+### Chen/IHP/Potsdam identity output accepted at discovery level
+
+- Identity-resolution commit `0b8864155c47bd8cb28fa0bd96be9fe23f6b96cb` was accepted as an identity/discovery record, not paper evidence or novelty adjudication.
+- The closest family is controlled as a 2025 JETTA consolidated source, a separate 2023 DFT controller disclosure and a separate 2024 LATS evaluation branch.
+- A bounded three-source full-text Paper Analyst comparison is authorized in parallel with EXP-001. The 2020/2022 prediction sources remain upstream context unless a named gap requires them.
+
+### C-RQ-05 permanently promoted to RQ-006
+
+- Explicit PI approval registered C-RQ-05 → `RQ-006`.
+- RQ-006 owns physical event topology, `W`, interleaving, joint post-`W` impact and exactness/bounds/error of representation reduction.
+- RQ-002 retains arrival/event/state modelling; RQ-003 retains concrete ECC/decoder outcomes.
+- RQ-006 remains `OPEN`; no answer, hypothesis, result or novelty claim was created by registration.
+
+### DEC-003 and EXP-001 registered
+
+- `DEC-003` passed the bounded literature/model-selection gate for prototype work without selecting HPP, NHPP, Cox, PDMP or another universal target family.
+- The comparison reference preserves parent-event provenance, physical topology, explicit `W`, joint codeword impact, initial state, repair transitions and DEC-001 first-passage semantics.
+- `EXP-001` was registered to compare `L0` full topology + `W`, `L1` joint post-`W` marks, `L2` marginal word statistics and `L3` scalar rates.
+- `L0 → L1` must be lossless for the declared state update. `L2/L3` have no pre-assigned direction; both invariance and material decision change are admissible results.
+- Numerical reliability requirements remain swept parameters. EXP-001 does not validate a target SRAM model or establish a normative deficiency/novelty claim.
+
+### Three-document Russian normative source set registered
+
+- PI-provided `РД 134-0174-2009`, `РД 134-0175-2009` and `СТО ГК Роскосмос 04.01.0005–2022` were fingerprinted and routed into `NORMATIVE-BASELINE-01`; PDFs were not committed.
+- The supplied RD 0175 copy states a 2012 reissue with amendment 1. Both RD PDFs contain later 2024 regeneration metadata, which is not treated as an edition date.
+- The supplied STO file states approval, registration and a 2022 effective date, but its text layer also contains repeated hidden white-text `Проект, окончательная редакция` labels. Standard identity/use is externally corroborated, while exact controlled-copy status remains `AMBIGUOUS`.
+- Preliminary inspection confirms that functional diagnosis and later processing can be separate stages and that MBU/MCU/SMU criteria and diagnostic software are PMI-dependent. No conclusion about normative information sufficiency or deficiency was accepted.
+- A bounded clause-level Paper Analyst handoff was defined. It runs in parallel and does not block the synthetic EXP-001.
+
+### Current gate and PI material request
+
+- Active gate: Research Engineer implementation/tests/configuration for EXP-001, followed by Scientific Reviewer inspection before any `RES-xxx`.
+- Parallel non-blockers: three-document normative extraction and three-source Chen full-text comparison.
+- Exact requested material for the current/applicable normative chain: controlled-copy/registry evidence for STO 04.01.0005–2022; ГОСТ РВ 0020–57.415–2020; STO 04.01.0008–2024; STO 04.01.0010–2025; and a representative/de-identified SRAM private PMI plus diagnostic/software output schema.
+- No additional PI decision is required to start EXP-001.

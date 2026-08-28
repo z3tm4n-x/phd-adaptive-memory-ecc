@@ -4,124 +4,138 @@
 
 ## Current phase
 
-RQ-002 bounded model selection and preparation of the first parameterized own-result experiment.
+First own quantitative prototype: implementation and validation of `EXP-001` while bounded normative and close-prior-art extractions run in parallel.
 
 ## Infrastructure status
 
 - GitHub repository setup: complete.
 - Zotero setup: complete.
 - AI-agent operating model: complete; canonical role instructions are in `docs/agents/`.
-- Research Specification: `v0.4-draft`.
+- Research Specification: `v0.5-draft`.
 
-## Active gate
+## Active scientific gate
 
-Audit the decision-carrying propositions from the accepted RQ-002 Paper Analyst batch, bound the remaining model alternatives, and specify the smallest quantitative prototype that can test the effect of event-information reduction on `E_cap`, `F_A(t0,T;μ_t0)` and an eventual adaptive restoration decision. No second general RQ-002 discovery cycle is authorized without a named blocking evidence gap.
+Implement the DEC-003 event-representation ladder under common `A/W/ECC/initial-state/scrub` semantics and determine whether full physical topology, joint post-`W` marks, marginal word statistics and scalar rates produce equivalent, bounded or decision-changing `F_A` estimates.
+
+The gate output is a reproducible `EXP-001` run suitable for adversarial Scientific Reviewer inspection. No second general RQ-002 literature cycle is authorized without a named gap that blocks model adequacy, validation or interpretation.
 
 ## Active Research Questions
 
 - RQ-001 — reliability event, metric and evaluation horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
-- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / INITIAL EVIDENCE SYNTHESIS ACCEPTED / MODEL-SELECTION GATE`.
+- RQ-002 — minimum adequate SRAM radiation error model — `OPEN / EVIDENCE AUDIT ACCEPTED / PROTOTYPE GATE`.
 - RQ-003 — ECC abstraction and baseline code class — `OPEN / QUEUED`; retains decoder-outcome semantics.
-- RQ-004 — online observables for adaptation — `OPEN / QUEUED`; must distinguish external exposure information from internal memory-state/history information.
+- RQ-004 — online observables for adaptation — `OPEN / QUEUED`; must distinguish external exposure from internal memory-state/history information.
 - RQ-005 — measurable resource-cost vector — `OPEN / QUEUED`.
-- C-RQ-05 — physical/logical mapping and interleaving — escalation condition confirmed by RQ-002 evidence; proposed promotion is C-RQ-05 → `RQ-006`, subject to explicit PI acceptance before the main reliability model is fixed.
-- An integrated adaptive-control RQ remains required to join RQ-002…RQ-005 outputs into an actual restoration-regime decision; its exact registration and relation to C-RQ-08/C-RQ-09/C-RQ-11 remain pending PI review.
+- RQ-006 — physical-to-logical mapping and information sufficiency — `OPEN / REGISTERED / PROTOTYPE-COUPLED`.
+- An integrated adaptive-control RQ remains required after RQ-002/RQ-006 prototype results and RQ-003…RQ-005 interfaces are bounded. It must preserve the SOURCE objective rather than become a dynamic-input-only question.
 
-## Accepted RQ-001 decision
+## Controlling decisions
 
-[DEC-001](decisions/DEC-001-rq001-reliability-contract.md) remains controlling and unchanged:
+- [DEC-001](decisions/DEC-001-rq001-reliability-contract.md) remains unchanged: `E_cap` is ECC capability exceedance, general metric is `F_A(t0,T;μ_t0)`, `A` is declared/partitioned, horizons remain distinct, and `H_req/ε_req` remain `TBD`.
+- [DEC-002](decisions/DEC-002-integrated-evidence-to-adaptive-control-roadmap.md) keeps one causal architecture from radiation-test evidence through `W` and ECC reliability to an actual adaptive restoration decision.
+- [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) accepts the bounded RQ-002 evidence constraints, retains an event-driven comparison reference and authorizes the representation-reduction experiment without selecting a universal process family.
 
-- primitive event `E_cap` is ECC capability exceedance, not an automatic DUE/SDC/miscorrection/system-failure label;
-- reporting window is `H(t0,T) = [t0,t0+T]`;
-- general metric is `F_A(t0,T; μ_t0)`, with the initial state/distribution required by every quantitative model;
-- `A` is an explicitly declared controller-managed SRAM protection domain and must be partitioned when ECC, mapping `W`, arrival, bank/block or scrubbing semantics differ;
-- upset-count, per-codeword exposure, reporting and mission horizons remain distinct;
-- `H_req` and `ε_req` remain `TBD` pending traceable requirements.
+## Orchestrator review dispositions
 
-## Accepted integrated roadmap decision
+### RQ-002 Evidence Audit 01
 
-[DEC-002](decisions/DEC-002-integrated-evidence-to-adaptive-control-roadmap.md) records the PI-directed working architecture:
+[Accepted with limitation](evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md):
 
-`radiation-test evidence → identifiable device-error representation → mapping W / ECC organization → ECC-level reliability → observable risk assessment → adaptive restoration decision`.
+- candidates 01–03 and 05–10 are accepted only in their precise scoped wording;
+- candidate 04 is partially supported: marginal per-word sufficiency cannot be presumed, but universal insufficiency is not established;
+- no permanent `CLM`/`EVD` was created;
+- no additional Paper Card is required before EXP-001.
 
-The three scientific layers — identification, ECC-aware reliability and adaptive control — are one causal method, not automatically three independent novelty claims. The active scientific question is the adequacy and quantitative price of information reduction between radiation-test observations and the final control decision. A richer representation is not presumed superior; exact reductions, bounded reductions and declared approximations are all admissible outcomes.
+### Chen/IHP/Potsdam identity report
 
-## RQ-002 accepted evidence
+[Accepted as identity/discovery only](literature_mapping/CONTROL-PRIOR-ART-IDENTITY-01.md):
 
-The corrected PA Batch 01 provenance at base commit `314b040de3bd8096ba1114edf1dc165da06e2360` has no blocking identity issue. The following full-text analytical cards are formally accepted:
+- the publication family and DOI/version chain are resolved;
+- the 2025 JETTA paper is the consolidated target;
+- the 2023 DFT controller disclosure and 2024 LATS evaluation branch remain separate mandatory full-text comparators;
+- discovery-level feature statements are not paper evidence or novelty conclusions.
 
-- [PAPER-004](paper_cards/PAPER-004-clemente-rezaei-franco-2022.md) — Clemente, Rezaei and Franco, 2022;
-- [PAPER-005](paper_cards/PAPER-005-zebrev-2017-arxiv-v2.md) — exact Zebrev arXiv v2, with C006 retained as a controlled companion publication rather than a separate Paper Card;
-- [PAPER-006](paper_cards/PAPER-006-moindjie-et-al-2017.md) — Moindjie et al., 2017;
-- [PAPER-007](paper_cards/PAPER-007-ogden-mascagni-2017.md) — Ogden and Mascagni, 2017;
-- [PAPER-008](paper_cards/PAPER-008-gomi-et-al-2026.md) — Gomi et al., 2026.
+## RQ-006 registration
 
-Acceptance covers completeness, traceability and fitness for bounded synthesis. It does not adopt source assumptions, accept candidate claims, select a process family or establish novelty.
+PI approval permanently promoted C-RQ-05 → [RQ-006](questions/RQ-006-physical-logical-mapping-information-sufficiency.md). RQ-006 owns physical topology, `W`, interleaving, joint post-`W` impact and the exactness/bound/error of representation reduction. RQ-002 continues to own arrival/event/state and restoration-process representation; RQ-003 retains ECC/decoder outcomes.
 
-The canonical [RQ-002 initial evidence synthesis](evidence_synthesis/RQ-002_initial_evidence_synthesis.md) preserves the cross-paper distinctions in primitive arrival object, temporal process, event mark/topology, `W`, accumulation state, repair, observation error, aggregation and horizon.
+## Russian normative baseline
 
-## Remaining model alternatives
+The bounded [NORMATIVE-BASELINE-01 protocol](normative_baseline/NORMATIVE-BASELINE-01_protocol.md) covers:
 
-No family is selected. The bounded alternatives are:
+- `РД 134-0174-2009` — calculation from experimental cross sections and space-environment spectra to rate/probability;
+- `РД 134-0175-2009` — digital VLSI irradiation testing and event/cross-section processing; supplied copy states a 2012 reissue with amendment 1;
+- `СТО ГК Роскосмос 04.01.0005–2022` — integrated modern test-method framework including SEU/MBU/MCU/SMU and PMI/software-dependent identification.
 
-- multiplicity-indexed marked HPP;
-- time-varying marked Poisson/NHPP;
-- compound marked Poisson;
-- event-driven physical/post-`W` marked simulation;
-- independent-accumulation occupancy model with a separately defined direct-event layer;
-- discrete-time scan/repair state model;
-- observation-aware latent-event model.
+The STO identity and practical listing are corroborated, but the supplied file's exact controlled revision is `AMBIGUOUS`: it contains approval/registration/effective-date statements and also repeated hidden white-text `Проект, окончательная редакция` markers. No stronger edition or compliance claim is accepted.
 
-Each alternative must be evaluated against the minimum event/mark representation, joint post-`W` dependence, initial state, repair/writeback semantics, observation uncertainty, validation domain and computational tractability.
+Preliminary routing shows that richer address/event information may exist before reported cross-section aggregation; its actual availability, physical meaning and retention are PMI/software dependent. No normative deficiency or sufficiency conclusion has been made.
 
-## Revised scientific roadmap
+## First own experiment
 
-1. **Identification layer:** determine what event/topology/multiplicity information is observable or identifiable from realistic radiation tests and with what reconstruction uncertainty.
-2. **ECC-aware reliability layer:** transform that information through declared `W`, ECC capability and restoration semantics into `E_cap` and `F_A(t0,T;μ_t0)`; quantify the effect of successive representation reductions.
-3. **Adaptive-control layer:** use physically available external and internal observations to choose an actual restoration regime under a parameterized or traceable reliability constraint and a measurable resource-cost vector.
-4. **Implementation/validation layer:** connect the method to controller architecture, RTL and hardware/resource/timing evidence without treating RTL alone as novelty.
+[EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is `PLANNED / IMPLEMENTATION HANDOFF READY`.
 
-Russian normative practice is a primary practical baseline for the whole chain. Its retained and aggregated information must be extracted before any claim of deficiency. The identification/mapping prior-art threat and the Chen/IHP/Potsdam adaptive-control prior-art threat remain separate checks.
+It compares:
+
+1. `L0` full physical topology + `W`;
+2. `L1` joint post-`W` parent-event mark;
+3. `L2` marginal per-word multiplicities with explicit reconstruction;
+4. `L3` scalar/unmarked rate.
+
+Outputs include `F_A` error, false-safe/false-conservative classification over a swept parameterized `ε`, feasible scrub-period sets, decision discrepancy and computational cost. `L0 → L1` must be lossless for the declared state update; otherwise the implementation/model interface is invalid.
 
 ## Actual blockers
 
-1. **PI decision:** approve or reject permanent promotion of C-RQ-05. The promotion is required before fixing the main quantitative reliability model.
-2. **Normative source material:** exact controlled copies/editions of `РД 134-0175-2009`, `РД 134-0174-2009` and any companion documents the PI considers applicable are required before normative-chain extraction.
-3. **Closest adaptive-control source identity:** exact Chen/IHP/Potsdam title, DOI/report identity or full text is required before a control-layer novelty statement can be assessed.
-4. **Target-specific conclusions:** a declared protection-domain architecture `A`, mapping `W`, and traceable event/rate data are required before device- or mission-specific quantitative conclusions.
+### Not blocking the synthetic EXP-001 implementation
 
-## Non-blockers for a parameterized prototype
-
-- unresolved numerical `H_req` and `ε_req`;
-- final decoder-outcome semantics from RQ-003;
-- final observation channel/estimator from RQ-004;
-- final resource weights or scalar objective from RQ-005/C-RQ-11;
+- numerical `H_req` and `ε_req`;
+- final target SRAM, `W` or irradiation data;
+- final RQ-003 decoder outcomes;
+- final RQ-004 estimator/observation channel;
+- final RQ-005 resource vector/scalarization;
 - final FPGA/RTL platform;
-- deferred eLibrary and unavailable ResearchRabbit coverage.
+- completion of normative or Chen deep reads.
 
-These quantities may remain explicit parameters or bounded alternatives in the first model-comparison experiment. The prototype must not claim satisfaction of an unstated requirement.
+### Blocking only stronger downstream claims
 
-## Active hypotheses and own results
+1. **Target/device validity:** target `A/W`, irradiation/test-log provenance and repair trace.
+2. **Normative applicability/identifiability:** accepted three-document extraction plus representative PMI/software-output semantics; current standard hierarchy remains incomplete.
+3. **Adaptive-control novelty:** full-text comparison of the 2025 JETTA, 2023 DFT and 2024 LATS Chen-family sources.
+4. **System requirement claim:** traceable `H_req` and `ε_req`.
+5. **First RES:** completed EXP-001 with fixed code/config/seeds, uncertainty and Scientific Reviewer pass.
+
+## Next bounded handoffs
+
+1. **Research Engineer (priority):** implement and run EXP-001 deterministic checks and Monte Carlo comparison from the registered specification.
+2. **Paper Analyst — normative branch (parallel):** perform only the three-document NORMATIVE-BASELINE-01 clause-level extraction; no broad standards search.
+3. **Paper Analyst — control prior art (parallel, non-blocking for EXP-001):** full-text compare the 2025 JETTA, 2023 DFT and 2024 LATS sources; create draft Paper Cards/matrix and no novelty conclusion.
+4. **Scientific Reviewer:** review EXP-001 only after implementation/tests/config/aggregate results exist.
+
+## PI materials requested
+
+The current three documents are sufficient to start extraction. To close the current/applicable normative chain, request exact copies/status for:
+
+- controlled edition or registry extract for `СТО ГК Роскосмос 04.01.0005–2022`;
+- `ГОСТ РВ 0020–57.415–2020`;
+- `СТО ГК Роскосмос 04.01.0008–2024`;
+- `СТО ГК Роскосмос 04.01.0010–2025`;
+- one representative SRAM private PMI or de-identified PMI template plus diagnostic/software output schema.
+
+No PI decision is required to begin EXP-001.
+
+## Active hypotheses and results
 
 - No `HYP-xxx` has been registered.
-- No `EXP-xxx` has been registered.
+- `EXP-001` is registered but has no accepted result.
 - No `RES-xxx` has been registered.
-- `DEC-001` and `DEC-002` are research decisions, not own experimental results.
-
-## Next actions
-
-1. Run one bounded Evidence Auditor task over the decision-carrying RQ-002 propositions from `PAPER-004…008`; do not create permanent claims automatically.
-2. Obtain the PI decision on C-RQ-05 promotion and then register the mapping/interleaving RQ if approved.
-3. When the PI supplies the Russian normative documents, run a document-bounded extraction of the normative calculation chain and retained information; do not perform a broad normative search first.
-4. After exact Chen/IHP/Potsdam identity is available, run a bounded feature-by-feature close-prior-art check for the adaptive-control layer.
-5. Define a common parameterized `A/W/ECC/scrub` test system, a representation ladder, comparison metrics and the first `EXP-xxx` specification. Register an experiment only after the bounded evidence/model-selection decision states what it discriminates.
-6. Authorize new literature or deep-read work only for a named gap that blocks model selection, adequacy, validation or the first own-result experiment.
+- DEC-001…003 are research decisions, not own experimental results.
 
 ## Constraints
 
 - Do not reopen RQ-001 or revise DEC-001 without a concrete contradiction.
-- External-advisor statements remain unverified threats until checked against primary evidence.
-- Do not claim that the normative chain is deficient before examining the applicable documents.
-- Do not claim novelty for radiation variation/prediction → adaptive scrub-frequency adjustment without the close control-layer prior-art pass.
+- Do not identify `E_cap` with DUE/SDC/miscorrection/system failure.
+- Do not claim that richer event information is always necessary or observable.
+- Do not claim normative deficiency before accepted extraction and applicability resolution.
+- Do not claim adaptive-control novelty before the bounded Chen full-text comparison.
 - Do not assign a numerical reliability requirement without traceable provenance.
-- Do not let the identification problem replace adaptive control as the dissertation core.
+- Do not let the identification/mapping layer replace adaptive control as the dissertation core.

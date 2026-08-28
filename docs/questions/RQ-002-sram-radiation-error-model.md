@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
 **Source candidate:** C-RQ-02<br>
-**Status:** `OPEN — INITIAL EVIDENCE SYNTHESIS ACCEPTED / MODEL-SELECTION GATE`<br>
+**Status:** `OPEN — EVIDENCE AUDIT ACCEPTED / PROTOTYPE GATE`<br>
 **Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -81,7 +81,7 @@ RQ is answerable when:
 7. experimentally identifiable parameters, unresolved uncertainties, validation needs and computational feasibility are stated;
 8. outputs required by RQ-003, RQ-004 and the first quantitative prototype are explicit.
 
-**Decision gate:** if evidence shows that MCU/MBU or spatial correlation materially changes the structure or probability of `E_cap`, or their exclusion cannot be justified or bounded, C-RQ-05 must be promoted to a mandatory permanent RQ and answered before the main reliability model is built.
+**Decision gate:** if evidence shows that MCU/MBU or spatial correlation materially changes the structure or probability of `E_cap`, or their exclusion cannot be justified or bounded, C-RQ-05 must be promoted to a mandatory permanent RQ and answered before the main reliability model is built. This gate has fired and the PI approved permanent promotion C-RQ-05 → [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) on 2026-08-28.
 
 ## Accepted initial evidence synthesis
 
@@ -97,15 +97,27 @@ Accepted inputs:
 
 The synthesis rules out, as unsupported stand-alone choices, an unmarked scalar bit-arrival rate, a clean count-conditioned occupancy model and the simple low-`β` additive expression. It retains a bounded alternative set rather than selecting HPP, NHPP, compound/marked, observation-aware or event-driven models prematurely.
 
+## Accepted Evidence Audit and bounded model decision
+
+[RQ-002 Evidence Audit 01](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md) is accepted with one limitation: its candidate 04 does not establish universal insufficiency of marginal per-word multiplicities; it establishes that sufficiency cannot be presumed and must be tested or bounded. No permanent claims were created.
+
+[DEC-003](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) passes the literature/model-selection gate for the first prototype without selecting a universal stochastic family. It retains:
+
+- an event-driven parent-event-preserving reference;
+- a representation ladder from full physical topology through joint post-`W`, marginal and scalar levels;
+- HPP and declared time-varying/NHPP scenarios only as synthetic controlled alternatives;
+- explicit initial state, repair/writeback/reset and DEC-001 first-passage semantics.
+
+The minimum adequate target model remains unknown until the reduction comparison, normative identifiability extraction and later target validation are available.
+
 ## Active gate / next action
 
-1. Audit only the cross-paper propositions that will carry the model-selection decision.
-2. Bound the remaining arrival, event-mark, state/repair and observation alternatives.
-3. Define a parameterized prototype that compares information-representation levels through `W` and reports their effect on `F_A` and an adaptive restoration decision.
-4. Do not wait for numerical `H_req` or `ε_req`; use parameter sweeps and do not claim requirement satisfaction.
-5. Do not authorize another general literature cycle without a named gap that blocks model selection, validation or the first prototype.
+1. Implement and validate [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) using common event streams and the DEC-003 representation ladder.
+2. Complete the bounded [Russian normative-baseline extraction](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) in parallel to establish realistic input identifiability.
+3. Do not wait for numerical `H_req` or `ε_req`; use parameter sweeps and do not claim requirement satisfaction.
+4. Do not authorize another general literature cycle without a named gap that blocks model adequacy, validation or interpretation of the first prototype.
 
-The C-RQ-05 escalation condition is confirmed by full-text synthesis because topology, interleaving and mapping `W` cannot be safely excluded or replaced by a scalar multiplicity without a declared validity argument. Permanent promotion requires explicit PI acceptance and must occur before the main quantitative reliability model is fixed.
+The former C-RQ-05 escalation condition is resolved by permanent [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md). RQ-002 retains arrival/event/state responsibility; RQ-006 owns `W`, interleaving and reduction-sufficiency conditions.
 
 eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-search cycle is authorized without a named gap that blocks model selection, adequacy, validation or the first quantitative experiment.
 
@@ -113,12 +125,15 @@ eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-sea
 
 - Related RQ: RQ-001, RQ-003.
 - Input decision: `DEC-001`.
-- Conditional dependency: C-RQ-05 — escalation condition triggered; permanent promotion pending explicit acceptance.
+- Mapping dependency: [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) — permanently registered after the escalation condition fired.
 - Non-blocking future task: control prior-art threat in [`research_backlog.md`](../research_backlog.md).
 - Mapping report: [`RQ-002_literature_mapping_initial_2026-08-27.md`](../literature_mapping/RQ-002_literature_mapping_initial_2026-08-27.md).
 - Accepted Paper Cards: `PAPER-004…PAPER-008`.
 - Evidence synthesis: [`RQ-002_initial_evidence_synthesis.md`](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md).
-- CLM/EVD/HYP/EXP: none created at this gate.
+- Evidence Audit: [`RQ-002_EVIDENCE_AUDIT_01.md`](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md).
+- Model decision: [`DEC-003`](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md).
+- Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — PLANNED.
+- CLM/EVD/HYP/RES: none created at this gate.
 
 ## Answer
 

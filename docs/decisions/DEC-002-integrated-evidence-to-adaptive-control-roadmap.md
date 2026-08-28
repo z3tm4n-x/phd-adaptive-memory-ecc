@@ -3,7 +3,7 @@
 **Decision:** Preserve adaptive control as the dissertation core and organize the research as one traceable chain from radiation-test evidence to an ECC-level risk assessment and an actual adaptive memory-restoration decision.<br>
 **Date:** 2026-08-28<br>
 **Status:** `ACCEPTED — PI DIRECTION / ROADMAP DECISION`<br>
-**Related RQ:** `RQ-002`, `RQ-003`, `RQ-004`, `RQ-005`; C-RQ-05 escalation and a future integrated adaptive-control RQ remain pending explicit registration<br>
+**Related RQ:** `RQ-002`…`RQ-006`; a future integrated adaptive-control RQ remains pending explicit registration<br>
 **Does not revise:** `DEC-001` or the `PARTIALLY ANSWERED / OPEN DEPENDENCIES` disposition of `RQ-001`
 
 ## Context
@@ -52,7 +52,7 @@ An ideal event representation is not treated as automatically observable in an i
 
 ### 4. Russian normative practice is a primary baseline
 
-Applicable Russian normative documentation is a primary engineering baseline for the identification-to-rate chain, not background and not merely a final compliance check. The initial bounded target includes РД 134-0175-2009 and РД 134-0174-2009 after the PI supplies the exact documents.
+Applicable Russian normative documentation is a primary engineering baseline for the identification-to-rate chain, not background and not merely a final compliance check. The received bounded target includes РД 134-0174-2009, РД 134-0175-2009 and СТО ГК Роскосмос 04.01.0005–2022. Copy provenance, applicability and PMI-dependent information retention must be extracted before any sufficiency or deficiency conclusion.
 
 The normative extraction must identify what the chain
 
@@ -88,7 +88,7 @@ Unknown numerical `H_req`, `ε_req`, final observables, resource weights or hard
 - The approved topic and SOURCE-level objective retain adaptive control as the core subject.
 - DEC-001 supplies the current event, metric, domain and horizon contract.
 - The accepted RQ-002 synthesis shows that the five decisive sources use materially different primitive objects, aggregation levels, mappings, horizons, reset semantics and observation models.
-- The C-RQ-05 escalation condition is confirmed at full-text synthesis depth because topology and `W` cannot be safely discarded without a validity argument.
+- The C-RQ-05 escalation condition was confirmed at full-text synthesis depth and resolved by PI-approved permanent RQ-006 registration because topology and `W` cannot be safely discarded without a validity argument.
 
 ## Working definitions / roadmap requirements
 
@@ -103,7 +103,7 @@ These are project decisions and internal roadmap requirements; they are not univ
 ## Unknown / TBD
 
 - the minimum adequate arrival/event/state representation — RQ-002;
-- the accepted physical-to-codeword mapping question and permanent RQ identity for C-RQ-05;
+- the minimum sufficient physical-to-codeword representation and reduction-validity domain — RQ-006;
 - concrete ECC and decoder outcomes — RQ-003;
 - feasible external/internal observation channels and estimator requirements — RQ-004;
 - measurable cost vector and later optimization form — RQ-005 and the deferred C-RQ-11 line;
@@ -127,12 +127,12 @@ These are project decisions and internal roadmap requirements; they are not univ
 ## Consequences
 
 - RQ-002 model selection must include representation sufficiency, experimental identifiability and uncertainty propagation to the DEC-001 metric.
-- C-RQ-05 should be promoted to a permanent mapping/information-reduction RQ after explicit PI acceptance and before the main quantitative reliability model is fixed.
+- RQ-006 is the permanent mapping/information-reduction RQ and must remain coupled to RQ-002 rather than silently merged into it.
 - An integrated adaptive-control RQ must be registered before control-method development; it should consume outputs from RQ-002…RQ-005 rather than duplicate them.
-- A bounded normative-baseline extraction task is activated when the PI supplies exact documents.
+- The three-document bounded normative-baseline extraction is active; exact controlled-copy status and private-PMI information remain explicit inputs.
 - The close Chen/IHP/Potsdam control-prior-art pass is required before an adaptive-control novelty claim but does not block the first parameterized representation/reliability prototype.
 - No new general literature cycle is authorized by this decision.
-- No numerical requirement, `CLM`, `EVD`, `HYP`, `EXP` or `RES` is created.
+- This roadmap decision itself created no numerical requirement, `CLM`, `EVD`, `HYP`, `EXP` or `RES`; later DEC-003 separately authorized EXP-001.
 
 ## Revisit when
 

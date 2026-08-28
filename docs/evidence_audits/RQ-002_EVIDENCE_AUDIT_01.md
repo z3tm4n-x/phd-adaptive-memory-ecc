@@ -1,10 +1,20 @@
-# DRAFT — RQ-002 Evidence Audit 01
+# RQ-002 Evidence Audit 01
 
 **Task:** `RQ-002-EVIDENCE-AUDIT-01`  
 **Audit targets:** exactly `RQ002-EA-CAND-01` through `RQ002-EA-CAND-10`  
 **Canonical base reviewed:** `c55ba6447e6b1104a5f7ae7af9d3b072c44a6c02`  
-**Status:** draft for Research Orchestrator acceptance  
+**Status:** `ACCEPTED WITH LIMITATION`<br>
 **Date:** 2026-08-28
+
+## Orchestrator disposition
+
+The audit is formally accepted as a bounded claim-level review of `PAPER-004…008` and the RQ-002 initial synthesis.
+
+- `RQ002-EA-CAND-01…03` and `05…10` are accepted only in the precise admissible wording and scope recorded below.
+- `RQ002-EA-CAND-04` remains `PARTIALLY_SUPPORTED`: marginal per-word multiplicities cannot be **assumed** sufficient for domain-level `F_A`, but their insufficiency is not established for every mapping, event class or queried aggregate. The joint-versus-marginal comparison is therefore an experiment target rather than an accepted universal claim.
+- No permanent `CLM-xxx` or `EVD-xxx` is created by this acceptance.
+- The audited constraints are sufficient to authorize a parameterized representation-sensitivity prototype. No additional Paper Card or general RQ-002 literature cycle is required before that prototype.
+- RQ-002 remains open: the minimum adequate representation and its target-specific validity domain must be established by comparison, validation and the RQ-006 mapping analysis.
 
 ## 1. Audit boundary and method
 

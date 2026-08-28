@@ -12,6 +12,11 @@
 | MCU / MBU | Multiple-Cell / Multiple-Bit Upset | working | уточнить используемое обозначение |
 | protection domain | explicitly declared controller-managed SRAM domain aggregated under one reliability contract | accepted working definition | DEC-001 |
 | reporting window | interval over which occurrence of the declared event is reported | accepted working definition | DEC-001; distinct from upset-count, word-exposure and mission horizons |
+| parent radiation event | one declared physical radiation interaction/event whose affected cells retain common provenance before and after `W` | accepted modeling object | RQ-002 Evidence Audit; DEC-003 |
+| physical event topology | multiplicity plus the declared spatial/coordinate arrangement of cells affected by one parent event before `W` | working definition | RQ-006; coordinates may be unavailable or only indirectly observed in a test |
+| joint post-`W` codeword-impact mark | one parent event represented by its simultaneous impacts across all affected ECC codewords after applying declared `W` | accepted comparison interface | DEC-003; losslessness for the declared state update must be verified in EXP-001 |
+| representation reduction | declared transformation from a richer event representation to a joint, marginal or scalar representation, with recorded information loss and validity condition | working definition | RQ-006 / DEC-003 |
+| normative reported characteristic | test/calculation output such as a classified ORE count, cross section, fitted sensitivity parameter, rate or probability indicator; not automatically a raw-event record or ECC-level reliability metric | working distinction | NORMATIVE-BASELINE-01 |
 
 ## Symbols
 

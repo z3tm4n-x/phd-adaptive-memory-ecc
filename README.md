@@ -84,11 +84,13 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **Infrastructure setup:** завершён.
 - **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
 - **AI-agent operating model:** настроен в `docs/agents/`.
-- **Research Specification:** `v0.4-draft`.
+- **Research Specification:** `v0.5-draft`.
 - **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
 - **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
 - **Integrated roadmap:** `DEC-002` — radiation-test evidence, mapping `W`, ECC-level reliability and adaptive restoration control are one causal method; representation loss and observability are evaluated explicitly.
 - **Numerical reliability requirement:** `TBD`.
-- **Current phase:** RQ-002 bounded model selection after acceptance of `PAPER-004…008` and the initial cross-paper evidence synthesis.
-- **Active gate:** audit decision-carrying propositions, bound model alternatives and specify the first parameterized experiment on the effect of event-information reduction on ECC-level reliability and an eventual adaptive decision.
-- **Constraint:** no second broad literature cycle without a named blocker; RQ-003 retains decoder-outcome semantics, C-RQ-05 awaits explicit PI promotion and RQ-001/DEC-001 remain unchanged.
+- **Accepted model decision:** `DEC-003` — event-driven comparison reference, `L0…L3` representation ladder and authorization of the first own experiment.
+- **RQ-006:** permanently registered for physical-to-logical mapping `W`, interleaving and information-sufficiency conditions.
+- **Current phase:** implementation and validation of `EXP-001`, with bounded normative and Chen prior-art extractions in parallel.
+- **Active gate:** determine whether full physical topology, joint post-`W` marks, marginal word statistics and scalar rates are equivalent, bounded or decision-changing under common DEC-001 semantics.
+- **Constraint:** no second broad literature cycle without a named blocker; RQ-003 retains decoder-outcome semantics and RQ-001/DEC-001 remain unchanged.

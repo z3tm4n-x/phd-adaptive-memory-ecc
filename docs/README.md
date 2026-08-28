@@ -17,5 +17,8 @@
 - `paper_cards/` — принятые traceable analyses внешних публикаций;
 - `evidence_synthesis/` — cross-paper matrices and bounded evidence syntheses for active RQ;
 - `evidence_audits/` — accepted claim-level audits and their Orchestrator dispositions.
+- `questions/` — canonical registry of permanent Research Questions;
+- `literature_mapping/` — targeted protocols, discovery reports and bounded source-identity records;
+- `normative_baseline/` — provenance manifests and bounded extraction protocols/matrices for applicable normative practice; source PDFs are not stored here.
 
 Документация должна фиксировать **решения и состояние знания**, а не дублировать содержимое чатов ChatGPT.

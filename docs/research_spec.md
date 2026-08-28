@@ -1,6 +1,6 @@
 # Research Specification
 
-**Version:** 0.4-draft<br>
+**Version:** 0.5-draft<br>
 **Status:** WORKING DRAFT
 
 > Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
@@ -48,17 +48,18 @@
 
 ## 6. Исследовательские вопросы
 
-Утверждён начальный пакет `RQ-001…RQ-005`; актуальные статусы фиксируются в `docs/current_status.md`.
+Зарегистрированы `RQ-001…RQ-006`; актуальные статусы фиксируются в `docs/current_status.md`.
 
 - `RQ-001` — reliability event, metric and horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; working contract recorded as `DEC-001`.
-- `RQ-002` — minimum adequate radiation-induced SRAM error model — initial evidence synthesis accepted; bounded model-selection gate active.
+- `RQ-002` — minimum adequate radiation-induced SRAM error model — Evidence Audit accepted with limitation; prototype gate active under DEC-003.
 - `RQ-003` — ECC abstraction and decoder outcomes.
 - `RQ-004` — online observables for adaptation.
 - `RQ-005` — measurable resource-cost vector without premature scalarization.
+- `RQ-006` — physical-to-logical mapping `W`, interleaving and information-sufficiency conditions — permanently promoted from C-RQ-05 by PI approval.
 
 RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
 
-The C-RQ-05 escalation is confirmed by RQ-002 full-text synthesis; permanent promotion remains an explicit PI decision. An integrated adaptive-control RQ must later consume the outputs of RQ-002…RQ-005 rather than duplicate or replace them.
+The C-RQ-05 escalation is resolved by permanent RQ-006. RQ-002 and RQ-006 are coupled through EXP-001 but retain separate responsibilities. An integrated adaptive-control RQ must later consume the outputs of RQ-002…RQ-006 rather than duplicate or replace them.
 
 ## 7. Исходные допущения
 
@@ -78,11 +79,11 @@ The C-RQ-05 escalation is confirmed by RQ-002 full-text synthesis; permanent pro
 
 ### 7.4. Ошибки
 
-**WORKING DEFINITION.** Центральный интерес — сбои, проявляющиеся как ошибочные биты в памяти. Начальный фокус — одиночные ошибки; необходимость явного моделирования многобитных событий и их пространственной корреляции должна быть установлена литературным анализом.
+**WORKING DEFINITION.** Центральный интерес — transient radiation-induced upsets, проявляющиеся как ошибочные биты в памяти. Accepted RQ-002 evidence requires same-parent multiplicity/topology and independent accumulation to remain distinguishable until their reduction through `W` is justified. Permanent faults, cumulative TID degradation and destructive/persistent mechanisms remain out of the base model unless separately reopened.
 
 ### 7.5. Стационарность и распределение ошибок
 
-**TBD.** Не принимать заранее пуассоновскую, независимую или иную конкретную модель как установленную. Модель должна быть выбрана и обоснована на основании литературы и требований к применимости.
+**TBD.** Не принимать заранее пуассоновскую, независимую или иную конкретную модель как установленную. DEC-003 authorizes an event-driven parent-event-preserving comparison reference and controlled HPP/time-varying scenarios for EXP-001, but this does not select a target stochastic family. Minimum adequacy remains an empirical/analytical result to be established over a declared validity domain.
 
 ### 7.6. Reliability event, aggregate and horizon contract
 
@@ -152,9 +153,11 @@ COSRAD рассматривается как источник предметно
 
 **TBD.** Baselines должны быть выбраны после обзора литературы. Минимально предполагается наличие fixed/non-adaptive strategy для сравнения с предлагаемым adaptive approach.
 
-**WORKING DEFINITION / DEC-002.** Applicable Russian normative practice is a primary engineering baseline for the radiation-test → cross-section → environment convolution → event-rate/probability chain. Initial bounded targets are РД 134-0175-2009 and РД 134-0174-2009 after exact PI-provided documents are available. No deficiency is presumed before extraction.
+**WORKING DEFINITION / DEC-002.** Applicable Russian normative practice is a primary engineering baseline for the radiation-test → cross-section → environment convolution → event-rate/probability chain. The received bounded set is РД 134-0174-2009, РД 134-0175-2009 and СТО ГК Роскосмос 04.01.0005–2022. The STO explicitly raises a pre-aggregation functional-diagnosis/event-classification layer; whether address/topology/provenance information is retained or usable downstream remains open and PMI/software dependent. No deficiency is presumed before accepted extraction.
 
-Chen/IHP/Potsdam is an active closest-prior-art threat for the adaptive-control layer. Zebrev/Ogden/Gomi/Franco and related sources address a different identification/event-representation/mapping threat layer. The layers must be compared separately before any integrated novelty statement.
+**PROVENANCE LIMIT.** The supplied STO file contains approval/registration/effective-date statements and also hidden `Проект, окончательная редакция` text. Its exact controlled revision remains ambiguous until official copy/registry evidence is provided.
+
+The Chen/IHP/Potsdam publication-family identity is resolved at discovery level. The 2025 JETTA article, 2023 DFT controller paper and 2024 LATS evaluation branch require a bounded full-text comparison before an adaptive-control novelty statement. Zebrev/Ogden/Gomi/Franco and related sources address a different identification/event-representation/mapping threat layer. The layers must be compared separately.
 
 Не фиксировать конкретные baseline algorithms до подтверждения их распространённости и корректности для выбранной модели памяти.
 
@@ -178,7 +181,7 @@ Chen/IHP/Potsdam is an active closest-prior-art threat for the adaptive-control 
 8. функциональная верификация SystemVerilog/iVerilog;
 9. синтез и оценка аппаратных затрат/временных характеристик в Vivado.
 
-The first bounded quantitative prototype should compare a declared hierarchy of device-error representations through the same `W`, ECC state and scrub semantics, then measure the change in `F_A` and in a parameterized restoration decision. Unknown numerical reliability requirements may be swept; they must not be invented.
+**REGISTERED / DEC-003.** [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) compares a declared hierarchy of device-error representations through the same `W`, ECC state and scrub semantics, then measures change in `F_A` and a parameterized restoration decision. Its `L0 → L1` full-topology-to-joint-post-`W` interface must be lossless for the declared state update; marginal/scalar reductions have no pre-assigned result direction. Unknown numerical reliability requirements are swept and not invented.
 
 ## 14. Критерии воспроизводимости
 
@@ -221,7 +224,7 @@ The first bounded quantitative prototype should compare a declared hierarchy of 
 3. Как в реальной вычислительной системе получать оценку текущей интенсивности/риска ошибок, пригодную для adaptive control?
 4. Какие параметры системы защиты, кроме `T_scrub`, целесообразно рассматривать как управляемые?
 5. Как определить функцию/вектор ресурсных затрат так, чтобы он отражал реальную цену adaptive scrubbing и был измерим в моделировании и RTL/FPGA-реализации?
-6. Насколько существенны MCU/MBU и interleaving для выбранного уровня абстракции?
+6. При каких условиях full topology, joint post-`W` marks, marginal word statistics или scalar rates достаточны для `E_cap/F_A`, и какова цена редукции для управляющего решения?
 7. Какие fixed/adaptive approaches являются корректными baselines для сравнения?
 8. Какая информация о physical radiation event достаточна после `W`, какая реально идентифицируема из тестовых наблюдений и как её редукция влияет на `F_A` и adaptive decision?
 9. Что сохраняет и агрегирует применимая российская нормативная цепочка расчёта, и достаточны ли её выходы для ECC-aware reliability/adaptive control?
@@ -238,3 +241,4 @@ The first bounded quantitative prototype should compare a declared hierarchy of 
 - `0.2-draft` — зафиксированы рабочие границы: SRAM, стартовый класс SEC/SEC-DED, определение scrubbing, обязательная RTL/FPGA-верификация; источник управляющей информации, расширенный набор механизмов защиты и функция затрат оставлены как осознанные открытые вопросы исследования.
 - `0.3-draft` — зарегистрирован DEC-001: primitive ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics; RQ-001 переведён в PARTIALLY ANSWERED, открыт gate RQ-002.
 - `0.4-draft` — зарегистрирован DEC-002: сохранён adaptive-control core и введена единая evidence-to-decision architecture; information sufficiency отделена от experimental identifiability; Russian normative practice and layered closest-prior-art threats made explicit baselines; RQ-002 advanced to bounded model-selection after accepted Paper Cards and synthesis.
+- `0.5-draft` — принят RQ-002 Evidence Audit with CAND-04 limitation; C-RQ-05 permanently promoted to RQ-006; DEC-003 registered the comparison reference/representation ladder and authorized EXP-001; three-document Russian normative source set and Chen identity record received bounded follow-up protocols without a broad search or novelty claim.
