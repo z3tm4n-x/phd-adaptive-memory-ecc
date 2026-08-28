@@ -8,22 +8,25 @@
 | Related RQ | `RQ-002` |
 | Role | Paper Analyst |
 | Canonical base used | `39f66ee359ba17b960d9382033b9a9f7c325ce93` |
+| Provenance-correction task/base | `RQ-002-PA-BATCH-01-CORRECTION-01`; `ed2a938aa5cc733e1a311116d8bf7b79e7c01e4e` |
 | Full-text gate | Passed for C005, C006, C001, C011, C008, and C020 |
 | Scope | Five decision-enabling work units; no final model selection |
 | Permanent identifiers | None created |
 
-`[SOURCE]` C005 was verified as exact arXiv:1704.07271v2. C006 was read as a separate RADECS publication identity and compared field by field in the C005 Draft Paper Card. Because C006 adds no independent analytical content beyond the common Eqs. (1)–(14), no separate C006 full card was created.
+`[SOURCE]` C005 was verified against the versioned arXiv:1704.07271v2 record and official v2 PDF. The analyzed attachment is byte-different from the official PDF but has byte-identical raw extracted text and the same five-page/eight-figure/equation inventory. C006 was read as a separate IEEE RADECS publication identity and compared field by field in the C005 Draft Paper Card. Because C006 adds no independent analytical content beyond the common Eqs. (1)–(14), no separate C006 full card was created.
 
 ## 2. Full-text identity and integrity
 
 | Candidate | Exact text analyzed | File SHA-256 | Gate result |
 |---|---|---|---|
-| RQ2-C005 | arXiv:1704.07271v2, 15 Oct. 2017, 5 pp. | `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e` | PASS |
-| RQ2-C006 | RADECS 2017, DOI `10.1109/RADECS.2017.8696217`, 4 pp. | `2cd3aa55ca715b8e3687fe411ad89b6ea01f6278c98423baa367fd38fc5bcc42` | PASS — comparison only |
-| RQ2-C001 | IEEE TNS 69(2), 169–180, 2022 | `9b5caea4b2f97787389a1b08dc699ade7ea61a8116bf1ba7a196980dd11bfbf0` | PASS |
+| RQ2-C005 | G. I. Zebrev, A. M. Galimov, L. V. Mrozovskaya, M. S. Gorbunov, K. A. Petrov; arXiv:1704.07271v2, revised 15 Oct. 2017, 5 pp., 8 figs. | Analyzed attachment: `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e`; official v2 PDF: `03fc5bc397c68bfb613174f2fd7b5123a27cca0831530000ba3870206f7782ac` | PASS — byte-different PDFs; raw extracted text identical |
+| RQ2-C006 | Same five-author order independently verified; “Multiple Cell Event Partitioning for Simulation of Soft Error Rates in Space Systems with Embedded Error Correcting Codes”; RADECS 2017, DOI `10.1109/RADECS.2017.8696217`, 4 pp. | `2cd3aa55ca715b8e3687fe411ad89b6ea01f6278c98423baa367fd38fc5bcc42` | PASS — separate identity; comparison only |
+| RQ2-C001 | Juan A. Clemente, Mohammadreza Rezaei, Francisco J. Franco; IEEE TNS 69(2), 169–180, 2022 | `9b5caea4b2f97787389a1b08dc699ade7ea61a8116bf1ba7a196980dd11bfbf0` | PASS |
 | RQ2-C011 | IEEE TR 66(4), 966–979, 2017 | `b5b8cb55ee16fe4d50c199b21eb9facfef9a9f70d9a6c68c2d503acee9ecec71` | PASS |
 | RQ2-C008 | Elsevier Article in Press, accepted 8 July 2017, 5 pp. | `48efb6837b8c323f474247d33da6243fa9c4200b8d49a570e91f9e5cad887b3f` | PASS |
-| RQ2-C020 | IEEE TNS 73(8), 2935–2947, 2026 | `9facf0f6086bc82557c7d18dbfa36ce7edcc2375e8cb63a49f6ec2576d586e2e` | PASS |
+| RQ2-C020 | “Quasi Event-Wise Measurement and Simulation of Neutron-Induced Multiple-Cell Upsets in 22-nm and 55-nm SRAMs”; IEEE TNS 73(8), 2935–2947, 2026 | `9facf0f6086bc82557c7d18dbfa36ce7edcc2375e8cb63a49f6ec2576d586e2e` | PASS |
+
+`[SOURCE]` Primary-record/full-text reconciliation corrected bibliographic provenance only: C001's second author is Mohammadreza Rezaei; C005 and C006 independently carry the five-author order shown above; and C020's exact bibliographic title uses “22-nm and 55-nm SRAMs,” while its analyzed PDF displays the abbreviated wording “22- and 55-nm SRAMs.” No scientific extraction, model-selection alternative, or comparison outcome was strengthened or changed.
 
 ## 3. Common extraction matrix — process and event representation
 

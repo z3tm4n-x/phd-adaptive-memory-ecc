@@ -8,13 +8,24 @@
 **Exact primary version:** arXiv:1704.07271v2, 15 Oct. 2017, 5 pages  
 **Companion identity:** `RQ2-C006`, DOI `10.1109/RADECS.2017.8696217`  
 **Full text used:** `Multiple_Cell_Event_Partitioning_for_Sim(5).pdf`; SHA-256 `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e`  
+**Official arXiv v2 comparator:** `1704.07271v2.pdf`, retrieved from the versioned arXiv record; SHA-256 `03fc5bc397c68bfb613174f2fd7b5123a27cca0831530000ba3870206f7782ac`  
 **Companion full text used:** `Multiple_Cell_Event_Partitioning_for_Simulation_of_Soft_Error_Rates_in_Space_Systems_with_Embedded_Error_Correcting_Codes.pdf`; SHA-256 `2cd3aa55ca715b8e3687fe411ad89b6ea01f6278c98423baa367fd38fc5bcc42`
 
 ## Bibliographic identity
 
-V. A. Zebrev, M. S. Gorbunov, P. A. Osipenko, S. V. Sheshin, and A. V. Balbekov, “Multiple Cell Upset Partitioning for Simulation of Soft Error Rates in Space Systems with Error Correcting Codes,” arXiv:1704.07271v2, 2017.
+Gennady I. Zebrev, Artur M. Galimov, Liza V. Mrozovskaya, Maxim S. Gorbunov, and Konstantin A. Petrov, “Multiple Cell Upset Partitioning for Simulation of Soft Error Rates in Space Systems with Error Correcting Codes,” arXiv:1704.07271v2, 2017.
 
-`[SOURCE]` The exact version is identified on the first page and by the versioned arXiv record; it contains five pages, eight figures, and Eqs. (1)–(19). The companion paper is the four-page RADECS 2017 publication “Multiple Cell Event Partitioning for Simulation of Soft Error Rates in Space Systems with Embedded Error Correcting Codes,” DOI `10.1109/RADECS.2017.8696217`.
+`[SOURCE]` The versioned arXiv record identifies submission on 24 Apr. 2017 and last revision on 15 Oct. 2017 (v2), gives the title and five authors above, and reports five pages and eight figures. The analyzed attachment contains the same title/byline, five pages, eight figures, Secs. I–IV plus Appendix, and Eqs. (1)–(19). Its raw extracted text is byte-identical to the raw extracted text of the official v2 PDF. The two PDF files are not byte-identical: the analyzed attachment has SHA-256 `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e`, while the official v2 PDF has SHA-256 `03fc5bc397c68bfb613174f2fd7b5123a27cca0831530000ba3870206f7782ac`.
+
+`[INFERENCE]` The checksum difference reflects PDF-container/reprocessing differences, not a different analytical text: the official file reports Foxit Reader Printer 8.1.1.1026 as producer, whereas the analyzed attachment reports GPL Ghostscript 9.26, while their raw extracted text and equation/section inventory match. The analyzed attachment was not replaced.
+
+`[SOURCE]` The title-page bibliographic byline uses **Liza V. Mrozovskaya**, matching the official arXiv metadata. The affiliation footnote inside both C005 and C006 PDFs instead prints **E. V. Mrozovskaya**. This card preserves the official bibliographic byline and records the internal inconsistency only as a provenance note.
+
+### Companion C006 bibliographic identity
+
+Gennady I. Zebrev, Artur M. Galimov, Liza V. Mrozovskaya, Maxim S. Gorbunov, and Konstantin A. Petrov, “Multiple Cell Event Partitioning for Simulation of Soft Error Rates in Space Systems with Embedded Error Correcting Codes,” in *2017 17th European Conference on Radiation and Its Effects on Components and Systems (RADECS)*, Geneva, Switzerland, 2–6 Oct. 2017. DOI: `10.1109/RADECS.2017.8696217`.
+
+`[SOURCE]` The C006 IEEE full text independently gives this exact title and the same five-author order; its first page records “Manuscript received April 24, 2017,” four pages, and six figures. The primary IEEE record identifies the RADECS 2017 proceedings, Geneva conference location, DOI, IEEE publisher, and date added to IEEE Xplore of 25 Apr. 2019. Authorship is therefore verified independently for C006 rather than inferred from title similarity.
 
 ## Common extraction summary
 
@@ -187,7 +198,7 @@ No `CLM-xxx` is created.
 
 | Comparison field | Status | Verified result |
 |---|---|---|
-| Bibliographic identity | `VERIFIED DIFFERENCE` | C005 is arXiv:1704.07271v2, revised 15 Oct. 2017, five pages; C006 is RADECS 2017, DOI `10.1109/RADECS.2017.8696217`, four pages. Titles and received dates differ. |
+| Bibliographic identity | `VERIFIED DIFFERENCE` | C005 is arXiv:1704.07271v2, revised 15 Oct. 2017, five pages, with “Multiple Cell **Upset** … with Error Correcting Codes”; C006 is the four-page RADECS 2017 paper, DOI `10.1109/RADECS.2017.8696217`, with “Multiple Cell **Event** … with Embedded Error Correcting Codes.” Their primary bylines independently list Gennady I. Zebrev, Artur M. Galimov, Liza V. Mrozovskaya, Maxim S. Gorbunov, and Konstantin A. Petrov in the same order. C005 records manuscript receipt on 29 Sep. 2017; C006 records receipt on 24 Apr. 2017. The C006 conference ran 2–6 Oct. 2017, and its IEEE Xplore record was added 25 Apr. 2019. |
 | Equations (1)–(14) | `VERIFIED NO SUBSTANTIVE DIFFERENCE` | Same multiplicity decomposition, Poisson conjecture, linear illustration, and vulnerability-vector recombination; minor layout/wording changes only. |
 | Equations (15)–(19) | `VERIFIED DIFFERENCE` | Present only in C005 as Sec. III.D; absent from C006. |
 | Definitions | `VERIFIED NO SUBSTANTIVE DIFFERENCE` | Core `σ_n`, `p_n`, `R_n`, multiplicity, and `V_n` definitions are substantively the same through Eq. (14). |
@@ -198,6 +209,8 @@ No `CLM-xxx` is created.
 | General conclusions | `VERIFIED NO SUBSTANTIVE DIFFERENCE` | Both conclude that multiplicity partition can support system-rate simulation; C005 additionally has the scrub-specific result. |
 | Validity statements | `VERIFIED DIFFERENCE` | `β≪1`, neglected `n≥3`, and one-half codeword mapping are stated only in C005. |
 | References | `VERIFIED DIFFERENCE` | C005 has 15 references and adds material supporting the scrubbing section; C006 has 13. |
+
+`[SOURCE]` The feature-by-feature comparison above used the analyzed C005 attachment with SHA-256 `b02b5fb32d45f63b078cf11488283fe6fff5a012077edb3d37f14acd3157ba2e` and the C006 IEEE attachment with SHA-256 `2cd3aa55ca715b8e3687fe411ad89b6ea01f6278c98423baa367fd38fc5bcc42`. Because the C005 attachment's raw extracted text is identical to the official arXiv v2 PDF, the comparison is confirmed as a comparison of the correct C005 and C006 analytical texts. No scientific comparison result changed in this correction pass.
 
 `[INFERENCE]` C006 has independent publication identity but no analytical content beyond the common Eqs. (1)–(14) that changes this batch's model-selection conclusions. Therefore no separate full Draft Paper Card is created; C006 remains explicitly versioned and compared here.
 

@@ -10,7 +10,9 @@
 
 ## Bibliographic identity
 
-J. A. Clemente, S. Rezaei, and F. J. Franco, “Reliability of Error Correction Codes Against Multiple Events by Accumulation,” *IEEE Transactions on Nuclear Science*, vol. 69, no. 2, pp. 169–180, Feb. 2022. DOI: `10.1109/TNS.2022.3143652`.
+Juan A. Clemente, Mohammadreza Rezaei, and Francisco J. Franco, “Reliability of Error Correction Codes Against Multiple Events by Accumulation,” *IEEE Transactions on Nuclear Science*, vol. 69, no. 2, pp. 169–180, Feb. 2022. DOI: `10.1109/TNS.2022.3143652`.
+
+`[SOURCE]` The analyzed IEEE full text and the primary IEEE record identify the authors in this order as Juan A. Clemente, Mohammadreza Rezaei, and Francisco J. Franco. The first page records receipt on 7 Sep. 2021, revision on 13 Dec. 2021, acceptance on 12 Jan. 2022, publication on 14 Jan. 2022, and current-version date 16 Feb. 2022 (p. 169).
 
 ## Common extraction summary
 

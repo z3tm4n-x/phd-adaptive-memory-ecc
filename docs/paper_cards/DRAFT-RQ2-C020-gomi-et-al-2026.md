@@ -10,7 +10,9 @@
 
 ## Bibliographic identity
 
-Y. Gomi, K. Takami, R. Yasuda, H. Kanda, M. Fukuda, and M. Hashimoto, “Quasi Event-Wise Measurement and Simulation of Neutron-Induced Multiple-Cell Upsets in 22- and 55-nm SRAMs,” *IEEE Transactions on Nuclear Science*, vol. 73, no. 8, pp. 2935–2947, Aug. 2026. DOI: `10.1109/TNS.2026.3675003`.
+Y. Gomi, K. Takami, R. Yasuda, H. Kanda, M. Fukuda, and M. Hashimoto, “Quasi Event-Wise Measurement and Simulation of Neutron-Induced Multiple-Cell Upsets in 22-nm and 55-nm SRAMs,” *IEEE Transactions on Nuclear Science*, vol. 73, no. 8, pp. 2935–2947, Aug. 2026. DOI: `10.1109/TNS.2026.3675003`.
+
+`[SOURCE]` The primary bibliographic record uses “22-nm and 55-nm SRAMs,” which is retained as the exact title above. The analyzed IEEE PDF's displayed title line and embedded PDF metadata abbreviate the paired nodes as “22- and 55-nm SRAMs”; this internal wording difference does not change the publication identity, DOI, authors, pagination, or scientific extraction.
 
 ## Common extraction summary
 
