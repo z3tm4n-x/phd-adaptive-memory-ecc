@@ -15,7 +15,7 @@ First own quantitative prototype: implementation and validation of `EXP-001` whi
 
 ## Active scientific gate
 
-Implement the DEC-003 event-representation ladder under common `A/W/ECC/initial-state/scrub` semantics and determine whether full physical topology, joint post-`W` marks, marginal word statistics and scalar rates produce equivalent, bounded or decision-changing `F_A` estimates.
+Implement the DEC-003 event-representation ladder under common `A/W/ECC/initial-state/scrub` semantics and determine whether full physical topology, joint post-`W` marks, marginal word statistics and the Phase-1 scalar upset-arrival comparator produce equivalent, bounded or decision-changing `F_A` estimates.
 
 The gate output is a reproducible `EXP-001` run suitable for adversarial Scientific Reviewer inspection. No second general RQ-002 literature cycle is authorized without a named gap that blocks model adequacy, validation or interpretation.
 
@@ -80,9 +80,11 @@ It compares:
 1. `L0` full physical topology + `W`;
 2. `L1` joint post-`W` parent-event mark;
 3. `L2` marginal per-word multiplicities with explicit reconstruction;
-4. `L3` scalar/unmarked rate.
+4. `L3-U` scalar ungrouped bit/upset-arrival intensity.
 
-Outputs include `F_A` error, false-safe/false-conservative classification over a swept parameterized `ε`, feasible scrub-period sets, decision discrepancy and computational cost. `L0 → L1` must be lossless for the declared state update; otherwise the implementation/model interface is invalid.
+`L3-E`, the scalar parent-event-rate primitive, is explicitly distinct and deferred from Phase 1 because it requires a separate event-to-state reconstruction. EXP-001 must also run a controlled `J-A`/`J-B` post-`W` pair with identical per-word marginals and different joint inter-word dependence, comparing both `F_A` and the parameterized restoration decision. An error of one `L2` reconstruction cannot be generalized to all marginal-statistics models.
+
+Outputs include `F_A` error, the controlled-pair `ΔF_A`, false-safe/false-conservative classification over a swept parameterized `ε`, feasible scrub-period sets, decision discrepancy and computational cost. `L0 → L1` must be lossless for the declared state update; otherwise the implementation/model interface is invalid.
 
 ## Actual blockers
 

@@ -16,6 +16,9 @@
 | physical event topology | multiplicity plus the declared spatial/coordinate arrangement of cells affected by one parent event before `W` | working definition | RQ-006; coordinates may be unavailable or only indirectly observed in a test |
 | joint post-`W` codeword-impact mark | one parent event represented by its simultaneous impacts across all affected ECC codewords after applying declared `W` | accepted comparison interface | DEC-003; losslessness for the declared state update must be verified in EXP-001 |
 | representation reduction | declared transformation from a richer event representation to a joint, marginal or scalar representation, with recorded information loss and validity condition | working definition | RQ-006 / DEC-003 |
+| `J-A` / `J-B` controlled pair | EXP-001-local pair of post-`W` models with identical per-word marginals and declared controlled quantities but different joint inter-word dependence / parent-event association | accepted experiment construct | EXP-001; no assumed effect direction or general sufficiency conclusion |
+| `L3-U` | EXP-001 scalar comparator whose primitive objects are ungrouped individual bit/upset arrivals over `A`; parent-event grouping is discarded | accepted Phase-1 comparator | EXP-001 |
+| `L3-E` | scalar parent-event-arrival comparator without an impact mark; distinct from `L3-U` and requiring an explicit event-to-state reconstruction | deferred comparator | EXP-001 Phase 1 |
 | normative reported characteristic | test/calculation output such as a classified ORE count, cross section, fitted sensitivity parameter, rate or probability indicator; not automatically a raw-event record or ECC-level reliability metric | working distinction | NORMATIVE-BASELINE-01 |
 
 ## Symbols

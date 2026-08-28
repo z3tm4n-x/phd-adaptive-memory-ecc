@@ -37,7 +37,9 @@ The Research Engineer must create versioned config files under `simulation/confi
 - physical bit-update semantics, including repeat-hit/toggle treatment;
 - initial state or `μ_t0`;
 - scrub schedule, correction/writeback/reset transition and reporting window;
-- representation level `L0…L3`;
+- representation level `L0`, `L1`, `L2` or the Phase-1 scalar comparator `L3-U`;
+- for every `L2` run, the reconstruction/dependence rule and every parameter not contained in the marginals;
+- for `L3-U`, the primitive object, intensity units, calibration target and bit/word allocation rule;
 - candidate scrub periods and parameterized `ε` grid;
 - seeds, run count and statistical precision rule.
 
@@ -51,7 +53,7 @@ Later target-specific configurations require separate provenance and are outside
 
 ## Random seeds
 
-`TBD in config`. Use a deterministic seed list, common random numbers across `L0…L3` where valid, and enough independent runs to meet the predeclared confidence/precision criterion. One seed cannot support a scientific result.
+`TBD in config`. Use a deterministic seed list, common random numbers across `L0`, `L1`, `L2` and `L3-U` where valid, and enough independent runs to meet the predeclared confidence/precision criterion. One seed cannot support a scientific result.
 
 ## Baselines / representation levels
 
@@ -60,15 +62,49 @@ Later target-specific configurations require separate provenance and are outside
 | `L0` | full physical topology + explicit `W` | event-driven reference |
 | `L1` | joint post-`W` codeword-impact mark with parent provenance | must reproduce the `L0` state update exactly for the same events |
 | `L2` | marginal per-word multiplicities plus declared reconstruction/dependence rule | tested reduction; no assumed bias direction |
-| `L3` | scalar/unmarked event or upset rate | coarse comparator; no assumed adequacy |
+| `L3-U` | scalar ungrouped bit/upset-arrival intensity over `A` | required Phase-1 coarse comparator; individual upsets are the primitive objects and parent-event grouping is discarded |
+| `L3-E` | scalar parent-event-arrival intensity with no impact mark | deferred from Phase 1; it is a distinct primitive and would require a separately declared event-to-state reconstruction before use |
 
 Optional source-inspired low-`β` or occupancy formulas may be added only as separately labelled comparators with their source assumptions; they are not reference truth.
+
+`L3-U` and `L3-E` must never be treated as interchangeable. Converting a
+parent-event intensity into an upset intensity using expected event multiplicity is
+permitted only as an explicitly declared first-moment calibration under stated
+assumptions; it does not make the two arrival processes or their reliability
+consequences equivalent.
+
+## Mandatory joint-sufficiency discriminator
+
+EXP-001 must include at least one controlled pair of joint post-`W` models,
+`J-A` and `J-B`, satisfying all of the following by construction:
+
+- identical parent-arrival process and arrival epochs;
+- identical `A`, ECC capability, initial state, reporting window, scrub transition and candidate restoration regimes;
+- identical per-word marginal multiplicity distributions for every named word class;
+- identical distribution of the total number of impacted words per parent event, so that this quantity is not a confounder;
+- different joint inter-word dependence / parent-event association and no other intentional difference.
+
+A minimum admissible synthetic construction uses four otherwise equivalent words and
+one new erroneous bit in each selected word per parent event. `J-A` selects
+`{w1,w2}` or `{w3,w4}` with equal probability; `J-B` selects uniformly among all six
+two-word subsets. Both models then give every word impact probability `1/2` per
+parent event and exactly two impacted words per event, while their joint
+association differs. The within-word update and repeat-hit semantics must be identical
+and explicit; an equivalent construction is allowed only if these invariants are
+machine-checked.
+
+For this pair, compute and compare the `L1` reference `F_A` values and the
+parameterized restoration decisions. Also show that the derived `L2` marginal input is
+identical for the pair, then evaluate each declared `L2` reconstruction consistently.
+No sign or materiality of the joint-dependence effect is assumed.
 
 ## Metrics
 
 - `F_A(t0,T;μ_t0)` and confidence interval for each configuration;
 - absolute and relative error against `L0/L1`;
 - paired trajectory/event disagreement where common event streams are available;
+- exact invariant checks for the `J-A`/`J-B` marginals and all controlled quantities;
+- `ΔF_A` and restoration-decision discrepancy between `J-A` and `J-B` under otherwise identical conditions;
 - false-safe classification over the swept `ε`: reduced model reports feasible while reference is infeasible;
 - false-conservative classification: reduced model reports infeasible while reference is feasible;
 - feasible set of candidate `T_scrub` values under each representation;
@@ -80,17 +116,26 @@ Optional source-inspired low-`β` or occupancy formulas may be added only as sep
 
 1. **Deterministic unit cases.** Construct single-event and two-event traces with known post-`W` word states, repeat hits, immediate capability exceedance and accumulation across a scrub boundary.
 2. **Lossless-interface check.** For identical event traces, verify exact state/event equivalence of `L0` and `L1` for every deterministic test and then under randomized streams.
-3. **Representation comparison.** Compare `L2` and `L3` with `L0/L1` across single-cell, compact multi-cell and spatially separated event classes and at least two `W` variants.
-4. **Temporal sensitivity.** Repeat the comparison under one constant-rate marked HPP scenario and one explicitly synthetic deterministic time-varying intensity/NHPP scenario. Do not infer empirical adequacy of either family.
-5. **Initial-state and scrub sensitivity.** Include a clean initial state and at least one declared non-clean `μ_t0`; sweep candidate scrub periods under one explicit periodic scrub transition.
-6. **Decision comparison.** Sweep `ε`, compute feasible scrub-period sets and record false-safe/false-conservative and selected-period discrepancies.
-7. **Robustness and cost.** Report precision, seed sensitivity, runtime and memory scaling. Keep raw outputs outside Git; commit configs, manifests, tests and bounded aggregate tables.
+3. **Joint-sufficiency discriminator.** Run the mandatory `J-A`/`J-B` controlled pair, verify its identical marginals and other invariants, and compare both `F_A` and the parameterized restoration decision. Treat a difference as evidence about joint-dependence relevance only for the tested model pair/domain; treat equality as invariance only for that domain.
+4. **Representation comparison.** Compare each declared `L2` reconstruction and `L3-U` with `L0/L1` across single-cell, compact multi-cell and spatially separated event classes and at least two `W` variants. Keep `L3-E` deferred in Phase 1.
+5. **Temporal sensitivity.** Repeat the comparison under one constant-rate marked HPP scenario and one explicitly synthetic deterministic time-varying intensity/NHPP scenario. Do not infer empirical adequacy of either family.
+6. **Initial-state and scrub sensitivity.** Include a clean initial state and at least one declared non-clean `μ_t0`; sweep candidate scrub periods under one explicit periodic scrub transition.
+7. **Decision comparison.** Sweep `ε`, compute feasible scrub-period sets and record false-safe/false-conservative and selected-period discrepancies.
+8. **Robustness and cost.** Report precision, seed sensitivity, runtime and memory scaling. Keep raw outputs outside Git; commit configs, manifests, tests and bounded aggregate tables.
 
 ## Expected falsification / acceptance criterion
 
 The experiment implementation is invalid if `L0` and `L1` disagree for the same physical event stream under the declared state semantics. Such a disagreement means the proposed joint post-`W` mark is not lossless or the implementation is incorrect.
 
-For `L2` and `L3`, no preferred result is specified. A valid result may show exact agreement in a restricted domain, a conservative/non-conservative bound, measurable error, or control-decision invariance/change. Every result must state the tested domain and uncertainty.
+For `L2` and `L3-U`, no preferred result is specified. A valid result may show exact agreement in a restricted domain, a conservative/non-conservative bound, measurable error, or control-decision invariance/change. Every result must state the tested domain and uncertainty.
+
+Failure of one `L2` reconstruction rule supports a conclusion only about that rule and
+tested domain. It must not be reported as universal insufficiency of all marginal
+per-word statistics. If the controlled `J-A`/`J-B` pair has different reference
+outcomes despite identical marginals, the admissible conclusion is narrower: the
+declared marginal summary alone does not identify `F_A` or the restoration decision
+over that tested pair/model class. If the outcomes agree, no general sufficiency claim
+follows.
 
 The first `RES-xxx` may be proposed only after:
 
@@ -118,4 +163,6 @@ EXP-001 does not by itself establish:
 - a final ECC/decoder outcome model;
 - a numerical reliability requirement;
 - the final resource-cost objective;
+- universal sufficiency or insufficiency of marginal per-word statistics;
+- equivalence of scalar parent-event and scalar bit/upset arrival primitives;
 - novelty of the integrated adaptive-control method.

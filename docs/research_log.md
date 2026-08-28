@@ -256,3 +256,12 @@
 - Parallel non-blockers: three-document normative extraction and three-source Chen full-text comparison.
 - Exact requested material for the current/applicable normative chain: controlled-copy/registry evidence for STO 04.01.0005–2022; ГОСТ РВ 0020–57.415–2020; STO 04.01.0008–2024; STO 04.01.0010–2025; and a representative/de-identified SRAM private PMI plus diagnostic/software output schema.
 - No additional PI decision is required to start EXP-001.
+
+### PI clarification incorporated into EXP-001
+
+- `DEC-003` and the experiment roadmap remain unchanged.
+- EXP-001 now requires a machine-checked `J-A`/`J-B` post-`W` discriminator with identical per-word marginal multiplicity distributions and different joint inter-word dependence / parent-event association.
+- The discriminator compares both `F_A` and the parameterized restoration decision without assuming the sign or existence of an effect.
+- Failure of one `L2` reconstruction is explicitly limited to that rule and tested domain; it cannot establish universal insufficiency of marginal per-word statistics.
+- Phase 1 selects `L3-U`, an ungrouped scalar bit/upset-arrival primitive. The distinct scalar parent-event-rate primitive `L3-E` is deferred and may not be substituted silently for `L3-U`.
+- The Research Engineer implementation handoff is ready against the corrected EXP-001 specification.
