@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "EXP-001",
+  "task_id": "EXP-001-IMPLEMENTATION-01",
+  "scope": "bounded_synthetic_representation_comparison_not_a_target_device_model",
+  "representations": [
+    "L0",
+    "L1",
+    "L2-independent_word_marginals",
+    "L3-U"
+  ],
+  "domain": {
+    "name": "A-synthetic-8x8",
+    "word_count": 8,
+    "bits_per_word": 8,
+    "physical_coordinate_system": "one_dimensional_ordered_cell_index_0_through_63",
+    "partition": "one homogeneous controller-managed protection domain",
+    "ecc_correction_capability_distinct_bits": 1,
+    "ecc_outcome_scope": "E_cap_only_not_DUE_SDC_or_system_failure"
+  },
+  "mappings": [
+    {
+      "name": "W-contiguous-no-interleaving",
+      "kind": "contiguous_words",
+      "definition": "physical_cell div 8 -> word; physical_cell mod 8 -> bit"
+    },
+    {
+      "name": "W-round-robin-interleaving",
+      "kind": "round_robin_words",
+      "definition": "physical_cell mod 8 -> word; physical_cell div 8 -> bit"
+    }
+  ],
+  "topology_scenarios": [
+    {
+      "name": "single-cell-only",
+      "classes": [
+        {
+          "kind": "single_cell",
+          "multiplicity": 1,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "name": "compact-three-cell-only",
+      "classes": [
+        {
+          "kind": "compact_multi_cell",
+          "multiplicity": 3,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "name": "separated-three-cell-only",
+      "classes": [
+        {
+          "kind": "spatially_separated",
+          "multiplicity": 3,
+          "stride": 8,
+          "probability": 1.0
+        }
+      ]
+    }
+  ],
+  "arrival_scenarios": [
+    {
+      "name": "synthetic-hpp-constant",
+      "kind": "hpp_constant",
+      "rate": 0.75,
+      "intensity_units": "parent_events_per_arbitrary_time_unit_over_A",
+      "empirical_model_status": "controlled_synthetic_scenario_not_selected_empirical_model"
+    },
+    {
+      "name": "synthetic-nhpp-low-then-high",
+      "kind": "piecewise_constant_nhpp",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "rate": 0.25
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "rate": 1.25
+        }
+      ],
+      "intensity_units": "parent_events_per_arbitrary_time_unit_over_A",
+      "empirical_model_status": "controlled_synthetic_scenario_not_selected_empirical_model"
+    }
+  ],
+  "state_update": {
+    "bit_update_semantics": "toggle",
+    "repeat_hit_semantics": "a repeat hit on the same erroneous cell clears that cell",
+    "parent_event_is_simultaneous": true,
+    "capability_check_order": "after_complete_parent_mark"
+  },
+  "initial_states": [
+    {
+      "name": "clean",
+      "erroneous_logical_cells": []
+    },
+    {
+      "name": "non-clean-two-singletons",
+      "erroneous_logical_cells": [
+        {
+          "word": 0,
+          "bit": 0
+        },
+        {
+          "word": 3,
+          "bit": 1
+        }
+      ]
+    }
+  ],
+  "scrub": {
+    "kind": "periodic_global_synchronous",
+    "phase_origin": 0.0,
+    "transition": "clear_all_erroneous_bits",
+    "event_at_boundary": "scrub_then_event",
+    "approximation_status": "explicit_phase1_approximation_not_literature_fact"
+  },
+  "reporting_window": {
+    "t0": 0.0,
+    "duration": 4.0,
+    "time_unit": "arbitrary_time_unit",
+    "endpoints": "closed"
+  },
+  "candidate_scrub_periods": [
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "epsilon_grid": [
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    0.7
+  ],
+  "epsilon_grid_status": "experiment_parameters_not_project_requirements",
+  "restoration_decision": {
+    "rule": "maximal_period_with_wilson_upper_bound_le_epsilon",
+    "feasibility_statistic": "upper_bound_of_95_percent_Wilson_CI",
+    "resource_proxy": "number_of_periodic_global_scrub_transitions_over_reporting_window",
+    "rq005_status": "experiment_local_proxy_not_final_cost_objective"
+  },
+  "l2": {
+    "rule": "independent_word_marginals",
+    "inputs": "exact_per_word_parent_event_multiplicity_pmfs_enumerated_from_L0_and_W",
+    "dependence_reconstruction": "sample_each_word_marginal_independently_at_every_reused_parent_epoch",
+    "within_word_bit_allocation": "uniform_without_replacement",
+    "known_discarded_information": [
+      "joint_inter_word_parent_event_dependence",
+      "distribution_of_total_impacted_words_per_parent_event"
+    ],
+    "interpretation_limit": "failure_or_success_applies_only_to_this_rule_and_tested_domain"
+  },
+  "l3_u": {
+    "primitive_object": "individual_ungrouped_bit_toggle_arrival",
+    "intensity_units": "ungrouped_upsets_per_arbitrary_time_unit_over_A",
+    "allocation_rule": "uniform_over_logical_cells_in_A",
+    "calibration_target": "expected_total_upset_exposure_over_A_first_moment",
+    "calibration_formula": "lambda_U(t)=lambda_parent(t)*E[parent_event_cell_multiplicity]",
+    "stochastic_process_equivalence_claimed": false,
+    "parent_event_grouping_retained": false,
+    "l3_e_status": "deferred_not_implemented"
+  },
+  "common_random_numbers": {
+    "parent_arrival_epochs": "shared_by_L0_L1_and_L2",
+    "physical_marks": "shared_by_W_variants_for_L0_L1",
+    "l2_reconstruction_uniforms": "same_derived_substream_labels_across_W_variants",
+    "l3_u": "deterministic_separate_substream_because_primitive_process_differs",
+    "claim": "variance_reduction_only_where_coupling_is_declared_not_process_equivalence"
+  },
+  "monte_carlo": {
+    "batch_seeds": [
+      1103,
+      2207,
+      3301,
+      4409,
+      5519,
+      6637,
+      7753,
+      8867
+    ],
+    "trials_per_seed": 1000,
+    "total_trials_per_aggregate": 8000,
+    "confidence_level": 0.95,
+    "confidence_interval": "wilson_score",
+    "max_wilson_half_width": 0.011,
+    "precision_scope": "every_reported_F_A_aggregate",
+    "stopping_rule": "fixed_sample_size_predeclared_from_worst_case_Wilson_half_width"
+  },
+  "raw_output": {
+    "persist": false,
+    "aggregation": "online_counts_only"
+  }
+}

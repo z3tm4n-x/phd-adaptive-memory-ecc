@@ -23,7 +23,13 @@ The experiment is intended to determine exactness, bounds, approximation error a
 
 ## Code commit
 
-`TBD` after the first implementation commit. The implementation must not report results until this field, configuration and environment manifest are fixed.
+First implementation: the commit containing
+`experiments/manifests/EXP-001/run-manifest.json`. Resolve the exact immutable SHA
+with
+`git log -1 --format=%H -- experiments/manifests/EXP-001/run-manifest.json`; the
+same SHA is returned in the Research Engineer handoff. Configuration and
+environment identities are fixed in that manifest. This self-reference avoids an
+impossible commit-SHA-inside-the-same-commit cycle.
 
 ## Configuration
 
@@ -53,7 +59,10 @@ Later target-specific configurations require separate provenance and are outside
 
 ## Random seeds
 
-`TBD in config`. Use a deterministic seed list, common random numbers across `L0`, `L1`, `L2` and `L3-U` where valid, and enough independent runs to meet the predeclared confidence/precision criterion. One seed cannot support a scientific result.
+Fixed deterministic batch-seed lists and trials per seed are declared in the
+versioned Phase-1 configs and copied into the run manifest. Common random numbers
+are used across `L0`, `L1`, `L2` and `L3-U` only where the config declares a valid
+coupling. One seed is not treated as statistical evidence.
 
 ## Baselines / representation levels
 

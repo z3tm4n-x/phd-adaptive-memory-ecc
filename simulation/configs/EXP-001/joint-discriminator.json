@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "EXP-001",
+  "task_id": "EXP-001-IMPLEMENTATION-01",
+  "scope": "mandatory_joint_sufficiency_discriminator",
+  "common": {
+    "domain": {
+      "name": "A-J-four-equivalent-words",
+      "word_count": 4,
+      "bits_per_word": 128,
+      "partition": "one homogeneous controller-managed protection domain",
+      "ecc_correction_capability_distinct_bits": 1,
+      "word_classes": "all_four_words_equivalent",
+      "ecc_outcome_scope": "E_cap_only_not_DUE_SDC_or_system_failure"
+    },
+    "arrival_scenario": {
+      "name": "J-common-synthetic-hpp",
+      "kind": "hpp_constant",
+      "rate": 0.5,
+      "intensity_units": "parent_events_per_arbitrary_time_unit_over_A",
+      "empirical_model_status": "controlled_synthetic_scenario_not_selected_empirical_model"
+    },
+    "state_update": {
+      "bit_update_semantics": "set_error",
+      "bit_allocation": "fresh_monotone_per_word",
+      "repeat_hit_semantics": "no_repeat_is_generated; set_error_is_idempotent_if_validation_fails",
+      "parent_event_is_simultaneous": true,
+      "capability_check_order": "after_complete_parent_mark"
+    },
+    "initial_state": {
+      "name": "clean",
+      "erroneous_logical_cells": []
+    },
+    "scrub": {
+      "kind": "periodic_global_synchronous",
+      "phase_origin": 0.0,
+      "transition": "clear_all_erroneous_bits",
+      "event_at_boundary": "scrub_then_event",
+      "approximation_status": "explicit_phase1_approximation_not_literature_fact"
+    },
+    "reporting_window": {
+      "t0": 0.0,
+      "duration": 4.0,
+      "time_unit": "arbitrary_time_unit",
+      "endpoints": "closed"
+    },
+    "candidate_scrub_periods": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "epsilon_grid": [
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65
+    ],
+    "epsilon_grid_status": "experiment_parameters_not_project_requirements",
+    "restoration_decision": {
+      "rule": "maximal_period_with_wilson_upper_bound_le_epsilon",
+      "feasibility_statistic": "upper_bound_of_95_percent_Wilson_CI",
+      "resource_proxy": "number_of_periodic_global_scrub_transitions_over_reporting_window",
+      "rq005_status": "experiment_local_proxy_not_final_cost_objective"
+    },
+    "monte_carlo": {
+      "batch_seeds": [
+        101,
+        211,
+        307,
+        401,
+        503,
+        601,
+        701,
+        809,
+        907,
+        1009,
+        1103,
+        1201,
+        1301,
+        1409,
+        1511,
+        1601,
+        1709,
+        1801,
+        1907,
+        2003
+      ],
+      "trials_per_seed": 1000,
+      "total_trials_per_aggregate": 20000,
+      "confidence_level": 0.95,
+      "confidence_interval": "wilson_score",
+      "max_wilson_half_width": 0.007,
+      "max_paired_delta_half_width": 0.008,
+      "precision_scope": "every_reported_F_A_and_paired_delta_aggregate",
+      "stopping_rule": "fixed_sample_size_predeclared_from_worst_case_Wilson_half_width"
+    },
+    "analytical_sanity_tolerance": 0.02
+  },
+  "joint_models": [
+    {
+      "name": "J-A",
+      "subsets": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "J-B",
+      "subsets": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  ],
+  "l2_reconstruction": {
+    "rule": "independent_word_marginals",
+    "inputs": "P(K_w=0)=P(K_w=1)=1/2_for_every_word_in_both_models",
+    "parent_epochs": "identical_to_J_A_and_J_B",
+    "fresh_bit_allocation": true,
+    "known_discarded_information": [
+      "exactly_two_impacted_words_per_parent_event",
+      "joint_pair_association"
+    ],
+    "interpretation_limit": "applies_only_to_this_reconstruction_and_tested_domain"
+  },
+  "common_random_numbers": {
+    "parent_arrival_epochs": "identical_for_J_A_J_B_and_L2",
+    "joint_selection": "one_common_uniform_per_parent_mapped_to_each_declared_subset_distribution",
+    "l2_reconstruction": "separate_deterministic_substream",
+    "claim": "coupling_for_precision_not_model_equivalence"
+  }
+}
