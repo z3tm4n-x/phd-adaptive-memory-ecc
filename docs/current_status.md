@@ -4,9 +4,10 @@
 
 ## Current phase
 
-Obtain the bounded Scientific Reviewer re-review of the accepted EXP-001
-validation repair, then promote or reject a narrowly scoped first own result.
-The bounded Chen/IHP/Potsdam
+The bounded EXP-001 validation repair has passed Scientific Reviewer re-review.
+The corrective and scientific-review gates are closed. A narrowly scoped first
+own-result candidate is prepared for PI wording approval but is not yet a
+registered `RES-xxx`. The bounded Chen/IHP/Potsdam
 Evidence Audit is accepted and now constrains the control-method target. The
 Russian normative baseline remains accepted with explicit unresolved interfaces.
 
@@ -19,36 +20,25 @@ Adaptive restoration control remains the final/core dissertation layer.
 
 ## Active scientific gate
 
-[EXP-001 Scientific Review 01](scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md)
-is an accepted review record with recommendation `REVISE`, no `CRITICAL` issue,
-one `MAJOR` and four `MINOR` issues.
+[EXP-001 Scientific Re-review 02](scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
+is accepted with recommendation `PASS`. It confirms that `MAJOR-01` and
+`MINOR-01…04` are closed, no repair-induced scientific regression exists and no
+new issue was found. The PI accepts this disposition and considers the EXP-001
+corrective gate closed.
 
-Research Engineer repair commit `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
-has passed Orchestrator disposition:
+The active gate is PI wording approval of
+[`DRAFT-RES-001`](result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md).
+The candidate preserves the maximum wording and complete fourteen-condition
+validity domain accepted by the Reviewer. It is not a permanent result and may
+not be cited as `RES-001` before explicit PI approval.
 
-1. the test-only oracle is independent of production mapping/conversion and
-   transition helpers;
-2. 267 physical streams produce 534 separate full-trace L0/L1-to-oracle
-   comparisons across both declared `W`, clean/non-clean starts, toggle and
-   `set_error` semantics;
-3. the exhaustive 8x8 single-cell mapping and mutation/sentinel checks pass;
-4. all four MINOR corrections are implemented and machine-recorded;
-5. 32/32 tests and `compileall` pass;
-6. an independent fixed rerun satisfies every precision/precondition check and
-   reproduces all seven scientific files plus `analytical-validation.json`
-   byte-for-byte.
-
-The remaining gate is a bounded Scientific Reviewer re-review of finding closure
-and regression only. `PASS` or `PASS_WITH_MINOR` makes a bounded `RES-001`
-admissible; it does not create the result automatically.
-
-No target-device extension, new literature cycle, retroactive `HYP-xxx` or
-redesign of EXP-001 is part of this gate.
+No new experiment, target-device extension, retroactive `HYP-xxx` or permanent
+result registration is authorized before that approval.
 
 ## Active Research Questions
 
 - RQ-001 — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; DEC-001 unchanged.
-- RQ-002 — `OPEN / EXP-001 SCIENTIFIC RE-REVIEW`.
+- RQ-002 — `OPEN / EXP-001 BOUNDED RESULT CANDIDATE`.
 - RQ-003 — `OPEN / ACTIVE NEXT INTERFACE`; owns parameterized ECC capability,
   state and decoder-outcome semantics and must keep `E_cap` distinct from
   DUE/SDC/miscorrection/system-visible outcomes.
@@ -57,13 +47,14 @@ redesign of EXP-001 is part of this gate.
   uncertainty to the risk interface.
 - RQ-005 — `OPEN / QUEUED NEXT`; retains the measurable multi-component resource
   vector without premature scalarization.
-- RQ-006 — `OPEN / EXP-001 SCIENTIFIC RE-REVIEW`; owns `W`, topology, joint post-`W`
+- RQ-006 — `OPEN / EXP-001 BOUNDED RESULT CANDIDATE`; owns `W`, topology, joint post-`W`
   impact and reduction-sufficiency/bound conditions.
 
 The future integrated adaptive-control question is prepared as a candidate in
 [`research_backlog.md`](research_backlog.md), but is not permanently registered.
 It requires explicit PI acceptance of its final wording/ID before control-method
-development; that approval does not block the current re-review or RQ-003 work.
+development; that separate future approval does not alter the current
+`DRAFT-RES-001` wording gate.
 
 ## EXP-001 disposition
 
@@ -81,18 +72,18 @@ Scientific Reviewer independently accepted:
 - exact endpoint decision differences at experimental `epsilon=0.15`, `0.25`
   and `0.35`, but not at `epsilon=0.55`.
 
-These are accepted review findings, not yet `RES-xxx`. They do not bound physical
-SRAM topology or establish universal insufficiency of marginal models.
+These are accepted review findings and form the basis of a bounded result
+candidate, not yet `RES-xxx`. They do not bound physical SRAM topology or
+establish universal insufficiency of marginal models.
 
 ### Validation-repair disposition
 
 The original 768,000 L0/L1 comparisons remain correctly labelled as
-outcome/final-signature comparisons. The accepted repair adds a bounded,
-independent full-trace validation layer rather than relabelling the production
-run. It closes the demonstrated shared-path validation weakness at Orchestrator
-level without changing configurations, scientific outputs or the EXP-001
-question. Scientific Review 01 remains `REVISE` until the Reviewer confirms
-closure.
+outcome/final-signature comparisons. The repair adds a bounded, independent
+full-trace validation layer rather than relabelling the production run.
+Scientific Review 02 confirms closure of the demonstrated shared-path weakness
+without changing configurations, scientific outputs or the EXP-001 question.
+EXP-001 is now `SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE`.
 
 ## Chen/IHP/Potsdam control-prior-art disposition
 
@@ -136,15 +127,18 @@ PI-provided signals concerning the Meshchanov/Lushnikov/Krasnikov, Podzolko,
 Boruzdina/Ulanova/Chumakov and Zebrev/Galimov lines are recorded in
 [`research_backlog.md`](research_backlog.md) as `UNVERIFIED`. They constrain
 future novelty-risk verification but are not accepted evidence, do not change
-EXP-001 and do not authorize a broad literature cycle.
+EXP-001 and do not authorize a broad literature cycle. Before the next
+quantitative experiment, the Orchestrator must define the smallest bounded
+full-text pass needed to turn these lines into controlled comparison points.
 
 ## Updated scientific roadmap
 
-1. **Close EXP-001 review.** Obtain the bounded Scientific Reviewer re-review of
-   the accepted repair and regression evidence.
-2. **Promote only the bounded result.** If the re-review passes, create a
-   candidate `RES-001` using the maximum admissible wording and complete validity
-   domain from Scientific Review 01; no retroactive hypothesis.
+1. **Approve or revise the bounded result candidate.** PI reviews the exact
+   statement and fourteen-condition validity domain; no permanent `RES-001`
+   exists before acceptance.
+2. **Control the minimum prior-art boundary.** After result approval and before
+   the next quantitative experiment, convert only the named domestic lines that
+   can change the next method/gate into bounded full-text comparison points.
 3. **Activate RQ-003.** Define the minimum parameterized ECC state/capability and
    decoder-outcome contract consumed by reliability and observation layers.
 4. **Converge RQ-004 and RQ-005.** Bound at least one internal and one external
@@ -163,9 +157,10 @@ EXP-001 and do not authorize a broad literature cycle.
    inspection/maintenance prior-art pass before a literature-level integrated
    control novelty claim, not before the next bounded model work.
 
-## Next quantitative gate
+## Prepared next quantitative gate — not active
 
-The next own quantitative stage must answer more than “dependence can matter.”
+No new `EXP` may start before PI approval of the bounded result candidate. The
+subsequent own quantitative stage must answer more than “dependence can matter.”
 Its gate is to define, for retained information `I`, an admissible model set and
 the induced interval/bound for `F_A`, then determine for every candidate
 `T_scrub`:
@@ -178,12 +173,14 @@ the induced interval/bound for `F_A`, then determine for every candidate
 
 The next experiment or derivation must be preregistered before execution and may
 use a hypothesis or an explicit decision/falsification criterion. It must not
-simply create another synthetic pair with different `F_A`.
+simply create another synthetic pair with different `F_A`. Exact gate wording,
+RQ/interface dependencies and the bounded prior-art handoff will be proposed
+after PI disposition of the result candidate.
 
 ## Genuine blockers and PI inputs
 
-No new PI decision is required for the EXP-001 re-review or the RQ-003 protocol
-revision/mapping.
+The only current blocking PI decision is acceptance, revision or rejection of
+the bounded `DRAFT-RES-001` wording.
 
 Before target-like calibration, useful but non-blocking material remains:
 
@@ -201,8 +198,9 @@ observable channels, ECC semantics or target hardware domains.
 ## Active hypotheses and results
 
 - No `HYP-xxx` is registered; none is created retroactively for EXP-001.
-- EXP-001 is implemented and its validation repair is Orchestrator-accepted, but
-  Scientific Review 01 remains `REVISE` pending bounded re-review.
+- EXP-001 is implemented, independently validated within the repair scope and
+  has `Scientific Review 02: PASS`.
+- `DRAFT-RES-001` awaits PI wording approval and is not a permanent result.
 - No `RES-xxx` is registered.
 
 ## Constraints

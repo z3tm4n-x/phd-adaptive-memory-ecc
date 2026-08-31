@@ -146,13 +146,13 @@ Purpose: compare adaptive SRAM restoration with classical inspection/checking/ma
 
 ## Active — own-result throughput gate
 
-**Status:** `VALIDATION REPAIR ACCEPTED / BOUNDED SCIENTIFIC RE-REVIEW PENDING`
+**Status:** `SCIENTIFIC REVIEW PASS / DRAFT RES-001 AWAITING PI APPROVAL`
 
 [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is the active own-work target.
 
 Current transition:
 
-`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → accepted independent-oracle repair → bounded re-review → bounded RES candidate or rejection`.
+`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → accepted independent-oracle repair → Scientific Review 02 PASS → PI disposition of bounded result candidate`.
 
 No second general RQ-002 literature cycle or automatic Paper Card batch is allowed. A new evidence task requires a named gap blocking:
 
@@ -161,18 +161,25 @@ No second general RQ-002 literature cycle or automatic Paper Card batch is allow
 - target validation;
 - interpretation of the first own result.
 
-The first `RES-xxx`, if the bounded re-review passes, may state the exact
-four-word identified set only with the complete validity domain accepted by the
-Reviewer. It must separate representation uncertainty, Monte Carlo uncertainty
-and confidence-rule conservatism and must not be a source summary.
+[`DRAFT-RES-001`](result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+states the exact four-word identified set only with the complete validity domain
+accepted by the Reviewer. It separates representation uncertainty, Monte Carlo
+uncertainty and confidence-rule conservatism and is not a source summary. It
+must not be treated as permanent `RES-001` before explicit PI approval.
 
-After review, the next quantitative gate is a preregistered derivation/experiment
+After PI disposition, the next quantitative gate is a preregistered derivation/experiment
 that maps available information `I` to an admissible model class `M(I)`, then to
 an exact value/set/bound for `F_A`, admissible restoration actions, selected
 `T_scrub` and resource cost. It must quantify controlled error, a safe-reduction
 domain or the resource price of robust conservatism over physically defensible
 `W`/topology/event/observation inputs rather than repeat the synthetic existence
 discriminator.
+
+No new experiment may start before that PI disposition. Before the next
+quantitative gate, define a minimum bounded full-text pass over the named
+Meshchanov/Lushnikov/Krasnikov, Podzolko, Boruzdina/Ulanova/Chumakov and
+Zebrev/Galimov lines only to the extent needed to control comparisons that can
+change the next method, validity domain or claim.
 
 ## Future specialty and implementation alignment
 

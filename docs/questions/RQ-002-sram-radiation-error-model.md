@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
 **Source candidate:** C-RQ-02<br>
-**Status:** `OPEN / EXP-001 REVIEW REPAIR`<br>
+**Status:** `OPEN / EXP-001 BOUNDED RESULT CANDIDATE`<br>
 **Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -112,12 +112,15 @@ The minimum adequate target model remains unknown until the reduction comparison
 
 ## Active gate / next action
 
-1. Close the independent-L0-oracle repair and four minor corrections required by
-   [EXP-001 Scientific Review 01](../scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md).
-2. Obtain a bounded passing re-review before any `RES-xxx`.
-3. Keep representation/dependence uncertainty, Monte Carlo uncertainty and
-   CI-decision conservatism separate.
-4. Activate RQ-003 as the next ECC state/outcome interface and use the accepted
+1. Treat [EXP-001 Scientific Review 02](../scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
+   as `PASS`; the corrective gate is closed.
+2. Obtain PI wording disposition of the bounded
+   [`DRAFT-RES-001`](../result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+   before permanent result registration or a new experiment.
+3. Preserve the separation of representation/dependence uncertainty, Monte
+   Carlo uncertainty and CI-decision conservatism.
+4. After result disposition, activate RQ-003 as the next ECC state/outcome
+   interface and use the accepted
    normative baseline later to define realistic observation inputs; do not infer
    normative deficiency.
 5. Do not authorize another general literature cycle without a named gap that
@@ -138,8 +141,9 @@ eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-sea
 - Evidence synthesis: [`RQ-002_initial_evidence_synthesis.md`](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md).
 - Evidence Audit: [`RQ-002_EVIDENCE_AUDIT_01.md`](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md).
 - Model decision: [`DEC-003`](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md).
-- Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — IMPLEMENTED / SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED.
-- CLM/EVD/HYP/RES: none created at this gate.
+- Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — IMPLEMENTED / INDEPENDENT VALIDATION PASS / SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE.
+- Result candidate: [`DRAFT-RES-001`](../result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md) — PI APPROVAL REQUIRED / NOT REGISTERED.
+- CLM/EVD/HYP/RES: no new permanent artefact created at this gate.
 
 ## Answer
 

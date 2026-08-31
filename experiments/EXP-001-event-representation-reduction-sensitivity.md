@@ -1,6 +1,6 @@
 # EXP-001 — Event-representation reduction sensitivity
 
-**Status:** `IMPLEMENTED / VALIDATION REPAIR ACCEPTED / SCIENTIFIC RE-REVIEW PENDING`<br>
+**Status:** `IMPLEMENTED / INDEPENDENT VALIDATION PASS / SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE`<br>
 **Registered:** 2026-08-28<br>
 **Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
 
@@ -41,8 +41,12 @@ Validation-repair commit
 `072b70adabb9827ee59c94b2b3d5cf044b25cdf9` is accepted at Orchestrator level.
 It adds the independent test-only oracle, full-trace and mutation checks and the
 four required MINOR corrections without changing the fixed configurations or
-seven scientific output files. Scientific Review 01 remains `REVISE` pending its
-bounded re-review; the repair is not a `RES-xxx` promotion.
+seven scientific output files. The bounded
+[Scientific Review 02](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
+returns `PASS`, closes all five original findings and reports no new issue or
+scientific regression. The corrective gate is closed. The prepared
+[`DRAFT-RES-001`](../docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+still requires explicit PI wording approval before permanent registration.
 
 ## Configuration
 
@@ -224,6 +228,24 @@ After those checks, a Scientific Reviewer re-review is limited to closure of the
 listed findings and regression detection. No target-device extension, new
 literature cycle, retroactive `HYP-xxx` or redesigned scientific question is part
 of this repair.
+
+## Scientific Review 02 disposition
+
+Scientific Review 02 returns `PASS`:
+
+- `MAJOR-01` and `MINOR-01…04` are closed;
+- no new `CRITICAL`, `MAJOR`, `MINOR` or required `OPTIONAL` issue is present;
+- the analytical parameterization, `1/6 <= q <= 1/2`, exact `S(q,m)` and
+  reporting-window `F_A`, endpoint attainment and identified-set interpretation
+  remain accepted only within the complete fourteen-condition domain above;
+- representation uncertainty, Monte Carlo estimation uncertainty and
+  confidence-rule conservatism remain separate;
+- a narrow first result is scientifically admissible but not automatically
+  promoted.
+
+The PI accepts the review disposition and closes the EXP-001 corrective gate.
+No permanent `RES-001` exists until the bounded candidate wording is explicitly
+approved.
 
 ## Output locations
 

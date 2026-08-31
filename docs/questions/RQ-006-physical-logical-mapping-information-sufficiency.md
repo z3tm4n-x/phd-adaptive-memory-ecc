@@ -2,7 +2,7 @@
 
 **Title:** Physical-to-logical mapping and information sufficiency for ECC-aware SRAM reliability<br>
 **Source candidate:** C-RQ-05<br>
-**Status:** `OPEN / EXP-001 REVIEW REPAIR`<br>
+**Status:** `OPEN / EXP-001 BOUNDED RESULT CANDIDATE`<br>
 **Registered:** 2026-08-28 by explicit PI approval<br>
 **Escalation basis:** accepted RQ-002 synthesis and [Evidence Audit 01](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md)
 
@@ -70,20 +70,23 @@ RQ-006 is answerable when:
 
 ## Next action
 
-Close `MAJOR-01` and the four `MINOR` findings in
-[Scientific Review 01](../scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md),
-obtain a passing bounded re-review, and only then propose the synthetic
-identified-set result. In parallel, activate RQ-003 so the next quantitative
-stage can replace the experiment-local `t_c` abstraction with an explicit
-parameterized ECC state/outcome interface. No target-specific sufficiency claim
-follows from EXP-001 alone.
+[Scientific Review 02](../scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
+returns `PASS` and closes the EXP-001 corrective gate. Obtain PI wording
+disposition of the bounded
+[`DRAFT-RES-001`](../result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+before permanent result registration or a new experiment. After approval,
+define the minimum bounded full-text prior-art closure and the next quantitative
+gate, then activate RQ-003 so the next stage can replace the experiment-local
+`t_c` abstraction with an explicit parameterized ECC state/outcome interface.
+No target-specific sufficiency claim follows from EXP-001 alone.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-001, RQ-002, RQ-003, RQ-004.
 - Decisions: DEC-001, DEC-002, DEC-003.
 - Evidence: PAPER-004…008; RQ-002 Evidence Audit 01.
-- Experiment: EXP-001.
+- Experiment: EXP-001 — `SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE`.
+- Result candidate: `DRAFT-RES-001` — PI approval required; not registered.
 - HYP/RES: none registered.
 
 ## Answer

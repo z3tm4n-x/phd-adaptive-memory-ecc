@@ -1,9 +1,10 @@
 # EXP-001 — Orchestrator disposition
 
-**Status:** `VALIDATION REPAIR ACCEPTED / SCIENTIFIC RE-REVIEW PENDING / NOT RES-xxx`
+**Status:** `VALIDATION REPAIR ACCEPTED / SCIENTIFIC REVIEW PASS / DRAFT RES-001 PENDING PI APPROVAL`
 **Research Engineer commit:** `84728d1b5768e7c91c508495d696c5980943ae57`
 **Validation repair commit:** `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
 **Scientific review:** [EXP-001-SCIENTIFIC-REVIEW-01](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md) — `REVISE`
+**Scientific re-review:** [EXP-001-SCIENTIFIC-REREVIEW-02](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md) — `PASS`
 **Related:** `DEC-001`; `DEC-002`; `DEC-003`; `RQ-002`; `RQ-006`
 
 ## Acceptance scope
@@ -179,3 +180,17 @@ The subsequent Scientific Reviewer task is limited to verifying closure of
 these findings and absence of regression. A passing `PASS` or
 `PASS_WITH_MINOR` disposition makes a narrowly bounded `RES-001` admissible but
 does not create it automatically. No retroactive hypothesis is permitted.
+
+## Subsequent re-review and PI disposition
+
+Scientific Review 02 independently closes `MAJOR-01` and `MINOR-01…04`, finds
+no new issue or scientific-output regression and returns `PASS`. The PI accepts
+the Orchestrator disposition and considers the EXP-001 corrective gate closed.
+
+The bounded
+[`DRAFT-RES-001`](../../../docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+is scientifically admissible for wording approval but is not a permanent
+`RES-xxx`. It must preserve the complete fourteen-condition validity domain,
+the experimental status of the `epsilon` values, the three distinct uncertainty
+objects and all explicit non-claims. No new experiment or retrospective
+`HYP-xxx` is authorized before PI disposition of the candidate.

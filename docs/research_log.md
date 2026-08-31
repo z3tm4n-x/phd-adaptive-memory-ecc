@@ -373,3 +373,24 @@
   `I -> M(I) -> F_A value/set/bound -> admissible actions -> T_scrub -> resource
   cost`, with the quantitative target of the control-resource price of
   information deficit.
+
+### EXP-001 Scientific Review 02 accepted; bounded result candidate prepared
+
+- Scientific Reviewer commit
+  `d76850f47826cc5c9cf693fae8b581b3dcc2542e` was reviewed as the direct child
+  of accepted Orchestrator disposition
+  `222e9303724c1e0f8f0986c1d4e53c754c47cf23`.
+- `EXP-001-SCIENTIFIC-REREVIEW-02` returns `PASS`: `MAJOR-01` and
+  `MINOR-01…04` are closed, no new issue or scientific-output regression is
+  reported, and the complete fourteen-condition validity domain is preserved.
+- PI accepts the Orchestrator disposition and closes the EXP-001 corrective
+  gate.
+- A bounded first-result candidate is stored as
+  `docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md`.
+  It is not registered as `RES-001` and requires explicit PI wording approval.
+- The candidate states only the exact identified set for the reviewed synthetic
+  four-word class and the conditional action change/invariance observed on the
+  declared experimental grid. It preserves the separation of representation,
+  Monte Carlo and decision-rule uncertainty and creates no retrospective
+  `HYP-xxx`.
+- No new experiment is authorized before PI disposition of the candidate.
