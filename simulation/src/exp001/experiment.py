@@ -28,6 +28,7 @@ from .config import (
     initial_state_from_config,
     memory_from_config,
     validate_bounded_config,
+    validate_joint_analytical_preconditions,
     validate_joint_config,
 )
 from .model import PeriodicScrub, PhysicalMapping, simulate_joint_events, simulate_physical_events
@@ -47,6 +48,90 @@ from .statistics import (
     PairedDifferenceAccumulator,
     paired_normal_interval,
     wilson_interval,
+)
+
+
+J_ANALYTICAL_VALIDITY_DOMAIN = (
+    {
+        "id": 1,
+        "condition": (
+            "one declared domain containing exactly four logical words with common "
+            "correction capability t_c=1"
+        ),
+    },
+    {"id": 2, "condition": "clean state at the reporting-window start"},
+    {"id": 3, "condition": "every parent event impacts exactly two distinct words"},
+    {
+        "id": 4,
+        "condition": (
+            "every selected word receives exactly one fresh erroneous bit; no repeat "
+            "hit, toggle-clear or within-interval repair is possible"
+        ),
+    },
+    {
+        "id": 5,
+        "condition": "one-event per-word impact probability is exactly 1/2 for every word",
+    },
+    {
+        "id": 6,
+        "condition": (
+            "one fixed pair-probability vector is used, and pair marks are i.i.d. "
+            "across parent events"
+        ),
+    },
+    {
+        "id": 7,
+        "condition": "pair marks are independent of HPP event times and counts",
+    },
+    {
+        "id": 8,
+        "condition": (
+            "parent arrivals form a simple homogeneous Poisson process, giving "
+            "Poisson counts and independent increments"
+        ),
+    },
+    {
+        "id": 9,
+        "condition": (
+            "parent impacts are simultaneous and E_cap is evaluated after the "
+            "complete mark"
+        ),
+    },
+    {
+        "id": 10,
+        "condition": (
+            "scrubbing is instantaneous, periodic, synchronous and clears the "
+            "entire erroneous-bit state"
+        ),
+    },
+    {
+        "id": 11,
+        "condition": (
+            "t0 is aligned with the scrub phase and the reporting duration is "
+            "exactly k*T_scrub, with no partial leading or trailing interval"
+        ),
+    },
+    {
+        "id": 12,
+        "condition": (
+            "deterministic-boundary events have probability zero under the HPP; "
+            "the implementation ordering is scrub_then_event"
+        ),
+    },
+    {
+        "id": 13,
+        "condition": (
+            "F_A is the DEC-001 reporting-window first-passage event, so an "
+            "exceedance remains counted even if a later scrub clears the state"
+        ),
+    },
+    {
+        "id": 14,
+        "condition": (
+            "each logical word has sufficient unused bit positions for the "
+            "generated fresh-bit construction over the finite run"
+        ),
+    },
 )
 
 
@@ -438,12 +523,51 @@ def run_bounded(config: Mapping[str, object]) -> dict[str, object]:
     }
 
 
-def _j_conditional_failure_after_two(subsets: Sequence[Sequence[int]]) -> float:
-    total = len(subsets) * len(subsets)
+def j_conditional_survival_after_two(subsets: Sequence[Sequence[int]]) -> float:
+    """Return q: survival after exactly two i.i.d. declared pair marks."""
+
+    if not subsets:
+        raise ValueError("at least one pair mark is required")
+    normalized: list[tuple[int, int]] = []
+    for subset in subsets:
+        words = tuple(int(word) for word in subset)
+        if len(words) != 2 or len(set(words)) != 2:
+            raise ValueError("every analytical J mark must contain two distinct words")
+        normalized.append(words)
+    total = len(normalized) * len(normalized)
     no_repeat = sum(
-        set(first).isdisjoint(second) for first in subsets for second in subsets
+        set(first).isdisjoint(second) for first in normalized for second in normalized
     )
-    return 1.0 - no_repeat / total
+    return no_repeat / total
+
+
+def j_interval_survival(q: float, mean_parent_events: float) -> float:
+    """Closed-form S(q,m) for one clean, complete scrub interval."""
+
+    if not 0.0 <= q <= 1.0:
+        raise ValueError("q must be a probability")
+    if mean_parent_events < 0.0:
+        raise ValueError("the interval HPP mean cannot be negative")
+    probability_zero = math.exp(-mean_parent_events)
+    probability_one = probability_zero * mean_parent_events
+    probability_two = probability_zero * mean_parent_events * mean_parent_events / 2.0
+    return probability_zero + probability_one + probability_two * q
+
+
+def j_reporting_window_failure(q: float, mean_parent_events: float, intervals: int) -> float:
+    """Closed-form F_A(q,m,k)=1-S(q,m)^k for aligned full resets."""
+
+    if intervals < 0:
+        raise ValueError("the number of complete intervals cannot be negative")
+    survival = 1.0
+    interval_survival = j_interval_survival(q, mean_parent_events)
+    for _ in range(intervals):
+        survival *= interval_survival
+    return 1.0 - survival
+
+
+def _j_conditional_failure_after_two(subsets: Sequence[Sequence[int]]) -> float:
+    return 1.0 - j_conditional_survival_after_two(subsets)
 
 
 def _j_analytical_f(
@@ -468,6 +592,52 @@ def _j_analytical_f(
         survival *= interval_survival
         start = boundary
     return 1.0 - survival
+
+
+def j_exact_decision_table(config: Mapping[str, object]) -> list[dict[str, object]]:
+    """Return the deterministic exact and identified-set-robust J decisions."""
+
+    validate_joint_analytical_preconditions(config)
+    common = config["common"]
+    t0 = float(common["reporting_window"]["t0"])
+    duration = float(common["reporting_window"]["duration"])
+    rate = float(common["arrival_scenario"]["rate"])
+    periods = [float(value) for value in common["candidate_scrub_periods"]]
+    models = {str(model["name"]): model for model in config["joint_models"]}
+    exact = {
+        model_name: {
+            period: _j_analytical_f(
+                rate=rate,
+                t0=t0,
+                duration=duration,
+                scrub=_scrub_from_config(common["scrub"], period),
+                subsets=models[model_name]["subsets"],
+            )
+            for period in periods
+        }
+        for model_name in ("J-A", "J-B")
+    }
+
+    output: list[dict[str, object]] = []
+    for epsilon_value in common["epsilon_grid"]:
+        epsilon = float(epsilon_value)
+        feasible_a = [period for period in periods if exact["J-A"][period] <= epsilon]
+        feasible_b = [period for period in periods if exact["J-B"][period] <= epsilon]
+        output.append(
+            {
+                "epsilon": epsilon,
+                "epsilon_status": "experiment_parameter_not_project_requirement",
+                "exact_j_a_feasible_periods": feasible_a,
+                "exact_j_b_feasible_periods": feasible_b,
+                "exact_j_a_selected_period": max(feasible_a) if feasible_a else None,
+                "exact_j_b_selected_period": max(feasible_b) if feasible_b else None,
+                "robust_exact_over_q_interval_feasible_periods": feasible_b,
+                "robust_exact_over_q_interval_selected_period": (
+                    max(feasible_b) if feasible_b else None
+                ),
+            }
+        )
+    return output
 
 
 def _joint_decision_rows(
@@ -542,6 +712,7 @@ def _joint_decision_rows(
 
 def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
     invariants = validate_joint_config(config)
+    analytical_preconditions = validate_joint_analytical_preconditions(config)
     common = config["common"]
     memory = memory_from_config(common["domain"])
     t0 = float(common["reporting_window"]["t0"])
@@ -562,6 +733,7 @@ def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
     runtime: dict[str, float] = defaultdict(float)
     epoch_checks = 0
     fresh_bit_checks = 0
+    maximum_fresh_bits_used_per_word = [0] * memory.word_count
     scrub_periods = [float(value) for value in common["candidate_scrub_periods"]]
 
     for batch_seed in common["monte_carlo"]["batch_seeds"]:
@@ -608,6 +780,10 @@ def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
                             raise AssertionError("J event did not add a fresh erroneous bit")
                         seen_by_word[impact.word].add(bit)
                         fresh_bit_checks += 1
+                for word, seen_bits in enumerate(seen_by_word):
+                    maximum_fresh_bits_used_per_word[word] = max(
+                        maximum_fresh_bits_used_per_word[word], len(seen_bits)
+                    )
 
             for scrub_period in scrub_periods:
                 scrub = _scrub_from_config(common["scrub"], scrub_period)
@@ -641,8 +817,26 @@ def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
                 )
                 deltas[scrub_period].add(result_b.e_cap, result_a.e_cap)
 
+    fresh_capacity_sufficient = all(
+        used <= memory.bits_per_word for used in maximum_fresh_bits_used_per_word
+    )
+    if not fresh_capacity_sufficient:
+        raise AssertionError(
+            "generated finite J streams exceed the declared fresh-bit capacity"
+        )
+    analytical_preconditions = dict(analytical_preconditions)
+    analytical_preconditions.update(
+        {
+            "fresh_bit_capacity_validated_before_analytical_output": True,
+            "maximum_fresh_bits_used_per_word": maximum_fresh_bits_used_per_word,
+            "available_bits_per_word": memory.bits_per_word,
+        }
+    )
+
     rate = float(common["arrival_scenario"]["rate"])
-    analytical_tolerance = float(common["analytical_sanity_tolerance"])
+    legacy_reported_tolerance = float(common["analytical_sanity_tolerance"])
+    analytical_precision_checks = 0
+    exact_inside_pointwise_wilson_checks = 0
     rows: list[dict[str, object]] = []
     for (model_name, scrub_period), accumulator in sorted(accumulators.items()):
         low, high = wilson_interval(accumulator.successes, accumulator.trials, confidence)
@@ -658,10 +852,13 @@ def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
                 subsets=models[model_name]["subsets"],
             )
             analytical_error = accumulator.successes / accumulator.trials - analytical
-            if abs(analytical_error) > analytical_tolerance:
+            if abs(analytical_error) > precision_limit + 1e-15:
                 raise AssertionError(
-                    f"{model_name} Monte Carlo sanity error {analytical_error} exceeds tolerance"
+                    f"{model_name} Monte Carlo analytical error {analytical_error} "
+                    f"exceeds the predeclared precision limit {precision_limit}"
                 )
+            analytical_precision_checks += 1
+            exact_inside_pointwise_wilson_checks += int(low <= analytical <= high)
         rows.append(
             {
                 "model": model_name,
@@ -678,7 +875,9 @@ def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
                 "precision_satisfied": half_width <= precision_limit + 1e-15,
                 "analytical_f_a": analytical,
                 "monte_carlo_minus_analytical": analytical_error,
-                "analytical_sanity_tolerance": analytical_tolerance
+                # Retained as legacy output metadata so the seven fixed scientific
+                # files remain byte-identical.  It is no longer an acceptance gate.
+                "analytical_sanity_tolerance": legacy_reported_tolerance
                 if analytical is not None
                 else None,
                 "l2_input_fingerprint": marginals_a.fingerprint
@@ -730,6 +929,41 @@ def run_joint_discriminator(config: Mapping[str, object]) -> dict[str, object]:
         "delta_rows": delta_rows,
         "decision_rows": decisions,
         "invariants": invariants,
+        "analytical_validation": {
+            "result_scope": "bounded_synthetic_four_word_discriminator_only",
+            "validity_domain": list(J_ANALYTICAL_VALIDITY_DOMAIN),
+            "configuration_and_runtime_preconditions": analytical_preconditions,
+            "q_endpoints": {
+                "J-A": j_conditional_survival_after_two(models["J-A"]["subsets"]),
+                "J-B": j_conditional_survival_after_two(models["J-B"]["subsets"]),
+            },
+            "formula": {
+                "interval_survival": "S(q,m)=exp(-m)*(1+m+q*m^2/2)",
+                "reporting_window_failure": "F_A(q,m,k)=1-S(q,m)^k",
+                "identified_interval": "[F_A(q=1/2),F_A(q=1/6)]",
+            },
+            "exact_decision_table": j_exact_decision_table(config),
+            "analytical_statistical_check": {
+                "method": "absolute_monte_carlo_error_le_predeclared_max_wilson_half_width",
+                "predeclared_limit": precision_limit,
+                "checks_passed": analytical_precision_checks,
+                "legacy_0_02_value_retained_only_for_scientific_file_byte_compatibility": True,
+            },
+            "pointwise_interval_checks": {
+                "exact_values_inside_pointwise_wilson_intervals": (
+                    exact_inside_pointwise_wilson_checks == analytical_precision_checks
+                ),
+                "checks_inside": exact_inside_pointwise_wilson_checks,
+                "checks_total": analytical_precision_checks,
+            },
+            "statistical_scope": {
+                "wilson_intervals": "pointwise_95_percent_not_simultaneous",
+                "paired_normal_intervals": "pointwise_95_percent_not_simultaneous",
+                "ci_based_restoration_decisions": (
+                    "pointwise_interval_based_not_a_simultaneous_selection_guarantee"
+                ),
+            },
+        },
         "runtime_seconds_by_model": dict(sorted(runtime.items())),
     }
 

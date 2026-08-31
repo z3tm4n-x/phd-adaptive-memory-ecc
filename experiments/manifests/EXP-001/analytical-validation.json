@@ -1,0 +1,262 @@
+{
+  "analytical_statistical_check": {
+    "checks_passed": 8,
+    "legacy_0_02_value_retained_only_for_scientific_file_byte_compatibility": true,
+    "method": "absolute_monte_carlo_error_le_predeclared_max_wilson_half_width",
+    "predeclared_limit": 0.007
+  },
+  "configuration_and_runtime_preconditions": {
+    "all_correction_capabilities_equal_one": true,
+    "available_bits_per_word": 128,
+    "clean_initial_state": true,
+    "configured_bits_per_word": 128,
+    "declared_trial_total_matches_seed_product": true,
+    "exactly_four_words": true,
+    "fresh_bit_capacity_validated_before_analytical_output": true,
+    "fresh_bit_capacity_validation_stage": "finite_stream_runtime_before_analytical_output",
+    "fresh_monotone_set_error_semantics": true,
+    "maximum_fresh_bits_used_per_word": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "periodic_synchronous_full_reset_scrub": true,
+    "phase_and_complete_window_alignment": true,
+    "positive_rate_hpp": true,
+    "scrub_then_event_boundary_order": true,
+    "simultaneous_complete_parent_mark_before_capability_check": true,
+    "valid_unique_distinct_two_word_marks": true
+  },
+  "exact_decision_table": [
+    {
+      "epsilon": 0.02,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [],
+      "exact_j_a_selected_period": null,
+      "exact_j_b_feasible_periods": [],
+      "exact_j_b_selected_period": null,
+      "robust_exact_over_q_interval_feasible_periods": [],
+      "robust_exact_over_q_interval_selected_period": null
+    },
+    {
+      "epsilon": 0.05,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [],
+      "exact_j_a_selected_period": null,
+      "exact_j_b_feasible_periods": [],
+      "exact_j_b_selected_period": null,
+      "robust_exact_over_q_interval_feasible_periods": [],
+      "robust_exact_over_q_interval_selected_period": null
+    },
+    {
+      "epsilon": 0.1,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [],
+      "exact_j_a_selected_period": null,
+      "exact_j_b_feasible_periods": [],
+      "exact_j_b_selected_period": null,
+      "robust_exact_over_q_interval_feasible_periods": [],
+      "robust_exact_over_q_interval_selected_period": null
+    },
+    {
+      "epsilon": 0.15,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [
+        0.5
+      ],
+      "exact_j_a_selected_period": 0.5,
+      "exact_j_b_feasible_periods": [],
+      "exact_j_b_selected_period": null,
+      "robust_exact_over_q_interval_feasible_periods": [],
+      "robust_exact_over_q_interval_selected_period": null
+    },
+    {
+      "epsilon": 0.25,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [
+        0.5,
+        1.0
+      ],
+      "exact_j_a_selected_period": 1.0,
+      "exact_j_b_feasible_periods": [
+        0.5
+      ],
+      "exact_j_b_selected_period": 0.5,
+      "robust_exact_over_q_interval_feasible_periods": [
+        0.5
+      ],
+      "robust_exact_over_q_interval_selected_period": 0.5
+    },
+    {
+      "epsilon": 0.35,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "exact_j_a_selected_period": 2.0,
+      "exact_j_b_feasible_periods": [
+        0.5,
+        1.0
+      ],
+      "exact_j_b_selected_period": 1.0,
+      "robust_exact_over_q_interval_feasible_periods": [
+        0.5,
+        1.0
+      ],
+      "robust_exact_over_q_interval_selected_period": 1.0
+    },
+    {
+      "epsilon": 0.45,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "exact_j_a_selected_period": 2.0,
+      "exact_j_b_feasible_periods": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "exact_j_b_selected_period": 2.0,
+      "robust_exact_over_q_interval_feasible_periods": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "robust_exact_over_q_interval_selected_period": 2.0
+    },
+    {
+      "epsilon": 0.55,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "exact_j_a_selected_period": 4.0,
+      "exact_j_b_feasible_periods": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "exact_j_b_selected_period": 4.0,
+      "robust_exact_over_q_interval_feasible_periods": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "robust_exact_over_q_interval_selected_period": 4.0
+    },
+    {
+      "epsilon": 0.65,
+      "epsilon_status": "experiment_parameter_not_project_requirement",
+      "exact_j_a_feasible_periods": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "exact_j_a_selected_period": 4.0,
+      "exact_j_b_feasible_periods": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "exact_j_b_selected_period": 4.0,
+      "robust_exact_over_q_interval_feasible_periods": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "robust_exact_over_q_interval_selected_period": 4.0
+    }
+  ],
+  "formula": {
+    "identified_interval": "[F_A(q=1/2),F_A(q=1/6)]",
+    "interval_survival": "S(q,m)=exp(-m)*(1+m+q*m^2/2)",
+    "reporting_window_failure": "F_A(q,m,k)=1-S(q,m)^k"
+  },
+  "pointwise_interval_checks": {
+    "checks_inside": 8,
+    "checks_total": 8,
+    "exact_values_inside_pointwise_wilson_intervals": true
+  },
+  "q_endpoints": {
+    "J-A": 0.5,
+    "J-B": 0.16666666666666666
+  },
+  "result_scope": "bounded_synthetic_four_word_discriminator_only",
+  "statistical_scope": {
+    "ci_based_restoration_decisions": "pointwise_interval_based_not_a_simultaneous_selection_guarantee",
+    "paired_normal_intervals": "pointwise_95_percent_not_simultaneous",
+    "wilson_intervals": "pointwise_95_percent_not_simultaneous"
+  },
+  "validity_domain": [
+    {
+      "condition": "one declared domain containing exactly four logical words with common correction capability t_c=1",
+      "id": 1
+    },
+    {
+      "condition": "clean state at the reporting-window start",
+      "id": 2
+    },
+    {
+      "condition": "every parent event impacts exactly two distinct words",
+      "id": 3
+    },
+    {
+      "condition": "every selected word receives exactly one fresh erroneous bit; no repeat hit, toggle-clear or within-interval repair is possible",
+      "id": 4
+    },
+    {
+      "condition": "one-event per-word impact probability is exactly 1/2 for every word",
+      "id": 5
+    },
+    {
+      "condition": "one fixed pair-probability vector is used, and pair marks are i.i.d. across parent events",
+      "id": 6
+    },
+    {
+      "condition": "pair marks are independent of HPP event times and counts",
+      "id": 7
+    },
+    {
+      "condition": "parent arrivals form a simple homogeneous Poisson process, giving Poisson counts and independent increments",
+      "id": 8
+    },
+    {
+      "condition": "parent impacts are simultaneous and E_cap is evaluated after the complete mark",
+      "id": 9
+    },
+    {
+      "condition": "scrubbing is instantaneous, periodic, synchronous and clears the entire erroneous-bit state",
+      "id": 10
+    },
+    {
+      "condition": "t0 is aligned with the scrub phase and the reporting duration is exactly k*T_scrub, with no partial leading or trailing interval",
+      "id": 11
+    },
+    {
+      "condition": "deterministic-boundary events have probability zero under the HPP; the implementation ordering is scrub_then_event",
+      "id": 12
+    },
+    {
+      "condition": "F_A is the DEC-001 reporting-window first-passage event, so an exceedance remains counted even if a later scrub clears the state",
+      "id": 13
+    },
+    {
+      "condition": "each logical word has sufficient unused bit positions for the generated fresh-bit construction over the finite run",
+      "id": 14
+    }
+  ]
+}

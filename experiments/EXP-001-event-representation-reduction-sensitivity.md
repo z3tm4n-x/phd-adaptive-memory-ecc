@@ -179,6 +179,40 @@ The accepted review has recommendation `REVISE`, no `CRITICAL` finding, one
   aggregate/decision/delta/invariant files must remain unchanged unless a
   documented defect is found.
 
+The analytical endpoint/identified-set statement and every exact decision made
+from it require all fourteen conditions below; citing only a subset is not an
+admissible EXP-001 result statement:
+
+1. one declared domain contains exactly four logical words with common
+   correction capability `t_c=1`;
+2. the reporting window starts from a clean state;
+3. every parent event impacts exactly two distinct words;
+4. every selected word receives exactly one fresh erroneous bit, with no repeat
+   hit, toggle-clear or within-interval repair;
+5. every word has one-event impact probability exactly `1/2`;
+6. one fixed pair-probability vector is used and pair marks are i.i.d. across
+   parent events;
+7. pair marks are independent of HPP event times and counts;
+8. parent arrivals form a simple HPP, giving Poisson counts and independent
+   increments;
+9. parent impacts are simultaneous and `E_cap` is evaluated after the complete
+   mark;
+10. scrubbing is instantaneous, periodic, synchronous and clears the complete
+    erroneous-bit state;
+11. `t0` is aligned with the scrub phase and the reporting duration is exactly
+    `k*T_scrub`, with no partial leading or trailing interval;
+12. deterministic-boundary events have probability zero under the HPP and the
+    implementation ordering is `scrub_then_event`;
+13. `F_A` is the DEC-001 reporting-window first-passage event, so an exceedance
+    remains counted even if a later scrub clears the state;
+14. every logical word has enough unused bit positions for the generated
+    fresh-bit construction over the finite run.
+
+The Wilson and paired-normal intervals in the fixed tables are pointwise 95%
+intervals. Decisions based on their upper endpoints are pointwise-interval-based
+decisions, not simultaneous or selection-valid confidence guarantees over the
+period/model grid.
+
 After those checks, a Scientific Reviewer re-review is limited to closure of the
 listed findings and regression detection. No target-device extension, new
 literature cycle, retroactive `HYP-xxx` or redesigned scientific question is part

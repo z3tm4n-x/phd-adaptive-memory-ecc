@@ -1,0 +1,96 @@
+{
+  "base_commit": "0ca6f13481ea0818c59395ead26db2f58cb6188e",
+  "blockers": [],
+  "compileall": {
+    "command": "& \"C:\\Users\\Иван\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -m compileall -q simulation/src simulation/tests simulation/run_exp001.py",
+    "exit_code": 0,
+    "passed": true
+  },
+  "configuration_sha256": {
+    "simulation/configs/EXP-001/bounded-phase1.json": "77f78ea988e1ee9106d4f414556fb76a0b6eefec0a2724a04484252c75eb0112",
+    "simulation/configs/EXP-001/joint-discriminator.json": "e79b9f8914cea2a5a616f1ba0b26c38fe4d09fef4969dc39148ad051502e58c0"
+  },
+  "deviations": [],
+  "experiment_run": {
+    "all_precision_rules_satisfied": true,
+    "analytical_precision_linked_checks_passed": true,
+    "analytical_preconditions_validated": true,
+    "command": "& \"C:\\Users\\Иван\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" simulation/run_exp001.py --bounded-config simulation/configs/EXP-001/bounded-phase1.json --joint-config simulation/configs/EXP-001/joint-discriminator.json --output-dir experiments/manifests/EXP-001 --repo-root .",
+    "executed_at_utc": "2026-08-31T13:54:59.552497+00:00",
+    "joint_invariants_all_pass": true,
+    "process_peak_memory_bytes": 25935872,
+    "wall_seconds_total": 62.05119380000542
+  },
+  "independent_oracle_validation": {
+    "complete_trace_streams": 267,
+    "exhaustive_single_cell_streams": 128,
+    "independence_guard_passed": true,
+    "mutation_sentinel": {
+      "mutant_accepted_by_production_joint_simulator": true,
+      "mutant_e_cap": false,
+      "oracle_e_cap": true,
+      "oracle_rejected_mutant_trace": true
+    },
+    "production_l0_to_oracle_complete_trace_comparisons": 267,
+    "production_l1_to_oracle_complete_trace_comparisons": 267,
+    "randomized_streams": 128,
+    "total_production_path_to_oracle_complete_trace_comparisons": 534
+  },
+  "production_fixed_run_l0_l1_comparisons": {
+    "comparison_kind": "outcome_and_final_signature_not_complete_trace",
+    "comparisons": 768000,
+    "converted_parent_event_marks": 288302,
+    "mismatches": 0
+  },
+  "scientific_output_regression": {
+    "all_byte_identical": true,
+    "files": {
+      "bounded-aggregate.csv": {
+        "after_sha256": "84e3f031da8ed0cb70209b10e9f8f8c06a08f00add8cb7c440db1d92be94804c",
+        "before_sha256": "84e3f031da8ed0cb70209b10e9f8f8c06a08f00add8cb7c440db1d92be94804c",
+        "byte_identical": true
+      },
+      "bounded-decisions.csv": {
+        "after_sha256": "530f37e2f4cc5232a872fa7a96ce28bde2560bd4192866574ae11c7b2ae70ae9",
+        "before_sha256": "530f37e2f4cc5232a872fa7a96ce28bde2560bd4192866574ae11c7b2ae70ae9",
+        "byte_identical": true
+      },
+      "bounded-invariants.json": {
+        "after_sha256": "cc316d1892d0aaf181d04c001acf51b02e93f18ac4d64e18aa22fb5fb380ea0f",
+        "before_sha256": "cc316d1892d0aaf181d04c001acf51b02e93f18ac4d64e18aa22fb5fb380ea0f",
+        "byte_identical": true
+      },
+      "joint-discriminator-aggregate.csv": {
+        "after_sha256": "9aec0a6638cc9a53627558abc67d4a6e54232641b5d188f2656620e739377a53",
+        "before_sha256": "9aec0a6638cc9a53627558abc67d4a6e54232641b5d188f2656620e739377a53",
+        "byte_identical": true
+      },
+      "joint-discriminator-decisions.csv": {
+        "after_sha256": "f689c3a008653fc461c8f04f95cb1b411004393ac1e84fb7ed71483386921d79",
+        "before_sha256": "f689c3a008653fc461c8f04f95cb1b411004393ac1e84fb7ed71483386921d79",
+        "byte_identical": true
+      },
+      "joint-discriminator-delta.csv": {
+        "after_sha256": "acc677f17a9e4a9408dd1d423b69e78c719bf193853dd8ead0ae04e39f1abdbc",
+        "before_sha256": "acc677f17a9e4a9408dd1d423b69e78c719bf193853dd8ead0ae04e39f1abdbc",
+        "byte_identical": true
+      },
+      "joint-discriminator-invariants.json": {
+        "after_sha256": "255afd28c55e08b8190b203b1b1e130a2f9167eb9737ef6912f0ab32a2907e65",
+        "before_sha256": "255afd28c55e08b8190b203b1b1e130a2f9167eb9737ef6912f0ab32a2907e65",
+        "byte_identical": true
+      }
+    }
+  },
+  "status": "validation_repair_complete_awaiting_bounded_scientific_re_review",
+  "task_id": "EXP-001-VALIDATION-REPAIR-01",
+  "unit_tests": {
+    "command": "& \"C:\\Users\\Иван\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -m unittest discover -s simulation/tests -v",
+    "errors": 0,
+    "failures": 0,
+    "passed": 32,
+    "run": 32,
+    "skipped": 0,
+    "wall_seconds": 0.138
+  }
+}
