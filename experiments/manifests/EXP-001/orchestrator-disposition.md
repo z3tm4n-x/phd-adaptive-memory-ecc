@@ -1,6 +1,6 @@
 # EXP-001 — Orchestrator disposition
 
-**Status:** `VALIDATION REPAIR ACCEPTED / SCIENTIFIC REVIEW PASS / DRAFT RES-001 PENDING PI APPROVAL`
+**Status:** `ACCEPTED / SCIENTIFIC REVIEW PASS / COMPLETE / PROMOTED TO RES-001`
 **Research Engineer commit:** `84728d1b5768e7c91c508495d696c5980943ae57`
 **Validation repair commit:** `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
 **Scientific review:** [EXP-001-SCIENTIFIC-REVIEW-01](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md) — `REVISE`
@@ -11,8 +11,11 @@
 
 The implementation, tests, fixed configurations, manifests and bounded aggregate
 outputs are accepted as a reproducible implementation of the registered EXP-001
-design. This acceptance does not accept a scientific result, physical SRAM model,
-novelty claim, numerical reliability requirement, `HYP-xxx` or `RES-xxx`.
+design. That technical acceptance did not by itself accept a scientific result,
+physical SRAM model, novelty claim, numerical reliability requirement or
+`HYP-xxx`. The later Scientific Review 02 `PASS` and explicit PI wording
+`ACCEPT` authorize only the bounded permanent
+[`RES-001`](../../../results/RES-001-exp001-four-word-identified-set.md).
 
 Independent Orchestrator verification found:
 
@@ -187,10 +190,10 @@ Scientific Review 02 independently closes `MAJOR-01` and `MINOR-01…04`, finds
 no new issue or scientific-output regression and returns `PASS`. The PI accepts
 the Orchestrator disposition and considers the EXP-001 corrective gate closed.
 
-The bounded
-[`DRAFT-RES-001`](../../../docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
-is scientifically admissible for wording approval but is not a permanent
-`RES-xxx`. It must preserve the complete fourteen-condition validity domain,
-the experimental status of the `epsilon` values, the three distinct uncertainty
-objects and all explicit non-claims. No new experiment or retrospective
-`HYP-xxx` is authorized before PI disposition of the candidate.
+The PI issued final `ACCEPT` for the wording-revised candidate. It is now
+registered as
+[`RES-001`](../../../results/RES-001-exp001-four-word-identified-set.md), with
+the complete fourteen-condition validity domain, experimental status of the
+`epsilon` values, three distinct uncertainty objects and all explicit
+non-claims preserved. EXP-001 is complete and promoted only within that scope.
+No retrospective `HYP-xxx` is created.

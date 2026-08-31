@@ -1,17 +1,16 @@
-# DRAFT RES-001 — Identified set for `F_A` in the EXP-001 four-word class
+# RES-001 — Identified set for `F_A` in the EXP-001 four-word class
 
-**Status:** `PI FINAL ACCEPT REQUIRED / WORDING REVISED / NOT REGISTERED AS RES-xxx`<br>
-**Proposed permanent ID:** `RES-001`<br>
+**Status:** `ACCEPTED / PERMANENT`<br>
+**Registered:** 2026-08-31 by explicit PI `ACCEPT`<br>
 **Related:** `EXP-001`; `RQ-002`; `RQ-006`; `DEC-001`; `DEC-003`<br>
 **Reviewer disposition:** `SCIENTIFIC REVIEW 02 — PASS`<br>
-**PI scientific-content disposition:** `ACCEPTED`<br>
-**PI wording disposition:** `REVISE — TWO EDITORIAL CORRECTIONS INCORPORATED`
+**PI disposition:** `ACCEPT — PERMANENT REGISTRATION AUTHORIZED`<br>
+**Used in:** RQ-002/RQ-006 follow-on method development; `ART`/thesis placement `TBD`
 
-This file is a bounded result candidate for PI wording approval. It is not an
-approved result and must not be cited as `RES-001` until the PI explicitly
-accepts the statement and permanent registration is completed.
+This is an approved bounded own result. It may be cited as `RES-001` only with
+the complete validity domain and limitations below.
 
-## Proposed central result statement
+## Result statement
 
 В заявленном синтетическом четырёхсловном классе одинаковые однословные
 маргинальные вероятности воздействия одного родительского события при
@@ -114,17 +113,17 @@ accepts the statement and permanent registration is completed.
 ## Evidence and provenance
 
 - experiment specification:
-  [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md);
+  [`EXP-001`](../experiments/EXP-001-event-representation-reduction-sensitivity.md);
 - implementation commit: `84728d1b5768e7c91c508495d696c5980943ae57`;
 - validation-repair commit: `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`;
 - accepted Orchestrator repair disposition commit:
   `222e9303724c1e0f8f0986c1d4e53c754c47cf23`;
-- [Scientific Review 01](../scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md):
+- [Scientific Review 01](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md):
   analytical result accepted, validation repair required;
-- [Scientific Review 02](../scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md):
+- [Scientific Review 02](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md):
   `PASS`; all original findings closed and no new issue found;
 - fixed configurations, manifests, aggregate tables and analytical validation:
-  [`experiments/manifests/EXP-001`](../../experiments/manifests/EXP-001/).
+  [`experiments/manifests/EXP-001`](../experiments/manifests/EXP-001/).
 
 The analytical identified set is exact within the complete validity domain.
 Monte Carlo estimates reproduce the endpoint probabilities within the reported
@@ -146,7 +145,7 @@ it is not an exact structural difference between the endpoint models.
 
 ## Limitations and explicit non-claims
 
-This candidate does not establish:
+This result does not establish:
 
 - universal insufficiency of marginal per-word distributions;
 - necessity of retaining complete physical event topology or complete `W`;
@@ -163,15 +162,10 @@ future invariance statement must remain conditional on the declared
 `epsilon`, candidate action set, decision rule, reporting horizon and resource
 criterion.
 
-## PI approval gate
+## Lifecycle disposition
 
-After the wording-only revision, PI must explicitly choose one final
-disposition:
-
-- `ACCEPT` — approve this wording and authorize permanent `RES-001`
-  registration;
-- `REVISE` — return exact wording or scope corrections;
-- `REJECT` — do not register the result.
-
-Until `ACCEPT`, `results/` remains unchanged and no publication or thesis claim
-may cite this candidate as an approved own result.
+The PI issued final `ACCEPT` after the wording-only revision and authorized
+permanent registration. EXP-001 is complete and promoted only within this
+result's exact scope. No retrospective `HYP-xxx` is created. Any later `ART`,
+thesis statement or generalized result must preserve this scope or pass a new
+evidence, experiment and review gate.

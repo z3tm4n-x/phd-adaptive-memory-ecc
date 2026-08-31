@@ -1,6 +1,6 @@
 # EXP-001 — Event-representation reduction sensitivity
 
-**Status:** `IMPLEMENTED / INDEPENDENT VALIDATION PASS / SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE`<br>
+**Status:** `COMPLETE / INDEPENDENT VALIDATION PASS / SCIENTIFIC REVIEW PASS / PROMOTED TO RES-001`<br>
 **Registered:** 2026-08-28<br>
 **Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
 
@@ -44,9 +44,9 @@ four required MINOR corrections without changing the fixed configurations or
 seven scientific output files. The bounded
 [Scientific Review 02](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
 returns `PASS`, closes all five original findings and reports no new issue or
-scientific regression. The corrective gate is closed. The prepared
-[`DRAFT-RES-001`](../docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
-still requires explicit PI wording approval before permanent registration.
+scientific regression. The corrective gate is closed. The PI issued final
+`ACCEPT`, and the exact reviewed result is permanently registered as
+[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md).
 
 ## Configuration
 
@@ -243,9 +243,10 @@ Scientific Review 02 returns `PASS`:
 - a narrow first result is scientifically admissible but not automatically
   promoted.
 
-The PI accepts the review disposition and closes the EXP-001 corrective gate.
-No permanent `RES-001` exists until the bounded candidate wording is explicitly
-approved.
+The PI accepts the review disposition, closes the EXP-001 corrective gate and
+approves the bounded wording. EXP-001 is complete and promoted only within
+[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md); no broader
+result follows.
 
 ## Output locations
 
@@ -253,7 +254,7 @@ approved.
 - tests: `simulation/tests/`;
 - configs: `simulation/configs/EXP-001/`;
 - run manifests: `experiments/manifests/EXP-001/`;
-- bounded aggregate outputs/figures after review: `results/` with a future `RES-xxx` link;
+- accepted bounded result: [`RES-001`](../results/RES-001-exp001-four-word-identified-set.md);
 - large/raw outputs: local external path recorded in the manifest, not committed.
 
 ## Explicit non-claims

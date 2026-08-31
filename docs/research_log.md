@@ -411,3 +411,42 @@
   uncertainty separation and explicit non-claims remain unchanged.
 - The candidate is resubmitted for final PI `ACCEPT`; no permanent `RES-001`,
   new experiment, calculation, hypothesis or review is created by this edit.
+
+### RES-001 permanently registered after final PI ACCEPT
+
+- PI issued final `ACCEPT` for the wording-revised first-result candidate and
+  explicitly authorized permanent registration.
+- The candidate was promoted without scientific expansion to
+  `results/RES-001-exp001-four-word-identified-set.md`; formulas, exact decision
+  table, all fourteen validity conditions, three uncertainty objects and every
+  explicit non-claim are preserved.
+- EXP-001 is now `COMPLETE / INDEPENDENT VALIDATION PASS / SCIENTIFIC REVIEW
+  PASS / PROMOTED TO RES-001` only within that exact scope.
+- At experimental `epsilon=0.15`, RES-001 records different admissible-action
+  sets; at `0.25` and `0.35`, different maximal feasible selected periods; at
+  `0.55`, identical exact selected actions. The `epsilon` values are not project
+  requirements.
+- No retrospective `HYP-xxx`, physical-SRAM generalization, numerical
+  reliability requirement or novelty claim was created.
+
+### Next information-deficit control-price gate prepared for PI disposition
+
+- A directional draft was created in `docs/research_gates/`; it is not an `RQ`,
+  `DEC`, `HYP`, `EXP`, `RES` or novelty claim and does not authorize execution.
+- The proposed chain is `I → M(I) → F_A value/set/bound → admissible actions →
+  T_scrub → measurable resource-cost vector`, with explicit conditional
+  action-invariance and robust-feasibility objects.
+- The draft requires a physically defensible event/`W` domain, controlled
+  projection of common underlying models, separate model/observation/numerical
+  uncertainties and a component-wise cost result without arbitrary
+  scalarization.
+- Minimum interfaces are assigned to RQ-002/RQ-006 and bounded slices of
+  RQ-003/RQ-004/RQ-005. The prepared integrated adaptive-control question is
+  proposed as future `RQ-007` but remains unregistered pending explicit PI
+  acceptance.
+- The domestic prior-art boundary is limited to four work units over the
+  Meshchanov/Lushnikov/Krasnikov, Podzolko, Boruzdina/Ulanova/Chumakov and
+  Zebrev/Galimov lines, with common extraction columns and a hard stop rule.
+- No new EXP may start until PI approves/revises this gate, the bounded prior-art
+  closure is complete, the integrated RQ is registered and a reproducible
+  experiment/derivation is preregistered.

@@ -74,9 +74,10 @@ missing proposition.
 
 ## Pending bounded branch — domestic prior-art signals
 
-**Status:** `PI SIGNAL / UNVERIFIED / NOT AN ACTIVE BROAD SEARCH`<br>
-**Trigger:** identity-controlled verification before relying on the corresponding
-method distinction or novelty-risk statement.
+**Status:** `BOUNDED CLOSURE DEFINED / PI GATE APPROVAL REQUIRED / NOT A BROAD SEARCH`<br>
+**Protocol location:** [next quantitative gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)<br>
+**Trigger:** PI approval of the gate, then identity-controlled verification before
+the next quantitative EXP or any corresponding method distinction.
 
 PI reported four potentially load-bearing domestic lines:
 
@@ -101,13 +102,15 @@ the relevant primary text are checked. The bounded verification questions are:
 - which generic adaptive-scrubbing or reconstruction claims are already occupied.
 
 This branch must not reopen EXP-001 or assert that complete physical topology is
-always necessary. It should be launched only as a small identity/full-text set
-needed to preregister the next quantitative model or to audit a future novelty
-claim.
+always necessary. The gate limits it to four work units (`PA-DOM-01…04`), common
+comparison columns and a hard stop after the required method boundaries are
+controlled. A new source requires one named proposition blocking model-set
+definition, physical plausibility, baseline reproduction, validity/bound
+interpretation or an exact comparison used in the next EXP specification.
 
 ## Prepared candidate — integrated adaptive-control RQ
 
-**Status:** `PREPARED / NOT REGISTERED / PI ACCEPTANCE REQUIRED`<br>
+**Status:** `PREPARED / PROPOSED RQ-007 / NOT REGISTERED / PI ACCEPTANCE REQUIRED`<br>
 **Inputs:** DEC-001; DEC-002; RQ-002…RQ-006; accepted Chen Evidence Audit<br>
 **Candidate lineage:** integrates the former C-RQ-08, C-RQ-09 and C-RQ-11
 control/action/optimization lines without consuming a permanent RQ identifier.
@@ -133,26 +136,26 @@ The candidate consumes rather than duplicates:
 
 It excludes generic “radiation prediction → dynamic scrub frequency,” arbitrary
 scalarization, an invented numerical reliability threshold, and a novelty claim.
-Permanent registration is required before control-method development, but does
-not block the current EXP-001 re-review, RQ-003 mapping or the next parameterized
-reliability/decision derivation.
+Permanent registration is required before the next risk-to-action quantitative
+execution because that work is control-method development. The gate draft does
+not consume `RQ-007`; PI must explicitly accept its exact wording and ID.
 
 ## Pending — future classical control prior-art threat
 
-**Status:** `PENDING / NON-BLOCKING FOR RQ-002, RQ-006 AND EXP-001`<br>
+**Status:** `PENDING / NON-BLOCKING FOR THE NEXT BOUNDED QUANTITATIVE GATE`<br>
 **Trigger:** before any literature-level novelty claim for the integrated adaptive-control method.
 
 Purpose: compare adaptive SRAM restoration with classical inspection/checking/maintenance scheduling, including the Barlow/Proschan/Keller line and relevant reliability/operations-research venues. Keep this task separate from radiation-test/event-representation mapping and do not launch it merely because the Chen identity is resolved.
 
-## Active — own-result throughput gate
+## Active — post-RES-001 throughput gate
 
-**Status:** `SCIENTIFIC REVIEW PASS / DRAFT RES-001 AWAITING PI APPROVAL`
+**Status:** `RES-001 REGISTERED / NEXT QUANTITATIVE GATE AWAITING PI APPROVAL`
 
-[DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is the active own-work target.
+[DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is complete and promoted only within [RES-001](../results/RES-001-exp001-four-word-identified-set.md).
 
 Current transition:
 
-`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → accepted independent-oracle repair → Scientific Review 02 PASS → PI disposition of bounded result candidate`.
+`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → accepted independent-oracle repair → Scientific Review 02 PASS → PI ACCEPT → RES-001`.
 
 No second general RQ-002 literature cycle or automatic Paper Card batch is allowed. A new evidence task requires a named gap blocking:
 
@@ -161,25 +164,23 @@ No second general RQ-002 literature cycle or automatic Paper Card batch is allow
 - target validation;
 - interpretation of the first own result.
 
-[`DRAFT-RES-001`](result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
-states the exact four-word identified set only with the complete validity domain
-accepted by the Reviewer. It separates representation uncertainty, Monte Carlo
-uncertainty and confidence-rule conservatism and is not a source summary. It
-must not be treated as permanent `RES-001` before explicit PI approval.
+[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md) states the
+exact four-word identified set only with the complete validity domain accepted
+by the Reviewer and PI. It separates representation uncertainty, Monte Carlo
+uncertainty and confidence-rule conservatism and is not a source summary.
 
-After PI disposition, the next quantitative gate is a preregistered derivation/experiment
-that maps available information `I` to an admissible model class `M(I)`, then to
-an exact value/set/bound for `F_A`, admissible restoration actions, selected
+The prepared
+[next quantitative gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)
+maps available information `I` to an admissible model class `M(I)`, then to an
+exact value/set/bound for `F_A`, admissible restoration actions, selected
 `T_scrub` and resource cost. It must quantify controlled error, a safe-reduction
 domain or the resource price of robust conservatism over physically defensible
 `W`/topology/event/observation inputs rather than repeat the synthetic existence
 discriminator.
 
-No new experiment may start before that PI disposition. Before the next
-quantitative gate, define a minimum bounded full-text pass over the named
-Meshchanov/Lushnikov/Krasnikov, Podzolko, Boruzdina/Ulanova/Chumakov and
-Zebrev/Galimov lines only to the extent needed to control comparisons that can
-change the next method, validity domain or claim.
+No new experiment may start before PI approval of that gate, permanent
+integrated-control RQ registration, completion of its four-unit prior-art stop
+rule and preregistration of the experiment/derivation.
 
 ## Future specialty and implementation alignment
 
@@ -193,6 +194,12 @@ RTL alone is not presumed novelty, but architecture/implementation cannot become
 
 ## Publication trigger
 
-**Status:** `PENDING / NON-BLOCKING`
+**Status:** `TRIGGER REACHED / NO ART LAUNCH AUTHORIZED`
 
-After the first independently reviewed `RES-xxx`, evaluate whether the RQ-001 evidence basis + RQ-002/RQ-006 own result + validation supports an `ART` candidate. Do not start a paper from literature synthesis alone and do not wait for the entire dissertation if a bounded publishable result is already complete.
+The first independently reviewed result now exists. RES-001 is a narrow
+foundational result and does not by itself establish the physically defensible
+or integrated adaptive-control contribution targeted by the project. No ART is
+launched at this gate. Re-evaluate after the next gate produces either a
+physically bounded sufficiency/error result or a control-resource consequence;
+do not wait for the entire dissertation if that package becomes independently
+publishable.
