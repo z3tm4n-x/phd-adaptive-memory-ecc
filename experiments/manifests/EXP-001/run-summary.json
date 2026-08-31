@@ -1,0 +1,31 @@
+{
+  "all_precision_rules_satisfied": true,
+  "bounded_decision_rows": 768,
+  "bounded_rows": 384,
+  "experiment_id": "EXP-001",
+  "is_res_record": false,
+  "joint_decision_rows": 36,
+  "joint_delta_rows": 4,
+  "joint_invariants_all_pass": true,
+  "joint_rows": 12,
+  "l0_l1_exact_equivalence": true,
+  "runtime": {
+    "bounded_seconds_by_representation": {
+      "L0": 21.122115000101076,
+      "L1": 9.331567900087975,
+      "L2-independent_word_marginals": 9.076484200079449,
+      "L3-U": 11.699505600073735
+    },
+    "joint_seconds_by_model": {
+      "J-A": 0.7959223999732785,
+      "J-B": 0.6954970000192588,
+      "L2-independent_word_marginals": 0.6752030000220657
+    },
+    "process_peak_memory_bytes": 25772032,
+    "process_peak_memory_method": "Windows PeakWorkingSetSize",
+    "wall_seconds_total": 74.90039039999965
+  },
+  "scientific_scope": "tested synthetic representations and declared domains only",
+  "status": "bounded_synthetic_execution_complete_awaiting_orchestrator_and_scientific_review",
+  "task_id": "EXP-001-IMPLEMENTATION-01"
+}

@@ -265,3 +265,36 @@
 - Failure of one `L2` reconstruction is explicitly limited to that rule and tested domain; it cannot establish universal insufficiency of marginal per-word statistics.
 - Phase 1 selects `L3-U`, an ungrouped scalar bit/upset-arrival primitive. The distinct scalar parent-event-rate primitive `L3-E` is deferred and may not be substituted silently for `L3-U`.
 - The Research Engineer implementation handoff is ready against the corrected EXP-001 specification.
+
+## 2026-08-31
+
+### EXP-001 implementation technically accepted for Scientific Reviewer
+
+- Research Engineer commit `84728d1b5768e7c91c508495d696c5980943ae57` was reviewed against DEC-003, the registered EXP-001 specification and the fixed manifests.
+- All 17 tests pass; `L0/L1` has zero mismatches over 768,000 trajectory checks and 288,302 converted event marks; all J-A/J-B invariants and statistical precision rules pass.
+- An independent Linux execution reproduced the scientific aggregate, decision, delta and invariant outputs byte-for-byte from the committed Windows run. Only platform-dependent runtime and peak-memory values changed.
+- Implementation and reproducibility are accepted; scientific interpretation remains pending adversarial Scientific Reviewer review. No `HYP-xxx` or `RES-xxx` was created.
+- An Orchestrator algebra precheck supports, but does not yet accept, the proposed four-word identified-set derivation with `1/6 <= q <= 1/2` and `F_A=1-S(q,m)^k`.
+- A mandatory interpretation correction was recorded: at experimental `epsilon=0.55`, exact J-A and J-B both select `T_scrub=4`; the reported Wilson-rule 4-versus-2 difference is confidence-bound conservatism, not a purely structural decision discrepancy.
+
+### Russian normative baseline accepted with limitation
+
+- The three-document clause-level extraction was accepted as `NORMATIVE-BASELINE-01` with scientific-chain status `PARTIAL — NAMED INPUT NEEDED`.
+- The practical chain from diagnostic observations and PMI/software classification through counts, cross sections, sensitivity representation, environment convolution and scalar probability is accepted as a bounded source extraction.
+- No normative deficiency, compliance conclusion or automatic equivalence to `W`/`E_cap`/`F_A` was inferred.
+- The two RD hash pairs were normalized administratively as canonical PI-supplied copy versus Paper Analyst processed copy; the difference is not a scientific blocker absent a material content difference.
+- The STO controlled-edition ambiguity remains explicit. PMI/log/address semantics, target `W`/ECC, initial state, restoration and current-applicability documents remain named downstream inputs.
+
+### Chen S3/S4/S5 Paper Cards and comparison accepted
+
+- CONTROL-S3 → `PAPER-009` (`CORE`), CONTROL-S4 → `PAPER-010` (`RELATED`) and CONTROL-S5 → `PAPER-011` (`CORE`) were formally accepted after full-text provenance, source/inference discipline and version-relation review.
+- The canonical S3/S4/S5 matrix is accepted with limitation and is ready for a bounded Evidence Auditor comparison against DEC-002.
+- S3 is the controller-disclosure source within the controlled family, S4 is a separate reactive HSIAO evaluation branch, and S5 is a real but bounded consolidation/extension. Their metrics, assumptions and numerical inconsistencies remain version-specific.
+- Eight exact candidate statements were selected for audit. No `CLM-xxx`, novelty conclusion, broad control search or project control model was created.
+
+### Next canonical gate
+
+- Scientific Reviewer: verify EXP-001 implementation fairness, statistics, the analytical identified-set claim and exact/estimated/robust feasibility separation.
+- Evidence Auditor: verify the eight scoped Chen-family feature/limitation statements.
+- After both returns, the Orchestrator will accept/reject a narrowly bounded `RES-001` and, if justified, preregister the next hypothesis/experiment over physically plausible `W`/topology/event statistics.
+- No additional PI decision is required at this gate.

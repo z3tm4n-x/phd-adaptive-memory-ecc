@@ -1,6 +1,6 @@
 # EXP-001 — Event-representation reduction sensitivity
 
-**Status:** `PLANNED / IMPLEMENTATION HANDOFF READY`<br>
+**Status:** `IMPLEMENTED / ORCHESTRATOR TECHNICAL ACCEPTANCE / SCIENTIFIC REVIEW PENDING`<br>
 **Registered:** 2026-08-28<br>
 **Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
 
@@ -23,7 +23,15 @@ The experiment is intended to determine exactness, bounds, approximation error a
 
 ## Code commit
 
-`TBD` after the first implementation commit. The implementation must not report results until this field, configuration and environment manifest are fixed.
+Research Engineer implementation commit:
+`84728d1b5768e7c91c508495d696c5980943ae57`. Configuration, code and environment
+identities are fixed in `experiments/manifests/EXP-001/run-manifest.json`.
+
+The implementation passed Orchestrator-level technical acceptance, including an
+independent Linux rerun whose scientific aggregate, decision, delta and invariant
+files were byte-identical to the committed Windows outputs. Scientific
+interpretation and any `RES-xxx` remain pending adversarial Scientific Reviewer
+review; see `experiments/manifests/EXP-001/orchestrator-disposition.md`.
 
 ## Configuration
 
@@ -53,7 +61,10 @@ Later target-specific configurations require separate provenance and are outside
 
 ## Random seeds
 
-`TBD in config`. Use a deterministic seed list, common random numbers across `L0`, `L1`, `L2` and `L3-U` where valid, and enough independent runs to meet the predeclared confidence/precision criterion. One seed cannot support a scientific result.
+Fixed deterministic batch-seed lists and trials per seed are declared in the
+versioned Phase-1 configs and copied into the run manifest. Common random numbers
+are used across `L0`, `L1`, `L2` and `L3-U` only where the config declares a valid
+coupling. One seed is not treated as statistical evidence.
 
 ## Baselines / representation levels
 

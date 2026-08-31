@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
 **Source candidate:** C-RQ-02<br>
-**Status:** `OPEN — EVIDENCE AUDIT ACCEPTED / PROTOTYPE GATE`<br>
+**Status:** `OPEN — EXP-001 IMPLEMENTED / SCIENTIFIC REVIEW PENDING`<br>
 **Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -112,10 +112,10 @@ The minimum adequate target model remains unknown until the reduction comparison
 
 ## Active gate / next action
 
-1. Implement and validate [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) using common event streams and the DEC-003 representation ladder.
-2. Complete the bounded [Russian normative-baseline extraction](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) in parallel to establish realistic input identifiability.
-3. Do not wait for numerical `H_req` or `ε_req`; use parameter sweeps and do not claim requirement satisfaction.
-4. Do not authorize another general literature cycle without a named gap that blocks model adequacy, validation or interpretation of the first prototype.
+1. Submit the implemented [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) to adversarial Scientific Reviewer review before any `RES-xxx`.
+2. Separate representation/dependence uncertainty, Monte Carlo uncertainty and CI-decision conservatism in the review.
+3. Use the accepted normative baseline to define realistic observability inputs for a later physically plausible configuration; do not infer normative deficiency.
+4. Do not authorize another general literature cycle without a named gap that blocks model adequacy, validation or interpretation of the next quantitative step.
 
 The former C-RQ-05 escalation condition is resolved by permanent [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md). RQ-002 retains arrival/event/state responsibility; RQ-006 owns `W`, interleaving and reduction-sufficiency conditions.
 
@@ -132,7 +132,7 @@ eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-sea
 - Evidence synthesis: [`RQ-002_initial_evidence_synthesis.md`](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md).
 - Evidence Audit: [`RQ-002_EVIDENCE_AUDIT_01.md`](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md).
 - Model decision: [`DEC-003`](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md).
-- Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — PLANNED.
+- Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — IMPLEMENTED / SCIENTIFIC REVIEW PENDING.
 - CLM/EVD/HYP/RES: none created at this gate.
 
 ## Answer

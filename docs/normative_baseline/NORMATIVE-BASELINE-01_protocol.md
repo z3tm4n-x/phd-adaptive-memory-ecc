@@ -1,10 +1,12 @@
 # NORMATIVE-BASELINE-01 — Radiation-test information-retention protocol
 
-**Status:** `SOURCE SET RECEIVED / BOUNDED FULL-TEXT EXTRACTION READY`<br>
+**Status:** `COMPLETED / ACCEPTED WITH LIMITATION`<br>
 **Date:** 2026-08-28<br>
 **Related:** DEC-002; RQ-002; RQ-006; EXP-001<br>
 **Role handoff:** Paper Analyst, document-bounded normative extraction<br>
 **Prohibited conclusion at this stage:** normative deficiency, target compliance or exact controlled-edition status beyond the evidence below
+
+**Accepted output:** [NORMATIVE-BASELINE-01 clause-level extraction matrix](NORMATIVE-BASELINE-01_extraction_matrix.md), scientific-chain classification `PARTIAL — NAMED INPUT NEEDED`.
 
 ## 1. Objective
 
@@ -74,11 +76,11 @@ For each stage below, record the exact document/clause, object, unit, provenance
 - **EXP-001:** remains synthetic and may run immediately. The normative matrix later determines which representation levels are realistically identifiable and which synthetic reductions correspond to actual engineering interfaces.
 - **DEC-002:** requires the output to remain connected to ECC reliability and adaptive control; a stand-alone compliance summary is insufficient.
 
-## 7. Expected handoff
+## 7. Accepted handoff
 
-Create one draft artefact:
+The draft artefact passed Orchestrator review and is canonical at:
 
-`docs/normative_baseline/DRAFT-NORMATIVE-BASELINE-01_extraction_matrix.md`
+`docs/normative_baseline/NORMATIVE-BASELINE-01_extraction_matrix.md`
 
 It must include:
 

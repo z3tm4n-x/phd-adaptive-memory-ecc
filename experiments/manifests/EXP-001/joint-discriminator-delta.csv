@@ -1,0 +1,5 @@
+scrub_period,delta_definition,paired_trials,delta_f_a,ci_method,confidence_level,ci_low,ci_high,ci_half_width,precision_limit,precision_satisfied,j_b_only_failures,j_a_only_failures
+0.5,F_A(J-B)-F_A(J-A),20000,0.0585,paired_normal_binary_difference,0.95,0.05524738960190521,0.0617526103980948,0.0032526103980947962,0.008,True,1170,0
+1.0,F_A(J-B)-F_A(J-A),20000,0.0863,paired_normal_binary_difference,0.95,0.08240819419848572,0.09019180580151429,0.0038918058015142837,0.008,True,1726,0
+2.0,F_A(J-B)-F_A(J-A),20000,0.10105,paired_normal_binary_difference,0.95,0.09687285185425429,0.10522714814574571,0.004177148145745713,0.008,True,2021,0
+4.0,F_A(J-B)-F_A(J-A),20000,0.0934,paired_normal_binary_difference,0.95,0.08936702763331382,0.09743297236668617,0.004032972366686177,0.008,True,1868,0

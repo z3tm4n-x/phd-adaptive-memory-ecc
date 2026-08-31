@@ -1,0 +1,68 @@
+{
+  "l0_l1_exact_checks": 768000,
+  "l0_l1_mismatches": 0,
+  "l0_to_l1_event_marks_checked": 288302,
+  "l3_e_implemented": false,
+  "l3_u_first_moment_calibrations": [
+    {
+      "arrival_scenario": "synthetic-hpp-constant",
+      "calibration_target": 3.0,
+      "expected_upsets_per_parent": 1.0,
+      "first_moment_equal": true,
+      "l3_u_expected_ungrouped_upset_count": 3.0,
+      "parent_expected_count": 3.0,
+      "stochastic_process_equivalence_claimed": false,
+      "topology_scenario": "single-cell-only"
+    },
+    {
+      "arrival_scenario": "synthetic-nhpp-low-then-high",
+      "calibration_target": 3.0,
+      "expected_upsets_per_parent": 1.0,
+      "first_moment_equal": true,
+      "l3_u_expected_ungrouped_upset_count": 3.0,
+      "parent_expected_count": 3.0,
+      "stochastic_process_equivalence_claimed": false,
+      "topology_scenario": "single-cell-only"
+    },
+    {
+      "arrival_scenario": "synthetic-hpp-constant",
+      "calibration_target": 9.0,
+      "expected_upsets_per_parent": 3.0,
+      "first_moment_equal": true,
+      "l3_u_expected_ungrouped_upset_count": 9.0,
+      "parent_expected_count": 3.0,
+      "stochastic_process_equivalence_claimed": false,
+      "topology_scenario": "compact-three-cell-only"
+    },
+    {
+      "arrival_scenario": "synthetic-nhpp-low-then-high",
+      "calibration_target": 9.0,
+      "expected_upsets_per_parent": 3.0,
+      "first_moment_equal": true,
+      "l3_u_expected_ungrouped_upset_count": 9.0,
+      "parent_expected_count": 3.0,
+      "stochastic_process_equivalence_claimed": false,
+      "topology_scenario": "compact-three-cell-only"
+    },
+    {
+      "arrival_scenario": "synthetic-hpp-constant",
+      "calibration_target": 9.0,
+      "expected_upsets_per_parent": 3.0,
+      "first_moment_equal": true,
+      "l3_u_expected_ungrouped_upset_count": 9.0,
+      "parent_expected_count": 3.0,
+      "stochastic_process_equivalence_claimed": false,
+      "topology_scenario": "separated-three-cell-only"
+    },
+    {
+      "arrival_scenario": "synthetic-nhpp-low-then-high",
+      "calibration_target": 9.0,
+      "expected_upsets_per_parent": 3.0,
+      "first_moment_equal": true,
+      "l3_u_expected_ungrouped_upset_count": 9.0,
+      "parent_expected_count": 3.0,
+      "stochastic_process_equivalence_claimed": false,
+      "topology_scenario": "separated-three-cell-only"
+    }
+  ]
+}

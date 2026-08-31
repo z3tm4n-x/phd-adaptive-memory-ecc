@@ -1,0 +1,15 @@
+{
+  "experiment_id": "EXP-001",
+  "verification": "repeated_execution_with_identical_configs_and_seeds",
+  "scientific_tables_byte_identical": true,
+  "files": {
+    "bounded-decisions.csv": "530f37e2f4cc5232a872fa7a96ce28bde2560bd4192866574ae11c7b2ae70ae9",
+    "joint-discriminator-decisions.csv": "f689c3a008653fc461c8f04f95cb1b411004393ac1e84fb7ed71483386921d79",
+    "joint-discriminator-delta.csv": "acc677f17a9e4a9408dd1d423b69e78c719bf193853dd8ead0ae04e39f1abdbc"
+  },
+  "excluded_from_byte_identity_requirement": [
+    "run-manifest.json timestamp and runtime fields",
+    "run-summary.json runtime fields"
+  ],
+  "interpretation": "deterministic scientific aggregates reproduced; runtime metadata is environment-dependent"
+}

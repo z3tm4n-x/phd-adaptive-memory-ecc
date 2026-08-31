@@ -1,0 +1,49 @@
+{
+  "all_words_have_impact_probability_one_half": true,
+  "common_parameter_object_sha256": "3d64e02abe138e5c33541defdfd55628fcb7bc1ffd2be3cd46fca11b70604bfc",
+  "derived_l2_fingerprint": "b8d968b33b9e47d905af8f30f76f42c5effc3caa5fff8ab808c8c675ce4af418",
+  "derived_l2_input_fingerprint": "b8d968b33b9e47d905af8f30f76f42c5effc3caa5fff8ab808c8c675ce4af418",
+  "derived_l2_inputs_exactly_equal": true,
+  "derived_per_word_l2_inputs_identical": true,
+  "exactly_two_words_impacted_per_event": true,
+  "fresh_bit_updates_checked": 158968,
+  "identical_parent_epoch_checks": 39742,
+  "joint_association_differs": true,
+  "model_details": {
+    "J-A": {
+      "impacted_words_per_event": 2,
+      "pair_probabilities": {
+        "w1,w2": "1/2",
+        "w1,w3": "0",
+        "w1,w4": "0",
+        "w2,w3": "0",
+        "w2,w4": "0",
+        "w3,w4": "1/2"
+      },
+      "per_word_impact_probability": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ]
+    },
+    "J-B": {
+      "impacted_words_per_event": 2,
+      "pair_probabilities": {
+        "w1,w2": "1/6",
+        "w1,w3": "1/6",
+        "w1,w4": "1/6",
+        "w2,w3": "1/6",
+        "w2,w4": "1/6",
+        "w3,w4": "1/6"
+      },
+      "per_word_impact_probability": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ]
+    }
+  },
+  "no_other_model_parameter_differs": true
+}

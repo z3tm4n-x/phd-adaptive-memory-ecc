@@ -11,8 +11,9 @@ The former escalation backlog item is resolved. RQ-006 owns `W`, interleaving, j
 
 ## Active parallel branch — Russian normative baseline
 
-**Status:** `SOURCE SET RECEIVED / BOUNDED EXTRACTION READY / NON-BLOCKING FOR SYNTHETIC EXP-001`<br>
+**Status:** `ACCEPTED WITH LIMITATION / PARTIAL — NAMED INPUT NEEDED`<br>
 **Protocol:** [NORMATIVE-BASELINE-01](normative_baseline/NORMATIVE-BASELINE-01_protocol.md)
+**Extraction:** [canonical matrix](normative_baseline/NORMATIVE-BASELINE-01_extraction_matrix.md)
 
 Source set:
 
@@ -22,7 +23,7 @@ Source set:
 
 Purpose: reconstruct the information-retention chain from functional diagnosis and event classification through cross section, environment convolution, rate and probability, then determine which outputs are directly usable or require augmentation by `W`/ECC/observation assumptions.
 
-The supplied STO file's controlled-revision status remains ambiguous because approval/registration statements coexist with hidden `Проект, окончательная редакция` text. The bounded extraction must preserve that provenance issue without treating the content as nonexistent.
+The accepted extraction reconstructs the chain through classified counts, cross sections, sensitivity representation, environment convolution and scalar rate/probability. It does not infer normative deficiency and leaves named PMI/software/`W`/ECC interfaces open. The supplied STO file's controlled-revision status remains ambiguous because approval/registration statements coexist with hidden `Проект, окончательная редакция` text.
 
 Exact PI follow-up material requested:
 
@@ -36,8 +37,9 @@ Do not launch a broad standards search. Request another source only when one mat
 
 ## Active parallel branch — closest adaptive-control prior art
 
-**Status:** `IDENTITY RESOLVED / BOUNDED FULL-TEXT COMPARISON READY / NON-BLOCKING FOR EXP-001`<br>
+**Status:** `FULL-TEXT CARDS ACCEPTED / EVIDENCE AUDITOR PENDING`<br>
 **Identity record:** [CONTROL-PRIOR-ART-IDENTITY-01](literature_mapping/CONTROL-PRIOR-ART-IDENTITY-01.md)
+**Comparison:** [CONTROL-PRIOR-ART-01](evidence_synthesis/CONTROL-PRIOR-ART-01_comparison_matrix.md)
 
 Mandatory full-text targets:
 
@@ -59,7 +61,7 @@ Required comparison fields:
 - validation, architecture and implementation;
 - actual publication-family differences.
 
-No discovery-level statement may become paper evidence or a novelty conclusion. The 2020/2022 prediction papers become additional deep-read targets only if the three-source comparison leaves a named upstream gap.
+`PAPER-009`/`PAPER-011` are accepted as CORE and `PAPER-010` as RELATED. No discovery-level or card-level statement is yet a novelty conclusion. The bounded family is ready for Evidence Auditor comparison against DEC-002; the 2020/2022 prediction papers become additional deep-read targets only if the audit exposes a named upstream blocker.
 
 ## Pending — future classical control prior-art threat
 
@@ -70,13 +72,13 @@ Purpose: compare adaptive SRAM restoration with classical inspection/checking/ma
 
 ## Active — own-result throughput gate
 
-**Status:** `MODEL-SELECTION LITERATURE GATE PASSED / EXP-001 REGISTERED`
+**Status:** `EXP-001 IMPLEMENTED / TECHNICALLY ACCEPTED / SCIENTIFIC REVIEW PENDING`
 
 [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is the active own-work target.
 
-Expected transition:
+Current transition:
 
-`DEC-003 → EXP-001 implementation/tests → fixed configs/seeds → aggregate comparison → Scientific Reviewer → first RES candidate`.
+`DEC-003 → EXP-001 implementation/tests/aggregates → Scientific Reviewer → bounded RES candidate or revision`.
 
 No second general RQ-002 literature cycle or automatic Paper Card batch is allowed. A new evidence task requires a named gap blocking:
 
@@ -85,7 +87,9 @@ No second general RQ-002 literature cycle or automatic Paper Card batch is allow
 - target validation;
 - interpretation of the first own result.
 
-The first `RES-xxx` should state a tested exactness/bound/error/decision-sensitivity result over a declared representation, mapping and parameter domain. It must not be a source summary.
+The first `RES-xxx`, if the review passes, must state a tested exactness/bound/error/decision-sensitivity result over the declared synthetic representation, mapping and parameter domain. It must separate representation uncertainty, Monte Carlo uncertainty and confidence-rule conservatism and must not be a source summary.
+
+After review, the next quantitative gate is a preregistered experiment over physically defensible `W`/topology/event statistics that estimates effect magnitude or establishes a safe-reduction validity domain. It must not merely repeat the synthetic existence discriminator.
 
 ## Future specialty and implementation alignment
 

@@ -21,4 +21,4 @@
 
 | EXP-ID | Objective | Related RQ | Status |
 |---|---|---|---|
-| [EXP-001](EXP-001-event-representation-reduction-sensitivity.md) | Quantify the reliability and restoration-decision effect of reducing full physical event information through `W` to joint, marginal and scalar representations | RQ-001 / RQ-002 / RQ-006 | PLANNED / IMPLEMENTATION HANDOFF READY |
+| [EXP-001](EXP-001-event-representation-reduction-sensitivity.md) | Quantify the reliability and restoration-decision effect of reducing full physical event information through `W` to joint, marginal and scalar representations | RQ-001 / RQ-002 / RQ-006 | IMPLEMENTED / TECHNICALLY ACCEPTED / SCIENTIFIC REVIEW PENDING |
