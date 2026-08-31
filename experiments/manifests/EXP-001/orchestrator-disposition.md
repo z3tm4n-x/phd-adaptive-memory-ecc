@@ -1,7 +1,8 @@
 # EXP-001 — Orchestrator disposition
 
-**Status:** `SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED / NOT RES-xxx`
+**Status:** `VALIDATION REPAIR ACCEPTED / SCIENTIFIC RE-REVIEW PENDING / NOT RES-xxx`
 **Research Engineer commit:** `84728d1b5768e7c91c508495d696c5980943ae57`
+**Validation repair commit:** `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
 **Scientific review:** [EXP-001-SCIENTIFIC-REVIEW-01](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md) — `REVISE`
 **Related:** `DEC-001`; `DEC-002`; `DEC-003`; `RQ-002`; `RQ-006`
 
@@ -142,29 +143,37 @@ would require the J-B/worst-endpoint exact value to satisfy the constraint;
 feasibility only at the J-A/best endpoint is not robust. This interpretation is
 accepted within the same complete validity domain.
 
-## Required validation repair and bounded re-review
+## Validation-repair acceptance and bounded re-review
 
 Scientific Review 01 found no `CRITICAL` issue and accepted the central
 identified-set derivation, but returned `REVISE` because `MAJOR-01` shows that
 the current L0/L1 equivalence paths share both mapping conversion and state
 transition code.
 
-Research Engineer must:
+Orchestrator review of repair commit `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
+accepts the technical correction:
 
-1. add a test-only independent L0 oracle for both declared `W` variants without
-   calling production mapping conversion, joint simulators or shared event-update
-   helpers;
-2. compare complete transition traces for deterministic and bounded randomized
-   cases covering clean/non-clean starts, repeat hits, immediate exceedance and
-   scrub boundaries;
-3. add a mutation/sentinel test proving that a wrong mapping/conversion is
-   detected;
-4. incorporate the four `MINOR` corrections: complete validity assumptions,
-   pointwise interval wording, validation of analytical preconditions and
-   deterministic/precision-linked analytical checks;
-5. rerun tests and the fixed experiment and show that all seven scientific
-   aggregate/decision/delta/invariant files are unchanged, unless a separately
-   documented implementation defect is found.
+1. the oracle imports no production `exp001` module and independently implements
+   both declared `W`, state transitions, scrub ordering and first passage;
+2. production L0 and L1 are compared separately against the oracle over 267
+   streams and 534 complete path-to-oracle transition-trace comparisons;
+3. coverage includes both `W`, clean/non-clean starts, toggle/`set_error`,
+   single/multi-cell marks, repeat hits, immediate and sequential exceedance,
+   scrub boundaries, deterministic cases and 16 bounded randomized seeds;
+4. all 64 physical cells are exhaustively checked under each `W`;
+5. the mutation/sentinel test demonstrates detection of a deliberately wrong
+   conversion that remains structurally valid for the joint simulator;
+6. all four MINOR corrections are represented in code, tests and machine-readable
+   validation output;
+7. Orchestrator rerun: 32/32 tests pass, `compileall` passes, all precision and
+   analytical-precondition checks pass;
+8. the fixed configurations are unchanged, and all seven scientific files plus
+   `analytical-validation.json` reproduce byte-for-byte in an independent Linux
+   run.
+
+No implementation defect or scientific-output regression was found. This is an
+Orchestrator acceptance of the repair, not a replacement for Scientific Reviewer
+disposition and not acceptance of `RES-001`.
 
 The subsequent Scientific Reviewer task is limited to verifying closure of
 these findings and absence of regression. A passing `PASS` or

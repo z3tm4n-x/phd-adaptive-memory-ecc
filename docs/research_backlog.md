@@ -72,6 +72,39 @@ No additional Chen-family Paper Card is authorized now. The named gaps
 bounded task only when an RQ-004/RQ-005/implementation decision depends on the
 missing proposition.
 
+## Pending bounded branch — domestic prior-art signals
+
+**Status:** `PI SIGNAL / UNVERIFIED / NOT AN ACTIVE BROAD SEARCH`<br>
+**Trigger:** identity-controlled verification before relying on the corresponding
+method distinction or novelty-risk statement.
+
+PI reported four potentially load-bearing domestic lines:
+
+1. Meshchanov/Lushnikov/Krasnikov and co-authors — corrected-error counts,
+   current-rate estimation and restoration-period adaptation;
+2. Podzolko (2017) — ECC-uncorrectable-state probability, periodic background
+   scanning and restoration-interval dependence under independent errors;
+3. Boruzdina/Ulanova/Chumakov and related work — physical/logical multiple
+   upsets, topology, accumulation, false grouping and event-form/multiplicity
+   measurement or reconstruction;
+4. Zebrev/Galimov and related work — recovery of multiplicity distributions or
+   partial rates from reduced observations under additional assumptions.
+
+None of these statements is accepted evidence until exact source identities and
+the relevant primary text are checked. The bounded verification questions are:
+
+- what information is observed, retained, reconstructed or assumed;
+- whether the output is before or after physical-to-logical mapping `W`;
+- what uncertainty/error or applicability domain is provided;
+- whether the output is sufficient for DEC-001-compatible `F_A` and a restoration
+  decision, rather than only for cross section, multiplicity or rate;
+- which generic adaptive-scrubbing or reconstruction claims are already occupied.
+
+This branch must not reopen EXP-001 or assert that complete physical topology is
+always necessary. It should be launched only as a small identity/full-text set
+needed to preregister the next quantitative model or to audit a future novelty
+claim.
+
 ## Prepared candidate — integrated adaptive-control RQ
 
 **Status:** `PREPARED / NOT REGISTERED / PI ACCEPTANCE REQUIRED`<br>
@@ -101,7 +134,7 @@ The candidate consumes rather than duplicates:
 It excludes generic “radiation prediction → dynamic scrub frequency,” arbitrary
 scalarization, an invented numerical reliability threshold, and a novelty claim.
 Permanent registration is required before control-method development, but does
-not block the current EXP-001 repair, RQ-003 mapping or the next parameterized
+not block the current EXP-001 re-review, RQ-003 mapping or the next parameterized
 reliability/decision derivation.
 
 ## Pending — future classical control prior-art threat
@@ -113,13 +146,13 @@ Purpose: compare adaptive SRAM restoration with classical inspection/checking/ma
 
 ## Active — own-result throughput gate
 
-**Status:** `EXP-001 SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR ACTIVE`
+**Status:** `VALIDATION REPAIR ACCEPTED / BOUNDED SCIENTIFIC RE-REVIEW PENDING`
 
 [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is the active own-work target.
 
 Current transition:
 
-`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → independent-oracle repair → bounded re-review → bounded RES candidate or rejection`.
+`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → accepted independent-oracle repair → bounded re-review → bounded RES candidate or rejection`.
 
 No second general RQ-002 literature cycle or automatic Paper Card batch is allowed. A new evidence task requires a named gap blocking:
 
@@ -134,11 +167,12 @@ Reviewer. It must separate representation uncertainty, Monte Carlo uncertainty
 and confidence-rule conservatism and must not be a source summary.
 
 After review, the next quantitative gate is a preregistered derivation/experiment
-that maps retained information to a set or bound for `F_A` and then to exact,
-estimated and robust restoration feasibility over physically defensible
-`W`/topology/event/observation inputs. It must estimate effect magnitude,
-controlled error or a safe-reduction domain rather than repeat the synthetic
-existence discriminator.
+that maps available information `I` to an admissible model class `M(I)`, then to
+an exact value/set/bound for `F_A`, admissible restoration actions, selected
+`T_scrub` and resource cost. It must quantify controlled error, a safe-reduction
+domain or the resource price of robust conservatism over physically defensible
+`W`/topology/event/observation inputs rather than repeat the synthetic existence
+discriminator.
 
 ## Future specialty and implementation alignment
 

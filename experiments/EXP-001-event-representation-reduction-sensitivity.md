@@ -1,6 +1,6 @@
 # EXP-001 — Event-representation reduction sensitivity
 
-**Status:** `IMPLEMENTED / SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED`<br>
+**Status:** `IMPLEMENTED / VALIDATION REPAIR ACCEPTED / SCIENTIFIC RE-REVIEW PENDING`<br>
 **Registered:** 2026-08-28<br>
 **Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
 
@@ -36,6 +36,13 @@ and L1 checks share mapping and state-transition code and therefore do not
 independently validate L0→L1 losslessness. Any `RES-xxx` remains blocked pending
 the bounded validation repair and passing re-review; see
 `experiments/manifests/EXP-001/orchestrator-disposition.md`.
+
+Validation-repair commit
+`072b70adabb9827ee59c94b2b3d5cf044b25cdf9` is accepted at Orchestrator level.
+It adds the independent test-only oracle, full-trace and mutation checks and the
+four required MINOR corrections without changing the fixed configurations or
+seven scientific output files. Scientific Review 01 remains `REVISE` pending its
+bounded re-review; the repair is not a `RES-xxx` promotion.
 
 ## Configuration
 

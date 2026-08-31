@@ -348,3 +348,28 @@
 - The next quantitative target is a general information-set/model-set to
   `F_A`-bound to robust-restoration-decision interface over a physically
   defensible domain, not another isolated dependence counterexample.
+
+## 2026-08-31
+
+### EXP-001 validation repair accepted for bounded re-review
+
+- Research Engineer repair commit
+  `072b70adabb9827ee59c94b2b3d5cf044b25cdf9` is exactly one commit over canonical
+  base `0ca6f13481ea0818c59395ead26db2f58cb6188e`.
+- Orchestrator inspection accepts the independent test-only L0 oracle, separate
+  full-trace comparison of production L0 and L1, exhaustive 8x8 mapping checks,
+  mutation/sentinel evidence and all four Scientific Review MINOR corrections.
+- Independent verification passed 32/32 tests and `compileall`. A clean fixed
+  rerun satisfied all precision and analytical-precondition rules and reproduced
+  the seven scientific files and `analytical-validation.json` byte-for-byte.
+- EXP-001 status advances to `VALIDATION REPAIR ACCEPTED / SCIENTIFIC RE-REVIEW
+  PENDING / NOT RES-xxx`. Scientific Review 01 remains `REVISE`; no retrospective
+  `HYP-xxx` or `RES-001` was created.
+- PI-provided Meshchanov/Lushnikov/Krasnikov, Podzolko,
+  Boruzdina/Ulanova/Chumakov and Zebrev/Galimov prior-art signals are recorded as
+  `UNVERIFIED` bounded backlog only. They do not alter EXP-001 or authorize a
+  broad literature campaign.
+- The post-EXP direction is retained as
+  `I -> M(I) -> F_A value/set/bound -> admissible actions -> T_scrub -> resource
+  cost`, with the quantitative target of the control-resource price of
+  information deficit.
