@@ -394,3 +394,20 @@
   Monte Carlo and decision-rule uncertainty and creates no retrospective
   `HYP-xxx`.
 - No new experiment is authorized before PI disposition of the candidate.
+
+### DRAFT-RES-001 wording-only revision incorporated
+
+- PI accepted the scientific content of `DRAFT-RES-001` and returned
+  `REVISE — wording only`; EXP-001, its calculations and Scientific Review 02
+  remain closed and unchanged.
+- The central statement now uses the proved object: identical one-event
+  per-word marginal impact probabilities with mandatory parent-event
+  cardinality of exactly two distinct words.
+- The control consequence is separated correctly: at experimental
+  `epsilon=0.15`, J-A admits `T_scrub=0.5` while J-B admits no period in the
+  tested action set; at `0.25` and `0.35`, the maximal feasible selected period
+  differs; at `0.55`, the exact selected action is identical.
+- All formulas, the exact decision table, fourteen validity conditions,
+  uncertainty separation and explicit non-claims remain unchanged.
+- The candidate is resubmitted for final PI `ACCEPT`; no permanent `RES-001`,
+  new experiment, calculation, hypothesis or review is created by this edit.
