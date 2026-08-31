@@ -2,7 +2,7 @@
 
 **Title:** Physical-to-logical mapping and information sufficiency for ECC-aware SRAM reliability<br>
 **Source candidate:** C-RQ-05<br>
-**Status:** `OPEN / EXP-001 IMPLEMENTED / SCIENTIFIC REVIEW PENDING`<br>
+**Status:** `OPEN / EXP-001 REVIEW REPAIR`<br>
 **Registered:** 2026-08-28 by explicit PI approval<br>
 **Escalation basis:** accepted RQ-002 synthesis and [Evidence Audit 01](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md)
 
@@ -70,7 +70,13 @@ RQ-006 is answerable when:
 
 ## Next action
 
-Complete adversarial Scientific Reviewer review of [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md). If accepted, bound the first result to the synthetic model class and use the accepted normative extraction plus physically defensible `W`/topology/event statistics to pre-register the next quantitative experiment. No target-specific sufficiency claim follows from EXP-001 alone.
+Close `MAJOR-01` and the four `MINOR` findings in
+[Scientific Review 01](../scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md),
+obtain a passing bounded re-review, and only then propose the synthetic
+identified-set result. In parallel, activate RQ-003 so the next quantitative
+stage can replace the experiment-local `t_c` abstraction with an explicit
+parameterized ECC state/outcome interface. No target-specific sufficiency claim
+follows from EXP-001 alone.
 
 ## Related PAPER/CLM/HYP/EXP
 

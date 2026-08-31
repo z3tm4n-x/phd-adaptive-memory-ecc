@@ -1,9 +1,10 @@
 # Targeted Literature Mapping Protocol — RQ-003
 
 **Related RQ:** RQ-003  
-**Status:** READY — SEARCH NOT STARTED  
+**Status:** `ACTIVE NEXT / PRE-LAUNCH REVISION REQUIRED / SEARCH NOT STARTED`<br>
 **Owner role:** Literature Scout  
 **Prepared:** 2026-08-26
+**Gate update:** 2026-08-31 after EXP-001 Scientific Review 01 and the bounded Chen Evidence Audit
 
 ## Research Question
 
@@ -14,6 +15,12 @@
 Картировать ECC abstractions, code classes, codeword parameters и decoder outcome semantics, используемые в radiation-tolerant SRAM и scrubbing models, чтобы обоснованно выбрать baseline.
 
 Mapping должен уменьшить неопределённость, необходимую для принятия решения по RQ-003; он не должен превращаться в общий обзор темы и не считается ответом на RQ.
+
+Before launch, the Orchestrator must align the database routes and extraction
+contract with DEC-001/DEC-002, accepted RQ-002/RQ-006 evidence and the Chen
+comparison. eLibrary is `DEFERRED / UNAVAILABLE TO LITERATURE SCOUT`; the Russian
+query concepts below are retained for a later authorized actor and are not a
+completion requirement for this Scout cycle.
 
 ## Concepts and synonyms
 
@@ -38,7 +45,7 @@ Mapping должен уменьшить неопределённость, нео
 
 Если интерфейс не поддерживает данную форму Boolean syntax, строка разбивается на эквивалентные запросы без смыслового расширения; все выполненные варианты документируются.
 
-## eLibrary search concepts/strings
+## eLibrary search concepts/strings — deferred
 
 Искать по русским и английским терминам; при ограничениях интерфейса выполнять concept blocks отдельно и записывать точную фактическую строку.
 
@@ -138,14 +145,16 @@ Literature Scout только находит и классифицирует и�
 
 Mapping для RQ-003 может быть остановлен, когда одновременно выполнены условия:
 
-- все заранее определённые IEEE Xplore и eLibrary strings выполнены и воспроизводимо записаны;
+- все authorized pre-launch database/search routes выполнены и воспроизводимо записаны; eLibrary is not a completion requirement while unavailable to Literature Scout;
 - каждая evidence category имеет хотя бы один plausible candidate либо явно зарегистрированный gap;
 - выбраны 2–5 strong seeds либо документировано, почему это невозможно;
 - выполнен предусмотренный ResearchRabbit expansion;
 - два последовательных search/expansion batches не добавили новую model/definition/measurement category;
 - подготовлены candidate table, gaps и handoffs.
 
-Если decision gate RQ-002 сработал, mapping не может поддержать окончательный baseline до регистрации и ответа на обязательный RQ, полученный из C-RQ-05.
+RQ-006 is now permanently registered. Mapping must preserve its `W`, interleaving
+and joint post-`W` dependencies rather than treating the former escalation as
+unresolved.
 
 Количество найденных работ само по себе не является stopping criterion.
 

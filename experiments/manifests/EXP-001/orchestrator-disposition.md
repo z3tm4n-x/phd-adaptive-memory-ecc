@@ -1,7 +1,8 @@
 # EXP-001 — Orchestrator disposition
 
-**Status:** `TECHNICALLY ACCEPTED / SCIENTIFIC REVIEW REQUIRED / NOT RES-xxx`
+**Status:** `SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED / NOT RES-xxx`
 **Research Engineer commit:** `84728d1b5768e7c91c508495d696c5980943ae57`
+**Scientific review:** [EXP-001-SCIENTIFIC-REVIEW-01](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md) — `REVISE`
 **Related:** `DEC-001`; `DEC-002`; `DEC-003`; `RQ-002`; `RQ-006`
 
 ## Acceptance scope
@@ -27,8 +28,9 @@ invariants.
 
 ## Results admitted to Scientific Reviewer review
 
-- `L0/L1`: 768,000 trajectory checks and 288,302 converted parent-event marks,
-  with zero mismatch.
+- `L0/L1`: 768,000 outcome/final-signature comparisons and 288,302 converted
+  parent-event marks, with zero mismatch. These comparisons reuse production
+  mapping/state code and are not independent full-trajectory validation.
 - J-A/J-B: identical per-word impact marginals and fixed two-word event
   cardinality, but different joint pair association.
 - Monte Carlo `F_A(J-B)-F_A(J-A)` is positive for all four scrub periods in the
@@ -39,10 +41,11 @@ invariants.
 All statements remain limited to the declared synthetic configurations and
 representation rules.
 
-## Unverified analytical precheck for J-A/J-B
+## Accepted bounded analytical result for J-A/J-B
 
-This section records an Orchestrator algebra check for independent Scientific
-Reviewer verification; it is not yet an accepted result.
+Scientific Review 01 independently accepts the derivation in this section for
+the complete fixed validity domain recorded in its Section 7.4. This acceptance
+does not create `RES-xxx`; the experiment still has a validation repair gate.
 
 Under exactly the declared four-word discriminator assumptions, equal word
 marginals imply that the unordered-pair probabilities can be parameterized as
@@ -78,13 +81,12 @@ pair-distribution class is
 F_A\in[F_A(q=1/2),\;F_A(q=1/6)],
 \]
 
-with J-A and J-B attaining the endpoints. This statement requires all of the
-following: four equivalent words, `t_c=1`, every parent event affects exactly two
-distinct words, identical word marginals `1/2`, clean start, fresh monotone
-within-word error accumulation, HPP parent arrivals, periodic synchronous full
-reset and equal scrub intervals. It is not a bound for arbitrary physical SRAM
-topologies, event cardinalities, repeat-hit semantics, non-Poisson arrivals or
-partial/asynchronous restoration.
+with J-A and J-B attaining the endpoints. The endpoint result requires every one
+of the fourteen conditions in Scientific Review 01 Section 7.4, including i.i.d.
+pair marks independent of HPP epochs/counts, aligned full-reset scrub phase and
+an integer number of complete equal intervals. It is not a bound for arbitrary
+physical SRAM topologies, temporally dependent marks, event cardinalities,
+repeat-hit semantics, non-Poisson arrivals or partial/asynchronous restoration.
 
 ## Structural feasibility versus confidence-rule feasibility
 
@@ -110,22 +112,33 @@ separate:
 For a candidate period, robust feasibility over the proposed identified set
 would require the J-B/worst-endpoint exact value to satisfy the constraint;
 feasibility only at the J-A/best endpoint is not robust. This interpretation is
-also pending Scientific Reviewer verification.
+accepted within the same complete validity domain.
 
-## Required Scientific Reviewer disposition
+## Required validation repair and bounded re-review
 
-The Reviewer must independently:
+Scientific Review 01 found no `CRITICAL` issue and accepted the central
+identified-set derivation, but returned `REVISE` because `MAJOR-01` shows that
+the current L0/L1 equivalence paths share both mapping conversion and state
+transition code.
 
-1. reproduce the implementation tests and selected aggregates;
-2. verify fairness of common inputs and the J-A/J-B invariants;
-3. prove, correct or reject the `q`, `S(q,m)` and identified-set derivation;
-4. state every assumption required for endpoint attainment;
-5. distinguish exact/model, estimated/Wilson and robust-over-set feasibility for
-   every candidate scrub period;
-6. verify the paired-interval construction and precision interpretation;
-7. assess whether L2/L3-U conclusions stay within their declared reconstruction
-   rules and synthetic domains;
-8. return `PASS`, `PASS WITH MINOR ISSUES`, `REVISE` or `BLOCK` with severities.
+Research Engineer must:
 
-Only after a passing scientific review may a narrowly scoped `RES-001` candidate
-be proposed. No retroactive hypothesis is permitted.
+1. add a test-only independent L0 oracle for both declared `W` variants without
+   calling production mapping conversion, joint simulators or shared event-update
+   helpers;
+2. compare complete transition traces for deterministic and bounded randomized
+   cases covering clean/non-clean starts, repeat hits, immediate exceedance and
+   scrub boundaries;
+3. add a mutation/sentinel test proving that a wrong mapping/conversion is
+   detected;
+4. incorporate the four `MINOR` corrections: complete validity assumptions,
+   pointwise interval wording, validation of analytical preconditions and
+   deterministic/precision-linked analytical checks;
+5. rerun tests and the fixed experiment and show that all seven scientific
+   aggregate/decision/delta/invariant files are unchanged, unless a separately
+   documented implementation defect is found.
+
+The subsequent Scientific Reviewer task is limited to verifying closure of
+these findings and absence of regression. A passing `PASS` or
+`PASS_WITH_MINOR` disposition makes a narrowly bounded `RES-001` admissible but
+does not create it automatically. No retroactive hypothesis is permitted.

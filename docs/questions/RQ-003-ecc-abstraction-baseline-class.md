@@ -2,7 +2,7 @@
 
 **Title:** ECC abstraction and baseline code class for adaptive SRAM scrubbing  
 **Source candidate:** C-RQ-04  
-**Status:** OPEN  
+**Status:** `OPEN / ACTIVE NEXT INTERFACE`<br>
 **Registered:** 2026-08-26
 
 ## Question
@@ -34,7 +34,7 @@ Reliability model и сравнение adaptive policies зависят не т
 
 - RQ-001: reliability event и метрика;
 - RQ-002: error model;
-- обязательный RQ, полученный из C-RQ-05, если decision gate RQ-002 сработает.
+- RQ-006: physical-to-logical mapping, interleaving and retained post-`W` information.
 
 ## Evidence needed
 
@@ -57,12 +57,15 @@ RQ считается отвеченным, когда:
 
 ## Next action
 
-Выполнить `docs/literature_mapping/RQ-003_protocol.md` после первичного mapping RQ-001 и RQ-002.
+Обновить `docs/literature_mapping/RQ-003_protocol.md` по DEC-001/DEC-002,
+accepted RQ-002/RQ-006 evidence and the Chen audit, then issue one bounded
+Literature Scout mapping. The protocol must not require eLibrary while that
+database is unavailable to Literature Scout.
 
 ## Related PAPER/CLM/HYP/EXP
 
 - Related RQ: RQ-001, RQ-002.
-- Conditional dependency: permanent RQ из C-RQ-05 при срабатывании gate RQ-002.
+- Required dependency: RQ-006.
 - PAPER/CLM/EVD/HYP/EXP: TBD после targeted literature mapping.
 
 ## Answer

@@ -4,7 +4,7 @@
 **Canonical base:** `e1e7b93cc72b7b295a8298560adf2cd507d7256b`<br>
 **Related:** future integrated adaptive-control RQ; `RQ-004`; `RQ-005`; `DEC-002`<br>
 **Scope:** bounded comparison of three supplied peer-reviewed full texts; not literature-level novelty adjudication<br>
-**Orchestrator disposition:** `ACCEPTED WITH LIMITATION / READY FOR EVIDENCE AUDITOR`
+**Orchestrator disposition:** `ACCEPTED WITH LIMITATION / EVIDENCE AUDIT ACCEPTED`
 
 ## 1. Source and copy provenance
 
@@ -62,7 +62,7 @@
 | Functions first explicit in S3 | `[SOURCE]` PBD online fault measurement, ML forecast, probability-to-fault-budget table, forecast-to-wash worked example, and NE/EDC/EDNC/ENDNC control flow (S3 Figs. 1, 3–5; Secs. III–V). |
 | Separate S4 evaluation branch | `[SOURCE]` Historical time-series fault-injection platform, random RTL address injection, HSIAO decode/rescrub workflow, correction-rate Monte Carlo table, and five-static-policy comparison (S4 Figs. 1, 4–6; Tables I–III). |
 | What S5 inherits | `[SOURCE]` It cites S3/S4 and combines S3's ML/PBD controller with S4's historical injection/static-baseline methodology (S5 Sec. 2; Figs. 2–7). |
-| What S5 adds or makes explicit | `[SOURCE]` Six-hour history and `t+1` target; min-max normalization; 10-fold CV; RMSE named; online-learning alternative; explicit ECC-agnostic architectural claim; prior PBD experiment description; annual scrub estimate and cost discussion (S5 Secs. 3.1–4.3). |
+| What S5 adds or makes explicit | `[SOURCE]` Six-hour input history; explicit next-hour/`t+1` notation for the next-hour target already present in S3; min-max normalization; 10-fold CV; RMSE named; online-learning alternative; explicit ECC-agnostic architectural claim; prior PBD experiment description; annual scrub estimate and cost discussion (S5 Secs. 3.1–4.3). |
 | What S5 does not add | `[INFERENCE]` It does not add `W`, MCU provenance, a new formal reliability event, complete control bounds, uncertainty propagation, or measured cost vector. |
 
 ### Extension versus consolidation
@@ -126,7 +126,7 @@ No `CLM-xxx` is created. The following seven statements warrant later audit:
 
 1. `[SOURCE-CANDIDATE]` Within this controlled three-source family, S3 is the earliest text to disclose the PBD fault-count → ML forecast → next-hour wash-frequency loop (S3 Fig. 1; Secs. III–V).
 2. `[SOURCE-CANDIDATE]` S4 is a separate reactive HSIAO evaluation branch based on hourly flux-driven random fault injection and static-policy comparison (S4 Secs. III–IV).
-3. `[SOURCE-CANDIDATE]` S5 explicitly consolidates S3 and S4 and adds a six-hour history, `t+1` target, 10-fold CV, online-learning alternative, and annual scrub estimates (S5 Secs. 2–4.3).
+3. `[SOURCE-CANDIDATE / AUDITED PARTIALLY_SUPPORTED]` S5 explicitly consolidates S3 and S4; relative to those conference papers it newly specifies the six-hour input window, 10-fold CV/RMSE evaluation setup, an online-learning alternative and annual scrub estimates, while making explicit rather than first adding the next-hour/`t+1` target already present in S3 (S5 Secs. 2–4.3).
 4. `[SOURCE-CANDIDATE]` The PBD threshold in S3/S5 is probability of accurate fault counting under distinct byte-pair occupancy, not a first-passage ECC failure probability (S3 Sec. V.A; S5 Sec. 4.1).
 5. `[INFERENCE-CANDIDATE]` None of S3/S4/S5 propagates measurement, model, or forecast uncertainty into the scrub decision.
 6. `[INFERENCE-CANDIDATE]` None preserves joint physical MCU marks or an explicit mapping `W`; random bit-address injection cannot establish `W`-aware `E_cap/F_A` behavior.
@@ -153,4 +153,4 @@ No `CLM-xxx` is created. The following seven statements warrant later audit:
 
 ## 12. Stop disposition
 
-All three named sources received full-text disposition and were accepted as `PAPER-009…011`. No S1/S2 expansion or broad search was performed. The matrix is sufficient for the bounded Evidence Auditor comparison against DEC-002; no permanent claim, threshold, novelty conclusion, or project control model is created by this acceptance.
+All three named sources received full-text disposition and were accepted as `PAPER-009…011`. The bounded [Evidence Audit](../evidence_audits/CONTROL-PRIOR-ART_EVIDENCE_AUDIT_01.md) is accepted with the candidate-3 wording correction above. No S1/S2 expansion or broad search is required at this gate. No permanent claim, threshold, novelty conclusion, or project control model is created by this acceptance.

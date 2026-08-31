@@ -1,6 +1,6 @@
 # EXP-001 — Event-representation reduction sensitivity
 
-**Status:** `IMPLEMENTED / ORCHESTRATOR TECHNICAL ACCEPTANCE / SCIENTIFIC REVIEW PENDING`<br>
+**Status:** `IMPLEMENTED / SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED`<br>
 **Registered:** 2026-08-28<br>
 **Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
 
@@ -27,11 +27,15 @@ Research Engineer implementation commit:
 `84728d1b5768e7c91c508495d696c5980943ae57`. Configuration, code and environment
 identities are fixed in `experiments/manifests/EXP-001/run-manifest.json`.
 
-The implementation passed Orchestrator-level technical acceptance, including an
+The implementation passed Orchestrator-level reproducibility checks, including an
 independent Linux rerun whose scientific aggregate, decision, delta and invariant
-files were byte-identical to the committed Windows outputs. Scientific
-interpretation and any `RES-xxx` remain pending adversarial Scientific Reviewer
-review; see `experiments/manifests/EXP-001/orchestrator-disposition.md`.
+files were byte-identical to the committed Windows outputs. The accepted
+[Scientific Review 01](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md)
+returned `REVISE`: the analytical J-A/J-B result survived, but the production L0
+and L1 checks share mapping and state-transition code and therefore do not
+independently validate L0→L1 losslessness. Any `RES-xxx` remains blocked pending
+the bounded validation repair and passing re-review; see
+`experiments/manifests/EXP-001/orchestrator-disposition.md`.
 
 ## Configuration
 
@@ -126,7 +130,7 @@ No sign or materiality of the joint-dependence effect is assumed.
 ## Procedure
 
 1. **Deterministic unit cases.** Construct single-event and two-event traces with known post-`W` word states, repeat hits, immediate capability exceedance and accumulation across a scrub boundary.
-2. **Lossless-interface check.** For identical event traces, verify exact state/event equivalence of `L0` and `L1` for every deterministic test and then under randomized streams.
+2. **Lossless-interface check.** For identical physical-event traces, validate the production L0 and L1 paths separately against a test-only independent physical-event oracle that does not reuse production mapping conversion or state-transition helpers. Compare complete transition traces for deterministic cases and bounded randomized streams under both declared `W` variants, and include a mutation/sentinel case that the oracle must reject.
 3. **Joint-sufficiency discriminator.** Run the mandatory `J-A`/`J-B` controlled pair, verify its identical marginals and other invariants, and compare both `F_A` and the parameterized restoration decision. Treat a difference as evidence about joint-dependence relevance only for the tested model pair/domain; treat equality as invariance only for that domain.
 4. **Representation comparison.** Compare each declared `L2` reconstruction and `L3-U` with `L0/L1` across single-cell, compact multi-cell and spatially separated event classes and at least two `W` variants. Keep `L3-E` deferred in Phase 1.
 5. **Temporal sensitivity.** Repeat the comparison under one constant-rate marked HPP scenario and one explicitly synthetic deterministic time-varying intensity/NHPP scenario. Do not infer empirical adequacy of either family.
@@ -154,6 +158,31 @@ The first `RES-xxx` may be proposed only after:
 - statistical precision is met;
 - the Scientific Reviewer checks the configuration, fairness of common inputs and interpretation;
 - the statement is limited to the tested representations and validity domain.
+
+## Scientific Review 01 disposition and corrective gate
+
+The accepted review has recommendation `REVISE`, no `CRITICAL` finding, one
+`MAJOR` and four `MINOR` findings.
+
+- The pair-probability parameterization, `1/6 <= q <= 1/2`, the exact
+  `S(q,m)`/reporting-window `F_A`, endpoint attainment and identified-set
+  interpretation are accepted only under the complete fourteen-condition domain
+  in Scientific Review 01 Section 7.4.
+- The 768,000 production L0/L1 comparisons are outcome/final-signature checks,
+  not independent full-trajectory validation.
+- `MAJOR-01` requires an independent test-only L0 oracle, full-trace comparisons
+  and a mutation/sentinel test before the experiment can pass.
+- The four `MINOR` corrections require the complete theorem assumptions,
+  pointwise rather than simultaneous confidence wording, explicit validation of
+  analytical preconditions and deterministic/precision-linked analytical checks.
+- The fixed experiment must be rerun after repair and its seven scientific
+  aggregate/decision/delta/invariant files must remain unchanged unless a
+  documented defect is found.
+
+After those checks, a Scientific Reviewer re-review is limited to closure of the
+listed findings and regression detection. No target-device extension, new
+literature cycle, retroactive `HYP-xxx` or redesigned scientific question is part
+of this repair.
 
 ## Output locations
 

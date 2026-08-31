@@ -35,11 +35,12 @@ Exact PI follow-up material requested:
 
 Do not launch a broad standards search. Request another source only when one matrix link remains unresolved.
 
-## Active parallel branch — closest adaptive-control prior art
+## Accepted bounded branch — closest adaptive-control prior art
 
-**Status:** `FULL-TEXT CARDS ACCEPTED / EVIDENCE AUDITOR PENDING`<br>
+**Status:** `EVIDENCE AUDIT ACCEPTED / BOUNDED FAMILY ONLY`<br>
 **Identity record:** [CONTROL-PRIOR-ART-IDENTITY-01](literature_mapping/CONTROL-PRIOR-ART-IDENTITY-01.md)
 **Comparison:** [CONTROL-PRIOR-ART-01](evidence_synthesis/CONTROL-PRIOR-ART-01_comparison_matrix.md)
+**Audit:** [CONTROL-PRIOR-ART-EVIDENCE-AUDIT-01](evidence_audits/CONTROL-PRIOR-ART_EVIDENCE_AUDIT_01.md)
 
 Mandatory full-text targets:
 
@@ -61,7 +62,47 @@ Required comparison fields:
 - validation, architecture and implementation;
 - actual publication-family differences.
 
-`PAPER-009`/`PAPER-011` are accepted as CORE and `PAPER-010` as RELATED. No discovery-level or card-level statement is yet a novelty conclusion. The bounded family is ready for Evidence Auditor comparison against DEC-002; the 2020/2022 prediction papers become additional deep-read targets only if the audit exposes a named upstream blocker.
+`PAPER-009`/`PAPER-011` are accepted as CORE and `PAPER-010` as RELATED. The
+bounded audit confirms genuine close prior art for fault-count/rate observation,
+next-hour prediction or reactive assessment and adaptive restoration-frequency
+selection. It does not establish literature-level novelty or non-novelty.
+
+No additional Chen-family Paper Card is authorized now. The named gaps
+`G-CHEN-OBS`, `G-CHEN-HW`, `G-CHEN-COST` and `G-CHEN-NUM` may trigger a single
+bounded task only when an RQ-004/RQ-005/implementation decision depends on the
+missing proposition.
+
+## Prepared candidate — integrated adaptive-control RQ
+
+**Status:** `PREPARED / NOT REGISTERED / PI ACCEPTANCE REQUIRED`<br>
+**Inputs:** DEC-001; DEC-002; RQ-002…RQ-006; accepted Chen Evidence Audit<br>
+**Candidate lineage:** integrates the former C-RQ-08, C-RQ-09 and C-RQ-11
+control/action/optimization lines without consuming a permanent RQ identifier.
+
+**Proposed question:**
+
+> Как построить метод адаптивного выбора периода или режима восстановления
+> ECC-защищённой SRAM, который по доступной online-информации формирует
+> DEC-001-compatible оценку или множество допустимых значений
+> `F_A(t0,T;μ_t0)`, явно распространяет неопределённость представления событий,
+> `W`, модели и наблюдений, и выбирает реализуемое управляющее действие при
+> заданном reliability constraint с отдельным измеримым resource-cost vector;
+> при каких условиях выбранное действие является инвариантным или робастным к
+> этой неопределённости?
+
+The candidate consumes rather than duplicates:
+
+- RQ-002 arrival/event/state representation;
+- RQ-006 mapping and information-sufficiency/bound conditions;
+- RQ-003 ECC capability/state/outcome semantics;
+- RQ-004 observable information, latency and estimation uncertainty;
+- RQ-005 measurable resource vector.
+
+It excludes generic “radiation prediction → dynamic scrub frequency,” arbitrary
+scalarization, an invented numerical reliability threshold, and a novelty claim.
+Permanent registration is required before control-method development, but does
+not block the current EXP-001 repair, RQ-003 mapping or the next parameterized
+reliability/decision derivation.
 
 ## Pending — future classical control prior-art threat
 
@@ -72,13 +113,13 @@ Purpose: compare adaptive SRAM restoration with classical inspection/checking/ma
 
 ## Active — own-result throughput gate
 
-**Status:** `EXP-001 IMPLEMENTED / TECHNICALLY ACCEPTED / SCIENTIFIC REVIEW PENDING`
+**Status:** `EXP-001 SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR ACTIVE`
 
 [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is the active own-work target.
 
 Current transition:
 
-`DEC-003 → EXP-001 implementation/tests/aggregates → Scientific Reviewer → bounded RES candidate or revision`.
+`DEC-003 → EXP-001 implementation → Scientific Review 01 REVISE → independent-oracle repair → bounded re-review → bounded RES candidate or rejection`.
 
 No second general RQ-002 literature cycle or automatic Paper Card batch is allowed. A new evidence task requires a named gap blocking:
 
@@ -87,9 +128,17 @@ No second general RQ-002 literature cycle or automatic Paper Card batch is allow
 - target validation;
 - interpretation of the first own result.
 
-The first `RES-xxx`, if the review passes, must state a tested exactness/bound/error/decision-sensitivity result over the declared synthetic representation, mapping and parameter domain. It must separate representation uncertainty, Monte Carlo uncertainty and confidence-rule conservatism and must not be a source summary.
+The first `RES-xxx`, if the bounded re-review passes, may state the exact
+four-word identified set only with the complete validity domain accepted by the
+Reviewer. It must separate representation uncertainty, Monte Carlo uncertainty
+and confidence-rule conservatism and must not be a source summary.
 
-After review, the next quantitative gate is a preregistered experiment over physically defensible `W`/topology/event statistics that estimates effect magnitude or establishes a safe-reduction validity domain. It must not merely repeat the synthetic existence discriminator.
+After review, the next quantitative gate is a preregistered derivation/experiment
+that maps retained information to a set or bound for `F_A` and then to exact,
+estimated and robust restoration feasibility over physically defensible
+`W`/topology/event/observation inputs. It must estimate effect magnitude,
+controlled error or a safe-reduction domain rather than repeat the synthetic
+existence discriminator.
 
 ## Future specialty and implementation alignment
 

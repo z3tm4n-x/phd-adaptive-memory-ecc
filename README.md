@@ -91,6 +91,7 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **Numerical reliability requirement:** `TBD`.
 - **Accepted model decision:** `DEC-003` — event-driven comparison reference, `L0…L3` representation ladder and authorization of the first own experiment.
 - **RQ-006:** permanently registered for physical-to-logical mapping `W`, interleaving and information-sufficiency conditions.
-- **Current phase:** implementation and validation of `EXP-001`, with bounded normative and Chen prior-art extractions in parallel.
-- **Active gate:** determine whether full physical topology, joint post-`W` marks, marginal word statistics and scalar rates are equivalent, bounded or decision-changing under common DEC-001 semantics.
-- **Constraint:** no second broad literature cycle without a named blocker; RQ-003 retains decoder-outcome semantics and RQ-001/DEC-001 remain unchanged.
+- **Current phase:** close the independent-validation repair required by `EXP-001-SCIENTIFIC-REVIEW-01`; the bounded Chen Evidence Audit and Russian normative extraction are accepted.
+- **Active gate:** add an independent L0 oracle, close one MAJOR and four MINOR review findings, rerun the fixed experiment and obtain a bounded Scientific Reviewer re-review before any `RES-xxx`.
+- **Next scientific interface:** RQ-003 — parameterized ECC capability/state and decoder-outcome semantics; RQ-004/RQ-005 follow as observation/uncertainty and measurable resource interfaces.
+- **Constraint:** no second broad literature cycle without a named blocker; no retroactive hypothesis, Chen-derived novelty claim or revision of RQ-001/DEC-001.

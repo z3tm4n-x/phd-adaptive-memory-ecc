@@ -298,3 +298,53 @@
 - Evidence Auditor: verify the eight scoped Chen-family feature/limitation statements.
 - After both returns, the Orchestrator will accept/reject a narrowly bounded `RES-001` and, if justified, preregister the next hypothesis/experiment over physically plausible `W`/topology/event statistics.
 - No additional PI decision is required at this gate.
+
+### EXP-001 Scientific Review 01 accepted with REVISE disposition
+
+- Scientific Reviewer commit `8f03ece7cda635c10413d404a02f44d8be0bca11`
+  was accepted canonically as
+  `docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md`.
+- The review found no `CRITICAL` issue and accepted the bounded J-A/J-B
+  parameterization, `1/6 <= q <= 1/2`, exact `S(q,m)`/`F_A`, endpoint attainment
+  and identified-set interpretation under the complete fourteen-condition
+  validity domain.
+- Exact endpoint decisions differ at experimental `epsilon=0.15`, `0.25` and
+  `0.35`; the `epsilon=0.55` Wilson-rule discrepancy is not structural.
+- `MAJOR-01` is accepted as demonstrated: production L0 and L1 reuse mapping and
+  state-transition code, so the 768,000 zero-mismatch checks are
+  outcome/final-signature comparisons rather than independent full-trajectory
+  validation.
+- EXP-001 status is `REVISE / VALIDATION REPAIR REQUIRED`; no `RES-xxx` or
+  retroactive `HYP-xxx` was created.
+
+### Chen control-prior-art Evidence Audit accepted
+
+- Evidence Auditor commit `1798a2c677fa3003c91e120dfd99d0557b9c0477`
+  was accepted canonically as
+  `docs/evidence_audits/CONTROL-PRIOR-ART_EVIDENCE_AUDIT_01.md`.
+- Candidates 1, 2, 4, 5, 6, 7, 8a and 8b are accepted only within the controlled
+  S3/S4/S5 family. Candidate 3 is accepted after correcting the claim that S5
+  first adds `t+1`: S5 newly specifies the six-hour input and makes S3's
+  already-present next-hour target explicit.
+- The family is confirmed as close prior art for observation/fault-count input,
+  forecast or reactive assessment and adaptive scrub-frequency selection.
+- The bounded absence of explicit `W`, DEC-001 first-passage risk, propagated
+  uncertainty, a measured multi-component resource vector or a complete deployed
+  loop is not a novelty claim. No `CLM-xxx`/`EVD-xxx` was created and no new
+  Chen-family Paper Card is authorized without a named blocker.
+
+### Roadmap advanced to validation repair and RQ-003 interface
+
+- The immediate gate is `EXP-001-VALIDATION-REPAIR-01`, followed by a bounded
+  Scientific Reviewer re-review. A passing disposition makes a narrow
+  `RES-001` admissible but does not create it automatically.
+- RQ-003 is now the active next scientific interface; its protocol requires a
+  current-gate revision and eLibrary remains deferred for Literature Scout.
+- A candidate integrated adaptive-control RQ was prepared in
+  `docs/research_backlog.md` without consuming a permanent ID. It combines
+  uncertainty-aware ECC first-passage assessment, adaptive restoration action and
+  a separate measurable resource vector, and requires explicit PI acceptance
+  before permanent registration.
+- The next quantitative target is a general information-set/model-set to
+  `F_A`-bound to robust-restoration-decision interface over a physically
+  defensible domain, not another isolated dependence counterexample.

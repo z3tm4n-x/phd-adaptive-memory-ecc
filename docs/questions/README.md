@@ -26,18 +26,18 @@ RQ-xxx-short-title.md
 | Permanent ID | Source candidate | Short title | Status | Mapping protocol |
 |---|---|---|---|---|
 | [RQ-001](RQ-001-reliability-event-metric-horizon.md) | C-RQ-01 | Reliability event, metric and horizon | PARTIALLY ANSWERED / OPEN DEPENDENCIES | [Protocol](../literature_mapping/RQ-001_protocol.md) |
-| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / ACTIVE GATE | [Protocol](../literature_mapping/RQ-002_protocol.md) |
-| [RQ-003](RQ-003-ecc-abstraction-baseline-class.md) | C-RQ-04 | ECC abstraction and baseline class | OPEN | [Protocol](../literature_mapping/RQ-003_protocol.md) |
+| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / EXP-001 REVIEW REPAIR | [Protocol](../literature_mapping/RQ-002_protocol.md) |
+| [RQ-003](RQ-003-ecc-abstraction-baseline-class.md) | C-RQ-04 | ECC abstraction and baseline class | OPEN / ACTIVE NEXT INTERFACE | [Protocol](../literature_mapping/RQ-003_protocol.md) |
 | [RQ-004](RQ-004-online-observables-for-adaptation.md) | C-RQ-06 | Online observables for adaptation | OPEN | [Protocol](../literature_mapping/RQ-004_protocol.md) |
 | [RQ-005](RQ-005-resource-cost-vector.md) | C-RQ-10 | Measurable resource-cost vector | OPEN | [Protocol](../literature_mapping/RQ-005_protocol.md) |
-| [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / PROTOTYPE-COUPLED | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) |
+| [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / EXP-001 REVIEW REPAIR | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) |
 
 ## Dependency-aware execution order
 
 1. RQ-001 — определить reliability event/metric/horizon.
 2. RQ-002 — bound the arrival/event/state model family and supply the reference representation.
-3. RQ-006 — quantify physical-to-logical mapping and representation-reduction sufficiency jointly with RQ-002 through EXP-001.
-4. RQ-003 — обосновать ECC abstraction и decoder outcomes.
+3. RQ-006 — close EXP-001 validation repair and bound the first synthetic representation-sufficiency result.
+4. RQ-003 — active next interface: обосновать parameterized ECC abstraction and decoder outcomes before observation/control integration.
 5. RQ-004 — определить online observables.
 6. RQ-005 — зафиксировать measurable resource-cost vector.
 
@@ -58,4 +58,9 @@ Accepted evidence:
 
 RQ-002 mapping, decisive deep reads, synthesis and Evidence Audit 01 are accepted with recorded limitations. The C-RQ-05 escalation condition was confirmed and the PI explicitly approved C-RQ-05 → RQ-006 on 2026-08-28.
 
-The active gate is now the implementation and validation of [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) under [DEC-003](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md). RQ-002 and RQ-006 remain open; no final minimum model or target-specific answer is asserted.
+The active gate is the bounded validation repair required by
+[EXP-001 Scientific Review 01](../scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md).
+The analytical J-A/J-B identified-set result survived review, but no `RES-xxx`
+is admissible until an independent L0 oracle closes `MAJOR-01` and a passing
+re-review is obtained. RQ-003 is the next active scientific interface. RQ-002
+and RQ-006 remain open; no final minimum model or target-specific answer is asserted.
