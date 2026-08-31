@@ -32,6 +32,13 @@ The candidate preserves the maximum wording and complete fourteen-condition
 validity domain accepted by the Reviewer. It is not a permanent result and may
 not be cited as `RES-001` before explicit PI approval.
 
+PI accepted the scientific content and returned `REVISE — wording only`. The
+candidate now refers specifically to one-event per-word marginal impact
+probabilities under mandatory two-distinct-word event cardinality and separates
+the no-feasible-action outcome at experimental `epsilon=0.15` from the selected-
+period differences at `0.25` and `0.35`. No calculation or review gate was
+reopened; final PI `ACCEPT` remains pending.
+
 No new experiment, target-device extension, retroactive `HYP-xxx` or permanent
 result registration is authorized before that approval.
 

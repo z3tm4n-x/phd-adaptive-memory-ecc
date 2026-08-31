@@ -1,22 +1,43 @@
 # DRAFT RES-001 — Identified set for `F_A` in the EXP-001 four-word class
 
-**Status:** `PI APPROVAL REQUIRED / NOT REGISTERED AS RES-xxx`  
-**Proposed permanent ID:** `RES-001`  
-**Related:** `EXP-001`; `RQ-002`; `RQ-006`; `DEC-001`; `DEC-003`  
-**Reviewer disposition:** `SCIENTIFIC REVIEW 02 — PASS`
+**Status:** `PI FINAL ACCEPT REQUIRED / WORDING REVISED / NOT REGISTERED AS RES-xxx`<br>
+**Proposed permanent ID:** `RES-001`<br>
+**Related:** `EXP-001`; `RQ-002`; `RQ-006`; `DEC-001`; `DEC-003`<br>
+**Reviewer disposition:** `SCIENTIFIC REVIEW 02 — PASS`<br>
+**PI scientific-content disposition:** `ACCEPTED`<br>
+**PI wording disposition:** `REVISE — TWO EDITORIAL CORRECTIONS INCORPORATED`
 
 This file is a bounded result candidate for PI wording approval. It is not an
 approved result and must not be cited as `RES-001` until the PI explicitly
 accepts the statement and permanent registration is completed.
 
-## Proposed result statement
+## Proposed central result statement
 
-В синтетическом классе из четырёх логических слов с одинаковой корректирующей
-способностью `t_c=1`, чистым начальным состоянием, однородным пуассоновским
-потоком родительских событий и синхронным периодическим полным восстановлением
-однословные маргинальные вероятности воздействия и фиксированная кратность
-родительского события, равная двум затронутым словам, не определяют единственное
-значение вероятности первого превышения корректирующей способности `F_A`.
+В заявленном синтетическом четырёхсловном классе одинаковые однословные
+маргинальные вероятности воздействия одного родительского события при
+фиксированной кратности два не определяют единственное значение вероятности
+первого превышения корректирующей способности `F_A`.
+
+Допустимый класс совместных распределений воздействий порождает точное
+идентифицированное множество значений `F_A`, границы которого достигаются
+моделями `J-A` и `J-B`.
+
+При исследованных экспериментальных значениях `epsilon` различие между
+границами этого множества имеет разные управляющие последствия: при
+`epsilon=0.15` оно изменяет само множество допустимых действий — для `J-A`
+период `T_scrub=0.5` допустим, тогда как для `J-B` ни один исследованный период
+не допустим; при `epsilon=0.25` и `0.35` оно изменяет максимальный допустимый и
+выбранный `T_scrub`; при `epsilon=0.55` точное выбранное действие для `J-A` и
+`J-B` совпадает.
+
+Результат действителен только при совместном выполнении всех четырнадцати
+условий применимости, зафиксированных ниже. Использованные значения `epsilon`
+являются параметрами эксперимента и не являются требованиями проекта.
+
+## Analytical form and exact decision table
+
+В центральной формулировке фиксированная кратность два означает обязательное
+условие: каждое родительское событие воздействует ровно на два различных слова.
 
 Для допустимого класса совместных распределений пар затронутых слов
 
@@ -55,13 +76,8 @@ accepts the statement and permanent registration is completed.
 | 0.35 | 2.0 | 1.0 | различается |
 | 0.55 | 4.0 | 4.0 | совпадает |
 
-Следовательно, в части проверенной области неопределённость совместного
-распределения изменяет допустимое управляющее действие, а в другой части
-действие инвариантно относительно этой неопределённости.
-
-Экспериментальные значения `epsilon` являются параметрами исследования, а не
-требованиями проекта. Указанное правило является экспериментальным правилом
-выбора и не заменяет будущий многокомпонентный ресурсный критерий RQ-005.
+Указанное правило является экспериментальным правилом выбора и не заменяет
+будущий многокомпонентный ресурсный критерий RQ-005.
 
 ## Complete validity domain
 
@@ -118,7 +134,8 @@ selection-valid guarantees over the period/model grid.
 ## Required uncertainty separation
 
 1. **Representation/dependence uncertainty:** the exact interval induced by the
-   admissible joint pair distributions at fixed marginals and event cardinality.
+   admissible joint pair distributions at fixed one-event per-word impact
+   probabilities and fixed two-word parent-event cardinality.
 2. **Monte Carlo estimation uncertainty:** uncertainty of finite-run numerical
    estimates, represented by pointwise intervals.
 3. **Decision-rule conservatism:** the additional restriction produced by using
@@ -148,7 +165,8 @@ criterion.
 
 ## PI approval gate
 
-PI must explicitly choose one disposition:
+After the wording-only revision, PI must explicitly choose one final
+disposition:
 
 - `ACCEPT` — approve this wording and authorize permanent `RES-001`
   registration;
