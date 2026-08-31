@@ -4,12 +4,13 @@
 
 ## Current phase
 
-The bounded EXP-001 validation repair has passed Scientific Reviewer re-review.
-The corrective and scientific-review gates are closed. A narrowly scoped first
-own-result candidate is prepared for PI wording approval but is not yet a
-registered `RES-xxx`. The bounded Chen/IHP/Potsdam
-Evidence Audit is accepted and now constrains the control-method target. The
-Russian normative baseline remains accepted with explicit unresolved interfaces.
+EXP-001 has passed independent validation and Scientific Reviewer re-review.
+The corrective and scientific-review gates are closed. After final PI `ACCEPT`,
+the exact bounded statement is registered as
+[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md), and EXP-001
+is complete/promoted only within that scope. The bounded Chen/IHP/Potsdam
+Evidence Audit constrains the control-method target, and the Russian normative
+baseline remains accepted with explicit unresolved interfaces.
 
 The controlling [DEC-002](decisions/DEC-002-integrated-evidence-to-adaptive-control-roadmap.md)
 architecture is unchanged:
@@ -20,48 +21,39 @@ Adaptive restoration control remains the final/core dissertation layer.
 
 ## Active scientific gate
 
-[EXP-001 Scientific Re-review 02](scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
-is accepted with recommendation `PASS`. It confirms that `MAJOR-01` and
-`MINOR-01…04` are closed, no repair-induced scientific regression exists and no
-new issue was found. The PI accepts this disposition and considers the EXP-001
-corrective gate closed.
+The active gate is PI disposition of the
+[`Next quantitative gate — Information-deficit price for restoration control`](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md).
+It proposes the bounded transition
+`I → M(I) → F_A value/set/bound → admissible actions → T_scrub → measurable resource cost`
+over a physically defensible event/`W` domain.
 
-The active gate is PI wording approval of
-[`DRAFT-RES-001`](result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md).
-The candidate preserves the maximum wording and complete fourteen-condition
-validity domain accepted by the Reviewer. It is not a permanent result and may
-not be cited as `RES-001` before explicit PI approval.
-
-PI accepted the scientific content and returned `REVISE — wording only`. The
-candidate now refers specifically to one-event per-word marginal impact
-probabilities under mandatory two-distinct-word event cardinality and separates
-the no-feasible-action outcome at experimental `epsilon=0.15` from the selected-
-period differences at `0.25` and `0.35`. No calculation or review gate was
-reopened; final PI `ACCEPT` remains pending.
-
-No new experiment, target-device extension, retroactive `HYP-xxx` or permanent
-result registration is authorized before that approval.
+The gate is a directional draft, not an `RQ`, `DEC`, `HYP`, `EXP`, `RES` or
+novelty claim. No new experiment, broad literature cycle or permanent integrated
+adaptive-control RQ is authorized by its preparation. A new quantitative EXP
+remains blocked until PI approves/revises the gate, the named minimum prior-art
+closure is complete, the integrated control RQ is explicitly registered and a
+reproducible experiment/derivation is preregistered.
 
 ## Active Research Questions
 
 - RQ-001 — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; DEC-001 unchanged.
-- RQ-002 — `OPEN / EXP-001 BOUNDED RESULT CANDIDATE`.
+- RQ-002 — `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE DRAFTED`.
 - RQ-003 — `OPEN / ACTIVE NEXT INTERFACE`; owns parameterized ECC capability,
   state and decoder-outcome semantics and must keep `E_cap` distinct from
   DUE/SDC/miscorrection/system-visible outcomes.
-- RQ-004 — `OPEN / QUEUED NEXT`; must distinguish external exposure information
+- RQ-004 — `OPEN / REQUIRED NEXT-GATE INTERFACE`; must distinguish external exposure information
   from internal protected-memory state/history and propagate observation
   uncertainty to the risk interface.
-- RQ-005 — `OPEN / QUEUED NEXT`; retains the measurable multi-component resource
+- RQ-005 — `OPEN / REQUIRED NEXT-GATE INTERFACE`; retains the measurable multi-component resource
   vector without premature scalarization.
-- RQ-006 — `OPEN / EXP-001 BOUNDED RESULT CANDIDATE`; owns `W`, topology, joint post-`W`
+- RQ-006 — `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE DRAFTED`; owns `W`, topology, joint post-`W`
   impact and reduction-sufficiency/bound conditions.
 
 The future integrated adaptive-control question is prepared as a candidate in
 [`research_backlog.md`](research_backlog.md), but is not permanently registered.
 It requires explicit PI acceptance of its final wording/ID before control-method
-development; that separate future approval does not alter the current
-`DRAFT-RES-001` wording gate.
+development. Because the proposed next stage maps risk information to a
+restoration action, its registration is a prerequisite for executing that stage.
 
 ## EXP-001 disposition
 
@@ -79,9 +71,10 @@ Scientific Reviewer independently accepted:
 - exact endpoint decision differences at experimental `epsilon=0.15`, `0.25`
   and `0.35`, but not at `epsilon=0.55`.
 
-These are accepted review findings and form the basis of a bounded result
-candidate, not yet `RES-xxx`. They do not bound physical SRAM topology or
-establish universal insufficiency of marginal models.
+These accepted findings are registered only as the bounded
+[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md). They do not
+bound physical SRAM topology or establish universal insufficiency of marginal
+models.
 
 ### Validation-repair disposition
 
@@ -90,7 +83,7 @@ outcome/final-signature comparisons. The repair adds a bounded, independent
 full-trace validation layer rather than relabelling the production run.
 Scientific Review 02 confirms closure of the demonstrated shared-path weakness
 without changing configurations, scientific outputs or the EXP-001 question.
-EXP-001 is now `SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE`.
+EXP-001 is now `COMPLETE / SCIENTIFIC REVIEW PASS / PROMOTED TO RES-001`.
 
 ## Chen/IHP/Potsdam control-prior-art disposition
 
@@ -131,22 +124,22 @@ inferred. The STO controlled-edition status remains `AMBIGUOUS`.
 ## Additional domestic prior-art signals
 
 PI-provided signals concerning the Meshchanov/Lushnikov/Krasnikov, Podzolko,
-Boruzdina/Ulanova/Chumakov and Zebrev/Galimov lines are recorded in
-[`research_backlog.md`](research_backlog.md) as `UNVERIFIED`. They constrain
-future novelty-risk verification but are not accepted evidence, do not change
-EXP-001 and do not authorize a broad literature cycle. Before the next
-quantitative experiment, the Orchestrator must define the smallest bounded
-full-text pass needed to turn these lines into controlled comparison points.
+Boruzdina/Ulanova/Chumakov and Zebrev/Galimov lines remain `UNVERIFIED`. The
+next-gate draft defines four bounded work units, common extraction columns and a
+hard stop rule. They must become controlled comparison points before the next
+quantitative experiment, but they do not authorize a broad literature cycle or
+alter RES-001.
 
 ## Updated scientific roadmap
 
-1. **Approve or revise the bounded result candidate.** PI reviews the exact
-   statement and fourteen-condition validity domain; no permanent `RES-001`
-   exists before acceptance.
-2. **Control the minimum prior-art boundary.** After result approval and before
-   the next quantitative experiment, convert only the named domestic lines that
+1. **Obtain PI disposition of the next quantitative gate.** No new EXP starts
+   from the draft alone.
+2. **Control the minimum prior-art boundary.** Before the next quantitative
+   experiment, convert only the named domestic lines that
    can change the next method/gate into bounded full-text comparison points.
-3. **Activate RQ-003.** Define the minimum parameterized ECC state/capability and
+3. **Register the integrated control question and activate RQ-003.** After
+   explicit PI approval, register the prepared integrated adaptive-control RQ;
+   define the minimum parameterized ECC state/capability and
    decoder-outcome contract consumed by reliability and observation layers.
 4. **Converge RQ-004 and RQ-005.** Bound at least one internal and one external
    observation channel with uncertainty/latency semantics, and a measurable
@@ -164,13 +157,13 @@ full-text pass needed to turn these lines into controlled comparison points.
    inspection/maintenance prior-art pass before a literature-level integrated
    control novelty claim, not before the next bounded model work.
 
-## Prepared next quantitative gate — not active
+## Prepared next quantitative gate — PI approval required
 
-No new `EXP` may start before PI approval of the bounded result candidate. The
-subsequent own quantitative stage must answer more than “dependence can matter.”
-Its gate is to define, for retained information `I`, an admissible model set and
-the induced interval/bound for `F_A`, then determine for every candidate
-`T_scrub`:
+The exact draft is stored in
+[`docs/research_gates/`](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md).
+It must answer more than “dependence can matter.” For retained information `I`,
+it defines an admissible model set and the induced value/set/bound for `F_A`,
+then determines for every candidate `T_scrub`:
 
 - exact/model feasibility at a specified model;
 - estimated feasibility under a declared statistical rule;
@@ -178,16 +171,18 @@ the induced interval/bound for `F_A`, then determine for every candidate
 - conditions under which the admissible or selected action is invariant;
 - decision and resource consequences over a physically defensible domain.
 
-The next experiment or derivation must be preregistered before execution and may
-use a hypothesis or an explicit decision/falsification criterion. It must not
-simply create another synthetic pair with different `F_A`. Exact gate wording,
-RQ/interface dependencies and the bounded prior-art handoff will be proposed
-after PI disposition of the result candidate.
+The draft also fixes the minimum physically defensible domain, RQ-002/RQ-006 and
+RQ-003/RQ-004/RQ-005 interface slices, the four-unit domestic prior-art closure,
+its stop rule and the future experiment completion criterion. The next experiment
+or derivation must be preregistered before execution and may use a prospective
+hypothesis or an explicit decision/falsification criterion. It must not simply
+create another synthetic pair with different `F_A`.
 
 ## Genuine blockers and PI inputs
 
-The only current blocking PI decision is acceptance, revision or rejection of
-the bounded `DRAFT-RES-001` wording.
+The current blocking PI decisions are acceptance/revision/rejection of the next
+quantitative gate and, before execution, explicit acceptance of the integrated
+adaptive-control RQ wording/ID.
 
 Before target-like calibration, useful but non-blocking material remains:
 
@@ -205,10 +200,12 @@ observable channels, ECC semantics or target hardware domains.
 ## Active hypotheses and results
 
 - No `HYP-xxx` is registered; none is created retroactively for EXP-001.
-- EXP-001 is implemented, independently validated within the repair scope and
-  has `Scientific Review 02: PASS`.
-- `DRAFT-RES-001` awaits PI wording approval and is not a permanent result.
-- No `RES-xxx` is registered.
+- EXP-001 is complete, independently validated and has `Scientific Review 02: PASS`.
+- [`RES-001`](../results/RES-001-exp001-four-word-identified-set.md) is the first
+  permanent own result; it is valid only under its complete fourteen-condition
+  domain.
+- The next quantitative gate is a PI-pending draft; no `EXP-002` or `RES-002`
+  exists.
 
 ## Constraints
 

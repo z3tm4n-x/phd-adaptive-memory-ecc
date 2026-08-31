@@ -1,6 +1,6 @@
 # Research Specification
 
-**Version:** 0.5-draft<br>
+**Version:** 0.6-draft<br>
 **Status:** WORKING DRAFT
 
 > Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
@@ -51,11 +51,11 @@
 Зарегистрированы `RQ-001…RQ-006`; актуальные статусы фиксируются в `docs/current_status.md`.
 
 - `RQ-001` — reliability event, metric and horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; working contract recorded as `DEC-001`.
-- `RQ-002` — minimum adequate radiation-induced SRAM error model — Evidence Audit accepted with limitation; prototype gate active under DEC-003.
+- `RQ-002` — minimum adequate radiation-induced SRAM error model — Evidence Audit accepted with limitation; bounded `RES-001` registered, general adequacy remains open.
 - `RQ-003` — ECC abstraction and decoder outcomes.
 - `RQ-004` — online observables for adaptation.
 - `RQ-005` — measurable resource-cost vector without premature scalarization.
-- `RQ-006` — physical-to-logical mapping `W`, interleaving and information-sufficiency conditions — permanently promoted from C-RQ-05 by PI approval.
+- `RQ-006` — physical-to-logical mapping `W`, interleaving and information-sufficiency conditions — permanently promoted from C-RQ-05; bounded `RES-001` registered, physically defensible generalization remains open.
 
 RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
 
@@ -157,7 +157,7 @@ COSRAD рассматривается как источник предметно
 
 **PROVENANCE LIMIT.** The supplied STO file contains approval/registration/effective-date statements and also hidden `Проект, окончательная редакция` text. Its exact controlled revision remains ambiguous until official copy/registry evidence is provided.
 
-The Chen/IHP/Potsdam publication-family identity is resolved at discovery level. The 2025 JETTA article, 2023 DFT controller paper and 2024 LATS evaluation branch require a bounded full-text comparison before an adaptive-control novelty statement. Zebrev/Ogden/Gomi/Franco and related sources address a different identification/event-representation/mapping threat layer. The layers must be compared separately.
+The Chen/IHP/Potsdam S3/S4/S5 family has a bounded accepted full-text comparison and Evidence Audit. It is close prior art for fault-count/rate observation or prediction followed by adaptive restoration-frequency selection; the audit is not a novelty decision. Zebrev/Ogden/Gomi/Franco and related sources address a different identification/event-representation/mapping threat layer. The layers must be compared separately.
 
 Не фиксировать конкретные baseline algorithms до подтверждения их распространённости и корректности для выбранной модели памяти.
 
@@ -183,15 +183,21 @@ The Chen/IHP/Potsdam publication-family identity is resolved at discovery level.
 
 **REGISTERED / DEC-003.** [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) compares a declared hierarchy of device-error representations through the same `W`, ECC state and scrub semantics, then measures change in `F_A` and a parameterized restoration decision. Its `L0 → L1` full-topology-to-joint-post-`W` interface must be lossless for the declared state update; marginal/scalar reductions have no pre-assigned result direction. Unknown numerical reliability requirements are swept and not invented.
 
-**CURRENT VALIDATION STATUS.** Scientific Review 02 returns `PASS` after the
-independent-oracle repair and confirms closure of `MAJOR-01` and
-`MINOR-01…04` without scientific-output regression. The PI accepts this
-disposition and closes the EXP-001 corrective gate. A bounded result candidate
-is prepared in
-[`DRAFT-RES-001`](result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
-with the complete fourteen-condition validity domain. It is not a registered
-`RES-xxx` until explicit PI wording approval. No retrospective `HYP-xxx` is
+**COMPLETED / REGISTERED RESULT.** Scientific Review 02 returns `PASS` after
+the independent-oracle repair and confirms closure of `MAJOR-01` and
+`MINOR-01…04` without scientific-output regression. The PI accepts the exact
+bounded wording, and
+[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md) is permanently
+registered with its complete fourteen-condition validity domain. EXP-001 is
+complete and promoted only within that result. No retrospective `HYP-xxx` is
 created, and DEC-001…003 and the experiment question remain unchanged.
+
+**NEXT GATE / NOT YET AUTHORIZED FOR EXECUTION.** The draft
+[information-deficit control-price gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)
+proposes the progression `I → M(I) → F_A value/set/bound → admissible actions →
+T_scrub → measurable resource cost`. It requires a physically defensible
+event/`W` domain, bounded domestic prior-art closure, minimum RQ-003/RQ-004/RQ-005
+interfaces and permanent integrated-control RQ registration before a new EXP.
 
 ## 14. Критерии воспроизводимости
 
@@ -218,6 +224,16 @@ created, and DEC-001…003 and the experiment question remain unchanged.
 **WORKING DEFINITION.** Конкретные формулировки научной новизны не фиксируются до анализа состояния области и получения собственных результатов.
 
 **WORKING DEFINITION / DEC-002.** Expected results must remain connected across the full chain. A candidate result on information reduction is scientifically useful only if it quantifies an effect, bound or invariance relevant to ECC-level reliability and the downstream adaptive decision.
+
+**OWN RESULT / RES-001.** In its complete fourteen-condition synthetic
+four-word domain, fixed two-distinct-word parent-event cardinality and identical
+one-event per-word impact probabilities induce a nontrivial exact identified set
+for `F_A` through admissible joint pair distributions. The endpoint difference
+changes the exact admissible-action set at experimental `epsilon=0.15`, changes
+the maximal feasible selected period at `0.25` and `0.35`, and leaves the exact
+selected action unchanged at `0.55`. This is not a statement about arbitrary marginal
+models, physical SRAM topology, a project reliability requirement or integrated
+method novelty.
 
 ## 16. Связь результатов с публикациями и диссертацией
 
@@ -252,3 +268,4 @@ created, and DEC-001…003 and the experiment question remain unchanged.
 - `0.3-draft` — зарегистрирован DEC-001: primitive ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics; RQ-001 переведён в PARTIALLY ANSWERED, открыт gate RQ-002.
 - `0.4-draft` — зарегистрирован DEC-002: сохранён adaptive-control core и введена единая evidence-to-decision architecture; information sufficiency отделена от experimental identifiability; Russian normative practice and layered closest-prior-art threats made explicit baselines; RQ-002 advanced to bounded model-selection after accepted Paper Cards and synthesis.
 - `0.5-draft` — принят RQ-002 Evidence Audit with CAND-04 limitation; C-RQ-05 permanently promoted to RQ-006; DEC-003 registered the comparison reference/representation ladder and authorized EXP-001; three-document Russian normative source set and Chen identity record received bounded follow-up protocols without a broad search or novelty claim.
+- `0.6-draft` — EXP-001 independent validation and Scientific Review 02 passed; PI-approved `RES-001` registered with its complete fourteen-condition domain; Chen S3/S4/S5 bounded audit incorporated; the next information-deficit control-price gate prepared without authorizing a new EXP, RQ, HYP or novelty claim.

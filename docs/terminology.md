@@ -16,7 +16,7 @@
 | physical event topology | multiplicity plus the declared spatial/coordinate arrangement of cells affected by one parent event before `W` | working definition | RQ-006; coordinates may be unavailable or only indirectly observed in a test |
 | joint post-`W` codeword-impact mark | one parent event represented by its simultaneous impacts across all affected ECC codewords after applying declared `W` | accepted comparison interface | DEC-003; losslessness for the declared state update must be verified in EXP-001 |
 | representation reduction | declared transformation from a richer event representation to a joint, marginal or scalar representation, with recorded information loss and validity condition | working definition | RQ-006 / DEC-003 |
-| `J-A` / `J-B` controlled pair | EXP-001-local pair of post-`W` models with identical per-word marginals and declared controlled quantities but different joint inter-word dependence / parent-event association | accepted experiment construct | EXP-001; no assumed effect direction or general sufficiency conclusion |
+| `J-A` / `J-B` controlled pair | EXP-001-local pair of post-`W` models with identical one-event per-word impact probabilities, fixed two-distinct-word cardinality and different joint pair association | accepted bounded construct | EXP-001 / RES-001; endpoint role applies only under the complete fourteen-condition domain |
 | `L3-U` | EXP-001 scalar comparator whose primitive objects are ungrouped individual bit/upset arrivals over `A`; parent-event grouping is discarded | accepted Phase-1 comparator | EXP-001 |
 | `L3-E` | scalar parent-event-arrival comparator without an impact mark; distinct from `L3-U` and requiring an explicit event-to-state reconstruction | deferred comparator | EXP-001 Phase 1 |
 | normative reported characteristic | test/calculation output such as a classified ORE count, cross section, fitted sensitivity parameter, rate or probability indicator; not automatically a raw-event record or ECC-level reliability metric | working distinction | NORMATIVE-BASELINE-01 |
@@ -40,6 +40,10 @@
 | \(\mu_{t_0}\) | Declared initial state or state distribution at \(t_0\), covering every state variable required by the quantitative model | state or probability distribution | mandatory model specification, DEC-001 |
 | \(H_{\mathrm{req}}\) | Required reporting window, including its origin and duration | time interval | `TBD`; requires traceable system/mission provenance |
 | \(\varepsilon_{\mathrm{req}}\) | Required upper bound for the declared reliability metric | probability / dimensionless | `TBD`; no numerical value assigned |
+| \(q\) | Probability that two consecutive two-word parent-event marks are disjoint in the RES-001 four-word class; \(q=2(a^2+c^2+e^2)\) | probability / dimensionless | accepted local symbol, RES-001 only; \(1/6\le q\le1/2\) under all fourteen conditions |
+| \(m\) | Mean number of parent events in one restoration interval, \(m=\lambda T_{\mathrm{scrub}}\), in the RES-001 HPP construction | expected count / dimensionless | accepted local symbol, RES-001 only |
+| \(k\) | Number of complete equal restoration intervals in the aligned RES-001 reporting window, \(T=kT_{\mathrm{scrub}}\) | count | accepted local symbol, RES-001 only |
+| \(S(q,m)\) | One-interval probability of not exceeding ECC capability in the RES-001 class, \(e^{-m}(1+m+qm^2/2)\) | probability / dimensionless | accepted local symbol, RES-001 only |
 
 ## Rule
 
