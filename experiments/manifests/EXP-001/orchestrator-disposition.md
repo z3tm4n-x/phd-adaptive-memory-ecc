@@ -1,8 +1,10 @@
 # EXP-001 — Orchestrator disposition
 
-**Status:** `SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED / NOT RES-xxx`
+**Status:** `VALIDATION REPAIR ACCEPTED / SCIENTIFIC REVIEW PASS / DRAFT RES-001 PENDING PI APPROVAL`
 **Research Engineer commit:** `84728d1b5768e7c91c508495d696c5980943ae57`
+**Validation repair commit:** `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
 **Scientific review:** [EXP-001-SCIENTIFIC-REVIEW-01](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REVIEW_01.md) — `REVISE`
+**Scientific re-review:** [EXP-001-SCIENTIFIC-REREVIEW-02](../../../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md) — `PASS`
 **Related:** `DEC-001`; `DEC-002`; `DEC-003`; `RQ-002`; `RQ-006`
 
 ## Acceptance scope
@@ -34,7 +36,8 @@ invariants.
 - J-A/J-B: identical per-word impact marginals and fixed two-word event
   cardinality, but different joint pair association.
 - Monte Carlo `F_A(J-B)-F_A(J-A)` is positive for all four scrub periods in the
-  tested synthetic configuration, with all paired 95% intervals above zero.
+  tested synthetic configuration, with all paired pointwise 95% intervals above
+  zero; no simultaneous coverage claim is made.
 - The declared L2 reconstruction and L3-U comparator exhibit both positive and
   negative signed error versus L1; no general conservatism direction is admitted.
 
@@ -82,16 +85,43 @@ F_A\in[F_A(q=1/2),\;F_A(q=1/6)],
 \]
 
 with J-A and J-B attaining the endpoints. The endpoint result requires every one
-of the fourteen conditions in Scientific Review 01 Section 7.4, including i.i.d.
-pair marks independent of HPP epochs/counts, aligned full-reset scrub phase and
-an integer number of complete equal intervals. It is not a bound for arbitrary
-physical SRAM topologies, temporally dependent marks, event cardinalities,
-repeat-hit semantics, non-Poisson arrivals or partial/asynchronous restoration.
+of these fourteen conditions from Scientific Review 01 Section 7.4:
+
+1. one declared domain contains exactly four logical words with common
+   correction capability `t_c=1`;
+2. the reporting window starts from a clean state;
+3. every parent event impacts exactly two distinct words;
+4. every selected word receives exactly one fresh erroneous bit, with no repeat
+   hit, toggle-clear or within-interval repair;
+5. every word has one-event impact probability exactly `1/2`;
+6. one fixed pair-probability vector is used and pair marks are i.i.d. across
+   parent events;
+7. pair marks are independent of HPP event times and counts;
+8. parent arrivals form a simple HPP, giving Poisson counts and independent
+   increments;
+9. parent impacts are simultaneous and `E_cap` is evaluated after the complete
+   mark;
+10. scrubbing is instantaneous, periodic, synchronous and clears the complete
+    erroneous-bit state;
+11. `t0` is aligned with the scrub phase and the reporting duration is exactly
+    `k*T_scrub`, with no partial leading or trailing interval;
+12. deterministic-boundary events have probability zero under the HPP and the
+    implementation ordering is `scrub_then_event`;
+13. `F_A` is the DEC-001 reporting-window first-passage event, so an exceedance
+    remains counted even if a later scrub clears the state;
+14. every logical word has enough unused bit positions for the generated
+    fresh-bit construction over the finite run.
+
+It is not a bound for arbitrary physical SRAM topologies, temporally dependent
+marks, event cardinalities, repeat-hit semantics, non-Poisson arrivals or
+partial/asynchronous restoration.
 
 ## Structural feasibility versus confidence-rule feasibility
 
-The committed decision table uses a Wilson-upper-bound rule. Exact analytical
-feasibility under `F_A<=epsilon` must be reported separately:
+The committed decision table uses each model/period's pointwise Wilson upper
+bound. These CI-based decisions are not simultaneous or selection-valid
+confidence guarantees over the candidate grid. Exact analytical feasibility
+under `F_A<=epsilon` must be reported separately:
 
 | `epsilon` | Exact J-A / J-B selected `T_scrub` | Wilson-rule J-A / J-B | Disposition |
 |---:|---|---|---|
@@ -114,31 +144,53 @@ would require the J-B/worst-endpoint exact value to satisfy the constraint;
 feasibility only at the J-A/best endpoint is not robust. This interpretation is
 accepted within the same complete validity domain.
 
-## Required validation repair and bounded re-review
+## Validation-repair acceptance and bounded re-review
 
 Scientific Review 01 found no `CRITICAL` issue and accepted the central
 identified-set derivation, but returned `REVISE` because `MAJOR-01` shows that
 the current L0/L1 equivalence paths share both mapping conversion and state
 transition code.
 
-Research Engineer must:
+Orchestrator review of repair commit `072b70adabb9827ee59c94b2b3d5cf044b25cdf9`
+accepts the technical correction:
 
-1. add a test-only independent L0 oracle for both declared `W` variants without
-   calling production mapping conversion, joint simulators or shared event-update
-   helpers;
-2. compare complete transition traces for deterministic and bounded randomized
-   cases covering clean/non-clean starts, repeat hits, immediate exceedance and
-   scrub boundaries;
-3. add a mutation/sentinel test proving that a wrong mapping/conversion is
-   detected;
-4. incorporate the four `MINOR` corrections: complete validity assumptions,
-   pointwise interval wording, validation of analytical preconditions and
-   deterministic/precision-linked analytical checks;
-5. rerun tests and the fixed experiment and show that all seven scientific
-   aggregate/decision/delta/invariant files are unchanged, unless a separately
-   documented implementation defect is found.
+1. the oracle imports no production `exp001` module and independently implements
+   both declared `W`, state transitions, scrub ordering and first passage;
+2. production L0 and L1 are compared separately against the oracle over 267
+   streams and 534 complete path-to-oracle transition-trace comparisons;
+3. coverage includes both `W`, clean/non-clean starts, toggle/`set_error`,
+   single/multi-cell marks, repeat hits, immediate and sequential exceedance,
+   scrub boundaries, deterministic cases and 16 bounded randomized seeds;
+4. all 64 physical cells are exhaustively checked under each `W`;
+5. the mutation/sentinel test demonstrates detection of a deliberately wrong
+   conversion that remains structurally valid for the joint simulator;
+6. all four MINOR corrections are represented in code, tests and machine-readable
+   validation output;
+7. Orchestrator rerun: 32/32 tests pass, `compileall` passes, all precision and
+   analytical-precondition checks pass;
+8. the fixed configurations are unchanged, and all seven scientific files plus
+   `analytical-validation.json` reproduce byte-for-byte in an independent Linux
+   run.
+
+No implementation defect or scientific-output regression was found. This is an
+Orchestrator acceptance of the repair, not a replacement for Scientific Reviewer
+disposition and not acceptance of `RES-001`.
 
 The subsequent Scientific Reviewer task is limited to verifying closure of
 these findings and absence of regression. A passing `PASS` or
 `PASS_WITH_MINOR` disposition makes a narrowly bounded `RES-001` admissible but
 does not create it automatically. No retroactive hypothesis is permitted.
+
+## Subsequent re-review and PI disposition
+
+Scientific Review 02 independently closes `MAJOR-01` and `MINOR-01…04`, finds
+no new issue or scientific-output regression and returns `PASS`. The PI accepts
+the Orchestrator disposition and considers the EXP-001 corrective gate closed.
+
+The bounded
+[`DRAFT-RES-001`](../../../docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+is scientifically admissible for wording approval but is not a permanent
+`RES-xxx`. It must preserve the complete fourteen-condition validity domain,
+the experimental status of the `epsilon` values, the three distinct uncertainty
+objects and all explicit non-claims. No new experiment or retrospective
+`HYP-xxx` is authorized before PI disposition of the candidate.

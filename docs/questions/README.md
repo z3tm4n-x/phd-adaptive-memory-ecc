@@ -26,11 +26,11 @@ RQ-xxx-short-title.md
 | Permanent ID | Source candidate | Short title | Status | Mapping protocol |
 |---|---|---|---|---|
 | [RQ-001](RQ-001-reliability-event-metric-horizon.md) | C-RQ-01 | Reliability event, metric and horizon | PARTIALLY ANSWERED / OPEN DEPENDENCIES | [Protocol](../literature_mapping/RQ-001_protocol.md) |
-| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / EXP-001 REVIEW REPAIR | [Protocol](../literature_mapping/RQ-002_protocol.md) |
+| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / EXP-001 BOUNDED RESULT CANDIDATE | [Protocol](../literature_mapping/RQ-002_protocol.md) |
 | [RQ-003](RQ-003-ecc-abstraction-baseline-class.md) | C-RQ-04 | ECC abstraction and baseline class | OPEN / ACTIVE NEXT INTERFACE | [Protocol](../literature_mapping/RQ-003_protocol.md) |
 | [RQ-004](RQ-004-online-observables-for-adaptation.md) | C-RQ-06 | Online observables for adaptation | OPEN | [Protocol](../literature_mapping/RQ-004_protocol.md) |
 | [RQ-005](RQ-005-resource-cost-vector.md) | C-RQ-10 | Measurable resource-cost vector | OPEN | [Protocol](../literature_mapping/RQ-005_protocol.md) |
-| [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / EXP-001 REVIEW REPAIR | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) |
+| [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / EXP-001 BOUNDED RESULT CANDIDATE | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [EXP-001](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) |
 
 ## Dependency-aware execution order
 

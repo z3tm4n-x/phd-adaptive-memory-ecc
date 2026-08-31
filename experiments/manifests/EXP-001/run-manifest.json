@@ -6,7 +6,7 @@
     "joint-discriminator-delta.csv",
     "joint-discriminator-decisions.csv"
   ],
-  "base_commit": "e1e7b93cc72b7b295a8298560adf2cd507d7256b",
+  "base_commit": "0ca6f13481ea0818c59395ead26db2f58cb6188e",
   "commands": {
     "experiment": "& \"C:\\Users\\Иван\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" simulation/run_exp001.py --bounded-config simulation/configs/EXP-001/bounded-phase1.json --joint-config simulation/configs/EXP-001/joint-discriminator.json --output-dir experiments/manifests/EXP-001 --repo-root .",
     "tests": "& \"C:\\Users\\Иван\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -m unittest discover -s simulation/tests -v"
@@ -19,9 +19,9 @@
     "The handoff named docs/questions/RQ-002-minimum-adequate-sram-radiation-error-model.md; the exact base commit instead contains docs/questions/RQ-002-sram-radiation-error-model.md, which was used as the canonical RQ-002 artefact."
   ],
   "environment_manifest": "experiments/manifests/EXP-001/environment.json",
-  "executed_at_utc": "2026-08-30T18:01:21.093866+00:00",
+  "executed_at_utc": "2026-08-31T13:54:59.552497+00:00",
   "experiment_id": "EXP-001",
-  "git_head_at_precommit_execution": "6db0ef82ccf28c7101c8b28b957a3d54c5e81547",
+  "git_head_at_precommit_execution": "0ca6f13481ea0818c59395ead26db2f58cb6188e",
   "implementation_commit": "SELF: resolve the commit containing this manifest with git log -1 --format=%H -- experiments/manifests/EXP-001/run-manifest.json",
   "input_provenance": "fully synthetic, completely declared in the two versioned configs",
   "random_seeds": {
@@ -68,35 +68,46 @@
   },
   "runtime": {
     "bounded_seconds_by_representation": {
-      "L0": 21.122115000101076,
-      "L1": 9.331567900087975,
-      "L2-independent_word_marginals": 9.076484200079449,
-      "L3-U": 11.699505600073735
+      "L0": 17.667738098934933,
+      "L1": 7.85777710237744,
+      "L2-independent_word_marginals": 7.593322600609099,
+      "L3-U": 9.809216798981652
     },
     "joint_seconds_by_model": {
-      "J-A": 0.7959223999732785,
-      "J-B": 0.6954970000192588,
-      "L2-independent_word_marginals": 0.6752030000220657
+      "J-A": 0.6553867997063207,
+      "J-B": 0.5841561997731333,
+      "L2-independent_word_marginals": 0.5650974990639952
     },
-    "process_peak_memory_bytes": 25772032,
+    "process_peak_memory_bytes": 25935872,
     "process_peak_memory_method": "Windows PeakWorkingSetSize",
-    "wall_seconds_total": 74.90039039999965
+    "wall_seconds_total": 62.05119380000542
   },
   "source_sha256": {
     "simulation/run_exp001.py": "834f8d94b95f1a3d2f0457d50af473e3c5aa808c160b9d134bdded33ae766855",
     "simulation/src/exp001/__init__.py": "c8624400bba0e3f1ffb7cee4bb8acd62246919422266f803878e51af0bdc85a6",
     "simulation/src/exp001/arrivals.py": "40a81632d3fe4f591e32394d1d23e4db0be52562be48faae3cbace4c50209c5b",
-    "simulation/src/exp001/cli.py": "5f1978c86857926b5e3a3e20580fcdfdf9f8fc2a917c67251fcc5412ee4eac93",
-    "simulation/src/exp001/config.py": "a4f3fca5d1337d815c1c939dd4fa40707753f51d70e96d4d3c8ba4d96e64f7a1",
-    "simulation/src/exp001/experiment.py": "8034f8796f4042f86bb7ec938ad4230ea8f4270af4b56c7a0766ace94424a675",
+    "simulation/src/exp001/cli.py": "b49d9616945cf2b582984ada29a277712e87e096b921464a2ee7825a12768691",
+    "simulation/src/exp001/config.py": "8d623aa9122b1f4826ef54cb60a2a43e1364a2ee1b0fd7d28bbc8589b146e148",
+    "simulation/src/exp001/experiment.py": "e664a8d0aad76df981086abe3527a1b2fbe985e2b5cbd092ae19a694129abc36",
     "simulation/src/exp001/model.py": "66fa46ab9450144a31ba164e945aac00f444bc30a16b2e65f6399219478894c8",
     "simulation/src/exp001/representations.py": "40a18ac88ff62c78e4faf799ca8ffe370cf895218f0a02171883a7f176c14e08",
     "simulation/src/exp001/statistics.py": "b34e941b2eb45aae654202f1aeae251ebc5e704b765606bb713fccf66d798900",
-    "simulation/tests/test_config_statistics.py": "f2d85a7015d13e6cbc40dfe964d2875755e92d6cd8ab1f51dd3c2739de2e7e9c",
+    "simulation/tests/independent_l0_oracle.py": "e6774f3803f4e0517835addeaa3d5018c3df07086610e140a85506f0e7ee00aa",
+    "simulation/tests/test_config_statistics.py": "debe389eceb67bcd3adc9cc15e0b629b11c0584ed7c6273d4785f51561657e47",
+    "simulation/tests/test_independent_l0_oracle.py": "f929686eabec9c8afeab3a977a6b2fd3b31ae0580a6af2707e483e9a65b4f7cc",
     "simulation/tests/test_model.py": "5f2dc2469b327ed7b6edeb427256cda691c5f21fca0fbfdc9a700d1b63d317ae",
     "simulation/tests/test_representations.py": "d57f0c1f179824fa96595d3f422905c2e81a59aec1c4a61ea8d2c30ebcddc52f"
   },
-  "task_id": "EXP-001-IMPLEMENTATION-01",
+  "statistical_interpretation": {
+    "ci_based_decisions": "pointwise_interval_based_not_a_simultaneous_selection_guarantee",
+    "paired_normal_intervals": "pointwise_95_percent_not_simultaneous",
+    "wilson_intervals": "pointwise_95_percent_not_simultaneous"
+  },
+  "task_id": "EXP-001-VALIDATION-REPAIR-01",
+  "validation_outputs": [
+    "analytical-validation.json",
+    "test-report.md"
+  ],
   "validity": {
     "implementation_checks_passed": true,
     "orchestrator_accepted": false,

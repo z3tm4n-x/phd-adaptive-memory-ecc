@@ -348,3 +348,49 @@
 - The next quantitative target is a general information-set/model-set to
   `F_A`-bound to robust-restoration-decision interface over a physically
   defensible domain, not another isolated dependence counterexample.
+
+## 2026-08-31
+
+### EXP-001 validation repair accepted for bounded re-review
+
+- Research Engineer repair commit
+  `072b70adabb9827ee59c94b2b3d5cf044b25cdf9` is exactly one commit over canonical
+  base `0ca6f13481ea0818c59395ead26db2f58cb6188e`.
+- Orchestrator inspection accepts the independent test-only L0 oracle, separate
+  full-trace comparison of production L0 and L1, exhaustive 8x8 mapping checks,
+  mutation/sentinel evidence and all four Scientific Review MINOR corrections.
+- Independent verification passed 32/32 tests and `compileall`. A clean fixed
+  rerun satisfied all precision and analytical-precondition rules and reproduced
+  the seven scientific files and `analytical-validation.json` byte-for-byte.
+- EXP-001 status advances to `VALIDATION REPAIR ACCEPTED / SCIENTIFIC RE-REVIEW
+  PENDING / NOT RES-xxx`. Scientific Review 01 remains `REVISE`; no retrospective
+  `HYP-xxx` or `RES-001` was created.
+- PI-provided Meshchanov/Lushnikov/Krasnikov, Podzolko,
+  Boruzdina/Ulanova/Chumakov and Zebrev/Galimov prior-art signals are recorded as
+  `UNVERIFIED` bounded backlog only. They do not alter EXP-001 or authorize a
+  broad literature campaign.
+- The post-EXP direction is retained as
+  `I -> M(I) -> F_A value/set/bound -> admissible actions -> T_scrub -> resource
+  cost`, with the quantitative target of the control-resource price of
+  information deficit.
+
+### EXP-001 Scientific Review 02 accepted; bounded result candidate prepared
+
+- Scientific Reviewer commit
+  `d76850f47826cc5c9cf693fae8b581b3dcc2542e` was reviewed as the direct child
+  of accepted Orchestrator disposition
+  `222e9303724c1e0f8f0986c1d4e53c754c47cf23`.
+- `EXP-001-SCIENTIFIC-REREVIEW-02` returns `PASS`: `MAJOR-01` and
+  `MINOR-01…04` are closed, no new issue or scientific-output regression is
+  reported, and the complete fourteen-condition validity domain is preserved.
+- PI accepts the Orchestrator disposition and closes the EXP-001 corrective
+  gate.
+- A bounded first-result candidate is stored as
+  `docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md`.
+  It is not registered as `RES-001` and requires explicit PI wording approval.
+- The candidate states only the exact identified set for the reviewed synthetic
+  four-word class and the conditional action change/invariance observed on the
+  declared experimental grid. It preserves the separation of representation,
+  Monte Carlo and decision-rule uncertainty and creates no retrospective
+  `HYP-xxx`.
+- No new experiment is authorized before PI disposition of the candidate.

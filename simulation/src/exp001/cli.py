@@ -50,14 +50,13 @@ def main(argv: list[str] | None = None) -> int:
     write_csv(args.output_dir / "joint-discriminator-decisions.csv", joint["decision_rows"])
     write_json(args.output_dir / "bounded-invariants.json", bounded["invariants"])
     write_json(args.output_dir / "joint-discriminator-invariants.json", joint["invariants"])
+    write_json(args.output_dir / "analytical-validation.json", joint["analytical_validation"])
 
     environment = collect_environment()
     write_json(args.output_dir / "environment.json", environment)
 
     source_files = sorted((args.repo_root / "simulation" / "src" / "exp001").glob("*.py"))
-    source_files.extend(
-        sorted((args.repo_root / "simulation" / "tests").glob("test_*.py"))
-    )
+    source_files.extend(sorted((args.repo_root / "simulation" / "tests").glob("*.py")))
     source_files.append(args.repo_root / "simulation" / "run_exp001.py")
     source_hashes = {
         str(path.relative_to(args.repo_root)).replace("\\", "/"): sha256_file(path)
@@ -73,8 +72,8 @@ def main(argv: list[str] | None = None) -> int:
     }
     run_summary = {
         "experiment_id": "EXP-001",
-        "task_id": "EXP-001-IMPLEMENTATION-01",
-        "status": "bounded_synthetic_execution_complete_awaiting_orchestrator_and_scientific_review",
+        "task_id": "EXP-001-VALIDATION-REPAIR-01",
+        "status": "validation_repair_execution_complete_awaiting_bounded_scientific_re_review",
         "is_res_record": False,
         "scientific_scope": "tested synthetic representations and declared domains only",
         "bounded_rows": len(bounded["aggregate_rows"]),
@@ -98,6 +97,21 @@ def main(argv: list[str] | None = None) -> int:
                 "no_other_model_parameter_differs",
             )
         ),
+        "analytical_preconditions_validated": all(
+            value is True
+            for key, value in joint["analytical_validation"][
+                "configuration_and_runtime_preconditions"
+            ].items()
+            if key.endswith("validated_before_analytical_output")
+        ),
+        "analytical_precision_linked_checks_passed": (
+            joint["analytical_validation"]["analytical_statistical_check"][
+                "checks_passed"
+            ]
+            == 8
+        ),
+        "confidence_interval_scope": "pointwise_not_simultaneous",
+        "ci_based_decision_scope": "pointwise_interval_based_not_selection_valid",
         "runtime": {
             "wall_seconds_total": wall_seconds,
             "process_peak_memory_bytes": peak_bytes,
@@ -120,9 +134,9 @@ def main(argv: list[str] | None = None) -> int:
     test_command = f'& "{exact_python}" -m unittest discover -s simulation/tests -v'
     manifest = {
         "experiment_id": "EXP-001",
-        "task_id": "EXP-001-IMPLEMENTATION-01",
+        "task_id": "EXP-001-VALIDATION-REPAIR-01",
         "executed_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
-        "base_commit": "e1e7b93cc72b7b295a8298560adf2cd507d7256b",
+        "base_commit": "0ca6f13481ea0818c59395ead26db2f58cb6188e",
         "git_head_at_precommit_execution": git_head(args.repo_root),
         "implementation_commit": (
             "SELF: resolve the commit containing this manifest with "
@@ -154,6 +168,14 @@ def main(argv: list[str] | None = None) -> int:
             "joint-discriminator-delta.csv",
             "joint-discriminator-decisions.csv",
         ],
+        "validation_outputs": ["analytical-validation.json", "test-report.md"],
+        "statistical_interpretation": {
+            "wilson_intervals": "pointwise_95_percent_not_simultaneous",
+            "paired_normal_intervals": "pointwise_95_percent_not_simultaneous",
+            "ci_based_decisions": (
+                "pointwise_interval_based_not_a_simultaneous_selection_guarantee"
+            ),
+        },
         "validity": {
             "implementation_checks_passed": True,
             "orchestrator_accepted": False,

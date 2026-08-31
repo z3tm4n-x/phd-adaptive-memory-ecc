@@ -183,12 +183,15 @@ The Chen/IHP/Potsdam publication-family identity is resolved at discovery level.
 
 **REGISTERED / DEC-003.** [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) compares a declared hierarchy of device-error representations through the same `W`, ECC state and scrub semantics, then measures change in `F_A` and a parameterized restoration decision. Its `L0 → L1` full-topology-to-joint-post-`W` interface must be lossless for the declared state update; marginal/scalar reductions have no pre-assigned result direction. Unknown numerical reliability requirements are swept and not invented.
 
-**CURRENT VALIDATION STATUS.** Scientific Review 01 accepts the bounded J-A/J-B
-identified-set derivation but returns `REVISE`: the production L0 and L1 checks
-share mapping/state-transition code and do not independently establish the
-required lossless interface. An independent test-only L0 oracle and bounded
-re-review are required before any `RES-xxx`. This validation repair does not
-revise DEC-001…003 or the experiment question.
+**CURRENT VALIDATION STATUS.** Scientific Review 02 returns `PASS` after the
+independent-oracle repair and confirms closure of `MAJOR-01` and
+`MINOR-01…04` without scientific-output regression. The PI accepts this
+disposition and closes the EXP-001 corrective gate. A bounded result candidate
+is prepared in
+[`DRAFT-RES-001`](result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+with the complete fourteen-condition validity domain. It is not a registered
+`RES-xxx` until explicit PI wording approval. No retrospective `HYP-xxx` is
+created, and DEC-001…003 and the experiment question remain unchanged.
 
 ## 14. Критерии воспроизводимости
 

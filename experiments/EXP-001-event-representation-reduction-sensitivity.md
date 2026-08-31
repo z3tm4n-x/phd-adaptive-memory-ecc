@@ -1,6 +1,6 @@
 # EXP-001 — Event-representation reduction sensitivity
 
-**Status:** `IMPLEMENTED / SCIENTIFIC REVIEW REVISE / VALIDATION REPAIR REQUIRED`<br>
+**Status:** `IMPLEMENTED / INDEPENDENT VALIDATION PASS / SCIENTIFIC REVIEW PASS / PROMOTION CANDIDATE`<br>
 **Registered:** 2026-08-28<br>
 **Authorization:** [DEC-003](../docs/decisions/DEC-003-rq002-bounded-model-family-and-exp001.md)
 
@@ -36,6 +36,17 @@ and L1 checks share mapping and state-transition code and therefore do not
 independently validate L0→L1 losslessness. Any `RES-xxx` remains blocked pending
 the bounded validation repair and passing re-review; see
 `experiments/manifests/EXP-001/orchestrator-disposition.md`.
+
+Validation-repair commit
+`072b70adabb9827ee59c94b2b3d5cf044b25cdf9` is accepted at Orchestrator level.
+It adds the independent test-only oracle, full-trace and mutation checks and the
+four required MINOR corrections without changing the fixed configurations or
+seven scientific output files. The bounded
+[Scientific Review 02](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
+returns `PASS`, closes all five original findings and reports no new issue or
+scientific regression. The corrective gate is closed. The prepared
+[`DRAFT-RES-001`](../docs/result_candidates/DRAFT-RES-001-exp001-four-word-identified-set.md)
+still requires explicit PI wording approval before permanent registration.
 
 ## Configuration
 
@@ -179,10 +190,62 @@ The accepted review has recommendation `REVISE`, no `CRITICAL` finding, one
   aggregate/decision/delta/invariant files must remain unchanged unless a
   documented defect is found.
 
+The analytical endpoint/identified-set statement and every exact decision made
+from it require all fourteen conditions below; citing only a subset is not an
+admissible EXP-001 result statement:
+
+1. one declared domain contains exactly four logical words with common
+   correction capability `t_c=1`;
+2. the reporting window starts from a clean state;
+3. every parent event impacts exactly two distinct words;
+4. every selected word receives exactly one fresh erroneous bit, with no repeat
+   hit, toggle-clear or within-interval repair;
+5. every word has one-event impact probability exactly `1/2`;
+6. one fixed pair-probability vector is used and pair marks are i.i.d. across
+   parent events;
+7. pair marks are independent of HPP event times and counts;
+8. parent arrivals form a simple HPP, giving Poisson counts and independent
+   increments;
+9. parent impacts are simultaneous and `E_cap` is evaluated after the complete
+   mark;
+10. scrubbing is instantaneous, periodic, synchronous and clears the complete
+    erroneous-bit state;
+11. `t0` is aligned with the scrub phase and the reporting duration is exactly
+    `k*T_scrub`, with no partial leading or trailing interval;
+12. deterministic-boundary events have probability zero under the HPP and the
+    implementation ordering is `scrub_then_event`;
+13. `F_A` is the DEC-001 reporting-window first-passage event, so an exceedance
+    remains counted even if a later scrub clears the state;
+14. every logical word has enough unused bit positions for the generated
+    fresh-bit construction over the finite run.
+
+The Wilson and paired-normal intervals in the fixed tables are pointwise 95%
+intervals. Decisions based on their upper endpoints are pointwise-interval-based
+decisions, not simultaneous or selection-valid confidence guarantees over the
+period/model grid.
+
 After those checks, a Scientific Reviewer re-review is limited to closure of the
 listed findings and regression detection. No target-device extension, new
 literature cycle, retroactive `HYP-xxx` or redesigned scientific question is part
 of this repair.
+
+## Scientific Review 02 disposition
+
+Scientific Review 02 returns `PASS`:
+
+- `MAJOR-01` and `MINOR-01…04` are closed;
+- no new `CRITICAL`, `MAJOR`, `MINOR` or required `OPTIONAL` issue is present;
+- the analytical parameterization, `1/6 <= q <= 1/2`, exact `S(q,m)` and
+  reporting-window `F_A`, endpoint attainment and identified-set interpretation
+  remain accepted only within the complete fourteen-condition domain above;
+- representation uncertainty, Monte Carlo estimation uncertainty and
+  confidence-rule conservatism remain separate;
+- a narrow first result is scientifically admissible but not automatically
+  promoted.
+
+The PI accepts the review disposition and closes the EXP-001 corrective gate.
+No permanent `RES-001` exists until the bounded candidate wording is explicitly
+approved.
 
 ## Output locations
 
