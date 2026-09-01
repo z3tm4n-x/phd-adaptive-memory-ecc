@@ -144,6 +144,8 @@ Lifecycle transitions are recorded only by the role/PI authority defined by the 
 
 New permanent artefacts should begin with a small YAML front-matter block so repository checks can read identity, relations, and controlled lifecycle fields without parsing arbitrary prose. Existing untouched artefacts are legacy-compatible and do **not** require immediate migration. When a permanent artefact is materially revised, adding metadata is expected when practical.
 
+Metadata v1 deliberately uses only a small YAML-compatible subset: top-level `key: scalar` fields and top-level scalar lists. Nested mappings, anchors, tags, multiline scalar syntax, and other general YAML features are outside v1; keep structured scientific detail in the Markdown body rather than expanding the metadata grammar.
+
 Metadata **mirrors an already authorized state; it does not create that state**. A validator or editor must not change scientific disposition merely to make metadata pass. If metadata conflicts with the accepted body/disposition, surface the inconsistency for the responsible role rather than applying a generic precedence rule.
 
 Common minimum form:
