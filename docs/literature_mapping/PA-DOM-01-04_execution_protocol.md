@@ -88,27 +88,38 @@ event information and its error is known.
 
 ### PA-DOM-04 — Zebrev / Galimov
 
-Reuse [PAPER-005](../paper_cards/PAPER-005-zebrev-2017-arxiv-v2.md) and its exact
-arXiv `1704.07271v2` source first. Do not order a new deep read merely because
-another related source exists.
+**Disposition:** `EVIDENCE ACQUISITION CLOSED BY CANONICAL REUSE / MATRIX ROW
+PENDING / NO NEW FULL-TEXT ANALYSIS`.
 
-Extract specifically:
+Reuse the accepted
+[PAPER-005](../paper_cards/PAPER-005-zebrev-2017-arxiv-v2.md) and accepted
+[RQ-002 initial evidence synthesis](../evidence_synthesis/RQ-002_initial_evidence_synthesis.md).
+They already control the exact arXiv `1704.07271v2` text and companion RADECS
+version and contain the required extraction for reduced inputs, recovered
+multiplicity/partial rates, assumptions, uncertainty, mapping level,
+parent-event provenance, accumulation, Eqs. (2)–(19), and non-equivalence to
+DEC-001 `F_A(t0,T;μ_t0)`.
 
-- reduced experimental inputs;
-- recovered multiplicity distributions or partial event rates;
-- additional model assumptions required for recovery;
-- uncertainty and declared validity domain;
-- whether reconstruction is physical-multiplicity-level, topology-level or
-  post-`W`;
-- what `W`/interleaving assumptions remain external;
-- whether the reconstructed output is sufficient for DEC-001-compatible
-  `F_A(t0,T;μ_t0)` or only supplies an upstream rate/mark input;
-- exact comparator role for the future information-state lattice.
+The only authorized PA-DOM-04 action is traceable reuse into the common matrix:
 
-If PAPER-005 does not contain the named reduced-data reconstruction proposition,
-return one exact missing proposition and, if identifiable from its references,
-one exact source identity. Do not start another search or Paper Card without
-Orchestrator disposition.
+- identify the available input and recovered/assumed multiplicity information;
+- retain the accepted uncertainty and validity limitations;
+- state that the partition is before `W`, while the later word conversion uses
+  a scalar one-half assumption rather than an explicit map;
+- keep `R_syst` and the low-`beta` one-interval illustration distinct from
+  DEC-001 `F_A` and its reporting-window/initial-state contract;
+- record `t_s` as an exogenous scrub interval in an illustrative approximation,
+  not an adaptive action selected by a decision law;
+- record that no DEC-001 reliability guarantee or RQ-005 resource-cost object
+  is provided in the accepted artefact scope;
+- identify PAPER-005 as an upstream reconstruction/rate comparator, not an
+  integrated RQ-007 control baseline.
+
+Return to the primary text only if one exact proposition required by the common
+columns is genuinely absent from both accepted artefacts. Name that proposition
+and obtain Orchestrator authorization before opening the source. Do not order a
+new Paper Card, full-text analysis or related source merely to restate accepted
+content.
 
 ## Source-control sequence
 
@@ -121,8 +132,10 @@ Orchestrator disposition.
    it, return `ACCESS BLOCKER` with the controlled identity; do not broaden the
    search.
 4. Paper Analyst performs full-text or explicitly limited targeted extraction
-   only after source identity and access are controlled.
-5. PA-DOM-04 may proceed from accepted PAPER-005 without another discovery pass.
+   for PA-DOM-01…03 only after source identity and access are controlled.
+5. PA-DOM-04 is closed at the evidence-acquisition layer by canonical reuse.
+   Populate its matrix row from accepted PAPER-005 and the accepted RQ-002
+   synthesis; do not perform another discovery or full-text pass.
 
 ## Common comparison columns
 
@@ -162,6 +175,12 @@ Create one draft cross-work-unit extraction matrix:
 
 `docs/evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md`
 
+For PA-DOM-04, populate the row only by citing and condensing the accepted
+PAPER-005 and RQ-002 synthesis. Mark the unit `CLOSED BY CANONICAL REUSE` when
+all common columns are represented. A field not provided by the accepted
+artefact scope must remain explicitly absent/unknown rather than trigger a new
+analysis automatically.
+
 Create a full DRAFT Paper Card only for a source whose complete method is both
 decision-enabling and cannot be traced adequately in the targeted matrix. Do
 not assign `PAPER-xxx`, `CLM-xxx` or `EVD-xxx`.
@@ -181,6 +200,10 @@ The matrix must end with:
 Stop when all four work units have controlled identities/full-text scope and the
 common matrix can state which baseline, reconstruction and control features the
 next design must not reclaim generically.
+
+For PA-DOM-04, the controlled source/full-text requirement is already satisfied.
+Its remaining completion condition is only a traceable common-matrix row and an
+explicit `CLOSED BY CANONICAL REUSE` disposition.
 
 A new source is allowed only for one named proposition blocking:
 

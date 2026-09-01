@@ -499,3 +499,17 @@
   authorized. After closure, the Orchestrator must synthesize baselines/design
   boundaries, set minimum RQ-003/RQ-004/RQ-005 interfaces and present the next
   experiment/derivation for separate PI approval.
+
+### PA-DOM-04 corrected to canonical reuse
+
+- PI identified that a proposed repeat full-text extraction for PA-DOM-04 would
+  duplicate accepted PAPER-005 and the accepted RQ-002 initial synthesis.
+- Orchestrator comparison against the nine PA-DOM common columns confirmed that
+  the accepted artefacts already contain traceable coverage. Evidence
+  acquisition for PA-DOM-04 is therefore `CLOSED BY CANONICAL REUSE`.
+- The only remaining PA-DOM-04 action is to populate the RQ-007 comparison-matrix
+  row from those canonical artefacts. Primary-text return requires one exact
+  missing proposition and prior Orchestrator authorization.
+- PA-DOM-01…03 source control remains unchanged. No new Paper Card, full-text
+  analysis, source search or permanent research identifier is authorized by
+  this correction.

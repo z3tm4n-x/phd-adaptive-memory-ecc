@@ -36,6 +36,11 @@ authorized. A new quantitative EXP remains blocked until the closure is
 complete, the minimum RQ-003/RQ-004/RQ-005 interfaces are stated, and a
 reproducible experiment/derivation specification receives separate PI approval.
 
+PA-DOM-04 requires no repeated deep read: its evidence-acquisition part is
+closed by canonical reuse of accepted PAPER-005 and the accepted RQ-002
+synthesis. Only traceable population of the common RQ-007 comparison-matrix row
+remains. PA-DOM-01…03 retain the identity-control/full-text sequence.
+
 ## Active Research Questions
 
 - RQ-001 — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; DEC-001 unchanged.
@@ -126,19 +131,21 @@ inferred. The STO controlled-edition status remains `AMBIGUOUS`.
 
 ## Additional domestic prior-art signals
 
-PI-provided signals concerning the Meshchanov/Lushnikov/Krasnikov, Podzolko,
-Boruzdina/Ulanova/Chumakov and Zebrev/Galimov lines remain `UNVERIFIED`. The
-accepted next gate defines four bounded work units, common extraction columns
-and a hard stop rule. They must become controlled comparison points before the next
-quantitative experiment, but they do not authorize a broad literature cycle or
+PI-provided signals concerning the Meshchanov/Lushnikov/Krasnikov, Podzolko and
+Boruzdina/Ulanova/Chumakov lines remain `UNVERIFIED` pending PA-DOM-01…03 source
+control. The Zebrev/Galimov comparator is already controlled by accepted
+PAPER-005 and the accepted RQ-002 synthesis; PA-DOM-04 is reuse-only and needs no
+new full-text work. The accepted gate retains four comparison units, common
+columns and a hard stop rule. It does not authorize a broad literature cycle or
 alter RES-001.
 
 ## Updated scientific roadmap
 
 1. **Control the minimum prior-art boundary.** Execute only the
    [PA-DOM-01…04 protocol](literature_mapping/PA-DOM-01-04_execution_protocol.md) and,
-   before the next quantitative experiment, convert only the named domestic lines that
-   can change the next method/gate into bounded full-text comparison points.
+   before the next quantitative experiment, source-control PA-DOM-01…03 and
+   reuse accepted canonical evidence for PA-DOM-04. Do not repeat a completed
+   full-text extraction.
 2. **Synthesize occupied methods and assumptions.** State which methods,
    reconstruction assumptions, observables and control rules become mandatory
    baselines or design boundaries.
