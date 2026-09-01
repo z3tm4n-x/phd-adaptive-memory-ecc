@@ -450,3 +450,29 @@
 - No new EXP may start until PI approves/revises this gate, the bounded prior-art
   closure is complete, the integrated RQ is registered and a reproducible
   experiment/derivation is preregistered.
+
+## 2026-09-01
+
+### Information-deficit control-price gate accepted; exact RQ-007 candidate prepared
+
+- PI returned `ACCEPT` for the next quantitative gate, its physically defensible
+  domain, four-unit domestic prior-art closure and hard stop rule.
+- The accepted chain is `I → M(I) → F_A value/set/bound → admissible actions →
+  T_scrub → measurable resource-cost vector`; the gate remains pre-execution and
+  does not authorize `EXP-002`.
+- PI clarified three distinct objects: control-resource price caused by a more
+  conservative action under wider `M(I)`; separate cost of acquiring, storing
+  and processing richer information; and an optional later net balance. A
+  difference in `T_scrub` resource cost is not automatically the full “value of
+  information.”
+- The exact integrated adaptive-control question and boundaries are prepared as
+  `docs/question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md`.
+  Proposed permanent ID `RQ-007` is not allocated or registered by the draft.
+- The candidate keeps `T_scrub` as the primary decision, consumes rather than
+  duplicates RQ-002…RQ-006, requires conditional action-invariance semantics,
+  and excludes invented requirements, arbitrary scalarization, generic
+  adaptive-scrubbing novelty and automatic full-topology assumptions.
+- The immediate gate is PI `ACCEPT / REVISE / REJECT` of the exact RQ-007 card.
+  The PA-DOM-01…04 closure is authorized but not launched and is held until
+  RQ-007 disposition. A new experiment remains blocked until registration,
+  closure, preregistration and separate PI approval of its specification.

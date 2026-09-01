@@ -15,4 +15,4 @@ Research gate:
 
 | Artefact | Status | Purpose |
 |---|---|---|
-| [Information-deficit control-price gate](NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) | DRAFT / PI APPROVAL REQUIRED | Define the smallest next quantitative stage after RES-001 without launching a new EXP |
+| [Information-deficit control-price gate](NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) | ACCEPTED / PRE-EXECUTION / NO NEW EXP AUTHORIZED | Define the smallest next quantitative stage after RES-001; RQ-007, bounded prior-art closure and a separately approved EXP/derivation remain required |

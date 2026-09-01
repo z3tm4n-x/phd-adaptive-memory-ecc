@@ -1,23 +1,25 @@
 # Next quantitative gate — Information-deficit price for restoration control
 
-**Status:** `DRAFT / PI APPROVAL REQUIRED / NO NEW EXP AUTHORIZED`<br>
+**Status:** `ACCEPTED / PRE-EXECUTION / NO NEW EXP AUTHORIZED`<br>
 **Artefact class:** directional research gate; not `RQ`, `DEC`, `HYP`, `EXP`,
 `RES` or novelty claim<br>
 **Prepared:** 2026-08-31<br>
+**PI accepted:** 2026-09-01<br>
 **Accepted basis:** `DEC-001…003`; `RES-001`; RQ-002; RQ-006; accepted Russian
 normative extraction; accepted Chen S3/S4/S5 Evidence Audit<br>
 **Downstream interfaces:** RQ-003; RQ-004; RQ-005; prepared integrated
 adaptive-control RQ candidate
 
-## Gate statement for PI approval
+## Accepted gate statement
 
 Следующий количественный этап должен построить и проверить единый интерфейс
 
 `available information I → admissible model set M(I) → exact value / identified set / bound for F_A → admissible restoration actions → selected T_scrub → measurable resource-cost vector`.
 
 Цель — не повторно показать, что зависимость «может иметь значение», а
-количественно определить **цену дефицита информации для управляющего решения**
-в физически обоснованном классе событий и отображений `W`.
+количественно определить **ресурсную цену дефицита информации для
+управляющего решения** в физически обоснованном классе событий и отображений
+`W`.
 
 Этап должен установить области параметров, в которых переход от более богатого
 информационного состояния к редуцированному:
@@ -27,16 +29,17 @@ adaptive-control RQ candidate
 3. изменяет `F_A`, но не изменяет управляющее действие;
 4. сужает множество робастно допустимых действий или вынуждает более частое
    восстановление;
-5. имеет измеримую векторную ресурсную цену.
+5. имеет измеримое покомпонентное ресурсное следствие для управления.
 
 Ни знак, ни наличие эффекта заранее не предполагаются.
 
 ## Scientific object
 
-### Local candidate notation
+### Accepted gate-level notation
 
-Обозначения этого раздела являются локальными для draft gate и не становятся
-canonical terminology до PI approval.
+Обозначения этого раздела являются принятыми working objects данного gate и
+зарегистрированы в `docs/terminology.md`. Они не выбирают конкретную модель,
+источник наблюдений, численный reliability requirement или scalar objective.
 
 - `I` — явно объявленный информационный набор: сохранённые наблюдения/сводки,
   provenance, разрешение, uncertainty и отсутствующие компоненты.
@@ -72,14 +75,28 @@ error вычисления не входит в `M(I)` и отчётно отд�
 Из равенства выбранных действий в одной точке не следует общая ненужность
 информации. Допустимый результат — только область условной инвариантности.
 
-### Information-deficit price
+### Three distinct resource objects
 
-Ресурсная цена редукции информации определяется как разность или множество
+**Control-resource price of information deficit** — разность или множество
 разностей между затратами действия, допустимого робастно при `I_coarse`, и
-действия при `I_rich`, при одном и том же underlying physical model/domain.
+действия при `I_rich`, при одном и том же underlying physical model/domain,
+action set, horizon, reliability constraint и selection rule. Это прежде всего
+ресурсное следствие более консервативного режима восстановления, вызванного
+более широким `M(I_coarse)`.
 
-До решения RQ-005 цена сообщается покомпонентно или как Pareto shift. Она не
-сворачивается в произвольную weighted sum. Отдельно сообщаются случаи:
+**Information-acquisition cost** — отдельные аппаратные, энергетические,
+вычислительные и коммуникационные затраты получения, хранения и обработки
+более богатого `I`. Они относятся к RQ-004/RQ-005 interface и не включаются
+молча в control-resource price.
+
+**Net information balance** — возможное последующее сопоставление первых двух
+объектов при совместимых единицах, области применения и явно принятом правиле
+агрегирования. До такого решения разность затрат на `T_scrub` не называется
+полной «ценностью информации».
+
+До решения RQ-005 все три объекта сообщаются раздельно и покомпонентно либо как
+Pareto shift. Они не сворачиваются в произвольную weighted sum. Для
+control-resource price отдельно сообщаются случаи:
 
 - оба информационных состояния дают одно действие;
 - coarse information требует более консервативного действия;
@@ -132,8 +149,9 @@ Target-device calibration полезна, но не блокирует перв�
 The prepared integrated adaptive-control RQ consumes these interfaces. Because
 the proposed next stage maps risk information to a restoration action, its
 permanent registration is required before execution begins. Proposed ID:
-`RQ-007`; exact wording remains the candidate in `docs/research_backlog.md` and
-requires explicit PI acceptance.
+`RQ-007`; its exact wording and boundaries are stored in
+`docs/question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md`
+and require explicit PI acceptance before permanent registration.
 
 ## Minimum bounded prior-art closure before a new EXP
 
@@ -178,17 +196,18 @@ not blockers for this bounded execution. They become mandatory before a
 literature-level integrated-control novelty claim, or earlier only if the
 chosen decision law directly instantiates that literature.
 
-## Candidate quantitative work package after PI approval
+## Candidate quantitative work package after RQ-007 and prior-art gates
 
-No `EXP-002` is registered by this document. After PI approval and prior-art
-closure, a proposed experiment/derivation must include:
+No `EXP-002` is registered by this document. After permanent RQ-007 registration
+and prior-art closure, a proposed experiment/derivation must include:
 
 1. a nested information-state lattice derived from common underlying models;
 2. explicit construction of each `M(I)`;
 3. exact, bounded or independently validated numerical evaluation of `R_I(u)`;
 4. a candidate `T_scrub` set and declared exact/robust decision rule;
 5. an experiment-local RQ-005-compatible resource vector;
-6. a parameter-domain map of action invariance/change and resource price;
+6. a parameter-domain map of action invariance/change and control-resource
+   price, with information-acquisition cost reported separately when present;
 7. a fixed/non-adaptive conservative baseline;
 8. falsification criteria and a Scientific Reviewer gate before any `RES-002`.
 
@@ -209,7 +228,9 @@ The next quantitative gate is complete only when all of the following exist:
   numerical estimation error and decision-rule conservatism;
 - robust and non-robust feasible action sets;
 - conditional action-invariance/change regions;
-- component-wise resource-price results;
+- component-wise control-resource-price results;
+- separately reported information-acquisition cost and, only if justified, net
+  information balance;
 - explicit null/infeasible outcomes rather than a forced positive effect;
 - reproducible code/configuration/manifests and adversarial scientific review.
 
@@ -220,11 +241,11 @@ novelty claim follows automatically.
 
 ### Blockers before execution
 
-1. PI approval/revision/rejection of this gate.
-2. Permanent registration of the integrated adaptive-control RQ before the
+1. PI acceptance and permanent registration of the exact integrated
+   adaptive-control RQ before the
    risk-to-action method is implemented.
-3. Completion of PA-DOM-01…04 to the stop rule above.
-4. A preregistered experiment/derivation with declared interface slices,
+2. Completion of PA-DOM-01…04 to the stop rule above.
+3. A preregistered experiment/derivation with declared interface slices,
    uncertainty objects, action rule, resource vector and falsification criteria.
 
 ### Not blockers for the first bounded execution
@@ -237,16 +258,13 @@ novelty claim follows automatically.
 - broad inspection/maintenance literature mapping;
 - a novelty decision.
 
-## PI decision requested
+## PI disposition and next approval gate
 
-PI should choose:
+PI disposition: `ACCEPT` on 2026-09-01. This accepts the scientific direction,
+the four-unit prior-art closure and its stop rule. It does **not** authorize a
+new `EXP`.
 
-- `ACCEPT` — approve this as the next quantitative gate and authorize the
-  bounded prior-art closure plus preparation, but not execution, of the next
-  `EXP` specification;
-- `REVISE` — return exact scope, interface, prior-art or completion-criterion
-  corrections;
-- `REJECT` — replace this gate before further quantitative work.
-
-Separate explicit approval of the exact integrated adaptive-control RQ wording
-and permanent ID remains required before execution.
+The immediate PI gate is `ACCEPT / REVISE / REJECT` of the exact proposed
+RQ-007 wording and boundaries. After RQ-007 registration and completion of the
+bounded prior-art closure, the proposed experiment/derivation must be presented
+for separate PI approval before execution.

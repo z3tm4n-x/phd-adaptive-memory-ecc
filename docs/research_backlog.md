@@ -74,10 +74,10 @@ missing proposition.
 
 ## Pending bounded branch — domestic prior-art signals
 
-**Status:** `BOUNDED CLOSURE DEFINED / PI GATE APPROVAL REQUIRED / NOT A BROAD SEARCH`<br>
+**Status:** `AUTHORIZED / NOT LAUNCHED / HELD FOR RQ-007 DISPOSITION / NOT A BROAD SEARCH`<br>
 **Protocol location:** [next quantitative gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)<br>
-**Trigger:** PI approval of the gate, then identity-controlled verification before
-the next quantitative EXP or any corresponding method distinction.
+**Trigger:** permanent RQ-007 registration, then identity-controlled verification
+before the next experiment/derivation specification is presented for PI approval.
 
 PI reported four potentially load-bearing domestic lines:
 
@@ -110,21 +110,20 @@ interpretation or an exact comparison used in the next EXP specification.
 
 ## Prepared candidate — integrated adaptive-control RQ
 
-**Status:** `PREPARED / PROPOSED RQ-007 / NOT REGISTERED / PI ACCEPTANCE REQUIRED`<br>
+**Status:** `EXACT CARD PREPARED / PROPOSED RQ-007 / NOT REGISTERED / PI DISPOSITION REQUIRED`<br>
+**Exact candidate:** [DRAFT-RQ-007 — Integrated adaptive restoration control](question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md)<br>
 **Inputs:** DEC-001; DEC-002; RQ-002…RQ-006; accepted Chen Evidence Audit<br>
 **Candidate lineage:** integrates the former C-RQ-08, C-RQ-09 and C-RQ-11
 control/action/optimization lines without consuming a permanent RQ identifier.
 
-**Proposed question:**
+**Proposed question (summary; exact wording is controlled by the candidate card):**
 
-> Как построить метод адаптивного выбора периода или режима восстановления
-> ECC-защищённой SRAM, который по доступной online-информации формирует
-> DEC-001-compatible оценку или множество допустимых значений
-> `F_A(t0,T;μ_t0)`, явно распространяет неопределённость представления событий,
-> `W`, модели и наблюдений, и выбирает реализуемое управляющее действие при
-> заданном reliability constraint с отдельным измеримым resource-cost vector;
-> при каких условиях выбранное действие является инвариантным или робастным к
-> этой неопределённости?
+> Как построить и обосновать метод адаптивного выбора `T_scrub`, который
+> преобразует доступную к моменту решения информацию `I` в совместимое
+> множество моделей `M(I)`, затем в DEC-001-compatible value/set/bound для
+> `F_A`, робастно допустимые действия и выбранный период, и устанавливает
+> условные области изменения/инвариантности решения и его покомпонентные
+> ресурсные последствия?
 
 The candidate consumes rather than duplicates:
 
@@ -136,9 +135,11 @@ The candidate consumes rather than duplicates:
 
 It excludes generic “radiation prediction → dynamic scrub frequency,” arbitrary
 scalarization, an invented numerical reliability threshold, and a novelty claim.
-Permanent registration is required before the next risk-to-action quantitative
-execution because that work is control-method development. The gate draft does
-not consume `RQ-007`; PI must explicitly accept its exact wording and ID.
+The exact card separately defines the control-resource price of information
+deficit, information-acquisition cost and any later net balance. Permanent
+registration is required before the next risk-to-action quantitative execution
+because that work is control-method development. The accepted gate does not
+consume `RQ-007`; PI must explicitly accept its exact wording, boundaries and ID.
 
 ## Pending — future classical control prior-art threat
 
@@ -149,7 +150,7 @@ Purpose: compare adaptive SRAM restoration with classical inspection/checking/ma
 
 ## Active — post-RES-001 throughput gate
 
-**Status:** `RES-001 REGISTERED / NEXT QUANTITATIVE GATE AWAITING PI APPROVAL`
+**Status:** `RES-001 REGISTERED / NEXT QUANTITATIVE GATE ACCEPTED / RQ-007 DISPOSITION ACTIVE`
 
 [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is complete and promoted only within [RES-001](../results/RES-001-exp001-four-word-identified-set.md).
 
@@ -169,18 +170,18 @@ exact four-word identified set only with the complete validity domain accepted
 by the Reviewer and PI. It separates representation uncertainty, Monte Carlo
 uncertainty and confidence-rule conservatism and is not a source summary.
 
-The prepared
+The accepted
 [next quantitative gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)
 maps available information `I` to an admissible model class `M(I)`, then to an
 exact value/set/bound for `F_A`, admissible restoration actions, selected
 `T_scrub` and resource cost. It must quantify controlled error, a safe-reduction
-domain or the resource price of robust conservatism over physically defensible
+domain or the control-resource price of robust conservatism over physically defensible
 `W`/topology/event/observation inputs rather than repeat the synthetic existence
 discriminator.
 
-No new experiment may start before PI approval of that gate, permanent
-integrated-control RQ registration, completion of its four-unit prior-art stop
-rule and preregistration of the experiment/derivation.
+No new experiment may start before permanent integrated-control RQ registration,
+completion of the four-unit prior-art stop rule, preregistration of the
+experiment/derivation and separate PI approval of that specification.
 
 ## Future specialty and implementation alignment
 
