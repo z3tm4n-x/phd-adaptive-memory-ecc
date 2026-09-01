@@ -1,25 +1,20 @@
-# DRAFT-RQ-007 — Integrated adaptive restoration control
+# RQ-007 — Integrated information-aware adaptive restoration control
 
-**Proposed permanent ID:** `RQ-007` — not allocated or registered<br>
-**Status:** `PI DISPOSITION REQUIRED / NOT REGISTERED / NO EXP AUTHORIZED`<br>
-**Prepared:** 2026-09-01<br>
-**Candidate lineage:** integration of the former C-RQ-08, C-RQ-09 and C-RQ-11
-control/action/optimization lines; no permanent identifier is consumed by this
-draft<br>
+**Title:** Integrated information-aware adaptive control of the restoration
+period for ECC-protected SRAM<br>
+**Source candidate:** `DRAFT-RQ-007`; integration of the former C-RQ-08,
+C-RQ-09 and C-RQ-11 control/action/optimization lines<br>
+**Status:** `OPEN / ACTIVE / PA-DOM-01…04 AUTHORIZED / NO NEW EXP AUTHORIZED`<br>
+**Registered:** 2026-09-01 by explicit PI `ACCEPT`<br>
 **Accepted basis:** DEC-001…003; DEC-002 causal architecture; RQ-002…RQ-006;
 RES-001; accepted information-deficit control-price gate; accepted bounded
 Russian normative and Chen S3/S4/S5 analyses
 
-This card is the exact candidate presented for PI `ACCEPT / REVISE / REJECT`.
-It is not an accepted Research Question, project answer, method selection,
-experiment authorization or novelty claim.
+Permanent registration accepts the Research Question, boundaries and answer
+criteria below. It does not select a method, authorize an experiment or create a
+hypothesis, result or novelty claim.
 
-## Proposed title
-
-**Integrated information-aware adaptive control of the restoration period for
-ECC-protected SRAM**
-
-## Proposed Research Question
+## Research Question
 
 Как построить и обосновать метод адаптивного выбора периода восстановления
 `T_scrub` ECC-защищённой SRAM, который по доступной к моменту решения информации
@@ -247,17 +242,19 @@ shows that:
 - the physically defensible domain cannot be defined without a specific target
   device/PMI/architecture supplied by PI.
 
-## Next action after PI disposition
+## Next action
 
-- `ACCEPT`: register the question as
-  `docs/questions/RQ-007-integrated-adaptive-restoration-control.md`, update the
-  Research Questions registry, then execute only the accepted PA-DOM-01…04
-  closure. After closure, present the exact next experiment/derivation for
-  separate PI approval before execution.
-- `REVISE`: change only the named scope, dependency or criterion and resubmit;
-  do not register RQ-007 or launch a new EXP.
-- `REJECT`: retain no permanent RQ identifier and return to the accepted gate
-  for an alternative decomposition.
+Execute only the accepted bounded
+[PA-DOM-01…04 prior-art closure](../literature_mapping/PA-DOM-01-04_execution_protocol.md)
+under the hard stop rule in the information-deficit control-price gate. After closure, the
+Orchestrator must:
+
+1. synthesize which occupied methods, assumptions and reconstruction/control
+   features become mandatory baselines or design boundaries;
+2. determine the minimum RQ-003/RQ-004/RQ-005 interface decisions needed for
+   the next own quantitative stage;
+3. present the exact next experiment/derivation specification for separate PI
+   `ACCEPT / REVISE / REJECT` before any calculation or implementation.
 
 ## Related artefacts
 
@@ -266,18 +263,14 @@ shows that:
 - Result: RES-001.
 - Gate: `NEXT-QUANTITATIVE-GATE-information-deficit-control-price` — accepted.
 - Prior art: Russian normative baseline; Chen S3/S4/S5 Evidence Audit;
-  PA-DOM-01…04 pending.
-- HYP/EXP/RES: no new identifier created by this candidate.
+  PA-DOM-01…04 active bounded closure.
+- HYP/EXP/RES: no new identifier created by RQ-007 registration.
 
-## Candidate answer
+## Answer
 
 `UNKNOWN`.
 
 ## Confidence
 
-Not assessed; this is a question formulation, not an evidence conclusion.
-
-## PI decision requested
-
-Choose one: `ACCEPT / REVISE / REJECT` for the exact proposed wording,
-boundaries and permanent ID `RQ-007`.
+Not assessed; registration is a question formulation, not an evidence
+conclusion.

@@ -1,6 +1,6 @@
 # Research Specification
 
-**Version:** 0.7-draft<br>
+**Version:** 0.8-draft<br>
 **Status:** WORKING DRAFT
 
 > Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
@@ -48,7 +48,7 @@
 
 ## 6. Исследовательские вопросы
 
-Зарегистрированы `RQ-001…RQ-006`; актуальные статусы фиксируются в `docs/current_status.md`.
+Зарегистрированы `RQ-001…RQ-007`; актуальные статусы фиксируются в `docs/current_status.md`.
 
 - `RQ-001` — reliability event, metric and horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; working contract recorded as `DEC-001`.
 - `RQ-002` — minimum adequate radiation-induced SRAM error model — Evidence Audit accepted with limitation; bounded `RES-001` registered, general adequacy remains open.
@@ -56,10 +56,13 @@
 - `RQ-004` — online observables for adaptation.
 - `RQ-005` — measurable resource-cost vector without premature scalarization.
 - `RQ-006` — physical-to-logical mapping `W`, interleaving and information-sufficiency conditions — permanently promoted from C-RQ-05; bounded `RES-001` registered, physically defensible generalization remains open.
+- `RQ-007` — integrated information-aware adaptive selection of `T_scrub` from
+  available information, compatible model sets and DEC-001 risk objects, with
+  conditional action invariance and separated resource consequences.
 
 RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
 
-The C-RQ-05 escalation is resolved by permanent RQ-006. RQ-002 and RQ-006 are coupled through EXP-001 but retain separate responsibilities. An integrated adaptive-control question is prepared as exact `DRAFT-RQ-007`; it must consume the outputs of RQ-002…RQ-006 rather than duplicate or replace them and is not registered before explicit PI acceptance.
+The C-RQ-05 escalation is resolved by permanent RQ-006. RQ-002 and RQ-006 are coupled through EXP-001 but retain separate responsibilities. RQ-007 is permanently registered after explicit PI `ACCEPT`; it consumes the outputs of RQ-002…RQ-006 without duplicating, absorbing or closing them.
 
 ## 7. Исходные допущения
 
@@ -209,10 +212,9 @@ created, and DEC-001…003 and the experiment question remain unchanged.
 defines the progression `I → M(I) → F_A value/set/bound → admissible actions →
 T_scrub → measurable resource cost`. It requires a physically defensible
 event/`W` domain, bounded domestic prior-art closure, minimum RQ-003/RQ-004/RQ-005
-interfaces, permanent integrated-control RQ registration and separate PI
-approval of a preregistered experiment/derivation before a new EXP. The exact
-proposed RQ-007 wording is under PI disposition and no permanent ID is consumed
-by its candidate card.
+interfaces, PA-DOM-01…04 closure and separate PI approval of a preregistered
+experiment/derivation before a new EXP. RQ-007 is permanently registered, but
+its registration does not authorize execution.
 
 ## 14. Критерии воспроизводимости
 
@@ -285,3 +287,4 @@ method novelty.
 - `0.5-draft` — принят RQ-002 Evidence Audit with CAND-04 limitation; C-RQ-05 permanently promoted to RQ-006; DEC-003 registered the comparison reference/representation ladder and authorized EXP-001; three-document Russian normative source set and Chen identity record received bounded follow-up protocols without a broad search or novelty claim.
 - `0.6-draft` — EXP-001 independent validation and Scientific Review 02 passed; PI-approved `RES-001` registered with its complete fourteen-condition domain; Chen S3/S4/S5 bounded audit incorporated; the next information-deficit control-price gate prepared without authorizing a new EXP, RQ, HYP or novelty claim.
 - `0.7-draft` — PI accepted the information-deficit control-price gate and its four-unit prior-art stop rule; the gate now separates control-resource price, information-acquisition cost and any later net balance; exact `DRAFT-RQ-007` wording/boundaries were prepared for a separate PI disposition without registering an RQ or authorizing a new experiment.
+- `0.8-draft` — PI accepted and permanently registered RQ-007 with its exact wording, boundaries and answer criteria; PA-DOM-01…04 became the active bounded prior-art gate, while a new EXP/HYP, novelty claim and search expansion remain unauthorized.

@@ -72,10 +72,10 @@ RQ-006 is answerable when:
 
 [Scientific Review 02](../scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md)
 returns `PASS`; the PI-approved bounded result is registered as
-[`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md). Obtain PI
-disposition of the
-[exact RQ-007 candidate](../question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md),
-then complete only the accepted gate's named domestic prior-art closure and
+[`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md). Use the
+permanently registered
+[RQ-007](RQ-007-integrated-adaptive-restoration-control.md), complete only the
+accepted gate's named domestic prior-art closure and
 construct source-constrained `W`/event information states before proposing a
 new experiment. Activate the
 minimum RQ-003 interface so the next stage can replace experiment-local `t_c`
@@ -90,6 +90,7 @@ sufficiency claim follows from RES-001.
 - Experiment: EXP-001 — `COMPLETE / SCIENTIFIC REVIEW PASS`.
 - Result: [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md) — accepted only in its fourteen-condition synthetic domain.
 - Next gate: [information-deficit control price](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — accepted / pre-execution / no new EXP authorized.
+- Integrated control: [RQ-007](RQ-007-integrated-adaptive-restoration-control.md) — registered / open.
 - HYP: none registered.
 
 ## Answer

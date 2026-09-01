@@ -144,7 +144,7 @@ eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-sea
 - Model decision: [`DEC-003`](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md).
 - Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — COMPLETE / SCIENTIFIC REVIEW PASS.
 - Result: [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md) — accepted bounded four-word identified-set result.
-- Next gate: [`Information-deficit control-price gate`](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — PI accepted / pre-execution; RQ-007 registration, bounded prior-art closure and separate EXP/derivation approval remain required.
+- Next gate: [`Information-deficit control-price gate`](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — PI accepted; RQ-007 is permanently registered, while bounded prior-art closure, minimum RQ-003/RQ-004/RQ-005 interface decisions and separate EXP/derivation approval remain required.
 - CLM/EVD/HYP: no new permanent artefact created at this gate.
 
 ## Answer

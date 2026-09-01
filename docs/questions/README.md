@@ -31,6 +31,7 @@ RQ-xxx-short-title.md
 | [RQ-004](RQ-004-online-observables-for-adaptation.md) | C-RQ-06 | Online observables for adaptation | OPEN | [Protocol](../literature_mapping/RQ-004_protocol.md) |
 | [RQ-005](RQ-005-resource-cost-vector.md) | C-RQ-10 | Measurable resource-cost vector | OPEN | [Protocol](../literature_mapping/RQ-005_protocol.md) |
 | [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / RES-001 REGISTERED / NEXT GATE ACCEPTED | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [RES-001](../../results/RES-001-exp001-four-word-identified-set.md) |
+| [RQ-007](RQ-007-integrated-adaptive-restoration-control.md) | DRAFT-RQ-007; C-RQ-08/09/11 lineage | Integrated information-aware adaptive restoration control | OPEN / ACTIVE / PA-DOM-01…04 AUTHORIZED / NO NEW EXP | [Accepted gate and bounded closure](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) |
 
 ## Dependency-aware execution order
 
@@ -40,6 +41,9 @@ RQ-xxx-short-title.md
 4. RQ-003 — active interface: обосновать parameterized ECC state/capability and decoder outcomes before observation/control integration.
 5. RQ-004 — define external/internal information channels and observation uncertainty needed by the next control-price gate.
 6. RQ-005 — define the measurable resource-cost vector used to price information deficit without arbitrary scalarization.
+7. RQ-007 — integrate the minimum RQ-002…RQ-006 interfaces into the declared
+   `I → M(I) → F_A → admissible actions → T_scrub → resource` method after the
+   bounded PA-DOM-01…04 closure.
 
 RQ-005 literature mapping может получить предварительный parallel pass, но окончательное решение зависит от RQ-001, RQ-003 и RQ-004.
 
@@ -61,9 +65,9 @@ RQ-002 mapping, decisive deep reads, synthesis and Evidence Audit 01 are accepte
 EXP-001 passed independent validation and Scientific Review 02 and is complete.
 Its PI-approved bounded result is registered as
 [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md). The active
-gate is PI disposition of the
-[exact proposed RQ-007 wording](../question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md)
-under the accepted
-[next quantitative gate](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md).
+gate is the PA-DOM-01…04 bounded prior-art closure under the accepted
+[next quantitative gate](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)
+and permanently registered
+[RQ-007](RQ-007-integrated-adaptive-restoration-control.md).
 RQ-003 is the next ECC interface; RQ-002 and RQ-006 remain open, and no final
 minimum model or target-specific answer is asserted.

@@ -84,7 +84,7 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **Infrastructure setup:** завершён.
 - **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
 - **AI-agent operating model:** настроен в `docs/agents/`.
-- **Research Specification:** `v0.7-draft`.
+- **Research Specification:** `v0.8-draft`.
 - **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
 - **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
 - **Integrated roadmap:** `DEC-002` — radiation-test evidence, mapping `W`, ECC-level reliability and adaptive restoration control are one causal method; representation loss and observability are evaluated explicitly.
@@ -94,6 +94,7 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 - **First own result:** [`RES-001`](results/RES-001-exp001-four-word-identified-set.md) — permanent, PI-approved and limited to the reviewed synthetic four-word/fixed-cardinality class.
 - **EXP-001:** complete; independent validation and Scientific Review 02 passed; promoted only within `RES-001`.
 - **Accepted next gate:** [`Information-deficit price for restoration control`](docs/research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — pre-execution; it separates control-resource price, information-acquisition cost and any later net balance.
-- **Active PI gate:** disposition of the [exact proposed RQ-007 wording and boundaries](docs/question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md); no permanent ID is consumed yet.
+- **Integrated control RQ:** [RQ-007](docs/questions/RQ-007-integrated-adaptive-restoration-control.md) permanently registered after explicit PI `ACCEPT`.
+- **Active gate:** bounded PA-DOM-01…04 prior-art closure under the accepted hard stop rule; no broad search.
 - **Next scientific interfaces:** RQ-003 parameterized ECC state/capability, RQ-004 observation/uncertainty and RQ-005 measurable resource vector.
-- **Constraint:** no new experiment before RQ-007 registration, bounded domestic prior-art closure, preregistration and separate PI approval of the experiment/derivation; no retroactive hypothesis or broad literature cycle without a named blocker.
+- **Constraint:** no new experiment before PA-DOM-01…04 closure, minimum RQ-003/RQ-004/RQ-005 interface decisions, preregistration and separate PI approval of the experiment/derivation; no retroactive hypothesis or broad literature cycle without a named blocker.
