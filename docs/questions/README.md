@@ -26,11 +26,11 @@ RQ-xxx-short-title.md
 | Permanent ID | Source candidate | Short title | Status | Mapping protocol |
 |---|---|---|---|---|
 | [RQ-001](RQ-001-reliability-event-metric-horizon.md) | C-RQ-01 | Reliability event, metric and horizon | PARTIALLY ANSWERED / OPEN DEPENDENCIES | [Protocol](../literature_mapping/RQ-001_protocol.md) |
-| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / RES-001 REGISTERED / NEXT GATE DRAFTED | [Protocol](../literature_mapping/RQ-002_protocol.md) |
+| [RQ-002](RQ-002-sram-radiation-error-model.md) | C-RQ-02 | SRAM radiation error model | OPEN / RES-001 REGISTERED / NEXT GATE ACCEPTED | [Protocol](../literature_mapping/RQ-002_protocol.md) |
 | [RQ-003](RQ-003-ecc-abstraction-baseline-class.md) | C-RQ-04 | ECC abstraction and baseline class | OPEN / ACTIVE NEXT INTERFACE | [Protocol](../literature_mapping/RQ-003_protocol.md) |
 | [RQ-004](RQ-004-online-observables-for-adaptation.md) | C-RQ-06 | Online observables for adaptation | OPEN | [Protocol](../literature_mapping/RQ-004_protocol.md) |
 | [RQ-005](RQ-005-resource-cost-vector.md) | C-RQ-10 | Measurable resource-cost vector | OPEN | [Protocol](../literature_mapping/RQ-005_protocol.md) |
-| [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / RES-001 REGISTERED / NEXT GATE DRAFTED | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [RES-001](../../results/RES-001-exp001-four-word-identified-set.md) |
+| [RQ-006](RQ-006-physical-logical-mapping-information-sufficiency.md) | C-RQ-05 | Physical-to-logical mapping and information sufficiency | OPEN / RES-001 REGISTERED / NEXT GATE ACCEPTED | [Normative protocol](../normative_baseline/NORMATIVE-BASELINE-01_protocol.md) + [RES-001](../../results/RES-001-exp001-four-word-identified-set.md) |
 
 ## Dependency-aware execution order
 
@@ -62,6 +62,8 @@ EXP-001 passed independent validation and Scientific Review 02 and is complete.
 Its PI-approved bounded result is registered as
 [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md). The active
 gate is PI disposition of the
+[exact proposed RQ-007 wording](../question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md)
+under the accepted
 [next quantitative gate](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md).
 RQ-003 is the next ECC interface; RQ-002 and RQ-006 remain open, and no final
 minimum model or target-specific answer is asserted.

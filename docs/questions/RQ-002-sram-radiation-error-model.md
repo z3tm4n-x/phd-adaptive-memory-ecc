@@ -2,7 +2,7 @@
 
 **Title:** Minimum adequate model of radiation-induced errors in SRAM<br>
 **Source candidate:** C-RQ-02<br>
-**Status:** `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE DRAFTED`<br>
+**Status:** `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE ACCEPTED`<br>
 **Registered:** 2026-08-26<br>
 **Gate opened:** 2026-08-27 by [DEC-001](../decisions/DEC-001-rq001-reliability-contract.md)
 
@@ -144,7 +144,7 @@ eLibrary remains `DEFERRED / UNKNOWN COVERAGE`. No second general literature-sea
 - Model decision: [`DEC-003`](../decisions/DEC-003-rq002-bounded-model-family-and-exp001.md).
 - Experiment: [`EXP-001`](../../experiments/EXP-001-event-representation-reduction-sensitivity.md) — COMPLETE / SCIENTIFIC REVIEW PASS.
 - Result: [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md) — accepted bounded four-word identified-set result.
-- Next gate draft: [`Information-deficit control-price gate`](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — PI approval required; no new EXP authorized.
+- Next gate: [`Information-deficit control-price gate`](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — PI accepted / pre-execution; RQ-007 registration, bounded prior-art closure and separate EXP/derivation approval remain required.
 - CLM/EVD/HYP: no new permanent artefact created at this gate.
 
 ## Answer

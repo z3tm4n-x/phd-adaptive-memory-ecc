@@ -2,7 +2,7 @@
 
 **Title:** Physical-to-logical mapping and information sufficiency for ECC-aware SRAM reliability<br>
 **Source candidate:** C-RQ-05<br>
-**Status:** `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE DRAFTED`<br>
+**Status:** `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE ACCEPTED`<br>
 **Registered:** 2026-08-28 by explicit PI approval<br>
 **Escalation basis:** accepted RQ-002 synthesis and [Evidence Audit 01](../evidence_audits/RQ-002_EVIDENCE_AUDIT_01.md)
 
@@ -74,9 +74,10 @@ RQ-006 is answerable when:
 returns `PASS`; the PI-approved bounded result is registered as
 [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md). Obtain PI
 disposition of the
-[next quantitative gate](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md),
-complete only its named domestic prior-art closure, and construct source-
-constrained `W`/event information states before a new experiment. Activate the
+[exact RQ-007 candidate](../question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md),
+then complete only the accepted gate's named domestic prior-art closure and
+construct source-constrained `W`/event information states before proposing a
+new experiment. Activate the
 minimum RQ-003 interface so the next stage can replace experiment-local `t_c`
 with an explicit parameterized ECC state/capability contract. No target-specific
 sufficiency claim follows from RES-001.
@@ -88,7 +89,7 @@ sufficiency claim follows from RES-001.
 - Evidence: PAPER-004…008; RQ-002 Evidence Audit 01.
 - Experiment: EXP-001 — `COMPLETE / SCIENTIFIC REVIEW PASS`.
 - Result: [`RES-001`](../../results/RES-001-exp001-four-word-identified-set.md) — accepted only in its fourteen-condition synthetic domain.
-- Next gate: [information-deficit control price](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — draft / PI approval required.
+- Next gate: [information-deficit control price](../research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — accepted / pre-execution / no new EXP authorized.
 - HYP: none registered.
 
 ## Answer

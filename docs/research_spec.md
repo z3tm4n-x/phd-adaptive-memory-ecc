@@ -1,6 +1,6 @@
 # Research Specification
 
-**Version:** 0.6-draft<br>
+**Version:** 0.7-draft<br>
 **Status:** WORKING DRAFT
 
 > Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
@@ -59,7 +59,7 @@
 
 RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
 
-The C-RQ-05 escalation is resolved by permanent RQ-006. RQ-002 and RQ-006 are coupled through EXP-001 but retain separate responsibilities. An integrated adaptive-control RQ must later consume the outputs of RQ-002…RQ-006 rather than duplicate or replace them.
+The C-RQ-05 escalation is resolved by permanent RQ-006. RQ-002 and RQ-006 are coupled through EXP-001 but retain separate responsibilities. An integrated adaptive-control question is prepared as exact `DRAFT-RQ-007`; it must consume the outputs of RQ-002…RQ-006 rather than duplicate or replace them and is not registered before explicit PI acceptance.
 
 ## 7. Исходные допущения
 
@@ -149,6 +149,18 @@ COSRAD рассматривается как источник предметно
 
 Предпочтительно рассматривать многокритериальную картину до тех пор, пока не будет обоснован основной скалярный критерий или набор ограничений.
 
+**ACCEPTED GATE-LEVEL DISTINCTION.** Следующий quantitative gate разделяет:
+
+1. control-resource price of information deficit — ресурсное следствие более
+   консервативного управляющего действия при более широком `M(I)`;
+2. information-acquisition cost — отдельные затраты получения, хранения и
+   обработки более богатой информации;
+3. возможный net information balance, допустимый только после объявления
+   совместимых units и aggregation/decision rule.
+
+Разность затрат на выбранные `T_scrub` не называется автоматически полной
+«ценностью информации». Все компоненты остаются раздельными до решения RQ-005.
+
 ## 11. Базовые методы для сравнения
 
 **TBD.** Baselines должны быть выбраны после обзора литературы. Минимально предполагается наличие fixed/non-adaptive strategy для сравнения с предлагаемым adaptive approach.
@@ -192,12 +204,15 @@ registered with its complete fourteen-condition validity domain. EXP-001 is
 complete and promoted only within that result. No retrospective `HYP-xxx` is
 created, and DEC-001…003 and the experiment question remain unchanged.
 
-**NEXT GATE / NOT YET AUTHORIZED FOR EXECUTION.** The draft
+**ACCEPTED NEXT GATE / NOT AUTHORIZED FOR EXECUTION.** The
 [information-deficit control-price gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)
-proposes the progression `I → M(I) → F_A value/set/bound → admissible actions →
+defines the progression `I → M(I) → F_A value/set/bound → admissible actions →
 T_scrub → measurable resource cost`. It requires a physically defensible
 event/`W` domain, bounded domestic prior-art closure, minimum RQ-003/RQ-004/RQ-005
-interfaces and permanent integrated-control RQ registration before a new EXP.
+interfaces, permanent integrated-control RQ registration and separate PI
+approval of a preregistered experiment/derivation before a new EXP. The exact
+proposed RQ-007 wording is under PI disposition and no permanent ID is consumed
+by its candidate card.
 
 ## 14. Критерии воспроизводимости
 
@@ -269,3 +284,4 @@ method novelty.
 - `0.4-draft` — зарегистрирован DEC-002: сохранён adaptive-control core и введена единая evidence-to-decision architecture; information sufficiency отделена от experimental identifiability; Russian normative practice and layered closest-prior-art threats made explicit baselines; RQ-002 advanced to bounded model-selection after accepted Paper Cards and synthesis.
 - `0.5-draft` — принят RQ-002 Evidence Audit with CAND-04 limitation; C-RQ-05 permanently promoted to RQ-006; DEC-003 registered the comparison reference/representation ladder and authorized EXP-001; three-document Russian normative source set and Chen identity record received bounded follow-up protocols without a broad search or novelty claim.
 - `0.6-draft` — EXP-001 independent validation and Scientific Review 02 passed; PI-approved `RES-001` registered with its complete fourteen-condition domain; Chen S3/S4/S5 bounded audit incorporated; the next information-deficit control-price gate prepared without authorizing a new EXP, RQ, HYP or novelty claim.
+- `0.7-draft` — PI accepted the information-deficit control-price gate and its four-unit prior-art stop rule; the gate now separates control-resource price, information-acquisition cost and any later net balance; exact `DRAFT-RQ-007` wording/boundaries were prepared for a separate PI disposition without registering an RQ or authorizing a new experiment.

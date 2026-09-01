@@ -18,7 +18,8 @@
 - `evidence_synthesis/` — cross-paper matrices and bounded evidence syntheses for active RQ;
 - `evidence_audits/` — accepted claim-level audits and their Orchestrator dispositions;
 - `scientific_reviews/` — accepted adversarial review records and their dispositions;
-- `research_gates/` — directional gate drafts that define a bounded transition to future work without registering an `RQ`, `HYP`, `DEC`, `EXP` or `RES`;
+- `research_gates/` — directional gate artefacts that define a bounded transition to future work without registering an `RQ`, `HYP`, `DEC`, `EXP` or `RES`;
+- `question_candidates/` — exact Research Question cards awaiting explicit PI disposition; candidates do not consume permanent IDs;
 - `questions/` — canonical registry of permanent Research Questions;
 - `literature_mapping/` — targeted protocols, discovery reports and bounded source-identity records;
 - `normative_baseline/` — provenance manifests and bounded extraction protocols/matrices for applicable normative practice; source PDFs are not stored here.
