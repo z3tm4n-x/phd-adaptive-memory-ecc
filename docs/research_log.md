@@ -476,3 +476,26 @@
   The PA-DOM-01…04 closure is authorized but not launched and is held until
   RQ-007 disposition. A new experiment remains blocked until registration,
   closure, preregistration and separate PI approval of its specification.
+
+### RQ-007 permanently registered; PA-DOM-01…04 gate activated
+
+- PI issued `ACCEPT` for the exact DRAFT-RQ-007 title, Research Question,
+  boundaries, dependencies and answer criteria and authorized permanent
+  `RQ-007` registration.
+- The candidate was promoted to
+  `docs/questions/RQ-007-integrated-adaptive-restoration-control.md`; the
+  candidate registry now retains only the promotion history, not a competing
+  scientific copy.
+- RQ-007 remains `OPEN`: it integrates but does not absorb or close RQ-002…RQ-006,
+  and it does not select a stochastic model, estimator, law, scalar objective,
+  numerical requirement or novelty statement.
+- The accepted three-way separation remains mandatory: control-resource price
+  of information deficit; separate information-acquisition/storage/processing
+  cost; optional later net balance under an explicit compatible rule.
+- The bounded PA-DOM-01…04 closure is now the active gate. Its execution
+  protocol fixes source-control sequencing, four work units, common comparison
+  columns, canonical draft outputs and the accepted hard stop rule.
+- No `HYP-xxx`, new `EXP-xxx`, calculation or literature expansion is
+  authorized. After closure, the Orchestrator must synthesize baselines/design
+  boundaries, set minimum RQ-003/RQ-004/RQ-005 interfaces and present the next
+  experiment/derivation for separate PI approval.

@@ -7,8 +7,8 @@
 **PI accepted:** 2026-09-01<br>
 **Accepted basis:** `DEC-001…003`; `RES-001`; RQ-002; RQ-006; accepted Russian
 normative extraction; accepted Chen S3/S4/S5 Evidence Audit<br>
-**Downstream interfaces:** RQ-003; RQ-004; RQ-005; prepared integrated
-adaptive-control RQ candidate
+**Downstream interfaces:** RQ-003; RQ-004; RQ-005; permanently registered
+[RQ-007](../questions/RQ-007-integrated-adaptive-restoration-control.md)
 
 ## Accepted gate statement
 
@@ -146,12 +146,10 @@ Target-device calibration полезна, но не блокирует перв�
 | RQ-004 | At least one external/test-derived and one internal-memory information channel represented with latency/uncertainty semantics, or an explicit reason one is deferred | Final estimator or sensor choice |
 | RQ-005 | Experiment-local measurable cost vector with units/proxies and measurement stage | Scalar objective, arbitrary weights or final platform limits |
 
-The prepared integrated adaptive-control RQ consumes these interfaces. Because
-the proposed next stage maps risk information to a restoration action, its
-permanent registration is required before execution begins. Proposed ID:
-`RQ-007`; its exact wording and boundaries are stored in
-`docs/question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md`
-and require explicit PI acceptance before permanent registration.
+The permanently registered
+[RQ-007](../questions/RQ-007-integrated-adaptive-restoration-control.md)
+consumes these interfaces. It does not close the upstream RQ and does not
+authorize an experiment by itself.
 
 ## Minimum bounded prior-art closure before a new EXP
 
@@ -196,10 +194,10 @@ not blockers for this bounded execution. They become mandatory before a
 literature-level integrated-control novelty claim, or earlier only if the
 chosen decision law directly instantiates that literature.
 
-## Candidate quantitative work package after RQ-007 and prior-art gates
+## Candidate quantitative work package after prior-art and interface gates
 
-No `EXP-002` is registered by this document. After permanent RQ-007 registration
-and prior-art closure, a proposed experiment/derivation must include:
+No `EXP-002` is registered by this document. After prior-art closure and the
+minimum interface decisions, a proposed experiment/derivation must include:
 
 1. a nested information-state lattice derived from common underlying models;
 2. explicit construction of each `M(I)`;
@@ -241,12 +239,11 @@ novelty claim follows automatically.
 
 ### Blockers before execution
 
-1. PI acceptance and permanent registration of the exact integrated
-   adaptive-control RQ before the
-   risk-to-action method is implemented.
-2. Completion of PA-DOM-01…04 to the stop rule above.
+1. Completion of PA-DOM-01…04 to the stop rule above.
+2. Minimum RQ-003/RQ-004/RQ-005 interface decisions required by RQ-007.
 3. A preregistered experiment/derivation with declared interface slices,
    uncertainty objects, action rule, resource vector and falsification criteria.
+4. Separate PI `ACCEPT` of that experiment/derivation before execution.
 
 ### Not blockers for the first bounded execution
 
@@ -264,7 +261,8 @@ PI disposition: `ACCEPT` on 2026-09-01. This accepts the scientific direction,
 the four-unit prior-art closure and its stop rule. It does **not** authorize a
 new `EXP`.
 
-The immediate PI gate is `ACCEPT / REVISE / REJECT` of the exact proposed
-RQ-007 wording and boundaries. After RQ-007 registration and completion of the
-bounded prior-art closure, the proposed experiment/derivation must be presented
-for separate PI approval before execution.
+PI issued `ACCEPT` for the exact RQ-007 wording, boundaries and permanent ID on
+2026-09-01. The active gate is completion of PA-DOM-01…04 under the hard stop
+rule, followed by baseline/interface synthesis. The proposed
+experiment/derivation must then be presented for separate PI approval before
+execution.

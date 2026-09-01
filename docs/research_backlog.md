@@ -74,10 +74,12 @@ missing proposition.
 
 ## Pending bounded branch — domestic prior-art signals
 
-**Status:** `AUTHORIZED / NOT LAUNCHED / HELD FOR RQ-007 DISPOSITION / NOT A BROAD SEARCH`<br>
-**Protocol location:** [next quantitative gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)<br>
-**Trigger:** permanent RQ-007 registration, then identity-controlled verification
-before the next experiment/derivation specification is presented for PI approval.
+**Status:** `AUTHORIZED / ACTIVE HANDOFF GATE / NOT A BROAD SEARCH`<br>
+**Controlling gate:** [next quantitative gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)<br>
+**Execution protocol:** [PA-DOM-01…04](literature_mapping/PA-DOM-01-04_execution_protocol.md)<br>
+**Trigger reached:** [RQ-007](questions/RQ-007-integrated-adaptive-restoration-control.md)
+registered; perform identity-controlled verification before the next
+experiment/derivation specification is presented for PI approval.
 
 PI reported four potentially load-bearing domestic lines:
 
@@ -108,15 +110,15 @@ controlled. A new source requires one named proposition blocking model-set
 definition, physical plausibility, baseline reproduction, validity/bound
 interpretation or an exact comparison used in the next EXP specification.
 
-## Prepared candidate — integrated adaptive-control RQ
+## Registered — integrated adaptive-control RQ
 
-**Status:** `EXACT CARD PREPARED / PROPOSED RQ-007 / NOT REGISTERED / PI DISPOSITION REQUIRED`<br>
-**Exact candidate:** [DRAFT-RQ-007 — Integrated adaptive restoration control](question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md)<br>
+**Status:** `PI ACCEPT / RQ-007 PERMANENTLY REGISTERED / OPEN`<br>
+**Canonical card:** [RQ-007 — Integrated information-aware adaptive restoration control](questions/RQ-007-integrated-adaptive-restoration-control.md)<br>
 **Inputs:** DEC-001; DEC-002; RQ-002…RQ-006; accepted Chen Evidence Audit<br>
 **Candidate lineage:** integrates the former C-RQ-08, C-RQ-09 and C-RQ-11
 control/action/optimization lines without consuming a permanent RQ identifier.
 
-**Proposed question (summary; exact wording is controlled by the candidate card):**
+**Question summary; exact wording is controlled by the permanent card:**
 
 > Как построить и обосновать метод адаптивного выбора `T_scrub`, который
 > преобразует доступную к моменту решения информацию `I` в совместимое
@@ -125,7 +127,7 @@ control/action/optimization lines without consuming a permanent RQ identifier.
 > условные области изменения/инвариантности решения и его покомпонентные
 > ресурсные последствия?
 
-The candidate consumes rather than duplicates:
+RQ-007 consumes rather than duplicates:
 
 - RQ-002 arrival/event/state representation;
 - RQ-006 mapping and information-sufficiency/bound conditions;
@@ -135,11 +137,11 @@ The candidate consumes rather than duplicates:
 
 It excludes generic “radiation prediction → dynamic scrub frequency,” arbitrary
 scalarization, an invented numerical reliability threshold, and a novelty claim.
-The exact card separately defines the control-resource price of information
+The permanent card separately defines the control-resource price of information
 deficit, information-acquisition cost and any later net balance. Permanent
-registration is required before the next risk-to-action quantitative execution
-because that work is control-method development. The accepted gate does not
-consume `RQ-007`; PI must explicitly accept its exact wording, boundaries and ID.
+registration is complete, but the accepted gate still blocks quantitative
+execution until PA-DOM-01…04, the minimum interface decisions and separate PI
+approval of the experiment/derivation specification are complete.
 
 ## Pending — future classical control prior-art threat
 
@@ -150,7 +152,7 @@ Purpose: compare adaptive SRAM restoration with classical inspection/checking/ma
 
 ## Active — post-RES-001 throughput gate
 
-**Status:** `RES-001 REGISTERED / NEXT QUANTITATIVE GATE ACCEPTED / RQ-007 DISPOSITION ACTIVE`
+**Status:** `RES-001 AND RQ-007 REGISTERED / PA-DOM-01…04 ACTIVE / NO NEW EXP`
 
 [DEC-003](decisions/DEC-003-rq002-bounded-model-family-and-exp001.md) selected a bounded comparison architecture rather than a universal stochastic family. [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) is complete and promoted only within [RES-001](../results/RES-001-exp001-four-word-identified-set.md).
 
@@ -179,8 +181,8 @@ domain or the control-resource price of robust conservatism over physically defe
 `W`/topology/event/observation inputs rather than repeat the synthetic existence
 discriminator.
 
-No new experiment may start before permanent integrated-control RQ registration,
-completion of the four-unit prior-art stop rule, preregistration of the
+No new experiment may start before completion of the four-unit prior-art stop
+rule, minimum RQ-003/RQ-004/RQ-005 interface decisions, preregistration of the
 experiment/derivation and separate PI approval of that specification.
 
 ## Future specialty and implementation alignment

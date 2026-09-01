@@ -57,14 +57,15 @@ RQ считается отвеченным, когда:
 
 ## Next action
 
-Обновить `docs/literature_mapping/RQ-003_protocol.md` по DEC-001/DEC-002,
-accepted RQ-002/RQ-006 evidence and the Chen audit, then issue one bounded
-Literature Scout mapping. The protocol must not require eLibrary while that
-database is unavailable to Literature Scout.
+After PA-DOM-01…04 closure, define the minimum parameterized ECC
+state/capability and labelled decoder-outcome contract required by RQ-007 and
+the proposed experiment/derivation. Launch a bounded RQ-003 evidence task only
+for a named proposition that remains blocking; do not require eLibrary while it
+is unavailable to Literature Scout.
 
 ## Related PAPER/CLM/HYP/EXP
 
-- Related RQ: RQ-001, RQ-002.
+- Related RQ: RQ-001, RQ-002, RQ-007.
 - Required dependency: RQ-006.
 - PAPER/CLM/EVD/HYP/EXP: TBD после targeted literature mapping.
 

@@ -27,13 +27,14 @@ The accepted transition is
 `I → M(I) → F_A value/set/bound → admissible actions → T_scrub → measurable resource cost`
 over a physically defensible event/`W` domain.
 
-The active PI gate is `ACCEPT / REVISE / REJECT` of the
-[exact proposed RQ-007 wording and boundaries](question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md).
-RQ-007 is not yet registered and no permanent identifier is consumed by the
-candidate card. No new experiment or broad literature cycle is authorized. A
-new quantitative EXP remains blocked until RQ-007 is accepted/registered, the
-named minimum prior-art closure is complete, and a reproducible
-experiment/derivation specification receives separate PI approval.
+PI has accepted and permanently registered
+[RQ-007](questions/RQ-007-integrated-adaptive-restoration-control.md) with its
+exact wording, boundaries and answer criteria. The active scientific gate is
+the authorized [PA-DOM-01…04 bounded prior-art closure](literature_mapping/PA-DOM-01-04_execution_protocol.md)
+under the accepted hard stop rule. No new experiment, hypothesis or broad literature cycle is
+authorized. A new quantitative EXP remains blocked until the closure is
+complete, the minimum RQ-003/RQ-004/RQ-005 interfaces are stated, and a
+reproducible experiment/derivation specification receives separate PI approval.
 
 ## Active Research Questions
 
@@ -49,13 +50,13 @@ experiment/derivation specification receives separate PI approval.
   vector without premature scalarization.
 - RQ-006 — `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE ACCEPTED`; owns `W`, topology, joint post-`W`
   impact and reduction-sufficiency/bound conditions.
+- RQ-007 — `OPEN / ACTIVE / PA-DOM-01…04 AUTHORIZED / NO NEW EXP`; owns the
+  integrated information/model-set → ECC-risk → adaptive `T_scrub` decision
+  interface and the conditional control-resource consequences.
 
-The future integrated adaptive-control question now has an
-[exact candidate card](question_candidates/DRAFT-RQ-007-integrated-adaptive-restoration-control.md)
-and backlog entry, but is not permanently registered. It requires explicit PI
-acceptance of its wording, boundaries and proposed ID before control-method
-development. Because the next stage maps risk information to a restoration
-action, its registration is a prerequisite for executing that stage.
+RQ-007 consumes but does not absorb or close RQ-002…RQ-006. Its registration
+does not select a stochastic model, estimator, control law, scalar objective or
+numerical reliability requirement, and it does not authorize execution.
 
 ## EXP-001 disposition
 
@@ -134,11 +135,13 @@ alter RES-001.
 
 ## Updated scientific roadmap
 
-1. **Obtain PI disposition of exact RQ-007.** Register it only after explicit
-   acceptance; no new EXP starts from the candidate card.
-2. **Control the minimum prior-art boundary.** After RQ-007 registration and
+1. **Control the minimum prior-art boundary.** Execute only the
+   [PA-DOM-01…04 protocol](literature_mapping/PA-DOM-01-04_execution_protocol.md) and,
    before the next quantitative experiment, convert only the named domestic lines that
    can change the next method/gate into bounded full-text comparison points.
+2. **Synthesize occupied methods and assumptions.** State which methods,
+   reconstruction assumptions, observables and control rules become mandatory
+   baselines or design boundaries.
 3. **Activate the minimum RQ-003 interface.** Define the minimum parameterized
    ECC state/capability and decoder-outcome contract consumed by reliability
    and observation layers.
@@ -188,8 +191,11 @@ full value of information.
 
 ## Genuine blockers and PI inputs
 
-The current blocking PI decision is acceptance/revision/rejection of the exact
-integrated adaptive-control RQ wording, boundaries and proposed ID.
+No PI decision is currently required for RQ-007. The blocking work before a new
+quantitative execution is PA-DOM-01…04 closure, synthesis of the resulting
+baselines/boundaries, and definition of the minimum RQ-003/RQ-004/RQ-005
+interfaces. The next PI decision will be `ACCEPT / REVISE / REJECT` of the exact
+experiment/derivation specification.
 
 Before target-like calibration, useful but non-blocking material remains:
 
@@ -199,11 +205,9 @@ Before target-like calibration, useful but non-blocking material remains:
 - target-like memory organization/interleaving information;
 - applicable current normative documents named in the accepted extraction.
 
-Permanent registration of the prepared integrated adaptive-control RQ will
-require explicit PI acceptance of its exact wording, boundaries and ID. A
-future genuine branch decision is required only if evidence forces a choice
-between incompatible observable channels, ECC semantics or target hardware
-domains.
+RQ-007 is permanently registered. A future genuine branch decision is required
+only if evidence forces a choice between incompatible observable channels, ECC
+semantics or target hardware domains.
 
 ## Active hypotheses and results
 

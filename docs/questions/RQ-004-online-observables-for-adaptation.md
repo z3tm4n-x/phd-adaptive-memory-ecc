@@ -60,11 +60,14 @@ RQ считается отвеченным, когда для каждого can
 
 ## Next action
 
-Выполнить `docs/literature_mapping/RQ-004_protocol.md` после первичного определения модели RQ-002 и ECC abstraction RQ-003.
+After PA-DOM-01…04 closure, declare the minimum external/test-derived and
+internal-memory information-channel interfaces, including latency and
+uncertainty, required by RQ-007 and the proposed experiment/derivation. Launch
+additional mapping only for a named blocking proposition.
 
 ## Related PAPER/CLM/HYP/EXP
 
-- Related RQ: RQ-002, RQ-003, RQ-005.
+- Related RQ: RQ-002, RQ-003, RQ-005, RQ-007.
 - PAPER/CLM/EVD/HYP/EXP: TBD после targeted literature mapping.
 
 ## Answer

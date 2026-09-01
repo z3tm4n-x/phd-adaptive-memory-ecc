@@ -15,4 +15,4 @@ Research gate:
 
 | Artefact | Status | Purpose |
 |---|---|---|
-| [Information-deficit control-price gate](NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) | ACCEPTED / PRE-EXECUTION / NO NEW EXP AUTHORIZED | Define the smallest next quantitative stage after RES-001; RQ-007, bounded prior-art closure and a separately approved EXP/derivation remain required |
+| [Information-deficit control-price gate](NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) | ACCEPTED / RQ-007 REGISTERED / PA-DOM-01…04 ACTIVE / NO NEW EXP AUTHORIZED | Define the smallest next quantitative stage after RES-001; bounded prior-art closure, minimum RQ-003/RQ-004/RQ-005 interface decisions and a separately approved EXP/derivation remain required |

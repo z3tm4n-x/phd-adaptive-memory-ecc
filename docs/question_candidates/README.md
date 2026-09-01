@@ -13,6 +13,12 @@ Candidate card:
   зависимостей и canonical registry;
 - после `REVISE` сохраняет candidate status до отдельного acceptance.
 
-| Candidate | Proposed ID | Status | Approval gate |
-|---|---|---|---|
-| [Integrated adaptive restoration control](DRAFT-RQ-007-integrated-adaptive-restoration-control.md) | RQ-007 (not allocated) | PI DISPOSITION REQUIRED / NOT REGISTERED | Exact wording and boundaries: ACCEPT / REVISE / REJECT |
+## Active candidates
+
+None.
+
+## Promotion history
+
+| Former candidate | Disposition | Permanent artefact |
+|---|---|---|
+| DRAFT-RQ-007 — Integrated adaptive restoration control | PI `ACCEPT`, 2026-09-01 | [RQ-007](../questions/RQ-007-integrated-adaptive-restoration-control.md) |

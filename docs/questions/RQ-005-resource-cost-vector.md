@@ -63,11 +63,14 @@ RQ считается отвеченным, когда:
 
 ## Next action
 
-Выполнить `docs/literature_mapping/RQ-005_protocol.md` после первичного mapping RQ-003 и RQ-004; до этого допускается только предварительная карта метрик.
+After PA-DOM-01…04 closure, declare the minimum experiment-local measurable
+resource vector required by RQ-007, keeping the control-resource price of
+information deficit separate from information-acquisition cost and any later
+net balance. Launch additional mapping only for a named blocking proposition.
 
 ## Related PAPER/CLM/HYP/EXP
 
-- Related RQ: RQ-001, RQ-003, RQ-004.
+- Related RQ: RQ-001, RQ-003, RQ-004, RQ-007.
 - Deferred candidate: C-RQ-11 — optimization formulation.
 - PAPER/CLM/EVD/HYP/EXP: TBD после targeted literature mapping.
 
