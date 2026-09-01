@@ -93,8 +93,11 @@ PI reported four potentially load-bearing domestic lines:
 4. Zebrev/Galimov and related work — recovery of multiplicity distributions or
    partial rates from reduced observations under additional assumptions.
 
-None of these statements is accepted evidence until exact source identities and
-the relevant primary text are checked. The bounded verification questions are:
+PA-DOM-01…03 remain unverified until exact source identities and the relevant
+primary texts are checked. PA-DOM-04 is already controlled by accepted
+PAPER-005 and the accepted RQ-002 synthesis; its evidence-acquisition layer is
+`CLOSED BY CANONICAL REUSE`, with only common-matrix population pending. The
+bounded comparison questions are:
 
 - what information is observed, retained, reconstructed or assumed;
 - whether the output is before or after physical-to-logical mapping `W`;
