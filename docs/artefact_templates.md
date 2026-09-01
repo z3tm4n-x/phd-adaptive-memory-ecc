@@ -1,6 +1,6 @@
 # Research Artefact Templates
 
-These are **formatting templates**, not the normative source of lifecycle semantics. Lifecycle definitions and allowed meanings are defined in [`research_lifecycle.md`](research_lifecycle.md). Templates may omit fields that are not applicable, but must not invent alternative meanings for controlled lifecycle/evidence terms.
+These are **formatting templates**, not the normative source of lifecycle semantics. Lifecycle definitions and allowed meanings are defined in [`research_lifecycle.md`](research_lifecycle.md). New permanent artefacts should also use the minimal YAML metadata block defined there; existing untouched legacy artefacts do not require immediate migration. Templates may omit fields that are not applicable, but must not invent alternative meanings for controlled lifecycle/evidence terms.
 
 ## RQ — Research Question
 

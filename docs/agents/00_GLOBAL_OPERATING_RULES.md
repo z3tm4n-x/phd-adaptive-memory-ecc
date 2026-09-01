@@ -172,6 +172,8 @@ GitHub / Zotero / Scite / local files / chat only
 
 Handoffs should transfer structured state, not long chat transcripts.
 
+For recurring specialized transitions, the minimum boundary-specific fields are centralized in [`HANDOFF_CONTRACTS.md`](HANDOFF_CONTRACTS.md). Those contracts supplement this base format and must not be copied into multiple role cards; task-specific handoffs may add requirements without changing role authority.
+
 ## 10. Artefact proportionality rule
 
 Do not create a research artefact merely because a template exists.

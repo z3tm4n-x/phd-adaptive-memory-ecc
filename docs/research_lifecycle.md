@@ -139,3 +139,48 @@ Acceptance of a Paper Card means the analysis is accepted for project use; it do
 ## 10. Transition discipline
 
 Lifecycle transitions are recorded only by the role/PI authority defined by the active workflow. Infrastructure, templates, validators, or future procedural skills may detect inconsistencies or check transition preconditions, but they do not themselves promote, reject, supersede, or scientifically reinterpret artefacts.
+
+## 11. Minimal machine-readable metadata
+
+New permanent artefacts should begin with a small YAML front-matter block so repository checks can read identity, relations, and controlled lifecycle fields without parsing arbitrary prose. Existing untouched artefacts are legacy-compatible and do **not** require immediate migration. When a permanent artefact is materially revised, adding metadata is expected when practical.
+
+Metadata **mirrors an already authorized state; it does not create that state**. A validator or editor must not change scientific disposition merely to make metadata pass. If metadata conflicts with the accepted body/disposition, surface the inconsistency for the responsible role rather than applying a generic precedence rule.
+
+Common minimum form:
+
+```yaml
+---
+schema_version: 1
+artifact_type: EXP
+id: EXP-xxx
+related:
+  - RQ-xxx
+supersedes: []
+superseded_by: []
+---
+```
+
+Use only fields applicable to the artefact type. Empty relationship lists are permitted. `related` is traceability, not authority or supersession.
+
+For an `EXP`, the machine-readable block should carry the controlled axes when they are known:
+
+```yaml
+implementation: IMPLEMENTED
+reproduction: REPRODUCED
+independent_validation: PASS
+independent_falsification: YES
+scientific_review: PASS
+promotion: RES_ELIGIBLE
+```
+
+For a `RES`, it should at minimum identify lifecycle and provenance links, for example:
+
+```yaml
+lifecycle: ACCEPTED
+derived_from:
+  - EXP-xxx
+scientific_review:
+  - EXP-xxx-SCIENTIFIC-REVIEW-yy
+```
+
+Long scientific statements, validity domains, evidence reasoning, review findings, and limitations remain in human-readable Markdown. Metadata is intentionally small and should not become a second research database.
