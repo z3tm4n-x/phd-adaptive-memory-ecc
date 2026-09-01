@@ -4,15 +4,31 @@
 
 These rules govern all AI roles used in the dissertation research project. Role-specific instructions in this directory supplement this file; they do not override it unless explicitly stated.
 
-## 2. Canonical sources of truth
+## 2. Canonical sources and authority by information type
 
-1. **External literature identity, metadata, PDFs, notes, and bibliography:** Zotero.
-2. **Own research state, decisions, RQ/HYP/DEC/EXP/RES artefacts, code, experiment definitions, approved results, RTL, and provenance:** this GitHub repository.
-3. **Current orchestration state:** `docs/current_status.md`, `docs/research_spec.md`, and open GitHub Issues.
-4. **Scientific evidence:** primary scientific sources, with Scite used as an evidence/citation-context layer where appropriate.
-5. **Chat messages:** temporary working context only. A statement existing only in chat is not a canonical research result.
+Canonical authority is determined by **what information is being asserted**, not by one global document hierarchy.
 
-When chat history conflicts with canonical GitHub state, agents must surface the conflict and prefer the canonical state unless the user explicitly updates it.
+- **External literature identity, metadata, PDFs, notes, and bibliography:** Zotero.
+- **A specific research object's accepted scientific content or disposition:** that object's own accepted canonical artefact and any explicit accepted disposition/review that governs it (`RQ`, `DEC`, `CLM`, `EXP`, `RES`, etc.).
+- **Current project phase, active gate, and cross-object summary:** `docs/current_status.md`. It is a summary of canonical state; it does not override object-specific accepted artefacts.
+- **Integrated working research contract:** `docs/research_spec.md`. It coordinates the project but does not silently supersede an accepted object-specific artefact.
+- **What was actually executed in a particular experiment run:** the corresponding run manifest and recorded code/config/input provenance. Execution provenance is historical; it must not be repurposed as the current lifecycle status of the experiment.
+- **Task ownership, coordination, and bounded work requests:** GitHub Issues and explicit handoffs.
+- **Historical project context:** `docs/research_log.md`.
+- **Scientific evidence:** checked primary scientific sources, with Scite used as an evidence/citation-context layer where appropriate.
+- **Chat messages:** temporary working context only. A statement existing only in chat is not a canonical research result.
+
+When chat history conflicts with canonical GitHub state, agents must surface the conflict and prefer canonical state unless the user explicitly updates it.
+
+When a summary file conflicts with an accepted object-specific artefact, agents must surface the inconsistency; the object-specific artefact governs that object's scientific content until an authorized correction or disposition is recorded.
+
+Two accepted scientific artefacts must **not** be resolved by a generic "newer file wins" rule. Replacement requires an explicit `Supersedes` / `Superseded by` relation or a separate accepted decision/disposition that explains the relationship. Historical artefacts remain part of provenance.
+
+A run manifest is authoritative for the execution it records, not for later review or promotion state. Later review, repair, or promotion must be recorded in their own artefacts/dispositions rather than by reinterpreting historical execution facts.
+
+An in-flight agent task remains bound to the explicit handoff, canonical base, and role rules under which it was issued. Later governance changes do not silently rewrite an active task; if they materially affect it, the task must be explicitly reissued, rebased, or amended.
+
+Lifecycle semantics for research artefacts are defined in [`docs/research_lifecycle.md`](../research_lifecycle.md).
 
 ## 3. Tool access boundaries
 

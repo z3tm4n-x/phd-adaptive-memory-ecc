@@ -1,5 +1,7 @@
 # Research Artefact Templates
 
+These are **formatting templates**, not the normative source of lifecycle semantics. Lifecycle definitions and allowed meanings are defined in [`research_lifecycle.md`](research_lifecycle.md). Templates may omit fields that are not applicable, but must not invent alternative meanings for controlled lifecycle/evidence terms.
+
 ## RQ — Research Question
 
 ```text
@@ -10,13 +12,16 @@ Why it matters:
 Scope:
 Exclusions:
 Dependencies:
-Status: OPEN | INVESTIGATING | ANSWERED | CLOSED-NO-ANSWER
+Lifecycle: OPEN | ANSWERED | CLOSED_NO_ANSWER | SUPERSEDED
+Current activity / gate:
 Evidence needed:
 Answer / decision criterion:
 Next action:
 Related PAPER/CLM/HYP/EXP:
 Answer:
 Confidence:
+Supersedes:
+Superseded by:
 ```
 
 ## CLM — Claim
@@ -25,11 +30,14 @@ Confidence:
 CLM-xxx
 Claim:
 Type: SOURCE | INFERENCE | ASSUMPTION | OWN RESULT
-Status: UNVERIFIED | SUPPORTED | PARTIAL | DISPUTED | REJECTED
+Lifecycle: ACTIVE | SUPERSEDED | WITHDRAWN
+Evidence assessment: SUPPORTED | PARTIALLY_SUPPORTED | DISPUTED | INSUFFICIENT | NOT_VERIFIED
 Evidence:
 Contrasting evidence:
 Used in:
 Last checked:
+Supersedes:
+Superseded by:
 ```
 
 ## HYP — Hypothesis
@@ -40,8 +48,11 @@ Hypothesis:
 Rationale:
 Falsification criterion:
 Required experiment(s):
-Status: PROPOSED | TESTING | SUPPORTED | REJECTED | INCONCLUSIVE
+Lifecycle: ACTIVE | SUPERSEDED | RETIRED
+Assessment: UNTESTED | TESTING | SUPPORTED | REJECTED | INCONCLUSIVE
 Related RQ:
+Supersedes:
+Superseded by:
 ```
 
 ## DEC — Research Decision
@@ -50,12 +61,15 @@ Related RQ:
 DEC-xxx
 Decision:
 Date:
+Lifecycle: ACTIVE | SUPERSEDED | REVOKED
 Context:
 Alternatives considered:
 Rationale:
 Evidence:
 Consequences:
 Revisit when:
+Supersedes:
+Superseded by:
 ```
 
 ## EXP — Experiment
@@ -64,6 +78,7 @@ Revisit when:
 EXP-xxx
 Objective:
 Related RQ/HYP:
+Authorization:
 Code commit:
 Configuration:
 Input data / provenance:
@@ -72,20 +87,32 @@ Baselines:
 Metrics:
 Procedure:
 Expected falsification/acceptance criterion:
+Independent falsification path: YES | PARTIAL | NO | NOT_APPLICABLE
+Independent falsification rationale:
 Output locations:
-Status: PLANNED | RUNNING | COMPLETE | INVALIDATED
+Implementation: PLANNED | IMPLEMENTED | INVALIDATED
+Reproduction: NOT_RUN | REPRODUCED | MISMATCH | NOT_APPLICABLE
+Independent validation: NOT_RUN | PARTIAL | PASS | FAIL | NOT_APPLICABLE
+Scientific review: NOT_REVIEWED | PASS | PASS_WITH_MINOR | REVISE | BLOCK
+Promotion: NOT_ELIGIBLE | RES_ELIGIBLE | PROMOTED
 ```
 
 ## RES — Result
 
 ```text
 RES-xxx
-Statement:
+Lifecycle: ACCEPTED | SUPERSEDED | INVALIDATED
+Maximum admissible statement:
 Derived from:
-Code commit:
+Code / derivation provenance:
+Scientific review / disposition:
 Evidence / statistics:
-Scope / validity domain:
-Limitations:
-Reviewer status:
+Validity domain:
+Explicit non-claims / forbidden generalizations:
+Evidence dependencies:
+Relevant uncertainty classes:
+Revisit / invalidation conditions:
 Used in ART / thesis:
+Supersedes:
+Superseded by:
 ```

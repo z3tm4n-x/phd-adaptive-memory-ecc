@@ -8,9 +8,10 @@
 - `current_status.md` — компактный снимок текущего состояния;
 - `research_backlog.md` — bounded future tasks and their activation gates;
 - `research_log.md` — журнал значимых действий и выводов;
+- `research_lifecycle.md` — нормативные lifecycle semantics, promotion/supersession rules and separation of lifecycle from evidence assessment;
 - `terminology.md` — словарь терминов, обозначений и единиц;
 - `novelty_workflow.md` — adversarial prior-art gate before literature-level novelty claims;
-- `artefact_templates.md` — шаблоны RQ/HYP/DEC/EXP/RES/CLM;
+- `artefact_templates.md` — formatting templates for research artefacts; lifecycle semantics are defined separately in `research_lifecycle.md`;
 - `decisions/` — существенные исследовательские решения;
 - `claims/` — реестр ключевых утверждений и их статуса;
 - `hypotheses/` — формализованные проверяемые гипотезы;

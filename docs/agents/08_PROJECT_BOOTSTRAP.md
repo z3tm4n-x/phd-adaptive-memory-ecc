@@ -2,6 +2,8 @@
 
 This file contains the short Project-level governance block and one-time bootstrap messages for persistent agent chats. Full role instructions remain in the other files in this directory.
 
+**Bootstrap rule:** this file tells agents where to obtain current state; it must not contain a hard-coded current scientific gate or next research action.
+
 ## ChatGPT Project Instructions block
 
 ```text
@@ -34,9 +36,11 @@ Do not silently turn suggestions into accepted RQ/HYP/DEC/RES records.
 - docs/agents/01_ORCHESTRATOR.md
 - docs/current_status.md
 - docs/research_spec.md
-- relevant open Issues
+- relevant object-specific canonical artefacts
+- relevant open Issues / active handoff
 
-Считай GitHub role cards авторитетнее старых инструкций из истории чата.
+Считай GitHub role cards и canonical artefacts авторитетнее старых инструкций из истории чата.
+Не выводи текущий gate из этого bootstrap-файла: определи его из актуального canonical state.
 Подтверди только, что синхронизировался, и назови текущий active gate.
 ```
 
@@ -106,13 +110,4 @@ Zotero Desktop напрямую из Cloud Work недоступен; новые
 
 Ты отвечаешь за local Git, Zotero Desktop/local API, Python/Jupyter, COSRAD, SystemVerilog/iVerilog, Vivado и reproducible experiments.
 Выполняй structured handoffs из Cloud Work.
-```
-
-## Current next instruction for Orchestrator
-
-After bootstrap, use:
-
-```text
-Продолжай текущий gate: сформируй 12–15 C-RQ, dependency graph и предложи 3–5 priority RQ.
-Пока не запускай литературу и не регистрируй permanent RQ без моего утверждения.
 ```
