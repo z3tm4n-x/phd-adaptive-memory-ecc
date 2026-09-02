@@ -25,17 +25,21 @@ jobs:
           python -m unittest -v test_observability.py
       - name: Download and verify controlled Zenodo proton files
         run: |
+          curl -L --fail --retry 5 --retry-all-errors --connect-timeout 20 --max-time 240 \
+            'https://zenodo.org/api/records/8314389/files-archive' -o /tmp/zenodo-files.zip
           python - <<'PY'
           from pathlib import Path
-          import hashlib, importlib.util, urllib.request
+          import hashlib,importlib.util,zipfile
           exp=Path('experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01')
           spec=importlib.util.spec_from_file_location('obs',exp/'observability.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
           out=Path('raw-zenodo');out.mkdir()
-          base='https://zenodo.org/records/8314389/files/'
-          for e,name,md5 in m.ENERGY_FILES:
-              urllib.request.urlretrieve(base+name+'?download=1',out/name)
-              got=hashlib.md5((out/name).read_bytes()).hexdigest()
-              if got!=md5: raise SystemExit(f'{name}: {got} != {md5}')
+          with zipfile.ZipFile('/tmp/zenodo-files.zip') as z:
+              names={Path(n).name:n for n in z.namelist() if not n.endswith('/')}
+              for e,name,expected in m.ENERGY_FILES:
+                  if name not in names:raise SystemExit('archive missing '+name)
+                  data=z.read(names[name]);(out/name).write_bytes(data)
+                  got=hashlib.md5(data).hexdigest()
+                  if got!=expected:raise SystemExit(f'{name}: {got} != {expected}')
           print('ZENODO_MD5_GATE_PASS',len(m.ENERGY_FILES))
           PY
       - name: Download pinned validated RADAR transport
@@ -112,7 +116,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import csv,json,math
+          import csv,json
           g=Path('generated-observability');required=['REPORT.md','input_manifest.json','coordinate_provenance.json','observation_contract.json','cluster_span_by_energy.csv','mapping_scenario_observability.csv','cross_cluster_diagnostics.csv','spectrum_observability_weight.csv','validation.json']
           for n in required:
               if not (g/n).exists() or (g/n).stat().st_size==0:raise SystemExit('missing '+n)
@@ -128,10 +132,7 @@ jobs:
           rel=max(abs(sums[k]-target[k])/max(abs(target[k]),1e-300) for k in target)
           print('SPECTRUM_RECONSTRUCTION_MAX_REL',rel)
           if rel>2e-10:raise SystemExit(f'spectrum interface mismatch {rel}')
-          v['spectrum_reconstruction_max_rel']=rel
-          v['radar_transport_sha256']='af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6'
-          v['controlled_goes_dataset_sha256']='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815'
-          (g/'validation.json').write_text(json.dumps(v,indent=2)+'\n')
+          v['spectrum_reconstruction_max_rel']=rel;v['radar_transport_sha256']='af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6';v['controlled_goes_dataset_sha256']='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815';(g/'validation.json').write_text(json.dumps(v,indent=2)+'\n')
           PY
       - name: Publish bounded outputs and finalize clean branch
         run: |
