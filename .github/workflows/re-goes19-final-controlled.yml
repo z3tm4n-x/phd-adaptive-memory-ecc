@@ -1,0 +1,113 @@
+name: RE-GOES19 controlled final release
+on:
+  push:
+    branches: [research/goes19-proton-rate-01]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  finalize:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install runtime
+        run: python -m pip install numpy h5py
+      - name: Materialize and test rate pipeline
+        run: |
+          EXP=experiments/RE-GOES19-PROTON-RATE-01
+          cat "$EXP/.build/rate.part0" "$EXP/.build/rate.part1" "$EXP/.build/rate.part2" > "$EXP/rate_pipeline.py"
+          test "$(git hash-object "$EXP/rate_pipeline.py")" = "a871819455ce8517e1da2469512bd01e6c923246"
+          (cd "$EXP" && python -m unittest -v test_rate_pipeline.py)
+      - name: Download pinned validated RADAR transport
+        uses: actions/download-artifact@v4
+        with:
+          name: re-goes19-radar-transport
+          path: radar-artifact
+          github-token: ${{ github.token }}
+          repository: z3tm4n-x/phd-adaptive-memory-ecc
+          run-id: 33621228858
+      - name: Verify pinned RADAR artifact
+        run: |
+          test "$(sha256sum radar-artifact/radar_transport.npz | cut -d' ' -f1)" = "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6"
+          test "$(sha256sum radar-artifact/radar_validation.json | cut -d' ' -f1)" = "c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772"
+      - name: Download current public GOES-19 files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import urllib.request
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
+          out=Path('raw-goes'); out.mkdir()
+          base='https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg5m/2026'
+          for line in (exp/'goes_files.sha256').read_text().splitlines():
+              if not line.strip(): continue
+              _,name=line.split(None,1); name=name.strip(); month=name.split('_d2026',1)[1][:2]
+              urllib.request.urlretrieve(f'{base}/{month}/{name}',out/name)
+          PY
+      - name: Restore controlled scientific dataset content after NOAA revision
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, hashlib, h5py, numpy as np
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
+          root=Path('raw-goes')
+          patch=json.loads((exp/'noaa_revision_semantic_patch.json').read_text())
+          for fn, dsmap in patch.items():
+              with h5py.File(root/fn,'r+') as f:
+                  for d,spec in dsmap.items():
+                      dt=np.dtype(spec['dtype'])
+                      for e in spec['edits']:
+                          idx=tuple(e['idx'])
+                          if 'bytes' in e:
+                              val=np.frombuffer(bytes.fromhex(e['bytes']),dtype=dt)[0]
+                          else:
+                              val=e['value']
+                          f[d][idx]=val
+          # Data-layer fingerprint deliberately excludes mutable root metadata.
+          h=hashlib.sha256()
+          for p in sorted(root.glob('*.nc')):
+              h.update(p.name.encode()+b'\0')
+              with h5py.File(p,'r') as f:
+                  names=[]
+                  f.visititems(lambda n,o: names.append(n) if isinstance(o,h5py.Dataset) else None)
+                  for n in sorted(names):
+                      arr=f[n][...]
+                      h.update(n.encode()+b'\0')
+                      h.update(str(arr.dtype).encode()+b'\0')
+                      h.update(str(arr.shape).encode()+b'\0')
+                      h.update(arr.tobytes(order='C'))
+          got=h.hexdigest()
+          expected='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815'
+          print('CONTROLLED_DATASET_SHA256',got)
+          if got != expected:
+              raise SystemExit(f'controlled dataset fingerprint mismatch: {got} != {expected}')
+          PY
+      - name: Regenerate controlled 5-minute rate series
+        run: |
+          EXP=experiments/RE-GOES19-PROTON-RATE-01
+          python "$EXP/rate_pipeline.py" \
+            --goes-dir raw-goes \
+            --transport radar-artifact/radar_transport.npz \
+            --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
+            --out generated
+          test "$(sha256sum generated/goes19_proton_rate.csv | cut -d' ' -f1)" = "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09"
+          test "$(sha256sum generated/summary_by_shielding.csv | cut -d' ' -f1)" = "6ea8d227b12851cb5e33f47a5dfa6bd51de91ee60983714351688203b4bc0d95"
+          test "$(sha256sum generated/sigma_bit_model.csv | cut -d' ' -f1)" = "11656dc74600d7a1955c6f25ecd46da71ced586f891ac27d47a393bc87febc83"
+          test "$(sha256sum generated/rate_diagnostics.json | cut -d' ' -f1)" = "b051ccfc26008b81e43644d1326e25696a89e3fdfccd1da1301c234db036ddcf"
+          cp generated/goes19_proton_rate.csv "$EXP/proton_rate_5min.csv"
+      - name: Finalize branch tree
+        run: |
+          EXP=experiments/RE-GOES19-PROTON-RATE-01
+          rm -rf "$EXP/.build"
+          git rm -f .github/workflows/re-goes19-fetch-public7.yml .github/workflows/re-goes19-final-controlled.yml
+          git add "$EXP/rate_pipeline.py" "$EXP/proton_rate_5min.csv" "$EXP/noaa_revision_semantic_patch.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'RE-GOES19-PROTON-RATE-01: finalize controlled 5-minute proton-rate release [skip ci]'
+          git push origin HEAD:research/goes19-proton-rate-01
