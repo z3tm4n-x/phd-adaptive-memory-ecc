@@ -1,0 +1,145 @@
+name: RE-CY62167 distant-MCU observability
+on:
+  push:
+    branches: [research/cy62167-distant-mcu-observability-01]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  observability:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned numerical runtime
+        run: python -m pip install 'numpy==2.3.5' 'h5py==3.15.1'
+      - name: Run unit tests
+        run: |
+          cd experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01
+          python -m unittest -v test_observability.py
+      - name: Download and verify controlled Zenodo proton files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, importlib.util, urllib.request
+          exp=Path('experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01')
+          spec=importlib.util.spec_from_file_location('obs',exp/'observability.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          out=Path('raw-zenodo');out.mkdir()
+          base='https://zenodo.org/records/8314389/files/'
+          for e,name,md5 in m.ENERGY_FILES:
+              urllib.request.urlretrieve(base+name+'?download=1',out/name)
+              got=hashlib.md5((out/name).read_bytes()).hexdigest()
+              if got!=md5: raise SystemExit(f'{name}: {got} != {md5}')
+          print('ZENODO_MD5_GATE_PASS',len(m.ENERGY_FILES))
+          PY
+      - name: Download pinned validated RADAR transport
+        uses: actions/download-artifact@v4
+        with:
+          name: re-goes19-radar-transport
+          path: radar-artifact
+          github-token: ${{ github.token }}
+          repository: z3tm4n-x/phd-adaptive-memory-ecc
+          run-id: 33621228858
+      - name: Verify pinned RADAR artifact
+        run: |
+          test "$(sha256sum radar-artifact/radar_transport.npz | cut -d' ' -f1)" = "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6"
+          test "$(sha256sum radar-artifact/radar_validation.json | cut -d' ' -f1)" = "c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772"
+      - name: Download current GOES-19 public source files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import urllib.request
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01');out=Path('raw-goes');out.mkdir()
+          base='https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg5m/2026'
+          for line in (exp/'goes_files.sha256').read_text().splitlines():
+              if not line.strip(): continue
+              _,name=line.split(None,1);name=name.strip();month=name.split('_d2026',1)[1][:2]
+              urllib.request.urlretrieve(f'{base}/{month}/{name}',out/name)
+          PY
+      - name: Restore controlled Task-2 GOES layer
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,h5py,json,numpy as np
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01');root=Path('raw-goes')
+          patch=json.loads((exp/'noaa_revision_semantic_patch.json').read_text())
+          for fn,dsmap in patch.items():
+              with h5py.File(root/fn,'r+') as f:
+                  for d,spec in dsmap.items():
+                      dt=np.dtype(spec['dtype'])
+                      for e in spec['edits']:
+                          idx=tuple(e['idx']);val=np.frombuffer(bytes.fromhex(e['bytes']),dtype=dt)[0] if 'bytes' in e else e['value'];f[d][idx]=val
+          h=hashlib.sha256()
+          for p in sorted(root.glob('*.nc')):
+              h.update(p.name.encode()+b'\0')
+              with h5py.File(p,'r') as f:
+                  names=[];f.visititems(lambda n,o:names.append(n) if isinstance(o,h5py.Dataset) else None)
+                  for n in sorted(names):
+                      a=f[n][...];h.update(n.encode()+b'\0');h.update(str(a.dtype).encode()+b'\0');h.update(str(a.shape).encode()+b'\0');h.update(a.tobytes(order='C'))
+          got=h.hexdigest();expected='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815'
+          if got!=expected:raise SystemExit(f'GOES fingerprint {got} != {expected}')
+          print('CONTROLLED_GOES_GATE_PASS',got)
+          PY
+      - name: Enforce Task-2 central E/W validity semantics
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/observability.py')
+          s=p.read_text();old="v=goes.valid[:,d];out=(inp[v,d]@P[di].T)+(inp[v,d]@S[di].T)";new="v=goes.valid[:,0]&goes.valid[:,1];out=(inp[v,d]@P[di].T)+(inp[v,d]@S[di].T)"
+          if s.count(old)!=1:raise SystemExit('central-validity patch target mismatch')
+          p.write_text(s.replace(old,new))
+          PY
+      - name: Run observability analysis
+        run: |
+          EXP=experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01
+          python "$EXP/observability.py" \
+            --raw-dir raw-zenodo \
+            --repo-root . \
+            --goes-dir raw-goes \
+            --transport radar-artifact/radar_transport.npz \
+            --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
+            --published-csv experiments/RE-GOES19-PROTON-RATE-01/published_physics_sigma.csv \
+            --multiplicity-csv experiments/RE-CY62167-PROTON-01/multiplicity_by_energy.csv \
+            --false-mcu-csv experiments/RE-CY62167-PROTON-01/false_mcu_estimates.csv \
+            --out generated-observability
+      - name: Validate outputs against previous kill-test interface
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,math
+          g=Path('generated-observability');required=['REPORT.md','input_manifest.json','coordinate_provenance.json','observation_contract.json','cluster_span_by_energy.csv','mapping_scenario_observability.csv','cross_cluster_diagnostics.csv','spectrum_observability_weight.csv','validation.json']
+          for n in required:
+              if not (g/n).exists() or (g/n).stat().st_size==0:raise SystemExit('missing '+n)
+          v=json.loads((g/'validation.json').read_text());assert v['K2_dinf_le3_all'];assert v['cross_cluster_distant_excess']=='NOT_IDENTIFIABLE';assert v['disposition_by_mapping']=={'W0':'C','W16-reg':'C','W-unknown':'D'}
+          sums={}
+          with (g/'spectrum_observability_weight.csv').open() as f:
+              for r in csv.DictReader(f):
+                  if r['budget']=='multi_upper':sums[r['sigma_model'],float(r['shield_mm'])]=sums.get((r['sigma_model'],float(r['shield_mm'])),0.0)+float(r['expected_count_valid_period'])
+          target={}
+          with Path('experiments/RE-CY62167-DIRECT-FLOOR-KILLTEST-01/direct_floor_summary.csv').open() as f:
+              for r in csv.DictReader(f):
+                  if r['multiplicity_variant']=='nominal_logE_linear' and r['low_energy_scenario']=='low_energy_conservative':target[r['sigma_model'],float(r['shield_mm'])]=float(r['expected_upper_multi_events_valid_period'])
+          rel=max(abs(sums[k]-target[k])/max(abs(target[k]),1e-300) for k in target)
+          print('SPECTRUM_RECONSTRUCTION_MAX_REL',rel)
+          if rel>2e-10:raise SystemExit(f'spectrum interface mismatch {rel}')
+          v['spectrum_reconstruction_max_rel']=rel
+          v['radar_transport_sha256']='af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6'
+          v['controlled_goes_dataset_sha256']='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815'
+          (g/'validation.json').write_text(json.dumps(v,indent=2)+'\n')
+          PY
+      - name: Publish bounded outputs and finalize clean branch
+        run: |
+          EXP=experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01
+          cp generated-observability/* "$EXP/"
+          git rm -f .github/workflows/re-cy62167-distant-mcu-observability.yml
+          git add "$EXP"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'RE-CY62167-DISTANT-MCU-OBSERVABILITY-01: finalize topology observability audit [skip ci]'
+          git push origin HEAD:research/cy62167-distant-mcu-observability-01
