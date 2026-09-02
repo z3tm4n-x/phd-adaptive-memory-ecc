@@ -95,7 +95,7 @@ jobs:
           python - <<'PY'
           import csv, math
           from pathlib import Path
-          p=Path('generated/proton_rate_5min.csv')
+          p=Path('generated/goes19_proton_rate.csv')
           with p.open() as f:
               n=sum(1 for _ in f)
           assert n == 16993, n
@@ -119,8 +119,7 @@ jobs:
               assert math.isclose(med,em,rel_tol=1e-6,abs_tol=1e-15),(d,med,em)
               assert math.isclose(mx,ex,rel_tol=1e-6,abs_tol=1e-12),(d,mx,ex)
           with p.open(newline='') as f:
-              rr=csv.DictReader(f)
-              count=0
+              rr=csv.DictReader(f); count=0
               for row in rr:
                   for d in ('0','1','2','3','5','7','10'):
                       x=row[f'd{d}_lambda_central_s-1']
@@ -136,51 +135,28 @@ jobs:
           from pathlib import Path
           import hashlib, json, platform, sys
           import numpy, h5py
-          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
-          gen=Path('generated')
-          for src,dst in [
-              ('goes19_proton_rate.csv','proton_rate_5min.csv'),
-              ('summary_by_shielding.csv','summary_by_shielding.csv'),
-              ('sigma_bit_model.csv','sigma_bit_model.csv'),
-              ('rate_diagnostics.json','rate_diagnostics.json')]:
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01'); gen=Path('generated')
+          for src,dst in [('goes19_proton_rate.csv','proton_rate_5min.csv'),('summary_by_shielding.csv','summary_by_shielding.csv'),('sigma_bit_model.csv','sigma_bit_model.csv'),('rate_diagnostics.json','rate_diagnostics.json')]:
               (exp/dst).write_bytes((gen/src).read_bytes())
           def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-          outputs={n:sha(exp/n) for n in [
-              'proton_rate_5min.csv','summary_by_shielding.csv','sigma_bit_model.csv',
-              'rate_diagnostics.json','goes19_audit.json','rate_pipeline.py',
-              'noaa_revision_semantic_patch.json']}
+          outputs={n:sha(exp/n) for n in ['proton_rate_5min.csv','summary_by_shielding.csv','sigma_bit_model.csv','rate_diagnostics.json','goes19_audit.json','rate_pipeline.py','noaa_revision_semantic_patch.json']}
           manifest={
-            'task_id':'RE-GOES19-PROTON-RATE-01',
-            'branch':'research/goes19-proton-rate-01',
+            'task_id':'RE-GOES19-PROTON-RATE-01','branch':'research/goes19-proton-rate-01',
             'controlled_source_file_count':59,
             'controlled_dataset_sha256':'f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815',
             'controlled_source_archive_file_hashes':'goes_files.sha256',
-            'upstream_noaa_revision':{
-              'affected_dates':['2026-01-14','2026-01-15','2026-01-16','2026-01-17','2026-01-18','2026-01-19','2026-01-20'],
-              'scientific_data_changes_requiring_patch':['2026-01-19','2026-01-20'],
-              'method':'current public NOAA files plus noaa_revision_semantic_patch.json; all 59 dataset arrays then exactly match the controlled-source data-layer fingerprint'
-            },
+            'upstream_noaa_revision':{'affected_dates':['2026-01-14','2026-01-15','2026-01-16','2026-01-17','2026-01-18','2026-01-19','2026-01-20'],'scientific_data_changes_requiring_patch':['2026-01-19','2026-01-20'],'method':'current public NOAA files plus noaa_revision_semantic_patch.json; all 59 dataset arrays then exactly match the controlled-source data-layer fingerprint'},
             'runtime':{'python':sys.version,'platform':platform.platform(),'numpy':numpy.__version__,'h5py':h5py.__version__},
-            'pinned_radar':{
-              'commit':'b032505d4d1b15403b8ad06aef578339f6d1c6b4',
-              'validation_run':33621228858,
-              'transport_sha256':'af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6',
-              'validation_sha256':'c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772',
-              'tests':'21 passed'
-            },
+            'pinned_radar':{'commit':'b032505d4d1b15403b8ad06aef578339f6d1c6b4','validation_run':33621228858,'transport_sha256':'af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6','validation_sha256':'c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772','tests':'21 passed'},
             'task_tests':'6 passed',
             'numeric_release_gate':'PASS: 16992 five-minute rows; 16971 valid paired intervals; coverage and seven shield median/max anchors within 1e-6 relative tolerance; finite nonnegative central rates',
             'output_sha256':outputs,
             'source_host_reference_proton_rate_sha256':'713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09',
-            'byte_identity_note':'The source-host reference and GitHub-runner CSV may differ in last floating-point digits across runtime patch/host implementations. Scientific inputs are gated by exact data-layer and RADAR hashes; the branch artifact is gated numerically and its own SHA-256 above is authoritative.'
-          }
+            'byte_identity_note':'The source-host reference and GitHub-runner CSV may differ in last floating-point digits across runtime patch/host implementations. Scientific inputs are gated by exact data-layer and RADAR hashes; the branch artifact is gated numerically and its own SHA-256 above is authoritative.'}
           (exp/'final_release_manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
-          vr=json.loads((exp/'validation_report.json').read_text())
-          vr['final_release']=manifest
+          vr=json.loads((exp/'validation_report.json').read_text()); vr['final_release']=manifest
           (exp/'validation_report.json').write_text(json.dumps(vr,indent=2,ensure_ascii=False)+'\n')
-          rp=exp/'reproducibility.md'
-          text=rp.read_text()
-          marker='## Final controlled branch release'
+          rp=exp/'reproducibility.md'; text=rp.read_text(); marker='## Final controlled branch release'
           if marker not in text:
               text += f'''\n\n{marker}\n\nThe final branch artifact is described by `final_release_manifest.json`. NOAA revised seven source files after the PI-controlled archive was captured. `noaa_revision_semantic_patch.json` restores the changed scientific dataset values; after restoration, all 59 HDF5/NetCDF dataset arrays have the exact controlled data-layer SHA-256 `f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815`.\n\nThe pinned RADAR transport remains the validated artifact from Actions run `33621228858`. Output floating-point CSV bytes can vary in the last digits across Python/NumPy/host implementations, so the final release uses exact input/artifact fingerprints plus a numerical invariant gate. The authoritative SHA-256 values for the committed branch outputs are recorded in `final_release_manifest.json`.\n'''
               rp.write_text(text)
