@@ -49,7 +49,7 @@ jobs:
 
       - name: Build validated RADAR response matrices
         run: |
-          python experiments/RE-GOES19-PROTON-RATE-01/radar_adapter.py \
+          python experiments/RE-GOES19-PROTON-RATE-01/radar_converged.py \
             --radar-root external/RADAR \
             --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
             --out radar-artifact
