@@ -32,8 +32,12 @@ Pinned RADAR GitHub Actions validation run used for the released transport: `336
 - `goes19_audit.json`: `fbc53e60d28cff3a8aaf8d518cd3b4fcb45d2dafbe08a64f4d13e5ed51d06ee1`
 - `sigma_bit_model.csv`: `11656dc74600d7a1955c6f25ecd46da71ced586f891ac27d47a393bc87febc83`
 - `summary_by_shielding.csv`: `6ea8d227b12851cb5e33f47a5dfa6bd51de91ee60983714351688203b4bc0d95`
-- `goes19_proton_rate.csv`: `713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09`
+- `proton_rate_5min.csv`: `713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09`
 - `radar_validation.json`: `c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772`
 - `rate_diagnostics.json`: `b051ccfc26008b81e43644d1326e25696a89e3fdfccd1da1301c234db036ddcf`
 
 Note: after any intentional output-schema change, hashes must be regenerated and `validation_report.json` updated.
+
+## Public archive drift
+
+On 2026-09-02, a bytewise re-check against the then-current NOAA archive found 52/59 files unchanged and seven revised public files dated 2026-01-14 through 2026-01-20. Reproduction of this task must use the PI-controlled files matching `goes_files.sha256`; downloading current files by filename alone is not sufficient for those seven dates.
