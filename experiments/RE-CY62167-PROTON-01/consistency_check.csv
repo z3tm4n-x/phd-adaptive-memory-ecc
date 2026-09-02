@@ -1,0 +1,15 @@
+energy_mev,source_file,sigma_bit_cm2_per_bit,lhs_Nbits_times_sigma_bit_cm2,rhs_sum_k_sigma_k_cm2,relative_difference,status,note
+0.9,clust_p0.9MeV.txt,9.410000e-10,1.578736e-02,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+1.0,clust_p1MeV.txt,1.270000e-09,2.130706e-02,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+1.1,clust_p1.1MeV.txt,4.020000e-10,6.744441e-03,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+1.5,clust_p1.5MeV.txt,5.580000e-11,9.361687e-04,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+2.5,clust_p2.5MeV.txt,1.610000e-12,2.701132e-05,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+3.0,clust_p3MeV.txt,6.130000e-13,1.028443e-05,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+4.0,clust_p4MeV.txt,1.490000e-13,2.499805e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+5.0,clust_p5MeV.txt,6.820000e-14,1.144206e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+29.0,clust_p29MeV.txt,,,,,NOT_EVALUABLE_MISSING_SIGMA_BIT_AND_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+40.0,clust_p40MeV.txt,1.000000e-13,1.677722e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+80.0,clust_p80MeV.txt,9.000000e-14,1.509949e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+124.0,clust_p124MeV.txt,8.000000e-14,1.342177e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+164.0,clust_p164MeV.txt,7.800000e-14,1.308623e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
+186.0,clust_p186MeV.txt,8.200000e-14,1.375732e-06,,,NOT_EVALUABLE_MISSING_SIGMA_K,absolute sigma_k requires independent fluence; no artificial normalization applied
