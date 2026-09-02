@@ -1,0 +1,203 @@
+        med = float(np.nanmedian(c))
+        mean = float(np.nanmean(c))
+        mx = float(c[idx])
+        alts = []
+        for _, a in R["alt"].items():
+            ac = np.where(np.all(np.isfinite(a[:, di, :]), axis=1), np.mean(a[:, di, :], axis=1), np.nan)
+            alts.append(ac)
+        astack = np.stack(alts)
+        rel_spread = np.full(astack.shape[1], np.nan)
+        finite_any = np.any(np.isfinite(astack), axis=0)
+        if np.any(finite_any):
+            aa = astack[:, finite_any]
+            rel_spread[finite_any] = (np.nanmax(aa, axis=0) - np.nanmin(aa, axis=0)) / np.maximum(c[finite_any], 1e-300)
+        ew = abs(e - w) / np.maximum((e + w) / 2, 1e-300)
+        gapc = np.where(np.all(np.isfinite(R["gap390_500_diag"]), axis=1), np.mean(R["gap390_500_diag"], axis=1), np.nan)
+        gapbridge = np.where(np.all(np.isfinite(R["gap_bridge_rate"]), axis=1), np.mean(R["gap_bridge_rate"], axis=1), np.nan)
+        low_frac = (c - mc - gapbridge) / np.maximum(c, 1e-300)
+        p11c = np.where(np.all(np.isfinite(R["p11_rate"]), axis=1), np.mean(R["p11_rate"], axis=1), np.nan)
+
+        row = {
+            "shield_mm": float(mm),
+            "absolute_status": "PARTIAL_LOW_SPECTRUM_AND_SIGMA_EXTRAPOLATION" if mm == 0 else "PARTIAL_SIGMA_EXTRAPOLATION",
+            "reference_low_spectrum_gamma": R["reference_gamma"],
+            "valid_5min_intervals": int(np.sum(np.isfinite(c))),
+            "coverage_fraction": float(np.mean(np.isfinite(c))),
+            "median_s-1": med,
+            "mean_s-1": mean,
+            "p90_s-1": q(c, 0.90),
+            "p95_s-1": q(c, 0.95),
+            "p99_s-1": q(c, 0.99),
+            "p99_9_s-1": q(c, 0.999),
+            "max_s-1": mx,
+            "max_timestamp_utc": goes.times[idx].isoformat(),
+            "dynamic_range_max_over_median": mx / med if med > 0 else float("inf"),
+            "total_expected_flipped_bits_observed_intervals": float(np.nansum(c * 300.0)),
+            "measured_support_median_s-1": float(np.nanmedian(mc)),
+            "median_fraction_from_low_spectrum_extrapolation": q(low_frac, 0.5),
+            "p99_fraction_from_low_spectrum_extrapolation": q(low_frac, 0.99),
+            "mean_primary_fraction": float(np.nanmean(cp / np.maximum(c, 1e-300))),
+            "mean_secondary_fraction": float(np.nanmean(cs / np.maximum(c, 1e-300))),
+            "p99_secondary_fraction": q(cs / np.maximum(c, 1e-300), 0.99),
+            "max_secondary_fraction": float(np.nanmax(cs / np.maximum(c, 1e-300))),
+            "mean_rate_fraction_from_0p8_1p2MeV_output": float(np.nanmean(band / np.maximum(c, 1e-300))),
+            "p99_rate_fraction_from_0p8_1p2MeV_output": q(band / np.maximum(c, 1e-300), 0.99),
+            "mean_rate_fraction_from_input_gt200MeV": float(np.nanmean(hiin / np.maximum(c, 1e-300))),
+            "p99_rate_fraction_from_input_gt200MeV": q(hiin / np.maximum(c, 1e-300), 0.99),
+            "median_high_gap_bridge_fraction": q(gapbridge / np.maximum(c, 1e-300), 0.5),
+            "p99_high_gap_bridge_fraction": q(gapbridge / np.maximum(c, 1e-300), 0.99),
+            "median_flat_P10_390_500_gap_fraction_diagnostic": q(gapc / np.maximum(c, 1e-300), 0.5),
+            "p99_flat_P10_390_500_gap_fraction_diagnostic": q(gapc / np.maximum(c, 1e-300), 0.99),
+            "median_P11_gt500_fraction": q(p11c / np.maximum(c, 1e-300), 0.5),
+            "median_EW_relative_discrepancy": q(ew, 0.5),
+            "p95_EW_relative_discrepancy": q(ew, 0.95),
+            "p99_EW_relative_discrepancy": q(ew, 0.99),
+            "median_L2_uncertainty_envelope_relative_halfwidth": q((hi - lo) / (2 * np.maximum(c, 1e-300)), 0.5),
+            "p95_L2_uncertainty_envelope_relative_halfwidth": q((hi - lo) / (2 * np.maximum(c, 1e-300)), 0.95),
+            "median_sigma_model_range_relative_to_main": q(rel_spread, 0.5),
+            "p95_sigma_model_range_relative_to_main": q(rel_spread, 0.95),
+        }
+        for gamma in LOW_EXTRAP_GAMMAS:
+            a = R["scenario_total"][gamma]
+            ac = np.where(np.all(np.isfinite(a[:, di, :]), axis=1), np.mean(a[:, di, :], axis=1), np.nan)
+            tag = str(int(gamma)) if float(gamma).is_integer() else str(gamma).replace(".", "p")
+            row[f"low_gamma{tag}_median_s-1"] = q(ac, 0.5)
+            row[f"low_gamma{tag}_p99_s-1"] = q(ac, 0.99)
+        rows.append(row)
+    return rows
+
+
+def write_summary(path: Path, rows):
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+
+
+def _shield_tag(mm: float) -> str:
+    return str(int(mm)) if float(mm).is_integer() else str(mm).replace(".", "p")
+
+
+def write_rate_csv(path: Path, goes, R):
+    """Compact wide 5-min interface.
+
+    East/West total chains remain separate. Primary/secondary are reported for
+    the E/W-average reference scenario. The d=0 measured-support and alternate
+    low-energy extrapolation scenarios are explicit additional columns.
+    """
+    fields = [
+        "timestamp_utc", "algorithm_version", "east_valid", "west_valid",
+        "east_quality_flag", "west_quality_flag",
+    ]
+    for mm in R["shields"]:
+        tag = _shield_tag(float(mm))
+        fields += [
+            f"d{tag}_lambda_E_s-1", f"d{tag}_lambda_W_s-1", f"d{tag}_lambda_central_s-1",
+            f"d{tag}_lambda_central_h-1", f"d{tag}_m5_central_bits",
+            f"d{tag}_primary_central_s-1", f"d{tag}_secondary_central_s-1",
+        ]
+    fields += [
+        "d0_measured_support_central_s-1",
+        "d0_low_gamma0_central_s-1",
+        "d0_low_gamma4_central_s-1",
+    ]
+
+    def fmt(x):
+        return "" if not np.isfinite(x) else f"{x:.7e}"
+
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for t, time in enumerate(goes.times):
+            row = {
+                "timestamp_utc": time.isoformat(),
+                "algorithm_version": goes.version[t],
+                "east_valid": int(goes.valid[t, 0]),
+                "west_valid": int(goes.valid[t, 1]),
+                "east_quality_flag": int(goes.quality_any[t, 0]),
+                "west_quality_flag": int(goes.quality_any[t, 1]),
+            }
+            for di, mm in enumerate(R["shields"]):
+                tag = _shield_tag(float(mm))
+                e = R["reference_total"][t, di, 0]
+                ww = R["reference_total"][t, di, 1]
+                central = np.mean(R["reference_total"][t, di]) if np.all(np.isfinite(R["reference_total"][t, di])) else np.nan
+                pc = np.mean(R["reference_primary"][t, di]) if np.all(np.isfinite(R["reference_primary"][t, di])) else np.nan
+                sc = np.mean(R["reference_secondary"][t, di]) if np.all(np.isfinite(R["reference_secondary"][t, di])) else np.nan
+                row[f"d{tag}_lambda_E_s-1"] = fmt(e)
+                row[f"d{tag}_lambda_W_s-1"] = fmt(ww)
+                row[f"d{tag}_lambda_central_s-1"] = fmt(central)
+                row[f"d{tag}_lambda_central_h-1"] = fmt(3600.0 * central)
+                row[f"d{tag}_m5_central_bits"] = fmt(300.0 * central)
+                row[f"d{tag}_primary_central_s-1"] = fmt(pc)
+                row[f"d{tag}_secondary_central_s-1"] = fmt(sc)
+            meas = R["measured_total"][t, 0]
+            g0 = R["scenario_total"][0.0][t, 0]
+            g4 = R["scenario_total"][4.0][t, 0]
+            row["d0_measured_support_central_s-1"] = fmt(np.mean(meas) if np.all(np.isfinite(meas)) else np.nan)
+            row["d0_low_gamma0_central_s-1"] = fmt(np.mean(g0) if np.all(np.isfinite(g0)) else np.nan)
+            row["d0_low_gamma4_central_s-1"] = fmt(np.mean(g4) if np.all(np.isfinite(g4)) else np.nan)
+            w.writerow(row)
+
+def write_sigma_model(path: Path, R):
+    points = R["points"]
+    grid = np.unique(np.r_[np.geomspace(0.11, 500, 350), [p.energy_mev for p in points], 29.0, R["low_sigma_zero_crossing"]])
+    fields = ["energy_mev"] + list(MODEL_NAMES) + ["experimental_sigma_cm2_per_bit", "experimental_value_type", "experimental_source"]
+    by = {p.energy_mev: p for p in points}
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        vals = {m: sigma_hat(grid, points, m) for m in MODEL_NAMES}
+        for i, e in enumerate(grid):
+            p = by.get(float(e))
+            row = {"energy_mev": f"{e:.9g}"}
+            for m in MODEL_NAMES:
+                row[m] = f"{vals[m][i]:.9e}"
+            row["experimental_sigma_cm2_per_bit"] = "" if p is None else f"{p.sigma_cm2_bit:.9e}"
+            row["experimental_value_type"] = "" if p is None else p.value_type
+            row["experimental_source"] = "" if p is None else p.source
+            w.writerow(row)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--goes-dir", type=Path, required=True)
+    ap.add_argument("--transport", type=Path, required=True)
+    ap.add_argument("--sigma-csv", type=Path, required=True)
+    ap.add_argument("--out", type=Path, required=True)
+    a = ap.parse_args()
+    a.out.mkdir(parents=True, exist_ok=True)
+    goes = load_directory(a.goes_dir)
+    R = calculate(goes, a.transport, a.sigma_csv)
+    rows = summarize(goes, R)
+    write_summary(a.out / "summary_by_shielding.csv", rows)
+    write_rate_csv(a.out / "goes19_proton_rate.csv", goes, R)
+    write_sigma_model(a.out / "sigma_bit_model.csv", R)
+    (a.out / "goes19_audit.json").write_text(json.dumps(goes.audit, indent=2), encoding="utf-8")
+    diagnostics = {
+        "low_sigma_zero_crossing_mev": R["low_sigma_zero_crossing"],
+        "low_spectrum_extrapolation": {
+            "status": "explicit scenario, not measured GOES spectrum",
+            "formula": "J(E)=J_P1*(E/E_P1_low)^(-gamma) for E_zero<=E<E_P1_low",
+            "P1_lower_support_mev": 0.92,
+            "gamma_scenarios": list(LOW_EXTRAP_GAMMAS),
+            "reference_gamma": LOW_EXTRAP_REFERENCE_GAMMA,
+            "interpretation": "gamma=0/2/4 are sensitivity scenarios rather than confidence bounds; gamma=2 is only a reproducible reference scenario",
+            "raw_P1_P2A_slope_diagnostic": R["raw_low_slope_diagnostic"],
+        },
+        "d0_status": "Scenario absolute rate is reported using gamma=2; measured-support-only and gamma=0/4 alternatives are retained separately.",
+        "high_energy_gap_bridge": {
+            "status": "included extrapolated bridge constrained by P10 differential and P11 integral measurements",
+            "formula": "power law J(E)=J390*(E/390)^(-gamma); gamma chosen so integral_500^inf J dE equals measured P11",
+            "diagnostic": R["gap_bridge_diagnostic"],
+            "fallback": "where P10 is nonpositive, use direction-median fitted gamma with measured P11 normalization",
+        },
+        "gap390_500_diagnostic_note": "Reference rate includes the P10/P11-constrained power-law bridge. A flat-P10 bridge is retained only as an alternative stress-test diagnostic.",
+        "p11_note": "Measured P11 >500 MeV is included analytically because sigma is held constant above 186 MeV; its integral value also constrains the 390-500 MeV bridge slope.",
+    }
+    (a.out / "rate_diagnostics.json").write_text(json.dumps(diagnostics, indent=2), encoding="utf-8")
+    print(json.dumps(rows, indent=2))
+
+
+if __name__ == "__main__":
+    main()
