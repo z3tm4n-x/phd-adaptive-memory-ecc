@@ -38,7 +38,7 @@ After excluding only strict service sentinels, the dataset contains **140,111 re
 | 164 | 8668 | 13358 | 6446 | 1176 | 463 | 29 | 45 | 0 |
 | 186 | 8356 | 12972 | 6150 | 1169 | 469 | 19 | 32 | 0 |
 
-`multiplicity_by_energy.csv` reports both candidate-segment distributions and descriptive whole-file energy totals. The segment rows are the safer comparison unit wherever a file contains cluster-ID resets; the whole-file totals must **not** be interpreted as pooling verified identical runs, because run-specific voltage/mode/sample metadata are not available. `P(K=k|E)` is therefore an empirical distribution **conditional on the registered Zenodo cluster records**. Zenodo calls these raw MCU data, but it does not explicitly prove that every file is a complete sample of all physical particle impacts during a single fluence-normalized run; the output does not make that stronger claim.
+`multiplicity_by_energy.csv` reports descriptive whole-file energy totals. Candidate acquisition-segment boundaries/counts are reported separately in `zenodo_runs.csv`, and segment-level false-MCU diagnostics are in `false_mcu_estimates.csv`. Wherever a file contains cluster-ID resets, segment-aware interpretation is safer; the whole-file totals must **not** be interpreted as pooling verified identical runs, because run-specific voltage/mode/sample metadata are not available. `P(K=k|E)` is therefore an empirical distribution **conditional on the registered Zenodo cluster records**. Zenodo calls these raw MCU data, but it does not explicitly prove that every file is a complete sample of all physical particle impacts during a single fluence-normalized run; the output does not make that stronger claim.
 
 ## 2. Geometry and the clustering-criterion discrepancy
 
