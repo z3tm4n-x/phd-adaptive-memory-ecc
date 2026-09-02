@@ -1,0 +1,133 @@
+name: RE-GOES19 sigma closure finalization
+on:
+  push:
+    branches: [research/goes19-proton-rate-01-sigma-closure]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  sigma-closure:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned numerical runtime
+        run: python -m pip install 'numpy==2.3.5' 'h5py==3.15.1'
+      - name: Run sigma-closure unit tests
+        run: |
+          cd experiments/RE-GOES19-PROTON-RATE-01
+          python -m unittest -v test_sigma_closure.py
+          python digitize_published_physics.py --output /tmp/published_physics_sigma.csv
+          diff -u published_physics_sigma.csv /tmp/published_physics_sigma.csv
+      - name: Download pinned validated RADAR transport
+        uses: actions/download-artifact@v4
+        with:
+          name: re-goes19-radar-transport
+          path: radar-artifact
+          github-token: ${{ github.token }}
+          repository: z3tm4n-x/phd-adaptive-memory-ecc
+          run-id: 33621228858
+      - name: Verify pinned RADAR artifact
+        run: |
+          test "$(sha256sum radar-artifact/radar_transport.npz | cut -d' ' -f1)" = "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6"
+          test "$(sha256sum radar-artifact/radar_validation.json | cut -d' ' -f1)" = "c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772"
+      - name: Download current public GOES-19 source files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import urllib.request
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
+          out=Path('raw-goes'); out.mkdir()
+          base='https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg5m/2026'
+          for line in (exp/'goes_files.sha256').read_text().splitlines():
+              if not line.strip(): continue
+              _,name=line.split(None,1); name=name.strip(); month=name.split('_d2026',1)[1][:2]
+              urllib.request.urlretrieve(f'{base}/{month}/{name}', out/name)
+          PY
+      - name: Restore controlled Task-2 GOES data layer
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, h5py, json, numpy as np
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01'); root=Path('raw-goes')
+          patch=json.loads((exp/'noaa_revision_semantic_patch.json').read_text())
+          for fn, dsmap in patch.items():
+              with h5py.File(root/fn,'r+') as f:
+                  for d,spec in dsmap.items():
+                      dt=np.dtype(spec['dtype'])
+                      for e in spec['edits']:
+                          idx=tuple(e['idx'])
+                          val=np.frombuffer(bytes.fromhex(e['bytes']),dtype=dt)[0] if 'bytes' in e else e['value']
+                          f[d][idx]=val
+          h=hashlib.sha256()
+          for p in sorted(root.glob('*.nc')):
+              h.update(p.name.encode()+b'\0')
+              with h5py.File(p,'r') as f:
+                  names=[]
+                  f.visititems(lambda n,o: names.append(n) if isinstance(o,h5py.Dataset) else None)
+                  for n in sorted(names):
+                      arr=f[n][...]
+                      h.update(n.encode()+b'\0'); h.update(str(arr.dtype).encode()+b'\0'); h.update(str(arr.shape).encode()+b'\0'); h.update(arr.tobytes(order='C'))
+          got=h.hexdigest(); expected='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815'
+          print('CONTROLLED_DATASET_SHA256',got)
+          if got != expected: raise SystemExit(f'controlled dataset fingerprint mismatch: {got} != {expected}')
+          PY
+      - name: Run published-physics sigma sensitivity only
+        run: |
+          EXP=experiments/RE-GOES19-PROTON-RATE-01
+          python "$EXP/sigma_closure.py" \
+            --goes-dir raw-goes \
+            --transport radar-artifact/radar_transport.npz \
+            --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
+            --published-csv "$EXP/published_physics_sigma.csv" \
+            --out generated-sigma
+      - name: Validate closure invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('generated-sigma/validation_sigma_closure.json')
+          v=json.loads(p.read_text())
+          assert v['disposition'] in ['A','B','C']
+          n=v['numeric_validation']
+          assert n['reference_reconstruction_max_rel'] < 1e-10, n
+          assert n['energy_partition_max_rel_ref'] < 1e-10, n
+          assert n['energy_partition_max_rel_phys'] < 1e-10, n
+          for name in ['REPORT_SIGMA_CLOSURE.md','sigma_model_comparison.csv','energy_contribution_comparison.csv']:
+              assert (Path('generated-sigma')/name).stat().st_size > 0
+          print('SIGMA_CLOSURE_GATE_PASS',v['disposition'])
+          PY
+      - name: Publish bounded outputs and provenance hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, platform, sys
+          import numpy, h5py
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01'); gen=Path('generated-sigma')
+          for name in ['REPORT_SIGMA_CLOSURE.md','sigma_model_comparison.csv','energy_contribution_comparison.csv','validation_sigma_closure.json']:
+              (exp/name).write_bytes((gen/name).read_bytes())
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+          p=exp/'validation_sigma_closure.json'; v=json.loads(p.read_text())
+          v['working_branch']='research/goes19-proton-rate-01-sigma-closure'
+          v['controlled_goes_dataset_sha256']='f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815'
+          v['radar']={'commit':'b032505d4d1b15403b8ad06aef578339f6d1c6b4','validation_run':33621228858,'transport_sha256':'af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6','validation_sha256':'c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772'}
+          v['runtime']={'python':sys.version,'platform':platform.platform(),'numpy':numpy.__version__,'h5py':h5py.__version__}
+          v['input_sha256']={n:sha(exp/n) for n in ['published_physics_sigma.csv','digitize_published_physics.py','sigma_closure.py','experiments-do-not-use'] if False}
+          v['input_sha256']={'published_physics_sigma.csv':sha(exp/'published_physics_sigma.csv'),'digitize_published_physics.py':sha(exp/'digitize_published_physics.py'),'sigma_closure.py':sha(exp/'sigma_closure.py'),'task1_sigma_bit_experimental.csv':sha(Path('experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv'))}
+          v['output_sha256']={n:sha(exp/n) for n in ['REPORT_SIGMA_CLOSURE.md','sigma_model_comparison.csv','energy_contribution_comparison.csv']}
+          p.write_text(json.dumps(v,indent=2)+'\n')
+          PY
+      - name: Finalize clean branch tree
+        run: |
+          git rm -f .github/workflows/re-goes19-sigma-closure.yml
+          git add experiments/RE-GOES19-PROTON-RATE-01
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'RE-GOES19-PROTON-RATE-01-SIGMA-CLOSURE: finalize published-physics sensitivity [skip ci]'
+          git push origin HEAD:research/goes19-proton-rate-01-sigma-closure
