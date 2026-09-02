@@ -1,0 +1,34 @@
+source_file,classification,reason,segment_id,cluster_id,line_start,cell_line,timestamp,xmin,xmax,ymin,ymax,xadd,yadd,raw_cell_record,candidate_external_address,x,y,predicted_external_address,mapping_status
+clust_Ar1050MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_Ar548MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_C1080MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_C360MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_C720MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,5088,35651,35653,03:03:03,0,0,0,0,0,0,1633755191 0 0,1633755191,0,0,787324,MISMATCH
+clust_U142.8GeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,03:03:03,0,0,0,0,0,0,640 0 0,640,0,0,787324,MISMATCH
+clust_U190.4GeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,03:03:03,0,0,0,0,0,0,0 0 0,0,0,0,787324,MISMATCH
+clust_U35.7GeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,03:03:03,0,0,0,0,0,0,0 0 0,0,0,0,787324,MISMATCH
+clust_U45.2GeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,03:03:03,0,0,0,0,0,0,0 0 0,0,0,0,787324,MISMATCH
+clust_U78.5GeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,03:03:03,0,0,0,0,0,0,0 0 0,0,0,0,787324,MISMATCH
+clust_Xe2700MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_XeLET27.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_XeLET42.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_XeLET57.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_p0.9MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,7455,52238,52240,03:03:03,0,0,0,0,0,0,807416886 0 0,807416886,0,0,787324,MISMATCH
+clust_p1.1MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,6614,46336,46338,03:03:03,0,0,0,0,0,0,170930208 0 0,170930208,0,0,787324,MISMATCH
+clust_p1.1MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,2,7398,98170,98172,03:03:03,0,0,0,0,0,0,543503136 0 0,543503136,0,0,787324,MISMATCH
+clust_p1.5MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,3214,22509,22511,03:03:03,0,0,0,0,0,0,909193013 0 0,909193013,0,0,787324,MISMATCH
+clust_p124MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_p164MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_p186MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,8356,63109,63111,03:03:03,0,0,0,0,0,0,808401201 0 0,808401201,0,0,787324,MISMATCH
+clust_p1MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,4690,32851,32853,03:03:03,0,0,0,0,0,0,875962416 0 0,875962416,0,0,787324,MISMATCH
+clust_p2.5MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,9911,69460,69462,03:03:03,0,0,0,0,0,0,807428449 0 0,807428449,0,0,787324,MISMATCH
+clust_p2.5MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,2,9257,134331,134333,03:03:03,0,0,0,0,0,0,893007157 0 0,893007157,0,0,787324,MISMATCH
+clust_p2.5MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,3,9388,200129,200131,03:03:03,0,0,0,0,0,0,540160800 0 0,540160800,0,0,787324,MISMATCH
+clust_p2.5MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,4,226,201719,201721,03:03:03,0,0,0,0,0,0,540095264 0 0,540095264,0,0,787324,MISMATCH
+clust_p29MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_p3MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,16345,114687,114689,03:03:03,0,0,0,0,0,0,808585776 0 0,808585776,0,0,787324,MISMATCH
+clust_p3MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,2,8358,173265,173267,03:03:03,0,0,0,0,0,0,808585776 0 0,808585776,0,0,787324,MISMATCH
+clust_p40MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS
+clust_p4MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,4336,30423,30425,03:03:03,0,0,0,0,0,0,807416886 0 0,807416886,0,0,787324,MISMATCH
+clust_p5MeV.txt,STRICT_SERVICE,03:03:03 all-zero singleton with leading integer outside 21-bit external-address range,1,1994,14018,14020,03:03:03,0,0,0,0,0,0,1633755187 0 0,1633755187,0,0,787324,MISMATCH
+clust_p80MeV.txt,AMBIGUOUS,all-zero singleton resembles service/zero record but does not satisfy strict service signature,1,0,1,3,,0,0,0,0,0,0,0 0,,0,0,787324,NOT_EVALUABLE_NO_CANDIDATE_ADDRESS

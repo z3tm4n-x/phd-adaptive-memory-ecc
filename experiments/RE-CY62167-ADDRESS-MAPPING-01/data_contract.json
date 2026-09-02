@@ -1,0 +1,71 @@
+{
+  "classification_contract": {
+    "AMBIGUOUS": "pre-model zero/service-like or out-of-range record not meeting strict service signature",
+    "PHYSICAL_ELIGIBLE": "ordinary three-field row in 21-bit address and 12-bit XY ranges",
+    "PHYSICAL_NO_ADDRESS": "ordinary two-field XY row without candidate address",
+    "STRICT_SERVICE": "03:03:03 all-zero singleton, three fields, leading integer > 2^21-1"
+  },
+  "controlled_context_sources": [
+    {
+      "doi": "10.5281/zenodo.8314389",
+      "role": "raw dataset/checksums"
+    },
+    {
+      "doi": "10.1109/TNS.2015.2496874",
+      "role": "logical/physical bitmap and clustering lineage"
+    },
+    {
+      "doi": "10.1109/TNS.2024.3487647",
+      "role": "same-device dataset; manufacturer descrambling acknowledgement"
+    },
+    {
+      "document": "Infineon AN88889",
+      "role": "32 data + 6 parity architecture context only"
+    }
+  ],
+  "deduplication": {
+    "conflicting_addresses_policy": "report; never arbitrarily resolve",
+    "key": [
+      "source_file",
+      "segment_id",
+      "cluster_id",
+      "x",
+      "y"
+    ],
+    "scope": "event-local"
+  },
+  "prohibited_claim": "A(x,y) recovery is not proprietary A->ECC-word/parity W.",
+  "raw_cell_schemas": {
+    "three_integer_interpretation": "(A,x,y) for ordinary PHYSICAL_ELIGIBLE records",
+    "three_integer_observed": "(field0_raw,x,y)",
+    "two_integer": "(x,y); no candidate address"
+  },
+  "semantic_status": {
+    "EMPIRICALLY_ESTABLISHED": [
+      "Ordinary leading integers lie in the 21-bit address range after pre-model filtering.",
+      "C720-only affine GF(2) fit exactly reproduces all ordinary held-out address-bearing records.",
+      "Linear rank 21 gives eight transformed-grid preimages per external address, consistent with 2^21 x8."
+    ],
+    "INFERENCE": [
+      "For ordinary three-field records, field0_raw is identified as external 21-bit byte address A with very strong empirical support; public raw documentation does not explicitly label the column."
+    ],
+    "MODEL_ASSUMPTION": [
+      "Mapping class is affine GF(2) with [1,x0..x11,y0..y11]."
+    ],
+    "SOURCE_SUPPORTED": [
+      "CY62167GE30-45ZXI is a 16-Mbit SRAM externally organized as 2^21 x8.",
+      "Controlled literature states manufacturer logical-to-physical descrambling information was used to create campaign XY physical maps.",
+      "Exact proprietary physical-to-ECC mapping is not public."
+    ],
+    "UNKNOWN": [
+      "Exact semantics of bounded ambiguous zero/service-like records.",
+      "D0..D7 assignment among same-address grid positions.",
+      "A to internal ECC data/parity word mapping W."
+    ]
+  },
+  "task_id": "RE-CY62167-ADDRESS-MAPPING-01",
+  "training_contract": {
+    "heldout_data_may_not_change_coefficients_or_features": true,
+    "only_file": "clust_C720MeV.txt"
+  }
+}
