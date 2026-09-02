@@ -26,13 +26,7 @@ def _git_sha(root: Path) -> str:
     return subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
 
 
-def _normalize_rows(
-    src: Path,
-    dst: Path,
-    key_cols: tuple[str, ...],
-    value_cols: tuple[str, ...],
-    extend_mt5_zero: bool = False,
-):
+def _normalize_rows(src: Path, dst: Path, key_cols: tuple[str, ...], value_cols: tuple[str, ...], extend_mt5_zero: bool = False):
     """Normalize duplicate interpolation coordinates without altering source values.
 
     Exact duplicates are deduplicated. If equal coordinates carry conflicting
@@ -65,6 +59,7 @@ def _normalize_rows(
                     row[c] = repr(float(np.nextafter(x, -np.inf)))
                 keep.append(row)
             actions.append({"kind": "conflicting_duplicate_left_limit", "key": key, "values": vals})
+
     if extend_mt5_zero:
         mt5 = [row for row in keep if int(row["mt"]) == 5]
         minr = min(mt5, key=lambda row: float(row["energy_mev"]))
@@ -72,21 +67,24 @@ def _normalize_rows(
             row = dict(minr)
             row["energy_mev"] = "0.1"
             keep.append(row)
-            actions.append(
-                {
-                    "kind": "zero_threshold_extension",
-                    "mt": 5,
-                    "from_mev": float(minr["energy_mev"]),
-                    "to_mev": 0.1,
-                    "sigma_barn": 0.0,
-                }
-            )
+            actions.append({"kind": "zero_threshold_extension", "mt": 5, "from_mev": float(minr["energy_mev"]), "to_mev": 0.1, "sigma_barn": 0.0})
+        maxr = max(mt5, key=lambda row: float(row["energy_mev"]))
+        if float(maxr["energy_mev"]) < 390.0:
+            # The pinned compact TENDL file ends at 200 MeV. Keep its final supported
+            # value at 200 MeV, then set only the nonelastic-survival correction to
+            # zero immediately above support. CSDA primary transport remains active.
+            emax = float(maxr["energy_mev"])
+            row0 = dict(maxr)
+            row0["energy_mev"] = repr(float(np.nextafter(emax, np.inf)))
+            row0["sigma_barn"] = "0.0"
+            row1 = dict(maxr)
+            row1["energy_mev"] = "390.0"
+            row1["sigma_barn"] = "0.0"
+            keep.extend([row0, row1])
+            actions.append({"kind": "zero_nonelastic_above_tendl_support", "mt": 5, "support_max_mev": emax, "extended_to_mev": 390.0})
 
     def sort_key(row):
-        return tuple(
-            int(row[c]) if c in {"mt", "product_index"} else float(row[c])
-            for c in key_cols
-        )
+        return tuple(int(row[c]) if c in {"mt", "product_index"} else float(row[c]) for c in key_cols)
 
     keep.sort(key=sort_key)
     with dst.open("w", encoding="utf-8", newline="") as f:
@@ -102,15 +100,8 @@ def _load_radar(root: Path):
     from radar.core.types import Particle, RadiationSource, SpectrumQuantity
     from radar.core.units import Unit
     from radar.shielding.proton_al import load_proton_al_range_energy_table
-    from radar.shielding.proton_al_survival import (
-        apply_proton_nonelastic_survival_to_primary_spectrum,
-        load_al27_nonelastic_cross_section_table,
-    )
-    from radar.shielding.proton_al_secondary import (
-        calculate_secondary_proton_spectrum_through_al,
-        load_secondary_proton_kernel,
-    )
-
+    from radar.shielding.proton_al_survival import apply_proton_nonelastic_survival_to_primary_spectrum, load_al27_nonelastic_cross_section_table
+    from radar.shielding.proton_al_secondary import calculate_secondary_proton_spectrum_through_al, load_secondary_proton_kernel
     return locals()
 
 
@@ -128,7 +119,9 @@ def _make_spectrum(rad, energy, y):
 
 
 def _grid(n: int) -> np.ndarray:
-    return np.geomspace(0.11, 500.0, n)
+    # Covers the measured SGPS differential range after correction; P11 >500 MeV is
+    # handled separately as an energetic-coverage bound, not assigned a spectral shape.
+    return np.geomspace(0.11, 390.0, n)
 
 
 def _load_normalized_physics(root: Path, temp: Path):
@@ -139,25 +132,9 @@ def _load_normalized_physics(root: Path, temp: Path):
     yy = temp / "yield.csv"
     pp = temp / "pdf.csv"
     actions = []
-    actions += _normalize_rows(
-        data / "tendl/p_al27_mf3_xs.csv",
-        xs,
-        ("mt", "energy_mev"),
-        ("sigma_barn",),
-        extend_mt5_zero=True,
-    )
-    actions += _normalize_rows(
-        data / "tendl/p_al27_mf6_proton_yield.csv",
-        yy,
-        ("mt", "product_index", "incident_energy_mev"),
-        ("yield",),
-    )
-    actions += _normalize_rows(
-        data / "tendl/p_al27_mf6_proton_pdf.csv",
-        pp,
-        ("mt", "product_index", "incident_energy_mev", "emitted_energy_mev"),
-        ("pdf_per_mev",),
-    )
+    actions += _normalize_rows(data / "tendl/p_al27_mf3_xs.csv", xs, ("mt", "energy_mev"), ("sigma_barn",), extend_mt5_zero=True)
+    actions += _normalize_rows(data / "tendl/p_al27_mf6_proton_yield.csv", yy, ("mt", "product_index", "incident_energy_mev"), ("yield",))
+    actions += _normalize_rows(data / "tendl/p_al27_mf6_proton_pdf.csv", pp, ("mt", "product_index", "incident_energy_mev", "emitted_energy_mev"), ("pdf_per_mev",))
     nonelastic = rad["load_al27_nonelastic_cross_section_table"](xs, mt=5)
     kernel = rad["load_secondary_proton_kernel"](xs_path=xs, yield_path=yy, pdf_path=pp)
     return rad, stopping, nonelastic, kernel, actions
@@ -171,21 +148,21 @@ def build_matrices(root: Path, n: int, depth_steps: int, survival_steps: int):
         primary = np.zeros((len(SHIELDS_MM), n, n))
         secondary = np.zeros_like(primary)
         for di, mm in enumerate(SHIELDS_MM):
-            gcm2 = mm / 10.0 * AL_DENSITY
+            thickness_g_cm2 = mm / 10.0 * AL_DENSITY
             for j in range(n):
                 spectrum = _make_spectrum(rad, energy, identity[j])
                 p = rad["apply_proton_nonelastic_survival_to_primary_spectrum"](
                     spectrum=spectrum,
                     stopping_table=stopping,
                     cross_section_table=nonelastic,
-                    thickness_g_cm2=gcm2,
+                    thickness_g_cm2=thickness_g_cm2,
                     integration_steps=survival_steps,
                 )
                 s = rad["calculate_secondary_proton_spectrum_through_al"](
                     incident_spectrum=spectrum,
                     stopping_table=stopping,
                     kernel=kernel,
-                    thickness_g_cm2=gcm2,
+                    thickness_g_cm2=thickness_g_cm2,
                     depth_steps=depth_steps,
                 )
                 primary[di, :, j] = p.y
@@ -202,9 +179,7 @@ def representative_validation(root: Path, sigma_csv: Path):
     matrices = {}
     actions = []
     for n in (72, 96):
-        energy, primary, secondary, actions = build_matrices(
-            root, n, depth_steps=24, survival_steps=64
-        )
+        energy, primary, secondary, actions = build_matrices(root, n, depth_steps=24, survival_steps=64)
         matrices[n] = (energy, primary, secondary)
 
     ef, pf, sf = matrices[96]
@@ -219,51 +194,33 @@ def representative_validation(root: Path, sigma_csv: Path):
             yc_interp = np.interp(np.log(ef), np.log(ec), yc, left=0.0, right=0.0)
             lf = float(np.trapezoid(yf * sigf, ef))
             lc = float(np.trapezoid(yc_interp * sigf, ef))
-            cases.append(
-                {
-                    "kind": "energy_grid",
-                    "power": power,
-                    "shield_mm": mm,
-                    "coarse_n": 72,
-                    "fine_n": 96,
-                    "relative_change": abs(lf - lc) / max(abs(lf), 1e-300),
-                }
-            )
+            cases.append({"kind": "energy_grid", "power": power, "shield_mm": mm, "coarse_n": 72, "fine_n": 96, "relative_change": abs(lf - lc) / max(abs(lf), 1e-300)})
 
-    rad, stopping, nonelastic, kernel, _ = _load_normalized_physics(
-        root, Path(tempfile.mkdtemp())
-    )
-    j = (ef / 10.0) ** (-1.5) * np.exp(-ef / 350.0)
-    spectrum = _make_spectrum(rad, ef, j)
-    for mm in SHIELDS_MM[1:]:
-        gcm2 = mm / 10.0 * AL_DENSITY
-        p = rad["apply_proton_nonelastic_survival_to_primary_spectrum"](
-            spectrum=spectrum,
-            stopping_table=stopping,
-            cross_section_table=nonelastic,
-            thickness_g_cm2=gcm2,
-            integration_steps=64,
-        )
-        values = []
-        for depth_steps in (24, 48):
-            s = rad["calculate_secondary_proton_spectrum_through_al"](
-                incident_spectrum=spectrum,
+    with tempfile.TemporaryDirectory() as td:
+        rad, stopping, nonelastic, kernel, _ = _load_normalized_physics(root, Path(td))
+        incident = (ef / 10.0) ** (-1.5) * np.exp(-ef / 350.0)
+        spectrum = _make_spectrum(rad, ef, incident)
+        for mm in SHIELDS_MM[1:]:
+            thickness_g_cm2 = mm / 10.0 * AL_DENSITY
+            p = rad["apply_proton_nonelastic_survival_to_primary_spectrum"](
+                spectrum=spectrum,
                 stopping_table=stopping,
-                kernel=kernel,
-                thickness_g_cm2=gcm2,
-                depth_steps=depth_steps,
+                cross_section_table=nonelastic,
+                thickness_g_cm2=thickness_g_cm2,
+                integration_steps=64,
             )
-            y = np.asarray(p.y) + np.asarray(s.y)
-            values.append(float(np.trapezoid(y * sigf, ef)))
-        cases.append(
-            {
-                "kind": "secondary_depth",
-                "shield_mm": mm,
-                "coarse_steps": 24,
-                "fine_steps": 48,
-                "relative_change": abs(values[1] - values[0]) / max(abs(values[1]), 1e-300),
-            }
-        )
+            values = []
+            for depth_steps in (24, 48):
+                s = rad["calculate_secondary_proton_spectrum_through_al"](
+                    incident_spectrum=spectrum,
+                    stopping_table=stopping,
+                    kernel=kernel,
+                    thickness_g_cm2=thickness_g_cm2,
+                    depth_steps=depth_steps,
+                )
+                y = np.asarray(p.y) + np.asarray(s.y)
+                values.append(float(np.trapezoid(y * sigf, ef)))
+            cases.append({"kind": "secondary_depth", "shield_mm": mm, "coarse_steps": 24, "fine_steps": 48, "relative_change": abs(values[1] - values[0]) / max(abs(values[1]), 1e-300)})
 
     d0_primary_err = float(np.max(np.abs(pf[0] - np.eye(len(ef)))))
     d0_secondary_max = float(np.max(np.abs(sf[0])))
@@ -282,9 +239,7 @@ def main():
         raise SystemExit(f"RADAR SHA mismatch: {sha}")
 
     (_, _, _), _, cases, d0p, d0s = representative_validation(args.radar_root, args.sigma_csv)
-    energy, primary, secondary, actions = build_matrices(
-        args.radar_root, 96, depth_steps=48, survival_steps=128
-    )
+    energy, primary, secondary, actions = build_matrices(args.radar_root, 96, depth_steps=48, survival_steps=128)
     np.savez_compressed(
         args.out / "radar_transport.npz",
         energy_mev=energy,
@@ -305,16 +260,11 @@ def main():
         "primary_nonnegative": bool(np.all(primary >= -1e-15)),
         "normalization_actions": actions,
         "convergence_cases": cases,
-        "max_energy_grid_relative_change": max(
-            x["relative_change"] for x in cases if x["kind"] == "energy_grid"
-        ),
-        "max_secondary_depth_relative_change": max(
-            x["relative_change"] for x in cases if x["kind"] == "secondary_depth"
-        ),
+        "max_energy_grid_relative_change": max(x["relative_change"] for x in cases if x["kind"] == "energy_grid"),
+        "max_secondary_depth_relative_change": max(x["relative_change"] for x in cases if x["kind"] == "secondary_depth"),
+        "high_energy_nuclear_domain_note": "TENDL compact nonelastic/secondary data end at 200 MeV; production adapter leaves CSDA active and applies no nonelastic correction above support. Contribution is quantified separately in task validation.",
     }
-    (args.out / "radar_validation.json").write_text(
-        json.dumps(report, indent=2), encoding="utf-8"
-    )
+    (args.out / "radar_validation.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps(report, indent=2))
 
 
