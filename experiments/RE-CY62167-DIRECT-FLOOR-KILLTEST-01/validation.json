@@ -1,0 +1,37 @@
+{
+  "task_id": "RE-CY62167-DIRECT-FLOOR-KILLTEST-01",
+  "starting_commit": "3474bf5d1773fe481bfd0a3d9013c12cb06dbabd",
+  "goes_radar_pipeline_changed": false,
+  "main_bit_rate_reconstruction_max_rel": 4.965405408764257e-08,
+  "multiplicity_invariants_pass": true,
+  "nonnegative_rates_pass": true,
+  "controlled_goes_valid_intervals": 16971,
+  "disposition": "B",
+  "decision_diagnostics": {
+    "max_nominal_actual_window_hazard": 668920.0459096093,
+    "natural_relevance_scale": "hazard>=1 => F_D_upper>=0.632",
+    "reason": "At least one requested actual reporting window has upper NHPP hazard >=1; direct risk cannot be dismissed without W/geometry."
+  },
+  "sensitivity_diagnostics": {
+    "false_mcu_aware_vs_nominal": {
+      "min_relative": -0.0733671873288465,
+      "max_relative": -0.0020078029340280246,
+      "max_abs_relative": 0.0733671873288465
+    },
+    "raw_nearest_vs_nominal": {
+      "min_relative": -0.013573330913552506,
+      "max_relative": 0.010797270073969134,
+      "max_abs_relative": 0.013573330913552506
+    },
+    "published_sigma_vs_main": {
+      "min_relative": -0.16072693375449953,
+      "max_relative": 0.14107541934063783,
+      "max_abs_relative": 0.16072693375449953
+    },
+    "low_conservative_vs_K1_only": {
+      "min_relative": 0.017482115360663464,
+      "max_relative": 2.5470676564200487,
+      "max_abs_relative": 2.5470676564200487
+    }
+  }
+}
