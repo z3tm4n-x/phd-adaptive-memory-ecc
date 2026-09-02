@@ -1,0 +1,63 @@
+name: RE-GOES19 pinned RADAR validation
+
+on:
+  push:
+    branches:
+      - research/goes19-proton-rate-01
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  radar-transport:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout PhD working branch
+        uses: actions/checkout@v4
+
+      - name: Checkout pinned RADAR
+        uses: actions/checkout@v4
+        with:
+          repository: z3tm4n-x/RADAR
+          ref: b032505d4d1b15403b8ad06aef578339f6d1c6b4
+          path: external/RADAR
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: external/RADAR/pyproject.toml
+
+      - name: Install pinned RADAR and test requirements
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e external/RADAR pytest
+
+      - name: Verify exact RADAR commit
+        run: |
+          test "$(git -C external/RADAR rev-parse HEAD)" = "b032505d4d1b15403b8ad06aef578339f6d1c6b4"
+
+      - name: Run pinned shielding tests
+        run: |
+          pytest -q \
+            external/RADAR/tests/test_proton_al_shielding.py \
+            external/RADAR/tests/test_proton_al_survival.py \
+            external/RADAR/tests/test_proton_al_secondary.py
+
+      - name: Build validated RADAR response matrices
+        run: |
+          python experiments/RE-GOES19-PROTON-RATE-01/radar_adapter.py \
+            --radar-root external/RADAR \
+            --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
+            --out radar-artifact
+
+      - name: Upload transport artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: re-goes19-radar-transport
+          path: radar-artifact/
+          if-no-files-found: error
+          retention-days: 7
