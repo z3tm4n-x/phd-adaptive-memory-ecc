@@ -1,0 +1,31 @@
+{
+  "low_sigma_zero_crossing_mev": 0.6139817629179332,
+  "low_spectrum_extrapolation": {
+    "status": "explicit scenario, not measured GOES spectrum",
+    "formula": "J(E)=J_P1*(E/E_P1_low)^(-gamma) for E_zero<=E<E_P1_low",
+    "P1_lower_support_mev": 0.92,
+    "gamma_scenarios": [0.0, 2.0, 4.0],
+    "reference_gamma": 2.0,
+    "interpretation": "gamma=0/2/4 are sensitivity scenarios rather than confidence bounds; gamma=2 is only a reproducible reference scenario",
+    "raw_P1_P2A_slope_diagnostic": {
+      "E": {"n":11798,"p05":1.1327813430136735,"median":7.581173636919897,"p95":14.84191641111473,"note":"diagnostic only; not used because provisional low-energy channel ratios are too unstable/background-sensitive for unconstrained extrapolation"},
+      "W": {"n":12731,"p05":0.17326356680985633,"median":4.24205467315484,"p95":12.766235746024364,"note":"diagnostic only; not used because provisional low-energy channel ratios are too unstable/background-sensitive for unconstrained extrapolation"}
+    }
+  },
+  "d0_status": "Scenario absolute rate is reported using gamma=2; measured-support-only and gamma=0/4 alternatives are retained separately.",
+  "high_energy_gap_bridge": {
+    "status": "included extrapolated bridge constrained by P10 differential and P11 integral measurements",
+    "formula": "power law J(E)=J390*(E/390)^(-gamma); gamma chosen so integral_500^inf J dE equals measured P11",
+    "diagnostic": {
+      "direction_median_gamma": {"E":1.179003304890439,"W":1.1705858862947358},
+      "fallback_rows": {"E":576,"W":920},
+      "gamma_quantiles": {
+        "E":{"p05":1.053790253606161,"median":1.179003304890439,"p95":1.3572297864833618},
+        "W":{"p05":1.057090767418769,"median":1.1705858862947358,"p95":1.3469515737907052}
+      }
+    },
+    "fallback": "where P10 is nonpositive, use direction-median fitted gamma with measured P11 normalization"
+  },
+  "gap390_500_diagnostic_note": "Reference rate includes the P10/P11-constrained power-law bridge. A flat-P10 bridge is retained only as an alternative stress-test diagnostic.",
+  "p11_note": "Measured P11 >500 MeV is included analytically because sigma is held constant above 186 MeV; its integral value also constrains the 390-500 MeV bridge slope."
+}
