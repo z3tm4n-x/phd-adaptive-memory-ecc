@@ -173,7 +173,7 @@ def spectrum_weights(args,outpath):
   for sm,sv in sig.items():
    sums={b:{z:0. for z in zones} for b in ('parent_event','multi_upper','bit_flip')}
    for d in range(2):
-    v=goes.valid[:,d];out=(inp[v,d]@P[di].T)+(inp[v,d]@S[di].T);dens=NB*out*sv[None,:]
+    v=goes.valid[:,0]&goes.valid[:,1];out=(inp[v,d]@P[di].T)+(inp[v,d]@S[di].T);dens=NB*out*sv[None,:]
     vals={'bit_flip':dens,'parent_event':dens/kb[None,:],'multi_upper':dens*pm[None,:]/kb[None,:]}
     for b,a in vals.items():
      for zn,m in zones.items():sums[b][zn]+=float(np.nansum(a[:,m]@tw[m]*300.0))/2

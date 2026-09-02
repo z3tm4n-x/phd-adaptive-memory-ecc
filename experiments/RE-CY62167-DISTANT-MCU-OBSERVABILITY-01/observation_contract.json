@@ -1,0 +1,33 @@
+{
+  "task_id": "RE-CY62167-DISTANT-MCU-OBSERVABILITY-01",
+  "raw_file_record_contract": {
+    "record": "already-formed cluster block: cluster id + bounding-box header + xadd/yadd + optional HH:MM:SS + K cell rows + declared count",
+    "cell_row": "(x,y) or (field0_raw,x,y)",
+    "field0_raw": "UNDOCUMENTED; preserved only; no new semantics assigned"
+  },
+  "cluster_semantics": {
+    "status": "POST_PROCESSED_CLUSTER_NOT_PARENT_GROUND_TRUTH",
+    "source_chain": "Zenodo states MCU were determined using Tsiligiannis-2014/Bosser-2015 procedure",
+    "spatial_rule_evidence": "historical method: detection window extends 3 bit cells in every direction; recursive expansion; later merge passes",
+    "raw_reproduction": {
+      "all_K2_dinf_le3": true,
+      "K2_literal_Manhattan_not_required": "Task-1/raw geometry has dM>3 cases while square-3 invariant holds",
+      "Kge3_recursive_span_exists": true
+    },
+    "temporal_rule_evidence": "Bosser historical method also required detections within 2 seconds; additional merge passes existed. Exact implementation producing Zenodo files is not published.",
+    "cluster_id": "post-processing sequence label; resets can mark parser segments, not proven parent-particle ids."
+  },
+  "timestamp": {
+    "availability": "present only in 0.9-5 and 186 MeV proton files",
+    "confirmed_semantics": "second-resolution value attached to already-formed registered cluster",
+    "not_established": "incident-particle arrival time; unique parent-event time; complete raw readout chronology",
+    "cross_cluster_use": "diagnostic only; same/adjacent timestamp does not imply common parent"
+  },
+  "unavailable_observations": [
+    "pre-clustering bitflip log for all proton runs",
+    "per-bit detection/readout timestamp before grouping",
+    "exact multi-pass cluster-merge provenance",
+    "manufacturer proprietary physical/logical/interleaving transformation",
+    "parent-particle event labels"
+  ]
+}

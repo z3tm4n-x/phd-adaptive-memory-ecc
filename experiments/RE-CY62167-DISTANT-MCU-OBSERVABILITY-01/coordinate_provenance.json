@@ -1,0 +1,27 @@
+{
+  "task_id": "RE-CY62167-DISTANT-MCU-OBSERVABILITY-01",
+  "classification": "TRANSFORMED_PHYSICAL_MAP_COORDINATE_REPRESENTATION",
+  "axis_labels": [
+    "axis_x",
+    "axis_y"
+  ],
+  "physical_row_column_names": "NOT ESTABLISHED",
+  "evidence": [
+    "Bosser 2015 distinguishes logical addresses from physical addresses and states that manufacturer-provided scrambling/interleaving knowledge is required to create physical bitmaps.",
+    "LELAPE 2024 states that the relevant Infineon SRAM campaigns used proprietary unscrambling/interleaving information to map logical addresses to physical bitcell locations in the XY plane and then applied MD-based clustering.",
+    "Zenodo states its MCU data were determined using the cited clustering procedure."
+  ],
+  "proprietary_transform_publicly_available": false,
+  "xadd_yadd_semantics": "UNDOCUMENTED_ANCHOR_FIELDS; empirical equality to xmin/ymin is reported but no stronger label is assigned",
+  "empirical_checks": {
+    "all_header_bounds_match_cells": true,
+    "all_xadd_yadd_equal_xmin_ymin": false,
+    "global_coordinate_range": [
+      0,
+      4095,
+      0,
+      4095
+    ]
+  },
+  "hard_rule": "Offsets are analyzed in supplied transformed XY grid only. x/y are never relabeled physical row/column, and the proprietary transform is not reconstructed."
+}
