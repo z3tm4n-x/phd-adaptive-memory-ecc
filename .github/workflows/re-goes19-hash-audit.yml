@@ -1,0 +1,41 @@
+name: RE-GOES19 controlled-input drift audit
+on:
+  push:
+    branches: [research/goes19-proton-rate-01]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare current NOAA files with controlled PI hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, urllib.request
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
+          base='https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg5m/2026'
+          mismatches=[]
+          for line in (exp/'goes_files.sha256').read_text().splitlines():
+              if not line.strip(): continue
+              expected,name=line.split(None,1); name=name.strip()
+              month=name.split('_d2026',1)[1][:2]
+              url=f'{base}/{month}/{name}'
+              try:
+                  data=urllib.request.urlopen(url,timeout=30).read()
+                  got=hashlib.sha256(data).hexdigest()
+              except Exception as e:
+                  print('FETCH_ERROR',name,repr(e),flush=True); mismatches.append((name,'FETCH_ERROR',expected)); continue
+              if got != expected:
+                  print('MISMATCH',name,got,expected,flush=True)
+                  mismatches.append((name,got,expected))
+              else:
+                  print('MATCH',name,flush=True)
+          print('MISMATCH_COUNT',len(mismatches),flush=True)
+          for row in mismatches: print('MISMATCH_FINAL',*row,flush=True)
+          PY
