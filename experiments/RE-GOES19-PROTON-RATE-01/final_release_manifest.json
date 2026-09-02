@@ -1,0 +1,49 @@
+{
+  "task_id": "RE-GOES19-PROTON-RATE-01",
+  "branch": "research/goes19-proton-rate-01",
+  "controlled_source_file_count": 59,
+  "controlled_dataset_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815",
+  "controlled_source_archive_file_hashes": "goes_files.sha256",
+  "upstream_noaa_revision": {
+    "affected_dates": [
+      "2026-01-14",
+      "2026-01-15",
+      "2026-01-16",
+      "2026-01-17",
+      "2026-01-18",
+      "2026-01-19",
+      "2026-01-20"
+    ],
+    "scientific_data_changes_requiring_patch": [
+      "2026-01-19",
+      "2026-01-20"
+    ],
+    "method": "current public NOAA files plus noaa_revision_semantic_patch.json; all 59 dataset arrays then exactly match the controlled-source data-layer fingerprint"
+  },
+  "runtime": {
+    "python": "3.13.15 (main, Aug  6 2026, 02:15:18) [GCC 13.3.0]",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "h5py": "3.15.1"
+  },
+  "pinned_radar": {
+    "commit": "b032505d4d1b15403b8ad06aef578339f6d1c6b4",
+    "validation_run": 33621228858,
+    "transport_sha256": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6",
+    "validation_sha256": "c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772",
+    "tests": "21 passed"
+  },
+  "task_tests": "6 passed",
+  "numeric_release_gate": "PASS: 16992 five-minute rows; 16971 valid paired intervals; coverage and seven shield median/max anchors within 1e-6 relative tolerance; finite nonnegative central rates",
+  "output_sha256": {
+    "proton_rate_5min.csv": "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09",
+    "summary_by_shielding.csv": "562310c814e1ddae6921c7a7c62f11c77db39feef940f1646c46c17fc2a55686",
+    "sigma_bit_model.csv": "11656dc74600d7a1955c6f25ecd46da71ced586f891ac27d47a393bc87febc83",
+    "rate_diagnostics.json": "b051ccfc26008b81e43644d1326e25696a89e3fdfccd1da1301c234db036ddcf",
+    "goes19_audit.json": "b699784fbff22f43ecd57af1638e16be659052d564d084ea52c7220a0c999cab",
+    "rate_pipeline.py": "d3a1a577922a02d1d498146f2c6a6fa3888478b36a823d8d0a89f921d4ad1b52",
+    "noaa_revision_semantic_patch.json": "84e65f61f1072e632523d901aaf6710fdeb30e3003dfe34e5a51c579479b7dec"
+  },
+  "source_host_reference_proton_rate_sha256": "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09",
+  "byte_identity_note": "The source-host reference and GitHub-runner CSV may differ in last floating-point digits across runtime patch/host implementations. Scientific inputs are gated by exact data-layer and RADAR hashes; the branch artifact is gated numerically and its own SHA-256 above is authoritative."
+}

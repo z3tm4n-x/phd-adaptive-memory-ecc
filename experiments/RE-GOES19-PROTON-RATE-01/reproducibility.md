@@ -41,3 +41,10 @@ Note: after any intentional output-schema change, hashes must be regenerated and
 ## Public archive drift
 
 On 2026-09-02, a bytewise re-check against the then-current NOAA archive found 52/59 files unchanged and seven revised public files dated 2026-01-14 through 2026-01-20. Reproduction of this task must use the PI-controlled files matching `goes_files.sha256`; downloading current files by filename alone is not sufficient for those seven dates.
+
+
+## Final controlled branch release
+
+The final branch artifact is described by `final_release_manifest.json`. NOAA revised seven source files after the PI-controlled archive was captured. `noaa_revision_semantic_patch.json` restores the changed scientific dataset values; after restoration, all 59 HDF5/NetCDF dataset arrays have the exact controlled data-layer SHA-256 `f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815`.
+
+The pinned RADAR transport remains the validated artifact from Actions run `33621228858`. Output floating-point CSV bytes can vary in the last digits across Python/NumPy/host implementations, so the final release uses exact input/artifact fingerprints plus a numerical invariant gate. The authoritative SHA-256 values for the committed branch outputs are recorded in `final_release_manifest.json`.
