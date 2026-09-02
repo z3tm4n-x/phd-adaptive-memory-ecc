@@ -1,0 +1,174 @@
+name: RE-GOES19 final reproducible build
+
+on:
+  push:
+    branches:
+      - research/goes19-proton-rate-01
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout working branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout pinned RADAR
+        uses: actions/checkout@v4
+        with:
+          repository: z3tm4n-x/RADAR
+          ref: b032505d4d1b15403b8ad06aef578339f6d1c6b4
+          path: external/RADAR
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e external/RADAR pytest h5py
+
+      - name: Assemble exact rate pipeline
+        run: |
+          EXP=experiments/RE-GOES19-PROTON-RATE-01
+          cat "$EXP/.build/rate.part0" "$EXP/.build/rate.part1" "$EXP/.build/rate.part2" > "$EXP/rate_pipeline.py"
+          test "$(git hash-object "$EXP/rate_pipeline.py")" = "a871819455ce8517e1da2469512bd01e6c923246"
+          python -m py_compile "$EXP/goes19_adapter.py" "$EXP/sigma_model.py" "$EXP/radar_converged.py" "$EXP/rate_pipeline.py"
+
+      - name: Verify pinned RADAR and run shielding tests
+        run: |
+          test "$(git -C external/RADAR rev-parse HEAD)" = "b032505d4d1b15403b8ad06aef578339f6d1c6b4"
+          pytest -q \
+            external/RADAR/tests/test_proton_al_shielding.py \
+            external/RADAR/tests/test_proton_al_survival.py \
+            external/RADAR/tests/test_proton_al_secondary.py
+
+      - name: Run task unit tests
+        run: |
+          cd experiments/RE-GOES19-PROTON-RATE-01
+          python -m unittest -v test_rate_pipeline.py
+
+      - name: Download exact controlled GOES daily files and verify hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, urllib.request
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
+          out=Path('raw-goes'); out.mkdir()
+          base='https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg5m/2026'
+          rows=[]
+          for line in (exp/'goes_files.sha256').read_text().splitlines():
+              if not line.strip(): continue
+              expected,name=line.split(None,1); name=name.strip()
+              month=name.split('_d2026',1)[1][:2]
+              url=f'{base}/{month}/{name}'
+              dst=out/name
+              print('download', url, flush=True)
+              urllib.request.urlretrieve(url,dst)
+              h=hashlib.sha256(dst.read_bytes()).hexdigest()
+              if h != expected:
+                  raise SystemExit(f'SHA mismatch {name}: {h} != {expected}')
+              rows.append(name)
+          if len(rows)!=59: raise SystemExit(f'expected 59 files, got {len(rows)}')
+          PY
+
+      - name: Build converged pinned-RADAR transport
+        run: |
+          python experiments/RE-GOES19-PROTON-RATE-01/radar_converged.py \
+            --radar-root external/RADAR \
+            --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
+            --out build-radar
+
+      - name: Build full 5-minute proton-rate release
+        run: |
+          python experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py \
+            --goes-dir raw-goes \
+            --transport build-radar/radar_transport.npz \
+            --sigma-csv experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv \
+            --out build-rate > build-rate/stdout-summary.json
+          cp build-radar/radar_validation.json build-rate/radar_validation.json
+
+      - name: Verify deterministic core-output hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          exp=Path('experiments/RE-GOES19-PROTON-RATE-01')
+          expected=json.loads((exp/'validation_report.json').read_text())['output_sha256']
+          for name,want in expected.items():
+              p=Path('build-rate')/name
+              got=hashlib.sha256(p.read_bytes()).hexdigest()
+              print(name,got)
+              if got != want: raise SystemExit(f'output SHA mismatch {name}: {got} != {want}')
+          PY
+
+      - name: Generate input manifest from the verified files
+        run: |
+          PYTHONPATH=experiments/RE-GOES19-PROTON-RATE-01 python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          from goes19_adapter import load_directory
+          g=load_directory(Path('raw-goes'))
+          sigma=Path('experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv')
+          sh=lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+          manifest={
+            'task_id':'RE-GOES19-PROTON-RATE-01',
+            'starting_commit':'a6b6663178927c0f389d9b73588da63963936236',
+            'working_branch':'research/goes19-proton-rate-01',
+            'inputs':{
+              'goes_archive':{
+                'controlled_copy_name':'goes010226.zip',
+                'controlled_archive_sha256':'7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581',
+                'note':'archive itself is not committed; each unpacked daily file is verified independently against the hashes below',
+                'files':g.files,
+              },
+              'rd174':{
+                'name':'РД 134-0174-2009(3).pdf',
+                'sha256':'7de0db483fb6a912b0e8bcdbfff1b0cc46ff5216e0374e7cd4a05130584b8f37',
+                'committed':False,
+                'used_for':'eq. (6.6) proton energy convolution and full-4pi isotropic-flux unit contract',
+              },
+              'sigma_bit_experimental':{
+                'repo_path':str(sigma),
+                'sha256':sh(sigma),
+                'source_task':'RE-CY62167-PROTON-01',
+              },
+              'radar':{
+                'repository':'z3tm4n-x/RADAR',
+                'commit':'b032505d4d1b15403b8ad06aef578339f6d1c6b4',
+                'code_vendored':False,
+              },
+              'noaa_retrieval_base':'https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg5m/2026/',
+            },
+            'shielding_mm_Al_equivalent':[0,1,2,3,5,7,10],
+            'n_bits':16777216,
+          }
+          Path('build-rate/input_manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False),encoding='utf-8')
+          PY
+
+      - name: Publish release outputs and remove build-only staging
+        run: |
+          EXP=experiments/RE-GOES19-PROTON-RATE-01
+          cp build-rate/goes19_audit.json "$EXP/"
+          cp build-rate/goes19_proton_rate.csv "$EXP/"
+          cp build-rate/input_manifest.json "$EXP/"
+          cp build-rate/radar_validation.json "$EXP/"
+          cp build-rate/rate_diagnostics.json "$EXP/"
+          cp build-rate/sigma_bit_model.csv "$EXP/"
+          cp build-rate/summary_by_shielding.csv "$EXP/"
+          rm -rf "$EXP/.build"
+          rm -f .github/workflows/re-goes19-finalize.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$EXP" .github/workflows/re-goes19-finalize.yml
+          git status --short
+          git commit -m 'RE-GOES19-PROTON-RATE-01: publish final reproducible outputs [skip ci]'
+          git push origin HEAD:research/goes19-proton-rate-01
