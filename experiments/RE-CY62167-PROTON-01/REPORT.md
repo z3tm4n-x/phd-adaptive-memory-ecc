@@ -42,7 +42,7 @@ After excluding only strict service sentinels, the dataset contains **140,111 re
 
 ## 2. Geometry and the clustering-criterion discrepancy
 
-For every K>=2 record, `geometry_by_energy.csv` preserves the event coordinates and timestamp (when present), canonical relative coordinates, bounding box, pairwise Manhattan/infinity metrics, and connectivity flags. For K=2 it additionally reports signed `dx,dy`, `|dx|,|dy|`, `dM=|dx|+|dy|`, `dInf=max(|dx|,|dy|)`, and orientation.
+The parser preserves each retained cluster's coordinates, timestamp (when present), `xadd/yadd`, header bounds, and the undocumented leading integer without assigning new semantics. `geometry_by_energy.csv` is the compact analysis interface derived from those records: it reports per-`(E,K)` bounding/pairwise-distance/connectivity summaries and the complete K=2 distance/orientation distribution with `P(geometry | E,K)`. Signed coordinates and timestamps remain preserved in the source records/parser rather than duplicated in this compact repository table. This keeps the repository output auditable without duplicating the ~1 MB event-detail table already reproducible from the Zenodo files and parser.
 
 A material consistency finding is that the raw files do **not** obey a literal Manhattan-diamond cutoff `dM<=3` for all two-cell clusters: **545 K=2 records have dM>3**. In contrast, **all K=2 records satisfy `dInf<=3`** (`0` violations). Examples therefore exist with `|dx|=|dy|=3`, giving `dM=6` while remaining within a ±3-cell-per-axis window.
 
@@ -106,11 +106,10 @@ No ResearchRabbit integration is exposed in this session, so its private graph c
 
 ## Reproducibility
 
-Run:
+Parser/data-integrity validation:
 
 ```bash
-python3 build_outputs.py --zenodo-dir <zenodo-dir> --pdf-dir <pdf-dir> --out .
-python3 -m unittest -v test_parser.py test_dataset.py
+CY62167_ZENODO_DIR=<zenodo-dir> python3 -m unittest -v test_parser.py test_dataset.py
 ```
 
-The source manifest records supplied input hashes. No publication PDFs are committed to Git.
+The repository CSV/JSON tables are frozen outputs derived from the checked raw files. The source manifest records supplied input hashes, and the parser/tests provide the auditable raw-data interface. No publication PDFs are committed to Git.
