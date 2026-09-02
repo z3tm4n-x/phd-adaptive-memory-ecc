@@ -1,0 +1,67 @@
+{
+  "task_id": "RE-GOES19-PROTON-RATE-01",
+  "GOES_to_RD174_unit_contract": {
+    "status": "PASS",
+    "goes_native": "J(E): protons cm^-2 s^-1 sr^-1 keV^-1",
+    "internal": "J(E): protons cm^-2 s^-1 sr^-1 MeV^-1 (numeric x1000)",
+    "solid_angle_step": "F_4pi(E)=4*pi*J(E), performed once immediately before RADAR",
+    "radar_input": "differential flux protons cm^-2 s^-1 MeV^-1 (no sr^-1)",
+    "rd174": "F_VEP(E) in (cm^2 s MeV)^-1, differential spectrum of isotropic proton flux in full solid angle Omega=4*pi; eq. (6.6) nu=integral Sigma(E)F(E)dE",
+    "device_rate": "lambda_bit=N_bits*integral F_sh(E)*sigma_bit(E)dE",
+    "dimensional_check": "[bit]*[cm^-2 s^-1 MeV^-1]*[cm^2 bit^-1]*[MeV]=s^-1",
+    "interpretation": "The 4*pi step is not a claim that East or West is a measured omnidirectional spectrum. Each direction is separately promoted to an isotropy-equivalent scenario; E/W disagreement is retained as a diagnostic."
+  },
+  "sigma_E_interface": {
+    "status": "PARTIAL",
+    "main": "log-log interpolation between positive experimental points; unresolved 29-MeV point omitted; local linear continuation below 0.9 MeV to nonnegative zero-crossing; constant hold above highest point",
+    "low_zero_crossing_mev": 0.6139817629179332,
+    "sensitivity_models": [
+      "linear_energy",
+      "gap_linear_5_40",
+      "low_hold"
+    ],
+    "reason_partial": "The response below 0.9 MeV and above the experimental high-energy endpoint is extrapolated; the 5-40 MeV gap includes the unresolved 29-MeV point. Shielding transports a substantial fraction of the rate weight into the ~1 MeV region, making interpolation/extrapolation sensitivity material."
+  },
+  "RADAR_shielding": {
+    "status": "PASS",
+    "commit": "b032505d4d1b15403b8ad06aef578339f6d1c6b4",
+    "github_actions_run": 33621228858,
+    "pinned_tests": "21 passed",
+    "grid_points": 192,
+    "energy_grid_max_relative_change": 0.0030224658669087893,
+    "secondary_depth_max_relative_change": 6.861533129582199e-05,
+    "d0_primary_identity_max_abs": 2.9976021664879317e-15,
+    "d0_secondary_max_abs": 0.0,
+    "secondary_nonnegative": true,
+    "monoenergetic_max_relative_peak_error": 0.026339253264528514,
+    "high_energy_nuclear_support": "TENDL-derived nonelastic/secondary tables end at 200 MeV; no invented reaction model is extrapolated above 200 MeV.",
+    "10mm_constant_sigma200_attenuation_bound": 0.021821732322301002,
+    "10mm_p99_total_rate_bound_from_missing_gt200_nuclear_attenuation": 0.015471760166200181
+  },
+  "lambda_bit": {
+    "status": "PARTIAL",
+    "why": "A reproducible scenario series is computed for all shields, but absolute values remain model-sensitive because sigma_bit(E) is not experimentally supported over every output energy that contributes materially; d=0 additionally requires an explicit 0.614-0.92 MeV environmental-spectrum extrapolation.",
+    "reference_low_spectrum_gamma": 2.0,
+    "low_spectrum_sensitivity_gamma": [
+      0.0,
+      2.0,
+      4.0
+    ],
+    "paired_valid_intervals": 16971,
+    "coverage_fraction": 0.9987641242937854
+  },
+  "tests": {
+    "local_unit_tests": "6 passed",
+    "deterministic_regeneration": "rate/audit/summary/sigma outputs reproduced byte-for-byte before final schema extension; final calculation rerun after schema/audit changes",
+    "python_compile": "PASS"
+  },
+  "output_sha256": {
+    "goes19_audit.json": "fbc53e60d28cff3a8aaf8d518cd3b4fcb45d2dafbe08a64f4d13e5ed51d06ee1",
+    "sigma_bit_model.csv": "11656dc74600d7a1955c6f25ecd46da71ced586f891ac27d47a393bc87febc83",
+    "summary_by_shielding.csv": "6ea8d227b12851cb5e33f47a5dfa6bd51de91ee60983714351688203b4bc0d95",
+    "goes19_proton_rate.csv": "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09",
+    "radar_validation.json": "c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772",
+    "rate_diagnostics.json": "b051ccfc26008b81e43644d1326e25696a89e3fdfccd1da1301c234db036ddcf"
+  },
+  "hard_stop_disposition": "No unsupported quantity is labeled as measured absolute truth. Where direct support is incomplete, the release is explicitly PARTIAL/scenario-based with sensitivity columns; therefore the hard-stop is respected rather than bypassed."
+}
