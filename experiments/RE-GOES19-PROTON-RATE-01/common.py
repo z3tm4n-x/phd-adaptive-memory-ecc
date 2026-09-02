@@ -8,7 +8,7 @@ import numpy as np
 
 N_BITS = 16_777_216
 AL_DENSITY_G_CM3 = 2.70
-SHIELD_MM = (0.0, 1.0, 2.0, 5.0, 10.0)
+SHIELD_MM = (0.0, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0)
 CHANNELS = ("P1", "P2A", "P2B", "P3", "P4", "P5", "P6", "P7", "P8A", "P8B", "P8C", "P9", "P10")
 P1_P5_CORR = np.array([0.656, 0.688, 0.708, 0.625, 0.618, 0.753], dtype=float)
 P1_P5_LO = np.array([0.92, 1.80, 2.20, 3.30, 6.30, 12.4], dtype=float)
