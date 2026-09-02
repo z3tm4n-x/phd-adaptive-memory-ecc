@@ -102,7 +102,7 @@ The pinned compact TENDL nonelastic/secondary tables end at 200 MeV. No nuclear 
 | 7 | PARTIAL_SIGMA_EXTRAPOLATION | 6.7420e-06 | 0.001426 | 1.1687e-04 | 0.008713 | 0.8755 | 2026-01-19T19:15:00+00:00 | 7261 |
 | 10 | PARTIAL_SIGMA_EXTRAPOLATION | 6.1578e-06 | 5.3074e-04 | 4.6217e-05 | 0.003323 | 0.3181 | 2026-01-19T19:15:00+00:00 | 2702 |
 
-`goes19_proton_rate.csv` also reports, for each shielding thickness, `lambda_E`, `lambda_W`, the central estimate, `lambda_h = 3600 lambda`, `m5 = 300 lambda`, and the central primary/secondary decomposition. `m5` is an expected number of flipped bits in a 5-minute interval; it is **not** a probability of an event or failure.
+`proton_rate_5min.csv` also reports, for each shielding thickness, `lambda_E`, `lambda_W`, the central estimate, `lambda_h = 3600 lambda`, `m5 = 300 lambda`, and the central primary/secondary decomposition. `m5` is an expected number of flipped bits in a 5-minute interval; it is **not** a probability of an event or failure.
 
 ### Physical structure
 
@@ -134,5 +134,9 @@ NOAA also warns that provisional SGPS P1–P9 background outside SEP events can 
 - `lambda_bit(t,d)`: **PARTIAL**
 
 ## Reproducibility
+
+### Controlled-input drift check
+
+A final comparison against the current NOAA public archive on 2026-09-02 found that **52 of the 59** daily public files still match the PI-controlled SHA-256 values byte-for-byte. Seven consecutive files, `20260114` through `20260120` (all `v3-0-3`), have since been replaced or rewritten in the public archive and no longer match the controlled copies. The calculations in this task remain tied to the PI-provided archive and its hashes; the later public revisions are not silently substituted. This is a provenance difference, not evidence that the controlled calculation should be retroactively changed.
 
 Large raw GOES NetCDF files and the transport/spectrum arrays are not committed. Exact input hashes are in `input_manifest.json`; transport is regenerated from the pinned RADAR SHA. The committed full 5-minute rate table is deterministic from those inputs and the task code.
