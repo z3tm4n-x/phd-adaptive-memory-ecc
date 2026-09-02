@@ -1,0 +1,203 @@
+                continue
+            g = gamma[t, d]
+            j = float(goes.flux[t, d, -1])
+            p11 = float(goes.p11[t, d])
+            uj = float(goes.uncert[t, d, -1]) if np.isfinite(goes.uncert[t, d, -1]) else 0.0
+            up = float(goes.p11_uncert[t, d]) if np.isfinite(goes.p11_uncert[t, d]) else 0.0
+            if j > 0 and not used_fallback[t, d]:
+                integ[t, d] = _gap_integral_from_anchor(j, g)
+                # Envelope at fixed fitted gamma; spectral-index model uncertainty
+                # is handled separately from the L2 measurement uncertainty.
+                integ_lo[t, d] = _gap_integral_from_anchor(max(0.0, j - uj), g)
+                integ_hi[t, d] = _gap_integral_from_anchor(j + uj, g)
+            else:
+                integ[t, d] = _gap_integral_from_p11(max(0.0, p11), g)
+                integ_lo[t, d] = _gap_integral_from_p11(max(0.0, p11 - up), g)
+                integ_hi[t, d] = _gap_integral_from_p11(max(0.0, p11 + up), g)
+    diag = {
+        "direction_median_gamma": {"E": float(med[0]), "W": float(med[1])},
+        "fallback_rows": {"E": int(np.sum(used_fallback[:, 0])), "W": int(np.sum(used_fallback[:, 1]))},
+        "gamma_quantiles": {},
+    }
+    for d, name in enumerate(("E", "W")):
+        x = gamma[goes.valid[:, d], d]
+        diag["gamma_quantiles"][name] = {
+            "p05": float(np.quantile(x, 0.05)),
+            "median": float(np.quantile(x, 0.50)),
+            "p95": float(np.quantile(x, 0.95)),
+        }
+    return integ, integ_lo, integ_hi, gamma, diag
+
+
+def calculate(goes, transport_npz: Path, sigma_csv: Path):
+    z = np.load(transport_npz)
+    energy = np.asarray(z["energy_mev"], float)
+    shields = np.asarray(z["shield_mm"], float)
+    primary_m = np.asarray(z["primary"], float)
+    secondary_m = np.asarray(z["secondary"], float)
+    if tuple(shields.tolist()) != SHIELDS_MM:
+        raise ValueError(f"shield grid mismatch {shields}")
+    if primary_m.shape != (len(shields), len(energy), len(energy)):
+        raise ValueError("transport shape")
+
+    points = load_experimental_points(sigma_csv)
+    sig_main = sigma_hat(energy, points, "main_loglog")
+    w_main = trap_weights(energy) * sig_main
+    e_zero = zero_crossing_low(points)
+
+    J, U = reconstruct_goes(goes, energy)
+    J4 = FOUR_PI * J
+    U4 = FOUR_PI * U
+    extensions = {}
+    for gamma in LOW_EXTRAP_GAMMAS:
+        L, LU = low_energy_extension(goes, energy, e_zero, gamma)
+        extensions[gamma] = (FOUR_PI * L, FOUR_PI * LU)
+
+    T = len(goes.times)
+    D = len(shields)
+    shape = (T, D, 2)
+    measured_p = np.full(shape, np.nan)
+    measured_s = np.full(shape, np.nan)
+    measured_t = np.full(shape, np.nan)
+    scenario_p = {g: np.full(shape, np.nan) for g in LOW_EXTRAP_GAMMAS}
+    scenario_s = {g: np.full(shape, np.nan) for g in LOW_EXTRAP_GAMMAS}
+    scenario_t = {g: np.full(shape, np.nan) for g in LOW_EXTRAP_GAMMAS}
+    rate_lo_ref = np.full(shape, np.nan)
+    rate_hi_ref = np.full(shape, np.nan)
+    sensitive_band_ref = np.full(shape, np.nan)
+    input_gt200 = np.full(shape, np.nan)
+    alt = {m: np.full(shape, np.nan) for m in SIGMA_SENSITIVITY_MODELS}
+
+    high_sigma_main = float(sigma_hat(np.array([600.0]), points, "main_loglog")[0])
+    p11_main = _p11_rate(goes, high_sigma_main)
+    p11_u = _p11_uncert_rate(goes, high_sigma_main)
+    gap_integral, gap_integral_lo, gap_integral_hi, gap_gamma, gap_bridge_diag = high_energy_gap_bridge(goes)
+    gap_bridge_main = N_BITS * FOUR_PI * gap_integral * high_sigma_main
+    gap_bridge_lo = N_BITS * FOUR_PI * gap_integral_lo * high_sigma_main
+    gap_bridge_hi = N_BITS * FOUR_PI * gap_integral_hi * high_sigma_main
+    band = (energy >= 0.8) & (energy <= 1.2)
+    highin = energy > 200.0
+    ref_gamma = LOW_EXTRAP_REFERENCE_GAMMA
+
+    for di in range(D):
+        for direction in range(2):
+            valid = goes.valid[:, direction]
+            if not np.any(valid):
+                continue
+            inp = J4[valid, direction]
+            po, so, rp, rs = _transport_component(inp, primary_m[di], secondary_m[di], w_main)
+            rp = rp + p11_main[valid, direction]
+            measured_p[valid, di, direction] = rp
+            measured_s[valid, di, direction] = rs
+            measured_t[valid, di, direction] = rp + rs
+
+            # Explicit low-energy extrapolation scenarios.
+            scenario_outputs = {}
+            for gamma in LOW_EXTRAP_GAMMAS:
+                low_inp = extensions[gamma][0][valid, direction]
+                lpo, lso, lrp, lrs = _transport_component(low_inp, primary_m[di], secondary_m[di], w_main)
+                scenario_p[gamma][valid, di, direction] = rp + lrp + gap_bridge_main[valid, direction]
+                scenario_s[gamma][valid, di, direction] = rs + lrs
+                scenario_t[gamma][valid, di, direction] = rp + rs + lrp + lrs + gap_bridge_main[valid, direction]
+                if gamma == ref_gamma:
+                    scenario_outputs[gamma] = (po + lpo, so + lso)
+
+            # L2 envelope for the reference extrapolation scenario. P1 uncertainty
+            # is propagated with the same assumed power-law shape in the added band.
+            low_meas = np.maximum(0.0, inp - U4[valid, direction])
+            high_meas = inp + U4[valid, direction]
+            low_ext, low_ext_u = extensions[ref_gamma]
+            low_e = low_ext[valid, direction]
+            low_eu = low_ext_u[valid, direction]
+            low_total_inp = low_meas + np.maximum(0.0, low_e - low_eu)
+            high_total_inp = high_meas + low_e + low_eu
+            lowout = (low_total_inp @ primary_m[di].T) + (low_total_inp @ secondary_m[di].T)
+            highout = (high_total_inp @ primary_m[di].T) + (high_total_inp @ secondary_m[di].T)
+            rate_lo_ref[valid, di, direction] = N_BITS * (lowout @ w_main) + np.maximum(
+                0, p11_main[valid, direction] - p11_u[valid, direction]
+            ) + gap_bridge_lo[valid, direction]
+            rate_hi_ref[valid, di, direction] = N_BITS * (highout @ w_main) + p11_main[valid, direction] + p11_u[valid, direction] + gap_bridge_hi[valid, direction]
+
+            # Diagnostics use the reference scenario where relevant.
+            total_ref_output = scenario_outputs[ref_gamma][0] + scenario_outputs[ref_gamma][1]
+            wb = w_main.copy()
+            wb[~band] = 0.0
+            sensitive_band_ref[valid, di, direction] = N_BITS * (total_ref_output @ wb)
+            inp_hi = np.zeros_like(inp)
+            inp_hi[:, highin] = inp[:, highin]
+            out_hi = (inp_hi @ primary_m[di].T) + (inp_hi @ secondary_m[di].T)
+            input_gt200[valid, di, direction] = N_BITS * (out_hi @ w_main) + gap_bridge_main[valid, direction] + p11_main[valid, direction]
+
+            # Sigma interpolation sensitivity at the fixed reference spectrum.
+            ref_inp = inp + extensions[ref_gamma][0][valid, direction]
+            refout = (ref_inp @ primary_m[di].T) + (ref_inp @ secondary_m[di].T)
+            for model in SIGMA_SENSITIVITY_MODELS:
+                sig = sigma_hat(energy, points, model)
+                w = trap_weights(energy) * sig
+                high_sigma = float(sigma_hat(np.array([600.0]), points, model)[0])
+                p11_alt = N_BITS * FOUR_PI * goes.p11[valid, direction] * high_sigma
+                gap_alt = N_BITS * FOUR_PI * gap_integral[valid, direction] * high_sigma
+                alt[model][valid, di, direction] = N_BITS * (refout @ w) + p11_alt + gap_alt
+
+    # Alternative 390-500 MeV diagnostic. The reference rate already includes the
+    # P10/P11-constrained power-law bridge above; this flat-P10 continuation is
+    # retained only as a deliberately simple stress test.
+    sig_gap = float(sigma_hat(np.array([445.0]), points, "main_loglog")[0])
+    gap_diag = N_BITS * FOUR_PI * goes.flux[:, :, -1] * (500.0 - 390.0) * sig_gap
+
+    return {
+        "energy": energy,
+        "shields": shields,
+        "measured_primary": measured_p,
+        "measured_secondary": measured_s,
+        "measured_total": measured_t,
+        "scenario_primary": scenario_p,
+        "scenario_secondary": scenario_s,
+        "scenario_total": scenario_t,
+        "reference_gamma": ref_gamma,
+        "reference_total": scenario_t[ref_gamma],
+        "reference_primary": scenario_p[ref_gamma],
+        "reference_secondary": scenario_s[ref_gamma],
+        "uncert_low_ref": rate_lo_ref,
+        "uncert_high_ref": rate_hi_ref,
+        "sensitive_band_ref": sensitive_band_ref,
+        "input_gt200": input_gt200,
+        "alt": alt,
+        "p11_rate": p11_main,
+        "gap390_500_diag": gap_diag,
+        "gap_bridge_rate": gap_bridge_main,
+        "gap_bridge_gamma": gap_gamma,
+        "gap_bridge_diagnostic": gap_bridge_diag,
+        "low_sigma_zero_crossing": e_zero,
+        "points": points,
+        "raw_low_slope_diagnostic": _raw_low_slope_diagnostic(goes),
+    }
+
+
+def q(v, p):
+    v = np.asarray(v, float)
+    return float(np.nanquantile(v, p)) if np.any(np.isfinite(v)) else float("nan")
+
+
+def summarize(goes, R):
+    rows = []
+    total = R["reference_total"]
+    primary = R["reference_primary"]
+    secondary = R["reference_secondary"]
+    measured = R["measured_total"]
+    for di, mm in enumerate(R["shields"]):
+        e = total[:, di, 0]
+        w = total[:, di, 1]
+        c = np.where(np.isfinite(e) & np.isfinite(w), (e + w) / 2, np.nan)
+        mc = np.where(
+            np.isfinite(measured[:, di, 0]) & np.isfinite(measured[:, di, 1]),
+            np.mean(measured[:, di, :], axis=1),
+            np.nan,
+        )
+        cp = np.where(np.all(np.isfinite(primary[:, di, :]), axis=1), np.mean(primary[:, di, :], axis=1), np.nan)
+        cs = np.where(np.all(np.isfinite(secondary[:, di, :]), axis=1), np.mean(secondary[:, di, :], axis=1), np.nan)
+        band = np.where(np.all(np.isfinite(R["sensitive_band_ref"][:, di, :]), axis=1), np.mean(R["sensitive_band_ref"][:, di, :], axis=1), np.nan)
+        hiin = np.where(np.all(np.isfinite(R["input_gt200"][:, di, :]), axis=1), np.mean(R["input_gt200"][:, di, :], axis=1), np.nan)
+        lo = np.where(np.all(np.isfinite(R["uncert_low_ref"][:, di, :]), axis=1), np.mean(R["uncert_low_ref"][:, di, :], axis=1), np.nan)
+        hi = np.where(np.all(np.isfinite(R["uncert_high_ref"][:, di, :]), axis=1), np.mean(R["uncert_high_ref"][:, di, :], axis=1), np.nan)
+        idx = int(np.nanargmax(c))
