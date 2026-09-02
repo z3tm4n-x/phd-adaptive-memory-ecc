@@ -1,0 +1,82 @@
+{
+  "task_id": "RE-GOES19-PROTON-RATE-01",
+  "satellite": "GOES-19",
+  "instrument_product": "SEISS/SGPS Level 2 5-minute Flux Averages",
+  "period_utc": {
+    "start": "2026-01-01T00:00:00Z",
+    "end": "2026-02-28T23:55:00Z"
+  },
+  "source_timestamps": 16992,
+  "cadence_seconds": 300,
+  "paired_valid_EW_intervals": 16971,
+  "coverage_fraction": 0.9987641242937854,
+  "product_versions": [
+    {
+      "algorithm_version": "3.2",
+      "file_version": "3-0-2",
+      "daily_files": 12,
+      "through_date": "2026-01-12"
+    },
+    {
+      "algorithm_version": "3.3",
+      "file_version": "3-0-3",
+      "daily_files": 47,
+      "from_date": "2026-01-13"
+    }
+  ],
+  "version_boundary_check": "PASS: energy metadata remain constant after the explicit P1-P5 correction; no checked channel shows a boundary jump larger than its local p99 one-step variability.",
+  "native_differential_units": "protons cm^-2 sr^-1 keV^-1 s^-1",
+  "internal_differential_units": "protons cm^-2 sr^-1 MeV^-1 s^-1",
+  "directions": ["East", "West"],
+  "direction_policy": "East and West are reconstructed and propagated separately before any central estimator is formed.",
+  "quality_policy": "L2 fill/nonfinite values and unresolved yaw are hard-invalid. Valid L2 averages are not time-interpolated or smoothed. Instrument-quality flagged spikes are not removed as outliers.",
+  "calibration": {
+    "legacy_P1_P5_bounds_detected": true,
+    "correction_applied_once": true,
+    "GOES19_provisional_readme_factors": [0.656, 0.688, 0.708, 0.625, 0.618, 0.753],
+    "double_correction_guard": true,
+    "note": "The controlled L2 files retain legacy P1-P5 bounds; the adapter applies the published GOES-19 correction only under that signature."
+  },
+  "corrected_channel_support_MeV": {
+    "P1": [0.92, 1.8],
+    "P2A": [1.8, 2.2],
+    "P2B": [2.2, 3.2],
+    "P3": [3.3, 6.2],
+    "P4": [6.3, 11.7],
+    "P5": [12.4, 23.3],
+    "P6": [25.9, 35.2],
+    "P7": [41.0, 74.0],
+    "P8A_E": [78.0, 99.7],
+    "P8A_W": [83.0, 100.7],
+    "P8B_E": [97.9, 120.3],
+    "P8B_W": [98.6, 120.6],
+    "P8C_E": [114.6, 136.1],
+    "P8C_W": [113.4, 142.4],
+    "P9_E": [150.7, 225.1],
+    "P9_W": [155.2, 231.5],
+    "P10": [267.0, 390.0],
+    "P11": ">500 MeV integral"
+  },
+  "controlled_archive": {
+    "filename": "goes010226.zip",
+    "sha256": "7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581",
+    "daily_file_count": 59,
+    "individual_hash_manifest": "goes_files.sha256",
+    "controlled_data_layer_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815"
+  },
+  "public_archive_drift": {
+    "checked": true,
+    "current_public_files_matching_controlled_bytes": 52,
+    "current_public_files_different": 7,
+    "affected_dates": ["2026-01-14", "2026-01-15", "2026-01-16", "2026-01-17", "2026-01-18", "2026-01-19", "2026-01-20"],
+    "scientific_dataset_values_requiring_semantic_patch": ["2026-01-19", "2026-01-20"],
+    "semantic_patch": "noaa_revision_semantic_patch.json",
+    "post_patch_data_layer_check": "PASS"
+  },
+  "known_product_limitations": [
+    "GOES-19 provisional documentation warns that P1-P9 background outside SEP intervals can exceed the actual GCR proton background.",
+    "P5 may contain electron contamination.",
+    "P8C on-orbit cross-calibration may be high; this is retained as a calibration limitation rather than silently corrected beyond the controlled P1-P5 update."
+  ],
+  "disposition": "PASS for audited five-minute environmental input with explicit version, quality, direction, calibration, and provenance metadata; absolute downstream rate remains PARTIAL for independent sigma/extrapolation reasons documented in validation_report.json."
+}
