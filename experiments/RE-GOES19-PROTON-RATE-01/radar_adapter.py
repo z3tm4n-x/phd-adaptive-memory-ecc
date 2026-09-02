@@ -99,7 +99,7 @@ def _load_radar(root: Path):
     from radar.core.spectra import Spectrum1D
     from radar.core.types import Particle, RadiationSource, SpectrumQuantity
     from radar.core.units import Unit
-    from radar.shielding.proton_al import load_proton_al_range_energy_table
+    from radar.shielding.proton_al import ProtonAlRangeEnergyTable, load_proton_al_range_energy_table
     from radar.shielding.proton_al_survival import apply_proton_nonelastic_survival_to_primary_spectrum, load_al27_nonelastic_cross_section_table
     from radar.shielding.proton_al_secondary import calculate_secondary_proton_spectrum_through_al, load_secondary_proton_kernel
     return locals()
@@ -124,14 +124,33 @@ def _grid(n: int) -> np.ndarray:
     return np.geomspace(0.11, 390.0, n)
 
 
+def _extend_stopping_table_to_zero_range(rad, base):
+    """Add the physical R->0 endpoint needed by the pinned secondary integrator.
+
+    The pinned table begins at 0.1 MeV with a small positive range. During midpoint
+    depth quadrature a nearly stopped proton can have 0 < residual_range < R(0.1 MeV),
+    for which the pinned strict inverse interpolator raises. We prepend an asymptotic
+    point at tiny positive energy and exactly zero range. No tabulated point is changed.
+    Secondary production at these sub-tabular energies remains zero because the TENDL
+    kernel itself is zero outside support.
+    """
+    tiny_energy = 1.0e-9
+    return rad["ProtonAlRangeEnergyTable"](
+        energy_mev=(tiny_energy,) + tuple(base.energy_mev),
+        range_g_cm2=(0.0,) + tuple(base.range_g_cm2),
+        stopping_mev_cm2_g=(base.stopping_mev_cm2_g[0],) + tuple(base.stopping_mev_cm2_g),
+    )
+
+
 def _load_normalized_physics(root: Path, temp: Path):
     rad = _load_radar(root)
     data = root / "src/radar/data/normative"
-    stopping = rad["load_proton_al_range_energy_table"](data / "stopping/proton_al_range.csv")
+    base_stopping = rad["load_proton_al_range_energy_table"](data / "stopping/proton_al_range.csv")
+    stopping = _extend_stopping_table_to_zero_range(rad, base_stopping)
     xs = temp / "xs.csv"
     yy = temp / "yield.csv"
     pp = temp / "pdf.csv"
-    actions = []
+    actions = [{"kind": "stopping_zero_range_endpoint", "energy_mev": 1.0e-9, "range_g_cm2": 0.0, "original_first_energy_mev": float(base_stopping.energy_mev[0]), "original_first_range_g_cm2": float(base_stopping.range_g_cm2[0])}]
     actions += _normalize_rows(data / "tendl/p_al27_mf3_xs.csv", xs, ("mt", "energy_mev"), ("sigma_barn",), extend_mt5_zero=True)
     actions += _normalize_rows(data / "tendl/p_al27_mf6_proton_yield.csv", yy, ("mt", "product_index", "incident_energy_mev"), ("yield",))
     actions += _normalize_rows(data / "tendl/p_al27_mf6_proton_pdf.csv", pp, ("mt", "product_index", "incident_energy_mev", "emitted_energy_mev"), ("pdf_per_mev",))
