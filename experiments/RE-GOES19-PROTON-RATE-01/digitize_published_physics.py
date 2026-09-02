@@ -107,7 +107,7 @@ def write_csv(path: Path):
     rows = digitized_rows()
     fields = list(rows[0])
     with path.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         w.writeheader()
         for row in rows:
             r = dict(row)
