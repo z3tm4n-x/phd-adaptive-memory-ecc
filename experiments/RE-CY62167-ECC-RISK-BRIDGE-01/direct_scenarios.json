@@ -1,0 +1,35 @@
+{
+  "D0": {
+    "accumulation": "all upstream bit flips",
+    "p_D": "0"
+  },
+  "DCLUSTER_K1_ONLY": {
+    "semantics": "registered-cluster observation-model conservative scenario, not rigorous parent upper bound",
+    "source": "previous kill-test nominal_logE_linear/K1_only"
+  },
+  "DCLUSTER_LOW_CONSERVATIVE": {
+    "low_p": 0.01295389223980893,
+    "semantics": "same caveat",
+    "source": "previous kill-test nominal_logE_linear/low_energy_conservative"
+  },
+  "DREG": {
+    "W": "W32_seq DECLARED ANALYSIS CODEWORD SCENARIO",
+    "measured_energy_p_registered_direct": {
+      "0.9": 0.0,
+      "1.0": 0.0,
+      "1.1": 0.0,
+      "1.5": 0.0,
+      "124.0": 0.0,
+      "164.0": 0.0,
+      "186.0": 0.0,
+      "2.5": 0.0,
+      "29.0": 0.0,
+      "3.0": 0.0,
+      "4.0": 0.0,
+      "40.0": 0.0,
+      "5.0": 0.0,
+      "80.0": 0.0
+    },
+    "observation_caveat": "registered clusters are post-processed; zero observed W32 direct is not a physical lower bound"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "N_analysis_words": 524288,
+  "N_data_bits": 16777216,
+  "accumulation_reduction": "exact 0/1/F first-passage per 32-data-bit word; homogeneous per-data-cell rate",
+  "arrival_time_resolution": "5 min GOES-19 bins",
+  "correction_capability": 1,
+  "cross_word_dependence_semantics": {
+    "lower": "max single-word phase risk",
+    "product": "independent-word reduction only",
+    "union_upper": "dependence-agnostic union upper bound"
+  },
+  "data_bits_per_word": 32,
+  "direct_scenarios": {
+    "D0": "no-direct reference",
+    "DCLUSTER_K1_ONLY": "previous P_registered(K>=2|E), K1 below 0.9 MeV",
+    "DCLUSTER_LOW_CONSERVATIVE": "previous P_registered(K>=2|E), low-energy conservative representative",
+    "DREG": "registered-cluster / observed-data / W32_seq scenario"
+  },
+  "direction_handling": {
+    "reference": "central E/W mean after complete direction-specific chain",
+    "sensitivities": [
+      "East",
+      "West"
+    ]
+  },
+  "epsilon_analysis_grid": [
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "epsilon_status": "ANALYSIS THRESHOLDS, not mission requirements",
+  "initial_state": "all analysis words clean at each independent reporting-window t0; no state carry",
+  "parity_status": "UNKNOWN; primary result data-only 32 observed data cells",
+  "reporting_windows": {
+    "1h": 3600,
+    "24h": 86400,
+    "5min": 300,
+    "6h": 21600,
+    "7d": 604800
+  },
+  "scan_phase_semantics": "uniform phase on [0,tau), deterministic midpoint quadrature, 16 phases",
+  "scrub_semantics": "CYCLIC-SEQUENTIAL primary; successful correction+writeback resets survivor state 1->0",
+  "shield_grid_mm": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    7.0,
+    10.0
+  ],
+  "sigma_models": [
+    "main_loglog",
+    "published_rpp_fluka_digitized"
+  ],
+  "stochastic_family": "marked NHPP parent-event family; task-local quantitative model",
+  "task_id": "RE-CY62167-ECC-RISK-BRIDGE-01",
+  "tau_grid": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    60,
+    120,
+    300,
+    600,
+    1200,
+    1800,
+    3600
+  ],
+  "tau_grid_status": "EXPLORATORY ACTION GRID",
+  "within_bin_assumption": "piecewise-constant environmental/marked-event intensities inside each 300-s bin; scrub dynamics continuous-time"
+}

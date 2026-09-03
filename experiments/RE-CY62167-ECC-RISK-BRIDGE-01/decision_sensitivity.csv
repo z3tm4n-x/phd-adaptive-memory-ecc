@@ -1,0 +1,17 @@
+shield_mm,window_duration,window_statistic,epsilon_analysis,sigma_model,risk_semantics,direct_scenario,largest_feasible_tau_s,feasible_action_count,all_actions_infeasible,comparison_disposition,tau_shift_factor
+0.0,5min,median,1e-06,main_loglog,product_estimate,D0,,0,True,A — ACTION-INVARIANT (all actions infeasible),nan
+0.0,5min,median,1e-06,main_loglog,product_estimate,DREG,,0,True,A — ACTION-INVARIANT (all actions infeasible),nan
+0.0,5min,median,1e-06,main_loglog,product_estimate,DCLUSTER_K1_ONLY,,0,True,A — ACTION-INVARIANT (all actions infeasible),nan
+0.0,5min,median,1e-06,main_loglog,product_estimate,DCLUSTER_LOW_CONSERVATIVE,,0,True,A — ACTION-INVARIANT (all actions infeasible),nan
+0.0,5min,median,0.0001,main_loglog,product_estimate,D0,1,1,False,C — FEASIBILITY FLIP,1.0
+0.0,5min,median,0.0001,main_loglog,product_estimate,DREG,1,1,False,C — FEASIBILITY FLIP,1.0
+0.0,5min,median,0.0001,main_loglog,product_estimate,DCLUSTER_K1_ONLY,,0,True,C — FEASIBILITY FLIP,1.0
+0.0,5min,median,0.0001,main_loglog,product_estimate,DCLUSTER_LOW_CONSERVATIVE,,0,True,C — FEASIBILITY FLIP,1.0
+1.0,5min,median,0.001,main_loglog,product_estimate,D0,3600,13,False,A — ACTION-INVARIANT,1.0
+1.0,5min,median,0.001,main_loglog,product_estimate,DREG,3600,13,False,A — ACTION-INVARIANT,1.0
+1.0,5min,median,0.001,main_loglog,product_estimate,DCLUSTER_K1_ONLY,3600,13,False,A — ACTION-INVARIANT,1.0
+1.0,5min,median,0.001,main_loglog,product_estimate,DCLUSTER_LOW_CONSERVATIVE,3600,13,False,A — ACTION-INVARIANT,1.0
+3.0,5min,max,0.1,main_loglog,product_estimate,D0,10,4,False,D — DEPENDENCE/MODEL BOUND TOO WIDE,1.0
+3.0,5min,max,0.1,main_loglog,product_estimate,DREG,10,4,False,D — DEPENDENCE/MODEL BOUND TOO WIDE,1.0
+3.0,5min,max,0.1,main_loglog,product_estimate,DCLUSTER_K1_ONLY,,0,True,D — DEPENDENCE/MODEL BOUND TOO WIDE,1.0
+3.0,5min,max,0.1,main_loglog,product_estimate,DCLUSTER_LOW_CONSERVATIVE,,0,True,D — DEPENDENCE/MODEL BOUND TOO WIDE,1.0
