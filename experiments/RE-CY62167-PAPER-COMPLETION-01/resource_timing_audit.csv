@@ -1,0 +1,14 @@
+parameter,value_ns,conditions,datasheet_page,table_or_figure
+tRC,45.0,45-ns grade; read cycle time minimum,10,Switching Characteristics / Read Cycle
+tAA,45.0,address to data/ERR valid maximum,10,Switching Characteristics / Read Cycle
+tOHA,10.0,data/ERR hold from address change minimum,10,Switching Characteristics / Read Cycle
+tWC,45.0,45-ns grade; write cycle time minimum,10,Switching Characteristics / Write Cycle
+tSCE,35.0,chip-enable active to write end minimum,10,Switching Characteristics / Write Cycle
+tAW,35.0,address setup to write end minimum,10,Switching Characteristics / Write Cycle
+tHA,0.0,address hold from write end minimum,10,Switching Characteristics / Write Cycle
+tSA,0.0,address setup to write start minimum,10,Switching Characteristics / Write Cycle
+tPWE,35.0,WE pulse width minimum,10,Switching Characteristics / Write Cycle
+tSD,25.0,data setup to write end minimum,10,Switching Characteristics / Write Cycle
+tHD,0.0,data hold from write end minimum,10,Switching Characteristics / Write Cycle
+tHZWE,18.0,WE low to output High-Z maximum; with OE LOW note requires tPWE >= tHZWE+tSD,10,Switching Characteristics notes / Fig.11
+read_write_transition_gap,0.0,no additional independent recovery gap identified beyond declared tRC/tWC and write setup/hold constraints; DECLARED SERIAL BUS-OCCUPANCY MODEL only,10-14,Switching Characteristics and waveforms

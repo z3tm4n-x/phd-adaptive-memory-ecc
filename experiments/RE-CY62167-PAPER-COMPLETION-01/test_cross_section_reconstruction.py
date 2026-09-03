@@ -4,7 +4,7 @@ from cross_section_model import point_cross_sections
 HERE=Path(__file__).resolve().parent
 class TestCrossSection(unittest.TestCase):
     def test_baseline_42_57(self):
-        with (HERE/'heavy_ion_cross_sections.csv').open(newline='',encoding='utf-8') as f:
+        with (HERE/'heavy_ion_cross_sections_audit_subset.csv').open(newline='',encoding='utf-8') as f:
             rows={(r['mapping_id'],float(r['LET_MeV_cm2_mg'])):r for r in csv.DictReader(f)}
         a=rows[('W_00_01',42.0)]; b=rows[('W_00_01',57.0)]
         self.assertEqual((int(a['N_direct']),int(a['S_direct_event_cells']),int(a['S_accumulation'])),(1,43,16969))

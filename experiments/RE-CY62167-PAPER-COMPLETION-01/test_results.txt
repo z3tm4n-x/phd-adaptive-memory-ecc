@@ -1,0 +1,38 @@
+test_baseline_formula (test_confidence_style.TestConfidenceStyle.test_baseline_formula) ... ok
+test_no_uncontrolled_generalization (test_confidence_style.TestConfidenceStyle.test_no_uncontrolled_generalization) ... ok
+test_normative_status (test_confidence_style.TestConfidenceStyle.test_normative_status) ... ok
+test_baseline_42_57 (test_cross_section_reconstruction.TestCrossSection.test_baseline_42_57) ... ok
+test_effective_fluence_not_named_measured (test_cross_section_reconstruction.TestCrossSection.test_effective_fluence_not_named_measured) ... ok
+test_equivalent_forms (test_cross_section_reconstruction.TestCrossSection.test_equivalent_forms) ... ok
+test_45_9_1 (test_event_partition.TestEventPartition.test_45_9_1) ... ok
+test_conservation_audit_subset (test_event_partition.TestEventPartition.test_conservation_audit_subset) ... ok
+test_event_local_duplicate_removed (test_event_partition.TestEventPartition.test_event_local_duplicate_removed) ... ok
+test_proton_fifth_event (test_event_partition.TestEventPartition.test_proton_fifth_event) ... ok
+test_independent_counts (test_full_linear_family.TestFullLinearFamily.test_independent_counts) ... ok
+test_strict_nesting_cardinality (test_full_linear_family.TestFullLinearFamily.test_strict_nesting_cardinality) ... ok
+test_210_and_55 (test_mapping_family.TestMappingFamily.test_210_and_55) ... ok
+test_baseline (test_mapping_family.TestMappingFamily.test_baseline) ... ok
+test_metric_filter_not_ambiguous (test_mapping_family.TestMappingFamily.test_metric_filter_not_ambiguous) ... ok
+test_spacing_distribution (test_mapping_family.TestMappingFamily.test_spacing_distribution) ... ok
+test_article_global_cell_count_is_discrepant (test_population_accounting.TestPopulationAccounting.test_article_global_cell_count_is_discrepant) ... ok
+test_counts (test_population_accounting.TestPopulationAccounting.test_counts) ... ok
+test_file_order_independence (test_population_accounting.TestPopulationAccounting.test_file_order_independence) ... ok
+test_frozen_mapping_without_refit (test_population_accounting.TestPopulationAccounting.test_frozen_mapping_without_refit) ... ok
+test_benchmark (test_reference_solver.TestReferenceSolver.test_benchmark) ... ok
+test_direct_absorbing_combination (test_reference_solver.TestReferenceSolver.test_direct_absorbing_combination) ... ok
+test_reference_monotone (test_reference_solver.TestReferenceSolver.test_reference_monotone) ... ok
+test_residual_same_bit_toggles_do_not_create_two_bit_failure (test_reference_solver.TestReferenceSolver.test_residual_same_bit_toggles_do_not_create_two_bit_failure) ... ok
+test_architecture_status (test_resource_model.TestResourceModel.test_architecture_status) ... ok
+test_old_percentages (test_resource_model.TestResourceModel.test_old_percentages) ... ok
+test_read_ratio (test_resource_model.TestResourceModel.test_read_ratio) ... ok
+test_tau_min (test_resource_model.TestResourceModel.test_tau_min) ... ok
+test_timing_traceability (test_resource_model.TestResourceModel.test_timing_traceability) ... ok
+test_beta (test_tau_bound.TestTauBound.test_beta) ... ok
+test_direct_exhausted (test_tau_bound.TestTauBound.test_direct_exhausted) ... ok
+test_monotone_tau (test_tau_bound.TestTauBound.test_monotone_tau) ... ok
+test_sensitivity_no_special_half_threshold (test_tau_bound.TestTauBound.test_sensitivity_no_special_half_threshold) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 7.671s
+
+OK
