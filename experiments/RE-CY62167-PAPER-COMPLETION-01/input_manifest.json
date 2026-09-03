@@ -1,0 +1,40 @@
+{
+  "controlled_inputs": {
+    "AN88889": {
+      "filename": "AN88889_RevD_2026-02-19.pdf",
+      "revision": "001-88889 Rev. *D, 2026-02-19",
+      "sha256": "c91f9c9c52ca587e224adbcf5cc7f0b124aaa7283f9ffe4bb39351132b9060f2"
+    },
+    "address_mapping": {
+      "git_blob_sha": "35f2410c8d6744bd80339bd38c08e31b90bc69b6",
+      "mismatches": 0,
+      "records_checked": 148731,
+      "refitted": false,
+      "source": "experiments/RE-CY62167-ADDRESS-MAPPING-01/address_mapping_coefficients.json"
+    },
+    "datasheet": {
+      "filename": "CY62167G30_GE30_RevF.pdf",
+      "revision": "002-20054 Rev. *F, 2020-03-18",
+      "sha256": "a7d9faf23208b6c0f3b2be402feb8653ff0c6f649306fc246605189018a9ed1f"
+    },
+    "manuscript": {
+      "filename": "Текст v2(2).pdf",
+      "role": "reproduction target/formula source; not source of truth",
+      "sha256": "b301b0e639dcfa4c408420223305a9b29708494a0bc781ae09a05300420fd3f9"
+    },
+    "raw_archive": {
+      "committed": false,
+      "filename": "New Folder(3).zip",
+      "sha256": "16ab27789329adbbccdf9a7e5d0e15e855440d3f52b8dd93a384317a4635770a"
+    },
+    "stage5_reference": {
+      "role": "synthetic benchmark regression",
+      "source": "PI-controlled stage5_report.md / Сводный_отчет_этапы_1-5.md",
+      "stage1_5_summary_sha256": "26e148735b6dfaf935fc80915349b16515157cce17bcac57c23697ba1eba6a7c",
+      "stage5_report_sha256": "a833fbf25e0159c65070540e7ec84b530d3919390a7ad6d81d4be138255151a1"
+    }
+  },
+  "starting_sha": "2f1292432b59d5637f024f216e3abd0694b744d7",
+  "task_id": "RE-CY62167-PAPER-COMPLETION-01",
+  "working_branch": "research/cy62167-paper-completion-01"
+}

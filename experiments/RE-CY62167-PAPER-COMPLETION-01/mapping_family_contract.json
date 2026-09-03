@@ -1,0 +1,19 @@
+{
+  "baseline_mapping_id": "W_00_01",
+  "baseline_regression": "W_0,1(A)=floor(A/4)",
+  "candidate_mappings": 210,
+  "definition": "choose two separate external address bits A_p,A_q as intra-word bits; remaining 19 bits identify the calculated word",
+  "deterministic_sensitivity_selection": {
+    "W_ARTICLE_BASELINE": "W_00_01",
+    "W_MAX_REGISTERED_DIRECT": "W_00_11",
+    "W_MIN_REGISTERED_DIRECT": "W_01_02",
+    "tie_break": "lowest stable mapping_id"
+  },
+  "family_semantics": "RESTRICTED MANUSCRIPT-COMPATIBILITY DIAGNOSTIC FAMILY",
+  "filter_semantics": "retain mappings whose minimum supplied-coordinate spacing among the 32 data cells of one calculated word is at least 16; L1, L2 and Linf independently yield the identical 55-member retained set",
+  "filter_was_selected_to_hit_55": false,
+  "full_linear_family_count": 733006703275,
+  "full_linear_family_count_independent_recurrence": 733006703275,
+  "interpretation": "55 subset 210 subset 733006703275; neither 55 nor 210 is the complete proprietary-layout uncertainty set",
+  "retained_mappings": 55
+}

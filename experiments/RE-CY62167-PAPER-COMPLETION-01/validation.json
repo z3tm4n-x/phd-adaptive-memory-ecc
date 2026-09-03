@@ -1,0 +1,125 @@
+{
+  "P_HI": {
+    "cells": 91284,
+    "clusters": 8240,
+    "series": 9
+  },
+  "P_MAP": {
+    "cells": 299026,
+    "clusters": 173802,
+    "series": 28
+  },
+  "address_mapping_imported_without_refit": true,
+  "address_mapping_mismatches": 0,
+  "address_mapping_records_checked": 148731,
+  "article_cell_count_299206_reproduced": false,
+  "article_cell_count_discrepancy": "299206 exceeds even RAW=299154 in the controlled archive; no declared RAW/ORDINARY/DEDUP semantics reproduces it",
+  "article_effective_fluence_status": "ARTICLE-NORMALIZED EFFECTIVE FLUENCE; NOT MEASURED FLUENCE",
+  "article_event_count_173802_reproduced": true,
+  "article_normalization_cell_semantics": "EVENT_LOCAL_DEDUPLICATED ordinary data cells within each P_HI series; for P_HI this reproduces manuscript S exactly",
+  "baseline_mapping": {
+    "N_direct_all_series": 4,
+    "N_direct_heavy_ion": 4,
+    "N_direct_proton": 0,
+    "baseline_mapping": true,
+    "bit_p": 0,
+    "bit_q": 1,
+    "mapping_id": "W_00_01",
+    "minimum_spacing": 16,
+    "retained_55": true
+  },
+  "candidate_mappings": 210,
+  "confidence_style_status": "ARTICLE-CONFIDENCE-STYLE EFFECTIVE-FLUENCE NORMALIZATION",
+  "counting_tracks": {
+    "ARTICLE_COMPAT": "event-local-deduplicated ordinary P_HI cells",
+    "CURRENT_CLEAN": "same; numerically identical for P_HI in controlled archive",
+    "tracks_differ_for_P_HI": false
+  },
+  "deterministic_sensitivity_selection": {
+    "W_ARTICLE_BASELINE": "W_00_01",
+    "W_MAX_REGISTERED_DIRECT": "W_00_11",
+    "W_MIN_REGISTERED_DIRECT": "W_01_02",
+    "tie_break": "lowest stable mapping_id"
+  },
+  "disposition": "PASS-A-WITH-DISCREPANCY",
+  "full_linear_family_count": 733006703275,
+  "full_linear_family_independent_check": 733006703275,
+  "mapping_45_9_1": "REPRODUCED",
+  "mapping_direct_distribution": {
+    "0": 45,
+    "4": 9,
+    "5": 1
+  },
+  "mapping_spacing_distribution": {
+    "1": 74,
+    "16": 55,
+    "2": 31,
+    "4": 27,
+    "8": 23
+  },
+  "normative_confidence_status": "NOT ESTABLISHED AS NORMATIVE CONFIDENCE BOUND WITHOUT INDEPENDENT FLUENCE PROVENANCE",
+  "old_interface_percent": {
+    "status": "REPRODUCED",
+    "tau_20s_R2_U": 0.9437184000000001,
+    "tau_45s_R2_U": 0.41943040000000004
+  },
+  "phase": "A",
+  "phase_b": "AWAITING_PI_COSRAD",
+  "population": {
+    "DEDUP": {
+      "cells": 299026,
+      "clusters": 173802
+    },
+    "ORDINARY": {
+      "cells": 299121,
+      "clusters": 173802
+    },
+    "P_HI": {
+      "cells": 91284,
+      "clusters": 8240,
+      "series": 9
+    },
+    "RAW": {
+      "cells": 299154,
+      "clusters": 173835
+    },
+    "ambiguous_records": 18,
+    "event_local_duplicate_cells": 95,
+    "service_records": 15
+  },
+  "proton_contribution": {
+    "direct_rows": 1,
+    "rows": [
+      {
+        "K": 29,
+        "LET_MeV_cm2_mg": "",
+        "addresses": "[1310875,1441819,1441947,1376283,1376411,1507355,1507483,1327131,1327259,1458203,1458331,1392667,1392795,1523739,1523867,1312794,1312922,1720475,1654811,1654939,1785883,1786011,1574938,1575066,1706010,1706138,1640474,1640602,1771546]",
+        "cluster_id": 5480,
+        "coordinate_summary": "x=[2881,2882];y=[2065,2086]",
+        "energy_MeV": 164.0,
+        "mapping_id": "W_00_11",
+        "max_same_word_data_cells": 2,
+        "number_of_failing_words": 1,
+        "particle": "p",
+        "radiation_type": "proton",
+        "segment_id": 1,
+        "source_file": "clust_p164MeV.txt"
+      }
+    ]
+  },
+  "raw_archive_fingerprint": "PASS",
+  "reference_benchmark": {
+    "status": "PASS",
+    "tau_max_U_s": 243.55401797989978,
+    "tau_max_ref_high_s": 315.744500578568,
+    "tau_max_ref_low_s": 315.2248412260683
+  },
+  "resource_timing_audit": "PASS; tRC and tWC independently traced; no extra transition recovery gap identified beyond declared cycle/setup/hold constraints for the declared serial model",
+  "retained_mappings": 55,
+  "task_id": "RE-CY62167-PAPER-COMPLETION-01",
+  "tests": {
+    "command": "CY62167_RAW_ARCHIVE=<controlled.zip> python -m unittest discover -v -p 'test_*.py'",
+    "executed_status": "PASS",
+    "tests_run": 33
+  }
+}
