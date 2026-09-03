@@ -1,0 +1,82 @@
+{
+  "critical_theta.csv": {
+    "committed_data_rows": 131,
+    "committed_bytes": 34277,
+    "committed_sha256": "96e7a258625833210898ba89fb616c8f1efb80cea4607947c55bdec3e8728d0c",
+    "full_output": {
+      "bytes": 825091,
+      "sha256": "859ccab5fb70c2bf021881d0a752dca05c17adb377d2190027c966f317b04685",
+      "data_rows": 3192
+    }
+  },
+  "action_transition_boundaries.csv": {
+    "committed_data_rows": 116,
+    "committed_bytes": 19483,
+    "committed_sha256": "45939af4faef99647e81ab6eaeaff6fa41471a8b913e6c887d01d57ad4b3cf88",
+    "full_output": {
+      "bytes": 1649447,
+      "sha256": "0dfab24175c68d2f0c205907b809804792d414a1aed0bf4b18955072014ebaee",
+      "data_rows": 9934
+    }
+  },
+  "energy_split_boundaries.csv": {
+    "committed_data_rows": 240,
+    "committed_bytes": 31070,
+    "committed_sha256": "307bc4b95cdb62ee5640892ba6179ec479b10075f4c8bad00b3793b93c015ce8",
+    "full_output": {
+      "bytes": 1001204,
+      "sha256": "fa3345a945e013ab16f7c99d9c2a656c950cb986d4da235a327eef79a22626bf",
+      "data_rows": 7830
+    }
+  },
+  "representative_boundary_curves.csv": {
+    "committed_data_rows": 312,
+    "committed_bytes": 28064,
+    "committed_sha256": "88ec854d1a1e1488e41d9000ea5df77ae8f50c36794a930cfb734293c1c0b0d6",
+    "full_output": {
+      "bytes": 209201,
+      "sha256": "39b82c5ae3153397ba80a155e9803c26ed8a3547b0a2ba5f0f9fc3e9e5faf377",
+      "data_rows": 2184
+    }
+  },
+  "energy_source_classification.csv": {
+    "committed_data_rows": 120,
+    "committed_bytes": 13583,
+    "committed_sha256": "8ed2b72c93678e05947d6889d9548373079e2b71a1b17b34538d221cfa5ba32e",
+    "full_output": {
+      "bytes": 171291,
+      "sha256": "37cafa23f138a51cf06403df2a7ab7eeba04e67420fa5f716547e57ed4d57e2e",
+      "data_rows": 1566
+    }
+  },
+  "sigma_boundary_shifts.csv": {
+    "committed_data_rows": 100,
+    "committed_bytes": 11252,
+    "committed_sha256": "54860708cc0c69e7d0ee9b5bfdd58dcc311d783c1afa406f3f7a17a605fbddbf",
+    "full_output": {
+      "bytes": 175042,
+      "sha256": "62057be1e7f85a4aa708824f9dbe63ece5cc928201c5775aac1323622b38edbe",
+      "data_rows": 1552
+    }
+  },
+  "low_energy_branch_shifts.csv": {
+    "committed_data_rows": 100,
+    "committed_bytes": 11663,
+    "committed_sha256": "90175ef93bc86fedec8189ec577520314cc17a959560335409950c7791fe5ed9",
+    "full_output": {
+      "bytes": 183821,
+      "sha256": "f53396044a60c6be9c3a7e8f29c00102d0b31c108bb57e040d6ce25d23f3ec60",
+      "data_rows": 1566
+    }
+  },
+  "dependence_boundary_shifts.csv": {
+    "committed_data_rows": 100,
+    "committed_bytes": 11822,
+    "committed_sha256": "018e0489b438a37381241e930dd266295bd82a2d26ecf89395fa7d18bcc02116",
+    "full_output": {
+      "bytes": 183156,
+      "sha256": "cf076afdddc80d6ae192108fdd5399f267b630ecbe50261d840eaf9c6740d56e",
+      "data_rows": 1566
+    }
+  }
+}

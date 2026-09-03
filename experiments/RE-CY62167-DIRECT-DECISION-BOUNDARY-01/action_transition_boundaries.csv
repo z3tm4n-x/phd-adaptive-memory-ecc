@@ -1,0 +1,13 @@
+shield_mm,window_duration,window_statistic,epsilon_analysis,sigma_model,risk_semantics,low_energy_model,tau_from_s,tau_to_s,theta_transition,F_at_boundary,Lambda_D_at_boundary,theta_solver_status,theta_tolerance
+0.0,1h,median,0.01,main_loglog,product_estimate,K1_only,5,2,0.000701904296875,0.01,0.0040366421180999,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+1.0,24h,p95,0.1,published_rpp_fluka_digitized,dependence_upper,K1_only,30,20,0.013580322265625,0.1,0.1025019415190454,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+2.0,1h,p95,1e-06,published_rpp_fluka_digitized,dependence_upper,K1_only,60,NONE,3.0517578125e-05,1e-06,8.64280524280348e-07,NUMERICALLY_NEAR_BOUNDARY,0.0001
+2.0,5min,p99,0.01,main_loglog,dependence_upper,K1_only,120,60,0.085662841796875,0.01,0.009793373393908,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+3.0,1h,p99,0.01,published_rpp_fluka_digitized,dependence_upper,low_energy_conservative,30,20,0.006134033203125,0.01,0.0097103120438105,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+3.0,6h,p95,0.01,published_rpp_fluka_digitized,dependence_upper,low_energy_conservative,1800,1200,0.044891357421875,0.01,0.0099875701128019,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+5.0,5min,max,0.01,main_loglog,product_estimate,K1_only,10,5,0.001800537109375,0.01,0.0035893756317944,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+7.0,1h,median,1e-06,published_rpp_fluka_digitized,dependence_upper,low_energy_conservative,3600,NONE,0.000457763671875,1e-06,9.63976352916034e-07,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+7.0,5min,p99,1e-05,main_loglog,product_estimate,low_energy_conservative,300,120,0.000274658203125,1e-05,6.187167354408289e-06,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+10.0,1h,median,0.001,main_loglog,product_estimate,low_energy_conservative,3600,NONE,0.407745361328125,0.001,0.0010005464190655,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+10.0,5min,p95,1e-06,main_loglog,dependence_upper,K1_only,3600,NONE,0.004119873046875,1e-06,1.00263830989805e-06,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001
+10.0,7d,p99,0.1,published_rpp_fluka_digitized,dependence_upper,low_energy_conservative,2,NONE,0.004180908203125,0.1,0.1043466098138274,THRESHOLD_RESOLVED_SURROGATE_VALIDATED,0.0001

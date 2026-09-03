@@ -1,0 +1,36 @@
+{
+  "task_id": "RE-CY62167-DIRECT-DECISION-BOUNDARY-01",
+  "primary_object": "direct-information decision boundary for frozen data-only F_A,data bridge",
+  "theta": {
+    "name": "DIRECT-REALIZATION SENSITIVITY PARAMETER",
+    "range": [0,1],
+    "meaning": "fraction of declared DCLUSTER candidate K>=2 parent-event population reassigned from accumulation to immediate direct class",
+    "not": ["measured probability","confidence/posterior probability","proprietary mapping estimate","physical interleaving efficiency"]
+  },
+  "disjoint_partition": {
+    "r_evt": "r_bit / Kbar",
+    "r_D": "theta * r_evt * p_M",
+    "Kbar_M": "(Kbar-(1-p_M))/p_M for p_M>0",
+    "r_C_bit": "r_evt * [1-p_M + (1-theta)*p_M*Kbar_M]",
+    "conservation": "r_bit = r_C_bit + r_evt*theta*p_M*Kbar_M"
+  },
+  "scalar_branches": ["K1_only","low_energy_conservative"],
+  "energy_split": {"low":"E<0.9 MeV -> theta_L","measured":"E>=0.9 MeV -> theta_M","theta_L_slices":[0,0.25,0.5,0.75,1]},
+  "frozen": {
+    "n_data": 32,
+    "N_words": 524288,
+    "t_c": 1,
+    "scrub": "CYCLIC-SEQUENTIAL, uniform phases=16",
+    "initial_state": "clean per reporting window; no carry",
+    "tau_grid_s": [1,2,5,10,20,30,60,120,300,600,1200,1800,3600],
+    "epsilon_analysis": [1e-06,1e-05,0.0001,0.001,0.01,0.1],
+    "windows": ["5min","1h","6h","24h","7d"],
+    "sigma_models": ["main_loglog","published_rpp_fluka_digitized"],
+    "shields_mm": [0,1,2,3,5,7,10]
+  },
+  "risk_semantics": ["product_estimate","dependence_upper"],
+  "root_solver": {"method":"bracketing/bisection with exact tau=1 correction","production_abs_theta_tolerance":0.0001,"near_boundary":"theta<=1e-4 reported NUMERICALLY_NEAR_BOUNDARY"},
+  "action_transitions": {"method":"monotone piecewise cumulative-hazard interpolation between frozen exact theta anchors; representative transitions exact-validated","theta_tolerance":0.0001},
+  "energy_classification": {"metric":"continuous change in theta_M,crit across theta_L=0->1 plus structural axis-crossing","categories":["LOW-ENERGY-DOMINATED","MEASURED-SUPPORT-DOMINATED","MIXED","NOT-SEPARABLE"],"arbitrary_percentage_threshold_used":false},
+  "parity": "UNRESOLVED / OUTSIDE PRIMARY DATA-ONLY BOUNDARY"
+}

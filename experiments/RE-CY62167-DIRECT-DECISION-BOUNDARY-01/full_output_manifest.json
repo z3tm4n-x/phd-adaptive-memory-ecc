@@ -1,0 +1,71 @@
+{
+  "critical_theta.csv": {
+    "bytes": 825091,
+    "sha256": "859ccab5fb70c2bf021881d0a752dca05c17adb377d2190027c966f317b04685",
+    "data_rows": 3192
+  },
+  "action_transition_boundaries.csv": {
+    "bytes": 1649447,
+    "sha256": "0dfab24175c68d2f0c205907b809804792d414a1aed0bf4b18955072014ebaee",
+    "data_rows": 9934
+  },
+  "energy_split_boundaries.csv": {
+    "bytes": 1001204,
+    "sha256": "fa3345a945e013ab16f7c99d9c2a656c950cb986d4da235a327eef79a22626bf",
+    "data_rows": 7830
+  },
+  "representative_boundary_curves.csv": {
+    "bytes": 209201,
+    "sha256": "39b82c5ae3153397ba80a155e9803c26ed8a3547b0a2ba5f0f9fc3e9e5faf377",
+    "data_rows": 2184
+  },
+  "energy_source_classification.csv": {
+    "bytes": 171291,
+    "sha256": "37cafa23f138a51cf06403df2a7ab7eeba04e67420fa5f716547e57ed4d57e2e",
+    "data_rows": 1566
+  },
+  "invariant_regression.csv": {
+    "bytes": 11977,
+    "sha256": "23af2f2ad3b4a441135e99465561160e276b8f41a8a6b95277a6f879e0d40463",
+    "data_rows": 80
+  },
+  "tolerance_study.csv": {
+    "bytes": 2324,
+    "sha256": "169ead9e4fe75f50ec1f89d0403678bd25306b61b0aa403b3dd08580a7e513bd",
+    "data_rows": 18
+  },
+  "exact_root_validation.csv": {
+    "bytes": 3689,
+    "sha256": "d095b7099b7a31ca3f3c02a20e6a6d892aa53c96b7b8c82498370efca1de1b1a",
+    "data_rows": 20
+  },
+  "action_transition_exact_validation.csv": {
+    "bytes": 1566,
+    "sha256": "62c0bb1490071d23e22d3a505927d476bf41a6ffda4553e8f966254604ffd975",
+    "data_rows": 6
+  },
+  "ew_boundary_sensitivity.csv": {
+    "bytes": 1817,
+    "sha256": "cd5ee79d569405a656b83006b3546a348a9acbe3236af32f8fc092488d9ffb31",
+    "data_rows": 12
+  },
+  "sigma_boundary_shifts.csv": {
+    "bytes": 175042,
+    "sha256": "62057be1e7f85a4aa708824f9dbe63ece5cc928201c5775aac1323622b38edbe",
+    "data_rows": 1552
+  },
+  "low_energy_branch_shifts.csv": {
+    "bytes": 183821,
+    "sha256": "f53396044a60c6be9c3a7e8f29c00102d0b31c108bb57e040d6ce25d23f3ec60",
+    "data_rows": 1566
+  },
+  "dependence_boundary_shifts.csv": {
+    "bytes": 183156,
+    "sha256": "cf076afdddc80d6ae192108fdd5399f267b630ecbe50261d840eaf9c6740d56e",
+    "data_rows": 1566
+  },
+  "boundary_summary.json": {
+    "bytes": 3345,
+    "sha256": "14fd3d983b4f1229c906d810e65670b504b2d3a8c8ba897fd100ad5d5331af89"
+  }
+}
