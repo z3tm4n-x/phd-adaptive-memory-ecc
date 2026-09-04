@@ -1,0 +1,23 @@
+{
+  "cosrad_zip_sha256": "84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb",
+  "determinism": "PASS",
+  "disposition": "PASS-B-REFERENCE-BLOCKED",
+  "let_unit_conversion_max_relative_discrepancy": 5.62533852782552e-15,
+  "member_count": 38,
+  "operator_closure_max_abs_relative_GCR": 0.9915724828643783,
+  "operator_closure_max_abs_relative_SEP": 1.0,
+  "operator_closure_status": "SPECTRAL_OPERATOR_NOT_CLOSED",
+  "phase": "B/FINAL",
+  "phase_A_accepted_tests": "33/33 PASS at starting SHA",
+  "phase_A_source_files_modified": false,
+  "phase_B_tests": "30/30 PASS",
+  "proton_comparator": {
+    "E0_MeV": 10.0,
+    "geometric_factor": 0.5,
+    "sigma_bit_cm2": 8e-14,
+    "status": "DECLARED PROTON COMPARATOR ASSUMPTION"
+  },
+  "reference_status": "TAU_MAX_REFERENCE_BLOCKED_BY_COSRAD_OPERATOR_SEMANTICS",
+  "scenario_status": "PASS",
+  "synthetic_reference_benchmark": "PRESERVED_FROM_PHASE_A; reference_solver.py unchanged"
+}

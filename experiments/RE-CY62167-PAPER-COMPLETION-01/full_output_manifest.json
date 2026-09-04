@@ -1,33 +1,18 @@
 {
   "task_id": "RE-CY62167-PAPER-COMPLETION-01",
-  "raw_archive_sha256": "16ab27789329adbbccdf9a7e5d0e15e855440d3f52b8dd93a384317a4635770a",
+  "generator_command_phase_A": "CY62167_RAW_ARCHIVE=<controlled.zip> python run_phase_a.py",
+  "generator_command_phase_B": "python run_phase_b.py --cosrad-results /path/to/results.zip",
+  "input_hashes": {"raw_archive":"16ab27789329adbbccdf9a7e5d0e15e855440d3f52b8dd93a384317a4635770a","cosrad_results_zip":"84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb","frozen_address_mapping_blob":"35f2410c8d6744bd80339bd38c08e31b90bc69b6"},
   "large_outputs": [
-    {
-      "filename": "mapping_sweep_all_series.csv",
-      "sha256": "b90e8efdab7cba561d6030806a89e49c64d5f7dee2fc72dc6a3634abf3fc4153",
-      "byte_size": 88546,
-      "row_count": 1540,
-      "generator_command": "CY62167_RAW_ARCHIVE=<controlled.zip> python run_phase_a.py",
-      "committed": false,
-      "audit_subset": "mapping_sweep_audit_subset.csv"
-    },
-    {
-      "filename": "heavy_ion_cross_sections.csv",
-      "sha256": "2dd525cda6c19349990f340dc32e24c6a58d0717acbdcd6f36939358122afa4b",
-      "byte_size": 85314,
-      "row_count": 495,
-      "generator_command": "CY62167_RAW_ARCHIVE=<controlled.zip> python run_phase_a.py",
-      "committed": false,
-      "audit_subset": "heavy_ion_cross_sections_audit_subset.csv"
-    }
+    {"filename":"mapping_sweep_all_series.csv","sha256":"b90e8efdab7cba561d6030806a89e49c64d5f7dee2fc72dc6a3634abf3fc4153","byte_size":88546,"row_count":1540,"committed":false,"audit_subset":"mapping_sweep_audit_subset.csv"},
+    {"filename":"heavy_ion_cross_sections.csv","sha256":"2dd525cda6c19349990f340dc32e24c6a58d0717acbdcd6f36939358122afa4b","byte_size":85314,"row_count":495,"committed":false,"audit_subset":"heavy_ion_cross_sections_audit_subset.csv"},
+    {"filename":"cosrad_event_weights.csv","sha256":"218a398c0f5e59a3cddd95a799ca57dc20a405688f3e97af1edf510c9bda60bf","byte_size":92131,"row_count":486,"committed":false,"audit_subset":"cosrad_event_weights_audit_subset.csv"},
+    {"filename":"cosrad_operator_closure_full.csv","sha256":"2e3ec6642f28501145fab2d7d5a0f8985af53e536a71337d3f09f02092a1bbb7","byte_size":23708,"row_count":216,"committed":false},
+    {"filename":"cosrad_rates_pi_reconstructed_full.csv","sha256":"29789855153660870572455f9c6dbbfe9f172471ac71dcf1b6b2c78d143192bc","byte_size":19146,"row_count":90,"committed":false},
+    {"filename":"geo_bound_results_full.csv","sha256":"6d78f21296de912e6f4840d4dd28cd5d6f6d885b33dfe5344a5173085d714c68","byte_size":18628,"row_count":90,"committed":false},
+    {"filename":"geo_reference_results_full.csv","sha256":"95ee86f8dc2a8e2b1b7d88595b5ff54bb53de5882c32b8a37a89c6997aa4f561","byte_size":15275,"row_count":90,"committed":false},
+    {"filename":"resource_results_full.csv","sha256":"6a7a7f5fb6b10f9c9a48bb97cf87328243f624928f7378c77473d0c82034d793","byte_size":42141,"row_count":156,"committed":false},
+    {"filename":"sep_peak_rates_full.csv","sha256":"395fbc47d77e1bd3eac2d22fd6d39410bbbf54d60b298e124727bdb3ded487a7","byte_size":14986,"row_count":90,"committed":false}
   ],
-  "committed_audits": {
-    "mapping_sweep_audit_subset.csv": {"sha256": "cb55b41269f9a86e5517ba3f8cb02b2376a34c1cb0dffe2f3906564731193b40", "row_count": 84},
-    "heavy_ion_cross_sections_audit_subset.csv": {"sha256": "9c6b9fc99cadef10f76ecd6a8383d4d2ea232f6d76aa817ece0621138a6d8964", "row_count": 27},
-    "cosrad_input_cross_sections.csv": {"sha256": "f59311fa1991c0db0dad2dfe3e7e88b1d1e5803de51b226bd82043b223f29bda", "row_count": 27}
-  },
-  "input_hashes": {
-    "raw_archive": "16ab27789329adbbccdf9a7e5d0e15e855440d3f52b8dd93a384317a4635770a",
-    "frozen_address_mapping_blob": "35f2410c8d6744bd80339bd38c08e31b90bc69b6"
-  }
+  "phase_B_status": "PASS-B-REFERENCE-BLOCKED"
 }

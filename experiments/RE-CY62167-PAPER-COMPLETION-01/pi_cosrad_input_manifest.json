@@ -1,0 +1,193 @@
+{
+  "SHA-256": "84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb",
+  "date_received": "2026-09-04",
+  "filename": "results.zip",
+  "member_count": 38,
+  "member_set_status": "PASS",
+  "provenance_status": "PASS",
+  "scenario": {
+    "Bit": 1.0,
+    "GCR_solar_cycle_number": "even",
+    "SEE_sensitive_volume": "Thin",
+    "SEP_probability": 0.1,
+    "apogee_km": 36000,
+    "argument_of_perigee_deg": 0.0,
+    "flight_time_years": 10,
+    "inclination_deg": 0.0,
+    "perigee_km": 36000,
+    "sigma_m_cm2": 1.0,
+    "solar_cycle": "mean",
+    "start_year_from_solar_cycle": 1
+  },
+  "shielding_grid_g_cm2": [
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.5,
+    4.0
+  ],
+  "threshold_printing_audit": [
+    {
+      "COSRAD_printed_L0": 0.2,
+      "PI_declared_L0": 0.15,
+      "environment": "GCR",
+      "status": "OUTPUT_FORMAT_ROUNDING"
+    },
+    {
+      "COSRAD_printed_L0": 0.5,
+      "PI_declared_L0": 0.5,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 1.0,
+      "PI_declared_L0": 1.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 2.0,
+      "PI_declared_L0": 2.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 3.0,
+      "PI_declared_L0": 3.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 5.0,
+      "PI_declared_L0": 5.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 10.0,
+      "PI_declared_L0": 10.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 20.0,
+      "PI_declared_L0": 20.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 25.0,
+      "PI_declared_L0": 25.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 30.0,
+      "PI_declared_L0": 30.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 33.0,
+      "PI_declared_L0": 33.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 40.0,
+      "PI_declared_L0": 40.0,
+      "environment": "GCR",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 0.2,
+      "PI_declared_L0": 0.15,
+      "environment": "SEP",
+      "status": "OUTPUT_FORMAT_ROUNDING"
+    },
+    {
+      "COSRAD_printed_L0": 0.5,
+      "PI_declared_L0": 0.5,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 1.0,
+      "PI_declared_L0": 1.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 2.0,
+      "PI_declared_L0": 2.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 3.0,
+      "PI_declared_L0": 3.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 5.0,
+      "PI_declared_L0": 5.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 10.0,
+      "PI_declared_L0": 10.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 20.0,
+      "PI_declared_L0": 20.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 25.0,
+      "PI_declared_L0": 25.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 30.0,
+      "PI_declared_L0": 30.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 33.0,
+      "PI_declared_L0": 33.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    },
+    {
+      "COSRAD_printed_L0": 40.0,
+      "PI_declared_L0": 40.0,
+      "environment": "SEP",
+      "status": "MATCH"
+    }
+  ],
+  "unit_response_thresholds_MeV_cm2_mg": [
+    0.15,
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    10.0,
+    20.0,
+    25.0,
+    30.0,
+    33.0,
+    40.0
+  ]
+}

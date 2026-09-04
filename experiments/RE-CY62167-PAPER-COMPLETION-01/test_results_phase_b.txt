@@ -1,0 +1,35 @@
+test_fingerprint_and_members (test_cosrad_input_manifest.TestManifest.test_fingerprint_and_members) ... ok
+test_grids (test_cosrad_input_manifest.TestManifest.test_grids) ... ok
+test_rounding_015 (test_cosrad_input_manifest.TestManifest.test_rounding_015) ... ok
+test_scenario (test_cosrad_input_manifest.TestManifest.test_scenario) ... ok
+test_jacobian_invariance_gcr (test_cosrad_let_units.TestUnits.test_jacobian_invariance_gcr) ... ok
+test_jacobian_invariance_sep (test_cosrad_let_units.TestUnits.test_jacobian_invariance_sep) ... ok
+test_all_cases_present (test_cosrad_operator_closure.TestClosure.test_all_cases_present) ... ok
+test_not_closed (test_cosrad_operator_closure.TestClosure.test_not_closed) ... ok
+test_sep_not_closed (test_cosrad_operator_closure.TestClosure.test_sep_not_closed) ... ok
+test_file_order_independence (test_cosrad_parser.TestParser.test_file_order_independence) ... ok
+test_gcr_sep_are_distinct (test_cosrad_parser.TestParser.test_gcr_sep_are_distinct) ... ok
+test_response_columns_and_sigma (test_cosrad_parser.TestParser.test_response_columns_and_sigma) ... ok
+test_spectra_columns (test_cosrad_parser.TestParser.test_spectra_columns) ... ok
+test_conservation (test_event_weights.TestWeights.test_conservation) ... ok
+test_reference_blocker_label (test_event_weights.TestWeights.test_reference_blocker_label) ... ok
+test_acs_transition_and_tau (test_geo_phase_b.TestGeo.test_acs_transition_and_tau) ... ok
+test_architecture_and_old_resource (test_geo_phase_b.TestGeo.test_architecture_and_old_resource) ... ok
+test_beta (test_geo_phase_b.TestGeo.test_beta) ... ok
+test_reference_blocked (test_geo_phase_b.TestGeo.test_reference_blocked) ... ok
+test_legacy_anchor_rates (test_rate_reconstruction.TestRates.test_legacy_anchor_rates) ... ok
+test_mapping_heavy_ion_equality (test_rate_reconstruction.TestRates.test_mapping_heavy_ion_equality) ... ok
+test_nonnegative (test_rate_reconstruction.TestRates.test_nonnegative) ... ok
+test_proton_is_separate_model (test_rate_reconstruction.TestRates.test_proton_is_separate_model) ... ok
+test_acs_boundary (test_shielding_boundary.TestBoundary.test_acs_boundary) ... ok
+test_point_boundary_below_grid (test_shielding_boundary.TestBoundary.test_point_boundary_below_grid) ... ok
+test_sep_is_peak_only (test_shielding_boundary.TestBoundary.test_sep_is_peak_only) ... ok
+test_accumulation_nodes (test_target_cross_section_models.TestTargets.test_accumulation_nodes) ... ok
+test_data_only_and_proton_contract (test_target_cross_section_models.TestTargets.test_data_only_and_proton_contract) ... ok
+test_direct_nodes (test_target_cross_section_models.TestTargets.test_direct_nodes) ... ok
+test_zero_mapping_point (test_target_cross_section_models.TestTargets.test_zero_mapping_point) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.674s
+
+OK
