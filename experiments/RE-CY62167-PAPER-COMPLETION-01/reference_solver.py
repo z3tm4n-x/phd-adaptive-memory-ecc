@@ -6,7 +6,11 @@ import random
 from dataclasses import dataclass
 from typing import Iterable, Sequence
 
-# Frozen synthetic benchmark constants from the accepted stage-5 reference report.
+# Frozen synthetic arithmetic-regression constants. The external Stage-5 proof
+# needed to interpret the resulting pair as a probabilistic reference bracket is
+# not available in the controlled evidence package. Keep these values only to
+# detect arithmetic/code drift; do not use them for scientific tightness,
+# optimality, or reference-relative resource claims.
 BENCH_T = 315_576_000.0
 BENCH_Q = 1e-3
 BENCH_N_WORDS = 131_072
@@ -22,6 +26,7 @@ BENCH_PHASE_FACTOR = 1.000961072684732
 
 
 def synthetic_tau_upper() -> float:
+    """Frozen sufficient-formula arithmetic regression value; not an accepted optimum."""
     alpha = (BENCH_N - 1) / (2 * (BENCH_N_BITS - 1))
     nu = BENCH_LAMBDA_PER_DAY * BENCH_M1 / 86400.0
     s2 = nu * nu * BENCH_T
@@ -29,16 +34,18 @@ def synthetic_tau_upper() -> float:
 
 
 def _mu_base(tau: float) -> float:
-    # Expected number of dangerous unordered physical-event pairs in the same synthetic bank/word.
+    # Frozen Stage-5 arithmetic expression. Its external probabilistic proof is
+    # not part of the controlled evidence available to this task.
     return (BENCH_EXPECTED_EVENTS**2 / (2.0 * BENCH_B)) * BENCH_PAIR_P * (tau / BENCH_T)
 
 
 def synthetic_reference_risk_bounds(tau: float):
-    """Second-order Bonferroni bracket from the accepted stage-5 benchmark.
+    """Legacy-named frozen Stage-5 formula outputs for arithmetic regression.
 
-    Upper risk: first-moment dangerous-pair measure with the worst 64-word scrub-phase span.
-    Lower risk: base pair measure minus disjoint-pair intersections mu^2/2 and the declared
-    conservative shared-event intersection bound L^3/(2B^2)*(2 tau/T)^2.
+    The function name is retained for compatibility. The two returned values are
+    NOT treated by the current project as verified probabilistic lower/upper risk
+    bounds because the external Stage-5 derivation/proof is unavailable. They may
+    only be used to reproduce the historical numerical regression benchmark.
     """
     tau = float(tau)
     mu = _mu_base(tau)
@@ -66,14 +73,21 @@ def bisect_monotone_root(func, target: float, lo: float, hi: float, tol: float =
 
 
 def synthetic_reference_tau_bracket():
-    # tau_ref must be >= root of risk upper bound and <= root of risk lower bound.
+    """Legacy-named frozen arithmetic root pair; not a verified reference bracket."""
     lower_period = bisect_monotone_root(lambda t: synthetic_reference_risk_bounds(t)[1], BENCH_Q, 1.0, 1000.0)
     upper_period = bisect_monotone_root(lambda t: synthetic_reference_risk_bounds(t)[0], BENCH_Q, 1.0, 1000.0)
     return lower_period, upper_period
 
 
 def combined_reference_risk(nu_direct: float, T: float, residual_survival: float) -> float:
-    """Direct registered events are an independent absorbing process, never toggles."""
+    """Exact risk only for the declared absorbing-direct surrogate product model.
+
+    This product formula requires an independent thinned direct process and the
+    residual process under a fixed, state-independent event partition and the
+    same fixed restoration action. It is not an exact physical-toggle risk and
+    is not automatically valid for state-dependent partitioning, shared random
+    environments, or adaptive policies.
+    """
     if not (0.0 <= residual_survival <= 1.0):
         raise ValueError("residual_survival outside [0,1]")
     return 1.0 - math.exp(-nu_direct * T) * residual_survival
@@ -103,7 +117,9 @@ def simulate_residual_first_passage(
     """Event-level residual reference kernel with toggles and cyclic sequential scrub.
 
     This kernel is deliberately generic and is not run for GEO in Phase A. It is used for semantics tests
-    and is ready to consume a PI-supplied registered-event mixture in Phase B. Direct marks are not accepted here.
+    and is ready to consume a PI-supplied registered-event mixture in Phase B. Direct marks are excluded
+    because the declared comparison surrogate treats them as absorbing; that surrogate is conservative
+    relative to the corresponding toggle path under the stated coupling, not identical to it.
     Returns True on first passage to >=2 erroneous distinct data bits in any word.
     """
     if lambda_registered_s < 0 or T < 0 or tau <= 0 or n_words <= 0:
@@ -114,7 +130,7 @@ def simulate_residual_first_passage(
         if not (len(mark.bit_ids) == len(mark.word_ids) == len(mark.word_positions)):
             raise ValueError("malformed residual mark")
         if len(set(mark.word_ids)) != len(mark.word_ids):
-            raise ValueError("residual mark contains same-word multiplicity and belongs in absorbing direct branch")
+            raise ValueError("residual mark contains same-word multiplicity and belongs in absorbing direct surrogate branch")
     if len(marks) != len(mark_weights) or any(w < 0 for w in mark_weights) or sum(mark_weights) <= 0:
         raise ValueError("invalid mark law")
     weights = [w / sum(mark_weights) for w in mark_weights]
@@ -124,12 +140,10 @@ def simulate_residual_first_passage(
         s += w
         cumulative.append(s)
 
-    # Per-word erroneous bit set and last completed scrub cycle index.
     state: dict[int, set[int]] = {}
     last_scrub_index: dict[int, int] = {}
 
     def scrub_before(time_s: float, word_id: int, position: int):
-        # Word is scrubbed once per tau at phase position/n_words.
         phase = tau * (position / n_words)
         idx = math.floor((time_s - phase) / tau)
         prev = last_scrub_index.get(word_id, -1)
@@ -151,7 +165,7 @@ def simulate_residual_first_passage(
             scrub_before(t, word, pos)
             st = state.setdefault(word, set())
             if bit in st:
-                st.remove(bit)  # residual bit toggle can restore a previously upset bit
+                st.remove(bit)
                 if not st:
                     state.pop(word, None)
             else:

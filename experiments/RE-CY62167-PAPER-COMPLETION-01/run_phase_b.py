@@ -8,8 +8,31 @@ from cosrad_rate_reconstruction import *
 from cosrad_event_mixture import event_weights
 from phase_b_core import *
 from phase_b_reporting import figure_outputs,write_status_and_manifests
+from resource_model import resource_semantics
 
 HERE=Path(__file__).resolve().parent
+
+def _qualify_resource_rows(resources):
+    """Attach repair semantics without changing historical numeric quantities.
+
+    ERR-assisted E rows retain the numerical read-only lower bound but must not
+    propagate it as an exact total cost or as a sufficient architectural minimum.
+    """
+    out=[]
+    for src in resources:
+        r=dict(src)
+        sem=resource_semantics(float(r['tau_s']),r['scan_mode'],r['write_policy'])
+        r.update(sem)
+        if r['write_policy']=='E':
+            r['tau_min_arch_interpretation']='LEGACY-NUMERIC-FIELD-IS-NECESSARY-READ-TIME-FLOOR-ONLY'
+            r['architecture_status']='NECESSARY-READ-TIME-FEASIBLE' if sem['necessary_read_time_feasible'] else 'READ-TIME-INFEASIBLE'
+            r['period_feasible']=sem['necessary_read_time_feasible']
+            r['interface_value_semantics']='READ-ONLY-LOWER-BOUND'
+        else:
+            r['tau_min_arch_interpretation']='DECLARED-U-FULL-PASS-BOUND'
+            r['interface_value_semantics']='DECLARED-U-SERIAL-TOTAL'
+        out.append(r)
+    return out
 
 def main(argv=None):
     ap=argparse.ArgumentParser();ap.add_argument('--cosrad-results',required=True,type=Path);args=ap.parse_args(argv)
@@ -31,8 +54,8 @@ def main(argv=None):
     write_csv(HERE/'basis_target_approximation.csv',bapprox);write_csv(HERE/'basis_reconstruction_stability.csv',bstab)
     bounds=make_bounds(rates);write_csv(HERE/'geo_bound_results_full.csv',bounds);article=[x for x in bounds if x['rate_reconstruction_route']=='SPECTRAL_EXTERNAL_CONVOLUTION'];write_csv(HERE/'geo_bound_results.csv',article)
     refs=make_references(bounds);write_csv(HERE/'geo_reference_results_full.csv',refs);write_csv(HERE/'geo_reference_results.csv',[x for x in refs if x['rate_reconstruction_route']=='SPECTRAL_EXTERNAL_CONVOLUTION'])
-    resources=resource_rows(bounds);write_csv(HERE/'resource_results_full.csv',resources)
-    rd=pd.DataFrame([x for x in resources if x['mapping_id']=='W_00_01']);cols=['shield_g_cm2','mapping_id','estimate_type','period_source','tau_s','scan_mode','write_policy','reads_per_cycle','writes_per_cycle_or_expected','t_read_effective_s','t_write_effective_s','tau_min_arch_s','resource_margin','period_feasible','architecture_status','reads_per_s','writes_per_s','interface_fraction','interface_percent'];rd[cols].to_csv(HERE/'resource_results.csv',index=False,float_format='%.6g')
+    resources=_qualify_resource_rows(resource_rows(bounds));write_csv(HERE/'resource_results_full.csv',resources)
+    rd=pd.DataFrame([x for x in resources if x['mapping_id']=='W_00_01']);cols=['shield_g_cm2','mapping_id','estimate_type','period_source','tau_s','scan_mode','write_policy','reads_per_cycle','writes_per_cycle_or_expected','t_read_effective_s','t_write_effective_s','tau_min_arch_s','tau_min_arch_interpretation','read_only_floor_s','necessary_read_time_feasible','worst_case_full_pass_bound_s','sufficient_full_pass_feasible','full_pass_feasibility_status','resource_margin','period_feasible','architecture_status','reads_per_s','writes_per_s','interface_fraction','interface_percent','interface_value_semantics','resource_value_semantics','write_cost_status','expected_total_cost_status'];rd[cols].to_csv(HERE/'resource_results.csv',index=False,float_format='%.6g')
     write_csv(HERE/'shielding_boundary_summary.csv',boundary_rows(bounds));write_csv(HERE/'accumulation_interpolation_sensitivity.csv',accumulation_sensitivity(pkg,groups))
     ew=event_weights(pkg,groups,'GCR')+event_weights(pkg,groups,'SEP');write_csv(HERE/'cosrad_event_weights.csv',ew)
     ewd=pd.DataFrame(ew);ewd[(ewd.mapping_id=='W_00_01')&(ewd.environment_scenario=='GCR_ONLY')&(ewd.shield_g_cm2.isin([2.0,2.5,3.0]))].to_csv(HERE/'cosrad_event_weights_audit_subset.csv',index=False)
