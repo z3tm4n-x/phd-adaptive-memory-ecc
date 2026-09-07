@@ -1,15 +1,19 @@
 # Stage A — restoration control applicability and information headroom
 
-**Status: PROPOSED / PI APPROVAL REQUIRED / NOT EXECUTED.**
-This is an execution/derivation proposal, not a new EXP, HYP, RES or novelty claim.
+**Status: PI ACCEPT WITH THREE CLARIFICATIONS / EXECUTION AUTHORIZED / NOT EXECUTED.**
+PI accepted proposal edb987bd3bfe1f639a072f8f0b31a3dcb3197f0e subject to the
+clarifications incorporated here: rho is a bit-rate allocation fraction;
+the organization is declared post-W; direct-budget triviality is audited
+before policy search. Piecewise-constant exposures are evaluated analytically.
+This is the accepted execution/derivation contract, not a HYP, RES or novelty claim.
 Date: 2026-09-07. Owner: Research Orchestrator.
 
-## 1. Decision requested and scope
+## 1. Authorized scope
 
-Approve one bounded derivation-and-computation package that compares fixed,
+PI authorizes one bounded derivation-and-computation package that compares fixed,
 precomputed and causal fully informed restoration choices under the same
 finite scenario family, first-passage risk certificate and serial actuation
-contract. Do not authorize operational estimation/Stage B in this approval.
+contract. Operational estimation/Stage B is not authorized by this approval.
 
 The first slice is **proton-driven, data-only, conditional**. GOES rates and
 CY62167 timing/word-size information ground its scale. Its two-level temporal
@@ -37,9 +41,9 @@ drop these mechanisms for a real mission.
 - DEC-001/002, RQ-002…007 and RES-001 retain their accepted scopes.
 - PA-DOM and Chen constrain eventual comparisons/novelty; no new search is required.
 
-The two reports are sibling commits from 619cb353. The implementation base
-must contain both by explicit integration, not assume that either branch
-contains the other. This proposal branch contains angular provenance and cites
+The two reports are sibling commits from 619cb353. The implementation must
+read both at their exact commits, not assume that either branch contains the
+other. This specification branch contains angular provenance and cites
 the immutable SR commit; it does not modify their historical reports.
 
 ## 3. Frozen input and scenario construction
@@ -78,8 +82,11 @@ remain attached. No heavy-ion multiplier or GEO average is added.
 ## 4. Declared post-W error models
 
 N = 2^24 data bits, n = 32 data bits/word, Nw = 2^19 words, SEC threshold 1.
-Use the existing hypothetical W_00_01/floor(A/4) grouping; it is not proprietary
-device W. Parity and decoder/system consequences are outside the data-only event.
+This is a declared post-W organization: 2^19 logical words x 32 data bits.
+Events are generated directly in word/bit coordinates. W_00_01/floor(A/4)
+is provenance for the corresponding CY62167 scale/organization and a comparator,
+not a required mapping input or a physically identified W in this computation.
+Parity and decoder/system consequences are outside the data-only event.
 
 At total bit rate b(t), parameter rho defines disjoint independently marked
 Poisson streams with deterministic blockwise intensities:
@@ -88,7 +95,9 @@ Poisson streams with deterministic blockwise intensities:
 - two-bit same-word parent arrivals: nu_D(t) = rho*b(t)/2, uniform over words
   and unordered distinct bit pairs of that word.
 
-Thus nu_C + 2 nu_D = b. Physical transitions in this declared model are toggles.
+Thus nu_C + 2 nu_D = b. Rho is the fraction of the total erroneous-bit rate
+budget assigned to two-bit same-word parents, NOT their fraction among parent
+events or a two-bit-event probability. Physical transitions in this declared model are toggles.
 The comparison surrogate absorbs on a two-bit parent; it is not the exact
 toggle model. Parent association is retained; no direct bits are recounted as
 residual arrivals. Uniformity and multiplicity-two are modeling assumptions.
@@ -158,6 +167,10 @@ Q = min(1, Lambda_D + sum_w choose(32,2) * sum_J [integral_J r(t)dt]^2),
 where r(t)=nu_C(t)/N, Lambda_D=integral_0^600 nu_D(t)dt, and J are word-specific
 intervals split by actual credited restorations, clipped at 0 and 600.
 A reset interval crossing t=300 is integrated across BOTH intensity blocks.
+Evaluate each exposure analytically as sum(rate x overlap duration) for the
+piecewise-constant rate. No numerical quadrature is needed. Derive the phase
+sum analytically where possible and check it against independent explicit
+interval summation; account for floating-point and boundary arithmetic errors.
 Do not sum independently clean block risks or insert an average intensity into
 the old stationary formula. Record numerical error separately from model scope.
 
@@ -179,6 +192,30 @@ No claim of exact physical infeasibility follows from Q > epsilon.
 
 ## 8. Common selection rule and finite computation
 
+### Mandatory direct-term triviality audit BEFORE policy search
+
+First export Lambda_D(d,rho,path) = rho*(300*b_1 + 300*b_2)/2 for the
+36 d/rho/path combinations, with classifications for all eight epsilon values.
+This small audit precedes any policy optimization or full certificate table.
+If Lambda_D > epsilon, label DIRECT-CERTIFICATE-BUDGET-EXHAUSTED and skip
+policy search for that case. Equality is recorded separately as zero remaining
+residual budget; do not reject an exact equality solely by the strict test.
+An unresolved floating-point comparison must not be pruned as proven exhaustion.
+
+If one required path/model exhausts the budget, the corresponding whole robust
+family is uncertified. Never silently remove that path/model to manufacture a
+robust feasible set. Report the witness and distinguish this outcome from zero
+value of current information. Known-rho cases, especially rho=0, remain the
+primary information-headroom comparison. Other paths may be reported as local
+diagnostics but not as the original all-path robust result.
+
+Do not change rho={0,1e-4,1e-2} post hoc. If both nonzero cases produce only
+trivial certificate exhaustion, report that outcome and continue eligible
+known-rho cases. A new rho grid requires a separate PI decision. No exhaustion
+classification is called a physical floor or physical infeasibility.
+
+### Selection and reusable tables
+
 All classes use one experimental rule: among robustly certified policies,
 minimize the worst-case total pass count across LL,LH,HL,HH (and rho if ambiguous).
 Break ties by lexicographically minimizing path pass-count vector in fixed order
@@ -194,7 +231,8 @@ scenario-frequency mean. A change of tie ordering may change a selected policy;
 any action-invariance conclusion is conditional on this declared rule.
 
 Precompute the 12x12 action-pair certificate/cost table for each of four level
-paths, three d values and three rho values: 5,184 elementary cases. Reuse these
+paths, three d values and three rho values: at most 5,184 elementary cases,
+pruned first by the direct audit. Reuse these
 tables for epsilon and ambiguity comparisons. Fixed policies use its diagonal;
 schedule policies use one common pair. The causal policy tree has two first-stage
 nodes and four second-stage nodes; impose shared first actions across matching
@@ -266,6 +304,7 @@ RQ-003 supplies SEC/reset semantics; RQ-004 supplies the ideal current-rate
 information boundary; RQ-005 supplies actuation accounting; RQ-002/006 retain
 mark/observation calibration ownership; RQ-007 owns the policy comparison.
 
-**PI decision now requested:** ACCEPT / REVISE / REJECT this exact conditional
-slice and its restricted comparison classes. Approval of the broader direction
-does not implicitly authorize these new parameter choices or execution.
+**PI disposition:** ACCEPT WITH THREE CLARIFICATIONS, incorporated above.
+RE may execute this bounded contract under the exact-base handoff without a
+further conceptual approval cycle. New rho choices, scope expansion, Stage B
+and permanent result promotion require their corresponding separate decisions.
