@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-08  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. No new quantitative experiment is authorized by this status update.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. PI authorization now covers only RE-GOES-REAL-TEMPORAL-01 under its corrected accepted contract; execution has not yet been reported.
 
 ## Completed gate and accepted scope
 
@@ -35,15 +35,17 @@ Orchestrator accepts [RE-GOES-CAUSAL-INPUT-CONTRACT-01](../experiments/RE-GOES-C
 - Frozen values remain a retrospective reference. The source does not establish instantaneous intensity, within-bin maxima, future-rate bounds or historical operational delivery.
 - No further raw input or repeated audit is required now. Operational publication/version evidence is required only before an operational-channel claim.
 
-## Active next gate — real-temporal proposal awaiting PI
+## Active gate — real-temporal bounded execution authorized
 
-[GOES-REAL-TEMPORAL-PREEXECUTION-01](research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md) is DRAFT FOR PI ACCEPT / REVISE / REJECT. Execution is NOT authorized.
+[GOES-REAL-TEMPORAL-PREEXECUTION-01](research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md) is PI ACCEPT WITH INTERPRETATION CORRECTION INCORPORATED. RE-GOES-REAL-TEMPORAL-01 may execute; it is not yet reported as executed.
 
-The proposal preserves known rho=0, SEC, R2-U and two decisions over 600 s, but uses fixed input-only rules to choose actual chronological sections. It masks fallback observations, includes causally available pre-window data, and separately declares future-variation uncertainty.
+PI accepts the mathematics and experimental contract: 600 s windows, input-only selection, known rho=0, SEC/R2-U, B_d, g, L, comparator classes and conservative open-loop planning with one replan at 300 s. B_d remains a counterfactual benchmark ceiling, not a demonstrated physical upper bound; global policy optimality is not claimed.
 
-Two proposed choices require PI approval as part of this exact contract: the inherited Stage A high-rate scale is an assumed benchmark ceiling (not an operationally evidenced prior), and all information classes use a stated conservative planning/replanning rule rather than claims of globally optimal policy trees. The resulting map must distinguish replay outside the assumed domain from certified resource savings inside it.
+GOES-19 has only two roles: real chronological environmental reference and signal content for a hypothetical delayed causal external-information comparator. It is another spacecraft. Neither an architecture delivering its L2 data to the target controller nor spatial/environmental equivalence to a target spacecraft is established. Publication/arrival logs alone would not establish those interfaces. Any operational external channel must be justified separately under RQ-004; no GOES-fed controller is proposed or validated here.
 
-No estimator, new EXP/HYP/RES, operational GOES guarantee, physical calibration or broad search is authorized by this update. RQ-004/005/007 remain the active interfaces. The internal-counter T_rel/T_obs idea remains unverified and deferred.
+The result concerns conditional information-quality requirements and actuation savings under the declared temporal, uncertainty and resource contract. The key test remains whether savings survive ONLY under variation assumptions that the real section actually satisfies. Benefits confined to violated assumptions are a negative result for the variant, not grounds for tuning g or replacing windows.
+
+The final RE handoff points to this corrected specification and authorizes only its package. One focused SR follows the completed derivation/computation. No estimator, operational-channel implementation, raw/transport rerun, broader search or permanent HYP/RES is authorized. RQ-004/005/007 remain active; internal-counter T_rel/T_obs remains unverified and deferred.
 
 ## Continuing canonical research state
 
@@ -61,4 +63,4 @@ No estimator, new EXP/HYP/RES, operational GOES guarantee, physical calibration 
 
 This page supersedes the 2026-09-01 active-gate summary, which still described PA-DOM as unfinished. Older README, research_spec and Issue #3 phase summaries must not be used to reissue completed work; object-specific accepted artefacts and this current gate govern. Their historical scientific definitions are not replaced by a date-order rule.
 
-Main and historical scientific outputs remain unchanged by the working-branch update. No PR/merge, new EXP, HYP, RES or broad search is authorized here.
+Main and historical scientific outputs remain unchanged by the working-branch update. No PR/merge, additional experiment beyond the named bounded task, permanent HYP/RES or broad search is authorized here.
