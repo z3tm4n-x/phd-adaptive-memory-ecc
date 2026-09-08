@@ -1,9 +1,13 @@
-# GOES real-temporal continuation — proposed bounded contract
+# GOES real-temporal continuation — accepted bounded contract
 
-**DRAFT FOR PI ACCEPT / REVISE / REJECT. NOT AUTHORIZED FOR EXECUTION.**
-2026-09-08. Owner: Research Orchestrator. Proposed task: RE-GOES-REAL-TEMPORAL-01.
+**PI ACCEPT WITH INTERPRETATION CORRECTION INCORPORATED. BOUNDED EXECUTION AUTHORIZED; NOT YET EXECUTED.**
+2026-09-08. Owner: Research Orchestrator. Task: RE-GOES-REAL-TEMPORAL-01.
 Basis: `3d24da961a151bc1ce744fbd44bf289c41b58451` and its retained ancestors.
-No EXP/HYP/RES registration or novelty claim is made by this proposal.
+PI accepts the existing mathematics and experiment contract, including B_d as a
+counterfactual benchmark ceiling and conservative planning with one replan.
+The requested correction concerns transfer/interpretation only; it is incorporated
+below. No further preexecution PI disposition is required for this bounded task.
+No permanent EXP/HYP/RES registration or novelty claim is made by this amendment.
 
 ## 1. Disposition and research decision
 
@@ -25,6 +29,29 @@ the same section? Establish this before implementing an estimator.
 
 This is a conditional replay/derivation using actual timestamped input sections,
 not validation of an operational sensor or a physically calibrated SRAM controller.
+
+### Controlling transfer limitation — PI clarification
+
+GOES-19 SGPS is not assumed to be an operational input of the target spacecraft
+memory controller. GOES-19 is a different spacecraft, and no target-system
+architecture delivering its L2 measurements to the controller is established in
+this project. The GOES-derived series is used only as a real chronological
+environmental reference and as the signal content of a hypothetical delayed
+external-information comparator. Any operational external channel must be
+established separately under RQ-004 and may be an onboard radiation monitor,
+another locally available observable, or another justified interface. Results of
+this gate establish information-quality/value requirements, not feasibility of
+a GOES-fed controller. Spatial/environmental representativeness relative to a
+future target spacecraft also remains unestablished.
+
+Here information value means the declared conditional actuation-resource
+consequence, not net value after information/controller costs. Operational
+publication/arrival logs alone would not close the target-architecture or spatial
+representativeness gaps. Interpret every result as conditional on an external
+channel with the declared temporal structure, availability and uncertainty/resource
+contract; never as a requirement or recommendation to deliver GOES-19 L2 to the
+target spacecraft. This qualification applies to the report, figures, tables and
+handoff as well as this specification.
 
 ## 2. Unchanged physical and service slice
 
@@ -89,7 +116,7 @@ that use from delivery to the controller. Masking removes information, NOT expos
 Quality/mask status becomes available with its associated record, not in advance.
 No assumption about the probability or intensity-dependence of missingness is used.
 
-Proposed experimental prior family, shared by ALL comparators:
+Accepted experimental prior family, shared by ALL comparators:
 
     0 <= x_j <= B_d,
     |x_(j+1)-x_j| <= g B_d,   0 <= g <= 1,
@@ -98,8 +125,8 @@ for consecutive five-minute reference bins in the context and reporting window.
 Use B_d equal to the already frozen Stage A high-rate scale, explicitly as a
 COUNTERFACTUAL KNOWN BENCHMARK CEILING. It is NOT an operationally established
 prior, not a physical upper bound, and not a value learned causally from this test
-record. PI approval of this proposal is requested specifically for this modelling
-assumption. A real-channel guarantee would need independent evidence for B_d and g.
+record. PI accepts this modelling assumption for this bounded experiment.
+A real-channel guarantee would need independent evidence for B_d and g.
 Using the previous maximum as an assumed domain does not turn its provenance into
 an a priori measurement. No ceiling or growth limit is fitted to obtain savings.
 
@@ -132,7 +159,7 @@ All comparators share B_d,g,U,epsilon, the exposure model and action times.
 |---|---|
 | Fixed | One constant period, certified over the whole prior family; same action across all selected windows for a given d/epsilon/g. |
 | Precomputed | One pair selected before any section-specific observation, certified over the same prior family and common to all windows. No retrospective window label/profile. |
-| Delayed causal | Timestamped eligible observations, including available pre-window data; replans only at 0 and 300 s. |
+| Delayed causal external-information comparator | Timestamped eligible observations, including available pre-window data; replans only at 0 and 300 s. |
 | Ideal current-rate comparator | Same prior plus exact reference bin rates through the current bin at each decision, never future bins or Poisson events. |
 
 No justified a priori orbit/time profile is available for this dataset; do not
@@ -153,8 +180,8 @@ Ignoring a new report remains an admissible option when the contract is consiste
 No future observation is assumed in the initial safety certificate.
 
 This is conservative open-loop planning with one causal replan, NOT the previously
-enumerated globally optimal finite policy tree. This change is explicit and part
-of the proposed PI approval. Do not claim global optimality, universal information
+enumerated globally optimal finite policy tree. PI explicitly accepts this
+experimental rule for the bounded study. Do not claim global optimality, universal information
 value, or monotone pathwise cost order. All history-dependent choices follow this
 one rule; never solve each realized future trajectory as if known at t=0.
 Show recursive certificate preservation for compatible added information. If no
@@ -201,7 +228,8 @@ exact/interval-verified decision boundaries and resource identities. Test the
 limiting no-observation and g=1 contracts without assuming a cost result in advance.
 No rerun of old production matrices, transport, Monte Carlo or raw NetCDF audit.
 
-After PI approval, RE may execute ONLY this package in a new task directory, then
+With the PI interpretation correction incorporated, RE may execute ONLY this
+package in a new task directory, then
 return it for one Scientific Review focused on the new envelope/replanning claims.
 Stop after this map. No estimator, faster action grid, revised ceilings, internal
 counter, topology/parity work or larger mission study is automatically authorized.
@@ -220,6 +248,8 @@ RQ-002/003/006 provide the unchanged conditional model/reset/organization slice.
 Operational timing, physical B_d/g justification, intra-bin bursts and calibration
 remain explicit transfer gaps. PA-DOM/Chen closure is reused; no literature search.
 
-PI is asked to approve this bounded proposal, particularly the assumed ceiling/
-variation family and the common conservative replanning rule. No additional data
-are requested now. This file is a reviewable proposal, not permission to execute.
+PI ACCEPT is effective with this wording correction incorporated. RE may execute
+RE-GOES-REAL-TEMPORAL-01 under this exact contract. No additional data or repeat
+conceptual approval are required. A resource benefit obtained only where the real
+section violates the declared variation contract is a negative result for this
+method variant, not a reason to tune g or replace the selected sections.
