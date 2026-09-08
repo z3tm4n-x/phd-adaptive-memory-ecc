@@ -5,7 +5,7 @@
   "upstream": {
     "implementation_semantics_commit": "619cb3538e296b3619f21301a176665f4611143f",
     "path": "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv",
-    "proton_rate_5min_sha256": "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09",
+    "proton_rate_5min_sha256": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d",
     "git_blob_sha": "5de108c6759bcf720073b3fbc6581389d46e63aa",
     "controlled_dataset_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815",
     "paired_valid_intervals": 16971,
@@ -15,7 +15,10 @@
       "d5": "d5_lambda_central_s-1"
     },
     "unit_contract": "full-array bit/upset rate s^-1; lambda_bit=N_bits*integral(F_sh(E)*sigma_bit(E)dE)",
-    "validity_filter": "east_valid==1 and west_valid==1; finite nonnegative central rates"
+    "validity_filter": "east_valid==1 and west_valid==1; finite nonnegative central rates",
+    "proton_rate_5min_sha256_provenance": "canonical LF bytes of pinned Git blob 5de108c6759bcf720073b3fbc6581389d46e63aa; exact bytes emitted by git show",
+    "historical_crlf_sha256": "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09",
+    "historical_crlf_sha256_note": "historical CRLF serialization only; not accepted by the exact Git-blob reproduction gate"
   },
   "frozen_levels": {
     "d1": {

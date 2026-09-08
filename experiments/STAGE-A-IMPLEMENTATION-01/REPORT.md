@@ -61,7 +61,9 @@ Frozen rate source:
 - commit: `619cb3538e296b3619f21301a176665f4611143f`;
 - path: `experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv`;
 - git blob SHA: `5de108c6759bcf720073b3fbc6581389d46e63aa`;
-- accepted upstream SHA-256:
+- canonical LF Git-blob SHA-256:
+  `9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d`;
+- historical CRLF serialization SHA-256 (provenance only, not the reproduction gate):
   `713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09`;
 - paired-valid rows: `16971`.
 
@@ -229,20 +231,21 @@ high-level scenario for every shield and epsilon.  Therefore Stage A **cannot** 
 says that the declared structural uncertainty dominates the certificate; it does not
 justify changing the rho grid post hoc and does not establish physical impossibility.
 
-## 9. Numerical status and independent checks
+## 9. Numerical status and validation evidence
 
-- 9 focused tests: PASS.
-- independent small-memory phase summation versus production closed form: PASS.
-- stationary reduction: PASS.
-- resource/pass identities: PASS.
-- common first actions / no future knowledge: PASS.
-- `Fixed subset Precomputed subset Causal`: PASS.
-- row-storage-order invariance: PASS.
-- exact decision-boundary comparisons: PASS.
-- numerically unresolved cases: **0**.
+The original implementation run recorded **9 focused tests PASS** in `test_output.txt`.
+Those tests are not identical to the later independent production-linked checks.  In
+particular, Scientific Review 01 independently linked explicit reset-timestamp/overlap
+integration to production `pair()` and separately checked the stationary limit; the
+preserved algorithm and scope are in
+`docs/scientific_reviews/STAGE_A_SCIENTIFIC_REVIEW_01.md`, §6.  Those reviewer checks
+remain reviewer evidence and are not retroactively attributed to `test_stage_a.py` or
+to the original run manifest.
 
+The original exact-decision results still report numerically unresolved cases: **0**.
 See `verification_report.md`, `verification.json`, and
-`numerical_boundary_summary.csv`.
+`numerical_boundary_summary.csv` for the historical implementation record, qualified by
+the Scientific Review 01 distinction above.
 
 ## 10. Execution environment and one limitation of this cloud run
 
@@ -253,37 +256,30 @@ Implementation environment:
 - glibc 2.41;
 - Python standard library only.
 
-The authenticated GitHub connector verified the exact commit/path/blob identity and
-exposed the frozen rows used for `L/H`, but the complete private CSV bytes were not
-materialized into this execution container.  Consequently this run did not recompute
-the upstream CSV SHA-256 locally.  The accepted upstream SHA-256 remains frozen in the
-manifest, and the supplied reproduction command hard-verifies it before recomputing
-`L/H`.  No input value or scale was substituted.
+The original implementation run did not materialize the complete private CSV bytes and
+therefore did not independently recompute its SHA-256.  Scientific Review 01 later
+identified that the old value was the hash of a CRLF serialization, while the pinned Git
+blob and `git show` output are LF.  The reproduction gate is corrected here to the
+canonical LF SHA-256.  This correction changes provenance/packaging only; no input
+value, L/H level, scale, formula, policy, or scientific table is changed.
 
 ## 11. Reproduction
 
 From a clone containing the repository objects:
 
 ```bash
-git checkout research/stage-a-implementation-01
-
-git show 619cb3538e296b3619f21301a176665f4611143f:\
-experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv \
-  > /tmp/stage_a_proton_rate_5min.csv
-
-python3 experiments/STAGE-A-IMPLEMENTATION-01/test_stage_a.py
-
-rm -rf /tmp/stage-a-repro
-python3 experiments/STAGE-A-IMPLEMENTATION-01/stage_a.py \
-  --config experiments/STAGE-A-IMPLEMENTATION-01/config.json \
-  --output-dir /tmp/stage-a-repro \
-  --frozen-csv /tmp/stage_a_proton_rate_5min.csv
+git checkout research/stage-a-reproduction-fix
+bash experiments/STAGE-A-IMPLEMENTATION-01/reproduce.sh
 ```
 
-The `--frozen-csv` run fails closed on SHA-256, paired-valid-row count, or recomputed
-`L/H` mismatch.  Science tables can then be byte-compared with the committed versions;
-`run_manifest.json` will additionally record that the local frozen byte hash was
-recomputed.
+The helper creates a fresh `mktemp -d` workspace, materializes the pinned file there via
+`git show`, runs the dedicated input-gate regression, then runs the historical focused
+tests and the science-table reproduction.  Cleanup is explicit through an EXIT trap; no
+fixed temporary path is deleted.
+
+The input gate fails closed on canonical LF SHA-256, paired-valid-row count, or
+recomputed `L/H` mismatch.  The historical committed `run_manifest.json` is not
+rewritten or promised as a generated reproduction artifact.
 
 ## 12. Files
 
@@ -297,7 +293,8 @@ recomputed.
 - `selected_policy_trees.json` — selected policy trees;
 - `resource_gaps.csv` — componentwise Fixed/Causal and Precomputed/Causal gaps;
 - `numerical_boundary_summary.csv` — nearest exact certificate/direct boundary per known-rho case;
-- `stage_a.py` / `test_stage_a.py` — implementation and focused tests;
+- `stage_a.py` / `test_stage_a.py` — implementation and original focused tests;
+- `test_input_gate.py` — input-only canonical/altered-byte regression;
 - `verification_report.md` / `verification.json` — independent checks and validity limits.
 
 ## 13. Scientific limitations retained
@@ -307,3 +304,27 @@ parity, ERR, estimator/acquisition cost, or a real mission distribution, and doe
 run Stage B.  The sufficient certificate remains an upper bound for the accepted
 surrogate.  A certificate failure is not a proof of physical infeasibility.  The finite
 Causal comparator is not an absolute upper bound on all adaptive control methods.
+
+
+## 14. Reproduction correction after Scientific Review 01
+
+Corrective scope is limited to findings in
+`docs/scientific_reviews/STAGE_A_SCIENTIFIC_REVIEW_01.md` at review commit
+`12d461aad112f22c37a365a38501143aaf2c3ee8`.  The exact Git blob remains
+`5de108c6759bcf720073b3fbc6581389d46e63aa`; the canonical LF SHA-256 is
+`9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d`.
+The former `713ece...` value is retained only as the historical CRLF serialization hash.
+
+The dedicated input-only regression calls `stage_a.frozen()` on a supplied file and on
+a one-byte-altered copy; it does not call `search()`, `main()`, or regenerate the
+scientific matrix.  In this corrective engineering environment the input-gate code path
+was exercised on a controlled LF fixture whose temporary config matched its SHA-256,
+paired-valid-row count and L/H contract: the fixture was accepted and a one-byte
+mutation was rejected at SHA-256.  The 13,002,858-byte private upstream blob was not
+materialized in this runtime, so no second direct execution on that blob is claimed
+here.  Exact-blob LF identity and row/L/H validation are the independent Scientific
+Review 01 §6 record; the corrected config now uses that canonical LF hash.  No
+production matrix was executed for this correction.  The original `run_manifest.json`
+remains unchanged.  Scientific Review 01's independent production-linked timestamp
+algorithm remains preserved in its §6 and is not repeated or re-labelled as an original
+implementation test.

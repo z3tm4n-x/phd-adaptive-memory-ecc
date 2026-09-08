@@ -2,32 +2,36 @@
 
 ## Result
 
-All mandatory focused checks passed.  Decision classifications use exact
-`fractions.Fraction` arithmetic on the frozen decimal inputs; binary floating point is
-used only to render CSV values.  No numerically unresolved case was found.
+The original implementation run recorded nine focused executable tests as PASS and used
+exact `fractions.Fraction` arithmetic for decision classifications.  Scientific Review
+01 later performed separate independent production-linked checks.  Those reviewer
+checks are distinct evidence and must not be attributed to the original test suite or
+run manifest.
 
-## Checks performed
+## Validation-evidence distinction
 
-| Check | Result | Method |
-|---|---:|---|
-| `nu_C + 2 nu_D = b` | PASS | exact algebra over all frozen `d`, levels and accepted `rho` values |
-| R2-U minimum period and 300 s divisibility | PASS | all `tau in U` satisfy `tau >= P` and `300/tau` integral |
-| word reset phase / cross-boundary exposure | PASS | independent explicit interval construction on small memories (`N_w=3,4,5,7,8`) compared with production closed form |
-| stationary reduction | PASS | exact equality to `beta tau T nu_C^2`, `beta=31/(2*2^24)`, in collapsed-phase limit |
-| zero direct limit (`rho=0`) | PASS | `Lambda_D=0` exactly |
-| zero residual limit (`rho=1`, algebraic diagnostic only) | PASS | accumulation term exactly zero; `rho=1` is not added to the execution grid |
-| pass/read/write/occupied-time identities | PASS | `reads=writes=passes*2^21`, occupied time `passes*P` |
-| common first action for identical prefixes | PASS | every selected causal policy has `LL.tau1=LH.tau1` and `HL.tau1=HH.tau1` |
-| no future-level knowledge | PASS | causal root enumeration parameterizes first action only by current `L/H` |
-| `Fixed subset Precomputed subset Causal` | PASS | constructive feasible-set checks in every non-direct-pruned execution case |
-| row-storage-order invariance | PASS | frozen-level extraction is order-statistic based; production consumes only frozen `L/H` |
-| tie rule | PASS | focused unit check plus actual precomputed selections where the period-maximization tie-break is exercised |
-| numerical boundary audit | PASS | exact rational `Q-epsilon` / `Lambda_D-epsilon`; no tolerance classification |
+**Original committed tests.** `test_stage_a.py` produced the nine PASS lines preserved
+in `test_output.txt`.  As Scientific Review 01 notes, `test_phase_sum` and
+`test_stationary_reduction` are algebraic checks written separately from production
+`pair()`; the original executable record therefore does not by itself establish every
+independent-production-link statement previously summarized here.
 
-`verification.json` is the machine-readable check record.  `numerical_boundary_summary.csv`
-contains the closest exact direct/certificate boundary for every known-rho `d x rho x epsilon` case.
-The smallest reported absolute certificate gap is still classified exactly; no equality
-or arithmetic ambiguity was delegated to binary float.
+**Independent reviewer checks.** Scientific Review 01 independently compared an
+explicit reset-timestamp/overlap-integration algorithm with production `stage_a.pair()`
+and separately checked the stationary limit and artifact linkage.  The exact algorithm,
+checked period/rate scope, and interpretation are preserved in
+`docs/scientific_reviews/STAGE_A_SCIENTIFIC_REVIEW_01.md`, §6.  This corrective package
+does not repeat the reviewer's larger check set and does not retroactively change the
+original run record.
+
+**Corrective input-gate regression.** `test_input_gate.py` is a new input-only test.
+For a supplied file it requires the configured SHA-256 and then the paired-valid-row/L/H
+contract, and it requires a one-byte-altered copy to fail at SHA-256.  Its code path was
+exercised in this corrective environment on a controlled LF fixture: the matching
+fixture was accepted and its one-byte mutation was rejected.  The exact 13,002,858-byte
+upstream blob was not materialized in this correction runtime; exact-blob LF identity
+and row/L/H evidence remain the independent Scientific Review 01 §6 record.  This test
+does not execute the policy/science matrix.
 
 ## Input and scaling verification
 
@@ -40,16 +44,17 @@ as `N_BITS * integral(F_sh(E)*sigma_bit(E)dE)`, with unit `s^-1`.  Stage A also 
 The frozen CSV identity is recorded as:
 
 - git blob SHA: `5de108c6759bcf720073b3fbc6581389d46e63aa`;
-- accepted upstream SHA-256:
+- canonical LF Git-blob SHA-256:
+  `9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d`;
+- historical CRLF serialization SHA-256 (provenance only):
   `713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09`;
 - paired-valid rows: `16971`.
 
-In this cloud execution the connector exposed the frozen text and exact source rows but
-did not materialize the complete private-repository file as local bytes.  Thus the
-SHA-256 was not independently recomputed in the execution container.  This is an
-execution-environment verification limitation, not a change of scientific input.  The
-reproduction command uses `git show` to materialize the exact commit blob and
-`stage_a.py --frozen-csv ...` then hard-fails on SHA-256, row-count, or `L/H` mismatch.
+The original cloud execution did not materialize the complete private-repository file.
+Scientific Review 01 subsequently established that the pinned Git blob is LF and has the
+canonical SHA-256 above; the former value is the CRLF serialization hash.  The corrected
+reproduction gate therefore uses the canonical LF bytes without newline normalization.
+The original historical `run_manifest.json` is intentionally unchanged.
 
 ## Focused tests
 
