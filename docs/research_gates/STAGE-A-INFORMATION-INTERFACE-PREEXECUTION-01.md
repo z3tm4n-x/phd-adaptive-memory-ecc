@@ -1,6 +1,6 @@
 # Stage A continuation — information-interface sensitivity
 
-**Status: PROPOSED FOR PI APPROVAL / NOT AUTHORIZED FOR EXECUTION.**
+**Status: PI ACCEPT WITH TWO QUALIFICATIONS / BOUNDED EXECUTION AUTHORIZED / NOT YET EXECUTED.**
 Date: 2026-09-08. Owner: Research Orchestrator. Related: RQ-004/005/007;
 RQ-002/003/006 supply unchanged model interfaces. No EXP/HYP/RES is registered.
 
@@ -75,7 +75,7 @@ timestamped sets and the already selected actions. A first-block report never
 identifies the second level; absence of a report at a known delivery time must
 not leak a hidden level. Past actions carry exposure history, not a free reset.
 
-First derive the finite observational-equivalence regions of
+Before ANY policy enumeration, analytically derive the finite observational-equivalence regions of
 (ell,s_1,s_2,eta,enabled updates). Do not choose a dense numerical parameter grid.
 With fixed action times, positive delays can be indistinguishable. In particular,
 for aligned samples, 0<ell<=300 delivers only the first-level report by the second
@@ -84,6 +84,9 @@ block do not create intra-block reactions. Include boundary and missing-report
 cases explicitly. Binary level uncertainty can likewise have stepwise regions.
 A broad region of identical actions is a valid boundary result, not a reason to
 invent intermediate levels, a smoother curve, or faster decisions.
+PI explicitly accepts a finite, stepwise map as a substantive outcome. Export
+the analytical timing and eta boundaries, including equality cases, before
+enumerating the distinct policy problems; no separate PI pause is needed there.
 
 ## 4. Comparison and robust policy contract
 
@@ -141,6 +144,9 @@ the attained retention breakpoints so any target can be queried without reruns.
 Give maximal allowable latency only when a maximum exists; otherwise report
 the admissible set/supremum and open/closed endpoints. Do not presume monotonicity
 of tie-selected pathwise results; justify any simplification used.
+Every maximum/supremum is conditional on this Stage A contract, especially the
+absence of pre-window observations and the fixed decision times. It is NOT a
+maximum permissible latency for a real external sensor channel.
 
 Alongside every saving report absolute p, reads=writes=p*2^21,
 occupied seconds=p*0.18874368 and occupied fraction=p*0.18874368/600 for
@@ -195,5 +201,12 @@ Before deriving T_obs, specify the count/reset interface, detection criterion
 and transition-risk allocation; do not import historical formulas. This belongs
 to the subsequent RQ-003/004/007 interface, with RQ-005 cost accounting.
 
-**Requested PI decision:** ACCEPT / REVISE / REJECT this bounded pre-execution
-contract. Directional acceptance alone has not started calculations or agents.
+**PI disposition:** ACCEPT, with the two qualifications incorporated above:
+derive the timing/eta equivalence boundaries before policy enumeration and keep
+every latency boundary conditional on the no-pre-window-observation contract.
+RE may execute this bounded contract without another conceptual approval cycle.
+Task: STAGE-A-INFORMATION-INTERFACE-01. Delivery: a separate branch
+`research/stage-a-information-interface-01`; new files only in
+`experiments/STAGE-A-INFORMATION-INTERFACE-01/`. Preserve prior outputs and main;
+do not create a PR or merge. Return the implementation for Orchestrator disposition
+and focused Scientific Review of the new analysis; RE does not assign review PASS.
