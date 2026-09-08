@@ -1,219 +1,215 @@
 # RE-GOES-CAUSAL-INPUT-CONTRACT-01 — REPORT
 
 **Starting commit:** `19cb6c09c88f55cbcaf0af328cd6ef81cbff9f92`  
-**Scope:** causal-input audit only; no new reliability/control experiment.
+**Delivery branch:** `research/goes-causal-input-contract-01`  
+**Scope:** input/code/metadata causality audit only; no reliability experiment, estimator, policy search, RADAR/COSRAD rerun, Monte Carlo, HYP or RES.
 
 ## Executive disposition
 
-**PARTIAL / SUFFICIENT FOR A PARAMETERIZED DELAYED-DATA COMPARATOR; OPERATIONAL CHANNEL NOT ESTABLISHED.**
+**PARTIAL / SUFFICIENT FOR A PARAMETERIZED DELAYED-DATA COMPARATOR; PRACTICAL OPERATIONAL CHANNEL NOT ESTABLISHED.**
 
-The existing `RE-GOES19-PROTON-RATE-01` series is a valid **pinned retrospective environmental reference** under its already declared physical/model limitations. It is not, as currently archived, evidence of what a controller could have known in real time.
+The retained `RE-GOES19-PROTON-RATE-01` series is a valid pinned **retrospective environmental reference** under its existing physical/model limitations. It is not evidence of what a controller knew in real time.
 
-For the present project contract, a source timestamp `t` is interpreted as the **start of a 5-minute averaging interval**. The historical adapter verifies `time_coverage_resolution=PT5M`, converts the source `time` coordinate without shifting it, explicitly records `timestamp_semantics='timestamp at start of averaging period'`, and writes that same value to `proton_rate_5min.csv`. Therefore the nominal measurement interval is `[t, t + 300 s)`, and the complete five-minute average cannot be available before `t + 300 s`. Any additional L2 processing, publication, communication, download, project-side transformation or controller-delivery latency is **UNKNOWN** from the retained evidence and must not be set to zero. `date_created` is not used as an operational-availability timestamp.
+The PI-controlled archive requested by the initial audit was subsequently supplied and checked in this closeout:
 
-One existing transformation is not causal at the affected timestamps: `high_energy_gap_bridge()` first fits P10/P11 power-law indices over the **entire 59-day series**, then uses the direction-wide median fitted index where a local fit is unavailable. The retained diagnostics report **576 East and 920 West directional fallback rows**. The row-level `used_fallback` mask is not written to `proton_rate_5min.csv` or another committed row-level artefact; only aggregate counts are retained. Thus the exact affected timestamps cannot be recovered from the frozen derived CSV alone.
+- `goes010226.zip`;
+- SHA-256 `7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581` — **exact match** to the retained manifest;
+- 59 daily NetCDF files, 16,992 timestamps at 300-s cadence.
 
-A small helper, `extract_causal_features.py`, is supplied to recover exactly that mask from the already-declared PI-controlled GOES NetCDF set, with hash verification and without running RADAR/transport/reliability/control. The exact controlled archive is not present in the Git checkout, so this helper could not be executed against the canonical raw bytes in this task.
+This closes the raw-input blocker for source-time semantics and exact historical fallback identification. The only remaining input blocker is for a **practical operational-channel claim**: actual as-received L2 publication/delivery/version timing is still `UNKNOWN`.
 
-The immediate input blocker for instantiating the existing derived series as a causal comparator is therefore the **PI-controlled `goes010226.zip`, SHA-256 `7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581` (59 declared daily NetCDF files)**. A separate blocker for any **practical operational guarantee** is evidence of actual L2 publication/delivery timing or an as-received operational feed/log; none is retained here.
+## 1. Canonical evidence
 
-## 1. Evidence and status discipline
+Repository sources at the starting commit:
 
-Canonical repository sources at the starting commit:
-
-- `experiments/RE-GOES19-PROTON-RATE-01/goes19_adapter.py`, especially `load_directory()`;
-- `experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py`, especially `high_energy_gap_bridge()`, `calculate()`, `write_rate_csv()`;
+- `experiments/RE-GOES19-PROTON-RATE-01/goes19_adapter.py` — source identity, time conversion, E/W mapping, validity, calibration;
+- `experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py` — bridge, transport/rate construction and CSV writer;
 - `experiments/RE-GOES19-PROTON-RATE-01/goes19_audit.json`;
 - `experiments/RE-GOES19-PROTON-RATE-01/rate_diagnostics.json`;
 - `experiments/RE-GOES19-PROTON-RATE-01/input_manifest.json`;
-- `experiments/RE-GOES19-PROTON-RATE-01/REPORT.md`;
-- `experiments/RE-GOES19-PROTON-RATE-01/noaa_revision_semantic_patch.json`.
+- `experiments/RE-GOES19-PROTON-RATE-01/noaa_revision_semantic_patch.json`;
+- `experiments/RE-GOES19-PROTON-RATE-01/REPORT.md`.
 
-The manifest also records the NOAA GOES-19 SGPS Provisional ReadMe URL. The currently reachable document is useful for product/calibration caveats, but it is not byte-pinned in the repository and it does not establish historical L2 delivery latency. It states that SGPS L1b is one-second cadence, that product improvements/reprocessing may occur, that gaps exist, and that the revised P1–P5 calibration had not been applied to operational L1b while corrected L2 one-/five-minute products were planned as replacements. Those facts support the archive-versus-operational distinction; they do not supply a controller-availability timestamp.
+Additional controlled input used in this closeout: the exact PI archive above. `date_created` is retained only as archive/product metadata and is **not** interpreted as initial operational availability.
 
-Statuses below use:
+Status vocabulary:
 
-- **KNOWN/RETAINED** — directly preserved by the pinned code/artefacts;
-- **DERIVED LOWER BOUND** — follows from the retained averaging/timestamp contract;
-- **UNKNOWN** — not evidenced by the retained inputs;
-- **RETROSPECTIVE ONLY** — depends on future records or later archive state and must not be presented as an online observation.
+- **KNOWN/RETAINED** — directly supported by pinned code/data/metadata;
+- **DERIVED LOWER BOUND** — follows from the averaging interval;
+- **UNKNOWN** — not established by current evidence;
+- **RETROSPECTIVE ONLY** — uses future records or later archive state.
 
-## 2. Temporal meaning of one record
+## 2. Temporal meaning of one record — source-level check closed
 
-### 2.1 Source timestamp and averaging interval
+Inspection of all 59 controlled NetCDF files gives one uniform time contract:
 
-`goes19_adapter.load_directory()` checks `processing_level == 'Level 2'`, `time_coverage_resolution == 'PT5M'`, exactly 300 s between retained timestamps, and converts source `time` values directly to UTC datetimes. The same function records `timestamp_semantics = 'timestamp at start of averaging period'` in its audit object. `rate_pipeline.write_rate_csv()` writes `goes.times[t].isoformat()` directly as `timestamp_utc`; no later code shifts it to the interval centre or end.
+- root `time_coverage_resolution = PT5M`;
+- `time.long_name = "Time stamp at the start of the averaging period, in seconds since 2000-01-01 12:00:00 UTC"`;
+- `time.units = "seconds since 2000-01-01 12:00:00 UTC"`;
+- no `time.bounds` attribute and no separate time-bounds dataset were present;
+- each daily file has `time_coverage_start` at 00:00 UTC and `time_coverage_end` at the next 00:00 UTC;
+- first series timestamp: `2026-01-01T00:00:00Z`;
+- last series timestamp: `2026-02-28T23:55:00Z`; its nominal averaging interval ends at `2026-03-01T00:00:00Z`.
 
-Hence the current project interpretation is:
+Therefore, for a CSV/source timestamp `t`, the measurement interval is
 
-| Quantity | Contract |
-|---|---|
-| interval start | `t = timestamp_utc` |
-| interval end | `t + 300 s` |
-| CSV timestamp | source averaging-interval start |
-| earliest possible availability of the **complete** five-minute average | not before `t + 300 s` |
-| additional processing/publication/delivery latency | **UNKNOWN** |
+`[t, t + 300 s)`.
 
-This is adequate for a **conditional comparator** with an explicitly declared nonnegative latency `L`: `availability_time = t + 300 s + L`. It is not an operational-latency measurement.
+The **complete** five-minute average cannot be available before `t + 300 s`. Any additional L2 processing, publication, communication, project-side transformation and controller-delivery delay remains `UNKNOWN`. For a future conditional comparator the admissible notation is therefore
 
-### 2.2 Qualification: raw time attributes/bounds are not independently rechecked here
+`availability_time = t + 300 s + L`, with `L >= 0` explicit and not claimed as measured GOES latency.
 
-The Git checkout retains the adapter contract, hashes and audit summaries, but not the 59 controlled NetCDF files themselves. The committed audit does not preserve the raw `time` variable attributes or any raw time-bounds array. The historical adapter also does not consume a bounds variable; it uses the source `time` coordinate plus the checked `PT5M` resolution.
+## 3. Causality of the existing transformation
 
-Therefore this task can verify the **existing project temporal contract**, but cannot independently re-open the original NetCDF `time` attributes/bounds from repository bytes. To close that provenance point at source-file level, provide the exact controlled archive named above. `extract_causal_features.py` intentionally requires the controlled hashes; with `--metadata-output` it also dumps the retained raw time attributes and discovers any bounds variable/dataset without interpreting `date_created` as operational availability.
+### 3.1 Same-record operations
 
-`date_created` is read into historical in-memory file metadata by `goes19_adapter.py`, but it is not interpreted here as the time at which an operational controller first received a record. File creation/reprocessing time and network/controller availability are different objects.
-
-## 3. Causality audit of the existing transformation
-
-### 3.1 Per-record operations that do not use future timestamps
-
-Subject to the source record itself being available, the following historical project operations use only the same timestamp plus fixed calibration/model objects:
+Once the completed source record is available, these existing transformations do not require future timestamps:
 
 - fill/nonfinite and yaw validity handling;
 - E/W physical-direction reconstruction;
-- fixed P1–P5 correction factors when legacy channel bounds are detected;
-- unit conversion keV -> MeV;
-- fixed low-energy `gamma={0,2,4}` scenario extension anchored to that row's P1 value;
-- per-direction RADAR transport with pinned static matrices;
-- static `sigma(E)` representation;
+- fixed P1–P5 correction when legacy bounds are detected;
+- keV-to-MeV unit conversion;
+- fixed low-energy `gamma={0,2,4}` scenarios anchored to the same-row P1 value;
+- pinned static transport and `sigma(E)` objects;
 - P11 >500 MeV contribution;
-- local P10/P11 390–500 MeV bridge when a positive finite local P10/P11 pair exists;
-- E/W arithmetic central estimator after both same-timestamp directional chains exist.
+- local P10/P11 390–500 MeV fit when both local values support the fit;
+- arithmetic `(E+W)/2` after both same-row directional chains exist.
 
-These operations can still have **processing latency** and **model uncertainty**; absence of future-time dependence is not evidence that their real-time execution was implemented.
+This establishes only absence of future-sample dependence. It does not establish real operational implementation or processing latency.
 
-### 3.2 Direction-median high-energy fallback is retrospective
+### 3.2 Global direction-median bridge fallback
 
-`rate_pipeline.high_energy_gap_bridge()` executes, per direction: (1) scan all timestamps and collect every locally fitted P10/P11 `gamma`; (2) compute `median(fitted)` over that complete population; (3) scan all timestamps again and fill any missing local `gamma` with that median.
+`high_energy_gap_bridge()` is retrospective on fallback rows: it first collects fitted `gamma` over the full supplied time record, computes a direction-wide median, and then assigns that median where the local P10/P11 fit is unavailable. Hence a fallback at `t_k` can depend on samples with timestamps after `t_k`.
 
-Thus a fallback value at time `t_k` can depend on observations with timestamps `> t_k`. The exact frozen fallback value is therefore a retrospective reference quantity. If one insists on using that exact frozen value without changing the algorithm, it cannot be treated as available during the Jan–Feb record until the full median population has been observed and processed.
+The raw-byte extraction exactly reproduces the retained diagnostics:
 
-`rate_diagnostics.json` preserves direction median gamma E `1.179003304890439`, W `1.1705858862947358`, and fallback counts E `576`, W `920`. The local `used_fallback[T,2]` Boolean array is not returned from `high_energy_gap_bridge()`; only aggregate counts enter the diagnostic. `write_rate_csv()` does not contain a bridge/fallback flag or per-row `gap_bridge_gamma` column. Consequently **row-level fallback identity is not recoverable from `proton_rate_5min.csv` + committed diagnostics alone**.
+| Quantity | Result |
+|---|---:|
+| East fallback directional rows | 576 |
+| West fallback directional rows | 920 |
+| Total fallback directional rows | 1,496 |
+| Unique timestamps with >=1 fallback direction | 1,449 |
+| Timestamps with both directions in fallback | 47 |
+| Timestamps with exactly one fallback direction | 1,402 |
+| Fraction of all 16,992 timestamps whose central E/W rate inherits fallback | 8.53% |
+| First affected timestamp | `2026-01-01T00:45:00Z` |
+| Last affected timestamp | `2026-02-28T20:55:00Z` |
 
-No transport rerun is needed to recover it. The supplied helper identifies the historical fallback predicate directly from the controlled raw P10/P11/validity values and verifies the historical aggregate counts.
+All 1,496 fallback directional rows have nonpositive/unusable P10 for the local fit. In 1,494 of them P11 remains positive/finite; two East rows also lack a positive/finite P11. This is exactly the predicate used by the historical implementation.
 
-### 3.3 Other retrospective calculations are diagnostics, not causal inputs
+The row-level mask is stored as `fallback_rows.csv.gz` (CSV columns: timestamp, direction, algorithm version, P10/P11 positive-finite flags, fallback flag). It is a provenance table only; it does not alter the frozen historical rate series.
 
-Dataset-wide summary quantiles/maxima, `_raw_low_slope_diagnostic()` quantiles, and the version-boundary comparison inspect populations beyond a single timestamp, but they are not used to construct the released per-row reference rate except for the high-energy fallback described above. They remain retrospective reporting diagnostics and must not be injected into future controller information unless separately defined as causal history statistics.
+For causal use, any derived `lambda_E/W` using the global-median fallback is **RETROSPECTIVE ONLY**. The central `(E+W)/2` value inherits that status whenever either direction is affected.
 
-## 4. Missing data, E/W aggregation, calibration and archive revision
+## 4. Missing data, E/W aggregation, calibration and archive revisions
 
-### Missingness and quality
+### Missingness / quality
 
-The frozen source has 16,992 timestamps and 16,971 paired-valid E/W intervals; 21 timestamps contain at least one missing/invalid direction. The adapter performs **no time interpolation or smoothing**. A central `lambda` is written only when both directional values are finite. This missingness must remain visible to a causal `M(I)`; a missing value is not permission to substitute a future neighbor.
+Raw extraction confirms 16,971 valid rows per direction and 21 timestamps invalid in both E and W; there are no one-direction-only validity losses in this controlled set. The adapter performs no time interpolation or smoothing. Missing data must therefore remain explicit in later `M(I)` construction.
 
-DQF information is retained as warning metadata rather than an automatic rejection of an otherwise reported L2 average. Future `M(I)` may use it as an uncertainty/status input, but this task does not invent a rule that maps a DQF flag to a risk bound.
+DQF fields are warning/status metadata, not a quantitative reliability penalty selected by this task.
 
 ### E/W aggregation
 
-East and West are reconstructed and propagated separately. The central series is `(E+W)/2` only after both complete chains are available. The historical report explicitly does **not** identify this arithmetic mean with a measured omnidirectional spectrum. A causal comparator may use the central value only as a declared estimator and must retain the E/W disagreement/status needed for uncertainty treatment.
+E and W are reconstructed and propagated separately. `(E+W)/2` is a declared central estimator, not a measured omnidirectional spectrum. Directional disagreement and validity/status must remain available alongside the central value.
 
-### Calibration correction
+### Calibration
 
-The adapter applies the published GOES-19 P1–P5 factors once when legacy bounds are detected. The factors are fixed constants and do not depend on future Jan–Feb samples, so the mathematical transformation is causal once a source record is available. However the project has not demonstrated an operational L2 delivery/processing chain that applied those corrections at a known time. Therefore they are acceptable in the **conditional delayed-data comparator**, not proof of what an actual controller received.
+The P1–P5 correction is a fixed same-record transformation once the correction constants are known; it has no future-time dependence within the Jan–Feb series. That does not prove when an operational feed first carried those corrected values.
 
-### Late archive revisions
+### Late archive revision
 
-`goes19_audit.json` records that, when checked later, 7 public daily files (2026-01-14…20) were bytewise different from the PI-controlled copies; Jan 19 and Jan 20 contained scientific dataset values requiring the retained semantic patch. `input_manifest.json` explicitly freezes the scientific outputs to the PI-controlled copies rather than silently replacing them with current public files.
+The earlier audit established seven later public-file byte revisions for 2026-01-14…20 and scientific-value differences for Jan 19–20. The present closeout deliberately used the PI-controlled archive whose ZIP hash matches the pinned manifest. Later public replacements are valid retrospective provenance objects, not evidence of values available at the historical decision time.
 
-This is correct for retrospective reproducibility but prevents a historical-operational claim unless an **as-received version timeline** is available. A later archive value or correction is not evidence that the same value existed at the original decision time.
+## 5. Three information objects
 
-## 5. Three distinct information objects
-
-| Object | Definition in this project | Permitted claim |
+| Object | Definition | Permitted use |
 |---|---|---|
-| **Archival retrospective reference** | pinned PI-controlled GOES source + historical adapter + frozen rate pipeline, including global direction-median fallback and declared model scenarios | Reproducible reconstruction of the selected archived environment under the existing model contract. May use future records for retrospective components. |
-| **Conditional delayed-data comparator** | same source-period semantics, but a record may enter controller information no earlier than `t+300 s+L`, with `L>=0` explicit; future-dependent fallback-derived values are unavailable/masked unless a separately approved causal treatment is defined | Tests sensitivity to a declared hypothetical availability delay. `L` is a parameter, not measured operational latency. |
-| **Practical operational channel** | a specific real feed/product whose acquisition, processing, publication and controller-delivery timing/version semantics are evidenced | **NOT ESTABLISHED** by current repository evidence. No practical latency/reliability guarantee may be claimed yet. |
+| **Archival retrospective reference** | exact PI-controlled GOES archive + historical adapter + frozen rate pipeline, including global-median fallback | Reproduce the selected archived environment; hindsight components remain labelled retrospective. |
+| **Conditional delayed-data comparator** | completed-bin observations enter no earlier than `t+300s+L`; `L>=0` explicit; global-median-fallback-derived values are masked/unresolved unless a separately approved causal treatment is supplied | Future bounded real-temporal comparison with hypothetical/parameterized delay. |
+| **Practical operational channel** | a real feed/product with evidenced acquisition, processing, publication, delivery and revision timing | **NOT ESTABLISHED**. No practical latency guarantee may be claimed. |
 
-The conditional comparator is scientifically useful even with actual `L` UNKNOWN, provided it is never relabelled as the operational GOES latency.
+## 6. Minimal input contract for the next gate
 
-## 6. Minimal input contract for the next real-temporal gate
-
-| Field / signal | Measurement interval | Earliest availability under current evidence | Processing | Future dependence | Uncertainty / status | Permitted use |
+| Field / signal | Measurement interval | Availability | Processing | Future dependence | Uncertainty / status | Permitted use |
 |---|---|---|---|---|---|---|
-| `timestamp_utc` | identifies nominal `[t,t+300s)` L2 average | timestamp itself is metadata; complete average not before `t+300s` | source time -> UTC; no shift | none | raw bounds not independently rechecked without controlled NetCDF | index the retrospective interval and define lower bound on observation availability |
-| `AvgDiffProtonFlux` E/W, P1–P10 | L2 five-minute average over nominal bin | `t+300s + L_source`, `L_source` UNKNOWN | yaw mapping, fill handling, units, fixed P1–P5 correction | no project future sample except downstream bridge | L2 uncertainty, DQF, background/calibration caveats | external observation component for conditional `M(I)`; not instantaneous flux |
-| P11 E/W | same nominal bin | `t+300s + L_source`, UNKNOWN extra latency | yaw mapping / validity | none by itself | L2 uncertainty | same-bin integral high-energy observation |
-| validity + DQF status | pertains to samples contributing to same L2 bin | no earlier than associated L2 record under current evidence | retained by adapter | none | DQF semantics are warning/status, not a chosen risk penalty | preserve missingness/status; do not silently interpolate |
-| corrected P1–P5 project spectrum | same source bin | after L2 availability + project-processing latency (UNKNOWN) | deterministic published correction on legacy signature | no time-future dependence | corrected calibration remains provisional/qualified | hypothetical processed external input; not proof of historical operational feed |
-| local P10/P11 390–500 bridge | same source bin | after both local values + processing latency | local power-law fit | none when local fit exists | extrapolation/model limitation | may participate in conditional causal comparator |
-| direction-median fallback bridge | nominally assigned to same bin | exact frozen value only after full fitted-median population exists + processing | whole-series direction median + P11 normalization | **YES** | 576 E / 920 W directional rows; row-level mask absent from committed derived outputs | **RETROSPECTIVE ONLY** until row mask and a separately approved causal treatment/M(I) are defined |
-| `lambda_E/W_s-1` | derived from same five-minute environmental bin | after all causal source inputs for that row + processing latency | fixed transport/sigma/scenario chain | inherits fallback status | physical/model interface remains PARTIAL | retrospective reference; conditional causal input only on rows/components not using future-dependent fallback, with uncertainties carried separately |
-| `lambda_central_s-1=(E+W)/2` | same bin | after both E and W directional chains are causally available | arithmetic mean after complete chains | inherits either direction's fallback status | not measured omnidirectional flux; E/W discrepancy material | declared comparator estimator only; retain E/W/status alongside it |
-| `m5_central_bits=300*lambda` | summarizes same bin | same as central lambda | algebraic interval expectation | inherits central status | expected flips under existing rate model; **not** failure probability | retrospective/bin exposure descriptor only; not an instantaneous rate, within-bin maximum, or next-bin guarantee |
+| `timestamp_utc` | `[t,t+300s)` | complete average not before `t+300s` | source UTC stamp, no shift | none | source semantics directly verified on all 59 files | interval index / lower availability bound |
+| E/W P1–P10 L2 average | same bin | `t+300s+L_source`, extra latency UNKNOWN | yaw, fill, units, fixed P1–P5 correction | none by itself | L2 uncertainty, DQF, calibration/background caveats | conditional external observation; not instantaneous flux |
+| E/W P11 | same bin | same lower bound | yaw / validity | none by itself | L2 uncertainty | same-bin high-energy observation |
+| validity + DQF | same bin | with associated L2 record | retained status | none | 21 jointly invalid timestamps; DQF not mapped to risk here | preserve missingness/status |
+| local P10/P11 bridge | same bin | after same-bin inputs + processing | local power-law fit | none when fit exists | extrapolation/model limitation | conditional causal comparator component |
+| global-median fallback bridge | nominally same bin | exact frozen value requires full-record population | whole-series median + same-row P11 | **YES** | 576 E / 920 W rows; exact row mask now retained | retrospective only; mask/unresolved in causal comparator pending approved treatment |
+| `lambda_E/W_s-1` | same environmental bin | after all required causal inputs + processing | frozen transport/sigma/scenario chain | inherits bridge status | physical/model interface remains PARTIAL | retrospective reference; causal comparator only where all contributing information is causal |
+| `(E+W)/2` central `lambda` | same bin | after both directions | arithmetic mean | inherits either direction | not measured omnidirectional flux | declared comparator estimator with E/W/status retained |
+| `m5=300*lambda` | same bin | same as central `lambda` | algebraic interval expectation | inherits central status | not failure probability | bin exposure descriptor only |
 
-`L_source` above intentionally remains a parameter. A future gate may split it into source processing/publication, communications and controller processing if evidence justifies those components.
+## 7. What the five-minute average still does not establish
 
-## 7. What a five-minute average does **not** establish
+The current evidence does **not** establish that the reported average is:
 
-The current input does not establish that: (1) `lambda(t)` at every instant inside the bin equals the reported average; (2) the five-minute average upper-bounds sub-bin intensity; (3) the current average bounds or predicts the next bin; (4) a value stamped `t` was available to a controller at `t`; (5) the present archive value is the value historically available in real time; (6) `(E+W)/2` is a physically measured omnidirectional flux; or (7) a DQF-warning bin has a known quantitative bias suitable for a reliability inequality.
+- the instantaneous intensity anywhere inside the bin;
+- an upper bound on within-bin intensity;
+- a bound or predictor for the next bin;
+- available at its start timestamp;
+- the same version/value historically available in an operational feed;
+- sufficient by itself to bound exposure between the latest completed bin and a future decision.
 
-Before constructing causal `M(I)` or a future exposure bound, the next approved specification must explicitly state, without silently importing them:
+The next separately approved real-temporal specification must therefore declare, rather than inherit silently:
 
-- a within-bin state/exposure representation consistent with a five-minute average;
-- an uncertainty set or controlled relation from L2 E/W/uncertainty/status to the latent rate used by the reliability model;
-- a rule/bound for exposure after the latest completed bin and before the next observation arrives;
-- the delayed-data latency parameter/evidence;
-- treatment of missing bins and direction disagreement;
-- a causal replacement, masking rule, or widened uncertainty set for high-gap fallback rows;
-- whether the comparator uses the pinned retrospective archive or a versioned as-received operational feed;
-- processing-time accounting for conversion to `lambda_bit`.
+- within-bin exposure/state representation;
+- relation/uncertainty set from E/W L2 observations to the latent rate used by reliability;
+- future-exposure rule/bound after the latest completed bin;
+- value or sweep for delayed-data latency;
+- missing-bin and E/W-disagreement treatment;
+- causal treatment for global-median-fallback rows (masking, widened model set, or another separately justified rule);
+- processing-time accounting from L2 observation to the controller-facing `lambda_bit` object.
 
-This task does **not** choose any of these modelling assumptions and does not derive a control law.
+No choice among those alternatives is made here.
 
-## 8. Reproducible real-section selection rule for the next gate
+## 8. Reproducible real-section selection rule
 
-To prevent selection on a later reliability/control outcome:
+To avoid selecting windows on later control success:
 
-1. Before any reliability or policy calculation, freeze the source/reference series, a window length `W`, and one declared **input-only** stratification signal from the contract above.
-2. Partition the Jan–Feb time axis into non-overlapping windows of length `W`, anchored at `2026-01-01T00:00:00Z`.
-3. Apply only input-quality eligibility rules fixed in advance (for example a minimum paired-valid fraction and explicit treatment of fallback-affected records once the row mask exists).
-4. If a bounded subset is required, select windows using only predeclared environmental/input descriptors (e.g. low level, high level, strongest positive change, strongest negative change), with earliest-UTC tie-break. Do **not** inspect `F_A`, chosen `T_scrub`, feasibility, resource saving or any control result during selection.
-5. Freeze the selected UTC intervals and their input descriptors before running the real-temporal reliability/control study.
+1. Freeze the source/reference series, window length and one input-only stratification rule before reliability/policy computation.
+2. Partition Jan–Feb 2026 into non-overlapping windows anchored at `2026-01-01T00:00:00Z`.
+3. Apply only predeclared input-quality eligibility rules, including explicit use of `fallback_rows.csv.gz` and the 21 invalid timestamps.
+4. If only a bounded subset is needed, select using predeclared environmental/input descriptors (for example level or change), with earliest-UTC tie-break.
+5. Do not inspect `F_A`, feasibility, selected `T_scrub`, resource cost or savings during window selection.
+6. Freeze selected UTC intervals before the real-temporal reliability/control calculation.
 
-Case selection is an offline experimental-design operation and may inspect the retrospective input series; controller information *within* each selected case must still obey the causal availability contract. No windows are selected by this task.
+Offline case selection may inspect the retrospective input series; controller information inside each case must still obey the causal availability contract.
 
-## 9. Exact remaining inputs / blockers
+## 9. Remaining blocker
 
-### Immediate blocker for a row-exact causal mask of the existing frozen rate series
+### Required only for a practical operational-channel claim
 
-Provide the exact PI-controlled GOES archive:
+Need a traceable artefact that establishes **as-received SGPS L2 five-minute availability and version/revision timing**, for example:
 
-- **file:** `goes010226.zip`
-- **SHA-256:** `7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581`
-- **contents:** the 59 daily NetCDF files listed/hashes pinned in `input_manifest.json`.
-
-With those bytes, `extract_causal_features.py` can, without transport, verify the source hashes, dump raw time metadata/bounds discovery, and emit the exact timestamps/directions that trigger the historical global-median fallback. Public revised substitutes must not be used silently because the project has already demonstrated archive drift.
-
-### Additional blocker for an operational-channel claim (not required for a parameterized comparator)
-
-Need a traceable product/feed artefact that establishes **as-received L2 availability**, preferably one of:
-
-- timestamped NCEI/NOAA publication/download logs for the relevant 5-minute L2 records;
-- an authoritative interface/product specification that defines production/publication latency and revision semantics for this exact SGPS L2 five-minute product;
+- timestamped NOAA/NCEI publication/download logs for the relevant records;
+- an authoritative interface/product specification defining production/publication latency and revision semantics for this exact L2 product; or
 - a preserved as-received operational stream/archive with acquisition timestamps and version identity.
 
-Absent that evidence, real processing/delivery latency remains `UNKNOWN`; the next experiment may sweep a declared delay, but cannot call it measured GOES operational latency.
+Absent such evidence, real processing/delivery latency remains `UNKNOWN`. A future experiment may parameterize `L`; it must not call the chosen value measured GOES operational latency.
+
+There is **no remaining raw-data blocker** for the row-exact fallback mask or source timestamp semantics.
 
 ## 10. Verification actually performed
 
-- Read the pinned adapter and rate-pipeline source; no historical production matrix was run.
-- Confirmed from code that `timestamp_utc` is copied from `goes.times` without shift and that the adapter asserts 300-s cadence / `PT5M` and start-of-average semantics.
-- Confirmed from code that the direction median is computed over all fitted timestamps before fallback assignment.
-- Confirmed from the writer schema that no row-level bridge-fallback flag is exported to `proton_rate_5min.csv`.
-- Confirmed retained aggregate fallback counts (E=576, W=920) from `rate_diagnostics.json`.
-- Confirmed 16,992 source timestamps, 16,971 paired-valid intervals, calibration policy and 7-file archive drift from the retained audit/manifest.
-- `extract_causal_features.py` passed `python -m py_compile` and CLI parsing locally. It was **not** run on raw GOES data because the controlled archive is not present in the connected repository/runtime.
-- No RADAR/COSRAD, transport regeneration, policy search, reliability calculation, Monte Carlo, estimator or control optimization was executed.
+- Verified the supplied archive SHA-256 against the pinned manifest: exact match.
+- Confirmed 59 controlled NetCDF files and 16,992 timestamps at exactly 300-s cadence.
+- Inspected raw `time` attributes in every file; confirmed start-of-averaging-period semantics and absence of explicit bounds variable/dataset.
+- Recomputed historical E/W validity and the exact fallback predicate from raw P10/P11 values without transport.
+- Reproduced historical fallback counts exactly: E=576, W=920.
+- Materialized the exact row-level fallback mask and compact statistics; no frozen rate value was changed.
+- No RADAR/COSRAD, transport regeneration, policy search, reliability calculation, Monte Carlo, estimator training or control optimization was executed.
 
 ## Final answer to the gate
 
-The next real-temporal gate can now distinguish the required objects unambiguously:
+The stop rule is satisfied:
 
-- **retrospective reference:** the existing frozen Jan–Feb 2026 series, including documented retrospective components;
-- **admissible delayed comparator:** a completed-bin observation available no earlier than `t+300s+L`, with `L` explicit/UNKNOWN and future-dependent fallback values excluded or represented as unresolved until a causal treatment is separately approved;
-- **operational channel:** currently **UNPROVEN** because actual L2 delivery/version timing is not evidenced.
+- **retrospective reference:** fully identified and reproducible from the pinned archive;
+- **admissible causal delayed-data input:** completed five-minute bins with availability no earlier than `t+300s+L`, explicit missing/status information, and future-dependent fallback rows masked/unresolved unless a future approved causal treatment is supplied;
+- **remaining assumptions:** within-bin representation, future-exposure bound, uncertainty mapping and latency parameter are explicitly left for the next preexecution specification;
+- **operational channel:** remains **UNPROVEN** solely because actual publication/delivery/version timing is not evidenced.
 
-This is sufficient for Orchestrator to draft a bounded real-temporal EXP/derivation specification. A practical latency guarantee is not yet supportable.
+Orchestrator can now prepare the exact real-temporal EXP/derivation specification for separate PI approval. This task does not authorize its execution.
