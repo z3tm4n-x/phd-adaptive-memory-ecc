@@ -1,238 +1,82 @@
 # Current Status
 
-**Updated:** 2026-09-01
+**Updated:** 2026-09-08  
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. No new quantitative experiment is authorized by this status update.
 
-## Current phase
+## Completed gate and accepted scope
 
-EXP-001 has passed independent validation and Scientific Reviewer re-review.
-The corrective and scientific-review gates are closed. After final PI `ACCEPT`,
-the exact bounded statement is registered as
-[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md), and EXP-001
-is complete/promoted only within that scope. The bounded Chen/IHP/Potsdam
-Evidence Audit constrains the control-method target, and the Russian normative
-baseline remains accepted with explicit unresolved interfaces.
+- Stage A implementation: c41feab9a8210b4f2213104784bb47990ae7f36f.
+- Stage A scientific review and reproduction repair: 12d461aad112f22c37a365a38501143aaf2c3ee8 and 924b1069faf576636e8bbf55a8ec29b3b1f4904d.
+- Information-interface implementation: da03ab308989f76e9ae15043c83ce4c4b1f76821.
+- [Information-interface Scientific Review](scientific_reviews/STAGE_A_INFORMATION_INTERFACE_REVIEW_01.md): 0ab6ba2cf8daf0ed62c1e2ec65cab52a1620b552, PASS_WITH_MINOR; no CRITICAL/MAJOR.
+- [Local closeout](../experiments/STAGE-A-INFORMATION-INTERFACE-01/REPORT.md): 92e1b520deeaecce3108905a5a705e48d174eb8c; MINOR-01…04 accepted as closed by Orchestrator diff inspection. Scientific code and numerical maps are unchanged.
 
-The controlling [DEC-002](decisions/DEC-002-integrated-evidence-to-adaptive-control-roadmap.md)
-architecture is unchanged:
+SR independently confirmed all 60 selected policies and reproduced the decoded scientific outputs from canonical Stage A retained sets. Closeout distinguishes 12 parameter cells from 11 report-history interfaces, compares decoded CSV content, supplies the pathwise ambiguous-history proof, and specifies exact rational retention queries. No further scientific review or production rerun is needed for that repair. Historical execution disclosures remain historical; closeout is not relabelled as a new canonical production run.
 
-`radiation-test evidence → identifiable device-error representation → W/ECC organization → ECC-level reliability → online risk assessment → adaptive restoration decision`.
+Accepted findings remain bounded by the exact Stage A model, Q certificate, U, sequential reset/exposure, clean start, four scenarios, decision times 0/300 s and 600 s horizon:
 
-Adaptive restoration control remains the final/core dissertation layer.
+- The information continuation uses known rho=0, not a calibrated or uncertain direct-event population.
+- Zero Precomputed-to-Ideal minimax gap coexists with positive conditional LL/LH/HL actuation savings.
+- T011 retains part of those savings without information for the first action, but requires zero common delivery latency for the second report.
+- Under the declared compatible-set channel, eta>=1/2 permits a common ambiguous history and forces the guaranteed pathwise optimum to the Precomputed count.
+- All latency boundaries assume no pre-window observations; none is a real-sensor latency requirement.
+- Occupied seconds/fractions are R2-U model quantities, not measured application performance, sensor cost or net benefit.
+- Certificate failure is not physical infeasibility. No novelty or permanent RES is created here.
 
-## Active scientific gate
+The finite L/H sensitivity study is finished. Do not expand it into another generic latency/eta sweep.
 
-PI has accepted the
-[`Next quantitative gate — Information-deficit price for restoration control`](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md).
-The accepted transition is
-`I → M(I) → F_A value/set/bound → admissible actions → T_scrub → measurable resource cost`
-over a physically defensible event/`W` domain.
+## Next action — bounded external-information input contract
 
-PI has accepted and permanently registered
-[RQ-007](questions/RQ-007-integrated-adaptive-restoration-control.md) with its
-exact wording, boundaries and answer criteria. The active scientific gate is
-the authorized [PA-DOM-01…04 bounded prior-art closure](literature_mapping/PA-DOM-01-04_execution_protocol.md)
-under the accepted hard stop rule. No new experiment, hypothesis or broad literature cycle is
-authorized. A new quantitative EXP remains blocked until the closure is
-complete, the minimum RQ-003/RQ-004/RQ-005 interfaces are stated, and a
-reproducible experiment/derivation specification receives separate PI approval.
+Owner: Research Orchestrator; execution role for local input inspection: Research Engineer.
 
-PA-DOM-04 requires no repeated deep read: its evidence-acquisition part is
-closed by canonical reuse of accepted PAPER-005 and the accepted RQ-002
-synthesis. Only traceable population of the common RQ-007 comparison-matrix row
-remains. PA-DOM-01…03 retain the identity-control/full-text sequence.
+Task: RE-GOES-CAUSAL-INPUT-CONTRACT-01. This is input/code/metadata inspection and preparation, not a new reliability experiment, estimator or controller implementation. Its purpose is to make the next real-temporal preexecution specification concrete.
 
-## Active Research Questions
+Current evidence from the retained [GOES rate package](../experiments/RE-GOES19-PROTON-RATE-01/REPORT.md):
 
-- RQ-001 — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; DEC-001 unchanged.
-- RQ-002 — `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE ACCEPTED`.
-- RQ-003 — `OPEN / ACTIVE NEXT INTERFACE`; owns parameterized ECC capability,
-  state and decoder-outcome semantics and must keep `E_cap` distinct from
-  DUE/SDC/miscorrection/system-visible outcomes.
-- RQ-004 — `OPEN / REQUIRED NEXT-GATE INTERFACE`; must distinguish external exposure information
-  from internal protected-memory state/history and propagate observation
-  uncertainty to the risk interface.
-- RQ-005 — `OPEN / REQUIRED NEXT-GATE INTERFACE`; retains the measurable multi-component resource
-  vector without premature scalarization.
-- RQ-006 — `OPEN / RES-001 BOUNDED RESULT REGISTERED / NEXT GENERALIZATION GATE ACCEPTED`; owns `W`, topology, joint post-`W`
-  impact and reduction-sufficiency/bound conditions.
-- RQ-007 — `OPEN / ACTIVE / PA-DOM-01…04 AUTHORIZED / NO NEW EXP`; owns the
-  integrated information/model-set → ECC-risk → adaptive `T_scrub` decision
-  interface and the conditional control-resource consequences.
+1. The source is an archived SGPS L2 five-minute average, not instantaneous device-error truth. The adapter declares the timestamp to be the START of averaging; original time-variable/bounds metadata must control confirmation. The current audit summaries do not establish operational delivery time.
+2. The derived central rate averages two separately propagated isotropy-equivalent E/W chains. Directional spread and sigma-model alternatives are not automatically confidence limits.
+3. In rate_pipeline.py, high_energy_gap_bridge() fits each available P10/P11 pair, then uses the median fitted slope over the full supplied record where fitting fails. Saved diagnostics report 576 E and 920 W fallback rows. This is a known offline preprocessing dependency, not evidence that the earlier retrospective calculation is wrong. A causal controller cannot automatically receive this hindsight-derived fallback as if it were contemporaneously computed.
+4. Archive revision/calibration information and date_created are not automatically the values or publication times available in real-time operation.
+5. A five-minute average does not by itself fix intra-bin exposure or guarantee a future rate bound. Piecewise-constant replay and future envelopes must be explicit modeling assumptions in the next proposal.
 
-RQ-007 consumes but does not absorb or close RQ-002…RQ-006. Its registration
-does not select a stochastic model, estimator, control law, scalar objective or
-numerical reliability requirement, and it does not authorize execution.
+Required bounded output: one input-interface table and a concise report, with only a small extraction helper if necessary. Establish measurement intervals, availability/provenance status, fallback applicability, missing-data handling and the distinction between offline reference and causal observation. Prefer existing saved metadata; request only exact missing source files from PI. No broad literature search, fresh transport, refitting, replacement of the frozen series or policy calculation.
 
-## EXP-001 disposition
+Report which inputs support:
+- retrospective environmental replay;
+- a declared delayed-data comparator;
+- a genuinely supported operational observation claim.
 
-### Accepted findings within the reviewed model class
+Do not convert UNKNOWN delivery latency into zero, completed-bin averages into current instantaneous rates, or whole-record statistics into a priori constants. A hypothesized latency may be parameterized later and labelled as such. Do not silently discard difficult/fallback rows or select favourable windows based on control savings.
 
-Scientific Reviewer independently accepted:
+## Next scientific decision after that input contract
 
-- the pair-probability parameterization;
-- `1/6 <= q <= 1/2`, with J-B and J-A attaining the two endpoints;
-- `S(q,m)=exp(-m)[1+m+q m^2/2]` and the aligned reporting-window `F_A`;
-- the identified-set interpretation within the complete fourteen-condition
-  validity domain in review Section 7.4;
-- the separation of representation/dependence uncertainty, Monte Carlo
-  estimation uncertainty and CI-decision conservatism;
-- exact endpoint decision differences at experimental `epsilon=0.15`, `0.25`
-  and `0.35`, but not at `epsilon=0.55`.
+Orchestrator prepares the exact real-temporal experiment/derivation for separate PI approval. Proposed focus: whether a causal external-information channel retains absolute actuation savings at the same declared reliability constraint.
 
-These accepted findings are registered only as the bounded
-[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md). They do not
-bound physical SRAM topology or establish universal insufficiency of marginal
-models.
+That proposal must specify:
+- pre-window information separately from initial memory state and scrub ages;
+- interval support, observation availability and deterministic action epochs;
+- a causal compatible-model/future-exposure construction, not merely shifted archived values;
+- common fixed/precomputed/causal comparison semantics; hindsight baselines separately labelled;
+- actuation cost separately from information and controller overhead.
 
-### Validation-repair disposition
+Known rho=0 and the existing data-only/R2-U slice are the preferred first decomposition, subject to the next exact proposal. No automatic generalization of binary eta, Stage A latency bounds, or physical calibration follows.
 
-The original 768,000 L0/L1 comparisons remain correctly labelled as
-outcome/final-signature comparisons. The repair adds a bounded, independent
-full-trace validation layer rather than relabelling the production run.
-Scientific Review 02 confirms closure of the demonstrated shared-path weakness
-without changing configurations, scientific outputs or the EXP-001 question.
-EXP-001 is now `COMPLETE / SCIENTIFIC REVIEW PASS / PROMOTED TO RES-001`.
+The candidate internal-channel distinction T_rel/T_obs remains unverified and deferred until corrected-count/exposure/detection semantics are declared. No retrospective HYP and no automatic estimator selection.
 
-## Chen/IHP/Potsdam control-prior-art disposition
+## Continuing canonical research state
 
-[CONTROL-PRIOR-ART Evidence Audit 01](evidence_audits/CONTROL-PRIOR-ART_EVIDENCE_AUDIT_01.md)
-is `ACCEPTED WITH BOUNDED WORDING CORRECTION`.
+- DEC-001/002/003 retain their accepted scopes. Adaptive restoration control remains the dissertation core.
+- RQ-001 remains PARTIALLY ANSWERED / OPEN DEPENDENCIES. E_cap is not automatically DUE/SDC/miscorrection/system failure. Numerical H_req and epsilon_req remain TBD.
+- RQ-002 and RQ-006 remain open for physically justified error/mapping/representation domains.
+- RQ-003 retains ECC/decoder/reset responsibility; the current SEC data-only slice does not close it.
+- RQ-004 is the active next external-observation interface. RQ-005 owns componentwise costs. RQ-007 integrates these without absorbing them.
+- EXP-001 remains complete/promoted only within PI-approved [RES-001](../results/RES-001-exp001-four-word-identified-set.md), with all fourteen applicability conditions. No new permanent result is registered by this update.
+- PA-DOM-01…04 bounded closure is complete under its accepted stop rule. PA-DOM-01-B and Chen remain obligatory control prior art; generic corrected-count/rate-to-period adaptation is not claimed as novelty.
+- The accepted normative baseline retains its controlled-edition/PMI/interface limitations. No normative deficiency is inferred.
+- Angular-event transport, proprietary W, parity/ERR, acquisition costs and real-channel availability are not resolved by Stage A. None is silently reinterpreted as an established physical guarantee.
 
-- Candidates 1, 2, 4, 5, 6, 7, 8a and 8b are accepted only within the controlled
-  S3/S4/S5 family.
-- Candidate 3 is accepted only after correcting the claim: S5 newly specifies
-  the six-hour input window and makes the already-present next-hour target
-  explicit; it does not first add the `t+1` target.
-- S5 is the strongest single architecture comparator; S3 remains necessary for
-  feature provenance and S4 for the separate reactive HSIAO branch.
-- No additional Chen-family Paper Card is required now.
-- No permanent `CLM`/`EVD`, novelty or non-novelty conclusion is created.
+## Summary synchronization
 
-The controlled family is genuine close prior art for online fault-count/rate
-input, next-hour point prediction or reactive assessment, and adaptive
-wash/scrub-frequency selection. Generic adaptive scrubbing, ML-to-frequency,
-online fault counts and scrub-count reduction cannot be project novelty claims.
+This page supersedes the 2026-09-01 active-gate summary, which still described PA-DOM as unfinished. Older README, research_spec and Issue #3 phase summaries must not be used to reissue completed work; object-specific accepted artefacts and this current gate govern. Their historical scientific definitions are not replaced by a date-order rule.
 
-The accepted bounded differences become method-design axes only if the project
-makes them operational and demonstrates a quantitative reliability, uncertainty,
-decision, resource or implementation consequence.
-
-## Russian normative baseline
-
-[NORMATIVE-BASELINE-01](normative_baseline/NORMATIVE-BASELINE-01_extraction_matrix.md)
-remains `ACCEPTED WITH LIMITATION / PARTIAL — NAMED INPUT NEEDED`.
-
-Accepted practical chain:
-
-`diagnostic observations → PMI/software classification → classified ORE counts → cross sections → sensitivity representation → environment convolution → scalar rate/probability`.
-
-No normative deficiency or automatic equivalence to `W`, `E_cap` or `F_A` is
-inferred. The STO controlled-edition status remains `AMBIGUOUS`.
-
-## Additional domestic prior-art signals
-
-PI-provided signals concerning the Meshchanov/Lushnikov/Krasnikov, Podzolko and
-Boruzdina/Ulanova/Chumakov lines remain `UNVERIFIED` pending PA-DOM-01…03 source
-control. The Zebrev/Galimov comparator is already controlled by accepted
-PAPER-005 and the accepted RQ-002 synthesis; PA-DOM-04 is reuse-only and needs no
-new full-text work. The accepted gate retains four comparison units, common
-columns and a hard stop rule. It does not authorize a broad literature cycle or
-alter RES-001.
-
-## Updated scientific roadmap
-
-1. **Control the minimum prior-art boundary.** Execute only the
-   [PA-DOM-01…04 protocol](literature_mapping/PA-DOM-01-04_execution_protocol.md) and,
-   before the next quantitative experiment, source-control PA-DOM-01…03 and
-   reuse accepted canonical evidence for PA-DOM-04. Do not repeat a completed
-   full-text extraction.
-2. **Synthesize occupied methods and assumptions.** State which methods,
-   reconstruction assumptions, observables and control rules become mandatory
-   baselines or design boundaries.
-3. **Activate the minimum RQ-003 interface.** Define the minimum parameterized
-   ECC state/capability and decoder-outcome contract consumed by reliability
-   and observation layers.
-4. **Converge RQ-004 and RQ-005.** Bound at least one internal and one external
-   observation channel with uncertainty/latency semantics, and a measurable
-   resource vector containing scrub activity plus nonredundant service/hardware
-   components.
-5. **Generalize the own method.** Replace the single extremal discriminator with
-   an information-state/model-set formulation
-   `I -> M(I) -> F_A set/bound -> admissible actions -> T_scrub -> resource cost`,
-   and quantify the control-resource price of information deficit separately
-   from the cost of acquiring richer information.
-6. **Move to a physically defensible domain.** Use plausible event/W classes and
-   observable test outputs to determine effect magnitude, controlled error or a
-   safe-reduction domain, then connect the result to adaptive `T_scrub` selection
-   and resource cost.
-7. **Only then broaden claims.** Run the separate classical
-   inspection/maintenance prior-art pass before a literature-level integrated
-   control novelty claim, not before the next bounded model work.
-
-## Accepted next quantitative gate — pre-execution
-
-The accepted gate is stored in
-[`docs/research_gates/`](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md).
-It must answer more than “dependence can matter.” For retained information `I`,
-it defines an admissible model set and the induced value/set/bound for `F_A`,
-then determines for every candidate `T_scrub`:
-
-- exact/model feasibility at a specified model;
-- estimated feasibility under a declared statistical rule;
-- robust feasibility over representation/model/observation uncertainty;
-- conditions under which the admissible or selected action is invariant;
-- decision and resource consequences over a physically defensible domain.
-
-The gate also fixes the minimum physically defensible domain, RQ-002/RQ-006 and
-RQ-003/RQ-004/RQ-005 interface slices, the four-unit domestic prior-art closure,
-its stop rule and the future experiment completion criterion. The next experiment
-or derivation must be preregistered before execution and may use a prospective
-hypothesis or an explicit decision/falsification criterion. It must not simply
-create another synthetic pair with different `F_A`.
-
-The gate now distinguishes three objects: (1) control-resource price caused by
-the more conservative action under a wider `M(I)`, (2) separate acquisition,
-storage, processing and communication cost of richer information, and (3) an
-optional later net balance. A `T_scrub` cost difference is not automatically the
-full value of information.
-
-## Genuine blockers and PI inputs
-
-No PI decision is currently required for RQ-007. The blocking work before a new
-quantitative execution is PA-DOM-01…04 closure, synthesis of the resulting
-baselines/boundaries, and definition of the minimum RQ-003/RQ-004/RQ-005
-interfaces. The next PI decision will be `ACCEPT / REVISE / REJECT` of the exact
-experiment/derivation specification.
-
-Before target-like calibration, useful but non-blocking material remains:
-
-- controlled-edition or registry evidence for STO 04.01.0005–2022;
-- one representative/de-identified SRAM private PMI and diagnostic/software log
-  schema;
-- target-like memory organization/interleaving information;
-- applicable current normative documents named in the accepted extraction.
-
-RQ-007 is permanently registered. A future genuine branch decision is required
-only if evidence forces a choice between incompatible observable channels, ECC
-semantics or target hardware domains.
-
-## Active hypotheses and results
-
-- No `HYP-xxx` is registered; none is created retroactively for EXP-001.
-- EXP-001 is complete, independently validated and has `Scientific Review 02: PASS`.
-- [`RES-001`](../results/RES-001-exp001-four-word-identified-set.md) is the first
-  permanent own result; it is valid only under its complete fourteen-condition
-  domain.
-- The next quantitative gate is accepted, but remains pre-execution; no
-  `EXP-002` or `RES-002` exists.
-
-## Constraints
-
-- Do not reopen RQ-001 or revise DEC-001 without a concrete contradiction.
-- Do not identify `E_cap` with DUE/SDC/miscorrection/system failure.
-- Do not assign a numerical reliability requirement without traceable provenance.
-- Do not generalize EXP-001 to physical SRAM or universal marginal-model
-  insufficiency.
-- Do not infer normative deficiency or Chen-family novelty/non-novelty.
-- Do not let representation/reliability work replace adaptive control as the
-  dissertation core.
+Main and historical scientific outputs remain unchanged by the working-branch update. No PR/merge, new EXP, HYP, RES or broad search is authorized here.
