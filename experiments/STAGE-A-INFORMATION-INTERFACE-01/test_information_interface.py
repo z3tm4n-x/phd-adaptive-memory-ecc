@@ -66,7 +66,9 @@ class InformationInterfaceTests(unittest.TestCase):
         self.assertTrue(z)
         self.assertTrue(all(r["guaranteed_cost_equals_precomputed"]=="1" for r in z))
 
-    def test_08_class_inclusion_cost_order(self):
+    def test_08_bounded_selected_policy_cost_order_check(self):
+        # Bounded check for the committed selected cells; not a general
+        # pathwise consequence of policy-class inclusion.
         for r in self.rows:
             p=int(r["precomputed_passes"]); i=int(r["ideal_passes"])
             d=int(r["imperfect_worst_report_passes"])

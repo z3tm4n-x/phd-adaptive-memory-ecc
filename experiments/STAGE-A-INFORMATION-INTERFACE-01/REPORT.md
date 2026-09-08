@@ -6,7 +6,11 @@ Within the accepted two-level Stage-A contract, imperfect information produces a
 **finite stepwise map**, not a smooth latency/uncertainty curve.
 
 There are exactly six timing-equivalence classes and two uncertainty classes,
-hence 12 distinct information regions.  The only uncertainty threshold is
+hence **12 timing-by-eta parameter cells representing 11 distinct report-history
+interfaces**.  The two `T000` cells have identical observation histories because
+no report is available at either decision, so the eta class cannot affect the
+controller history there.  The existing 12 region identifiers are retained as
+parameter-cell identifiers.  The only uncertainty threshold is
 
 \[
 \boxed{\eta=\tfrac12}.
@@ -110,6 +114,11 @@ The eta derivation gives two classes:
 - `E_EXACT`: `0 <= eta < 1/2`;
 - `E_AMBIG`: `eta >= 1/2`, including equality.
 
+The Cartesian product therefore contains 12 timing-by-eta parameter cells, but
+only 11 distinct report-history interfaces: `T000_E_EXACT` and
+`T000_E_AMBIG` both contain the same no-report histories.  The identifiers and
+numerical tables remain unchanged.
+
 See `derivation.md`, `information_regions.csv`, and
 `information_boundaries.json`.
 
@@ -132,7 +141,7 @@ Path order is `(LL,LH,HL,HH)`.
 `T011_E_EXACT` is the weakest timing region that preserves **positive guaranteed
 saving simultaneously on LL, LH, and HL** in all five cases.
 
-| Case | T011 `(LL,LH,HL,HH)` | Minimum retention across LL/LH/HL |
+| Case | T011 `(LL,LH,HL,HH)` | Minimum retention across LL/LH/HL (approx.) |
 |---|---|---:|
 | 3 mm, `1e-2` | `(601,1200,601,2100)` | 0.600400266845 |
 | 3 mm, `1e-1` | `(61,120,61,210)` | 0.604026845638 |
@@ -241,18 +250,31 @@ constraints *within that frozen action/certificate model*.
 
 ## 7. Retention breakpoints
 
-No arbitrary gamma grid was evaluated.  `retention_breakpoints.csv` exports every
-attained value of
+No arbitrary gamma grid was evaluated.  `retention_breakpoints.csv` exports
+rounded decimal **display values** of
 
 \[
-R=\frac{p_P-p_D^{worst}}{p_P-p_I}
+R=\frac{p_P-p_D^{worst}}{p_P-p_I}.
 \]
 
-where the denominator is positive.  A later reporting target `gamma` can be
-queried by selecting regions with `R >= gamma` without rerunning the policy
-calculation.
+Those decimals are approximate and must not be used to decide exact equality at
+a breakpoint.  The exact query uses the already exported integer pass counts:
 
-For `HH`, the Ideal saving denominator is zero, so retention is `NA`.
+\[
+G=p_P-p_D^{worst}=\texttt{guaranteed\_pass\_saving},\qquad
+D=p_P-p_I=\texttt{ideal\_pass\_saving}.
+\]
+
+For `D>0` and a rational reporting target `gamma=a/b` with `b>0`,
+
+\[
+R\ge\gamma\quad\Longleftrightarrow\quad bG\ge aD.
+\]
+
+Decimal targets must therefore be parsed as exact decimal rationals (for example
+with `Decimal`/`Fraction` semantics), not as binary floating-point values.  For
+`D=0`, including `HH`, retention remains `NOT APPLICABLE`.  No rerun or gamma
+grid is needed to answer an exact threshold query.
 
 ## 8. Verification
 
@@ -267,7 +289,7 @@ The focused test suite contains 10 tests covering:
 5. Ideal endpoint recovery;
 6. Precomputed endpoint recovery;
 7. guaranteed ambiguous-report collapse;
-8. class-inclusion cost ordering;
+8. bounded selected-policy pathwise cost ordering (`Ideal <= selected imperfect <= Precomputed` for the committed cells);
 9. whole-window certificate margin for every selected report history;
 10. resource identities.
 
@@ -292,7 +314,19 @@ The committed solver itself **does not use that development fixture**: on a
 repository checkout it reads the canonical retained
 `STAGE-A-IMPLEMENTATION-01/passing_sets.json.gz.b64`,
 `passing_sets.csv`, `selected_policy_trees.json`, and `stage_a.py`.
-`reproduce.sh` regenerates the outputs from those canonical files, writes decoded CSVs plus deterministic gzip+base64 copies, and compares the committed maps byte-for-byte before running the focused tests.
+`reproduce.sh` regenerates the outputs from those canonical files.  For the two
+gzip/base64 artefacts it compares the **decoded scientific CSV bytes**; a gzip
+container/header difference is reported but does not fail scientific
+reproduction or prevent the focused tests from running.  An actual decoded CSV
+difference still fails.  The remaining uncompressed maps are compared
+byte-for-byte.
+
+Scientific Review 01 historically ran the original helper in Python 3.12.13: the
+new calculation completed, but the command exited at the first compressed-file
+`cmp` because the gzip OS-header byte differed (`02ff` versus `0203`).  The
+review then established that both decoded scientific CSVs were byte-identical.
+This closeout does not rewrite that historical failure; it corrects the helper's
+scientific comparison criterion.
 
 A focused Scientific Review should therefore execute `reproduce.sh` in the
 pinned repository checkout and review the new observation reduction and
@@ -327,11 +361,11 @@ after its count/reset/detection semantics are defined.
 - `config.json` — frozen new-interface contract/provenance;
 - `information_interface.py` — finite policy calculation reusing Stage-A roots;
 - `test_information_interface.py` — 10 focused tests;
-- `information_regions.csv` — 12 equivalence regions;
+- `information_regions.csv` — 12 timing-by-eta parameter cells representing 11 distinct report-history interfaces;
 - `information_boundaries.json` — exact boundary predicates;
 - `policy_region_map.csv.gz.b64` — deterministic gzip+base64 of the report-conditioned CSV action/Q/resource map;
 - `resource_summary.csv.gz.b64` — deterministic gzip+base64 of the guaranteed/best-report resource/retention CSV;
-- `retention_breakpoints.csv` — attained retention values, no gamma grid;
+- `retention_breakpoints.csv` — rounded display values of attained retention, no gamma grid; exact threshold queries use integer `G,D`;
 - `summary.json` — compact machine-readable conclusions;
 - `reproduce.sh` — canonical regeneration/comparison/test command.
 

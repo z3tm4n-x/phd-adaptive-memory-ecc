@@ -120,8 +120,12 @@ For \(\eta\ge1/2\), singleton reports are still possible, but the study is
 robust over *all* allowed errors.  Hence an ambiguous report must remain in the
 policy tree and cannot be assigned zero probability.
 
-Combining six timing signatures and two eta classes gives exactly twelve
-information-equivalence regions.
+Combining six timing signatures and two eta classes gives 12 timing-by-eta
+parameter cells but only **11 distinct report-history interfaces**.  In both
+`T000_E_EXACT` and `T000_E_AMBIG` no report is available at either decision, so
+the eta class cannot alter any observed history.  The two existing identifiers
+are retained as separate parameter-cell labels even though their observation
+histories are identical.
 
 ## 4. Reuse of Stage-A feasible sets
 
@@ -196,17 +200,36 @@ selected Ideal tree requires different actions.
 
 ### 6.2 Ambiguous uncertainty
 
-For every timing class with \(\eta\ge1/2\), an all-ambiguous allowed report
-history exists.  On that history the controller cannot distinguish the four
-Stage-A paths beyond information already available to Precomputed.  Since
-Precomputed itself is always an admissible policy that ignores reports, class
-inclusion gives, for the guaranteed worst-report objective,
+For every timing class with \(\eta\ge1/2\), a common all-ambiguous/no-report
+history is allowed on **every** one of the four true paths.  Consider the two
+actions taken by any certified imperfect-information policy on that common
+history.  Because the same history occurs on every path, those actions form one
+single action pair that is feasible for all four paths; therefore it is an
+all-path-feasible Precomputed pair.
+
+Let \(P\) be the optimal Precomputed pass count.  The pass count of the common
+ambiguous-history pair cannot be below \(P\), so for each true path \(p\), its
+worst-report cost satisfies
 
 \[
-C_{\rm imperfect}^{\rm worst}=C_{\rm Precomputed}
+C_{\rm imperfect}^{\rm worst}(p)\ge P.
 \]
 
-in all five eligible cases and all six timing classes.
+Conversely, the imperfect-information class may ignore every report and execute
+the optimal Precomputed pair, which gives cost \(P\) on every path.  Hence an
+optimal minimax imperfect-information policy has every path component at most
+\(P\).  Combining the lower and upper bounds yields the stronger pathwise
+result
+
+\[
+\boxed{C_{\rm imperfect}^{\rm worst}(p)=P
+\quad\text{for }p\in\{LL,LH,HL,HH\}}.
+\]
+
+Thus the guaranteed pathwise collapse is not inferred from scalar class
+inclusion alone.  The committed per-path ordering check is only a bounded check
+of the **selected policies in these finite cells**, not a general theorem that
+pathwise cost vectors must be ordered whenever policy classes are nested.
 
 Singleton reports can still produce lower report-conditioned costs.  They are
 reported as achievable values, not guaranteed savings.
@@ -234,13 +257,19 @@ Two non-Ideal patterns are especially informative:
 
 For `T011`, the minimum retained fraction across `LL/LH/HL` is:
 
-| Case | minimum retention |
+| Case | minimum retention (approx.) |
 |---|---:|
 | d=3 mm, eps=1e-2 | 0.600400266845 |
 | d=3 mm, eps=1e-1 | 0.604026845638 |
 | d=5 mm, eps=1e-3 | 0.500834724541 |
 | d=5 mm, eps=1e-2 | 0.508474576271 |
 | d=5 mm, eps=1e-1 | 0.428571428571 |
+
+The displayed retention decimals are rounded.  Exact threshold queries use the
+integer savings \(G=p_P-p_D^{worst}\) and \(D=p_P-p_I\).  For \(D>0\) and a
+rational target \(\gamma=a/b\), \(b>0\), evaluate \(bG\ge aD\); decimal targets
+must be parsed as exact decimal rationals rather than binary floats.  When
+\(D=0\), retention is not applicable.
 
 Thus exact first-action information is necessary for the *full Ideal tree*, but
 not for a substantial fraction of its pathwise saving.  A current second-block
