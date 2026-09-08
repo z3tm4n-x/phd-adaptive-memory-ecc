@@ -1,0 +1,117 @@
+{
+  "eligible_stage_a_cases": [
+    "d3_rho=0_eps=0.01",
+    "d3_rho=0_eps=0.1",
+    "d5_rho=0_eps=0.001",
+    "d5_rho=0_eps=0.01",
+    "d5_rho=0_eps=0.1"
+  ],
+  "eta_class_count": 2,
+  "guaranteed_ambiguity_result": "for eta>=0.5, worst-report cost equals Precomputed in every timing class and eligible case",
+  "ideal_action_region": "T111_E_EXACT only in every eligible case",
+  "information_region_count": 12,
+  "positive_guaranteed_savings_all_LL_LH_HL": {
+    "d3_rho=0_eps=0.01": {
+      "T011_E_EXACT": 0.600400266845,
+      "T111_E_EXACT": 1.0
+    },
+    "d3_rho=0_eps=0.1": {
+      "T011_E_EXACT": 0.604026845638,
+      "T111_E_EXACT": 1.0
+    },
+    "d5_rho=0_eps=0.001": {
+      "T011_E_EXACT": 0.500834724541,
+      "T111_E_EXACT": 1.0
+    },
+    "d5_rho=0_eps=0.01": {
+      "T011_E_EXACT": 0.508474576271,
+      "T111_E_EXACT": 1.0
+    },
+    "d5_rho=0_eps=0.1": {
+      "T011_E_EXACT": 0.428571428571,
+      "T111_E_EXACT": 1.0
+    }
+  },
+  "retention_breakpoints": {
+    "d3_rho=0_eps=0.01:HL": [
+      "0",
+      "1"
+    ],
+    "d3_rho=0_eps=0.01:LH": [
+      "0",
+      "0.600400266845",
+      "1"
+    ],
+    "d3_rho=0_eps=0.01:LL": [
+      "0",
+      "0.428979980934",
+      "0.714489990467",
+      "1"
+    ],
+    "d3_rho=0_eps=0.1:HL": [
+      "0",
+      "1"
+    ],
+    "d3_rho=0_eps=0.1:LH": [
+      "0",
+      "0.604026845638",
+      "1"
+    ],
+    "d3_rho=0_eps=0.1:LL": [
+      "0",
+      "0.432692307692",
+      "0.716346153846",
+      "1"
+    ],
+    "d5_rho=0_eps=0.001:HL": [
+      "0",
+      "1"
+    ],
+    "d5_rho=0_eps=0.001:LH": [
+      "0",
+      "0.500834724541",
+      "1"
+    ],
+    "d5_rho=0_eps=0.001:LL": [
+      "0",
+      "0.334075723831",
+      "0.667037861915",
+      "1"
+    ],
+    "d5_rho=0_eps=0.01:HL": [
+      "0",
+      "1"
+    ],
+    "d5_rho=0_eps=0.01:LH": [
+      "0",
+      "0.508474576271",
+      "1"
+    ],
+    "d5_rho=0_eps=0.01:LL": [
+      "0",
+      "0.340909090909",
+      "0.670454545455",
+      "1"
+    ],
+    "d5_rho=0_eps=0.1:HL": [
+      "0",
+      "1"
+    ],
+    "d5_rho=0_eps=0.1:LH": [
+      "0",
+      "0.428571428571",
+      "1"
+    ],
+    "d5_rho=0_eps=0.1:LL": [
+      "0",
+      "0.375",
+      "0.5",
+      "0.875",
+      "1"
+    ]
+  },
+  "rho": "0",
+  "scope": "conditional on Stage-A two-level/no-pre-window-observation contract",
+  "task_id": "STAGE-A-INFORMATION-INTERFACE-01",
+  "timing_class_count": 6
+}

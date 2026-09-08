@@ -1,0 +1,47 @@
+{
+  "task_id": "STAGE-A-INFORMATION-INTERFACE-01",
+  "starting_commit": "8cde3f9ef079a34780caf4d07d339eadfa75ca9a",
+  "stage_a_base_commit": "924b1069faf576636e8bbf55a8ec29b3b1f4904d",
+  "stage_a_directory": "../STAGE-A-IMPLEMENTATION-01",
+  "fixed_model": {
+    "rho": "0",
+    "decision_times_s": [
+      "0",
+      "300"
+    ],
+    "horizon_s": "600"
+  },
+  "information_channel": {
+    "sample_1_domain_s": "0 <= s1 < 300",
+    "sample_2_domain_s": "300 <= s2 < 600",
+    "latency_domain_s": "ell >= 0",
+    "delivery_at_decision_available_before_action": true,
+    "pre_window_observations": false,
+    "eta_error_bound": "|y_i-b(s_i)| <= eta*(b_H-b_L)",
+    "eta_equivalence_boundary": "1/2",
+    "measurement_set_order": [
+      "{b_L}",
+      "{b_H}",
+      "{b_L,b_H}"
+    ]
+  },
+  "resource_contract": {
+    "reads_per_pass": 2097152,
+    "writes_per_pass": 2097152,
+    "occupied_s_per_pass": "0.18874368",
+    "horizon_s": "600"
+  },
+  "outputs": [
+    "information_regions.csv",
+    "information_boundaries.json",
+    "policy_region_map.csv.gz.b64",
+    "resource_summary.csv.gz.b64",
+    "retention_breakpoints.csv",
+    "summary.json"
+  ],
+  "notes": [
+    "No scenario/report probabilities.",
+    "No estimator.",
+    "Any latency boundary is conditional on the no-pre-window-observation Stage-A contract."
+  ]
+}
