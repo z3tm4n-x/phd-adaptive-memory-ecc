@@ -1,0 +1,80 @@
+{
+  "task_id": "STAGE-A-IMPLEMENTATION-01",
+  "starting_commit": "c9ec2197f98207fc43938331542bbe00c8ae5a82",
+  "scientific_review_02_commit": "e11e1b1db1ca26b79291dad59f818167f2441620",
+  "upstream": {
+    "implementation_semantics_commit": "619cb3538e296b3619f21301a176665f4611143f",
+    "path": "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv",
+    "proton_rate_5min_sha256": "713eceb0df3faa4ea0eb50f6381c5a26cfb77a969f82e059f58815e8469f1e09",
+    "git_blob_sha": "5de108c6759bcf720073b3fbc6581389d46e63aa",
+    "controlled_dataset_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815",
+    "paired_valid_intervals": 16971,
+    "columns": {
+      "d1": "d1_lambda_central_s-1",
+      "d3": "d3_lambda_central_s-1",
+      "d5": "d5_lambda_central_s-1"
+    },
+    "unit_contract": "full-array bit/upset rate s^-1; lambda_bit=N_bits*integral(F_sh(E)*sigma_bit(E)dE)",
+    "validity_filter": "east_valid==1 and west_valid==1; finite nonnegative central rates"
+  },
+  "frozen_levels": {
+    "d1": {
+      "L_s-1": "1.0147076e-04",
+      "L_timestamp_utc": "2026-02-19T11:10:00+00:00",
+      "H_s-1": "5.8709784e+01",
+      "H_timestamp_utc": "2026-01-19T19:20:00+00:00"
+    },
+    "d3": {
+      "L_s-1": "2.8886786e-05",
+      "L_timestamp_utc": "2026-01-28T15:15:00+00:00",
+      "H_s-1": "6.1249308e+00",
+      "H_timestamp_utc": "2026-01-19T19:20:00+00:00"
+    },
+    "d5": {
+      "L_s-1": "7.1682448e-06",
+      "L_timestamp_utc": "2026-01-05T07:05:00+00:00",
+      "H_s-1": "1.5358618e+00",
+      "H_timestamp_utc": "2026-01-19T19:15:00+00:00"
+    }
+  },
+  "memory": {
+    "N_bits": 16777216,
+    "data_bits_per_word": 32,
+    "N_words": 524288,
+    "SEC_threshold": 1,
+    "organization": "declared post-W data-only: 2^19 logical words x 32 data bits"
+  },
+  "model": {
+    "rho_grid": ["0", "1e-4", "1e-2"],
+    "nu_C": "(1-rho)*b",
+    "nu_D": "rho*b/2",
+    "rho_semantics": "fraction of total erroneous-bit intensity allocated to same-word two-bit parent events; not a parent-event probability"
+  },
+  "scenario": {
+    "block_duration_s": "300",
+    "horizon_s": "600",
+    "paths": ["LL", "LH", "HL", "HH"],
+    "path_probabilities": null,
+    "initial_state": "clean at t=0",
+    "boundary_state": "carry through t=300; no free reset"
+  },
+  "restoration": {
+    "contract": "R2-U",
+    "full_pass_reads": 2097152,
+    "full_pass_writes": 2097152,
+    "op_time_s": "45e-9",
+    "full_pass_duration_s": "0.18874368",
+    "U_s": ["0.2", "0.5", "1", "2", "5", "10", "20", "30", "60", "100", "150", "300"],
+    "word_reset_offset": "(w+1)*P/N_words from pass start; credit at end of 4-address group"
+  },
+  "certificate": {
+    "epsilon_grid": ["1e-8", "1e-7", "1e-6", "1e-5", "1e-4", "1e-3", "1e-2", "1e-1"],
+    "formula": "Q=min(1,Lambda_D+C(32,2)*sum_w sum_J (integral_J r(t)dt)^2)",
+    "classification": "certified iff exact Q <= epsilon; direct strict-exhaustion iff Lambda_D > epsilon"
+  },
+  "selection_rule": [
+    "minimize worst-case total pass count across LL,LH,HL,HH",
+    "lexicographically minimize path pass-count vector in LL,LH,HL,HH order",
+    "lexicographically maximize realized periods in path/time order"
+  ]
+}
