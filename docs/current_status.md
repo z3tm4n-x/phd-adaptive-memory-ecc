@@ -25,43 +25,25 @@ Accepted findings remain bounded by the exact Stage A model, Q certificate, U, s
 
 The finite L/H sensitivity study is finished. Do not expand it into another generic latency/eta sweep.
 
-## Next action — bounded external-information input contract
+## Completed input gate — GOES causal contract
 
-Owner: Research Orchestrator; execution role for local input inspection: Research Engineer.
+Orchestrator accepts [RE-GOES-CAUSAL-INPUT-CONTRACT-01](../experiments/RE-GOES-CAUSAL-INPUT-CONTRACT-01/REPORT.md) at 3d24da961a151bc1ce744fbd44bf289c41b58451 for its bounded input-audit purpose. The raw-data blocker is closed. This disposition follows report/code traceability inspection; it is not another execution of the private archive.
 
-Task: RE-GOES-CAUSAL-INPUT-CONTRACT-01. This is input/code/metadata inspection and preparation, not a new reliability experiment, estimator or controller implementation. Its purpose is to make the next real-temporal preexecution specification concrete.
+- Source time labels the start of [t,t+300 s). A completed average enters a parameterized comparator no earlier than t+300 s+L; additional real availability latency remains UNKNOWN.
+- The raw audit recovers 1,496 directional fallback rows and 1,449 affected central timestamps (8.53%). The retained row mask controls exclusion of hindsight-derived observations from a causal interface.
+- Twenty-one timestamps are jointly invalid. Missingness is explicit, not zero exposure.
+- Frozen values remain a retrospective reference. The source does not establish instantaneous intensity, within-bin maxima, future-rate bounds or historical operational delivery.
+- No further raw input or repeated audit is required now. Operational publication/version evidence is required only before an operational-channel claim.
 
-Current evidence from the retained [GOES rate package](../experiments/RE-GOES19-PROTON-RATE-01/REPORT.md):
+## Active next gate — real-temporal proposal awaiting PI
 
-1. The source is an archived SGPS L2 five-minute average, not instantaneous device-error truth. The adapter declares the timestamp to be the START of averaging; original time-variable/bounds metadata must control confirmation. The current audit summaries do not establish operational delivery time.
-2. The derived central rate averages two separately propagated isotropy-equivalent E/W chains. Directional spread and sigma-model alternatives are not automatically confidence limits.
-3. In rate_pipeline.py, high_energy_gap_bridge() fits each available P10/P11 pair, then uses the median fitted slope over the full supplied record where fitting fails. Saved diagnostics report 576 E and 920 W fallback rows. This is a known offline preprocessing dependency, not evidence that the earlier retrospective calculation is wrong. A causal controller cannot automatically receive this hindsight-derived fallback as if it were contemporaneously computed.
-4. Archive revision/calibration information and date_created are not automatically the values or publication times available in real-time operation.
-5. A five-minute average does not by itself fix intra-bin exposure or guarantee a future rate bound. Piecewise-constant replay and future envelopes must be explicit modeling assumptions in the next proposal.
+[GOES-REAL-TEMPORAL-PREEXECUTION-01](research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md) is DRAFT FOR PI ACCEPT / REVISE / REJECT. Execution is NOT authorized.
 
-Required bounded output: one input-interface table and a concise report, with only a small extraction helper if necessary. Establish measurement intervals, availability/provenance status, fallback applicability, missing-data handling and the distinction between offline reference and causal observation. Prefer existing saved metadata; request only exact missing source files from PI. No broad literature search, fresh transport, refitting, replacement of the frozen series or policy calculation.
+The proposal preserves known rho=0, SEC, R2-U and two decisions over 600 s, but uses fixed input-only rules to choose actual chronological sections. It masks fallback observations, includes causally available pre-window data, and separately declares future-variation uncertainty.
 
-Report which inputs support:
-- retrospective environmental replay;
-- a declared delayed-data comparator;
-- a genuinely supported operational observation claim.
+Two proposed choices require PI approval as part of this exact contract: the inherited Stage A high-rate scale is an assumed benchmark ceiling (not an operationally evidenced prior), and all information classes use a stated conservative planning/replanning rule rather than claims of globally optimal policy trees. The resulting map must distinguish replay outside the assumed domain from certified resource savings inside it.
 
-Do not convert UNKNOWN delivery latency into zero, completed-bin averages into current instantaneous rates, or whole-record statistics into a priori constants. A hypothesized latency may be parameterized later and labelled as such. Do not silently discard difficult/fallback rows or select favourable windows based on control savings.
-
-## Next scientific decision after that input contract
-
-Orchestrator prepares the exact real-temporal experiment/derivation for separate PI approval. Proposed focus: whether a causal external-information channel retains absolute actuation savings at the same declared reliability constraint.
-
-That proposal must specify:
-- pre-window information separately from initial memory state and scrub ages;
-- interval support, observation availability and deterministic action epochs;
-- a causal compatible-model/future-exposure construction, not merely shifted archived values;
-- common fixed/precomputed/causal comparison semantics; hindsight baselines separately labelled;
-- actuation cost separately from information and controller overhead.
-
-Known rho=0 and the existing data-only/R2-U slice are the preferred first decomposition, subject to the next exact proposal. No automatic generalization of binary eta, Stage A latency bounds, or physical calibration follows.
-
-The candidate internal-channel distinction T_rel/T_obs remains unverified and deferred until corrected-count/exposure/detection semantics are declared. No retrospective HYP and no automatic estimator selection.
+No estimator, new EXP/HYP/RES, operational GOES guarantee, physical calibration or broad search is authorized by this update. RQ-004/005/007 remain the active interfaces. The internal-counter T_rel/T_obs idea remains unverified and deferred.
 
 ## Continuing canonical research state
 
