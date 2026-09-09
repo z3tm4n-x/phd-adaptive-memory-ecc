@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. The accepted contract/handoff is recorded; no execution result is claimed by this Orchestrator update.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Research Engineer delivery fb6415444d028526dfc41118b52688ffb83c03dd has been inspected and is ACCEPTED FOR SCIENTIFIC REVIEW, not scientifically accepted or promoted. The next action is one review of the method, its whole-horizon guarantee and matched comparison.
 
 ## Completed gate and accepted scope
 
@@ -71,21 +71,46 @@ PI explicitly ACCEPTED DRAFT-RES-002 in its presented validity domain. [RES-002]
 
 This closes the result's normal maintenance. Reopen only for a material error or contradiction, not incremental defensive wording. Registration records a result; it does not prove dissertation novelty or complete RQ-007.
 
-### Active task — endogenous corrected-count control
+### Active gate — Scientific Review of internal-count control
 
-The PI changed the scientific priority: select tasks by the substantial capability they add, and distinguish own contribution, necessary auxiliary results and correctness/reproduction work. These are not interchangeable measures of scientific progress.
+**Engineering delivery accepted for review; scientific acceptance pending.**
+Delivery: fb6415444d028526dfc41118b52688ffb83c03dd; executable code:
+ec8f95b24733d854c9e343f5077f313ee886e178. The two delivery commits above
+a44355e38a5434fa69d7c343e456ddd944315d46 change only
+`experiments/RE-INTERNAL-COUNT-CONTROL-01/`.
+Orchestrator inspected report/derivation/config, key physical/controller code
+paths and comparison tables. No production or engineering tests were rerun.
 
-PI accepts one [bounded method-building task and executable RE handoff](research_gates/INTERNAL-COUNT-CONTROL-PROPOSAL-01.md), **AUTHORIZED FOR LOCAL RE EXECUTION**: adaptive period selection from the scrubber's corrected-single count with a joint observation/state/risk update and a whole-horizon DEC-001 constraint through repeated decisions.
+The delivered candidate contains the capability requested by PI: own
+action-dependent counter → finite auxiliary information state → next period,
+with carried residual arrivals and a whole-horizon risk argument. The 26
+probabilities describe an auxiliary process, not an asserted exact posterior
+of actual memory. The coupling, risk potential and controlled error ledger
+are central review objects. This is a substantive method candidate, not another
+latency map; it is not yet a proved permanent result or novelty claim.
 
-The closest operational analogue is PA-DOM-01-B (Krasnikov/Lushnikov/Meshchanov et al., extended 2018 text), already controlled in accepted PA-DOM synthesis at 4f96bb95189f0d385ea2077aa7b05d81ef8edf0d. This source is on another branch and is accessed by its controlled commit; no literature re-extraction or silent branch merge is requested. Its count-to-period feedback is known, not our novelty. The proposed difference is the proved risk consequence of policy-dependent noisy observation and carried memory/risk state under matched information.
+Under the declared model, delivery reports feasibility for epsilon=0.1 at
+D=30/300/3000, Fixed 3600 and finite-class Precomputed 2700 passes. Proposed
+conditional surviving-mission pass means are 2053.9/1823.7/1640.0 versus
+2929/2945/2949 for the mandatory count-disabled mechanism. Estimated F is
+7.815%/7.945%/8.120%. These are delivered evidence pending review, not
+Orchestrator reruns. Six stricter cells remain unresolved for adaptive
+feasibility; Fixed exclusion is not general adaptive impossibility.
 
-The initial closed model uses known rho=0, sequential SEC/R2-U, a declared hidden two-level Markov environment, completed-pass counters, repeated decisions and one 3600-s horizon. This is the accepted model task, not physical calibration. Compare with a traceably adapted PA-DOM-01-B law, optimized Fixed and optimized finite-class Precomputed under the same information/risk/resource semantics. No algorithm is declared novel or successful in advance.
+Resource comparisons are survival-conditioned, with separate common-pair
+survivor and stop-cost checks. No equal-risk dominance over PA-DOM is claimed:
+at D=3000 the analogue has lower estimated risk and higher cost.
+Equal observation channels produce distinct per-policy counters. The method's
+analytic guarantee and the analogue's held-out statistical evidence differ.
 
-The central obstacle is an action-dependent observation operator and global risk guarantee. It must be solved or the intended claim changed/abandoned explicitly. Further g/L sweeps, GOES-window selection and g calibration are deferred, not prerequisites for this chosen model contribution. Angular transport, proprietary W and a flight-ready system remain outside this task. No broader search or new HYP is authorized. Method construction and the bounded calculations in the accepted task are authorized; this update does not claim that RE has executed them.
-
-No further general PI preparation cycle is required. Research Engineer starts with numerical feasibility before a large optimizer; failure of a sufficient certificate is not impossibility. Equal information means the same channel and model knowledge, with each controller receiving counters induced by its own actions. The probability constraint covers the whole horizon under the declared joint stochastic model; it is not a guarantee for each environment path.
-
-The small exact model is the independent reference. Completion requires a working observation-to-action transition, a verifiable whole-risk argument and a computational method at the chosen memory scale, including state size, approximation control and update time. The same mechanism without counters is a mandatory comparison to isolate information from schedule flexibility. Negative cases remain recorded without consuming the main search unless informative. A full method result, a substantive negative bound or a concrete failure of the method target is required; another wording package is not the output.
+Next: [SR-INTERNAL-COUNT-CONTROL-REVIEW-01](research_gates/INTERNAL-COUNT-CONTROL-REVIEW-01.md).
+One adversarial review covers coupling/global risk, approximation/arithmetic,
+baseline optimality, no-count and analogue comparison, and target-scale
+computability. No preliminary repair is demanded without a demonstrated issue.
+No new experiment, parameter expansion, broad search or RES/HYP promotion.
+RES-002 maintenance stays closed. After a positive review prepare the bounded
+method result and publication argument; if a blocker is found repair only the
+material method/evidence gap.
 
 ## Continuing canonical research state
 
