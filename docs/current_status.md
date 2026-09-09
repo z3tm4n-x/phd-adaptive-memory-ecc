@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete; next is bounded synthesis for PI, not another repair or experiment.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. DRAFT-RES-002 is ready for PI wording/scope approval; no permanent promotion or next experiment has occurred.
 
 ## Completed gate and accepted scope
 
@@ -65,13 +65,23 @@ These show conditional dependence of actuation savings on delay and prior variat
 
 The review allows relabelling instead of recomputation. [Current report](../experiments/RE-GOES-REAL-TEMPORAL-01/REPORT.md) and comments next to summary export now explicitly define the legacy boundary-width/count fields as **selected by representative compatibility**, not clipped geometric intersections with the replay domain. Legacy keys and output bytes remain unchanged for compatibility. This administrative interpretation correction changes no calculation, policy, certificate, saving, retention or provenance. No new RE task, production rerun or Scientific Review is required.
 
-### Next action — bounded scientific synthesis for PI
+### Active gate — PI approval of bounded result wording
 
-The numerical repair/re-review loop is finished. Prepare a compact synthesis of the accepted Stage A, finite-information and chronological-replay results for PI approval of bounded permanent-result wording. Separate mathematical sufficiency of the risk envelope, observed decision/resource consequences and engineering transfer limitations. Do not assign an unused permanent RES number before checking the result registry and obtaining required PI approval.
+[DRAFT-RES-002 — external-information restoration certificate and conditional resource consequences](result_proposals/DRAFT-RES-002-external-information-restoration.md) is prepared for PI ACCEPT / REVISE / REJECT. The registry at the preparation base and main contains only RES-001. RES-002 is a proposed identifier, not a permanent registration; recheck availability before promotion.
 
-The highest-value unresolved question for a subsequent proposal is whether the delay/variation information contract that preserves material actuation savings can be supported independently of the evaluated replay, and by a locally available observable of a target system. Do not fit g or select new windows for a favourable answer, and do not infer a GOES-fed spacecraft architecture. Information acquisition and controller overhead remain separate RQ-004/RQ-005 obligations.
+The proposal connects the attainable worst-certificate envelope, preservation of a certified continuation under compatible external updates, and the reviewed delay/variation action-resource map. It contains the maximum admissible statement, exact model/information/control/resource domain, boundary-band lookup limitations, negative cases, provenance, uncertainty distinctions and forbidden generalizations. It does not promote all earlier Stage A findings automatically or supersede RES-001.
 
-No next numerical experiment, estimator, new literature campaign, HYP or permanent RES is launched by this closeout. Any next quantitative contract must be presented to PI before execution.
+Implementation, reproduction, independent validation and scientific review are complete for the accepted repaired domain. Promotion is **RES_ELIGIBLE**, not PROMOTED. No retrospective HYP is created. The source run manifests remain unchanged; this is a later disposition.
+
+PI is asked only to approve/revise/reject the proposed permanent-result wording and scope. No new scientific review or calculation is required merely to format accepted content. After PI ACCEPT, register only the approved result and update the result registry.
+
+### Next scientific question — proposal only
+
+The highest-value unresolved question is whether a future-intensity information contract preserving material actuation savings can be justified independently of the evaluated replay and tied to a locally available target-system observable. The draft separates physical/deterministic bounds, statistical guarantees and empirical compatibility; validation on withheld data alone must not be relabelled as a physical guarantee.
+
+RQ-004 owns channel meaning, causal availability and uncertainty; RQ-005 owns separate information/controller costs; RQ-007 owns safe action selection and conditional resource consequences. RQ-002/003/006's physical/model limitations remain open. Do not fit g or select windows for a favourable answer, assume an operational GOES-fed architecture, or introduce an estimator before its information contract is justified.
+
+No next numerical experiment, estimator, literature campaign, HYP or permanent RES is launched. Any next quantitative contract requires separate PI approval before execution.
 
 ## Continuing canonical research state
 
