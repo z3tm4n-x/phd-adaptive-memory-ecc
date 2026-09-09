@@ -1,73 +1,64 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, math
+import argparse,csv,json
+from collections import defaultdict
+from decimal import Decimal as D,getcontext
 from pathlib import Path
-import pandas as pd
-import numpy as np
 
+def read(p):
+    with Path(p).open(newline="",encoding="utf-8") as f:return list(csv.DictReader(f))
 
-def fmt_interval(lo, hi):
-    return f"({lo:.12g},{hi:.12g})"
+def write(p,rows):
+    rows=list(rows);fields=sorted({k for r in rows for k in r}) if rows else []
+    with Path(p).open("w",newline="",encoding="utf-8") as f:
+        w=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");w.writeheader();w.writerows(rows)
 
-def merge_intervals(rows):
-    if not rows: return ""
-    rows=sorted(rows)
-    out=[]
-    for lo,hi in rows:
-        if out and abs(out[-1][1]-lo)<3e-10:
-            out[-1]=(out[-1][0],hi)
-        else: out.append((lo,hi))
-    return "|".join(fmt_interval(lo,hi) for lo,hi in out)
+def union_components(xs):
+    xs=sorted((D(a),D(b)) for a,b in xs if D(b)>D(a));out=[]
+    for a,b in xs:
+        if out and out[-1][1]==a:out[-1]=(out[-1][0],b)
+        else:out.append((a,b))
+    return out
 
-def endpoint_row(gdf):
-    # Region signature immediately below g=1; focused tests independently verify
-    # the selected g=1 limiting contract, so this is a reporting projection only.
-    return gdf.sort_values(["g_hi_open","g_lo_open"]).iloc[-1]
+def width(xs):return sum((b-a for a,b in xs),D(0))
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--dir",required=True)
-    a=ap.parse_args(); d=Path(a.dir)
-    comp=pd.read_csv(d/"resource_comparison.csv")
-    base=pd.read_csv(d/"baseline_actions.csv")
-
-    app=[]; g1=[]
-    for (label,shield,eps,L),g in comp.groupby(["label","shield","epsilon","L_s"],dropna=False):
-        replay=float(g.replay_g_min.iloc[0])
-        pre_status=str(g.precomputed_status.iloc[0])
-        sav=[]; gain=[]
-        for _,r in g.iterrows():
-            lo=max(float(r.g_lo_open), replay); hi=float(r.g_hi_open)
-            if hi <= lo+1e-14: continue
-            if pre_status=="CERTIFIED" and r.delayed_status=="CERTIFIED" and not pd.isna(r.pre_minus_delayed_passes) and float(r.pre_minus_delayed_passes)>0:
-                sav.append((lo,hi))
-            if pre_status!="CERTIFIED" and r.delayed_status=="CERTIFIED":
-                gain.append((lo,hi))
-        er=endpoint_row(g)
-        row={
-          "label":label,"shield":shield,"epsilon":eps,"L_s":int(L),"replay_g_min":replay,
-          "precomputed_status":pre_status,
-          "positive_saving_open_intervals":merge_intervals(sav),
-          "certifiability_gain_open_intervals":merge_intervals(gain),
-          "saving_exists_for_some_replay_compatible_g":int(bool(sav)),
-          "certifiability_gain_exists_for_some_replay_compatible_g":int(bool(gain)),
-          "g1_delayed_status":er.delayed_status,
-          "g1_pre_minus_delayed_passes":"" if pd.isna(er.pre_minus_delayed_passes) else int(er.pre_minus_delayed_passes),
-          "g1_delayed_passes":"" if pd.isna(er.delayed_passes) else int(er.delayed_passes),
-          "g1_ideal_passes":"" if pd.isna(er.ideal_passes) or int(er.ideal_exact_replay_available)!=1 else int(er.ideal_passes),
-          "g1_retention":"" if pd.isna(er.retention) else float(er.retention),
-        }
-        app.append(row)
-        if pre_status=="CERTIFIED" and int(er.ideal_exact_replay_available)==1:
-            g1.append({
-              "label":label,"shield":shield,"epsilon":eps,"L_s":int(L),
-              "precomputed_passes":int(er.precomputed_passes),"delayed_passes":int(er.delayed_passes),"ideal_passes":int(er.ideal_passes),
-              "pre_minus_delayed_passes":int(er.pre_minus_delayed_passes),
-              "pre_minus_delayed_occupied_s":float(er.pre_minus_delayed_occupied_s),
-              "pre_minus_delayed_occupancy_pp":float(er.pre_minus_delayed_occupancy_pp),
-              "delayed_minus_ideal_passes":int(er.delayed_minus_ideal_passes),
-              "retention":"" if pd.isna(er.retention) else float(er.retention),
-            })
-    pd.DataFrame(app).sort_values(["label","shield","epsilon","L_s"]).to_csv(d/"applicability_resource_summary.csv",index=False)
-    pd.DataFrame(g1).sort_values(["label","shield","epsilon","L_s"]).to_csv(d/"g1_endpoint_summary.csv",index=False)
-    print(f"PASS applicability rows={len(app)} g1 rows={len(g1)}")
-if __name__=="__main__": main()
+    ap=argparse.ArgumentParser();ap.add_argument("--dir",required=True);a=ap.parse_args();getcontext().prec=80;d=Path(a.dir)
+    rc=read(d/"resource_comparison.csv");pts=read(d/"policy_points.csv");base=read(d/"baseline_actions.csv")
+    pre={(r["shield"],r["epsilon"]):r for r in base if r["comparator"]=="Precomputed"}
+    pg=defaultdict(list)
+    for r in pts:pg[(r["label"],r["shield"],r["epsilon"],r["kind"],r.get("L_s",""),r["g_point"])].append(r)
+    app=[];g1=[];groups=defaultdict(list)
+    for r in rc:groups[(r["label"],r["shield"],r["epsilon"],r["L_s"])].append(r)
+    for key,rows in sorted(groups.items()):
+        label,shield,eps,L=key;replay=rows[0]["replay_g_min"];ps=pre[(shield,eps)];sav=[];gain=[];boundary=[]
+        for r in rows:
+            lo=D(r["g_lo_open"]);hi=D(r["g_hi_open"])
+            if hi<=lo or r.get("replay_compatible")!="1":continue
+            if r["coverage_status"]=="BOUNDARY-ENCLOSURE":boundary.append((lo,hi));continue
+            if ps["status"]=="CERTIFIED" and r["delayed_status"]=="CERTIFIED" and r["pre_minus_delayed_passes"]!="" and int(r["pre_minus_delayed_passes"])>0:sav.append((lo,hi))
+            if ps["status"]!="CERTIFIED" and r["delayed_status"]=="CERTIFIED":gain.append((lo,hi))
+        savu=union_components(sav);gainu=union_components(gain);bu=union_components(boundary)
+        app.append({"label":label,"reference_semantics":"COMPATIBLE-COMPLETION-STRESS" if label=="EARLIEST_INVALID" else "EXACT-REFERENCE-REPLAY",
+            "shield":shield,"epsilon":eps,"L_s":L,"replay_g_min":replay,"precomputed_status":ps["status"],
+            "positive_saving_resolved_component_count":len(savu),"positive_saving_resolved_total_g_width":str(width(savu)),
+            "certifiability_gain_resolved_component_count":len(gainu),"certifiability_gain_resolved_total_g_width":str(width(gainu)),
+            "verified_boundary_enclosure_component_count_in_replay_domain":len(bu),"verified_boundary_enclosure_total_g_width_in_replay_domain":str(width(bu)),
+            "saving_exists_for_some_replay_compatible_g":int(bool(savu)),"certifiability_gain_exists_for_some_replay_compatible_g":int(bool(gainu))})
+        dk=(label,shield,eps,"Delayed",L,"1");ik=(label,shield,eps,"Ideal","","1")
+        if dk not in pg or ik not in pg:raise RuntimeError(f"missing exact g=1 point {key}")
+        dr=pg[dk][0];ir=pg[ik][0]
+        if label!="EARLIEST_INVALID" and ps["status"]=="CERTIFIED" and dr["status"]=="CERTIFIED" and ir["status"]=="CERTIFIED":
+            pp=int(ps["passes"]);dp=int(dr["passes"]);ip=int(ir["passes"]);den=pp-ip
+            g1.append({"label":label,"shield":shield,"epsilon":eps,"L_s":L,"precomputed_passes":pp,"delayed_passes":dp,"ideal_passes":ip,
+                "pre_minus_delayed_passes":pp-dp,"delayed_minus_ideal_passes":dp-ip,"retention":str(D(pp-dp)/D(den)) if den>0 else ""})
+    write(d/"applicability_resource_summary.csv",app);write(d/"g1_endpoint_summary.csv",g1)
+    exact=[r for r in app if r["reference_semantics"]=="EXACT-REFERENCE-REPLAY" and r["precomputed_status"]=="CERTIFIED"]
+    stress=[r for r in app if r["reference_semantics"]=="COMPATIBLE-COMPLETION-STRESS" and r["precomputed_status"]=="CERTIFIED"]
+    counts={}
+    for L in ("0","300","900","1800"):
+        ex=[r for r in exact if r["L_s"]==L];st=[r for r in stress if r["L_s"]==L]
+        counts[L]={"complete_reference_some_saving":sum(int(r["saving_exists_for_some_replay_compatible_g"]) for r in ex),"complete_reference_denominator":len(ex),
+            "missing_reference_stress_some_saving":sum(int(r["saving_exists_for_some_replay_compatible_g"]) for r in st),"missing_reference_stress_denominator":len(st)}
+    print(json.dumps({"status":"PASS","applicability_rows":len(app),"g1_rows":len(g1),"counts":counts},sort_keys=True))
+if __name__=="__main__":main()

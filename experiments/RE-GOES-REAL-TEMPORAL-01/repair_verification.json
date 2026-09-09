@@ -1,9 +1,4 @@
 {
-  "task_id": "RE-GOES-REAL-TEMPORAL-NUMERICAL-REPAIR-01",
-  "starting_commit": "77f299bdc3f5abaac36e5d8ef79359f557e56065",
-  "historical_implementation_commit": "bb900279876bad4a370589871eaa07a1d6ecd1ad",
-  "scientific_review_commit": "bf34676d7842e6f843a716941178c695855bbf75",
-  "scientific_contract": "UNCHANGED; numerical boundary/map/serialization repair only",
   "map_counts": {
     "policy_regions": 14781,
     "decision_boundaries_total": 14061,
@@ -28,7 +23,7 @@
       "total_aligned_g_width": "4.576000000000000000000000000E-14"
     }
   },
-  "repair_regression": "ALL 8 NUMERICAL-REPAIR TEST GROUPS PASS",
+  "test_result": "ALL 8 NUMERICAL-REPAIR TEST GROUPS PASS",
   "old_to_new_summary": {
     "existence_boolean_differences": {
       "saving_exists_for_some_replay_compatible_g": 0,
@@ -99,32 +94,5 @@
     "information_timeline.csv": "59bc2f27639b1e1bd40e6f7c87d4ee291b7f2768b61e5a2ceb0562527675f076",
     "input_context.csv": "49090128d92eef6fc156e77e17ebe1b10054b0eda0f2c0aa3f5ce1a71707655f"
   },
-  "compact_scientific_sha256": {
-    "model_compatibility.csv": "eecb5d35cdd78d9aa4cd7178946bc251df20d96867138e9db6cb4d76cc4c7031",
-    "g1_endpoint_summary.csv": "468ce9a5cbe5c1f372a1ff1dc713ff00e0012da33b90f067882cdf72f9f06bb9",
-    "repair_regression_witnesses.csv": "437de96a60c51010cbecd1bcd07a2f0c274e1d9a1edea9cd0ced96cd15905a75",
-    "selection_recomputed.csv": "01f78e81293310746fd8db28169b8f54f9296661eaaa4a2a005a4b18e5d44799",
-    "test_output.txt": "5a7c44a172e085cbbd63425b4293b9bd19b5185a19ea313bc364c7257177a9eb"
-  },
-  "applicability_resource_summary_raw_sha256": "b69c2e0fd03bb2f1e078431e94ab24fe56c73f33ce71943cbbc44142b36c8536",
-  "runtime_reference": {
-    "python": "3.13.5",
-    "numpy": "2.3.5",
-    "pandas": "2.2.3",
-    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
-  },
-  "execution_record": {
-    "historical_original_wrapper_note": "Historical implementation bb900279: original wrapper was stopped by an outer harness time limit after core generation; retained as historical provenance.",
-    "repair_development_staged_run": "PASS in fresh temporary output; used during repair development and independent regression.",
-    "final_release_wrapper": "PASS: ./reproduce.sh completed end-to-end with exit code 0 using a fresh mktemp directory and cleanup trap.",
-    "final_release_checks": [
-      "core_generation",
-      "resource_alignment",
-      "summary_generation",
-      "8-group numerical-repair regression",
-      "unchanged baseline decisions/resources",
-      "transient scientific SHA-256",
-      "decompressed compact scientific CSV comparison"
-    ]
-  }
+  "final_release_wrapper": "PASS / exit 0"
 }

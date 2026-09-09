@@ -1,6 +1,6 @@
 {
-  "task_id": "RE-GOES-REAL-TEMPORAL-01",
-  "starting_commit": "2135cac502bb39054d888d2f468283de5fe802f0",
+  "task_id": "RE-GOES-REAL-TEMPORAL-NUMERICAL-REPAIR-01",
+  "starting_commit": "77f299bdc3f5abaac36e5d8ef79359f557e56065",
   "controlling_spec": "docs/research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md",
   "input": {
     "rate_csv": "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv",
@@ -87,7 +87,11 @@
     ]
   },
   "numerics": {
-    "root_bracket_target": "1e-14",
-    "decimal_precision": 60
-  }
+    "root_bracket_target": "1e-18",
+    "decimal_precision": 70,
+    "jobs": 8
+  },
+  "historical_task_id": "RE-GOES-REAL-TEMPORAL-01",
+  "historical_implementation_commit": "bb900279876bad4a370589871eaa07a1d6ecd1ad",
+  "scientific_review_commit": "bf34676d7842e6f843a716941178c695855bbf75"
 }

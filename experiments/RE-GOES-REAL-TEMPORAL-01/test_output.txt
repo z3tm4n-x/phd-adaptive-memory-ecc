@@ -1,10 +1,9 @@
-PASS input-only window selection and frozen-selection identity
-PASS no-future delivery and fallback/missing masking
-PASS nonempty-model and attainable upper envelope
-PASS independent sequential exposure/no-free-reset check
-PASS same-history/hidden-future invariance
-PASS recursive continuation preservation and resource identities
-PASS interval-verified reported certificate boundaries
-PASS limiting g=1/no-current-observation contract
-PASS missing-window Ideal NA semantics
-ALL 8 FOCUSED TEST GROUPS PASS
+PASS independent reset-timestamp exposure/Q oracle
+PASS MAJOR-01 SR witness regressions and mandatory 90-pass control
+PASS serialized root enclosures independently signed: 12869
+PASS all-competitor policy representatives/endpoints and exact threshold semantics: 14781 regions + 2632 point records
+PASS no silent g-map coverage gaps; boundary bands explicit
+PASS policy/resource alignment including explicit boundary bands: 46336
+PASS retained g=1/MAX_MEAN/MAX_INCREASE and serialization-witness regressions
+PASS EARLIEST_INVALID compatible-completion stress semantics
+ALL 8 NUMERICAL-REPAIR TEST GROUPS PASS
