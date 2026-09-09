@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. DRAFT-RES-002 is ready for PI wording/scope approval; no permanent promotion or next experiment has occurred.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. The only proposed next task is internal corrected-count adaptive control with whole-horizon risk; it awaits PI agreement and has not been executed.
 
 ## Completed gate and accepted scope
 
@@ -65,23 +65,25 @@ These show conditional dependence of actuation savings on delay and prior variat
 
 The review allows relabelling instead of recomputation. [Current report](../experiments/RE-GOES-REAL-TEMPORAL-01/REPORT.md) and comments next to summary export now explicitly define the legacy boundary-width/count fields as **selected by representative compatibility**, not clipped geometric intersections with the replay domain. Legacy keys and output bytes remain unchanged for compatibility. This administrative interpretation correction changes no calculation, policy, certificate, saving, retention or provenance. No new RE task, production rerun or Scientific Review is required.
 
-### Active gate — PI approval of bounded result wording
+### Permanent promotion — RES-002
 
-[DRAFT-RES-002 — external-information restoration certificate and conditional resource consequences](result_proposals/DRAFT-RES-002-external-information-restoration.md) is prepared for PI ACCEPT / REVISE / REJECT. The registry at the preparation base and main contains only RES-001. RES-002 is a proposed identifier, not a permanent registration; recheck availability before promotion.
+PI explicitly ACCEPTED DRAFT-RES-002 in its presented validity domain. [RES-002](../results/RES-002-external-information-restoration.md) is now **ACCEPTED / PERMANENT**; RE-GOES-REAL-TEMPORAL-01 promotion is **PROMOTED only within RES-002**. Central scientific wording is preserved; no recalculation, new review or retrospective HYP was introduced. The historical proposal is retained with an acceptance pointer.
 
-The proposal connects the attainable worst-certificate envelope, preservation of a certified continuation under compatible external updates, and the reviewed delay/variation action-resource map. It contains the maximum admissible statement, exact model/information/control/resource domain, boundary-band lookup limitations, negative cases, provenance, uncertainty distinctions and forbidden generalizations. It does not promote all earlier Stage A findings automatically or supersede RES-001.
+This closes the result's normal maintenance. Reopen only for a material error or contradiction, not incremental defensive wording. Registration records a result; it does not prove dissertation novelty or complete RQ-007.
 
-Implementation, reproduction, independent validation and scientific review are complete for the accepted repaired domain. Promotion is **RES_ELIGIBLE**, not PROMOTED. No retrospective HYP is created. The source run manifests remain unchanged; this is a later disposition.
+### Proposed next action — solve endogenous corrected-count control
 
-PI is asked only to approve/revise/reject the proposed permanent-result wording and scope. No new scientific review or calculation is required merely to format accepted content. After PI ACCEPT, register only the approved result and update the result registry.
+The PI changed the scientific priority: select tasks by the substantial capability they add, and distinguish own contribution, necessary auxiliary results and correctness/reproduction work. These are not interchangeable measures of scientific progress.
 
-### Next scientific question — proposal only
+Orchestrator recommends one [bounded method-building task](research_gates/INTERNAL-COUNT-CONTROL-PROPOSAL-01.md), **NOT AUTHORIZED FOR EXECUTION**: adaptive period selection from the scrubber's corrected-single count with a joint observation/state/risk update and a whole-horizon DEC-001 constraint through repeated decisions.
 
-The highest-value unresolved question is whether a future-intensity information contract preserving material actuation savings can be justified independently of the evaluated replay and tied to a locally available target-system observable. The draft separates physical/deterministic bounds, statistical guarantees and empirical compatibility; validation on withheld data alone must not be relabelled as a physical guarantee.
+The closest operational analogue is PA-DOM-01-B (Krasnikov/Lushnikov/Meshchanov et al., extended 2018 text), already controlled in accepted PA-DOM synthesis at 4f96bb95189f0d385ea2077aa7b05d81ef8edf0d. This source is on another branch and is accessed by its controlled commit; no literature re-extraction or silent branch merge is requested. Its count-to-period feedback is known, not our novelty. The proposed difference is the proved risk consequence of policy-dependent noisy observation and carried memory/risk state under matched information.
 
-RQ-004 owns channel meaning, causal availability and uncertainty; RQ-005 owns separate information/controller costs; RQ-007 owns safe action selection and conditional resource consequences. RQ-002/003/006's physical/model limitations remain open. Do not fit g or select windows for a favourable answer, assume an operational GOES-fed architecture, or introduce an estimator before its information contract is justified.
+The initial closed model uses known rho=0, sequential SEC/R2-U, a declared hidden two-level Markov environment, completed-pass counters, repeated decisions and one 3600-s horizon. This is a proposed model task, not physical calibration. Compare with a traceably adapted PA-DOM-01-B law, optimized Fixed and optimized finite-class Precomputed under the same information/risk/resource semantics. No algorithm is declared novel or successful in advance.
 
-No next numerical experiment, estimator, literature campaign, HYP or permanent RES is launched. Any next quantitative contract requires separate PI approval before execution.
+The central obstacle is an action-dependent observation operator and global risk guarantee. It must be solved or the intended claim changed/abandoned explicitly. Further g/L sweeps, GOES-window selection and g calibration are deferred, not prerequisites for this chosen model contribution. Angular transport, proprietary W and a flight-ready system remain outside this task. No new broad search, estimator implementation, experiment or HYP has started.
+
+The next PI decision concerns this one proposed task. A full method result, a substantive bound on attainable benefit, or a clear rejection of the proposed method target is required; another uncontrolled cycle of small maps is not the completion criterion.
 
 ## Continuing canonical research state
 
@@ -90,7 +92,7 @@ No next numerical experiment, estimator, literature campaign, HYP or permanent R
 - RQ-002 and RQ-006 remain open for physically justified error/mapping/representation domains.
 - RQ-003 retains ECC/decoder/reset responsibility; the current SEC data-only slice does not close it.
 - RQ-004 is the active next external-observation interface. RQ-005 owns componentwise costs. RQ-007 integrates these without absorbing them.
-- EXP-001 remains complete/promoted only within PI-approved [RES-001](../results/RES-001-exp001-four-word-identified-set.md), with all fourteen applicability conditions. No new permanent result is registered by this update.
+- EXP-001 remains complete/promoted only within PI-approved [RES-001](../results/RES-001-exp001-four-word-identified-set.md), with all fourteen applicability conditions. RES-002 is separately registered by the present PI-authorized promotion.
 - PA-DOM-01…04 bounded closure is complete under its accepted stop rule. PA-DOM-01-B and Chen remain obligatory control prior art; generic corrected-count/rate-to-period adaptation is not claimed as novelty.
 - The accepted normative baseline retains its controlled-edition/PMI/interface limitations. No normative deficiency is inferred.
 - Angular-event transport, proprietary W, parity/ERR, acquisition costs and real-channel availability are not resolved by Stage A. None is silently reinterpreted as an established physical guarantee.
