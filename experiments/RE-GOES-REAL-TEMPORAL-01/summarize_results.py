@@ -43,6 +43,13 @@ def main():
             "shield":shield,"epsilon":eps,"L_s":L,"replay_g_min":replay,"precomputed_status":ps["status"],
             "positive_saving_resolved_component_count":len(savu),"positive_saving_resolved_total_g_width":str(width(savu)),
             "certifiability_gain_resolved_component_count":len(gainu),"certifiability_gain_resolved_total_g_width":str(width(gainu)),
+            # Legacy CSV keys retained for byte-compatible reproduction.
+            # Display labels (MINOR-R2-01 closeout):
+            # boundary_enclosure_components_selected_by_representative_compatibility;
+            # boundary_enclosure_total_g_width_selected_by_representative_compatibility.
+            # Whole bands are selected by their representative replay_compatible flag.
+            # These are NOT component counts/widths of the geometric intersection
+            # with [g_min_exact, 1]; a threshold-straddling band is not clipped.
             "verified_boundary_enclosure_component_count_in_replay_domain":len(bu),"verified_boundary_enclosure_total_g_width_in_replay_domain":str(width(bu)),
             "saving_exists_for_some_replay_compatible_g":int(bool(savu)),"certifiability_gain_exists_for_some_replay_compatible_g":int(bool(gainu))})
         dk=(label,shield,eps,"Delayed",L,"1");ik=(label,shield,eps,"Ideal","","1")
