@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Research Engineer delivery fb6415444d028526dfc41118b52688ffb83c03dd has been inspected and is ACCEPTED FOR SCIENTIFIC REVIEW, not scientifically accepted or promoted. The next action is one review of the method, its whole-horizon guarantee and matched comparison.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Scientific Review 82117f8b2bea9d92ffcd807e3671ab3dd13e96db is accepted: PASS_WITH_MINOR, no blocking finding. RE-INTERNAL-COUNT-CONTROL-01 is scientifically accepted within the review domain and RES_ELIGIBLE, not PROMOTED. The arithmetic-disclosure MINOR is locally closed in the bounded result proposal; no code/output change or new computation. DRAFT-RES-003 awaits PI approval.
 
 ## Completed gate and accepted scope
 
@@ -71,46 +71,58 @@ PI explicitly ACCEPTED DRAFT-RES-002 in its presented validity domain. [RES-002]
 
 This closes the result's normal maintenance. Reopen only for a material error or contradiction, not incremental defensive wording. Registration records a result; it does not prove dissertation novelty or complete RQ-007.
 
-### Active gate — Scientific Review of internal-count control
+### Completed scientific gate — internal-count adaptive control
 
-**Engineering delivery accepted for review; scientific acceptance pending.**
-Delivery: fb6415444d028526dfc41118b52688ffb83c03dd; executable code:
-ec8f95b24733d854c9e343f5077f313ee886e178. The two delivery commits above
-a44355e38a5434fa69d7c343e456ddd944315d46 change only
-`experiments/RE-INTERNAL-COUNT-CONTROL-01/`.
-Orchestrator inspected report/derivation/config, key physical/controller code
-paths and comparison tables. No production or engineering tests were rerun.
+**Orchestrator: ACCEPT within Review §10; promotion RES_ELIGIBLE.**
+[Scientific Review](scientific_reviews/INTERNAL_COUNT_CONTROL_REVIEW_01.md)
+at 82117f8b2bea9d92ffcd807e3671ab3dd13e96db returns PASS_WITH_MINOR;
+no CRITICAL/MAJOR. Reviewed delivery fb6415444d028526dfc41118b52688ffb83c03dd,
+executable code ec8f95b24733d854c9e343f5077f313ee886e178, accepted task a44355e38a5434fa69d7c343e456ddd944315d46.
 
-The delivered candidate contains the capability requested by PI: own
-action-dependent counter → finite auxiliary information state → next period,
-with carried residual arrivals and a whole-horizon risk argument. The 26
-probabilities describe an auxiliary process, not an asserted exact posterior
-of actual memory. The coupling, risk potential and controlled error ledger
-are central review objects. This is a substantive method candidate, not another
-latency map; it is not yet a proved permanent result or novelty claim.
+The accepted scientific content is a computable own-count control method:
+action-dependent joint auxiliary (mode,pending-arrivals) state, conservative
+coupling to actual SEC memory and a whole-horizon risk-budget recursion.
+The mathematical guarantee is supported; the numerical implementation is
+supported conditionally on the declared arithmetic contract and reviewed
+tables. The auxiliary posterior is not an exact physical-memory posterior.
 
-Under the declared model, delivery reports feasibility for epsilon=0.1 at
-D=30/300/3000, Fixed 3600 and finite-class Precomputed 2700 passes. Proposed
-conditional surviving-mission pass means are 2053.9/1823.7/1640.0 versus
-2929/2945/2949 for the mandatory count-disabled mechanism. Estimated F is
-7.815%/7.945%/8.120%. These are delivered evidence pending review, not
-Orchestrator reruns. Six stricter cells remain unresolved for adaptive
-feasibility; Fixed exclusion is not general adaptive impossibility.
+Review independently confirms all 468 fixed/precomputed cases and the 3600/2700
+pass optima in those finite classes. Own-count conditional resource effects
+are supported, including common-survivor and stop-cost checks. Equal risks are
+not proved. For the selected PA-DOM adaptation D=30/300 supports simultaneously
+lower risk and lower conditional costs with the review's stated statistical
+family; D=3000 trades higher risk for lower cost. Six strict-epsilon cases remain
+unresolved for the adaptive class. No general impossibility or novelty is inferred.
 
-Resource comparisons are survival-conditioned, with separate common-pair
-survivor and stop-cost checks. No equal-risk dominance over PA-DOM is claimed:
-at D=3000 the analogue has lower estimated risk and higher cost.
-Equal observation channels produce distinct per-policy counters. The method's
-analytic guarantee and the analogue's held-out statistical evidence differ.
+**MINOR-01: CLOSED BY EXPLICIT INCORPORATION.** The
+[bounded result proposal](result_proposals/DRAFT-RES-003-internal-count-control.md)
+§5 incorporates review's absolute moments/cancellation and affine reconstruction
+guard: 25 gamma_(256 N_b) Vmax yields arithmetic tally 0.000143018263177913,
+within unchanged reserve 0.0002. The tighter historical tally is retained as
+execution provenance, not required as the sole proof. Code, experimental outputs
+and manifests are unchanged. The review expressly permits this local closure;
+no RE repair task, production rerun or new SR is required.
 
-Next: [SR-INTERNAL-COUNT-CONTROL-REVIEW-01](research_gates/INTERNAL-COUNT-CONTROL-REVIEW-01.md).
-One adversarial review covers coupling/global risk, approximation/arithmetic,
-baseline optimality, no-count and analogue comparison, and target-scale
-computability. No preliminary repair is demanded without a demonstrated issue.
-No new experiment, parameter expansion, broad search or RES/HYP promotion.
-RES-002 maintenance stays closed. After a positive review prepare the bounded
-method result and publication argument; if a blocker is found repair only the
-material method/evidence gap.
+SR did not rerun the full 60000 missions or Numba JIT. Python-body/independent
+checks, recorded statistics and trace verification remain distinguished from
+engineering production and warmed timing measurements. No compiler/WCET or
+hardware certification is added by acceptance.
+
+### Current PI gate — DRAFT-RES-003
+
+[Proposed bounded method result](result_proposals/DRAFT-RES-003-internal-count-control.md)
+is ready for PI ACCEPT / REVISE / REJECT. No permanent RES-003 is registered
+and results/README is unchanged. This proposal preserves the full reviewed
+model, probabilistic semantics, numerical conditions and conditional-resource
+interpretation. The scientific significance is the closed method and its
+substantive comparison, not review/test counts.
+
+After approval, the next output should consolidate the method/proof/comparison
+into a publication argument; no additional parameter map or physical
+identification is prerequisite. Novelty remains a separate, targeted
+comparison against concrete method claims. No new experiment or broad search
+is launched by this disposition. RES-001/002 remain unchanged and their routine
+maintenance closed.
 
 ## Continuing canonical research state
 
