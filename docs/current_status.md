@@ -1,7 +1,7 @@
 # Current Status
 
-**Updated:** 2026-09-08  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. PI authorization now covers only RE-GOES-REAL-TEMPORAL-01 under its corrected accepted contract; execution has not yet been reported.
+**Updated:** 2026-09-09  
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. RE-GOES-REAL-TEMPORAL-01 delivery is accepted for one focused Scientific Review; scientific acceptance and result promotion remain pending.
 
 ## Completed gate and accepted scope
 
@@ -35,17 +35,35 @@ Orchestrator accepts [RE-GOES-CAUSAL-INPUT-CONTRACT-01](../experiments/RE-GOES-C
 - Frozen values remain a retrospective reference. The source does not establish instantaneous intensity, within-bin maxima, future-rate bounds or historical operational delivery.
 - No further raw input or repeated audit is required now. Operational publication/version evidence is required only before an operational-channel claim.
 
-## Active gate — real-temporal bounded execution authorized
+## Active gate — GOES real-temporal Scientific Review
 
-[GOES-REAL-TEMPORAL-PREEXECUTION-01](research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md) is PI ACCEPT WITH INTERPRETATION CORRECTION INCORPORATED. RE-GOES-REAL-TEMPORAL-01 may execute; it is not yet reported as executed.
+Orchestrator disposition: **DELIVERY ACCEPTED FOR SCIENTIFIC REVIEW; SCIENTIFIC ACCEPTANCE PENDING.**
 
-PI accepts the mathematics and experimental contract: 600 s windows, input-only selection, known rho=0, SEC/R2-U, B_d, g, L, comparator classes and conservative open-loop planning with one replan at 300 s. B_d remains a counterfactual benchmark ceiling, not a demonstrated physical upper bound; global policy optimality is not claimed.
+Target: bb900279876bad4a370589871eaa07a1d6ecd1ad, branch research/goes-real-temporal-01.
+Controlling PI-approved specification: [GOES-REAL-TEMPORAL-PREEXECUTION-01](research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md) at 2135cac502bb39054d888d2f468283de5fe802f0.
+Report: [RE-GOES-REAL-TEMPORAL-01](../experiments/RE-GOES-REAL-TEMPORAL-01/REPORT.md).
 
-GOES-19 has only two roles: real chronological environmental reference and signal content for a hypothetical delayed causal external-information comparator. It is another spacecraft. Neither an architecture delivering its L2 data to the target controller nor spatial/environmental equivalence to a target spacecraft is established. Publication/arrival logs alone would not establish those interfaces. Any operational external channel must be justified separately under RQ-004; no GOES-fed controller is proposed or validated here.
+Scope/history inspection confirms three commits above the approved starting point, input-only window selection in the first two commits, and only nineteen new files in the authorized experiment directory in the final diff. Orchestrator read the report, derivation, configuration, stored summaries, decoded source/tests and reproduction wrapper. No production, raw or transport rerun was performed; summary counts below are an aggregation of the committed compact table, not independent regeneration.
 
-The result concerns conditional information-quality requirements and actuation savings under the declared temporal, uncertainty and resource contract. The key test remains whether savings survive ONLY under variation assumptions that the real section actually satisfies. Benefits confined to violated assumptions are a negative result for the variant, not grounds for tuning g or replacing windows.
+### Candidate findings to review
 
-The final RE handoff points to this corrected specification and authorizes only its package. One focused SR follows the completed derivation/computation. No estimator, operational-channel implementation, raw/transport rerun, broader search or permanent HYP/RES is authorized. RQ-004/005/007 remain active; internal-counter T_rel/T_obs remains unverified and deferred.
+- The derivation supplies an attainable componentwise greatest sequence in the nonempty bounded Lipschitz family. Consequently its maximization of the retained monotone Q certificate appears well supported analytically. This does not remove conservatism of Q relative to F_A or validate the physical family.
+- At g=1 the report finds positive saving in 13/25 complete-reference, baseline-certified cells for L=0 and none for L=300/900/1800. At L=0 the t=300 decision learns the COMPLETED first-bin exposure, not the current second-bin intensity. Review the timing mechanism; do not turn this into a universal sensor delay requirement.
+- The committed summary separates into complete-reference positive-saving counts 18/25, 13/25, 10/25, 10/25 and missing-reference stress counts 5/5 at each L, respectively. The reported combined 23/30,18/30,15/30,15/30 mix these two evidential statuses. EARLIEST_INVALID establishes existence of a compatible completion, not that the unknown realized bin satisfies the assumed family; ideal cost/retention are unavailable there.
+- MAX_MEAN is reported to have no compatible resource saving in baseline-certified cases. MAX_INCREASE/d3/epsilon=0.01/L=300 is a useful independent falsification target: replay threshold about 0.3274298543911712; upper saving transition near 0.40040202412223; at g=0.35 passes P/D/I=2100/1200/900. All remain candidate results pending SR.
+- Information-only certifiability gain without a certified Precomputed cost is separate from resource saving.
+
+### Focused review concerns, not automatic rejection
+
+1. Completeness and equality semantics of the g-map: float tolerances merge/filter roots and narrow intervals at scales near 1e-12…1e-10, whereas selected roots are refined to <=1e-14. Refinement of a retained witness does not prove that all transitions, singleton endpoints or nearby admissibility changes survived construction/alignment. Check actual consequences before assigning severity.
+2. exactify_fast_result evaluates chosen actions with Decimal but does not itself reject positive certificate margins in the wrong direction or reselect among all competitors. Verify production selection/nonemptiness and boundary-side decisions through an independent path.
+3. The small-word test compares two test-local formulas; recorded boundary checks read production-exported residuals. Their independence must not be overstated. Connect an independent reset-time/exposure oracle to production Q and separately verify selected boundaries.
+4. reproduce.sh again deletes a fixed-name temporary directory and compares a regenerated gzip/base64 container. Treat these as localized engineering concerns; use an isolated TMPDIR and decoded CSV comparisons for review. A container-only mismatch is not a scientific mismatch. Do not create a separate scientific cycle for it.
+5. Preserve actual execution evidence: core generation completed before an outer harness timeout; later stages ran on the same temporary output. Do not claim an uninterrupted wrapper run.
+
+One Scientific Reviewer task, GOES-REAL-TEMPORAL-REVIEW-01, now governs the next action. It reviews the new envelope, causal replanning, applicability and numerical/resource boundary claims. It does not reopen Stage A physics, the raw GOES audit or closed prior-art searches. No extra PI input is needed to begin this review.
+
+GOES is only an environmental reference and hypothetical external-channel signal. No target-spacecraft delivery architecture, spatial equivalence, measured latency, physical B_d/g bound or net information benefit is established. No estimator/new quantitative extension or permanent HYP/RES is authorized before review disposition.
 
 ## Continuing canonical research state
 
