@@ -1,0 +1,10 @@
+PASS input-only window selection and frozen-selection identity
+PASS no-future delivery and fallback/missing masking
+PASS nonempty-model and attainable upper envelope
+PASS independent sequential exposure/no-free-reset check
+PASS same-history/hidden-future invariance
+PASS recursive continuation preservation and resource identities
+PASS interval-verified reported certificate boundaries
+PASS limiting g=1/no-current-observation contract
+PASS missing-window Ideal NA semantics
+ALL 8 FOCUSED TEST GROUPS PASS

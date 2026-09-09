@@ -1,0 +1,93 @@
+{
+  "task_id": "RE-GOES-REAL-TEMPORAL-01",
+  "starting_commit": "2135cac502bb39054d888d2f468283de5fe802f0",
+  "controlling_spec": "docs/research_gates/GOES-REAL-TEMPORAL-PREEXECUTION-01.md",
+  "input": {
+    "rate_csv": "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv",
+    "rate_sha256": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d",
+    "rate_git_blob_sha": "5de108c6759bcf720073b3fbc6581389d46e63aa",
+    "rows": 16992,
+    "paired_valid": 16971,
+    "fallback_gzip": "experiments/RE-GOES-CAUSAL-INPUT-CONTRACT-01/fallback_rows.csv.gz",
+    "fallback_git_blob_sha": "a78c8a2ff51c0213b5cd85c3ecd50f448ed0332f",
+    "fallback_gzip_sha256": "c7e860ac62106078a5039f7abf372829d9b6ebcbbac1065e300fae01065675de",
+    "fallback_decompressed_sha256": "c0c63b632ee6cf3aabcd4f6c2c9aca592d79ea69b54db678af8460c9d1e5004f"
+  },
+  "memory": {
+    "N_bits": 16777216,
+    "N_words": 524288,
+    "data_bits_per_word": 32
+  },
+  "restoration": {
+    "U_s": [
+      "0.2",
+      "0.5",
+      "1",
+      "2",
+      "5",
+      "10",
+      "20",
+      "30",
+      "60",
+      "100",
+      "150",
+      "300"
+    ],
+    "full_pass_duration_s": "0.18874368",
+    "reads_per_pass": 2097152,
+    "writes_per_pass": 2097152
+  },
+  "experiment": {
+    "shielding": {
+      "d1": {
+        "column": "d1_lambda_central_s-1",
+        "B_s-1": "58.709784"
+      },
+      "d3": {
+        "column": "d3_lambda_central_s-1",
+        "B_s-1": "6.1249308"
+      },
+      "d5": {
+        "column": "d5_lambda_central_s-1",
+        "B_s-1": "1.5358618"
+      }
+    },
+    "rho": "0",
+    "epsilon": [
+      "1e-8",
+      "1e-7",
+      "1e-6",
+      "1e-5",
+      "1e-4",
+      "1e-3",
+      "1e-2",
+      "1e-1"
+    ],
+    "L_s": [
+      0,
+      300,
+      900,
+      1800
+    ],
+    "window_s": 600,
+    "bin_s": 300,
+    "decisions_s": [
+      0,
+      300
+    ],
+    "history_s": 3600,
+    "window_anchor_utc": "2026-01-01T00:00:00+00:00",
+    "selection_labels": [
+      "LOWER_MEDIAN",
+      "MAX_MEAN",
+      "MAX_INCREASE",
+      "MAX_DECREASE",
+      "MAX_FALLBACK",
+      "EARLIEST_INVALID"
+    ]
+  },
+  "numerics": {
+    "root_bracket_target": "1e-14",
+    "decimal_precision": 60
+  }
+}

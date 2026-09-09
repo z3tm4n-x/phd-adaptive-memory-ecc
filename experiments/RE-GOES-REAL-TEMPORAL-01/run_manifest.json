@@ -1,0 +1,64 @@
+{
+  "task_id": "RE-GOES-REAL-TEMPORAL-01",
+  "starting_commit": "2135cac502bb39054d888d2f468283de5fe802f0",
+  "delivery_branch": "research/goes-real-temporal-01",
+  "scientific_review_status": "NOT ASSIGNED; one Scientific Review required by handoff",
+  "frozen_precontrol_files_already_committed": [
+    "selected_windows.csv",
+    "selection_manifest.json"
+  ],
+  "transient_full_map_rows": {
+    "policy_regions.csv": 14667,
+    "decision_boundaries.csv": 13947,
+    "resource_comparison.csv": 20341
+  },
+  "transient_full_maps_sha256": {
+    "policy_regions.csv": "0ff76754d78f785bb3fd1b7a6d3e0cfbaca9ff637a38982d12261620b0f3a37d",
+    "decision_boundaries.csv": "f2306b6478a85800159211da586d8a5df36a70c62d4f78b4506dd65904f9b083",
+    "resource_comparison.csv": "c7e449f7ceb3c51fff94e87f24041d9d3d4129becc6bd1bba4dae095bc1aea28"
+  },
+  "transient_intermediate_sha256": {
+    "envelope_segments.csv": "a0c2ab29d6aa5caeee6ae794f0b4d5919f467f3203c80f3fcfcb439178bdde36",
+    "information_timeline.csv": "59bc2f27639b1e1bd40e6f7c87d4ee291b7f2768b61e5a2ceb0562527675f076",
+    "input_context.csv": "49090128d92eef6fc156e77e17ebe1b10054b0eda0f2c0aa3f5ce1a71707655f"
+  },
+  "interval_verified_certificate_selection_boundaries": 12857,
+  "focused_tests": "ALL 8 FOCUSED TEST GROUPS PASS",
+  "delivery_reproduction_execution": {
+    "core_generation": "PASS: 14667 policy regions; 13947 decision boundaries",
+    "resource_generation": "PASS: 20341 resource regions",
+    "focused_tests": "PASS: ALL 8 FOCUSED TEST GROUPS PASS",
+    "transient_hash_comparison": "PASS",
+    "compact_byte_comparison": "PASS",
+    "single_wrapper_observation": "outer harness timeout after completed core generation; remaining stages executed on same temporary output"
+  },
+  "packaged_solver": {
+    "loader_sha256": "c4731d06872f1c8ac03378b489808d787dc90ec8db6ca5330d7a2200dd85bfcc",
+    "encoded_core_sha256": "59998f06b00b66dc5b4dc714627237e54eb0f69c21f20e6d4fd18db6ec36c8d3",
+    "decoded_core_sha256": "6ffb2bbedd971b01201109aab94c3616a7ec6b39e3bc8549864d42716fcb2d79",
+    "verification": "PASS: decoded bytes equal audited core; loader reproduces byte-identical focused-test output on completed transient maps"
+  },
+  "packaged_focused_tests": {
+    "loader_sha256": "31268e6fb2b51537173373aa171224274b8de7718c88bddb5bb6c7643ce9f752",
+    "encoded_core_sha256": "dc6ec4bc5927c3cc8311424202b3ef430da9e114705a82bbbbdef8b4ae51409f",
+    "decoded_core_sha256": "af9580c5f81be153f547b4891af59fb46745398c8301c507e9a26b7303357a9a",
+    "verification": "PASS: decoded bytes equal audited focused-test source"
+  },
+  "compact_release_sha256": {
+    "applicability_resource_summary.csv.gz.b64": "b5fe83d531e9419b8d9ab28158102e3594b7d6992762528e1bdb27684704f11b",
+    "baseline_actions.csv": "97a9f1110f68725d2821c7e1db87f5e616bb03df682fe024bf55025d96c6e78a",
+    "config.json": "bf604ff976cc2a6bd2108124f769b2fc625feae5519637bef15acedd81b1d01c",
+    "derivation.md": "697681cd8c1a84d1b699952a535d42579aafb835d205df3f4ea0b4c4cf5daff1",
+    "g1_endpoint_summary.csv": "80dfdbef48e883a498c77f9c4f7ff1f347f7ea88daa701fea4bd4e80216a8c05",
+    "model_compatibility.csv": "2fe5c9d95bea721373406c1144d7fb0f1869b7cb2eb5caea51201dd4aa460619",
+    "reproduce.sh": "ba78f980714873d1f56c07d33c9f52a2fe16540bd13c0ae601b4b6979d75eb85",
+    "resource_map.py": "74590c270a788607f92e5a4a6fc880b205ee90101ce0a2fd8310b8ea8c022d66",
+    "selection_recomputed.csv": "01f78e81293310746fd8db28169b8f54f9296661eaaa4a2a005a4b18e5d44799",
+    "summarize_results.py": "710d637bf36328aa5986d2144b2574c470eed4e832bcfb2795ae1854a3a80bc5",
+    "test_output.txt": "79e1dee3a7c0975ff3a8e7ee46dac0b8a2354c263aa75644547d38d645b7c547"
+  },
+  "runtime_reference": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  }
+}
