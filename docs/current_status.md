@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. The only proposed next task is internal corrected-count adaptive control with whole-horizon risk; it awaits PI agreement and has not been executed.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. The accepted contract/handoff is recorded; no execution result is claimed by this Orchestrator update.
 
 ## Completed gate and accepted scope
 
@@ -71,19 +71,21 @@ PI explicitly ACCEPTED DRAFT-RES-002 in its presented validity domain. [RES-002]
 
 This closes the result's normal maintenance. Reopen only for a material error or contradiction, not incremental defensive wording. Registration records a result; it does not prove dissertation novelty or complete RQ-007.
 
-### Proposed next action — solve endogenous corrected-count control
+### Active task — endogenous corrected-count control
 
 The PI changed the scientific priority: select tasks by the substantial capability they add, and distinguish own contribution, necessary auxiliary results and correctness/reproduction work. These are not interchangeable measures of scientific progress.
 
-Orchestrator recommends one [bounded method-building task](research_gates/INTERNAL-COUNT-CONTROL-PROPOSAL-01.md), **NOT AUTHORIZED FOR EXECUTION**: adaptive period selection from the scrubber's corrected-single count with a joint observation/state/risk update and a whole-horizon DEC-001 constraint through repeated decisions.
+PI accepts one [bounded method-building task and executable RE handoff](research_gates/INTERNAL-COUNT-CONTROL-PROPOSAL-01.md), **AUTHORIZED FOR LOCAL RE EXECUTION**: adaptive period selection from the scrubber's corrected-single count with a joint observation/state/risk update and a whole-horizon DEC-001 constraint through repeated decisions.
 
 The closest operational analogue is PA-DOM-01-B (Krasnikov/Lushnikov/Meshchanov et al., extended 2018 text), already controlled in accepted PA-DOM synthesis at 4f96bb95189f0d385ea2077aa7b05d81ef8edf0d. This source is on another branch and is accessed by its controlled commit; no literature re-extraction or silent branch merge is requested. Its count-to-period feedback is known, not our novelty. The proposed difference is the proved risk consequence of policy-dependent noisy observation and carried memory/risk state under matched information.
 
-The initial closed model uses known rho=0, sequential SEC/R2-U, a declared hidden two-level Markov environment, completed-pass counters, repeated decisions and one 3600-s horizon. This is a proposed model task, not physical calibration. Compare with a traceably adapted PA-DOM-01-B law, optimized Fixed and optimized finite-class Precomputed under the same information/risk/resource semantics. No algorithm is declared novel or successful in advance.
+The initial closed model uses known rho=0, sequential SEC/R2-U, a declared hidden two-level Markov environment, completed-pass counters, repeated decisions and one 3600-s horizon. This is the accepted model task, not physical calibration. Compare with a traceably adapted PA-DOM-01-B law, optimized Fixed and optimized finite-class Precomputed under the same information/risk/resource semantics. No algorithm is declared novel or successful in advance.
 
-The central obstacle is an action-dependent observation operator and global risk guarantee. It must be solved or the intended claim changed/abandoned explicitly. Further g/L sweeps, GOES-window selection and g calibration are deferred, not prerequisites for this chosen model contribution. Angular transport, proprietary W and a flight-ready system remain outside this task. No new broad search, estimator implementation, experiment or HYP has started.
+The central obstacle is an action-dependent observation operator and global risk guarantee. It must be solved or the intended claim changed/abandoned explicitly. Further g/L sweeps, GOES-window selection and g calibration are deferred, not prerequisites for this chosen model contribution. Angular transport, proprietary W and a flight-ready system remain outside this task. No broader search or new HYP is authorized. Method construction and the bounded calculations in the accepted task are authorized; this update does not claim that RE has executed them.
 
-The next PI decision concerns this one proposed task. A full method result, a substantive bound on attainable benefit, or a clear rejection of the proposed method target is required; another uncontrolled cycle of small maps is not the completion criterion.
+No further general PI preparation cycle is required. Research Engineer starts with numerical feasibility before a large optimizer; failure of a sufficient certificate is not impossibility. Equal information means the same channel and model knowledge, with each controller receiving counters induced by its own actions. The probability constraint covers the whole horizon under the declared joint stochastic model; it is not a guarantee for each environment path.
+
+The small exact model is the independent reference. Completion requires a working observation-to-action transition, a verifiable whole-risk argument and a computational method at the chosen memory scale, including state size, approximation control and update time. The same mechanism without counters is a mandatory comparison to isolate information from schedule flexibility. Negative cases remain recorded without consuming the main search unless informative. A full method result, a substantive negative bound or a concrete failure of the method target is required; another wording package is not the output.
 
 ## Continuing canonical research state
 
@@ -91,7 +93,7 @@ The next PI decision concerns this one proposed task. A full method result, a su
 - RQ-001 remains PARTIALLY ANSWERED / OPEN DEPENDENCIES. E_cap is not automatically DUE/SDC/miscorrection/system failure. Numerical H_req and epsilon_req remain TBD.
 - RQ-002 and RQ-006 remain open for physically justified error/mapping/representation domains.
 - RQ-003 retains ECC/decoder/reset responsibility; the current SEC data-only slice does not close it.
-- RQ-004 is the active next external-observation interface. RQ-005 owns componentwise costs. RQ-007 integrates these without absorbing them.
+- RQ-004 now supplies the internal corrected-count observation interface for the active task. RQ-005 owns componentwise costs. RQ-007 integrates these without absorbing them.
 - EXP-001 remains complete/promoted only within PI-approved [RES-001](../results/RES-001-exp001-four-word-identified-set.md), with all fourteen applicability conditions. RES-002 is separately registered by the present PI-authorized promotion.
 - PA-DOM-01…04 bounded closure is complete under its accepted stop rule. PA-DOM-01-B and Chen remain obligatory control prior art; generic corrected-count/rate-to-period adaptation is not claimed as novelty.
 - The accepted normative baseline retains its controlled-edition/PMI/interface limitations. No normative deficiency is inferred.
