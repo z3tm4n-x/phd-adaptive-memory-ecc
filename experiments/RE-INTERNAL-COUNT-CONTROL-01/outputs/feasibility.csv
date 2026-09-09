@@ -1,0 +1,10 @@
+dwell,epsilon,adaptive_feasibility,minimum_period_lower,minimum_period_upper,reason
+30,0.001,UNRESOLVED_NOT_INFEASIBILITY,0.012295236607004278,0.01244931032382134,all Fixed fail lower bound; general adaptive class not ruled out
+30,0.01,UNRESOLVED_NOT_INFEASIBILITY,0.012295236607004278,0.01244931032382134,all Fixed fail lower bound; general adaptive class not ruled out
+30,0.1,CONFIRMED_BY_FIXED,0.012295236607004278,0.01244931032382134,nonempty sufficient set
+300,0.001,UNRESOLVED_NOT_INFEASIBILITY,0.012319791071501175,0.012474172484520466,all Fixed fail lower bound; general adaptive class not ruled out
+300,0.01,UNRESOLVED_NOT_INFEASIBILITY,0.012319791071501175,0.012474172484520466,all Fixed fail lower bound; general adaptive class not ruled out
+300,0.1,CONFIRMED_BY_FIXED,0.012319791071501175,0.012474172484520466,nonempty sufficient set
+3000,0.001,UNRESOLVED_NOT_INFEASIBILITY,0.012322254626597987,0.012476666910848349,all Fixed fail lower bound; general adaptive class not ruled out
+3000,0.01,UNRESOLVED_NOT_INFEASIBILITY,0.012322254626597987,0.012476666910848349,all Fixed fail lower bound; general adaptive class not ruled out
+3000,0.1,CONFIRMED_BY_FIXED,0.012322254626597987,0.012476666910848349,nonempty sufficient set

@@ -1,0 +1,23 @@
+{
+  "task": "RE-INTERNAL-COUNT-CONTROL-01",
+  "implementation_commit": "ec8f95b24733d854c9e343f5077f313ee886e178",
+  "command": "OPENBLAS_NUM_THREADS=1 python -u reproduce.py --retune --full",
+  "completed": true,
+  "source_tree_verified": "aeed0b306b8cf1ef10f7ba4df8d4055f001fd8c5",
+  "engineering_checks": 19,
+  "engineering_checks_passed": 19,
+  "comparison_rows": 15,
+  "paired_comparison_rows": 12,
+  "repeat_comparison_rows_exact_match": true,
+  "repeat_paired_rows_exact_match": true,
+  "repeat_selected_analogue_json_exact_match": true,
+  "full_array_trials_per_dwell": 20000,
+  "dwell_cases": 3,
+  "policies_per_trial": 5,
+  "small_independent_event_trials": 100000,
+  "timings_are_remeasurement_not_byte_identity_targets": true,
+  "pilot_screen_cache_reused": true,
+  "pilot_cache_note": "Previously executed pilot screens were reused by the second full command; 2000-trial refinements and all final validation trials were rerun. Fresh-checkout retune rebuilds screens.",
+  "scientific_review_disposition": "NOT_ASSIGNED",
+  "delivery_text_serialization": "UTF-8 LF with terminal newline; selected_analogue JSON whitespace compacted; numerical values unchanged"
+}
