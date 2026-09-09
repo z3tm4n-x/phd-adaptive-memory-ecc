@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal Scientific Review 01 is accepted with REVISE for the full numerical map. Supported analytical/point results are retained; a bounded numerical repair and focused re-review are the active gate.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal Scientific Review 01 remains REVISE for the full numerical map. Numerical repair 65d640d is inspected and accepted for limited Scientific Reviewer re-review, not as scientific PASS. Supported analytical/point results are retained.
 
 ## Completed gate and accepted scope
 
@@ -35,7 +35,7 @@ Orchestrator accepts [RE-GOES-CAUSAL-INPUT-CONTRACT-01](../experiments/RE-GOES-C
 - Frozen values remain a retrospective reference. The source does not establish instantaneous intensity, within-bin maxima, future-rate bounds or historical operational delivery.
 - No further raw input or repeated audit is required now. Operational publication/version evidence is required only before an operational-channel claim.
 
-## Active gate — GOES real-temporal numerical-map repair
+## Active gate — limited re-review of the numerical-map repair
 
 **Orchestrator disposition: SR REVISE ACCEPTED. One MAJOR; no CRITICAL.**
 [Scientific Review 01](scientific_reviews/GOES_REAL_TEMPORAL_REVIEW_01.md):
@@ -72,11 +72,33 @@ Preserve windows, frozen inputs, rho=0, SEC/R2-U, B_d, g domain, L, epsilon, U, 
 
 The complete-reference counts before repair are 18/25,13/25,10/25,10/25 for the four L values; missing-reference stress is separately 5/5 each. Only existence of a compatible completion is established for EARLIEST_INVALID, not membership of its unknown actual bin.
 
-### Completion and next gate
+### Repair received — Orchestrator inspection disposition
 
-RE returns a repair commit and focused verification; it does not assign SR PASS. Orchestrator then issues minimum Scientific Reviewer re-review of MAJOR-01 closure, numerical-map coverage/serialization and local MINOR disposition, not another broad scientific review. PASS or PASS_WITH_MINOR without blocking findings is required before full-map acceptance/promotion consideration.
+Repair: **65d640d7c988d83b97daa839e35a3abb358b3c7d**, branch research/goes-real-temporal-numerical-repair-01, directly above the authorized base 77f299bdc3f5abaac36e5d8ef79359f557e56065. Changes are confined to experiments/RE-GOES-REAL-TEMPORAL-01/. The scientific config, original solver semantics, frozen inputs and pre-control selected windows are unchanged; changed config fields concern repair identity and numerical precision/execution.
 
-No additional PI choice or raw data is required for this repair. No new experiment, estimator, channel implementation, radiation/transport rerun, old Stage A production matrix or broad literature search is authorized.
+**Disposition: ACCEPT FOR LIMITED SCIENTIFIC RE-REVIEW.** This is static Orchestrator inspection of the diff, decoded repair/test source, report, verification record and reproduction wrapper, not an independent regeneration or SR PASS. MAJOR-01 closure remains subject to the focused review.
+
+The implementation now builds action thresholds from piecewise quadratic Q, checks the selected action certificate, separates root/threshold enclosures from resolved cells, exports rational model/replay thresholds and retains boundary bands in resource alignment. The new expected-value test path builds reset timestamps and enumerates competitors without production Q/selection helpers. It still shares pinned inputs and model semantics; representative checks do not alone establish partition completeness.
+
+RE reports 14,781 resolved policy regions, 12,869 certificate/selection brackets, 1,192 model/replay threshold enclosures and 2,632 endpoint/model-threshold point records. Certificate-root equality metadata are separately carried in decision_boundaries.csv. Zero unresolved ordering clusters must not be interpreted as exact action certification inside all boundary enclosures: 22,880 aligned BOUNDARY-ENCLOSURE rows intentionally carry no saving/retention claim.
+
+The required 90-pass result and unchanged headline findings are reported by RE; previously independently supported scope remains as recorded above. Full repaired-map acceptance awaits SR. The local wrapper changes (fresh temporary directory, decoded scientific CSV comparisons), missing-reference stress labels and clearer independence descriptions are suitable for a short MINOR closeout check in the same review, not a separate cycle.
+
+### Authorized next handoff
+
+Task: **SR-GOES-REAL-TEMPORAL-REVIEW-02**.
+Read Review 01, the accepted preexecution contract, repair report/appendix, changed numerical and test implementation, regenerated maps and resource summaries. Review only the repair delta and its downstream consequences.
+
+- Verify completeness/order of retained thresholds and constancy of selection over resolved intervals, including omitted non-selected roots. A midpoint match is insufficient without the piecewise/monotonic argument.
+- Query all seven SR witnesses against the repaired exported map and compare with independent all-competitor selection. The RE witness test computes independent expected choices; explicitly connect those choices to map lookup.
+- Independently check signs at serialized endpoints, rational compatibility thresholds, certificate equality ownership and domain endpoints. Distinguish exact roots from rounded displays/enclosure endpoints.
+- Verify boundary bands survive policy/resource alignment, no action or saving is silently certified there, and exclusion of those bands is consistent with summary claims. Test exact-query behavior or state its limits; do not require invented precision.
+- Confirm local MINOR closure and affected headline/summary invariance, separating factual complete-reference replay from compatible-completion stress.
+- Reuse Review 01's accepted physics, envelope and exposure derivation. Regenerate the current package at most once if needed to materialize its uncommitted maps, reuse that output for focused checks, and do not rerun upstream processing or old experiments.
+
+Reviewer delivery is one new report at docs/scientific_reviews/GOES_REAL_TEMPORAL_REVIEW_02.md, with explicit MAJOR-01 and MINOR-01..03 disposition, supported map domain, execution disclosure and PASS / PASS_WITH_MINOR / REVISE / REJECT. Do not modify experiment files, main, accepted research objects or create HYP/RES. The reviewer determines scientific PASS independently.
+
+PASS or PASS_WITH_MINOR without a blocking finding permits Orchestrator full-map acceptance only within the documented resolved-domain/equality/enclosure semantics, followed by bounded result synthesis for PI. It does not automatically promote a permanent result or authorize a new experiment. No additional PI choice or raw data is required for this re-review.
 
 GOES remains only a chronological environmental reference and signal content for a hypothetical external-information comparator. All accepted physical, temporal, resource and transfer limitations remain controlling.
 
