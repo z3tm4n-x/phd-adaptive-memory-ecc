@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Scientific Review 82117f8b2bea9d92ffcd807e3671ab3dd13e96db is accepted: PASS_WITH_MINOR, no blocking finding. RE-INTERNAL-COUNT-CONTROL-01 is scientifically accepted within the review domain and RES_ELIGIBLE, not PROMOTED. The arithmetic-disclosure MINOR is locally closed in the bounded result proposal; no code/output change or new computation. DRAFT-RES-003 awaits PI approval.
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Scientific Review 82117f8b2bea9d92ffcd807e3671ab3dd13e96db is accepted: PASS_WITH_MINOR, no blocking finding. PI has accepted RES-003, now ACCEPTED / PERMANENT; RE-INTERNAL-COUNT-CONTROL-01 is PROMOTED only within that result. The arithmetic-disclosure MINOR remains closed without code/output changes. Publication preparation is a separate stream; the primary research proposal concerns one unknown environmental parameter, dwell time D.
 
 ## Completed gate and accepted scope
 
@@ -73,7 +73,7 @@ This closes the result's normal maintenance. Reopen only for a material error or
 
 ### Completed scientific gate — internal-count adaptive control
 
-**Orchestrator: ACCEPT within Review §10; promotion RES_ELIGIBLE.**
+**Orchestrator: ACCEPT within Review §10; PI promotion PROMOTED only within RES-003.**
 [Scientific Review](scientific_reviews/INTERNAL_COUNT_CONTROL_REVIEW_01.md)
 at 82117f8b2bea9d92ffcd807e3671ab3dd13e96db returns PASS_WITH_MINOR;
 no CRITICAL/MAJOR. Reviewed delivery fb6415444d028526dfc41118b52688ffb83c03dd,
@@ -108,21 +108,49 @@ checks, recorded statistics and trace verification remain distinguished from
 engineering production and warmed timing measurements. No compiler/WCET or
 hardware certification is added by acceptance.
 
-### Current PI gate — DRAFT-RES-003
+### Permanent result — RES-003 and separate publication stream
 
-[Proposed bounded method result](result_proposals/DRAFT-RES-003-internal-count-control.md)
-is ready for PI ACCEPT / REVISE / REJECT. No permanent RES-003 is registered
-and results/README is unchanged. This proposal preserves the full reviewed
-model, probabilistic semantics, numerical conditions and conditional-resource
-interpretation. The scientific significance is the closed method and its
-substantive comparison, not review/test counts.
+PI accepts the reviewed [RES-003](../results/RES-003-internal-count-control.md).
+The approved central statement, validity conditions and comparisons are preserved.
+The draft at fa2607b012825cadaf23b0cc2103a78ee36ec65b remains historical provenance.
+No new review, computation or retrospective HYP was introduced. Registration
+does not establish literature-level novelty or complete RQ-007.
 
-After approval, the next output should consolidate the method/proof/comparison
-into a publication argument; no additional parameter map or physical
-identification is prerequisite. Novelty remains a separate, targeted
-comparison against concrete method claims. No new experiment or broad search
-is launched by this disposition. RES-001/002 remain unchanged and their routine
-maintenance closed.
+[WP-INTERNAL-COUNT-METHOD-01 and dissertation block placement](publication_plans/RES-003-PUBLICATION-HANDOFF.md)
+transfer the whole known-model method into a separate writing stream. Writer is
+not claimed to have started. The primary research stream does not switch to
+manuscript production. Four intended publication-sized questions are event-data
+risk inference, known-model control, unknown-model control, and architecture/net
+resource consequences. They are not four concurrent tasks or a division of one
+proof into papers. RES-001/002 support the shared chain; result IDs are not a
+publication count.
+
+### Proposed next primary research task — unknown dwell time
+
+[RE-INTERNAL-COUNT-UNKNOWN-D-01](research_gates/INTERNAL-COUNT-UNKNOWN-D-PROPOSAL-01.md)
+is prepared for PI approval; **NOT EXECUTED / NOT AUTHORIZED FOR EXECUTION**.
+One substantial uncertainty: D is fixed but unknown in [30,3000] s. Known
+levels, symmetric two-state law, rho=0, own-count channel, 3600-s horizon and
+SEC/R2-U architecture remain fixed. The primary epsilon is 0.1.
+
+Target: a computational method with F_A^pi(D)<=0.1 for every allowed D,
+including a justified treatment of learning D from endogenous counts and its
+contribution to decisions/resources. No invented prior-average guarantee and no
+per-path guarantee. A safe set update needs whole-history error control and
+connection to the auxiliary/physical coupling; a single MAP substitution is
+insufficient. The continuum cannot be certified by testing only grid points.
+
+Mandatory comparison freezes the admissible D-set while retaining count updates
+for current state, to distinguish parameter-information effects from already
+accepted count effects. Robust Fixed/Precomputed, the known-D diagnostic and
+one uniformly configured PA-DOM adaptation complete the proposed comparison.
+No levels/asymmetry/drifting parameters/GOES/W work is opened.
+
+The experimental-event line remains the physical-input component; the future
+architectural block must assess preservation of risk and resource benefit
+under implementation costs/precision/latency. Neither is launched by this
+proposal. Only this one proposed research task is presented for the next
+execution decision.
 
 ## Continuing canonical research state
 
