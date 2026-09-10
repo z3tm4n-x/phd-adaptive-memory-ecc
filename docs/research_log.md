@@ -513,3 +513,13 @@
 - PA-DOM-01…03 source control remains unchanged. No new Paper Card, full-text
   analysis, source search or permanent research identifier is authorized by
   this correction.
+
+## 2026-09-10
+
+### RE-REPOSITORY-CONSOLIDATION-01 — техническая интеграция принятого состояния
+
+- PI передал постоянному Research Engineer handoff и selection Orchestrator на commit 72125a48fc6342884c6839d67b8d0d8c226f13ef. Интеграционный PR и обычное merge-слияние в main после проверок разрешены явно.
+- История main 83d4db20ce43ff238d58551610f487e7cf3c2c6e и выбранного снимка 6deaff07f8e8474b5a39d614e3bf55318bd145c6 сохраняется. Пять указанных зависимостей импортируются исходными Git blobs по прежним путям, без слияния веток-доноров.
+- Оперативная навигация синхронизируется с RES-001…004 и закрытым локальным инженерным этапом; Research Specification получает v1.0 как рабочий контракт. Карточки результатов, исходные пакеты, манифесты, первичные NPZ, рецензии и авторство не изменяются.
+- [Карта источников и истории](research_map.md) отделяет прежние сводки и ограничения от текущих поручений. Следующий предметный вопрос — [Issue №12](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12), BACKLOG без назначения расчётов; публикация RES-003 продолжается независимо.
+- Собственная квитанция RE с проверками Git-объектов, ссылкой на merged PR и точным итоговым main SHA публикуется в обсуждении интеграционного PR. Новые научные расчёты, общий SR, refactoring, новые RES и изменение областей принятия не входят в консолидацию. Старые записи выше являются историей, а не действующими ACTIVE/NOT EXECUTED.
