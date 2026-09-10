@@ -1,7 +1,7 @@
 # Current Status
 
-**Updated:** 2026-09-09  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Scientific Review 82117f8b2bea9d92ffcd807e3671ab3dd13e96db is accepted: PASS_WITH_MINOR, no blocking finding. PI has accepted RES-003, now ACCEPTED / PERMANENT; RE-INTERNAL-COUNT-CONTROL-01 is PROMOTED only within that result. The arithmetic-disclosure MINOR remains closed without code/output changes. Publication preparation is a separate stream; the primary research proposal concerns one unknown environmental parameter, dwell time D.
+**Updated:** 2026-09-10  
+**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Scientific Review 82117f8b2bea9d92ffcd807e3671ab3dd13e96db is accepted: PASS_WITH_MINOR, no blocking finding. PI has accepted RES-003, now ACCEPTED / PERMANENT; RE-INTERNAL-COUNT-CONTROL-01 is PROMOTED only within that result. The arithmetic-disclosure MINOR remains closed without code/output changes. Publication preparation is a separate stream; PI has accepted RE-INTERNAL-COUNT-UNKNOWN-D-01 and authorized execution with one unknown environmental parameter, dwell time D.
 
 ## Completed gate and accepted scope
 
@@ -125,10 +125,11 @@ resource consequences. They are not four concurrent tasks or a division of one
 proof into papers. RES-001/002 support the shared chain; result IDs are not a
 publication count.
 
-### Proposed next primary research task — unknown dwell time
+### Active authorized research task — unknown dwell time
 
 [RE-INTERNAL-COUNT-UNKNOWN-D-01](research_gates/INTERNAL-COUNT-UNKNOWN-D-PROPOSAL-01.md)
-is prepared for PI approval; **NOT EXECUTED / NOT AUTHORIZED FOR EXECUTION**.
+is **PI ACCEPTED / EXECUTION AUTHORIZED**. Research Engineer handoff is ready;
+this Orchestrator update does not claim that numerical execution has already begun.
 One substantial uncertainty: D is fixed but unknown in [30,3000] s. Known
 levels, symmetric two-state law, rho=0, own-count channel, 3600-s horizon and
 SEC/R2-U architecture remain fixed. The primary epsilon is 0.1.
@@ -143,14 +144,22 @@ insufficient. The continuum cannot be certified by testing only grid points.
 Mandatory comparison freezes the admissible D-set while retaining count updates
 for current state, to distinguish parameter-information effects from already
 accepted count effects. Robust Fixed/Precomputed, the known-D diagnostic and
-one uniformly configured PA-DOM adaptation complete the proposed comparison.
+one uniformly configured PA-DOM adaptation complete the accepted comparison.
 No levels/asymmetry/drifting parameters/GOES/W work is opened.
 
 The experimental-event line remains the physical-input component; the future
 architectural block must assess preservation of risk and resource benefit
 under implementation costs/precision/latency. Neither is launched by this
-proposal. Only this one proposed research task is presented for the next
-execution decision.
+acceptance. Only RE-INTERNAL-COUNT-UNKNOWN-D-01 is authorized for the main
+research execution. Publication preparation of RES-003 remains separate.
+
+PI's controlling success criterion is the link from admissible D-set refinement
+to selected periods and costs under the whole-horizon risk constraint, not
+parameter precision alone. Preserve the frozen-D-set comparator with functioning
+current-state filtering. Explain zero additional benefit through evidence about
+information insufficiency, action insensitivity or conservatism of the concrete
+method; do not infer universal impossibility. No new unknown parameters, drift,
+physical lines or optimal active observation planning are added.
 
 ## Continuing canonical research state
 
