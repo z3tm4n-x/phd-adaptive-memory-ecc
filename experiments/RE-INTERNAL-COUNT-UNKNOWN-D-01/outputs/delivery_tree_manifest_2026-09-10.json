@@ -2,8 +2,8 @@
   "schema_version": 1,
   "task": "RE-INTERNAL-COUNT-UNKNOWN-D-01",
   "artifact_type": "NORMALIZED_DELIVERY_TREE_INVENTORY_NOT_HISTORICAL_EXECUTION_MANIFEST",
-  "generated_at_utc": "2026-09-10T07:10:52.288516+00:00",
-  "parent_commit": "7ffc75bb2c4499f221aae54102c2ff5770d524f0",
+  "generated_at_utc": "2026-09-10T10:29:26.763271+00:00",
+  "parent_commit": "f1b1418b5f75630433af9c8d0e5586f328532a15",
   "input_archive": {
     "name": "RE-INTERNAL-COUNT-UNKNOWN-D-01.zip",
     "size_bytes": 9082382,
@@ -13,7 +13,7 @@
   "path_semantics": "Relative to experiment root. All 53 archive files are byte-identical.",
   "self_exclusion": "outputs/delivery_tree_manifest_2026-09-10.json",
   "self_identity": "The enclosing Git tree/commit identifies this manifest; no recursive self-hash is asserted.",
-  "file_count_excluding_self": 65,
+  "file_count_excluding_self": 66,
   "original_files_preserved": 53,
   "files": [
     {
@@ -32,9 +32,9 @@
     },
     {
       "path": "DELIVERY_REPORT.md",
-      "size_bytes": 9177,
-      "sha256": "b75d5285cc24e647a1570b52975750e5d6337d795a9e30df5d520c09d5604af7",
-      "git_blob_sha1": "ad58b6a0d7118485b8e630042171dd72d019fed9",
+      "size_bytes": 10101,
+      "sha256": "82f5731a4fc07e54879d358bcc9357ef556a329d1f304b4dfcd60c5354d1b123",
+      "git_blob_sha1": "2bb1b9190e777667f0245a3b1201297f98735e8b",
       "origin": "delivery_documentation_or_audit"
     },
     {
@@ -43,6 +43,13 @@
       "sha256": "c383677b483b85d9649557a2fa59e293a2a80afb3222363b794520b3a3552f90",
       "git_blob_sha1": "ebf41df7f89a4eea3589106fd62a15bc4a97f626",
       "origin": "input_archive_unchanged"
+    },
+    {
+      "path": "ORCHESTRATOR_SR_DISPOSITION.md",
+      "size_bytes": 9299,
+      "sha256": "f75a1a9f678e051299f4bf23412ff36eee60c200d029a3124c8dd0292e187a86",
+      "git_blob_sha1": "552c099a340bb8323129b9af38f6c4bedf6bae1d",
+      "origin": "orchestrator_review_closeout"
     },
     {
       "path": "README.md",
@@ -471,5 +478,6 @@
       "git_blob_sha1": "8d68b6221c60d996074221959508a25d7e70e89a",
       "origin": "input_archive_unchanged"
     }
-  ]
+  ],
+  "update_reason": "SR disposition and MINOR-01 textual correction; original 53 archive files remain unchanged."
 }
