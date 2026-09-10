@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="445" viewBox="0 0 1100 445">
+<title>Последовательная проверка слов и остаточные поступления</title>
+<desc>Слово j проверяется раньше конца прохода. Инверсия до проверки попадает в счётчик, инверсия после проверки остаётся до следующего прохода. Рисунок схематический, не траектория расчёта.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z"/></marker></defs>
+<g font-family="Times New Roman, Liberation Serif, serif" font-size="25" fill="black">
+<text x="310" y="39" text-anchor="middle">Ожидание</text><text x="760" y="39" text-anchor="middle">Последовательный проход</text>
+<line x1="92" y1="80" x2="1035" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="515" y="57" width="475" height="46" fill="none" stroke="black" stroke-width="2"/>
+<line x1="112" y1="63" x2="112" y2="95" stroke="black" stroke-width="2"/>
+<line x1="515" y1="50" x2="515" y2="120" stroke="black"/>
+<line x1="990" y1="50" x2="990" y2="332" stroke="black" stroke-dasharray="5 5"/>
+<text x="112" y="132" text-anchor="middle">tᵢ</text><text x="515" y="132" text-anchor="middle">tᵢ + τ − P</text><text x="990" y="132" text-anchor="middle">tᵢ + τ</text>
+<line x1="122" y1="166" x2="980" y2="166" stroke="black" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="550" y="158" text-anchor="middle">τ</text>
+<text x="82" y="233">Слово j</text><line x1="218" y1="225" x2="1020" y2="225" stroke="black" stroke-width="2"/>
+<line x1="706" y1="64" x2="706" y2="265" stroke="black" stroke-dasharray="5 5"/>
+<rect x="698" y="217" width="16" height="16"/>
+<text x="706" y="301" text-anchor="middle">Проверка слова</text><text x="706" y="333" text-anchor="middle">tᵢ + τ − P + jP/W</text>
+<text x="609" y="233" text-anchor="middle" font-size="37">×</text><text x="881" y="233" text-anchor="middle" font-size="37">×</text>
+<path d="M609 216 L609 197 L682 197" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<path d="M893 207 L958 207" fill="none" stroke="black" marker-end="url(#arrow)"/>
+<text x="432" y="376" text-anchor="middle">До проверки:</text><text x="432" y="407" text-anchor="middle">поступление учитывается в C</text>
+<text x="850" y="376" text-anchor="middle">После проверки:</text><text x="850" y="407" text-anchor="middle">поступление остаётся в K</text>
+<path d="M594 240 L531 346" fill="none" stroke="black"/>
+<path d="M882 240 L865 346" fill="none" stroke="black"/>
+</g></svg>
