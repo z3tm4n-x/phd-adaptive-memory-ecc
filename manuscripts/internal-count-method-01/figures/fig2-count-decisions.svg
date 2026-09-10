@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="535" viewBox="0 0 1080 535">
+<title>Наблюдения и решения контроллера на сохранённых фрагментах реализации</title>
+<desc>Строки исходной реализации D=300 с, seed=12345. Между показанными моментами часть строк опущена. Вероятность высокого режима относится к вспомогательному распределению.</desc>
+<g font-family="Times New Roman, Liberation Serif, serif" fill="black" font-size="25">
+<text x="90" y="35" text-anchor="middle">Момент</text>
+<text x="90" y="66" text-anchor="middle">решения, с</text>
+<text x="290" y="35" text-anchor="middle">Предыдущий</text>
+<text x="290" y="66" text-anchor="middle">период, с</text>
+<text x="490" y="35" text-anchor="middle">Число</text>
+<text x="490" y="66" text-anchor="middle">исправлений</text>
+<text x="722" y="35" text-anchor="middle">Вероятность</text>
+<text x="722" y="66" text-anchor="middle">режима H</text>
+<text x="951" y="35" text-anchor="middle">Следующий</text>
+<text x="951" y="66" text-anchor="middle">период, с</text>
+<line x1="15" y1="85" x2="1065" y2="85" stroke="black" stroke-width="1.5"/>
+<text x="90" y="135" text-anchor="middle">115</text>
+<text x="290" y="135" text-anchor="middle">1</text>
+<text x="490" y="135" text-anchor="middle">1</text>
+<text x="722" y="135" text-anchor="middle">0,9597</text>
+<text x="951" y="135" text-anchor="middle">1</text>
+<line x1="15" y1="153" x2="1065" y2="153" stroke="black" stroke-width="0.5"/>
+<text x="90" y="185" text-anchor="middle">116</text>
+<text x="290" y="185" text-anchor="middle">1</text>
+<text x="490" y="185" text-anchor="middle">0</text>
+<text x="722" y="185" text-anchor="middle">0,0500</text>
+<text x="951" y="185" text-anchor="middle">2</text>
+<line x1="15" y1="203" x2="1065" y2="203" stroke="black" stroke-width="0.5"/>
+<text x="90" y="235" text-anchor="middle">118</text>
+<text x="290" y="235" text-anchor="middle">2</text>
+<text x="490" y="235" text-anchor="middle">0</text>
+<text x="722" y="235" text-anchor="middle">0,000831</text>
+<text x="951" y="235" text-anchor="middle">10</text>
+<text x="90" y="327" text-anchor="middle">828</text>
+<text x="290" y="327" text-anchor="middle">10</text>
+<text x="490" y="327" text-anchor="middle">22</text>
+<text x="722" y="327" text-anchor="middle">0,9788</text>
+<text x="951" y="327" text-anchor="middle">1</text>
+<line x1="15" y1="345" x2="1065" y2="345" stroke="black" stroke-width="0.5"/>
+<text x="90" y="377" text-anchor="middle">829</text>
+<text x="290" y="377" text-anchor="middle">1</text>
+<text x="490" y="377" text-anchor="middle">10</text>
+<text x="722" y="377" text-anchor="middle">0,9991</text>
+<text x="951" y="377" text-anchor="middle">1</text>
+<line x1="15" y1="395" x2="1065" y2="395" stroke="black" stroke-width="0.5"/>
+<text x="90" y="427" text-anchor="middle">837</text>
+<text x="290" y="427" text-anchor="middle">1</text>
+<text x="490" y="427" text-anchor="middle">0</text>
+<text x="722" y="427" text-anchor="middle">0,5819</text>
+<text x="951" y="427" text-anchor="middle">1</text>
+<line x1="15" y1="445" x2="1065" y2="445" stroke="black" stroke-width="0.5"/>
+<text x="90" y="477" text-anchor="middle">838</text>
+<text x="290" y="477" text-anchor="middle">1</text>
+<text x="490" y="477" text-anchor="middle">0</text>
+<text x="722" y="477" text-anchor="middle">0,003859</text>
+<text x="951" y="477" text-anchor="middle">10</text>
+<text x="540" y="280" text-anchor="middle">...   пропуск строк   ...</text>
+<line x1="15" y1="495" x2="1065" y2="495" stroke="black" stroke-width="1.5"/>
+<text x="540" y="526" text-anchor="middle" font-size="22">При выборе учитываются также история наблюдений, остаток времени и запас s.</text>
+</g></svg>
