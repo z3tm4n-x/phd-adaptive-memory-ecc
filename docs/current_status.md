@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-10  
-**Orchestrator disposition:** PI has accepted the unknown constant-D result within Scientific Review c9c9dd7f9ea038a169c2bf493f32bb6e5c842323 and correction 8b865cbbbec2406a7eccd033bb3c2ff150f4c995. [RES-004](../results/RES-004-internal-count-unknown-d.md) is ACCEPTED / PERMANENT. RE-INTERNAL-COUNT-UNKNOWN-D-01 is COMPLETED / PROMOTED only within RES-004. RES-001…003 retain their scopes. Historical held-out independence remains unconfirmed; a future preregistered confirmatory comparison is planned for publication, not required for this registration. The main research stage is closed. RE-ENGINEERING-APPLICABILITY-01 is PI ACCEPTED WITH CLARIFICATIONS / EXECUTION AUTHORIZED. [Dissertation completion position and full next-task proposal](research_gates/DISSERTATION-COMPLETION-POSITION-01.md) integrate the old scrubber and Chapters 3/4.
+**Orchestrator disposition:** PI has accepted the unknown constant-D result within Scientific Review c9c9dd7f9ea038a169c2bf493f32bb6e5c842323 and correction 8b865cbbbec2406a7eccd033bb3c2ff150f4c995. [RES-004](../results/RES-004-internal-count-unknown-d.md) is ACCEPTED / PERMANENT. RE-INTERNAL-COUNT-UNKNOWN-D-01 is COMPLETED / PROMOTED only within RES-004. RES-001…003 retain their scopes. Historical held-out independence remains unconfirmed; a future preregistered confirmatory comparison is planned for publication, not required for this registration. The main research stage is closed. RE-ENGINEERING-APPLICABILITY-01 was PI ACCEPTED WITH CLARIFICATIONS and its bounded preliminary engineering execution is now COMPLETE; scientific acceptance is separate. [Dissertation completion position and full next-task proposal](research_gates/DISSERTATION-COMPLETION-POSITION-01.md) integrate the old scrubber and Chapters 3/4.
 
 ## Completed gate and accepted scope
 
@@ -131,11 +131,13 @@ publication count.
 
 The stage is closed. Do not reissue the unknown-D task or automatically add unknown levels, asymmetry or D(t). Future confirmation uses new missions after independently accessible code/settings/analysis fixation; it does not rewrite the historical delivery and is not launched by this update.
 
-### Prepared next decision — engineering applicability
+### Completed bounded engineering analysis — RE-ENGINEERING-APPLICABILITY-01
 
-PI directs the dissertation toward a connected evidence-to-risk-to-control-to-implementation method, including a justified choice between fixed, simple and complex control. The [prepared position and RE-ENGINEERING-APPLICABILITY-01](research_gates/DISSERTATION-COMPLETION-POSITION-01.md) select a representative long-retention read-mostly SRAM region, preserve the old repo cf7ab706224f7872fdafcf34febda70e3f6c8dd1, and define the next bounded task and its negative outcomes. Execution is authorized for targeted calculations, short traces and preliminary integration under the amended §6. Full port and a large comparison campaign follow the justified configuration choice. The central contribution remains our adaptive methods; the selection map is an application output.
+PI accepted the task with clarifications recorded in c9132b1a262eca283fb04ad5877f7c3e611778b2. [Engineering report](../experiments/RE-ENGINEERING-APPLICABILITY-01/REPORT.md) completes the authorized preliminary scope: retained-certificate limits, traceable conditional error-rate/count-information analysis, service-cost bounds and one recommended software/RTL architecture. Numerical verification is partial and explicit; no new scientific PASS or RES is assigned.
 
-Publication of accepted results continues as a separate stream. Four independent publication questions are proposed; no manuscript or publication is counted complete merely from a RES or title.
+The recommended candidate uses a parallel 48-bit codeword port, fixed 360-ns word frames and the existing SEC-DED/scan blocks with a command/count adapter. It preserves the old scan duration and exposes a local RMW risk allowance. Full-codeword physical calibration, the stricter .001 certificate and platform timing remain specific local transitions. Significant system benefit of the complex method is not established for the low-rate historical candidate; the report quantifies why and identifies the required next evidence without declaring adaptation generally useless.
+
+No new missions, retuning, full RTL port, large comparison campaign or new irradiation were performed. The original RES-003 manuscript scope continues; automatic RES-003/004 combination and RES-002 article separation are not approved by this engineering task. Accepted RES-004 remains closed.
 
 ## Continuing canonical research state
 
@@ -153,4 +155,4 @@ Publication of accepted results continues as a separate stream. Four independent
 
 README and the research-specification direction note now point to RES-001…004 and the prepared completion position. Historical stage descriptions above record their own dates and scopes; they do not authorize restarting completed tasks. Issue #3 still contains an old main-era phase summary and must not be used as the active execution instruction.
 
-This is an authorized working-branch registration, not a merge to main. Historical scientific outputs are preserved. No PR/merge, new RES beyond the explicitly accepted RES-004, is created by this update. The amended engineering task is authorized; scientific acceptance remains separate.
+This is an authorized working-branch registration, not a merge to main. Historical scientific outputs are preserved. No PR/merge, new RES beyond the explicitly accepted RES-004, is created by this update. The amended preliminary engineering task has been executed; scientific acceptance remains separate.

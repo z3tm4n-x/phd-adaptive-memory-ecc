@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "check": "reserve_floor_decimal",
+      "value": "0.006064",
+      "passed": true
+    },
+    {
+      "check": "backup_linear_ODE_vs_quadrature",
+      "cases": 12,
+      "max_abs_error": 6.938893903907228e-17,
+      "passed": true
+    },
+    {
+      "check": "application_burst_all_slot_phases",
+      "cases": 8,
+      "worst_trace_s": 7.2e-07,
+      "rate_latency_bound_s": 1.08e-06,
+      "passed": true
+    },
+    {
+      "check": "abstract_atomic_word_slot_pass",
+      "cases": 9,
+      "passed": true,
+      "scope": "transaction/snapshot model with correction oracle; not original RTL simulation"
+    },
+    {
+      "check": "retained_resource_mapping",
+      "rows": 30,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "limitations": "ODE/transaction models independently check stated formulas; no historical held-out attestation, RTL simulator, synthesis, platform WCET or scientific PASS."
+}
