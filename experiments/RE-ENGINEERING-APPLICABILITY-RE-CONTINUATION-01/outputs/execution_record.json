@@ -1,0 +1,121 @@
+{
+  "task": "RE-ENGINEERING-APPLICABILITY-01 continuation 01",
+  "executed_at_utc": "2026-09-10T13:18:48.426625+00:00",
+  "input_commit": "bcc774c1c3700bcbeacb8b2ca3bd9ead51523951",
+  "executor": "Permanent Research Engineer; user-started separate ChatGPT session",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "tool_paths": {
+    "git": "/usr/bin/git",
+    "iverilog": null,
+    "verilator": null,
+    "yosys": null,
+    "vivado": null
+  },
+  "source_sha256": {
+    "config.json": "c8442d07bc9c3d13217315458e11aa0ae32b885ce552399956b5b8d6b6ee3813",
+    "numerical_checks.py": "9a1da6c8e1029529b250a4de8da7cdd1c7c544773fe9800b51914ee3205a9014",
+    "protocol_checks.py": "56dc6ba0de155491b3851c4136971b1debeac2d3e8d198be0b3234b600dd9c7a",
+    "run_checks.py": "32a1436f72538ca9990ce0f5a82e2327cb2cdf99ae8b2bce17b9b1f27730ba52"
+  },
+  "checks": [
+    {
+      "check": "algebraic_39bit_channel",
+      "singles": 39,
+      "doubles": 741,
+      "data": 32,
+      "parity": 7,
+      "passed": true,
+      "limitation": "error-mask algebra; not an RTL simulation"
+    },
+    {
+      "check": "post_read_parity_upset_coupling_break",
+      "actual_count": 0,
+      "ideal_count": 1,
+      "passed": true
+    },
+    {
+      "check": "irreversible_first_passage",
+      "passed": true
+    },
+    {
+      "check": "generation_deadline_ack_and_loss",
+      "cases": [
+        {
+          "case": "early",
+          "accepted": true,
+          "executed_period_ns": 2000000000
+        },
+        {
+          "case": "late",
+          "accepted": false,
+          "executed_period_ns": 1000000000
+        },
+        {
+          "case": "stale_generation",
+          "accepted": false,
+          "executed_period_ns": 1000000000
+        },
+        {
+          "case": "wrong_epoch",
+          "accepted": false,
+          "executed_period_ns": 1000000000
+        },
+        {
+          "case": "wrong_profile",
+          "accepted": false,
+          "executed_period_ns": 1000000000
+        },
+        {
+          "case": "shorter_than_backup",
+          "accepted": false,
+          "executed_period_ns": 1000000000
+        },
+        {
+          "case": "unknown_period",
+          "accepted": false,
+          "executed_period_ns": 1000000000
+        }
+      ],
+      "lost_record": "backup_to_horizon_no_adaptation_no_budget_reset",
+      "passed": true
+    },
+    {
+      "check": "started_not_completed_pass_bound",
+      "histories": 729,
+      "max_started": 6,
+      "analytic_upper": 6,
+      "passed": true
+    },
+    {
+      "check": "word_commit_snapshot_and_partial",
+      "cases": 9,
+      "partial_reads": 3,
+      "partial_writes": 2,
+      "complete_passes": 0,
+      "passed": true
+    },
+    {
+      "check": "service_discrete_and_fractional_phases",
+      "discrete_burst_ns": 720.0,
+      "just_after_slot_burst_ns": 764.999955,
+      "continuous_phase_supremum_ns": 765,
+      "token_bucket_delay_bound_ns": 1080,
+      "passed": true
+    },
+    {
+      "check": "80percent_deadline_counterexample",
+      "simulated_ns": 360000,
+      "queued_words": 2401,
+      "max_completed_wait_ns": 134966.25,
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "numerical_assertions_passed": true,
+  "large_MC_run": false,
+  "RTL_run": false,
+  "synthesis_or_placement": false,
+  "scientific_PASS": false,
+  "environment_note": "ChatGPT container; no claim of access to user PC or full private checkout"
+}
