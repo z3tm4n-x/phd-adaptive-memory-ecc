@@ -1,0 +1,37 @@
+{
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01",
+  "execution_base": "59603d231b923ee7426056cb62779a5ad16c8413",
+  "canonical_base": "abc39d5986aa7101fe2608700d455317ed683610",
+  "old_repo_commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+  "ecc": {"baseline": "SEC-DED(39,32)", "word_bits": 39, "correctable_bits": 1, "stronger_variant": "shortened binary BCH candidate (44,32,d>=5)", "stronger_word_bits": 44, "stronger_correctable_bits": 2},
+  "memory_mib": [2, 4, 8, 16, 32],
+  "primary_documented_memory_mib": [4, 8, 16, 32],
+  "error_rate_per_physical_bit_day": 7.3e-7,
+  "temporal_shape": {"hours": 43824, "mean_old_per_hour": 7.07276729449, "max_old_per_hour": 1193.96354958, "cv2_old": 6.24295991773, "nu0_old_per_hour": 10.8034405568, "lag1_eta": 1.04935369403},
+  "horizons_hours": [1, 43824],
+  "epsilons": [0.0005, 0.001, 0.0025, 0.005, 0.01, 0.025, 0.05, 0.1],
+  "average_service_budgets": [0.001, 0.0025, 0.005, 0.01, 0.02, 0.05],
+  "application_loads": [0.10, 0.50, 0.80],
+  "application_burst_words": 8,
+  "application_deadline_us": 100.0,
+  "peak_service_window_s": 1.0,
+  "peak_scrub_budget": 0.25,
+  "fixed_period_max_s": 3600.0,
+  "causal_information_age_h": 1,
+  "causal_risk_margin": 0.95,
+  "service_profiles": {
+    "2": {"read_s": 6e-8, "write_s": 8e-8, "status": "CONTROL_ASSUMPTION; timing borrowed from documented 4 MiB prototype interface"},
+    "4": {"read_s": 6e-8, "write_s": 8e-8, "status": "SOURCE_DERIVED; 50 MHz, one wait state; 2+WS read cycles and 3+WS write cycles"},
+    "8": {"read_s": 8e-8, "write_s": 1e-7, "status": "ASSUMPTION; conservative 32 MiB timing used"},
+    "16": {"read_s": 8e-8, "write_s": 1e-7, "status": "ASSUMPTION; conservative 32 MiB timing used"},
+    "32": {"read_s": 8e-8, "write_s": 1e-7, "status": "SOURCE_DERIVED; 50 MHz, two wait states; 2+WS read cycles and 3+WS write cycles"}
+  },
+  "analysis_rules": {
+    "fixed_impossibility": "phase-independent lower bound from exactly-two-distinct-bit arrivals on full within-hour inter-check intervals plus a mean-only lower bound for long periods",
+    "causal_witness": "one-hour delayed external rate; continuous cyclic scan rate r(t)=nu_hat(t)/C; C chosen from a 0.95 epsilon risk allocation using lag1 eta and a conservative endpoint-sum bound",
+    "conditional_write_resource": "for hard resource admission count every read plus an optional write slot as if every word were corrected; skipped clean-word write slots are therefore only upside",
+    "application_delay": "research network-calculus bound (burst_service + one scrub word grab)/(1-rho_app-rho_scrub_peak), valid only when denominator positive",
+    "level2_gate": "run Level II only if at least one primary documented memory configuration has causal_full_contract=true and fixed_proven_impossible=true at the same epsilon/budget/load",
+    "level3": "RES-004 forbidden"
+  }
+}
