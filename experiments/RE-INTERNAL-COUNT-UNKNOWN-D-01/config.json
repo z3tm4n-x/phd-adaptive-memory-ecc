@@ -1,0 +1,53 @@
+{
+  "task_id": "RE-INTERNAL-COUNT-UNKNOWN-D-01",
+  "base_commit": "529709f1b98d12a5f5a2c7b71ee1ff9f53210c97",
+  "delivery_branch": "research/internal-count-unknown-d-01",
+  "memory": {"words": 524288, "bits_per_word": 32, "pass_seconds": 0.18874368, "reads_per_pass": 2097152, "writes_per_pass": 2097152},
+  "environment": {"b_low": 0.000028886786, "b_high": 6.1249308, "dwell_interval_seconds": [30, 3000], "initial": [0.5, 0.5]},
+  "horizon_seconds": 3600,
+  "epsilon": 0.1,
+  "periods_seconds": [0.2, 0.5, 1, 2, 5, 10, 20, 30, 60, 100, 150, 300],
+  "controller": {
+    "observation": "zero versus positive own correction count; no new observation channel",
+    "state": "four probabilities (mode,pending-zero) plus two pending first moments per generator",
+    "rate_grid_formula": "a_j=(32+9*j)^2/(3000*32^2), j=0,...,32; D_j=1/a_j",
+    "grid_intervals": 32,
+    "continuous_transfer_factor": 1.064,
+    "beta": 0.005,
+    "test_mixture": "uniform over all 33 grid laws; mathematical test, not physical prior",
+    "test_log_margin": 0.001,
+    "retained_set": "union of closed cells; remove a cell only after both endpoint tests reject",
+    "backup_period_seconds": 1,
+    "time_tick_seconds": 0.1,
+    "one_switch_midpoints": 512,
+    "two_switch_midpoints": 128,
+    "numerical_allowance": 0.001,
+    "kernel_relative_error_contract": 1e-12,
+    "frozen_budget": "same beta and numerical reserves; only D-set exclusion is disabled"
+  },
+  "simulation": {
+    "dwell_seconds": [30, 100, 300, 1000, 3000],
+    "validation_trials_per_dwell": 20000,
+    "validation_seed": 290916001,
+    "seed_stride_per_dwell": 1000000,
+    "pilot_seed": 130916001,
+    "pilot_trials_per_dwell": 2000,
+    "small_oracle_seed": 170916001,
+    "trace_seed": 12345,
+    "analogue_Ms": [0.10, 0.12, 0.14, 0.16, 0.18, 0.20],
+    "analogue_caps": [5, 20, 300],
+    "analogue_growth": 3,
+    "analogue_zero_mode": 1,
+    "analogue_selection": "among candidates with pointwise one-sided 95% pilot upper <=0.1 at every test D, minimize maximum survivor mean passes; then lexicographic vector by increasing D; then Ms, cap",
+    "policies": ["learning", "frozen_uncertainty", "Fixed", "Precomputed", "PA_DOM_one_setting", "known_D_RES003_diagnostic"],
+    "retuning_after_validation": false
+  },
+  "provenance": {
+    "accepted_task_blob": "d9cd726b95072c48a732aa435e5d8990c620d59f",
+    "upstream_core_blob": "7873e28e126ea02e03fc6c429ac0b4275e243cfb",
+    "upstream_simulate_blob": "ee55c6bf57b034b0efc0b41936a549d6a14b53dd",
+    "upstream_feasibility_blob": "d9417313ad406c2fa7a5e54ad9751d7a82903b97",
+    "upstream_config_blob": "5ca1b8cda0a19315684c34423cadafa2cf544e6e",
+    "RES003": "results/RES-003-internal-count-control.md at base"
+  }
+}
