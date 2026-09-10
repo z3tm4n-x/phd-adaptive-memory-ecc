@@ -2,11 +2,41 @@
   "task_id": "RE-INTERNAL-COUNT-UNKNOWN-D-01",
   "base_commit": "529709f1b98d12a5f5a2c7b71ee1ff9f53210c97",
   "delivery_branch": "research/internal-count-unknown-d-01",
-  "memory": {"words": 524288, "bits_per_word": 32, "pass_seconds": 0.18874368, "reads_per_pass": 2097152, "writes_per_pass": 2097152},
-  "environment": {"b_low": 0.000028886786, "b_high": 6.1249308, "dwell_interval_seconds": [30, 3000], "initial": [0.5, 0.5]},
+  "memory": {
+    "words": 524288,
+    "bits_per_word": 32,
+    "pass_seconds": 0.18874368,
+    "reads_per_pass": 2097152,
+    "writes_per_pass": 2097152
+  },
+  "environment": {
+    "b_low": 2.8886786e-05,
+    "b_high": 6.1249308,
+    "dwell_interval_seconds": [
+      30,
+      3000
+    ],
+    "initial": [
+      0.5,
+      0.5
+    ]
+  },
   "horizon_seconds": 3600,
   "epsilon": 0.1,
-  "periods_seconds": [0.2, 0.5, 1, 2, 5, 10, 20, 30, 60, 100, 150, 300],
+  "periods_seconds": [
+    0.2,
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    60,
+    100,
+    150,
+    300
+  ],
   "controller": {
     "observation": "zero versus positive own correction count; no new observation channel",
     "state": "four probabilities (mode,pending-zero) plus two pending first moments per generator",
@@ -26,7 +56,13 @@
     "frozen_budget": "same beta and numerical reserves; only D-set exclusion is disabled"
   },
   "simulation": {
-    "dwell_seconds": [30, 100, 300, 1000, 3000],
+    "dwell_seconds": [
+      30,
+      100,
+      300,
+      1000,
+      3000
+    ],
     "validation_trials_per_dwell": 20000,
     "validation_seed": 290916001,
     "seed_stride_per_dwell": 1000000,
@@ -34,13 +70,52 @@
     "pilot_trials_per_dwell": 2000,
     "small_oracle_seed": 170916001,
     "trace_seed": 12345,
-    "analogue_Ms": [0.10, 0.12, 0.14, 0.16, 0.18, 0.20],
-    "analogue_caps": [5, 20, 300],
+    "analogue_Ms": [
+      0.1,
+      0.105,
+      0.11,
+      0.115,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2
+    ],
+    "analogue_caps": [
+      5,
+      20,
+      300
+    ],
     "analogue_growth": 3,
     "analogue_zero_mode": 1,
     "analogue_selection": "among candidates with pointwise one-sided 95% pilot upper <=0.1 at every test D, minimize maximum survivor mean passes; then lexicographic vector by increasing D; then Ms, cap",
-    "policies": ["learning", "frozen_uncertainty", "Fixed", "Precomputed", "PA_DOM_one_setting", "known_D_RES003_diagnostic"],
-    "retuning_after_validation": false
+    "policies": [
+      "learning",
+      "frozen_uncertainty",
+      "Fixed",
+      "Precomputed",
+      "PA_DOM_one_setting",
+      "known_D_RES003_diagnostic"
+    ],
+    "retuning_after_validation": false,
+    "pilot_refinement": {
+      "initial_Ms": [
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "inserted_Ms": [
+        0.105,
+        0.11,
+        0.115
+      ],
+      "reason": "Initial Ms=0.12/cap=5 pilot upper at D=30 was 0.10595484882101389, while Ms=0.10 was eligible. Refine this bracket in the analogue favor before any held-out execution. Main controller and selection criterion unchanged.",
+      "validation_opened": false,
+      "reuse": "same predeclared pilot streams; complete final 27-candidate grid is reproducible from scratch"
+    }
   },
   "provenance": {
     "accepted_task_blob": "d9cd726b95072c48a732aa435e5d8990c620d59f",
