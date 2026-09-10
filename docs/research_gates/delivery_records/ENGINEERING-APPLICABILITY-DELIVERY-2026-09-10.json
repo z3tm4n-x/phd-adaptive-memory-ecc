@@ -1,0 +1,233 @@
+{
+  "kind": "Orchestrator delivery identity audit; no engineering tests executed",
+  "date": "2026-09-10",
+  "archive": {
+    "filename": "RE_ENGINEERING_CONTINUATION_DELIVERY_2026-09-10.zip",
+    "bytes": 61913,
+    "sha256": "6535e4f24cf32e965be0147240d4d4a00adf9066123fc38cc34ce1a6df844621"
+  },
+  "base_commit": "8138c5ba05fb4e88246379db8c86bab1a3687687",
+  "selected_source_commit": "8229668e9e6f3d05438fe1c0a5e3e46d98bfef4e",
+  "alternative_commit": "7db95ecea920e41dec9b191a94230c9da0db6678",
+  "selected_tree": "ddc90dcf04fb7ef9092105bf9186cc6bf11d6b78",
+  "selected_package_tree": "1985e1ac8ed2ee5ba7d9bb3acc9005db2b330066",
+  "alternative_tree": "e1afdd95d68469c1a87d639ad64674736aea3490",
+  "manifest_checks": {
+    "archive_entries": 12,
+    "archive_inventory": 13,
+    "published_entries": 19,
+    "published_inventory": 20,
+    "archive_source_hashes": 4,
+    "published_source_hashes": 6,
+    "all_match": true
+  },
+  "same_blob_pairs": [],
+  "archive_files_match_imported_git_blobs": true,
+  "original_base_subtrees_unchanged": true,
+  "main_repository_input_identities_verified": 14,
+  "selected_inventory": [
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/DELIVERY_STATUS.md",
+      "bytes": 1701,
+      "git_blob": "68bd909a338c992d2942133c8ce1a756c502eb57",
+      "sha256": "15b55a746989f9fdab7e80ba758d8daacccaca67a3463d84dfc1fa367313dcfc"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/HANDOFF.md",
+      "bytes": 6475,
+      "git_blob": "bdb28819a9ef9c0c0d8855a8c4823fd4bbb7f2a1",
+      "sha256": "efee5d56184cd7d30099a6d3c6fe5a6a87376439ace4bc22bee81f236b007756"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/INPUTS.json",
+      "bytes": 6443,
+      "git_blob": "e7577faac4110b1352f0af8573cdd2c5bff7354e",
+      "sha256": "abd0ddabfdd0c02b3faada52c94b90020749233038d7eec429a767300032dc59"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/README.md",
+      "bytes": 1360,
+      "git_blob": "634b301da2cf3e64b4b208808f2f490b01774e0c",
+      "sha256": "54bed2bf0db852724d4d1238cc70fd6886e4a8412de0a7f3c6858fb0c6ea0107"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/REPORT.md",
+      "bytes": 17747,
+      "git_blob": "47a7bcc902c648a5c71c1bbd41667ec51f843ae8",
+      "sha256": "d6e3bb98df1b85b6ae3b340173b0cdabdbab3b43d2b6e5c25bc438f0faa99f69"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/config.json",
+      "bytes": 1525,
+      "git_blob": "4f20dc9295b8bb5d44f908632c07f16ad4709927",
+      "sha256": "c8442d07bc9c3d13217315458e11aa0ae32b885ce552399956b5b8d6b6ee3813"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/numerical_checks.py",
+      "bytes": 5794,
+      "git_blob": "3aceb7578d7231e73c7a4016e07d785524b6c0a3",
+      "sha256": "9a1da6c8e1029529b250a4de8da7cdd1c7c544773fe9800b51914ee3205a9014"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/delivery_manifest.json",
+      "bytes": 3158,
+      "git_blob": "518ccdbbca18339f337b1169d69592c055ba9b0b",
+      "sha256": "70965e44345ac7c09c28285e32822a52d6a3133e8931c21ba17acd06576f2628"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/execution_record.json",
+      "bytes": 3495,
+      "git_blob": "cf6a51d36842aceb3cfe62d7c5d2a9df1037abe8",
+      "sha256": "a91fb3c0167c30729635c2a4624dc9fc19387c8225d60429d6818d4cd6d42e3b"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/numerical_checks.json",
+      "bytes": 5985,
+      "git_blob": "a820b0ec80bc488c63a3077475bdbbaa2420a99d",
+      "sha256": "e5d6c190c54a89b18e1ab74101f793741a74ff3d086a7c626e7cdb971d910688"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/run_stdout.txt",
+      "bytes": 2083,
+      "git_blob": "efadca277139f8e29be9e8ee7e3745a239a2bd9d",
+      "sha256": "727b75005759a0d78f97fcf2f6dc42729ef597e277da71639809e1160c06eb25"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/protocol_checks.py",
+      "bytes": 7892,
+      "git_blob": "1493f19afdb599fa4a759ff7e70d7a35cc307d6b",
+      "sha256": "56dc6ba0de155491b3851c4136971b1debeac2d3e8d198be0b3234b600dd9c7a"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/run_checks.py",
+      "bytes": 1667,
+      "git_blob": "63f701c507a2df22881760b59c5628ffdece45bc",
+      "sha256": "32a1436f72538ca9990ce0f5a82e2327cb2cdf99ae8b2bce17b9b1f27730ba52"
+    }
+  ],
+  "alternative_inventory": [
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/.gitignore",
+      "bytes": 19,
+      "git_blob": "7a60b85e148f80966a550e5ab6a762a907c69ca6",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/HANDOFF.md",
+      "bytes": 7578,
+      "git_blob": "f24d886069e637d57eddca3b70da9354124af72b",
+      "sha256": "3a18fe4c7d339f90b9f0c34b9a0c163bd9df45bef3c39f78d99f06292be7f7c8"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/INTERFACE.md",
+      "bytes": 9840,
+      "git_blob": "08c723c0a087c6fe9d4b70c7b91996d9c3ba6dc4",
+      "sha256": "ed15395ea3df2631c2651b14cc7ca323cf71945929f75ed84e34a38d6e1acffb"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/README.md",
+      "bytes": 2259,
+      "git_blob": "00ca93fa0a67a965f1db46e26803e32fa72d71f3",
+      "sha256": "d4870cb6528e9104bf95f375089884ffed98cc012ee99b9083ae8a350965e271"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/REPORT.md",
+      "bytes": 10663,
+      "git_blob": "f69b40ce30fc9f74585a0d9cdfd5a188e4fca1ec",
+      "sha256": "5d157bb0a1ad8637b9abc6af5974fad106377e744051044a1bf417623a8d89a1"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/TRANSFER.md",
+      "bytes": 10694,
+      "git_blob": "6ddeacd71e900daaac838e05e920eead2e820890",
+      "sha256": "e1ee92b3627188fcdff42e3099cfb1a31942448400bcdc82bc6d0184810629a6"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/checks_budget.py",
+      "bytes": 5020,
+      "git_blob": "15be8a6d17b280776e1d739c73136e6133226289",
+      "sha256": "4069f27008c21d1e59403343110908799951f97d5568811ed68c9ba5a413ee55"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/checks_interface.py",
+      "bytes": 4760,
+      "git_blob": "3e4f51204a2fe527608a39269fce948fb5ce947a",
+      "sha256": "19207514bb2d50fb40427b5c455de6780cd2002cc2a376d3fd4e31ed3f9fd06b"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/checks_numeric.py",
+      "bytes": 4460,
+      "git_blob": "ab5f5f5e6405d9df15492cf087fe1ca29c03b33f",
+      "sha256": "caaf1301c3bc15316d23d5d3198e777ae679c4bb87f7955bfab6fe7d337a75c6"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/checks_word.py",
+      "bytes": 4140,
+      "git_blob": "24a2f9b4f9438c8c639d1536264ea2a92131d146",
+      "sha256": "b518865ed4d52dc52966d855bdd3b28f1718f2699ad44844d24d8a5580d9bed9"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/config.json",
+      "bytes": 1666,
+      "git_blob": "e3f361d92bf4d4b45e8dee430f2d9cccdab7c310",
+      "sha256": "9cac7e99d7f43fed278fa16efc711ecd64bfc7834bbf0be46189b83622ece073"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/inputs.json",
+      "bytes": 4066,
+      "git_blob": "d3fdf1e053f43c90d7692f431fb4d376ddc27c52",
+      "sha256": "bf18ce937a583018113470378bfe47ab340a42e16db37ff4499092a6ae2d359b"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/budget.json",
+      "bytes": 3681,
+      "git_blob": "309a2466c326f4dd206a466e8b4ae4e18953b2af",
+      "sha256": "dae9f8e3e653b8cebb1784bdec6859645452cdb3cda2969786d6aaae8231c84b"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/execution.json",
+      "bytes": 1911,
+      "git_blob": "901f6ef50697af6b23250c1328e9f7933c7d7c96",
+      "sha256": "e7012333b2137058d38face78b8485c8c65ae9dad3efc2b7dff10ead90d442e2"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/interface.json",
+      "bytes": 1248,
+      "git_blob": "d6d2e72084e79b7dbb96e1641ff40bda3ee42617",
+      "sha256": "be4018ea98b38f1301cbd7c5543ab3870b6b9b4add347b5fc15c4782e90e1cdd"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/manifest.json",
+      "bytes": 3571,
+      "git_blob": "359e2a4e93409dfa6e98b7ee3fabff248d88e7be",
+      "sha256": "061982ee914a990dce1c5ad5e318a872875612b9c91a60cd55058d556a8f8fa5"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/numeric.json",
+      "bytes": 8809,
+      "git_blob": "b966c6f6b3478b55999fb51200fc3efcc5982741",
+      "sha256": "00196fa31c3306e4a804498ee6f64b73442332d9b9fbf789674ad72b13512ce9"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/repeat_check.json",
+      "bytes": 324,
+      "git_blob": "85f8ac81f7a0c2bea3097028a1e80bb91d9849d3",
+      "sha256": "0b55d39a57d1188129ac9452be350765ae9f03998612a5f667b2f252e4e92c3a"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/outputs/word.json",
+      "bytes": 1669,
+      "git_blob": "39de6ff485cc8b73040974ff2826b9ae4473cb65",
+      "sha256": "058de4b8f419170ef05d9dbbe92f97c4aefacdd23c5e0d86126376c616eed198"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/run_checks.py",
+      "bytes": 2836,
+      "git_blob": "87a7d323aeb3bf02292c7ec028de0be3451ba73f",
+      "sha256": "fffec0b02fdb1382fafcf17413351f85da99caec75b7e00c079c6fafc67bfa5c"
+    }
+  ],
+  "scientific_review": "NOT_PERFORMED",
+  "engineering_scripts_run_by_orchestrator": false,
+  "old_repository_input_identities_verified": 4
+}

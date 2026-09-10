@@ -1,0 +1,27 @@
+{
+  "address_mapping": {
+    "refitted": false,
+    "scenario": "W32_seq DECLARED ANALYSIS CODEWORD SCENARIO",
+    "source_commit": "365eaee5906505ff7bfccd8766ca8cb1d6729486"
+  },
+  "goes_archive": {
+    "controlled_data_layer_fingerprint_reference": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815",
+    "daily_file_count": 59,
+    "filename": "goes010226.zip",
+    "sha256": "7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581"
+  },
+  "radar": {
+    "commit": "b032505d4d1b15403b8ad06aef578339f6d1c6b4",
+    "transport_sha256": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6"
+  },
+  "raw_cy62167_archive": {
+    "filename": "New Folder(3).zip",
+    "sha256": "16ab27789329adbbccdf9a7e5d0e15e855440d3f52b8dd93a384317a4635770a",
+    "size_bytes": 5016468
+  },
+  "raw_inputs_committed": false,
+  "repository_output_policy": "bounded audit subsets committed; complete generated tables reproducible from frozen inputs and recorded by SHA-256/row count in full_output_manifest.json",
+  "starting_sha": "365eaee5906505ff7bfccd8766ca8cb1d6729486",
+  "task_id": "RE-CY62167-ECC-RISK-BRIDGE-01",
+  "working_branch": "research/cy62167-ecc-risk-bridge-01"
+}

@@ -81,20 +81,8 @@ Canonical инструкции ИИ-ролей находятся в `docs/agent
 
 ## Текущая стадия
 
-- **Infrastructure setup:** завершён.
-- **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
-- **AI-agent operating model:** настроен в `docs/agents/`.
-- **Research Specification:** `v0.8-draft`.
-- **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
-- **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
-- **Integrated roadmap:** `DEC-002` — radiation-test evidence, mapping `W`, ECC-level reliability and adaptive restoration control are one causal method; representation loss and observability are evaluated explicitly.
-- **Numerical reliability requirement:** `TBD`.
-- **Accepted model decision:** `DEC-003` — event-driven comparison reference, `L0…L3` representation ladder and authorization of the first own experiment.
-- **RQ-006:** permanently registered for physical-to-logical mapping `W`, interleaving and information-sufficiency conditions.
-- **First own result:** [`RES-001`](results/RES-001-exp001-four-word-identified-set.md) — permanent, PI-approved and limited to the reviewed synthetic four-word/fixed-cardinality class.
-- **EXP-001:** complete; independent validation and Scientific Review 02 passed; promoted only within `RES-001`.
-- **Accepted next gate:** [`Information-deficit price for restoration control`](docs/research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — pre-execution; it separates control-resource price, information-acquisition cost and any later net balance.
-- **Integrated control RQ:** [RQ-007](docs/questions/RQ-007-integrated-adaptive-restoration-control.md) permanently registered after explicit PI `ACCEPT`.
-- **Active gate:** bounded PA-DOM-01…04 prior-art closure under the accepted hard stop rule; no broad search.
-- **Next scientific interfaces:** RQ-003 parameterized ECC state/capability, RQ-004 observation/uncertainty and RQ-005 measurable resource vector.
-- **Constraint:** no new experiment before PA-DOM-01…04 closure, minimum RQ-003/RQ-004/RQ-005 interface decisions, preregistration and separate PI approval of the experiment/derivation; no retroactive hypothesis or broad literature cycle without a named blocker.
+- Постоянно приняты RES-001, RES-002, RES-003 и [RES-004](results/RES-004-internal-count-unknown-d.md), каждый в собственной проверенной области.
+- RE-INTERNAL-COUNT-UNKNOWN-D-01 завершён и зарегистрирован; поправка SR закрыта. Историческая независимость held-out не установлена.
+- Для будущей публикации unknown-D предусмотрено отдельное подтверждение на новых миссиях после фиксации кода, настроек и анализа; оно не является условием текущего принятия.
+- [Позиция по завершению диссертации и одно следующее задание](docs/research_gates/DISSERTATION-COMPLETION-POSITION-01.md) уточнены PI. [Предварительный пакет](experiments/RE-ENGINEERING-APPLICABILITY-01/REPORT.md) фактически выполнен Orchestrator, не отдельным инженером. Постоянный RE из отдельной сессии передал [собственную поставку](experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/HANDOFF.md). [Выбрана архивная версия 8229668e; различия и происхождение зафиксированы](docs/research_gates/ENGINEERING-APPLICABILITY-DELIVERY-RECONCILIATION-01.md). [Scientific Review](docs/scientific_reviews/ENGINEERING_APPLICABILITY_REVIEW_01.md) вернул PASS_WITH_MINOR. [Локальные выводы приняты в области SR; MINOR-01 закрыт точной поправкой Endpoint](docs/research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md). Резерв 0.5 с остаётся условным; численная реализация изменённого банка и целевое устройство не сертифицированы.
+- [Текущее состояние](docs/current_status.md) и конкретные RES определяют границы утверждений. DEC-001/002 сохраняются; RQ-007 целиком не закрыт. Опубликованные результаты не равнозначны четырём готовым статьям или готовому бортовому устройству.

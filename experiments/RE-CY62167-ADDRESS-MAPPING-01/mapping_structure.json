@@ -1,0 +1,33 @@
+{
+  "external_address_count": 2097152,
+  "external_x8_consistency": "PASS",
+  "input_coordinate_bits": 24,
+  "interpretation": "Rank 21 on a 24-bit supplied grid gives eight coordinate preimages per external 21-bit address. Kernel basis is mathematical transformed-grid structure, not ECC/bank/transistor architecture or D0..D7 labels.",
+  "kernel_basis": [
+    {
+      "bit_vector_24_lsb_order": [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "coordinate_bit_terms": ["x4"],
+      "xor_delta_x": 16,
+      "xor_delta_y": 0
+    },
+    {
+      "bit_vector_24_lsb_order": [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "coordinate_bit_terms": ["x5"],
+      "xor_delta_x": 32,
+      "xor_delta_y": 0
+    },
+    {
+      "bit_vector_24_lsb_order": [0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "coordinate_bit_terms": ["x6"],
+      "xor_delta_x": 64,
+      "xor_delta_y": 0
+    }
+  ],
+  "kernel_dimension": 3,
+  "kernel_size": 8,
+  "linear_part_rank_gf2": 21,
+  "preimages_per_external_address": 8,
+  "representation": "A = c xor M z, z=(x0..x11,y0..y11)",
+  "supplied_grid_position_count": 16777216,
+  "task_id": "RE-CY62167-ADDRESS-MAPPING-01"
+}

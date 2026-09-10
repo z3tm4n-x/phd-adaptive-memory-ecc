@@ -1,0 +1,16 @@
+{
+  "task_id": "RE-CY62167-PAPER-COMPLETION-01",
+  "phase": "B/FINAL",
+  "starting_sha": "10661887694c075fbb27786df72a7b85f5664a05",
+  "branch": "research/cy62167-paper-completion-01",
+  "cosrad_input": {"filename":"results.zip","sha256":"84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb","member_count":38},
+  "operator_closure": {"status":"SPECTRAL_OPERATOR_NOT_CLOSED","max_abs_relative_GCR":0.9915724828643783,"max_abs_relative_SEP":1.0,"let_unit_max_relative_discrepancy":5.62533852782552e-15},
+  "primary_article_route": "SPECTRAL_EXTERNAL_CONVOLUTION; article-facing reproducible external-spectrum construction; not asserted equal to internal COSRAD SEE operator",
+  "basis_route": "BASIS_RESPONSE_RECONSTRUCTION_STABILITY_GATED; comparator only for sharp direct targets",
+  "reference_status": "TAU_MAX_REFERENCE_BLOCKED_BY_COSRAD_OPERATOR_SEMANTICS",
+  "disposition": "PASS-B-REFERENCE-BLOCKED",
+  "tests": {"phase_A":"33/33 PASS at accepted starting SHA","phase_B":"30/30 PASS","compileall":"PASS","determinism":"PASS"},
+  "reproduction_command": "python run_phase_b.py --cosrad-results /path/to/results.zip",
+  "committed_outputs": ["pi_cosrad_input_manifest.json","cosrad_member_manifest.csv","cosrad_operator_closure.csv","cosrad_rates_pi_reconstructed.csv","cosrad_event_weights_audit_subset.csv","legacy_article_regression.csv","geo_bound_results.csv","geo_reference_results.csv","resource_results.csv","sep_peak_rates.csv","shielding_boundary_summary.csv","phase_b_validation.json","test_results_phase_b.txt","REPORT.md"],
+  "generated_large_outputs": ["cosrad_event_weights.csv","cosrad_operator_closure_full.csv","cosrad_rates_pi_reconstructed_full.csv","geo_bound_results_full.csv","geo_reference_results_full.csv","resource_results_full.csv","sep_peak_rates_full.csv","figure_B1_direct_budget.svg","figure_B2_allowable_period.svg","figure_B3_reference_status.svg","figure_B4_architecture.svg","figure_B5_resource.svg","figure_B6_environment_contributions.svg"]
+}

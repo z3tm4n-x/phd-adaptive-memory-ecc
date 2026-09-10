@@ -1,0 +1,102 @@
+[
+  {
+    "dwell": 30,
+    "policy": "learning",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2382,
+    "set_changes": 22,
+    "local_action_changes": 0,
+    "file": "trace_30_learning.csv"
+  },
+  {
+    "dwell": 30,
+    "policy": "frozen",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2401,
+    "set_changes": 0,
+    "local_action_changes": 0,
+    "file": "trace_30_frozen.csv"
+  },
+  {
+    "dwell": 100,
+    "policy": "learning",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2614,
+    "set_changes": 19,
+    "local_action_changes": 0,
+    "file": "trace_100_learning.csv"
+  },
+  {
+    "dwell": 100,
+    "policy": "frozen",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2666,
+    "set_changes": 0,
+    "local_action_changes": 0,
+    "file": "trace_100_frozen.csv"
+  },
+  {
+    "dwell": 300,
+    "policy": "learning",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2032,
+    "set_changes": 19,
+    "local_action_changes": 1,
+    "file": "trace_300_learning.csv"
+  },
+  {
+    "dwell": 300,
+    "policy": "frozen",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2403,
+    "set_changes": 0,
+    "local_action_changes": 0,
+    "file": "trace_300_frozen.csv"
+  },
+  {
+    "dwell": 1000,
+    "policy": "learning",
+    "seed": 12345,
+    "failure": false,
+    "passes": 1886,
+    "set_changes": 21,
+    "local_action_changes": 1,
+    "file": "trace_1000_learning.csv"
+  },
+  {
+    "dwell": 1000,
+    "policy": "frozen",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2256,
+    "set_changes": 0,
+    "local_action_changes": 0,
+    "file": "trace_1000_frozen.csv"
+  },
+  {
+    "dwell": 3000,
+    "policy": "learning",
+    "seed": 12345,
+    "failure": false,
+    "passes": 1762,
+    "set_changes": 23,
+    "local_action_changes": 1,
+    "file": "trace_3000_learning.csv"
+  },
+  {
+    "dwell": 3000,
+    "policy": "frozen",
+    "seed": 12345,
+    "failure": false,
+    "passes": 2188,
+    "set_changes": 0,
+    "local_action_changes": 0,
+    "file": "trace_3000_frozen.csv"
+  }
+]

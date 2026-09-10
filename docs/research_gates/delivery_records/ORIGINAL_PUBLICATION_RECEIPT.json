@@ -1,0 +1,43 @@
+{
+  "task": "RE-ENGINEERING-APPLICABILITY-01 continuation 01",
+  "created_at_utc": "2026-09-10T13:26:35.774109+00:00",
+  "local_commit_sha": "8229668e9e6f3d05438fe1c0a5e3e46d98bfef4e",
+  "parent_commit_sha": "8138c5ba05fb4e88246379db8c86bab1a3687687",
+  "root_tree_sha": "ddc90dcf04fb7ef9092105bf9186cc6bf11d6b78",
+  "experiment_tree_sha": "1985e1ac8ed2ee5ba7d9bb3acc9005db2b330066",
+  "branch": "research/engineering-applicability-re-continuation-01",
+  "remote_published": false,
+  "delivery_files": 13,
+  "changed_paths": [
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/DELIVERY_STATUS.md",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/HANDOFF.md",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/INPUTS.json",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/README.md",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/REPORT.md",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/config.json",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/numerical_checks.py",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/delivery_manifest.json",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/execution_record.json",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/numerical_checks.json",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/run_stdout.txt",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/protocol_checks.py",
+    "A\texperiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/run_checks.py"
+  ],
+  "bundle": {
+    "filename": "RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01.bundle",
+    "size_bytes": 26669,
+    "sha256": "9f6ee9ec6289ace9b4a7b3a47ad06d8792ae93496e266d7ecdb7395a0b1ee8c4",
+    "prerequisite": "8138c5ba05fb4e88246379db8c86bab1a3687687",
+    "list_heads": "8229668e9e6f3d05438fe1c0a5e3e46d98bfef4e refs/heads/research/engineering-applicability-re-continuation-01",
+    "pack_index_result": "pack\t620f0a0cd923e17f27c9dd5c0111a6ae8b53111f"
+  },
+  "checks": {
+    "base_tree_hashes_match_GitHub": true,
+    "all_delivered_blob_bytes_match": true,
+    "only_new_directory_added": true,
+    "executed_source_hashes_match": true,
+    "pack_index_verified": true
+  },
+  "limitation": "No authenticated local clone or remote write action. Bundle prerequisite must be verified in a clone containing the canonical base. Original package and other trees preserved by exact object IDs.",
+  "git_version": "git version 2.47.3"
+}

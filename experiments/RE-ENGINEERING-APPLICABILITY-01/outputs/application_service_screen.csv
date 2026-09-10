@@ -1,0 +1,4 @@
+load_fraction,baseline_burst_seconds,guaranteed_rate_words_s,slot_latency_s,deterministic_delay_bound_s,backlog_end_scan_words,fluid_delay_at_scan_end_s,delay_status
+0.1,3.6e-07,11111111.111111112,3.6e-07,1.08e-06,0.0,0.0,token_bucket_bound
+0.5,3.6e-07,11111111.111111112,3.6e-07,1.08e-06,0.0,0.0,token_bucket_bound
+0.8,3.6e-07,11111111.111111112,3.6e-07,,1258291.2000000002,0.05662310400000001,outside_reserved_rate_contract

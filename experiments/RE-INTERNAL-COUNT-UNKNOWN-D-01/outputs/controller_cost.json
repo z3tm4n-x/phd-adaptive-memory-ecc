@@ -1,0 +1,23 @@
+{
+  "probabilities_and_moments_bytes": 1584,
+  "second_filter_buffer_bytes": 1584,
+  "slack_and_likelihood_scores_bytes": 528,
+  "rejection_and_active_flags_bytes": 66,
+  "kernel_tables_bytes": 152064,
+  "value_tables_bytes": 38017056,
+  "reward_transition_pending_bytes": 38016,
+  "build_seconds": 0.2852762839997922,
+  "host_update_choice_seconds": [
+    4.2291997000120315e-06,
+    4.3196420000185754e-06,
+    4.241429700005028e-06,
+    4.41744130000643e-06,
+    4.303458100002899e-06,
+    4.362846799995168e-06,
+    4.470458499986307e-06
+  ],
+  "median_host_seconds": 4.3196420000185754e-06,
+  "minimum_idle_window_seconds": 0.011256320000000014,
+  "hardware_WCET_claim": false,
+  "scaling": "working O(M); observation O(M), choice O(M |U|), value tables O(M H/tick); fixed M=33, independent of W"
+}

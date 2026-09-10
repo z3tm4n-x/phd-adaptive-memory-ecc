@@ -1,0 +1,9 @@
+{
+  "source": "NASA cFE Table Services Overview",
+  "repository": "nasa/cFE",
+  "commit": "302cb22f1a8c04e530e406affd15c501f0ccd5d3",
+  "path": "docs/src/cfe_tbl.dox",
+  "url": "https://github.com/nasa/cFE/blob/302cb22f1a8c04e530e406affd15c501f0ccd5d3/docs/src/cfe_tbl.dox",
+  "supports": "Flight application tables include attitude gains, sensor scaling and telemetry filtering parameters; active/inactive management supports controlled infrequent updates.",
+  "does_not_support": "2 MiB size, physical SRAM/ECC, this workload, 100 microsecond deadline, selected radiation rates or a flight-system failure probability."
+}

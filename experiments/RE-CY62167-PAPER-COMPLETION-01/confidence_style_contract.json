@@ -1,0 +1,12 @@
+{
+  "assumed_relative_fluence_uncertainty": 0.1,
+  "confidence_coefficient": 2.4,
+  "construction_name": "ARTICLE-CONFIDENCE-STYLE EFFECTIVE-FLUENCE NORMALIZATION",
+  "direct_event_count": 3,
+  "effective_fluence_definition": "F_art(L)=S(L)/(2^24*sigma_b(L)); ARTICLE-NORMALIZED EFFECTIVE FLUENCE",
+  "fluence_is_independently_measured": false,
+  "formula": "sigma_hat * 2.4 * (3+0.67) / (3*(1-0.10))",
+  "generalization_policy": "ARTICLE_CONFIDENCE_STYLE_GENERALIZATION_REQUIRES_PI_DECISION",
+  "normative_status": "NOT ESTABLISHED AS NORMATIVE CONFIDENCE BOUND WITHOUT INDEPENDENT FLUENCE PROVENANCE",
+  "result": 0.0010904848941775637
+}

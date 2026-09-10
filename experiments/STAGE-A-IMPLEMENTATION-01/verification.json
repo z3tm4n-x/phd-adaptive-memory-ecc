@@ -1,0 +1,15 @@
+{
+  "all_boolean_mandatory_checks_pass": true,
+  "causal_common_first_actions": true,
+  "class_inclusion_fixed_precomputed_causal": true,
+  "conservation_nuC_plus_2nuD_eq_b": true,
+  "decision_boundary_arithmetic": "exact Fraction comparisons on frozen decimal inputs; float used only for rendering",
+  "independent_small_memory_phase_sum": true,
+  "no_future_level_in_first_action": true,
+  "numerically_unresolved_cases": 0,
+  "period_tie_rule_exercised": true,
+  "resource_and_pass_counts": true,
+  "row_storage_order_invariance": true,
+  "stationary_simultaneous_reduction": true,
+  "zero_direct_and_zero_residual_limits": true
+}

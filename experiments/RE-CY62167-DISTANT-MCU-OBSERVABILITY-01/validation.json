@@ -1,0 +1,24 @@
+{
+  "task_id": "RE-CY62167-DISTANT-MCU-OBSERVABILITY-01",
+  "starting_sha": "672a9daf2d799ed72491a8d701395cdb458bee21",
+  "working_branch": "research/cy62167-distant-mcu-observability-01",
+  "raw_files_verified_md5": true,
+  "K2_dinf_le3_all": true,
+  "header_bounds_consistent_all": true,
+  "xadd_yadd_anchor_empirical_all": false,
+  "coordinate_classification": "TRANSFORMED_PHYSICAL_MAP_COORDINATE_REPRESENTATION",
+  "cross_cluster_distant_excess": "NOT_IDENTIFIABLE",
+  "physical_span_bound": "NOT_ESTABLISHED",
+  "parity_cell_status": "UNKNOWN",
+  "zebrev_half_comparator": "NOT_TESTABLE",
+  "disposition_by_mapping": {
+    "W0": "C",
+    "W16-reg": "C",
+    "W-unknown": "D"
+  },
+  "can_p_D_be_computed_next": "AS_IDENTIFIED_SET_FOR_DECLARED_W0_W16_REG; NO_FOR_W_UNKNOWN",
+  "spectrum_rows": 168,
+  "spectrum_reconstruction_max_rel": 4.547475298894047e-16,
+  "radar_transport_sha256": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6",
+  "controlled_goes_dataset_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815"
+}

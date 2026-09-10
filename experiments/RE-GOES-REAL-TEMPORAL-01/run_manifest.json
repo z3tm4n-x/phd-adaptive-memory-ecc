@@ -1,0 +1,130 @@
+{
+  "task_id": "RE-GOES-REAL-TEMPORAL-NUMERICAL-REPAIR-01",
+  "starting_commit": "77f299bdc3f5abaac36e5d8ef79359f557e56065",
+  "historical_implementation_commit": "bb900279876bad4a370589871eaa07a1d6ecd1ad",
+  "scientific_review_commit": "bf34676d7842e6f843a716941178c695855bbf75",
+  "scientific_contract": "UNCHANGED; numerical boundary/map/serialization repair only",
+  "map_counts": {
+    "policy_regions": 14781,
+    "decision_boundaries_total": 14061,
+    "certificate_selection_boundaries": 12869,
+    "model_replay_threshold_boundaries": 1192,
+    "policy_points": 2632,
+    "unresolved_regions": 0,
+    "resource_rows": 46336,
+    "resource_boundary_enclosure_rows": 22880
+  },
+  "boundary_widths": {
+    "CERTIFICATE/SELECTION": {
+      "rows": 12869,
+      "total_g_width": "2.573800000000000000000000000E-14"
+    },
+    "MODEL/REPLAY-THRESHOLD": {
+      "rows": 1192,
+      "total_g_width": "2.384000000000000000000000000E-15"
+    },
+    "RESOURCE-BOUNDARY-ENCLOSURE": {
+      "rows": 22880,
+      "total_aligned_g_width": "4.576000000000000000000000000E-14"
+    }
+  },
+  "repair_regression": "ALL 8 NUMERICAL-REPAIR TEST GROUPS PASS",
+  "old_to_new_summary": {
+    "existence_boolean_differences": {
+      "saving_exists_for_some_replay_compatible_g": 0,
+      "certifiability_gain_exists_for_some_replay_compatible_g": 0
+    },
+    "g1_numeric_differences": {
+      "precomputed_passes": 0,
+      "delayed_passes": 0,
+      "ideal_passes": 0,
+      "pre_minus_delayed_passes": 0,
+      "delayed_minus_ideal_passes": 0,
+      "retention_decimal_serialization_rows": 1,
+      "retention_max_absolute_decimal_difference": "1e-16",
+      "interpretation": "same unchanged integer pass counts; serialization-only final digit"
+    },
+    "some_saving_counts": {
+      "0": {
+        "exact_denominator": 25,
+        "exact_some_saving": 18,
+        "stress_denominator": 5,
+        "stress_some_saving": 5
+      },
+      "300": {
+        "exact_denominator": 25,
+        "exact_some_saving": 13,
+        "stress_denominator": 5,
+        "stress_some_saving": 5
+      },
+      "900": {
+        "exact_denominator": 25,
+        "exact_some_saving": 10,
+        "stress_denominator": 5,
+        "stress_some_saving": 5
+      },
+      "1800": {
+        "exact_denominator": 25,
+        "exact_some_saving": 10,
+        "stress_denominator": 5,
+        "stress_some_saving": 5
+      }
+    },
+    "g1_counts": {
+      "0": {
+        "denominator": 25,
+        "positive_saving": 13
+      },
+      "300": {
+        "denominator": 25,
+        "positive_saving": 0
+      },
+      "900": {
+        "denominator": 25,
+        "positive_saving": 0
+      },
+      "1800": {
+        "denominator": 25,
+        "positive_saving": 0
+      }
+    }
+  },
+  "transient_sha256": {
+    "policy_regions.csv": "7f0236f11d46e680865bf2045eddc6858869a9a2ece19cd36fec2f29c61bfeea",
+    "decision_boundaries.csv": "ae7148b35bcb0b20de20295dea4d34203ad251de8b6f41a3613c175ebde2a359",
+    "policy_points.csv": "730a9f437dd8df46a383353002287ea6994d686a14609f7953fdb651ec217138",
+    "unresolved_regions.csv": "79258df9cfdb5879ec10dc4158c28c3ae1418f34cb5ed4b4d35670f63be49a44",
+    "resource_comparison.csv": "e92cdf8b4f055df29f8bd7d32cdc549d300c0340ac410eb9a7e24b9bee8bf3d8",
+    "envelope_segments.csv": "0a0ec02981ef10d410a7ad95aa895ba6ef32fe4b9a6c9aa689e8ec2d35397ea9",
+    "information_timeline.csv": "59bc2f27639b1e1bd40e6f7c87d4ee291b7f2768b61e5a2ceb0562527675f076",
+    "input_context.csv": "49090128d92eef6fc156e77e17ebe1b10054b0eda0f2c0aa3f5ce1a71707655f"
+  },
+  "compact_scientific_sha256": {
+    "model_compatibility.csv": "eecb5d35cdd78d9aa4cd7178946bc251df20d96867138e9db6cb4d76cc4c7031",
+    "g1_endpoint_summary.csv": "468ce9a5cbe5c1f372a1ff1dc713ff00e0012da33b90f067882cdf72f9f06bb9",
+    "repair_regression_witnesses.csv": "437de96a60c51010cbecd1bcd07a2f0c274e1d9a1edea9cd0ced96cd15905a75",
+    "selection_recomputed.csv": "01f78e81293310746fd8db28169b8f54f9296661eaaa4a2a005a4b18e5d44799",
+    "test_output.txt": "5a7c44a172e085cbbd63425b4293b9bd19b5185a19ea313bc364c7257177a9eb"
+  },
+  "applicability_resource_summary_raw_sha256": "b69c2e0fd03bb2f1e078431e94ab24fe56c73f33ce71943cbbc44142b36c8536",
+  "runtime_reference": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "execution_record": {
+    "historical_original_wrapper_note": "Historical implementation bb900279: original wrapper was stopped by an outer harness time limit after core generation; retained as historical provenance.",
+    "repair_development_staged_run": "PASS in fresh temporary output; used during repair development and independent regression.",
+    "final_release_wrapper": "PASS: ./reproduce.sh completed end-to-end with exit code 0 using a fresh mktemp directory and cleanup trap.",
+    "final_release_checks": [
+      "core_generation",
+      "resource_alignment",
+      "summary_generation",
+      "8-group numerical-repair regression",
+      "unchanged baseline decisions/resources",
+      "transient scientific SHA-256",
+      "decompressed compact scientific CSV comparison"
+    ]
+  }
+}

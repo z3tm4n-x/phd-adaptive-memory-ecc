@@ -1,0 +1,133 @@
+{
+  "status": "ENGINEERING_CHECKS_COMPLETED_NOT_SCIENTIFIC_REVIEW",
+  "seconds": 9.142858072999843,
+  "tests": [
+    {
+      "test": "integrated_rate_moments_independent_block_exponential",
+      "passed": true,
+      "max_scaled_error": 1.1626733238615176e-12
+    },
+    {
+      "test": "whole_observation_tree_potential_identity",
+      "passed": true,
+      "checks": 3300,
+      "max_residual": 5.204170427930421e-16
+    },
+    {
+      "test": "likelihood_ratio_one_step_martingale_identity",
+      "passed": true,
+      "checks": 3300,
+      "max_relative_residual": 1.1861339503347184e-14
+    },
+    {
+      "test": "unbounded_pending_first_moment_bound",
+      "passed": true,
+      "maximum": 0.5779891996506332
+    },
+    {
+      "test": "frozen_set_is_not_posterior_reweighted_or_shrunk",
+      "passed": true
+    },
+    {
+      "test": "closed_cell_elimination_and_empty_set_no_budget_reset",
+      "passed": true
+    },
+    {
+      "test": "binary_coarsening_is_explicit_not_an_extra_channel",
+      "passed": true
+    },
+    {
+      "test": "small_killed_physical_vs_actual_events",
+      "passed": true,
+      "D": 1.0,
+      "learning": true,
+      "trials": 100000,
+      "F_exact": 0.05410882484794886,
+      "F_MC": 0.05509,
+      "standard_error": 0.000715409392736235,
+      "nodes": 57
+    },
+    {
+      "test": "small_killed_physical_vs_actual_events",
+      "passed": true,
+      "D": 1.0,
+      "learning": false,
+      "trials": 100000,
+      "F_exact": 0.05410882484794886,
+      "F_MC": 0.05509,
+      "standard_error": 0.000715409392736235,
+      "nodes": 57
+    },
+    {
+      "test": "small_killed_physical_vs_actual_events",
+      "passed": true,
+      "D": 3.0,
+      "learning": true,
+      "trials": 100000,
+      "F_exact": 0.060575507005770475,
+      "F_MC": 0.06017,
+      "standard_error": 0.0007543614183981331,
+      "nodes": 57
+    },
+    {
+      "test": "small_killed_physical_vs_actual_events",
+      "passed": true,
+      "D": 3.0,
+      "learning": false,
+      "trials": 100000,
+      "F_exact": 0.060575507005770475,
+      "F_MC": 0.06017,
+      "standard_error": 0.0007543614183981331,
+      "nodes": 57
+    },
+    {
+      "test": "small_killed_physical_vs_actual_events",
+      "passed": true,
+      "D": 10.0,
+      "learning": true,
+      "trials": 100000,
+      "F_exact": 0.0632211910194651,
+      "F_MC": 0.06277,
+      "standard_error": 0.000769573076618104,
+      "nodes": 57
+    },
+    {
+      "test": "small_killed_physical_vs_actual_events",
+      "passed": true,
+      "D": 10.0,
+      "learning": false,
+      "trials": 100000,
+      "F_exact": 0.0632211910194651,
+      "F_MC": 0.06277,
+      "standard_error": 0.000769573076618104,
+      "nodes": 57
+    },
+    {
+      "test": "explicit_all_word_chronology_vs_lazy_scanner",
+      "passed": true,
+      "paths": 400,
+      "discrepancies": 0
+    },
+    {
+      "test": "known_D_adapter_reproduces_published_RES003_action_witnesses",
+      "passed": true,
+      "witnesses": [
+        [
+          116.0,
+          0,
+          2.0
+        ],
+        [
+          118.0,
+          0,
+          10.0
+        ],
+        [
+          828.0,
+          22,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

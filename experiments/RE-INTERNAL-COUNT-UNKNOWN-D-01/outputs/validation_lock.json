@@ -1,0 +1,18 @@
+{
+  "source_sha256": {
+    "config.json": "6544bfcda8b22f2d4ca8b413eca82b6486d59a50632f346bfba8a90938dab6c8",
+    "diagnostics.py": "0745ff663dbd7daf49b5ca2e2ea8b0a5dee1d5c8206b62bb46ee935868762245",
+    "experiment.py": "d84da2e72c7333b1ea1b882e0b88cc7e02f12c98260076263b23d6f6fba2c74a",
+    "feasibility.py": "a8679c348974d9e0366302da3845692deff0eede07dda5b472c6f352b8f0af0f",
+    "known_reference.py": "dc75594565fd89443ccfcf38a87177dfb99cc084f03c4bf3b4c4fc256cf0dcff",
+    "model.py": "37c395abfde82c1894d88bd6b69f6db7493c7906c317118da34be216d458bd85",
+    "numeric_witness.py": "840e8c3e63c21fc474f2b1d6f154a02c06ac01a2f94eab8d0d76d21ce06326c3",
+    "reproduce.py": "9998402bd40d3849492caaca159595ec05c6644f553926ef52ba7caa93b947ac",
+    "simulate.py": "2ebeeaccd630836ae5b7399093dab37292d93936508f54529f25d34dd74a8fde",
+    "small_reference.py": "2ff1f032e3124928226a95a66d52108f17f0ec00fefc452406372f08999d6f28",
+    "tests.py": "09bd78b253ace95ae95b28ee9a55ae61ead3a16b2f2f336a3558d38e04155c9d"
+  },
+  "pilot_selection_sha256": "1524a034e9d863f44be5741c913796d67e31f235f9f38b0f352f617a8a271dbe",
+  "validation_seed": 290916001,
+  "retuning_permitted": false
+}

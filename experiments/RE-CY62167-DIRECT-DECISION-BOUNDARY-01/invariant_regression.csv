@@ -1,0 +1,21 @@
+shield_mm,window_duration,window_statistic,epsilon_analysis,sigma_model,comparison_disposition,risk_semantics,low_energy_model,regression_type,theta_anchor_feasible_states,pass
+1.0,1h,median,0.01,main_loglog,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,1h,median,0.01,published_rpp_fluka_digitized,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,1h,median,0.1,main_loglog,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,1h,median,0.1,published_rpp_fluka_digitized,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,5min,median,0.001,main_loglog,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,5min,median,0.001,published_rpp_fluka_digitized,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,5min,median,0.01,main_loglog,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,5min,median,0.01,published_rpp_fluka_digitized,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,5min,median,0.1,main_loglog,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,5min,median,0.1,published_rpp_fluka_digitized,A — ACTION-INVARIANT,product_estimate,K1_only,feasible,"[true, true, true]",True
+1.0,1h,max,1e-06,main_loglog,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,1e-06,published_rpp_fluka_digitized,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,1e-05,main_loglog,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,1e-05,published_rpp_fluka_digitized,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,0.0001,main_loglog,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,0.0001,published_rpp_fluka_digitized,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,0.001,main_loglog,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,0.001,published_rpp_fluka_digitized,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,0.01,main_loglog,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
+1.0,1h,max,0.01,published_rpp_fluka_digitized,A — ACTION-INVARIANT (all actions infeasible),product_estimate,K1_only,all_infeasible,"[false, false, false]",True
