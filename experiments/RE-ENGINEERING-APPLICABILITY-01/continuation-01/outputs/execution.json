@@ -1,0 +1,49 @@
+{
+  "timestamp_utc": "2026-09-10T13:25:09.993184+00:00",
+  "executor": "Research Engineer in the separate user-started ChatGPT session",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "mpmath": "1.3.0",
+  "numba": "0.65.1",
+  "rtl_backends": {
+    "iverilog": null,
+    "vvp": null,
+    "verilator": null,
+    "yosys": null,
+    "vivado": null
+  },
+  "input_hashes_before": {
+    "model.py": "37c395abfde82c1894d88bd6b69f6db7493c7906c317118da34be216d458bd85",
+    "config.json": "6544bfcda8b22f2d4ca8b413eca82b6486d59a50632f346bfba8a90938dab6c8"
+  },
+  "input_hashes_after": {
+    "model.py": "37c395abfde82c1894d88bd6b69f6db7493c7906c317118da34be216d458bd85",
+    "config.json": "6544bfcda8b22f2d4ca8b413eca82b6486d59a50632f346bfba8a90938dab6c8"
+  },
+  "continuation_sources_sha256": {
+    "checks_budget.py": "4069f27008c21d1e59403343110908799951f97d5568811ed68c9ba5a413ee55",
+    "checks_interface.py": "19207514bb2d50fb40427b5c455de6780cd2002cc2a376d3fd4e31ed3f9fd06b",
+    "checks_numeric.py": "caaf1301c3bc15316d23d5d3198e777ae679c4bb87f7955bfab6fe7d337a75c6",
+    "checks_word.py": "b518865ed4d52dc52966d855bdd3b28f1718f2699ad44844d24d8a5580d9bed9",
+    "run_checks.py": "fffec0b02fdb1382fafcf17413351f85da99caec75b7e00c079c6fafc67bfa5c",
+    "config.json": "9cac7e99d7f43fed278fa16efc711ecd64bfc7834bbf0be46189b83622ece073"
+  },
+  "continuation_sources_unchanged": true,
+  "command": "OPENBLAS_NUM_THREADS=1 python run_checks.py --reference-root <pinned-package> --out <new-output>",
+  "executed": [
+    "deterministic local calculations",
+    "finite word/command/service checks",
+    "short accepted-kernel budget trace"
+  ],
+  "not_executed": [
+    "Monte Carlo",
+    "retuning",
+    "five-year replay",
+    "RTL simulation",
+    "synthesis",
+    "placement",
+    "hardware WCET"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-10",
+  "main_repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+  "handoff_commit": "8138c5ba05fb4e88246379db8c86bab1a3687687",
+  "orchestrator_input_commit": "bcc774c1c3700bcbeacb8b2ca3bd9ead51523951",
+  "orchestrator_authorship_preserved": true,
+  "governance_read": [
+    {
+      "path": "docs/agents/00_GLOBAL_OPERATING_RULES.md",
+      "git_blob": "a0796fc3b013d93065c26ca0ea5f1354c199af2e"
+    },
+    {
+      "path": "docs/agents/07_RESEARCH_ENGINEER_LOCAL.md",
+      "git_blob": "49fb02b353e9c7b5c6632d8bc7284992169cbe42"
+    },
+    {
+      "path": "docs/agents/HANDOFF_CONTRACTS.md",
+      "git_blob": "dcb401e2109e3ac312f79d3a14504d93de4601ae"
+    },
+    {
+      "path": "docs/research_gates/ENGINEERING-APPLICABILITY-RE-CONTINUATION-01.md",
+      "git_blob": "bfab3774d770d372a45d8ea4be780f760b6af65d"
+    },
+    {
+      "path": "docs/research_gates/ENGINEERING-APPLICABILITY-ROLE-CORRECTION-01.md",
+      "git_blob": "b14148dc769c4ef7d616da0d8c44624dd4bc5806"
+    },
+    {
+      "path": "docs/research_gates/DISSERTATION-COMPLETION-POSITION-01.md",
+      "git_blob": "76f8ad0d72d121289e803201e5640397aa28c2f3",
+      "read_scope": "Targeted sections, including controlling section 6 and PI clarifications"
+    },
+    {
+      "path": "results/RES-004-internal-count-unknown-d.md",
+      "git_blob": "7f624bafe5a973d295999a8322a2b1885c24fb3d",
+      "read_scope": "Accepted assertion, validity domain, numerical evidence, identities and correction through line 145"
+    }
+  ],
+  "input_package_read": [
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/README.md",
+      "git_blob": "57fa2b29b92ba3ff3623f8a7dea568976411b0c0"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/REPORT.md",
+      "git_blob": "e661889992fd1b321ad3a509082c9008418fd372"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/DERIVATION.md",
+      "git_blob": "72a7110c270f2f285bb07aa6d592e9007f47b838"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/config.json",
+      "git_blob": "36a12afb397db5d2b4ccd7e2e8974bf7d4dc6853"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/analyze.py",
+      "git_blob": "1d282c4602ebd21bdac1bbae1e2e5402cc9be2a6"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/verify.py",
+      "git_blob": "0768d71403c3053bc71833916808c926c75e8f23"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/outputs/summary.json",
+      "git_blob": "60621ca4043fe684dccb740512fcba224d023755"
+    }
+  ],
+  "old_repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+  "old_commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+  "old_sources_read_not_executed": [
+    {
+      "path": "rtl/scrubber/scrub_pass_engine.sv",
+      "git_blob": "2fc4892e987785591875a91878b53335df71c872"
+    },
+    {
+      "path": "rtl/scrubber/period_scheduler.sv",
+      "git_blob": "cae503f392efec1e0be8cd7b4e9da3301adb55ef"
+    },
+    {
+      "path": "rtl/ecc/secded_32_39_decoder.sv",
+      "git_blob": "3b0da850d1804e26dc17f63cb6af4d9338ecce6e"
+    },
+    {
+      "path": "configs/ch3_main_1pct.json",
+      "git_blob": "13cbb52424cf0db0ff3d47dbf97fbfc04e46f0fa"
+    }
+  ],
+  "locally_executed_reference": {
+    "commit": "bcc774c1c3700bcbeacb8b2ca3bd9ead51523951",
+    "path": "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01",
+    "model.py": "5bbb873592600d5224fd0d56ec08754233ada72a",
+    "config.json": "21725338224f8b48b5198da078ef6ead6f688277",
+    "origin": "Existing ZIP attachment; both local blob hashes matched GitHub at the pinned input",
+    "archive_sha256": "8829f4435d439448e7d767574e1b345bc7ee10370e3dc6c89921ffa4c1f992f3"
+  },
+  "rate_values": "Inherited summary mean/peak; no independent reconstruction of the five-year CSV or physical sensitivity",
+  "not_read_again": [
+    "Chapters 3/4 DOCX",
+    "raw GOES/COSRAD datasets",
+    "complete five-year schedules",
+    "unknown-D NPZ comparison"
+  ],
+  "source_scope": "Connector reads at immutable commits; no claim of a full local repository clone"
+}

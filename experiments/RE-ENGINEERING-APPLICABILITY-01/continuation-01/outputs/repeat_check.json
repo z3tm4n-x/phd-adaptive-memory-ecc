@@ -1,0 +1,10 @@
+{
+  "scope": "Repeat of only the bounded continuation; not Monte Carlo or upstream replay",
+  "matches": {
+    "numeric.json": true,
+    "word.json": true,
+    "interface.json": true,
+    "budget.json": true
+  },
+  "execution_metadata_excluded": "Timestamp and environment-location metadata are not byte-identity targets"
+}
