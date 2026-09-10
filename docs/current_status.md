@@ -1,7 +1,7 @@
 # Current Status
 
 **Updated:** 2026-09-10  
-**Orchestrator disposition:** Stage A and its information-interface continuation are complete within their reviewed scopes. Local closeout is accepted. GOES real-temporal numerical repair is scientifically accepted within Review 02's explicit map domain. Review 02 is PASS_WITH_MINOR; all blocking findings are closed. The remaining diagnostic-label MINOR is locally closed without numerical changes. The execution/review gate is complete. PI has approved and RES-002 is permanently registered. Its maintenance is closed except for material error/contradiction. PI has now accepted RE-INTERNAL-COUNT-CONTROL-01 with narrow clarifications and authorized local Research Engineer execution. Scientific Review 82117f8b2bea9d92ffcd807e3671ab3dd13e96db is accepted: PASS_WITH_MINOR, no blocking finding. PI has accepted RES-003, now ACCEPTED / PERMANENT; RE-INTERNAL-COUNT-CONTROL-01 is PROMOTED only within that result. The arithmetic-disclosure MINOR remains closed without code/output changes. Publication preparation is a separate stream; PI has accepted RE-INTERNAL-COUNT-UNKNOWN-D-01 and authorized execution with one unknown environmental parameter, dwell time D.
+**Orchestrator disposition:** PI has accepted the unknown constant-D result within Scientific Review c9c9dd7f9ea038a169c2bf493f32bb6e5c842323 and correction 8b865cbbbec2406a7eccd033bb3c2ff150f4c995. [RES-004](../results/RES-004-internal-count-unknown-d.md) is ACCEPTED / PERMANENT. RE-INTERNAL-COUNT-UNKNOWN-D-01 is COMPLETED / PROMOTED only within RES-004. RES-001…003 retain their scopes. Historical held-out independence remains unconfirmed; a future preregistered confirmatory comparison is planned for publication, not required for this registration. The main research stage is closed. The next engineering-applicability task is prepared for PI agreement, not launched. [Dissertation completion position and full next-task proposal](research_gates/DISSERTATION-COMPLETION-POSITION-01.md) integrate the old scrubber and Chapters 3/4.
 
 ## Completed gate and accepted scope
 
@@ -125,41 +125,17 @@ resource consequences. They are not four concurrent tasks or a division of one
 proof into papers. RES-001/002 support the shared chain; result IDs are not a
 publication count.
 
-### Active authorized research task — unknown dwell time
+### Completed and permanently registered — unknown dwell time
 
-[RE-INTERNAL-COUNT-UNKNOWN-D-01](research_gates/INTERNAL-COUNT-UNKNOWN-D-PROPOSAL-01.md)
-is **PI ACCEPTED / EXECUTION AUTHORIZED**. Research Engineer handoff is ready;
-this Orchestrator update does not claim that numerical execution has already begun.
-One substantial uncertainty: D is fixed but unknown in [30,3000] s. Known
-levels, symmetric two-state law, rho=0, own-count channel, 3600-s horizon and
-SEC/R2-U architecture remain fixed. The primary epsilon is 0.1.
+[RES-004](../results/RES-004-internal-count-unknown-d.md) records the exact reviewed domain, the preserved numerical evidence and the unresolved historical provenance separately. The rounding MINOR is closed: max transfer < 1.063694137406891 < 1.064. No source/output/lock/NPZ was changed for promotion and no new production run was required.
 
-Target: a computational method with F_A^pi(D)<=0.1 for every allowed D,
-including a justified treatment of learning D from endogenous counts and its
-contribution to decisions/resources. No invented prior-average guarantee and no
-per-path guarantee. A safe set update needs whole-history error control and
-connection to the auxiliary/physical coupling; a single MAP substitution is
-insufficient. The continuum cannot be certified by testing only grid points.
+The stage is closed. Do not reissue the unknown-D task or automatically add unknown levels, asymmetry or D(t). Future confirmation uses new missions after independently accessible code/settings/analysis fixation; it does not rewrite the historical delivery and is not launched by this update.
 
-Mandatory comparison freezes the admissible D-set while retaining count updates
-for current state, to distinguish parameter-information effects from already
-accepted count effects. Robust Fixed/Precomputed, the known-D diagnostic and
-one uniformly configured PA-DOM adaptation complete the accepted comparison.
-No levels/asymmetry/drifting parameters/GOES/W work is opened.
+### Prepared next decision — engineering applicability
 
-The experimental-event line remains the physical-input component; the future
-architectural block must assess preservation of risk and resource benefit
-under implementation costs/precision/latency. Neither is launched by this
-acceptance. Only RE-INTERNAL-COUNT-UNKNOWN-D-01 is authorized for the main
-research execution. Publication preparation of RES-003 remains separate.
+PI directs the dissertation toward a connected evidence-to-risk-to-control-to-implementation method, including a justified choice between fixed, simple and complex control. The [prepared position and RE-ENGINEERING-APPLICABILITY-01](research_gates/DISSERTATION-COMPLETION-POSITION-01.md) select a representative long-retention read-mostly SRAM region, preserve the old repo cf7ab706224f7872fdafcf34febda70e3f6c8dd1, and define the next bounded task and its negative outcomes. Execution awaits agreement on that concrete proposal. No large simulation, new irradiation or full port is authorized by preparation.
 
-PI's controlling success criterion is the link from admissible D-set refinement
-to selected periods and costs under the whole-horizon risk constraint, not
-parameter precision alone. Preserve the frozen-D-set comparator with functioning
-current-state filtering. Explain zero additional benefit through evidence about
-information insufficiency, action insensitivity or conservatism of the concrete
-method; do not infer universal impossibility. No new unknown parameters, drift,
-physical lines or optimal active observation planning are added.
+Publication of accepted results continues as a separate stream. Four independent publication questions are proposed; no manuscript or publication is counted complete merely from a RES or title.
 
 ## Continuing canonical research state
 
@@ -167,14 +143,14 @@ physical lines or optimal active observation planning are added.
 - RQ-001 remains PARTIALLY ANSWERED / OPEN DEPENDENCIES. E_cap is not automatically DUE/SDC/miscorrection/system failure. Numerical H_req and epsilon_req remain TBD.
 - RQ-002 and RQ-006 remain open for physically justified error/mapping/representation domains.
 - RQ-003 retains ECC/decoder/reset responsibility; the current SEC data-only slice does not close it.
-- RQ-004 now supplies the internal corrected-count observation interface for the active task. RQ-005 owns componentwise costs. RQ-007 integrates these without absorbing them.
-- EXP-001 remains complete/promoted only within PI-approved [RES-001](../results/RES-001-exp001-four-word-identified-set.md), with all fourteen applicability conditions. RES-002 is separately registered by the present PI-authorized promotion.
+- RQ-004 supplies the accepted internal corrected-count observation interfaces; transfer to the proposed executor remains to be established. RQ-005 owns componentwise costs. RQ-007 integrates these without absorbing them.
+- EXP-001 remains complete/promoted only within PI-approved [RES-001](../results/RES-001-exp001-four-word-identified-set.md), with all fourteen applicability conditions. RES-002, RES-003 and RES-004 are separately registered within their accepted domains.
 - PA-DOM-01…04 bounded closure is complete under its accepted stop rule. PA-DOM-01-B and Chen remain obligatory control prior art; generic corrected-count/rate-to-period adaptation is not claimed as novelty.
 - The accepted normative baseline retains its controlled-edition/PMI/interface limitations. No normative deficiency is inferred.
 - Angular-event transport, proprietary W, parity/ERR, acquisition costs and real-channel availability are not resolved by Stage A. None is silently reinterpreted as an established physical guarantee.
 
 ## Summary synchronization
 
-This page supersedes the 2026-09-01 active-gate summary, which still described PA-DOM as unfinished. Older README, research_spec and Issue #3 phase summaries must not be used to reissue completed work; object-specific accepted artefacts and this current gate govern. Their historical scientific definitions are not replaced by a date-order rule.
+README and the research-specification direction note now point to RES-001…004 and the prepared completion position. Historical stage descriptions above record their own dates and scopes; they do not authorize restarting completed tasks. Issue #3 still contains an old main-era phase summary and must not be used as the active execution instruction.
 
-Main and historical scientific outputs remain unchanged by the working-branch update. No PR/merge, additional experiment beyond the named bounded task, permanent HYP/RES or broad search is authorized here.
+This is an authorized working-branch registration, not a merge to main. Historical scientific outputs are preserved. No PR/merge, new RES beyond the explicitly accepted RES-004, or execution of the proposed next task is performed by this update.
