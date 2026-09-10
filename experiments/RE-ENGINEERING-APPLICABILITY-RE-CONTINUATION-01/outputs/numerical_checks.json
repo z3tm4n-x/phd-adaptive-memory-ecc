@@ -1,0 +1,175 @@
+{
+  "backup_cases": [
+    {
+      "rate_scale": "1",
+      "backup_s": 1.0,
+      "starts_upper": 3600,
+      "auxiliary_initial_upper": 0.0765497948007954,
+      "rmw_upper": 0.0039689551584,
+      "model_tv_upper": 0.0010168926983465624,
+      "backup_lower_at_D3000": 0.07651943922419004,
+      "slack_lower_conditional_on_numeric_reserve": 0.006988805773038478,
+      "exact_slack_fraction": "28366429681827318764933408404620396579725390366931/4058837890625000000000000000000000000000000000000000",
+      "numeric_reserve_status": "assumed_for_modified_backend_not_verified"
+    },
+    {
+      "rate_scale": "39/32",
+      "backup_s": 1.0,
+      "starts_upper": 3600,
+      "auxiliary_initial_upper": 0.11370335731641584,
+      "rmw_upper": 0.0048371640993,
+      "model_tv_upper": 0.0011144759428074224,
+      "backup_lower_at_D3000": 0.11365826861327447,
+      "slack_lower_conditional_on_numeric_reserve": -0.031078325833753338,
+      "exact_slack_fraction": "-129169291746537306669961285104796371528800181251897949/4156250000000000000000000000000000000000000000000000000",
+      "numeric_reserve_status": "assumed_for_modified_backend_not_verified"
+    },
+    {
+      "rate_scale": "39/32",
+      "backup_s": 0.5,
+      "starts_upper": 7200,
+      "auxiliary_initial_upper": 0.0658787452184229,
+      "rmw_upper": 0.0096743281986,
+      "model_tv_upper": 0.0011144759428074224,
+      "backup_lower_at_D3000": 0.06586358641510802,
+      "slack_lower_conditional_on_numeric_reserve": 0.01220007940399524,
+      "exact_slack_fraction": "101413160045710446121285439008596774128087656295032227/8312500000000000000000000000000000000000000000000000000",
+      "numeric_reserve_status": "assumed_for_modified_backend_not_verified"
+    }
+  ],
+  "addressed_backup_reconstruction": [
+    {
+      "D": 30,
+      "pass_s": "0.18874368",
+      "value": "0.07562336217098844976173051587723144895721877029637219221603962207437996",
+      "input_value": 0.07562336217098845,
+      "abs_difference": 0.0
+    },
+    {
+      "D": 300,
+      "pass_s": "0.18874368",
+      "value": "0.07645561454386196602905111432357879021629911605176400136075318973870153",
+      "input_value": 0.07645561454386195,
+      "abs_difference": 1.3877787807814457e-17
+    },
+    {
+      "D": 3000,
+      "pass_s": "0.18874368",
+      "value": "0.07654036118035629761034353814013358741485688630147650512331499516163805",
+      "input_value": 0.07654036118035629,
+      "abs_difference": 1.3877787807814457e-17
+    },
+    {
+      "D": 3000,
+      "pass_s": "0.37748736",
+      "value": "0.08868898374861303420791932734276449653667431123326892320912127647670908",
+      "input_value": 0.08868898374861302,
+      "abs_difference": 1.3877787807814457e-17
+    }
+  ],
+  "max_gap_classes": [
+    {
+      "action_class": "RES_grid_12",
+      "epsilon": 0.001,
+      "candidates": 144,
+      "best_complete_passes": 120,
+      "first_s": 30,
+      "second_s": 30,
+      "upper": 0.0008329487249770957
+    },
+    {
+      "action_class": "RES_grid_12",
+      "epsilon": 0.01,
+      "candidates": 144,
+      "best_complete_passes": 12,
+      "first_s": 300,
+      "second_s": 300,
+      "upper": 0.008310279355061064
+    },
+    {
+      "action_class": "RES_grid_12",
+      "epsilon": 0.1,
+      "candidates": 144,
+      "best_complete_passes": 12,
+      "first_s": 300,
+      "second_s": 300,
+      "upper": 0.008310279355061064
+    },
+    {
+      "action_class": "input_screen_grid_15",
+      "epsilon": 0.001,
+      "candidates": 225,
+      "best_complete_passes": 120,
+      "first_s": 30,
+      "second_s": 30,
+      "upper": 0.0008329487249770957
+    },
+    {
+      "action_class": "input_screen_grid_15",
+      "epsilon": 0.01,
+      "candidates": 225,
+      "best_complete_passes": 12,
+      "first_s": 300,
+      "second_s": 300,
+      "upper": 0.008310279355061064
+    },
+    {
+      "action_class": "input_screen_grid_15",
+      "epsilon": 0.1,
+      "candidates": 225,
+      "best_complete_passes": 1,
+      "first_s": 1800,
+      "second_s": 3600,
+      "upper": 0.09972104019933249
+    }
+  ],
+  "rate_threshold": {
+    "critical_per_hour": 354.34671888579174,
+    "relative_increase_percent": 9.580958349248924,
+    "direct_event_probability_room": 0.00016705127502290428
+  },
+  "observation_checks": [
+    {
+      "anchor": "mean",
+      "tau_s": 30,
+      "first_arrival_t95_s": 5630.071063751923,
+      "auxiliary_first_positive_probability": 0.015786696177947052,
+      "physical_first_positive_lower": 0.015786695839161816,
+      "physical_first_positive_upper": 0.01578669651673229,
+      "assumptions": "clean; constant homogeneous Poisson; qualified full-word ECC/RMW"
+    },
+    {
+      "anchor": "mean",
+      "tau_s": 300,
+      "first_arrival_t95_s": 5630.071063751923,
+      "auxiliary_first_positive_probability": 0.14749675602640705,
+      "physical_first_positive_lower": 0.14749673162981497,
+      "physical_first_positive_upper": 0.14749678042299913,
+      "assumptions": "clean; constant homogeneous Poisson; qualified full-word ECC/RMW"
+    },
+    {
+      "anchor": "peak",
+      "tau_s": 30,
+      "first_arrival_t95_s": 33.351254734170496,
+      "auxiliary_first_positive_probability": 0.9318629013824633,
+      "physical_first_positive_lower": 0.9318559601430886,
+      "physical_first_positive_upper": 0.931869842621838,
+      "assumptions": "clean; constant homogeneous Poisson; qualified full-word ECC/RMW"
+    },
+    {
+      "anchor": "peak",
+      "tau_s": 300,
+      "first_arrival_t95_s": 33.351254734170496,
+      "auxiliary_first_positive_probability": 0.9999999999980015,
+      "physical_first_positive_lower": 0.9993074767184131,
+      "physical_first_positive_upper": 1,
+      "assumptions": "clean; constant homogeneous Poisson; qualified full-word ECC/RMW"
+    }
+  ],
+  "time_lattice": {
+    "coarsest_common_quantum_ns": 5,
+    "single_clock_realization_MHz": 200.0,
+    "original_7p5ns_clock_exact_0p1s": false,
+    "clock_realization": "not_synthesized_or_timing_verified"
+  }
+}

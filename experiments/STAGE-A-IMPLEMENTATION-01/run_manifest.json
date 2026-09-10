@@ -1,0 +1,20 @@
+{
+  "task_id": "STAGE-A-IMPLEMENTATION-01",
+  "implementation": "stage_a.py",
+  "arithmetic": "fractions.Fraction exact rational decisions; binary float only for rendering",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "frozen_csv_verified_in_this_cloud_run": false,
+  "frozen_csv_note": "Authenticated GitHub commit/path/blob and source rows were checked; full private CSV bytes were not materialized locally. reproduce.sh hard-gates SHA-256, paired-valid row count and L/H on a clone.",
+  "counts": {
+    "direct_budget_audit_rows": 36,
+    "passing_set_case_rows": 96,
+    "encoded_causal_roots": 432,
+    "selected_certificate_resource_rows": 72,
+    "resource_action_pairs": 144,
+    "resource_gap_rows": 60,
+    "numerical_boundary_summary_rows": 72,
+    "focused_tests": 9,
+    "numerically_unresolved_cases": 0
+  }
+}

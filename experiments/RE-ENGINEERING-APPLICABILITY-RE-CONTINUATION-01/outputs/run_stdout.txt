@@ -1,0 +1,54 @@
+{
+  "checks": 8,
+  "passed": true,
+  "backup_cases": [
+    {
+      "rate_scale": "1",
+      "backup_s": 1.0,
+      "starts_upper": 3600,
+      "auxiliary_initial_upper": 0.0765497948007954,
+      "rmw_upper": 0.0039689551584,
+      "model_tv_upper": 0.0010168926983465624,
+      "backup_lower_at_D3000": 0.07651943922419004,
+      "slack_lower_conditional_on_numeric_reserve": 0.006988805773038478,
+      "exact_slack_fraction": "28366429681827318764933408404620396579725390366931/4058837890625000000000000000000000000000000000000000",
+      "numeric_reserve_status": "assumed_for_modified_backend_not_verified"
+    },
+    {
+      "rate_scale": "39/32",
+      "backup_s": 1.0,
+      "starts_upper": 3600,
+      "auxiliary_initial_upper": 0.11370335731641584,
+      "rmw_upper": 0.0048371640993,
+      "model_tv_upper": 0.0011144759428074224,
+      "backup_lower_at_D3000": 0.11365826861327447,
+      "slack_lower_conditional_on_numeric_reserve": -0.031078325833753338,
+      "exact_slack_fraction": "-129169291746537306669961285104796371528800181251897949/4156250000000000000000000000000000000000000000000000000",
+      "numeric_reserve_status": "assumed_for_modified_backend_not_verified"
+    },
+    {
+      "rate_scale": "39/32",
+      "backup_s": 0.5,
+      "starts_upper": 7200,
+      "auxiliary_initial_upper": 0.0658787452184229,
+      "rmw_upper": 0.0096743281986,
+      "model_tv_upper": 0.0011144759428074224,
+      "backup_lower_at_D3000": 0.06586358641510802,
+      "slack_lower_conditional_on_numeric_reserve": 0.01220007940399524,
+      "exact_slack_fraction": "101413160045710446121285439008596774128087656295032227/8312500000000000000000000000000000000000000000000000000",
+      "numeric_reserve_status": "assumed_for_modified_backend_not_verified"
+    }
+  ],
+  "threshold": {
+    "critical_per_hour": 354.34671888579174,
+    "relative_increase_percent": 9.580958349248924,
+    "direct_event_probability_room": 0.00016705127502290428
+  },
+  "tools": {
+    "git": "/usr/bin/git",
+    "iverilog": null,
+    "verilator": null,
+    "yosys": null,
+    "vivado": null
+  }
+}

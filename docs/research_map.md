@@ -1,0 +1,58 @@
+# Карта источников и истории исследования
+
+Актуализировано 2026-09-10 постоянным Research Engineer по [составу Orchestrator](research_gates/REPOSITORY-CONSOLIDATION-01.md) и [selection.json](research_gates/REPOSITORY-CONSOLIDATION-01.selection.json), commit `72125a48fc6342884c6839d67b8d0d8c226f13ef`. Это указатель происхождения и действующих ограничений, не новый научный результат. Текущая задача и вопрос — в [состоянии](current_status.md), карточки результатов и проверки — в [реестре RES](../results/README.md).
+
+## Цепочка результатов и их место
+
+RES-001 устанавливает ограниченный пример достаточности информации для риска и действия; RES-002 — роль внешнего информационного канала; RES-003 — безопасную обратную связь по собственным исправлениям; RES-004 — уточнение неизвестного постоянного параметра. Экспериментальная линия и локальная инженерная основа обеспечивают связь методов с входами и исполнением. Они не устанавливают автоматически физическую применимость и суммарную системную пользу.
+
+| Связь | Зафиксированные версии и действующее основание |
+|---|---|
+| EXP-001 → RES-001 | Реализация `84728d1b5768e7c91c508495d696c5980943ae57` → исправление `072b70adabb9827ee59c94b2b3d5cf044b25cdf9` → [Review 02 на d76850f4](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d76850f47826cc5c9cf693fae8b581b3dcc2542e/docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md) → PI ACCEPT. Все 14 условий [карточки](../results/RES-001-exp001-four-word-identified-set.md) действуют совместно. |
+| Real-temporal → RES-002 | Исправление `65d640d7c988d83b97daa839e35a3abb358b3c7d` → [Review 02 на 63e18990](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/63e189904a261124d219912bee27dd92267bb445/docs/scientific_reviews/GOES_REAL_TEMPORAL_REVIEW_02.md) → [closeout 43cfad8f](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/43cfad8f8b411f1abfa625fae4117f93d07c27f4) → PI ACCEPT. |
+| Собственный счётчик → RES-003 | [Поставка fb641544](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/fb6415444d028526dfc41118b52688ffb83c03dd/experiments/RE-INTERNAL-COUNT-CONTROL-01/) → [SR 82117f8b](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/82117f8b2bea9d92ffcd807e3671ab3dd13e96db/docs/scientific_reviews/INTERNAL_COUNT_CONTROL_REVIEW_01.md) → арифметическое закрытие MINOR в §5 [RES-003](../results/RES-003-internal-count-control.md) → PI ACCEPT. |
+| Неизвестный D → RES-004 | [Нормализованный пакет f1b1418b](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/f1b1418b5f75630433af9c8d0e5586f328532a15/experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/) → [SR c9c9dd7f](scientific_reviews/INTERNAL_COUNT_UNKNOWN_D_REVIEW_01.md) → [поправка 8b865cbb](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/8b865cbbbec2406a7eccd033bb3c2ff150f4c995) → PI ACCEPT. |
+| Исполнение → локальная инженерная основа | [Публикация 76a95a3b](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0/experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/) → [SR 616b198b](scientific_reviews/ENGINEERING_APPLICABILITY_REVIEW_01.md) → [disposition и Endpoint-поправка](research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md), `6deaff07f8e8474b5a39d614e3bf55318bd145c6`. LOCAL CLOSED без нового RES. |
+
+## Экспериментальные и литературные основания
+
+Сохраняется цепочка CY62167/зарегистрированные события/отображение W → GOES rate и причинный контракт → Stage A и информационный интерфейс → real-temporal → внутренние счётчиковые методы. [Все исходные пакеты](../experiments/), [модели](../model/), [симуляция](../simulation/) и [материалы COSRAD](../cosrad/) сохранены. Двухрежимная среда не объявляется калибровкой реальной SRAM. Registered-event популяция после внутренней ECC не равна всему физическому потоку. [CY semantics Review 02](scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md) сохраняет остаточный ERR consumer MINOR; принятая U-ветвь обходит его, а не закрывает. Старый синтетический bracket сохраняется как арифметический benchmark без отозванного вероятностного смысла.
+
+[DEC-001…003](decisions/), [RQ-001…007](questions/), [CLM](claims/), [Paper Cards](paper_cards/), [evidence synthesis](evidence_synthesis/), [audits](evidence_audits/) и [нормативная матрица](normative_baseline/) сохраняют собственные версии и ограничения. Zotero остаётся главным хранилищем внешней литературы. Неоднозначность редакций нормативных источников, PMI/диагностика, физический W и незакрытый COSRAD operator не восполняются предположением.
+
+Ближайшие линии управления — Chen S3/S4/S5 и PA-DOM-01-B; сама обратная связь по исправлениям не считается собственной новизной. [Полная матрица PA-DOM-01…04](evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md) перенесена из `4f96bb95189f0d385ea2077aa7b05d81ef8edf0d`, [контроль идентичностей](literature_mapping/PA-DOM-01-03_identity_control.md) — из `603fb4bff99a7d5c84f89030e2183bf41026fc15`. Название DRAFT и метки SOURCE/INFERENCE/UNKNOWN не изменены. [Прежняя матрица b82f146c](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b82f146cabed5f92598834db4af78f7ea9b65d6a/docs/evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md) остаётся исторической версией; её перенос не создаёт нового CLM/RES.
+
+Пять адресных восстановлений перечислены с исходными Git blobs и донорами в [selection](research_gates/REPOSITORY-CONSOLIDATION-01.selection.json). Импорт выполнен отдельным commit `bd4645d728df76000b1b0848e77ee727aac802f8`; ветки-доноры целиком не слиты, их код не запускался.
+
+## Авторство и согласование инженерной поставки
+
+[Предварительный пакет bcc774c1](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/bcc774c1c3700bcbeacb8b2ca3bd9ead51523951/experiments/RE-ENGINEERING-APPLICABILITY-01/) создан Orchestrator. [Исправление сведений об исполнителе](research_gates/ENGINEERING-APPLICABILITY-ROLE-CORRECTION-01.md) не переписывает историческое исполнение. Постоянный RE в отдельной сессии использовал пакет как вход и создал собственный архивный commit `8229668e9e6f3d05438fe1c0a5e3e46d98bfef4e`, parent `8138c5ba05fb4e88246379db8c86bab1a3687687`.
+
+[Выбранный каталог](../experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/) имеет tree `1985e1ac8ed2ee5ba7d9bb3acc9005db2b330066`. [Исходный bundle](research_gates/delivery_records/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01.bundle), [исходная квитанция](research_gates/delivery_records/ORIGINAL_PUBLICATION_RECEIPT.json) и [запись публикации](research_gates/delivery_records/ENGINEERING-APPLICABILITY-DELIVERY-2026-09-10.json) сохранены. 8229668e доступен через bundle и не выдаётся за опубликованный самостоятельный GitHub commit.
+
+[Альтернативный 7db95ece](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/7db95ecea920e41dec9b191a94230c9da0db6678/experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/) остаётся вне выбранного пакета. Его ветка не удаляется. [Согласование двух редакций](research_gates/ENGINEERING-APPLICABILITY-DELIVERY-RECONCILIATION-01.md) объясняет выбор без смешения файлов. Численные методы одного исполнителя не означают независимого Scientific Reviewer.
+
+## Старый репозиторий и первая статья
+
+Старый [chapter4-risk-limited-scrubber](https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/tree/cf7ab706224f7872fdafcf34febda70e3f6c8dd1) используется только на commit `cf7ab706224f7872fdafcf34febda70e3f6c8dd1` как задел, не новый RES. Используемые части: постановка «период — риск — проходы» и пятилетний ряд главы 3; SEC-DED (39,32), адресный обход, scheduler и простой measured-error estimator; контракты модели/RTL и времени; прежние replay/testbench и отчёты OOC/feasibility главы 4. Старые числа принадлежат своим моделям и конфигурациям: conditional writeback и coarse tick не равны новому R2-U, OOC не заменяет размещение нового интерфейса, а ряд не является автоматически потоком нового устройства. Новый полный аудит или перенос здесь не выполнялся.
+
+Первая статья RES-003 сохраняет [согласованный handoff](publication_plans/RES-003-PUBLICATION-HANDOFF.md). [Writing snapshot 3fd5d792](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/3fd5d792a0dd55ee9d46c0b7ca46c72d4eba5ea2/manuscripts/internal-count-method-01/) включает обе сохранённые редакции; это черновики, не принятая публикация. Они не импортируются и не редактируются данной консолидацией. Объединение RES-003/004 и новая отдельная статья RES-002 не назначаются. Подтверждающие новые миссии RES-004 — отдельная будущая публикационная проверка, не текущая кампания.
+
+## История оперативных сводок
+
+Прежний [main 83d4db20](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/83d4db20ce43ff238d58551610f487e7cf3c2c6e) и [выбранный снимок 6deaff07](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/6deaff07f8e8474b5a39d614e3bf55318bd145c6) сохраняются в истории обычного merge. Старые ACTIVE/NOT EXECUTED описывают состояние соответствующего времени, а не повторный запуск завершённых этапов.
+
+| Прежняя оперативная сводка | Исходная версия перед консолидацией |
+|---|---|
+| Главная страница | [README на 6deaff07](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/README.md), [README прежнего main](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/83d4db20ce43ff238d58551610f487e7cf3c2c6e/README.md) |
+| Текущее состояние | [current_status на 6deaff07](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/current_status.md) |
+| Рабочая спецификация и её change log | [research_spec на 6deaff07](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/research_spec.md), [v0.8 прежнего main](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/83d4db20ce43ff238d58551610f487e7cf3c2c6e/docs/research_spec.md) |
+| Реестр результатов | [results/README на 6deaff07](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/results/README.md) |
+| Backlog | [research_backlog на 6deaff07](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/research_backlog.md) |
+| Указатели рецензий и этапов | [scientific_reviews/README](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/scientific_reviews/README.md), [research_gates/README](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/research_gates/README.md) |
+| Публикационный handoff | [исходная версия](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md) |
+| Журнал | [research_log до добавления записи](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/research_log.md); новые записи только добавляются |
+
+[Датированный снимок исходного тела Issue №3](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/3#issuecomment-5621578064) сохраняет его историю v0.8. Закрытие этого Issue после слияния v1.0 означает завершение задачи спецификации, не диссертации или RQ-007. Один текущий вопрос — [Issue №12](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12), BACKLOG без назначенного исполнения.
+
+Исторические манифесты, locks, пять первичных NPZ и исходные архивные квитанции неизменны. Отдельная техническая квитанция консолидации описывает проверенные Git-объекты и итоговый merge, не считается манифестом старого научного запуска. Проверка сохранности не является новым научным PASS.

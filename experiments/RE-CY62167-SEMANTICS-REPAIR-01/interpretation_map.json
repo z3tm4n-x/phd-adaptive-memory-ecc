@@ -1,0 +1,17 @@
+{
+  "task_id": "RE-CY62167-SEMANTICS-REPAIR-01",
+  "base_sha": "1580a76def06aeaac450d0dbc37012715cc2e88c",
+  "legacy_interpretations": {
+    "direct event / direct hazard in registered W partition": "registered-event class used by an absorbing conservative surrogate; not automatically a fatal physical toggle from every safe state",
+    "exact direct+residual risk": "exact only for the declared absorbing surrogate under its stated process assumptions; not exact physical-toggle risk",
+    "DIRECT-BOUND-EXHAUSTED": "the selected sufficient Q_U/direct-budget certificate cannot certify a positive tested period; physical feasibility is unresolved",
+    "NO_POSITIVE_PERIOD / NONE": "no action in the declared tested set U passes the selected model/rule; not global physical infeasibility",
+    "theta": "sensitivity parameter only, not an inferred physical probability",
+    "tau=1 s grid minimum": "exploratory action-grid minimum, not an architectural minimum",
+    "synthetic_reference_tau_bracket": "legacy function name for frozen arithmetic root pair; not a verified probabilistic reference bracket",
+    "synthetic_reference_risk_bounds": "legacy function name for frozen formula outputs; bound interpretation unverified",
+    "ERR-assisted tau_min_arch_s without write model": "legacy numeric read-time lower bound only; not sufficient total-pass minimum",
+    "ERR-assisted interface_fraction without write model": "read-only lower bound; expected total cost unknown"
+  },
+  "proof_scope_exclusions": ["state-dependent direct/residual partitioning","shared random environments without conditional treatment","adaptive policies without a separate coupling/product proof","unobserved physical parent-event population"]
+}

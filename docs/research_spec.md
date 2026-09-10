@@ -1,290 +1,117 @@
 # Research Specification
 
-**Version:** 0.8-draft<br>
-**Status:** WORKING DRAFT
+**Version:** 1.0  
+**Status:** АКТУАЛИЗИРОВАННЫЙ РАБОЧИЙ КОНТРАКТ  
+**Дата:** 2026-09-10
 
-> Документ фиксирует текущее состояние постановки исследования. Формулировки разделены по статусу: **SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация проекта; **ASSUMPTION** — допущение, подлежащее проверке; **TBD** — вопрос сознательно оставлен открытым и должен быть разрешён последующим исследованием.
+**SOURCE** — следует из утверждённого описания темы; **WORKING DEFINITION** — рабочая формализация; **ASSUMPTION** — допущение в объявленной области; **TBD** — открытый вопрос. Версия 1.0 синхронизирует принятые постановки и результаты по [заданию Orchestrator](research_gates/REPOSITORY-CONSOLIDATION-01.md), а не переводит TBD в доказанные положения. Определения и решения [DEC-001…003](decisions/) и собственные области [RES-001…004](../results/README.md) имеют приоритет над этой сводкой.
 
-## 1. Идентификация исследования
+## 1. Идентификация, проблема, объект и предмет
 
-- Специальность: 2.3.2 «Вычислительные системы и их элементы».
-- Рабочая тема: «Разработка методов адаптивного управления системами коррекции ошибок в цифровой памяти вычислительных систем».
+Специальность: 2.3.2 «Вычислительные системы и их элементы».
 
-## 2. Исходная проблема
+Утверждённая тема: **«Разработка методов адаптивного управления системами коррекции ошибок в цифровой памяти вычислительных систем».**
 
 **SOURCE.** Непрерывность функционирования бортовых вычислительных систем зависит от сохранности информации в памяти. Радиационно-индуцированные искажения данных способны приводить к неисправимым ошибкам и отказам. Для противодействия используются помехоустойчивое кодирование, перемежение и периодическое восстановление памяти; период восстановления должен учитывать текущую радиационную обстановку.
 
-**WORKING DEFINITION.** Исследование рассматривает задачу управления сбоеустойчивостью SRAM в части одиночных и связанных с ними многобитных ошибок памяти, при которой параметры восстановления/защиты должны адаптироваться к изменяющимся условиям и обеспечивать заданный уровень надёжности при приемлемых ресурсных затратах.
+**WORKING DEFINITION.** Объект — подсистема SRAM вычислительной системы, защищённая коррекцией ошибок и периодическим восстановлением. Предмет — методы, модели и аппаратно-реализуемые алгоритмы адаптивного управления восстановлением SRAM при возникновении ошибочных битов. Период восстановления остаётся основной управляемой величиной. Конкретная микросхема и квалифицированная платформа не выбраны.
 
-## 3. Объект исследования
-
-**WORKING DEFINITION.** Подсистема SRAM вычислительной системы, защищённая средствами коррекции ошибок и периодического восстановления данных.
-
-Границы объекта пока не привязаны к конкретной микросхеме SRAM или FPGA-платформе.
-
-## 4. Предмет исследования
-
-**WORKING DEFINITION.** Методы, модели и аппаратно-реализуемые алгоритмы адаптивного управления сбоеустойчивостью SRAM при возникновении ошибочных битов, включая управление периодическим восстановлением памяти и, при обоснованной необходимости, другими параметрами защиты.
-
-**TBD.** Точный состав управляемых механизмов помимо периода scrubbing должен быть определён после анализа современного состояния области.
-
-## 5. Цель
+## 2. Цель и два недостающих перехода
 
 **SOURCE.** Разработка методов адаптивного управления периодом восстановления памяти, обеспечивающих непрерывность функционирования вычислительной системы при заданных требованиях к вероятности неисправимой ошибки и минимальных затратах ресурсов.
 
-**WORKING DEFINITION.** В ходе исследования цель может быть уточнена от управления только периодом scrubbing к более общей задаче адаптивного проектирования/управления сбоеустойчивостью SRAM, если анализ литературы и результаты моделирования покажут обоснованность такого расширения.
+**WORKING DEFINITION / DEC-002.** Центральный вклад — собственные методы адаптивного управления, их обоснованные в объявленных условиях свойства и ресурсная эффективность. Экспериментальные данные, модели и реализация обеспечивают этот вклад. Причинная цепочка:
 
-### 5.1. Интегрированная архитектура метода
+`радиационные испытания → обоснованное представление ошибок → организация W/ECC → оценка риска → доступная информация → решение о периоде → исполнение и измеримые затраты`.
 
-**WORKING DEFINITION / DEC-002.** Адаптивное управление остаётся центральным предметом диссертации. Радиационно-экспериментальная и стохастическая части формируют обоснованные входы для ECC-level reliability assessment, а не заменяют control layer.
+Идентификация входа, оценка надёжности и управление — связанные слои. Более богатое представление не считается автоматически необходимым или лучшим; информационная достаточность отделяется от идентифицируемости по реальным наблюдениям.
 
-Текущая причинно-расчётная архитектура:
+**TBD.** Для перехода от принятых результатов к SOURCE-цели требуется отдельно установить: (1) связь превышения корректирующей способности памяти с отказом и непрерывностью работы вычислительной системы; (2) связь сравнительного снижения затрат с оптимальностью в точно объявленном классе и с суммарной пользой после накладных затрат. Ни переименование E_cap, ни положительная экономия этих переходов не доказывают. Расширение на иные управляемые механизмы допускается только по отдельному обоснованию.
 
-`radiation tests → experimentally justified device-error representation → transformation through memory/ECC organization W → ECC-level reliability model → current/future risk assessment from online information → adaptive memory-restoration decision`.
+## 3. Событие, метрика и временная семантика
 
-Идентификация, ECC-aware reliability и adaptive control рассматриваются как три связанные слоя одного метода. Научная задача на их интерфейсе — установить, какая информация достаточна в принципе, какая реально идентифицируема из тестовых наблюдений и как её редукция изменяет reliability output и управляющее решение. Более богатое представление не считается автоматически необходимым или лучшим.
+**WORKING DEFINITION / DEC-001.** A — явно объявленная область SRAM под одним контроллером; w — кодовое слово; N_w(t) — текущее число различных ошибочных разрядов; t_c(w) — гарантированная корректирующая способность; H(t_0,T)=[t_0,t_0+T].
 
-**TBD.** Эта архитектура является roadmap decision, а не утверждённым novelty claim. Её отличие от нормативной практики и closest prior art должно быть проверено отдельно.
+E_cap(A;t_0,T) означает существование t в H и w в A, для которых N_w(t)>t_c(w). При SEC t_c=1. Первое превышение не отменяется последующей инверсией или восстановлением.
 
-## 6. Исследовательские вопросы
+Метрика F_A(t_0,T;mu_t0) — вероятность первого превышения в H при объявленном начальном состоянии или распределении mu_t0; R_A=1-F_A. Начальное состояние включает нужные для модели ошибки, возрасты слов, фазу прохода, состояние контроллера и среды. Сокращение F_A(T) допустимо только при явно заданных начале времени и начальном состоянии.
 
-Зарегистрированы `RQ-001…RQ-007`; актуальные статусы фиксируются в `docs/current_status.md`.
+Если ECC, отображение W, поступления, банки или восстановление неоднородны внутри A, до агрегации требуется разбиение A на области и объявление их совместного закона. Независимость областей по умолчанию не предполагается. W как отображение не следует смешивать с числом слов в локальных обозначениях пакетов.
 
-- `RQ-001` — reliability event, metric and horizon — `PARTIALLY ANSWERED / OPEN DEPENDENCIES`; working contract recorded as `DEC-001`.
-- `RQ-002` — minimum adequate radiation-induced SRAM error model — Evidence Audit accepted with limitation; bounded `RES-001` registered, general adequacy remains open.
-- `RQ-003` — ECC abstraction and decoder outcomes.
-- `RQ-004` — online observables for adaptation.
-- `RQ-005` — measurable resource-cost vector without premature scalarization.
-- `RQ-006` — physical-to-logical mapping `W`, interleaving and information-sufficiency conditions — permanently promoted from C-RQ-05; bounded `RES-001` registered, physically defensible generalization remains open.
-- `RQ-007` — integrated information-aware adaptive selection of `T_scrub` from
-  available information, compatible model sets and DEC-001 risk objects, with
-  conditional action invariance and separated resource consequences.
+Различаются число поступлений, экспозиция отдельного слова, отчётное окно и миссия. Последовательная проверка не означает одновременной очистки в конце прохода. Начальное состояние и уже израсходованный риск переносятся; новый час сам по себе не выдаёт новый допуск. Последний неполный интервал учитывается.
 
-RQ-001 is not closed: decoder/system outcomes, quantitative requirements and downstream model dependencies remain open.
+**TBD.** E_cap не тождественно DUE, SDC, ошибочной коррекции или отказу системы. H_req и epsilon_req требуют прослеживаемых требований к системе/миссии. Последовательная экспозиция — требование модели, не автоматически установленный литературой факт; отложенный CAND-10 не закрывается этой сводкой.
 
-The C-RQ-05 escalation is resolved by permanent RQ-006. RQ-002 and RQ-006 are coupled through EXP-001 but retain separate responsibilities. RQ-007 is permanently registered after explicit PI `ACCEPT`; it consumes the outputs of RQ-002…RQ-006 without duplicating, absorbing or closing them.
+## 4. Исходные допущения и границы
 
-## 7. Исходные допущения
+**WORKING DEFINITION.** Основной объект — SRAM. Стартовый класс — исправление одиночной ошибки; SEC-DED (39,32) является исследовательским кандидатом полного слова, не окончательным квалифицированным выбором. В общем определении скраббинг — чтение, проверка/коррекция ECC и обратная запись при необходимости; в принятых R2-U пакетах действует более узкая семантика безусловной записи и фиксированных моментов восстановления слов.
 
-### 7.1. Тип памяти
+**WORKING DEFINITION.** Основные механизмы — временные радиационно-индуцированные инверсии. События одной частицы, их кратность и топология отличимы от независимого накопления до обоснованного преобразования через W. Постоянные дефекты, накопление дозовых повреждений и разрушительные/устойчивые эффекты не включаются без отдельного решения.
 
-**WORKING DEFINITION.** Основной объект — SRAM.
+**ASSUMPTION, ограниченная область RES-003/004.** Равномерные независимые метки слова/разряда, одиночные инверсии, rho=0, условно пуассоновский поток при заданном пути скрытой симметричной двухрежимной CTMC, известные уровни и начальная смесь. В RES-003 закон известен; в RES-004 неизвестное D постоянно в миссии и лежит в [30,3000] с. Эти предпосылки не устанавливают физическую калибровку целевой SRAM; после смешения по среде безусловная независимость слов не постулируется.
 
-### 7.2. Код коррекции ошибок
+**TBD.** Адекватная физическому объекту модель, полный канал проверочных разрядов, direct-события и корреляции, окончательный ECC и отображение W. Неизвестные уровни, асимметрия или дрейф среды не добавляются автоматически. DEC-003 и синтетический EXP-001 не выбирают универсальную пуассоновскую/независимую модель.
 
-**WORKING DEFINITION.** Стартовый класс — коды с исправлением одиночной ошибки (SEC). SEC-DED рассматривается как естественное расширение, если детектирование двойной ошибки существенно для постановки задачи и метрик надёжности.
+## 5. Распределение исследовательских вопросов
 
-**TBD.** До анализа литературы не фиксировать конкретный код как окончательный. Необходимо установить, какие ECC-модели наиболее актуальны для современной SRAM и задач радиационной стойкости и насколько полезно обобщение результатов на различные коды.
+| RQ | Ответственность и текущее ограничение |
+|---|---|
+| [RQ-001](questions/RQ-001-reliability-event-metric-horizon.md) | Событие, метрика, область и горизонты; DEC-001 принят, системные исходы и требования остаются открытыми. |
+| [RQ-002](questions/RQ-002-sram-radiation-error-model.md) | Поступления, события и состояние ошибок; ограниченные модели проверены, общая адекватность объекту не установлена. |
+| [RQ-003](questions/RQ-003-ecc-abstraction-baseline-class.md) | ECC, гарантированная способность и исходы декодера; переход от data-only к полному устройству требует отдельного основания. |
+| [RQ-004](questions/RQ-004-online-observables-for-adaptation.md) | Доступные каналы, задержка, неопределённость, идентифицируемость; RES-002…004 дают ограниченные ответы. |
+| [RQ-005](questions/RQ-005-resource-cost-vector.md) | Измеримые затраты и их единицы; суммарная системная польза без произвольной скаляризации остаётся открытой. |
+| [RQ-006](questions/RQ-006-physical-logical-mapping-information-sufficiency.md) | Отображение W, перемежение и достаточность информации; RES-001 ограничен своим четырёхсловным классом. |
+| [RQ-007](questions/RQ-007-integrated-adaptive-restoration-control.md) | Интеграция информации, оценки риска, допустимого действия и управления; не поглощает и не закрывает RQ-002…006. |
 
-### 7.3. Scrubbing
+Карточки RQ сохраняются без изменения. Исторические строки о запуске этапов читаются с [текущим состоянием](current_status.md) и [картой решений](research_map.md), а не как повторные задания.
 
-**WORKING DEFINITION.** Scrubbing понимается как периодический цикл чтения кодового слова из памяти, проверки/коррекции средствами ECC и обратной записи исправленного значения при необходимости.
+## 6. Входы, наблюдения и управление
 
-### 7.4. Ошибки
+**SOURCE / WORKING DEFINITION.** Входы: параметры радиационной обстановки или производная оценка интенсивности; организация SRAM и ECC; состояние/статистика ошибок; режим восстановления. Основное действие — T_scrub. ECC, перемежение и пороги не становятся дополнительными действиями без отдельного выбора.
 
-**WORKING DEFINITION.** Центральный интерес — transient radiation-induced upsets, проявляющиеся как ошибочные биты в памяти. Accepted RQ-002 evidence requires same-parent multiplicity/topology and independent accumulation to remain distinguishable until their reduction through `W` is justified. Permanent faults, cumulative TID degradation and destructive/persistent mechanisms remain out of the base model unless separately reopened.
+В RES-002 внешний канал задаётся доступностью и совместимым множеством. В RES-003/004 контроллер получает только собственные исправления завершённого прохода, времена и свои действия; наблюдения зависят от действия. Истинные Z, неизвестное D, будущие инверсии и скрытый признак выживания не выдаются контроллеру. Frozen-uncertainty сохраняет оценивание текущего состояния по собственным счётчикам; запрещено лишь уточнение D.
 
-### 7.5. Стационарность и распределение ошибок
+**TBD.** Прикладной источник оперативной информации может быть внешним датчиком, моделью/прогнозом, счётчиком или их обоснованной комбинацией. COSRAD остаётся средством исследования сценариев; прямая доступность для бортового контроллера не предполагается. Историческая средняя GOES не является мгновенной интенсивностью, будущим потолком или доказательством своевременной доставки. Registered-event данные после внутренней ECC не равны всем физическим инверсиям.
 
-**TBD.** Не принимать заранее пуассоновскую, независимую или иную конкретную модель как установленную. DEC-003 authorizes an event-driven parent-event-preserving comparison reference and controlled HPP/time-varying scenarios for EXP-001, but this does not select a target stochastic family. Minimum adequacy remains an empirical/analytical result to be established over a declared validity domain.
+## 7. Критерии, ограничения и сравнения
 
-### 7.6. Reliability event, aggregate and horizon contract
+**SOURCE.** Базовое ограничение — требование к вероятности неисправимой ошибки; базовая цель — минимизация ресурсов восстановления. До определения системных исходов количественный контракт использует F_A(t_0,T;mu_t0)<=epsilon в объявленной модели. Числа экспериментов не являются H_req/epsilon_req изделия.
 
-**WORKING DEFINITION / DEC-001.** Primitive event — `E_cap`: existence, within reporting window \(H(t_0,T)=[t_0,t_0+T]\), of at least one codeword in declared controller-managed SRAM protection domain \(A\) whose current distinct-error multiplicity exceeds the declared ECC correction capability.
+Раздельно измеряются полные и начатые/частичные проходы, чтения/записи, занятость и блокирование интерфейса, задержки приложения, RAM/ROM и время вычислителя. Затраты до E_cap/H, на собственной безотказной выборке и на общей безотказной подвыборке пары не смешиваются. Энергию, WCET и производительность нельзя получить переименованием этих величин.
 
-**WORKING DEFINITION.** General metric — \(F_A(t_0,T;\mu_{t_0})\). The initial state/distribution \(\mu_{t_0}\) and nonstationary start-time semantics are mandatory parts of a quantitative model. \(F_A(T)\) is only a shorthand for an explicit origin and initial state.
+Сохраняются три объекта: ресурсное следствие дефицита информации; затраты получения/хранения/обработки информации; возможный суммарный баланс только при совместимых единицах и явном критерии. **TBD:** системная скаляризация, энергетическая модель и требования платформы.
 
-**WORKING DEFINITION.** If ECC, mapping \(W\), arrival process, bank/block semantics or scrubbing semantics differ inside \(A\), partition \(A\) before aggregation and state the dependence model between partitions.
+Сильные сравнения: Fixed и Precomputed в точно заданных классах; отключённый счётчик RES-003; frozen-uncertainty RES-004; принятая адаптация PA-DOM-01-B; старый простой счётчиковый регулятор для будущего сопоставимого прикладного режима. Known-D — диагностическая опора с дополнительной информацией. Разные политики получают собственные истории при общем разрешённом канале. Оптимальность заявляется только для проверенного класса. Непрохождение достаточного сертификата не доказывает небезопасность конкурента.
 
-**WORKING DEFINITION / MODELING REQUIREMENT.** Upset-count, per-codeword exposure, reporting-window and mission horizons remain distinct. Sequential exposure semantics are not claimed as a literature-established fact; CAND-10 remains deferred.
+## 8. Принятые результаты и литературные основания
 
-**TBD.** `E_cap` is not automatically DUE, SDC, miscorrection or system-visible failure. Decoder outcomes belong to RQ-003. \(H_{\mathrm{req}}\) and \(\varepsilon_{\mathrm{req}}\) require traceable system/mission provenance.
+[Реестр RES](../results/README.md) содержит карточки, пакеты, SR и поправки. RES-001: информационное множество в четырёхсловном классе с 14 совместными условиями. RES-002: достижимая огибающая Q, сохранение продолжения и условные ресурсные области; Q не равен F_A, BOUNDARY-ENCLOSURE не разрешает действие по соседней строке. RES-003: собственный счётчик и общий риск при известном законе. RES-004: безопасное уточнение постоянного D и непрерывная гарантия при условном арифметическом контракте.
 
-## 8. Входные параметры и наблюдаемые величины
+Локальные инженерные основания приняты [disposition](research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md) в области [SR](scientific_reviews/ENGINEERING_APPLICABILITY_REVIEW_01.md); этап закрыт без RES-005. Вердикт PASS_WITH_MINOR сохранён, Endpoint MINOR закрыт поправкой. Полное устройство, изменённый банк и резерв 0.5 с не сертифицированы. Цена beta+G·numeric=0.006064 не обеспечивает epsilon=0.001; это не предел физической защиты.
 
-**SOURCE / WORKING DEFINITION:**
+Ограниченные Chen S3/S4/S5 и [PA-DOM-01…04](evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md) остаются ближайшими подходами. Обратная связь по исправлениям сама по себе не объявляется новизной. Название DRAFT и SOURCE/INFERENCE/UNKNOWN матрицы сохраняются; перенос не создаёт CLM или RES. Zebrev/Ogden/Gomi/Franco относятся также к представлению событий и отображению, не заменяют сравнение управления.
 
-- параметры радиационной обстановки или производная от них оценка интенсивности ошибок;
-- параметры организации SRAM;
-- параметры ECC;
-- состояние/статистика ошибок памяти;
-- параметры режима восстановления.
+Российская нормативная цепочка — обязательное инженерное основание: РД 134-0174-2009, РД 134-0175-2009, СТО ГК Роскосмос 04.01.0005–2022 в пределах принятого извлечения. Неоднозначность контролируемой редакции СТО, PMI/диагностика и адресные сведения остаются ограничениями; нормативная недостаточность не постулируется. Остаточный ERR consumer MINOR CY review 02 не закрыт U-ветвью, а обходится ею. Отозванный вероятностный смысл старого синтетического bracket не восстанавливается. Zotero — главное хранилище литературы; [карта источников](research_map.md) фиксирует версии.
 
-**TBD — ключевой исследовательский вопрос.** Как именно контроллер получает оперативную информацию для адаптации:
+## 9. Исполнение, воспроизводимость и принятие
 
-- внешний источник/датчик радиационной обстановки;
-- модель/прогноз радиационной среды;
-- счётчики исправленных ошибок памяти;
-- комбинация физических и внутренних наблюдений;
-- иной механизм.
+Завершены ограниченный литературный этап, EXP-001, RES-002/003/004 и локальное инженерное продолжение. Старые запреты запуска уже завершённых заданий не действуют как новые оперативные gate. Сейчас разрешена консолидация через PR/merge; новые исследования не запускаются этим документом.
 
-COSRAD рассматривается как источник предметно обоснованных сценариев и данных для исследования, но его роль как прямого источника информации для реального контроллера не предполагается без дополнительного обоснования.
+Для каждого существенного исполнения сохраняются исходный commit, конфигурация, версии инструментов, происхождение данных и COSRAD-параметры при применимости, seeds, критерии/сравнения и выходы. Первичные NPZ не удаляются из-за имени cache. Старые манифесты описывают свои исполнения, а не последующее научное принятие. Историческая независимость held-out RES-004 не установлена; согласованность сохранённых данных её не доказывает.
 
-## 9. Управляемые параметры
+Классы дальнейших работ остаются возможными, но не назначенными: аналитическое/численное моделирование, независимая вычислительная проверка, синтетические и физически обоснованные сценарии, сравнение и чувствительность, RTL/функциональная проверка и синтез. Python-модель не является RTL-симуляцией; исторический OOC не является новым размещением или WCET. Общий SR и рефакторинг научного кода в консолидацию не входят.
 
-**SOURCE.** Основной управляемый параметр — период восстановления памяти (`T_scrub`).
+Новые гипотезы или явные критерии опровержения определяются до соответствующего будущего эксперимента; ретроспективные HYP не создаются. Техническая интеграция и совпадение хэшей не присваивают научный PASS. Orchestrator определяет состав и дальнейший ход, постоянный RE исполняет ограниченное задание, Scientific Reviewer проверяет существенные новые научные утверждения отдельно.
 
-**WORKING DEFINITION.** Исследование допускает расширение набора управляемых параметров в рамках проектирования сбоеустойчивости SRAM, если это даст самостоятельный обоснованный результат.
+## 10. Следующий вопрос и публикационный контур
 
-**TBD.** Определить по литературе и моделированию, имеет ли смысл адаптация:
+**При каких предметно обоснованных характеристиках ошибок полного слова и нагрузки выбранной SRAM-подсистемы разработанные адаптивные методы дают существенное преимущество после затрат управления по сравнению с сильным постоянным и простым счётчиковым режимами, и какой минимальный контракт реализации это сохраняет?**
 
-- периода scrubbing;
-- режима/параметров ECC;
-- interleaving;
-- порогов или режимов работы контроллера;
-- иных механизмов.
+[Issue №12](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12) — BACKLOG без назначения вычислительного исполнения. Кандидат: внешняя SRAM длительного хранения, 2 МиБ данных, SEC-DED (39,32), общий интерфейс, программный вычислитель, фиксированный 48-битный порт. H=3600 с, epsilon=10^-3 и нагрузки — исследовательские условия. Предметная калибровка ошибок и нагрузки, перенос на полное слово и суммарная полезность остаются открытыми; unknown-D не описывает всю эту неопределённость.
 
-## 10. Критерии и ограничения
+**SOURCE — ожидаемые классы результатов:** вероятностная аналитическая модель неисправимых ошибок; условия достижимости требований; методы адаптивного восстановления; архитектура контроллера. Их конкретная новизна требует собственного доказательства и адресного сравнения, а не общего отрицания prior art.
 
-**SOURCE.** Базовое ограничение — заданное требование к вероятности неисправимой ошибки. Базовая цель оптимизации — минимизация затрат ресурсов на восстановление.
+Первая статья по RES-003 продолжается независимо в [согласованном составе](publication_plans/RES-003-PUBLICATION-HANDOFF.md). Номера RES не равны количеству статей. Консолидация не объединяет RES-003/004 и не выделяет RES-002 в новую статью. Подтверждающее сравнение RES-004 — отдельная будущая публикационная проверка новых миссий после фиксации кода/анализа, не условие закрытия результата.
 
-**WORKING DEFINITION / DEC-001.** Пока decoder/system semantics не определены, quantitative reliability contract uses `E_cap` and \(F_A(t_0,T;\mu_{t_0})\). A future constraint may use \(F_A(t_{0,\mathrm{req}},T_{\mathrm{req}};\mu_{t_{0,\mathrm{req}}})\le\varepsilon_{\mathrm{req}}\), but the reporting window, initial state and numerical bound remain `TBD` until traceable requirements are available.
-
-**TBD — ключевой исследовательский вопрос.** Функция затрат пока не фиксируется. Необходимо определить, какие компоненты являются существенными и измеримыми:
-
-- число/частота операций scrubbing;
-- дополнительный трафик и использование пропускной способности памяти;
-- latency/занятость интерфейса памяти;
-- энергопотребление;
-- аппаратные ресурсы контроллера;
-- производительность вычислительной системы;
-- комбинация перечисленных показателей.
-
-Предпочтительно рассматривать многокритериальную картину до тех пор, пока не будет обоснован основной скалярный критерий или набор ограничений.
-
-**ACCEPTED GATE-LEVEL DISTINCTION.** Следующий quantitative gate разделяет:
-
-1. control-resource price of information deficit — ресурсное следствие более
-   консервативного управляющего действия при более широком `M(I)`;
-2. information-acquisition cost — отдельные затраты получения, хранения и
-   обработки более богатой информации;
-3. возможный net information balance, допустимый только после объявления
-   совместимых units и aggregation/decision rule.
-
-Разность затрат на выбранные `T_scrub` не называется автоматически полной
-«ценностью информации». Все компоненты остаются раздельными до решения RQ-005.
-
-## 11. Базовые методы для сравнения
-
-**TBD.** Baselines должны быть выбраны после обзора литературы. Минимально предполагается наличие fixed/non-adaptive strategy для сравнения с предлагаемым adaptive approach.
-
-**WORKING DEFINITION / DEC-002.** Applicable Russian normative practice is a primary engineering baseline for the radiation-test → cross-section → environment convolution → event-rate/probability chain. The received bounded set is РД 134-0174-2009, РД 134-0175-2009 and СТО ГК Роскосмос 04.01.0005–2022. The STO explicitly raises a pre-aggregation functional-diagnosis/event-classification layer; whether address/topology/provenance information is retained or usable downstream remains open and PMI/software dependent. No deficiency is presumed before accepted extraction.
-
-**PROVENANCE LIMIT.** The supplied STO file contains approval/registration/effective-date statements and also hidden `Проект, окончательная редакция` text. Its exact controlled revision remains ambiguous until official copy/registry evidence is provided.
-
-The Chen/IHP/Potsdam S3/S4/S5 family has a bounded accepted full-text comparison and Evidence Audit. It is close prior art for fault-count/rate observation or prediction followed by adaptive restoration-frequency selection; the audit is not a novelty decision. Zebrev/Ogden/Gomi/Franco and related sources address a different identification/event-representation/mapping threat layer. The layers must be compared separately.
-
-Не фиксировать конкретные baseline algorithms до подтверждения их распространённости и корректности для выбранной модели памяти.
-
-## 12. Проверяемые гипотезы
-
-Пока не заведены.
-
-Гипотезы должны появляться только после первичного literature mapping. Каждая `HYP-xxx` должна иметь заранее заданный критерий опровержения и связь с `RQ-xxx` и будущими `EXP-xxx`.
-
-## 13. Планируемые классы экспериментов
-
-**WORKING DEFINITION.** На текущем этапе предполагаются следующие классы, без фиксации конкретных моделей:
-
-1. аналитическое/численное моделирование вероятности исправимых и неисправимых ошибок;
-2. Monte Carlo или иная вычислительная верификация аналитической модели;
-3. controlled synthetic scenarios для отладки и проверки модели;
-4. сценарии радиационной обстановки на основе COSRAD;
-5. сравнительное исследование adaptive и baseline strategies;
-6. sensitivity/robustness analysis;
-7. аппаратная RTL-реализация выбранного метода;
-8. функциональная верификация SystemVerilog/iVerilog;
-9. синтез и оценка аппаратных затрат/временных характеристик в Vivado.
-
-**REGISTERED / DEC-003.** [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md) compares a declared hierarchy of device-error representations through the same `W`, ECC state and scrub semantics, then measures change in `F_A` and a parameterized restoration decision. Its `L0 → L1` full-topology-to-joint-post-`W` interface must be lossless for the declared state update; marginal/scalar reductions have no pre-assigned result direction. Unknown numerical reliability requirements are swept and not invented.
-
-**COMPLETED / REGISTERED RESULT.** Scientific Review 02 returns `PASS` after
-the independent-oracle repair and confirms closure of `MAJOR-01` and
-`MINOR-01…04` without scientific-output regression. The PI accepts the exact
-bounded wording, and
-[`RES-001`](../results/RES-001-exp001-four-word-identified-set.md) is permanently
-registered with its complete fourteen-condition validity domain. EXP-001 is
-complete and promoted only within that result. No retrospective `HYP-xxx` is
-created, and DEC-001…003 and the experiment question remain unchanged.
-
-**ACCEPTED NEXT GATE / NOT AUTHORIZED FOR EXECUTION.** The
-[information-deficit control-price gate](research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md)
-defines the progression `I → M(I) → F_A value/set/bound → admissible actions →
-T_scrub → measurable resource cost`. It requires a physically defensible
-event/`W` domain, bounded domestic prior-art closure, minimum RQ-003/RQ-004/RQ-005
-interfaces, PA-DOM-01…04 closure and separate PI approval of a preregistered
-experiment/derivation before a new EXP. RQ-007 is permanently registered, but
-its registration does not authorize execution.
-
-## 14. Критерии воспроизводимости
-
-**WORKING DEFINITION.** Для каждого существенного `EXP-xxx` должны фиксироваться:
-
-- commit SHA кода;
-- конфигурация эксперимента;
-- версии инструментов;
-- происхождение входных данных;
-- версия/параметры COSRAD для соответствующих сценариев;
-- random seeds при стохастическом моделировании;
-- используемые baselines и метрики;
-- выходные данные и связь с `RES-xxx`/`FIG-xxx`.
-
-## 15. Ожидаемые классы научных результатов
-
-**SOURCE:**
-
-- вероятностная аналитическая модель возникновения неисправимых ошибок;
-- условия достижимости заданных требований;
-- методы адаптивного управления периодом восстановления памяти;
-- архитектура контроллера адаптивного восстановления памяти.
-
-**WORKING DEFINITION.** Конкретные формулировки научной новизны не фиксируются до анализа состояния области и получения собственных результатов.
-
-**WORKING DEFINITION / DEC-002.** Expected results must remain connected across the full chain. A candidate result on information reduction is scientifically useful only if it quantifies an effect, bound or invariance relevant to ECC-level reliability and the downstream adaptive decision.
-
-**OWN RESULT / RES-001.** In its complete fourteen-condition synthetic
-four-word domain, fixed two-distinct-word parent-event cardinality and identical
-one-event per-word impact probabilities induce a nontrivial exact identified set
-for `F_A` through admissible joint pair distributions. The endpoint difference
-changes the exact admissible-action set at experimental `epsilon=0.15`, changes
-the maximal feasible selected period at `0.25` and `0.35`, and leaves the exact
-selected action unchanged at `0.55`. This is not a statement about arbitrary marginal
-models, physical SRAM topology, a project reliability requirement or integrated
-method novelty.
-
-## 16. Связь результатов с публикациями и диссертацией
-
-Планируется 3–5 научных статей, однако статьи не рассматриваются как независимые от исследования задачи. Каждая публикация должна соответствовать завершённому и проверенному исследовательскому результату (`RES-xxx`) либо связанной группе результатов.
-
-Точная карта `RES → ART → thesis section` будет сформирована после появления первых результатов.
-
-## 17. Открытые вопросы
-
-### Высокий приоритет
-
-1. Какой класс ECC является наиболее актуальным и научно оправданным baseline для SRAM в рассматриваемой задаче: SEC, SEC-DED или более общий класс кодов?
-2. Какие модели радиационно-индуцированных ошибок SRAM применяются в современной литературе и каковы их границы применимости?
-3. Как в реальной вычислительной системе получать оценку текущей интенсивности/риска ошибок, пригодную для adaptive control?
-4. Какие параметры системы защиты, кроме `T_scrub`, целесообразно рассматривать как управляемые?
-5. Как определить функцию/вектор ресурсных затрат так, чтобы он отражал реальную цену adaptive scrubbing и был измерим в моделировании и RTL/FPGA-реализации?
-6. При каких условиях full topology, joint post-`W` marks, marginal word statistics или scalar rates достаточны для `E_cap/F_A`, и какова цена редукции для управляющего решения?
-7. Какие fixed/adaptive approaches являются корректными baselines для сравнения?
-8. Какая информация о physical radiation event достаточна после `W`, какая реально идентифицируема из тестовых наблюдений и как её редукция влияет на `F_A` и adaptive decision?
-9. Что сохраняет и агрегирует применимая российская нормативная цепочка расчёта, и достаточны ли её выходы для ECC-aware reliability/adaptive control?
-
-### Средний приоритет
-
-10. Какие метрики аппаратной реализации необходимы для доказательства практической реализуемости метода?
-11. Как связать COSRAD-сценарии с параметрами модели ошибок памяти без необоснованных преобразований?
-12. Какой уровень обобщения результатов между различными организациями SRAM и ECC-кодами достижим без потери строгости?
-
-## Change log
-
-- `0.1-draft` — создан каркас документа.
-- `0.2-draft` — зафиксированы рабочие границы: SRAM, стартовый класс SEC/SEC-DED, определение scrubbing, обязательная RTL/FPGA-верификация; источник управляющей информации, расширенный набор механизмов защиты и функция затрат оставлены как осознанные открытые вопросы исследования.
-- `0.3-draft` — зарегистрирован DEC-001: primitive ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics; RQ-001 переведён в PARTIALLY ANSWERED, открыт gate RQ-002.
-- `0.4-draft` — зарегистрирован DEC-002: сохранён adaptive-control core и введена единая evidence-to-decision architecture; information sufficiency отделена от experimental identifiability; Russian normative practice and layered closest-prior-art threats made explicit baselines; RQ-002 advanced to bounded model-selection after accepted Paper Cards and synthesis.
-- `0.5-draft` — принят RQ-002 Evidence Audit with CAND-04 limitation; C-RQ-05 permanently promoted to RQ-006; DEC-003 registered the comparison reference/representation ladder and authorized EXP-001; three-document Russian normative source set and Chen identity record received bounded follow-up protocols without a broad search or novelty claim.
-- `0.6-draft` — EXP-001 independent validation and Scientific Review 02 passed; PI-approved `RES-001` registered with its complete fourteen-condition domain; Chen S3/S4/S5 bounded audit incorporated; the next information-deficit control-price gate prepared without authorizing a new EXP, RQ, HYP or novelty claim.
-- `0.7-draft` — PI accepted the information-deficit control-price gate and its four-unit prior-art stop rule; the gate now separates control-resource price, information-acquisition cost and any later net balance; exact `DRAFT-RQ-007` wording/boundaries were prepared for a separate PI disposition without registering an RQ or authorizing a new experiment.
-- `0.8-draft` — PI accepted and permanently registered RQ-007 with its exact wording, boundaries and answer criteria; PA-DOM-01…04 became the active bounded prior-art gate, while a new EXP/HYP, novelty claim and search expansion remain unauthorized.
+Предыдущие редакции v0.1…v0.8 и их переходы сохранены в [истории](research_map.md#история-оперативных-сводок). v1.0 означает согласованный текущий рабочий контракт, не завершение диссертации, универсальную модель SRAM или принятие всех открытых вопросов.

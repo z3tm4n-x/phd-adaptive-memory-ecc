@@ -1,0 +1,33 @@
+{
+  "task_id": "RE-CY62167-DIRECT-FLOOR-KILLTEST-01",
+  "starting_commit": "3474bf5d1773fe481bfd0a3d9013c12cb06dbabd",
+  "working_branch": "research/cy62167-direct-floor-killtest-01",
+  "goes_radar_pipeline_changed": false,
+  "controlled_goes_dataset_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815",
+  "radar": {
+    "repository": "z3tm4n-x/RADAR",
+    "commit": "b032505d4d1b15403b8ad06aef578339f6d1c6b4",
+    "transport_sha256": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6"
+  },
+  "inputs": {
+    "multiplicity_by_energy.csv": "dd6323c804fc521b62d40d613af0f131d0d84c55c7404d781885ad4ab93697be",
+    "false_mcu_estimates.csv": "8827a9632304e0ffc6161f522f7b184e8b0e6dae628375f7a9cf8075481de6eb",
+    "sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+    "published_physics_sigma.csv": "8d2eeaef4329b9b7f7debff0f53d1ef4cd3dcffc4c69d853cbce3c3fe9649526",
+    "proton_rate_5min.csv": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d"
+  },
+  "runtime": {
+    "python": "3.13.15 (main, Aug  6 2026, 02:15:18) [GCC 13.3.0]",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "h5py": "3.15.1"
+  },
+  "outputs": {
+    "REPORT.md": "375996b50d5b3fbfa41c6028ef5ecda9fe488ae2aa4e22750f66219b3b0704e6",
+    "multiplicity_model.csv": "f5e831c0baf912a3d9e0d6c8fd2c840b87cf24fde2c87c77c0676f190dee6d77",
+    "weighted_parent_event_rate.csv": "aa76903245e36c8c2d43c2d477fe850d4ae9a1be0dbdbb2ced4c0034287612bd",
+    "direct_floor_summary.csv": "4513e3a23f3c30cdf1f079612ca022a7534bd168a40cc54395c9ade69d59004a",
+    "direct_floor_horizon_sweep.csv": "94cde4706329f2ac9dfd76dacd2541b2d1282062cbe58a01d3ee250dcb6e9fb3",
+    "validation.json": "863751073ef9d6c3de76e1da5ecde3925dceded6c1691990254f46c880f545b9"
+  }
+}

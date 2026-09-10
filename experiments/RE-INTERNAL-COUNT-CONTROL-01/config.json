@@ -1,0 +1,70 @@
+{
+  "task_id": "RE-INTERNAL-COUNT-CONTROL-01",
+  "base_commit": "a44355e38a5434fa69d7c343e456ddd944315d46",
+  "delivery_branch": "research/internal-count-control-01",
+  "memory": {
+    "words": 524288,
+    "bits_per_word": 32,
+    "pass_seconds": 0.18874368,
+    "reads_per_pass": 2097152,
+    "writes_per_pass": 2097152
+  },
+  "environment": {
+    "b_low": 2.8886786e-05,
+    "b_high": 6.1249308,
+    "mean_dwell_seconds": [
+      30,
+      300,
+      3000
+    ],
+    "initial": [
+      0.5,
+      0.5
+    ]
+  },
+  "horizon_seconds": 3600,
+  "periods_seconds": [
+    0.2,
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    60,
+    100,
+    150,
+    300
+  ],
+  "epsilon": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "controller": {
+    "pending_cap": 12,
+    "count_cap": 32,
+    "backup_period_seconds": 1,
+    "time_tick_seconds": 0.1,
+    "one_switch_midpoints": 512,
+    "two_switch_midpoints": 128,
+    "scan_switch_cutoff": 2,
+    "numerical_allowance": 0.0002
+  },
+  "simulation": {
+    "pilot_seed": 943771,
+    "validation_seed": 91842031,
+    "pilot_trials": 2000,
+    "validation_trials": 20000,
+    "exploratory_coarse_validation_seed": 7143801,
+    "tuning_refinement_note": "Coarse Ms grid refined on pilot only; final validation uses fresh independent seed. Model and proposed policy unchanged."
+  },
+  "provenance": {
+    "stage_a_config_git_blob": "654c50105390904ae62d114998d7369a7f4adb27",
+    "accepted_task_git_blob": "f20f0b5041bfed62d6cda880d09d3636860dc046",
+    "dec001_git_blob": "f24f8a6b041e00d2f2c381c6f6118288f745087f",
+    "pa_dom_controlled_commit": "4f96bb95189f0d385ea2077aa7b05d81ef8edf0d",
+    "pa_dom_synthesis_git_blob": "8cdd41f2914203df0e130fa9863a73864a3e14a1"
+  }
+}

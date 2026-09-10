@@ -1,17 +1,20 @@
-# Approved Results
+# Реестр принятых результатов
 
-Здесь хранятся только результаты, которые уже прошли внутреннюю проверку и имеют `RES-xxx`.
+Актуальная сводка: 2026-09-10. Все четыре карточки **ACCEPTED / PERMANENT** сохраняются побайтно; эта таблица не расширяет их области. Полные условия действуют совместно. [Карта исследования и истории](../docs/research_map.md) поясняет место результатов в диссертации.
 
-Не использовать этот каталог как dumping ground для сырых simulation outputs.
-
-Рекомендуемые подкаталоги будут созданы при появлении результатов:
-
-- `tables/`
-- `figures/`
-- `data/` — только агрегированные данные разумного размера.
-
-## Registry
-
-| RES-ID | Statement scope | Derived from | Status |
+| Результат | Принятое содержание | Исследовательский пакет | Scientific Review и действующая поправка |
 |---|---|---|---|
-| [RES-001](RES-001-exp001-four-word-identified-set.md) | Exact `F_A` identified set and conditional restoration-action consequences in the reviewed synthetic four-word/fixed-cardinality class | EXP-001; Scientific Review 02 | ACCEPTED / PERMANENT |
+| [RES-001](RES-001-exp001-four-word-identified-set.md) | Точное идентифицированное множество F_A и управляющие последствия потери информации в четырёхсловном классе; 14 условий. | [EXP-001](../experiments/EXP-001-event-representation-reduction-sensitivity.md), [реализация](../simulation/src/exp001/); исправление 072b70ad. | [Review 02](../docs/scientific_reviews/EXP-001_SCIENTIFIC_REREVIEW_02.md), PASS, d76850f4; принятая карточка сохраняет все ограничения. |
+| [RES-002](RES-002-external-information-restoration.md) | Достижимая худшая огибающая достаточного Q, сохранение допустимого продолжения, условные ресурсные области. | [RE-GOES-REAL-TEMPORAL-01](../experiments/RE-GOES-REAL-TEMPORAL-01/), repair 65d640d7. | [Review 02](../docs/scientific_reviews/GOES_REAL_TEMPORAL_REVIEW_02.md), PASS_WITH_MINOR, 63e18990; [closeout 43cfad8f](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/43cfad8f8b411f1abfa625fae4117f93d07c27f4). |
+| [RES-003](RES-003-internal-count-control.md) | Выбор периода по собственному счётчику с ограниченным вспомогательным состоянием, сопряжением и общим риском. | [RE-INTERNAL-COUNT-CONTROL-01](../experiments/RE-INTERNAL-COUNT-CONTROL-01/), delivery fb641544. | [Review](../docs/scientific_reviews/INTERNAL_COUNT_CONTROL_REVIEW_01.md), PASS_WITH_MINOR, 82117f8b; арифметическое закрытие MINOR в §5 карточки RES. |
+| [RES-004](RES-004-internal-count-unknown-d.md) | Безопасное уточнение неизвестного постоянного D на [30,3000] с и непрерывная гарантия; отдельное численное свидетельство learning против frozen. | [RE-INTERNAL-COUNT-UNKNOWN-D-01](../experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/), нормализованный snapshot f1b1418b. | [Review](../docs/scientific_reviews/INTERNAL_COUNT_UNKNOWN_D_REVIEW_01.md), PASS_WITH_MINOR, c9c9dd7f; [поправка 8b865cbb](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/8b865cbbbec2406a7eccd033bb3c2ff150f4c995) и PI ACCEPT. |
+
+## Принятая локальная инженерная основа — без нового RES
+
+[Выбранное продолжение постоянного RE](../experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/) использует [пакет Orchestrator](../experiments/RE-ENGINEERING-APPLICABILITY-01/) с сохранением авторства. Публикация 76a95a3b → [SR 616b198b](../docs/scientific_reviews/ENGINEERING_APPLICABILITY_REVIEW_01.md) → [disposition 6deaff07 с Endpoint-поправкой](../docs/research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md). Этап LOCAL CLOSED; вердикт PASS_WITH_MINOR не переписан. RES-005 не создаётся.
+
+## Ограничения чтения реестра
+
+RES-002 не превращает Q в точный F_A; историческая дефектная карта не принята, BOUNDARY-ENCLOSURE не заполняется соседним действием. В RES-003/004 сохраняется условный арифметический контракт. Историческая независимость held-out RES-004 не установлена; первичные пять NPZ, locks и манифесты остаются в пакете. Гарантия, арифметическая согласованность данных и независимость выборки — разные основания.
+
+Инженерное принятие не сертифицирует изменённый банк с резервом 0.5 с, полное 39-разрядное устройство, WCET или суммарную пользу. E_cap не тождественно отказу системы; сравнительная экономия не равна глобальной оптимальности. Номера RES не обозначают число готовых статей. Первая статья по RES-003 [продолжается отдельно](../docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md).

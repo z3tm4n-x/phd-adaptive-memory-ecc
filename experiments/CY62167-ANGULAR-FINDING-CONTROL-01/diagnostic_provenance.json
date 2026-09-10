@@ -1,0 +1,99 @@
+{
+  "task_id": "CY62167-ANGULAR-FINDING-CONTROL-01",
+  "exact_base": "619cb3538e296b3619f21301a176665f4611143f",
+  "delivery_branch": "research/cy62167-angular-finding-control-01",
+  "purpose": "traceability control of already-executed angular diagnostics; no new numerical sweep or production rerun",
+  "historical_angular_diagnostic": {
+    "execution_medium": "ephemeral ChatGPT Python/Jupyter tool cells",
+    "execution_date": "2026-09-07",
+    "exact_cell_source_code": "UNKNOWN_NOT_PERSISTED",
+    "shell_command": "NOT_APPLICABLE_EPHEMERAL_NOTEBOOK_TOOL_CALLS",
+    "known_transient_cell_ids_from_retained_warnings": [
+      "/tmp/ipykernel_300/4291862933.py",
+      "/tmp/ipykernel_300/1973670005.py",
+      "/tmp/ipykernel_300/145904674.py",
+      "/tmp/ipykernel_300/2953018042.py",
+      "/tmp/ipykernel_300/2911889829.py",
+      "/tmp/ipykernel_300/1696209490.py"
+    ],
+    "historical_runtime_versions": {
+      "python": "UNKNOWN_NOT_RECORDED_AT_EXECUTION",
+      "os": "UNKNOWN_NOT_RECORDED_AT_EXECUTION",
+      "numpy": "UNKNOWN_NOT_RECORDED_AT_EXECUTION",
+      "pandas": "UNKNOWN_NOT_RECORDED_AT_EXECUTION",
+      "scipy": "UNKNOWN_NOT_RECORDED_AT_EXECUTION"
+    },
+    "known_configuration_from_retained_outputs_and_handoff": {
+      "theta_max_deg": 60,
+      "angular_comparator": "effective LET / thin-layer scalar transfer",
+      "effective_LET_relation": "L_eff = L / cos(theta)",
+      "angular_weight": "cos(theta)*sin(theta)",
+      "spectrum_interpolation_variants_observed": ["log-log", "linear"],
+      "extra_solid_angle_multiplier_applied": "none in retained diagnostic",
+      "fD_semantics": "T*nu_D/Q_dop; sufficient-surrogate certificate budget only",
+      "T_s": 315600000.0,
+      "Q_dop": 0.001
+    },
+    "output_status": "UNREVIEWED_DIAGNOSTIC",
+    "recomputed_in_control_task": false,
+    "important_note": "No reconstructed script is presented as the historical diagnostic code. CSV files in this task transcribe retained tool outputs only."
+  },
+  "input_identities": {
+    "cosrad_results_zip": {
+      "filename": "results.zip",
+      "sha256": "84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb",
+      "bytes": 69464,
+      "controlled_manifest_path": "experiments/RE-CY62167-PAPER-COMPLETION-01/pi_cosrad_input_manifest.json"
+    },
+    "cosrad_export_members": {
+      "gl_x.txt": {"sha256": "7e507a77a5b1d7e3ae7e0e0c0c87ed9d87dc6a3b220d7b72b762b5d21ae72c02", "bytes": 6335},
+      "sl_x.txt": {"sha256": "dbd44c3322293e9bb2238343af38ba08032e1a184da5cb2021942e86ac702350", "bytes": 7191}
+    },
+    "phaseA_cosrad_cross_sections": {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_input_cross_sections.csv",
+      "sha256": "f59311fa1991c0db0dad2dfe3e7e88b1d1e5803de51b226bd82043b223f29bda",
+      "git_blob_sha": "cbe4d4f76e9dbc2c6430dae830d43c8deef8e690"
+    },
+    "phaseA_full_heavy_ion_cross_sections": {
+      "filename": "heavy_ion_cross_sections.csv",
+      "sha256": "2dd525cda6c19349990f340dc32e24c6a58d0717acbdcd6f36939358122afa4b",
+      "committed": false,
+      "manifest_path": "experiments/RE-CY62167-PAPER-COMPLETION-01/full_output_manifest.json"
+    },
+    "historical_noangle_operator": {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_operator.py",
+      "git_blob_sha": "b7e21e01c381c630100ffbb19f74f398cbca27a7",
+      "observation": "convolve() integrates phi(L)*target(L) only; no theta integral"
+    }
+  },
+  "normative_source": {
+    "identity": "СТО ГК Роскосмос 04.01.0010-2025",
+    "library_file_name": "СТО ГК Роскосмос 04.01.0010-2025.pdf",
+    "sha256": "cbda322df345fd39146c4772d429b3f741dabd8343573b387cbd2b95750f0f7e",
+    "bytes": 2168729,
+    "copy_status": "Exact controlled PDF copy inspected. Cover contains Roscosmos approval disposition dated 03.09.2025, No. ЦА-362-рсп, and states effective date 2026-01-01. Embedded foreword page retains blank approval/registration template fields; external registry status was not independently audited under the stop rule.",
+    "pdf_committed": false
+  },
+  "angular_publication": {
+    "title": "Characterization of Fragmented Ultrahigh-Energy Heavy Ion Beam and Its Effects on Electronics Single-Event Effect Testing",
+    "authors": [
+      "Mario Sacristán Barbero", "Ivan Slipukhin", "Matteo Cecchetto", "Daniel Prelipcean", "Ygor Aguiar", "Kacper Bilko", "Natalia Emriskova", "Andreas Waets", "Andrea Coronetti", "Maria Kastriotou", "Carlo Cazzaniga", "Torran Dodd", "Frédéric Saigné", "Vincent Pouget", "Rubén García Alía"
+    ],
+    "year": 2024,
+    "doi": "10.1109/TNS.2024.3396737",
+    "final_publication": "IEEE Transactions on Nuclear Science 71(8) (2024), 1557-1564",
+    "final_fulltext_record": "https://cds.cern.ch/record/2913173",
+    "final_fulltext_pdf": "https://cds.cern.ch/record/2913173/files/document.pdf",
+    "version_used_for_control": "final published IEEE TNS text exposed by CERN CDS; publication date 2024-05-03, current version 2024-08-16",
+    "prior_handoff_text_location": "ResearchGate author accepted version under the same DOI was used during the preliminary chat diagnostic before final-text control",
+    "pdf_committed": false,
+    "targeted_extraction_note": "The current UHE irradiation described in Section VI-A is stated to be at normal incidence. Figure 11 compares Cypress CY62167GE30 aggregate SEU cross sections and explicitly includes Cypress tilt angles 0, 45 and 60 deg with effective LET/fluence corrected by the cosine rule. The final article does not expose Cypress event multiplicity, upset addresses, parent-event grouping, cluster geometry, or post-W direct/residual labels for those angular points. The provenance of the off-normal comparison points was not followed into additional sources under the stop rule."
+  },
+  "control_task_environment": {
+    "python": "3.13.5 (GCC 14.2.0)",
+    "os": "Linux 6.18.35 x86_64, glibc 2.41",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "note": "Recorded for the control/provenance task only; not substituted for the historical diagnostic runtime."
+  }
+}

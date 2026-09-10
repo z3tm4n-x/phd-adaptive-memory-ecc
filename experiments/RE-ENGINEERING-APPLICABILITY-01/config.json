@@ -1,0 +1,40 @@
+{
+  "task": "RE-ENGINEERING-APPLICABILITY-01",
+  "base_commit": "3a19d9b07af7c3709e53476066cec1f8fffbc425",
+  "old_repository_commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+  "status": "PI_AUTHORIZED_TARGETED_ENGINEERING_ANALYSIS",
+  "words": 524288,
+  "data_bits": 32,
+  "codeword_bits": 39,
+  "H_seconds": 3600,
+  "epsilon_slices": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "application_burst_words": 8,
+  "application_load_slices": [
+    0.1,
+    0.5,
+    0.8
+  ],
+  "application_deadline_seconds": 0.0001,
+  "candidate_bus_bits": 16,
+  "candidate_transfer_seconds": 4.5e-08,
+  "candidate_scrub_slot_seconds": 3.6e-07,
+  "candidate_slot_frame_seconds": 1.44e-06,
+  "candidate_backup_period_seconds": 1,
+  "scan_implementation": "padded codeword read-modify-write slots; old ECC core reused; proposed logical model only",
+  "data_rate_transfer": "old GOES-derived 39-bit totals scaled by word-count ratio under explicit homogeneous-device assumption; not calibrated target-chip rate",
+  "information_windows_seconds": [
+    1,
+    5,
+    30,
+    60,
+    300,
+    3600
+  ],
+  "no_new_missions": true,
+  "no_retuning": true,
+  "no_full_port": true
+}

@@ -1,0 +1,4 @@
+dwell,offline_build_seconds,online_update_median_seconds,online_update_max_batch_mean_seconds,packed_arrays_bytes,live_two_belief_buffers_bytes,live_scalar_workspace_upper_bytes,uncompressed_reference_value_bytes,trace_complete_passes,trace_first_passage
+30,0.219968396999775,4.529753257647269e-07,5.050643385972627e-07,3360048,416,256,7488208,2026,False
+300,0.26982435499985513,4.921094561937616e-07,5.894713413878678e-07,3360048,416,256,7488208,1655,False
+3000,0.2600391130004027,4.4714516042572077e-07,5.936713770057288e-07,3360048,416,256,7488208,1496,False

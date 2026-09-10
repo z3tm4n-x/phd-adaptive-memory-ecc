@@ -1,0 +1,15 @@
+energy_mev,source_file,N_registered_clusters,N_registered_bitflips,N_direct_W32seq,p_registered_direct_W32seq,accumulation_bits_W32seq,mean_accumulation_bits_per_registered_event,direct_multiplicity_counts,direct_geometry_summary,address_mapping_failures,ambiguous_cell_rows_excluded,strict_service_cell_rows_excluded,unevaluable_multicell_clusters
+0.9,clust_p0.9MeV.txt,7455,7507,0,0.0,7507,1.0069751844399732,{},none,0,0,1,0
+1.0,clust_p1MeV.txt,4690,4710,0,0.0,4710,1.004264392324094,{},none,0,0,1,0
+1.1,clust_p1.1MeV.txt,14012,14090,0,0.0,14090,1.0055666571510133,{},none,0,0,2,0
+1.5,clust_p1.5MeV.txt,3214,3224,0,0.0,3224,1.0031113876789048,{},none,0,0,1,0
+2.5,clust_p2.5MeV.txt,28782,29008,0,0.0,29008,1.0078521298033494,{},none,0,0,4,0
+3.0,clust_p3MeV.txt,24703,25040,0,0.0,25040,1.0136420677650488,{},none,0,0,2,0
+4.0,clust_p4MeV.txt,4336,4406,0,0.0,4406,1.0161439114391144,{},none,0,0,1,0
+5.0,clust_p5MeV.txt,1994,2053,0,0.0,2053,1.0295887662988967,{},none,0,0,1,0
+29.0,clust_p29MeV.txt,1164,1182,0,0.0,1182,1.0154639175257731,{},none,0,1,0,0
+40.0,clust_p40MeV.txt,12441,16398,0,0.0,16398,1.3180612490957317,{},none,0,1,0,0
+80.0,clust_p80MeV.txt,10889,15320,0,0.0,15320,1.4069244191385801,{},none,0,1,0,0
+124.0,clust_p124MeV.txt,9403,13631,0,0.0,13631,1.449643730724237,{},none,0,1,0,0
+164.0,clust_p164MeV.txt,8667,13353,0,0.0,13353,1.5406715126341295,{},none,0,1,0,0
+186.0,clust_p186MeV.txt,8356,12969,0,0.0,12969,1.5520584011488752,{},none,0,0,1,0

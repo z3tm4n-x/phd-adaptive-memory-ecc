@@ -1,0 +1,34 @@
+{
+  "task_id": "RE-CY62167-DIRECT-DECISION-BOUNDARY-01",
+  "starting_sha": "39bcf9c85f76a6fa661cb0559cb75d0fcb6146be",
+  "working_branch": "research/cy62167-direct-decision-boundary-01",
+  "previous_bridge": {
+    "task_id": "RE-CY62167-ECC-RISK-BRIDGE-01",
+    "final_sha": "39bcf9c85f76a6fa661cb0559cb75d0fcb6146be",
+    "reproduction": "PASS"
+  },
+  "raw_cy62167_archive": {
+    "filename": "New Folder(3).zip",
+    "sha256": "16ab27789329adbbccdf9a7e5d0e15e855440d3f52b8dd93a384317a4635770a"
+  },
+  "goes_archive": {
+    "filename": "goes010226.zip",
+    "sha256": "7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581"
+  },
+  "radar": {
+    "commit": "b032505d4d1b15403b8ad06aef578339f6d1c6b4",
+    "transport_sha256": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6"
+  },
+  "address_mapping": {
+    "refitted": false,
+    "status": "FROZEN",
+    "previous_source_commit": "365eaee5906505ff7bfccd8766ca8cb1d6729486"
+  },
+  "parity": "OUTSIDE PRIMARY DATA-ONLY BOUNDARY",
+  "previous_bridge_full_output_hashes": {
+    "decision_sensitivity.csv": "a86a55eced84980caf0a672a83bed4374713e70cc1ecbe2fae91a4d3be8ea8b5",
+    "direct_rate_5min.csv": "c10a68e721716c8c9b96bf99a9e2d1de0bd3b179ebcc747b3fd149ff0741ff83",
+    "risk_curves.csv": "55e070a9eac2a40f47c27b68a16504ac71b4181b116c4f455e17b55fb8870b8d",
+    "window_risk_summary.csv": "503221e1783e455fa4fd00796267fecc74b55258958b857b9d955017a6e03611"
+  }
+}

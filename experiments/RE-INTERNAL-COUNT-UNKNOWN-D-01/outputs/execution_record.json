@@ -1,0 +1,60 @@
+{
+  "task": "RE-INTERNAL-COUNT-UNKNOWN-D-01",
+  "base": "529709f1b98d12a5f5a2c7b71ee1ff9f53210c97",
+  "completed": true,
+  "records": [
+    {
+      "dwell": 30,
+      "seed": 290916001,
+      "trials": 20000,
+      "seconds": 470.7300579319999,
+      "sha256": "22251abe5b70ea19e1bd51f3c96b7d4108a426e24ab1b4ba825f637406a2c436"
+    },
+    {
+      "dwell": 100,
+      "seed": 291916001,
+      "trials": 20000,
+      "seconds": 489.47788555199986,
+      "sha256": "ad071ae12010c945f16bfaec67f134e46bdf3811b6a2b7174ba23b321b978b4f"
+    },
+    {
+      "dwell": 300,
+      "seed": 292916001,
+      "trials": 20000,
+      "seconds": 464.5431371689999,
+      "sha256": "317be68ccf2f58d0ee655300ea07f49b3208c1752c4630ef2fa62302049b111d"
+    },
+    {
+      "dwell": 1000,
+      "seed": 293916001,
+      "trials": 20000,
+      "seconds": 447.3396464089999,
+      "sha256": "92656a724518ec82db2286733b3006e7ad5ed5a6cb9da0f16257a918cdf39ae5"
+    },
+    {
+      "dwell": 3000,
+      "seed": 294916001,
+      "trials": 20000,
+      "seconds": 413.87196717300003,
+      "sha256": "93f4b4a8cc49a4c8f3ae60c54c8d01c7f8a039bce8b026cb6a05653db5afaa76"
+    }
+  ],
+  "source_sha256": {
+    "config.json": "6544bfcda8b22f2d4ca8b413eca82b6486d59a50632f346bfba8a90938dab6c8",
+    "diagnostics.py": "0745ff663dbd7daf49b5ca2e2ea8b0a5dee1d5c8206b62bb46ee935868762245",
+    "experiment.py": "d84da2e72c7333b1ea1b882e0b88cc7e02f12c98260076263b23d6f6fba2c74a",
+    "feasibility.py": "a8679c348974d9e0366302da3845692deff0eede07dda5b472c6f352b8f0af0f",
+    "known_reference.py": "dc75594565fd89443ccfcf38a87177dfb99cc084f03c4bf3b4c4fc256cf0dcff",
+    "model.py": "37c395abfde82c1894d88bd6b69f6db7493c7906c317118da34be216d458bd85",
+    "numeric_witness.py": "840e8c3e63c21fc474f2b1d6f154a02c06ac01a2f94eab8d0d76d21ce06326c3",
+    "reproduce.py": "9998402bd40d3849492caaca159595ec05c6644f553926ef52ba7caa93b947ac",
+    "simulate.py": "2ebeeaccd630836ae5b7399093dab37292d93936508f54529f25d34dd74a8fde",
+    "small_reference.py": "2ff1f032e3124928226a95a66d52108f17f0ec00fefc452406372f08999d6f28",
+    "tests.py": "09bd78b253ace95ae95b28ee9a55ae61ead3a16b2f2f336a3558d38e04155c9d"
+  },
+  "workers": 4,
+  "validation_tuned": false,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+}

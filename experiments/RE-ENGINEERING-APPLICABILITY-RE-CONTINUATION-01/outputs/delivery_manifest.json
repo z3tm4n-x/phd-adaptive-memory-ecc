@@ -1,0 +1,83 @@
+{
+  "task": "RE-ENGINEERING-APPLICABILITY-01 continuation 01",
+  "created_at_utc": "2026-09-10T13:26:35.518153+00:00",
+  "input_commit": "bcc774c1c3700bcbeacb8b2ca3bd9ead51523951",
+  "handoff_commit": "8138c5ba05fb4e88246379db8c86bab1a3687687",
+  "executor": "Permanent Research Engineer in this separate user-started session",
+  "input_authorship": "Research Orchestrator",
+  "kind": "current-continuation delivery inventory; not retrospective experiment provenance",
+  "files": [
+    {
+      "path": "DELIVERY_STATUS.md",
+      "size_bytes": 1701,
+      "sha256": "15b55a746989f9fdab7e80ba758d8daacccaca67a3463d84dfc1fa367313dcfc",
+      "git_blob_sha": "68bd909a338c992d2942133c8ce1a756c502eb57"
+    },
+    {
+      "path": "HANDOFF.md",
+      "size_bytes": 6475,
+      "sha256": "efee5d56184cd7d30099a6d3c6fe5a6a87376439ace4bc22bee81f236b007756",
+      "git_blob_sha": "bdb28819a9ef9c0c0d8855a8c4823fd4bbb7f2a1"
+    },
+    {
+      "path": "INPUTS.json",
+      "size_bytes": 6443,
+      "sha256": "abd0ddabfdd0c02b3faada52c94b90020749233038d7eec429a767300032dc59",
+      "git_blob_sha": "e7577faac4110b1352f0af8573cdd2c5bff7354e"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1360,
+      "sha256": "54bed2bf0db852724d4d1238cc70fd6886e4a8412de0a7f3c6858fb0c6ea0107",
+      "git_blob_sha": "634b301da2cf3e64b4b208808f2f490b01774e0c"
+    },
+    {
+      "path": "REPORT.md",
+      "size_bytes": 17747,
+      "sha256": "d6e3bb98df1b85b6ae3b340173b0cdabdbab3b43d2b6e5c25bc438f0faa99f69",
+      "git_blob_sha": "47a7bcc902c648a5c71c1bbd41667ec51f843ae8"
+    },
+    {
+      "path": "config.json",
+      "size_bytes": 1525,
+      "sha256": "c8442d07bc9c3d13217315458e11aa0ae32b885ce552399956b5b8d6b6ee3813",
+      "git_blob_sha": "4f20dc9295b8bb5d44f908632c07f16ad4709927"
+    },
+    {
+      "path": "numerical_checks.py",
+      "size_bytes": 5794,
+      "sha256": "9a1da6c8e1029529b250a4de8da7cdd1c7c544773fe9800b51914ee3205a9014",
+      "git_blob_sha": "3aceb7578d7231e73c7a4016e07d785524b6c0a3"
+    },
+    {
+      "path": "outputs/execution_record.json",
+      "size_bytes": 3495,
+      "sha256": "a91fb3c0167c30729635c2a4624dc9fc19387c8225d60429d6818d4cd6d42e3b",
+      "git_blob_sha": "cf6a51d36842aceb3cfe62d7c5d2a9df1037abe8"
+    },
+    {
+      "path": "outputs/numerical_checks.json",
+      "size_bytes": 5985,
+      "sha256": "e5d6c190c54a89b18e1ab74101f793741a74ff3d086a7c626e7cdb971d910688",
+      "git_blob_sha": "a820b0ec80bc488c63a3077475bdbbaa2420a99d"
+    },
+    {
+      "path": "outputs/run_stdout.txt",
+      "size_bytes": 2083,
+      "sha256": "727b75005759a0d78f97fcf2f6dc42729ef597e277da71639809e1160c06eb25",
+      "git_blob_sha": "efadca277139f8e29be9e8ee7e3745a239a2bd9d"
+    },
+    {
+      "path": "protocol_checks.py",
+      "size_bytes": 7892,
+      "sha256": "56dc6ba0de155491b3851c4136971b1debeac2d3e8d198be0b3234b600dd9c7a",
+      "git_blob_sha": "1493f19afdb599fa4a759ff7e70d7a35cc307d6b"
+    },
+    {
+      "path": "run_checks.py",
+      "size_bytes": 1667,
+      "sha256": "32a1436f72538ca9990ce0f5a82e2327cb2cdf99ae8b2bce17b9b1f27730ba52",
+      "git_blob_sha": "63f701c507a2df22881760b59c5628ffdece45bc"
+    }
+  ]
+}

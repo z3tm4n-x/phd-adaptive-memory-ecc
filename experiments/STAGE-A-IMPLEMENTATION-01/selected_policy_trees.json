@@ -1,0 +1,410 @@
+{
+  "d3_rho=0_eps=0.01": {
+    "Causal": {
+      "HH": {
+        "passes": 2100,
+        "tau1_s": "0.5",
+        "tau2_s": "0.2"
+      },
+      "HL": {
+        "passes": 601,
+        "tau1_s": "0.5",
+        "tau2_s": "300"
+      },
+      "LH": {
+        "passes": 601,
+        "tau1_s": "300",
+        "tau2_s": "0.5"
+      },
+      "LL": {
+        "passes": 2,
+        "tau1_s": "300",
+        "tau2_s": "300"
+      }
+    },
+    "Fixed": {
+      "HH": {
+        "passes": 3000,
+        "tau1_s": "0.2",
+        "tau2_s": "0.2"
+      },
+      "HL": {
+        "passes": 3000,
+        "tau1_s": "0.2",
+        "tau2_s": "0.2"
+      },
+      "LH": {
+        "passes": 3000,
+        "tau1_s": "0.2",
+        "tau2_s": "0.2"
+      },
+      "LL": {
+        "passes": 3000,
+        "tau1_s": "0.2",
+        "tau2_s": "0.2"
+      }
+    },
+    "Precomputed": {
+      "HH": {
+        "passes": 2100,
+        "tau1_s": "0.5",
+        "tau2_s": "0.2"
+      },
+      "HL": {
+        "passes": 2100,
+        "tau1_s": "0.5",
+        "tau2_s": "0.2"
+      },
+      "LH": {
+        "passes": 2100,
+        "tau1_s": "0.5",
+        "tau2_s": "0.2"
+      },
+      "LL": {
+        "passes": 2100,
+        "tau1_s": "0.5",
+        "tau2_s": "0.2"
+      }
+    }
+  },
+  "d3_rho=0_eps=0.1": {
+    "Causal": {
+      "HH": {
+        "passes": 210,
+        "tau1_s": "5",
+        "tau2_s": "2"
+      },
+      "HL": {
+        "passes": 61,
+        "tau1_s": "5",
+        "tau2_s": "300"
+      },
+      "LH": {
+        "passes": 61,
+        "tau1_s": "300",
+        "tau2_s": "5"
+      },
+      "LL": {
+        "passes": 2,
+        "tau1_s": "300",
+        "tau2_s": "300"
+      }
+    },
+    "Fixed": {
+      "HH": {
+        "passes": 300,
+        "tau1_s": "2",
+        "tau2_s": "2"
+      },
+      "HL": {
+        "passes": 300,
+        "tau1_s": "2",
+        "tau2_s": "2"
+      },
+      "LH": {
+        "passes": 300,
+        "tau1_s": "2",
+        "tau2_s": "2"
+      },
+      "LL": {
+        "passes": 300,
+        "tau1_s": "2",
+        "tau2_s": "2"
+      }
+    },
+    "Precomputed": {
+      "HH": {
+        "passes": 210,
+        "tau1_s": "5",
+        "tau2_s": "2"
+      },
+      "HL": {
+        "passes": 210,
+        "tau1_s": "5",
+        "tau2_s": "2"
+      },
+      "LH": {
+        "passes": 210,
+        "tau1_s": "5",
+        "tau2_s": "2"
+      },
+      "LL": {
+        "passes": 210,
+        "tau1_s": "5",
+        "tau2_s": "2"
+      }
+    }
+  },
+  "d5_rho=0.0001_eps=0.1": {
+    "Causal": {
+      "HH": {
+        "passes": 20,
+        "tau1_s": "60",
+        "tau2_s": "20"
+      },
+      "HL": {
+        "passes": 6,
+        "tau1_s": "60",
+        "tau2_s": "300"
+      },
+      "LH": {
+        "passes": 4,
+        "tau1_s": "300",
+        "tau2_s": "100"
+      },
+      "LL": {
+        "passes": 2,
+        "tau1_s": "300",
+        "tau2_s": "300"
+      }
+    },
+    "Fixed": {
+      "HH": {
+        "passes": 20,
+        "tau1_s": "30",
+        "tau2_s": "30"
+      },
+      "HL": {
+        "passes": 20,
+        "tau1_s": "30",
+        "tau2_s": "30"
+      },
+      "LH": {
+        "passes": 20,
+        "tau1_s": "30",
+        "tau2_s": "30"
+      },
+      "LL": {
+        "passes": 20,
+        "tau1_s": "30",
+        "tau2_s": "30"
+      }
+    },
+    "Precomputed": {
+      "HH": {
+        "passes": 20,
+        "tau1_s": "60",
+        "tau2_s": "20"
+      },
+      "HL": {
+        "passes": 20,
+        "tau1_s": "60",
+        "tau2_s": "20"
+      },
+      "LH": {
+        "passes": 20,
+        "tau1_s": "60",
+        "tau2_s": "20"
+      },
+      "LL": {
+        "passes": 20,
+        "tau1_s": "60",
+        "tau2_s": "20"
+      }
+    }
+  },
+  "d5_rho=0_eps=0.001": {
+    "Causal": {
+      "HH": {
+        "passes": 900,
+        "tau1_s": "1",
+        "tau2_s": "0.5"
+      },
+      "HL": {
+        "passes": 301,
+        "tau1_s": "1",
+        "tau2_s": "300"
+      },
+      "LH": {
+        "passes": 301,
+        "tau1_s": "300",
+        "tau2_s": "1"
+      },
+      "LL": {
+        "passes": 2,
+        "tau1_s": "300",
+        "tau2_s": "300"
+      }
+    },
+    "Fixed": {
+      "HH": {
+        "passes": 1200,
+        "tau1_s": "0.5",
+        "tau2_s": "0.5"
+      },
+      "HL": {
+        "passes": 1200,
+        "tau1_s": "0.5",
+        "tau2_s": "0.5"
+      },
+      "LH": {
+        "passes": 1200,
+        "tau1_s": "0.5",
+        "tau2_s": "0.5"
+      },
+      "LL": {
+        "passes": 1200,
+        "tau1_s": "0.5",
+        "tau2_s": "0.5"
+      }
+    },
+    "Precomputed": {
+      "HH": {
+        "passes": 900,
+        "tau1_s": "1",
+        "tau2_s": "0.5"
+      },
+      "HL": {
+        "passes": 900,
+        "tau1_s": "1",
+        "tau2_s": "0.5"
+      },
+      "LH": {
+        "passes": 900,
+        "tau1_s": "1",
+        "tau2_s": "0.5"
+      },
+      "LL": {
+        "passes": 900,
+        "tau1_s": "1",
+        "tau2_s": "0.5"
+      }
+    }
+  },
+  "d5_rho=0_eps=0.01": {
+    "Causal": {
+      "HH": {
+        "passes": 90,
+        "tau1_s": "10",
+        "tau2_s": "5"
+      },
+      "HL": {
+        "passes": 31,
+        "tau1_s": "10",
+        "tau2_s": "300"
+      },
+      "LH": {
+        "passes": 31,
+        "tau1_s": "300",
+        "tau2_s": "10"
+      },
+      "LL": {
+        "passes": 2,
+        "tau1_s": "300",
+        "tau2_s": "300"
+      }
+    },
+    "Fixed": {
+      "HH": {
+        "passes": 120,
+        "tau1_s": "5",
+        "tau2_s": "5"
+      },
+      "HL": {
+        "passes": 120,
+        "tau1_s": "5",
+        "tau2_s": "5"
+      },
+      "LH": {
+        "passes": 120,
+        "tau1_s": "5",
+        "tau2_s": "5"
+      },
+      "LL": {
+        "passes": 120,
+        "tau1_s": "5",
+        "tau2_s": "5"
+      }
+    },
+    "Precomputed": {
+      "HH": {
+        "passes": 90,
+        "tau1_s": "10",
+        "tau2_s": "5"
+      },
+      "HL": {
+        "passes": 90,
+        "tau1_s": "10",
+        "tau2_s": "5"
+      },
+      "LH": {
+        "passes": 90,
+        "tau1_s": "10",
+        "tau2_s": "5"
+      },
+      "LL": {
+        "passes": 90,
+        "tau1_s": "10",
+        "tau2_s": "5"
+      }
+    }
+  },
+  "d5_rho=0_eps=0.1": {
+    "Causal": {
+      "HH": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "HL": {
+        "passes": 6,
+        "tau1_s": "60",
+        "tau2_s": "300"
+      },
+      "LH": {
+        "passes": 3,
+        "tau1_s": "300",
+        "tau2_s": "150"
+      },
+      "LL": {
+        "passes": 2,
+        "tau1_s": "300",
+        "tau2_s": "300"
+      }
+    },
+    "Fixed": {
+      "HH": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "HL": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "LH": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "LL": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      }
+    },
+    "Precomputed": {
+      "HH": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "HL": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "LH": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      },
+      "LL": {
+        "passes": 10,
+        "tau1_s": "60",
+        "tau2_s": "60"
+      }
+    }
+  }
+}

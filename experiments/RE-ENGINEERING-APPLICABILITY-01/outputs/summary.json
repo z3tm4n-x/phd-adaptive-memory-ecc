@@ -1,0 +1,134 @@
+{
+  "task": "RE-ENGINEERING-APPLICABILITY-01",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "sources_sha256": {
+    "experiments/RE-ENGINEERING-APPLICABILITY-01/config.json": "86f63ef3dc1e0b2cc963e9a76c58332d8a7b6594d4c5f51262100c782bc9ce23",
+    "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/config.json": "6544bfcda8b22f2d4ca8b413eca82b6486d59a50632f346bfba8a90938dab6c8",
+    "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/outputs/reserve_certificate.json": "73b7ed65f27c5d04e2055899ba59195eecd778d87949ca56db1ca491ae57e102",
+    "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/outputs/open_loop_uniform.csv": "cd3b812c324797c4ec6c791fcf788ea1f559d050a586b2259e9d8df566473975",
+    "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/outputs/comparison.csv": "046f95d3cf4ab4b152eb717edb5f095b8f95b21c0a77d576d8103198dfa8f58c",
+    "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/outputs/information_effect.csv": "4f356a758fcebc78ab5f1dd27130d19ea68d97f0ab858fba89fceac423285070",
+    "data/ch3_five_year_upsets.csv": "5b1f77b83c2c1a708c99663b7da13437414527e1a1ecebeee091bc71356eea22",
+    "configs/ch3_main_1pct.json": "6c3598484f614cdaacb05720025a5152f87346ee056e5a4ef8d61511f2830636",
+    "results/schedules/measured_policy_seed_sweep_summary.csv": "90a84514593fedfe902d85d1c2938af09869518961945594415d784c01411bc1",
+    "rtl/scrubber/scrub_pass_engine.sv": "e9b6677441fbf57ee29a1f7fa1f28b2ebefba76bb207680ee2b7dc9c13fa7a67",
+    "rtl/scrubber/period_scheduler.sv": "4e8be0cd2c9bad211208e490ca750382bce2d866e62799427e2d4acb09c207bf"
+  },
+  "old_hours": 43824,
+  "missing_hours": 148,
+  "rate_transfer_word_ratio": 0.2708334194289587,
+  "target_mean_per_hour": 1.9155417511919295,
+  "target_peak_per_hour": 323.36523080628854,
+  "target_peak_timestamp": "2025-11-12T02:00:00Z",
+  "symmetric_zero_peak_CTMC_mean_per_hour": 161.68261540314427,
+  "symmetric_zero_peak_mean_to_data_mean": 84.4056859123737,
+  "target_rate_mean_t95_s": 5630.071063751923,
+  "target_rate_peak_t95_s": 33.351254734170496,
+  "fraction_hours_no_scrub_pair_bound_below_1e3": 0.9981973347937203,
+  "peak_max_gap_for_1e3_s": 36.10071231196258,
+  "max_old_backup_reconstruction_abs_error": 2.317212947910985e-08,
+  "preferred_bus_bits": 48,
+  "preferred_frame_s": 3.6e-07,
+  "preferred_pass_s": 0.18874368,
+  "preferred_active_reservation": 0.5,
+  "active_application_rate_words_s": 11111111.111111112,
+  "preferred_reads_per_pass": 524288,
+  "preferred_writes_per_pass": 524288,
+  "preferred_transferred_bits_per_pass": 50331648,
+  "preferred_storage_bytes": 3145728,
+  "transfer_busy_s": 0.04718592,
+  "reserved_busy_s": 0.09437184,
+  "max_rmw_guard_original_high_1s": 0.0039689551584,
+  "max_rmw_guard_original_high_all_actions": 0.019844775792,
+  "old_budget_min_slack_after_rmw_if_tau_at_least_1s": 0.007920469763147265,
+  "max_command_latency_s": 0.81125632,
+  "old_engine_trace_semantics": "handwritten cycle model; original SV not executed; iverilog unavailable",
+  "no_new_missions": true,
+  "checks": [
+    {
+      "case": "old_engine_0",
+      "cycles_from_start_edge": 24,
+      "reads": 8,
+      "writes": 0,
+      "corrections": 0,
+      "passed": true
+    },
+    {
+      "case": "old_engine_1",
+      "cycles_from_start_edge": 25,
+      "reads": 8,
+      "writes": 1,
+      "corrections": 1,
+      "passed": true
+    },
+    {
+      "case": "old_engine_5",
+      "cycles_from_start_edge": 26,
+      "reads": 8,
+      "writes": 2,
+      "corrections": 2,
+      "passed": true
+    },
+    {
+      "case": "old_engine_255",
+      "cycles_from_start_edge": 32,
+      "reads": 8,
+      "writes": 8,
+      "corrections": 8,
+      "passed": true
+    },
+    {
+      "case": "old_command_at_done",
+      "wait_ticks": 298,
+      "selected_after_edge": 1,
+      "passed": true,
+      "finding": "new command does not change wait already loaded on this edge"
+    },
+    {
+      "case": "old_subtick_pass",
+      "recorded_ticks": 2,
+      "actual_coarse_ticks": 0,
+      "passed": true,
+      "finding": "legacy compressed-time accounting differs from physical duration"
+    },
+    {
+      "case": "interface_on_time",
+      "accepted": true,
+      "next_end": 3.0,
+      "budget_reinitialized": false,
+      "passed": true
+    },
+    {
+      "case": "interface_late",
+      "accepted": false,
+      "next_end": 2.0,
+      "budget_reinitialized": false,
+      "passed": true
+    },
+    {
+      "case": "interface_wrong_generation",
+      "accepted": false,
+      "next_end": 2.0,
+      "budget_reinitialized": false,
+      "passed": true
+    },
+    {
+      "case": "terminal_partial",
+      "reads": 9,
+      "writes": 7,
+      "complete_passes": 0,
+      "restored_words": 2,
+      "passed": true
+    },
+    {
+      "case": "fault_between_read_write",
+      "physical_count": 0,
+      "ideal_credit_count": 1,
+      "physical_word_after_write": 0,
+      "passed": true,
+      "finding": "timing construction alone does not equate counts"
+    }
+  ]
+}

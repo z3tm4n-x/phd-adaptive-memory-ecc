@@ -1,0 +1,114 @@
+{
+  "task_id": "RE-GOES19-PROTON-RATE-01-SIGMA-CLOSURE",
+  "starting_commit": "e2370c1ad2bb5e640efe5af549e0944ac1a16aa0",
+  "models": [
+    "main_loglog",
+    "published_rpp_fluka_digitized"
+  ],
+  "goes_radar_pipeline_changed": false,
+  "reference_low_spectrum_gamma": 2.0,
+  "published_source_doi": "10.1109/TNS.2021.3061209",
+  "published_model_uncertainty": "average +/-35% stated by publication; digitization error separate",
+  "numeric_validation": {
+    "reference_reconstruction_max_rel": 9.869405620337695e-16,
+    "energy_partition_max_rel_ref": 8.652653007745957e-16,
+    "energy_partition_max_rel_phys": 9.843229513675247e-16
+  },
+  "ranking_orders": {
+    "median_s-1": {
+      "main_loglog": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ],
+      "published_rpp_fluka_digitized": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ]
+    },
+    "p99_s-1": {
+      "main_loglog": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ],
+      "published_rpp_fluka_digitized": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ]
+    },
+    "max_s-1": {
+      "main_loglog": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ],
+      "published_rpp_fluka_digitized": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0
+      ]
+    }
+  },
+  "disposition": "B",
+  "disposition_diagnostics": {
+    "ranking_changed": false,
+    "peak_timestamp_changed": false,
+    "worst_key_metric_absolute_relative_difference": 0.12608577024563794,
+    "worst_excursion_metric_absolute_relative_difference": 0.18405608703594534,
+    "minimum_log10_temporal_pearson": 0.9994622470466407,
+    "worst_pointwise_ratio_factor_p01_p99": 1.204272639982879,
+    "rule": "A <=10% key/excursion and log10 corr>=0.995; C ranking/peak change, corr<0.95, >=2x ratio factor, or >50% excursion; otherwise B"
+  },
+  "working_branch": "research/goes19-proton-rate-01-sigma-closure",
+  "controlled_goes_dataset_sha256": "f745cead0ffa2b76d4b9fdd6c236f873c46054880c3aaf2c5e4be94070826815",
+  "radar": {
+    "commit": "b032505d4d1b15403b8ad06aef578339f6d1c6b4",
+    "validation_run": 33621228858,
+    "transport_sha256": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6",
+    "validation_sha256": "c7b01f28d8fd395f62be32b54413d5e38c461d2e18aa779321ea03f6eea3f772"
+  },
+  "runtime": {
+    "python": "3.13.15 (main, Aug  6 2026, 02:15:18) [GCC 13.3.0]",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "h5py": "3.15.1"
+  },
+  "input_sha256": {
+    "published_physics_sigma.csv": "8d2eeaef4329b9b7f7debff0f53d1ef4cd3dcffc4c69d853cbce3c3fe9649526",
+    "digitize_published_physics.py": "286b68dd7cd709224d74ad81cfcab2bd867d84bb7a6c30a66ab8c60c3ae9542b",
+    "sigma_closure.py": "e064292d9aefa0669ad334d7bbea460b8b7996caa97a6d9b6a0c299c6cdd7d4c",
+    "task1_sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972"
+  },
+  "output_sha256": {
+    "REPORT_SIGMA_CLOSURE.md": "054ed7d49b7f37b58107d7030a417fe3c92c46132630ae1c061ecd2bdb280f42",
+    "sigma_model_comparison.csv": "73422b868b3b8f25821c50861697e136fa33b2c71569c59e5ab1149f0cad6e4d",
+    "energy_contribution_comparison.csv": "980601db0303d15976205a737bc00aff4a1e10d5be32cc2b4383902b142d3040"
+  }
+}

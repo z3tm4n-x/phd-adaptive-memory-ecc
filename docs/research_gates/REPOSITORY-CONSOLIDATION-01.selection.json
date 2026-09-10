@@ -1,0 +1,249 @@
+{
+  "accepted_engineering": {
+    "archive_commit": "8229668e9e6f3d05438fe1c0a5e3e46d98bfef4e",
+    "archive_commit_location": "docs/research_gates/delivery_records/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01.bundle",
+    "authorship": "bcc774c1c3700bcbeacb8b2ca3bd9ead51523951 is Orchestrator's input; 8229668e is permanent RE's separate-session continuation.",
+    "disposition": "6deaff07f8e8474b5a39d614e3bf55318bd145c6",
+    "published_delivery": "76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0",
+    "review": "616b198b8fcef903410e573c477b04740b1e89b2",
+    "source_tree": "1985e1ac8ed2ee5ba7d9bb3acc9005db2b330066"
+  },
+  "additional_preservation_checks": {
+    "unknown_d_correction": "8b865cbbbec2406a7eccd033bb3c2ff150f4c995",
+    "unknown_d_npz": [
+      {
+        "git_blob_sha1": "b2de2ca528d983bf02d2d069b689775765537667",
+        "path": "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/cache/heldout_100.npz"
+      },
+      {
+        "git_blob_sha1": "09b3e67db95c63fd59019e4d61bfb888d73254db",
+        "path": "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/cache/heldout_1000.npz"
+      },
+      {
+        "git_blob_sha1": "8af106f3b9bfc76bec8b1b5913d57393840ee9b0",
+        "path": "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/cache/heldout_30.npz"
+      },
+      {
+        "git_blob_sha1": "1b611167498eae1bd2fd31f6fcb29dcc2a8de5ac",
+        "path": "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/cache/heldout_300.npz"
+      },
+      {
+        "git_blob_sha1": "a18d35990c5e67b9535a1e8f13c13592f57383ef",
+        "path": "experiments/RE-INTERNAL-COUNT-UNKNOWN-D-01/cache/heldout_3000.npz"
+      }
+    ]
+  },
+  "date": "2026-09-10",
+  "external_references": [
+    {
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "status": "reusable prior work; not new RES; read-only"
+    },
+    {
+      "commit": "3fd5d792a0dd55ee9d46c0b7ca46c72d4eba5ea2",
+      "path": "manuscripts/internal-count-method-01/",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "status": "separate writing draft; link only, no publication-scope change"
+    },
+    {
+      "commit": "7db95ecea920e41dec9b191a94230c9da0db6678",
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-01/continuation-01/",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "status": "alternative unselected delivery; retain branch and comparison link; no import into selected package"
+    },
+    {
+      "commit": "b82f146cabed5f92598834db4af78f7ea9b65d6a",
+      "path": "docs/evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "status": "earlier PA-DOM-04-only matrix; historical version retained"
+    }
+  ],
+  "forbidden": [
+    "new scientific calculations",
+    "rerun reproduce/pilot/Monte Carlo",
+    "rewrite run manifests",
+    "scientific code refactoring",
+    "general Scientific Review",
+    "new RES promotion",
+    "automatic widening of RES-003/004",
+    "assigning permanent RE role to internal subagent"
+  ],
+  "immutable_by_default": "Every baseline blob retains path, mode and bytes unless listed in navigation_update_allowlist. Scientific-code, inputs, outputs, old manifests, accepted RES text and historical reports are immutable.",
+  "issue_action": {
+    "action": "Preserve old body/history; close as completed only after v1.0 working spec is merged. Do not equate to dissertation completion.",
+    "existing_issue": 3,
+    "existing_title": "Create Research Specification v1.0",
+    "new_issue_count": 1,
+    "new_issue_status": "question backlog; no technical execution authorized",
+    "new_issue_title": "Обоснование потока ошибок и нагрузки SRAM для оценки полезности адаптации"
+  },
+  "kind": "orchestrator_integration_selection_not_run_manifest",
+  "main_observed": "83d4db20ce43ff238d58551610f487e7cf3c2c6e",
+  "merge_authorization": "PI explicitly authorizes integration PR and merge to main after completeness/preservation checks. No further general approval required within this selection. No force-push, squash or branch deletion. Preserve parents/authorship and record selected imports.",
+  "navigation_constraints": {
+    "docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md": "status/navigation changes only; unchanged approved first-article scope and publication composition",
+    "docs/research_log.md": "append-only",
+    "docs/research_spec.md": "current v1.0 working contract; preserve SOURCE goal, definitions, assumptions and TBD distinctions"
+  },
+  "navigation_update_allowlist": [
+    "README.md",
+    "docs/current_status.md",
+    "docs/research_spec.md",
+    "results/README.md",
+    "docs/research_backlog.md",
+    "docs/scientific_reviews/README.md",
+    "docs/research_gates/README.md",
+    "docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md",
+    "docs/research_log.md"
+  ],
+  "new_document_scope": [
+    "This handoff and selection manifest",
+    "One source/history map with immutable links",
+    "One integration receipt with actual pre/post hashes, PR and verification results",
+    "Archived operational-summary snapshots where used"
+  ],
+  "permanent_results": [
+    {
+      "git_blob_sha1": "4401ef6d61a2f8d019d56f0bdc7e8d940282a5e7",
+      "path": "results/RES-001-exp001-four-word-identified-set.md"
+    },
+    {
+      "git_blob_sha1": "e3eea01c3b9cec93b5e53346815bcab0bd26da9b",
+      "path": "results/RES-002-external-information-restoration.md"
+    },
+    {
+      "git_blob_sha1": "983f088e796bdac4baa76d5b4433c1b0ad884baa",
+      "path": "results/RES-003-internal-count-control.md"
+    },
+    {
+      "git_blob_sha1": "7f624bafe5a973d295999a8322a2b1885c24fb3d",
+      "path": "results/RES-004-internal-count-unknown-d.md"
+    }
+  ],
+  "protected_trees": [
+    {
+      "git_tree_sha1": "f821d7f2671ba71bc0fac3435e55743b826bf5fa",
+      "path": "experiments"
+    },
+    {
+      "git_tree_sha1": "d92861e3615c188f82513ede888ca9da7266359b",
+      "path": "simulation"
+    },
+    {
+      "git_tree_sha1": "0efaa2a841753963a6264d3684be06a4a6e0db5f",
+      "path": "model"
+    },
+    {
+      "git_tree_sha1": "558f8b5b63b3442c562a68156e20c599f500139e",
+      "path": "rtl"
+    },
+    {
+      "git_tree_sha1": "25c7330bb4b589700527f3ddd63e35ea093badd0",
+      "path": "cosrad"
+    },
+    {
+      "git_tree_sha1": "c0ebfccc4dfde0813ca82623f67c3a7bf24bc1ab",
+      "path": "literature"
+    },
+    {
+      "git_tree_sha1": "417cb7de84dbf87e9fb9bef53f926c080d7644d3",
+      "path": "papers"
+    },
+    {
+      "git_tree_sha1": "b368132507941a27ea182e421fbda06b10bd7144",
+      "path": "thesis"
+    },
+    {
+      "git_tree_sha1": "7308841f4fe5918d045ab95214b1923a4a0376cf",
+      "path": "tools"
+    },
+    {
+      "git_tree_sha1": "dbc5b9dd00d28aca6d458afc0ef83cd717800c24",
+      "path": "docs/agents"
+    },
+    {
+      "git_tree_sha1": "e1a8a678d87080270244d5cdf1652bb211a2b8c7",
+      "path": "docs/claims"
+    },
+    {
+      "git_tree_sha1": "28e83a3426c1c9b505c7253065e698063d09e21e",
+      "path": "docs/decisions"
+    },
+    {
+      "git_tree_sha1": "f9277a2cc3f66d8af073339bfba3fa881e27ca31",
+      "path": "docs/hypotheses"
+    },
+    {
+      "git_tree_sha1": "8a7d5dfa97c130ef320b1ca0bcdfb0997837bdba",
+      "path": "docs/questions"
+    },
+    {
+      "git_tree_sha1": "bdfa5471b504b4db060a74e8ec12289a3cbdb457",
+      "path": "docs/paper_cards"
+    },
+    {
+      "git_tree_sha1": "0857f1fd0adbd846179d9bd96204a47a8eb4592c",
+      "path": "docs/normative_baseline"
+    },
+    {
+      "git_tree_sha1": "d4cb6aa37b0f9426982663be5ecebd02bef796ff",
+      "path": "docs/evidence_audits"
+    },
+    {
+      "git_tree_sha1": "256885deae3638b71f8a2e1dcb0e78353e528a81",
+      "path": "docs/research_gates/delivery_records"
+    },
+    {
+      "git_tree_sha1": "fe60d3a70debb6fb3ef091208c4de28dc514109c",
+      "path": "docs/research_gates/support"
+    }
+  ],
+  "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+  "required_additions": [
+    {
+      "git_blob_sha1": "9ce7f9ed3bcc924dfba8baa643dcac64ddef7735",
+      "mode": "100644",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_UNKNOWN_D_REVIEW_01.md",
+      "scope": "RES-004 scientific review",
+      "source_commit": "c9c9dd7f9ea038a169c2bf493f32bb6e5c842323"
+    },
+    {
+      "git_blob_sha1": "ddfa782873ec26d29325f205d0ab2cf813d879b5",
+      "mode": "100644",
+      "path": "docs/scientific_reviews/checks/internal_count_unknown_d_review_01.py",
+      "scope": "RES-004 review evidence; copy without execution",
+      "source_commit": "c9c9dd7f9ea038a169c2bf493f32bb6e5c842323"
+    },
+    {
+      "git_blob_sha1": "f8af51aa9bd76800da7dfe5ceb01c94777fccf89",
+      "mode": "100644",
+      "path": "docs/scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md",
+      "scope": "bounded experimental-line review; residual ERR finding retained",
+      "source_commit": "e11e1b1db1ca26b79291dad59f818167f2441620"
+    },
+    {
+      "git_blob_sha1": "8cdd41f2914203df0e130fa9863a73864a3e14a1",
+      "mode": "100644",
+      "path": "docs/evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md",
+      "scope": "accepted bounded stop-rule basis; retain DRAFT title and epistemic labels",
+      "source_commit": "4f96bb95189f0d385ea2077aa7b05d81ef8edf0d"
+    },
+    {
+      "git_blob_sha1": "6b30c2b84deaf326e259c3be1526c03637e03acb",
+      "mode": "100644",
+      "path": "docs/literature_mapping/PA-DOM-01-03_identity_control.md",
+      "scope": "source identity dependency of PA-DOM matrix",
+      "source_commit": "603fb4bff99a7d5c84f89030e2183bf41026fc15"
+    }
+  ],
+  "schema_version": 1,
+  "selected_snapshot": {
+    "blob_count": 545,
+    "commit": "6deaff07f8e8474b5a39d614e3bf55318bd145c6",
+    "git_tree_sha1": "ab4eebaa18cc116c6b0d01c2b42ae42896087183",
+    "meaning": "Preserved source/evidence baseline, not blanket scientific acceptance of every historical file."
+  },
+  "status": "PREPARED_FOR_TRANSFER_THROUGH_PI",
+  "task_id": "RE-REPOSITORY-CONSOLIDATION-01"
+}

@@ -1,100 +1,36 @@
-# PhD Research — Adaptive Memory ECC
+# Адаптивное управление восстановлением ECC-защищённой памяти
 
-Репозиторий исследовательской части кандидатской диссертации по специальности **2.3.2 «Вычислительные системы и их элементы»**.
+**Тема диссертации:** «Разработка методов адаптивного управления системами коррекции ошибок в цифровой памяти вычислительных систем».
 
-**Рабочая тема:** «Разработка методов адаптивного управления системами коррекции ошибок в цифровой памяти вычислительных систем».
+Специальность 2.3.2 «Вычислительные системы и их элементы». Центральная задача — выбирать период восстановления по доступным сведениям об ошибках, обосновывать ограничение риска в объявленном классе условий и определять ресурсную эффективность адаптации. Данные, вероятностные модели и реализация обеспечивают этот результат, а не заменяют его.
 
-## Назначение репозитория
+## Полученные результаты и место в диссертации
 
-Этот репозиторий — master-хранилище **собственных исследовательских артефактов**: моделей, кода, конфигураций экспериментов, результатов, графиков, RTL и технической документации.
+| Результат | Научный вопрос и полученное основание | Место в общей работе |
+|---|---|---|
+| [RES-001](results/RES-001-exp001-four-word-identified-set.md) | Какие сведения об ошибках определяют риск и действие? Точное идентифицированное множество и управляющие последствия потери информации в четырёхсловном классе. | Информационная достаточность; все 14 условий карточки действуют совместно. |
+| [RES-002](results/RES-002-external-information-restoration.md) | Что даёт ограниченная внешняя информация? Достижимая худшая огибающая достаточного сертификата и сохранение допустимого продолжения. | Внешний информационный канал и условные ресурсные области. |
+| [RES-003](results/RES-003-internal-count-control.md) | Как безопасно управлять по собственному счётчику? Вычислимый выбор периода последовательного восстановления с ограничением риска на всём горизонте. | Обратная связь при известном законе среды; основа первой статьи. |
+| [RES-004](results/RES-004-internal-count-unknown-d.md) | Как использовать сведения о неизвестном постоянном параметре? Безопасное уточнение D и ограничение риска на непрерывном диапазоне. | Неполное знание закона среды; сравнение learning и frozen-uncertainty. |
 
-Он **не является** библиотекой научных публикаций. Внешняя литература и библиографические метаданные хранятся в Zotero.
+Четыре результата имеют статус **ACCEPTED / PERMANENT** только в областях своих карточек. Соответствующие исследовательские этапы завершены. Это не четыре готовые статьи и не закрытие RQ-001…007 целиком.
 
-## Canonical systems
+Экспериментальная линия CY62167 → W/ECC → GOES → Stage A и [локальная инженерная основа](docs/research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md) связывают методы с входами и исполнением. Инженерный этап **LOCAL CLOSED** в области принятого SR; новый RES ему не присвоен.
 
-- **Литература и библиография:** Zotero
-- **Оркестрация исследования и анализ:** ChatGPT Project / Work
-- **Код, модели, эксперименты, результаты и provenance:** этот Git-репозиторий
-- **Радиационная обстановка:** COSRAD; здесь фиксируются сценарии, параметры и происхождение данных
-- **RTL/FPGA:** SystemVerilog + iVerilog + Vivado
+## Один следующий научный вопрос
 
-## Tool access boundary
+**При каких предметно обоснованных характеристиках ошибок полного слова и нагрузки выбранной SRAM-подсистемы разработанные адаптивные методы дают существенное преимущество после затрат управления по сравнению с сильным постоянным и простым счётчиковым режимами, и какой минимальный контракт реализации это сохраняет?**
 
-- **Cloud ChatGPT Work:** прямой доступ к GitHub и Scite при подключённых коннекторах; нет прямого доступа к локальной Zotero Desktop library, локальным COSRAD/Vivado/Python данным и файловой системе рабочего ПК.
-- **Local Codex / local research environment:** локальный Git clone, Zotero Desktop + local API, Python/Jupyter, COSRAD, SystemVerilog/iVerilog, Vivado и локальные datasets.
-- `literature/zotero_exports/references.bib` используется как cloud-visible snapshot библиографии и не заменяет Zotero master library.
+[Issue №12 — BACKLOG](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12). Это постановка следующего этапа, не разрешение новых расчётов. Кандидат применения: долго хранимая область внешней SRAM, 2 МиБ данных, SEC-DED (39,32), общий интерфейс, программный вычислитель и фиксированный 48-битный порт. Часовой горизонт, epsilon=10^-3 и нагрузки — исследовательские условия, не требования изделия.
 
-## AI-agent governance
+## Публикация и границы выводов
 
-Canonical инструкции ИИ-ролей находятся в `docs/agents/`:
+Первая статья по RES-003 продолжается независимо: [публикационный handoff](docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md), [зафиксированный черновик и обе его редакции](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/3fd5d792a0dd55ee9d46c0b7ca46c72d4eba5ea2/manuscripts/internal-count-method-01/). Консолидация не меняет состав статьи и не импортирует рукопись.
 
-- `00_GLOBAL_OPERATING_RULES.md` — общие правила;
-- `01_ORCHESTRATOR.md` — Research Orchestrator;
-- `02_LITERATURE_SCOUT.md` — Literature Scout;
-- `03_PAPER_ANALYST.md` — Paper Analyst;
-- `04_EVIDENCE_AUDITOR.md` — Evidence Auditor;
-- `05_SCIENTIFIC_REVIEWER.md` — Scientific Reviewer;
-- `06_WRITING_PUBLICATIONS.md` — Writing & Publications;
-- `07_RESEARCH_ENGINEER_LOCAL.md` — локальный Research Engineer / Codex.
+E_cap памяти не равен автоматически отказу вычислительной системы; сравнительное снижение затрат не доказывает глобальную оптимальность. Q в RES-002 — достаточная оценка, не точный F_A; BOUNDARY-ENCLOSURE не разрешает действие по соседней строке. Условный арифметический контракт сохраняется. Историческая независимость held-out RES-004 не установлена; будущая подтверждающая выборка не является условием закрытия принятого результата и сейчас не запускается. Полное устройство, WCET, сертификат изменённого банка с резервом 0.5 с и суммарная практическая польза не приняты.
 
-Перед существенной работой агент должен читать общие правила и свою role card. Инструкции в GitHub являются canonical; DOCX в ChatGPT Project — удобный snapshot.
+## Навигация
 
-## Исследовательские сущности
+[Текущее состояние](docs/current_status.md) · [Рабочая спецификация v1.0](docs/research_spec.md) · [Реестр результатов и проверок](results/README.md) · [Следующие вопросы](docs/research_backlog.md) · [Карта источников и истории](docs/research_map.md).
 
-Используются стабильные идентификаторы:
-
-- `RQ-xxx` — Research Question
-- `PAPER-xxx` — карточка публикации
-- `CLM-xxx` — Claim
-- `EVD-xxx` — Evidence record
-- `HYP-xxx` — Hypothesis
-- `DEC-xxx` — Research decision
-- `EXP-xxx` — Experiment
-- `RES-xxx` — Research result
-- `FIG-xxx` — Figure
-- `ART-xxx` — Article/publication
-
-Кандидатные Research Questions до утверждения используют временные идентификаторы `C-RQ-xx`.
-
-## Структура
-
-- `docs/` — research specification, Research Questions, журнал исследования, решения, гипотезы, claims и инструкции ИИ-агентов
-- `literature/` — только экспорты/мосты из Zotero; не PDF-библиотека
-- `model/` — аналитические и символические модели
-- `simulation/` — вычислительные модели и тесты
-- `cosrad/` — обработка и provenance COSRAD-сценариев
-- `experiments/` — спецификации и manifests экспериментов
-- `results/` — утверждённые таблицы, данные малого объёма и графики
-- `rtl/` — RTL, testbench, constraints и scripts
-- `papers/` — материалы публикаций
-- `thesis/` — материалы диссертации
-
-## Правила
-
-1. Не коммитить большие raw datasets, waveforms, generated Vivado projects и Zotero database.
-2. Любой существенный эксперимент должен иметь `EXP-ID`, конфигурацию и связь с commit SHA.
-3. Любой утверждённый собственный вывод должен иметь `RES-ID` и ссылаться на воспроизводимый эксперимент/вывод.
-4. Значимые научные решения фиксируются как `DEC-ID`.
-5. Непроверенные утверждения не помещаются в `results/` как установленные результаты.
-6. `main` содержит только согласованное текущее состояние; рискованные изменения выполняются в отдельных ветках.
-7. Chat history не является canonical research storage.
-
-## Текущая стадия
-
-- **Infrastructure setup:** завершён.
-- **Zotero setup:** завершён; Zotero является master-хранилищем внешней литературы.
-- **AI-agent operating model:** настроен в `docs/agents/`.
-- **Research Specification:** `v0.8-draft`.
-- **RQ-001:** `PARTIALLY ANSWERED / OPEN DEPENDENCIES`.
-- **Accepted decision:** `DEC-001` — ECC-capability event, start-time-aware metric, declared/partitioned protection domain and layered horizon semantics.
-- **Integrated roadmap:** `DEC-002` — radiation-test evidence, mapping `W`, ECC-level reliability and adaptive restoration control are one causal method; representation loss and observability are evaluated explicitly.
-- **Numerical reliability requirement:** `TBD`.
-- **Accepted model decision:** `DEC-003` — event-driven comparison reference, `L0…L3` representation ladder and authorization of the first own experiment.
-- **RQ-006:** permanently registered for physical-to-logical mapping `W`, interleaving and information-sufficiency conditions.
-- **First own result:** [`RES-001`](results/RES-001-exp001-four-word-identified-set.md) — permanent, PI-approved and limited to the reviewed synthetic four-word/fixed-cardinality class.
-- **EXP-001:** complete; independent validation and Scientific Review 02 passed; promoted only within `RES-001`.
-- **Accepted next gate:** [`Information-deficit price for restoration control`](docs/research_gates/NEXT-QUANTITATIVE-GATE-information-deficit-control-price.md) — pre-execution; it separates control-resource price, information-acquisition cost and any later net balance.
-- **Integrated control RQ:** [RQ-007](docs/questions/RQ-007-integrated-adaptive-restoration-control.md) permanently registered after explicit PI `ACCEPT`.
-- **Active gate:** bounded PA-DOM-01…04 prior-art closure under the accepted hard stop rule; no broad search.
-- **Next scientific interfaces:** RQ-003 parameterized ECC state/capability, RQ-004 observation/uncertainty and RQ-005 measurable resource vector.
-- **Constraint:** no new experiment before PA-DOM-01…04 closure, minimum RQ-003/RQ-004/RQ-005 interface decisions, preregistration and separate PI approval of the experiment/derivation; no retroactive hypothesis or broad literature cycle without a named blocker.
+Исходные пакеты, расчёты, исправления, манифесты и авторство сохраняются. Научные статусы задаются карточками результатов и их решениями о принятии; историческая формулировка в старом отчёте не переоткрывает завершённый этап. [Инструкции ролей](docs/agents/00_GLOBAL_OPERATING_RULES.md) и [жизненный цикл](docs/research_lifecycle.md) действуют без изменений. Zotero остаётся главным хранилищем внешней литературы; репозиторий хранит собственные исследовательские материалы.

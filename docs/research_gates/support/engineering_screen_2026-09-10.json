@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-10",
+  "kind": "arithmetic_screen_not_new_simulation",
+  "source_commit": "8b865cbbbec2406a7eccd033bb3c2ff150f4c995",
+  "old_repository_commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+  "semantics": "Own-survival conditional means differ by policy. Completed-pass contribution excludes terminal partial work. R2-U modeled serial occupancy, not application latency.",
+  "tables_bytes": 38207136,
+  "H": 3600,
+  "P": 0.18874368,
+  "reads_per_complete_pass": 2097152,
+  "writes_per_complete_pass": 2097152,
+  "comparison": [
+    {
+      "D": 30,
+      "learning_N": 2407.2886891950066,
+      "frozen_N": 2420.1370733283084,
+      "learning_completed_busy_s": 454.3605260210418,
+      "learning_completed_busy_pct": 12.621125722806717,
+      "completed_busy_s_saving": 2.4250513033729932,
+      "completed_busy_percentage_points_saving": 0.06736253620480537,
+      "learning_completed_reads": 5048450289.122686,
+      "learning_completed_writes": 5048450289.122686,
+      "read_saving": 26945014.48192215,
+      "write_saving": 26945014.48192215,
+      "reported_busy_given_survival": 454.3605260210418
+    },
+    {
+      "D": 100,
+      "learning_N": 2283.715543151567,
+      "frozen_N": 2411.6048391413738,
+      "learning_completed_busy_s": 431.0368756876256,
+      "learning_completed_busy_pct": 11.973246546878489,
+      "completed_busy_s_saving": 24.138296357725352,
+      "completed_busy_percentage_points_saving": 0.6705082321590375,
+      "learning_completed_reads": 4789298618.751395,
+      "learning_completed_writes": 4789298618.751395,
+      "read_saving": 268203292.86361504,
+      "write_saving": 268203292.86361504,
+      "reported_busy_given_survival": 431.0368756876255
+    },
+    {
+      "D": 300,
+      "learning_N": 2143.895867856952,
+      "frozen_N": 2397.6999733262205,
+      "learning_completed_busy_s": 404.6467956361148,
+      "learning_completed_busy_pct": 11.240188767669855,
+      "completed_busy_s_saving": 47.90392086537786,
+      "completed_busy_percentage_points_saving": 1.3306644684827185,
+      "learning_completed_reads": 4496075507.067943,
+      "learning_completed_writes": 4496075507.067943,
+      "read_saving": 532265787.3930874,
+      "write_saving": 532265787.3930874,
+      "reported_busy_given_survival": 404.64679563611486
+    },
+    {
+      "D": 1000,
+      "learning_N": 2065.6521995708154,
+      "frozen_N": 2385.128301280334,
+      "learning_completed_busy_s": 389.8787977470901,
+      "learning_completed_busy_pct": 10.829966604085836,
+      "completed_busy_s_saving": 60.299095108708876,
+      "completed_busy_percentage_points_saving": 1.6749748641308022,
+      "learning_completed_reads": 4331986641.634335,
+      "learning_completed_writes": 4331986641.634335,
+      "read_saving": 669989945.6523209,
+      "write_saving": 669989945.6523209,
+      "reported_busy_given_survival": 389.8787977470901
+    },
+    {
+      "D": 3000,
+      "learning_N": 2016.1938966383411,
+      "frozen_N": 2366.625540547755,
+      "learning_completed_busy_s": 380.54385564506015,
+      "learning_completed_busy_pct": 10.570662656807226,
+      "completed_busy_s_saving": 66.14175805991236,
+      "completed_busy_percentage_points_saving": 1.837271057219788,
+      "learning_completed_reads": 4228265062.7228904,
+      "learning_completed_writes": 4228265062.7228904,
+      "read_saving": 734908422.8879151,
+      "write_saving": 734908422.8879151,
+      "reported_busy_given_survival": 380.5438556450601
+    }
+  ],
+  "tables_MiB": 36.437164306640625,
+  "old_read_only_transfer_s": 0.29491190625,
+  "old_no_error_fsm_cycles_leading_term": 5807496,
+  "CTMC_stationary_mean_arrivals_per_hour": 11024.927436214799,
+  "attachment_identities": [
+    {
+      "name": "Глава 3_fab(2).docx",
+      "bytes": 45925,
+      "sha256": "7e44cdb6909dc66b76a0c7dc10e2c9e5990b1d5671fce956c2d7e0802d3d5088"
+    },
+    {
+      "name": "Глава 4_fab(2).docx",
+      "bytes": 48326,
+      "sha256": "16cee815172131f51a4319a95112b174b4bbf33df48ceb200915c56a43ac3f63"
+    },
+    {
+      "name": "02-00_-_-.docx",
+      "bytes": 16490,
+      "sha256": "a9a59248606e367df9b6e47e45bae4400267fc5bcf032b980a79146a502fbf11"
+    }
+  ]
+}

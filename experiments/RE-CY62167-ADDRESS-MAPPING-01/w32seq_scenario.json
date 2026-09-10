@@ -1,0 +1,22 @@
+{
+  "actual_proprietary_ecc_mapping": false,
+  "definition": "W32_seq(x,y) = floor(A(x,y)/4)",
+  "kernel_basis": [
+    {"bit_vector_24_lsb_order":[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"coordinate_bit_terms":["x4"],"xor_delta_x":16,"xor_delta_y":0},
+    {"bit_vector_24_lsb_order":[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"coordinate_bit_terms":["x5"],"xor_delta_x":32,"xor_delta_y":0},
+    {"bit_vector_24_lsb_order":[0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"coordinate_bit_terms":["x6"],"xor_delta_x":64,"xor_delta_y":0},
+    {"bit_vector_24_lsb_order":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],"coordinate_bit_terms":["y4"],"xor_delta_x":0,"xor_delta_y":16},
+    {"bit_vector_24_lsb_order":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],"coordinate_bit_terms":["y10","y11"],"xor_delta_x":0,"xor_delta_y":3072}
+  ],
+  "kernel_dimension": 5,
+  "linear_rank_gf2": 19,
+  "minimum_displacement_basis": ["x4","y4"],
+  "minimum_nonzero_supplied_grid_displacement": 16,
+  "nominal_16_step_relation": "EMERGES_MATHEMATICALLY in the supplied transformed grid only; it does not prove manufacturer interleaving or actual ECC W.",
+  "prohibited_inference": "Do not identify W32_seq with proprietary CY62167 ECC word/parity placement.",
+  "semantic": "four consecutive external x8 addresses are treated as the 32 data cells of one analysis codeword",
+  "status": "DEFINED_AS_SCENARIO",
+  "supplied_grid_positions_per_scenario_word": 32,
+  "task_id": "RE-CY62167-ADDRESS-MAPPING-01",
+  "word_index_width_bits": 19
+}

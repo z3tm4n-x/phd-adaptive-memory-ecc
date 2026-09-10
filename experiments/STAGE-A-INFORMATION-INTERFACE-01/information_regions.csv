@@ -1,0 +1,13 @@
+region_id,timing_class,eta_class,eta_range,A0,A1,A2,timing_predicate,timing_meaning,eta_meaning
+T000_E_EXACT,T000,E_EXACT,"[0,0.5)",0,0,0,not A1 and not A2,no report is available at either decision,delivered report is necessarily singleton and identifies its true binary level
+T000_E_AMBIG,T000,E_AMBIG,"[0.5,infinity)",0,0,0,not A1 and not A2,no report is available at either decision,"singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+T001_E_EXACT,T001,E_EXACT,"[0,0.5)",0,0,1,not A1 and A2,only the second-block report is available at t=300,delivered report is necessarily singleton and identifies its true binary level
+T001_E_AMBIG,T001,E_AMBIG,"[0.5,infinity)",0,0,1,not A1 and A2,only the second-block report is available at t=300,"singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+T010_E_EXACT,T010,E_EXACT,"[0,0.5)",0,1,0,not A0 and A1 and not A2,first-block report arrives only by t=300; no current second-block report,delivered report is necessarily singleton and identifies its true binary level
+T010_E_AMBIG,T010,E_AMBIG,"[0.5,infinity)",0,1,0,not A0 and A1 and not A2,first-block report arrives only by t=300; no current second-block report,"singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+T011_E_EXACT,T011,E_EXACT,"[0,0.5)",0,1,1,not A0 and A1 and A2,no report at t=0; both block reports are available at t=300,delivered report is necessarily singleton and identifies its true binary level
+T011_E_AMBIG,T011,E_AMBIG,"[0.5,infinity)",0,1,1,not A0 and A1 and A2,no report at t=0; both block reports are available at t=300,"singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+T110_E_EXACT,T110,E_EXACT,"[0,0.5)",1,1,0,A0 and not A2,first-block report is available at both decisions; no current second-block report,delivered report is necessarily singleton and identifies its true binary level
+T110_E_AMBIG,T110,E_AMBIG,"[0.5,infinity)",1,1,0,A0 and not A2,first-block report is available at both decisions; no current second-block report,"singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+T111_E_EXACT,T111,E_EXACT,"[0,0.5)",1,1,1,A0 and A2,current block report is available at both decisions (Ideal timing endpoint),delivered report is necessarily singleton and identifies its true binary level
+T111_E_AMBIG,T111,E_AMBIG,"[0.5,infinity)",1,1,1,A0 and A2,current block report is available at both decisions (Ideal timing endpoint),"singleton or {L,H} is allowed; equality eta=0.5 belongs here"

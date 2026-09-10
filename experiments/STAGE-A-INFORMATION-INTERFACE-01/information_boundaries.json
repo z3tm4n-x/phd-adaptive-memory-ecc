@@ -1,0 +1,173 @@
+{
+  "decision_times_s": [
+    0,
+    300
+  ],
+  "sample_contract": {
+    "s1": "0 <= s1 < 300",
+    "s2": "300 <= s2 < 600",
+    "ell": "ell >= 0"
+  },
+  "availability_predicates": {
+    "A0": "enabled1 AND s1=0 AND ell=0",
+    "A1": "enabled1 AND s1+ell<=300 (equality included)",
+    "A2": "enabled2 AND s2=300 AND ell=0"
+  },
+  "logical_constraint": "A0 implies A1, hence exactly six timing signatures",
+  "eta_boundary": {
+    "exact": "0 <= eta < 1/2: intervals around b_L and b_H are disjoint, so every valid delivered report is singleton",
+    "ambiguous": "eta >= 1/2: overlap exists; at eta=1/2 equality y=(b_L+b_H)/2 already permits {b_L,b_H}"
+  },
+  "aligned_enabled_samples": {
+    "s1=0,s2=300,ell=0": "T111",
+    "s1=0,s2=300,0<ell<=300": "T010",
+    "s1=0,s2=300,ell>300": "T000"
+  },
+  "regions": [
+    {
+      "region_id": "T000_E_EXACT",
+      "timing_class": "T000",
+      "eta_class": "E_EXACT",
+      "eta_range": "[0,0.5)",
+      "A0": 0,
+      "A1": 0,
+      "A2": 0,
+      "timing_predicate": "not A1 and not A2",
+      "timing_meaning": "no report is available at either decision",
+      "eta_meaning": "delivered report is necessarily singleton and identifies its true binary level"
+    },
+    {
+      "region_id": "T000_E_AMBIG",
+      "timing_class": "T000",
+      "eta_class": "E_AMBIG",
+      "eta_range": "[0.5,infinity)",
+      "A0": 0,
+      "A1": 0,
+      "A2": 0,
+      "timing_predicate": "not A1 and not A2",
+      "timing_meaning": "no report is available at either decision",
+      "eta_meaning": "singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+    },
+    {
+      "region_id": "T001_E_EXACT",
+      "timing_class": "T001",
+      "eta_class": "E_EXACT",
+      "eta_range": "[0,0.5)",
+      "A0": 0,
+      "A1": 0,
+      "A2": 1,
+      "timing_predicate": "not A1 and A2",
+      "timing_meaning": "only the second-block report is available at t=300",
+      "eta_meaning": "delivered report is necessarily singleton and identifies its true binary level"
+    },
+    {
+      "region_id": "T001_E_AMBIG",
+      "timing_class": "T001",
+      "eta_class": "E_AMBIG",
+      "eta_range": "[0.5,infinity)",
+      "A0": 0,
+      "A1": 0,
+      "A2": 1,
+      "timing_predicate": "not A1 and A2",
+      "timing_meaning": "only the second-block report is available at t=300",
+      "eta_meaning": "singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+    },
+    {
+      "region_id": "T010_E_EXACT",
+      "timing_class": "T010",
+      "eta_class": "E_EXACT",
+      "eta_range": "[0,0.5)",
+      "A0": 0,
+      "A1": 1,
+      "A2": 0,
+      "timing_predicate": "not A0 and A1 and not A2",
+      "timing_meaning": "first-block report arrives only by t=300; no current second-block report",
+      "eta_meaning": "delivered report is necessarily singleton and identifies its true binary level"
+    },
+    {
+      "region_id": "T010_E_AMBIG",
+      "timing_class": "T010",
+      "eta_class": "E_AMBIG",
+      "eta_range": "[0.5,infinity)",
+      "A0": 0,
+      "A1": 1,
+      "A2": 0,
+      "timing_predicate": "not A0 and A1 and not A2",
+      "timing_meaning": "first-block report arrives only by t=300; no current second-block report",
+      "eta_meaning": "singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+    },
+    {
+      "region_id": "T011_E_EXACT",
+      "timing_class": "T011",
+      "eta_class": "E_EXACT",
+      "eta_range": "[0,0.5)",
+      "A0": 0,
+      "A1": 1,
+      "A2": 1,
+      "timing_predicate": "not A0 and A1 and A2",
+      "timing_meaning": "no report at t=0; both block reports are available at t=300",
+      "eta_meaning": "delivered report is necessarily singleton and identifies its true binary level"
+    },
+    {
+      "region_id": "T011_E_AMBIG",
+      "timing_class": "T011",
+      "eta_class": "E_AMBIG",
+      "eta_range": "[0.5,infinity)",
+      "A0": 0,
+      "A1": 1,
+      "A2": 1,
+      "timing_predicate": "not A0 and A1 and A2",
+      "timing_meaning": "no report at t=0; both block reports are available at t=300",
+      "eta_meaning": "singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+    },
+    {
+      "region_id": "T110_E_EXACT",
+      "timing_class": "T110",
+      "eta_class": "E_EXACT",
+      "eta_range": "[0,0.5)",
+      "A0": 1,
+      "A1": 1,
+      "A2": 0,
+      "timing_predicate": "A0 and not A2",
+      "timing_meaning": "first-block report is available at both decisions; no current second-block report",
+      "eta_meaning": "delivered report is necessarily singleton and identifies its true binary level"
+    },
+    {
+      "region_id": "T110_E_AMBIG",
+      "timing_class": "T110",
+      "eta_class": "E_AMBIG",
+      "eta_range": "[0.5,infinity)",
+      "A0": 1,
+      "A1": 1,
+      "A2": 0,
+      "timing_predicate": "A0 and not A2",
+      "timing_meaning": "first-block report is available at both decisions; no current second-block report",
+      "eta_meaning": "singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+    },
+    {
+      "region_id": "T111_E_EXACT",
+      "timing_class": "T111",
+      "eta_class": "E_EXACT",
+      "eta_range": "[0,0.5)",
+      "A0": 1,
+      "A1": 1,
+      "A2": 1,
+      "timing_predicate": "A0 and A2",
+      "timing_meaning": "current block report is available at both decisions (Ideal timing endpoint)",
+      "eta_meaning": "delivered report is necessarily singleton and identifies its true binary level"
+    },
+    {
+      "region_id": "T111_E_AMBIG",
+      "timing_class": "T111",
+      "eta_class": "E_AMBIG",
+      "eta_range": "[0.5,infinity)",
+      "A0": 1,
+      "A1": 1,
+      "A2": 1,
+      "timing_predicate": "A0 and A2",
+      "timing_meaning": "current block report is available at both decisions (Ideal timing endpoint)",
+      "eta_meaning": "singleton or {L,H} is allowed; equality eta=0.5 belongs here"
+    }
+  ],
+  "scope": "Stage-A contract only; no pre-window observations; not a real-sensor latency limit"
+}

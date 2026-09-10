@@ -1,0 +1,23 @@
+{
+  "generated_at_utc": "2026-09-10T06:59:03.299358+00:00",
+  "available_attachment_versions": [
+    {
+      "attachment_file_id": "file_000000009a8c820b8dbe4546bc5ee234",
+      "size_bytes": 9082382,
+      "sha256": "8829f4435d439448e7d767574e1b345bc7ee10370e3dc6c89921ffa4c1f992f3"
+    },
+    {
+      "attachment_file_id": "file_000000008718820c89020a74e045d637",
+      "size_bytes": 9082382,
+      "sha256": "8829f4435d439448e7d767574e1b345bc7ee10370e3dc6c89921ffa4c1f992f3"
+    }
+  ],
+  "attachments_byte_equal": true,
+  "github_report_claimed_sha256": "1565da588c267451be0dc0a1c1403c1b622dc6b0b66d5f1d9bc905f8db7058ef",
+  "github_report_commit": "7ffc75bb2c4499f221aae54102c2ff5770d524f0",
+  "claim_supported_by_available_attachments": false,
+  "old_claim_origin": "UNRESOLVED; no bytes of an archive with this SHA-256 were recovered from the two conversation attachments",
+  "github_head_observed": "7ffc75bb2c4499f221aae54102c2ff5770d524f0",
+  "previously_claimed_commit_21391796_lookup": "GitHub GET git/commits/21391796b648f7fc3a9ecf48823e082202eaed58 returned 404",
+  "repo_writes_this_turn": false
+}
