@@ -1,0 +1,68 @@
+[
+  {
+    "D": 1.0,
+    "learning": true,
+    "nodes": 57,
+    "F_lower": 0.05410882484794886,
+    "F_upper": 0.05410882484794886,
+    "survival": 0.9458911751520511,
+    "mass_residual": 0.0,
+    "unresolved_mass": 0.0,
+    "passes_given_survival": 4.256119244957348
+  },
+  {
+    "D": 1.0,
+    "learning": false,
+    "nodes": 57,
+    "F_lower": 0.05410882484794886,
+    "F_upper": 0.05410882484794886,
+    "survival": 0.9458911751520511,
+    "mass_residual": 0.0,
+    "unresolved_mass": 0.0,
+    "passes_given_survival": 4.256119244957348
+  },
+  {
+    "D": 3.0,
+    "learning": true,
+    "nodes": 57,
+    "F_lower": 0.060575507005770475,
+    "F_upper": 0.060575507005770475,
+    "survival": 0.9394244929942293,
+    "mass_residual": 2.220446049250313e-16,
+    "unresolved_mass": 0.0,
+    "passes_given_survival": 4.242599066147091
+  },
+  {
+    "D": 3.0,
+    "learning": false,
+    "nodes": 57,
+    "F_lower": 0.060575507005770475,
+    "F_upper": 0.060575507005770475,
+    "survival": 0.9394244929942293,
+    "mass_residual": 2.220446049250313e-16,
+    "unresolved_mass": 0.0,
+    "passes_given_survival": 4.242599066147091
+  },
+  {
+    "D": 10.0,
+    "learning": true,
+    "nodes": 57,
+    "F_lower": 0.0632211910194651,
+    "F_upper": 0.0632211910194651,
+    "survival": 0.9367788089805349,
+    "mass_residual": 0.0,
+    "unresolved_mass": 0.0,
+    "passes_given_survival": 4.233879196473444
+  },
+  {
+    "D": 10.0,
+    "learning": false,
+    "nodes": 57,
+    "F_lower": 0.0632211910194651,
+    "F_upper": 0.0632211910194651,
+    "survival": 0.9367788089805349,
+    "mass_residual": 0.0,
+    "unresolved_mass": 0.0,
+    "passes_given_survival": 4.233879196473444
+  }
+]

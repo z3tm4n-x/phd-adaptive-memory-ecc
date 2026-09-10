@@ -1,22 +1,16 @@
-"""Reproduce the bounded study, without altering canonical inputs."""
-import argparse,hashlib,json,platform,sys,time
+"""Reproduce certificates/tests, optionally pilot and full held-out experiment."""
+from __future__ import annotations
+import argparse,subprocess,sys
 from pathlib import Path
-import numpy as np,scipy,numba,mpmath
-import model,certify,baselines,verification,diagnostics,experiment
-from upstream import verify
+ROOT=Path(__file__).resolve().parent
+
+def call(*args):subprocess.run([sys.executable,*args],cwd=ROOT,check=True)
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--full',action='store_true');parser.add_argument('--retune',action='store_true');parser.add_argument('--workers',type=int,default=4)
-    args=parser.parse_args();start=time.perf_counter();verify()
-    certify.run();baselines.run();verification.run();diagnostics.run()
-    if args.retune:experiment.pilot(args.workers)
-    if args.full:experiment.full(args.workers)
-    root=Path(__file__).resolve().parent
-    manifest=dict(task=model.config()['task_id'],base=model.config()['base_commit'],full=args.full,retune=args.retune,elapsed_seconds=time.perf_counter()-start,
-                  environment=dict(python=sys.version,numpy=np.__version__,scipy=scipy.__version__,numba=numba.__version__,mpmath=mpmath.__version__,platform=platform.platform()),
-                  upstream_blobs=verify(),source_sha256=experiment.hash_sources(),output_sha256={})
-    for p in sorted((root/'outputs').iterdir()):
-        if p.is_file() and p.suffix in ('.json','.csv') and p.name!='manifest.json':manifest['output_sha256'][p.name]=hashlib.sha256(p.read_bytes()).hexdigest()
-    (root/'outputs'/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('Reproduction completed. No SR PASS or RES promotion assigned.')
+    p=argparse.ArgumentParser();p.add_argument('--full',action='store_true');p.add_argument('--retune',action='store_true');p.add_argument('--workers',type=int,default=4);a=p.parse_args()
+    call('model.py');call('numeric_witness.py');call('feasibility.py');call('tests.py');call('diagnostics.py')
+    if a.retune or (a.full and not (ROOT/'outputs'/'selected_analogue.json').exists()):
+        call('experiment.py','pilot','--workers',str(a.workers))
+    if a.full:call('experiment.py','full','--workers',str(a.workers))
+
 if __name__=='__main__':main()

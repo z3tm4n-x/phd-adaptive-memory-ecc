@@ -1,0 +1,198 @@
+{
+  "task": "RE-INTERNAL-COUNT-UNKNOWN-D-01",
+  "generated_at_utc": "2026-09-10T07:06:29.184858+00:00",
+  "audit_scope": "Read-only hash audit and independent arithmetic from saved NPZ; no model imports/execution.",
+  "input_archive": {
+    "name": "RE-INTERNAL-COUNT-UNKNOWN-D-01.zip",
+    "size_bytes": 9082382,
+    "sha256": "8829f4435d439448e7d767574e1b345bc7ee10370e3dc6c89921ffa4c1f992f3"
+  },
+  "file_count": 53,
+  "recorded_sources_checked": 11,
+  "source_hash_dictionaries_compared": 4,
+  "selected_analogue_sha256": "1524a034e9d863f44be5741c913796d67e31f235f9f38b0f352f617a8a271dbe",
+  "raw_data_checks": [
+    {
+      "path": "cache/heldout_30.npz",
+      "sha256_matches_record": true,
+      "shape": [
+        20000,
+        6,
+        10
+      ],
+      "seed": 290916001,
+      "trials": 20000
+    },
+    {
+      "path": "cache/heldout_100.npz",
+      "sha256_matches_record": true,
+      "shape": [
+        20000,
+        6,
+        10
+      ],
+      "seed": 291916001,
+      "trials": 20000
+    },
+    {
+      "path": "cache/heldout_300.npz",
+      "sha256_matches_record": true,
+      "shape": [
+        20000,
+        6,
+        10
+      ],
+      "seed": 292916001,
+      "trials": 20000
+    },
+    {
+      "path": "cache/heldout_1000.npz",
+      "sha256_matches_record": true,
+      "shape": [
+        20000,
+        6,
+        10
+      ],
+      "seed": 293916001,
+      "trials": 20000
+    },
+    {
+      "path": "cache/heldout_3000.npz",
+      "sha256_matches_record": true,
+      "shape": [
+        20000,
+        6,
+        10
+      ],
+      "seed": 294916001,
+      "trials": 20000
+    }
+  ],
+  "comparison_rows_checked": 30,
+  "paired_rows_checked": 25,
+  "family_rows_checked": 5,
+  "numeric_fields_checked": 715,
+  "numeric_fields_exact_float_equal": 715,
+  "max_scaled_absolute_error": 0.0,
+  "float_comparison_tolerance": {
+    "rtol": 2e-12,
+    "atol": 2e-12
+  },
+  "integer_failure_counts": "Recomputed directly from NPZ; required to match saved CSV.",
+  "saved_test_records": 15,
+  "saved_test_records_marked_passed": 15,
+  "tests_rerun_in_this_audit": false,
+  "small_reference_saved_output_checks": [
+    {
+      "D": 1.0,
+      "learning": true,
+      "F_exact": 0.05410882484794886,
+      "same_as_oracle_file": true
+    },
+    {
+      "D": 1.0,
+      "learning": false,
+      "F_exact": 0.05410882484794886,
+      "same_as_oracle_file": true
+    },
+    {
+      "D": 3.0,
+      "learning": true,
+      "F_exact": 0.060575507005770475,
+      "same_as_oracle_file": true
+    },
+    {
+      "D": 3.0,
+      "learning": false,
+      "F_exact": 0.060575507005770475,
+      "same_as_oracle_file": true
+    },
+    {
+      "D": 10.0,
+      "learning": true,
+      "F_exact": 0.0632211910194651,
+      "same_as_oracle_file": true
+    },
+    {
+      "D": 10.0,
+      "learning": false,
+      "F_exact": 0.0632211910194651,
+      "same_as_oracle_file": true
+    }
+  ],
+  "primary_comparison": [
+    {
+      "dwell": 30,
+      "trials": 20000,
+      "learning_failures": 1416,
+      "frozen_failures": 1426,
+      "F_learning": 0.0708,
+      "F_frozen": 0.0713,
+      "learning_passes_given_survival": 2407.2886891950066,
+      "frozen_passes_given_survival": 2420.1370733283084,
+      "saving_percent": 0.5308948933058567,
+      "individual_family95_lower": -76.35633296749708,
+      "common_survivor_family95_lower": -76.63871389176785
+    },
+    {
+      "dwell": 100,
+      "trials": 20000,
+      "learning_failures": 1368,
+      "frozen_failures": 1319,
+      "F_learning": 0.0684,
+      "F_frozen": 0.06595,
+      "learning_passes_given_survival": 2283.715543151567,
+      "frozen_passes_given_survival": 2411.6048391413738,
+      "saving_percent": 5.303078427863012,
+      "individual_family95_lower": 38.86999690114193,
+      "common_survivor_family95_lower": 38.74769848452128
+    },
+    {
+      "dwell": 300,
+      "trials": 20000,
+      "learning_failures": 1293,
+      "frozen_failures": 1255,
+      "F_learning": 0.06465,
+      "F_frozen": 0.06275,
+      "learning_passes_given_survival": 2143.895867856952,
+      "frozen_passes_given_survival": 2397.6999733262205,
+      "saving_percent": 10.585315439495025,
+      "individual_family95_lower": 164.9501769834982,
+      "common_survivor_family95_lower": 165.19933210130313
+    },
+    {
+      "dwell": 1000,
+      "trials": 20000,
+      "learning_failures": 1360,
+      "frozen_failures": 1333,
+      "F_learning": 0.068,
+      "F_frozen": 0.06665,
+      "learning_passes_given_survival": 2065.6521995708154,
+      "frozen_passes_given_survival": 2385.128301280334,
+      "saving_percent": 13.394503831849399,
+      "individual_family95_lower": 230.44968461010336,
+      "common_survivor_family95_lower": 230.72057139408554
+    },
+    {
+      "dwell": 3000,
+      "trials": 20000,
+      "learning_failures": 1289,
+      "frozen_failures": 1269,
+      "F_learning": 0.06445,
+      "F_frozen": 0.06345,
+      "learning_passes_given_survival": 2016.1938966383411,
+      "frozen_passes_given_survival": 2366.625540547755,
+      "saving_percent": 14.807228178071068,
+      "individual_family95_lower": 261.56587547192635,
+      "common_survivor_family95_lower": 261.6845270700038
+    }
+  ],
+  "historical_manifest_present": false,
+  "errors": [],
+  "status": "CONSISTENT_SAVED_BYTES_AND_STATISTICS_NOT_SCIENTIFIC_REVIEW",
+  "limits": [
+    "Matching recorded hashes establishes internal consistency, not independent proof of historical execution or causal generation.",
+    "Guarantee labels, mathematical proofs, origin of the old claimed ZIP hash, model validity, and prior test execution are not authenticated by this audit.",
+    "New inventory is dated now and must not be backdated or represented as an original run manifest."
+  ]
+}

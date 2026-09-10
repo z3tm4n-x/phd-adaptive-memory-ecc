@@ -1,327 +1,199 @@
-# Unknown mission-constant D: derivation and numerical contract
-
-Task: RE-INTERNAL-COUNT-UNKNOWN-D-01. Engineering derivation for Scientific Review;
-no PASS, RES promotion, or literature-novelty conclusion.
-Base: 529709f1b98d12a5f5a2c7b71ee1ff9f53210c97.
-Implementation: 11d9462d768e9f537865efbbd63db79b950191a7.
-
-## 1. Fixed physical experiment
-
-W=524288 words, n=32 data bits, H=3600 seconds, sequential pass P=0.18874368 s.
-Array rates bL=2.8886786e-5 and bH=6.1249308 s^-1. The hidden environment has
-Q(a)=[[-a,a],[a,-a]], initial mixture (1/2,1/2), a=1/D. One unknown a applies
-to the entire mission, a in [1/3000,1/30]. Conditional arrivals are Poisson,
-with independent uniform word/bit marks. Unconditional word independence is
-not assumed after mixing over the hidden environment.
-
-The original twelve periods are unchanged. At the end of a pass, action tau
-places the next pass on [t+tau-P,t+tau]; word w resets at its own offset
-(w+1)P/W. Only t=0 is globally clean. First passage to two distinct wrong bits
-in a word is irreversible in the reliability accounting. It is not identified
-with DUE, SDC or a decoder-visible event. A terminal incomplete interval retains
-its exposure. True D, current environment and hidden survival are not inputs.
-
-## 2. Auxiliary coupling and interval risk
-
-In the RES-003 auxiliary system each arrival is counted at its word's next
-scan. K at a completed pass is the number of arrivals after their individual
-word scans. Before the first repeated hit in an uncleared word, real and
-auxiliary counters agree and consequently generate the same actions. A same-bit
-cancellation also breaks this coupling and is conservatively charged. Real
-capability exceedance is contained in this first-repeat event.
-
-Let Bh=integral_0^h b_Z(s)ds, m1_z=E_z Bh and m2_z=E_z Bh^2. For an initial
-mode z and k pending arrivals, a sufficient one-interval probability bound is
-
-    r_h(z,k) = [k m1_z(h) + m2_z(h)/2]/W.                 (1)
+# RE-INTERNAL-COUNT-UNKNOWN-D-01 — вывод метода
 
-It counts old-new and new-new pairs. Each new uniform word mark matches a
-specified old/new word with probability 1/W. Ignoring some intervening resets
-only enlarges this count. Before coupling failure, old arrivals occupy distinct
-words; the bound is valid for any distribution of their positions. It also
-covers an incomplete final interval.
+**Инженерный результат для независимого Scientific Review. Не PASS, не RES и не утверждение литературной новизны.**
 
-With kappa=2a, m=(bL+bH)/2, d=(bH-bL)/2, A=(1-exp(-kappa*h))/kappa and
-B=(h-A)/kappa,
+Base: `529709f1b98d12a5f5a2c7b71ee1ff9f53210c97`. Полная исполнявшаяся конфигурация — `config.json`; идентичность исходников — `outputs/execution_record.json`. Принятый RES-003 используется как предшествующий метод и не изменяется.
 
-    m1_L,H = m*h -/+ d*A,
-    m2_L,H = m^2*h^2 + 2*d^2*B -/+ 2*m*d*h*A.            (2)
+## 1. Модель и требование
 
-Small arguments use the explicit series in model.py. Cancellation is bounded
-against the positive absolute scales bH*h and bH^2*h^2, not a vanishing low-mode
-moment. No count/tau plug-in or fitted D appears in (1)-(2).
+Сохраняются W=524288 слов, n=32 информационных разряда, b_L=2.8886786e-5, b_H=6.1249308 с^-1 на массив, H=3600 с, P=0.18874368 с, исходное множество 12 периодов. Слово w проверяется в момент начала прохода+(w+1)P/W. Чистое состояние имеется только в 0. Последний неполный интервал учитывается без бесплатного восстановления.
 
-## 3. Six-coordinate closure of the allowed observation
+Z — симметричная двухсостоянийная CTMC с начальной смесью (1/2,1/2). Один неизвестный параметр a=1/D постоянен на всей миссии; D принадлежит [30,3000] с. При заданной траектории Z инверсии — пуассоновский поток, маркированный независимыми равномерными словом и разрядом. E_cap — первое достижение двух различных ошибочных разрядов слова. Последующая инверсия этого события не отменяет. Требуется F^pi(D)<=0.1 для каждого D, а не среднее по D или отсутствие отказа на каждом пути среды.
 
-Use Y=1{own correction count C>0}. This coarsens the allowed numeric count;
-it adds no observation. For each generator retain
+Контроллер использует собственный C после завершённого прохода. Здесь выполняется допустимое укрупнение Y=1{C>0}; полный C сохраняется в физической трассе, но его положительная величина не влияет на новый фильтр. Не вводятся новые датчики, неизвестные уровни интенсивности, дрейф D, асимметрия, MCU или неизвестная регистрация. Цена потери положительных значений C не объявляется нулевой.
 
-    q0_z=Pr(Z=z,K=0), qplus_z=Pr(Z=z,K>0),
-    mu_z=E[K 1{Z=z}], z=L,H.                             (3)
+## 2. Связь непрерывного диапазона с конечным банком
 
-The first four coordinates are probabilities, the last two are first moments.
-There is no K truncation. Every old pending arrival enters the next complete
-auxiliary count. Thus K_old>0 forces Y=1; if K_old=0 the new observed arrivals
-determine Y. New K depends on the future environment and starting mode but not
-on the value of old K conditional on the starting mode.
+За фиксированный горизонт число переключений N_H имеет закон Pois(aH). Условно на N_H=n моменты переключений являются порядковыми статистиками n равномерных точек. Начальная смесь, условный поток инверсий и исполнение одного фиксированного алгоритма, которому не передаётся истинный a, при таком условии от a не зависят.
 
-For a given environment path, observed and pending births are conditionally
-independent Poisson counts with means c,k. The six needed coefficients are
+Поэтому для любого фиксированного события B на полном горизонте, включая событие первого превышения при адаптивном управлении,
 
-    e^-c e^-k, e^-c(1-e^-k), (1-e^-c)e^-k,
-    (1-e^-c)(1-e^-k), k e^-c, k(1-e^-c).                 (4)
+    P_a(B) = exp(-aH) sum_{n>=0} c_n(B) a^n,  c_n(B)>=0.                 (1)
 
-These are probabilities C0K0/C0K+/C+K0/C+K+ and moments E[K;C0], E[K;C+].
-Integrating the path and final mode and composing with the idle segment gives
-a 4-by-6 matrix K_j,tau[y]. Let v=q_probability K_j,tau[y]. Then
+Зависимость действий от собственных наблюдений не нарушает (1): программа политики одинакова под всеми сравниваемыми законами. Для диагностического алгоритма, которому каждый раз сообщается истинный D, это рассуждение без фиксации такого входа не применяется.
 
-    ell_j=sum(v[0:4]), q'_j=v/ell_j.                     (5)
-
-Old pending moments do not enter likelihood; they enter (1) linearly. This
-establishes the closure, not only an empirical approximation. Normalization
-is of the auxiliary law, not physical mass conditioned on non-failure.
-Conditional pending mean is at most mu_max=bH*P/2: conditioning on Y only mixes
-paths whose independent pending Poisson means obey that bound.
-
-## 4. Finite kernels and the paid model error
-
-Idle evolution is a four-state CTMC (mode, zero/positive observed births).
-During a scan the actual scanned fraction is floor(W*s/P)/W. Its approximation
-max(s/P-1/(2W),0) has primitive error at most 1/(8W^2). Scan paths with zero,
-one and two environment switches are integrated explicitly; use 512 midpoint
-nodes for one switch and 128-by-128 for two, after ordered-times substitution
-(u,u+(1-u)v) with density 2(1-u). The omitted Poisson switch mass is replaced
-by a specified same-mode/no-birth transition, never silently removed.
+Пусть l<=a<=u и a=l^(1-t)u^t. Из неравенства Гёльдера для положительного ряда:
 
-Set nu=P*a, v=(bH-bL)*P, p1=exp(-nu)*nu, p2=p1*nu/2. A uniform row-TV bound is
+    P_a(B) <= exp(H[(1-t)l+t u-a]) P_l(B)^(1-t) P_u(B)^t.              (2)
 
-    e_j = Pr{Pois(nu)>=3}
-        + p1*(4*v+4*v^2)/(24*512^2)
-        + p2*(40*v+40*v^2)/(24*128^2)
-        + P*(bH+nu*(bH-bL))/(4*W^2),
-    delta_model,j = 18000*e_j.                          (6)
+Это не предположение о достижении худшего случая на концах. Огибающая допускает превышение обоих концов. Для линейной интерполяции exp на [log l,log u] остаток ограничивается u(log(u/l))^2/8. Неравенство log r <= (r-1)/sqrt(r), следующее из 2sinh(x/2)>=x при x>=0, даёт
 
-Poisson law first-derivative L1 norm is at most 2 and second/mixed derivative
-norm at most 4. Chain rule gives the stated one-switch and transformed
- two-switch bounds, including the density derivatives. Primitive error and
-integration by parts pay for the terminal level and expected mode jumps.
-These are the accepted RES-003 scan bounds; projecting to binary counts cannot
-increase TV. K is unbounded and no pending-overflow allowance is needed.
+    (1-t)l+t u-l^(1-t)u^t <= (u-l)^2/(8l).                            (3)
 
-The reference finite kernel still represents a full probability law on the
-unbounded pending count, with (3) its exact sufficient statistics. TV is used
-for a stopped-event coupling, not to transfer an unbounded reward expectation.
-The largest model allowance is approximately 0.001012 over the full horizon.
+Использован заранее заданный рациональный банк
 
-## 5. Continuous a: a whole-mission probability interpolation
+    a_j=(32+9j)^2/(3000*32^2), j=0,...,32.
 
-For any fixed causal policy which does not receive the true a, the number of
-switches over the whole mission is Poisson(aH). Conditional on n switches,
-the ordered switch times are uniform order statistics, independent of a.
-The initial mixture and conditional marked-arrival law also no longer depend
-on a. All endogenous observations/actions can therefore be included in fixed
-coefficients f_n in [0,1]:
+Направленная интервальная арифметика для всех 32 промежутков даёт
 
-    F(a)=exp(-aH) sum_{n>=0} f_n (aH)^n/n!.               (7)
-
-For l<=a<=u, write a=l^(1-t)*u^t. Holder's inequality for the nonnegative
-series (first finite, then monotone convergence) gives
+    max_j exp(H(a_{j+1}-a_j)^2/(8a_j))
+       < 1.063694137406887 < G=1.064.                                 (4)
 
-    F(a) <= exp(H*((1-t)*l+t*u-a))
-            * F(l)^(1-t)*F(u)^t.                        (8)
+Таким образом, достаточны 33 ограничения F(a_j)<=theta=0.1/G. Непрерывный диапазон обеспечивается (1)–(4), а не сравнением двух сеток или пятью точками Монте-Карло. Фактический максимум F внутри ячейки не вычисляется. Граница относится к постоянному a и фиксированному H; перенос на дрейфующий генератор не заявляется.
 
-Limits cover zero endpoint probabilities. Linear-interpolation error for exp
-on [log l,log u] is at most u*log(u/l)^2/8. Since log r<=(r-1)/sqrt(r),
-
-    exp(H*((1-t)*l+t*u-a)) <= exp(H*(u-l)^2/(8*l)).        (9)
-
-Use exact rational a_j=(32+9*j)^2/(3000*32^2), j=0,...,32. All 32 directed
-Decimal interval bounds in (9) are below G=1.064. Consequently,
-
-    all node F(a_j)<=theta=0.1/G  implies
-    all a in [1/3000,1/30] have F(a)<=0.1.               (10)
-
-This is neither an empirical endpoint maximum nor a grid substituted for the
-continuum. The theorem is applied to the physical whole-mission event. It
-cannot simply be applied to the approximate scan model as though that model
-had the original whole-mission switch law. It also applies to a fixed event
-of exact auxiliary observation history. The known-D diagnostic changes policy
-with true a and is not automatically covered by this fixed-policy argument.
-
-## 6. Anytime exclusions and retained cells
-
-L_j,i is the likelihood of the policy's own binary observations under auxiliary
-node j and its actual past actions. Keep the fixed test mixture
-M_i=(1/33)*sum_j L_j,i over ALL nodes, including rejected nodes. This mixture
-is a mathematical test, not a physical prior or a risk average. The process
-
-    E_i(j)=M_i/L_j,i                                    (11)
-
-is a nonnegative martingale under law j: actions are predictable from the
-history and next-observation probabilities sum to one. E_0(j)=1. With
-beta0=0.005/G, stopping at the first crossing yields Ville's inequality
-
-    Pr_j{some i: E_i(j)>1/beta0}<=beta0.                  (12)
-
-There is no renewed beta at each observation. No multiplicity penalty across
-all possible true parameters is needed for this pointwise-in-true-parameter
-requirement. Persistent rejection uses log(E)>log(1/beta0)+0.001; the arithmetic
-margin is justified below.
-
-Remove a CLOSED cell [a_j,a_(j+1)] only after both endpoint tests have rejected.
-Retain the union of the other cells, transformed by D=1/a. All endpoints of
-remaining cells remain required by the risk controller, even if an individual
-endpoint test has rejected but the neighboring cell still needs it. Thus a
-node can cease to be required only on its own test-crossing event. Empty set
-means execute the one-second backup without resetting any risk budget; for
-each node this continuation already lies inside the charged exceptional event.
-Uncertified exclusion is not authorized; deterministic preflight must establish
-the bounds. Frozen disables exclusions and keeps all node constraints forever.
-
-Equation (12) is NOT unconditional coverage for the real correction counter.
-For an exact-auxiliary cell-removal event, endpoint crossing bounds plus paid
-kernel errors can be transferred through (8). In real memory the likelihood
-may differ after coupling failure. The unified argument in section 8, not a
-separate claim of 99.5% physical-parameter coverage, is essential.
-
-## 7. Vector remaining-risk potentials
-
-For each fixed node j let the one-second backup's expected auxiliary reward
-be V_j(R,z,k)=c_j(R,z)+k*f_j(R,z). Below one second it equals (1). Otherwise
-
-    f_j(R)=m1_j(1)/W,
-    c_j(R)=m2_j(1)/(2W)+T_j,1*c_j(R-1)+J_j,1*f_j(R-1),   (13)
-
-where T is mode transition and J[z,z']=E_z[K_new 1{Z'=z'}] from the same kernel.
-Four coefficients are stored per remaining-time tick. Initialize
-
-    B_j,0=theta-beta0-delta_model,j-delta_num,
-    s_j,0=B_j,0-q_j,0*V_j(H), delta_num=0.001.             (14)
-
-The common one-second backup passes: maximum initial V is about 0.07654 and
-minimum initial slack about 0.01165. The domain/model were not narrowed.
-For h=min(tau,R), each currently required node must satisfy
-
-    Delta_j=q_j*(r_j,h+P_j,tau*V_j(R-h))-q_j*V_j(R)
-           <=s_j*h/R,
-    s'_j=s_j-Delta_j.                                   (15)
-
-The future term is zero in an incomplete final interval. Choose the largest
-period in the original U. Backup has Delta=0 by (13), so feasible continuation
-is preserved and exact slack stays nonnegative. Observation updates q, not the
-already spent risk. Define B_i^j=q_i^j*V_j(R_i)+s_i^j. Summing every Y branch,
-
-    q_i^j*r_i+E_j[B_(i+1)^j | history_i]=B_i^j.           (16)
-
-Stop this identity when node j is first removed or at mission end. Nonnegative
-stopped terminal potential yields E_j sum(r before removal)<=B_j,0. Rare
-histories can have conditional potential above epsilon; that does not violate
-the overall probability requirement. Each j retains one constant generator
-and its own q/slack. Intersecting action constraints is conservative but does
-not silently replace the physical model by an adversarially reselected D.
-
-Frozen updates the hidden mode and pending state from its own observations at
-every node. It never uses likelihood scores as hidden D weights in the risk.
-It retains the same beta reserve to isolate exclusion; this is not an optimum
-among every conceivable robust controller with separately reallocated reserves.
-
-## 8. One combined stopped-event argument
-
-Fix node j. Couple physical and exact auxiliary evolution up to the first
-repeated uncleared-word hit, and the exact and approximate auxiliary kernels
-with row discrepancy at most e_j. Retaining only matched, unrepeated trajectories
-produces a subkernel dominated by the full approximate auxiliary kernel.
-Inductively, the surviving matched mass in history and full pending state is
-no larger than the corresponding full auxiliary mass. Conditional loss in a
-step is at most (1) plus the kernel discrepancy. Stop when j is removed.
-
-This domination bounds the reward-weighted loss before removal by the full
-auxiliary stopped reward sum. Removal costs at most beta0 by (12). Every first
-loss or exclusion is charged once; the argument does not apply a TV bound to
-an unbounded cumulative cost and does not normalize away absorbed probability.
-Thus
-
-    F_physical(a_j)
-      <= E_aux,j sum(r before removal)+delta_model,j+beta0
-      <= B_j,0+delta_num+delta_model,j+beta0=theta.        (17)
-
-The log-test arithmetic guard is needed in beta0 as well as in control.
-Terminal exposure has its reward but needs no extra observation kernel.
-Equations (10) and (17) give the declared uniform whole-horizon bound. After
-continuum transfer the exclusion allocation is exactly G*beta0=0.005. Model
-and numerical errors are separate from Monte Carlo confidence intervals.
-
-## 9. Conditional numerical realization
-
-Assume IEEE binary64, nearest basic-operation rounding, and exp/expm1/log
-within four ulp. No compiler/hardware or universal math-library certification
-is claimed. certify.py encloses every one of 19008 coefficients using directed
-60-digit Decimal operations, exact rational rate/quadrature nodes and literal
-decimal physical parameters. Correctly rounded Decimal.exp is bracketed by
-adjacent decimal numbers. Positive uniformization through 64 terms, an explicit
-positive geometric tail bound and interval squaring enclose the idle CTMC.
-Every structural zero is checked; every positive coefficient meets the relative
-contract k0=1e-12. Full witnesses are regenerated and included in the archive.
-
-Positive operators do not expand max/min componentwise relative distortion;
-normalization preserves that ratio. All four probability coordinates are
-positive after a reachable observation, with lower support derived from the
-coefficient bounds. The next likelihood is bounded through their products;
--log ell<80, so probability-filter underflow is excluded. Pending moments are
-bounded by mu_max=bH*P/2. Tiny dropped log-sum-exp terms have negligible total
-absolute mass while the largest score is always zero.
-
-For u=2^-53, gamma_m=m*u/(1-m*u), N=18000, Nb=3600, use
-
-    Vmax=(H+1)*(mu_max*bH+bH^2/2)/W,
-    Rsum=H*(mu_max*bH+bH^2*max(U)/2)/W,
-    eta=expm1(4*N*(k0+gamma_128)),
-    eV=8*(gamma_(512*Nb)+Nb*k0)*Vmax.
-
-The ledger covers filtering by (2*N*Vmax+Rsum)*eta, value recursion by 2*N*eV,
-action arithmetic by N*gamma_4096*(4*Vmax+2*Rsum)+N*1e-13, positive-kernel
-guard by 8*N*k0, slack summation by gamma_(2*N)*(epsilon+Rsum+2*N*Vmax), and
-slack comparisons by N*gamma_32*(epsilon+Rsum+2*N*Vmax). Absolute moment scales,
-initial potential, subtraction in Delta and max(0,slack-Delta) are paid.
-Coefficients c,f are stored directly, not recovered by subtracting neighboring V.
-The computed total is below the allocated delta_num=0.001.
-
-Scaled log scores require more than local log error. The explicit bound is
-
-    e_log=4*N*(k0+gamma_128)+2*gamma_(4*N+256)*N*80.
-
-It accounts for accumulated subtraction of score scales. Twice this bound is
-below 0.001, so implemented rejection cannot precede the exact permitted test.
-This declared arithmetic contract, the operation-count bounds and the actual
-interval enclosures are separate review objects, not empirical residual claims.
-
-## 10. Baselines, independent checks and boundaries
-
-For exogenous Fixed/Precomputed schedules, use the accepted RES-003 first-passage
-brackets: E[Q] upper and the conditional exactly-two-distinct-bits/chord lower.
-Directed intervals evaluate all 12+144 schedules at all 33 nodes. G*max upper
-certifies the continuum; one node lower above epsilon excludes a schedule from
-the uniform class. Optima are Fixed 1 s/3600 passes and two-block 2/1 s/2700.
-All 9 and 97 cheaper candidates are excluded; no general open-loop optimum.
-
-The small physical oracle independently constructs a killed generator on
-(mode, erroneous-word mask), chronological resets and actual correction counts,
-without the auxiliary observation helper. Its physical mass is unnormalized.
-The short toy learning/frozen policies coincide; that test is not sold as a
-numerical learning-effect test. A separate complete adaptive likelihood tree,
-all-branch budget checks, independent all-word event scanner, numeric witnesses
-and full-scale paired simulations test the other interfaces.
-
-Held-out uses five D values and 20000 missions each, six policies, own counters.
-PA-DOM is the declared (10)->(9) adaptation with one pilot-selected setting for
-the entire range. Its finite-point Monte Carlo evidence is not a uniform theorem.
-Known-D has stronger information and different count coarsening/reserves; its
-cost difference is not an isolated price of unknown D. The principal matched
-contrast is learning versus frozen uncertainty, not count-disabled RES-003.
-
-Martingale testing, Ville and Holder inequalities are not claimed as new
-mathematical principles. The candidate result is their explicit integration
-with endogenous counts, residual arrivals, one unknown constant generator and
-the first-passage budget. No equal-risk dominance, global policy optimality,
-unknown levels, drift, MCU, physical environment identification, energy result
-or flight-hardware guarantee is asserted. RES-003 remains unchanged.
+## 3. Замкнутый оператор собственного наблюдения
+
+Как в RES-003, вводится вспомогательный учёт всех поступлений до следующей проверки соответствующего слова. K в конце прохода — поступления после уже состоявшихся проверок их слов. Старые K не исчезают при начале нового действия. При следующем полном проходе
+
+    C_aux = K_old + A_observed,    K_new = A_pending.
+
+При заданном будущем пути среды A_observed и A_pending независимы и имеют пуассоновские средние m_c и m_k. Во время ожидания весь поток относится к следующему счётчику; в проходе доля уже проверенных слов относится к K_new. После смешения по среде независимость не предполагается.
+
+Y=0 эквивалентно одновременно K_old=0 и A_observed=0. Поэтому для будущего наблюдения нужен только признак нулевого старого остатка. Для риска дополнительно нужен его первый момент. На каждый a_j хранятся
+
+    q=(Pr(L,K=0), Pr(H,K=0), Pr(L,K>0), Pr(H,K>0),
+       E[K 1{Z=L}], E[K 1{Z=H}]).                                    (5)
+
+Это шесть статистик, а не шесть вероятностей. Первые четыре суммируются в единицу. Последние две — ненормированные по режиму первые моменты.
+
+Шесть положительных функционалов одного пути сканирования:
+
+    e^(-m_c-m_k), e^(-m_c)(1-e^(-m_k)),
+    (1-e^(-m_c))e^(-m_k), (1-e^(-m_c))(1-e^(-m_k)),
+    e^(-m_c)m_k, (1-e^(-m_c))m_k.                                    (6)
+
+Их совместное интегрирование с конечным режимом и свёртка с ожиданием строят K_tau[y,old_category,new_statistic]. При старом K>0 наблюдение заведомо положительно; распределение нового остатка при заданном исходном режиме от величины старого K не зависит. Обновление:
+
+    v_y=q[0:4] K_tau[y],  ell_y=sum(v_y[0:4]),  q_y=v_y/ell_y.         (7)
+
+Оператор зависит от выполненного tau. Две политики на общем внешнем потоке используют разные собственные C и разные истории (7). Размер K не ограничивается искусственным cap: бинарный признак и линейный момент образуют замыкание без отбрасывания хвоста K. При каждом завершённом проходе
+
+    E[K_new | доступная история] <= mu=b_H P/2,                       (8)
+
+поскольку условно на путь среды K_new пуассоновский со средним не больше mu, а наблюдение использует независимый наблюдаемый под-поток; последующее смешение сохраняет эту границу. Индивидуальные K могут быть больше mu.
+
+q — вспомогательное информационное состояние, не posterior реальной памяти, условный на ненаблюдаемое отсутствие E_cap. В физическом эталоне поглощённая масса не нормируется. Из вспомогательного нормирования не следует безусловное доверительное покрытие параметра в уже разошедшемся физическом канале.
+
+## 4. Проверка параметра на всей последовательности
+
+L_i^j — произведение ell для одного и того же собственного адаптивного наблюдения при генераторе j. Математическая смесь M_i=(1/33)sum_j L_i^j используется только как числитель теста. Она не задаёт физического распределения D и не используется для усреднения риска или выбора управляющего действия.
+
+Для каждого фиксированного j в приближённой вспомогательной модели
+
+    E_i^j=M_i/L_i^j
+
+является неотрицательным мартингалом с начальным значением 1. Условно на прошлое выполненное действие известно; суммирование следующего отношения по всем его собственным наблюдениям сохраняет ожидание. Выбор этого действия по всем предшествующим тестам не нарушает свойства. По максимальному неравенству для неотрицательного мартингала вероятность когда-либо отвергнуть j при пороге G/beta не больше beta/G. Здесь beta=0.005 выделена один раз; нет повторного выделения beta на каждом проходе и нет 33-кратного объединения для одного истинного j.
+
+Исполнение использует log E > log(G/beta)+0.001; защитная добавка покрывает отдельно ограниченную ошибку вычисления log likelihood (§7). Общая перенормировка всех log L одним скаляром не меняет отношений.
+
+Ячейка [a_j,a_{j+1}] исключается только после отвергания обоих концов. Допустимое множество — объединение оставшихся закрытых ячеек; граничные точки входят при наличии хотя бы одной соседней ячейки. Для управления сохраняются ограничения всех концов оставшихся ячеек, даже если тест одного конца уже пересёк порог. В терминах D применяется обратное отображение 1/a. Множество убывает и никогда не восстанавливается с обнулением бюджета.
+
+Если ячеек не осталось, исполняется tau=1 с без изменения сохранённых бюджетов. Такое продолжение не считается условно безопасным для каждой редкой истории: оно разрешено потому, что событие отвергания истинного опорного закона уже включено в исходное общее ограничение. Нельзя интерпретировать возврат к 1 с как новый clean start.
+
+Frozen-uncertainty выполняет (5)–(7) отдельно для всех 33 законов по своим C, но множество и все его ограничения сохраняет навсегда. Никакой переоценки весов D в управляющем критерии нет. Его резерв beta сохранён тем же, что у learning: сравнение выключает только разрешённое сужение, а не одновременно меняет риск-бюджет. Это не оптимум всех возможных frozen-контроллеров.
+
+## 5. Риск и перенос бюджета при фиксированном генераторе
+
+До первого повторного попадания в ещё не очищенное слово физический и вспомогательный счётчики совпадают. Включая безопасное повторное попадание в тот же разряд в событие разрыва, получаем E_cap подмножеством такого разрыва. При k старых поступлениях и исходном режиме z достаточно
+
+    r_h(z,k) = [k m1_z(h)+m2_z(h)/2]/W,                               (9)
+
+где m1=E_z integral b_Z, m2=E_z(integral b_Z)^2. Первая часть считает старые-новые пары, вторая — новые-новые; вероятность совпадения слова каждой пары равна 1/W. Проверки внутри интервала могут исключать некоторые пары, поэтому их невычитание консервативно. Граница верна для любого размещения старых различных слов до разрыва. Для последнего неполного интервала применяется тот же r без будущего сброса.
+
+Для kappa=2a, m=(b_L+b_H)/2, d=(b_H-b_L)/2, A=(1-exp(-kappa h))/kappa, B=(h-A)/kappa:
+
+    m1_L,H=m h ∓ d A;
+    m2_L,H=m²h²+2d²B ∓2mdhA.                                         (10)
+
+У приближённой вспомогательной модели определим V_j(R,z,k), ожидаемую сумму (9) при резервном периоде 1 с. Это аффинная функция c_j(R,z)+k d_j(R,z). Для R<1 используются m2_R/(2W), m1_R/W. Для R>=1:
+
+    d_j(R)=m1_1/W;
+    c_j(R)=m2_1/(2W)+T_1 c_j(R-1)+J_1 d_j(R-1),                     (11)
+
+где T — переход режима, J(z,z')=E[K_new 1{Z'=z'}|Z=z]. Ненулевой J сохраняет остаток после прохода.
+
+Инициализация каждого опорного закона:
+
+    s_0^j=theta-beta/G-delta_model^j-delta_num-q_0^j V_j(H).           (12)
+
+Все 33 значения положительны. Минимум около 0.01165069. Следовательно, резерв 1 с допускается одновременно во всём банке; (2) обеспечивает непрерывное продолжение исходной гарантии.
+
+При h=min(tau,R) для каждого действующего j:
+
+    Delta_j=q_j[r_h+P_tau^j V_j(R-h)]-q_j V_j(R),
+    Delta_j <= s_j h/R;   s'_j=s_j-Delta_j.                           (13)
+
+Если следующий полный проход выходит за H, будущий член равен нулю. Выбирается наибольший период исходного U, удовлетворяющий всем действующим ограничениям. Для резервного действия Delta=0 по (11); запас неотрицателен, поэтому резерв не теряется. Каждый j несёт свой собственный запас на всю миссию. Физический D не заменяется другим на каждом шаге. Одновременное пересечение ограничений может быть консервативным, но не объявляется точным оптимизатором всех политик.
+
+Для B_i^j=q_i^j V_j(R_i)+s_i^j в точной арифметике приближённой модели:
+
+    q_i^j r_i+E_j[B_{i+1}^j|history_i]=B_i^j.                         (14)
+
+Остановим расчёт при первом отвергании j, даже если его ограничение пока оставлено соседней ячейкой. До остановки (13) обязательно действовало. В конце горизонта или при таком остановленном исключении B>=0. Последовательное взятие ожиданий по конечному дереву решений даёт
+
+    E_aux,j sum_{i до остановки} r_i <= B_0^j.                        (15)
+
+Условный B после редкого наблюдения может превышать theta; ограничение относится к общему вероятностному закону, а не каждой отдельной истории. Поглощённая физическая вероятность не удаляется ни в (14), ни в независимом эталоне.
+
+## 6. Совместный аргумент для ошибки исключения и разрыва счётчика
+
+Для одного j рассматривается неблагоприятное событие: первое повторное попадание либо первое отвергание j. До повторного попадания реальная политика и вспомогательная политика получают одинаковые бинарные наблюдения. В физической рекурсии первого неблагоприятного события переход после отсутствия разрыва является субвероятностным. Заменить его полным вспомогательным переходом при неотрицательной функции продолжения можно сверху; мгновенный разрыв оплачивается (9).
+
+Ключевой момент: функцию вероятности продолжения нужно ограничить интервалом [0,1]. Замена точного совместного ядра (наблюдение, режим, остаток) приближённым ядром с построчной TV-ошибкой delta тогда добавляет не более delta к вероятности. По обратной индукции и не более 18000 проходам добавляется delta_model. **Не применяется неверное утверждение, что TV-ошибка сама ограничивает разность неограниченных сумм парных затрат.** Сначала сравниваются ограниченные рекурсии неблагоприятного события; лишь затем их приближённая версия ограничивается ожидаемой суммой (15) и вероятностью тестового исключения.
+
+В приближённой модели объединение повторного попадания до остановки и тестового исключения ограничивается (15)+beta/G. Пересечение этих событий не вычитается, что сохраняет верхнюю границу; ни одно событие не получает заново полный epsilon. Ошибки арифметики добавляются по §7. Поэтому
+
+    F_physical^pi(a_j) <= B_0^j+beta/G+delta_model^j+delta_num
+                      <= theta.                                    (16)
+
+Применение (2) к фиксированной физической программе learning даёт
+
+    sup_{D in [30,3000]} F_physical^pi(D) <= G theta = 0.1.             (17)
+
+Это единый аргумент, а не механическое сложение независимых событий: независимость исключения, счётчиков и ошибок не предполагается. Для фиксированной ячейки событие её ошибочного исключения также имеет форму (1). Оба её конца ограничивают вероятность исключения через свой тест; между ними применяется (2), с оплатой перехода от приближённой к точной вспомогательной модели. Из этого не делается безусловное заявление о beta-покрытии физического счётчика после разрыва. Число физических историй с отсутствием истинного D в итоговом множестве приводится только как диагностика.
+
+## 7. Численный контракт и проверяемые запасы
+
+Ожидание рассчитывается положительной униформизацией. В проходе учитываются 0,1,2 переключения. Масса >=3 заменяется явно указанным переходом «тот же режим, нулевые новые поступления», а не выбрасывается. Для одного переключения — 512 средних точек, для двух — 128×128 с преобразованием t2=t1+(1-t1)v и плотностью 2(1-t1). Конечное число слов заменяется первообразной max(u-1/(2W),0)^2/2, отличающейся от ступенчатой первообразной не больше 1/(8W²).
+
+Для nu=aP, v=(b_H-b_L)P, p1=e^-nu nu, p2=e^-nu nu²/2:
+
+    delta_model^j = Nmax [Pr(Pois(nu)>=3)
+      +p1(4v+4v²)/(24*512²)+p2(40v+40v²)/(24*128²)
+      +P(b_H+nu(b_H-b_L))/(4W²)].                                    (18)
+
+Это границы совместного распределения счётчиков и режима: L1-оценки производных пуассоновских функционалов используются как более свободные TV-оценки. Они не являются TV-сравнением непрерывных моментов переключения с атомами квадратуры. Укрупнение C до нулевого/ненулевого не увеличивает TV. Граница (18) наследует аналитическую конструкцию прохода RES-003; исключён только ненужный здесь хвост K>12. Для малого W используется отдельный точный по фазам вспомогательный оператор, а не физическая подмена production-параметров.
+
+Проверка `numeric_witness.py` строит направленные Decimal-интервалы для всех 14256 положительных вероятностных/моментных коэффициентов и проверяет структурные нули. Экспонента округляется корректно, после чего расширяется на соседнее Decimal-значение; усечённый положительный ряд имеет геометрическую верхнюю границу хвоста. В отличие от сравнения двух точностей, результат содержит интервал целевой величины. Максимальная относительная ошибка опубликованных binary64 коэффициентов — около 1.174e-15, ниже принятого k_coeff=1e-12. Минимальный положительный коэффициент около 2.23372e-12; ширина относительных интервалов менее 9.56e-50. Все промежутки континуума проверены отдельно. Поддержка конечных таблиц исключает underflow достижимого фильтра в принятом диапазоне; вклад потерянных крайне малых слагаемых смеси ограничен отдельно.
+
+Для u=2^-53 и gamma_n=nu/(1-nu) используется projective-граница положительного фильтра
+
+    eta_q=expm1(4Nmax(k_coeff+gamma_128)).                              (19)
+
+Положительный оператор не увеличивает отношение максимального к минимальному компонентному искажению; скалярное нормирование его не меняет. Поэтому редкость наблюдения не вводит неподтверждённого деления абсолютной ошибки на ell_min. Для двух моментных координат применяется тот же положительный оператор из четырёх вероятностей.
+
+При mu=b_H P/2, N_b=ceil(H/1),
+
+    Vmax=(H+1)(mu b_H+b_H²/2)/W,
+    Rsum=H(mu b_H+b_H² max(U)/2)/W,
+    eta_V=8(gamma_(512 N_b)+N_b k_coeff)Vmax,                           (20)
+
+оплачиваются (2Nmax Vmax+Rsum)eta_q, 2Nmax eta_V, положительные ядра, действия, накопление и сравнение запаса, абсолютная ошибка moments/reward относительно b_H h и b_H²h², допуск 1e-13 и clipping отрицательного численного остатка к нулю. V хранится непосредственно в аффинных коэффициентах, а не восстанавливается вычитанием соседних значений при k=0,1.
+
+Сумма априорного ledger в `outputs/reserve_certificate.json` около **0.000574412 < delta_num=0.001**. Ошибка log-теста <2.318e-5, ниже защитной добавки 0.001. Ошибка теста устраняется защитным порогом, а не расходуется как новый beta. Табличные округления и приведение строк к стохастическим оплачены в ledger. Небольшая невязка строк или тождества бюджета является проверкой реализации, но не основанием этого запаса.
+
+Численный результат условен на IEEE-754 binary64 с округлением к ближайшему и точностью exp/expm1/log не хуже 4 ulp, корректность проверенного исполнения и установленные интервальные границы таблиц. Это не аппаратная сертификация компилятора, доказанный WCET или машинно-проверенная теорема. Во время инженерной подготовки чисто binary64 расчёт ожидания не прошёл более жёсткую локальную границу коэффициентов. Он заменён extended-precision построением до held-out; физическая модель, G, beta, epsilon и правило управления не менялись.
+
+## 8. Эталоны, ресурсы и допустимая интерпретация
+
+Fixed/Precomputed используют принятые exogenous-schedule first-passage brackets. Все 156 вариантов проверены в 33 опорных точках; их допустимость на континууме следует из (2). Для исключения равномерно допустимого более дешёвого варианта достаточно одного D с lower>.1. Поэтому Fixed=1 с/3600 и Precomputed=2/1 с/2700 — оптимумы именно объявленных классов по полному безотказному числу проходов. Аналитика независимых интервалов экзогенного расписания не применяется молча к адаптивным моментам.
+
+Независимый малый физический эталон хранит (Z,маску грязных слов). Переход грязного слова в чистое имеет интенсивность b/(nW), остальные повторные разряды выводят массу из transient-состояний. Реальные последовательные reset-карты создают счётчик; вспомогательный observation helper не используется. Результат сверяется с событийным симулятором. Контроллер, конфигурация и численная среда остаются общими путями возможной ошибки; это раскрыто в HANDOFF.
+
+На H=6 с малый эталон не отверг параметр, поэтому совпадение learning/frozen в нём не считается доказательством полезности исключения. Само исключение проверяется тождествами, правилом ячеек и полным production-сравнением; time-uniform гарантия основана на §4–7, а не редкости ошибок в Monte Carlo.
+
+Для статистики фиксированы пять D и по 20000 парных миссий с шестью политиками. Каждая политика получает только свой счётчик. PA-DOM — одна настройка (10)→(9) после отдельного пилота; M_s не равен F или epsilon. Known-D — читаемый адаптер принятого алгоритма с прежними caps и полной категорией min(C,32), а не byte-identical копия upstream. Три опубликованных trace-witness воспроизведены. Разность с новым методом не является чистой ценой неизвестного D: отличаются укрупнение наблюдения, число одновременно действующих ограничений и резервы.
+
+Основные условные средние разных политик относятся к разным событиям survival. Поэтому дополнительно сохранены общие безотказные пары и безусловные stop-cost. Отдельные pointwise CLT интервалы не являются математической гарантией риска. Семейство 30 binomial верхних границ риска и отдельное семейство 15 Hoeffding утверждений об экономии имеют собственные уровни; они не объединены автоматически в одно 95%-заявление. Возможные различия фактического риска сообщаются, equal-risk dominance не заявляется.
+
+Стандартные положительные фильтры, likelihood-ratio мартингалы, максимальное неравенство и Гёльдер не объявляются новыми идеями. Кандидат результата здесь — их проверяемое соединение с зависимым от действий каналом памяти, сохранением остатка и общим риском при одном неизвестном постоянном D. Литературная новизна и принятие остаются отдельными решениями.
