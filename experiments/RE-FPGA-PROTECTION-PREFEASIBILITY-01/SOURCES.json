@@ -1,0 +1,115 @@
+{
+  "task_id": "RE-FPGA-PROTECTION-PREFEASIBILITY-01",
+  "checked_date": "2026-09-11",
+  "instruction_base": "59603d231b923ee7426056cb62779a5ad16c8413",
+  "primary_input": {
+    "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+    "commit": "4c65d946ca043b6383c2a70d4c09865bec44c550",
+    "path": "docs/evidence_synthesis/DRAFT-PA-FPGA-OBJECT-SELECTION-01.md",
+    "outcome": "2 — architectural basis for protection/redundancy switching; closed-loop system benefit not established"
+  },
+  "local_environment_probe": {
+    "tools_not_found": [
+      "vivado",
+      "vitis",
+      "vitis_hls",
+      "xsct",
+      "xsim",
+      "hw_server",
+      "iverilog",
+      "verilator",
+      "yosys",
+      "openocd"
+    ],
+    "serial_devices_visible": [],
+    "xilinx_install_dirs_found": [],
+    "hardware_board_access": "UNKNOWN",
+    "interpretation": "no FPGA toolchain or attached board is available in the current RE execution environment"
+  },
+  "platform_selection": {
+    "primary": "AMD ZCU102 / XCZU9EG",
+    "backup": "AMD ZCU104 / XCZU7EV",
+    "reason": "ZCU102 has direct AMD hardware-verified SEM and DFX reference designs; ZCU104 preserves family/PS architecture but requires retargeting validation"
+  },
+  "documents": [
+    {
+      "id": "PG187",
+      "version": "3.1",
+      "release": "2026-07-22",
+      "title": "UltraScale Architecture Soft Error Mitigation Controller LogiCORE IP Product Guide",
+      "url": "https://docs.amd.com/r/en-US/pg187-ultrascale-sem",
+      "used_for": ["SEM modes/interfaces", "Zynq UltraScale+ PCAP/ICAP ownership", "ICAP arbitration", "SEM+PR support", "latency bounds", "monitoring", "unsupported/simulation limits"]
+    },
+    {
+      "id": "UG570",
+      "version": "1.20.1",
+      "release": "2025-03-04",
+      "title": "UltraScale Architecture Configuration User Guide",
+      "url": "https://docs.amd.com/r/en-US/ug570-ultrascale-configuration",
+      "used_for": ["readback verification", "RBD/MSD/MSK compare", "golden CRC recalculation after PR"]
+    },
+    {
+      "id": "XAPP1298",
+      "version": "1.1",
+      "release": "2018-11-29",
+      "title": "Integrating LogiCORE SEM IP in Zynq UltraScale+ Devices",
+      "url": "https://docs.amd.com/v/u/en-US/xapp1298-integrating-sem-ip",
+      "used_for": ["hardware-verified SEM integration on ZCU102/ZU9EG", "reference design availability"]
+    },
+    {
+      "id": "XAPP1303",
+      "version": "1.0.2",
+      "release": "2017-02-27",
+      "title": "Integrating LogiCORE SEM IP with AXI in Zynq UltraScale+ Devices",
+      "url": "https://docs.amd.com/v/u/en-US/xapp1303-integrating-sem-ip-with-axi",
+      "used_for": ["AXI/PS-facing SEM integration reference on ZCU102"]
+    },
+    {
+      "id": "XAPP1261",
+      "version": "1.0",
+      "release": "2015-06-19",
+      "title": "Demonstration of Soft Error Mitigation IP and Partial Reconfiguration Capability on Monolithic Devices",
+      "url": "https://docs.amd.com/v/u/en-US/xapp1261-demo-sem-pr",
+      "used_for": ["SEM/PR ownership sequence", "SEM reset/reinitialization after PR"],
+      "limitation": "KCU105/older reference; current UltraScale+ applicability is cited by PG187, not treated as ZCU102 timing evidence"
+    },
+    {
+      "id": "XAPP1361",
+      "version": "1.2",
+      "release": "2024-05-23",
+      "title": "Isolation Design Flow + Dynamic Function eXchange Example",
+      "url": "https://docs.amd.com/r/en-US/xapp1361-idf-dfx-example",
+      "used_for": ["hardware-verified ZCU102 DFX", "partial bitstreams in PS DDR", "PCAP load via Cortex-A53", "source C/Tcl/HDL/Verilog"]
+    },
+    {
+      "id": "UG1137",
+      "version": "2026.1",
+      "release": "2026-07-22",
+      "title": "Zynq UltraScale+ MPSoC Software Developer Guide",
+      "url": "https://docs.amd.com/r/en-US/ug1137-zynq-ultrascale-mpsoc-swdev/FPGA-Manager-Solution",
+      "used_for": ["partial bitstream loading/readback capability from PS software"]
+    },
+    {
+      "id": "ZCU102_PRODUCT",
+      "version": "web current",
+      "checked": "2026-09-11",
+      "url": "https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards/ek-u1-zcu102-g.html",
+      "used_for": ["current commercial availability and platform identity"]
+    },
+    {
+      "id": "ZCU104_PRODUCT",
+      "version": "web current",
+      "checked": "2026-09-11",
+      "url": "https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards/zcu104.html",
+      "used_for": ["backup platform identity/commercial availability"]
+    }
+  ],
+  "no_execution": [
+    "no controller RTL",
+    "no synthesis/implementation",
+    "no error injection",
+    "no Monte Carlo",
+    "no control-law tuning",
+    "no RES-004 execution"
+  ]
+}
