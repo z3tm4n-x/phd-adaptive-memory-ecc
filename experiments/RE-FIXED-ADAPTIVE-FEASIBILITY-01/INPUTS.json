@@ -1,0 +1,136 @@
+{
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01",
+  "execution_base": "59603d231b923ee7426056cb62779a5ad16c8413",
+  "preverification_commit": "e8713d187592c9b810ecf4194b6da7108d898e22",
+  "internal_sources": [
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "ref": "59603d231b923ee7426056cb62779a5ad16c8413",
+      "path": "docs/research_gates/RE-FIXED-ADAPTIVE-FEASIBILITY-01.md",
+      "use": "task contract, gate and stop rules"
+    },
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "ref": "59603d231b923ee7426056cb62779a5ad16c8413",
+      "path": "docs/decisions/DEC-001-rq001-reliability-contract.md",
+      "use": "E_cap and F_A semantics"
+    },
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "ref": "59603d231b923ee7426056cb62779a5ad16c8413",
+      "path": "results/RES-003-internal-count-control.md",
+      "use": "accepted RES-003 applicability limits for Level-II compatibility disposition"
+    },
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "ref": "59603d231b923ee7426056cb62779a5ad16c8413",
+      "path": "experiments/RE-GOES-CAUSAL-INPUT-CONTRACT-01/REPORT.md",
+      "blob_sha": "965deccc94e92d241f6963a957c7cecfad7411e1",
+      "use": "external delayed-data channel remains conditional; practical operational delivery latency not established"
+    },
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "ref": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "results/schedules/ch3_series_import_summary.csv",
+      "blob_sha": "15632dda3c4052d844c2b27584b567d2afe9e55e",
+      "use": "normalized five-year temporal shape and 148 missing hours"
+    },
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "ref": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "results/schedules/ch3_lag_sweep_summary.csv",
+      "blob_sha": "e5cdd000be9485a45dd82411274a4524aaf3638a",
+      "use": "lag-1 shape factor eta=1.04935369403"
+    },
+    {
+      "status": "SOURCE_DIAGNOSTIC_ONLY",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "ref": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "results/schedules/measured_policy_seed_sweep_report.md",
+      "blob_sha": "6a682a1111cc851aeb0d1719187a7de276bf3593",
+      "use": "old counter-only simple is diagnostic only; not promoted into new-domain certificate"
+    }
+  ],
+  "external_sources": [
+    {
+      "status": "SOURCE",
+      "identity": "ESA, Common DPU and Basic Software for JUICE Instruments, Felice Torelli, OBDP 2019",
+      "url": "https://indico.esa.int/event/225/contributions/3688/attachments/3360/4398/OBDP2019-S01-06-ESA_Torelli_Common_DPU_and_Basic_SW_for_JUICE_Instruments.pdf",
+      "checked": "2026-09-11",
+      "locations": ["slide 14", "slide 15", "slide 16"],
+      "parameters_used": {
+        "documented_sram_mib": [4, 8, 16, 32],
+        "sram_seu_error_rate_errors_per_bit_day": 7.3e-7,
+        "data_bits": 32,
+        "edac_bits": 7,
+        "prototype_4mib_50mhz_wait_states": 1,
+        "prototype_32mib_50mhz_wait_states": 2
+      },
+      "limitation": "reference-design/prototype evidence; not proof that every flight instrument uses the same configuration"
+    },
+    {
+      "status": "SOURCE",
+      "identity": "GR712RC User's Manual, version 2.17, March 2025",
+      "url": "https://download.gaisler.com/products/gr712rc/doc/gr712rc-usermanual-2_17.pdf",
+      "checked": "2026-09-11",
+      "location": "section 5.4, PDF page 63",
+      "parameters_used": {
+        "sram_read_data_cycles": 2,
+        "sram_read_wait_states_range": [0, 3],
+        "sram_write_min_cycles": 3,
+        "write_wait_states_same_programming_class": true,
+        "maximum_supported_sram_mib": 32
+      },
+      "limitation": "bus clock/access cycles are not automatically total effective service bandwidth"
+    },
+    {
+      "status": "SOURCE",
+      "identity": "GRLIB-AN-0004, Handling of External Memory EDAC Errors in LEON/GRLIB Systems, issue 1 rev 1, 2017-08-17",
+      "url": "https://download.gaisler.com/application_notes/GRLIB-AN-0004.pdf",
+      "checked": "2026-09-11",
+      "locations": ["section 3.1", "section 3.2", "section 3.3"],
+      "parameters_used": {
+        "correctable_read_temporarily_corrected_on_bus": true,
+        "software_read_writeback_scrub_described": true,
+        "hardware_scrubber_locked_read_write_on_correction": true,
+        "single_error_status_register_limitation_noted": true
+      },
+      "limitation": "application note supports execution semantics; it does not certify this experiment's risk bound"
+    },
+    {
+      "status": "SOURCE_CONTEXT_ONLY",
+      "identity": "ECSS-Q-ST-60-15C Rev.1, 20 March 2025",
+      "url": "https://ecss.nl/wp-content/uploads/2025/03/ECSS-Q-ST-60-15C-Rev.1%2820March2025%29.pdf",
+      "use": "SEE consequences must be related to mission/system requirements; no universal epsilon is taken from this source"
+    },
+    {
+      "status": "SOURCE_CONTEXT_ONLY_NOT_NUMERICALLY_MIXED",
+      "identity": "Frontgrade UT8ER512K32 datasheet v1.0.1 and Design Handbook",
+      "urls": [
+        "https://www.frontgrade.com/sites/default/files/documents/datasheet-ut8er512k32.pdf",
+        "https://www.frontgrade.com/sites/default/files/documents/App-Note-UT8ER512K32-DesignHandbook.pdf"
+      ],
+      "use": "alternative integrated EDAC/scrub architecture considered qualitatively; its numerical specifications are not combined with the JUICE/GR712 reference configuration"
+    }
+  ],
+  "assumptions": [
+    "ESA scalar SEU error rate is applied uniformly to all 39 protected physical bit cells.",
+    "Only the normalized shape of the pinned 2021-2025 project series is transferred to the ESA scalar mean; this is not a physical JUICE calibration.",
+    "8 and 16 MiB timing uses the slower documented 32 MiB prototype timing; 2 MiB is a control slice borrowing 4 MiB timing.",
+    "Application loads, 8-word burst, 100 us deadline, 1-s peak window and 25% scrub peak are research-contract values, not sourced flight requirements."
+  ],
+  "unknowns": [
+    "mission-specific H and epsilon allocation",
+    "mapping from E_cap to system-visible failure",
+    "actual flight workload envelope",
+    "operational delivery/publication latency of an external environmental feed",
+    "target processor/controller WCET",
+    "actual conditional-write fraction in deployment"
+  ]
+}
