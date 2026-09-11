@@ -1,0 +1,43 @@
+{
+  "task": "RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01",
+  "repair_handoff": "d4918569e278289e300eee8bb0504211b23ac92b",
+  "reviewed_delivery": "0c979c34d537c9f328858010a8df6cdeab598735",
+  "scientific_review": "18b78a647ac299290b5e2399b8af581e14240b88",
+  "slice": {
+    "t0_utc": "2026-01-19T04:00:00+00:00",
+    "horizon_s": 86400,
+    "shield_mm": 10.0,
+    "sigma_model": "main_loglog",
+    "direction": "central_mean",
+    "direct_scenario": "DREG",
+    "tau_s": 1.0,
+    "epsilon_analysis": 0.001,
+    "historical_u_reg": 0.0003098119451681036,
+    "risk_curves_blob": "cc5067f2c5eeba7b552839a4532fee9292b64398"
+  },
+  "registered_model": {
+    "words": 524288,
+    "data_bits_per_word": 32,
+    "correction_t": 1,
+    "full_internal_word_bits": 38
+  },
+  "executor": {
+    "automatic_writeback_supported": false,
+    "tRC_min_s": 4.5e-8,
+    "tAA_max_s": 4.5e-8,
+    "tWC_min_s": 4.5e-8,
+    "rmw_delta_is_measured_wcet": false,
+    "sensitivity_delta_s": [4.5e-8, 9e-8, 1e-6, 1e-5, 0.0001, 0.001]
+  },
+  "required_rate_input": {
+    "acceptable": [
+      "exact frozen selected-window per-bit rate trace with historical identity/hash",
+      "source-equivalent frozen integral_r and integral_r2 with traceable derivation"
+    ],
+    "forbidden": [
+      "infer rate trace from U_historical",
+      "rerun environment transport",
+      "substitute another mission, shield, direction, or sigma model"
+    ]
+  }
+}
