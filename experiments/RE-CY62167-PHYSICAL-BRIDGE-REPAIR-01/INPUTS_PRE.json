@@ -1,0 +1,36 @@
+{
+  "task": "RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01",
+  "provenance_policy": "identity_recorded != actually_re_read",
+  "actually_re_read_in_this_repair": [
+    {
+      "type": "PRIMARY_SOURCE",
+      "title": "Infineon AN88889, Mitigating Single Event Upsets Using Infineon 65-nm Asynchronous SRAM",
+      "library_file_id": "file_000000009ed481fb9d01019a18df85a8e",
+      "locations": ["pp. 9-10"],
+      "facts": ["Hamming (32,38)", "16-bit interleaving", "corrected read does not repair stored word"]
+    },
+    {
+      "type": "PRIMARY_SOURCE",
+      "title": "CY62167G30/CY62167GE30 datasheet 002-20054 Rev *F",
+      "library_file_id": "file_00000000291881f48da84acce50c5dac",
+      "locations": ["p.1", "pp.10-11", "revision history"],
+      "facts": ["automatic write-back unsupported", "tRC>=45 ns", "tAA<=45 ns", "tWC>=45 ns", "ERR/read timing"]
+    }
+  ],
+  "repository_inputs_re_read": [
+    "RE-CY62167-PROTON-01/REPORT.md and source_manifest.json",
+    "RE-CY62167-ADDRESS-MAPPING-01/REPORT.md",
+    "RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/REPORT.md",
+    "RE-CY62167-ECC-RISK-BRIDGE-01/model_contract.json, risk_curves.csv, window_risk_summary.csv, scrub_model.py",
+    "RE-CY62167-PAPER-COMPLETION-01 mapping-family contracts/summaries and resource_timing_audit.csv",
+    "RE-CY62167-SEMANTICS-REPAIR-01/REPORT.md",
+    "CY62167_PHYSICAL_BRIDGE_REVIEW_01.md"
+  ],
+  "historical_identity_only_not_re_read_as_raw_bytes": [
+    "Zenodo raw cluster archive New Folder(3).zip",
+    "GOES archive goes010226.zip",
+    "COSRAD results.zip",
+    "full historical proton_rate_5min.csv unless recovered later as the exact saved artifact"
+  ],
+  "forbidden_inference": "Historical SHA/source identity is not reported as a current re-hash unless exact bytes are recovered."
+}
