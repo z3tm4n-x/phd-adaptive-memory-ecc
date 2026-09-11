@@ -19,9 +19,11 @@
 
 ## Действующий этап и сохранённые последующие поставки
 
-**[RE-CY62167-PHYSICAL-BRIDGE-01](RE-CY62167-PHYSICAL-BRIDGE-01.md), [Issue №15](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/15) — поставка постоянного RE получена:** [0c979c34](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/0c979c34d537c9f328858010a8df6cdeab598735/experiments/RE-CY62167-PHYSICAL-BRIDGE-01/), после pre-execution CONTRACT 4bac6ec1. Нижние/верхние границы, совместимое семейство и информационная недостаточность ещё не приняты научно.
+**[RE-CY62167-PHYSICAL-BRIDGE-01](RE-CY62167-PHYSICAL-BRIDGE-01.md), [Issue №15](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/15) — поставка постоянного RE получена:** [0c979c34](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/0c979c34d537c9f328858010a8df6cdeab598735/experiments/RE-CY62167-PHYSICAL-BRIDGE-01/), после pre-execution CONTRACT 4bac6ec1. Полноустройственные численные границы и физический свидетель противоположных решений не приняты; ограниченное принятие компонентов определяется disposition ниже.
 
-**[CY62167-PHYSICAL-BRIDGE-SR-01](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-01.md) — подготовлено к передаче отдельному постоянному Reviewer через пользователя.** Exact target — 0c979c34; приём Reviewer не подтверждён. Проверить D3/q3, физическую совместимость m0/m1, исходный U_reg и delta_cov, вывод о достаточности информации. Issue открыт; общий поиск, новый контроллер и переход к методике не назначены.
+**[CY62167-PHYSICAL-BRIDGE-SR-01](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-01.md) выполнен отдельным Reviewer:** [отчёт 18b78a64](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/18b78a647ac299290b5e2399b8af581e14240b88/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_01.md), target 0c979c34, **REVISE / 2 MAJOR / 3 MINOR**. Физический мост не завершён.
+
+**[RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01](RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01.md) — подготовлено к передаче постоянному RE через пользователя; приём не подтверждён.** Документ фиксирует ограниченное принятие структурных/условных компонентов и один repair совместимого свидетеля и положительной границы для conditional write. После него — адресный re-review, не общий новый цикл. Issue открыт; поиск нового объекта, новый контроллер и методика пока не запускаются.
 
 [Прежняя позиция](DISSERTATION-COMPLETION-POSITION-01.md) сохраняется исторически; новый выбор и критерии завершения полностью заданы DEC-004. Первый приоритет — физический мост CY62167 → W/ECC и корректные границы риска; [backlog](../research_backlog.md).
 
