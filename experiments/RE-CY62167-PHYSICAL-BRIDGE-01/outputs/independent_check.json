@@ -1,0 +1,17 @@
+{
+  "bitmask_d3_cases": 294,
+  "nonidentifiability_fixture": {
+    "hidden_D3_in_m1": true,
+    "same_registered_data_projection": true,
+    "visible_projection": [
+      "0x1",
+      "0x4"
+    ]
+  },
+  "passed": true,
+  "threshold": {
+    "delta_crit": "0.0006901880548318964",
+    "epsilon": "0.001",
+    "u_reg": "0.0003098119451681036"
+  }
+}

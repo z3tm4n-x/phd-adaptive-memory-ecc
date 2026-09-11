@@ -1,0 +1,51 @@
+{
+  "checks": [
+    "D3_exactly3_all_SEC_safe_states_n38",
+    "two_toggle_cancellation_counterexample",
+    "coverage_union_threshold_direction",
+    "conditional_poisson_threshold_translation"
+  ],
+  "d3": {
+    "analytic_extension": "for |M|>=3 and |E|<=1, |E symmetric_difference M| >= |M|-|E| >= 2",
+    "atomic_mark_distinct_cells": 3,
+    "codeword_cells": 38,
+    "correctable_t": 1,
+    "counterexamples": 0,
+    "enumerated_cases": 329004,
+    "safe_pre_states": 39
+  },
+  "passed": true,
+  "slice": {
+    "delta_cov_critical": "0.0006901880548318964",
+    "direct_scenario": "DREG",
+    "direction": "central_mean",
+    "epsilon_analysis": "0.001",
+    "poisson_translation_only": {
+      "coverage_certificate_rate_per_day": 0.0006904263442567309,
+      "coverage_certificate_rate_per_s": 7.991045651119571e-09,
+      "q3_exclusion_rate_per_day": 0.0010005003335835335,
+      "q3_exclusion_rate_per_s": 1.1579864972031637e-08
+    },
+    "registered_data_only_lower": "5.90925197663239E-10",
+    "registered_data_only_upper": "0.0003098119451681036",
+    "shield_mm": 10.0,
+    "sigma_model": "main_loglog",
+    "source": "RE-CY62167-ECC-RISK-BRIDGE-01/risk_curves.csv@69e92fe36b3b7933cebccbedd457cc0309dd4d1c",
+    "tau_s": 1.0,
+    "timestamp": "2026-01-19T04:00:00+00:00",
+    "window": "24h"
+  },
+  "two_toggle_cancellation": {
+    "post_errors": [
+      1
+    ],
+    "post_weight": 1,
+    "pre_errors": [
+      0
+    ],
+    "toggle_mark": [
+      0,
+      1
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "RE-CY62167-PHYSICAL-BRIDGE-01",
+  "task_commit": "9ea66664d37cb522d0d148ed63b06858de313d00",
+  "scientific_input_base": "69e92fe36b3b7933cebccbedd457cc0309dd4d1c",
+  "preexecution_commit": "4bac6ec1f017f98cd685fee79051dd972b8c8342",
+  "issue": 15,
+  "branch": "research/cy62167-physical-bridge-01",
+  "controlled_inputs": [
+    {"path":"docs/research_gates/RE-CY62167-PHYSICAL-BRIDGE-01.md","ref":"9ea66664d37cb522d0d148ed63b06858de313d00","blob":"e5f14d2ba0774a026dd71add1ecc0773ac512f4e","use":"task contract and stop rules"},
+    {"path":"experiments/RE-CY62167-PROTON-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"1e568ec0eec83e87375603bab8920dd8bbed42a7","use":"registered proton multiplicity/geometry, missing aligned fluence, internal ECC/test-mode facts"},
+    {"path":"experiments/RE-CY62167-ADDRESS-MAPPING-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"76a99e12e4187f7489d9abf8915d51f47fd4abb2","use":"empirical XY-to-external-address mapping and boundary to proprietary W"},
+    {"path":"experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"09062207b46b7d83258da63a4ca03a28f030c860","use":"parent/cluster observability and censoring limits"},
+    {"path":"experiments/RE-CY62167-PAPER-COMPLETION-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"361021000f45b20a86b4abc0b9c81a183356d04f","use":"registered-event physical scope and frozen diagnostics"},
+    {"path":"experiments/RE-CY62167-PAPER-COMPLETION-01/mapping_family_contract.json","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"6dba4efadefc86d52d0c095421fd1d8e01745e72","use":"55/210 restricted W-family semantics; non-completeness"},
+    {"path":"experiments/RE-CY62167-PAPER-COMPLETION-01/mapping_sweep_summary.csv","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"44167897f8fe96b5c3f5bc16f03bd8b0358568fd","use":"registered direct-class sensitivity to declared W"},
+    {"path":"experiments/RE-CY62167-PAPER-COMPLETION-01/registered_direct_events.csv","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"f32f536ff9870874480c276dbed64bcd8e79d9cb","use":"traceability of registered same-word direct marks"},
+    {"path":"experiments/RE-CY62167-ECC-RISK-BRIDGE-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"c9a9d4e807d6fac00f67db18b48d02cbb69143be","use":"data-only first-passage bridge and conditional registered bounds"},
+    {"path":"experiments/RE-CY62167-ECC-RISK-BRIDGE-01/risk_curves.csv","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"cc5067f2c5eeba7b552839a4532fee9292b64398","use":"predeclared 10mm/24h/DREG/tau1 frozen numerical slice"},
+    {"path":"experiments/RE-CY62167-DIRECT-FLOOR-KILLTEST-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"239102d7c534262579bc519a96a3f52c7b3b9526","use":"K>=2 is only an upper candidate population, not a direct floor"},
+    {"path":"experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"a48972e7472881a928939db488f86fa88d86bd53","use":"theta as sensitivity parameter, not physical probability"},
+    {"path":"experiments/RE-CY62167-SEMANTICS-REPAIR-01/REPORT.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"e2beb547e866dab5491f92a4bb1733eafd9e0398","use":"correct upper-coupling direction and cancellation semantics"},
+    {"path":"docs/scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md","ref":"69e92fe36b3b7933cebccbedd457cc0309dd4d1c","blob":"f8af51aa9bd76800da7dfe5ceb01c94777fccf89","use":"reviewed narrow admissible wording for registered-event surrogate/certificate"}
+  ],
+  "selected_frozen_slice": {
+    "source": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/risk_curves.csv",
+    "timestamp": "2026-01-19T04:00:00+00:00",
+    "window": "24h",
+    "shield_mm": 10.0,
+    "sigma_model": "main_loglog",
+    "direction_scenario": "central_mean",
+    "direct_scenario": "DREG",
+    "tau_s": 1.0,
+    "registered_data_only_lower": 5.90925197663239e-10,
+    "registered_data_only_upper": 0.0003098119451681036,
+    "epsilon_analysis": 0.001,
+    "epsilon_status": "analysis line only; not a mission requirement"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "os": "Linux 6.18.35 x86_64",
+    "glibc": "2.41"
+  }
+}

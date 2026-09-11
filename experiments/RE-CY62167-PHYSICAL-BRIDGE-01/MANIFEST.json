@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "d3_n38_minimal_marks": "329004_PASS",
+    "nonidentifiability_projection_fixture": "PASS",
+    "two_toggle_cancellation": "PASS_EXPECTED_SAFE_COUNTEREXAMPLE",
+    "union_threshold_direction": "PASS"
+  },
+  "commands": [
+    "python3 checks.py",
+    "python3 independent_check.py"
+  ],
+  "delivery_branch": "research/cy62167-physical-bridge-01",
+  "delivery_commit": "REPORTED_EXTERNALLY_TO_AVOID_SELF_REFERENCE",
+  "files": {
+    "HANDOFF.md": {
+      "sha256": "b4348855b5035c734c288b8c90e2731dc190011f624300c0fd2050cab9ded724",
+      "size_bytes": 2902
+    },
+    "INPUTS.json": {
+      "sha256": "8d6f11dea30f211b5c8c6e4e94cd6151110311eb2d35592ed99a9fd30dc0debd",
+      "size_bytes": 4359
+    },
+    "REPORT.md": {
+      "sha256": "2d055fa22eeb5e73cf2a9978aa59c10dd0b5f7d8938a8ec150d98c21385640f0",
+      "size_bytes": 19658
+    },
+    "checks.py": {
+      "sha256": "ed1e9c6b8ecb31a5beafa1835d1b99d61189a5a13387d1b64aa1057d11259e88",
+      "size_bytes": 3199
+    },
+    "decision_table.csv": {
+      "sha256": "29e1ad1e9c289c1cf0e3e813fa3f21d5d6f6c90e93bd1f1c78b120b1619a2937",
+      "size_bytes": 1870
+    },
+    "independent_check.py": {
+      "sha256": "d9883e957a0ff350fa67c7c160efdf9b9ce6568fb2d8350cf12b99d8a0fcde1c",
+      "size_bytes": 2079
+    },
+    "outputs/checks.json": {
+      "sha256": "f14e7eff8aec32c2abf1f33abe4ca25ccd9c5422002cd58f20052a3de648c222",
+      "size_bytes": 1486
+    },
+    "outputs/independent_check.json": {
+      "sha256": "bc7dcfb2902d8b9353f9b6b9dd58c35980a7f599223f27da7fdd120009f7ed7b",
+      "size_bytes": 346
+    }
+  },
+  "new_environment_calculation": false,
+  "new_res_assigned": false,
+  "preexecution_commit": "4bac6ec1f017f98cd685fee79051dd972b8c8342",
+  "preexecution_contract_git_blob": "e367d63d1dd30c12c78924425e639066f5bc4643",
+  "raw_reparse": false,
+  "res004_executed": false,
+  "schema_version": 1,
+  "scientific_input_base": "69e92fe36b3b7933cebccbedd457cc0309dd4d1c",
+  "scientific_status": "OWN_RESULT_REQUIRES_SEPARATE_SCIENTIFIC_REVIEW",
+  "task_commit": "9ea66664d37cb522d0d148ed63b06858de313d00",
+  "task_id": "RE-CY62167-PHYSICAL-BRIDGE-01"
+}
