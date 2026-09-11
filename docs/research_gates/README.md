@@ -19,6 +19,8 @@
 
 ## Действующий этап и сохранённые последующие поставки
 
+**[RE-CY62167-PHYSICAL-BRIDGE-01](RE-CY62167-PHYSICAL-BRIDGE-01.md), [Issue №15](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/15) — подготовлено к передаче постоянному RE.** Нижние/верхние границы, совместимое семейство W и родительских описаний, исход ECC и достаточность физической информации. Приём отдельной сессией не подтверждён. После поставки — независимый SR новых существенных утверждений; общий поиск и новый контроллер не назначены.
+
 [Прежняя позиция](DISSERTATION-COMPLETION-POSITION-01.md) сохраняется исторически; новый выбор и критерии завершения полностью заданы DEC-004. Первый приоритет — физический мост CY62167 → W/ECC и корректные границы риска; [backlog](../research_backlog.md).
 
 [Задание Fixed/Adaptive](RE-FIXED-ADAPTIVE-FEASIBILITY-01.md), [Issue №12](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12), исполнение/repair и [cold-start disposition a88d6a26](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a88d6a26c54c193e3d518fb16f43ffd19511202b/experiments/RE-FIXED-ADAPTIVE-FEASIBILITY-01/SCIENTIFIC_REVIEW_DISPOSITION.md) — завершённый этап в ограниченной области, общий SR остаётся REVISE. Старое «подготовлено к передаче» больше не действует для этого исполнения.
