@@ -1,0 +1,59 @@
+{
+  "check_count": 13,
+  "checks": [
+    "git_blob:ANALYSIS_CONTRACT.md",
+    "git_blob:config.json",
+    "git_blob:analyze.py",
+    "git_blob:verify.py",
+    "fixed_short_continuous_unimodal",
+    "fixed_long_continuous_monotone",
+    "fixed_resource_risk_separator",
+    "all_frozen_witness_pairs_continuous_tau",
+    "causal_bound_and_4x_rmw",
+    "application_delay",
+    "missing_input_fallback",
+    "hour_slice",
+    "stronger_ecc"
+  ],
+  "continuous_witness_audit": [
+    {"epsilon": 0.001, "memory_mib": 4, "post900_crossover_s": 1551.4877041366449, "post900_min_lower_bound": 0.013483686867439948},
+    {"epsilon": 0.0025, "memory_mib": 4, "post900_crossover_s": 1551.4877041366449, "post900_min_lower_bound": 0.013483686867439948},
+    {"epsilon": 0.005, "memory_mib": 8, "post900_crossover_s": 1551.4877041366462, "post900_min_lower_bound": 0.02678556392334064},
+    {"epsilon": 0.01, "memory_mib": 8, "post900_crossover_s": 1551.4877041366462, "post900_min_lower_bound": 0.02678556392334064},
+    {"epsilon": 0.025, "memory_mib": 16, "post900_crossover_s": 1551.4877041366462, "post900_min_lower_bound": 0.052853661411989994},
+    {"epsilon": 0.05, "memory_mib": 16, "post900_crossover_s": 1551.4877041366462, "post900_min_lower_bound": 0.052853661411989994},
+    {"epsilon": 0.1, "memory_mib": 32, "post900_crossover_s": 1551.4877041366462, "post900_min_lower_bound": 0.1029138132993267}
+  ],
+  "passed": true,
+  "preverification_blob_ids": {
+    "ANALYSIS_CONTRACT.md": "d99a2eb5abd1556540ab39e5b914d0db35134384",
+    "analyze.py": "f6b9ce3907c9fa41d550b58d367a2bf6864d3a8e",
+    "config.json": "e532df57cc298fbc961ab2ecbee20ac6e98a3dca",
+    "verify.py": "f8a43cde9e6a2bbdd905d0741f68e4675a909044"
+  },
+  "principal": {
+    "causal_C": 0.03560929815993128,
+    "causal_average_fraction": 0.0014244700083518912,
+    "causal_pair_upper": 0.0009499997574207971,
+    "causal_peak_fraction": 0.24045835514172653,
+    "causal_risk_upper": 0.0009499999999999999,
+    "causal_risk_upper_4x_rmw": 0.0009500007277376081,
+    "delay_bound_50pct_us": 3.0052980531349043,
+    "fallback_148h_average_fraction": 0.002231722084833715,
+    "fallback_capacity_hours": 197.1855426593061,
+    "fixed_cauchy_lower_at_3600s": 0.031004547989699316,
+    "fixed_cauchy_lower_at_900s": 0.007844363475014604,
+    "fixed_exactly_two_lower_at_900s": 0.028117667349234265,
+    "fixed_exactly_two_lower_at_resource_tau": 0.001571525031251797,
+    "fixed_read_boundary_fraction": 0.0039503977189538015,
+    "fixed_risk_root_s": 15.926133132909436,
+    "hour_fixed_read_boundary_fraction": 0.00032605026093966336,
+    "hour_fixed_risk_root_s": 192.95969835657496,
+    "max_application_load_for_100us": 0.7517416448582734,
+    "rmw_delta": 2.425792027647989e-10,
+    "stronger_ecc_tau_s": 58.72025599999999,
+    "stronger_ecc_triple_upper": 5.5712752513052024e-09,
+    "tau_resource_min_s": 25.165823999999997
+  },
+  "python": "3.13.5"
+}
