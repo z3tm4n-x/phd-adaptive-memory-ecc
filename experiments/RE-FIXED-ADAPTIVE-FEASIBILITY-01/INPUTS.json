@@ -44,9 +44,17 @@
       "status": "SOURCE",
       "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
       "ref": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
-      "path": "results/schedules/ch3_lag_sweep_summary.csv",
-      "blob_sha": "e5cdd000be9485a45dd82411274a4524aaf3638a",
-      "use": "lag-1 shape factor eta=1.04935369403"
+      "path": "results/schedules/ch3_five_year_summary.csv",
+      "blob_sha": "7f64b1f6a7ba544c610325588ee26f7b10d03bb4",
+      "use": "delayed_1h eta_shape=1.04935369403 used as lag1_eta"
+    },
+    {
+      "status": "SOURCE",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "ref": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "scripts/run_ch3_five_year_schedule.py",
+      "blob_sha": "10ea6f0911bf5782f5034a39d95e647f181480fc",
+      "use": "defines delayed_estimate(values, delay_steps=1) and eta_shape(nu_values, estimate_values, dt_hours) corresponding to lag1_eta"
     },
     {
       "status": "SOURCE_DIAGNOSTIC_ONLY",
@@ -132,5 +140,14 @@
     "operational delivery/publication latency of an external environmental feed",
     "target processor/controller WCET",
     "actual conditional-write fraction in deployment"
-  ]
+  ],
+  "post_sr_source_correction": {
+    "review_commit": "619492db33cb8793710fb4e454616f543993c982",
+    "incorrect_historical_pointer": "results/schedules/ch3_lag_sweep_summary.csv",
+    "correct_eta_table": "results/schedules/ch3_five_year_summary.csv",
+    "correct_eta_table_blob_sha": "7f64b1f6a7ba544c610325588ee26f7b10d03bb4",
+    "corresponding_code": "scripts/run_ch3_five_year_schedule.py",
+    "corresponding_code_blob_sha": "10ea6f0911bf5782f5034a39d95e647f181480fc",
+    "functions": ["delayed_estimate(values, delay_steps=1)", "eta_shape(nu_values, estimate_values, dt_hours)"]
+  }
 }

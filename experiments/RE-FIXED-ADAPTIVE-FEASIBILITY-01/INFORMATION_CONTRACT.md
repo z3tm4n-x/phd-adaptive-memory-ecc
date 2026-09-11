@@ -1,41 +1,57 @@
-# INFORMATION CONTRACT REPAIR — RE-FIXED-ADAPTIVE-FEASIBILITY-01
+# INFORMATION CONTRACT — POST-SR COLD-START DISPOSITION
 
-The runtime controller is causal, but its tuning is not calibration-free.
+Task: `RE-FIXED-ADAPTIVE-FEASIBILITY-01`.
+Reviewed delivery: `03e6c4ad8570fa3351378c9c77b1f9c2fe943f15`.
+Scientific Review: `619492db33cb8793710fb4e454616f543993c982`.
+
+The overall Scientific Review verdict for the full delivery remains **REVISE**. Orchestrator selected the reviewer's limited-acceptance alternative that restricts the supported result to **cold start**. This document does not convert the full package to PASS and does not alter accepted RES artefacts.
+
+## Correct provenance for lag1_eta
+
+The retrospective `lag1_eta=1.04935369403` is sourced from:
+
+- repository `z3tm4n-x/chapter4-risk-limited-scrubber`;
+- ref `cf7ab706224f7872fdafcf34febda70e3f6c8dd1`;
+- `results/schedules/ch3_five_year_summary.csv`, blob `7f64b1f6a7ba544c610325588ee26f7b10d03bb4`;
+- row `delayed_1h`, field `eta_shape`.
+
+The corresponding implementation is `scripts/run_ch3_five_year_schedule.py`, blob `10ea6f0911bf5782f5034a39d95e647f181480fc`:
+
+- `delayed_estimate(values, delay_steps=1)` uses `values[max(0,index-delay_steps)]`;
+- `eta_shape(nu_values, estimate_values, dt_hours)` computes `(integral nu_hat dt)*(integral nu^2/nu_hat dt)/(integral nu dt)^2` by the discrete hourly sums in that script.
+
+The earlier pointer to `ch3_lag_sweep_summary.csv` is historical provenance only and is not the current source citation for `lag1_eta`.
 
 ## Offline design constants
 
-The following are fixed offline design quantities in this experiment:
+The following remain retrospective offline design quantities for this experiment:
 
-- the scalar SRAM error-rate figure `7.3e-7 errors/bit-day`, transferred to all 39 protected physical bits;
-- retrospective `mean_old_per_hour` used to normalize the old five-year temporal shape;
-- retrospective `max_old_per_hour` used as the calibrated peak/fallback rate;
-- retrospective `lag1_eta` used to select the controller coefficient;
-- the resulting `C=0.03560929815993128`.
+- scalar SRAM error-rate figure `7.3e-7 errors/bit-day`, transferred to all 39 protected physical bits;
+- `mean_old_per_hour` and `max_old_per_hour` from the pinned 2021--2025 temporal profile;
+- `lag1_eta=1.04935369403` from the source above;
+- the already-fixed controller coefficient `C`.
 
-`mean_old_per_hour`, `max_old_per_hour` and `lag1_eta` come from the same retrospective 2021--2025 project series. They are not runtime measurements, not an independent future qualification envelope, and were not validated on a held-out future environment in this experiment.
+The review did not establish out-of-sample transfer of these quantities to an unseen mission. The result remains conditional on the retrospectively calibrated/transferred temporal shape.
 
-Therefore the supported scope is **causal execution conditional on a retrospectively calibrated/transferred environmental shape**, not prospective validation that the tuning transfers to an unseen mission.
+## Accepted runtime information contract
 
-## Runtime information
+Only the **cold-start** contract is selected for limited acceptance:
 
-For hour `h>=1`, the action uses only the scalar estimate for the completed previous hour. The comparator assumes that value is available at the next hourly decision boundary. Additional operational publication/delivery latency is not established; positive extra latency is outside this experiment.
+1. At `t0`, no pre-`t0` completed-hour scalar is assumed available.
+2. The first hour uses the calibrated peak-rate fallback.
+3. For hour `h>=1`, a decision may use only the completed scalar estimate for the immediately preceding hour, assuming it is available at the hourly decision boundary.
+4. If that previous-hour scalar is unavailable, the next hour uses the same calibrated peak-rate fallback.
+5. The limited accepted case allows at most **148 additional fallback hours** after the first cold-start hour.
+6. No current-hour or future-hour scalar is supplied to the controller.
+7. Positive operational publication/delivery latency beyond the declared hourly boundary is not established.
+8. The retrospective maximum is a calibration envelope in this model, not a qualified future physical ceiling.
 
-No current-hour or future-hour rate is supplied to the controller.
+## Warm-start status
 
-### First hour
+The earlier warm-start rows in `outputs/budget_domains_repair.json`, `REPAIR_DISPOSITION.md` and related historical artefacts are preserved for provenance. They are **not certified for an arbitrary valid pre-t0 scalar** and are not part of the selected limited acceptance.
 
-Two cases are explicit.
+No further warm-start analysis is performed by this documentary release.
 
-**Warm start:** a valid completed pre-`t0` hour scalar is already available. The nominal 0.142447% resource lower edge belongs to this case.
+## Scientific scope
 
-**Cold start:** no valid pre-`t0` scalar is available. The first hour uses the calibrated peak-rate fallback. `nu0_old_per_hour` is not treated as runtime knowledge of the first hour.
-
-### Missing later input
-
-If the previous-hour scalar is unavailable, the next hour uses the calibrated peak-rate fallback.
-
-That fallback is conditional on the transferred calibration envelope. This experiment does not independently establish that a future physical rate cannot exceed the retrospective calibrated maximum.
-
-## Meaning of “causal”
-
-Causal means only that a decision does not use samples after its information boundary. It does not imply that `C`, the historical maximum or `lag1_eta` were selected independently of the verification time series, that they transfer out of sample, or that a practical feed has zero additional latency.
+The selected result is an existence/feasibility result under the declared transferred-profile assumption and the cold-start/fallback information contract above. It is not prospective calibration, operational qualification of the environmental feed, proof of optimality, or proof that the simple controller is universally necessary across other ECC architectures.

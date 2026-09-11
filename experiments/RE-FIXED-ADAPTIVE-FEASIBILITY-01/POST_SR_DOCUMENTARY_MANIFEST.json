@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POST_SR_DOCUMENTARY_RELEASE_MANIFEST",
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01",
+  "parent_delivery": "03e6c4ad8570fa3351378c9c77b1f9c2fe943f15",
+  "scientific_review_commit": "619492db33cb8793710fb4e454616f543993c982",
+  "orchestrator_decision": "cold-start limited result from review section 9; no further warm-start research",
+  "scope": "documentary only",
+  "files_in_this_release": {
+    "INPUTS.json": "1b7193839718270a1ece6828932095d199542451",
+    "INFORMATION_CONTRACT.md": "7f3344af4bb2f66b5cf34e53326c5433f1121ae9",
+    "SCIENTIFIC_REVIEW_DISPOSITION.md": "2cc2a45a3df0f524188e2590f1263e267d86a8e9",
+    "EXPORT_RULE.md": "7a6c611440d4e66b1f7e4755b0251cc76c5e947a",
+    "outputs/sr_disposition_cold_start.json": "f59edd62c7140f9aa0bbb6160805b462ddd98880"
+  },
+  "preserved_historical_files": {
+    "outputs/execution_record.json": "2eee173da3ef1a29a3314c5d23c59e388eb4e6e8",
+    "independent_check.py": "090384581915943d3de9a252355957cd5b34d871",
+    "outputs/independent_check.json": "d92c58710743358f932b4757de212d5eea86e52a",
+    "outputs/verification.json": "3e9061f3f433df9700a2df61c37a9e208b40b03e",
+    "outputs/repair_verification.json": "4e839ba9d3bc5a5b8113b985aa77327c26f58592",
+    "repair_checks.py": "13472d61cd97115a663d7ddbf1bd567e225742af"
+  },
+  "review_status": {
+    "full_delivery": "REVISE",
+    "selected_restricted_result": "LIMITED_ACCEPTANCE_COLD_START_ONLY",
+    "new_general_review_performed": false
+  },
+  "closed_documentary_items": [
+    "MAJOR-01 option 1 selected: cold start only; warm-start rows not certified for arbitrary initial estimate",
+    "lag1_eta provenance corrected to ch3_five_year_summary.csv and run_ch3_five_year_schedule.py delayed_estimate()/eta_shape()",
+    "MINOR-01 accepted wording restricted to conservative Scientific Review bounds",
+    "MINOR-02 export rule, omitted trace, manual annotations and current check-byte identities recorded",
+    "overall REVISE verdict preserved separately from limited acceptance"
+  ],
+  "excluded_actions": [
+    "new numerical calculation",
+    "retuning",
+    "warm-start development",
+    "new Monte Carlo",
+    "repeat general Scientific Review",
+    "RES-004 practical execution",
+    "modification of accepted RES"
+  ]
+}
