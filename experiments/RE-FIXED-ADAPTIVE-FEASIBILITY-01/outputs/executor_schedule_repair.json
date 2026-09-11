@@ -1,0 +1,14 @@
+{
+  "app_word_max_s": 8e-08,
+  "application_rho": 0.5,
+  "application_sigma_service_s": 6.4e-07,
+  "busy_period_delay_us": 3.0052980531349043,
+  "leftover_service_rate": 0.7595416448582735,
+  "max_scrub_lateness_s": 8e-08,
+  "phase_integral_inflation_max": 1.0000001310394042,
+  "release_spacing_s_at_peak": 5.822213992833967e-07,
+  "rho_scrub_peak": 0.24045835514172656,
+  "risk_upper_with_word_boundary_lateness": 0.0009500001244874023,
+  "scrub_grab_s": 1.3999999999999998e-07,
+  "service_curve_delay_us": 1.0269351328926066
+}
