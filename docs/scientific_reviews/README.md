@@ -1,6 +1,6 @@
 # Scientific Reviews — действующие основания
 
-Актуальный указатель 2026-09-10. Вердикты и тексты рецензий сохраняются без изменений. Техническая консолидация не является новым Scientific Review. Окончательные области принятия задают [карточки RES](../../results/README.md) и решения Orchestrator/PI.
+Актуальный указатель 2026-09-11. Вердикты и тексты рецензий сохраняются без изменений. [DEC-004](../decisions/DEC-004-dissertation-architecture-A.md) выбирает путь A и не является новым Scientific Review. Области принятия задают [карточки RES](../../results/README.md) и явные dispositions.
 
 | Объект | Действующая рецензия | Применение и закрытие |
 |---|---|---|
@@ -14,3 +14,7 @@
 | Инженерное продолжение | [Review 01](ENGINEERING_APPLICABILITY_REVIEW_01.md), PASS_WITH_MINOR | [Disposition и Endpoint-поправка](../research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md): LOCAL CLOSED, без изменения вердикта и без сертификата изменённого банка. |
 
 Полная цепочка версий, авторство и отвергнутые интерпретации — в [карте исследования](../research_map.md). Рецензии на ограниченные пакеты не являются общим PASS проекта, устройства или диссертации.
+
+**RE-FIXED-ADAPTIVE-FEASIBILITY-01:** [SR на 619492db](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/619492db33cb8793710fb4e454616f543993c982), объект 03e6c4ad, общий вердикт **REVISE**; [документальный довыпуск a88d6a26](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a88d6a26c54c193e3d518fb16f43ffd19511202b/experiments/RE-FIXED-ADAPTIVE-FEASIBILITY-01/SCIENTIFIC_REVIEW_DISPOSITION.md) фиксирует только разрешённое ограниченное cold-start принятие. Он не является общим повторным SR. Warm-start строки не сертифицированы для произвольного начального scalar. Новый RES не присвоен.
+
+В текущем физическом приоритете не восстанавливать отозванный lower-floor смысл direct-суррогата CY62167 и старого синтетического bracket. Новые существенные утверждения о floor, полном ECC outcome и формальной методике потребуют собственных адресных проверок.

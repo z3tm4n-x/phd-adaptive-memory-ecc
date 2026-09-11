@@ -1,10 +1,23 @@
 # Карта источников и истории исследования
 
-Актуализировано 2026-09-10 постоянным Research Engineer по [составу Orchestrator](research_gates/REPOSITORY-CONSOLIDATION-01.md) и [selection.json](research_gates/REPOSITORY-CONSOLIDATION-01.selection.json), commit `72125a48fc6342884c6839d67b8d0d8c226f13ef`. Это указатель происхождения и действующих ограничений, не новый научный результат. Текущая задача и вопрос — в [состоянии](current_status.md), карточки результатов и проверки — в [реестре RES](../results/README.md).
+Состав исходной консолидации зафиксирован 2026-09-10 постоянным Research Engineer по [составу Orchestrator](research_gates/REPOSITORY-CONSOLIDATION-01.md) и [selection.json](research_gates/REPOSITORY-CONSOLIDATION-01.selection.json), commit `72125a48fc6342884c6839d67b8d0d8c226f13ef`. Это указатель происхождения и действующих ограничений, не новый научный результат. Текущая задача и вопрос — в [состоянии](current_status.md), карточки результатов и проверки — в [реестре RES](../results/README.md).
+
+## Действующее направление — 2026-09-11
+
+[DEC-004](decisions/DEC-004-dissertation-architecture-A.md) фиксирует основной путь A: существующие методы управления риском, физический мост и формальная методика минимально достаточного сертифицированного класса. Новый поиск объекта завершён; FPGA — альтернативная смена предмета. Приоритеты и актуальный научный вопрос — в [состоянии](current_status.md) и [backlog](research_backlog.md).
+
+| Материал после консолидации | Точная версия и действующий смысл |
+|---|---|
+| Fixed/Adaptive | [Delivery 80737bdc](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/80737bdcc37dff1eb597a20e603c61a6a5af3a1f) → [repair 03e6c4ad](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/03e6c4ad8570fa3351378c9c77b1f9c2fe943f15) → [SR 619492db](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/commit/619492db33cb8793710fb4e454616f543993c982), REVISE → [disposition a88d6a26](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a88d6a26c54c193e3d518fb16f43ffd19511202b/experiments/RE-FIXED-ADAPTIVE-FEASIBILITY-01/SCIENTIFIC_REVIEW_DISPOSITION.md), LIMITED ACCEPTANCE — COLD START ONLY. Без нового RES и перспективной калибровки. |
+| FPGA prior art | [PA 4c65d946](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4c65d946ca043b6383c2a70d4c09865bec44c550/docs/evidence_synthesis/DRAFT-PA-FPGA-OBJECT-SELECTION-01.md): Glein/Gantel, DRAFT, ограниченные извлечения. |
+| FPGA prefeasibility | [RE 08e7838e](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/08e7838eeb15f117774fa1b838c1d4264dd13d36/experiments/RE-FPGA-PROTECTION-PREFEASIBILITY-01/), собственная документальная поставка постоянного RE; не измеренный системный эффект. |
+| Статическое уточнение | [Handoff b45f7710](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b45f77106d79f12ebc7b0ba1c642659a7e4a2e27/docs/research_gates/RE-FPGA-STATIC-EXECUTOR-CHECK-01.md) подготовлен; приём/исполнение не подтверждены. Не блокирует A; автоматического стенда нет. |
+
+Эти версии сохранены по точным ссылкам; ветки не слиты механически и исходные научные пакеты не изменены. Предыдущее решение о продолжении поиска объекта заменено DEC-004, не переписано задним числом.
 
 ## Цепочка результатов и их место
 
-RES-001 устанавливает ограниченный пример достаточности информации для риска и действия; RES-002 — роль внешнего информационного канала; RES-003 — безопасную обратную связь по собственным исправлениям; RES-004 — уточнение неизвестного постоянного параметра. Экспериментальная линия и локальная инженерная основа обеспечивают связь методов с входами и исполнением. Они не устанавливают автоматически физическую применимость и суммарную системную пользу.
+RES-001 устанавливает точное идентифицированное множество риска и управляющие последствия сокращения информации в ограниченном классе; RES-002 — роль внешнего информационного канала; RES-003 — безопасную обратную связь по собственным исправлениям; RES-004 — уточнение неизвестного постоянного параметра. Экспериментальная линия и локальная инженерная основа обеспечивают связь методов с входами и исполнением. Они не устанавливают автоматически физическую применимость и суммарную системную пользу.
 
 | Связь | Зафиксированные версии и действующее основание |
 |---|---|
@@ -18,7 +31,7 @@ RES-001 устанавливает ограниченный пример дос�
 
 Сохраняется цепочка CY62167/зарегистрированные события/отображение W → GOES rate и причинный контракт → Stage A и информационный интерфейс → real-temporal → внутренние счётчиковые методы. [Все исходные пакеты](../experiments/), [модели](../model/), [симуляция](../simulation/) и [материалы COSRAD](../cosrad/) сохранены. Двухрежимная среда не объявляется калибровкой реальной SRAM. Registered-event популяция после внутренней ECC не равна всему физическому потоку. [CY semantics Review 02](scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md) сохраняет остаточный ERR consumer MINOR; принятая U-ветвь обходит его, а не закрывает. Старый синтетический bracket сохраняется как арифметический benchmark без отозванного вероятностного смысла.
 
-[DEC-001…003](decisions/), [RQ-001…007](questions/), [CLM](claims/), [Paper Cards](paper_cards/), [evidence synthesis](evidence_synthesis/), [audits](evidence_audits/) и [нормативная матрица](normative_baseline/) сохраняют собственные версии и ограничения. Zotero остаётся главным хранилищем внешней литературы. Неоднозначность редакций нормативных источников, PMI/диагностика, физический W и незакрытый COSRAD operator не восполняются предположением.
+[DEC-001…004](decisions/), [RQ-001…007](questions/), [CLM](claims/), [Paper Cards](paper_cards/), [evidence synthesis](evidence_synthesis/), [audits](evidence_audits/) и [нормативная матрица](normative_baseline/) сохраняют собственные версии и ограничения. Zotero остаётся главным хранилищем внешней литературы. Неоднозначность редакций нормативных источников, PMI/диагностика, физический W и незакрытый COSRAD operator не восполняются предположением.
 
 Ближайшие линии управления — Chen S3/S4/S5 и PA-DOM-01-B; сама обратная связь по исправлениям не считается собственной новизной. [Полная матрица PA-DOM-01…04](evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md) перенесена из `4f96bb95189f0d385ea2077aa7b05d81ef8edf0d`, [контроль идентичностей](literature_mapping/PA-DOM-01-03_identity_control.md) — из `603fb4bff99a7d5c84f89030e2183bf41026fc15`. Название DRAFT и метки SOURCE/INFERENCE/UNKNOWN не изменены. [Прежняя матрица b82f146c](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b82f146cabed5f92598834db4af78f7ea9b65d6a/docs/evidence_synthesis/DRAFT-RQ-007_PA-DOM-01-04_comparison_matrix.md) остаётся исторической версией; её перенос не создаёт нового CLM/RES.
 
@@ -53,6 +66,10 @@ RES-001 устанавливает ограниченный пример дос�
 | Публикационный handoff | [исходная версия](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md) |
 | Журнал | [research_log до добавления записи](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6deaff07f8e8474b5a39d614e3bf55318bd145c6/docs/research_log.md); новые записи только добавляются |
 
-[Датированный снимок исходного тела Issue №3](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/3#issuecomment-5621578064) сохраняет его историю v0.8. Закрытие этого Issue после слияния v1.0 означает завершение задачи спецификации, не диссертации или RQ-007. Один текущий вопрос — [Issue №12](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12), BACKLOG без назначенного исполнения.
+[Датированный снимок исходного тела Issue №3](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/3#issuecomment-5621578064) сохраняет его историю v0.8. Закрытие этого Issue после слияния v1.0 означает завершение задачи спецификации, не диссертации или RQ-007. [Issue №12](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/12) относится к завершённому ограниченному Fixed/Adaptive этапу; новый текущий вопрос — физический мост по DEC-004.
 
 Исторические манифесты, locks, пять первичных NPZ и исходные архивные квитанции неизменны. Отдельная техническая квитанция консолидации описывает проверенные Git-объекты и итоговый merge, не считается манифестом старого научного запуска. Проверка сохранности не является новым научным PASS.
+
+## Снимок перед выбором A
+
+[main 59603d23](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/59603d231b923ee7426056cb62779a5ad16c8413) сохраняет прежние README, current_status, research_spec v1.1, backlog и реестры. DEC-004 и оперативные сводки написаны Orchestrator; технический расчётный пакет в этой фиксации не исполнялся. Сохраняется принятое авторство всех предыдущих поставок.
