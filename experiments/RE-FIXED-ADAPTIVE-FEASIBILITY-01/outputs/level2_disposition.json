@@ -1,0 +1,38 @@
+{
+  "gate_opened": true,
+  "ordered_methods": [
+    {
+      "method": "Strong Fixed",
+      "status": "PROVEN_INSUFFICIENT_IN_PRINCIPAL_DOMAIN",
+      "basis": "phase-independent continuous-tau risk lower bounds plus read-only resource lower bound"
+    },
+    {
+      "method": "Strong Precomputed",
+      "status": "INCONCLUSIVE_NO_DISTINCT_ADMISSIBLE_WITNESS",
+      "basis": "realized verification trajectory cannot be used as preparation-time schedule; no independent preparation-time event/calendar predictor is established in the fixed inputs"
+    },
+    {
+      "method": "simple external delayed-rate + local fallback",
+      "status": "MINIMAL_ESTABLISHED_CAUSAL_WITNESS",
+      "basis": "Level-I analytical upper bound and resource/delay contract; one completed previous-hour scalar plus peak fallback"
+    },
+    {
+      "method": "counter-only simple",
+      "status": "NOT_ESTABLISHED_FOR_THIS_DOMAIN",
+      "basis": "old q16/q32 seed sweeps are diagnostic under a different 32-bit/old-row execution; no new stochastic retuning/certification was allowed or needed after earlier simple witness"
+    },
+    {
+      "method": "RES-003",
+      "status": "NOT_COMPARABLE_WITHOUT_NEW_SCIENTIFIC_TRANSFER",
+      "basis": "accepted scope uses n=32 data-only, H=3600 s, epsilon=0.1, known symmetric two-state CTMC and different execution semantics"
+    },
+    {
+      "method": "RES-004",
+      "status": "NOT_EXECUTED",
+      "basis": "Level III expressly forbidden; no practical revisit condition established"
+    }
+  ],
+  "stop_reason": "First established full-contract method in the ordered Level-II set after inconclusive Precomputed is the simple external delayed-rate controller; later methods are dispositioned but not promoted.",
+  "new_res_assigned": false,
+  "scientific_review_required": true
+}
