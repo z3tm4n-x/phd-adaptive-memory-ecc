@@ -25,7 +25,9 @@
 
 **[RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01](RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01.md) — получен ограниченный repair [c48ca29e](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/c48ca29eb65fee96154d645819c4e533a1709037/experiments/RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01/).** Branch ref пока b386d8ff после сообщённого RE защитного отказа; exact delivery доступен отдельно. Обе сильные цели — полный свидетель и численная CW upper — остаются NOT_ESTABLISHED.
 
-**[CY62167-PHYSICAL-BRIDGE-SR-02](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-02.md) — подготовлено к передаче отдельному Reviewer, приём не подтверждён.** Проверить снятие старых claims, новую pair/RMW-лемму, силу set/bitmask checks и точный отсутствующий вход. Это адресный re-review, не новый общий цикл. Issue открыт; поиск объекта, восстановление среды, новый контроллер и методика не запускаются.
+**[CY62167-PHYSICAL-BRIDGE-SR-02](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-02.md) — выполнен отдельным Reviewer:** [SR-02 57021de7](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/57021de76b45971ca2687e69c4a890f02647df8f/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_02.md), target c48ca29e, **REVISE**. Один новый MAJOR опровергает ideal-at-read плюс distinct-hit RMW включение; условный enlarged-pair маршрут дан в SR. Оба физических численных выхода null, полный мост открыт.
+
+**[RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02](RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02.md) — текущая подготовленная передача постоянному RE**, приём не подтверждён. Исправить включение/безусловную огибающую и trace, одновременно связанные MINOR; после поставки — адресный SR этих изменений. Старые пакеты неизменны, численная регенерация и новый общий цикл не входят в задание.
 
 [Прежняя позиция](DISSERTATION-COMPLETION-POSITION-01.md) сохраняется исторически; новый выбор и критерии завершения полностью заданы DEC-004. Первый приоритет — физический мост CY62167 → W/ECC и корректные границы риска; [backlog](../research_backlog.md).
 
