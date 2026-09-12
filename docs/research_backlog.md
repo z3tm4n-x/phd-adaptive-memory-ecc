@@ -1,6 +1,6 @@
 # Порядок завершения диссертации
 
-Обновлено 2026-09-11. Основание — [DEC-004: путь A](decisions/DEC-004-dissertation-architecture-A.md). Это последовательность приоритетов; новые технические задачи и кампании документ не запускает. RQ-001…007 сохраняют области.
+Обновлено 2026-09-12. Основание — [DEC-004: путь A](decisions/DEC-004-dissertation-architecture-A.md). Это последовательность приоритетов; новые технические задачи и кампании документ не запускает. RQ-001…007 сохраняют области.
 
 ## 1. Физический мост
 
@@ -37,4 +37,4 @@
 
 [Прежний backlog](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/59603d231b923ee7426056cb62779a5ad16c8413/docs/research_backlog.md) сохранён. Orchestrator определяет направление; постоянный RE исполняет технические задачи в отдельной сессии через пользователя.
 
-Текущая передача по первому приоритету: после поставки 0c979c34 и [SR 18b78a64 — REVISE](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/18b78a647ac299290b5e2399b8af581e14240b88/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_01.md) подготовлен [RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01](research_gates/RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01.md) по [Issue №15](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/15). Один repair двух связанных доказательных разрывов; приём постоянным RE ещё не подтверждён. Ограниченное принятие компонентов не закрывает мост. Переход ко второму приоритету — после адресного re-review и явного решения Orchestrator, не по факту снятия завышенной формулировки.
+Текущая передача по первому приоритету: получен ограниченный repair c48ca29e после [SR 18b78a64 — REVISE](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/18b78a647ac299290b5e2399b8af581e14240b88/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_01.md); [CY62167-PHYSICAL-BRIDGE-SR-02](research_gates/CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-02.md) подготовлен к передаче отдельному Reviewer по [Issue №15](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/15), приём не подтверждён. Actual-CY свидетель и численная CW upper остаются NOT_ESTABLISHED. Переход ко второму приоритету — после решения по мосту, не по факту снятия сильной формулировки. Следующий технический шаг по отсутствующему входу/исполнению определяется после адресного re-review; сейчас регенерация и новое исследование не назначаются.
