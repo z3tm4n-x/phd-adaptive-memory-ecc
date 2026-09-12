@@ -1,6 +1,6 @@
 # Scientific Reviews — действующие основания
 
-Актуальный указатель 2026-09-11. Вердикты и тексты рецензий сохраняются без изменений. [DEC-004](../decisions/DEC-004-dissertation-architecture-A.md) выбирает путь A и не является новым Scientific Review. Области принятия задают [карточки RES](../../results/README.md) и явные dispositions.
+Актуальный указатель 2026-09-12. Вердикты и тексты рецензий сохраняются без изменений. [DEC-004](../decisions/DEC-004-dissertation-architecture-A.md) выбирает путь A и не является новым Scientific Review. Области принятия задают [карточки RES](../../results/README.md) и явные dispositions.
 
 | Объект | Действующая рецензия | Применение и закрытие |
 |---|---|---|
@@ -20,3 +20,5 @@
 В текущем физическом приоритете не восстанавливать отозванный lower-floor смысл direct-суррогата CY62167 и старого синтетического bracket. Новые существенные утверждения о floor, полном ECC outcome и формальной методике потребуют собственных адресных проверок.
 
 **RE-CY62167-PHYSICAL-BRIDGE-01:** [SR 18b78a64](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/18b78a647ac299290b5e2399b8af581e14240b88/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_01.md), exact target 0c979c34; **REVISE, 2 MAJOR / 3 MINOR, без CRITICAL**. [Disposition Orchestrator и repair](../research_gates/RE-CY62167-PHYSICAL-BRIDGE-REPAIR-01.md) принимают ограниченно D3/2t+1 и условные вероятностные компоненты, не CY62167-свидетель или физический численный сертификат. Issue №15 открыт, новый RES не присвоен. Отчёт и его проверочный скрипт сохранены на ветке отдельного Reviewer без переписывания; дальнейшая проверка — адресный re-review нового repair SHA.
+
+**Repair c48ca29e получен 2026-09-12.** [CY62167-PHYSICAL-BRIDGE-SR-02](../research_gates/CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-02.md) подготовлен к передаче; Reviewer не подтвердил приём, новой рецензии/вердикта ещё нет. Exact target доступен независимо от оставшегося на b386d8ff RE-ref. Сам repair снимает сильный m0/m1 claim и не получает численной CW upper. Новая pair/RMW-формула и исполнительные утверждения проходят проверку; прежнее ограниченное принятие не распространяется на них автоматически.
