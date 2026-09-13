@@ -20,8 +20,9 @@ def targeted(counterexample):
         "pass": all(ce[k] == v for k,v in counterexample["required"].items()),
         "result": ce
     }
-    clean = one([t(1.1,0)])
-    out["clean_no_write_post_error_persists"] = clean["physical_at_horizon"] == [0]
+    # Inspect after a clean check and post-check error, before the next check can correct it.
+    clean = run_trace([t(1.1,0)], [1.0], .2, 1.5, 3)
+    out["clean_no_write_post_error_persists"] = clean["physical_at_horizon"] == [0] and not clean["pending_at_horizon"]
     distinct = one([t(.5,0), t(1.1,1)])
     out["distinct_RMW_hit"] = distinct["physical_failure"] and distinct["B"]
     same = one([t(.5,0), t(1.1,0)])
