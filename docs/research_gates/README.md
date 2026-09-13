@@ -1,6 +1,6 @@
 # Исследовательские этапы и решения
 
-Актуальный указатель 2026-09-12. Действующее направление — [DEC-004: путь A](../decisions/DEC-004-dissertation-architecture-A.md). Физический мост → формальная методика выбора → аппаратное подтверждение. Поиск нового объекта завершён. Это навигация, не новый регламент или запуск исследования. Исторические задания сохраняются с исходными статусами; применимость определяется явными последующими решениями, [состоянием](../current_status.md) и [историей](../research_map.md).
+Актуальный указатель 2026-09-13. Действующее направление — [DEC-004: путь A](../decisions/DEC-004-dissertation-architecture-A.md). Физический мост → формальная методика выбора → аппаратное подтверждение. Поиск нового объекта завершён. Это навигация, не новый регламент или запуск исследования. Исторические задания сохраняются с исходными статусами; применимость определяется явными последующими решениями, [состоянием](../current_status.md) и [историей](../research_map.md).
 
 ## Консолидация принятого состояния
 
@@ -27,9 +27,9 @@
 
 **[CY62167-PHYSICAL-BRIDGE-SR-02](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-02.md) — выполнен отдельным Reviewer:** [SR-02 57021de7](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/57021de76b45971ca2687e69c4a890f02647df8f/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_02.md), target c48ca29e, **REVISE**. Один новый MAJOR опровергает ideal-at-read плюс distinct-hit RMW включение; условный enlarged-pair маршрут дан в SR. Оба физических численных выхода null, полный мост открыт.
 
-**[RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02](RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02.md) — выполнен отдельным постоянным RE; получен [repair-02 d3cd3e93](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/d3cd3e9385f62f047954ce3e54454eb5976ddcb8/experiments/RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02/).** Проверены точный HEAD, 16 repair-only файлов и 15 manifest blobs. Поставлены корректировка включения, RMW-огибающая, две событийные реализации и сохранённые неудачный run/test-fixes; научное принятие ещё не состоялось.
+**[RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02](RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02.md) — выполнен отдельным постоянным RE; d3cd3e9385f62f047954ce3e54454eb5976ddcb8 ограниченно принят после SR-03.** [Disposition](CY62167-PHYSICAL-BRIDGE-SR-03-DISPOSITION.md) закрывает локальный proof/executor этап для детерминированных окон, сохраняя код, манифест, неудачный frozen run, test-fixes и авторство.
 
-**[CY62167-PHYSICAL-BRIDGE-SR-03](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-03.md) — текущая подготовленная передача отдельному Reviewer**, приём не подтверждён. Определить локальное закрытие MAJOR, условия принимаемой формулы/исполнителя и MINOR. Численная CY upper и полный физический мост остаются NOT_ESTABLISHED; прежний REVISE не заменяется автоматически новым PASS.
+**[CY62167-PHYSICAL-BRIDGE-SR-03](CY62167-PHYSICAL-BRIDGE-SR-HANDOFF-03.md) — выполнен отдельным постоянным Reviewer:** [SR-03 52bb60e5](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/52bb60e516a85f5a0ba10a8b3935285a9c6c25d2/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_03.md), **PASS_WITH_MINOR**. MINOR о случайной прошлой-измеримой задержке учтён в действующей формулировке принятия: ожидание сохраняется либо используется доказанная детерминированная огибающая. Численная CY upper и полный физический мост остаются NOT_ESTABLISHED; Issue №15 открыт. Новый RE/SR цикл для закрытого детерминированного случая не назначается.
 
 [Прежняя позиция](DISSERTATION-COMPLETION-POSITION-01.md) сохраняется исторически; новый выбор и критерии завершения полностью заданы DEC-004. Первый приоритет — физический мост CY62167 → W/ECC и корректные границы риска; [backlog](../research_backlog.md).
 
