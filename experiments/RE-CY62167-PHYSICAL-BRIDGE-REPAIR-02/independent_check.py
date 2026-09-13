@@ -7,27 +7,28 @@ from pathlib import Path
 def run(marks, slots, checks, delay, H, nbits=3):
     p=i=0; pending_bit=None; commit=None; fp=fi=B=False
     bounds=[0.0]+list(checks)+[H]; labels=[0]*(len(bounds)-1)
-    events=[(tm,"hit",b) for tm,b in zip(slots,marks) if b>=0] + [(c,"check",None) for c in checks]
-    k=0
+    arrivals=sorted([(tm,"hit",b) for tm,b in zip(slots,marks) if b>=0])
+    checks_left=sorted(float(c) for c in checks)
+    ai=0
     while True:
-        next_base=events[k] if k<len(events) else (float("inf"),"",None)
+        at=arrivals[ai][0] if ai<len(arrivals) else float("inf")
         ct=commit if commit is not None else float("inf")
-        if ct < next_base[0]: e=(ct,"commit",None)
-        else: e=next_base; k += (e is next_base)
-        time,kind,bit=e
+        kt=checks_left[0] if checks_left else float("inf")
+        time=min(at,ct,kt)
         if time>H or time==float("inf"): break
-        if kind=="hit":
+        if time==at:
+            _,kind,bit=arrivals[ai]; ai+=1
             interval=max(j for j in range(len(bounds)-1) if bounds[j] <= time < bounds[j+1]); labels[interval] |= 1<<bit
             if pending_bit is not None and bit != pending_bit: B=True
             p ^= 1<<bit; i ^= 1<<bit
-        elif kind=="check":
-            i=0
+        elif time==ct:
+            p=0; pending_bit=None; commit=None
+        else:
+            checks_left.pop(0); i=0
             if p.bit_count()==1:
                 pending_bit=(p & -p).bit_length()-1; commit=time+delay
             else:
                 pending_bit=None; commit=None
-        else:
-            p=0; pending_bit=None; commit=None
         fp |= p.bit_count()>=2; fi |= i.bit_count()>=2
     P=any(x.bit_count()>=2 for x in labels)
     return fp,fi,B,P
