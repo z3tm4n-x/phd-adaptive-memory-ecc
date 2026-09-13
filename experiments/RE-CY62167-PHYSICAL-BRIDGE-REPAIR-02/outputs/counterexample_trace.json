@@ -1,0 +1,20 @@
+{
+  "B": false,
+  "P": true,
+  "ideal_at_horizon": [1],
+  "ideal_failure": false,
+  "labels_by_interval": [[0],[0,1]],
+  "old_inclusion_holds": false,
+  "pending_at_horizon": false,
+  "physical_at_horizon": [0,1],
+  "physical_failure": true,
+  "repaired_inclusion_holds": true,
+  "trace": [
+    {"B":false,"bit":0,"ideal":[0],"ideal_failure":false,"kind":"toggle","pending_commit":null,"pending_origin":null,"physical":[0],"physical_failure":false,"time":0.5},
+    {"B":false,"ideal":[],"ideal_failure":false,"kind":"singleton_check","pending_commit":1.2,"pending_origin":0,"physical":[0],"physical_failure":false,"time":1.0},
+    {"B":false,"bit":0,"ideal":[0],"ideal_failure":false,"kind":"toggle","pending_commit":1.2,"pending_origin":0,"physical":[],"physical_failure":false,"time":1.1},
+    {"B":false,"ideal":[0],"ideal_failure":false,"kind":"commit","pending_commit":null,"pending_origin":null,"physical":[],"physical_failure":false,"time":1.2},
+    {"B":false,"bit":0,"ideal":[],"ideal_failure":false,"kind":"toggle","pending_commit":null,"pending_origin":null,"physical":[0],"physical_failure":false,"time":1.3},
+    {"B":false,"bit":1,"ideal":[1],"ideal_failure":false,"kind":"toggle","pending_commit":null,"pending_origin":null,"physical":[0,1],"physical_failure":true,"time":1.4}
+  ]
+}
