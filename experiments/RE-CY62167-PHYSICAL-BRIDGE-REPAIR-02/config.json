@@ -1,0 +1,41 @@
+{
+  "task": "RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02",
+  "handoff": "ec6b1b3cd10ff1268979c60e08167279603f23d5",
+  "reviewed_repair": "c48ca29eb65fee96154d645819c4e533a1709037",
+  "scientific_review": "57021de76b45971ca2687e69c4a890f02647df8f",
+  "registered_model": {
+    "data_bits": 32,
+    "full_internal_bits": 38,
+    "words": 524288,
+    "tau_s": 1.0,
+    "clean_start": true,
+    "pending_at_start": false,
+    "arrival_model": "independent simple per-bit NHPP with common deterministic r(t)"
+  },
+  "trace_check": {
+    "bits": 3,
+    "check_times": [1.0, 2.0],
+    "write_delay": 0.2,
+    "horizon": 3.0,
+    "arrival_slots": [0.5, 1.1, 1.3, 1.4, 2.1, 2.3],
+    "symbols": [-1, 0, 1, 2],
+    "expected_streams": 4096
+  },
+  "physical_slice": {
+    "shield_mm": 10.0,
+    "horizon_s": 86400,
+    "direct_scenario": "DREG",
+    "tau_s": 1.0,
+    "epsilon_analysis": 0.001,
+    "bound": null,
+    "status": "NOT_ESTABLISHED"
+  },
+  "rate_input": {
+    "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/direct_rate_5min.csv",
+    "historical_full_sha256": "c10a68e721716c8c9b96bf99a9e2d1de0bd3b179ebcc747b3fd149ff0741ff83",
+    "historical_rows": 237888,
+    "historical_bytes": 53420841,
+    "required_rate_expression": "nu_C_bit_DREG_s-1 / 2^24",
+    "acceptance_scope": "EXCLUDED"
+  }
+}
