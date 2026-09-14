@@ -1,0 +1,44 @@
+{
+  "task": "RE-CY62167-COVERAGE-THRESHOLD-01",
+  "assignment_commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+  "scientific_base": "408134431d46e8efeae6ebb3223fee91b550c0cf",
+  "closed_repair_delivery": "d3cd3e9385f62f047954ce3e54454eb5976ddcb8",
+  "closed_sr03": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+  "slice": {
+    "start_utc": "2026-01-19T04:00:00+00:00",
+    "horizon_s": 86400,
+    "bin_s": 300,
+    "shield_mm": 10.0,
+    "sigma_model": "main_loglog",
+    "direction": "central_mean",
+    "direct_scenario": "DREG",
+    "tau_s": 1.0,
+    "epsilon_analysis": "0.001",
+    "words": 524288,
+    "data_bits_per_word": 32,
+    "data_bits_total": 16777216
+  },
+  "upstream_rate": {
+    "path": "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv",
+    "git_blob": "5de108c6759bcf720073b3fbc6581389d46e63aa",
+    "sha256": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d",
+    "data_rows": 16992,
+    "column": "d10_lambda_central_s-1"
+  },
+  "missing_historical_direct_rate": {
+    "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/direct_rate_5min.csv",
+    "full_sha256": "c10a68e721716c8c9b96bf99a9e2d1de0bd3b179ebcc747b3fd149ff0741ff83",
+    "data_rows": 237888,
+    "bytes": 53420841,
+    "status": "full bytes unavailable; repository/library contain regeneration marker only"
+  },
+  "dreg_identity": {
+    "registered_direct_table_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
+    "rule": "all measured-energy N_direct_W32seq=0 and accumulation_bits_W32seq=N_registered_bitflips; therefore declared DREG accumulation retains the whole upstream data-bit upset rate",
+    "nu_column_identity": "nu_C_bit_DREG_s-1 == d10_lambda_central_s-1",
+    "per_bit_normalization": "r(t)=d10_lambda_central_s-1/2^24"
+  },
+  "reporting_delta_s": ["0", "4.5e-8", "1e-6", "1e-5", "1e-4", "1e-3", "1e-2", "0.1", "0.5", "0.999999"],
+  "historical_ideal_union_upper_qa": "0.000309811945168",
+  "arithmetic_precision_decimal_digits": 80
+}
