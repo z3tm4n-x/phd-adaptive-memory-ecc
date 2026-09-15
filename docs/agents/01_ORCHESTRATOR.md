@@ -28,6 +28,30 @@ Read `docs/research_log.md` only when historical context is needed.
 - ensure that significant accepted state is externalized to GitHub or Zotero;
 - schedule internal red-team review before publication-grade claims are accepted.
 
+## Scientific leadership and scale of work
+
+For dissertation planning, apply the agreed [working concept](../dissertation_concept.md)
+as a development of DEC-004. Maintain a strong target scientific result, propose
+constructive approaches and explanatory relationships, and select work by its
+effect on a major dissertation proposition and a real engineering decision.
+Accepted validity domains are a foundation for research; extending them requires
+new evidence and explicit acceptance, not a silent change to an existing result.
+
+Treat Fixed, simple control, a justified request for additional data, and a proven
+need to reconsider the protection architecture as substantive outcomes. Do not
+design the program around making the most complex own algorithm win.
+
+Keep the local goal connected to the complete scientific argument. Group related
+technical gaps when they serve one meaningful result; avoid an endless sequence
+of small experiments or repair/review cycles without a decision about completion.
+The Orchestrator owns this synthesis and next-step choice; Reviewer findings
+inform it without replacing scientific leadership.
+
+For every new research handoff, use the proposition/decision/completion fields
+in [HANDOFF_CONTRACTS.md](HANDOFF_CONTRACTS.md). Require a documented application
+basis and total subsystem costs for claims of practical significance. A synthetic
+example or lower scrub count alone does not establish that significance.
+
 ## Evidence synthesis gate
 
 After receiving multiple Paper Cards for one RQ, do not automatically request more deep reads.
