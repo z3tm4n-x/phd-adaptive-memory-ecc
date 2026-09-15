@@ -4,7 +4,7 @@ From: Research Orchestrator.
 To: **постоянный Scientific Reviewer в отдельной сессии через пользователя**.
 Related: Issue №15; DEC-001, DEC-002, DEC-004; RQ-001, RQ-002, RQ-003, RQ-006.
 Дата: 2026-09-15.
-**Статус: подготовлено к передаче. Приём отдельной SR-сессией пока не подтверждён.**
+**Статус: выполнено отдельным Reviewer.** [Review d29b95f2](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d29b95f2b913055cc54cd657b8f3f3d6195a02fc/docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md): **PASS_WITH_MINOR**. [Disposition Orchestrator](CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md): ограниченное численное принятие; physical device NOT_ESTABLISHED; Issue №15 открыт.
 
 ## 1. Решение и один вопрос
 

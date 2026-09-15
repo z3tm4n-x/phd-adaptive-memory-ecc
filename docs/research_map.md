@@ -15,6 +15,20 @@
 
 Эти версии сохранены по точным ссылкам; ветки не слиты механически и исходные научные пакеты не изменены. Предыдущее решение о продолжении поиска объекта заменено DEC-004, не переписано задним числом.
 
+## Раздельная цепочка coverage threshold — 2026-09-15
+
+| Событие | Точная версия и роль |
+|---|---|
+| Публикация Research Engineer | [a9d9b74b](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/tree/a9d9b74b9ac03a4eb20b209eb14552d5b914e21a/experiments/RE-CY62167-COVERAGE-THRESHOLD-01/), source delivery 7d6d16c… сохранён bundle. Это инженерная поставка, не Scientific Review и не canonical acceptance. |
+| Handoff Orchestrator на SR | [99ee4355](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/99ee43551f06f52f5a4156f4b7b27865a5f45b5f/docs/research_gates/CY62167-COVERAGE-THRESHOLD-SR-HANDOFF-01.md), прямое документальное продолжение main ee174ccd. Он не содержит reviewer verdict. |
+| Scientific Review | [d29b95f2](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d29b95f2b913055cc54cd657b8f3f3d6195a02fc/docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md), parent a9d9b74b, PASS_WITH_MINOR. Это отдельная reviewer-ветка, не merge/disposition Orchestrator. |
+| Canonical disposition | [CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01](research_gates/CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md): ограниченное численное принятие, physical device NOT_ESTABLISHED, Issue №15 открыт. |
+
+`99ee4355` и `d29b95f2` имеют разные ancestry: первый сохраняет документальное
+получение/передачу от main, второй — неизменяемый RE target и собственный
+Reviewer diff. Каноническое состояние связывает их точными ссылками и решением,
+не приписывает RE/SR файлы Orchestrator и не переписывает исходные ветки.
+
 ## Цепочка результатов и их место
 
 RES-001 устанавливает точное идентифицированное множество риска и управляющие последствия сокращения информации в ограниченном классе; RES-002 — роль внешнего информационного канала; RES-003 — безопасную обратную связь по собственным исправлениям; RES-004 — уточнение неизвестного постоянного параметра. Экспериментальная линия и локальная инженерная основа обеспечивают связь методов с входами и исполнением. Они не устанавливают автоматически физическую применимость и суммарную системную пользу.
