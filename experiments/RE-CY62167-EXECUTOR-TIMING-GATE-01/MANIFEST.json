@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "task": "RE-CY62167-EXECUTOR-TIMING-GATE-01",
+  "stage": 0,
+  "status": "BLOCKED_INPUT / NOT_ESTABLISHED",
+  "base_commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+  "branch": "research/cy62167-executor-timing-gate-01",
+  "source_inventory": "timing_input_gate.json#/sources",
+  "execution_record": "EXECUTION.md",
+  "delivery_identity": "Git commit containing this manifest; exact SHA supplied in Issue 15 and user delivery, not self-referenced",
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 18393,
+      "sha256": "aa3d7e370b195c5ed2af5e7f358dc488c69e2ebc1fee47a99af77333a9ec871b",
+      "git_blob": "92379999a947eefcffac4bd202d0f49e340212a0"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 2259,
+      "sha256": "885662bb0d60dfeafac9da1c058799f361457783f8fb1d7933b16578415745ab",
+      "git_blob": "678c9e4b2a7645d9df182e9c27b2d0d34535e8ba"
+    },
+    {
+      "path": "timing_input_gate.json",
+      "bytes": 23903,
+      "sha256": "54ae6efc88b4ae1ccd90e2d7f97e9f7958c8d4b44a0a15b389ab67f08b4372ca",
+      "git_blob": "bd2e5de2353a33c0a0335415aba337078ea203ef"
+    },
+    {
+      "path": "EXECUTION.md",
+      "bytes": 11156,
+      "sha256": "4e51768d60fdf71dbeddb4463299ab83e3956e026f2dd72c3e3c2a38a5acc309",
+      "git_blob": "196efd2cfbee2838a35a1ef495d0b3ce6036fb03"
+    }
+  ]
+}
