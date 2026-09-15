@@ -6,7 +6,7 @@ To: **постоянный Research Engineer в отдельной сессии 
 
 Related: Issue №15; DEC-001, DEC-002, DEC-004; RQ-001, RQ-002, RQ-003, RQ-006.
 
-Дата исходной постановки: 2026-09-14. Приём постоянным RE подтверждён 2026-09-15; численный результат не завершён из-за отсутствующего входа.
+Дата исходной постановки: 2026-09-14. Численная поставка постоянного RE получена 2026-09-15: [exact target a9d9b74b](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a9d9b74b9ac03a4eb20b209eb14552d5b914e21a/experiments/RE-CY62167-COVERAGE-THRESHOLD-01/HANDOFF.md), source delivery 7d6d16c… сохранён bundle. Предыдущий входной блокер снят. Отдельный [SR-01 d29b95f2](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d29b95f2b913055cc54cd657b8f3f3d6195a02fc/docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md) завершён с **PASS_WITH_MINOR**; [disposition Orchestrator](CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md) закрывает численный subgate в ограниченной области. Научный контракт ниже остаётся исторической постановкой; full-device coverage/WCET/start и конкретная Fixed остаются NOT_ESTABLISHED.
 
 **Действующее уточнение:** [восстановление входа 2026-09-15](RE-CY62167-COVERAGE-THRESHOLD-01-INPUT-RECOVERY.md) разрешает только повторное получение исторического transport по закреплённым исходникам после истечения Actions-архива. В этой части оно явно уточняет запрет §4; остальные условия исходного handoff 64a7a1f4 сохраняются.
 
