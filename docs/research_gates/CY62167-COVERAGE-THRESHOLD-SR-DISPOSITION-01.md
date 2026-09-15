@@ -121,7 +121,7 @@ wrapper обязательны отдельные timestamps/duration текущ
 Не установлены:
 
 - событие нарушения transfer `V`, включение
-  `E_cap,physical intersect V^c subseteq E_CW,model` на общем вероятностном
+  `E_cap,physical ∩ V^c ⊆ E_CW,model` на общем вероятностном
   пространстве и совместная upper `Pr(V) <= delta_cov_upper`;
 - parent association, полнота регистрации, split/merge/censoring, истинное
   внутреннее W, data+parity и mixed paths, абсолютная нормировка/отклик и
@@ -168,13 +168,15 @@ clean/no-pending start. Даже положительный ответ не да
 
 Подготовлен
 [RE-CY62167-EXECUTOR-TIMING-GATE-01](RE-CY62167-EXECUTOR-TIMING-GATE-01.md).
-Он должен дать один из трёх проверяемых ответов: **SUFFICIENT**, если полный
-детерминированный bound и start contract доказаны и проходят численную
-границу; **INSUFFICIENT FOR THIS CERTIFICATE**, если доказанный lower/upper
-исключает прохождение данной upper; **NOT_ESTABLISHED / BLOCKED_INPUT**, если
-нет точного backend/platform timing контракта, с перечислением минимальных
-входов, способных изменить решение. Handoff подготовлен, но исполнение
-Research Engineer этим disposition не объявляется начатым.
+Он должен раздельно классифицировать timing и start: **SUFFICIENT FOR THIS
+TIMING GATE**, если полный детерминированный bound/start доказан и проходит
+численную границу; **CANDIDATE NOT CERTIFIED BY THIS UPPER**, если доказанный
+upper выше порога без исключающего lower; **INSUFFICIENT FOR THIS EXECUTOR**
+только при доказанном необходимом lower либо невозможном обязательном
+контракте; **NOT_ESTABLISHED / BLOCKED_INPUT**, если нет точного
+backend/platform timing контракта, с перечислением минимальных входов,
+способных изменить решение. Handoff подготовлен, но исполнение Research
+Engineer этим disposition не объявляется начатым.
 
 После положительного timing gate следующий самостоятельный предмет — joint
 physical-transfer coverage upper. При отрицательном результате пересматривается
