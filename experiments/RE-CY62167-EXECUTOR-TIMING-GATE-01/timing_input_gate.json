@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "task": "RE-CY62167-EXECUTOR-TIMING-GATE-01",
+  "date_utc": "2026-09-15",
+  "stage": 0,
+  "status": "BLOCKED_INPUT",
+  "stage_1_started": false,
+  "classification": "NOT_ESTABLISHED / BLOCKED_INPUT",
+  "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+  "issue": 15,
+  "issue_must_remain_open": true,
+  "branch": "research/cy62167-executor-timing-gate-01",
+  "base_commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+  "handoff_documentary_base": "a8b04eff258401233a1aa038862c71daa4f01072",
+  "ancestry": "documentary base is ancestor of working base; working base is an ordinary two-parent merge",
+  "candidate": {
+    "identity": "Fixed full SEC-DED(39,32), previously proposed 48-bit parallel interface, legacy cf7ab706 core as source-only witness",
+    "source_ids": [
+      "S20",
+      "S21",
+      "S22"
+    ],
+    "data_bits": 32,
+    "codeword_bits": 39,
+    "proposed_bus_bits": 48,
+    "padding_bits": 9,
+    "words": 524288,
+    "physical_platform": null,
+    "physical_backend": null,
+    "physical_codeword_packing": null,
+    "qualified_operating_corner": null,
+    "note": "The former specification and historical OOC device are not an accepted physical binding."
+  },
+  "results": {
+    "timing": "NOT_ESTABLISHED",
+    "clean_start": "NOT_ESTABLISHED",
+    "no_pending_start": "NOT_ESTABLISHED",
+    "delta_upper_s": null,
+    "delta_necessary_lower_s": null,
+    "delta_le_exact_threshold": null,
+    "coverage_slack": null,
+    "device_insufficiency_proven": false
+  },
+  "frozen_numerical_input": {
+    "commit": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+    "source_ids": [
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S10"
+    ],
+    "start_utc": "2026-01-19T04:00:00Z",
+    "end_exclusive_utc": "2026-01-20T04:00:00Z",
+    "shield_mm": 10,
+    "sigma_model": "main_loglog",
+    "direction": "central_mean",
+    "scenario": "DREG",
+    "mapping": "W32_seq",
+    "words": 524288,
+    "data_bits": 32,
+    "rows": 288,
+    "block_s": 300,
+    "tau_s": "1",
+    "epsilon_analysis": "0.001",
+    "epsilon_is_project_requirement": false,
+    "a_upper": "0.0003098157772336203819978391463469440873",
+    "b_upper_s_inverse": "2528.1037181797039690725",
+    "delta_star_s": {
+      "numerator": "6901842227663796180021608536530559127",
+      "denominator": "25281037181797039690725000000000000000000000"
+    },
+    "selected_rate_sha256": "13daa667dcdf0931a477ba6994f3213b345c582b4d6b472031a9454705a60cf8",
+    "use": "Inherited threshold only, no numerical rerun; conditional on complete S17 section 8 domain; not a full 39-bit/parity certificate."
+  },
+  "evidence_facts": [
+    {
+      "id": "F1",
+      "fact": "Legacy port is 39 bits, decoder reads current mem_read_data and write data is combinational",
+      "sources": [
+        "S22"
+      ],
+      "classification": "SOURCE_CODE_NOT_EXECUTED",
+      "scope": "cf7ab706 scrub_pass_engine"
+    },
+    {
+      "id": "F2",
+      "fact": "Legacy module has no read-ready/write-ack input; S_WRITE advances and counts without backend confirmation",
+      "sources": [
+        "S22"
+      ],
+      "classification": "SOURCE_CODE_NOT_EXECUTED",
+      "scope": "Local FSM; external implicit timing contract is not supplied"
+    },
+    {
+      "id": "F3",
+      "fact": "S_WRITE is skipped for clean checks, so later word service can depend on earlier corrections",
+      "sources": [
+        "S22",
+        "S23"
+      ],
+      "classification": "INFERENCE_FROM_SOURCE",
+      "scope": "Does not establish fixed per-word phases; no new RTL simulation"
+    },
+    {
+      "id": "F4",
+      "fact": "OOC memory external; historical 100 MHz scrub report lists 41 inputs and 187 outputs without delay constraints",
+      "sources": [
+        "S26",
+        "S27"
+      ],
+      "classification": "HISTORICAL_TOOL_REPORT",
+      "scope": "xc7a200tfbg484-2, Vivado 2025.2, routed, Slow/Fast, speed file -2 PRODUCTION 1.23; not full backend WCET"
+    },
+    {
+      "id": "F5",
+      "fact": "45 ns transfer / 180 ns reserved RMW / 360 ns frame / 48-bit port are conditional specification values",
+      "sources": [
+        "S20",
+        "S21",
+        "S19",
+        "S12"
+      ],
+      "classification": "ASSUMPTION_NOT_QUALIFIED_UPPER",
+      "scope": "No target board binding; values not substituted for Delta"
+    },
+    {
+      "id": "F6",
+      "fact": "Controller reset only resets local registers; clean/no-pending start is a model premise",
+      "sources": [
+        "S22",
+        "S14",
+        "S18"
+      ],
+      "classification": "SOURCE_PLUS_INFERENCE",
+      "scope": "Neither full-memory initialization nor external transaction drain proven"
+    }
+  ],
+  "decision_changing_inputs": [
+    {
+      "id": "T1",
+      "status": "MISSING",
+      "affects": [
+        "timing"
+      ],
+      "required": "Frozen platform/backend binding: board revision, controller part and clock bounds, CY component SKUs/speed grades and voltage/temperature/load, complete 39-bit pin/address/data/parity packing and parallel/sequential transactions",
+      "why": "Defines operations, component count, corners and composition of the absolute path",
+      "acceptable_evidence": "Specific board schematic/interface specification, exact full component datasheet revisions and applicable constraints",
+      "sources_showing_gap": [
+        "S09",
+        "S20",
+        "S21",
+        "S25",
+        "S26"
+      ]
+    },
+    {
+      "id": "T2",
+      "status": "MISSING",
+      "affects": [
+        "timing"
+      ],
+      "required": "Qualified maximum read-valid/IO/CDC and bounded stall/arbitration/retry times, controlled cycle counts, write/setup/hold/turnaround compliance, observable irreversible commit of the entire word",
+      "why": "Without these no finite numerical end-to-end upper is proved; qualified complete upper must be compared with exact Delta_star",
+      "acceptable_evidence": "Bounded backend protocol and timing proof/STA for the selected corner, including all masters and failure handling; minimum or measured mean is not sufficient",
+      "sources_showing_gap": [
+        "S22",
+        "S27",
+        "S19",
+        "S12"
+      ]
+    },
+    {
+      "id": "T3",
+      "status": "MISSING",
+      "affects": [
+        "timing"
+      ],
+      "required": "Fixed per-word sampling schedule c_wk=phi_w+k*1s for all 524288 words, precheck bounds, stable full-word latch, irrevocable singleton-only correcting write, clean/no-write, commit before next check",
+      "why": "Variable check phases or hidden precheck work invalidate use of the unchanged duty formula even if a nominal transaction is fast",
+      "acceptable_evidence": "Frozen scheduler/sampling/commit contract with worst-case branch and stall treatment; no extra checks; independent target validation only after Stage 0 passes",
+      "sources_showing_gap": [
+        "S17",
+        "S18",
+        "S22",
+        "S23"
+      ]
+    },
+    {
+      "id": "S1",
+      "status": "MISSING",
+      "affects": [
+        "clean_start"
+      ],
+      "required": "Evidence that the whole modeled array is clean at the declared t0, including initialization and exposure of earlier prepared words until t0",
+      "why": "Sequential initialization does not give a simultaneous clean state; unmodeled initial errors change the accepted bound",
+      "acceptable_evidence": "Qualified preparation/start protocol and exposure premise; otherwise Orchestrator decision is needed before changing initial-state model",
+      "sources_showing_gap": [
+        "S14",
+        "S18",
+        "S20",
+        "S22"
+      ]
+    },
+    {
+      "id": "S2",
+      "status": "MISSING",
+      "affects": [
+        "no_pending_start"
+      ],
+      "required": "Backend drain/fence/start interlock proving no prior accepted or partial write remains at t0; reset and failed commit cannot report successful completion",
+      "why": "Pending pre-start windows are otherwise omitted; no-pending does not prove clean memory",
+      "acceptable_evidence": "Backend completion/reset contract and exact completed-drain condition for all storage parts and queues",
+      "sources_showing_gap": [
+        "S14",
+        "S18",
+        "S22"
+      ]
+    }
+  ],
+  "stage_1_actions": {
+    "rtl": "NOT_RUN_STAGE0_BLOCKED",
+    "synthesis": "NOT_RUN_STAGE0_BLOCKED",
+    "bound_calculation": "NOT_RUN_STAGE0_BLOCKED",
+    "independent_timing_checker": "NOT_RUN_STAGE0_BLOCKED",
+    "timing_tests": "NOT_RUN_STAGE0_BLOCKED",
+    "start_protocol_implementation": "NOT_RUN_STAGE0_BLOCKED"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/agents/00_GLOBAL_OPERATING_RULES.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/agents/00_GLOBAL_OPERATING_RULES.md",
+      "git_blob": "a0796fc3b013d93065c26ca0ea5f1354c199af2e",
+      "bytes": 8782,
+      "sha256": "3774b056531b7be12329190aa16748d4cad2feb8b4aa0aa33e8ce13b54061dce"
+    },
+    {
+      "id": "S02",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/agents/07_RESEARCH_ENGINEER_LOCAL.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/agents/07_RESEARCH_ENGINEER_LOCAL.md",
+      "git_blob": "49fb02b353e9c7b5c6632d8bc7284992169cbe42",
+      "bytes": 3855,
+      "sha256": "9ef2a926993507d4ad94e9f5adba68101efaa360550cd932daf77a353a7f9b1b"
+    },
+    {
+      "id": "S03",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/agents/HANDOFF_CONTRACTS.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/agents/HANDOFF_CONTRACTS.md",
+      "git_blob": "5aa78e45544530b2164a10ea652fb1454bf1e66a",
+      "bytes": 4579,
+      "sha256": "d39ab04ab09b3054a7421418e467ad4623cd302c7cd9659fd2920857d7d935b0"
+    },
+    {
+      "id": "S04",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "README.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/README.md",
+      "git_blob": "b388724a19f4a1067da083a2375db75b61801b90",
+      "bytes": 10597,
+      "sha256": "d869bcc7b8869d62f1c2716c2b454b0b9004e34477119266424a394b841ecd71"
+    },
+    {
+      "id": "S05",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/current_status.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/current_status.md",
+      "git_blob": "82ae7c2a13abe734e876aef17a386279cbad0230",
+      "bytes": 16685,
+      "sha256": "14519c1477518f172a4b027b37fef4937c17d5cfe929e3b43512c9e94828b313"
+    },
+    {
+      "id": "S06",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/research_spec.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/research_spec.md",
+      "git_blob": "c821cd4918d54680209e6d202cf29b4ccee25fe6",
+      "bytes": 22110,
+      "sha256": "1d12e023880a0849598383e9f97427f6e6386bdf0f29fd1570cb6d6b5051dc68"
+    },
+    {
+      "id": "S07",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/decisions/DEC-004-dissertation-architecture-A.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/decisions/DEC-004-dissertation-architecture-A.md",
+      "git_blob": "41bfd17653bc1aaee44f111fd2400d953b8754d2",
+      "bytes": 46995,
+      "sha256": "a50f9221bdaf3e4a0e72fe8a992aa670a37b0c919e544244fc3da77cc713dedb"
+    },
+    {
+      "id": "S08",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/dissertation_concept.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/dissertation_concept.md",
+      "git_blob": "e8af65c3d51eff6b30ae6c3d0ec7886625929382",
+      "bytes": 32668,
+      "sha256": "94deb6ecb83b0b685f660fe48b9be9cd32fc23e733e84bf76844cc33a1b5619e"
+    },
+    {
+      "id": "S09",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/research_gates/RE-CY62167-EXECUTOR-TIMING-GATE-01.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/research_gates/RE-CY62167-EXECUTOR-TIMING-GATE-01.md",
+      "git_blob": "e4483e7aa0888adab7033922b73755dd71fd0aca",
+      "bytes": 18773,
+      "sha256": "ea82d72fce9971e5e6cdabc9139ef73153e53cf563cc19a0fb6e8d0a96556ae8"
+    },
+    {
+      "id": "S10",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/research_gates/CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/research_gates/CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md",
+      "git_blob": "2cbc65d2b788f1778387b8acd5a4f97c3ffc96b0",
+      "bytes": 14016,
+      "sha256": "26fac94c51c9ca31cdabc3acf6113f53bd22c8948830a36dbc42cc743740e73e"
+    },
+    {
+      "id": "S11",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/research_gates/CY62167-PHYSICAL-BRIDGE-SR-03-DISPOSITION.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/research_gates/CY62167-PHYSICAL-BRIDGE-SR-03-DISPOSITION.md",
+      "git_blob": "fdcdf275f3708f3b3caecb64d66cd50532b80c19",
+      "bytes": 10575,
+      "sha256": "40dfd779248e0e54f60abb0ac876c50165bae389903137f021c462984bcb3503"
+    },
+    {
+      "id": "S12",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "be6b447e1c2ee7b70e68604fd135b379a800e62f",
+      "path": "docs/research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/be6b447e1c2ee7b70e68604fd135b379a800e62f/docs/research_gates/ENGINEERING-APPLICABILITY-SR-DISPOSITION-01.md",
+      "git_blob": "5cf5e0f5c77c8092d6d5effed0d15f6706fabe15",
+      "bytes": 10961,
+      "sha256": "dc2bb3fc6f8b614220f9f93d652bbf2d82366e105167b89e51db2cf66c5a90cf"
+    },
+    {
+      "id": "S13",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/REPORT.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a9d9b74b9ac03a4eb20b209eb14552d5b914e21a/experiments/RE-CY62167-COVERAGE-THRESHOLD-01/REPORT.md",
+      "git_blob": "733a729e6502cfa5bc973445650a930330874702",
+      "bytes": 22038,
+      "sha256": "ee0494ce1f6cc11873102a036417399a36aebb41076f36dc82a23c27a782e47f"
+    },
+    {
+      "id": "S14",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/calculation_config.json",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a9d9b74b9ac03a4eb20b209eb14552d5b914e21a/experiments/RE-CY62167-COVERAGE-THRESHOLD-01/calculation_config.json",
+      "git_blob": "fe1a1510cb8e083bd7aefcf91b1e475f1965bbad",
+      "bytes": 1296,
+      "sha256": "d2a28c0afffd3008a1e5ade113bcc31d406b6c79ae0b9ff6fb5641426578cd12"
+    },
+    {
+      "id": "S15",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/recovery/outputs/cw_bounds.json",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a9d9b74b9ac03a4eb20b209eb14552d5b914e21a/experiments/RE-CY62167-COVERAGE-THRESHOLD-01/recovery/outputs/cw_bounds.json",
+      "git_blob": "89d6a7042877f1377c91e02a64f0fd5aaf7419bd",
+      "bytes": 6358,
+      "sha256": "5540b57dc19856d44a625b816c410e5fb7bb319ae0b927a61b8f45a94bc76277"
+    },
+    {
+      "id": "S16",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a9d9b74b9ac03a4eb20b209eb14552d5b914e21a/experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv",
+      "git_blob": "f44648d3bdbe7b44f2a03cded74d768d3cebbac4",
+      "bytes": 44436,
+      "sha256": "13daa667dcdf0931a477ba6994f3213b345c582b4d6b472031a9454705a60cf8"
+    },
+    {
+      "id": "S17",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+      "path": "docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d29b95f2b913055cc54cd657b8f3f3d6195a02fc/docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md",
+      "git_blob": "80a97c0703072dbc1f543f3438830553d4f244d0",
+      "bytes": 36264,
+      "sha256": "a6ae08e10e25b436886ef91278bd19e782444b864096f7767043ee85bb3210df"
+    },
+    {
+      "id": "S18",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+      "path": "docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_03.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/52bb60e516a85f5a0ba10a8b3935285a9c6c25d2/docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_03.md",
+      "git_blob": "fa64b0869ce61cef67f54d8c3ac13b0682b8f26a",
+      "bytes": 20259,
+      "sha256": "d1e2c5db671a074e22f11a1297aa90e4c11fa3505faffd0b4ac6d5724e84081e"
+    },
+    {
+      "id": "S19",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "616b198b8fcef903410e573c477b04740b1e89b2",
+      "path": "docs/scientific_reviews/ENGINEERING_APPLICABILITY_REVIEW_01.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/616b198b8fcef903410e573c477b04740b1e89b2/docs/scientific_reviews/ENGINEERING_APPLICABILITY_REVIEW_01.md",
+      "git_blob": "bd735ab2a9755d14b31aeef300c64ffa5aca76a5",
+      "bytes": 41803,
+      "sha256": "96def9bf8aaa7623f11e544a3560d52a6b28a30cb30d7019d3995c10bcda6a10"
+    },
+    {
+      "id": "S20",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0",
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/REPORT.md",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0/experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/REPORT.md",
+      "git_blob": "47a7bcc902c648a5c71c1bbd41667ec51f843ae8",
+      "bytes": 17747,
+      "sha256": "d6e3bb98df1b85b6ae3b340173b0cdabdbab3b43d2b6e5c25bc438f0faa99f69"
+    },
+    {
+      "id": "S21",
+      "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+      "commit": "76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0",
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/config.json",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0/experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/config.json",
+      "git_blob": "4f20dc9295b8bb5d44f908632c07f16ad4709927",
+      "bytes": 1525,
+      "sha256": "c8442d07bc9c3d13217315458e11aa0ae32b885ce552399956b5b8d6b6ee3813"
+    },
+    {
+      "id": "S22",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "rtl/scrubber/scrub_pass_engine.sv",
+      "url": "https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/blob/cf7ab706224f7872fdafcf34febda70e3f6c8dd1/rtl/scrubber/scrub_pass_engine.sv",
+      "git_blob": "2fc4892e987785591875a91878b53335df71c872",
+      "bytes": 4939,
+      "sha256": "e9b6677441fbf57ee29a1f7fa1f28b2ebefba76bb207680ee2b7dc9c13fa7a67"
+    },
+    {
+      "id": "S23",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "rtl/scrubber/period_scheduler.sv",
+      "url": "https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/blob/cf7ab706224f7872fdafcf34febda70e3f6c8dd1/rtl/scrubber/period_scheduler.sv",
+      "git_blob": "cae503f392efec1e0be8cd7b4e9da3301adb55ef",
+      "bytes": 8736,
+      "sha256": "4e8be0cd2c9bad211208e490ca750382bce2d866e62799427e2d4acb09c207bf"
+    },
+    {
+      "id": "S24",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "docs/model_rtl_contract.md",
+      "url": "https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/blob/cf7ab706224f7872fdafcf34febda70e3f6c8dd1/docs/model_rtl_contract.md",
+      "git_blob": "a4fd3e03da3f311c52946ff3a312ae7b419c8f06",
+      "bytes": 711,
+      "sha256": "3fe21e3a895a6b5e871e61120fbf2efd828f8eefe90a9655690e248807e8f479"
+    },
+    {
+      "id": "S25",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "configs/ch4_hardware_timing.json",
+      "url": "https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/blob/cf7ab706224f7872fdafcf34febda70e3f6c8dd1/configs/ch4_hardware_timing.json",
+      "git_blob": "6870553181f3db08ed250956f05fc6d8440eb258",
+      "bytes": 1149,
+      "sha256": "50906e1e4a1c590d626c68638e5dbb029dd1b44cb1f83e8308815b66cb0c907f"
+    },
+    {
+      "id": "S26",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "results/vivado_ooc/vivado_ooc_report.md",
+      "url": "https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/blob/cf7ab706224f7872fdafcf34febda70e3f6c8dd1/results/vivado_ooc/vivado_ooc_report.md",
+      "git_blob": "ac5d5d2a35469f8c232a0c883c2ea94f8ebf2870",
+      "bytes": 3758,
+      "sha256": "6f9907b8861c1f6119808965470214546ab4a248d0bad5402fababfed98170e2"
+    },
+    {
+      "id": "S27",
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "results/vivado_ooc/runs/scrub_pass_engine_100p000MHz/timing_scrub_pass_engine.rpt",
+      "url": "https://github.com/z3tm4n-x/chapter4-risk-limited-scrubber/blob/cf7ab706224f7872fdafcf34febda70e3f6c8dd1/results/vivado_ooc/runs/scrub_pass_engine_100p000MHz/timing_scrub_pass_engine.rpt",
+      "git_blob": "375401d3d05783bf36e12b4298f7da9fb1e58ab2",
+      "bytes": 16620,
+      "sha256": "b7b9e73c17ff3fcd041d76a522e38277e96a4c6e606408ea44c99cf1e1571e10"
+    }
+  ],
+  "limits": [
+    "Source inspection is not hardware execution or a new Scientific Review.",
+    "No claim of universal absence of other external evidence.",
+    "Historical engineering unconditional-write coupling is not silently substituted for current SR-03 singleton-only semantics.",
+    "Joint coverage, physical W, parity radiation transfer, device certification and changes to DEC-004/RES are outside this Stage 0.",
+    "Platform choices and exposure-free start are not assumed to close missing inputs."
+  ]
+}
