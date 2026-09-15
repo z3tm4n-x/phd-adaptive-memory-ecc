@@ -4,6 +4,27 @@ This file supplements the standard handoff format in `00_GLOBAL_OPERATING_RULES.
 
 Do not duplicate these contracts across role cards. Role-specific instructions may add task-specific requirements, but conflicting local copies must not be created.
 
+## ORCHESTRATOR → research roles — scientific purpose of the next task
+
+For each new research handoff, state briefly:
+
+- **Dissertation contribution:** which major proposition or scientific assertion
+  will become stronger or be completed; distinguish a supporting feasibility
+  check from a new fundamental result.
+- **Decision and practical purpose:** what concrete choice the output enables,
+  why it matters for the target application, and which input gap currently prevents it.
+- **Expected evidence:** the verifiable derivation, data requirement, bound,
+  comparison or implementation evidence that changes that choice.
+- **Completion and next disposition:** what ends the task for a positive,
+  negative or unresolved result, including the decision about stopping, changing
+  the approach or requesting a specific missing input.
+
+Use the [working dissertation concept](../dissertation_concept.md) and DEC-004
+for this connection. Integrate these fields into the existing handoff; do not
+create a separate artefact merely to repeat them. A local repair can be necessary,
+but its role in the larger result must be explicit. These requirements do not
+silently amend already accepted in-flight tasks or authorize their execution.
+
 ## LS → PA — Literature Scout to Paper Analyst
 
 Required minimum:
