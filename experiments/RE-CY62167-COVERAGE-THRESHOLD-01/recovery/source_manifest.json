@@ -1,0 +1,94 @@
+[
+  {
+    "commit": "7971484c4d054f521cc0086e2df6d4d0f63ed7b7",
+    "source_path": "docs/research_gates/RE-CY62167-COVERAGE-THRESHOLD-01-INPUT-RECOVERY.md",
+    "package_path": "recovery/ORCHESTRATOR_INPUT_RECOVERY.md",
+    "git_blob": "eb61e4eae2557f1ed62658a618c3edc137e3fb0e",
+    "sha256": "18db4e23c92dacf4fdf2a1750085879b5ab37386cd1b76a8afcdea3c1253ce20",
+    "bytes": 14243
+  },
+  {
+    "commit": "96e6d724e8c8d79c63c91a00b753e6d4b1796c92",
+    "source_path": "experiments/RE-GOES19-PROTON-RATE-01/radar_converged.py",
+    "package_path": "recovery/historical/radar_converged.py",
+    "git_blob": "3302ab0648988a42f6a1892f52f844f20aee22b9",
+    "sha256": "3ff8ddfb485c21a6ececfae1644bba632b8ac9bf2e1ce3a7711ef1e40e2426f6",
+    "bytes": 5885
+  },
+  {
+    "commit": "96e6d724e8c8d79c63c91a00b753e6d4b1796c92",
+    "source_path": "experiments/RE-GOES19-PROTON-RATE-01/radar_adapter.py",
+    "package_path": "recovery/historical/radar_adapter.py",
+    "git_blob": "8e706e5f2475542f1a6b7fd31e96df9752aa1f42",
+    "sha256": "71c440c4f9fb12f98607e8fc082b5efaae894963b13490602138bbc775d6dbfb",
+    "bytes": 13713
+  },
+  {
+    "commit": "96e6d724e8c8d79c63c91a00b753e6d4b1796c92",
+    "source_path": "experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py",
+    "package_path": "recovery/historical/sigma_model.py",
+    "git_blob": "7988bea35dbcb106d4b178deb7dab2c7df03862a",
+    "sha256": "3c4885925dcaf068a508b669f2b30d38ccee4673240e9847288b0461c53baf69",
+    "bytes": 3597
+  },
+  {
+    "commit": "96e6d724e8c8d79c63c91a00b753e6d4b1796c92",
+    "source_path": "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv",
+    "package_path": "recovery/historical/sigma_bit_experimental.csv",
+    "git_blob": "624c3e50526a6c9dbf5d534e6d600c56802df036",
+    "sha256": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+    "bytes": 4054
+  },
+  {
+    "commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+    "source_path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/upstream_interface.py.zlib.b85",
+    "package_path": "recovery/historical/upstream_interface.py.zlib.b85",
+    "git_blob": "103a80d25709d09d7da9add19152c6144587411b",
+    "sha256": "66c65f0251440c82cb35b86d7f52f162fd57318a44b54067718c12b3cecc8231",
+    "bytes": 4917
+  },
+  {
+    "derived_from": "recovery/historical/upstream_interface.py.zlib.b85",
+    "package_path": "recovery/historical/upstream_interface.py",
+    "sha256": "1d0dc91fb032e584db6b2047ca7f063570b412124eb5903d71d2ad260c3159df",
+    "bytes": 9326
+  },
+  {
+    "commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+    "source_path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/risk_bridge.py.zlib.b85",
+    "package_path": "recovery/historical/risk_bridge.py.zlib.b85",
+    "git_blob": "959c210696bb7f5c112659129c3298d3bbecefbf",
+    "sha256": "7825e9e9a3ab249143df9742ccb4a82908bd25cde1be7e3bbdbe5e77a6c43d3c",
+    "bytes": 16837
+  },
+  {
+    "derived_from": "recovery/historical/risk_bridge.py.zlib.b85",
+    "package_path": "recovery/historical/risk_bridge.py",
+    "sha256": "7c71ccf8c4d4c1aea3b99d239e430de5bffdfefa36954e97e049f3d166d6418e",
+    "bytes": 36598
+  },
+  {
+    "commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+    "source_path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/registered_direct_by_energy.csv",
+    "package_path": "recovery/historical/registered_direct_by_energy.csv",
+    "git_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
+    "sha256": "74e0fac4bb0847625b50bdf1aef7cd2215a881f471529953dbc72e8eeddc1ff2",
+    "bytes": 1473
+  },
+  {
+    "commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+    "source_path": "experiments/RE-GOES19-PROTON-RATE-01/goes19_adapter.py",
+    "package_path": "recovery/historical/goes19_adapter.py",
+    "git_blob": "56b9eedde28026f3d78e073060674bc76c10c19c",
+    "sha256": "042eedfb3cee28e567c433850fbbc832c7c1704b953ab4b7d709d049398f0abb",
+    "bytes": 13569
+  },
+  {
+    "commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+    "source_path": "experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py",
+    "package_path": "recovery/historical/rate_pipeline.py",
+    "git_blob": "a871819455ce8517e1da2469512bd01e6c923246",
+    "sha256": "d3a1a577922a02d1d498146f2c6a6fa3888478b36a823d8d0a89f921d4ad1b52",
+    "bytes": 29105
+  }
+]

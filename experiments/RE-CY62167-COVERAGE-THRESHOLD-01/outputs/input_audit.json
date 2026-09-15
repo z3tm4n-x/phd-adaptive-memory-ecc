@@ -1,0 +1,282 @@
+{
+  "I1": null,
+  "I2": null,
+  "a_upper": null,
+  "audit_code_commit": "fa3a55063ac73712de27791221992314dbd72a75",
+  "audit_scope": "input identities, literal coefficient audit, protective stops only",
+  "b_upper": null,
+  "base_commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+  "delta_zero_coverage_limit_s": null,
+  "device_policy_status": "NOT_ESTABLISHED",
+  "energy_coefficients": [
+    {
+      "energy_mev": "0.9",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "7507/7455",
+      "mreg_exact_counts": "7507/7455",
+      "registered_accumulation_bits": 7507,
+      "registered_clusters": 7455,
+      "upstream_bits": 7507,
+      "upstream_clusters": 7455,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "1.0",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "471/469",
+      "mreg_exact_counts": "471/469",
+      "registered_accumulation_bits": 4710,
+      "registered_clusters": 4690,
+      "upstream_bits": 4710,
+      "upstream_clusters": 4690,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "1.1",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "7045/7006",
+      "mreg_exact_counts": "7045/7006",
+      "registered_accumulation_bits": 14090,
+      "registered_clusters": 14012,
+      "upstream_bits": 14090,
+      "upstream_clusters": 14012,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "1.5",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "1612/1607",
+      "mreg_exact_counts": "1612/1607",
+      "registered_accumulation_bits": 3224,
+      "registered_clusters": 3214,
+      "upstream_bits": 3224,
+      "upstream_clusters": 3214,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "2.5",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "14504/14391",
+      "mreg_exact_counts": "14504/14391",
+      "registered_accumulation_bits": 29008,
+      "registered_clusters": 28782,
+      "upstream_bits": 29008,
+      "upstream_clusters": 28782,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "3.0",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "25040/24703",
+      "mreg_exact_counts": "25040/24703",
+      "registered_accumulation_bits": 25040,
+      "registered_clusters": 24703,
+      "upstream_bits": 25040,
+      "upstream_clusters": 24703,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "4.0",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "2203/2168",
+      "mreg_exact_counts": "2203/2168",
+      "registered_accumulation_bits": 4406,
+      "registered_clusters": 4336,
+      "upstream_bits": 4406,
+      "upstream_clusters": 4336,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "5.0",
+      "exact_counts_equal": true,
+      "frozen_float_coefficients_equal": true,
+      "kbar_exact_counts": "2053/1994",
+      "mreg_exact_counts": "2053/1994",
+      "registered_accumulation_bits": 2053,
+      "registered_clusters": 1994,
+      "upstream_bits": 2053,
+      "upstream_clusters": 1994,
+      "weight_exact_counts": "1"
+    },
+    {
+      "energy_mev": "29.0",
+      "exact_counts_equal": false,
+      "frozen_float_coefficients_equal": false,
+      "kbar_exact_counts": "1183/1165",
+      "mreg_exact_counts": "197/194",
+      "registered_accumulation_bits": 1182,
+      "registered_clusters": 1164,
+      "upstream_bits": 1183,
+      "upstream_clusters": 1165,
+      "weight_exact_counts": "229505/229502"
+    },
+    {
+      "energy_mev": "40.0",
+      "exact_counts_equal": false,
+      "frozen_float_coefficients_equal": false,
+      "kbar_exact_counts": "8201/6221",
+      "mreg_exact_counts": "5466/4147",
+      "registered_accumulation_bits": 16398,
+      "registered_clusters": 12441,
+      "upstream_bits": 16402,
+      "upstream_clusters": 12442,
+      "weight_exact_counts": "34003986/34009547"
+    },
+    {
+      "energy_mev": "80.0",
+      "exact_counts_equal": false,
+      "frozen_float_coefficients_equal": false,
+      "kbar_exact_counts": "3065/2178",
+      "mreg_exact_counts": "15320/10889",
+      "registered_accumulation_bits": 15320,
+      "registered_clusters": 10889,
+      "upstream_bits": 15325,
+      "upstream_clusters": 10890,
+      "weight_exact_counts": "6673392/6674957"
+    },
+    {
+      "energy_mev": "124.0",
+      "exact_counts_equal": false,
+      "frozen_float_coefficients_equal": false,
+      "kbar_exact_counts": "3408/2351",
+      "mreg_exact_counts": "13631/9403",
+      "registered_accumulation_bits": 13631,
+      "registered_clusters": 9403,
+      "upstream_bits": 13632,
+      "upstream_clusters": 9404,
+      "weight_exact_counts": "32046481/32045424"
+    },
+    {
+      "energy_mev": "164.0",
+      "exact_counts_equal": false,
+      "frozen_float_coefficients_equal": false,
+      "kbar_exact_counts": "6679/4334",
+      "mreg_exact_counts": "4451/2889",
+      "registered_accumulation_bits": 13353,
+      "registered_clusters": 8667,
+      "upstream_bits": 13358,
+      "upstream_clusters": 8668,
+      "weight_exact_counts": "19290634/19295631"
+    },
+    {
+      "energy_mev": "186.0",
+      "exact_counts_equal": false,
+      "frozen_float_coefficients_equal": false,
+      "kbar_exact_counts": "3243/2089",
+      "mreg_exact_counts": "12969/8356",
+      "registered_accumulation_bits": 12969,
+      "registered_clusters": 8356,
+      "upstream_bits": 12972,
+      "upstream_clusters": 8356,
+      "weight_exact_counts": "4323/4324"
+    }
+  ],
+  "entry_point_stops": {
+    "compute_bounds.py": {
+      "returncode": 1,
+      "stderr": "DISABLED_UNQUALIFIED_DREG: see PREEXECUTION_AMENDMENT.md; no numerical certificate released"
+    },
+    "extract_selected_rate.py": {
+      "returncode": 1,
+      "stderr": "DISABLED_UNQUALIFIED_DREG: see PREEXECUTION_AMENDMENT.md; upstream substitution withdrawn"
+    },
+    "independent_check.py": {
+      "returncode": 1,
+      "stderr": "DISABLED_UNQUALIFIED_DREG: see PREEXECUTION_AMENDMENT.md; independent integrals NOT_RUN"
+    }
+  },
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "frozen_transport_sha256_required": "af35f22ed333150e5ac46df951989811efdef31ee8e9c517f121e5f0853c9cb6",
+  "goes_archive": {
+    "bytes": 5969999,
+    "selected_days": [
+      {
+        "name": "goes010226/sci_sgps-l2-avg5m_g19_d20260119_v3-0-3.nc",
+        "sha256": "ac282f4e96f903f0c0ffa6f11a25f6b8463af0d13f68e69246301b0f7332fcce",
+        "timestamp_attribute_text_found": true
+      },
+      {
+        "name": "goes010226/sci_sgps-l2-avg5m_g19_d20260120_v3-0-3.nc",
+        "sha256": "56c88dbd07005617e69571d6e26c00217d799eeb7396768dab88257423470d3a",
+        "timestamp_attribute_text_found": true
+      }
+    ],
+    "sha256": "7b5e2f62e8a3b235ae1956505742253bb7d7633dfaa4be6e0350e37e5d8ab581"
+  },
+  "historical_direct_stub": {
+    "bytes": 512,
+    "git_blob": "3e845b9da6ea6669b5538629e3fcb18dad69737c",
+    "sha256": "206d882f2929297b6b5ab122b7761c54fdaccf3c8741168ae2b13c88ece05ab3"
+  },
+  "historical_full_rate_sha256_required": "c10a68e721716c8c9b96bf99a9e2d1de0bd3b179ebcc747b3fd149ff0741ff83",
+  "independent_integrals": "NOT_RUN",
+  "numerical_execution": "NOT_RUN",
+  "selected_integrated_equality": "NOT_ESTABLISHED",
+  "signed_slack": null,
+  "source_inputs": {
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/full_output_manifest.json": {
+      "bytes": 644,
+      "git_blob": "ba08014e869fd82fe9b7a89017038c7d053d3824",
+      "sha256": "6a3d6b20a256e7629e7102833cf2f8f02992442f4c076218a31e964373bef414"
+    },
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/input_manifest.json": {
+      "bytes": 1199,
+      "git_blob": "464c0667b946b6a88e54d8db7b9eedc245345d75",
+      "sha256": "76ebc4899128e8b560a4884a5eacecb79c368580b8a623fb7642a93d3133c9b5"
+    },
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/model_contract.json": {
+      "bytes": 2248,
+      "git_blob": "cefda54f684268facd1e969cac2e9f23c451549e",
+      "sha256": "95b50ddae6d73c90d29441f027537605f4e7a31d390630bc6b456703ced0d8e3"
+    },
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/registered_direct_by_energy.csv": {
+      "bytes": 1473,
+      "git_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
+      "sha256": "74e0fac4bb0847625b50bdf1aef7cd2215a881f471529953dbc72e8eeddc1ff2"
+    },
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/risk_bridge.py.zlib.b85": {
+      "bytes": 16837,
+      "git_blob": "959c210696bb7f5c112659129c3298d3bbecefbf",
+      "sha256": "7825e9e9a3ab249143df9742ccb4a82908bd25cde1be7e3bbdbe5e77a6c43d3c"
+    },
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/upstream_interface.py.zlib.b85": {
+      "bytes": 4917,
+      "git_blob": "103a80d25709d09d7da9add19152c6144587411b",
+      "sha256": "66c65f0251440c82cb35b86d7f52f162fd57318a44b54067718c12b3cecc8231"
+    },
+    "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv": {
+      "bytes": 13002858,
+      "git_blob": "5de108c6759bcf720073b3fbc6581389d46e63aa",
+      "sha256": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d"
+    }
+  },
+  "task": "RE-CY62167-COVERAGE-THRESHOLD-01",
+  "temporal_contract": {
+    "bin_s": 300,
+    "end_exclusive_utc": "2026-01-20T04:00:00+00:00",
+    "expected_bins": 288,
+    "selected_rate_completeness_checked": false,
+    "start_utc": "2026-01-19T04:00:00+00:00",
+    "time_arrays_checked": false,
+    "timestamp_semantics": "start of averaging period"
+  },
+  "unequal_energy_nodes": [
+    "29.0",
+    "40.0",
+    "80.0",
+    "124.0",
+    "164.0",
+    "186.0"
+  ],
+  "upstream_identity": "NOT_IDENTICAL_AS_ENERGY_TRANSFORMATION"
+}

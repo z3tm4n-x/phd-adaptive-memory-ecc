@@ -14,6 +14,7 @@ def sha256(p:Path):
 def dt(s): return datetime.fromisoformat(s)
 
 def main():
+    raise SystemExit('DISABLED_UNQUALIFIED_DREG: see PREEXECUTION_AMENDMENT.md; upstream substitution withdrawn')
     ap=argparse.ArgumentParser(); ap.add_argument('--config',required=True); ap.add_argument('--upstream',required=True); ap.add_argument('--out',required=True); ap.add_argument('--manifest',required=True); a=ap.parse_args()
     cfg=json.loads(Path(a.config).read_text()); u=Path(a.upstream); exp=cfg['upstream_rate']
     got=sha256(u)

@@ -11,6 +11,7 @@ def F(s): return Fraction(Decimal(s))
 def dec(q,prec=70):
     getcontext().prec=prec; return Decimal(q.numerator)/Decimal(q.denominator)
 def main():
+    raise SystemExit('DISABLED_UNQUALIFIED_DREG: see PREEXECUTION_AMENDMENT.md; independent integrals NOT_RUN')
     ap=argparse.ArgumentParser();ap.add_argument('--config',required=True);ap.add_argument('--rate',required=True);ap.add_argument('--primary',required=True);ap.add_argument('--out',required=True);a=ap.parse_args()
     cfg=json.loads(Path(a.config).read_text()); rows=list(csv.DictReader(Path(a.rate).open(newline='',encoding='utf-8'))); p=json.loads(Path(a.primary).read_text())
     if len(rows)!=288: raise SystemExit('expected 288 bins')

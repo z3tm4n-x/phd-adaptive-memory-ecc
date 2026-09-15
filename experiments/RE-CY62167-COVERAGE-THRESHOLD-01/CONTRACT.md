@@ -1,5 +1,11 @@
 # RE-CY62167-COVERAGE-THRESHOLD-01 — pre-execution contract
 
+> Disposition 2026-09-15: the input-equivalence assertion below is withdrawn.
+> See `PREEXECUTION_AMENDMENT.md` and `REPORT.md`. This historical text and its
+> original commit c8ee76bf84018ea081c4845005f232de5607ecb1 remain provenance,
+> not an active authorization to substitute the upstream rate. Numerical entry
+> points are disabled pending a qualified DREG input and a new code lock.
+
 This file freezes the numerical question before `I1`, `I2`, `a`, `b`, any slack, or any coverage threshold is inspected.
 
 ## Fixed slice

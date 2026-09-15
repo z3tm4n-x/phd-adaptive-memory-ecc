@@ -1,5 +1,7 @@
 {
   "task": "RE-CY62167-COVERAGE-THRESHOLD-01",
+  "input_qualification_status": "BLOCKED_MISSING_DREG_OR_FROZEN_TRANSPORT",
+  "active_contract": "PREEXECUTION_AMENDMENT.md",
   "assignment_commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
   "scientific_base": "408134431d46e8efeae6ebb3223fee91b550c0cf",
   "closed_repair_delivery": "d3cd3e9385f62f047954ce3e54454eb5976ddcb8",
@@ -34,11 +36,11 @@
   },
   "dreg_identity": {
     "registered_direct_table_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
-    "rule": "all measured-energy N_direct_W32seq=0 and accumulation_bits_W32seq=N_registered_bitflips; therefore declared DREG accumulation retains the whole upstream data-bit upset rate",
-    "nu_column_identity": "nu_C_bit_DREG_s-1 == d10_lambda_central_s-1",
-    "per_bit_normalization": "r(t)=d10_lambda_central_s-1/2^24"
+    "rule": "DREG build_rates weights each output-energy density and high bucket by mreg/kbar. Registered counts differ from MULT_POINTS on part of the support; zero preg does not establish mreg/kbar == 1.",
+    "nu_column_identity": "WITHDRAWN: equality to d10_lambda_central_s-1 is not established",
+    "per_bit_normalization": "r(t)=nu_C_bit_DREG_s-1/2^24"
   },
   "reporting_delta_s": ["0", "4.5e-8", "1e-6", "1e-5", "1e-4", "1e-3", "1e-2", "0.1", "0.5", "0.999999"],
-  "historical_ideal_union_upper_qa": "0.000309811945168",
+  "historical_ideal_union_upper_qa": null,
   "arithmetic_precision_decimal_digits": 80
 }

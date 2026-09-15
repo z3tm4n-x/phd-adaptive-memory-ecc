@@ -7,6 +7,7 @@ from pathlib import Path
 
 def D(x): return Decimal(str(x))
 def main():
+    raise SystemExit('DISABLED_UNQUALIFIED_DREG: see PREEXECUTION_AMENDMENT.md; no numerical certificate released')
     ap=argparse.ArgumentParser();ap.add_argument('--config',required=True);ap.add_argument('--rate',required=True);ap.add_argument('--out',required=True);a=ap.parse_args()
     cfg=json.loads(Path(a.config).read_text()); prec=cfg['arithmetic_precision_decimal_digits']
     with localcontext() as c:
