@@ -1,0 +1,77 @@
+{
+  "tool": "Icarus Verilog 13.0 stable, MSYS2 1~13.0-2",
+  "vectors": 3955,
+  "vector_sha256": "e51c32925bca9d1dc44228552af40ac341c95cb69dbd62e74084619562916f45",
+  "wall_s": 4.722185500000251,
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\iverilog\\ucrt64\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "reference_tb",
+        "-o",
+        "../../../../tmp/iverilog/reference.vvp",
+        "reference_slot.sv",
+        "reference_tb.sv"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "reference_slot.sv:22: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'b[47:0]').\nreference_slot.sv:62: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'code[38:0]').\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\iverilog\\ucrt64\\bin\\vvp.exe",
+        "../../../../tmp/iverilog/reference.vvp",
+        "+vectors=../../../../tmp/iverilog/vectors.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS reference_slot vectors=3955\nreference_tb.sv:64: $finish called at 1027828500 (1ps)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\iverilog\\ucrt64\\bin\\iverilog.exe",
+        "-g2012",
+        "-s",
+        "schedule_tb",
+        "-o",
+        "../../../../tmp/iverilog/schedule.vvp",
+        "reference_slot.sv",
+        "reference_schedule.sv",
+        "schedule_tb.sv"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "reference_slot.sv:22: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'b[47:0]').\nreference_slot.sv:62: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'code[38:0]').\nreference_schedule.sv:27: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'prep_issued[19:0]').\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\iverilog\\ucrt64\\bin\\vvp.exe",
+        "../../../../tmp/iverilog/schedule.vvp"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS schedule prep_prefix=5 scrub_slots=1024 reads=3069 boundary_injection=explicit\nschedule_tb.sv:76: $finish called at 1952545000 (1ps)\n",
+      "stderr": ""
+    }
+  ],
+  "sentinels": [
+    {
+      "mutation": "direct_bus_to_codeword",
+      "source_sha256": "a47505730a55b05336d04b5d4cc804d1888588bb2516cb64611c2f43e9bc05e5",
+      "compile_exit": 0,
+      "simulation_exit": 1,
+      "stdout": "FATAL: reference_tb.sv:53: fence ack 791\n       Time: 205828500  Scope: reference_tb\n",
+      "rejected": true
+    },
+    {
+      "mutation": "omit_ERR_only",
+      "source_sha256": "49fc9936e42db91d220dae6e3886cf5bd183fe7eba55e495c9070e53a2df41f0",
+      "compile_exit": 0,
+      "simulation_exit": 1,
+      "stdout": "FATAL: reference_tb.sv:49: write image case 1 tick 12 got zzzzzzzzzzzz expected 000000000000\n       Time: 403500  Scope: reference_tb\n",
+      "rejected": true
+    }
+  ],
+  "scope": "actual slot RTL and integrated bounded scheduler simulation; epoch-state injection explicitly skips full prep; ideal digital SRAM stub, not analog/STA"
+}

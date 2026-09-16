@@ -1,0 +1,1167 @@
+{
+  "package_member_sha256": "46869500440c4c51b29547f43b410fcf9dbfb265f6aa2dc300d7c5941cc925e3",
+  "signals": [
+    {
+      "port": "dq[0]",
+      "net": "FMC1_HPC_LA00_CC_P",
+      "j30": "G6",
+      "ball": "D18",
+      "ug952_page": 61,
+      "function": "IO_L12P_T1_MRCC_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.29"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[1]",
+      "net": "FMC1_HPC_LA00_CC_N",
+      "j30": "G7",
+      "ball": "C18",
+      "ug952_page": 61,
+      "function": "IO_L12N_T1_MRCC_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.31"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[2]",
+      "net": "FMC1_HPC_LA01_CC_P",
+      "j30": "D8",
+      "ball": "E17",
+      "ug952_page": 59,
+      "function": "IO_L11P_T1_SRCC_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.33"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[3]",
+      "net": "FMC1_HPC_LA01_CC_N",
+      "j30": "D9",
+      "ball": "E18",
+      "ug952_page": 59,
+      "function": "IO_L11N_T1_SRCC_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.35"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[4]",
+      "net": "FMC1_HPC_LA02_P",
+      "j30": "H7",
+      "ball": "H14",
+      "ug952_page": 61,
+      "function": "IO_L1P_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.38"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[5]",
+      "net": "FMC1_HPC_LA02_N",
+      "j30": "H8",
+      "ball": "H15",
+      "ug952_page": 61,
+      "function": "IO_L1N_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.40"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[6]",
+      "net": "FMC1_HPC_LA03_P",
+      "j30": "G9",
+      "ball": "G17",
+      "ug952_page": 61,
+      "function": "IO_L2P_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.42"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[7]",
+      "net": "FMC1_HPC_LA03_N",
+      "j30": "G10",
+      "ball": "F17",
+      "ug952_page": 61,
+      "function": "IO_L2N_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.44"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[8]",
+      "net": "FMC1_HPC_LA04_P",
+      "j30": "H10",
+      "ball": "F18",
+      "ug952_page": 61,
+      "function": "IO_L3P_T0_DQS_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.30"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[9]",
+      "net": "FMC1_HPC_LA04_N",
+      "j30": "H11",
+      "ball": "F19",
+      "ug952_page": 61,
+      "function": "IO_L3N_T0_DQS_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.32"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[10]",
+      "net": "FMC1_HPC_LA05_P",
+      "j30": "D11",
+      "ball": "G15",
+      "ug952_page": 59,
+      "function": "IO_L4P_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.34"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[11]",
+      "net": "FMC1_HPC_LA05_N",
+      "j30": "D12",
+      "ball": "F15",
+      "ug952_page": 59,
+      "function": "IO_L4N_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.36"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[12]",
+      "net": "FMC1_HPC_LA06_P",
+      "j30": "C10",
+      "ball": "G19",
+      "ug952_page": 59,
+      "function": "IO_L5P_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.39"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[13]",
+      "net": "FMC1_HPC_LA06_N",
+      "j30": "C11",
+      "ball": "F20",
+      "ug952_page": 59,
+      "function": "IO_L5N_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.41"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[14]",
+      "net": "FMC1_HPC_LA07_P",
+      "j30": "H13",
+      "ball": "H16",
+      "ug952_page": 61,
+      "function": "IO_L6P_T0_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.43"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[15]",
+      "net": "FMC1_HPC_LA07_N",
+      "j30": "H14",
+      "ball": "G16",
+      "ug952_page": 61,
+      "function": "IO_L6N_T0_VREF_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.45"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[16]",
+      "net": "FMC1_HPC_LA08_P",
+      "j30": "G12",
+      "ball": "C17",
+      "ug952_page": 61,
+      "function": "IO_L7P_T1_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.29"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[17]",
+      "net": "FMC1_HPC_LA08_N",
+      "j30": "G13",
+      "ball": "B17",
+      "ug952_page": 61,
+      "function": "IO_L7N_T1_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.31"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[18]",
+      "net": "FMC1_HPC_LA09_P",
+      "j30": "D14",
+      "ball": "E16",
+      "ug952_page": 59,
+      "function": "IO_L8P_T1_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.33"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[19]",
+      "net": "FMC1_HPC_LA09_N",
+      "j30": "D15",
+      "ball": "D16",
+      "ug952_page": 59,
+      "function": "IO_L8N_T1_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.35"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[20]",
+      "net": "FMC1_HPC_LA10_P",
+      "j30": "C14",
+      "ball": "A17",
+      "ug952_page": 59,
+      "function": "IO_L9P_T1_DQS_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.38"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[21]",
+      "net": "FMC1_HPC_LA10_N",
+      "j30": "C15",
+      "ball": "A18",
+      "ug952_page": 59,
+      "function": "IO_L9N_T1_DQS_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.40"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[22]",
+      "net": "FMC1_HPC_LA11_P",
+      "j30": "H16",
+      "ball": "B19",
+      "ug952_page": 61,
+      "function": "IO_L10P_T1_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.42"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[23]",
+      "net": "FMC1_HPC_LA11_N",
+      "j30": "H17",
+      "ball": "A19",
+      "ug952_page": 61,
+      "function": "IO_L10N_T1_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.44"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[24]",
+      "net": "FMC1_HPC_LA12_P",
+      "j30": "G15",
+      "ball": "E20",
+      "ug952_page": 61,
+      "function": "IO_L14P_T2_SRCC_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.30"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[25]",
+      "net": "FMC1_HPC_LA12_N",
+      "j30": "G16",
+      "ball": "D20",
+      "ug952_page": 61,
+      "function": "IO_L14N_T2_SRCC_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.32"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[26]",
+      "net": "FMC1_HPC_LA13_P",
+      "j30": "D17",
+      "ball": "B20",
+      "ug952_page": 59,
+      "function": "IO_L15P_T2_DQS_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.34"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[27]",
+      "net": "FMC1_HPC_LA13_N",
+      "j30": "D18",
+      "ball": "A20",
+      "ug952_page": 60,
+      "function": "IO_L15N_T2_DQS_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.36"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[28]",
+      "net": "FMC1_HPC_LA14_P",
+      "j30": "C18",
+      "ball": "C21",
+      "ug952_page": 59,
+      "function": "IO_L16P_T2_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.39"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[29]",
+      "net": "FMC1_HPC_LA14_N",
+      "j30": "C19",
+      "ball": "B21",
+      "ug952_page": 59,
+      "function": "IO_L16N_T2_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.41"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[30]",
+      "net": "FMC1_HPC_LA15_P",
+      "j30": "H19",
+      "ball": "B22",
+      "ug952_page": 61,
+      "function": "IO_L17P_T2_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.43"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[31]",
+      "net": "FMC1_HPC_LA15_N",
+      "j30": "H20",
+      "ball": "A22",
+      "ug952_page": 61,
+      "function": "IO_L17N_T2_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.45"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[32]",
+      "net": "FMC1_HPC_LA16_P",
+      "j30": "G18",
+      "ball": "E21",
+      "ug952_page": 61,
+      "function": "IO_L18P_T2_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.29"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[33]",
+      "net": "FMC1_HPC_LA16_N",
+      "j30": "G19",
+      "ball": "D21",
+      "ug952_page": 61,
+      "function": "IO_L18N_T2_16",
+      "bank": 16,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.31"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[34]",
+      "net": "FMC1_HPC_LA17_CC_P",
+      "j30": "D20",
+      "ball": "K21",
+      "ug952_page": 60,
+      "function": "IO_L12P_T1_MRCC_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.33"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[35]",
+      "net": "FMC1_HPC_LA17_CC_N",
+      "j30": "D21",
+      "ball": "J21",
+      "ug952_page": 60,
+      "function": "IO_L12N_T1_MRCC_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.35"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[36]",
+      "net": "FMC1_HPC_LA18_CC_P",
+      "j30": "C22",
+      "ball": "G20",
+      "ug952_page": 60,
+      "function": "IO_L11P_T1_SRCC_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.38"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[37]",
+      "net": "FMC1_HPC_LA18_CC_N",
+      "j30": "C23",
+      "ball": "G21",
+      "ug952_page": 60,
+      "function": "IO_L11N_T1_SRCC_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.40"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[38]",
+      "net": "FMC1_HPC_LA19_P",
+      "j30": "H22",
+      "ball": "M14",
+      "ug952_page": 61,
+      "function": "IO_L4P_T0_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.42"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[39]",
+      "net": "FMC1_HPC_LA19_N",
+      "j30": "H23",
+      "ball": "L14",
+      "ug952_page": 61,
+      "function": "IO_L4N_T0_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.44"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[40]",
+      "net": "FMC1_HPC_LA20_P",
+      "j30": "G21",
+      "ball": "M16",
+      "ug952_page": 61,
+      "function": "IO_L6P_T0_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.30"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[41]",
+      "net": "FMC1_HPC_LA20_N",
+      "j30": "G22",
+      "ball": "M17",
+      "ug952_page": 61,
+      "function": "IO_L6N_T0_VREF_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.32"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[42]",
+      "net": "FMC1_HPC_LA21_P",
+      "j30": "H25",
+      "ball": "J19",
+      "ug952_page": 61,
+      "function": "IO_L7P_T1_AD2P_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.34"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[43]",
+      "net": "FMC1_HPC_LA21_N",
+      "j30": "H26",
+      "ball": "H19",
+      "ug952_page": 61,
+      "function": "IO_L7N_T1_AD2N_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.36"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[44]",
+      "net": "FMC1_HPC_LA22_P",
+      "j30": "G24",
+      "ball": "L17",
+      "ug952_page": 61,
+      "function": "IO_L8P_T1_AD10P_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.39"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[45]",
+      "net": "FMC1_HPC_LA22_N",
+      "j30": "G25",
+      "ball": "L18",
+      "ug952_page": 61,
+      "function": "IO_L8N_T1_AD10N_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.41"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[46]",
+      "net": "FMC1_HPC_LA23_P",
+      "j30": "D23",
+      "ball": "K20",
+      "ug952_page": 60,
+      "function": "IO_L9P_T1_DQS_AD3P_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.43"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "dq[47]",
+      "net": "FMC1_HPC_LA23_N",
+      "j30": "D24",
+      "ball": "J20",
+      "ug952_page": 60,
+      "function": "IO_L9N_T1_DQS_AD3N_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.45"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[0]",
+      "net": "FMC1_HPC_LA24_P",
+      "j30": "H28",
+      "ball": "J18",
+      "ug952_page": 61,
+      "function": "IO_L10P_T1_AD11P_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.25",
+        "M1.25",
+        "M2.25"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[1]",
+      "net": "FMC1_HPC_LA24_N",
+      "j30": "H29",
+      "ball": "H18",
+      "ug952_page": 61,
+      "function": "IO_L10N_T1_AD11N_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.24",
+        "M1.24",
+        "M2.24"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[2]",
+      "net": "FMC1_HPC_LA25_P",
+      "j30": "G27",
+      "ball": "G22",
+      "ug952_page": 61,
+      "function": "IO_L15P_T2_DQS_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.23",
+        "M1.23",
+        "M2.23"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[3]",
+      "net": "FMC1_HPC_LA25_N",
+      "j30": "G28",
+      "ball": "F22",
+      "ug952_page": 61,
+      "function": "IO_L15N_T2_DQS_ADV_B_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.22",
+        "M1.22",
+        "M2.22"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[4]",
+      "net": "FMC1_HPC_LA26_P",
+      "j30": "D26",
+      "ball": "J24",
+      "ug952_page": 60,
+      "function": "IO_L16P_T2_A28_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.21",
+        "M1.21",
+        "M2.21"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[5]",
+      "net": "FMC1_HPC_LA26_N",
+      "j30": "D27",
+      "ball": "H24",
+      "ug952_page": 60,
+      "function": "IO_L16N_T2_A27_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.20",
+        "M1.20",
+        "M2.20"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[6]",
+      "net": "FMC1_HPC_LA27_P",
+      "j30": "C26",
+      "ball": "F23",
+      "ug952_page": 60,
+      "function": "IO_L17P_T2_A26_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.19",
+        "M1.19",
+        "M2.19"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[7]",
+      "net": "FMC1_HPC_LA27_N",
+      "j30": "C27",
+      "ball": "E23",
+      "ug952_page": 60,
+      "function": "IO_L17N_T2_A25_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.18",
+        "M1.18",
+        "M2.18"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[8]",
+      "net": "FMC1_HPC_LA28_P",
+      "j30": "H31",
+      "ball": "K22",
+      "ug952_page": 61,
+      "function": "IO_L18P_T2_A24_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.8",
+        "M1.8",
+        "M2.8"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[9]",
+      "net": "FMC1_HPC_LA28_N",
+      "j30": "H32",
+      "ball": "K23",
+      "ug952_page": 61,
+      "function": "IO_L18N_T2_A23_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.7",
+        "M1.7",
+        "M2.7"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[10]",
+      "net": "FMC1_HPC_LA29_P",
+      "j30": "G30",
+      "ball": "G24",
+      "ug952_page": 61,
+      "function": "IO_L19P_T3_A22_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.6",
+        "M1.6",
+        "M2.6"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[11]",
+      "net": "FMC1_HPC_LA29_N",
+      "j30": "G31",
+      "ball": "F24",
+      "ug952_page": 61,
+      "function": "IO_L19N_T3_A21_VREF_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.5",
+        "M1.5",
+        "M2.5"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[12]",
+      "net": "FMC1_HPC_LA30_P",
+      "j30": "H34",
+      "ball": "E25",
+      "ug952_page": 61,
+      "function": "IO_L20P_T3_A20_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.4",
+        "M1.4",
+        "M2.4"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[13]",
+      "net": "FMC1_HPC_LA30_N",
+      "j30": "H35",
+      "ball": "D25",
+      "ug952_page": 61,
+      "function": "IO_L20N_T3_A19_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.3",
+        "M1.3",
+        "M2.3"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[14]",
+      "net": "FMC1_HPC_LA31_P",
+      "j30": "G33",
+      "ball": "E26",
+      "ug952_page": 61,
+      "function": "IO_L21P_T3_DQS_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.2",
+        "M1.2",
+        "M2.2"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[15]",
+      "net": "FMC1_HPC_LA31_N",
+      "j30": "G34",
+      "ball": "D26",
+      "ug952_page": 61,
+      "function": "IO_L21N_T3_DQS_A18_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.1",
+        "M1.1",
+        "M2.1"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[16]",
+      "net": "FMC1_HPC_LA32_P",
+      "j30": "H37",
+      "ball": "H26",
+      "ug952_page": 61,
+      "function": "IO_L22P_T3_A17_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.48",
+        "M1.48",
+        "M2.48"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[17]",
+      "net": "FMC1_HPC_LA32_N",
+      "j30": "H38",
+      "ball": "G26",
+      "ug952_page": 61,
+      "function": "IO_L22N_T3_A16_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.17",
+        "M1.17",
+        "M2.17"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "addr[18]",
+      "net": "FMC1_HPC_LA33_P",
+      "j30": "G36",
+      "ball": "G25",
+      "ug952_page": 61,
+      "function": "IO_L23P_T3_FOE_B_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.16",
+        "M1.16",
+        "M2.16"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "ce_n",
+      "net": "FMC1_HPC_LA33_N",
+      "j30": "G37",
+      "ball": "F25",
+      "ug952_page": 61,
+      "function": "IO_L23N_T3_FWE_B_15",
+      "bank": 15,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.26",
+        "M1.26",
+        "M2.26"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "oe_n",
+      "net": "FMC1_HPC_HA00_CC_P",
+      "j30": "F4",
+      "ball": "AA19",
+      "ug952_page": 60,
+      "function": "IO_L13P_T2_MRCC_12",
+      "bank": 12,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.28",
+        "M1.28",
+        "M2.28"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "we_n",
+      "net": "FMC1_HPC_HA00_CC_N",
+      "j30": "F5",
+      "ball": "AB19",
+      "ug952_page": 60,
+      "function": "IO_L13N_T2_MRCC_12",
+      "bank": 12,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.11",
+        "M1.11",
+        "M2.11"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "err[0]",
+      "net": "FMC1_HPC_HA01_CC_P",
+      "j30": "E2",
+      "ball": "AB21",
+      "ug952_page": 60,
+      "function": "IO_L11P_T1_SRCC_12",
+      "bank": 12,
+      "io_type": "HR",
+      "sram_pins": [
+        "M0.13"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "err[1]",
+      "net": "FMC1_HPC_HA01_CC_N",
+      "j30": "E3",
+      "ball": "AC21",
+      "ug952_page": 60,
+      "function": "IO_L11N_T1_SRCC_12",
+      "bank": 12,
+      "io_type": "HR",
+      "sram_pins": [
+        "M1.13"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    },
+    {
+      "port": "err[2]",
+      "net": "FMC1_HPC_HA02_P",
+      "j30": "K7",
+      "ball": "AE25",
+      "ug952_page": 62,
+      "function": "IO_L1P_T0_12",
+      "bank": 12,
+      "io_type": "HR",
+      "sram_pins": [
+        "M2.13"
+      ],
+      "rail": "VCCO_VADJ 2.375..2.625 V",
+      "standard": "LVCMOS25"
+    }
+  ],
+  "straps_each_sram": {
+    "A19_pin9": "GND",
+    "BYTE_pin47": "VADJ",
+    "CE2_pin12": "VADJ",
+    "BHE_pin14": "GND",
+    "BLE_pin15": "GND",
+    "VCC_pin37": "VADJ",
+    "VSS_pins27_46": "GND",
+    "NC_pin10": "unconnected"
+  },
+  "readiness": {
+    "PG_M2C": "J30.F1 / FPGA.N17",
+    "PRSNT_M2C_B": "J30.H2 / FPGA.N16",
+    "CTRL2_PWRGOOD": "J30.D1 / FPGA.P15",
+    "note": "board sequencer plus separately qualified voltage/clock; not equivalent to ready"
+  },
+  "clock": {
+    "source": "UG952 p26 U51",
+    "positive": "R3",
+    "negative": "P3",
+    "bank": 34,
+    "note": "dedicated differential board clock; wrapper and clock-input constraints remain integration obligations"
+  }
+}

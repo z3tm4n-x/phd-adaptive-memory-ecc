@@ -41,7 +41,22 @@
       "rtl/ecc/secded_32_39_decoder.sv"
     ]
   },
+  "package_pinout": {
+    "url": "https://download.amd.com/adaptive-socs-and-fpgas/developer/adaptive-socs-and-fpgas/package-pinout-files/a7packages/a7all.zip",
+    "sha256": "576e04c5eea02d4d139a475338cfa4be600e7c4e5a983ba792d799849880d53b",
+    "local_path": "../../../../tmp/pdfs/cy62167-reference/a7all.zip",
+    "member": "a7all/xc7a200tfbg676pkg.txt",
+    "member_header": "Device/Package xc7a200tfbg676 9/11/2012 11:20:00",
+    "member_sha256_location": "pinmap.json",
+    "retrieved": "2026-09-16"
+  },
   "previous_sources": "../timing_input_gate.json; governing dispositions preserved at handoff commit",
+  "xdc_property_reference": {
+    "url": "https://docs.amd.com/r/en-US/ug912-vivado-properties/PULLTYPE",
+    "document": "UG912 2026.1, 2026-07-20",
+    "accessed": "2026-09-16",
+    "use": "PULLTYPE empty Tcl value disables pulls, all architectures. Web documentation; no PDF byte-hash claim."
+  },
   "retrieval_limits": [
     "First AMD download stalled and was cancelled; bounded retry succeeded.",
     "PDF local read is authoritative for downloaded bytes. Text extraction initially hit Windows cp1251; retried UTF-8.",

@@ -1,0 +1,18 @@
+{
+  "scope": "Portable MSYS2 archives, downloaded to workspace tmp/iverilog; no system installation",
+  "retrieved": "2026-09-16",
+  "upstream": "https://github.com/steveicarus/iverilog/tree/v13_0",
+  "package_repository": "https://packages.msys2.org/packages/mingw-w64-ucrt-x86_64-iverilog",
+  "url_prefix": "https://mirror.msys2.org/mingw/ucrt64/",
+  "archives": [
+    {"local": "iverilog.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-iverilog-1~13.0-2-any.pkg.tar.zst", "sha256": "fd4d7d7cb60cda1eb437f5476673503d92964cf47ce6c11b460eb3bd05c43582"},
+    {"local": "bzip2.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-bzip2-1.0.8-4-any.pkg.tar.zst", "sha256": "f03a2174034ddd2d96cecd34f617c5f8e2ef86c812b8d2bb3b8875257f2c8bfa"},
+    {"local": "readline.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-readline-8.3.003-1-any.pkg.tar.zst", "sha256": "de2423c2e10fcd88272a0ab2f833f6a082cfe613d4c17c2f548cc50a5d2190c4"},
+    {"local": "zlib.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-zlib-1.3.2-2-any.pkg.tar.zst", "sha256": "841401182976d2f9e17e5c0ebaac51f2a8014140ea53d67625e91c8fb3c85ea0"},
+    {"local": "termcap.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-termcap-1.3.1-7-any.pkg.tar.zst", "sha256": "17b78eb63e89458a6ae4d56aa1dc357e1decb2f845b29fded79bccdd628d9d41"},
+    {"local": "gcc-libs.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-gcc-libs-16.2.0-3-any.pkg.tar.zst", "sha256": "5763fabf86fa13a4449ee765006d3446384ed66af7bf827459710eb777e0b11c"},
+    {"local": "libwinpthread.pkg.tar.zst", "file": "mingw-w64-ucrt-x86_64-libwinpthread-14.0.0.r375.g9c1abbbf5-1-any.pkg.tar.zst", "sha256": "61d340fe8eebc77ee821badca246827fe90545e99685e503bdea16a8d25df512"}
+  ],
+  "verification": "Each downloaded SHA256 compared with the corresponding MSYS2 package page before execution.",
+  "python_tools": {"pdfplumber": "0.11.9", "pypdf": "6.10.0", "pyslang": "9.1.0"}
+}
