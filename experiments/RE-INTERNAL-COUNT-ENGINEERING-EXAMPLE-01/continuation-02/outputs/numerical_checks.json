@@ -1,0 +1,23 @@
+{
+  "moment_block_exponential_scaled_error": 3.660033389179995e-11,
+  "independent_action_expression_matches": 100,
+  "posterior_updates_against_fsum": 2000,
+  "sr_arithmetic": {
+    "terms": {
+      "kernel_coupling": 6.126369811457346e-05,
+      "filtering": 4.900670744121984e-06,
+      "value_recursion": 2.5138628149866004e-05,
+      "action_arithmetic": 2.476961142720613e-07,
+      "underflow_and_series": 1e-100
+    },
+    "total_bound": 9.15506931228335e-05,
+    "vmax": 0.5459795348994894,
+    "affine_guard": 25,
+    "elementary_function_ulp_assumption": 4
+  },
+  "refined_grid_kernel_row_l1_difference": 4.685404209089462e-10,
+  "initial_potential_refined": 0.061149774237610116,
+  "initial_potential_original": 0.06114977424118347,
+  "shared": "accepted kernels/reward and numpy/scipy; decision expression independent but not full independent policy implementation",
+  "scope": "finite addressed checks plus conditional SR arithmetic ledger, not platform WCET/physical proof"
+}

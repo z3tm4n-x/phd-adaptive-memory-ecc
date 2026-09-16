@@ -136,9 +136,10 @@ def run(times,ptr,locations,marks,policy,packed,delay,record=False):
         max_count=max(max_count,count)
         if record:
             trace[tr]=np.array([now,periods[a],limit,count,slack,q[len(q)//2:].sum(),active_n,int(failed),reservation]);tr+=1
+        if limit>=end:passes+=1
         if failed:break
         if end>horizon:break
-        passes+=1;updates+=int(kind<2 or kind==4)
+        updates+=int(kind<2 or kind==4)
         if kind<2:
             q,likelihood=accepted._observe(q,a,count,kind==0,kernels,transition)
             if not np.isfinite(q).all() or likelihood<=0:

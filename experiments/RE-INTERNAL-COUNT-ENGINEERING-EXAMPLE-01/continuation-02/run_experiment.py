@@ -37,7 +37,7 @@ def run(mode,workers,batch_size):
     c=config();output=ROOT/'outputs';output.mkdir(exist_ok=True)
     n=c['simulation']['tuning_trials' if mode=='tune' else 'validation_trials']
     selected={} if mode=='tune' else json.loads((output/'selected_policies.json').read_text())
-    run_info=dict(mode=mode,trials=n,workers=workers,batch_size=batch_size,python=platform.python_version(),numpy=np.__version__,git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),start_unix=time.time())
+    run_info=dict(mode=mode,trials=n,workers=workers,batch_size=batch_size,python=platform.python_version(),numpy=np.__version__,git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),start_unix=time.time(),input_code_sha256={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ('config.json','engine.py','reference.py','run_experiment.py','inputs/templates.npz','outputs/controller_tables.npz')})
     for case,name in enumerate(c['cases']):
         policies=candidates(c) if mode=='tune' else np.array(selected[name]['policies'])
         path=output/f'{mode}_{name}.npz'

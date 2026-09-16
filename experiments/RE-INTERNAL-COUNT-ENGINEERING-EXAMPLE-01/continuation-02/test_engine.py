@@ -59,6 +59,10 @@ class Tests(unittest.TestCase):
             self.assert_stream([(t,[(0,1)]),(.21,[(0,2)])])
     def test_terminal_partial(self):
         self.assert_stream([(.01,[(3,1)]),(.21,[(3,1<<36)])],H=.3)
+        self.assert_stream([(.21,[(0,1)]),(.22,[(3,1<<38)])],H=.3999997)
+    def test_group_tied_to_complete_pass_counts_completed_service(self):
+        r,tr,o=small_run([(1.,[(3,3)])])
+        self.assertEqual(r[2],5);self.assertTrue(bool(r[0]));self.assertEqual(r[4],20)
     def test_randomized_oracle(self):
         rng=np.random.default_rng(87231)
         for i in range(100):
@@ -83,6 +87,12 @@ class Tests(unittest.TestCase):
         self.assertAlmostEqual(c['environment']['b_high'],expected,places=12)
         mutant=m['groups']/m['total_duration_s']*39/64
         self.assertGreater(abs(mutant/expected-1),.1)
+    def test_mapping_mutation_rejected_by_oracle(self):
+        correct=[(.01,[(0,3)])]
+        mutant=[(.01,[(0,1),(1,2)])]
+        actual=small_run(mutant)[0]
+        expected=oracle(correct,4,.2,8e-7,1.,8e-8)
+        self.assertTrue(expected[0]);self.assertFalse(bool(actual[0]))
     def test_disabled_observation_invariance(self):
         p=packed()
         a=accepted._observe(p.initial,0,0,False,p.kernels,p.transition)[0]
