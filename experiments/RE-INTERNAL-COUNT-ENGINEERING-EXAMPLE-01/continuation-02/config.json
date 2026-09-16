@@ -1,0 +1,15 @@
+{
+  "task_id": "ISSI-GROUPED-VALIDATION",
+  "base_commit": "268e0d772aa718226ce7d3c2c18ded96306bdcf2",
+  "memory": {"words": 524288, "bits_per_word": 39, "pass_seconds": 0.1048576, "chips": 3, "native_addresses": 2097152, "native_bits": 16},
+  "environment": {"b_low": 1.081286564353262, "b_high": 10.812865643532618, "mean_dwell_seconds": [60], "initial": [0.5, 0.5], "low_flux_fraction": 0.1},
+  "horizon_seconds": 1800,
+  "periods_seconds": [0.2,0.5,1,2,5,10,20,30,60,100,150,300],
+  "epsilon": [0.1],
+  "controller": {"pending_cap":12,"count_cap":32,"backup_period_seconds":0.5,"time_tick_seconds":0.1,"one_switch_midpoints":512,"two_switch_midpoints":128,"scan_switch_cutoff":2,"numerical_allowance":0.0003},
+  "executor": {"slot_seconds":2e-7,"reservation_seconds":1e-7,"read_seconds":2e-8,"latch_before_commit_seconds":8e-8,"write_begin_before_commit_seconds":4e-8,"write_end_before_commit_seconds":2e-8,"commit_rule":"write corrected latched full word only if latch was dirty; increment count on acknowledged commit","tie_order":["commit","group","latch"],"application":"backlogged best-effort reads outside reserved service slots; no application writes"},
+  "cases": ["xor_groups","singleton_ablation","native_word_merged"],
+  "simulation": {"tuning_seed":2026091604,"validation_seed":2026091605,"illustration_seed":2026091606,"input_bootstrap_seed":2026091607,"tuning_trials":2000,"validation_trials":20000,"input_bootstraps":2000,"case_independent_streams":true},
+  "statistics": {"family_alpha":0.05,"family_size":54,"meaningful_fractional_saving":0.1,"risk_interval":"Clopper-Pearson","paired_risk":"discordant-cell Clopper-Pearson union rectangle","resource_interval":"paired Student/CLT delta-method; asymptotic, not finite-sample guarantee","fixed_sample":true},
+  "tuning": {"fixed":"all 12 U","precomputed":"all 144 ordered U pairs; switch selection at decision time H/2","pa_dom_ms":[0.05,0.15,0.3],"pa_dom_cap":[5,20,300],"pa_dom_growth":[2,3],"pa_dom_zero_mode":[0,1],"rule":"among candidates with one-sided pointwise 95% risk upper <= epsilon choose minimum mean complete-pass-equivalent reservation on own survivors; ties lexicographic; otherwise select minimum upper and label no certified tuning candidate; held-out test is definitive"}
+}
