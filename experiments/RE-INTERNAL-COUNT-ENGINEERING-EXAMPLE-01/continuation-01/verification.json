@@ -1,0 +1,530 @@
+{
+  "status": "ADDRESSED_CHECKS_ONLY_NOT_COMPLETED_ENGINEERING_EXAMPLE",
+  "code_base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+  "execution_head": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+  "base_is_ancestor": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_check_boundary_order (test_prerequisites.Prerequisites.test_check_boundary_order) ... ok\ntest_delayed_write_counterexample (test_prerequisites.Prerequisites.test_delayed_write_counterexample) ... ok\ntest_direct_executor_against_independent_set_oracle (test_prerequisites.Prerequisites.test_direct_executor_against_independent_set_oracle) ... ok\ntest_full_word_exhaustive (test_prerequisites.Prerequisites.test_full_word_exhaustive) ... ok\ntest_guard_exact (test_prerequisites.Prerequisites.test_guard_exact) ... ok\ntest_initial_state_and_terminal_pending_write (test_prerequisites.Prerequisites.test_initial_state_and_terminal_pending_write) ... ok\ntest_parity_count_mutation_is_rejected (test_prerequisites.Prerequisites.test_parity_count_mutation_is_rejected) ... ok\ntest_units_and_normalization (test_prerequisites.Prerequisites.test_units_and_normalization) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.160s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "-b",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01\\continuation-01",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_full_word_rate_independent_rational (test_input.InputChecks.test_full_word_rate_independent_rational) ... ok\ntest_generators_against_independent_bit_oracle (test_input.InputChecks.test_generators_against_independent_bit_oracle) ... ok\ntest_limits (test_input.InputChecks.test_limits) ... ok\ntest_literal_rows (test_input.InputChecks.test_literal_rows) ... ok\ntest_marginal_only_mutant_rejected (test_input.InputChecks.test_marginal_only_mutant_rejected) ... ok\ntest_normalization_not_silently_repaired (test_input.InputChecks.test_normalization_not_silently_repaired) ... ok\ntest_word_marginals_identical_but_joint_different (test_input.InputChecks.test_word_marginals_identical_but_joint_different) ... ok\ntest_zero_is_not_zero_upper_independent_decimal (test_input.InputChecks.test_zero_is_not_zero_upper_independent_decimal) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.013s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "-b",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01\\continuation-01"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "deterministic_diagnostics_reproduced_exactly": true,
+  "prior_package": [
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/.gitattributes",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "f29df8e90a8a804ce145c296bb7a50bb385be94676334467d5d5fd13371299e0",
+      "local_sha256": "f29df8e90a8a804ce145c296bb7a50bb385be94676334467d5d5fd13371299e0",
+      "byte_identical": true,
+      "git_blob": "d0bf3e23448d8af132a50c0e74b6f36ee9caf199",
+      "head_git_blob": "d0bf3e23448d8af132a50c0e74b6f36ee9caf199",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/HANDOFF.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "99e93383f7dfdc7201d5ce7685074633fef6cbdabc7bebea2a76a8040484992c",
+      "local_sha256": "99e93383f7dfdc7201d5ce7685074633fef6cbdabc7bebea2a76a8040484992c",
+      "byte_identical": true,
+      "git_blob": "5f897ebf044d961dec49087cf89d6b29f82e49e8",
+      "head_git_blob": "5f897ebf044d961dec49087cf89d6b29f82e49e8",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/PREREGISTRATION.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "46c7dbb07778db0bb2a8c11731865c6cc0ccb7c52c9562977a1e707df22ff4b1",
+      "local_sha256": "46c7dbb07778db0bb2a8c11731865c6cc0ccb7c52c9562977a1e707df22ff4b1",
+      "byte_identical": true,
+      "git_blob": "01879c135f039d80fe2d092cecdc7a4ca0e5de8d",
+      "head_git_blob": "01879c135f039d80fe2d092cecdc7a4ca0e5de8d",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/REPORT.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "b74277a5b4c3cf63cbd3bba63e746aedf14fc9b4b052f288242e5f1bf263988f",
+      "local_sha256": "b74277a5b4c3cf63cbd3bba63e746aedf14fc9b4b052f288242e5f1bf263988f",
+      "byte_identical": true,
+      "git_blob": "1e31bd3373aee184b274c537bab5719415858a5e",
+      "head_git_blob": "1e31bd3373aee184b274c537bab5719415858a5e",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/REPRODUCE.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "2c429e7548031c9698c4d119be6532e33ac4b7a770821029db59ed7f65bf0245",
+      "local_sha256": "2c429e7548031c9698c4d119be6532e33ac4b7a770821029db59ed7f65bf0245",
+      "byte_identical": true,
+      "git_blob": "e1cf24a001d90218f2eada7bdf23cb8c3d3c1dcc",
+      "head_git_blob": "e1cf24a001d90218f2eada7bdf23cb8c3d3c1dcc",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/applicability.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "77d83a976763e4e34ba70c241f1409d959148c554aa802042421b6623ce038e0",
+      "local_sha256": "77d83a976763e4e34ba70c241f1409d959148c554aa802042421b6623ce038e0",
+      "byte_identical": true,
+      "git_blob": "b913e0c50177f1c1ccd917465e9397c69768a9c6",
+      "head_git_blob": "b913e0c50177f1c1ccd917465e9397c69768a9c6",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/checks.json",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "f90fe6aaa22265eada817882578781e89f0339a1ec432b95566b45c3bec2c74e",
+      "local_sha256": "5f05ea7c94ece02ba0f5c5d3cfd677a4ef05d70f9875ff54054b505f0f31cb43",
+      "byte_identical": false,
+      "git_blob": "651edd72a85e132106ae75bffcffed13ee8a5259",
+      "head_git_blob": "651edd72a85e132106ae75bffcffed13ee8a5259",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/config.json",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "cbc13698baa2eed2e0a11e1298fd9f08d7e00c63ee330ab41faddde9a7e3a8b3",
+      "local_sha256": "cbc13698baa2eed2e0a11e1298fd9f08d7e00c63ee330ab41faddde9a7e3a8b3",
+      "byte_identical": true,
+      "git_blob": "379184ab93b2c9103d013124429ec690a22c5d45",
+      "head_git_blob": "379184ab93b2c9103d013124429ec690a22c5d45",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/prerequisite_checks.py",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "b967294b362f919520b214242af951e0222c1cc20ff9cd039e7c73d83a13c28c",
+      "local_sha256": "b967294b362f919520b214242af951e0222c1cc20ff9cd039e7c73d83a13c28c",
+      "byte_identical": true,
+      "git_blob": "cbc6d3b3433981de1eacb2c370fe0c2fe1bfc8ec",
+      "head_git_blob": "cbc6d3b3433981de1eacb2c370fe0c2fe1bfc8ec",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/run_checks.py",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "945f1fb284c6b73afa8da2c4e2d38be818f88e8d71842ce783f850dee6c56ab2",
+      "local_sha256": "945f1fb284c6b73afa8da2c4e2d38be818f88e8d71842ce783f850dee6c56ab2",
+      "byte_identical": true,
+      "git_blob": "a8a2169ce5c63f88d9d851e844d67cb6a1c7858f",
+      "head_git_blob": "a8a2169ce5c63f88d9d851e844d67cb6a1c7858f",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/sources.json",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "6febd459491aef05376a00a89528b57897954cf8bf19059c4fb4d33e4b3e347f",
+      "local_sha256": "6febd459491aef05376a00a89528b57897954cf8bf19059c4fb4d33e4b3e347f",
+      "byte_identical": true,
+      "git_blob": "a796b9a7d2fae77827dc8e597ae1a7c42df2df16",
+      "head_git_blob": "a796b9a7d2fae77827dc8e597ae1a7c42df2df16",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/test_prerequisites.py",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "be972d41327eb30f096f2bcf33cf385812e98ca9d7ba92c92a1f5f1df5ce277e",
+      "local_sha256": "be972d41327eb30f096f2bcf33cf385812e98ca9d7ba92c92a1f5f1df5ce277e",
+      "byte_identical": true,
+      "git_blob": "96c7e1b4a794828594d92e80fc69a87d6237e93d",
+      "head_git_blob": "96c7e1b4a794828594d92e80fc69a87d6237e93d",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    }
+  ],
+  "canonical_sources": [
+    {
+      "path": "docs/agents/00_GLOBAL_OPERATING_RULES.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "3774b056531b7be12329190aa16748d4cad2feb8b4aa0aa33e8ce13b54061dce",
+      "local_sha256": "3774b056531b7be12329190aa16748d4cad2feb8b4aa0aa33e8ce13b54061dce",
+      "byte_identical": true,
+      "git_blob": "a0796fc3b013d93065c26ca0ea5f1354c199af2e",
+      "head_git_blob": "a0796fc3b013d93065c26ca0ea5f1354c199af2e",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/agents/07_RESEARCH_ENGINEER_LOCAL.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "9ef2a926993507d4ad94e9f5adba68101efaa360550cd932daf77a353a7f9b1b",
+      "local_sha256": "9ef2a926993507d4ad94e9f5adba68101efaa360550cd932daf77a353a7f9b1b",
+      "byte_identical": true,
+      "git_blob": "49fb02b353e9c7b5c6632d8bc7284992169cbe42",
+      "head_git_blob": "49fb02b353e9c7b5c6632d8bc7284992169cbe42",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/agents/HANDOFF_CONTRACTS.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "d39ab04ab09b3054a7421418e467ad4623cd302c7cd9659fd2920857d7d935b0",
+      "local_sha256": "d39ab04ab09b3054a7421418e467ad4623cd302c7cd9659fd2920857d7d935b0",
+      "byte_identical": true,
+      "git_blob": "5aa78e45544530b2164a10ea652fb1454bf1e66a",
+      "head_git_blob": "5aa78e45544530b2164a10ea652fb1454bf1e66a",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "README.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "72b587b88b46967c9463b0efd5ea08df68c91955d4e897c0cf26fd90e4b28608",
+      "local_sha256": "72b587b88b46967c9463b0efd5ea08df68c91955d4e897c0cf26fd90e4b28608",
+      "byte_identical": true,
+      "git_blob": "96c404a87490df1641f4b5e21e15421469b46be7",
+      "head_git_blob": "96c404a87490df1641f4b5e21e15421469b46be7",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/current_status.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "b0a56c61aff0989fc842244d903cb5b3cd07e99730e97c34b1dd89733bdd5bea",
+      "local_sha256": "b0a56c61aff0989fc842244d903cb5b3cd07e99730e97c34b1dd89733bdd5bea",
+      "byte_identical": true,
+      "git_blob": "bf87eb139a3df739a9f3922bb2b904088be34a7d",
+      "head_git_blob": "bf87eb139a3df739a9f3922bb2b904088be34a7d",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/research_spec.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "34522d4acd1189d1196b1005d6ae7427a5efb72a3d7877ab6ff13f8bfdc0fd78",
+      "local_sha256": "34522d4acd1189d1196b1005d6ae7427a5efb72a3d7877ab6ff13f8bfdc0fd78",
+      "byte_identical": true,
+      "git_blob": "a5ecdc06f49dd06b8817e6d85a0b9c8780e21b55",
+      "head_git_blob": "a5ecdc06f49dd06b8817e6d85a0b9c8780e21b55",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/decisions/DEC-004-dissertation-architecture-A.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "a50f9221bdaf3e4a0e72fe8a992aa670a37b0c919e544244fc3da77cc713dedb",
+      "local_sha256": "a50f9221bdaf3e4a0e72fe8a992aa670a37b0c919e544244fc3da77cc713dedb",
+      "byte_identical": true,
+      "git_blob": "41bfd17653bc1aaee44f111fd2400d953b8754d2",
+      "head_git_blob": "41bfd17653bc1aaee44f111fd2400d953b8754d2",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/dissertation_concept.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "94deb6ecb83b0b685f660fe48b9be9cd32fc23e733e84bf76844cc33a1b5619e",
+      "local_sha256": "94deb6ecb83b0b685f660fe48b9be9cd32fc23e733e84bf76844cc33a1b5619e",
+      "byte_identical": true,
+      "git_blob": "e8af65c3d51eff6b30ae6c3d0ec7886625929382",
+      "head_git_blob": "e8af65c3d51eff6b30ae6c3d0ec7886625929382",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "results/RES-003-internal-count-control.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "8e05d402290a207616062a51eedddc81b805099489c0d44f7981a9cbdfa4b561",
+      "local_sha256": "8e05d402290a207616062a51eedddc81b805099489c0d44f7981a9cbdfa4b561",
+      "byte_identical": true,
+      "git_blob": "983f088e796bdac4baa76d5b4433c1b0ad884baa",
+      "head_git_blob": "983f088e796bdac4baa76d5b4433c1b0ad884baa",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "57d4708b54ad4322b56b9c6e20251192ba0b7c42f9ac197f9ffc4260df563b20",
+      "local_sha256": "57d4708b54ad4322b56b9c6e20251192ba0b7c42f9ac197f9ffc4260df563b20",
+      "byte_identical": true,
+      "git_blob": "2f944b9af1aab63ac50ba01ed93e719a5046b2f8",
+      "head_git_blob": "2f944b9af1aab63ac50ba01ed93e719a5046b2f8",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_CONTROL_REVIEW_01.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "d291f627246749a7446dbc984daa9df9776e53995b1398aae537b782f5da06f9",
+      "local_sha256": "d291f627246749a7446dbc984daa9df9776e53995b1398aae537b782f5da06f9",
+      "byte_identical": true,
+      "git_blob": "0378cb344db3c0c04f6e9d25d5c3088d806967cb",
+      "head_git_blob": "0378cb344db3c0c04f6e9d25d5c3088d806967cb",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/derivation.md",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "6852273484bdc25f17794493cee81a8580aa1e6182aa5bcbe959376f2ebcdb4d",
+      "local_sha256": "6852273484bdc25f17794493cee81a8580aa1e6182aa5bcbe959376f2ebcdb4d",
+      "byte_identical": true,
+      "git_blob": "4b93b8cb56f5149b684a1dceb9533dc89f0cb26b",
+      "head_git_blob": "4b93b8cb56f5149b684a1dceb9533dc89f0cb26b",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/core.py",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "54b014feec86bb157de0c1e34c2daedc3be16c631377ec820c53ffc3f7c0267c",
+      "local_sha256": "54b014feec86bb157de0c1e34c2daedc3be16c631377ec820c53ffc3f7c0267c",
+      "byte_identical": true,
+      "git_blob": "7873e28e126ea02e03fc6c429ac0b4275e243cfb",
+      "head_git_blob": "7873e28e126ea02e03fc6c429ac0b4275e243cfb",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/simulate.py",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "3c6b26ecd248f3c9f1fb380cfc037eca532e5994ecf799f00faac0783b7cee4e",
+      "local_sha256": "3c6b26ecd248f3c9f1fb380cfc037eca532e5994ecf799f00faac0783b7cee4e",
+      "byte_identical": true,
+      "git_blob": "ee55c6bf57b034b0efc0b41936a549d6a14b53dd",
+      "head_git_blob": "ee55c6bf57b034b0efc0b41936a549d6a14b53dd",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    }
+  ],
+  "preexisting_status_entries": [
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/decision_sensitivity.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "f1e2e232f51280be1c4e77a7c5b91eddf78df0c52d6e8acb77e88f5f79ab7968",
+      "local_sha256": "f1e2e232f51280be1c4e77a7c5b91eddf78df0c52d6e8acb77e88f5f79ab7968",
+      "byte_identical": true,
+      "git_blob": "f1591b34b3f870eee5c5c053fd7a236618470f5b",
+      "head_git_blob": "f1591b34b3f870eee5c5c053fd7a236618470f5b",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/dependence_validation.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "5f36a3a5d5e6e7e608b4543d9319aff5efebfae67f77a44621a0cf0d560fdbee",
+      "local_sha256": "5f36a3a5d5e6e7e608b4543d9319aff5efebfae67f77a44621a0cf0d560fdbee",
+      "byte_identical": true,
+      "git_blob": "0aa0845930bc52c3ffa9e64f9a9505079dbfbb25",
+      "head_git_blob": "0aa0845930bc52c3ffa9e64f9a9505079dbfbb25",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/direct_rate_5min.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "206d882f2929297b6b5ab122b7761c54fdaccf3c8741168ae2b13c88ece05ab3",
+      "local_sha256": "206d882f2929297b6b5ab122b7761c54fdaccf3c8741168ae2b13c88ece05ab3",
+      "byte_identical": true,
+      "git_blob": "3e845b9da6ea6669b5538629e3fcb18dad69737c",
+      "head_git_blob": "3e845b9da6ea6669b5538629e3fcb18dad69737c",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/registered_direct_by_energy.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "74e0fac4bb0847625b50bdf1aef7cd2215a881f471529953dbc72e8eeddc1ff2",
+      "local_sha256": "74e0fac4bb0847625b50bdf1aef7cd2215a881f471529953dbc72e8eeddc1ff2",
+      "byte_identical": true,
+      "git_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
+      "head_git_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/risk_curves.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "890e7fe77bf638528d7c440aeff81e00a8290bd1b5b955bdd6e7bdb389529fd8",
+      "local_sha256": "890e7fe77bf638528d7c440aeff81e00a8290bd1b5b955bdd6e7bdb389529fd8",
+      "byte_identical": true,
+      "git_blob": "cc5067f2c5eeba7b552839a4532fee9292b64398",
+      "head_git_blob": "cc5067f2c5eeba7b552839a4532fee9292b64398",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/window_risk_summary.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "91387e9a4967f7b835e56a702dd87863954d2b6e945f752108f0b8961222235e",
+      "local_sha256": "91387e9a4967f7b835e56a702dd87863954d2b6e945f752108f0b8961222235e",
+      "byte_identical": true,
+      "git_blob": "984f4dba71bd8d48305019d2278956b8b8f99679",
+      "head_git_blob": "984f4dba71bd8d48305019d2278956b8b8f99679",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_member_manifest.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "ca9ad3ddf746be8a394ff53577789fae3448d3f02094b57c79935582509e37f0",
+      "local_sha256": "ca9ad3ddf746be8a394ff53577789fae3448d3f02094b57c79935582509e37f0",
+      "byte_identical": true,
+      "git_blob": "a1d91845a9265998e5adf1aad9159f91704b549c",
+      "head_git_blob": "a1d91845a9265998e5adf1aad9159f91704b549c",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_operator_closure.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "4d3c0e127af2557f291c4de4aee12d089ee4acb1e81e3a03a71ed634f75e31be",
+      "local_sha256": "4d3c0e127af2557f291c4de4aee12d089ee4acb1e81e3a03a71ed634f75e31be",
+      "byte_identical": true,
+      "git_blob": "e13ee5087e1c97b48d16d3745969dc0c512a491f",
+      "head_git_blob": "e13ee5087e1c97b48d16d3745969dc0c512a491f",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/legacy_article_regression.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "f935d0d22c75293009a3905a5d2a3c8cb766132e90f11acc21c0b5a225c605ca",
+      "local_sha256": "f935d0d22c75293009a3905a5d2a3c8cb766132e90f11acc21c0b5a225c605ca",
+      "byte_identical": true,
+      "git_blob": "43ef4321b12843545919d7529de2a962f00d695a",
+      "head_git_blob": "43ef4321b12843545919d7529de2a962f00d695a",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/shielding_boundary_summary.csv",
+      "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+      "base_sha256": "7e1a609ecf1e40fa8a0f7dddf453278fd741221729d1952a35fb8b74bf3fd061",
+      "local_sha256": "7e1a609ecf1e40fa8a0f7dddf453278fd741221729d1952a35fb8b74bf3fd061",
+      "byte_identical": true,
+      "git_blob": "90411f54bb9ab2b90c6f2c9c4ba49bd0845e72c3",
+      "head_git_blob": "90411f54bb9ab2b90c6f2c9c4ba49bd0845e72c3",
+      "canonical_blob_unchanged": true,
+      "equal_after_crlf_to_lf": true
+    }
+  ],
+  "downloaded_sources": [
+    {
+      "id": "S1",
+      "file": "..\\tmp\\engineering-example-sources\\Sacristan-2026-vor.pdf",
+      "sha256": "49373ca95ee4cfb2e6ef419c104e213ad7f582c8014d369a3dc96aa4e3f76c30",
+      "matched": true,
+      "pdf_header": true
+    },
+    {
+      "id": "S2",
+      "file": "..\\tmp\\engineering-example-sources\\ISSI-204816.pdf",
+      "sha256": "56c1910717662296158fd75f697c070a3e2850281dd7f94f47e7894bb2d1428b",
+      "matched": true,
+      "pdf_header": true
+    },
+    {
+      "id": "S3",
+      "file": "..\\tmp\\engineering-example-sources\\Renesas-0816.pdf",
+      "sha256": "fc5fa135ed40efc0279bf785b6b156081aea89d9bc995182fd1025f824a09cf2",
+      "matched": true,
+      "pdf_header": true
+    },
+    {
+      "id": "S4",
+      "file": "..\\tmp\\engineering-example-sources\\Coronetti-2020.pdf",
+      "sha256": "4021f72436e457ed025c1dc3eddb4b309fad01c2dd35f7c8b2527ea0180baabf",
+      "matched": true,
+      "pdf_header": true
+    },
+    {
+      "id": "S5",
+      "file": "..\\tmp\\engineering-example-sources\\Cecchetto-2021.pdf",
+      "sha256": "c64cdd0dba7d5d9d1febdf7974bddb89beed2177a6c2ecf0da39d951ae2a5bf5",
+      "matched": true,
+      "pdf_header": true
+    },
+    {
+      "id": "S6",
+      "file": "..\\tmp\\engineering-example-sources\\ISSI-family.pdf",
+      "sha256": "9236366c7b2013af9f5b63f058b18ac1216351e8df10aa1a7fe0d2c21b855d9c",
+      "matched": true,
+      "pdf_header": true
+    }
+  ],
+  "input_code_output_hashes": {
+    "audit.py": "409ba9683a3b2982301dd4da99e233df72bec80b4e9bec9b1f317abc0387ce74",
+    "config.json": "687aa7aec78bec763dff16b5daefb9d78641124c0172e67f912fad24de42b33e",
+    "diagnostics.json": "fff90d49f4a0a58554eb58557ef83ad968103249a30d35b8ed088db83551e816",
+    "independent_check.py": "9ccd45b879141e372d2db011305b656019fc95205f077d6bac4222d22a09f498",
+    "source_rows.json": "311ceb6d7f40c04f1908aec2e773440012adab01e003b181d9a9cf4477478f53",
+    "sources.json": "ec811bc901c49d173170e2f03857dbd417f83d6ca95f225b202aa86d74929a98",
+    "test_input.py": "c41c0c9a38784dc708cdacdf94bebfe29913fdfb1f69f78fd9f07da0311d42a1",
+    "verify.py": "cd7b00e102553bcd5a9e6005e56f206bac72aa71a4e7a3578ad139e3542ebfd1"
+  },
+  "elapsed_s": 9.547412399999303,
+  "policy_trials": 0,
+  "addressed_checks_succeeded": true
+}
