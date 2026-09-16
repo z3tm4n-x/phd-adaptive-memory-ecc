@@ -49,7 +49,7 @@ def main():
             equal(lower_plus-upper_minus,row['risk_difference_low'],'paired CP low');equal(upper_plus-lower_minus,row['risk_difference_high'],'paired CP high')
             d=[p-q for p,q in zip(x,y)];mean=fmean(d);quant=float(stdtrit(len(d)-1,1-alpha/2));radius=quant*stdev(d)/math.sqrt(len(d))
             equal(mean-radius,row['reservation_difference_low'],'resource lower');equal(mean+radius,row['reservation_difference_high'],'resource upper')
-            ratio=fmean(x)/fmean(y);influence=[-(p-ratio*q)/fmean(y) for p,q in zip(x,y)]
+            denominator=fmean(y);ratio=fmean(x)/denominator;influence=[-(p-ratio*q)/denominator for p,q in zip(x,y)]
             radius=quant*stdev(influence)/math.sqrt(len(x))
             equal(1-ratio-radius,row['G_low'],'G low');equal(1-ratio+radius,row['G_high'],'G high')
     # Analytic endpoints reject a zero-upper mutation on zero events.

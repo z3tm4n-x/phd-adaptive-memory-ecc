@@ -1,0 +1,7 @@
+{
+  "checks": 199,
+  "errors": [],
+  "independent_path": "binomial-tail bisection vs beta quantile; scalar statistics vs numpy paired reductions",
+  "shared_dependencies": "published trial records and scipy special functions; not independent RNG/physical law",
+  "zero_upper_mutation_rejected": true
+}

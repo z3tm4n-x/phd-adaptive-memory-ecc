@@ -23,7 +23,7 @@ def ratio_ci(x,y,a):
     return [float(1-r),float(1-r-width),float(1-r+width)]
 def save_csv(name,rows):
     with (ROOT/'outputs'/name).open('w',newline='',encoding='utf-8') as f:
-        w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+        w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
 
 def main():
     c=config();a=c['statistics']['family_alpha']/c['statistics']['family_size'];epsilon=c['epsilon'][0]
@@ -63,10 +63,10 @@ def figures(c,results):
     r,tr=engine.run(*s[:4],np.array([0,0,0,0.,0.,0.,0.]),accepted.args(p),c['executor']['latch_before_commit_seconds'],True)
     np.savez_compressed(ROOT/'outputs/illustration.npz',trace=tr,segments=s[5],result=r,event_sha256=s[4])
     fig,axes=plt.subplots(3,1,figsize=(10,6),sharex=True,constrained_layout=True)
-    for start,end,z,rate in s[5]:axes[0].plot([start,end],[rate,rate],color='tab:blue')
+    axes[0].step(np.r_[s[5][:,0],s[5][-1,1]],np.r_[s[5][:,3],s[5][-1,3]],where='post',color='tab:blue')
     axes[0].set_ylabel('Group arrivals / s\n(all chips)')
     axes[1].step(tr[:,2],tr[:,3],where='post');axes[1].set_ylabel('Own completed count')
-    axes[2].step(tr[:,0],tr[:,1],where='post');axes[2].set_ylabel('Chosen period, s');axes[2].set_xlabel('Relative time, s')
+    axes[2].step(tr[:,0],tr[:,1],where='post');axes[2].set_yscale('log');axes[2].set_ylabel('Nominal period, s\n(terminal clipped)');axes[2].set_xlabel('Relative time, s')
     if r[0]:
         for ax in axes:ax.axvline(r[1],color='red',ls='--')
     fig.suptitle('Preregistered illustration seed; no selection for visual effect')
