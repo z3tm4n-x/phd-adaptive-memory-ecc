@@ -1,0 +1,232 @@
+{
+  "task_id": "RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01",
+  "status": "PREREQUISITE_CHECKS_ONLY_NOT_ENGINEERING_VALIDATION",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "exhaustive": {
+    "data_patterns": 36,
+    "single_error_checks": 1404,
+    "double_error_checks": 26676,
+    "protected_positions": 39,
+    "parity_positions_counted": 7
+  },
+  "complete_trace_comparisons": 6084,
+  "mutation_data_only_counter_rejected_positions": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    39
+  ],
+  "elapsed_seconds": 1.9781541999982437,
+  "sources": [
+    {
+      "path": "docs/agents/00_GLOBAL_OPERATING_RULES.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "a0796fc3b013d93065c26ca0ea5f1354c199af2e",
+      "canonical_sha256": "3774b056531b7be12329190aa16748d4cad2feb8b4aa0aa33e8ce13b54061dce",
+      "worktree_sha256": "3774b056531b7be12329190aa16748d4cad2feb8b4aa0aa33e8ce13b54061dce",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/agents/07_RESEARCH_ENGINEER_LOCAL.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "49fb02b353e9c7b5c6632d8bc7284992169cbe42",
+      "canonical_sha256": "9ef2a926993507d4ad94e9f5adba68101efaa360550cd932daf77a353a7f9b1b",
+      "worktree_sha256": "9ef2a926993507d4ad94e9f5adba68101efaa360550cd932daf77a353a7f9b1b",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/agents/HANDOFF_CONTRACTS.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "5aa78e45544530b2164a10ea652fb1454bf1e66a",
+      "canonical_sha256": "d39ab04ab09b3054a7421418e467ad4623cd302c7cd9659fd2920857d7d935b0",
+      "worktree_sha256": "d39ab04ab09b3054a7421418e467ad4623cd302c7cd9659fd2920857d7d935b0",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "README.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "96c404a87490df1641f4b5e21e15421469b46be7",
+      "canonical_sha256": "72b587b88b46967c9463b0efd5ea08df68c91955d4e897c0cf26fd90e4b28608",
+      "worktree_sha256": "72b587b88b46967c9463b0efd5ea08df68c91955d4e897c0cf26fd90e4b28608",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/current_status.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "bf87eb139a3df739a9f3922bb2b904088be34a7d",
+      "canonical_sha256": "b0a56c61aff0989fc842244d903cb5b3cd07e99730e97c34b1dd89733bdd5bea",
+      "worktree_sha256": "b0a56c61aff0989fc842244d903cb5b3cd07e99730e97c34b1dd89733bdd5bea",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/research_spec.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "a5ecdc06f49dd06b8817e6d85a0b9c8780e21b55",
+      "canonical_sha256": "34522d4acd1189d1196b1005d6ae7427a5efb72a3d7877ab6ff13f8bfdc0fd78",
+      "worktree_sha256": "34522d4acd1189d1196b1005d6ae7427a5efb72a3d7877ab6ff13f8bfdc0fd78",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/decisions/DEC-004-dissertation-architecture-A.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "41bfd17653bc1aaee44f111fd2400d953b8754d2",
+      "canonical_sha256": "a50f9221bdaf3e4a0e72fe8a992aa670a37b0c919e544244fc3da77cc713dedb",
+      "worktree_sha256": "a50f9221bdaf3e4a0e72fe8a992aa670a37b0c919e544244fc3da77cc713dedb",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/dissertation_concept.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "e8af65c3d51eff6b30ae6c3d0ec7886625929382",
+      "canonical_sha256": "94deb6ecb83b0b685f660fe48b9be9cd32fc23e733e84bf76844cc33a1b5619e",
+      "worktree_sha256": "94deb6ecb83b0b685f660fe48b9be9cd32fc23e733e84bf76844cc33a1b5619e",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "results/RES-003-internal-count-control.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "983f088e796bdac4baa76d5b4433c1b0ad884baa",
+      "canonical_sha256": "8e05d402290a207616062a51eedddc81b805099489c0d44f7981a9cbdfa4b561",
+      "worktree_sha256": "8e05d402290a207616062a51eedddc81b805099489c0d44f7981a9cbdfa4b561",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "2f944b9af1aab63ac50ba01ed93e719a5046b2f8",
+      "canonical_sha256": "57d4708b54ad4322b56b9c6e20251192ba0b7c42f9ac197f9ffc4260df563b20",
+      "worktree_sha256": "57d4708b54ad4322b56b9c6e20251192ba0b7c42f9ac197f9ffc4260df563b20",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_CONTROL_REVIEW_01.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "0378cb344db3c0c04f6e9d25d5c3088d806967cb",
+      "canonical_sha256": "d291f627246749a7446dbc984daa9df9776e53995b1398aae537b782f5da06f9",
+      "worktree_sha256": "d291f627246749a7446dbc984daa9df9776e53995b1398aae537b782f5da06f9",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/derivation.md",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "4b93b8cb56f5149b684a1dceb9533dc89f0cb26b",
+      "canonical_sha256": "6852273484bdc25f17794493cee81a8580aa1e6182aa5bcbe959376f2ebcdb4d",
+      "worktree_sha256": "6852273484bdc25f17794493cee81a8580aa1e6182aa5bcbe959376f2ebcdb4d",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/config.json",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "5ca1b8cda0a19315684c34423cadafa2cf544e6e",
+      "canonical_sha256": "de7909f032d1a1af5f9931b77a8d8c4d86ba722fe935828757ce75b55b4edaac",
+      "worktree_sha256": "de7909f032d1a1af5f9931b77a8d8c4d86ba722fe935828757ce75b55b4edaac",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/core.py",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "7873e28e126ea02e03fc6c429ac0b4275e243cfb",
+      "canonical_sha256": "54b014feec86bb157de0c1e34c2daedc3be16c631377ec820c53ffc3f7c0267c",
+      "worktree_sha256": "54b014feec86bb157de0c1e34c2daedc3be16c631377ec820c53ffc3f7c0267c",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/simulate.py",
+      "commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+      "git_blob": "ee55c6bf57b034b0efc0b41936a549d6a14b53dd",
+      "canonical_sha256": "3c6b26ecd248f3c9f1fb380cfc037eca532e5994ecf799f00faac0783b7cee4e",
+      "worktree_sha256": "3c6b26ecd248f3c9f1fb380cfc037eca532e5994ecf799f00faac0783b7cee4e",
+      "canonical_bytes_equal": true,
+      "equal_after_crlf_to_lf": true
+    }
+  ],
+  "preexisting_status_entries": [
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/decision_sensitivity.csv",
+      "base_sha256": "f1e2e232f51280be1c4e77a7c5b91eddf78df0c52d6e8acb77e88f5f79ab7968",
+      "worktree_sha256": "f1e2e232f51280be1c4e77a7c5b91eddf78df0c52d6e8acb77e88f5f79ab7968",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/dependence_validation.csv",
+      "base_sha256": "5f36a3a5d5e6e7e608b4543d9319aff5efebfae67f77a44621a0cf0d560fdbee",
+      "worktree_sha256": "5f36a3a5d5e6e7e608b4543d9319aff5efebfae67f77a44621a0cf0d560fdbee",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/direct_rate_5min.csv",
+      "base_sha256": "206d882f2929297b6b5ab122b7761c54fdaccf3c8741168ae2b13c88ece05ab3",
+      "worktree_sha256": "206d882f2929297b6b5ab122b7761c54fdaccf3c8741168ae2b13c88ece05ab3",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/registered_direct_by_energy.csv",
+      "base_sha256": "74e0fac4bb0847625b50bdf1aef7cd2215a881f471529953dbc72e8eeddc1ff2",
+      "worktree_sha256": "74e0fac4bb0847625b50bdf1aef7cd2215a881f471529953dbc72e8eeddc1ff2",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/risk_curves.csv",
+      "base_sha256": "890e7fe77bf638528d7c440aeff81e00a8290bd1b5b955bdd6e7bdb389529fd8",
+      "worktree_sha256": "890e7fe77bf638528d7c440aeff81e00a8290bd1b5b955bdd6e7bdb389529fd8",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/window_risk_summary.csv",
+      "base_sha256": "91387e9a4967f7b835e56a702dd87863954d2b6e945f752108f0b8961222235e",
+      "worktree_sha256": "91387e9a4967f7b835e56a702dd87863954d2b6e945f752108f0b8961222235e",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_member_manifest.csv",
+      "base_sha256": "ca9ad3ddf746be8a394ff53577789fae3448d3f02094b57c79935582509e37f0",
+      "worktree_sha256": "ca9ad3ddf746be8a394ff53577789fae3448d3f02094b57c79935582509e37f0",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_operator_closure.csv",
+      "base_sha256": "4d3c0e127af2557f291c4de4aee12d089ee4acb1e81e3a03a71ed634f75e31be",
+      "worktree_sha256": "4d3c0e127af2557f291c4de4aee12d089ee4acb1e81e3a03a71ed634f75e31be",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/legacy_article_regression.csv",
+      "base_sha256": "f935d0d22c75293009a3905a5d2a3c8cb766132e90f11acc21c0b5a225c605ca",
+      "worktree_sha256": "f935d0d22c75293009a3905a5d2a3c8cb766132e90f11acc21c0b5a225c605ca",
+      "byte_identical": true
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/shielding_boundary_summary.csv",
+      "base_sha256": "7e1a609ecf1e40fa8a0f7dddf453278fd741221729d1952a35fb8b74bf3fd061",
+      "worktree_sha256": "7e1a609ecf1e40fa8a0f7dddf453278fd741221729d1952a35fb8b74bf3fd061",
+      "byte_identical": true
+    }
+  ],
+  "production_trials": 0,
+  "script_hashes": {
+    "prerequisite_checks.py": "b967294b362f919520b214242af951e0222c1cc20ff9cd039e7c73d83a13c28c",
+    "run_checks.py": "945f1fb284c6b73afa8da2c4e2d38be818f88e8d71842ce783f850dee6c56ab2",
+    "test_prerequisites.py": "be972d41327eb30f096f2bcf33cf385812e98ca9d7ba92c92a1f5f1df5ce277e"
+  }
+}

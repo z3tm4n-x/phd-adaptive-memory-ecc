@@ -1,0 +1,21 @@
+{
+  "task_id": "RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01",
+  "base_commit": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+  "stage": "addressed_prerequisite_checks_only",
+  "comparative_experiment_registered": false,
+  "production_trials": 0,
+  "code_definition": "shortened extended Hamming; positions 1..38, parity at powers of two; overall parity at 39",
+  "information_bits": 32,
+  "protected_bits": 39,
+  "count_rule": "one per completed single-error correction, including check bits",
+  "engineering_object_frozen": false,
+  "words": null,
+  "arrival_process_parameters": null,
+  "physical_response_source": null,
+  "horizon_seconds": null,
+  "epsilon_research": null,
+  "executor_timing_contract": null,
+  "controller_resource_contract": null,
+  "policies_tuned": false,
+  "test_inputs": "deterministic artificial integer times and rational rates only; no scientific policy outcomes"
+}
