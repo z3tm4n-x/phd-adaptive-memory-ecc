@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-16",
+  "handoff_commit": "d59de85eb46ae1fa254f3b936ce6fa64c28bcff0",
+  "branch_parent": "003c2346c4135b3d2f24dac0981e60cb2f179384",
+  "primary_documents": [
+    {
+      "name": "cy62167.pdf",
+      "bytes": 645178,
+      "sha256": "a7d9faf23208b6c0f3b2be402feb8653ff0c6f649306fc246605189018a9ed1f",
+      "local_path": "../../../../tmp/pdfs/cy62167-reference/cy62167.pdf",
+      "revision": "002-20054 Rev. *F, 2020-03-18",
+      "url": "https://www.infineon.com/dgdl/Infineon-CY62167G30_CY62167GE30_16_Mbit_%281M_words_X_16_bit_2M_words_X_8_bit%29_Static_RAM_with_Error-Correcting_Code_%28ECC%29-DataSheet-v07_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0ee9e49f72cf"
+    },
+    {
+      "name": "ds181.pdf",
+      "bytes": 2010373,
+      "sha256": "3f0cb482d645e217ae834e9370c1320300abb85a8046287250f9a48856aed070",
+      "local_path": "../../../../tmp/pdfs/cy62167-reference/ds181.pdf",
+      "revision": "DS181 v1.27.1, 2024-07-03",
+      "url": "https://docs.amd.com/api/khub/documents/iAkxxTOk96ANLJqYf2hgrQ/content"
+    },
+    {
+      "name": "ug952.pdf",
+      "bytes": 9456238,
+      "sha256": "195cc5fd95e993b63754695be83576cfbf337c970ee85da2a9732e2c1afd1fa2",
+      "local_path": "../../../../tmp/pdfs/cy62167-reference/ug952.pdf",
+      "revision": "UG952 v1.4, 2019-08-06",
+      "url": "https://docs.amd.com/api/khub/documents/9uY8E5K7FZWRB1nL_I4sRg/content"
+    }
+  ],
+  "scientific_input": {
+    "commit": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+    "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv",
+    "sha256": "13daa667dcdf0931a477ba6994f3213b345c582b4d6b472031a9454705a60cf8"
+  },
+  "legacy_codec": {
+    "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+    "commit": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+    "paths": [
+      "rtl/ecc/secded_32_39_encoder.sv",
+      "rtl/ecc/secded_32_39_decoder.sv"
+    ]
+  },
+  "previous_sources": "../timing_input_gate.json; governing dispositions preserved at handoff commit",
+  "retrieval_limits": [
+    "First AMD download stalled and was cancelled; bounded retry succeeded.",
+    "PDF local read is authoritative for downloaded bytes. Text extraction initially hit Windows cp1251; retried UTF-8.",
+    "Poppler rendering produced Unicode ancillary-file warnings; rendered pages inspected."
+  ]
+}
