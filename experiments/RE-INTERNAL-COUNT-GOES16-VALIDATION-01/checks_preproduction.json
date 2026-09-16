@@ -1,0 +1,27 @@
+{
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "input": {
+    "spectral_rows_checked": 10,
+    "max_relative_convolution_error": 6.661338147750939e-16,
+    "raw_units_and_direction_check": true,
+    "array_normalization_rows": 1440,
+    "time_bins": 1440,
+    "independent_selected_indices": [
+      732,
+      753,
+      157
+    ]
+  },
+  "certificate": {
+    "floor": 0.07667519552414698,
+    "delta": 0.00021960410931119292,
+    "s0": 0.023324804475853028,
+    "backup": 0.07645559141483578,
+    "accepted_SR_arithmetic_bound": 0.000143018263177913,
+    "numeric_reserve": 0.0002,
+    "guarantee_domain": "original CTMC only; not GOES profile"
+  }
+}
