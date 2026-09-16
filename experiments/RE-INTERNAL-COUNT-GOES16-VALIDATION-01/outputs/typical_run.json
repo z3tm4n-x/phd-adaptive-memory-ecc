@@ -1,0 +1,43 @@
+{
+  "case": "typical",
+  "prereg": "870a3c5d725793dd45ff2cc2feaf6e8885df0df9",
+  "utc": "2024-10-08T13:05:00+00:00",
+  "trials": 20000,
+  "computational_failures": 0,
+  "seconds": 47.94373709999854,
+  "trial_file_sha256": "99abf83e635ee999e75c4a23345f1b59b3dbb3bb6685585afdfd5f5a7f1589a4",
+  "certificate": {
+    "floor": 0.07667519552414698,
+    "delta": 0.00021960410931119292,
+    "s0": 0.023324804475853028,
+    "backup": 0.07645559141483578,
+    "accepted_SR_arithmetic_bound": 0.000143018263177913,
+    "numeric_reserve": 0.0002,
+    "guarantee_domain": "original CTMC only; not GOES profile"
+  },
+  "fixed300": {
+    "period_s": 300,
+    "upper_decimal_ceiling": "6.83377085192066388596536421343010010014243926423310363620062E-7",
+    "upper": 6.833770851920665e-07,
+    "exact_numerator": "696031853969418115011486657960697327763859398556627227714115255415814038541593803325",
+    "exact_denominator": "1018517988167243043134222844204689080525734196832968125318070224677190649881668353091698688",
+    "coarse_max_rate_upper": 8.469766671596427e-07,
+    "status": "SUFFICIENT",
+    "argument": "distinct-bit pair union bound on every actual word-check gap, including initial and terminal gaps; exact rational sum"
+  },
+  "illustration_result": [
+    0.0,
+    311.0,
+    58.699284479999996,
+    652214272.0,
+    652214272.0,
+    3600.0,
+    311.0,
+    0.026324647382807286,
+    311.0
+  ],
+  "illustration_event_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "peak_memory_bytes": 201048064
+}
