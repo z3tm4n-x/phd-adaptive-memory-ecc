@@ -1,0 +1,29 @@
+{
+  "status": "PASS_WITH_MINOR_FIGURE_LABEL",
+  "ancestry": [
+    "268e0d772aa718226ce7d3c2c18ded96306bdcf2",
+    "c09928f2ad0e483539426ec2c0d20e84adbb3d86",
+    "8ed0035d8b75b43733d9dcce4473835031d21f49",
+    "4979ee554fe67796ec5970ad61b41868b9864b59",
+    "c277567b86a294adb415cce65df3ea6f44dcb510"
+  ],
+  "hashed_objects": 53,
+  "frozen_pretest_objects": 7,
+  "decimal_row_mass_error": "2.99470742834980963636314997339750066482620126509218440E-16",
+  "minimum_kernel": 2.418222330410521e-165,
+  "uniform_positive_posterior_lower": 1.031677768935824e-19,
+  "min_product": 2.494826218628715e-184,
+  "forward_backup_potential": 0.061149774241167076,
+  "delta": 0.00033146425961188614,
+  "slack": 0.03851876149922104,
+  "illustration": {
+    "rows": 1418,
+    "completed_passes": 1417,
+    "last_start": 1789.5,
+    "last_nominal_period": 300.0,
+    "last_stop": 1800.0,
+    "plotted_terminal_count": 0.0,
+    "terminal_count_is_observation": false
+  },
+  "shared": "published transition matrices; forward propagation and Decimal rewards independent of production V recurrence; no assertion of physical calibration"
+}
