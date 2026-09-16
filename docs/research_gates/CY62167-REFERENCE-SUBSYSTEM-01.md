@@ -2,7 +2,12 @@
 
 2026-09-15. **Проектное решение Orchestrator и явное дополнение к заданию RE.**
 База: `ca8643c26ef773d6f29ba10bb0c9fc3b8c6c0450` (main, PR #27).
-Статус: **DESIGN SELECTED / RE CONTINUATION PREPARED; исполнение не подтверждено.**
+Статус после [disposition 2026-09-16](CY62167-EXECUTOR-REFERENCE-SR-DISPOSITION-01.md):
+**CONDITIONAL REFERENCE ACCEPTED / REFERENCE SUBGATE CLOSED;
+PHYSICAL QUALIFICATION NOT_ESTABLISHED.** RE 3dc58a5f и отдельный SR 4b8aa6ae
+завершены. Принятое использование требует B_H и исправленного названия корпуса
+48-pin TSOP I по disposition. Проект и исходное поручение ниже сохраняются как
+условия выполненного продолжения; их будущие времена не означают новое задание.
 
 Выбран **AC701 Rev. 2.0 + три CY62167GE30-45ZXI на одном параллельном интерфейсе**,
 внешний SEC-DED(39,32), 2 MiB полезной памяти. Задача продолжения — получить
