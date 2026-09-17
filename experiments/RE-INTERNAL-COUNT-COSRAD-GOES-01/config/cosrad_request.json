@@ -1,0 +1,52 @@
+{
+  "orbit": {
+    "apogee_km": 36000,
+    "perigee_km": 36000,
+    "inclination_deg": 0,
+    "argument_perigee_deg": 0
+  },
+  "prediction_years": 10,
+  "solar_cycle_number": "even",
+  "start_year_in_cycle": 1,
+  "shielding": {
+    "material": "Al",
+    "density_g_cm3": 2.7,
+    "thickness_mm": 1,
+    "areal_density_g_cm2": 0.27,
+    "geometry": "uniform equivalent Al areal shield: 0.27 g/cm2 for each incident direction, central spherical-shell approximation; native representation must be identified, not assumed identical"
+  },
+  "states": [
+    {
+      "id": "BKG_MIN",
+      "solar_activity": "minimum",
+      "components": "GCR plus applicable trapped components; no SEP added"
+    },
+    {
+      "id": "BKG_MAX",
+      "solar_activity": "maximum",
+      "components": "GCR plus applicable trapped components; no SEP added"
+    },
+    {
+      "id": "SEP_DESIGN",
+      "probability_native": 0.1,
+      "components": "solar proton and ion component separately; pair with BKG_MAX only under explicitly declared project rule"
+    }
+  ],
+  "sensitivity": {
+    "normalization": "per bit",
+    "native_Bit_field": 1,
+    "external_active_bits_multiplier": 40894464,
+    "ion_model": "normal-incidence Weibull; Thin sensitive volume if native input supports that model",
+    "ion_parameters": {
+      "sigma_sat_cm2_per_bit": 2.6e-07,
+      "LET0_MeV_cm2_mg": 0.15,
+      "W_MeV_cm2_mg": 70,
+      "s": 1.2
+    },
+    "external_ion_operator": "integral_mu=0.5..1 mu*sigma(L/mu) dmu; no additional 4pi; chosen thin-layer scalar approximation",
+    "proton_model": "tabulated measured bit-flip response plus explicitly tagged extensions; no replacement by high-energy constant",
+    "proton_native_caution": "do not add proton rate inferred internally from ion LET threshold to custom measured proton rate"
+  },
+  "technical_input_required": "COSRAD version and native input-form screenshots/project export showing available environment model identifiers, flux/fluence/probability semantics and tabulated/Weibull sensitivity fields",
+  "native_models_status": "exact identifiers not known; preserve original project model identities until checked from native export, do not invent model names"
+}
