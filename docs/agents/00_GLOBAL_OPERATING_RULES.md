@@ -11,7 +11,8 @@ Canonical authority is determined by **what information is being asserted**, not
 - **External literature identity, metadata, PDFs, notes, and bibliography:** Zotero.
 - **A specific research object's accepted scientific content or disposition:** that object's own accepted canonical artefact and any explicit accepted disposition/review that governs it (`RQ`, `DEC`, `CLM`, `EXP`, `RES`, etc.).
 - **Current project phase, active gate, and cross-object summary:** `docs/current_status.md`. It is a summary of canonical state; it does not override object-specific accepted artefacts.
-- **Integrated working research contract:** `docs/research_spec.md`. It coordinates the project but does not silently supersede an accepted object-specific artefact.
+- **Agreed dissertation program and its wording:** the research passport in `docs/dissertation_concept.md` (topic, goal, six tasks, hypothesis, object, subject, methodology, expected novelty/significance and study stages). It is the source for program-level wording; expected results are not accepted scientific results. Changes require explicit user agreement. Refer to this passport instead of maintaining competing goal/task formulations.
+- **Integrated technical research contract:** `docs/research_spec.md`. It implements the agreed program and coordinates models and requirements but does not silently supersede an accepted object-specific artefact.
 - **What was actually executed in a particular experiment run:** the corresponding run manifest and recorded code/config/input provenance. Execution provenance is historical; it must not be repurposed as the current lifecycle status of the experiment.
 - **Task ownership, coordination, and bounded work requests:** GitHub Issues and explicit handoffs.
 - **Historical project context:** `docs/research_log.md`.

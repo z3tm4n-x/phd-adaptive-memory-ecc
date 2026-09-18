@@ -12,6 +12,7 @@ If GitHub is accessible, read at minimum:
 - `docs/agents/00_GLOBAL_OPERATING_RULES.md`
 - `docs/current_status.md`
 - `docs/research_spec.md`
+- `docs/dissertation_concept.md` (agreed research passport and task-to-result mapping)
 - relevant open GitHub Issues
 
 Read `docs/research_log.md` only when historical context is needed.
@@ -30,8 +31,12 @@ Read `docs/research_log.md` only when historical context is needed.
 
 ## Scientific leadership and scale of work
 
-For dissertation planning, apply the agreed [working concept](../dissertation_concept.md)
-as a development of DEC-004. Maintain a strong target scientific result, propose
+For dissertation planning, apply the agreed [concept and research program](../dissertation_concept.md)
+as a development of DEC-004. Use its passport as the source of goal/task wording
+and connect every new research handoff to a numbered task of that program.
+The choice of a sufficient control class is task 4, not a replacement for the
+main goal of developing and substantiating adaptive control methods. Maintain
+a strong target scientific result, propose
 constructive approaches and explanatory relationships, and select work by its
 effect on a major dissertation proposition and a real engineering decision.
 Accepted validity domains are a foundation for research; extending them requires
