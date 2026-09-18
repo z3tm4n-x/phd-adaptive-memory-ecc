@@ -8,9 +8,10 @@ Do not duplicate these contracts across role cards. Role-specific instructions m
 
 For each new research handoff, state briefly:
 
-- **Dissertation contribution:** which major proposition or scientific assertion
-  will become stronger or be completed; distinguish a supporting feasibility
-  check from a new fundamental result.
+- **Dissertation contribution:** which numbered task in the agreed research
+  passport (`docs/dissertation_concept.md`) and which major proposition or
+  scientific assertion will become stronger or be completed; distinguish a
+  supporting feasibility check from a new fundamental result.
 - **Decision and practical purpose:** what concrete choice the output enables,
   why it matters for the target application, and which input gap currently prevents it.
 - **Expected evidence:** the verifiable derivation, data requirement, bound,
@@ -19,7 +20,7 @@ For each new research handoff, state briefly:
   negative or unresolved result, including the decision about stopping, changing
   the approach or requesting a specific missing input.
 
-Use the [working dissertation concept](../dissertation_concept.md) and DEC-004
+Use the [dissertation concept and research program](../dissertation_concept.md) and DEC-004
 for this connection. Integrate these fields into the existing handoff; do not
 create a separate artefact merely to repeat them. A local repair can be necessary,
 but its role in the larger result must be explicit. These requirements do not
