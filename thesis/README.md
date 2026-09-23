@@ -1,6 +1,8 @@
 # Материалы диссертации
 
-Текущая сборка v2.2: [W1 — раздел главы 3](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/33).
+Сборка главы v2.2 [W1 / #33](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/33)
+приостановлена решением PI от 23.09.2026. Сейчас приоритет — научные результаты;
+возобновление написания только по отдельному поручению автора.
 Исходная рукопись — [MANUSCRIPT-02](../manuscripts/internal-count-method-01/MANUSCRIPT-02.md),
 происхождение и статус — [T0](../experiments/t31-working-set/README.md).
 Сама рукопись не подменяет принятые карточки результатов и не является готовой главой.
