@@ -1,0 +1,88 @@
+{
+  "base_commit": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+  "sources": [
+    {
+      "id": "HI2024",
+      "title": "SRAM-based heavy ion beam flux and LET dosimetry",
+      "doi": "10.1109/TNS.2024.3487647",
+      "version": "HAL hal-04715265v1 author postprint; journal metadata 2025 72(8) 2458-2465",
+      "pdf_file": "2024___RADECS___ANDREA___HAL_Version(1).pdf",
+      "sha256": "953f55d89ea8a3d0dc480ec14c5628045c376ba3807f4c1a811da1889d41370e",
+      "locator": "PDF p4 Section II, last paragraph; p5 multiplicity discussion",
+      "evidence": "exact device/ECC off/3.3V/normal incidence; sat2.6e-7,L0.15,W70,s1.2; bit first moment not parent events"
+    },
+    {
+      "id": "REDW2020",
+      "title": "SEU characterization of commercial and custom-designed SRAMs based on 90 nm technology and below",
+      "doi": "10.1109/REDW51883.2020.9325822",
+      "pdf_file": "coronetti2020(2).pdf",
+      "sha256": "68ed42b409788bfa9d5b883a5ed3b0829372aa7ebd019ec4690760ef38b9aaee",
+      "locator": "Table I; ECC-disable text; Fig.6 PDF p5",
+      "evidence": "CY62167, low-energy nonmonotonic proton response; three additional isolated marker digitizations"
+    },
+    {
+      "id": "PDI2021",
+      "title": "Assessment of Proton Direct Ionization for the Radiation Hardness Assurance of Deep Submicron SRAMs Used in Space Applications",
+      "doi": "10.1109/TNS.2021.3061209",
+      "pdf_file": "fulltext from publisher.pdf",
+      "sha256": "4e34f5eafe870f817241ff8550aed12386b988659eacd62ef8d0470d905f02b8",
+      "locator": "Fig.3 proton; Fig.6 earlier ion fit; irradiation setup",
+      "evidence": "high-energy points in frozen repository table; distinct earlier HI fit is not substituted for HI2024"
+    },
+    {
+      "id": "CY-DATASHEET",
+      "title": "CY62167GE30/CY62167G30 MoBL 16-Mbit (1M x 16 / 2M x 8) SRAM with ECC",
+      "version": "001-81537 Rev.*P, May 26 2017, controlled Library copy",
+      "locator": "PDF pp1-3, features and note1",
+      "evidence": "16Mbit,x16,45ns nominal timing,no automatic read write-back; 300ns slot is our assumption, not this source"
+    },
+    {
+      "id": "AN88889",
+      "title": "Mitigating single-event upsets using Infineon’s 65-nm asynchronous SRAM",
+      "version": "001-88889 Rev.*D, 2026-02-19, controlled Library copy",
+      "locator": "PDF pp8-9",
+      "evidence": "internal(38,32) Hamming and 16-bit interleaving; external ECC is distinct"
+    },
+    {
+      "id": "PROTON-REPO",
+      "path": "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv",
+      "commit": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "git_blob": "624c3e50526a6c9dbf5d534e6d600c56802df036",
+      "evidence": "frozen empirical marker values; missing29MeV;184anchor separate"
+    },
+    {
+      "id": "GROUP-REPO",
+      "path": "experiments/RE-CY62167-PROTON-01/multiplicity_by_energy.csv",
+      "commit": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "git_blob": "69556c8cdfea7eb0bd929983ff71eabece6c4a67",
+      "evidence": "conditional registered K counts, no aligned fluence"
+    },
+    {
+      "id": "ANGLE-REPO",
+      "path": "experiments/CY62167-ANGULAR-FINDING-CONTROL-01/REPORT.md",
+      "commit": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "git_blob": "c110281d6ada560d9b1bb7a31fc23f8b8f09780c",
+      "evidence": "controlled STO 04.01.0010-2025 §7.8 Eq7.5, theta_max60; COSRAD exact numerical identity not established; full mark angular transfer not proved"
+    },
+    {
+      "id": "NOAA-EVENT",
+      "url": "https://www.spaceweather.gov/news/moderate-s2-solar-radiation-storms-observed-08-june-2024",
+      "access_date": "2026-09-17",
+      "evidence": "June8 external event selection, no policy performance"
+    },
+    {
+      "id": "ACE-SIS",
+      "url": "https://izw1.caltech.edu/ACE/ASC/level2/sis_l2desc.html",
+      "dataset_doi": "10.48322/eq1k-gs80",
+      "access_date": "2026-09-17",
+      "evidence": "14 species,8 element-dependent bands, per-sr per-MeV/n flux, counts/quality; current systematic-uncertainty notes must be retained"
+    },
+    {
+      "id": "XAPP779",
+      "url": "https://docs.amd.com/v/u/en-US/xapp779",
+      "version": "v1.1,2007",
+      "evidence": "configuration-memory recommendation not used as a SECDED risk criterion; inspect source before any numeric recommendation is quoted"
+    }
+  ],
+  "copyright": "Original publication PDFs and licensed COSRAD raw files are not redistributed in this package. Source hashes identify checked copies."
+}

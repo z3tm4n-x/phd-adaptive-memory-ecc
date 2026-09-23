@@ -1,0 +1,84 @@
+{
+  "ion_independent_scalar_checks": [
+    {
+      "LET": 0.01,
+      "gauss96": 0.0,
+      "adaptive_quad": 0.0,
+      "absolute_difference": 0.0,
+      "quad_reported_error_not_proof": 0.0
+    },
+    {
+      "LET": 0.075,
+      "gauss96": 0.0,
+      "adaptive_quad": 0.0,
+      "absolute_difference": 0.0,
+      "quad_reported_error_not_proof": 0.0
+    },
+    {
+      "LET": 0.1,
+      "gauss96": 1.6202191586043734e-12,
+      "adaptive_quad": 1.6204056541228506e-12,
+      "absolute_difference": 1.8649551847723043e-16,
+      "quad_reported_error_not_proof": 4.382280100683765e-26
+    },
+    {
+      "LET": 0.15,
+      "gauss96": 1.7598246798311216e-11,
+      "adaptive_quad": 1.7598246801348154e-11,
+      "absolute_difference": 3.0369386890258888e-21,
+      "quad_reported_error_not_proof": 8.659547037664508e-25
+    },
+    {
+      "LET": 0.3,
+      "gauss96": 1.1407566889969664e-10,
+      "adaptive_quad": 1.1407566889969666e-10,
+      "absolute_difference": 1.2924697071141057e-26,
+      "quad_reported_error_not_proof": 1.2664943416195912e-24
+    },
+    {
+      "LET": 1,
+      "gauss96": 7.30134052162166e-10,
+      "adaptive_quad": 7.301340521621663e-10,
+      "absolute_difference": 2.0679515313825692e-25,
+      "quad_reported_error_not_proof": 8.10611635773302e-24
+    },
+    {
+      "LET": 10,
+      "gauss96": 1.2309866814789819e-08,
+      "adaptive_quad": 1.2309866814789822e-08,
+      "absolute_difference": 3.308722450212111e-24,
+      "quad_reported_error_not_proof": 1.3666697567848797e-22
+    },
+    {
+      "LET": 70,
+      "gauss96": 7.255169080258855e-08,
+      "adaptive_quad": 7.255169080258856e-08,
+      "absolute_difference": 1.3234889800848443e-23,
+      "quad_reported_error_not_proof": 8.054855760451902e-22
+    },
+    {
+      "LET": 200,
+      "gauss96": 9.640290305081106e-08,
+      "adaptive_quad": 9.640290305081106e-08,
+      "absolute_difference": 0.0,
+      "quad_reported_error_not_proof": 1.0702872260771718e-21
+    },
+    {
+      "LET": 1000,
+      "gauss96": 9.749999999977712e-08,
+      "adaptive_quad": 9.749999999977712e-08,
+      "absolute_difference": 0.0,
+      "quad_reported_error_not_proof": 1.082467449007053e-21
+    }
+  ],
+  "maximum_absolute_disagreement": 1.8649551847723043e-16,
+  "constant_sigma_exact_angular_factor": 0.375,
+  "note": "agreement checks a scalar implementation; not COSRAD operator identity or certified arithmetic",
+  "proton_grid_points": 515,
+  "ion_grid_points": 413,
+  "new_measured_anchor_count": 3,
+  "frozen_main_measured_anchor_count": 16,
+  "proton_peak_anchor_sigma": 1.2700000000000002e-09,
+  "active_bits": 40894464,
+  "pass_seconds": 0.3145728
+}

@@ -1,5 +1,9 @@
 # AI Agent Instructions
 
+> Устарело. Действующие инструкции v2.2 — в [agents/](../../agents/00_RULES.md).
+> Этот каталог сохраняется как история v1; приведённые ниже правила запуска
+> не назначают новые работы. Текущий план — [MAP](../../MAP.md) и [STATUS](../../STATUS.md).
+
 This directory contains the canonical operating rules and role cards for the dissertation research workflow.
 
 ## Cloud roles

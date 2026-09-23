@@ -1,0 +1,51 @@
+{
+  "task_id": "RE-INTERNAL-COUNT-COSRAD-GOES-01",
+  "stage": "A",
+  "recorded_at_utc": "2026-09-17T08:55:25.731505+00:00",
+  "base_commit": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+  "delivery_commit": null,
+  "push_performed": false,
+  "publication_limitation": "GitHub connector reads succeeded; exposed methods were read-only. Direct git ls-remote failed with Could not resolve host: github.com; no authenticated local checkout available.",
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "commands_executed": [
+    "python -B src/prepare_inputs.py --archive /mnt/data/results.zip",
+    "python -B -m unittest discover -s tests -v",
+    "python -B tests/check_importer_fixture.py"
+  ],
+  "interface_unittest_count": 34,
+  "new_cosrad_1mm_runs": 0,
+  "new_goes_ace_numeric_reconstructions": 0,
+  "policy_trials": 0,
+  "source_pdf_hashes_verified": 3,
+  "independent_validation": "Small separately expressed codec/executor/pair oracles and alternative scalar quadrature; no production RES-003 transfer certification; no Scientific Review.",
+  "source_provenance": "Exact GitHub inputs read through connector; normalized source values are not claimed byte-identical to upstream blobs; original assignment bytes preserved.",
+  "remaining_stages": [
+    "native COSRAD input-form binding",
+    "PI COSRAD runs",
+    "1mm transport and historical input",
+    "reference floor and numerical contract",
+    "final preregistration before policy tests",
+    "Package B and separate review"
+  ],
+  "offline_importer_fixture": {
+    "checks": {
+      "dry_run_no_mutation": true,
+      "dirty_tree_rejected": true,
+      "apply_commit_changes_task_only_keeps_original_branch": true,
+      "identical_reimport_idempotent": true,
+      "nonidentical_existing_file_rejected": true,
+      "outside_task_branch_change_rejected": true
+    },
+    "passed": 6,
+    "real_base_or_repository_used": false,
+    "network_used": false,
+    "push_executed": false,
+    "source_BASE_modified": false,
+    "scope": "offline branch/copy/commit guards only; not GitHub publication"
+  }
+}

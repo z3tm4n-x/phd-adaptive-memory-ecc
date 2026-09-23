@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "dry_run_no_mutation": true,
+    "dirty_tree_rejected": true,
+    "apply_commit_changes_task_only_keeps_original_branch": true,
+    "identical_reimport_idempotent": true,
+    "nonidentical_existing_file_rejected": true,
+    "outside_task_branch_change_rejected": true
+  },
+  "passed": 6,
+  "real_base_or_repository_used": false,
+  "network_used": false,
+  "push_executed": false,
+  "source_BASE_modified": false,
+  "scope": "offline branch/copy/commit guards only; not GitHub publication"
+}

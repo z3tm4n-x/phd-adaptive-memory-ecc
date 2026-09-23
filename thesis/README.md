@@ -1,5 +1,10 @@
 # Материалы диссертации
 
+Текущая сборка v2.2: [W1 — раздел главы 3](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/33).
+Исходная рукопись — [MANUSCRIPT-02](../manuscripts/internal-count-method-01/MANUSCRIPT-02.md),
+происхождение и статус — [T0](../experiments/t31-working-set/README.md).
+Сама рукопись не подменяет принятые карточки результатов и не является готовой главой.
+
 Материалы по [DEC-004](../docs/decisions/DEC-004-dissertation-architecture-A.md)
 и [концепции и программе исследования](../docs/dissertation_concept.md).
 Согласованные формулировки цели и задач, этапы работы и план первого семестра
@@ -20,8 +25,10 @@
 
 Это согласованная структура завершения, а не утверждение о готовности четырёх
 глав или всех положений. Итоговые названия разделов уточняются при сборке.
-Сведения о готовности и недостающих основаниях находятся в
-[current_status](../docs/current_status.md) и [backlog](../docs/research_backlog.md).
+Сведения о готовности и следующей работе находятся в
+[MAP](../MAP.md) и [STATUS](../STATUS.md).
+Прежние [current_status](../docs/current_status.md) и [backlog](../docs/research_backlog.md)
+сохраняются как история v1, а не действующая очередь задач.
 Первая статья RES-003 продолжается по [собственному плану](../docs/publication_plans/RES-003-PUBLICATION-HANDOFF.md).
 
 Формат окончательной сборки (Word/LaTeX) будет выбран отдельно.

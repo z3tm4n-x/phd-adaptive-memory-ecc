@@ -1,0 +1,39 @@
+test_all_double_bits (test_contracts.CodeTests.test_all_double_bits) ... ok
+test_all_single_bits (test_contracts.CodeTests.test_all_single_bits) ... ok
+test_dimensions (test_contracts.CodeTests.test_dimensions) ... ok
+test_double_normalization_sentinel (test_contracts.CodeTests.test_double_normalization_sentinel) ... ok
+test_mapping_is_bijection (test_contracts.CodeTests.test_mapping_is_bijection) ... ok
+test_wrong_bit_multiplier_sentinel (test_contracts.CodeTests.test_wrong_bit_multiplier_sentinel) ... ok
+test_clean_latch_does_not_erase_late_upset (test_contracts.ExecutorTests.test_clean_latch_does_not_erase_late_upset) ... ok
+test_commit_upset_latch_tie (test_contracts.ExecutorTests.test_commit_upset_latch_tie) ... ok
+test_dirty_latch_then_second_hit_is_latched_failure (test_contracts.ExecutorTests.test_dirty_latch_then_second_hit_is_latched_failure) ... ok
+test_ecap_not_cleared_by_later_toggle (test_contracts.ExecutorTests.test_ecap_not_cleared_by_later_toggle) ... ok
+test_group_is_atomic (test_contracts.ExecutorTests.test_group_is_atomic) ... ok
+test_horizon_contract (test_contracts.ExecutorTests.test_horizon_contract) ... ok
+test_invalid_period (test_contracts.ExecutorTests.test_invalid_period) ... ok
+test_late_word_residual_persists (test_contracts.ExecutorTests.test_late_word_residual_persists) ... ok
+test_no_scan_pair_bound (test_contracts.ExecutorTests.test_no_scan_pair_bound) ... ok
+test_own_count_not_shared_sentinel (test_contracts.ExecutorTests.test_own_count_not_shared_sentinel) ... ok
+test_pair_bound_independent_fraction_oracle (test_contracts.ExecutorTests.test_pair_bound_independent_fraction_oracle) ... ok
+test_parity_in_own_count (test_contracts.ExecutorTests.test_parity_in_own_count) ... ok
+test_same_bit_toggle_is_not_failure (test_contracts.ExecutorTests.test_same_bit_toggle_is_not_failure) ... ok
+test_terminal_after_latch_before_commit (test_contracts.ExecutorTests.test_terminal_after_latch_before_commit) ... ok
+test_terminal_no_false_zero_sentinel (test_contracts.ExecutorTests.test_terminal_no_false_zero_sentinel) ... ok
+test_184_not_relabelled (test_contracts.ResponseTests.test_184_not_relabelled) ... ok
+test_anchor_values_preserved (test_contracts.ResponseTests.test_anchor_values_preserved) ... ok
+test_continuations_are_named (test_contracts.ResponseTests.test_continuations_are_named) ... ok
+test_flux_factors (test_contracts.ResponseTests.test_flux_factors) ... ok
+test_invalid_not_zero (test_contracts.ResponseTests.test_invalid_not_zero) ... ok
+test_ion_angle_independent_scalar (test_contracts.ResponseTests.test_ion_angle_independent_scalar) ... ok
+test_ion_angular_constant_plateau (test_contracts.ResponseTests.test_ion_angular_constant_plateau) ... ok
+test_ion_threshold_and_sat (test_contracts.ResponseTests.test_ion_threshold_and_sat) ... ok
+test_let_jacobian (test_contracts.ResponseTests.test_let_jacobian) ... ok
+test_missing_29_not_zero (test_contracts.ResponseTests.test_missing_29_not_zero) ... ok
+test_original_archive_audit (test_contracts.ResponseTests.test_original_archive_audit) ... ok
+test_proton_nonmonotonic (test_contracts.ResponseTests.test_proton_nonmonotonic) ... ok
+test_registered_counts (test_contracts.ResponseTests.test_registered_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.032s
+
+OK
