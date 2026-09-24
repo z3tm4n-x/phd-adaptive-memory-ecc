@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01",
+  "execution_base": "59603d231b923ee7426056cb62779a5ad16c8413",
+  "canonical_base": "abc39d5986aa7101fe2608700d455317ed683610",
+  "delivery_branch": "research/fixed-adaptive-feasibility-01",
+  "preverification_commit": "e8713d187592c9b810ecf4194b6da7108d898e22",
+  "delivery_commit": "THIS_MANIFEST_COMMIT_REPORTED_EXTERNALLY_TO_AVOID_SELF_REFERENCE",
+  "scientific_status": "OWN_RESULT_REQUIRES_SEPARATE_SCIENTIFIC_REVIEW",
+  "res004_practical_executed": false,
+  "canonical_delivery_entrypoint": {
+    "path": "experiments/RE-FIXED-ADAPTIVE-FEASIBILITY-01/FINAL_DELIVERY.md",
+    "git_blob_sha": "cb4ffcc3549486ed1b44ff1a3ca0b5b17c08734e"
+  },
+  "immutable_preverification_files": {
+    "ANALYSIS_CONTRACT.md": "d99a2eb5abd1556540ab39e5b914d0db35134384",
+    "analyze.py": "f6b9ce3907c9fa41d550b58d367a2bf6864d3a8e",
+    "config.json": "e532df57cc298fbc961ab2ecbee20ac6e98a3dca",
+    "verify.py": "f8a43cde9e6a2bbdd905d0741f68e4675a909044"
+  },
+  "final_machine_results": {
+    "outputs/final_results.json": "524bcbdade34af8d09e5380295650e7d73688f04",
+    "outputs/fallback_resource_correction.json": "369e55c77943a16d9b77702aa1902a4d186bcb27",
+    "fallback_resource_check.py": "7e88de152b55d0f2377c3b49d8b449f75092b0b6",
+    "outputs/boundary_map.csv": "fc1ed3a01a6ee8da6fc11b1a4d7b1396a90ef521",
+    "outputs/causal_witnesses.csv": "39dd121d5cf26f7c337062a9b32314bd5e415528",
+    "outputs/level2_disposition.json": "0a9151a83b293280aebbf73f805f3526c9ebd783",
+    "outputs/verification.json": "3e9061f3f433df9700a2df61c37a9e208b40b03e"
+  },
+  "full_preregistered_grid_archive": {
+    "description": "720-row generated Level-I grid stored as deterministic gzip encoded into three text chunks because the connector path used for delivery is text-oriented",
+    "reconstructed_filename": "level1_map.csv.gz",
+    "reconstructed_size_bytes": 5998,
+    "reconstructed_sha256": "ef5cf8e65c41e0aac5c1b3bcbf0eef5aa7951ee609f3092794175ab60910bd80",
+    "raw_csv_size_bytes": 141973,
+    "raw_csv_sha256": "957e29dfc43f4c0a1ac5093c94d96292967f1a1028e3798ae344d549d7cc83dc",
+    "chunks": {
+      "outputs/level1_map.csv.gz.b64.part000": "f7aa00beaf8a35680508f5833bd160fb7c5836aa",
+      "outputs/level1_map.csv.gz.b64.part001": "72d0f1045566a71698cd5345e6090be46947f8e5",
+      "outputs/level1_map.csv.gz.b64.part002": "523a1e2d2ec98e111b448daeae99f39e40a9693e"
+    },
+    "reconstruction_script": {
+      "path": "outputs/reconstruct_level1_map.py",
+      "git_blob_sha": "7f598f2c9e79a4980b5c39364060377ee669c8fe"
+    }
+  },
+  "checks": {
+    "frozen_verify_py": "78_PASS",
+    "post_result_independent_formula_audit": "13_PASS",
+    "continuous_fixed_class_to_3600s": true,
+    "four_x_rmw_stress": true,
+    "fallback_resource_correction_check": true,
+    "preverification_blob_identity_rechecked": true
+  },
+  "principal_result": {
+    "memory_mib": 4,
+    "ecc": "SEC-DED(39,32)",
+    "horizon_h": 43824,
+    "epsilon": 0.001,
+    "tested_average_budget": 0.0025,
+    "connected_average_budget_separator": [0.0014244700083518912, 0.0039503977189538015],
+    "fixed_tau_resource_min_s": 25.165824,
+    "fixed_lower_bound_at_resource_tau": 0.001571525031251797,
+    "causal_risk_upper": 0.00095,
+    "causal_risk_upper_4x_rmw": 0.0009500007277376081,
+    "causal_peak_fraction": 0.24045835514172653,
+    "delay_50pct_us": 3.0052980531349043
+  },
+  "fallback_correction": {
+    "canonical_average_fraction": 0.00223653272651946,
+    "canonical_capacity_h": 196.01741984056181,
+    "superseded_intermediate_average_fraction": 0.00223172,
+    "superseded_intermediate_capacity_h": 197.19,
+    "main_level1_and_level2_conclusions_changed": false
+  },
+  "historical_intermediate_notice": "REPORT.md, HANDOFF.md, independent_check.py and their earlier machine outputs remain in history/provenance. Where they contain fallback sensitivity 0.223172% / 197.19 h, FINAL_DELIVERY.md and final_results/fallback_resource_correction supersede only those two auxiliary values. No accepted RES or previous scientific review was modified.",
+  "excluded_work": [
+    "RES-004 practical execution",
+    "new Monte Carlo or retuning",
+    "GOES/COSRAD rerun",
+    "RTL/Vivado execution",
+    "new RES or Scientific Review verdict"
+  ]
+}

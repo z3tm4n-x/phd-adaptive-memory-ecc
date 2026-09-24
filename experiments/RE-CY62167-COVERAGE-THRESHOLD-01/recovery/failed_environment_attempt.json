@@ -1,0 +1,9 @@
+{
+  "attempt_head_short": "64d3d7c",
+  "command": "python3 -B experiments/RE-CY62167-COVERAGE-THRESHOLD-01/run_transport.py --radar-root /workspace/scratch/adf34e406362/radar-historical",
+  "exit_code": 1,
+  "exception": "importlib.metadata.PackageNotFoundError: No package metadata was found for pytest",
+  "stage": "environment metadata, before pytest or transport execution",
+  "scientific_functions_executed": false,
+  "correction": "Install pytest 8.4.2 into task-specific dependency directory and expose it with PYTHONPATH; source/model/test thresholds unchanged."
+}

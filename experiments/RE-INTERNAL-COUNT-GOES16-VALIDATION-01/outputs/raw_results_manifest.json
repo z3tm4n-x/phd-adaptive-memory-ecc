@@ -1,0 +1,107 @@
+[
+  {
+    "path": "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-production\\growth_trials.npz",
+    "sha256": "d3829610cc6918a3f9a7ed9d9c9c936086ca43333640f605a3c3dabbdc03daa9",
+    "bytes": 1321598,
+    "arrays": {
+      "samples": {
+        "shape": [
+          20000,
+          5,
+          8
+        ],
+        "dtype": "float64",
+        "sha256": "e76e35e4406edd690451a94e91f90e65eb800b72a8738b143a4759f0b066531f"
+      },
+      "event_hashes": {
+        "shape": [
+          20000
+        ],
+        "dtype": "<U64",
+        "sha256": "3399760dd12c7c0e2cbc6f03a76ae248ad3fc94b0fc1b0c50d07bfe0a2a2be74"
+      },
+      "event_counts": {
+        "shape": [
+          20000
+        ],
+        "dtype": "int64",
+        "sha256": "f36d2078797ebe740a71b307c03f58330da81811478f46cf633ec6df505ce64b"
+      },
+      "utc_index": {
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "6a6c664062e6b8936621ceaf5f2b902bc53ce632fecb0bd78a7590794d02708d"
+      }
+    }
+  },
+  {
+    "path": "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-production\\peak_trials.npz",
+    "sha256": "49b420c08ca88e99a6df9ac4c27fe44742411eb07d3e1b7361857d0576e100ae",
+    "bytes": 1328625,
+    "arrays": {
+      "samples": {
+        "shape": [
+          20000,
+          5,
+          8
+        ],
+        "dtype": "float64",
+        "sha256": "fbb568f2e4f902d4bd700495a65c6803e8377d0e395e254a3a94d92063f60fa7"
+      },
+      "event_hashes": {
+        "shape": [
+          20000
+        ],
+        "dtype": "<U64",
+        "sha256": "72336b280a3f695eddd8edd21920e32ea0ab30336e6ff8f2f909b3bb12f7cddc"
+      },
+      "event_counts": {
+        "shape": [
+          20000
+        ],
+        "dtype": "int64",
+        "sha256": "cc927e88e02abcfa6ca580b34e199da14b951a68b0db8f328786f1c6b587b81f"
+      },
+      "utc_index": {
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "ad70729ef1d8119038687bbd7e6498059c9642ff5fa944b247d1f8240fa98947"
+      }
+    }
+  },
+  {
+    "path": "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-production\\typical_trials.npz",
+    "sha256": "99abf83e635ee999e75c4a23345f1b59b3dbb3bb6685585afdfd5f5a7f1589a4",
+    "bytes": 1326322,
+    "arrays": {
+      "samples": {
+        "shape": [
+          20000,
+          5,
+          8
+        ],
+        "dtype": "float64",
+        "sha256": "76e0ebaaf443eae1c7ec3fb0a512513300c208813f15ae5dfc2ae1c7d9841415"
+      },
+      "event_hashes": {
+        "shape": [
+          20000
+        ],
+        "dtype": "<U64",
+        "sha256": "a07262d69b03c9a0935cea2c9e2766a9cd2f91c3632a0e85cfc8461f9f6dd320"
+      },
+      "event_counts": {
+        "shape": [
+          20000
+        ],
+        "dtype": "int64",
+        "sha256": "354e67cb2471d611cc82719cb6be974b7c4c874e722ebcd5a174030dbaaf8c71"
+      },
+      "utc_index": {
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "3a2414468c03f5f2d711a911dca50866fbdec98bc8cf8305216c68aadbd1b19c"
+      }
+    }
+  }
+]

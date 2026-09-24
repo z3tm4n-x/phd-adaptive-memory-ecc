@@ -1,0 +1,28 @@
+{
+  "source_delivery_sha": "7d6d16c130f44f8d9210199498f326fc9e47b719",
+  "source_base_sha": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+  "source_prior_blocked_delivery": "e7a4c727967f752eb06ab15fe515fc38376bc896",
+  "publication_parent_sha": "c8ee76bf84018ea081c4845005f232de5607ecb1",
+  "publication_semantics": "Byte-identical source-delivery snapshot plus original Git bundle. Connector-created publication commit is distinct from source delivery and does not impersonate its SHA/author/timestamps. Original local ancestry and authorship are retained in bundle, not replaced.",
+  "bundle": {
+    "path": "delivery.bundle",
+    "bytes": 1135129,
+    "sha256": "b0424696e51b0252a2947b7cc348943921cb5f9de5368218bfc5f13a02dcd9d5",
+    "git_blob": "d7e6ce72c283a998a1f3650f80765685fa2bed9a",
+    "contained_ref": "refs/heads/research/cy62167-coverage-threshold-01",
+    "contained_head": "7d6d16c130f44f8d9210199498f326fc9e47b719",
+    "prerequisites": [
+      "64a7a1f436b2abd6997d37d14e6ce571e3a480c8"
+    ],
+    "git_bundle_verify": "OK"
+  },
+  "source_manifest": {
+    "path": "MANIFEST.json",
+    "bytes": 13247,
+    "sha256": "b0daae0d8ea91fe002a1d498f24a6f4dcae3088f2fff5dd034ae85896d81a171",
+    "git_blob": "363c651a9d238fe28acb685b32867a540c103ace"
+  },
+  "independent_scientific_review": "NOT_ASSIGNED",
+  "preserved_local_preexecution_order": true,
+  "independent_time_attestation": false
+}

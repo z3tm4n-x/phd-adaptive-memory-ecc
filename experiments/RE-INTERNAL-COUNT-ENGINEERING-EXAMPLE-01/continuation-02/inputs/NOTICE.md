@@ -1,0 +1,5 @@
+# Source and derivative notice
+
+Source: Francisco Franco et al., *Experimental data from tests on the IS61WV204816BLL-10TLI 32-Mb 40-nm CMOS SRAM under positive and negative muons and 14-MeV neutrons*, DOI [10.5281/zenodo.17500462](https://doi.org/10.5281/zenodo.17500462). Full author/affiliation metadata and declared rights retrieved from DataCite on 2026-09-16 are preserved in datacite.json. License: European Union Public Licence 1.2 (EUPL-1.2); unmodified licence text supplied here. Direct Zenodo metadata retrieval timed out; the DOI registry supplied the rights, not a guessed default CC license.
+
+templates.npz and manifest.json are modified, task-local extractions by the Research Engineer (2026-09-16) from the static 3.3V neutron subset; distributed under EUPL-1.2. They are not the authors' original files or an endorsement. Source archive and every used member are identified by cryptographic hashes; extract_inputs.py is the reproducible modification procedure. Additional native-word merges are our declared model alternative, not the authors' particle labels. The original archive is not republished here.

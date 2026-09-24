@@ -1,0 +1,24 @@
+{
+  "bootstrap_unit": "whole static test, 60 iid/exchangeable tests assumed; systematic facility calibration not included",
+  "bootstrap_replicates": 2000,
+  "protected_high_bit_rate": 10.812865643532618,
+  "bit_rate_percentile95": [
+    10.686978640513974,
+    10.945671961917498
+  ],
+  "all_chip_group_rate_percentile95": [
+    42.17232247772961,
+    43.15623004353419
+  ],
+  "native_double_words": 9,
+  "direct_lower_killing_rate_high": 0.0012622215098573486,
+  "direct_model_risk_lower": 0.708429317709907,
+  "bootstrap_direct_lower_percentile95": [
+    0.42375318651759675,
+    0.8687020960105134
+  ],
+  "poisson_count_sensitivity": "additional Poisson/exposure assumption for rare observed double-word templates, not certified incident particles",
+  "poisson_count_lower95_rate": 0.0005771680493999105,
+  "poisson_count_lower95_model_risk": 0.4332373065548958,
+  "interpretation": "diagnostic applies only to declared native-word-merged model; no physical lower bound for the chip; not a new RES theorem"
+}

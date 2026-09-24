@@ -1,0 +1,18 @@
+{
+  "preexecution_local_sha": "0cab8b63fc7121422aec0a57a4c6f243bd7f3d5c",
+  "main_frozen_run": {
+    "overall": "FAIL",
+    "failed_targeted_check": "clean_no_write_post_error_persists",
+    "cause": "test inspected horizon after a later singleton check and correcting write, rather than before the next check",
+    "exhaustive_streams": 4096,
+    "old_inclusion_violations": 60,
+    "repaired_inclusion_violations": 0
+  },
+  "independent_frozen_run": {
+    "overall": "FAIL",
+    "observed_old_inclusion_violations": 0,
+    "observed_repaired_inclusion_violations": 564,
+    "cause": "independent checker concatenated arrivals and checks without chronological sorting"
+  },
+  "scientific_criteria_changed": false
+}

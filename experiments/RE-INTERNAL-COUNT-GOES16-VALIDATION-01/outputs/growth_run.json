@@ -1,0 +1,43 @@
+{
+  "case": "growth",
+  "prereg": "870a3c5d725793dd45ff2cc2feaf6e8885df0df9",
+  "utc": "2024-10-10T13:00:00+00:00",
+  "trials": 20000,
+  "computational_failures": 0,
+  "seconds": 56.815796499999124,
+  "trial_file_sha256": "d3829610cc6918a3f9a7ed9d9c9c936086ca43333640f605a3c3dabbdc03daa9",
+  "certificate": {
+    "floor": 0.07667519552414698,
+    "delta": 0.00021960410931119292,
+    "s0": 0.023324804475853028,
+    "backup": 0.07645559141483578,
+    "accepted_SR_arithmetic_bound": 0.000143018263177913,
+    "numeric_reserve": 0.0002,
+    "guarantee_domain": "original CTMC only; not GOES profile"
+  },
+  "fixed300": {
+    "period_s": 300,
+    "upper_decimal_ceiling": "0.0322040095776903485065407957542242434624876430736755415344558",
+    "upper": 0.03220400957769035,
+    "exact_numerator": "500493820892147827313191660885443934256156060154235823629870412943116697265937856925",
+    "exact_denominator": "15541351137805832567355695254588151253139254712417116170014499277911234281641667985408",
+    "coarse_max_rate_upper": 0.04636944674036366,
+    "status": "SUFFICIENT",
+    "argument": "distinct-bit pair union bound on every actual word-check gap, including initial and terminal gaps; exact rational sum"
+  },
+  "illustration_result": [
+    0.0,
+    737.0,
+    139.10409216,
+    1545601024.0,
+    1545601024.0,
+    3600.0,
+    737.0,
+    0.039275555216803384,
+    737.0
+  ],
+  "illustration_event_hash": "5f7f634ef15427349744d17cbb6727949bbb0b3f72592b83e505f1971f30cb9d",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "peak_memory_bytes": 201469952
+}

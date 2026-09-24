@@ -1,0 +1,21 @@
+test_all_timing_corners (test_reference.ReferenceTests.test_all_timing_corners) ... ok
+test_block_edges_ppm_tubes (test_reference.ReferenceTests.test_block_edges_ppm_tubes) ... ok
+test_clean_and_err_only (test_reference.ReferenceTests.test_clean_and_err_only) ... ok
+test_corrected_and_uncorrectable (test_reference.ReferenceTests.test_corrected_and_uncorrectable) ... ok
+test_epoch_no_fake_global_clean (test_reference.ReferenceTests.test_epoch_no_fake_global_clean) ... ok
+test_hit_inside_service_tube_needs_payment (test_reference.ReferenceTests.test_hit_inside_service_tube_needs_payment) ... ok
+test_independent_first_passage_inclusion_and_sentinel (test_reference.ReferenceTests.test_independent_first_passage_inclusion_and_sentinel) ... ok
+test_independent_numeric_checker (test_reference.ReferenceTests.test_independent_numeric_checker) ... ok
+test_pack_basis_and_padding (test_reference.ReferenceTests.test_pack_basis_and_padding) ... ok
+test_pin_uniqueness_and_voltage (test_reference.ReferenceTests.test_pin_uniqueness_and_voltage) ... ok
+test_prepare_and_pending_fence (test_reference.ReferenceTests.test_prepare_and_pending_fence) ... ok
+test_saturated_reads_do_not_move_phase (test_reference.ReferenceTests.test_saturated_reads_do_not_move_phase) ... ok
+test_sec_ded_all_masks (test_reference.ReferenceTests.test_sec_ded_all_masks) ... ok
+test_soft_hard_and_failed_commit (test_reference.ReferenceTests.test_soft_hard_and_failed_commit) ... ok
+test_swapped_data_parity_sentinel (test_reference.ReferenceTests.test_swapped_data_parity_sentinel) ... ok
+test_unsigned_upper_not_requirement (test_reference.ReferenceTests.test_unsigned_upper_not_requirement) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 7.637s
+
+OK

@@ -1,0 +1,26 @@
+{
+  "nominal_warm_start": {
+    "lower_fraction": 0.0014244700083518912,
+    "upper_fixed_separator_fraction": 0.0039503977189538015,
+    "control_cost_reserve_at_0p25": 0.0010755299916481089
+  },
+  "fallback_148h_warm_start": {
+    "lower_fraction": 0.00223653272651946,
+    "upper_fixed_separator_fraction": 0.0039503977189538015,
+    "control_cost_reserve_at_0p25": 0.00026346727348054017
+  },
+  "cold_start_plus_148h_fallback": {
+    "lower_fraction": 0.0022420196367773488,
+    "upper_fixed_separator_fraction": 0.0039503977189538015,
+    "control_cost_reserve_at_0p25": 0.0002579803632226513
+  },
+  "information_contract": {
+    "offline_design_constants": ["error_rate_per_physical_bit_day","mean_old_per_hour","max_old_per_hour","lag1_eta","C"],
+    "runtime_hour_h_ge_1": "only completed previous-hour scalar rate estimate, assuming it is delivered by the next decision boundary",
+    "first_hour_warm_start": "requires a valid completed pre-t0 hour scalar; explicit assumption",
+    "first_hour_cold_start": "if no pre-t0 scalar exists, use calibrated peak-rate fallback for one hour",
+    "missing_hour": "use calibrated peak-rate fallback",
+    "not_established": ["positive operational delivery-latency margin","future rate <= retrospective calibrated maximum","held-out transfer of mean/max/lag1_eta/C"],
+    "claim_scope": "causal execution conditional on retrospectively calibrated/transferred design constants; not an independently validated prospective calibration"
+  }
+}

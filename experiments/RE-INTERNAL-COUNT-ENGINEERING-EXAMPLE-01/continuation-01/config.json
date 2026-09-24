@@ -1,0 +1,33 @@
+{
+  "task": "RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01/continuation-01",
+  "base": "44b3d5992d7473fa6026de7b5eda26613e0623f8",
+  "stage": "targeted_radiation_input_closure_not_policy_preregistration",
+  "policy_trials": 0,
+  "memory": "RMLV0816BGSA-4S2",
+  "chips": 3,
+  "chip_bits": 8388608,
+  "words": 524288,
+  "data_bits_per_word": 32,
+  "protected_bits_per_word": 39,
+  "physical_bits_per_address": 48,
+  "source_row": {"table": "IX", "facility": "RADEF", "LET_MeV_cm2_mg": 13.3, "fluence_cm_minus2": 7000000, "SBU": 1199, "logic_MBU": 0},
+  "diagnostic_scenario": {
+    "kind": "accelerated irradiation model, not a mission",
+    "ion": "57Fe, 16.3 MeV/n, normal incidence, delidded, room temperature",
+    "flux_cm_minus2_s_minus1": 1000,
+    "flux_basis": "lower end of RADEF continuous heavy-ion facility range in Coronetti 2020 III.D; not the flux reported for the particular Table IX run",
+    "horizon_s": 3600,
+    "horizon_basis": "one-hour engineering observation interval; not a mission allocation",
+    "epsilon_research": 0.1,
+    "epsilon_basis": "explicit 10% research design ceiling for first E_cap; no flight requirement or borrowing of old radiation normalization",
+    "alpha_one_sided": 0.05,
+    "response_transfer": "nominal same-response model for three identical parts; equal sensitivity of all physical bit cells is an assumption",
+    "spatial_layout": "three separate chips, common address, 16+16 data and 7 parity lanes, 9 ignored padding lanes",
+    "complete_group_detection_established": false,
+    "group_process_established": false
+  },
+  "witness": {"words": 4, "bits_per_word": 39, "total_expected_bit_arrivals": 2.0, "duration": 1.0, "initial_state": "clean", "scrubs": "none", "semantics": "toggle, absorbing first two distinct error positions"},
+  "controller_parameters": null,
+  "reason_no_controller_parameters": "The radiation mean is calculable; the marked arrival/count law and a budget for excluded grouped paths remain unclosed. No CTMC is fitted or policy tuning undertaken at this stage.",
+  "seeds": null
+}

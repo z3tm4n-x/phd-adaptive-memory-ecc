@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "keys": true,
+    "energy": true,
+    "shields": true,
+    "grid_choice": true,
+    "depth": true,
+    "survival": true,
+    "grid_convergence": true,
+    "depth_convergence": true,
+    "zero_primary": true,
+    "zero_secondary": true,
+    "monoenergetic_one_bin": true,
+    "primary_structure": true,
+    "secondary_structure": true
+  },
+  "hashes": {
+    "radar_transport.npz": "7f006d49c4e469b624db62b84925571c40f0602cfbd0f3b333211521dad60f9e",
+    "radar_validation.json": "857b99dc841a9d3a2bb54f3d467a6b2a01492a02adc0bb9770fdef15059833f9"
+  },
+  "historical_npz_sha_matches": false,
+  "historical_json_sha_matches": false,
+  "structural_numerical_gate_pass": true,
+  "elapsed_s": 743.044055223465
+}

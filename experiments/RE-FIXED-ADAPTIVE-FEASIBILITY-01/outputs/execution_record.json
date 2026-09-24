@@ -1,0 +1,55 @@
+{
+  "branch": "research/fixed-adaptive-feasibility-01",
+  "commands": [
+    {"command": "python analyze.py", "exit_code": 0, "stdout_sha256": "c642fa3231e57e9d5c7658a3a4855c117b61943736c05512361c07788d0f64d9"},
+    {"command": "python verify.py", "exit_code": 0, "stdout_sha256": "b3a8eadb278a71702fc8ae807e454152e826dfdac55ab5cba4f627afefd884c9"},
+    {"command": "python independent_check.py", "exit_code": 0, "stdout_sha256": "e699da4e2dff661f47439ce4e8afd5d207b69af2169794ce16e4f0ee5664b236"}
+  ],
+  "delivered_level1_map_gzip_sha256": "ef5cf8e65c41e0aac5c1b3bcbf0eef5aa7951ee609f3092794175ab60910bd80",
+  "delivered_level1_map_gzip_size": 5998,
+  "execution_base": "59603d231b923ee7426056cb62779a5ad16c8413",
+  "execution_date": "2026-09-11",
+  "file_sha256": {
+    "ANALYSIS_CONTRACT.md": "aa9a59c0e469ba0207bf6681347fc29e902dd37ca19b4aa719ff10f1560d4754",
+    "HANDOFF.md": "7b865114c92d7417d0d9609cc52124ca41f33bf6d1ce20a9b3265605f72acb87",
+    "INPUTS.json": "f36539605a18e473a7780dd1caf5cd7350b4443020fbb1650e6e5b994b89ce0e",
+    "REPORT.md": "1c82643f46fa0ee892e5cb294e09b8193e3a4e12867e5e6f662fde81f42d95d8",
+    "analyze.py": "ee29a92e922dc928e82341ab76d13dfe9c8a97d8263e61381fbffdf416b5cffc",
+    "config.json": "941fd181ab5e0020b79a17b54d7fbdb61703336ac9de0753a0fe0a3364f8ca70",
+    "independent_check.py": "e2cf8d2655f4b835bd1f457075f375e9a8b09144090cf0f865aa4c451ee2d8f0",
+    "outputs/boundary_map.csv": "beb4007abeb2641a3c8c4a1a1b7a4a9434a6cc36d6d3cadfdbf80d1a0097cf22",
+    "outputs/causal_witnesses.csv": "7fcd70222c2166917b6d059d748773e9a57217c28ec1e4e5ba516a6211d31828",
+    "outputs/hour_slice.json": "b5e4c1365d0364b0b49156127a669bad47eb0f01366aa802c991a6b98381097a",
+    "outputs/independent_check.json": "e699da4e2dff661f47439ce4e8afd5d207b69af2169794ce16e4f0ee5664b236",
+    "outputs/level1_map.csv.gz": "ef5cf8e65c41e0aac5c1b3bcbf0eef5aa7951ee609f3092794175ab60910bd80",
+    "outputs/level2_disposition.json": "fbf8b5b8f220094cfa13a8b6bbd0bd957e4a4ee1bf2bf66ef7975343032a6323",
+    "outputs/stronger_ecc.json": "49bcc2e077bec7402415bddc18ebd10d20a653897da9577f792f107d69483315",
+    "outputs/summary.json": "73cf1c187d66349e87361333cb760adcf17d1ae3bbc004050e9fe6c928de14ca",
+    "outputs/verification.json": "8d8bdbfc9307150d338408cb46b8c6c6aaefc4ae68cb08607ab8e17785eae6e5",
+    "verify.py": "45831f8280d81fa5947c5cbbc13592b4896ad8c6ef3e6f87fe975a49bbbf2d3d"
+  },
+  "generated_level1_map_raw_sha256": "957e29dfc43f4c0a1ac5093c94d96292967f1a1028e3798ae344d549d7cc83dc",
+  "generated_level1_map_raw_size": 141973,
+  "independent_check_passed": true,
+  "level1_gate_open": true,
+  "level3_res004_executed": false,
+  "notes": [
+    "No Monte Carlo, retuning, GOES/COSRAD rerun, RTL, Vivado, or RES-004 practical execution was performed.",
+    "verify.py reruns analyze.py by construction; independent_check.py does not import analyze.py."
+  ],
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "preverification_commit": "e8713d187592c9b810ecf4194b6da7108d898e22",
+  "preverification_git_blob_ids": {
+    "ANALYSIS_CONTRACT.md": "d99a2eb5abd1556540ab39e5b914d0db35134384",
+    "analyze.py": "f6b9ce3907c9fa41d550b58d367a2bf6864d3a8e",
+    "config.json": "e532df57cc298fbc961ab2ecbee20ac6e98a3dca",
+    "verify.py": "f8a43cde9e6a2bbdd905d0741f68e4675a909044"
+  },
+  "python_version": "3.13.5",
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01",
+  "verification": {
+    "checks": 78,
+    "conditional_write_cases": ["clean", "single", "post_read", "rmw_pair", "last_word", "partial", "late_command", "app_conflict"],
+    "passed": true
+  }
+}

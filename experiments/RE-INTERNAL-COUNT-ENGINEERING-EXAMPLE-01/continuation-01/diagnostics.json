@@ -1,0 +1,535 @@
+{
+  "candidate": {
+    "data_bits": 16777216,
+    "nominal_SBU_cross_section_cm2_per_bit": 2.0418848310198103e-11,
+    "nominal_protected_SBU_exposure": 1503.0321428571428,
+    "nominal_protected_SBU_exposure_rate_s_minus1": 0.4175089285714286,
+    "padding_bits": 4718592,
+    "physical_bits": 25165824,
+    "protected_bits": 20447232
+  },
+  "joint_mark_nonidentification_witness": {
+    "1": {
+      "F_first_cap": 0.30800424309502616,
+      "no_arrival_probability": 0.1353352832366127,
+      "per_word_arrival_mean": 0.5,
+      "safe_dirty_word_distribution": [
+        0.13707964647601456,
+        0.27357498068785474,
+        0.20474393532081944,
+        0.068102522379387,
+        0.008494672040897957
+      ],
+      "same_parent_same_word_pairs": 0,
+      "total_arrival_mean": 2.0,
+      "total_arrival_variance": 2.0
+    },
+    "2": {
+      "F_first_cap": 0.2302124176493755,
+      "no_arrival_probability": 0.36787944117144233,
+      "per_word_arrival_mean": 0.5,
+      "safe_dirty_word_distribution": [
+        0.3678997124498653,
+        0.0,
+        0.37105525541949835,
+        0.0,
+        0.030832614481261195
+      ],
+      "same_parent_same_word_pairs": 0,
+      "total_arrival_mean": 2.0,
+      "total_arrival_variance": 4.0
+    }
+  },
+  "normalization": {
+    "ISSI_32Mbit": [
+      {
+        "LET": 1.2,
+        "SBU": 1923,
+        "SBU_over_full_capacity_fluence": 5.730986595153809e-10,
+        "facility": "RADEF",
+        "fluence": 100000,
+        "implied_tested_bits": 16025000.0,
+        "literal_nominal_sigma": 1.2e-09,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 2.0938803120124807
+      },
+      {
+        "LET": 9.7,
+        "SBU": 23025,
+        "SBU_over_full_capacity_fluence": 1.3723969459533692e-08,
+        "facility": "RADEF",
+        "fluence": 50000,
+        "implied_tested_bits": 17055555.555555556,
+        "literal_nominal_sigma": 2.7e-08,
+        "logic_MBU": 12,
+        "nominal_to_full_capacity_ratio": 1.9673608338762216
+      },
+      {
+        "LET": 18.6,
+        "SBU": 47008,
+        "SBU_over_full_capacity_fluence": 2.8018951416015625e-08,
+        "facility": "RADEF",
+        "fluence": 50000,
+        "implied_tested_bits": 16788571.42857143,
+        "literal_nominal_sigma": 5.6e-08,
+        "logic_MBU": 35,
+        "nominal_to_full_capacity_ratio": 1.9986472430224642
+      },
+      {
+        "LET": 31.3,
+        "SBU": 61313,
+        "SBU_over_full_capacity_fluence": 3.654539585113525e-08,
+        "facility": "RADEF",
+        "fluence": 50000,
+        "implied_tested_bits": 16798082.19178082,
+        "literal_nominal_sigma": 7.3e-08,
+        "logic_MBU": 4616,
+        "nominal_to_full_capacity_ratio": 1.9975156459478416
+      },
+      {
+        "LET": 60.0,
+        "SBU": 93471,
+        "SBU_over_full_capacity_fluence": 5.5713057518005374e-08,
+        "facility": "RADEF",
+        "fluence": 50000,
+        "implied_tested_bits": 16994727.27272727,
+        "literal_nominal_sigma": 1.1e-07,
+        "logic_MBU": 257,
+        "nominal_to_full_capacity_ratio": 1.974402499170866
+      },
+      {
+        "LET": 85.6,
+        "SBU": 34838,
+        "SBU_over_full_capacity_fluence": 6.921688715616862e-08,
+        "facility": "RADEF",
+        "fluence": 15000,
+        "implied_tested_bits": 16589523.809523808,
+        "literal_nominal_sigma": 1.4e-07,
+        "logic_MBU": 3828,
+        "nominal_to_full_capacity_ratio": 2.0226277972329068
+      },
+      {
+        "LET": 1.5,
+        "SBU": 10215,
+        "SBU_over_full_capacity_fluence": 5.854436984428992e-10,
+        "facility": "NSRL",
+        "fluence": 520000,
+        "implied_tested_bits": 16370192.307692308,
+        "literal_nominal_sigma": 1.2e-09,
+        "logic_MBU": 1,
+        "nominal_to_full_capacity_ratio": 2.0497274173274596
+      },
+      {
+        "LET": 2.5,
+        "SBU": 36060,
+        "SBU_over_full_capacity_fluence": 1.472153075753826e-09,
+        "facility": "NSRL",
+        "fluence": 730000,
+        "implied_tested_bits": 16465753.424657533,
+        "literal_nominal_sigma": 3e-09,
+        "logic_MBU": 12,
+        "nominal_to_full_capacity_ratio": 2.0378315607321134
+      },
+      {
+        "LET": 6.7,
+        "SBU": 11690,
+        "SBU_over_full_capacity_fluence": 6.831159778669769e-09,
+        "facility": "NSRL",
+        "fluence": 51000,
+        "implied_tested_bits": 16372549.019607844,
+        "literal_nominal_sigma": 1.4e-08,
+        "logic_MBU": 1,
+        "nominal_to_full_capacity_ratio": 2.0494323736526945
+      },
+      {
+        "LET": 11.4,
+        "SBU": 21458,
+        "SBU_over_full_capacity_fluence": 1.1025831617158035e-08,
+        "facility": "NSRL",
+        "fluence": 58000,
+        "implied_tested_bits": 16816614.420062695,
+        "literal_nominal_sigma": 2.2e-08,
+        "logic_MBU": 3,
+        "nominal_to_full_capacity_ratio": 1.9953143457917792
+      },
+      {
+        "LET": 14.5,
+        "SBU": 26608,
+        "SBU_over_full_capacity_fluence": 1.762178209092882e-08,
+        "facility": "NSRL",
+        "fluence": 45000,
+        "implied_tested_bits": 16893968.253968254,
+        "literal_nominal_sigma": 3.5e-08,
+        "logic_MBU": 12,
+        "nominal_to_full_capacity_ratio": 1.9861782321106434
+      },
+      {
+        "LET": 17.1,
+        "SBU": 17399,
+        "SBU_over_full_capacity_fluence": 1.8518950257982528e-08,
+        "facility": "NSRL",
+        "fluence": 28000,
+        "implied_tested_bits": 16794401.544401545,
+        "literal_nominal_sigma": 3.7e-08,
+        "logic_MBU": 4,
+        "nominal_to_full_capacity_ratio": 1.9979534198517157
+      },
+      {
+        "LET": 28.0,
+        "SBU": 30457,
+        "SBU_over_full_capacity_fluence": 2.9280301063291488e-08,
+        "facility": "NSRL",
+        "fluence": 31000,
+        "implied_tested_bits": 16939377.085650723,
+        "literal_nominal_sigma": 5.8e-08,
+        "logic_MBU": 13,
+        "nominal_to_full_capacity_ratio": 1.980853949371245
+      },
+      {
+        "LET": 37.0,
+        "SBU": 42301,
+        "SBU_over_full_capacity_fluence": 3.939587622880936e-08,
+        "facility": "NSRL",
+        "fluence": 32000,
+        "implied_tested_bits": 16523828.124999998,
+        "literal_nominal_sigma": 8e-08,
+        "logic_MBU": 27,
+        "nominal_to_full_capacity_ratio": 2.030669391267346
+      },
+      {
+        "LET": 12.3,
+        "SBU": 12777,
+        "SBU_over_full_capacity_fluence": 1.1538917368108576e-08,
+        "facility": "CERN",
+        "fluence": 33000,
+        "implied_tested_bits": 16833992.09486166,
+        "literal_nominal_sigma": 2.3e-08,
+        "logic_MBU": 6,
+        "nominal_to_full_capacity_ratio": 1.9932545893402207
+      },
+      {
+        "LET": 16.5,
+        "SBU": 5116,
+        "SBU_over_full_capacity_fluence": 1.694096459282769e-08,
+        "facility": "CERN",
+        "fluence": 9000,
+        "implied_tested_bits": 16718954.248366013,
+        "literal_nominal_sigma": 3.4e-08,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 2.0069695449569975
+      },
+      {
+        "LET": 22.2,
+        "SBU": 9449,
+        "SBU_over_full_capacity_fluence": 2.81602144241333e-08,
+        "facility": "CERN",
+        "fluence": 10000,
+        "implied_tested_bits": 17180000.0,
+        "literal_nominal_sigma": 5.5e-08,
+        "logic_MBU": 7,
+        "nominal_to_full_capacity_ratio": 1.9531101280558791
+      },
+      {
+        "LET": 26.6,
+        "SBU": 9963,
+        "SBU_over_full_capacity_fluence": 3.6656856536865234e-08,
+        "facility": "CERN",
+        "fluence": 8100,
+        "implied_tested_bits": 16849315.06849315,
+        "literal_nominal_sigma": 7.3e-08,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.991441899186992
+      },
+      {
+        "LET": 31.7,
+        "SBU": 14691,
+        "SBU_over_full_capacity_fluence": 6.345303162284519e-08,
+        "facility": "CERN",
+        "fluence": 6900,
+        "implied_tested_bits": 16377926.421404682,
+        "literal_nominal_sigma": 1.3e-07,
+        "logic_MBU": 13,
+        "nominal_to_full_capacity_ratio": 2.048759478864611
+      },
+      {
+        "LET": 36.3,
+        "SBU": 9588,
+        "SBU_over_full_capacity_fluence": 9.217569904942666e-08,
+        "facility": "CERN",
+        "fluence": 3100,
+        "implied_tested_bits": 17182795.69892473,
+        "literal_nominal_sigma": 1.8e-07,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.9527923504380476
+      }
+    ],
+    "Renesas_8Mbit": [
+      {
+        "LET": 7.2,
+        "SBU": 0,
+        "SBU_over_full_capacity_fluence": 0.0,
+        "facility": "RADEF",
+        "fluence": 5000000,
+        "implied_tested_bits": null,
+        "literal_nominal_sigma": 0.0,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": null
+      },
+      {
+        "LET": 9.0,
+        "SBU": 53,
+        "SBU_over_full_capacity_fluence": 6.318092346191406e-13,
+        "facility": "RADEF",
+        "fluence": 10000000,
+        "implied_tested_bits": 8412698.412698412,
+        "literal_nominal_sigma": 6.3e-13,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 0.9971364226415096
+      },
+      {
+        "LET": 13.3,
+        "SBU": 1199,
+        "SBU_over_full_capacity_fluence": 2.0418848310198103e-11,
+        "facility": "RADEF",
+        "fluence": 7000000,
+        "implied_tested_bits": 8564285.714285715,
+        "literal_nominal_sigma": 2e-11,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 0.9794871726438698
+      },
+      {
+        "LET": 16.0,
+        "SBU": 3238,
+        "SBU_over_full_capacity_fluence": 1.2866655985514324e-10,
+        "facility": "RADEF",
+        "fluence": 3000000,
+        "implied_tested_bits": 8302564.102564103,
+        "literal_nominal_sigma": 1.3e-10,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.0103635330450895
+      },
+      {
+        "LET": 18.1,
+        "SBU": 4108,
+        "SBU_over_full_capacity_fluence": 2.4485588073730467e-10,
+        "facility": "RADEF",
+        "fluence": 2000000,
+        "implied_tested_bits": 8558333.333333334,
+        "literal_nominal_sigma": 2.4e-10,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 0.9801684128529699
+      },
+      {
+        "LET": 24.5,
+        "SBU": 5634,
+        "SBU_over_full_capacity_fluence": 6.716251373291016e-10,
+        "facility": "RADEF",
+        "fluence": 1000000,
+        "implied_tested_bits": 8285294.117647058,
+        "literal_nominal_sigma": 6.8e-10,
+        "logic_MBU": 4,
+        "nominal_to_full_capacity_ratio": 1.0124695491657794
+      },
+      {
+        "LET": 31.3,
+        "SBU": 2907,
+        "SBU_over_full_capacity_fluence": 1.7327070236206054e-09,
+        "facility": "RADEF",
+        "fluence": 200000,
+        "implied_tested_bits": 8550000.0,
+        "literal_nominal_sigma": 1.7e-09,
+        "logic_MBU": 14,
+        "nominal_to_full_capacity_ratio": 0.9811237426900584
+      },
+      {
+        "LET": 38.0,
+        "SBU": 3234,
+        "SBU_over_full_capacity_fluence": 2.409517765045166e-09,
+        "facility": "RADEF",
+        "fluence": 160000,
+        "implied_tested_bits": 8085000.0,
+        "literal_nominal_sigma": 2.5e-09,
+        "logic_MBU": 102,
+        "nominal_to_full_capacity_ratio": 1.0375520098948672
+      },
+      {
+        "LET": 47.5,
+        "SBU": 3611,
+        "SBU_over_full_capacity_fluence": 4.304647445678711e-09,
+        "facility": "RADEF",
+        "fluence": 100000,
+        "implied_tested_bits": 8397674.418604651,
+        "literal_nominal_sigma": 4.3e-09,
+        "logic_MBU": 385,
+        "nominal_to_full_capacity_ratio": 0.9989203655497092
+      },
+      {
+        "LET": 58.5,
+        "SBU": 3739,
+        "SBU_over_full_capacity_fluence": 5.788617319874949e-09,
+        "facility": "RADEF",
+        "fluence": 77000,
+        "implied_tested_bits": 8372145.096283027,
+        "literal_nominal_sigma": 5.8e-09,
+        "logic_MBU": 643,
+        "nominal_to_full_capacity_ratio": 1.0019663901577962
+      },
+      {
+        "LET": 85.6,
+        "SBU": 4655,
+        "SBU_over_full_capacity_fluence": 5.549192428588867e-09,
+        "facility": "RADEF",
+        "fluence": 100000,
+        "implied_tested_bits": 8463636.363636365,
+        "literal_nominal_sigma": 5.5e-09,
+        "logic_MBU": 3379,
+        "nominal_to_full_capacity_ratio": 0.9911352094522018
+      },
+      {
+        "LET": 37.0,
+        "SBU": 3000,
+        "SBU_over_full_capacity_fluence": 1.7881393432617187e-09,
+        "facility": "NSRL",
+        "fluence": 200000,
+        "implied_tested_bits": 8333333.333333333,
+        "literal_nominal_sigma": 1.8e-09,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.0066329600000001
+      },
+      {
+        "LET": 28.0,
+        "SBU": 2715,
+        "SBU_over_full_capacity_fluence": 7.706029074532645e-10,
+        "facility": "NSRL",
+        "fluence": 420000,
+        "implied_tested_bits": 8395176.252319109,
+        "literal_nominal_sigma": 7.7e-10,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 0.9992176159116022
+      },
+      {
+        "LET": 17.1,
+        "SBU": 216,
+        "SBU_over_full_capacity_fluence": 2.86102294921875e-11,
+        "facility": "NSRL",
+        "fluence": 900000,
+        "implied_tested_bits": 8275862.068965517,
+        "literal_nominal_sigma": 2.9e-11,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.0136234666666668
+      },
+      {
+        "LET": 22.9,
+        "SBU": 2286,
+        "SBU_over_full_capacity_fluence": 3.9494555929432745e-10,
+        "facility": "NSRL",
+        "fluence": 690000,
+        "implied_tested_bits": 8282608.695652175,
+        "literal_nominal_sigma": 4e-10,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.0127978162729658
+      },
+      {
+        "LET": 14.5,
+        "SBU": 490,
+        "SBU_over_full_capacity_fluence": 1.7700773296934186e-11,
+        "facility": "NSRL",
+        "fluence": 3300000,
+        "implied_tested_bits": 8249158.249158249,
+        "literal_nominal_sigma": 1.8e-11,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 1.0169047248979592
+      },
+      {
+        "LET": 11.4,
+        "SBU": 51,
+        "SBU_over_full_capacity_fluence": 6.141084613222064e-13,
+        "facility": "NSRL",
+        "fluence": 9900000,
+        "implied_tested_bits": 8445106.805762542,
+        "literal_nominal_sigma": 6.1e-13,
+        "logic_MBU": 0,
+        "nominal_to_full_capacity_ratio": 0.9933098767058823
+      },
+      {
+        "LET": 12.3,
+        "SBU": 828,
+        "SBU_over_full_capacity_fluence": 2.5309049166165864e-12,
+        "facility": "CERN",
+        "fluence": 39000000,
+        "implied_tested_bits": 8492307.692307692,
+        "literal_nominal_sigma": 2.5e-12,
+        "logic_MBU": 202,
+        "nominal_to_full_capacity_ratio": 0.9877889855072464
+      },
+      {
+        "LET": 16.5,
+        "SBU": 2132,
+        "SBU_over_full_capacity_fluence": 2.6753074244449014e-11,
+        "facility": "CERN",
+        "fluence": 9500000,
+        "implied_tested_bits": 8311890.838206627,
+        "literal_nominal_sigma": 2.7e-11,
+        "logic_MBU": 108,
+        "nominal_to_full_capacity_ratio": 1.009229808630394
+      },
+      {
+        "LET": 22.2,
+        "SBU": 6898,
+        "SBU_over_full_capacity_fluence": 4.5683648851182724e-10,
+        "facility": "CERN",
+        "fluence": 1800000,
+        "implied_tested_bits": 8330917.874396134,
+        "literal_nominal_sigma": 4.6e-10,
+        "logic_MBU": 29,
+        "nominal_to_full_capacity_ratio": 1.006924822267324
+      },
+      {
+        "LET": 26.6,
+        "SBU": 5469,
+        "SBU_over_full_capacity_fluence": 1.3871395841557928e-09,
+        "facility": "CERN",
+        "fluence": 470000,
+        "implied_tested_bits": 8311550.151975685,
+        "literal_nominal_sigma": 1.4e-09,
+        "logic_MBU": 44,
+        "nominal_to_full_capacity_ratio": 1.0092711764490765
+      },
+      {
+        "LET": 31.7,
+        "SBU": 6521,
+        "SBU_over_full_capacity_fluence": 4.8585236072540284e-09,
+        "facility": "CERN",
+        "fluence": 160000,
+        "implied_tested_bits": 8317602.040816327,
+        "literal_nominal_sigma": 4.9e-09,
+        "logic_MBU": 1477,
+        "nominal_to_full_capacity_ratio": 1.008536830547462
+      },
+      {
+        "LET": 36.3,
+        "SBU": 11324,
+        "SBU_over_full_capacity_fluence": 9.642328534807477e-09,
+        "facility": "CERN",
+        "fluence": 140000,
+        "implied_tested_bits": 8425595.238095239,
+        "literal_nominal_sigma": 9.6e-09,
+        "logic_MBU": 4727,
+        "nominal_to_full_capacity_ratio": 0.9956101335217237
+      }
+    ]
+  },
+  "optimistic_complete_detection_diagnostic": {
+    "Poisson_at_least_one_upper": 0.9901667613812309,
+    "allowable_group_cross_section_if_entire_budget_assigned_cm2": 9.755603301650583e-09,
+    "assumption": "Counterfactually treat logic_MBU=0 as complete Poisson detection of every excluded parent group; treat every group as coupling failure and use all three chips, including padding conservatively. Fluence treated exact.",
+    "is_validated_physical_bound": false,
+    "one_sided_confidence": 0.95,
+    "per_device_group_cross_section_upper_cm2": 4.279617533648558e-07,
+    "three_device_group_mean_upper": 4.621986936340443,
+    "union_upper": 1.0,
+    "zero_count_test_fluence_required_even_if_entire_budget_assigned": 307078115.10202885
+  },
+  "policy_trials": 0,
+  "status": "INPUT_NOT_CLOSED_NOT_POLICY_RESULTS"
+}

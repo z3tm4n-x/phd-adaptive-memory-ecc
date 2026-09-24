@@ -1,0 +1,15 @@
+{
+  "raw_tests_reconstructed": 60,
+  "raw_group_logs_exactly_equal": 60,
+  "legacy_fullword_unit_tests_passed": 8,
+  "new_unit_tests_passed": 12,
+  "new_oracle_random_streams": 100,
+  "mutation_checks": ["data-only parity exclusion (preserved regression)","scatter same-word two-bit group into separate words; oracle rejects", "break intragroup address XOR", "replace bit rate with parent rate"],
+  "numerical_details": "numerical_checks.json",
+  "generator_details": "stream_checks.json",
+  "tuning_replay_details": "tuning_replay.json",
+  "compileall": "python -m compileall -q -b continuation-02: exit 0",
+  "independence": "Set-of-bits explicit scheduled oracle does not call advance/run/translate; accepted controller functions and source assumptions shared where disclosed.",
+  "failed_development_attempts": ["wrong expected bit-lane XOR in test, fixed before preregistration", "multiprocessing named-pipe permission denied before trials, rerun with host authorization", "Zenodo metadata timeout; DataCite DOI registry used"],
+  "not_performed": ["physical particle-time reconstruction", "device/board qualification", "embedded WCET proof", "independent new controller theorem", "Scientific Review"]
+}

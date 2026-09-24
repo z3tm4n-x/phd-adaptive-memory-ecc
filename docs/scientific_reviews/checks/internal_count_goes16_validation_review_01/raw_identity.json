@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "name": "sci_sgps-l2-avg5m_g16_d20241008_v3-0-2.nc",
+      "sha256": "62d79beebcfaa9e3e0d82182650a1e3279b848548d150498caeed88281787375",
+      "raw_bytes": 631029,
+      "string_presence": true
+    },
+    {
+      "name": "sci_sgps-l2-avg5m_g16_d20241009_v3-0-2.nc",
+      "sha256": "40c404249818937ede12f08aba968b32ec61bdd216969424d9b8165d5929af43",
+      "raw_bytes": 640698,
+      "string_presence": true
+    },
+    {
+      "name": "sci_sgps-l2-avg5m_g16_d20241010_v3-0-2.nc",
+      "sha256": "a4555692d5095ad609c0ca44783332c4875b1ffc8cc0888212c74c7fa4a89d1f",
+      "raw_bytes": 639281,
+      "string_presence": true
+    },
+    {
+      "name": "sci_sgps-l2-avg5m_g16_d20241011_v3-0-2.nc",
+      "sha256": "cb6e212adc1b425754ea33f5d2cb38a2d31a79c17647ba2ce9499f09c51a9526",
+      "raw_bytes": 632234,
+      "string_presence": true
+    },
+    {
+      "name": "sci_sgps-l2-avg5m_g16_d20241012_v3-0-2.nc",
+      "sha256": "8ca94464a6d564a8ab0eb9330ee27b822f43d28eea65f43285c24b060f60f9b7",
+      "raw_bytes": 629768,
+      "string_presence": true
+    }
+  ],
+  "scope": "Hash identity and selected uncompressed metadata string presence only; not typed HDF5 arrays or transport reproduction"
+}

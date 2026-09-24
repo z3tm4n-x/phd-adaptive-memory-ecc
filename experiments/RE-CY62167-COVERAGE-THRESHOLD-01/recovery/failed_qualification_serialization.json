@@ -1,0 +1,9 @@
+{
+  "transport_execution_head": "63fbe46c10c41dce24477ab43f7916eb93aa448e",
+  "transport_process": "completed; NPZ, historical JSON and logs preserved",
+  "failure": "TypeError: Object of type bool is not JSON serializable",
+  "cause": "NumPy boolean from one-bin comparison in new RE qualification wrapper was not converted to builtin bool before json.dumps",
+  "downstream_attempt": "upstream_regression stopped immediately with FileNotFoundError for missing transport_qualification.json; no upstream or DREG rate calculated",
+  "repair": "Convert check values to builtin bool; add validate-only to reuse completed NPZ without repeating transport. Check thresholds and historical sources unchanged.",
+  "chronology": "repair commit precedes qualification re-execution and first upstream/DREG/CW execution"
+}

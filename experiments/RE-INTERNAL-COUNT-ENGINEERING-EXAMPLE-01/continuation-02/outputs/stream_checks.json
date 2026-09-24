@@ -1,0 +1,37 @@
+{
+  "trials_per_case": 500,
+  "horizon_s": 10,
+  "seed": 592317,
+  "diagnostics": [
+    {
+      "case": "xor_groups",
+      "parent_count": 111261.0,
+      "conditional_expected_parents": 110909.84085931393,
+      "parent_standardized_residual": 1.0544328718006963,
+      "protected_bits": 28191.0,
+      "expected_protected_bits": 28108.90498000639,
+      "compound_mark_first_moment_standardized_residual": 0.36128128869472503
+    },
+    {
+      "case": "singleton_ablation",
+      "parent_count": 31153.0,
+      "conditional_expected_parents": 30832.186777606166,
+      "parent_standardized_residual": 1.8270485813259751,
+      "protected_bits": 31153.0,
+      "expected_protected_bits": 30832.186777606166,
+      "uniform_lane_chi2": 46.61316727120984,
+      "uniform_lane_p": 0.15935463888685672
+    },
+    {
+      "case": "native_word_merged",
+      "parent_count": 117089.0,
+      "conditional_expected_parents": 117365.55825552899,
+      "parent_standardized_residual": -0.8072653144645354,
+      "protected_bits": 29626.0,
+      "expected_protected_bits": 29751.07256070979,
+      "compound_mark_first_moment_standardized_residual": -0.5901461303517221
+    }
+  ],
+  "common_stream_immutable_after_each_policy": true,
+  "scope": "addressed RNG diagnostics; physical law assumed, not validated by this test"
+}

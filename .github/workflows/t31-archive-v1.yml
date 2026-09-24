@@ -1,4 +1,4 @@
-name: T31 archive fixed v1 snapshot
+name: T31 archive fixed v1 snapshot (completed)
 
 on:
   push:
@@ -14,11 +14,12 @@ concurrency:
 
 jobs:
   archive:
-    if: github.repository == 'z3tm4n-x/phd-adaptive-memory-ecc'
+    # Completed in run 35957935788. Kept as provenance; no further writes.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:

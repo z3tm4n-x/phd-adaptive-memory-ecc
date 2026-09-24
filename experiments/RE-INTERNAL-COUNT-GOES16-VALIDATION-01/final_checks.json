@@ -1,0 +1,23 @@
+{
+  "preregistration": "870a3c5d725793dd45ff2cc2feaf6e8885df0df9",
+  "production_cases": 3,
+  "trials_per_case": 20000,
+  "policy_executions": 300000,
+  "computational_failures": 0,
+  "postproduction_unit_tests": 11,
+  "unit_failures": 0,
+  "unit_errors": 0,
+  "compileall_exit_code": 0,
+  "all_event_hashes_reproduced": 60000,
+  "policy_trial_replays_exact": 60,
+  "aggregate_csv_reproduction_byte_identical": true,
+  "fresh_RADAR_transport_arrays_match": true,
+  "fresh_input_derived_rates_sha256": "e3a1ce8f2a33cd9a60b22039c86ae8f1f7214458850d5a0b609042eace1bc3ac",
+  "preregistered_execution_code_changed_after_preregistration": false,
+  "base_files_checked": 576,
+  "raw_byte_identical": 551,
+  "checkout_EOL_only_differences": 25,
+  "non_EOL_base_differences": 0,
+  "figure_visually_inspected": true,
+  "scope": "Computational validation in the declared conditional model; not physical calibration or independent validation of shared controller/transport kernels"
+}

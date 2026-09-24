@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": 78,
+  "conditional_write_cases": [
+    "clean",
+    "single",
+    "post_read",
+    "rmw_pair",
+    "last_word",
+    "partial",
+    "late_command",
+    "app_conflict"
+  ]
+}

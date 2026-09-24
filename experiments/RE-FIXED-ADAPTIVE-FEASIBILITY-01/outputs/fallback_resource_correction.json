@@ -1,0 +1,13 @@
+{
+  "B_budget": 0.0025,
+  "B_normal": 0.0014244700083518912,
+  "B_peak": 0.24045835514172653,
+  "H_h": 43824,
+  "N_missing_h": 148,
+  "corrected_B_fallback": 0.00223653272651946,
+  "corrected_capacity_h": 196.01741984056181,
+  "formula": "B_normal + (N_missing/H)*B_peak",
+  "level1_separator_changed": false,
+  "old_B_fallback_superseded": 0.00223172,
+  "old_capacity_h_superseded": 197.19
+}

@@ -1,0 +1,113 @@
+{
+  "base_sha": "a1f4a65f4f0663125b5a93eb611c0f6f0d7a6b19",
+  "selections": [
+    {
+      "source_sha": "82282a8b36b04b388cb3441c474bede30a1287a2",
+      "path": "experiments/RE-INTERNAL-COUNT-GOES16-VALIDATION-01"
+    },
+    {
+      "source_sha": "c277567b86a294adb415cce65df3ea6f44dcb510",
+      "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01"
+    },
+    {
+      "source_sha": "a88d6a26c54c193e3d518fb16f43ffd19511202b",
+      "path": "experiments/RE-FIXED-ADAPTIVE-FEASIBILITY-01"
+    },
+    {
+      "source_sha": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01"
+    },
+    {
+      "source_sha": "d3cd3e9385f62f047954ce3e54454eb5976ddcb8",
+      "path": "experiments/RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02"
+    },
+    {
+      "source_sha": "3dc58a5f79960d3ee294dc405848db5341583e0d",
+      "path": "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01"
+    },
+    {
+      "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_GOES16_VALIDATION_REVIEW_01.md"
+    },
+    {
+      "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/check_python_bodies.py"
+    },
+    {
+      "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/check_review.py"
+    },
+    {
+      "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/independent.json"
+    },
+    {
+      "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/python_bodies.json"
+    },
+    {
+      "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/raw_identity.json"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01.md"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/check_contract.py"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/check_data.py"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/check_execution.py"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/contract_results.json"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/data_results.json"
+    },
+    {
+      "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/execution_results.json"
+    },
+    {
+      "source_sha": "619492db33cb8793710fb4e454616f543993c982",
+      "path": "docs/scientific_reviews/FIXED_ADAPTIVE_FEASIBILITY_REVIEW_01.md"
+    },
+    {
+      "source_sha": "619492db33cb8793710fb4e454616f543993c982",
+      "path": "docs/scientific_reviews/checks/fixed_adaptive_review_01.py"
+    },
+    {
+      "source_sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+      "path": "docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md"
+    },
+    {
+      "source_sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+      "path": "docs/scientific_reviews/checks/cy62167_coverage_threshold_review_01.json"
+    },
+    {
+      "source_sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+      "path": "docs/scientific_reviews/checks/cy62167_coverage_threshold_review_01.py"
+    },
+    {
+      "source_sha": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+      "path": "docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_03.md"
+    },
+    {
+      "source_sha": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+      "path": "docs/scientific_reviews/checks/cy62167_physical_bridge_review_03.py"
+    },
+    {
+      "source_sha": "4b8aa6ae8f8467cac2df0395603c327563796638",
+      "path": "docs/scientific_reviews/CY62167_EXECUTOR_REFERENCE_REVIEW_01.md"
+    }
+  ]
+}

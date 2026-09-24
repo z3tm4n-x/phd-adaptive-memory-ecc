@@ -1,0 +1,134 @@
+{
+  "base": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+  "files_checked": 576,
+  "raw_blob_mismatch_count": 25,
+  "checkout_EOL_only": [
+    {
+      "path": ".gitattributes",
+      "canonical_sha256": "368c48b056b3bb3eedefa69df156be011455ff8d895f3ff366c1cd866e97893e",
+      "checkout_sha256": "f33a7fd49064ce8bffa3b758300d2a05a76d135e7a86dd51a41e55360eb27bf0"
+    },
+    {
+      "path": ".gitignore",
+      "canonical_sha256": "f3666002696a7622ffbae6eda522ba253a1f38e736f565e39911b4b4303566b6",
+      "checkout_sha256": "85406a2e1e1e4e23400c0bb181310b70cef3d09b1d0ac75b9ff66e5b90d8be7d"
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/figure1_mapping_distribution.svg",
+      "canonical_sha256": "b56a1a582298b1a69c4cebd4086eb80320dc316bb0ceda9456d082e94eff3e22",
+      "checkout_sha256": "e16225231613f72261517d4c1e1390d4a7610b8ec481213743d0f7a871c4f53d"
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/figure4_resource_curve.svg",
+      "canonical_sha256": "4a0bcf106f29ce034bf65df4aa91ea13adbcef17339672f170e5f35dc9db9326",
+      "checkout_sha256": "340fc359008b2f30742103c0ee52830602b7fab97c5a51060a6b68e545110b63"
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/test_results.txt",
+      "canonical_sha256": "651159abc14ae8f00c4ab4639211b5c9041e79e76a554a4c8003126b2ee1f9a5",
+      "checkout_sha256": "12a629ac7b2bb71bee4c6e7e8e5e633b0c558ed0d8ba8526eed03cf3ccd4e5f6"
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/test_results_phase_b.txt",
+      "canonical_sha256": "6b17b8b3728fe448746d49a8aaa5f1e8230a048c126e88de1e0ef584dbf28429",
+      "checkout_sha256": "34a7051ebae542b720d56730a38808f7f86580dbccb99bd40cd1da6e8a7a95be"
+    },
+    {
+      "path": "experiments/RE-ENGINEERING-APPLICABILITY-RE-CONTINUATION-01/outputs/run_stdout.txt",
+      "canonical_sha256": "727b75005759a0d78f97fcf2f6dc42729ef597e277da71639809e1160c06eb25",
+      "checkout_sha256": "4f1ab4bba24e1e7b7dcd1be0e29581b3d50570e679b28c05393d13b75f80a919"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/applicability_resource_summary.csv.gz.b64.part03",
+      "canonical_sha256": "5b832e1b5c488aaca66987d405e3f7a998b1900bcdc3603674c20d6d308f83c8",
+      "checkout_sha256": "09895fc26b45e52387631d5adf1622af8c2d05e9ddb95e91f5ba256c09af4828"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/model_compatibility.csv.gz.b64",
+      "canonical_sha256": "c74c8b48e59cb015e1b122737b29bf6dcf1aea4e333a0be0af5ede8ff6e5e1be",
+      "checkout_sha256": "5b9b42ef7e534a1afe6eaac54bdc8ba25d059fb71c24fe4413c30c2718bbb009"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/numerical_repair_core.py.gz.b64",
+      "canonical_sha256": "2d695c7316ba7da20fdd547e60089e1b184aa2cdcc58ea623aa5eb26b489f033",
+      "checkout_sha256": "52a4df195e8c9eeac5d002f4f9e661fb2080c42903a19473afd140a56604242b"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/real_temporal_core.py.gz.b64",
+      "canonical_sha256": "59998f06b00b66dc5b4dc714627237e54eb0f69c21f20e6d4fd18db6ec36c8d3",
+      "checkout_sha256": "436b2df7715370f647566974b231ec29116db45941a98cfd09035c7ea37c7cab"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/reproduce.sh",
+      "canonical_sha256": "84bc8c4dd1ff911f53ba92e337a7bcae9631f9068e978ec4aacab21487f62143",
+      "checkout_sha256": "9693a4022f3b34e89a82d166c9e837448d3a57e82a8eb6c83ee153594c4c98ab"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/test_numerical_repair_core.py.gz.b64",
+      "canonical_sha256": "ffd87715c1c8fe0732c908d49c169e327bd74387f5f2115c6e53e16a8d029333",
+      "checkout_sha256": "c9c58b9ccd8dbf85ebf3ee021482bc35f20c78b64cbb8af1514d954ed527f684"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/test_output.txt",
+      "canonical_sha256": "5a7c44a172e085cbbd63425b4293b9bd19b5185a19ea313bc364c7257177a9eb",
+      "checkout_sha256": "216499f0335245ed0e7a3370de17d72ab64016828cce42ceba2543a6d8247c41"
+    },
+    {
+      "path": "experiments/RE-GOES-REAL-TEMPORAL-01/test_real_temporal_core.py.gz.b64",
+      "canonical_sha256": "dc6ec4bc5927c3cc8311424202b3ef430da9e114705a82bbbbdef8b4ae51409f",
+      "checkout_sha256": "652ce6030eba6905670c379ccfa93aaa858cdc77468fe00531ae8c374ef116d4"
+    },
+    {
+      "path": "experiments/RE-GOES19-PROTON-RATE-01/goes_files.sha256",
+      "canonical_sha256": "40fa10945f950160f1e37110d77ae2781f93f6b3a4e764ea37f8d5b921166644",
+      "checkout_sha256": "0b2be45ab694d4d1c32225116acbb46c7627898ae99c4fef9463edd8dcb61ef6"
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/.gitignore",
+      "canonical_sha256": "6eb9caa382af708d9c6ef6ee0c8533369b28aafa490c542c305baa4e80d2f4cc",
+      "checkout_sha256": "746d78e292ae8f583f283e48c1eda09d34a1e2319b6ae3df8bb3ce214fec6353"
+    },
+    {
+      "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/requirements.txt",
+      "canonical_sha256": "f62bf9f04a92d05f2fb924a9e22b4192f3ba7a669f06e8444a68c9a5e1069e31",
+      "checkout_sha256": "13958ed6abff49675c34a35b0e4c0994eafc5c8000d686f028b7cbeb388de0de"
+    },
+    {
+      "path": "experiments/STAGE-A-IMPLEMENTATION-01/passing_sets.json.gz.b64",
+      "canonical_sha256": "977d9395b058906a859778fa08fbba53e529083476740b7a4bdb1988dadaa26d",
+      "checkout_sha256": "35e6b95d3a54db8c52f9f33fb93a4dd36777554a72c72fed238b72791176428b"
+    },
+    {
+      "path": "experiments/STAGE-A-IMPLEMENTATION-01/reproduce.sh",
+      "canonical_sha256": "72e59f5815c2b550f475534848903bcf36d2222fd0e9b8c3680e5f7f495dbcbb",
+      "checkout_sha256": "5db4441ad39cff69214e2ac06a186d03e20ba094b0c85d11e5b498341e68eef1"
+    },
+    {
+      "path": "experiments/STAGE-A-IMPLEMENTATION-01/selected_policies.csv.gz.b64",
+      "canonical_sha256": "8137a063e830ffe97bac97ff669173fb86acdf28f62cdc6eb7003bf4ad19af38",
+      "checkout_sha256": "ed5555c123a70ab21a47f5c16dad8e12983343bd94590c7c8f5934a1c3937d50"
+    },
+    {
+      "path": "experiments/STAGE-A-IMPLEMENTATION-01/test_output.txt",
+      "canonical_sha256": "a43b635429390cc8686ea3f975685171787ecbf83f310187a028c039af9926cb",
+      "checkout_sha256": "ef770e0a044f60bb3744b52643a998011cb9113a220a523ed30d1fbbd209bce9"
+    },
+    {
+      "path": "experiments/STAGE-A-INFORMATION-INTERFACE-01/policy_region_map.csv.gz.b64",
+      "canonical_sha256": "9c7b72777195171778e42e48223e0b4c34860c4a51b77a5e2329e682b772f248",
+      "checkout_sha256": "b8d2e67b511c64af351a4a741cb06dbddac48946f565a4b5fad0c26f4c85cc89"
+    },
+    {
+      "path": "experiments/STAGE-A-INFORMATION-INTERFACE-01/reproduce.sh",
+      "canonical_sha256": "b967509dae6b1f1f38bb9051d8b2d4d077ea96c8101ea1bdd51b23591810cd70",
+      "checkout_sha256": "abcb1e5abeab1d94f5eb1264a01a4960b95de77819a8ea8081dc7f9e7caa9b57"
+    },
+    {
+      "path": "experiments/STAGE-A-INFORMATION-INTERFACE-01/resource_summary.csv.gz.b64",
+      "canonical_sha256": "40e91d9fb45cf3bcf2d4a21e943fd183c688f1118ef3bda18a703c72fa5546a5",
+      "checkout_sha256": "44db3886bde5482e6aefdecec74b66f199dee5e8c0892df59bdefe573875a3ff"
+    }
+  ],
+  "non_EOL_mismatches": [],
+  "git_status_note": "Ten legacy CSVs were dirty immediately after checkout because tracked CRLF conflicts with attributes; their raw blobs equal base. Additionally 25 other files have checkout-only newline conversion. No historical content edited or staged."
+}

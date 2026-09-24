@@ -1,0 +1,108 @@
+{
+  "checks": {
+    "I1_independent_exact": true,
+    "I1_outward": true,
+    "I2_s_1_independent_exact": true,
+    "I2_s_1_outward": true,
+    "a_independent_exact": true,
+    "a_outward": true,
+    "b_s_1_independent_exact": true,
+    "b_s_1_outward": true,
+    "DREG_component_fsum": true,
+    "production_threshold_equality": true,
+    "production_above_threshold": true,
+    "boundary_zero": true,
+    "boundary_equality": true,
+    "boundary_negative_slack": true,
+    "negative_slack_retained": true,
+    "boundary_only_delta0": true,
+    "boundary_above_delta0": true,
+    "boundary_threshold_equal": true,
+    "boundary_threshold_over": true,
+    "boundary_saturation": true,
+    "saturation_signed_value": true,
+    "boundary_strict_near_tau": true,
+    "reject_tau": true,
+    "reject_negative_delta": true,
+    "reject_negative_coverage": true,
+    "reject_negative_coefficient": true,
+    "mutation_missing": true,
+    "mutation_duplicate": true,
+    "mutation_no_division": true,
+    "mutation_double_division": true,
+    "mutation_negative": true,
+    "mutation_nan": true,
+    "mutation_wrong_duration": true,
+    "mutation_wrong_window": true,
+    "zero_series_domain": true,
+    "window_boundary_duty": true,
+    "average_duty_not_general": true,
+    "production_duty_alignment": true
+  },
+  "all_pass": true,
+  "independent_integrals": {
+    "I1": "0.0001555475861444598763418197631835937500000",
+    "I2_s_1": "1.19138447405299979639760581273011271898099039390217512845993041992187500000E-12",
+    "a": "0.00030981577723362038199783914634694408725571632385253906250000000000000000000000000000",
+    "b_s_1": "2528.1037181797039690725000000000000000000000000"
+  },
+  "DREG_component_max_relative_difference": 4.39049622815852e-16,
+  "window_cases": [
+    {
+      "phase": "0",
+      "delay": "0",
+      "actual": "0",
+      "duty_upper": "0"
+    },
+    {
+      "phase": "0",
+      "delay": "1/7",
+      "actual": "3",
+      "duty_upper": "3"
+    },
+    {
+      "phase": "0",
+      "delay": "999/1000",
+      "actual": "20979/1000",
+      "duty_upper": "20979/1000"
+    },
+    {
+      "phase": "1/3",
+      "delay": "0",
+      "actual": "0",
+      "duty_upper": "0"
+    },
+    {
+      "phase": "1/3",
+      "delay": "1/7",
+      "actual": "3",
+      "duty_upper": "3"
+    },
+    {
+      "phase": "1/3",
+      "delay": "999/1000",
+      "actual": "60943/3000",
+      "duty_upper": "20979/1000"
+    },
+    {
+      "phase": "17/19",
+      "delay": "0",
+      "actual": "0",
+      "duty_upper": "0"
+    },
+    {
+      "phase": "17/19",
+      "delay": "1/7",
+      "actual": "389/133",
+      "duty_upper": "3"
+    },
+    {
+      "phase": "17/19",
+      "delay": "999/1000",
+      "actual": "364639/19000",
+      "duty_upper": "20979/1000"
+    }
+  ],
+  "independence": "Decimal reverse-order finite-decimal sums with Inexact trap; no main-calculator import. CLI mutation/boundary tests; Fraction window intersections. Shared model/constants/CSV and Python runtime remain.",
+  "scientific_review": "NOT_ASSIGNED; RE verification only"
+}
