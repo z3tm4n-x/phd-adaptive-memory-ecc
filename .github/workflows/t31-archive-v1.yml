@@ -1,0 +1,32 @@
+name: T31 archive fixed v1 snapshot
+
+on:
+  push:
+    branches: [t31-v22-working-set]
+    paths: [.github/workflows/t31-archive-v1.yml]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: t31-archive-v1
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    if: github.repository == 'z3tm4n-x/phd-adaptive-memory-ecc'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          clean: false
+      - name: Offline safety tests
+        run: python3 -B experiments/t31-working-set/test_archive.py
+      - name: Create only missing frozen tags and verify server SHAs
+        run: python3 -B experiments/t31-working-set/archive_branches.py --apply
+      - name: Print verification record
+        run: cat experiments/t31-working-set/archive_snapshot.json
