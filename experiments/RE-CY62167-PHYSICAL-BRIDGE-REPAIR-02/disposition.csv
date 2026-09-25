@@ -1,0 +1,13 @@
+claim_id,object,status,qualification
+CW-OLD-INCLUSION,"E_CW subset E_ideal_at_read union B_distinct",INSUFFICIENT,"False under mandated same-bit RMW trace; 60/4096 frozen-family counterexamples"
+CW-NEW-INCLUSION,"E_CW subset P union B",SUFFICIENT,"Declared clean-start deterministic-check conditional-write submodel only"
+P-BOUND,"Pr(P) pair-arrival union upper",SUFFICIENT,"Independent simple per-bit NHPP; deterministic per-word partitions; interval length <= tau"
+B-EXPECTATION,"Pr(B) expectation and all-check envelope",SUFFICIENT,"Check-measurable singleton J; deterministic/past-known D; independent future increments"
+B-KD,"31*integral K_D(t) r(t) dt",SUFFICIENT,"Deterministic potential-check windows"
+B-DUTY,"31*W*(D/tau)*integral r",SUFFICIENT,"Only periodic checks, D<tau, blockwise-constant r on integer-number-of-period blocks; boundary truncation non-increasing"
+CW-SLICE-NUMERIC,"24h/10mm/DREG/tau=1s numerical U_CW",NOT_ESTABLISHED,"No qualified rate integrals and no qualified executor D upper in this repair; bound=null"
+FULL-DEVICE,"full-device F_A upper",NOT_ESTABLISHED,"Requires separate delta_cov and full physical qualification"
+OPPOSITE-DECISION,"complete actual-CY passing m0 plus excluding indistinguishable m1",NOT_ESTABLISHED,"No admissible full passing m0 is supplied; only weaker conditional lower-bound-change lemma retained"
+EXTENSION-LEMMA,"observation-invariant hidden D3 extension changes an excluding lower bound",SUFFICIENT,"Conditional on admissible extension preserving the declared observations; no physical occurrence probability supplied"
+UPPER-GT-EPS,"upper>epsilon implies physical impossibility",INSUFFICIENT,"Only failure of that sufficient certificate"
+UPPER-LE-EPS,"qualified upper<=epsilon supplies sufficient certificate",SUFFICIENT,"Inclusive requirement; registered submodel only unless full-device term added"

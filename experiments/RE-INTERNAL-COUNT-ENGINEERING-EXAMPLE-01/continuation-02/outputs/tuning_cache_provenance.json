@@ -1,0 +1,29 @@
+[
+  {
+    "case": "xor_groups",
+    "cache_path": "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01\\continuation-02\\outputs\\tune_xor_groups.npz",
+    "sha256": "2aae35693b1126bd312248a12ce7d939864c4f8f5a131d2527270a86aa3b8af4",
+    "bytes": 4622261,
+    "regeneration": "run_experiment.py tune --workers 6 --batch-size 10",
+    "published_scores": "tuning_candidates.csv",
+    "development_only": true
+  },
+  {
+    "case": "singleton_ablation",
+    "cache_path": "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01\\continuation-02\\outputs\\tune_singleton_ablation.npz",
+    "sha256": "ca4e71f5aaf3b7e28ae53dc65fe6801463318ab54307ed33bc9f3e3cd75f7a5d",
+    "bytes": 4611819,
+    "regeneration": "run_experiment.py tune --workers 6 --batch-size 10",
+    "published_scores": "tuning_candidates.csv",
+    "development_only": true
+  },
+  {
+    "case": "native_word_merged",
+    "cache_path": "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\eng-example-01\\experiments\\RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01\\continuation-02\\outputs\\tune_native_word_merged.npz",
+    "sha256": "4c50272a116b265e440df78e9c412cf416f4dceb5b17ca24d7aa91c1088d8ed1",
+    "bytes": 3632465,
+    "regeneration": "run_experiment.py tune --workers 6 --batch-size 10",
+    "published_scores": "tuning_candidates.csv",
+    "development_only": true
+  }
+]

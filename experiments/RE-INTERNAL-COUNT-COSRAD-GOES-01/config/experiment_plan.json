@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "task_id": "RE-INTERNAL-COUNT-COSRAD-GOES-01",
+  "stage": "A_input_freeze_not_final_policy_preregistration",
+  "base_commit": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+  "target_branch": "research/internal-count-cosrad-goes-01",
+  "horizon_seconds": 604800,
+  "epsilon": 0.01,
+  "epsilon_origin": "research design allocation for first E_cap in a seven-day retained-buffer window; not a norm or system allocation",
+  "test_start_utc": "2024-06-07T00:00:00Z",
+  "test_end_utc_exclusive": "2024-06-14T00:00:00Z",
+  "selection_rule": "fixed connected seven-day interval containing the 8 June 2024 proton event named in NOAA reports, selected before policy outcomes",
+  "historical_independence": "not asserted: project had broader GOES history; new frozen policy test, not proven historically unseen data",
+  "training_start_utc": "2021-01-01T00:00:00Z",
+  "training_end_utc_exclusive": "2024-01-01T00:00:00Z",
+  "prior_studies_excluded_from_tuning": [
+    "2024-10-08/2024-10-13 old GOES profiles",
+    "ISSI neutron/grouped rate and timing data"
+  ],
+  "periods_seconds": [
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    30,
+    60,
+    120,
+    300,
+    600,
+    1800,
+    3600
+  ],
+  "backup_period_seconds": 0.5,
+  "model_class": "two-state Markov-modulated independent singleton Poisson, uniform word and bit labels; nonsymmetric transition rates estimated from training only",
+  "initial_mode_law": "stationary law of frozen training-fit Q, not forced (0.5,0.5), independent of test history",
+  "nominal_historical_law": "piecewise-constant singleton NHPP driven by reconstructed GOES proton plus separately ACE/COSRAD-reconstructed ion bit-first-moment rates",
+  "pilot_trials": 2000,
+  "validation_trials": 50000,
+  "pilot_seed": 2026091701,
+  "validation_seed": 2026091702,
+  "primary_family_alpha": 0.05,
+  "primary_family_max_size": 18,
+  "primary_estimands": [
+    "6 policy risks",
+    "5 Proposed-minus-comparator paired risk differences",
+    "5 paired common-survival reservation differences",
+    "2 preregistered reconstruction sensitivities: Proposed and Strong Fixed risk"
+  ],
+  "statistical_goal": "order 0.002 absolute risk half-width near epsilon for simultaneous risk intervals; actual exact intervals reported, not guaranteed width",
+  "policies": [
+    "Proposed",
+    "Count-disabled",
+    "Fixed-design",
+    "Strong Fixed",
+    "Precomputed",
+    "PA-DOM"
+  ],
+  "precomputed_class": "all two-block schedules with one fixed split at H/2; 12x12 candidates, plus fixed grid; none knows event onset",
+  "engineering_threshold": {
+    "net_released_interface_fraction": 0.01,
+    "equivalent_extra_32bit_reads_per_second_at_100ns": 100000,
+    "scope": "absolute design threshold chosen before outcomes; only J-conditional effect unless explicit post-error operating policy added"
+  },
+  "numerical_contract": "must be rebuilt after actual rates/Q; no copied 0.0002 or 0.0003 reserve; no certificate issued in A",
+  "freezing_order": [
+    "validate COSRAD and response/transport",
+    "derive training-only parameters and cheap reference floor",
+    "freeze final numerical contract and all policies; publish before test",
+    "run test without retuning"
+  ],
+  "not_run": [
+    "COSRAD 1mm calculations",
+    "new GOES/ACE numeric reconstruction",
+    "reference risk certificate",
+    "policy simulation",
+    "Scientific Review"
+  ]
+}

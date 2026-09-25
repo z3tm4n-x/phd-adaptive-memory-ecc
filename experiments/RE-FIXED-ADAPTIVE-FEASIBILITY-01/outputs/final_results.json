@@ -1,0 +1,60 @@
+{
+  "checks": {
+    "independent_formula_audit_corrected": {
+      "count": 13,
+      "passed": true
+    },
+    "verify_py": {
+      "count": 78,
+      "passed": true
+    }
+  },
+  "connected_budget_separator": [
+    0.0014244700083518912,
+    0.0039503977189538015
+  ],
+  "correction": {
+    "corrected_avg_fraction": 0.00223653272651946,
+    "corrected_capacity_h": 196.01741984056181,
+    "main_level1_unchanged": true,
+    "supersedes_fallback_avg_fraction": 0.00223172,
+    "supersedes_fallback_capacity_h": 197.19
+  },
+  "level1_gate_open": true,
+  "level2": {
+    "RES-003": "NO_COMPATIBLE_TRANSFER_NO_ADDITIONAL_BENEFIT_ESTABLISHED",
+    "RES-004": "NOT_EXECUTED_NO_REVISIT_BASIS",
+    "counter_only": "NOT_ESTABLISHED_NOT_REJECTED",
+    "fixed": "PROVEN_INSUFFICIENT_PRINCIPAL",
+    "simple_external": "MINIMAL_ESTABLISHED_CAUSAL_WITNESS",
+    "strong_precomputed": "INCONCLUSIVE_NO_NONLEAKING_WITNESS"
+  },
+  "principal": {
+    "B_avg_test": 0.0025,
+    "H_h": 43824,
+    "causal_C": 0.03560929815993128,
+    "causal_avg_fraction": 0.0014244700083518912,
+    "causal_peak_fraction": 0.24045835514172653,
+    "causal_risk_upper": 0.00095,
+    "causal_risk_upper_4x_rmw": 0.0009500007277376081,
+    "delay_50pct_us": 3.0052980531349043,
+    "ecc": "SEC-DED(39,32)",
+    "epsilon": 0.001,
+    "fallback_148h_avg_fraction_corrected": 0.00223653272651946,
+    "fallback_capacity_h_corrected": 196.01741984056181,
+    "fixed_F_lower_at_resource_tau": 0.001571525031251797,
+    "fixed_read_boundary_fraction": 0.0039503977189538015,
+    "fixed_tau_resource_min_s": 25.165824,
+    "hour_fixed_read_boundary_fraction": 0.00032605026093966336,
+    "memory_mib": 4
+  },
+  "res004_practical_executed": false,
+  "status": "OWN RESULT / SR required",
+  "stronger_ecc": {
+    "candidate": "shortened binary BCH(44,32,d>=5), t=2",
+    "drop_in": false,
+    "tau_s": 58.72025599999999,
+    "triple_event_upper": 5.5712752513052024e-09
+  },
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01"
+}

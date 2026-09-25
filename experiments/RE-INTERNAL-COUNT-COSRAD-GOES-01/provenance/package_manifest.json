@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "task_id": "RE-INTERNAL-COUNT-COSRAD-GOES-01",
+  "scope": "published task directory except manifest itself; ZIP snapshot and publication differences in PUBLICATION.md; integrity not scientific acceptance",
+  "files": [
+    {
+      "path": "COSRAD_REQUEST.md",
+      "bytes": 15735,
+      "sha256": "1f8f223122e12ea441843e67e90853d1158b7bf5b0614abb9d91e8dd50c5d95b"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 11793,
+      "sha256": "8f7b0def2078946ec3d3fd3b0c54a44ec68706c76bfd714f4f91f712cd9cbcc3"
+    },
+    {
+      "path": "MODEL_AND_INPUTS.md",
+      "bytes": 43047,
+      "sha256": "cce1aacfb5964991ee57a75519cac26361ddbfdfb3a6b6fc68f037b28d1e53f1"
+    },
+    {
+      "path": "ORCHESTRATOR_HANDOFF.md",
+      "bytes": 53081,
+      "sha256": "d8d680df2e1ef2ea95cde275dbdb9f3c7165ffacea7ee95a362964854f34e310"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 4645,
+      "sha256": "dde3925a0a3bd2ff8e4e9c975368cd78039673c95be83651e58896a08271d29b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1905,
+      "sha256": "59d3fb44a5ed04efc8cb9288b3cd784ffd23cd3299c5dbc9cc1a1d658f0e31ff"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 4378,
+      "sha256": "08736fcef1596defd206332c1156c91f99bcfe663b1ecfa346e649153e9050aa"
+    },
+    {
+      "path": "config/cosrad_request.json",
+      "bytes": 2197,
+      "sha256": "a1996120a143458c6b898ebaf9cc2ee90647755c12429fff8320dda2c84046cc"
+    },
+    {
+      "path": "config/experiment_plan.json",
+      "bytes": 3386,
+      "sha256": "25d0a202dca86bd8d330b5946418c721032051ac92f0ea412b19bacdd910d481"
+    },
+    {
+      "path": "config/memory.json",
+      "bytes": 2054,
+      "sha256": "d0157a9ae296eee1104981d598149b8b5012272b5a846ca3bb894addee8ed5f2"
+    },
+    {
+      "path": "inputs/ion_normal_2col.txt",
+      "bytes": 15694,
+      "sha256": "750c8132d8e58eb55d772c89339dcbbbfa06c0d22e36e0aaf86909e27727f6ca"
+    },
+    {
+      "path": "inputs/ion_response.csv",
+      "bytes": 22149,
+      "sha256": "8371114551a2aa8dbdc8f455d0ba208b53df2bfb3dd780e82afc737287c087f5"
+    },
+    {
+      "path": "inputs/logical_mapping.csv",
+      "bytes": 2071,
+      "sha256": "fef7181ef10398a42afc363ef583531c60ec8c424b42812ce255e3a62c61037f"
+    },
+    {
+      "path": "inputs/proton_anchors.csv",
+      "bytes": 1496,
+      "sha256": "07de440fcb965198f931b7e6de07e3e1d10715f8b2e91923b37f1e2f8e5a5d21"
+    },
+    {
+      "path": "inputs/proton_repository_points.csv",
+      "bytes": 1700,
+      "sha256": "c8266fdf98404e8efaa16458c52bedc3a88f490a40a808ab741c06af6838f5b7"
+    },
+    {
+      "path": "inputs/proton_response.csv",
+      "bytes": 32637,
+      "sha256": "de5808536f3aeec1454b0f88ad71659aeefbfcb87298962e20c725b5edfc807a"
+    },
+    {
+      "path": "inputs/proton_response_2col.txt",
+      "bytes": 19570,
+      "sha256": "24faf51455779c85f0aaedde30b3149fadd95933c6ebd79b84547d73aa2b7e1c"
+    },
+    {
+      "path": "inputs/proton_supplementary_points.csv",
+      "bytes": 480,
+      "sha256": "5eb293cf9bf023571ffd806a6e5c932d765439a9609e777c100c4ddb49c4b951"
+    },
+    {
+      "path": "inputs/registered_multiplicity.csv",
+      "bytes": 10796,
+      "sha256": "453b2940a632bfa7bb15553a3ca1c64a0449d8d54a16c50fb733d8554d9c443e"
+    },
+    {
+      "path": "outputs/importer_fixture_checks.json",
+      "bytes": 511,
+      "sha256": "cc6fae9ae8bc1c5721ceb998f383b4e788b643c79ca4d41356cb7748ee04c1e8"
+    },
+    {
+      "path": "outputs/response_checks.json",
+      "bytes": 2636,
+      "sha256": "ba211317dc9c012dd5f5d96adb97d7546acb27e7fbb0e20ff21260c88abbe6dc"
+    },
+    {
+      "path": "outputs/tests.txt",
+      "bytes": 3343,
+      "sha256": "8628a1264a173c81b06953456af0402d4559e4432556dbfac495a025a7c85baa"
+    },
+    {
+      "path": "provenance/cosrad_old_archive.json",
+      "bytes": 36040,
+      "sha256": "c172c2f17d5970c3c729a6a6b1de2e06f57e254c19ce137401461252f48782a5"
+    },
+    {
+      "path": "provenance/cosrad_old_member_manifest.csv",
+      "bytes": 3596,
+      "sha256": "88b642c30c1c3e7b68f1b1757b2e50177aac2bda52eed7634294aac617a23fab"
+    },
+    {
+      "path": "provenance/digitization.json",
+      "bytes": 1138,
+      "sha256": "17358b0d7351f493ad4d0603d8027732e0ea2593470d4b7653b053d70e16e248"
+    },
+    {
+      "path": "provenance/execution.json",
+      "bytes": 2209,
+      "sha256": "95613f6039046f43d1e6be59ee8a75412c8dc7c2dca0bcec912dbe0030fcdaae"
+    },
+    {
+      "path": "provenance/package_manifest_zip_A.json",
+      "bytes": 5154,
+      "sha256": "6fff77ff0ef5ef15bdcf7fcda3816b6265f4050440b3b6cd4a8fbd7b333fe244"
+    },
+    {
+      "path": "provenance/sources.json",
+      "bytes": 4485,
+      "sha256": "dd413709d54e713788b849b445d5fa1285a915e63047e06a4ec3999c5254ee1e"
+    },
+    {
+      "path": "src/contracts.py",
+      "bytes": 7068,
+      "sha256": "4790d0d647bb7f7d0b75f89b2cfe45ba8ed1d710d699cc9ca7e8d1854851d90b"
+    },
+    {
+      "path": "src/import_into_checkout.py",
+      "bytes": 7124,
+      "sha256": "285a997ed8361c54ae9bb67f9c345ac6687b6f431f2acb2a957e96cd5d415bbe"
+    },
+    {
+      "path": "src/prepare_inputs.py",
+      "bytes": 6641,
+      "sha256": "f2066bdd8d5d0819b8f12b71590cc2fcdcd463cb6d73ad7463151f509f23e078"
+    },
+    {
+      "path": "src/verify_package.py",
+      "bytes": 2643,
+      "sha256": "cfdf19b8a6a34465b9c9f007ba98734b0735fa022c716a78cbfd456a5198ac36"
+    },
+    {
+      "path": "tests/check_importer_fixture.py",
+      "bytes": 3651,
+      "sha256": "c40e49fb5d2f05ea390acb02f0f02f440205150d16294884dc8fdcafbc42a380"
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "bytes": 9135,
+      "sha256": "6e1a10f88523c1e164e598f0587ebbd2190716ba9c5aec56d41ab6f67d213f94"
+    }
+  ]
+}

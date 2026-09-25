@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01-REPAIR-01",
+  "repair_base": "80737bdcc37dff1eb597a20e603c61a6a5af3a1f",
+  "delivery_branch": "research/fixed-adaptive-feasibility-01",
+  "scientific_status": "OWN_RESULT_REPAIR_REQUIRES_SCIENTIFIC_REVIEW",
+  "scope": [
+    "executable conditional-write state transitions",
+    "word-level executor schedule and application-delay proof",
+    "nominal versus fallback-reserved resource domains",
+    "first-hour and retrospective-calibration information contract"
+  ],
+  "files": {
+    "semantic_model.py": "0cb473457b369ab39ae137d9f5284fbd1517abef",
+    "repair_checks.py": "13472d61cd97115a663d7ddbf1bd567e225742af",
+    "EXECUTION_SEMANTICS.md": "07533c8640cd88f1a44aa67dafffa46d113ae6fc",
+    "INFORMATION_CONTRACT.md": "115ce3d03ba234a10a5de213777c734c32a4e66d",
+    "REPAIR_DISPOSITION.md": "823346c82b43eb73c1b96bfd028ae0ed6e4e8f3f",
+    "outputs/executor_schedule_repair.json": "bbf62e41e579fc037555afc9936f15787c3808d8",
+    "outputs/budget_domains_repair.json": "8f4371ff7b8c608c3e7e5632778dc8d893f78f17",
+    "outputs/repair_verification.json": "4e839ba9d3bc5a5b8113b985aa77327c26f58592"
+  },
+  "checks": {
+    "semantic_state_transitions": "9_PASS",
+    "executor_schedule_checks": "4_PASS",
+    "old_verify_dictionary_fixtures_count_as_semantic_evidence": false
+  },
+  "principal_repair_numbers": {
+    "release_spacing_peak_ns": 582.2213992833967,
+    "max_scrub_grab_ns": 140.0,
+    "max_scrub_start_lateness_ns": 80.0,
+    "risk_upper_with_executor_lateness": 0.0009500001244874023,
+    "service_curve_delay_us": 1.0269351328926066,
+    "conservative_busy_period_delay_us": 3.0052980531349043,
+    "nominal_warm_start_lower_percent": 0.14244700083518912,
+    "fallback_148h_warm_start_lower_percent": 0.223653272651946,
+    "cold_start_plus_148h_lower_percent": 0.22420196367773488,
+    "fixed_separator_upper_percent": 0.39503977189538015
+  },
+  "main_level1_fixed_insufficiency_changed": false,
+  "res004_practical_executed": false
+}

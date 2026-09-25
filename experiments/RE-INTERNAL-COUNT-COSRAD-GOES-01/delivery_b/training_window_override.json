@@ -1,0 +1,32 @@
+{
+  "task_id": "RE-INTERNAL-COUNT-COSRAD-GOES-01",
+  "amendment": "PI approval in the current conversation, 2026-09-17",
+  "old_training_utc": [
+    "2021-01-01T00:00:00Z",
+    "2024-01-01T00:00:00Z"
+  ],
+  "training_utc": [
+    "2021-01-01T00:00:00Z",
+    "2024-06-01T00:00:00Z"
+  ],
+  "excluded_gap_utc": [
+    "2024-06-01T00:00:00Z",
+    "2024-06-07T00:00:00Z"
+  ],
+  "test_utc": [
+    "2024-06-07T00:00:00Z",
+    "2024-06-14T00:00:00Z"
+  ],
+  "end_exclusive": true,
+  "selection": "Require the entire decoded averaging interval inside one permitted window; reject boundary-straddling intervals.",
+  "shared_file": "sis_data_1hr_2602.hdf contains both May training and June test rows; never assign the entire file to either role.",
+  "no_leakage": "Fit spectra/model/Q/initial distribution/policy settings using training rows only; no temporal filling or smoothing across a gap or split.",
+  "baseline_role": "2021-2023 remains an input/model sensitivity, not a post-test contest to choose a winning training period.",
+  "not_done_by_this_tool": [
+    "HDF/NetCDF scientific validation",
+    "spectral reconstruction",
+    "model fitting",
+    "risk certification",
+    "policy simulation"
+  ]
+}

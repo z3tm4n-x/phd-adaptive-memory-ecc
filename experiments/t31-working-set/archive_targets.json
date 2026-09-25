@@ -1,0 +1,562 @@
+{
+  "repository": "z3tm4n-x/phd-adaptive-memory-ecc",
+  "base_sha": "228239d428c18c6a5a5a0ec384154b90bc1e66c3",
+  "excluded_active_branch": "refs/heads/t31-v22-working-set",
+  "branches": [
+    {
+      "branch": "refs/heads/docs/research-program-passport-20260918",
+      "sha": "bc8ffe83a73a1d8e3e14ecc6ae65406f29eaf825",
+      "tag": "refs/tags/v1/docs/research-program-passport-20260918"
+    },
+    {
+      "branch": "refs/heads/ea/control-prior-art-evidence-audit-01",
+      "sha": "1798a2c677fa3003c91e120dfd99d0557b9c0477",
+      "tag": "refs/tags/v1/ea/control-prior-art-evidence-audit-01"
+    },
+    {
+      "branch": "refs/heads/exp-001-implementation-01",
+      "sha": "84728d1b5768e7c91c508495d696c5980943ae57",
+      "tag": "refs/tags/v1/exp-001-implementation-01"
+    },
+    {
+      "branch": "refs/heads/exp-001-validation-repair-01",
+      "sha": "072b70adabb9827ee59c94b2b3d5cf044b25cdf9",
+      "tag": "refs/tags/v1/exp-001-validation-repair-01"
+    },
+    {
+      "branch": "refs/heads/infra/research-governance-v1",
+      "sha": "af5c6293a67c0d6048912ca4f42ec7e0a75b3efc",
+      "tag": "refs/tags/v1/infra/research-governance-v1"
+    },
+    {
+      "branch": "refs/heads/integration/accepted-state-consolidation-01",
+      "sha": "a402272a04266341a8ab02e33f68fab6f32f3809",
+      "tag": "refs/tags/v1/integration/accepted-state-consolidation-01"
+    },
+    {
+      "branch": "refs/heads/ls/memory-protection-tradeoff-01",
+      "sha": "d0c3555a746b9e8db9d17b2a40fea8cfbacd849b",
+      "tag": "refs/tags/v1/ls/memory-protection-tradeoff-01"
+    },
+    {
+      "branch": "refs/heads/ls/pa-dom-01-03-source-control-01",
+      "sha": "603fb4bff99a7d5c84f89030e2183bf41026fc15",
+      "tag": "refs/tags/v1/ls/pa-dom-01-03-source-control-01"
+    },
+    {
+      "branch": "refs/heads/main",
+      "sha": "228239d428c18c6a5a5a0ec384154b90bc1e66c3",
+      "tag": "refs/tags/v1/main"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-coverage-threshold-01",
+      "sha": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+      "tag": "refs/tags/v1/orchestrator/cy62167-coverage-threshold-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-coverage-threshold-closeout-01",
+      "sha": "1a25daff00cbab15866bcc7da61662d0a85f9720",
+      "tag": "refs/tags/v1/orchestrator/cy62167-coverage-threshold-closeout-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-coverage-threshold-sr-01",
+      "sha": "99ee43551f06f52f5a4156f4b7b27865a5f45b5f",
+      "tag": "refs/tags/v1/orchestrator/cy62167-coverage-threshold-sr-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-cw-repair-02",
+      "sha": "ec6b1b3cd10ff1268979c60e08167279603f23d5",
+      "tag": "refs/tags/v1/orchestrator/cy62167-cw-repair-02"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-executor-reference-closeout-01",
+      "sha": "b457de5270dcf1e8cb8ce3881416451da785c0e6",
+      "tag": "refs/tags/v1/orchestrator/cy62167-executor-reference-closeout-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-physical-bridge-01",
+      "sha": "9ea66664d37cb522d0d148ed63b06858de313d00",
+      "tag": "refs/tags/v1/orchestrator/cy62167-physical-bridge-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-physical-bridge-repair-01",
+      "sha": "d4918569e278289e300eee8bb0504211b23ac92b",
+      "tag": "refs/tags/v1/orchestrator/cy62167-physical-bridge-repair-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-physical-bridge-rereview-02",
+      "sha": "eef9068591d6e125dd273dbf615216cec23df99b",
+      "tag": "refs/tags/v1/orchestrator/cy62167-physical-bridge-rereview-02"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-physical-bridge-review-01",
+      "sha": "8cd4f0a43a6cc6d845b5556e570b1c818fa48034",
+      "tag": "refs/tags/v1/orchestrator/cy62167-physical-bridge-review-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-physical-bridge-sr-03",
+      "sha": "631169dafa34e4e5ebc107f37e5882f58c575b2c",
+      "tag": "refs/tags/v1/orchestrator/cy62167-physical-bridge-sr-03"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-physical-bridge-sr-03-closeout",
+      "sha": "ff30aae43f6b7cbebd3deef26e1c9b5eceb03087",
+      "tag": "refs/tags/v1/orchestrator/cy62167-physical-bridge-sr-03-closeout"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-reference-subsystem-01",
+      "sha": "d59de85eb46ae1fa254f3b936ce6fa64c28bcff0",
+      "tag": "refs/tags/v1/orchestrator/cy62167-reference-subsystem-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-timing-stage0-disposition-01",
+      "sha": "7beacf4360e60218dede08a472ed4972e1be49e7",
+      "tag": "refs/tags/v1/orchestrator/cy62167-timing-stage0-disposition-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/cy62167-transport-input-recovery-01",
+      "sha": "7971484c4d054f521cc0086e2df6d4d0f63ed7b7",
+      "tag": "refs/tags/v1/orchestrator/cy62167-transport-input-recovery-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/dissertation-architecture-a-01",
+      "sha": "a089dd5f4833b403eb114e4c80af249d9739d382",
+      "tag": "refs/tags/v1/orchestrator/dissertation-architecture-a-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/dissertation-concept-01",
+      "sha": "0d5d0c97481980cf772234c6491a70bd93019b89",
+      "tag": "refs/tags/v1/orchestrator/dissertation-concept-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/draft-res-002",
+      "sha": "7e29cc96c2c0faeba9b5f2a9c8da44e6fa971907",
+      "tag": "refs/tags/v1/orchestrator/draft-res-002"
+    },
+    {
+      "branch": "refs/heads/orchestrator/draft-res-003",
+      "sha": "fa2607b012825cadaf23b0cc2103a78ee36ec65b",
+      "tag": "refs/tags/v1/orchestrator/draft-res-003"
+    },
+    {
+      "branch": "refs/heads/orchestrator/exp001-repair-disposition-20260831",
+      "sha": "6eef5fbb88799ed5026b182a0fe10df2fd4bcee3",
+      "tag": "refs/tags/v1/orchestrator/exp001-repair-disposition-20260831"
+    },
+    {
+      "branch": "refs/heads/orchestrator/fixed-adaptive-feasibility-01",
+      "sha": "59603d231b923ee7426056cb62779a5ad16c8413",
+      "tag": "refs/tags/v1/orchestrator/fixed-adaptive-feasibility-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/fpga-static-executor-check-01",
+      "sha": "b45f77106d79f12ebc7b0ba1c642659a7e4a2e27",
+      "tag": "refs/tags/v1/orchestrator/fpga-static-executor-check-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/goes-real-temporal-closeout-01",
+      "sha": "43cfad8f8b411f1abfa625fae4117f93d07c27f4",
+      "tag": "refs/tags/v1/orchestrator/goes-real-temporal-closeout-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/goes-real-temporal-proposal-01",
+      "sha": "2135cac502bb39054d888d2f468283de5fe802f0",
+      "tag": "refs/tags/v1/orchestrator/goes-real-temporal-proposal-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/goes-real-temporal-repair-01",
+      "sha": "77f299bdc3f5abaac36e5d8ef79359f557e56065",
+      "tag": "refs/tags/v1/orchestrator/goes-real-temporal-repair-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/goes-real-temporal-review-01",
+      "sha": "0422f2bc062eb85228a4a5f5174b7a1f3090c424",
+      "tag": "refs/tags/v1/orchestrator/goes-real-temporal-review-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/goes-real-temporal-review-02",
+      "sha": "b08c651c7694f17e725f27c9520b2e9aadcf0344",
+      "tag": "refs/tags/v1/orchestrator/goes-real-temporal-review-02"
+    },
+    {
+      "branch": "refs/heads/orchestrator/information-closeout-next-gate-20260908",
+      "sha": "19cb6c09c88f55cbcaf0af328cd6ef81cbff9f92",
+      "tag": "refs/tags/v1/orchestrator/information-closeout-next-gate-20260908"
+    },
+    {
+      "branch": "refs/heads/orchestrator/internal-count-control-execution-01",
+      "sha": "a44355e38a5434fa69d7c343e456ddd944315d46",
+      "tag": "refs/tags/v1/orchestrator/internal-count-control-execution-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/internal-count-control-review-01",
+      "sha": "6cfc762c131d4c7c1f6ed6ec76b5ef9297cfbe88",
+      "tag": "refs/tags/v1/orchestrator/internal-count-control-review-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/internal-count-unknown-d-execution-01",
+      "sha": "529709f1b98d12a5f5a2c7b71ee1ff9f53210c97",
+      "tag": "refs/tags/v1/orchestrator/internal-count-unknown-d-execution-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/pa-dom04-reuse-correction-20260901",
+      "sha": "a213a7ca82267541d235347d6be4cc724b287ddb",
+      "tag": "refs/tags/v1/orchestrator/pa-dom04-reuse-correction-20260901"
+    },
+    {
+      "branch": "refs/heads/orchestrator/repository-consolidation-01",
+      "sha": "72125a48fc6342884c6839d67b8d0d8c226f13ef",
+      "tag": "refs/tags/v1/orchestrator/repository-consolidation-01"
+    },
+    {
+      "branch": "refs/heads/orchestrator/res-002-internal-control-direction",
+      "sha": "6c53dd633b046a8da1bacc2b540394136244902b",
+      "tag": "refs/tags/v1/orchestrator/res-002-internal-control-direction"
+    },
+    {
+      "branch": "refs/heads/orchestrator/res-003-unknown-d-direction",
+      "sha": "28b5ca19bf8f2818ef65947115b8308fe4bd5784",
+      "tag": "refs/tags/v1/orchestrator/res-003-unknown-d-direction"
+    },
+    {
+      "branch": "refs/heads/orchestrator/res001-registration-next-gate-20260831",
+      "sha": "79552c86655101021d9804803c8de1ba850735c5",
+      "tag": "refs/tags/v1/orchestrator/res001-registration-next-gate-20260831"
+    },
+    {
+      "branch": "refs/heads/orchestrator/res001-wording-revision-20260831",
+      "sha": "dac6777a3cef1db2b776aed529f54ef6ab8207c5",
+      "tag": "refs/tags/v1/orchestrator/res001-wording-revision-20260831"
+    },
+    {
+      "branch": "refs/heads/orchestrator/rq007-candidate-20260901",
+      "sha": "7a0fcc447b7a0e7e03bf4ec80f0d1d4dc8f9617b",
+      "tag": "refs/tags/v1/orchestrator/rq007-candidate-20260901"
+    },
+    {
+      "branch": "refs/heads/orchestrator/rq007-registration-20260901",
+      "sha": "c92df5d859b3ce205562b6f79884b4f547d43183",
+      "tag": "refs/tags/v1/orchestrator/rq007-registration-20260901"
+    },
+    {
+      "branch": "refs/heads/orchestrator/stage-a-information-interface-20260908",
+      "sha": "8cde3f9ef079a34780caf4d07d339eadfa75ca9a",
+      "tag": "refs/tags/v1/orchestrator/stage-a-information-interface-20260908"
+    },
+    {
+      "branch": "refs/heads/orchestrator/stage-a-spec-20260907",
+      "sha": "c9ec2197f98207fc43938331542bbe00c8ae5a82",
+      "tag": "refs/tags/v1/orchestrator/stage-a-spec-20260907"
+    },
+    {
+      "branch": "refs/heads/pa/chen-thesis-strategy-01",
+      "sha": "261e2dafeb5360b7ebb55946906a1b16bb766c2f",
+      "tag": "refs/tags/v1/pa/chen-thesis-strategy-01"
+    },
+    {
+      "branch": "refs/heads/pa/control-prior-art-01",
+      "sha": "db3cc26aeca09591e0fdc2aff02bcf42fd30571c",
+      "tag": "refs/tags/v1/pa/control-prior-art-01"
+    },
+    {
+      "branch": "refs/heads/pa/fpga-object-selection-01",
+      "sha": "4c65d946ca043b6383c2a70d4c09865bec44c550",
+      "tag": "refs/tags/v1/pa/fpga-object-selection-01"
+    },
+    {
+      "branch": "refs/heads/pa/memory-protection-selection-01",
+      "sha": "71fad2de3eee10cbc02adfb7313155fbbcc14663",
+      "tag": "refs/tags/v1/pa/memory-protection-selection-01"
+    },
+    {
+      "branch": "refs/heads/pa/normative-baseline-01",
+      "sha": "b075c49d8c470ca06a410e84add20155f46b5689",
+      "tag": "refs/tags/v1/pa/normative-baseline-01"
+    },
+    {
+      "branch": "refs/heads/pa/pa-dom-01-03-targeted-extraction-01",
+      "sha": "4f96bb95189f0d385ea2077aa7b05d81ef8edf0d",
+      "tag": "refs/tags/v1/pa/pa-dom-01-03-targeted-extraction-01"
+    },
+    {
+      "branch": "refs/heads/pa/pa-dom-04-canonical-reuse-01",
+      "sha": "b82f146cabed5f92598834db4af78f7ea9b65d6a",
+      "tag": "refs/tags/v1/pa/pa-dom-04-canonical-reuse-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-address-mapping-01",
+      "sha": "365eaee5906505ff7bfccd8766ca8cb1d6729486",
+      "tag": "refs/tags/v1/research/cy62167-address-mapping-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-angular-finding-control-01",
+      "sha": "313a3a3ff1ef7781f05fdf5461194071f631a4f3",
+      "tag": "refs/tags/v1/research/cy62167-angular-finding-control-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-coverage-threshold-01",
+      "sha": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+      "tag": "refs/tags/v1/research/cy62167-coverage-threshold-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-direct-decision-boundary-01",
+      "sha": "2f1292432b59d5637f024f216e3abd0694b744d7",
+      "tag": "refs/tags/v1/research/cy62167-direct-decision-boundary-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-direct-floor-killtest-01",
+      "sha": "672a9daf2d799ed72491a8d701395cdb458bee21",
+      "tag": "refs/tags/v1/research/cy62167-direct-floor-killtest-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-distant-mcu-observability-01",
+      "sha": "9fb2aca74b22c7fa533fc9f72715eae81d3e1596",
+      "tag": "refs/tags/v1/research/cy62167-distant-mcu-observability-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-ecc-risk-bridge-01",
+      "sha": "39bcf9c85f76a6fa661cb0559cb75d0fcb6146be",
+      "tag": "refs/tags/v1/research/cy62167-ecc-risk-bridge-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-executor-timing-gate-01",
+      "sha": "3dc58a5f79960d3ee294dc405848db5341583e0d",
+      "tag": "refs/tags/v1/research/cy62167-executor-timing-gate-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-paper-completion-01",
+      "sha": "d237f347571879096b1ad3d7744a7ed8cb862fb7",
+      "tag": "refs/tags/v1/research/cy62167-paper-completion-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-physical-bridge-01",
+      "sha": "0c979c34d537c9f328858010a8df6cdeab598735",
+      "tag": "refs/tags/v1/research/cy62167-physical-bridge-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-physical-bridge-repair-01",
+      "sha": "b386d8ff4ecd5acc599faed98338698bc122bd3a",
+      "tag": "refs/tags/v1/research/cy62167-physical-bridge-repair-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-physical-bridge-repair-02",
+      "sha": "d3cd3e9385f62f047954ce3e54454eb5976ddcb8",
+      "tag": "refs/tags/v1/research/cy62167-physical-bridge-repair-02"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-proton-01",
+      "sha": "a6b6663178927c0f389d9b73588da63963936236",
+      "tag": "refs/tags/v1/research/cy62167-proton-01"
+    },
+    {
+      "branch": "refs/heads/research/cy62167-semantics-repair-01",
+      "sha": "619cb3538e296b3619f21301a176665f4611143f",
+      "tag": "refs/tags/v1/research/cy62167-semantics-repair-01"
+    },
+    {
+      "branch": "refs/heads/research/engineering-applicability-01",
+      "sha": "8138c5ba05fb4e88246379db8c86bab1a3687687",
+      "tag": "refs/tags/v1/research/engineering-applicability-01"
+    },
+    {
+      "branch": "refs/heads/research/engineering-applicability-re-continuation-01",
+      "sha": "7db95ecea920e41dec9b191a94230c9da0db6678",
+      "tag": "refs/tags/v1/research/engineering-applicability-re-continuation-01"
+    },
+    {
+      "branch": "refs/heads/research/engineering-applicability-re-delivery-01",
+      "sha": "76a95a3b5fae5d3472a65d27a6a2fa9250f7e7a0",
+      "tag": "refs/tags/v1/research/engineering-applicability-re-delivery-01"
+    },
+    {
+      "branch": "refs/heads/research/engineering-applicability-sr-closeout-01",
+      "sha": "6deaff07f8e8474b5a39d614e3bf55318bd145c6",
+      "tag": "refs/tags/v1/research/engineering-applicability-sr-closeout-01"
+    },
+    {
+      "branch": "refs/heads/research/fixed-adaptive-feasibility-01",
+      "sha": "a88d6a26c54c193e3d518fb16f43ffd19511202b",
+      "tag": "refs/tags/v1/research/fixed-adaptive-feasibility-01"
+    },
+    {
+      "branch": "refs/heads/research/fpga-protection-prefeasibility-01",
+      "sha": "08e7838eeb15f117774fa1b838c1d4264dd13d36",
+      "tag": "refs/tags/v1/research/fpga-protection-prefeasibility-01"
+    },
+    {
+      "branch": "refs/heads/research/fpga-static-executor-check-01",
+      "sha": "d286597b11c3344d37970bfb65c497828a7211ca",
+      "tag": "refs/tags/v1/research/fpga-static-executor-check-01"
+    },
+    {
+      "branch": "refs/heads/research/goes-causal-input-contract-01",
+      "sha": "3d24da961a151bc1ce744fbd44bf289c41b58451",
+      "tag": "refs/tags/v1/research/goes-causal-input-contract-01"
+    },
+    {
+      "branch": "refs/heads/research/goes-real-temporal-01",
+      "sha": "bb900279876bad4a370589871eaa07a1d6ecd1ad",
+      "tag": "refs/tags/v1/research/goes-real-temporal-01"
+    },
+    {
+      "branch": "refs/heads/research/goes-real-temporal-numerical-repair-01",
+      "sha": "65d640d7c988d83b97daa839e35a3abb358b3c7d",
+      "tag": "refs/tags/v1/research/goes-real-temporal-numerical-repair-01"
+    },
+    {
+      "branch": "refs/heads/research/goes19-proton-rate-01",
+      "sha": "e2370c1ad2bb5e640efe5af549e0944ac1a16aa0",
+      "tag": "refs/tags/v1/research/goes19-proton-rate-01"
+    },
+    {
+      "branch": "refs/heads/research/goes19-proton-rate-01-sigma-closure",
+      "sha": "3474bf5d1773fe481bfd0a3d9013c12cb06dbabd",
+      "tag": "refs/tags/v1/research/goes19-proton-rate-01-sigma-closure"
+    },
+    {
+      "branch": "refs/heads/research/internal-count-control-01",
+      "sha": "fb6415444d028526dfc41118b52688ffb83c03dd",
+      "tag": "refs/tags/v1/research/internal-count-control-01"
+    },
+    {
+      "branch": "refs/heads/research/internal-count-cosrad-goes-01",
+      "sha": "5e75ab9979b7573ffb95cd8211baa4237e65bb93",
+      "tag": "refs/tags/v1/research/internal-count-cosrad-goes-01"
+    },
+    {
+      "branch": "refs/heads/research/internal-count-engineering-example-01",
+      "sha": "c277567b86a294adb415cce65df3ea6f44dcb510",
+      "tag": "refs/tags/v1/research/internal-count-engineering-example-01"
+    },
+    {
+      "branch": "refs/heads/research/internal-count-goes16-validation-01",
+      "sha": "82282a8b36b04b388cb3441c474bede30a1287a2",
+      "tag": "refs/tags/v1/research/internal-count-goes16-validation-01"
+    },
+    {
+      "branch": "refs/heads/research/internal-count-unknown-d-01",
+      "sha": "3a19d9b07af7c3709e53476066cec1f8fffbc425",
+      "tag": "refs/tags/v1/research/internal-count-unknown-d-01"
+    },
+    {
+      "branch": "refs/heads/research/stage-a-implementation-01",
+      "sha": "c41feab9a8210b4f2213104784bb47990ae7f36f",
+      "tag": "refs/tags/v1/research/stage-a-implementation-01"
+    },
+    {
+      "branch": "refs/heads/research/stage-a-information-interface-01",
+      "sha": "da03ab308989f76e9ae15043c83ce4c4b1f76821",
+      "tag": "refs/tags/v1/research/stage-a-information-interface-01"
+    },
+    {
+      "branch": "refs/heads/research/stage-a-information-interface-closeout-01",
+      "sha": "92e1b520deeaecce3108905a5a705e48d174eb8c",
+      "tag": "refs/tags/v1/research/stage-a-information-interface-closeout-01"
+    },
+    {
+      "branch": "refs/heads/research/stage-a-reproduction-fix",
+      "sha": "924b1069faf576636e8bbf55a8ec29b3b1f4904d",
+      "tag": "refs/tags/v1/research/stage-a-reproduction-fix"
+    },
+    {
+      "branch": "refs/heads/review/internal-count-engineering-example-01",
+      "sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+      "tag": "refs/tags/v1/review/internal-count-engineering-example-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-coverage-threshold-review-01",
+      "sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+      "tag": "refs/tags/v1/reviewer/cy62167-coverage-threshold-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-executor-reference-review-01",
+      "sha": "4b8aa6ae8f8467cac2df0395603c327563796638",
+      "tag": "refs/tags/v1/reviewer/cy62167-executor-reference-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-physical-bridge-review-01",
+      "sha": "18b78a647ac299290b5e2399b8af581e14240b88",
+      "tag": "refs/tags/v1/reviewer/cy62167-physical-bridge-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-physical-bridge-review-02",
+      "sha": "57021de76b45971ca2687e69c4a890f02647df8f",
+      "tag": "refs/tags/v1/reviewer/cy62167-physical-bridge-review-02"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-physical-bridge-review-03",
+      "sha": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+      "tag": "refs/tags/v1/reviewer/cy62167-physical-bridge-review-03"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-scientific-disposition-01",
+      "sha": "1580a76def06aeaac450d0dbc37012715cc2e88c",
+      "tag": "refs/tags/v1/reviewer/cy62167-scientific-disposition-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/cy62167-semantics-repair-review-02",
+      "sha": "e11e1b1db1ca26b79291dad59f818167f2441620",
+      "tag": "refs/tags/v1/reviewer/cy62167-semantics-repair-review-02"
+    },
+    {
+      "branch": "refs/heads/reviewer/engineering-applicability-review-01",
+      "sha": "616b198b8fcef903410e573c477b04740b1e89b2",
+      "tag": "refs/tags/v1/reviewer/engineering-applicability-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/exp-001-scientific-rereview-02",
+      "sha": "d76850f47826cc5c9cf693fae8b581b3dcc2542e",
+      "tag": "refs/tags/v1/reviewer/exp-001-scientific-rereview-02"
+    },
+    {
+      "branch": "refs/heads/reviewer/exp-001-scientific-review-01",
+      "sha": "8f03ece7cda635c10413d404a02f44d8be0bca11",
+      "tag": "refs/tags/v1/reviewer/exp-001-scientific-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/fixed-adaptive-feasibility-review-01",
+      "sha": "619492db33cb8793710fb4e454616f543993c982",
+      "tag": "refs/tags/v1/reviewer/fixed-adaptive-feasibility-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/goes-real-temporal-review-01",
+      "sha": "bf34676d7842e6f843a716941178c695855bbf75",
+      "tag": "refs/tags/v1/reviewer/goes-real-temporal-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/goes-real-temporal-review-02",
+      "sha": "63e189904a261124d219912bee27dd92267bb445",
+      "tag": "refs/tags/v1/reviewer/goes-real-temporal-review-02"
+    },
+    {
+      "branch": "refs/heads/reviewer/internal-count-control-review-01",
+      "sha": "82117f8b2bea9d92ffcd807e3671ab3dd13e96db",
+      "tag": "refs/tags/v1/reviewer/internal-count-control-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/internal-count-goes16-validation-review-01",
+      "sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+      "tag": "refs/tags/v1/reviewer/internal-count-goes16-validation-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/internal-count-unknown-d-review-01",
+      "sha": "c9c9dd7f9ea038a169c2bf493f32bb6e5c842323",
+      "tag": "refs/tags/v1/reviewer/internal-count-unknown-d-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/stage-a-information-interface-review-01",
+      "sha": "0ab6ba2cf8daf0ed62c1e2ec65cab52a1620b552",
+      "tag": "refs/tags/v1/reviewer/stage-a-information-interface-review-01"
+    },
+    {
+      "branch": "refs/heads/reviewer/stage-a-scientific-review-01",
+      "sha": "12d461aad112f22c37a365a38501143aaf2c3ee8",
+      "tag": "refs/tags/v1/reviewer/stage-a-scientific-review-01"
+    },
+    {
+      "branch": "refs/heads/writing/internal-count-method-01",
+      "sha": "3fd5d792a0dd55ee9d46c0b7ca46c72d4eba5ea2",
+      "tag": "refs/tags/v1/writing/internal-count-method-01"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "case": "growth",
+    "all_event_hashes_regenerated": 20000,
+    "exact_trial_replays": [
+      0,
+      1,
+      2,
+      19999
+    ],
+    "policy_replays": 20,
+    "mean_events": 637.05825,
+    "variance_events": 631.4510294889745,
+    "expected_events": 636.9701529394009,
+    "aggregate_checks": true
+  },
+  {
+    "case": "peak",
+    "all_event_hashes_regenerated": 20000,
+    "exact_trial_replays": [
+      0,
+      1,
+      2,
+      19999
+    ],
+    "policy_replays": 20,
+    "mean_events": 884.20355,
+    "variance_events": 901.1850766513326,
+    "expected_events": 884.2977049876768,
+    "aggregate_checks": true
+  },
+  {
+    "case": "typical",
+    "all_event_hashes_regenerated": 20000,
+    "exact_trial_replays": [
+      0,
+      1,
+      2,
+      19999
+    ],
+    "policy_replays": 20,
+    "mean_events": 2.9745,
+    "variance_events": 2.9563975698784937,
+    "expected_events": 2.9712659356663162,
+    "aggregate_checks": true
+  }
+]

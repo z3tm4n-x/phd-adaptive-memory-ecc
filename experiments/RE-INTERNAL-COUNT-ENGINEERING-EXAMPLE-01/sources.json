@@ -1,0 +1,26 @@
+{
+  "retrieved_utc": "2026-09-16T11:29:08.2803648Z",
+  "scope": "Documentary feasibility of an external 32+7 SRAM subsystem; not radiation calibration or executor validation",
+  "sources": [
+    {
+      "title": "GR712RC User's Manual",
+      "version": "2.17, March 2025",
+      "url": "https://download.gaisler.com/products/gr712rc/doc/gr712rc-usermanual-2_17.pdf",
+      "sha256": "aed8629b4c6c26ba7e4f4068dc888e340269e3ad8b2814fd7d7181da07fd01bb",
+      "sections": ["5.9.1", "5.9.3", "7.2", "7.3"],
+      "printed_pages": [68, 70, 79],
+      "supports": "external SECDED and error reporting semantics",
+      "does_not_support": "new example arrival rates, count collection WCET, full controller cost"
+    },
+    {
+      "title": "GR712 Development Board User Manual",
+      "version": "0.13, March 2018",
+      "url": "https://www.download.gaisler.com/products/gr712rc-board/doc/gr712rc-board.pdf",
+      "sha256": "fb7d03ee737eb3d46953bf84b22a3494f98310d1994468d17e89ad691a787cd5",
+      "sections": ["2.3.1"],
+      "printed_pages": [13],
+      "supports": "documented SRAM bank organisation",
+      "does_not_support": "selected irradiation scenario or measured effect of proposed controller"
+    }
+  ]
+}

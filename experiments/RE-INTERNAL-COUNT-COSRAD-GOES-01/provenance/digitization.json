@@ -1,0 +1,35 @@
+{
+  "source_sha256": "68ed42b409788bfa9d5b883a5ed3b0829372aa7ebd019ec4690760ef38b9aaee",
+  "pdf_page_1based": 5,
+  "image_bbox_pdf_points": [
+    50.3017425537,
+    544.0173339844,
+    302.3017578125,
+    692.3373413086
+  ],
+  "native_image_size_px": [
+    1050,
+    618
+  ],
+  "method": "RGB red-mask connected components, >100 pixels; choose isolated circles at nominal 0.6,0.7,2 MeV; inspect native figure visually; no OCR",
+  "mask": "R>200,G<80,B<80",
+  "energy_calibration": "E=1+(x-232.1)/193.7; x-axis linear",
+  "sigma_calibration": "log10(sigma)=-9-(y-46.0)/113.3",
+  "grid_y_px": [
+    46,
+    160,
+    273,
+    386,
+    499
+  ],
+  "grid_log10_sigma": [
+    -9,
+    -10,
+    -11,
+    -12,
+    -13
+  ],
+  "main_table_precision": "3 significant digits for new points; source statistical CI and digitization error are not numerical confidence bounds here",
+  "overlap_note": "0.8 and 0.9 markers overlap; no new separate value assigned to 0.8, existing 0.9 retained",
+  "verification": "isolated 1,1.1,1.5,2.5,3,4,5 marker reconstructions differ from prior frozen digitization by less than 2%; old values not silently replaced"
+}

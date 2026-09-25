@@ -1,0 +1,34 @@
+{
+  "mode": "test",
+  "trials": 20000,
+  "workers": 6,
+  "batch_size": 20,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "git_sha": "8ed0035d8b75b43733d9dcce4473835031d21f49",
+  "start_unix": 1789578467.4453006,
+  "input_code_sha256": {
+    "config.json": "2f6e5a6150df3c7d0d17e691ef13986982a58ce8fccaa44971e4abb78bceeb44",
+    "engine.py": "7ced007daeb4b30537bbcedd0d0d51eea829b39fbafa499a34a6df83e1c35d73",
+    "reference.py": "fe6194ee0b52260025404a344852bb53ca528ddbdc3d755f2e3222a13e33d95e",
+    "run_experiment.py": "cec0cb0f1578332180a24c376559fd93c53085e51f56fd77b7f48d7734cdb2c2",
+    "inputs/templates.npz": "37176d54c77f458745d3a7ca1bd193b45ab78091f2500c3fce967c08b4607922",
+    "outputs/controller_tables.npz": "27ae6766d62b238eb106a27c9219e8c925c819d82ad7f2f9fc8c804a93cd9faf"
+  },
+  "xor_groups": {
+    "seconds": 150.1049991999971,
+    "sha256": "b16ccf6b64f21c7b8391818fb19b579133ed5e7db10760429a05f8013be8b1c7",
+    "bytes": 2916107
+  },
+  "singleton_ablation": {
+    "seconds": 144.39505340000323,
+    "sha256": "6b39b46b54f6eb3435a1c63d48e6b7106f250097c84d286016ea24b6e0984f25",
+    "bytes": 2675032
+  },
+  "native_word_merged": {
+    "seconds": 124.80653940000047,
+    "sha256": "25944e0f0e8275154899d0fba060a30883cf017714a326c6a343397b2017e36d",
+    "bytes": 3522599
+  },
+  "elapsed_seconds": 419.3413944244385
+}

@@ -1,0 +1,26 @@
+{
+  "task": "RE-CY62167-COVERAGE-THRESHOLD-01",
+  "stage": "PRE_EXECUTION",
+  "assignment_commit": "64a7a1f436b2abd6997d37d14e6ce571e3a480c8",
+  "scientific_base": "408134431d46e8efeae6ebb3223fee91b550c0cf",
+  "upstream_rate_current_access": {
+    "library_file_id": "file_00000000eb0881f5bbfb13ed10e4c78d",
+    "name": "proton_rate_5min.csv",
+    "bytes": 13002858,
+    "sha256": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d",
+    "rows": 16992,
+    "git_blob": "5de108c6759bcf720073b3fbc6581389d46e63aa"
+  },
+  "historical_direct_rate": {
+    "availability": "FULL_BYTES_NOT_FOUND",
+    "repository_and_library_object": "512-byte regeneration marker",
+    "historical_full_sha256": "c10a68e721716c8c9b96bf99a9e2d1de0bd3b179ebcc747b3fd149ff0741ff83",
+    "historical_rows": 237888,
+    "historical_bytes": 53420841
+  },
+  "registered_direct_table": {
+    "git_blob": "643189d9c288b9fac353c1233a4c73dbc994c89c",
+    "fact": "N_direct_W32seq=0 and p_registered_direct_W32seq=0 at all 14 measured energies; all registered bit flips remain accumulation bits"
+  },
+  "numerical_results_seen_before_lock": false
+}

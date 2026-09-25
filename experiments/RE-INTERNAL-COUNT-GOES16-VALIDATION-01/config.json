@@ -1,0 +1,98 @@
+{
+  "task": "RE-INTERNAL-COUNT-GOES16-VALIDATION-01",
+  "base": "7b83f643efb37541547d7d93a65ba2f43acd43fd",
+  "words": 524288,
+  "bits_per_word": 32,
+  "horizon_s": 3600,
+  "pass_s": 0.18874368,
+  "initial": "clean; q0(z,0)=(0.5,0.5)",
+  "dwell_s": 300,
+  "low_array_s_1": 0.000028886786,
+  "high_array_s_1": 6.1249308,
+  "epsilon": 0.1,
+  "periods_s": [
+    0.2,
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    60,
+    100,
+    150,
+    300
+  ],
+  "backup_s": 1,
+  "Kmax": 12,
+  "Ccap": 32,
+  "tick_s": 0.1,
+  "policies": [
+    [
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      3,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      2,
+      2,
+      0.15,
+      20,
+      3,
+      1
+    ]
+  ],
+  "trials_per_unique_window": 20000,
+  "seeds": {
+    "production": 2026091601,
+    "illustration": 2026091602,
+    "resampling_reserved_unused": 2026091603
+  },
+  "generator": "PCG64(SeedSequence([seed, Unix_UTC_start_seconds//300, zero_based_trial])); twelve Poisson draws with sorted within-bin uniforms, then uniform int32 word and int8 bit marks",
+  "shield_mm_Al": 3,
+  "response": "main_loglog; inherited gamma=2 below P1 and 390-500 bridge; archived G16 L2 flux, no G19 correction",
+  "intensity_scale": 1,
+  "family_alpha": 0.05,
+  "predeclared_family_tests": 12,
+  "per_metric_alpha": 0.004166666666666667,
+  "statistical_procedure": "CP risks; union of two CP discordant cells for paired difference; empirical Bernstein bounded conditional means, union and ratio for G; see PREREGISTRATION",
+  "effect_threshold_G": 0.1,
+  "complete_pass_bounds": [
+    12,
+    18000
+  ],
+  "status": "FROZEN BEFORE GOES POLICY EXECUTION"
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "task_id": "RE-FIXED-ADAPTIVE-FEASIBILITY-01-POST-SR-DOCUMENTARY",
+  "documentary_base": "03e6c4ad8570fa3351378c9c77b1f9c2fe943f15",
+  "scientific_review_commit": "619492db33cb8793710fb4e454616f543993c982",
+  "overall_scientific_review_verdict": "REVISE",
+  "orchestrator_selection": "LIMITED_ACCEPTANCE_COLD_START_ONLY",
+  "general_pass_claimed": false,
+  "new_scientific_calculation_performed": false,
+  "warm_start_researched_further": false,
+  "accepted_limited_scope": {
+    "memory_mib_data": 4,
+    "ecc": "SEC-DED(39,32)",
+    "horizon_h": 43824,
+    "epsilon": 0.001,
+    "average_interface_budget_fraction": 0.0025,
+    "initialization": "cold_start_peak_fallback_first_hour",
+    "additional_fallback_hours_max": 148,
+    "application_load_fraction_for_delay_bound": 0.5,
+    "risk_upper_conservative": "<0.000951",
+    "average_interface_fraction_upper_conservative": "<0.00224203",
+    "average_interface_percent_upper_conservative": "<0.224203%",
+    "scrub_peak_fraction_upper": "<0.25",
+    "application_delay_us_upper": "<3.006",
+    "same_interface_controller_reserve_percentage_points": ">0.025798",
+    "fixed_class_statement": "at the principal 0.25% slice, every declared constant period through 3600 s remains excluded by Scientific Review lower bounds even when Fixed pays reads only"
+  },
+  "accepted_scope_conditions": [
+    "clean ECC state at horizon start",
+    "long-lived protected domain without additional application writes/restorations that change the model",
+    "same memory/ECC architecture for Fixed and causal comparison",
+    "uniform single Poisson inversions with declared word/bit marks; no direct MCU population added",
+    "deterministic retrospectively transferred temporal profile with reviewed integral/peak constants",
+    "cold-start peak fallback in first hour",
+    "peak fallback for later missing previous-hour scalar, with no more than 148 additional fallback hours",
+    "continuous scan phase; no hourly reset of risk budget",
+    "reviewed read/write/jitter/FIFO primitive-transaction contract",
+    "no address/latch/controller faults outside modeled process",
+    "acquisition/computation costs fit residual resources or have separate resource contract",
+    "E_cap is not identified with total system failure",
+    "epsilon and H remain research parameters, not mission allocations"
+  ],
+  "warm_start_rows": {
+    "nominal_warm_start_lower_percent": 0.14244700083518912,
+    "fallback_148h_warm_start_lower_percent": 0.223653272651946,
+    "status": "HISTORICAL_ARITHMETIC_NOT_CERTIFIED_FOR_ARBITRARY_PRE_T0_SCALAR",
+    "selected_for_limited_acceptance": false
+  },
+  "source_correction": {
+    "lag1_eta": 1.04935369403,
+    "correct_table": {
+      "repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+      "ref": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "path": "results/schedules/ch3_five_year_summary.csv",
+      "git_blob_sha": "7f64b1f6a7ba544c610325588ee26f7b10d03bb4",
+      "row": "delayed_1h",
+      "field": "eta_shape"
+    },
+    "corresponding_code": {
+      "path": "scripts/run_ch3_five_year_schedule.py",
+      "git_blob_sha": "10ea6f0911bf5782f5034a39d95e647f181480fc",
+      "functions": [
+        "delayed_estimate(values, delay_steps=1)",
+        "eta_shape(nu_values, estimate_values, dt_hours)"
+      ]
+    },
+    "superseded_pointer": "results/schedules/ch3_lag_sweep_summary.csv"
+  },
+  "review_findings": {
+    "MAJOR-01": {
+      "documentary_status": "ADDRESSED_BY_ORCHESTRATOR_OPTION_1_COLD_START_SELECTION",
+      "warm_start_certified": false
+    },
+    "MINOR-01": {
+      "documentary_status": "ADDRESSED_BY_CONSERVATIVE_SR_WORDING_IN_LIMITED_SCOPE",
+      "accepted_risk_wording": "F_A<0.000951",
+      "accepted_average_resource_wording": "<0.224203%",
+      "accepted_delay_wording": "<3.006 us",
+      "stronger_ecc_status": "ANALYTICAL_VARIANT_ONLY_WITH_OWN_TIMING_TRANSFER_CONTRACT"
+    },
+    "MINOR-02": {
+      "documentary_status": "ADDRESSED_BY_EXPLICIT_EXPORT_RULE_AND_CURRENT_BYTE_IDENTITIES",
+      "export_rule": "EXPORT_RULE.md",
+      "historical_execution_record_rewritten": false
+    }
+  },
+  "current_byte_identities": {
+    "independent_check.py": "090384581915943d3de9a252355957cd5b34d871",
+    "outputs/independent_check.json": "d92c58710743358f932b4757de212d5eea86e52a",
+    "outputs/verification.json": "3e9061f3f433df9700a2df61c37a9e208b40b03e",
+    "outputs/repair_verification.json": "4e839ba9d3bc5a5b8113b985aa77327c26f58592",
+    "repair_checks.py": "13472d61cd97115a663d7ddbf1bd567e225742af",
+    "outputs/execution_record.json": "2eee173da3ef1a29a3314c5d23c59e388eb4e6e8"
+  },
+  "historical_execution_record_status": "PRESERVED_UNCHANGED_NOT_A_FINAL_BYTE_MANIFEST",
+  "res004_practical_executed": false,
+  "accepted_res_modified": false,
+  "repeat_scientific_review_performed": false
+}

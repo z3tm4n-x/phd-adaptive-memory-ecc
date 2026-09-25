@@ -1,0 +1,322 @@
+{
+  "checked_at_utc": "2026-09-24T05:12:48Z",
+  "task": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/31",
+  "main_base_sha": "228239d428c18c6a5a5a0ec384154b90bc1e66c3",
+  "setup_sha": "a1f4a65f4f0663125b5a93eb611c0f6f0d7a6b19",
+  "scope": "Technical integration, provenance, unit tests and exact arithmetic only. No new scientific runs or acceptance.",
+  "archive": {
+    "workflow_run_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/actions/runs/35957935788",
+    "workflow_commit": "88c4f6d2a49927da0d3822666ebb4cd066d7b3c2",
+    "conclusion": "success",
+    "targets_sha256": "b6cabea18755acb454ac6140133d48c95a67359fe2f1871d6965e7d0bd3775ef",
+    "independent_read_only_verification": {
+      "tags_checked": 112,
+      "tag_failures": [],
+      "branches_changed_since_snapshot": []
+    },
+    "retirement": "The delivery commit disables the one-time job and reduces contents permission to read."
+  },
+  "integration": {
+    "scope": "T31 integration only; no new scientific acceptance",
+    "verified_source_files": 327,
+    "protected_files": 130,
+    "baseline_files_preserved_except_named_docs": 635,
+    "external_sources": {
+      "external/chapter4-risk-limited-scrubber": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+      "external/chapter4-rate-burst-stress": "76a4ed5b0622625e3e7a40b3b9d9f79b5ea2a1ee"
+    },
+    "checks": {
+      "python_syntax": 77,
+      "json_syntax": 107,
+      "zip_crc": 9
+    },
+    "groups": [
+      {
+        "source_sha": "82282a8b36b04b388cb3441c474bede30a1287a2",
+        "path": "experiments/RE-INTERNAL-COUNT-GOES16-VALIDATION-01",
+        "verified_files": 39
+      },
+      {
+        "source_sha": "c277567b86a294adb415cce65df3ea6f44dcb510",
+        "path": "experiments/RE-INTERNAL-COUNT-ENGINEERING-EXAMPLE-01",
+        "verified_files": 78
+      },
+      {
+        "source_sha": "a88d6a26c54c193e3d518fb16f43ffd19511202b",
+        "path": "experiments/RE-FIXED-ADAPTIVE-FEASIBILITY-01",
+        "verified_files": 39
+      },
+      {
+        "source_sha": "a9d9b74b9ac03a4eb20b209eb14552d5b914e21a",
+        "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01",
+        "verified_files": 57
+      },
+      {
+        "source_sha": "d3cd3e9385f62f047954ce3e54454eb5976ddcb8",
+        "path": "experiments/RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02",
+        "verified_files": 16
+      },
+      {
+        "source_sha": "3dc58a5f79960d3ee294dc405848db5341583e0d",
+        "path": "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01",
+        "verified_files": 30
+      },
+      {
+        "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_GOES16_VALIDATION_REVIEW_01.md",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+        "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/check_python_bodies.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+        "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/check_review.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+        "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/independent.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+        "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/python_bodies.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "11f40d957e44538f3a5512a8f12c41af587e0290",
+        "path": "docs/scientific_reviews/checks/internal_count_goes16_validation_review_01/raw_identity.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01.md",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/check_contract.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/check_data.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/check_execution.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/contract_results.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/data_results.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "0715fd8e17b59a71d731110c53b87b900f8fa304",
+        "path": "docs/scientific_reviews/INTERNAL_COUNT_ENGINEERING_EXAMPLE_REVIEW_01_checks/execution_results.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "619492db33cb8793710fb4e454616f543993c982",
+        "path": "docs/scientific_reviews/FIXED_ADAPTIVE_FEASIBILITY_REVIEW_01.md",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "619492db33cb8793710fb4e454616f543993c982",
+        "path": "docs/scientific_reviews/checks/fixed_adaptive_review_01.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+        "path": "docs/scientific_reviews/CY62167_COVERAGE_THRESHOLD_REVIEW_01.md",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+        "path": "docs/scientific_reviews/checks/cy62167_coverage_threshold_review_01.json",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "d29b95f2b913055cc54cd657b8f3f3d6195a02fc",
+        "path": "docs/scientific_reviews/checks/cy62167_coverage_threshold_review_01.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+        "path": "docs/scientific_reviews/CY62167_PHYSICAL_BRIDGE_REVIEW_03.md",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "52bb60e516a85f5a0ba10a8b3935285a9c6c25d2",
+        "path": "docs/scientific_reviews/checks/cy62167_physical_bridge_review_03.py",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "4b8aa6ae8f8467cac2df0395603c327563796638",
+        "path": "docs/scientific_reviews/CY62167_EXECUTOR_REFERENCE_REVIEW_01.md",
+        "verified_files": 1
+      },
+      {
+        "source_sha": "3fd5d792a0dd55ee9d46c0b7ca46c72d4eba5ea2",
+        "path": "manuscripts/internal-count-method-01",
+        "verified_files": 10
+      },
+      {
+        "source_sha": "5e75ab9979b7573ffb95cd8211baa4237e65bb93",
+        "path": "experiments/RE-INTERNAL-COUNT-COSRAD-GOES-01",
+        "verified_files": 37
+      }
+    ],
+    "checkout_newline_only": [],
+    "r0_arithmetic": {
+      "words": 1048576,
+      "useful_bytes": 4194304,
+      "active_bits": 40894464,
+      "physical_bits": 50331648,
+      "unused_bits": 9437184,
+      "dense_pass_s": 0.3145728,
+      "min_period_full_slot_reservation_s": 125.82912,
+      "meaning": "Exact project arithmetic, not reliability or WCET evidence"
+    },
+    "cosrad_original_manifest_files_valid": 34,
+    "cosrad_original_verifier_extra_paths": [
+      "delivery_b/PI_TRAINING_WINDOW_AMENDMENT_2024_05.md",
+      "delivery_b/training_window_override.json"
+    ],
+    "goes16_prereg_is_head_ancestor": false,
+    "goes16_upstream_contract": [
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/digitize_published_physics.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/goes19_adapter.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/radar_adapter.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/radar_converged.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/sigma_closure.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/test_rate_pipeline.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-GOES19-PROTON-RATE-01/test_sigma_closure.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/core.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/exact_oracle.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/feasibility.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/reproduce.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/simulate.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/tests.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/tune.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/validate.py",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      },
+      {
+        "path": "experiments/RE-INTERNAL-COUNT-CONTROL-01/config.json",
+        "git_bytes_match": true,
+        "working_bytes_match": true
+      }
+    ]
+  },
+  "unit_tests": [
+    {
+      "command": "python -B -m unittest discover -s experiments/t31-working-set -p test_archive.py",
+      "tests": 6,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B experiments/RE-INTERNAL-COUNT-COSRAD-GOES-01/tests/test_contracts.py",
+      "tests": 34,
+      "exit_code": 0
+    }
+  ],
+  "limitations": [
+    "Historical COSRAD src/verify_package.py returned exit 2: exactly two approved delivery_b additions are absent from the original delivery-A manifest. All 34 original payload records match. No source verifier or manifest was modified.",
+    "GOES16 preregistration is not an ancestor of the integration HEAD. Full historical reproduction requires a separate checkout of the frozen source tag; its protection was not relaxed.",
+    "Raw NOAA/ISSI/PDF/COSRAD source downloads and RADAR transport regeneration were not repeated. Source manifests and derived artifacts were preserved.",
+    "Current Python/library versions differ from historical campaign environments. No dependency installation, synthesis, hardware testing or new reliability estimates were performed.",
+    "Existing CSV worktree warnings caused by CRLF attributes were not normalized or staged. The original Git blobs were preserved."
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "author_decisions": "R0 remains draft; its definitions and PR merge require PI. Scientific MAP statuses and accepted RES are unchanged."
+}

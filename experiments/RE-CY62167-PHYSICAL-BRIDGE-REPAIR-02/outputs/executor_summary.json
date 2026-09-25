@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "mandatory_counterexample": true,
+    "clean_no_write_post_error_persists": true,
+    "distinct_RMW_hit": true,
+    "same_bit_RMW_cancellation": true,
+    "pending_write_at_horizon": true,
+    "initial_interval_P": true,
+    "final_interval_P": true,
+    "sticky_after_writeback": true,
+    "exhaustive_count": true,
+    "old_inclusion_is_falsified": true,
+    "repaired_inclusion_holds_exhaustive": true
+  },
+  "exhaustive": {
+    "streams": 4096,
+    "old_inclusion_violations": 60,
+    "repaired_inclusion_violations": 0,
+    "first_old_violation_marks": [0,0,0,1,-1,-1]
+  },
+  "physical_slice": {
+    "bound": null,
+    "status": "NOT_ESTABLISHED"
+  },
+  "scientific_acceptance_rate_interface": "EXCLUDED"
+}

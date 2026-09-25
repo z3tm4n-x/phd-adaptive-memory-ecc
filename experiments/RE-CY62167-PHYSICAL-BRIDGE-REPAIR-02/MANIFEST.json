@@ -1,0 +1,89 @@
+{
+  "task": "RE-CY62167-PHYSICAL-BRIDGE-REPAIR-02",
+  "assignment_commit": "ec6b1b3cd10ff1268979c60e08167279603f23d5",
+  "reviewed_repair": "c48ca29eb65fee96154d645819c4e533a1709037",
+  "controlling_review": "57021de76b45971ca2687e69c4a890f02647df8f",
+  "branch": "research/cy62167-physical-bridge-repair-02",
+  "publication_chronology": {
+    "true_local_preexecution_commit": "0cab8b63fc7121422aec0a57a4c6f243bd7f3d5c",
+    "github_frozen_mirror_before_checker_fixes": "ae208424274336f0bd0eb0fa923e1a974a3412bd",
+    "note": "The initial authorized branch-creation attempt did not execute. The same request later succeeded. GitHub therefore mirrors the already frozen local pre-execution bytes retrospectively; the saved frozen-run failure and Git ancestry preserve the frozen-before-fix code state."
+  },
+  "checker_defect_repairs": {
+    "main_checker_commit": "0ef88511f7f88cbe50601ea2ba94cd9ea1763cb3",
+    "independent_checker_commit": "50317bd0601634a1ba876c54bc27667061fb5881",
+    "scientific_contract_changed": false,
+    "frozen_failure_record_blob": "bf345f27514aa5b137079d80a15670dac1652f61"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "os": "Linux x86_64",
+    "dependencies": "Python standard library only for executor/probability checks"
+  },
+  "reproduction": [
+    "python3 -m py_compile executor_model.py check_executor.py independent_check.py probability_qa.py",
+    "python3 check_executor.py --config config.json --counterexample traces/counterexample_input.json --out outputs/executor_check.json --trace-out outputs/counterexample_trace.json",
+    "python3 independent_check.py --config config.json --out outputs/independent_check.json",
+    "python3 probability_qa.py"
+  ],
+  "results": {
+    "mandatory_counterexample": {
+      "physical_failure": true,
+      "ideal_failure": false,
+      "B": false,
+      "P": true,
+      "old_inclusion_holds": false,
+      "repaired_inclusion_holds": true
+    },
+    "finite_family": {
+      "streams": 4096,
+      "old_inclusion_violations": 60,
+      "repaired_inclusion_violations": 0,
+      "independent_checker_repaired_inclusion_violations": 0
+    },
+    "registered_symbolic_inclusion": "E_CW subset P union B",
+    "registered_upper_form": "U_CW=min(1,U_P+U_B)",
+    "physical_selected_slice_bound": null,
+    "physical_selected_slice_status": "NOT_ESTABLISHED",
+    "full_device_bridge_status": "NOT_ESTABLISHED"
+  },
+  "files": {
+    "CONTRACT.md": "fb29ff4364780a9c1760dd89f76f636126fab1f0",
+    "config.json": "1fb672441387d300421c4c0d61c4b38d7c50bc7a",
+    "executor_model.py": "51df704980f60b1235e083baeeb5b00a65947b21",
+    "check_executor.py": "c9db81c926a012d6826764784411892455e9c41d",
+    "independent_check.py": "92f461e7a4cb6c1c03f6955a2626d3e9327d94c3",
+    "probability_qa.py": "0da7278ae1eb9186b4fa093191dc30e9e97af024",
+    "traces/counterexample_input.json": "47f8327644adc25a2ac076bf9a4e7dd572d4602d",
+    "outputs/PREEXECUTION_FROZEN_RUN_FAILURE.json": "bf345f27514aa5b137079d80a15670dac1652f61",
+    "outputs/counterexample_trace.json": "4b29635021389249e966f037203837c5e5fb10e9",
+    "outputs/executor_summary.json": "165796ebb2732eeb33d998358c6e1991dc4fbabe",
+    "outputs/independent_check.json": "3f4d3b0e4c5bb738a85614fa302a411f454ceb16",
+    "outputs/probability_qa.json": "1c0ce6876137b1cd1ce21c772d09ebf3505d3bc2",
+    "disposition.csv": "2d1d031902453dd206ea44c260597a6bce6af55d",
+    "REPORT.md": "d033e4c4d4626a29c5eb0a7bfbd7e0df5e59b73e",
+    "HANDOFF.md": "945514c68143cd587fb046373ff251c3082d5fd3"
+  },
+  "historical_frozen_checker_blobs": {
+    "check_executor.py": "fad7d9b0c6fb7e586bfb514d3e0cc8749630849b",
+    "independent_check.py": "8e3d71c8ab2c14eed095daad3e8954ddddc64586"
+  },
+  "physical_rate_input": {
+    "acceptance_scope": "EXCLUDED",
+    "path": "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/direct_rate_5min.csv",
+    "historical_full_sha256": "c10a68e721716c8c9b96bf99a9e2d1de0bd3b179ebcc747b3fd149ff0741ff83",
+    "historical_rows": 237888,
+    "historical_bytes": 53420841,
+    "required_rate_expression": "nu_C_bit_DREG_s-1 / 2^24"
+  },
+  "scope_exclusions": [
+    "no CY rate/environment regeneration",
+    "no new physical experiment",
+    "no controller design",
+    "no full-device coverage estimate",
+    "no numerical correcting-write WCET qualification",
+    "no RES change",
+    "no Scientific Review PASS assigned"
+  ],
+  "manifest_note": "This manifest intentionally does not hash itself and does not assign scientific acceptance."
+}

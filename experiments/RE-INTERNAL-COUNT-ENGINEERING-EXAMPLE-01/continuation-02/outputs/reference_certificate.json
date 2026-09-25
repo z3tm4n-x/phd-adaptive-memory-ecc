@@ -1,0 +1,167 @@
+{
+  "reference_only": "singleton uniform marks, instantaneous correction at scan epochs; NOT a grouped-model certificate",
+  "parameters": {
+    "task_id": "ISSI-GROUPED-VALIDATION",
+    "base_commit": "268e0d772aa718226ce7d3c2c18ded96306bdcf2",
+    "memory": {
+      "words": 524288,
+      "bits_per_word": 39,
+      "pass_seconds": 0.1048576,
+      "chips": 3,
+      "native_addresses": 2097152,
+      "native_bits": 16
+    },
+    "environment": {
+      "b_low": 1.081286564353262,
+      "b_high": 10.812865643532618,
+      "mean_dwell_seconds": [
+        60
+      ],
+      "initial": [
+        0.5,
+        0.5
+      ],
+      "low_flux_fraction": 0.1
+    },
+    "horizon_seconds": 1800,
+    "periods_seconds": [
+      0.2,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      20,
+      30,
+      60,
+      100,
+      150,
+      300
+    ],
+    "epsilon": [
+      0.1
+    ],
+    "controller": {
+      "pending_cap": 12,
+      "count_cap": 32,
+      "backup_period_seconds": 0.5,
+      "time_tick_seconds": 0.1,
+      "one_switch_midpoints": 512,
+      "two_switch_midpoints": 128,
+      "scan_switch_cutoff": 2,
+      "numerical_allowance": 0.0003
+    },
+    "executor": {
+      "slot_seconds": 2e-07,
+      "reservation_seconds": 1e-07,
+      "read_seconds": 2e-08,
+      "latch_before_commit_seconds": 8e-08,
+      "write_begin_before_commit_seconds": 4e-08,
+      "write_end_before_commit_seconds": 2e-08,
+      "commit_rule": "write corrected latched full word only if latch was dirty; increment count on acknowledged commit",
+      "tie_order": [
+        "commit",
+        "group",
+        "latch"
+      ],
+      "application": "backlogged best-effort reads outside reserved service slots; no application writes"
+    },
+    "cases": [
+      "xor_groups",
+      "singleton_ablation",
+      "native_word_merged"
+    ],
+    "simulation": {
+      "tuning_seed": 2026091604,
+      "validation_seed": 2026091605,
+      "illustration_seed": 2026091606,
+      "input_bootstrap_seed": 2026091607,
+      "tuning_trials": 2000,
+      "validation_trials": 20000,
+      "input_bootstraps": 2000,
+      "case_independent_streams": true
+    },
+    "statistics": {
+      "family_alpha": 0.05,
+      "family_size": 54,
+      "meaningful_fractional_saving": 0.1,
+      "risk_interval": "Clopper-Pearson",
+      "paired_risk": "discordant-cell Clopper-Pearson union rectangle",
+      "resource_interval": "paired Student/CLT delta-method; asymptotic, not finite-sample guarantee",
+      "fixed_sample": true
+    },
+    "tuning": {
+      "fixed": "all 12 U",
+      "precomputed": "all 144 ordered U pairs; switch selection at decision time H/2",
+      "pa_dom_ms": [
+        0.05,
+        0.15,
+        0.3
+      ],
+      "pa_dom_cap": [
+        5,
+        20,
+        300
+      ],
+      "pa_dom_growth": [
+        2,
+        3
+      ],
+      "pa_dom_zero_mode": [
+        0,
+        1
+      ],
+      "rule": "among candidates with one-sided pointwise 95% risk upper <= epsilon choose minimum mean complete-pass-equivalent reservation on own survivors; ties lexicographic; otherwise select minimum upper and label no certified tuning candidate; held-out test is definitive"
+    }
+  },
+  "error": {
+    "per_pass": {
+      "omitted_switch_paths": 8.884347246876552e-10,
+      "midpoint_one_switch": 2.2867861299928412e-09,
+      "midpoint_two_switch": 3.1971587373911653e-10,
+      "discrete_scan_smoothing": 1.0328171549453894e-12,
+      "pending_overflow": 5.930019057070766e-14
+    },
+    "max_complete_passes": 9000,
+    "arithmetic": {
+      "terms": {
+        "kernel_coupling": 6.126369811457346e-05,
+        "filtering": 4.900670744121984e-06,
+        "value_recursion": 7.195932307163601e-06,
+        "action_arithmetic": 2.476961142720613e-07,
+        "underflow_and_series": 1e-100
+      },
+      "total_bound": 7.36079972801311e-05,
+      "reserve": 0.0003,
+      "covered": true,
+      "elementary_function_ulp_assumption": 4
+    },
+    "numerical_allowance": 0.0003,
+    "whole_horizon_delta": 0.00033146425961188614,
+    "observed_row_sum_error": 4.440892098500626e-16
+  },
+  "sr_arithmetic": {
+    "terms": {
+      "kernel_coupling": 6.126369811457346e-05,
+      "filtering": 4.900670744121984e-06,
+      "value_recursion": 2.5138628149866004e-05,
+      "action_arithmetic": 2.476961142720613e-07,
+      "underflow_and_series": 1e-100
+    },
+    "total_bound": 9.15506931228335e-05,
+    "vmax": 0.5459795348994894,
+    "affine_guard": 25,
+    "elementary_function_ulp_assumption": 4
+  },
+  "backup_potential": 0.06114977424118347,
+  "delta": 0.00033146425961188614,
+  "initial_slack": 0.03851876149920464,
+  "decimal_row_mass_error": "2.9947074283498096363631499733975006648262013E-16",
+  "minimum_positive_entry": 2.418222330410521e-165,
+  "build_seconds": 0.14255750000302214,
+  "accepted_source_sha256": {
+    "core.py": "54b014feec86bb157de0c1e34c2daedc3be16c631377ec820c53ffc3f7c0267c",
+    "simulate.py": "3c6b26ecd248f3c9f1fb380cfc037eca532e5994ecf799f00faac0783b7cee4e",
+    "derivation.md": "6852273484bdc25f17794493cee81a8580aa1e6182aa5bcbe959376f2ebcdb4d"
+  }
+}
