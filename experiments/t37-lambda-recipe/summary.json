@@ -1,0 +1,649 @@
+{
+  "base_sha": "2869b02439ea015ab61fdf64fa173a9dce9b97bd",
+  "source_sha256": {
+    "experiments/RE-INTERNAL-COUNT-GOES16-VALIDATION-01/derived_rates.csv": "e3a1ce8f2a33cd9a60b22039c86ae8f1f7214458850d5a0b609042eace1bc3ac",
+    "experiments/RE-INTERNAL-COUNT-GOES16-VALIDATION-01/input_quality.csv": "48137d3007f6ae5494970907b9d5ca68f878267112d3906f4874da9c7e2643c2",
+    "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d",
+    "experiments/RE-GOES-CAUSAL-INPUT-CONTRACT-01/fallback_rows.csv.gz": "c7e860ac62106078a5039f7abf372829d9b6ebcbbac1065e300fae01065675de"
+  },
+  "meaning": "descriptive statistics of serialized model bit-inversion first moments, not a physical event-rate or future derivative bound",
+  "unit": "bit inversions / bit / s",
+  "growth_unit": "bit inversions / bit / s^2 (difference of bin means divided by bin spacing)",
+  "confidence_interval": null,
+  "future_upper_bound": null,
+  "series": {
+    "GOES16_3mm": {
+      "start_utc": "2024-10-08T00:00:00+00:00",
+      "end_exclusive_utc": "2024-10-13T00:00:00+00:00",
+      "rows": 1440,
+      "versions_rows": {
+        "3.2": 1440
+      },
+      "missing_grid_bins": 0,
+      "paired_invalid_rows": 0,
+      "warning_rows": 0,
+      "retrospective_fallback_rows": 165,
+      "screened_rows": 1274,
+      "invalid_timestamps_utc": [],
+      "g16_incomplete_samples_or_lut_rows": 2,
+      "diagnostics": {
+        "E": {
+          "source_column": "lambda_bit_E_s_1",
+          "factor_to_per_bit_s": 1,
+          "published_valid": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 1440,
+              "valid_bins": 1440,
+              "invalid_bins": 0,
+              "eligible_adjacent_pairs": 1439,
+              "increasing_pairs": 720,
+              "min": 1.0889972229326413e-12,
+              "median": 4.5193870172926623e-11,
+              "max": 2.8680280395273992e-08,
+              "max_bin_start_utc": "2024-10-10T15:15:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T15:10:00+00:00",
+                "to_bin_start_utc": "2024-10-10T15:15:00+00:00",
+                "from_value": 9.300628104161867e-09,
+                "to_value": 2.8680280395273992e-08,
+                "version": "3.2",
+                "positive_increment": 1.9379652291112125e-08,
+                "increment_divided_by_step_s": 6.459884097037375e-11
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 120,
+              "valid_bins": 120,
+              "invalid_bins": 0,
+              "eligible_adjacent_pairs": 119,
+              "increasing_pairs": 48,
+              "min": 4.234131528659116e-12,
+              "median": 4.53320373685343e-11,
+              "max": 1.3793742916529165e-08,
+              "max_bin_start_utc": "2024-10-10T15:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T12:00:00+00:00",
+                "to_bin_start_utc": "2024-10-10T13:00:00+00:00",
+                "from_value": 4.491547224222461e-09,
+                "to_value": 7.766983128517969e-09,
+                "version": "3.2",
+                "positive_increment": 3.275435904295508e-09,
+                "increment_divided_by_step_s": 9.098433067487521e-13
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          },
+          "screened": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 1440,
+              "valid_bins": 1274,
+              "invalid_bins": 166,
+              "eligible_adjacent_pairs": 1142,
+              "increasing_pairs": 580,
+              "min": 1.0889972229326413e-12,
+              "median": 5.292760343383874e-11,
+              "max": 2.8680280395273992e-08,
+              "max_bin_start_utc": "2024-10-10T15:15:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T15:10:00+00:00",
+                "to_bin_start_utc": "2024-10-10T15:15:00+00:00",
+                "from_value": 9.300628104161867e-09,
+                "to_value": 2.8680280395273992e-08,
+                "version": "3.2",
+                "positive_increment": 1.9379652291112125e-08,
+                "increment_divided_by_step_s": 6.459884097037375e-11
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 120,
+              "valid_bins": 52,
+              "invalid_bins": 68,
+              "eligible_adjacent_pairs": 41,
+              "increasing_pairs": 23,
+              "min": 4.429720679516793e-12,
+              "median": 3.534341272121932e-09,
+              "max": 1.3793742916529165e-08,
+              "max_bin_start_utc": "2024-10-10T15:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T12:00:00+00:00",
+                "to_bin_start_utc": "2024-10-10T13:00:00+00:00",
+                "from_value": 4.491547224222461e-09,
+                "to_value": 7.766983128517969e-09,
+                "version": "3.2",
+                "positive_increment": 3.275435904295508e-09,
+                "increment_divided_by_step_s": 9.098433067487521e-13
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          }
+        },
+        "W": {
+          "source_column": "lambda_bit_W_s_1",
+          "factor_to_per_bit_s": 1,
+          "published_valid": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 1440,
+              "valid_bins": 1440,
+              "invalid_bins": 0,
+              "eligible_adjacent_pairs": 1439,
+              "increasing_pairs": 712,
+              "min": 3.1825232840072516e-12,
+              "median": 5.242656097099311e-11,
+              "max": 2.0937796797733406e-08,
+              "max_bin_start_utc": "2024-10-10T15:10:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T15:05:00+00:00",
+                "to_bin_start_utc": "2024-10-10T15:10:00+00:00",
+                "from_value": 1.5059355386699134e-08,
+                "to_value": 2.0937796797733406e-08,
+                "version": "3.2",
+                "positive_increment": 5.8784414110342716e-09,
+                "increment_divided_by_step_s": 1.959480470344757e-11
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 120,
+              "valid_bins": 120,
+              "invalid_bins": 0,
+              "eligible_adjacent_pairs": 119,
+              "increasing_pairs": 52,
+              "min": 8.166863505218547e-12,
+              "median": 5.1737820882900315e-11,
+              "max": 1.6117923841160337e-08,
+              "max_bin_start_utc": "2024-10-10T14:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-09T08:00:00+00:00",
+                "to_bin_start_utc": "2024-10-09T09:00:00+00:00",
+                "from_value": 3.033115155883933e-09,
+                "to_value": 8.0466222615189e-09,
+                "version": "3.2",
+                "positive_increment": 5.013507105634967e-09,
+                "increment_divided_by_step_s": 1.3926408626763798e-12
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          },
+          "screened": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 1440,
+              "valid_bins": 1274,
+              "invalid_bins": 166,
+              "eligible_adjacent_pairs": 1142,
+              "increasing_pairs": 563,
+              "min": 3.1825232840072516e-12,
+              "median": 6.024366245393942e-11,
+              "max": 2.0937796797733406e-08,
+              "max_bin_start_utc": "2024-10-10T15:10:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T15:05:00+00:00",
+                "to_bin_start_utc": "2024-10-10T15:10:00+00:00",
+                "from_value": 1.5059355386699134e-08,
+                "to_value": 2.0937796797733406e-08,
+                "version": "3.2",
+                "positive_increment": 5.8784414110342716e-09,
+                "increment_divided_by_step_s": 1.959480470344757e-11
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 120,
+              "valid_bins": 52,
+              "invalid_bins": 68,
+              "eligible_adjacent_pairs": 41,
+              "increasing_pairs": 24,
+              "min": 8.166863505218547e-12,
+              "median": 9.34578263728965e-09,
+              "max": 1.6117923841160337e-08,
+              "max_bin_start_utc": "2024-10-10T14:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-09T08:00:00+00:00",
+                "to_bin_start_utc": "2024-10-09T09:00:00+00:00",
+                "from_value": 3.033115155883933e-09,
+                "to_value": 8.0466222615189e-09,
+                "version": "3.2",
+                "positive_increment": 5.013507105634967e-09,
+                "increment_divided_by_step_s": 1.3926408626763798e-12
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          }
+        },
+        "central": {
+          "source_column": "lambda_bit_central_s_1",
+          "factor_to_per_bit_s": 1,
+          "published_valid": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 1440,
+              "valid_bins": 1440,
+              "invalid_bins": 0,
+              "eligible_adjacent_pairs": 1439,
+              "increasing_pairs": 731,
+              "min": 6.7415473190242644e-12,
+              "median": 4.86288126558641e-11,
+              "max": 2.4040243826653755e-08,
+              "max_bin_start_utc": "2024-10-10T15:15:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T15:10:00+00:00",
+                "to_bin_start_utc": "2024-10-10T15:15:00+00:00",
+                "from_value": 1.5119212450947635e-08,
+                "to_value": 2.4040243826653755e-08,
+                "version": "3.2",
+                "positive_increment": 8.92103137570612e-09,
+                "increment_divided_by_step_s": 2.973677125235373e-11
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 120,
+              "valid_bins": 120,
+              "invalid_bins": 0,
+              "eligible_adjacent_pairs": 119,
+              "increasing_pairs": 50,
+              "min": 9.326845125493284e-12,
+              "median": 4.9281218786856077e-11,
+              "max": 1.4116874928924779e-08,
+              "max_bin_start_utc": "2024-10-10T15:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-09T08:00:00+00:00",
+                "to_bin_start_utc": "2024-10-09T09:00:00+00:00",
+                "from_value": 2.6254603138972417e-09,
+                "to_value": 6.2001392718743056e-09,
+                "version": "3.2",
+                "positive_increment": 3.574678957977064e-09,
+                "increment_divided_by_step_s": 9.929663772158511e-13
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          },
+          "screened": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 1440,
+              "valid_bins": 1274,
+              "invalid_bins": 166,
+              "eligible_adjacent_pairs": 1142,
+              "increasing_pairs": 587,
+              "min": 6.7415473190242644e-12,
+              "median": 5.583128595681256e-11,
+              "max": 2.4040243826653755e-08,
+              "max_bin_start_utc": "2024-10-10T15:15:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-10T15:10:00+00:00",
+                "to_bin_start_utc": "2024-10-10T15:15:00+00:00",
+                "from_value": 1.5119212450947635e-08,
+                "to_value": 2.4040243826653755e-08,
+                "version": "3.2",
+                "positive_increment": 8.92103137570612e-09,
+                "increment_divided_by_step_s": 2.973677125235373e-11
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 120,
+              "valid_bins": 52,
+              "invalid_bins": 68,
+              "eligible_adjacent_pairs": 41,
+              "increasing_pairs": 23,
+              "min": 1.074196657903073e-11,
+              "median": 6.57924669322411e-09,
+              "max": 1.4116874928924779e-08,
+              "max_bin_start_utc": "2024-10-10T15:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2024-10-09T08:00:00+00:00",
+                "to_bin_start_utc": "2024-10-09T09:00:00+00:00",
+                "from_value": 2.6254603138972417e-09,
+                "to_value": 6.2001392718743056e-09,
+                "version": "3.2",
+                "positive_increment": 3.574678957977064e-09,
+                "increment_divided_by_step_s": 9.929663772158511e-13
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          }
+        }
+      }
+    },
+    "GOES19_1mm": {
+      "start_utc": "2026-01-01T00:00:00+00:00",
+      "end_exclusive_utc": "2026-03-01T00:00:00+00:00",
+      "rows": 16992,
+      "versions_rows": {
+        "3.2": 3456,
+        "3.3": 13536
+      },
+      "missing_grid_bins": 0,
+      "paired_invalid_rows": 21,
+      "warning_rows": 28,
+      "retrospective_fallback_rows": 1449,
+      "screened_rows": 15519,
+      "invalid_timestamps_utc": [
+        "2026-01-13T17:20:00+00:00",
+        "2026-01-27T17:20:00+00:00",
+        "2026-02-05T09:10:00+00:00",
+        "2026-02-05T09:15:00+00:00",
+        "2026-02-05T09:20:00+00:00",
+        "2026-02-05T09:25:00+00:00",
+        "2026-02-05T09:30:00+00:00",
+        "2026-02-05T09:35:00+00:00",
+        "2026-02-05T09:40:00+00:00",
+        "2026-02-05T09:45:00+00:00",
+        "2026-02-05T09:50:00+00:00",
+        "2026-02-05T09:55:00+00:00",
+        "2026-02-05T10:00:00+00:00",
+        "2026-02-05T10:05:00+00:00",
+        "2026-02-05T10:10:00+00:00",
+        "2026-02-23T13:45:00+00:00",
+        "2026-02-23T13:50:00+00:00",
+        "2026-02-23T14:00:00+00:00",
+        "2026-02-23T14:05:00+00:00",
+        "2026-02-23T14:15:00+00:00",
+        "2026-02-23T14:20:00+00:00"
+      ],
+      "g16_incomplete_samples_or_lut_rows": null,
+      "diagnostics": {
+        "E": {
+          "source_column": "d1_lambda_E_s-1",
+          "factor_to_per_bit_s": 5.960464477539063e-08,
+          "published_valid": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 16992,
+              "valid_bins": 16971,
+              "invalid_bins": 21,
+              "eligible_adjacent_pairs": 16963,
+              "increasing_pairs": 8525,
+              "min": 9.299357533454896e-22,
+              "median": 5.207184255123139e-12,
+              "max": 3.922743618488312e-06,
+              "max_bin_start_utc": "2026-01-19T19:20:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T19:10:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:15:00+00:00",
+                "from_value": 1.6301844716072082e-06,
+                "to_value": 3.285710155963898e-06,
+                "version": "3.3",
+                "positive_increment": 1.6555256843566897e-06,
+                "increment_divided_by_step_s": 5.5184189478556324e-09
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 1416,
+              "valid_bins": 1410,
+              "invalid_bins": 6,
+              "eligible_adjacent_pairs": 1404,
+              "increasing_pairs": 677,
+              "min": 2.6840264250834784e-12,
+              "median": 5.04742947469155e-12,
+              "max": 2.383069028457006e-06,
+              "max_bin_start_utc": "2026-01-19T19:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T18:00:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:00:00+00:00",
+                "from_value": 9.013433655103049e-07,
+                "to_value": 2.383069028457006e-06,
+                "version": "3.3",
+                "positive_increment": 1.481725662946701e-06,
+                "increment_divided_by_step_s": 4.115904619296392e-10
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          },
+          "screened": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 16992,
+              "valid_bins": 15519,
+              "invalid_bins": 1473,
+              "eligible_adjacent_pairs": 14197,
+              "increasing_pairs": 7114,
+              "min": 1.9666401147842408e-13,
+              "median": 5.1916584372520446e-12,
+              "max": 3.922743618488312e-06,
+              "max_bin_start_utc": "2026-01-19T19:20:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T19:10:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:15:00+00:00",
+                "from_value": 1.6301844716072082e-06,
+                "to_value": 3.285710155963898e-06,
+                "version": "3.3",
+                "positive_increment": 1.6555256843566897e-06,
+                "increment_divided_by_step_s": 5.5184189478556324e-09
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 1416,
+              "valid_bins": 499,
+              "invalid_bins": 917,
+              "eligible_adjacent_pairs": 188,
+              "increasing_pairs": 94,
+              "min": 2.947354731957118e-12,
+              "median": 5.001597518722216e-12,
+              "max": 2.383069028457006e-06,
+              "max_bin_start_utc": "2026-01-19T19:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T09:00:00+00:00",
+                "to_bin_start_utc": "2026-01-19T10:00:00+00:00",
+                "from_value": 3.6083884338537853e-09,
+                "to_value": 9.373828132947285e-09,
+                "version": "3.3",
+                "positive_increment": 5.7654396990935e-09,
+                "increment_divided_by_step_s": 1.6015110275259722e-12
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          }
+        },
+        "W": {
+          "source_column": "d1_lambda_W_s-1",
+          "factor_to_per_bit_s": 5.960464477539063e-08,
+          "published_valid": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 16992,
+              "valid_bins": 16971,
+              "invalid_bins": 21,
+              "eligible_adjacent_pairs": 16963,
+              "increasing_pairs": 8459,
+              "min": 1.5519282817840577e-13,
+              "median": 6.945355534553528e-12,
+              "max": 3.5451022982597353e-06,
+              "max_bin_start_utc": "2026-01-19T19:15:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T19:10:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:15:00+00:00",
+                "from_value": 2.526219666004181e-06,
+                "to_value": 3.5451022982597353e-06,
+                "version": "3.3",
+                "positive_increment": 1.0188826322555543e-06,
+                "increment_divided_by_step_s": 3.3962754408518477e-09
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 1416,
+              "valid_bins": 1410,
+              "invalid_bins": 6,
+              "eligible_adjacent_pairs": 1404,
+              "increasing_pairs": 676,
+              "min": 3.7032651950915655e-12,
+              "median": 6.606680974364281e-12,
+              "max": 2.4105535248915354e-06,
+              "max_bin_start_utc": "2026-01-19T19:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T18:00:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:00:00+00:00",
+                "from_value": 1.0502373973528544e-06,
+                "to_value": 2.4105535248915354e-06,
+                "version": "3.3",
+                "positive_increment": 1.360316127538681e-06,
+                "increment_divided_by_step_s": 3.7786559098296696e-10
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          },
+          "screened": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 16992,
+              "valid_bins": 15519,
+              "invalid_bins": 1473,
+              "eligible_adjacent_pairs": 14197,
+              "increasing_pairs": 7080,
+              "min": 1.7772340178489685e-13,
+              "median": 6.927303075790405e-12,
+              "max": 3.5451022982597353e-06,
+              "max_bin_start_utc": "2026-01-19T19:15:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T19:10:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:15:00+00:00",
+                "from_value": 2.526219666004181e-06,
+                "to_value": 3.5451022982597353e-06,
+                "version": "3.3",
+                "positive_increment": 1.0188826322555543e-06,
+                "increment_divided_by_step_s": 3.3962754408518477e-09
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 1416,
+              "valid_bins": 499,
+              "invalid_bins": 917,
+              "eligible_adjacent_pairs": 188,
+              "increasing_pairs": 89,
+              "min": 3.7032651950915655e-12,
+              "median": 6.4230261395374934e-12,
+              "max": 2.4105535248915354e-06,
+              "max_bin_start_utc": "2026-01-19T19:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T09:00:00+00:00",
+                "to_bin_start_utc": "2026-01-19T10:00:00+00:00",
+                "from_value": 3.693036451935768e-08,
+                "to_value": 6.15677667160829e-08,
+                "version": "3.3",
+                "positive_increment": 2.4637402196725215e-08,
+                "increment_divided_by_step_s": 6.843722832423671e-12
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          }
+        },
+        "central": {
+          "source_column": "d1_lambda_central_s-1",
+          "factor_to_per_bit_s": 5.960464477539063e-08,
+          "published_valid": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 16992,
+              "valid_bins": 16971,
+              "invalid_bins": 21,
+              "eligible_adjacent_pairs": 16963,
+              "increasing_pairs": 8495,
+              "min": 7.759641408920288e-14,
+              "median": 6.048128604888916e-12,
+              "max": 3.499375820159912e-06,
+              "max_bin_start_utc": "2026-01-19T19:20:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T19:10:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:15:00+00:00",
+                "from_value": 2.0782020688056945e-06,
+                "to_value": 3.4154062271118166e-06,
+                "version": "3.3",
+                "positive_increment": 1.337204158306122e-06,
+                "increment_divided_by_step_s": 4.45734719435374e-09
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 1416,
+              "valid_bins": 1410,
+              "invalid_bins": 6,
+              "eligible_adjacent_pairs": 1404,
+              "increasing_pairs": 682,
+              "min": 3.730919708808263e-12,
+              "median": 5.8301183631022764e-12,
+              "max": 2.3968112766742707e-06,
+              "max_bin_start_utc": "2026-01-19T19:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T18:00:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:00:00+00:00",
+                "from_value": 9.757903714974721e-07,
+                "to_value": 2.3968112766742707e-06,
+                "version": "3.3",
+                "positive_increment": 1.4210209051767986e-06,
+                "increment_divided_by_step_s": 3.947280292157774e-10
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          },
+          "screened": {
+            "native": {
+              "bin_s": 300,
+              "bins_present": 16992,
+              "valid_bins": 15519,
+              "invalid_bins": 1473,
+              "eligible_adjacent_pairs": 14197,
+              "increasing_pairs": 7143,
+              "min": 6.74017071723938e-13,
+              "median": 6.0340440273284915e-12,
+              "max": 3.499375820159912e-06,
+              "max_bin_start_utc": "2026-01-19T19:20:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T19:10:00+00:00",
+                "to_bin_start_utc": "2026-01-19T19:15:00+00:00",
+                "from_value": 2.0782020688056945e-06,
+                "to_value": 3.4154062271118166e-06,
+                "version": "3.3",
+                "positive_increment": 1.337204158306122e-06,
+                "increment_divided_by_step_s": 4.45734719435374e-09
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            },
+            "hourly": {
+              "bin_s": 3600,
+              "bins_present": 1416,
+              "valid_bins": 499,
+              "invalid_bins": 917,
+              "eligible_adjacent_pairs": 188,
+              "increasing_pairs": 84,
+              "min": 3.730919708808263e-12,
+              "median": 5.73463785648346e-12,
+              "max": 2.3968112766742707e-06,
+              "max_bin_start_utc": "2026-01-19T19:00:00+00:00",
+              "max_positive_increment": {
+                "from_bin_start_utc": "2026-01-19T09:00:00+00:00",
+                "to_bin_start_utc": "2026-01-19T10:00:00+00:00",
+                "from_value": 2.0269376585880916e-08,
+                "to_value": 3.547079717119535e-08,
+                "version": "3.3",
+                "positive_increment": 1.5201420585314434e-08,
+                "increment_divided_by_step_s": 4.222616829254009e-12
+              },
+              "zero_growth_when_pairs_but_no_increase": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

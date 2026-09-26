@@ -1,0 +1,31 @@
+{
+  "base_sha": "2869b02439ea015ab61fdf64fa173a9dce9b97bd",
+  "source_hashes": {
+    "experiments/RE-INTERNAL-COUNT-GOES16-VALIDATION-01/derived_rates.csv": "e3a1ce8f2a33cd9a60b22039c86ae8f1f7214458850d5a0b609042eace1bc3ac",
+    "experiments/RE-INTERNAL-COUNT-GOES16-VALIDATION-01/input_quality.csv": "48137d3007f6ae5494970907b9d5ca68f878267112d3906f4874da9c7e2643c2",
+    "experiments/RE-GOES19-PROTON-RATE-01/proton_rate_5min.csv": "9f8a43a00780a0853db6e4a03263eb87672065be5a93edfcc79f544c78f7593d",
+    "experiments/RE-GOES-CAUSAL-INPUT-CONTRACT-01/fallback_rows.csv.gz": "c7e860ac62106078a5039f7abf372829d9b6ebcbbac1065e300fae01065675de"
+  },
+  "cadence_s": 300,
+  "aggregate_s": 3600,
+  "historical_array_bits": 16777216,
+  "g16_shield_mm": 3,
+  "g19_shield_mm": 1,
+  "policies": ["published_valid", "screened"],
+  "screened_rule": "paired-valid, no warning, no retrospective fallback in either direction; also at least 300 samples and matching LUT for G16 (the original validity allows up to 301)",
+  "hour_rule": "UTC-aligned, disjoint 12-bin averages; every bin valid under the selected policy and one algorithm version",
+  "difference_rule": "positive difference between contiguous complete equal-duration bins of the same algorithm version; no interpolation",
+  "numeric_meaning": "descriptive statistics of serialized model bit-inversion first moments, not a physical event-rate or future derivative bound",
+  "design_parameters": {
+    "T_s": null,
+    "epsilon_memory": null,
+    "lambda_event_max_s_1": null,
+    "event_growth_s_2": null,
+    "environment_coverage_error": null,
+    "response_margin": null,
+    "growth_margin": null,
+    "sub_bin_peak_margin": null,
+    "observation_error": null,
+    "observation_latency_s": null
+  }
+}
