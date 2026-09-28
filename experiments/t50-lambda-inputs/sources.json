@@ -1,0 +1,216 @@
+{
+  "base_sha": "81f0020c3b735e73716573bb8f1df5dd586f6baf",
+  "byte_contract": "immutable Git blob bytes, not checkout-normalized CRLF",
+  "files": {
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv": {
+      "git_blob": "f44648d3bdbe7b44f2a03cded74d768d3cebbac4",
+      "sha256": "13daa667dcdf0931a477ba6994f3213b345c582b4d6b472031a9454705a60cf8",
+      "bytes": 44436
+    },
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/calculation_config.json": {
+      "git_blob": "fe1a1510cb8e083bd7aefcf91b1e475f1965bbad",
+      "sha256": "d2a28c0afffd3008a1e5ade113bcc31d406b6c79ae0b9ff6fb5641426578cd12",
+      "bytes": 1296
+    },
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/bounds.json": {
+      "git_blob": "785959557a153d9fe58e33893dd5c57d040f5bed",
+      "sha256": "d0f8744dab1bec3654a5627a289ab7c981871202777edbca5e88cfb387465a0c",
+      "bytes": 6026
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/geo_bound_results.csv": {
+      "git_blob": "5e49f1335159f5a76fb2021fea51e6ed3c551750",
+      "sha256": "dd0e81e6ae896c8dbf26f9a737cc0625a823b3edea23bca75f215b6c23f2f69f",
+      "bytes": 8879
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_rates_pi_reconstructed.csv": {
+      "git_blob": "b345bc3810a55d0181e64ed22bb9b7edf228ef25",
+      "sha256": "c317c9c0104745f04c670393df3fd9560a5009a8fcb7245aa4d35018802426ec",
+      "bytes": 9352
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/sep_peak_rates.csv": {
+      "git_blob": "968ed2c8066a131e83c7831019c0c8187d159c7d",
+      "sha256": "7218e4f3ae2c5b24a7c5aa04a8f688fbd25e77beb3b88c116186f3d3cef3ee00",
+      "bytes": 6561
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/mapping_sweep_summary.csv": {
+      "git_blob": "44167897f8fe96b5c3f5bc16f03bd8b0358568fd",
+      "sha256": "8edb96ac4d795e331532e783b6210a39e5806a837ae44bcfbf5791af86ccf157",
+      "bytes": 1932
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/confidence_style_contract.json": {
+      "git_blob": "1a2de89b23a42a3039dc5e90b4c92ad1aae320b5",
+      "sha256": "e9b8d51b421dd54c8fb5b32db23eabe509fd0ef45715c4cc1696864611788025",
+      "bytes": 640
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/pi_cosrad_input_manifest.json": {
+      "git_blob": "be3adf7f5de1efbac58458b2f6bc79278b437202",
+      "sha256": "b8aa05951bd1aaf0efa36b820772a6110d381a7fc75550c920167a281bc40d05",
+      "bytes": 3997
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_member_manifest.csv": {
+      "git_blob": "a1d91845a9265998e5adf1aad9159f91704b549c",
+      "sha256": "ca9ad3ddf746be8a394ff53577789fae3448d3f02094b57c79935582509e37f0",
+      "bytes": 3830
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/tau_bound.py": {
+      "git_blob": "d007489c5fbc49e683547f500e9e499fbdc2c159",
+      "sha256": "e9cf5c4a2928ec8bf284f1992c8752ea3bfc8636165f29118e798b3360d41637",
+      "bytes": 1070
+    },
+    "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/action_transition_exact_validation.csv": {
+      "git_blob": "bdf44dcd57a5188d40610e70895826b5ebb8347a",
+      "sha256": "62c0bb1490071d23e22d3a505927d476bf41a6ffda4553e8f966254604ffd975",
+      "bytes": 1566
+    },
+    "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/boundary_contract.json": {
+      "git_blob": "83b31344f2f16a90135e3bc28de870623c4b8c55",
+      "sha256": "4f906d6c01c8bc96bae9b6e3a0a4a2a1377e405f712b41c6858fa2589830b51b",
+      "bytes": 3443
+    },
+    "experiments/t44-lambda-class-diagnostics/summary.json": {
+      "git_blob": "eee2f27f112fbc7325edfdc348c9d9f6937dcbea",
+      "sha256": "3a916e2b064c7699fcd5c02f90cfdc65c9f74858657e0ae6f4fb24eb5c550383",
+      "bytes": 274145
+    },
+    "experiments/t44-lambda-class-diagnostics/config.json": {
+      "git_blob": "7f07024b785c66f31a96c92a2fdedc3ebef7e948",
+      "sha256": "38b91c34b7e9f12fa3f249a1b73fc00cc3e27d85cffd9603d7d433f36c5da9b8",
+      "bytes": 3238
+    },
+    "experiments/t44-lambda-class-diagnostics/conditions.md": {
+      "git_blob": "590b41c403da13ea0d39c06bf5c7cd1fe537c85c",
+      "sha256": "02f98587046d9dd6e68fcb47251ed54557379e0faac9e760aad5e14eccaaebbb",
+      "bytes": 35171
+    },
+    "experiments/t37-lambda-recipe/summary.json": {
+      "git_blob": "a2ac2a8cff04eef93708caaf98348daca7fd6ae1",
+      "sha256": "d6e68779d61fa482b8dbd52e43078897cb85d784f25e0096b4fded3b3e843d8d",
+      "bytes": 27483
+    },
+    "experiments/t37-lambda-recipe/config.json": {
+      "git_blob": "c13e1bb7646b1f0ce915b20b46630d62d9d71ae8",
+      "sha256": "567d991ed021c59b4addab612945d170e6023e7c19e83065d30815efb29acc9f",
+      "bytes": 1753
+    },
+    "experiments/t37-lambda-recipe/inputs.md": {
+      "git_blob": "6c91286e45c1fce73438cb0d9179be1a1e287fb0",
+      "sha256": "69398d975747a89a6adec7e61d5536eef50caf32a38d7f3a9d97fe976d8872f4",
+      "bytes": 20146
+    },
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/source_manifest.json": {
+      "git_blob": "277772c3337f586bf1803122f867f498ca71c238",
+      "sha256": "c508fba5b22c4e508940750395525a7ab61907f0a5f51085b4f50c4b93d3cccb",
+      "bytes": 3126
+    },
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/TIMING.md": {
+      "git_blob": "c0ef55627019ccd8e1ee2ade57a8dcf131e4af83",
+      "sha256": "114f1ba245e516246cfe14f46f0c881862717ad7680a55d1e6c7da690e6ba5fa",
+      "bytes": 10659
+    },
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/pinmap.json": {
+      "git_blob": "eda33eb34d0563206016d3d353d4f49fca9b6e0b",
+      "sha256": "1fae20981a3fcf21b825e6c8d7807126fc79aff6c8b15c30d1636272228b0cac",
+      "bytes": 25665
+    },
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/reference_slot.sv": {
+      "git_blob": "033503fe60ea1e1fead5960cd357c74a0de8e383",
+      "sha256": "cc2161363b5f8937909856c0b6241a6f0e12c2bf2d8947d3236dc7a4e38526d8",
+      "bytes": 4161
+    },
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/reference_schedule.sv": {
+      "git_blob": "fb88d0568177ae7585b44a8e55b8d85d5b6b5f6a",
+      "sha256": "c28b911fc98ee6ffb5b1bcb471f8dceb59b7ad04a2ee50acd4d77b98a8b65fbc",
+      "bytes": 3153
+    },
+    "theory/t36-robust-count.md": {
+      "git_blob": "04f7e9714d7b794ec5cabe0034ef9be6e54c9988",
+      "sha256": "0f05803d1efa42a313964288453b918997a90ca0aac45ad7cd8c2d591bbe2dc9",
+      "bytes": 35086
+    },
+    "theory/t36-robust-count-appendices.md": {
+      "git_blob": "12857c86d1fff68269a2a423e346ebb6be66eeff",
+      "sha256": "3cd4414fa86f0a8d81131e1ac409059c04ebd3bcf2ffb2524962d145e1a6ce7d",
+      "bytes": 72393
+    },
+    "docs/research_gates/CY62167-REFERENCE-SUBSYSTEM-01.md": {
+      "git_blob": "4f5ab0e50cb3aa89fbcd06aadfcf14b288007288",
+      "sha256": "2e55225e55067f775202dbab69fca8bee20745a977e05c7d700b05678c697c68",
+      "bytes": 33937
+    },
+    "docs/research_gates/CY62167-PHYSICAL-BRIDGE-SR-03-DISPOSITION.md": {
+      "git_blob": "fdcdf275f3708f3b3caecb64d66cd50532b80c19",
+      "sha256": "40dfd779248e0e54f60abb0ac876c50165bae389903137f021c462984bcb3503",
+      "bytes": 10575
+    },
+    "docs/research_gates/CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md": {
+      "git_blob": "2cbc65d2b788f1778387b8acd5a4f97c3ffc96b0",
+      "sha256": "26fac94c51c9ca31cdabc3acf6113f53bd22c8948830a36dbc42cc743740e73e",
+      "bytes": 14016
+    },
+    "docs/research_gates/CY62167-EXECUTOR-REFERENCE-SR-DISPOSITION-01.md": {
+      "git_blob": "45061c1ec4d3868ff207b6f902ee43fca9c2d7e9",
+      "sha256": "a0ed5bba74eef01ad7f437ef46b26f85af25f4b39643f78dee79788562203d46",
+      "bytes": 17196
+    },
+    "experiments/RE-CY62167-PROTON-01/REPORT.md": {
+      "git_blob": "1e568ec0eec83e87375603bab8920dd8bbed42a7",
+      "sha256": "4a1fd1fbab21b332d3b9767c9f4459235a0db1e3ee7b32bd94a00d70d3926035",
+      "bytes": 14465
+    },
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/REPORT.md": {
+      "git_blob": "76a99e12e4187f7489d9abf8915d51f47fd4abb2",
+      "sha256": "d3302d577a35ee3e0f26e0b3834cb4a305d7e9fb16ae73a548837244928ced2e",
+      "bytes": 10320
+    },
+    "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/REPORT.md": {
+      "git_blob": "09062207b46b7d83258da63a4ca03a28f030c860",
+      "sha256": "9a9e024d094997cf6d825dcf00ab60973b419fcbe9af46ae664c541969081443",
+      "bytes": 5346
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/REPORT.md": {
+      "git_blob": "361021000f45b20a86b4abc0b9c81a183356d04f",
+      "sha256": "904bb2160cec1ed7d89c30acac0ee476c6f7a519b961507a17c4d9dc9ee995b9",
+      "bytes": 10895
+    },
+    "experiments/RE-CY62167-SEMANTICS-REPAIR-01/REPORT.md": {
+      "git_blob": "e2beb547e866dab5491f92a4bb1733eafd9e0398",
+      "sha256": "62e985995d712426b90457d3aa21ba1d5d45ab8a55a2a47a6f76da1e70748646",
+      "bytes": 15360
+    },
+    "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/REPORT.md": {
+      "git_blob": "a48972e7472881a928939db488f86fa88d86bd53",
+      "sha256": "0aec739050c899f3c2b7e793684338e7cfe4f62e1c40781e05b7c8af511affb4",
+      "bytes": 7937
+    },
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/REPORT.md": {
+      "git_blob": "c9a9d4e807d6fac00f67db18b48d02cbb69143be",
+      "sha256": "d9b2e476669e46dd7bd68024b3b485bc3634834c09123846c2c55d8a680d7ef2",
+      "bytes": 4181
+    },
+    "experiments/CY62167-ANGULAR-FINDING-CONTROL-01/REPORT.md": {
+      "git_blob": "c110281d6ada560d9b1bb7a31fc23f8b8f09780c",
+      "sha256": "947468e667340737a7122cd25061e8a9606f99906a027c670e10a9cbf430f370",
+      "bytes": 16836
+    },
+    "docs/scientific_reviews/CY62167_SCIENTIFIC_DISPOSITION_01.md": {
+      "git_blob": "065ffcaf1618399f3c0d435368519de91b59ef7e",
+      "sha256": "345b948eb982f1b2835a25cf840e2ace4633319bb7d3201c1548c359d3c12c16",
+      "bytes": 32659
+    },
+    "docs/scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md": {
+      "git_blob": "f8af51aa9bd76800da7dfe5ceb01c94777fccf89",
+      "sha256": "8eb7722ada8bba28d43f6476713f028a19de5446774eafd84765102feb401889",
+      "bytes": 20855
+    },
+    "experiments/RE-INTERNAL-COUNT-COSRAD-GOES-01/provenance/cosrad_old_archive.json": {
+      "git_blob": "d3781ddcc0ae9ecb1801dc605a827ee98cdbd994",
+      "sha256": "c172c2f17d5970c3c729a6a6b1de2e06f57e254c19ce137401461252f48782a5",
+      "bytes": 36040
+    },
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_rate_reconstruction.py": {
+      "git_blob": "c5bc8cf463ad00ab8cc8776a303a967f22bcfd07",
+      "sha256": "437bd4fa5fc22cf816b48d96e0f6e5a2244a92b1ab9464dfe0a7ca3ac9acac04",
+      "bytes": 10069
+    }
+  }
+}
