@@ -51,13 +51,15 @@
     "status": "predeclared diagnostic grid; no physical threshold or future bound"
   },
   "rarity": {
+    "count_law_primary_status": "not_confirmed_in_accessible_primary_text",
+    "source_check_date": "2026-09-28",
     "mission_mean_events": null,
     "mission_delta_K": null,
     "event_fluence_parameters": null,
     "physical_joint_coverage_error": null,
     "conditional_poisson_demo_means": [1, 16, 64, 128],
     "conditional_poisson_demo_delta_K": [0.00001, 0.0001, 0.00025],
-    "demo_status": "arithmetic examples only if model law is sourced; no R0 mean or coverage chosen"
+    "demo_status": "reserved arithmetic grid; exported only after primary law confirmation; otherwise covered by unit tests, not mission estimates"
   },
   "ost_sha256": "232c84bf7fb6c2d3aec11c44827bcf01a6b6964366a8d0059ff36cd5b143a9e1"
 }
