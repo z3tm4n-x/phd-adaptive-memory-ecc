@@ -1,0 +1,33 @@
+{
+  "issue": 50,
+  "issue_updated_at": "2026-09-28T14:46:55Z",
+  "base_sha": "81f0020c3b735e73716573bb8f1df5dd586f6baf",
+  "t45_spec_sha": "7b7a06601030619f47b877fde50e2d98fe8ef688",
+  "scenario": {
+    "orbit": "GEO",
+    "mission_years": 10,
+    "epsilon": 0.001,
+    "shield_g_cm2": [2.5, 3.0],
+    "useful_bytes": 2097152,
+    "external_data_bits": 32,
+    "external_code_bits": 39,
+    "sram": "3 x CY62167GE30-45ZXI",
+    "status": "author_scenario_not_physical_qualification"
+  },
+  "lambda_parent_inputs": {
+    "B_s_1": null,
+    "background_upper_s_1": null,
+    "F_S_parent_exposure": null,
+    "F0_parent_exposure": null,
+    "threshold_l_s_1": null,
+    "relative_growth_rho_s_1": null,
+    "delta_env": null,
+    "status": "unknown_not_zero"
+  },
+  "run_scope": {
+    "model": "reuse_only; target_full39_and_historical_data32_kept_separate",
+    "compared_algorithms": [],
+    "metrics": ["I1", "I2", "J", "input_readiness"],
+    "success": "traceable_inputs_or_exact_decisive_gap; no_physical_guarantee_by_substitution"
+  }
+}
