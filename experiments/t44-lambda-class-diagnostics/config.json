@@ -1,0 +1,65 @@
+{
+  "base_sha": "126b9b7e4238a6e90f85bbfa4a99447be95e78f3",
+  "issue": 44,
+  "issue_updated_at": "2026-09-28T09:55:25Z",
+  "accepted_t36_sha": "377d05529cbebc9f1947ee210438d2b25e7a9790",
+  "accepted_t37_sha": "35c75c5f9e0b92dcc217f74b1cb3aeb7dd39cc2a",
+  "pinned_files": {
+    "experiments/t37-lambda-recipe/reproduce.py": "6753e05ef8ba147d7df8d88355066348b22778670b4e5512086be3e96e479ada",
+    "experiments/t37-lambda-recipe/config.json": "567d991ed021c59b4addab612945d170e6023e7c19e83065d30815efb29acc9f",
+    "experiments/t37-lambda-recipe/summary.json": "d6e68779d61fa482b8dbd52e43078897cb85d784f25e0096b4fded3b3e843d8d",
+    "theory/t36-robust-count.md": "0f05803d1efa42a313964288453b918997a90ca0aac45ad7cd8c2d591bbe2dc9",
+    "theory/t36-robust-count-appendices.md": "3cd4414fa86f0a8d81131e1ac409059c04ebd3bcf2ffb2524962d145e1a6ce7d"
+  },
+  "diagnostic_memory": {
+    "words": 1048576,
+    "bits_per_word": 39,
+    "years": 5,
+    "days_per_year": "365.25",
+    "seconds_per_day": 86400,
+    "epsilon": "0.001",
+    "scan_period_s": "0.3145728",
+    "slot_s": "0.0000003",
+    "read_write_gap_s": ["0", "0.0000003"],
+    "rounded_r_per_bit_s": "0.000000024",
+    "event_law": "independent uniform single-bit Poisson flips; beta=lambda_parent only here",
+    "timing": "fixed cyclic phases; no application writes or extra service; D4 cells after prior write and before next read; initial/final fragments bounded separately"
+  },
+  "counter_diagnostics": {
+    "a_min_s": "0.3145728",
+    "epsilon_fractions": ["0.01", "0.1", "0.25"],
+    "illustrative_H": 28,
+    "finite_a_s": ["0.3145728", "1", "5", "60", "300", "3600"],
+    "counts": [0, 1, 10],
+    "growth_inputs": ["GOES16_3mm/central/published_valid/native", "GOES16_3mm/central/published_valid/hourly"],
+    "meaning": "sample differences used as hypothetical continuous-time g, not physical bounds; separate alpha_star and alpha_info"
+  },
+  "external_channel": {
+    "latency_s": [5, 60, 300],
+    "mean_window_s": [300, 3600],
+    "point_value_s_1": 0,
+    "illustrative_mean_value_s_1": 0,
+    "illustrative_error_s_1": 0
+  },
+  "relative_growth": {
+    "cadence_s": 300,
+    "threshold_fraction_of_t37_sample_max": [0.0001, 0.001, 0.01],
+    "series": ["GOES16_3mm", "GOES19_1mm"],
+    "directions": ["E", "W", "central"],
+    "masks": ["published_valid", "screened"],
+    "rule": "both endpoints >= threshold and positive; exact T37 frame/mask; contiguous same-version pairs only; separately retain threshold crossings and all exclusion counts",
+    "status": "predeclared diagnostic grid; no physical threshold or future bound"
+  },
+  "rarity": {
+    "count_law_primary_status": "not_confirmed_in_accessible_primary_text",
+    "source_check_date": "2026-09-28",
+    "mission_mean_events": null,
+    "mission_delta_K": null,
+    "event_fluence_parameters": null,
+    "physical_joint_coverage_error": null,
+    "conditional_poisson_demo_means": [1, 16, 64, 128],
+    "conditional_poisson_demo_delta_K": [0.00001, 0.0001, 0.00025],
+    "demo_status": "reserved arithmetic grid; exported only after primary law confirmation; otherwise covered by unit tests, not mission estimates"
+  },
+  "ost_sha256": "232c84bf7fb6c2d3aec11c44827bcf01a6b6964366a8d0059ff36cd5b143a9e1"
+}
