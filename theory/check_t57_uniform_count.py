@@ -478,5 +478,184 @@ class T57StrengtheningChecks(unittest.TestCase):
         self.assertEqual(sum(r["layer_not_excluded"] for r in rows),237)
         self.assertTrue(all(not (r["A"] or r["B"]) or r["layer_not_excluded"] for r in rows))
 
+
+
+class T57ReviewCorrectionChecks(unittest.TestCase):
+    def setUp(self):
+        self.p = budget.model()
+        self.d = budget.count_and_tax(self.p)
+        self.c = self.d["numerical_certificate"]
+
+    def test_zero_lower_channel_quota_preserves_price(self):
+        from dataclasses import replace
+        zero = budget.count_and_tax(replace(self.p, delta_o_minus=F(0)))
+        self.assertEqual(zero["nominal_tax_upper"], self.d["nominal_tax_upper"])
+        self.assertEqual(zero["quiet_coupling_upper"],
+                         self.p.chi*(self.d["acap"]+self.p.tick)*self.p.b**2*self.p.T/2)
+
+    def test_whole_horizon_undercount_paid_once_not_per_block(self):
+        from dataclasses import replace
+        q = budget.count_and_tax(replace(self.p, delta_o_minus=F("0.02"), eps=F("0.03")))
+        self.assertEqual(q["quiet_coupling_upper"]-self.d["quiet_coupling_upper"], F("0.02"))
+        expected = F("0.02")*(self.d["fast_density"]-self.d["slow_density"])
+        self.assertEqual(q["nominal_tax_upper"]-self.d["nominal_tax_upper"], expected)
+        self.assertGreater(q["nominal_tax_upper"], F("0.0036414715179"))
+        self.assertLess(q["nominal_tax_upper"], F("0.0036414715180"))
+        self.assertTrue(q["conditional_price_valid"])  # alpha+gamma+delta == epsilon.
+
+    def test_undercount_requires_risk_allocation_but_not_double_payment(self):
+        from dataclasses import replace
+        bad_budget = budget.count_and_tax(replace(self.p, delta_o_minus=F("0.02")))
+        self.assertIsNone(bad_budget["nominal_tax_upper"])
+        corrected = replace(self.p, delta_o_minus=F("0.02"), eps=F("0.03"))
+        self.assertEqual(corrected.alpha+corrected.gamma+corrected.delta_o_minus, corrected.eps)
+        self.assertIsNotNone(budget.count_and_tax(corrected)["nominal_tax_upper"])
+
+    def test_probability_is_capped_at_one(self):
+        from dataclasses import replace
+        q = budget.count_and_tax(replace(self.p, delta_o_minus=F("0.999")))
+        self.assertEqual(q["quiet_coupling_upper"], 1)
+        self.assertEqual(q["bad_time_fraction"], 1)
+        self.assertEqual(q["candidate_tax_expression"],
+                         q["fast_density"]+4*self.p.c*(q["epochs"]+1)/self.p.T)
+        with self.assertRaises(ValueError):
+            budget.count_and_tax(replace(self.p, delta_o_minus=F("1.01")))
+
+    def test_review_counterexample_is_covered(self):
+        from dataclasses import replace
+        p, d = self.p, self.d
+        mu_pre = p.b*d["kappa"]*(d["block"]/2-2*d["acap"])
+        branch_lower = F("0.02")*(1-budget.exp_neg(mu_pre)[1]-d["quiet_coupling_upper"])
+        DB = budget.price_cap(p.B,p.b,p.chi,p.u,p.v)
+        cost_lower = (p.W*p.c/d["acap"]-p.W*p.c/p.T
+                      +branch_lower*p.W*p.c*(1/DB-1/d["acap"]))
+        fixed = budget.count_and_tax(replace(p, delta_o_minus=F("0.02"), eps=F("0.03")))
+        self.assertGreater(branch_lower, F("0.01992315295"))
+        self.assertGreater(cost_lower, F("0.003436430933"))
+        self.assertGreater(cost_lower, d["nominal_tax_upper"])
+        self.assertLess(cost_lower, fixed["nominal_tax_upper"])
+
+    def test_fixed_term_log_enclosure_independently(self):
+        from decimal import Decimal, localcontext
+        with localcontext() as ctx:
+            ctx.prec = 100
+            for x in map(F, ("0.001","0.9","1","1.01","2","7.5","1000")):
+                lo, hi = budget.log_interval(x, 10)
+                truth = (Decimal(x.numerator)/Decimal(x.denominator)).ln()
+                self.assertLessEqual(Decimal(lo.numerator)/Decimal(lo.denominator), truth)
+                self.assertGreaterEqual(Decimal(hi.numerator)/Decimal(hi.denominator), truth)
+                self.assertLessEqual(hi-lo, (abs(budget.log2_floor(x))+1)*budget.log_tail(10))
+
+    def test_dyadic_exposure_error_and_fixed_memory(self):
+        p, c = self.p, self.c
+        exact_total = down_total = F(0)
+        for a in [c["ab"],c["acap"],(c["ab"]+c["acap"])/2]*7:
+            exact_total += a*(1-F(1,p.W)-p.tick/a)**2/2
+            down_total = budget.accumulate_exposure(down_total,a,p,c["exposure_bits"])
+        self.assertLessEqual(down_total,exact_total)
+        self.assertLess(exact_total-down_total,21*F(1,1<<c["exposure_bits"]))
+        self.assertEqual((down_total*(1<<c["exposure_bits"])).denominator,1)
+
+    def test_reference_finite_certificate_has_proved_precision_and_margin(self):
+        c = self.c
+        self.assertTrue(c["success"])
+        self.assertEqual(c["log_terms"],10)
+        self.assertEqual(c["rational_operation_bound"],500)
+        self.assertGreater(c["normalized_log_rational_bit_bound"],0)
+        self.assertLess(c["relative_input_error"],F("2.277e-13"))
+        self.assertLess(c["total_H_error_bound"],2*c["eta"])
+        self.assertLess(c["exposure_error"],F("1.137e-8"))
+        self.assertLess(c["inverse_error_bound"],F("8.674e-19"))
+        self.assertGreater(c["margin"],F("2.38432829"))
+        self.assertEqual(c["extra_reserve_fraction"],0)
+        self.assertTrue(budget.numerical_witness(self.p,self.d)["success"])
+
+    def test_all_good_extremes_install_and_accept_in_finite_arithmetic(self):
+        p, c = self.p, self.c
+        _, initial = budget.H_interval(p.B,c["l"],c["log_terms"])
+        E_min = budget.dyadic(c["exposure_min"],c["exposure_bits"],True)
+        for start in (F(0), c["block"], 1000*c["block"]):
+            issue = start+c["block"]+c["acap"]
+            for count in (F(0),F(1),c["count_max"]):
+                for E_down in (E_min,budget.dyadic(c["block"],c["exposure_bits"])):
+                    update = budget.install_block_bound(c,count,E_down,start,issue,initial)
+                    self.assertTrue(update["installed"])
+                    self.assertLessEqual(update["intercept"],initial)
+                    for current in (c["ab"],c["acap"]):
+                        t = start+2*c["block"]+c["acap"]
+                        action = budget.guarded_action(p,c,update["intercept"],t,current)
+                        self.assertTrue(action["long_accepted"])
+                        self.assertEqual(action["period"],c["acap"])
+
+    def test_safe_skip_failure_and_late_update_do_not_claim_good_block_price(self):
+        p, c = self.p, self.c
+        _, initial = budget.H_interval(p.B,c["l"],c["log_terms"])
+        E_down = budget.dyadic(c["exposure_min"],c["exposure_bits"],True)
+        args = (c,c["count_max"],E_down,F(0),c["block"],initial)
+        for flags in (dict(skip=True),dict(numeric_failure=True),dict(valid=False)):
+            update = budget.install_block_bound(*args,**flags)
+            self.assertFalse(update["installed"])
+            self.assertEqual(update["intercept"],initial)
+            action = budget.guarded_action(p,c,initial,c["block"],c["ab"])
+            self.assertEqual(action["period"],c["ab"])
+        late = budget.install_block_bound(c,c["count_max"],E_down,F(0),
+                                          c["block"]+c["acap"]+p.tick,initial)
+        self.assertFalse(late["installed"])
+        no_contract = budget.count_and_tax(p,numerical_contract=False)
+        self.assertIsNone(no_contract["nominal_tax_upper"])
+        reserve_price_lower = p.W*p.c/c["ab"]-p.W*p.c/p.T
+        self.assertGreater(reserve_price_lower,F("0.01996799898"))
+        self.assertGreater(reserve_price_lower,self.d["nominal_tax_upper"])
+        self.assertGreater(no_contract["hard_mask_tax_upper"],reserve_price_lower)
+
+    def test_numerical_precision_failure_has_no_strong_price(self):
+        for precision in (dict(anchor_bits=4),dict(exposure_bits=0)):
+            d = budget.count_and_tax(self.p,precision=precision)
+            self.assertFalse(d["numerical_certificate"]["success"])
+            self.assertIsNone(d["nominal_tax_upper"])
+            self.assertGreater(d["hard_mask_tax_upper"],F("0.0199"))
+
+    def test_guard_boundary_is_exact_not_float_tolerance(self):
+        p,c = self.p,self.c
+        time,current = c["block"],c["ab"]
+        boundary = c["S_guard"]-c["rho"]*(time+current+c["acap"]+c["ab"])
+        at = budget.guarded_action(p,c,boundary,time,current)
+        above = budget.guarded_action(p,c,boundary+F(1,1<<80),time,current)
+        self.assertTrue(at["long_accepted"])
+        self.assertFalse(above["long_accepted"])
+        self.assertEqual(above["period"],c["ab"])
+
+    def test_zero_length_margin_is_not_a_positive_numerical_certificate(self):
+        # An isolated exact-boundary unit check, not a changed T58 input row.
+        from dataclasses import replace
+        p,c = self.p,self.c
+        boundary_model = replace(p,tick=c["D_guard"]-c["acap"])
+        edge = budget.finite_price_certificate(
+            boundary_model,c["ab"],c["acap"],c["block"],c["H"],c["count_max"],
+            self.d["exposure_lower"],c["l"],c["rho"],c["eta"])
+        self.assertEqual(edge["margin"],0)
+        self.assertFalse(edge["success"])
+
+    def test_reserve_promise_survives_numerical_failure_after_long_action(self):
+        p,c = self.p,self.c
+        _, initial = budget.H_interval(p.B,c["l"],c["log_terms"])
+        issue = c["block"]+c["acap"]
+        update = budget.install_block_bound(
+            c,c["count_max"],budget.dyadic(c["exposure_min"],c["exposure_bits"],True),
+            F(0),issue,initial)
+        first = budget.guarded_action(p,c,update["intercept"],issue,c["ab"])
+        second = budget.guarded_action(
+            p,c,update["intercept"],issue+c["ab"],c["acap"],
+            promise=first["promise"],numeric_failure=True)
+        third = budget.guarded_action(
+            p,c,update["intercept"],issue+c["ab"]+c["acap"],c["ab"],
+            promise=second["promise"],numeric_failure=True)
+        self.assertEqual((first["period"],second["period"],third["period"]),
+                         (c["acap"],c["ab"],c["ab"]))
+        self.assertLessEqual(c["acap"]+p.tick,c["D_guard"])
+        self.assertTrue(budget.length_admitted(c["ab"]+p.tick,p.B,p))
+        with self.assertRaises(ValueError):
+            budget.guarded_action(p,c,initial,issue,c["acap"],numeric_failure=True)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
