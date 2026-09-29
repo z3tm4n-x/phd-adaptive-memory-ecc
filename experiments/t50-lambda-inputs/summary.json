@@ -1,0 +1,1163 @@
+{
+  "GOES_growth_diagnostics_reused": [
+    {
+      "B_sample_per_bit_s": 2.4040243826653755e-08,
+      "counts": {
+        "both_above": 1439,
+        "both_below": 0,
+        "down_crossing": 0,
+        "up_crossing": 0
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": null,
+      "mask": "published_valid",
+      "maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.5119212450947635e-08,
+        "from_utc": "2024-10-10T15:10:00+00:00",
+        "log_growth_s_1": 0.001545876564459829,
+        "to_per_bit_s": 2.4040243826653755e-08,
+        "to_utc": "2024-10-10T15:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 0,
+        "excluded_nonpositive": 0,
+        "excluded_version": 0,
+        "total_pairs": 1439,
+        "valid_positive_same_version_pairs": 1439
+      },
+      "series": "GOES16_3mm",
+      "threshold_fraction": 0.0001,
+      "threshold_per_bit_s": 2.4040243826653755e-12,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 2.4040243826653755e-08,
+      "counts": {
+        "both_above": 999,
+        "both_below": 368,
+        "down_crossing": 36,
+        "up_crossing": 36
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.580945880047048e-11,
+        "from_utc": "2024-10-12T01:40:00+00:00",
+        "log_growth_s_1": 0.0015390381946546884,
+        "to_per_bit_s": 2.5086249756458383e-11,
+        "to_utc": "2024-10-12T01:45:00+00:00"
+      },
+      "mask": "published_valid",
+      "maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.5119212450947635e-08,
+        "from_utc": "2024-10-10T15:10:00+00:00",
+        "log_growth_s_1": 0.001545876564459829,
+        "to_per_bit_s": 2.4040243826653755e-08,
+        "to_utc": "2024-10-10T15:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 0,
+        "excluded_nonpositive": 0,
+        "excluded_version": 0,
+        "total_pairs": 1439,
+        "valid_positive_same_version_pairs": 1439
+      },
+      "series": "GOES16_3mm",
+      "threshold_fraction": 0.001,
+      "threshold_per_bit_s": 2.4040243826653757e-11,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 2.4040243826653755e-08,
+      "counts": {
+        "both_above": 485,
+        "both_below": 950,
+        "down_crossing": 2,
+        "up_crossing": 2
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.580945880047048e-11,
+        "from_utc": "2024-10-12T01:40:00+00:00",
+        "log_growth_s_1": 0.0015390381946546884,
+        "to_per_bit_s": 2.5086249756458383e-11,
+        "to_utc": "2024-10-12T01:45:00+00:00"
+      },
+      "mask": "published_valid",
+      "maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.5119212450947635e-08,
+        "from_utc": "2024-10-10T15:10:00+00:00",
+        "log_growth_s_1": 0.001545876564459829,
+        "to_per_bit_s": 2.4040243826653755e-08,
+        "to_utc": "2024-10-10T15:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 0,
+        "excluded_nonpositive": 0,
+        "excluded_version": 0,
+        "total_pairs": 1439,
+        "valid_positive_same_version_pairs": 1439
+      },
+      "series": "GOES16_3mm",
+      "threshold_fraction": 0.01,
+      "threshold_per_bit_s": 2.4040243826653754e-10,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 2.4040243826653755e-08,
+      "counts": {
+        "both_above": 1142,
+        "both_below": 0,
+        "down_crossing": 0,
+        "up_crossing": 0
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": null,
+      "mask": "screened",
+      "maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.5119212450947635e-08,
+        "from_utc": "2024-10-10T15:10:00+00:00",
+        "log_growth_s_1": 0.001545876564459829,
+        "to_per_bit_s": 2.4040243826653755e-08,
+        "to_utc": "2024-10-10T15:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 297,
+        "excluded_nonpositive": 0,
+        "excluded_version": 0,
+        "total_pairs": 1439,
+        "valid_positive_same_version_pairs": 1142
+      },
+      "series": "GOES16_3mm",
+      "threshold_fraction": 0.0001,
+      "threshold_per_bit_s": 2.4040243826653755e-12,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 2.4040243826653755e-08,
+      "counts": {
+        "both_above": 828,
+        "both_below": 261,
+        "down_crossing": 29,
+        "up_crossing": 24
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 6.777431624624899e-12,
+        "from_utc": "2024-10-08T00:00:00+00:00",
+        "log_growth_s_1": 0.00149239661621803,
+        "to_per_bit_s": 1.0604911030839153e-11,
+        "to_utc": "2024-10-08T00:05:00+00:00"
+      },
+      "mask": "screened",
+      "maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.5119212450947635e-08,
+        "from_utc": "2024-10-10T15:10:00+00:00",
+        "log_growth_s_1": 0.001545876564459829,
+        "to_per_bit_s": 2.4040243826653755e-08,
+        "to_utc": "2024-10-10T15:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 297,
+        "excluded_nonpositive": 0,
+        "excluded_version": 0,
+        "total_pairs": 1439,
+        "valid_positive_same_version_pairs": 1142
+      },
+      "series": "GOES16_3mm",
+      "threshold_fraction": 0.001,
+      "threshold_per_bit_s": 2.4040243826653757e-11,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 2.4040243826653755e-08,
+      "counts": {
+        "both_above": 481,
+        "both_below": 657,
+        "down_crossing": 2,
+        "up_crossing": 2
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 6.777431624624899e-12,
+        "from_utc": "2024-10-08T00:00:00+00:00",
+        "log_growth_s_1": 0.00149239661621803,
+        "to_per_bit_s": 1.0604911030839153e-11,
+        "to_utc": "2024-10-08T00:05:00+00:00"
+      },
+      "mask": "screened",
+      "maximum": {
+        "algorithm_version": "3.2",
+        "from_per_bit_s": 1.5119212450947635e-08,
+        "from_utc": "2024-10-10T15:10:00+00:00",
+        "log_growth_s_1": 0.001545876564459829,
+        "to_per_bit_s": 2.4040243826653755e-08,
+        "to_utc": "2024-10-10T15:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 297,
+        "excluded_nonpositive": 0,
+        "excluded_version": 0,
+        "total_pairs": 1439,
+        "valid_positive_same_version_pairs": 1142
+      },
+      "series": "GOES16_3mm",
+      "threshold_fraction": 0.01,
+      "threshold_per_bit_s": 2.4040243826653754e-10,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 3.499375820159912e-06,
+      "counts": {
+        "both_above": 1121,
+        "both_below": 15830,
+        "down_crossing": 6,
+        "up_crossing": 6
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 2.300607979297638e-13,
+        "from_utc": "2026-02-03T17:25:00+00:00",
+        "log_growth_s_1": 0.011193455462700714,
+        "to_per_bit_s": 6.610273122787476e-12,
+        "to_utc": "2026-02-03T17:30:00+00:00"
+      },
+      "mask": "published_valid",
+      "maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 4.613609910011291e-09,
+        "from_utc": "2026-01-20T17:45:00+00:00",
+        "log_growth_s_1": 0.0016959194666845612,
+        "to_per_bit_s": 7.673604488372803e-09,
+        "to_utc": "2026-01-20T17:50:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 27,
+        "excluded_nonpositive": 0,
+        "excluded_version": 1,
+        "total_pairs": 16991,
+        "valid_positive_same_version_pairs": 16963
+      },
+      "series": "GOES19_1mm",
+      "threshold_fraction": 0.0001,
+      "threshold_per_bit_s": 3.499375820159912e-10,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 3.499375820159912e-06,
+      "counts": {
+        "both_above": 520,
+        "both_below": 16439,
+        "down_crossing": 2,
+        "up_crossing": 2
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 2.300607979297638e-13,
+        "from_utc": "2026-02-03T17:25:00+00:00",
+        "log_growth_s_1": 0.011193455462700714,
+        "to_per_bit_s": 6.610273122787476e-12,
+        "to_utc": "2026-02-03T17:30:00+00:00"
+      },
+      "mask": "published_valid",
+      "maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 4.613609910011291e-09,
+        "from_utc": "2026-01-20T17:45:00+00:00",
+        "log_growth_s_1": 0.0016959194666845612,
+        "to_per_bit_s": 7.673604488372803e-09,
+        "to_utc": "2026-01-20T17:50:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 27,
+        "excluded_nonpositive": 0,
+        "excluded_version": 1,
+        "total_pairs": 16991,
+        "valid_positive_same_version_pairs": 16963
+      },
+      "series": "GOES19_1mm",
+      "threshold_fraction": 0.001,
+      "threshold_per_bit_s": 3.499375820159912e-09,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 3.499375820159912e-06,
+      "counts": {
+        "both_above": 137,
+        "both_below": 16822,
+        "down_crossing": 2,
+        "up_crossing": 2
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 2.300607979297638e-13,
+        "from_utc": "2026-02-03T17:25:00+00:00",
+        "log_growth_s_1": 0.011193455462700714,
+        "to_per_bit_s": 6.610273122787476e-12,
+        "to_utc": "2026-02-03T17:30:00+00:00"
+      },
+      "mask": "published_valid",
+      "maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 2.0782020688056945e-06,
+        "from_utc": "2026-01-19T19:10:00+00:00",
+        "log_growth_s_1": 0.0016559776993302585,
+        "to_per_bit_s": 3.4154062271118166e-06,
+        "to_utc": "2026-01-19T19:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 27,
+        "excluded_nonpositive": 0,
+        "excluded_version": 1,
+        "total_pairs": 16991,
+        "valid_positive_same_version_pairs": 16963
+      },
+      "series": "GOES19_1mm",
+      "threshold_fraction": 0.01,
+      "threshold_per_bit_s": 3.499375820159912e-08,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 3.499375820159912e-06,
+      "counts": {
+        "both_above": 832,
+        "both_below": 13356,
+        "down_crossing": 5,
+        "up_crossing": 4
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 7.19290018081665e-13,
+        "from_utc": "2026-02-14T21:00:00+00:00",
+        "log_growth_s_1": 0.007659131289284834,
+        "to_per_bit_s": 7.158129811286926e-12,
+        "to_utc": "2026-02-14T21:05:00+00:00"
+      },
+      "mask": "screened",
+      "maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 1.615504264831543e-08,
+        "from_utc": "2026-01-19T22:30:00+00:00",
+        "log_growth_s_1": 0.0016596129651637816,
+        "to_per_bit_s": 2.6578859090805053e-08,
+        "to_utc": "2026-01-19T22:35:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 2793,
+        "excluded_nonpositive": 0,
+        "excluded_version": 1,
+        "total_pairs": 16991,
+        "valid_positive_same_version_pairs": 14197
+      },
+      "series": "GOES19_1mm",
+      "threshold_fraction": 0.0001,
+      "threshold_per_bit_s": 3.499375820159912e-10,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 3.499375820159912e-06,
+      "counts": {
+        "both_above": 373,
+        "both_below": 13821,
+        "down_crossing": 1,
+        "up_crossing": 2
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 7.19290018081665e-13,
+        "from_utc": "2026-02-14T21:00:00+00:00",
+        "log_growth_s_1": 0.007659131289284834,
+        "to_per_bit_s": 7.158129811286926e-12,
+        "to_utc": "2026-02-14T21:05:00+00:00"
+      },
+      "mask": "screened",
+      "maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 1.615504264831543e-08,
+        "from_utc": "2026-01-19T22:30:00+00:00",
+        "log_growth_s_1": 0.0016596129651637816,
+        "to_per_bit_s": 2.6578859090805053e-08,
+        "to_utc": "2026-01-19T22:35:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 2793,
+        "excluded_nonpositive": 0,
+        "excluded_version": 1,
+        "total_pairs": 16991,
+        "valid_positive_same_version_pairs": 14197
+      },
+      "series": "GOES19_1mm",
+      "threshold_fraction": 0.001,
+      "threshold_per_bit_s": 3.499375820159912e-09,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    },
+    {
+      "B_sample_per_bit_s": 3.499375820159912e-06,
+      "counts": {
+        "both_above": 112,
+        "both_below": 14083,
+        "down_crossing": 1,
+        "up_crossing": 1
+      },
+      "direction": "central",
+      "excluded_threshold_maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 7.19290018081665e-13,
+        "from_utc": "2026-02-14T21:00:00+00:00",
+        "log_growth_s_1": 0.007659131289284834,
+        "to_per_bit_s": 7.158129811286926e-12,
+        "to_utc": "2026-02-14T21:05:00+00:00"
+      },
+      "mask": "screened",
+      "maximum": {
+        "algorithm_version": "3.3",
+        "from_per_bit_s": 2.0782020688056945e-06,
+        "from_utc": "2026-01-19T19:10:00+00:00",
+        "log_growth_s_1": 0.0016559776993302585,
+        "to_per_bit_s": 3.4154062271118166e-06,
+        "to_utc": "2026-01-19T19:15:00+00:00"
+      },
+      "pair_audit": {
+        "excluded_gap": 0,
+        "excluded_mask": 2793,
+        "excluded_nonpositive": 0,
+        "excluded_version": 1,
+        "total_pairs": 16991,
+        "valid_positive_same_version_pairs": 14197
+      },
+      "series": "GOES19_1mm",
+      "threshold_fraction": 0.01,
+      "threshold_per_bit_s": 3.499375820159912e-08,
+      "type": "empirical diagnostic, not a continuous-time or future bound",
+      "unit_growth": "s^-1, discrete log ratio / 300 s"
+    }
+  ],
+  "R0A_full39": {
+    "I1": null,
+    "I2": null,
+    "J": null,
+    "decisive_contract": "joint full39 post-embedded-ECC marked response / observation domination with a justified Theta",
+    "lambda_inputs": {
+      "B_s_1": null,
+      "F0_parent_exposure": null,
+      "F_S_parent_exposure": null,
+      "background_upper_s_1": null,
+      "delta_env": null,
+      "relative_growth_rho_s_1": null,
+      "status": "unknown_not_zero",
+      "threshold_l_s_1": null
+    },
+    "ready_for_algorithm_comparison": false
+  },
+  "R3": {
+    "groupings": {
+      "0": 45,
+      "4": 9,
+      "5": 1
+    },
+    "probability_over_groupings": null,
+    "saved_GOES_transition": {
+      "F_at_boundary": "0.1",
+      "F_exact_tau_from": "0.100529217758306",
+      "F_exact_tau_to": "0.0809539576459575",
+      "Lambda_D_at_boundary": "0.0700649719145076",
+      "elapsed_s": "5.234173774719238",
+      "epsilon_analysis": "0.1",
+      "low_energy_model": "K1_only",
+      "risk_semantics": "product_estimate",
+      "shield_mm": "5.0",
+      "sigma_model": "main_loglog",
+      "tau_from_minus_eps": "0.000529217758306",
+      "tau_from_s": "5",
+      "tau_to_minus_eps": "-0.0190460423540425",
+      "tau_to_s": "2",
+      "theta_transition": "0.001251220703125",
+      "window_duration": "7d",
+      "window_statistic": "max"
+    },
+    "saved_certificate_comparison": [
+      {
+        "passes_saved_sufficient_period_bound": true,
+        "probe_s": "170",
+        "source_row": {
+          "S_D": "-0.0",
+          "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+          "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+          "estimate_type": "POINT",
+          "f_D": "0.0",
+          "mapping_id": "W_01_02",
+          "nu_accumulation_total_bit_s-1": "0.00014016798252734859",
+          "nu_direct_total_s-1": "0.0",
+          "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+          "shield_g_cm2": "2.5",
+          "tau_max_U_s": "174.56354716152367"
+        }
+      },
+      {
+        "passes_saved_sufficient_period_bound": false,
+        "probe_s": "170",
+        "source_row": {
+          "S_D": "-0.03305827344612301",
+          "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+          "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+          "estimate_type": "POINT",
+          "f_D": "0.032000395617418284",
+          "mapping_id": "W_00_01",
+          "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+          "nu_direct_total_s-1": "1.0139542337585009e-13",
+          "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+          "shield_g_cm2": "2.5",
+          "tau_max_U_s": "168.9774547885905"
+        }
+      }
+    ],
+    "zero_count_demo": {
+      "Poisson_mean_upper_approx": 2.995732273553991,
+      "alpha": "0.05",
+      "sigma_upper_cm2": null,
+      "status": "conditional statistical formula; aligned fluence and detection completeness absent"
+    }
+  },
+  "architecture": {
+    "addressed_bytes": 3145728,
+    "counter_bits_ERR_sum": 21,
+    "counter_bits_all_flags": 22,
+    "counter_bits_outer": 20,
+    "data_bits": 16777216,
+    "external_active_bits": 20447232,
+    "installed_bytes": 6291456,
+    "padding_bits": 4718592,
+    "words": 524288
+  },
+  "arithmetic": "exact fractions of serialized decimals; approximate displays, no physical CI",
+  "base_sha": "81f0020c3b735e73716573bb8f1df5dd586f6baf",
+  "configuration_sha256_canonical_json": "7a538fb572df675af85bce1e8b048b9640da3a414720064289d7cd888456394b",
+  "historical_integrals": {
+    "I1_nu": {
+      "decimal_approx": "2609.6554510242104",
+      "exact_from_serialized_model": "32620693137802631859/12500000000000000",
+      "unit": "model bit inversions on data32 array"
+    },
+    "I1_r": {
+      "decimal_approx": "0.00015554758614445987",
+      "exact_from_serialized_model": "32620693137802631859/209715200000000000000000",
+      "unit": "model bit inversions / bit"
+    },
+    "I1_registered_direct": {
+      "decimal_approx": "0",
+      "exact_from_serialized_model": "0",
+      "unit": "registered direct surrogate exposure"
+    },
+    "I2_nu": {
+      "decimal_approx": "335.34491708750528",
+      "exact_from_serialized_model": "41918114635938158151453700738050741063/125000000000000000000000000000000000",
+      "unit": "(model bit inversions)^2 / s"
+    },
+    "I2_r": {
+      "decimal_approx": "1.1913844740529998e-12",
+      "exact_from_serialized_model": "41918114635938158151453700738050741063/35184372088832000000000000000000000000000000000000",
+      "unit": "(model bit inversions / bit)^2 / s"
+    },
+    "J": {
+      "decimal_approx": "4.2544079033111553",
+      "exact_from_serialized_model": "503017375631257897817444408856608892756/118234402310075968435386880140786866209",
+      "unit": "1"
+    },
+    "T_s": "86400",
+    "accepted_I1_I2_exact_match": true,
+    "full39_R0A_eligible": false,
+    "scope": {
+      "array_bits": 16777216,
+      "direct_column": "r_D_DREG_s_1",
+      "direction_scenario": "central_mean",
+      "dt_s": 300,
+      "end_exclusive_utc": "2026-01-20T04:00:00+00:00",
+      "mapping": "W32_seq",
+      "mask": "all 288 accepted selected rows; no new screening, interpolation, renormalization or gap filling",
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv",
+      "r_column": "r_bit_s_1",
+      "rate_column": "nu_C_bit_DREG_s_1",
+      "rows": 288,
+      "scenario": "DREG",
+      "shield_mm": "10",
+      "sigma_model": "main_loglog",
+      "start_utc": "2026-01-19T04:00:00+00:00",
+      "status": "historical_data32_proton_only_not_R0A_full39",
+      "within_bin": "piecewise constant model; I2 is not an upper bound for unknown sub-bin dynamics"
+    },
+    "source": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv"
+  },
+  "input_sha256": {
+    "docs/research_gates/CY62167-COVERAGE-THRESHOLD-SR-DISPOSITION-01.md": "26fac94c51c9ca31cdabc3acf6113f53bd22c8948830a36dbc42cc743740e73e",
+    "docs/research_gates/CY62167-EXECUTOR-REFERENCE-SR-DISPOSITION-01.md": "a0ed5bba74eef01ad7f437ef46b26f85af25f4b39643f78dee79788562203d46",
+    "docs/research_gates/CY62167-PHYSICAL-BRIDGE-SR-03-DISPOSITION.md": "40dfd779248e0e54f60abb0ac876c50165bae389903137f021c462984bcb3503",
+    "docs/research_gates/CY62167-REFERENCE-SUBSYSTEM-01.md": "2e55225e55067f775202dbab69fca8bee20745a977e05c7d700b05678c697c68",
+    "docs/scientific_reviews/CY62167_SCIENTIFIC_DISPOSITION_01.md": "345b948eb982f1b2835a25cf840e2ace4633319bb7d3201c1548c359d3c12c16",
+    "docs/scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md": "8eb7722ada8bba28d43f6476713f028a19de5446774eafd84765102feb401889",
+    "experiments/CY62167-ANGULAR-FINDING-CONTROL-01/REPORT.md": "947468e667340737a7122cd25061e8a9606f99906a027c670e10a9cbf430f370",
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/REPORT.md": "d3302d577a35ee3e0f26e0b3834cb4a305d7e9fb16ae73a548837244928ced2e",
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/calculation_config.json": "d2a28c0afffd3008a1e5ade113bcc31d406b6c79ae0b9ff6fb5641426578cd12",
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv": "13daa667dcdf0931a477ba6994f3213b345c582b4d6b472031a9454705a60cf8",
+    "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/REPORT.md": "0aec739050c899f3c2b7e793684338e7cfe4f62e1c40781e05b7c8af511affb4",
+    "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/action_transition_exact_validation.csv": "62c0bb1490071d23e22d3a505927d476bf41a6ffda4553e8f966254604ffd975",
+    "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/boundary_contract.json": "4f906d6c01c8bc96bae9b6e3a0a4a2a1377e405f712b41c6858fa2589830b51b",
+    "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/REPORT.md": "9a9e024d094997cf6d825dcf00ab60973b419fcbe9af46ae664c541969081443",
+    "experiments/RE-CY62167-ECC-RISK-BRIDGE-01/REPORT.md": "d9b2e476669e46dd7bd68024b3b485bc3634834c09123846c2c55d8a680d7ef2",
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/TIMING.md": "114f1ba245e516246cfe14f46f0c881862717ad7680a55d1e6c7da690e6ba5fa",
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/bounds.json": "d0f8744dab1bec3654a5627a289ab7c981871202777edbca5e88cfb387465a0c",
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/pinmap.json": "1fae20981a3fcf21b825e6c8d7807126fc79aff6c8b15c30d1636272228b0cac",
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/reference_schedule.sv": "c28b911fc98ee6ffb5b1bcb471f8dceb59b7ad04a2ee50acd4d77b98a8b65fbc",
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/reference_slot.sv": "cc2161363b5f8937909856c0b6241a6f0e12c2bf2d8947d3236dc7a4e38526d8",
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/source_manifest.json": "c508fba5b22c4e508940750395525a7ab61907f0a5f51085b4f50c4b93d3cccb",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/REPORT.md": "904bb2160cec1ed7d89c30acac0ee476c6f7a519b961507a17c4d9dc9ee995b9",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/confidence_style_contract.json": "e9b8d51b421dd54c8fb5b32db23eabe509fd0ef45715c4cc1696864611788025",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_member_manifest.csv": "ca9ad3ddf746be8a394ff53577789fae3448d3f02094b57c79935582509e37f0",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_rate_reconstruction.py": "437bd4fa5fc22cf816b48d96e0f6e5a2244a92b1ab9464dfe0a7ca3ac9acac04",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/cosrad_rates_pi_reconstructed.csv": "c317c9c0104745f04c670393df3fd9560a5009a8fcb7245aa4d35018802426ec",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/geo_bound_results.csv": "dd0e81e6ae896c8dbf26f9a737cc0625a823b3edea23bca75f215b6c23f2f69f",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/mapping_sweep_summary.csv": "8edb96ac4d795e331532e783b6210a39e5806a837ae44bcfbf5791af86ccf157",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/pi_cosrad_input_manifest.json": "b8aa05951bd1aaf0efa36b820772a6110d381a7fc75550c920167a281bc40d05",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/sep_peak_rates.csv": "7218e4f3ae2c5b24a7c5aa04a8f688fbd25e77beb3b88c116186f3d3cef3ee00",
+    "experiments/RE-CY62167-PAPER-COMPLETION-01/tau_bound.py": "e9cf5c4a2928ec8bf284f1992c8752ea3bfc8636165f29118e798b3360d41637",
+    "experiments/RE-CY62167-PROTON-01/REPORT.md": "4a1fd1fbab21b332d3b9767c9f4459235a0db1e3ee7b32bd94a00d70d3926035",
+    "experiments/RE-CY62167-SEMANTICS-REPAIR-01/REPORT.md": "62e985995d712426b90457d3aa21ba1d5d45ab8a55a2a47a6f76da1e70748646",
+    "experiments/RE-INTERNAL-COUNT-COSRAD-GOES-01/provenance/cosrad_old_archive.json": "c172c2f17d5970c3c729a6a6b1de2e06f57e254c19ce137401461252f48782a5",
+    "experiments/t37-lambda-recipe/config.json": "567d991ed021c59b4addab612945d170e6023e7c19e83065d30815efb29acc9f",
+    "experiments/t37-lambda-recipe/inputs.md": "69398d975747a89a6adec7e61d5536eef50caf32a38d7f3a9d97fe976d8872f4",
+    "experiments/t37-lambda-recipe/summary.json": "d6e68779d61fa482b8dbd52e43078897cb85d784f25e0096b4fded3b3e843d8d",
+    "experiments/t44-lambda-class-diagnostics/conditions.md": "02f98587046d9dd6e68fcb47251ed54557379e0faac9e760aad5e14eccaaebbb",
+    "experiments/t44-lambda-class-diagnostics/config.json": "38b91c34b7e9f12fa3f249a1b73fc00cc3e27d85cffd9603d7d433f36c5da9b8",
+    "experiments/t44-lambda-class-diagnostics/summary.json": "3a916e2b064c7699fcd5c02f90cfdc65c9f74858657e0ae6f4fb24eb5c550383",
+    "theory/t36-robust-count-appendices.md": "3cd4414fa86f0a8d81131e1ac409059c04ebd3bcf2ffb2524962d145e1a6ce7d",
+    "theory/t36-robust-count.md": "0f05803d1efa42a313964288453b918997a90ca0aac45ad7cd8c2d591bbe2dc9"
+  },
+  "issue_updated_at": "2026-09-28T14:46:55Z",
+  "orbit_fluence": [
+    {
+      "Z_columns": [
+        1,
+        28
+      ],
+      "energy_max_MeV_n": "1.26E+0004",
+      "energy_min_MeV_n": "1.00E+0000",
+      "location": "in orbit, NOT behind 2.5/3 g/cm2 shielding",
+      "member": "results/sfn.txt",
+      "member_sha256": "89e27e63de8ec6b554e5e42448a827a949722a2518a290a688d8fb333d91c6e0",
+      "normalized_input": "inputs/orbit_sep_fluence.csv",
+      "parent_exposure_behind_shield": null,
+      "rows": 42,
+      "status": "confirmed_existing_export; mathematical/physical coverage not established; original printed zeros preserved, no tail extension",
+      "unit": "particles / (MeV per nucleon * cm2)"
+    },
+    {
+      "Z_columns": [
+        1,
+        92
+      ],
+      "energy_max_MeV_n": "7.94E+0004",
+      "energy_min_MeV_n": "1.00E+0000",
+      "location": "in orbit, NOT behind 2.5/3 g/cm2 shielding",
+      "member": "results/gfn.txt",
+      "member_sha256": "5f65e04d65e6094b8245f5f50e1384ad169699f453e0ee397385dc9c455bad50",
+      "normalized_input": "inputs/orbit_gcr_fluence.csv",
+      "parent_exposure_behind_shield": null,
+      "rows": 50,
+      "status": "confirmed_existing_export; mathematical/physical coverage not established; original printed zeros preserved, no tail extension",
+      "unit": "particles / (MeV per nucleon * cm2)"
+    }
+  ],
+  "stationary_background_integrals": [
+    {
+      "I1_nu": {
+        "decimal_approx": "44233.649919453768",
+        "exact_from_serialized_model": "110584124798634411957/2500000000000000",
+        "unit": "model bit inversions on data32 array"
+      },
+      "I2_nu": {
+        "decimal_approx": "6.2001412819631154",
+        "exact_from_serialized_model": "310007064098155761473796874233862767/50000000000000000000000000000000000",
+        "unit": "(model bit inversions)^2 / s"
+      },
+      "J": {
+        "decimal_approx": "1",
+        "exact_from_serialized_model": "1",
+        "unit": "1"
+      },
+      "T_s": "315576000",
+      "full39_R0A_eligible": false,
+      "original_tau_certificate_T_s": "315600000",
+      "source_row": {
+        "S_D": "-0.03305827344612301",
+        "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+        "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+        "estimate_type": "POINT",
+        "f_D": "0.032000395617418284",
+        "mapping_id": "W_00_01",
+        "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+        "nu_direct_total_s-1": "1.0139542337585009e-13",
+        "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+        "shield_g_cm2": "2.5",
+        "tau_max_U_s": "168.9774547885905"
+      },
+      "status": "constant_background_submodel_not_temporal_measurement_or_parent_bound"
+    },
+    {
+      "I1_nu": {
+        "decimal_approx": "41170.038988873363",
+        "exact_from_serialized_model": "128656371840229261539/3125000000000000",
+        "unit": "model bit inversions on data32 array"
+      },
+      "I2_nu": {
+        "decimal_approx": "5.3710425074953507",
+        "exact_from_serialized_model": "419612695898074299724198085643350943/78125000000000000000000000000000000",
+        "unit": "(model bit inversions)^2 / s"
+      },
+      "J": {
+        "decimal_approx": "1",
+        "exact_from_serialized_model": "1",
+        "unit": "1"
+      },
+      "T_s": "315576000",
+      "full39_R0A_eligible": false,
+      "original_tau_certificate_T_s": "315600000",
+      "source_row": {
+        "S_D": "-0.028954484161457572",
+        "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+        "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+        "estimate_type": "POINT",
+        "f_D": "0.02813971327901245",
+        "mapping_id": "W_00_01",
+        "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+        "nu_direct_total_s-1": "8.916258960396847e-14",
+        "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+        "shield_g_cm2": "3.0",
+        "tau_max_U_s": "195.83955637220427"
+      },
+      "status": "constant_background_submodel_not_temporal_measurement_or_parent_bound"
+    },
+    {
+      "I1_nu": {
+        "decimal_approx": "44233.649919453768",
+        "exact_from_serialized_model": "110584124798634411957/2500000000000000",
+        "unit": "model bit inversions on data32 array"
+      },
+      "I2_nu": {
+        "decimal_approx": "6.2001412819631154",
+        "exact_from_serialized_model": "310007064098155761473796874233862767/50000000000000000000000000000000000",
+        "unit": "(model bit inversions)^2 / s"
+      },
+      "J": {
+        "decimal_approx": "1",
+        "exact_from_serialized_model": "1",
+        "unit": "1"
+      },
+      "T_s": "315576000",
+      "full39_R0A_eligible": false,
+      "original_tau_certificate_T_s": "315600000",
+      "source_row": {
+        "S_D": "-7.532515977227794",
+        "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+        "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+        "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+        "f_D": "0.8828012742467903",
+        "mapping_id": "W_00_01",
+        "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+        "nu_direct_total_s-1": "2.7972156978668894e-12",
+        "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+        "shield_g_cm2": "2.5",
+        "tau_max_U_s": "20.458626524826883"
+      },
+      "status": "constant_background_submodel_not_temporal_measurement_or_parent_bound"
+    },
+    {
+      "I1_nu": {
+        "decimal_approx": "41170.038988873363",
+        "exact_from_serialized_model": "128656371840229261539/3125000000000000",
+        "unit": "model bit inversions on data32 array"
+      },
+      "I2_nu": {
+        "decimal_approx": "5.3710425074953507",
+        "exact_from_serialized_model": "419612695898074299724198085643350943/78125000000000000000000000000000000",
+        "unit": "(model bit inversions)^2 / s"
+      },
+      "J": {
+        "decimal_approx": "1",
+        "exact_from_serialized_model": "1",
+        "unit": "1"
+      },
+      "T_s": "315576000",
+      "full39_R0A_eligible": false,
+      "original_tau_certificate_T_s": "315600000",
+      "source_row": {
+        "S_D": "-3.4108636607527467",
+        "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+        "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+        "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+        "f_D": "0.7732870301800844",
+        "mapping_id": "W_00_01",
+        "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+        "nu_direct_total_s-1": "2.450212389670736e-12",
+        "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+        "shield_g_cm2": "3.0",
+        "tau_max_U_s": "45.684928214485105"
+      },
+      "status": "constant_background_submodel_not_temporal_measurement_or_parent_bound"
+    }
+  ],
+  "target_GCR_saved_rows": [
+    {
+      "S_D": "-0.0",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "POINT",
+      "f_D": "0.0",
+      "mapping_id": "W_01_02",
+      "nu_accumulation_total_bit_s-1": "0.00014016798252734859",
+      "nu_direct_total_s-1": "0.0",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "tau_max_U_s": "174.56354716152367"
+    },
+    {
+      "S_D": "-0.0",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "POINT",
+      "f_D": "0.0",
+      "mapping_id": "W_01_02",
+      "nu_accumulation_total_bit_s-1": "0.00013045998479684474",
+      "nu_direct_total_s-1": "0.0",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3.0",
+      "tau_max_U_s": "201.50997821901143"
+    },
+    {
+      "S_D": "-0.03305827344612301",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "POINT",
+      "f_D": "0.032000395617418284",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+      "nu_direct_total_s-1": "1.0139542337585009e-13",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "tau_max_U_s": "168.9774547885905"
+    },
+    {
+      "S_D": "-0.028954484161457572",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "POINT",
+      "f_D": "0.02813971327901245",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+      "nu_direct_total_s-1": "8.916258960396847e-14",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3.0",
+      "tau_max_U_s": "195.83955637220427"
+    },
+    {
+      "S_D": "-7.532515977227794",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "f_D": "0.8828012742467903",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+      "nu_direct_total_s-1": "2.7972156978668894e-12",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "tau_max_U_s": "20.458626524826883"
+    },
+    {
+      "S_D": "-3.4108636607527467",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "f_D": "0.7732870301800844",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+      "nu_direct_total_s-1": "2.450212389670736e-12",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3.0",
+      "tau_max_U_s": "45.684928214485105"
+    },
+    {
+      "S_D": "-0.03305827344612301",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "POINT",
+      "f_D": "0.032000395617418284",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+      "nu_direct_total_s-1": "1.0139542337585009e-13",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "tau_max_U_s": "168.9774547885905"
+    },
+    {
+      "S_D": "-0.028954484161457572",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "POINT",
+      "f_D": "0.02813971327901245",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+      "nu_direct_total_s-1": "8.916258960396847e-14",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3.0",
+      "tau_max_U_s": "195.83955637220427"
+    },
+    {
+      "S_D": "-7.532515977227794",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "f_D": "0.8828012742467903",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+      "nu_direct_total_s-1": "2.7972156978668894e-12",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "tau_max_U_s": "20.458626524826883"
+    },
+    {
+      "S_D": "-3.4108636607527467",
+      "bound_status": "CERTIFIED-POSITIVE-PERIOD",
+      "environment_scenario": "GCR-ARTICLE-BACKGROUND",
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "f_D": "0.7732870301800844",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+      "nu_direct_total_s-1": "2.450212389670736e-12",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3.0",
+      "tau_max_U_s": "45.684928214485105"
+    }
+  ],
+  "target_SEP_peak_saved_rows": [
+    {
+      "estimate_type": "POINT",
+      "mapping_id": "W_01_02",
+      "nu_accumulation_peak_s-1": "0.3361546154",
+      "nu_direct_peak_s-1": "0",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "POINT",
+      "mapping_id": "W_01_02",
+      "nu_accumulation_peak_s-1": "0.2422554514",
+      "nu_direct_peak_s-1": "0",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "POINT",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_peak_s-1": "0.3361546023",
+      "nu_direct_peak_s-1": "3.491842115e-10",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "POINT",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_peak_s-1": "0.242255443",
+      "nu_direct_peak_s-1": "2.23933353e-10",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_peak_s-1": "0.3361546023",
+      "nu_direct_peak_s-1": "1.414332409e-08",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_peak_s-1": "0.242255443",
+      "nu_direct_peak_s-1": "9.070175234e-09",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "POINT",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_peak_s-1": "0.3361546023",
+      "nu_direct_peak_s-1": "3.491842115e-10",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "POINT",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_peak_s-1": "0.242255443",
+      "nu_direct_peak_s-1": "2.23933353e-10",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_peak_s-1": "0.3361546023",
+      "nu_direct_peak_s-1": "1.414332409e-08",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    },
+    {
+      "estimate_type": "ARTICLE_CONFIDENCE_STYLE",
+      "mapping_id": "W_00_11",
+      "nu_accumulation_peak_s-1": "0.242255443",
+      "nu_direct_peak_s-1": "9.070175234e-09",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3",
+      "status": "PEAK-RATE-DIAGNOSTIC; NO-MISSION-INTEGRATION-WITHOUT-DURATION"
+    }
+  ],
+  "target_particle_component_saved_rows": [
+    {
+      "direct_model": "POINT-DATA-INTERPOLATED",
+      "environment_scenario": "GCR_ONLY",
+      "estimate_type": "POINT",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_HI_bit_s-1": "0.00013734152355762501",
+      "nu_accumulation_proton_bit_s-1": "2.826454740641535e-06",
+      "nu_accumulation_total_bit_s-1": "0.00014016797829826655",
+      "nu_direct_HI_s-1": "1.0139542337585009e-13",
+      "nu_direct_proton_registered_s-1": "0.0",
+      "nu_direct_total_s-1": "1.0139542337585009e-13",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "2.5"
+    },
+    {
+      "direct_model": "POINT-DATA-INTERPOLATED",
+      "environment_scenario": "GCR_ONLY",
+      "estimate_type": "POINT",
+      "mapping_id": "W_00_01",
+      "nu_accumulation_HI_bit_s-1": "0.00012762146728076588",
+      "nu_accumulation_proton_bit_s-1": "2.8385137978755953e-06",
+      "nu_accumulation_total_bit_s-1": "0.00013045998107864148",
+      "nu_direct_HI_s-1": "8.916258960396847e-14",
+      "nu_direct_proton_registered_s-1": "0.0",
+      "nu_direct_total_s-1": "8.916258960396847e-14",
+      "rate_reconstruction_route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "shield_g_cm2": "3.0"
+    }
+  ],
+  "theta_coverage_sensitivity": [
+    {
+      "delta_theta_illustrative": "0",
+      "remaining_conditional_budget_signed": {
+        "decimal_approx": "0.001",
+        "exact_from_serialized_model": "1/1000",
+        "unit": "probability"
+      },
+      "union_upper": {
+        "decimal_approx": "0.001",
+        "exact_from_serialized_model": "1/1000",
+        "unit": "probability"
+      }
+    },
+    {
+      "delta_theta_illustrative": "0.0001",
+      "remaining_conditional_budget_signed": {
+        "decimal_approx": "0.00089999999999999998",
+        "exact_from_serialized_model": "9/10000",
+        "unit": "probability"
+      },
+      "union_upper": {
+        "decimal_approx": "0.0011000000000000001",
+        "exact_from_serialized_model": "11/10000",
+        "unit": "probability"
+      }
+    },
+    {
+      "delta_theta_illustrative": "0.001",
+      "remaining_conditional_budget_signed": {
+        "decimal_approx": "0",
+        "exact_from_serialized_model": "0",
+        "unit": "probability"
+      },
+      "union_upper": {
+        "decimal_approx": "0.002",
+        "exact_from_serialized_model": "1/500",
+        "unit": "probability"
+      }
+    },
+    {
+      "delta_theta_illustrative": "0.01",
+      "remaining_conditional_budget_signed": {
+        "decimal_approx": "-0.0089999999999999993",
+        "exact_from_serialized_model": "-9/1000",
+        "unit": "probability"
+      },
+      "union_upper": {
+        "decimal_approx": "0.010999999999999999",
+        "exact_from_serialized_model": "11/1000",
+        "unit": "probability"
+      }
+    },
+    {
+      "delta_theta_illustrative": "0.05",
+      "remaining_conditional_budget_signed": {
+        "decimal_approx": "-0.049000000000000002",
+        "exact_from_serialized_model": "-49/1000",
+        "unit": "probability"
+      },
+      "union_upper": {
+        "decimal_approx": "0.050999999999999997",
+        "exact_from_serialized_model": "51/1000",
+        "unit": "probability"
+      }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "issue": 50,
+  "issue_updated_at": "2026-09-28T14:46:55Z",
+  "base_sha": "81f0020c3b735e73716573bb8f1df5dd586f6baf",
+  "t45_spec_sha": "7b7a06601030619f47b877fde50e2d98fe8ef688",
+  "scenario": {
+    "orbit": "GEO",
+    "mission_years": 10,
+    "nominal_T_s": "315576000",
+    "seconds_convention": "10*365.25*86400; explicit engineering convention, not a specified calendar epoch",
+    "historical_article_T_s": "315600000",
+    "epsilon": 0.001,
+    "shield_g_cm2": [2.5, 3.0],
+    "useful_bytes": 2097152,
+    "external_data_bits": 32,
+    "external_code_bits": 39,
+    "sram": "3 x CY62167GE30-45ZXI",
+    "status": "author_scenario_not_physical_qualification"
+  },
+  "lambda_parent_inputs": {
+    "B_s_1": null,
+    "background_upper_s_1": null,
+    "F_S_parent_exposure": null,
+    "F0_parent_exposure": null,
+    "threshold_l_s_1": null,
+    "relative_growth_rho_s_1": null,
+    "delta_env": null,
+    "status": "unknown_not_zero"
+  },
+  "theta_full39": {
+    "status": "unknown_domain_not_calibrated_by_data32",
+    "scope": "all 39 external positions after embedded ECC; hidden parity, padding, unused addresses and inter-chip marks included in transfer contract",
+    "parent_law": "conditional NHPP with exogenous independent nonempty marks required by T36/T45; not established for post-embedded-ECC output",
+    "m_words_upper": null,
+    "q_w_upper": null,
+    "q_upper": null,
+    "chi_upper": null,
+    "d_multibit_upper": null,
+    "sigma_parent_upper_cm2_array": null,
+    "sigma_bit_upper_cm2_bit": null,
+    "beta_to_parent_contract": null,
+    "delta_theta": null,
+    "confidence_basis": "ARTICLE_CONFIDENCE_STYLE is not a validated joint 95% domain"
+  },
+  "observation": {
+    "status": "contract_specified_not_implemented_or_qualified",
+    "channels": ["outer_corrected", "outer_uncorrectable", "ERR_M0", "ERR_M1", "ERR_M2"],
+    "latch_tick": 8,
+    "outer_decision_tick": 10,
+    "write_end_tick": 19,
+    "completion_fence_tick": 24,
+    "service_tick_nominal_ns": 10,
+    "scrub_write_rule": "(outer_corrected OR any_latched_ERR) AND NOT outer_uncorrectable",
+    "application_reads_counted": false,
+    "application_writeback": false,
+    "C_outer_visit_max": 524288,
+    "C_ERR_chip_visit_max": 1572864,
+    "C_sum_flags_visit_max": 2097152,
+    "overflow_or_missing": "skip statistical update; never zero or saturated numeric count",
+    "bounded_undercount_per_scan": null,
+    "delta_o_mission": null,
+    "delivery_latency_upper_s": null,
+    "K0": null,
+    "rho0": null,
+    "P_calendar_scan_s": null,
+    "timing_handoff": "existing fixed phase/tube contract only; #52 supplies admissible uniform service and action timing"
+  },
+  "conversion_jobs": {
+    "orbit_fluence": {
+      "archive_sha256": "84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb",
+      "provenance_path": "experiments/RE-INTERNAL-COUNT-COSRAD-GOES-01/provenance/cosrad_old_archive.json",
+      "members": {
+        "results/sfn.txt": {
+          "sha256": "89e27e63de8ec6b554e5e42448a827a949722a2518a290a688d8fb333d91c6e0",
+          "rows": 42,
+          "species": 28,
+          "normalized_sha256": "af2c97acdd0949a97f87c9c6deb3fa9ef2f98e204da919bd31214243211244c7",
+          "output": "inputs/orbit_sep_fluence.csv"
+        },
+        "results/gfn.txt": {
+          "sha256": "5f65e04d65e6094b8245f5f50e1384ad169699f453e0ee397385dc9c455bad50",
+          "rows": 50,
+          "species": 92,
+          "normalized_sha256": "34486cd8360d407350ba1aefa92a288e2c9eb35ec7341c8735dfe51c16a5097c",
+          "output": "inputs/orbit_gcr_fluence.csv"
+        }
+      },
+      "units": "particles / (MeV per nucleon * cm2)",
+      "location": "in orbit, NOT behind 2.5/3 g/cm2 shielding",
+      "mission_years_header": 10,
+      "SEP_probability_header": "0.100",
+      "joint_coverage_error": null,
+      "status": "confirmed_existing_export; mathematical/physical coverage not established; original printed zeros preserved, no tail extension"
+    },
+    "historical_series": {
+      "path": "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/selected_rate.csv",
+      "start_utc": "2026-01-19T04:00:00+00:00",
+      "end_exclusive_utc": "2026-01-20T04:00:00+00:00",
+      "rows": 288,
+      "dt_s": 300,
+      "shield_mm": "10",
+      "sigma_model": "main_loglog",
+      "direction_scenario": "central_mean",
+      "scenario": "DREG",
+      "mapping": "W32_seq",
+      "array_bits": 16777216,
+      "rate_column": "nu_C_bit_DREG_s_1",
+      "r_column": "r_bit_s_1",
+      "direct_column": "r_D_DREG_s_1",
+      "status": "historical_data32_proton_only_not_R0A_full39",
+      "mask": "all 288 accepted selected rows; no new screening, interpolation, renormalization or gap filling",
+      "within_bin": "piecewise constant model; I2 is not an upper bound for unknown sub-bin dynamics"
+    },
+    "stationary_background": {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/geo_bound_results.csv",
+      "mapping_id": "W_00_01",
+      "estimate_types": ["POINT", "ARTICLE_CONFIDENCE_STYLE"],
+      "route": "SPECTRAL_EXTERNAL_CONVOLUTION",
+      "duration_source": "scenario.nominal_T_s",
+      "status": "constant_background_submodel_not_temporal_measurement_or_parent_bound"
+    },
+    "goes_growth": {
+      "path": "experiments/t44-lambda-class-diagnostics/summary.json",
+      "directions": ["central"],
+      "masks": ["published_valid", "screened"],
+      "threshold_fractions": [0.0001, 0.001, 0.01],
+      "status": "extract accepted diagnostics only; no fit of T45 H_l or extrapolation to target shields"
+    },
+    "r3": {
+      "groupings_path": "experiments/RE-CY62167-PAPER-COMPLETION-01/mapping_sweep_summary.csv",
+      "groupings_expected": {"0": 45, "4": 9, "5": 1},
+      "certificate_probe_s": "170",
+      "certificate_shield_g_cm2": "2.5",
+      "certificate_mappings": ["W_01_02", "W_00_01"],
+      "certificate_estimate": "POINT",
+      "probe_status": "illustrative comparison to saved sufficient-period boundaries only, not R0 policy selection",
+      "transition_path": "experiments/RE-CY62167-DIRECT-DECISION-BOUNDARY-01/action_transition_exact_validation.csv",
+      "transition_selector": {
+        "shield_mm": "5.0",
+        "window_duration": "7d",
+        "window_statistic": "max",
+        "epsilon_analysis": "0.1",
+        "sigma_model": "main_loglog",
+        "risk_semantics": "product_estimate",
+        "low_energy_model": "K1_only",
+        "tau_from_s": "5",
+        "tau_to_s": "2"
+      },
+      "zero_count_alpha_demo": "0.05",
+      "zero_count_fluence_cm2_inverse": null
+    },
+    "coverage_sensitivity": {
+      "conditional_epsilon_including_env_and_channel": "0.001",
+      "delta_theta_grid": ["0", "0.0001", "0.001", "0.01", "0.05"],
+      "meaning": "sensitivity only; no element of this grid is an assigned or measured coverage error"
+    }
+  },
+  "run_scope": {
+    "model": "reuse_only; target_full39_and_historical_data32_kept_separate",
+    "compared_algorithms": [],
+    "metrics": ["I1", "I2", "J", "input_readiness"],
+    "success": "traceable_inputs_or_exact_decisive_gap; no_physical_guarantee_by_substitution"
+  }
+}
