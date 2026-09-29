@@ -11,6 +11,7 @@ from fractions import Fraction as F
 from itertools import combinations
 import math
 import unittest
+import t57_uniform_budget as budget
 
 
 def phases(words, ticks, tick=F(1), latch=F(0), fence=F(0)):
@@ -251,6 +252,231 @@ class T57Checks(unittest.TestCase):
         self.assertEqual(converted, direct)
         self.assertGreater(converted, 0)
 
+
+
+
+class T57StrengtheningChecks(unittest.TestCase):
+    """Addressed regression; all acceptance comparisons are rational."""
+
+    def test_original_snapshot_and_same_per_bit_scaling(self):
+        data = budget.snapshot()
+        self.assertEqual(data["source_sha"], "ff705de22012fb8e6481436483150a1472879b0a")
+        self.assertEqual(len(data["grid"]["W"]), 6)
+        for W in data["grid"]["W"]:
+            p = budget.model(W)
+            self.assertEqual(p.F0/p.W, budget.model().F0/budget.model().W)
+            self.assertEqual(p.S2/(39*W)**2,
+                             F(data["history"]["S2_per_bit_s_inverse"]))
+
+    def test_old_integer_barrier_all_original_sizes(self):
+        for W in budget.snapshot()["grid"]["W"]:
+            d = budget.old_barriers(budget.model(W))
+            self.assertTrue(d["no_positive_integer_cap"])
+            self.assertGreater(d["beta_T"], 1)
+            self.assertGreater(d["exact_quantile_union_lower"], F(1, 4))
+            self.assertGreater(d["F0q"], F("0.32301607221069"))
+            self.assertLess(d["F0q"], F("0.32301607221070"))
+
+    def test_old_pair_barrier_original_array(self):
+        d = budget.old_barriers(budget.model(1935832, 256000000))
+        self.assertLess(d["pair_ab_upper"], F("0.186688384"))
+        self.assertGreater(d["pair_ab_upper"], F("0.186688383"))
+        self.assertEqual(d["full_busy_pass"], F("0.29491190625"))
+        self.assertLess(d["pair_ab_upper"], d["full_busy_pass"])
+
+    def test_exp_enclosure_against_independent_decimal(self):
+        from decimal import Decimal, localcontext
+        with localcontext() as ctx:
+            ctx.prec = 100
+            for x in map(F, ("0", "0.001", "0.25", "1", "12", "15", "80", "200")):
+                lo, hi = budget.exp_neg(x)
+                reference = (-Decimal(x.numerator)/Decimal(x.denominator)).exp()
+                self.assertLessEqual(Decimal(lo.numerator)/Decimal(lo.denominator), reference)
+                self.assertGreaterEqual(Decimal(hi.numerator)/Decimal(hi.denominator), reference)
+
+    def test_affine_cap_matches_endpoint_infimum(self):
+        for b in (F(0), F(1), F(3)):
+            for u, v in ((F(1), F(0)), (F(1), F(10)), (F(5), F(1))):
+                previous = None
+                for n in range(1, 50):
+                    x = F(n, 10)
+                    cap = budget.price_cap(x, b, F(1, 3), u, v)
+                    if previous is not None:
+                        self.assertLessEqual(cap, previous)
+                    previous = cap
+                    for k in range(1, 21):
+                        z = x*k/20
+                        quotient = 6*(u+v*max(F(0), z-b))/(z*z)
+                        self.assertLessEqual(cap, quotient)
+
+    def test_prospective_cells_cover_word_lifetime_and_bound_transition(self):
+        W, tick, fence = 7, F(1, 10), F(1, 5)
+        periods = [56, 113, 57, 159, 56]
+        t, byword = F(0), [[F(0)] for _ in range(W)]
+        for M in periods:
+            a = M*tick
+            _, _, fs = phases(W, M, tick, fence=fence)
+            for w, f in enumerate(fs):
+                byword[w].append(t+f)
+            t += a
+        for w in range(W):
+            seq = byword[w]+[t]
+            self.assertEqual(sum(v-u for u, v in zip(seq, seq[1:])), t)
+            for i in range(len(periods)-1):
+                length = byword[w][i+2]-byword[w][i+1]
+                self.assertLessEqual(length, max(periods[i:i+2])*tick+tick)
+
+    def test_squared_exposure_cost_uses_same_partition(self):
+        # Piecewise positive intensity entirely within one certified interval.
+        lam = [F(1, 10), F(1, 2), F(1, 5)]
+        width = [F(1, 10), F(1, 5), F(1, 10)]
+        b, u, v, chi = F(1, 10), F(1, 20), F(1, 2), F(1, 3)
+        length = sum(width)
+        cap = budget.price_cap(max(lam), b, chi, u, v)
+        self.assertLessEqual(length, cap)
+        mean = sum(x*h for x, h in zip(lam, width))
+        price = sum((u+v*max(F(0), x-b))*h for x, h in zip(lam, width))
+        self.assertLessEqual(chi*mean*mean/2, price)
+
+    def test_positive_growth_threshold_and_saturation(self):
+        self.assertEqual(budget.psi_upper(F(0), F(2), F(10), F(1), F(1, 4)), F(1, 2))
+        exponential = budget.psi_upper(F(1, 2), F(4), F(10), F(1), F(1, 4))
+        lo, _ = budget.exp_neg(F(1, 2))
+        self.assertEqual(exponential, 1/lo)
+        self.assertEqual(budget.psi_upper(F(1), F(100), F(2), F(1), F(1)), F(2))
+        self.assertEqual(budget.psi_upper(F(1), F(100), F(2), F(1), F(0)), F(1))
+
+    def test_integer_choice_agrees_with_small_complete_domain(self):
+        p = budget.Model(3, 100000, F(10), F(1, 2), F(1, 10), F(1),
+                         eps=F(3, 10), gamma=F(1, 5), tick=F(1, 100))
+        ab, cap, rho, l = F(1, 10), F(2), F(1, 20), F(1, 10)
+        for x in (F(0), p.b, p.B):
+            answer = budget.choose_tick(p, x, ab, ab, cap, l, rho)
+            safe = [M for M in range(10, 201) if budget.action_admitted(
+                p, x, ab, M*p.tick, ab, cap, l, rho)]
+            self.assertEqual(answer, max(safe))
+            nxt = answer*p.tick
+            future_x = budget.psi_upper(x, ab, p.B, l, rho)
+            self.assertTrue(budget.action_admitted(p, future_x, nxt, ab, ab, cap, l, rho))
+
+    def test_scalar_exposure_lower_on_entire_action_range(self):
+        p = budget.model()
+        ab, ac, block = budget.design(p)
+        kappa = (1-F(1, p.W)-p.tick/ab)**2/2
+        for a in (ab, (ab+ac)/2, ac):
+            _, _, _, E = proxy(a, p.W, F(1, p.W), p.tick)
+            self.assertGreaterEqual(E, kappa*a)
+        self.assertGreater(block, 6*ac)
+
+    def test_predictable_whole_cycles_leave_only_two_boundary_fragments(self):
+        acap, L = F(7), F(50)
+        periods = [F(3), F(7), F(5), F(4), F(6)]*30
+        cuts = [F(0)]
+        for a in periods:
+            cuts.append(cuts[-1]+a)
+        for j in range(10):
+            included = [(u,v) for u,v in zip(cuts,cuts[1:]) if j*L<=u and v<=(j+1)*L]
+            self.assertGreaterEqual(sum(v-u for u,v in included), L-2*acap)
+
+    def test_each_parent_contributes_at_most_m_counts_across_cycles(self):
+        events = [(F(7, 2), {0, 1, 2}), (F(5), {0, 2}), (F(10), {1})]
+        counts, _, _, _ = token_trace(3, [9, 12, 15], F(1), F(1,10), F(1,5), events)
+        self.assertLessEqual(sum(counts), sum(len(mark) for _, mark in events))
+
+    def test_batch_alpha_and_poisson_tail_are_certified(self):
+        p = budget.model()
+        d = budget.count_and_tax(p)
+        self.assertLessEqual(d["epochs"]*budget.exp_neg(F(d["H"]))[1], p.alpha)
+        z = F(1,4)
+        exp_upper = 1/budget.exp_neg(z)[0]
+        self.assertGreaterEqual(z*d["count_threshold"]-d["mean_count_upper"]*(exp_upper-1), 12)
+        self.assertLess(d["tail_upper"], F("0.000006145"))
+
+    def test_reference_launch_usefulness_and_resource(self):
+        p = budget.model()
+        d = budget.count_and_tax(p)
+        self.assertTrue(budget.length_admitted(d["ab"]+p.tick,p.B,p))
+        self.assertTrue(d["informative_and_long_action"])
+        resource = budget.resource(p,d["ab"])
+        self.assertTrue(resource["ok"])
+        self.assertEqual(resource["peak"], F("0.020109375"))
+        self.assertLess(resource["delay"], F("0.000000812"))
+        self.assertEqual(resource["decision_slack"], F("0.000029900625"))
+
+    def test_reference_tax_compares_upper_to_fixed_lower(self):
+        p = budget.model()
+        d = budget.count_and_tax(p)
+        self.assertEqual(d["fixed_tick"], 2018037184)
+        self.assertLess(d["nominal_tax_upper"], F("0.00330592"))
+        self.assertGreater(d["fixed_tax_lower"], F("0.007915809"))
+        self.assertGreater(d["reduction_vs_presented_fixed_lower"], F("0.5823"))
+        self.assertGreater(p.b*p.T, 70000)  # Not a whole-mission zero-event argument.
+
+    def test_all_four_accepted_fixed_candidates_are_preserved(self):
+        accepted = [r for r in budget.snapshot()["fixed_grid"] if r["selected_tick"] is not None]
+        self.assertEqual(len(accepted), 4)
+        for row in accepted:
+            p = budget.model(row["W"], row["R_eff_bit_s"])
+            self.assertEqual(budget.count_and_tax(p)["fixed_tick"], row["selected_tick"])
+
+    def test_reference_positive_growth_domain_and_failure(self):
+        p = budget.model()
+        lo, hi = budget.rho_threshold(p)
+        self.assertGreaterEqual(lo, F("0.0000042468684"))
+        self.assertLessEqual(hi, F("0.0000042468687"))
+        self.assertTrue(budget.count_and_tax(p,lo)["informative_and_long_action"])
+        self.assertFalse(budget.count_and_tax(p,hi)["informative_and_long_action"])
+        self.assertFalse(budget.count_and_tax(p,F("0.0009"))["informative_and_long_action"])
+        self.assertIsNone(budget.count_and_tax(p,F("0.0009"))["nominal_tax_upper"])
+        self.assertFalse(budget.count_and_tax(p,overcount=10000)["informative_and_long_action"])
+
+    def test_A_and_B_witnesses_use_original_sizes_and_positive_growth(self):
+        from dataclasses import replace
+        for W, speed in ((262144,64000000),(262144,256000000),(524288,256000000)):
+            p = budget.model(W,speed)
+            d = budget.count_and_tax(p)
+            self.assertTrue(d["informative_and_long_action"])
+            self.assertTrue(budget.resource(p,d["ab"])["ok"])
+            self.assertLess(d["nominal_tax_upper"], F("0.01"))
+        for W,speed in ((262144,16000000),(524288,64000000),(1048576,256000000)):
+            p = replace(budget.model(W,speed),theta=F("0.7"))
+            d = budget.count_and_tax(p,rho=F("0.0000005"),policy=budget.alternate_design(p))
+            self.assertTrue(d["informative_and_long_action"])
+            self.assertTrue(budget.length_admitted(d["ab"]+p.tick,p.B,p))
+            self.assertTrue(budget.resource(p,d["ab"],F("0.25"))["ok"])
+            self.assertLess(d["nominal_tax_upper"],F("0.01"))
+
+    def test_affine_launch_ceiling_and_peak_barrier(self):
+        p = budget.model(1935832,256000000)
+        self.assertGreater(budget.launch_ceiling(p),F("2.3964199183"))
+        self.assertLess(budget.launch_ceiling(p),F("2.3964199184"))
+        amin = budget.first_resource_tick(p,F("0.05"))*p.tick
+        self.assertEqual(amin,F("5.9042876"))
+        self.assertGreater(amin,budget.launch_ceiling(p))
+        for peak in (F("0.25"),F("0.5")):
+            self.assertLess(budget.first_resource_tick(p,peak)*p.tick+p.tick,
+                            budget.launch_ceiling(p))
+
+    def test_nominal_lower_excludes_only_price_density_layer(self):
+        p = budget.model(1935832,256000000)
+        lower = budget.count_and_tax(p)["price_layer_nominal_tax_lower"]
+        self.assertGreater(lower,F("0.01839329883"))
+        for peak in (F("0.05"),F("0.25"),F("0.5")):
+            self.assertFalse(budget.price_tradeoff(p,peak,F("0.01"))["possible"])
+        self.assertFalse(budget.price_tradeoff(budget.model(1048576,256000000),
+                                               F("0.05"),F("0.01"))["possible"])
+        self.assertTrue(budget.price_tradeoff(budget.model(1048576,256000000),
+                                              F("0.25"),F("0.01"))["possible"])
+
+    def test_all_original_1458_resource_tuples(self):
+        rows = budget.grid_diagnostic()
+        self.assertEqual(len(rows),1458)
+        keys = {(r["W"],r["rate"],r["tax"],r["peak"],r["h"],r["delay"]) for r in rows}
+        self.assertEqual(len(keys),1458)
+        self.assertEqual(sum(r["A"] for r in rows),135)
+        self.assertEqual(sum(r["B"] for r in rows),237)
+        self.assertEqual(sum(r["layer_not_excluded"] for r in rows),237)
+        self.assertTrue(all(not (r["A"] or r["B"]) or r["layer_not_excluded"] for r in rows))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
