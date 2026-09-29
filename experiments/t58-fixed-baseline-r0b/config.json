@@ -1,0 +1,133 @@
+{
+  "base_sha": "7f42f356c89b09d69e5c9d13ded0ffdd6bd0ddb1",
+  "t52_sha": "f7180c5b99da0a16db7195ddf407e1fea5029488",
+  "review_56": {
+    "status": "pending",
+    "verified_utc": "2026-09-29",
+    "final_numerical_admission": false
+  },
+  "master_repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+  "master_sha": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+  "grid": {
+    "W": [
+      262144,
+      524288,
+      1048576,
+      1935832,
+      2097152,
+      4194304
+    ],
+    "R_eff_bit_s": [
+      16000000,
+      64000000,
+      256000000
+    ],
+    "tax": [
+      "0.001",
+      "0.0025",
+      "0.01"
+    ],
+    "peak": [
+      "0.05",
+      "0.25",
+      "0.5"
+    ],
+    "h_s": [
+      "0.001",
+      "0.01",
+      "0.1"
+    ],
+    "delay_s": [
+      "0.000001",
+      "0.000003",
+      "0.000010"
+    ]
+  },
+  "scenario": {
+    "n": 39,
+    "W_reference": 1935832,
+    "epsilon": "0.01",
+    "calendar_start": "2021-01-01T00:00:00Z",
+    "calendar_end_exclusive": "2026-01-01T00:00:00Z",
+    "shield_mm_Al": 2
+  },
+  "actions": {
+    "kind": "all_integer_ticks",
+    "tick_s": "0.00000001",
+    "tick_relative_error": "0",
+    "M_min": 1,
+    "M_max": "18446744073709551615",
+    "status": "research_contract_not_device_qualification",
+    "legacy_table_s": [
+      1,
+      2,
+      5,
+      10,
+      30,
+      60,
+      120,
+      300,
+      600,
+      1200,
+      1800,
+      3600
+    ]
+  },
+  "fixed_diagnostic": {
+    "mode": "U",
+    "marks": "independent_uniform_single_bit_XOR_on_all_39W_bits",
+    "scaling": "hold_per_bit_rate_not_array_rate",
+    "D": "c",
+    "Ds": "0",
+    "service": "conditional_assumption_correct_with_in_window_hits",
+    "K0": 0,
+    "rho0": "0",
+    "delta_exec": "0",
+    "delta_env": "0",
+    "initial_status": "conditional_clean_no_pending_not_reset_claim",
+    "tax_window": "T",
+    "cost_after_first_exceedance": "continue_to_T",
+    "preparation": "separate_unqualified"
+  },
+  "app_diagnostic": {
+    "sigma_s": "0.0000001",
+    "g_s": "0.0000001",
+    "u": "0.5",
+    "status": "declared_research_envelope_not_observed_product_load"
+  },
+  "physical_class": {
+    "B_per_bit_s": null,
+    "bbar_per_bit_s": null,
+    "FS_per_bit": null,
+    "l_per_bit_s": null,
+    "rho_s_inverse": null,
+    "delta_env": null,
+    "theta_coverage": null,
+    "full_word_mark_evidence": null,
+    "preparation_contract": null,
+    "clock_bounds": null,
+    "application_contract": null
+  },
+  "historical_diagnostics": [
+    "piecewise_constant_serialized_series_I1_I2_and_masks",
+    "rarity_envelope_B=max_total_bbar=max_reconstructed_background_FS=sum_positive_excess_over_bbar",
+    "envelope_is_not_future_physical_bound"
+  ],
+  "reference_point_rule": {
+    "core": "all_54_W_R_tax_combinations",
+    "resource_expansion": "all_original_1458_combinations",
+    "table": "two_extreme_critical_S2_points_and_nearest_critical_S2_below_and_above_historical_I2_and_rarity_S2; deduplicate; tie_break_W_then_R_then_tax",
+    "table_resources": {
+      "peak": "0.05",
+      "h_s": "0.001",
+      "delay_s": "0.000003"
+    },
+    "lower": "same_declared_initial_peak_witness_for_entire_fixed_class; ell=(L-J*c)/(4*J) when positive; no_adaptive_runs"
+  },
+  "outcomes": {
+    "upper": "presented_fixed_policy_sufficient_only_if_all_contracts_and_tests_pass",
+    "lower": "exclude_only_proved_fixed_class_when_lower_strictly_exceeds_actual_epsilon",
+    "otherwise": "unresolved; missing_physical_inputs_remain_null"
+  }
+}
+
