@@ -333,11 +333,14 @@ def finite_price_certificate(p, ab, acap, block, H, count_max, E_star,
     while (max_k+1)*log_tail(n)+h_quantum > eta:
         n += 1
     log_error = (max_k+1)*log_tail(n)
-    # Good counts are integers. Bound exact rational operand sizes before any
-    # online work; reduction z=2^-k*y/l gives v=(z-1)/(z+1).
+    # Good counts are integers, but H may be rational. Its denominator must
+    # appear in BOTH bounds for (count+H)/(phi_lo*exposure*l).
+    # Bound operand sizes before online work; z=2^-k*y/l, v=(z-1)/(z+1).
     exposure_integer_max = ceil(block*(1 << exposure_bits))
-    arg_num_max = ceil(count_max+H)*(1 << exposure_bits)*phi_lo.denominator*l.denominator
-    arg_den_max = phi_lo.numerator*exposure_integer_max*l.numerator
+    H_denominator = F(H).denominator
+    arg_num_max = (H_denominator*ceil(count_max+H)*(1 << exposure_bits)
+                   *phi_lo.denominator*l.denominator)
+    arg_den_max = H_denominator*phi_lo.numerator*exposure_integer_max*l.numerator
     reduced_ratio_bits = (arg_num_max+arg_den_max*(1 << max_k)).bit_length()
     # Shared-power denominators in the atanh sums and their remainder; includes
     # log(2), range exponent, and combining endpoints. See appendix I.5.

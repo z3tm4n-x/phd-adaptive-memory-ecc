@@ -657,5 +657,60 @@ class T57ReviewCorrectionChecks(unittest.TestCase):
         with self.assertRaises(ValueError):
             budget.guarded_action(p,c,initial,issue,c["acap"],numeric_failure=True)
 
+    def _certificate_at_H(self, H):
+        c = self.c
+        return budget.finite_price_certificate(
+            self.p,c["ab"],c["acap"],c["block"],H,c["count_max"],
+            self.d["exposure_lower"],c["l"],c["rho"],c["eta"])
+
+    def _assert_good_log_sizes(self, c, count, exposure):
+        x = (count+c["H"])/(c["phi_lower"]*exposure*c["l"])
+        if x <= 1:
+            self.assertEqual(budget.H_interval(x*c["l"],c["l"],c["log_terms"]),
+                             (x,x))
+            return 0  # The linear branch does not evaluate a logarithm.
+        z = x/F(2)**budget.log2_floor(x)
+        v = (z-1)/(z+1)
+        self.assertLessEqual(v.denominator.bit_length(),c["reduced_ratio_bit_bound"])
+        lo,hi = budget.log_interval(x,c["log_terms"])
+        actual_bits = max(max(abs(a.numerator).bit_length(),a.denominator.bit_length())
+                          for a in (lo,hi))
+        self.assertLessEqual(actual_bits,c["normalized_log_rational_bit_bound"])
+        return actual_bits
+
+    def test_rational_H_review_counterexample_has_valid_bit_bound(self):
+        c = self._certificate_at_H(F(15)+F(1,1 << 1024))
+        self.assertTrue(c["success"])
+        exposure = budget.dyadic(c["exposure_min"],c["exposure_bits"],True)
+        actual_bits = self._assert_good_log_sizes(c,c["count_max"],exposure)
+        self.assertEqual(actual_bits,22639)
+        self.assertGreater(actual_bits,12609)  # The reviewed bound was too small.
+        self.assertEqual(c["normalized_log_rational_bit_bound"],61761)
+
+    def test_rational_H_bit_bounds_cover_dyadic_and_odd_denominators(self):
+        for denominator in (3,7,10,1 << 257,(1 << 512)+1):
+            c = self._certificate_at_H(F(15)+F(1,denominator))
+            self.assertTrue(c["success"])
+            exposures = (budget.dyadic(c["exposure_min"],c["exposure_bits"],True),
+                         budget.dyadic(self.d["exposure_lower"],c["exposure_bits"],True),
+                         3*c["block"]/4)
+            for count in (F(0),F(1),c["count_max"]):
+                for exposure in exposures:
+                    with self.subTest(denominator=denominator,count=count,exposure=exposure):
+                        self._assert_good_log_sizes(c,count,exposure)
+
+    def test_integer_H_keeps_A_and_B_bit_bounds(self):
+        from dataclasses import replace
+        pb = replace(budget.model(262144,16000000),theta=F("0.7"))
+        cb = budget.count_and_tax(pb,rho=F("0.0000005"),
+                                  policy=budget.alternate_design(pb))["numerical_certificate"]
+        for c,H,reduced_bits,log_bits in ((self.c,15,260,12609),(cb,14,261,12657)):
+            with self.subTest(H=H):
+                self.assertEqual(c["H"],H)
+                self.assertTrue(c["success"])
+                self.assertEqual(c["reduced_ratio_bit_bound"],reduced_bits)
+                self.assertEqual(c["normalized_log_rational_bit_bound"],log_bits)
+        self.assertEqual(self._certificate_at_H(F(15)),self.c)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
