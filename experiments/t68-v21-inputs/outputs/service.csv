@@ -1,0 +1,21 @@
+mode,shield_g_cm2,write_fraction,reads,nominal_busy_s,point_period_s,occupancy_percent_at_point_period,interpretation,external_risk_period_applicable
+internal_x8_known,2.5,0.0,524288,0.02359296,0.0746526518455408,31.60364624262074,read-only lower bound,conditional v21 surrogate only
+internal_x8_known,3.0,0.0,524288,0.02359296,0.1503908499467867,15.68776292463802,read-only lower bound,conditional v21 surrogate only
+internal_x8_known,2.5,1.0,524288,0.04718592,0.0746526518455408,63.20729248524148,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x8_known,3.0,1.0,524288,0.04718592,0.1503908499467867,31.37552584927604,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x8_unknown,2.5,0.0,2097152,0.09437184,0.0746526518455408,126.41458497048296,read-only lower bound,conditional v21 surrogate only
+internal_x8_unknown,3.0,0.0,2097152,0.09437184,0.1503908499467867,62.75105169855208,read-only lower bound,conditional v21 surrogate only
+internal_x8_unknown,2.5,1.0,2097152,0.18874368,0.0746526518455408,252.82916994096593,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x8_unknown,3.0,1.0,2097152,0.18874368,0.1503908499467867,125.50210339710416,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x16_known,2.5,0.0,524288,0.02359296,0.0746526518455408,31.60364624262074,read-only lower bound,conditional v21 surrogate only
+internal_x16_known,3.0,0.0,524288,0.02359296,0.1503908499467867,15.68776292463802,read-only lower bound,conditional v21 surrogate only
+internal_x16_known,2.5,1.0,524288,0.04718592,0.0746526518455408,63.20729248524148,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x16_known,3.0,1.0,524288,0.04718592,0.1503908499467867,31.37552584927604,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x16_unknown,2.5,0.0,1048576,0.04718592,0.0746526518455408,63.20729248524148,read-only lower bound,conditional v21 surrogate only
+internal_x16_unknown,3.0,0.0,1048576,0.04718592,0.1503908499467867,31.37552584927604,read-only lower bound,conditional v21 surrogate only
+internal_x16_unknown,2.5,1.0,1048576,0.09437184,0.0746526518455408,126.41458497048296,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x16_unknown,3.0,1.0,1048576,0.09437184,0.1503908499467867,62.75105169855208,serial U total; ERR worst case,conditional v21 surrogate only
+external39_parallel3_nominal,2.5,0.0,524288,0.02359296,0.0746526518455408,31.60364624262074,read-only lower bound,False
+external39_parallel3_nominal,3.0,0.0,524288,0.02359296,0.1503908499467867,15.68776292463802,read-only lower bound,False
+external39_parallel3_nominal,2.5,1.0,524288,0.04718592,0.0746526518455408,63.20729248524148,serial U total; ERR worst case,False
+external39_parallel3_nominal,3.0,1.0,524288,0.04718592,0.1503908499467867,31.37552584927604,serial U total; ERR worst case,False
