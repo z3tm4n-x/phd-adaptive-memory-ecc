@@ -209,5 +209,27 @@ class SelectionTests(unittest.TestCase):
         self.assertTrue(r['files'][0]['name'].startswith('se_'))
 
 
+class FigureTests(unittest.TestCase):
+    def test_atomic_figures_round_trip(self):
+        import tempfile
+        from pathlib import Path
+        from figures import plt, save, validate_image
+        with tempfile.TemporaryDirectory(prefix='t67-figure-test-') as d:
+            p=Path(d)/'tiny'
+            fig,ax=plt.subplots();ax.plot([0,1],[1,2])
+            save(fig,p)
+            for extension in ('.png','.svg'):
+                validate_image(p.with_suffix(extension).read_bytes(),extension)
+            self.assertEqual(len(list(Path(d).iterdir())),2)
+
+    def test_truncated_figures_fail_validation(self):
+        import xml.etree.ElementTree as ET
+        from figures import validate_image
+        with self.assertRaises(ET.ParseError):
+            validate_image(b'<svg xmlns="http://www.w3.org/2000/svg"><path', '.svg')
+        with self.assertRaises(ValueError):
+            validate_image(b'\x89PNG\r\n\x1a\n', '.png')
+
+
 if __name__ == "__main__":
     unittest.main()

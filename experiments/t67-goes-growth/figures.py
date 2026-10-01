@@ -3,8 +3,12 @@ from __future__ import annotations
 import csv
 from datetime import datetime,timezone
 import gzip
+import io
 import json
+import os
 from pathlib import Path
+import tempfile
+import xml.etree.ElementTree as ET
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -23,10 +27,43 @@ def table(path):
         return list(csv.DictReader(f))
 
 
+def validate_image(data,extension):
+    """Reject truncated renderings before reporting a successful reproduction."""
+    if extension=='.svg':
+        if ET.fromstring(data).tag!='{http://www.w3.org/2000/svg}svg':
+            raise ValueError('Not an SVG document')
+    elif extension=='.png':
+        if not data.endswith(b'\x00\x00\x00\x00IEND\xaeB`\x82'):
+            raise ValueError('Missing PNG end marker')
+        plt.imread(io.BytesIO(data),format='png')
+    else:
+        raise ValueError(extension)
+
+
 def save(fig,path):
-    fig.savefig(path.with_suffix('.png'),dpi=170,bbox_inches='tight',metadata={'Software':'T67'})
-    fig.savefig(path.with_suffix('.svg'),bbox_inches='tight',metadata={'Date':None})
-    plt.close(fig)
+    try:
+        for extension,options in (
+            ('.png',{'dpi':170,'metadata':{'Software':'T67'}}),
+            ('.svg',{'metadata':{'Date':None}}),
+        ):
+            buffer=io.BytesIO()
+            fig.savefig(buffer,format=extension[1:],bbox_inches='tight',**options)
+            data=buffer.getvalue()
+            validate_image(data,extension)
+            target=path.with_suffix(extension)
+            with tempfile.NamedTemporaryFile(dir=target.parent,prefix=target.name+'.',suffix='.tmp',delete=False) as f:
+                temporary=Path(f.name)
+                f.write(data);f.flush();os.fsync(f.fileno())
+            try:
+                if temporary.read_bytes()!=data:
+                    raise OSError(f'Incomplete figure write: {temporary}')
+                os.replace(temporary,target)
+                if target.read_bytes()!=data:
+                    raise OSError(f'Figure changed after replacement: {target}')
+            finally:
+                temporary.unlink(missing_ok=True)
+    finally:
+        plt.close(fig)
 
 
 def broken(time,values,mask,signature,cadence):

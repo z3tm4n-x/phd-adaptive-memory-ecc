@@ -62,6 +62,8 @@ python -B experiments/t67-goes-growth/reproduce.py --cache ../t67-cache --out ..
 patch не применяется. Сырые NetCDF и промежуточные ряды вне Git.
 Новые зависимости не устанавливались; использован имеющийся NetCDF C API.
 Отдельно: `python -B -m unittest discover -s experiments/t67-goes-growth -p test_*.py -v`.
+Финальный полный повтор завершён; 24 теста проходят. Условия, независимые
+численные проверки и исправленные дефекты — [VERIFICATION.md](VERIFICATION.md).
 
 ## Навигация
 
