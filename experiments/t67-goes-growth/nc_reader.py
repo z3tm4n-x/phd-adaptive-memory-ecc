@@ -9,11 +9,13 @@ from __future__ import annotations
 import ctypes as C
 import ctypes.util
 import importlib.util
+from functools import lru_cache
 import os
 from pathlib import Path
 import numpy as np
 
 
+@lru_cache(maxsize=1)
 def library():
     candidates = []
     if os.environ.get("T67_NETCDF_LIBRARY"):

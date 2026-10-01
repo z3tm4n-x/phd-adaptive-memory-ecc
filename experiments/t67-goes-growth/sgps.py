@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 import hashlib
 import json
+import re
 from pathlib import Path
 import numpy as np
 from nc_reader import open_nc
@@ -156,6 +157,7 @@ def read(path):
             strict[:] = False
             screened[:] = False
         signature_fields = {k: attrs.get(k) for k in ("platform", "algorithm_version", "L1b_LUT_Filenames", "processing_parameters_file", "sgps_mx_instrument_id", "sgps_px_instrument_id")}
+        signature_fields["product_version"] = re.search(r"_v([^/]+)\.nc$", path.name)[1]
         signature_fields.update({"lower": lo.tolist(), "upper": hi.tolist(), "energy": ef.tolist(), "correction": action, "cadence_s": cadence})
         signature = hashlib.sha256(json.dumps(signature_fields, sort_keys=True, default=str).encode()).hexdigest()
         flux, corrected, unc = [directions(x, yaw) for x in (raw, corrected, unc)]

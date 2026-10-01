@@ -26,6 +26,23 @@ class GrowthTests(unittest.TestCase):
         self.assertAlmostEqual(result["h"][0], 1/300)
         self.assertAlmostEqual(result["log"][0], 1/300)
 
+    def test_all_pair_slopes_bounded_by_native_increment(self):
+        rng=np.random.default_rng(67)
+        x=np.r_[0.,np.exp(rng.uniform(-6,2,19))]
+        t=np.arange(len(x))*60
+        r=window_extreme(t,x,np.ones(len(x),bool),np.zeros(len(x)),60,60,.01)
+        independent=[]
+        def scalar(v):
+            return v/.01 if v<=.01 else 1+math.log(v/.01)
+        for i in range(len(x)):
+            for j in range(i+1,len(x)):
+                independent.append((scalar(x[j])-scalar(x[i]))/(t[j]-t[i]))
+        self.assertAlmostEqual(r['h'][0],max(independent))
+
+    def test_rescale_intensity_and_threshold_together(self):
+        x=np.array([0.,.01,.1,1.])
+        np.testing.assert_allclose(h_l(x,.1),h_l(x*39/32,.1*39/32))
+
     def test_resolution_and_zero_background(self):
         r = window_extreme(np.arange(3)*300, np.array([0, 1, 2]), np.ones(3, bool), np.zeros(3), 300, 60, 1)
         self.assertEqual(r["status"], "unresolved_at_native_resolution")
