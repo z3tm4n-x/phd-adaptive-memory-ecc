@@ -25,6 +25,12 @@
   "design_growth_margin": null,
   "inter_bin_growth_assumption": null,
   "raw_temporal_interpolation": false,
+  "masks": {
+    "reported": "finite nonnegative flux, at least one contributing L1b sample, known yaw",
+    "screened": "at least 90% L1b samples; zero deadtime/oob/ignored-DQF flags; matched LUT; exclude G19 P7/P8C until 2025-04-03; retain dynamic-error warnings explicitly",
+    "strict": "screened plus zero dynamic-error flags; full model also requires positive P10 and P11",
+    "response_support": "only positive-weight channels for screened/core_strict; core_only omits 390+ MeV tail"
+  },
   "apply_historical_semantic_patch": false,
   "compare_adaptive_policies": false
 }
