@@ -1,0 +1,1060 @@
+{
+  "issue": 73,
+  "instruction_and_parent_sha": "2c88749ee6103fcaee595ab22600357bb3f0649b",
+  "status": "synchronized_with_engineer_426704a_pending_targeted_confirmation_of_new_theory_sha_then_review_74",
+  "number_format": "decimal strings are exact rational numbers; no physical qualification is implied",
+  "scenario": {
+    "memory": "CY62167 internal 32+6+ERR candidate; architecture remains author's decision",
+    "orbit": "GEO",
+    "n": 38,
+    "W": 524288,
+    "T_s": "315576000",
+    "epsilon": "0.001"
+  },
+  "environments": [
+    {
+      "shield_g_cm2": "2.5",
+      "bbar_per_s": "0.00016624",
+      "solar_peak_per_s": "0.346440",
+      "B_definition": "bbar + solar_peak",
+      "FS_definition": "115776 * solar_peak",
+      "S2_rational_upper_per_s": "13918",
+      "fixed_candidate_frame_ticks": 279,
+      "t68_data_only_direct_upper": "0.01536626872599612",
+      "t68_data_only_direct_point": "0.000035227371638739395"
+    },
+    {
+      "shield_g_cm2": "3",
+      "bbar_per_s": "0.000154704",
+      "solar_peak_per_s": "0.244528",
+      "B_definition": "bbar + solar_peak",
+      "FS_definition": "115776 * solar_peak",
+      "S2_rational_upper_per_s": "6940",
+      "fixed_candidate_frame_ticks": 560,
+      "t68_data_only_direct_upper": "0.012299573120944566",
+      "t68_data_only_direct_point": "0.000030971504388263915"
+    }
+  ],
+  "environment_contract": {
+    "quantity": "upper full-word load nu, not the observed counter and not automatically the parent rate",
+    "rarity": "nu=b+s<=B; b<=bbar; integral(s)<=FS",
+    "l_per_s": "0.001",
+    "rho_entry_upper_per_s": "0.048",
+    "rho_ongoing_upper_per_s": "0.048",
+    "entry_definition": "first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory",
+    "b_Q": "bbar",
+    "D_Q_s": "300",
+    "v_e_per_s": "0.001",
+    "initial_intensity": "free up to B; may begin in an ongoing burst",
+    "coverage": "uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned",
+    "data_status": "T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification"
+  },
+  "mark_contract": {
+    "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+    "per_word_non_smu_touch_rate": "<=nu/W",
+    "sum_non_smu_word_touch_rates": "<=nu",
+    "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+    "chi_different_bit_pairs": "37/(38*W)",
+    "D_star_full38_direct_exposure_upper": "0.00005",
+    "physical_qualification": false,
+    "unknown_full38_smu_upper": null,
+    "MCU_independence_or_zero_assumption": false
+  },
+  "whole_mission_quotas": {
+    "rho0": "0.000001",
+    "delta_exec": "0.000001",
+    "delta_svc": "0.000001",
+    "delta_E": "0.000001",
+    "delta_M": "0.000001",
+    "alpha_M": "0.000001",
+    "K0": 1,
+    "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+    "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+  },
+  "service": {
+    "mode": "U unconditional complete-word write-back",
+    "tick_nominal_s": "0.000000001",
+    "constant_clock_scale_min": "0.99999",
+    "constant_clock_scale_max": "1.00001",
+    "c_ticks": 91,
+    "fence_ticks": 91,
+    "g_ticks": 120,
+    "long_multiplier": 129,
+    "slot_formula_ticks": "2*g*floor(j/2)+c*(j%2)",
+    "word_formula": "inverse_mod(129,W)*j mod W",
+    "mandatory_slots": "j divisible by 129",
+    "decision_lead_ticks": 51,
+    "gate_logic_wcet_s": "0.000000005",
+    "hold_ticks": "10000000000",
+    "price_strip_physical_s": "11",
+    "uniformity": "fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",
+    "correctness": "complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",
+    "timing": "hard mask on every history; no unlimited retries",
+    "measured_wcet": null,
+    "same_ascending_address_order_in_both_modes": false
+  },
+  "monitor": {
+    "status": "required conditional interface, not an identified flight instrument",
+    "ideal_count_lower_rate": "a_M*nu",
+    "a_M": "1000000000",
+    "quiet_upper_rate": "A_M*b_nom + eta_M",
+    "A_M": "1050000000",
+    "eta_M_per_s": "100",
+    "window_ticks": "100000000",
+    "delivery_computation_deadline_after_window_ticks": "50000000",
+    "required_delivery_computation_physical_max_s": "0.049",
+    "lease_end_from_window_start_ticks": "480000000",
+    "k": 18500,
+    "z": "0.1",
+    "phi_rational_lower": "0.095",
+    "H": "42",
+    "v_c_per_s": "0.000225",
+    "recognized_bad_window_probability": "0.000000001",
+    "independence_from_memory_required": false,
+    "missing_overflow_late_or_numeric_failure": "alarm, no LOW; safe S, price charged to declared window/global quotas",
+    "calibration_coverage_and_species_mapping": null
+  },
+  "own_ERR": {
+    "role": "first available flag enters or extends S; a single zero never releases S",
+    "max_delivery_s": "0.000001",
+    "false_flag_rate_upper_per_s": "0.000001",
+    "true_count_cost_domination": "each true flag on good execution charged to a removed word touch or one initial dirty word",
+    "under_and_over_count_contract_status": "conditional; must be qualified for the full word and own latch"
+  },
+  "resources": {
+    "price": "expected occupied common-bus time through T, including after hidden failure",
+    "b_nom": "bbar for each shielding point",
+    "quiet_tax_limit": "0.01",
+    "peak_limit": "0.8",
+    "peak_window_s": "0.001",
+    "application_delay_limit_s": "0.000003",
+    "application_max_request_s": "0.000000045",
+    "application_sigma_s": "0.000000045",
+    "application_rate": "0.04",
+    "extra_monitor_control_rate": "0.0001",
+    "extra_monitor_control_sigma_s": "0.0000001",
+    "extra_request_max_s": "0.000000045",
+    "quiet_return_example": {
+      "T_Q_min": "0.9*T",
+      "K_Q_max": 1000,
+      "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+    },
+    "resource_qualification": false,
+    "T58_grid_changed": false
+  },
+  "engineer_handoff": {
+    "via": "orchestrator to existing Issue #72 / PR #77",
+    "instructions": "theory/t73-burst-mode-count-appendix.md, section Ж",
+    "checks_executed_by_theorist": false,
+    "engineering_source_sha": "426704a12cffddf01463ef11a21c1eaa20baee05",
+    "tested_theory_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+    "tests_reported_passed": 27,
+    "new_theory_sha_confirmation": "pending; old run is not automatically a confirmation of new text",
+    "targeted_checks": [
+      "E.2 arbitrary-phase 2Wc/T edge, counterexample, tau_min_any, J0 and class lower",
+      "full-domain fixed M and M+1, exact rarity expression, occupied-cost edge and resource",
+      "expand all four JSON variants and compare with engineer checked inputs; no favorable input substitution",
+      "revised ka=85 mandatory-slot metadata, finite LOW and shorter-hold price/returns",
+      "retain existing numerical-only regressions and report the exact newly checked scientific SHA"
+    ]
+  },
+  "synchronization": {
+    "source_engineer_pr": 77,
+    "source_engineer_sha": "426704a12cffddf01463ef11a21c1eaa20baee05",
+    "source_theory_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+    "source_directory": "experiments/t72-r0a-onset-inputs/",
+    "sources": [
+      "RESULTS.md",
+      "contracts.md",
+      "inputs/t72_explicit_changes.json",
+      "outputs/t73_checked_inputs.json",
+      "outputs/t73_directed_bounds.csv",
+      "outputs/t73_summary.csv"
+    ],
+    "original_numeric_root_input_preserved": true,
+    "source_original_json_sha256": "0cec8d8c868a73ed4c9499db230a2a3b6197ec2864f91838f492b3e6f3489186",
+    "old_fixed_frame_candidates": "279/560 are retained as historical sufficient examples, not the primary comparator",
+    "variant_expansion": "For each variant start from root core_input_fields; recursively replace object fields from overrides; replace arrays as a whole. Variants do NOT overwrite one another.",
+    "core_input_fields": [
+      "scenario",
+      "environments",
+      "environment_contract",
+      "mark_contract",
+      "whole_mission_quotas",
+      "service",
+      "monitor",
+      "own_ERR",
+      "resources"
+    ],
+    "only_source_metadata_correction": "For both T72 revisions, service.mandatory_slots is j divisible by 85, consistent with long_multiplier and the engineering Calendar code. The old expanded descriptive string 129 is not the rule.",
+    "physical_qualification": false,
+    "numerical_reproduction_command": "python -B experiments/t72-r0a-onset-inputs/run.py --cache ../t72-cache --out ../t72-numerical-confirmation --numerical-only",
+    "command_checkout": "engineer SHA above; new scientific SHA must be explicitly checked by the engineer before #74"
+  },
+  "variant_definitions": [
+    {
+      "set": "T73_published",
+      "status": "All exact published inputs; conditional, not physical qualification",
+      "base": "root core_input_fields",
+      "overrides": {}
+    },
+    {
+      "set": "T72_budgets_explicit_T73_extension",
+      "status": "T72 D/four quotas/K0=0 retained; delta_exec=alpha_M=1e-6 ADDED explicitly. T73 monitor, total-load growth, 1ns paired calendar and full mark contract are additional assumptions; original T72 has no certified Poisson monitor.",
+      "base": "root core_input_fields",
+      "overrides": {
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016623855053804845",
+            "solar_peak_per_s": "0.346439355082072",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.00015470350295316676",
+            "solar_peak_per_s": "0.24452779251706908",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "mark_contract": {
+          "D_star_full38_direct_exposure_upper": "0.0001"
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.00001",
+          "delta_svc": "0.00001",
+          "delta_E": "0.00001",
+          "delta_M": "0.00001",
+          "K0": 0
+        }
+      }
+    },
+    {
+      "set": "T72_explicit_same_method_revision",
+      "status": "Same rule and unchanged T72 environmental/direct/known error inputs; explicit proposed changes: U 90 ticks, g119, ka85, hold5s/D6s; monitor a=1e11,A/a=1.001,w=.05,d=.01,lease=.175,k840000,z.01,vc.0001782. Stronger monitor and new timing need author qualification; no silent adoption.",
+      "base": "root core_input_fields",
+      "overrides": {
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016623855053804845",
+            "solar_peak_per_s": "0.346439355082072",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.00015470350295316676",
+            "solar_peak_per_s": "0.24452779251706908",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "mark_contract": {
+          "D_star_full38_direct_exposure_upper": "0.0001"
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.00001",
+          "delta_svc": "0.00001",
+          "delta_E": "0.00001",
+          "delta_M": "0.00001",
+          "K0": 0
+        },
+        "service": {
+          "c_ticks": 90,
+          "fence_ticks": 90,
+          "g_ticks": 119,
+          "long_multiplier": 85,
+          "word_formula": "inverse_mod(85,W)*j mod W",
+          "mandatory_slots": "j divisible by 85",
+          "hold_ticks": "5000000000",
+          "price_strip_physical_s": "6",
+          "required_joint_U_WCET_physical_s": "0.0000000899991",
+          "warning": "Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound."
+        },
+        "monitor": {
+          "a_M": "100000000000",
+          "A_M": "100100000000",
+          "window_ticks": "50000000",
+          "delivery_computation_deadline_after_window_ticks": "10000000",
+          "required_delivery_computation_physical_max_s": "0.009",
+          "lease_end_from_window_start_ticks": "175000000",
+          "k": 840000,
+          "z": "0.01",
+          "phi_rational_lower": "0.00995",
+          "v_c_per_s": "0.0001782"
+        }
+      }
+    },
+    {
+      "set": "T72_revision_shorter_return_hold",
+      "status": "Same explicit revision, hold reduced 5s -> 1s and price strip 6s -> 1.5s after the return-price bound failed. Both previous rows retained. Physical monitor/WCET requirements remain unqualified.",
+      "base": "root core_input_fields",
+      "overrides": {
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016623855053804845",
+            "solar_peak_per_s": "0.346439355082072",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.00015470350295316676",
+            "solar_peak_per_s": "0.24452779251706908",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "mark_contract": {
+          "D_star_full38_direct_exposure_upper": "0.0001"
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.00001",
+          "delta_svc": "0.00001",
+          "delta_E": "0.00001",
+          "delta_M": "0.00001",
+          "K0": 0
+        },
+        "service": {
+          "c_ticks": 90,
+          "fence_ticks": 90,
+          "g_ticks": 119,
+          "long_multiplier": 85,
+          "word_formula": "inverse_mod(85,W)*j mod W",
+          "mandatory_slots": "j divisible by 85",
+          "hold_ticks": "1000000000",
+          "price_strip_physical_s": "1.5",
+          "required_joint_U_WCET_physical_s": "0.0000000899991",
+          "warning": "Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound."
+        },
+        "monitor": {
+          "a_M": "100000000000",
+          "A_M": "100100000000",
+          "window_ticks": "50000000",
+          "delivery_computation_deadline_after_window_ticks": "10000000",
+          "required_delivery_computation_physical_max_s": "0.009",
+          "lease_end_from_window_start_ticks": "175000000",
+          "k": 840000,
+          "z": "0.01",
+          "phi_rational_lower": "0.00995",
+          "v_c_per_s": "0.0001782"
+        }
+      }
+    }
+  ],
+  "verified_results": [
+    {
+      "set": "T73_published",
+      "shield_g_cm2": "2.5",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": true,
+      "risk_upper": "0.000989555583561280988",
+      "quiet_mission_upper": "0.00746544761288198202975326",
+      "quiet_24h_prepared_upper": "0.00765849274655304675148498",
+      "quiet_returns_upper": "0.00823629250724708453361139",
+      "peak_upper": "0.75858958052",
+      "app_delay_upper_s": "0.00000290476737158674585134560",
+      "fixed_cost_lower": "0.651132735374722563412175",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "26.598625021888",
+          "upper": "26.598625021888"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.21707771985149",
+          "upper": "0.21707771985149"
+        },
+        "time_margin_s": {
+          "lower": "0.16707721985149",
+          "upper": "0.16707721985149"
+        },
+        "strip_margin_s": {
+          "lower": "0.68698048884618",
+          "upper": "0.68698048884618"
+        },
+        "fixed_strong_M": {
+          "lower": "73272630",
+          "upper": "73272630"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.0732733627263",
+          "upper": "0.0732733627263"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999992306785770422543",
+          "upper": "0.000999999992306785770422544"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000523112044090981",
+          "upper": "0.00100000000523112044090982"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.651132735374722563412175",
+          "upper": "0.651132735374722563412176"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.651132735374723716870106",
+          "upper": "0.651132735374723716870107"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.65478054774",
+          "upper": "0.65478054774"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "4.72194719210951548456734E-7",
+          "upper": "4.72194719210951548456735E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.77097294553110067002723",
+          "upper": "4.77097294553110067002724"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24268",
+          "upper": "24268"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00758670203071222352517867",
+          "upper": "0.00758670203071222352517868"
+        }
+      }
+    },
+    {
+      "set": "T73_published",
+      "shield_g_cm2": "3",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": true,
+      "risk_upper": "0.000581877170730442218484211",
+      "quiet_mission_upper": "0.00736253860794247586662915",
+      "quiet_24h_prepared_upper": "0.00755558374161353750008948",
+      "quiet_returns_upper": "0.00780660279483914132524938",
+      "peak_upper": "0.75858958052",
+      "app_delay_upper_s": "0.00000290476737158674585134560",
+      "fixed_cost_lower": "0.324648364009373316419550",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "26.598625021888",
+          "upper": "26.598625021888"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.21707771985149",
+          "upper": "0.21707771985149"
+        },
+        "time_margin_s": {
+          "lower": "0.16707721985149",
+          "upper": "0.16707721985149"
+        },
+        "strip_margin_s": {
+          "lower": "0.68698048884618",
+          "upper": "0.68698048884618"
+        },
+        "fixed_strong_M": {
+          "lower": "146959644",
+          "upper": "146959644"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.14696111359644",
+          "upper": "0.14696111359644"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999999662411825315225",
+          "upper": "0.000999999999662411825315226"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000610635775418813",
+          "upper": "0.00100000000610635775418814"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.324648364009373316419550",
+          "upper": "0.324648364009373316419551"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.324648364009374469877481",
+          "upper": "0.324648364009374469877482"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.32647526472",
+          "upper": "0.32647526472"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "3.03850024882740797235556E-7",
+          "upper": "3.03850024882740797235557E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.77097294553110067002723",
+          "upper": "4.77097294553110067002724"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24268",
+          "upper": "24268"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00378755034053193191605828",
+          "upper": "0.00378755034053193191605829"
+        }
+      }
+    },
+    {
+      "set": "T72_budgets_explicit_T73_extension",
+      "shield_g_cm2": "2.5",
+      "all_scalar_tests_pass": false,
+      "passes_also_24h_and_returns": false,
+      "risk_upper": "0.0010755139903965535",
+      "quiet_mission_upper": "0.00753062617468077522310142",
+      "quiet_24h_prepared_upper": "0.00762714874316519080538314",
+      "quiet_returns_upper": "0.00830143732008128088916534",
+      "peak_upper": "0.75858958052",
+      "app_delay_upper_s": "0.00000290476737158674585134560",
+      "fixed_cost_lower": "0.701466269830504827735589",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "26.598625021888",
+          "upper": "26.598625021888"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.21707771985149",
+          "upper": "0.21707771985149"
+        },
+        "time_margin_s": {
+          "lower": "0.16707721985149",
+          "upper": "0.16707721985149"
+        },
+        "strip_margin_s": {
+          "lower": "0.68698048884618",
+          "upper": "0.68698048884618"
+        },
+        "fixed_strong_M": {
+          "lower": "68014971",
+          "upper": "68014971"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.06801565114971",
+          "upper": "0.06801565114971"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999996775662491371924",
+          "upper": "0.000999999996775662491371925"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000969928774404846",
+          "upper": "0.00100000000969928774404847"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.701466269830504827735589",
+          "upper": "0.701466269830504827735590"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.701466269830505981193520",
+          "upper": "0.701466269830505981193521"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.705353609182084732055664",
+          "upper": "0.705353609182084732055665"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "5.99214787753365211191670E-7",
+          "upper": "5.99214787753365211191671E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.77097294553110067002723",
+          "upper": "4.77097294553110067002724"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24268",
+          "upper": "24268"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00758667383858966104361944",
+          "upper": "0.00758667383858966104361945"
+        }
+      }
+    },
+    {
+      "set": "T72_budgets_explicit_T73_extension",
+      "shield_g_cm2": "3",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": true,
+      "risk_upper": "0.000667847808512342973684211",
+      "quiet_mission_upper": "0.00742772570754672763174088",
+      "quiet_24h_prepared_upper": "0.00752424827603114015346120",
+      "quiet_returns_upper": "0.00787176493244873935133447",
+      "peak_upper": "0.75858958052",
+      "app_delay_upper_s": "0.00000290476737158674585134560",
+      "fixed_cost_lower": "0.349737440764074245029602",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "26.598625021888",
+          "upper": "26.598625021888"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.21707771985149",
+          "upper": "0.21707771985149"
+        },
+        "time_margin_s": {
+          "lower": "0.16707721985149",
+          "upper": "0.16707721985149"
+        },
+        "strip_margin_s": {
+          "lower": "0.68698048884618",
+          "upper": "0.68698048884618"
+        },
+        "fixed_strong_M": {
+          "lower": "136417216",
+          "upper": "136417216"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.13641858017216",
+          "upper": "0.13641858017216"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999998952627313631883",
+          "upper": "0.000999999998952627313631884"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000539609555559210",
+          "upper": "0.00100000000539609555559211"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.349737440764074245029602",
+          "upper": "0.349737440764074245029603"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.349737440764075398487532",
+          "upper": "0.349737440764075398487533"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.35172951726",
+          "upper": "0.35172951726"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "3.08093029470943973089863E-7",
+          "upper": "3.08093029470943973089864E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.77097294553110067002723",
+          "upper": "4.77097294553110067002724"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24268",
+          "upper": "24268"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00378754391222632701423503",
+          "upper": "0.00378754391222632701423504"
+        }
+      }
+    },
+    {
+      "set": "T72_explicit_same_method_revision",
+      "shield_g_cm2": "2.5",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": false,
+      "risk_upper": "0.000997685333992567132159369",
+      "quiet_mission_upper": "0.00989599445173986818925169",
+      "quiet_24h_prepared_upper": "0.00994850213409556853364145",
+      "quiet_returns_upper": "0.0105567714721576315599573",
+      "peak_upper": "0.75655956018",
+      "app_delay_upper_s": "0.00000288044446541087826701201",
+      "fixed_cost_lower": "0.693757849282916862595638",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "5.46134554179",
+          "upper": "5.46134554179"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.01260606509439",
+          "upper": "0.01260606509439"
+        },
+        "time_margin_s": {
+          "lower": "0.00260596509439",
+          "upper": "0.00260596509439"
+        },
+        "strip_margin_s": {
+          "lower": "0.82755618808912",
+          "upper": "0.82755618808912"
+        },
+        "fixed_strong_M": {
+          "lower": "68014971",
+          "upper": "68014971"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.06801565114971",
+          "upper": "0.06801565114971"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999996775662491371924",
+          "upper": "0.000999999996775662491371925"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000969928774404846",
+          "upper": "0.00100000000969928774404847"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.693757849282916862595638",
+          "upper": "0.693757849282916862595639"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.693757849282918003378207",
+          "upper": "0.693757849282918003378208"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.697645532102084732055664",
+          "upper": "0.697645532102084732055665"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "5.75020857333479809176769E-7",
+          "upper": "5.75020857333479809176770E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.71854467297224912920547",
+          "upper": "4.71854467297224912920548"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24538",
+          "upper": "24538"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00758667384179404002587584",
+          "upper": "0.00758667384179404002587585"
+        }
+      }
+    },
+    {
+      "set": "T72_explicit_same_method_revision",
+      "shield_g_cm2": "3",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": false,
+      "risk_upper": "0.000593416370290725026896211",
+      "quiet_mission_upper": "0.00983929825602544798507100",
+      "quiet_24h_prepared_upper": "0.00989180593838114832825149",
+      "quiet_returns_upper": "0.0101900345770896086239820",
+      "peak_upper": "0.75655956018",
+      "app_delay_upper_s": "0.00000288044446541087826701201",
+      "fixed_cost_lower": "0.345894172184249253325980",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "5.46134554179",
+          "upper": "5.46134554179"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.01260606509439",
+          "upper": "0.01260606509439"
+        },
+        "time_margin_s": {
+          "lower": "0.00260596509439",
+          "upper": "0.00260596509439"
+        },
+        "strip_margin_s": {
+          "lower": "0.82755618808912",
+          "upper": "0.82755618808912"
+        },
+        "fixed_strong_M": {
+          "lower": "136417216",
+          "upper": "136417216"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.13641858017216",
+          "upper": "0.13641858017216"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999998952627313631883",
+          "upper": "0.000999999998952627313631884"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000539609555559210",
+          "upper": "0.00100000000539609555559211"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.345894172184249253325980",
+          "upper": "0.345894172184249253325981"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.345894172184250394108549",
+          "upper": "0.345894172184250394108550"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.34788547882",
+          "upper": "0.34788547882"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "3.05548875464928425362168E-7",
+          "upper": "3.05548875464928425362169E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.71854467297224912920547",
+          "upper": "4.71854467297224912920548"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24538",
+          "upper": "24538"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00378754391382934382046657",
+          "upper": "0.00378754391382934382046658"
+        }
+      }
+    },
+    {
+      "set": "T72_revision_shorter_return_hold",
+      "shield_g_cm2": "2.5",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": true,
+      "risk_upper": "0.000997685333992567132159369",
+      "quiet_mission_upper": "0.00932673099585581029492880",
+      "quiet_24h_prepared_upper": "0.00933985791887464110745981",
+      "quiet_returns_upper": "0.00995350914191962389356440",
+      "peak_upper": "0.75655956018",
+      "app_delay_upper_s": "0.00000288044446541087826701201",
+      "fixed_cost_lower": "0.693757849282916862595638",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "5.46134554179",
+          "upper": "5.46134554179"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.01260606509439",
+          "upper": "0.01260606509439"
+        },
+        "time_margin_s": {
+          "lower": "0.00260596509439",
+          "upper": "0.00260596509439"
+        },
+        "strip_margin_s": {
+          "lower": "0.32759618808912",
+          "upper": "0.32759618808912"
+        },
+        "fixed_strong_M": {
+          "lower": "68014971",
+          "upper": "68014971"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.06801565114971",
+          "upper": "0.06801565114971"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999996775662491371924",
+          "upper": "0.000999999996775662491371925"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000969928774404846",
+          "upper": "0.00100000000969928774404847"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.693757849282916862595638",
+          "upper": "0.693757849282916862595639"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.693757849282918003378207",
+          "upper": "0.693757849282918003378208"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.697645532102084732055664",
+          "upper": "0.697645532102084732055665"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "5.75020857333479809176769E-7",
+          "upper": "5.75020857333479809176770E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.71854467297224912920547",
+          "upper": "4.71854467297224912920548"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24538",
+          "upper": "24538"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00758667384179404002587584",
+          "upper": "0.00758667384179404002587585"
+        }
+      }
+    },
+    {
+      "set": "T72_revision_shorter_return_hold",
+      "shield_g_cm2": "3",
+      "all_scalar_tests_pass": true,
+      "passes_also_24h_and_returns": true,
+      "risk_upper": "0.000593416370290725026896211",
+      "quiet_mission_upper": "0.00930929352036791091754187",
+      "quiet_24h_prepared_upper": "0.00932242044338674172977056",
+      "quiet_returns_upper": "0.00963250810455234063705850",
+      "peak_upper": "0.75655956018",
+      "app_delay_upper_s": "0.00000288044446541087826701201",
+      "fixed_cost_lower": "0.345894172184249253325980",
+      "quantity_types": "risk/quiet/peak/delay are upper bounds; fixed_cost_lower is a lower bound on the actual occupied cost of the displayed certified schedule, NOT on the whole constant class",
+      "directed_formula_bounds": {
+        "LOW_margin": {
+          "lower": "5.46134554179",
+          "upper": "5.46134554179"
+        },
+        "d_safe_lower_s": {
+          "lower": "0.01260606509439",
+          "upper": "0.01260606509439"
+        },
+        "time_margin_s": {
+          "lower": "0.00260596509439",
+          "upper": "0.00260596509439"
+        },
+        "strip_margin_s": {
+          "lower": "0.32759618808912",
+          "upper": "0.32759618808912"
+        },
+        "fixed_strong_M": {
+          "lower": "136417216",
+          "upper": "136417216"
+        },
+        "fixed_period_upper_s": {
+          "lower": "0.13641858017216",
+          "upper": "0.13641858017216"
+        },
+        "fixed_risk_upper": {
+          "lower": "0.000999999998952627313631883",
+          "upper": "0.000999999998952627313631884"
+        },
+        "fixed_risk_next_quantum": {
+          "lower": "0.00100000000539609555559210",
+          "upper": "0.00100000000539609555559211"
+        },
+        "fixed_cost_lower": {
+          "lower": "0.345894172184249253325980",
+          "upper": "0.345894172184249253325981"
+        },
+        "fixed_cost_upper": {
+          "lower": "0.345894172184250394108549",
+          "upper": "0.345894172184250394108550"
+        },
+        "fixed_peak_upper": {
+          "lower": "0.34788547882",
+          "upper": "0.34788547882"
+        },
+        "fixed_delay_upper_s": {
+          "lower": "3.05548875464928425362168E-7",
+          "upper": "3.05548875464928425362169E-7"
+        },
+        "fixed_resource_ok": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_arbitrary_phase_tau_min_s": {
+          "lower": "4.71854467297224912920547",
+          "upper": "4.71854467297224912920548"
+        },
+        "E3_arbitrary_phase_J_required": {
+          "lower": "24538",
+          "upper": "24538"
+        },
+        "E3_arbitrary_phase_J0_valid": {
+          "lower": "True",
+          "upper": "True"
+        },
+        "E3_risk_lower": {
+          "lower": "0.00378754391382934382046657",
+          "upper": "0.00378754391382934382046658"
+        }
+      }
+    }
+  ],
+  "fixed_class_necessary_bound": {
+    "class": "deterministic constant full-block U; identical per-word period, arbitrary fixed word phases; no out-of-window correction except delta_exec; charged through T",
+    "tax_limit": "0.01",
+    "arbitrary_phase_cost_edge": "2*W*c_plus/T",
+    "tau_min_any": "W*c_minus/(tax_limit+2*W*c_plus/T)",
+    "previous_2c_edge_domain": "proved balanced paired floor-phase calendar only, not arbitrary word phases",
+    "witness_peak_length_s": "115776",
+    "J0": 24540,
+    "ell": "(115776-J0*c_plus)/(4*J0)",
+    "cells": 25732055040,
+    "risk_lower_formula": "1-exp(-cells*(37/76)*(B*ell/W)^2*exp(-B*ell/W))-delta_exec",
+    "excludes": "declared deterministic constant U class with occupied tax <=1%; no claim about arbitrary schedules, C/E, seed-averaged random mixtures or physical qualification"
+  }
+}

@@ -1,0 +1,137 @@
+location,set,shield_g_cm2,metric,scale,printed,direction,formula_lower,formula_upper,pass_check
+main §6,T73_published,2.5,risk_upper,1,"0,000989556",upper,0.000989555583561280988,0.000989555583561280988,True
+main §6,T73_published,2.5,quiet_mission_upper,100,"0,746545",upper,0.746544761288198202975325,0.746544761288198202975326,True
+main §6,T73_published,2.5,quiet_returns_upper,100,"0,823630",upper,0.823629250724708453361138,0.823629250724708453361139,True
+main §6,T73_published,2.5,fixed_cost_lower,100,"65,113273",lower,65.1132735374722563412175,65.1132735374722563412176,True
+main §6,T73_published,3,risk_upper,1,"0,000581878",upper,0.000581877170730442218484210,0.000581877170730442218484211,True
+main §6,T73_published,3,quiet_mission_upper,100,"0,736254",upper,0.736253860794247586662914,0.736253860794247586662915,True
+main §6,T73_published,3,quiet_returns_upper,100,"0,780661",upper,0.780660279483914132524937,0.780660279483914132524938,True
+main §6,T73_published,3,fixed_cost_lower,100,"32,464836",lower,32.4648364009373316419550,32.4648364009373316419551,True
+main §6,T72_revision_shorter_return_hold,2.5,risk_upper,1,"0,000997686",upper,0.000997685333992567132159368,0.000997685333992567132159369,True
+main §6,T72_revision_shorter_return_hold,2.5,quiet_mission_upper,100,"0,932674",upper,0.932673099585581029492879,0.932673099585581029492880,True
+main §6,T72_revision_shorter_return_hold,2.5,quiet_returns_upper,100,"0,995351",upper,0.995350914191962389356439,0.995350914191962389356440,True
+main §6,T72_revision_shorter_return_hold,2.5,fixed_cost_lower,100,"69,375784",lower,69.3757849282916862595638,69.3757849282916862595639,True
+main §6,T72_revision_shorter_return_hold,3,risk_upper,1,"0,000593417",upper,0.000593416370290725026896210,0.000593416370290725026896211,True
+main §6,T72_revision_shorter_return_hold,3,quiet_mission_upper,100,"0,930930",upper,0.930929352036791091754186,0.930929352036791091754187,True
+main §6,T72_revision_shorter_return_hold,3,quiet_returns_upper,100,"0,963251",upper,0.963250810455234063705849,0.963250810455234063705850,True
+main §6,T72_revision_shorter_return_hold,3,fixed_cost_lower,100,"34,589417",lower,34.5894172184249253325980,34.5894172184249253325981,True
+Д.5,T73_published,2.5,risk_upper,1,"0,000989556",upper,0.000989555583561280988,0.000989555583561280988,True
+Д.5,T73_published,2.5,quiet_mission_upper,100,"0,746545",upper,0.746544761288198202975325,0.746544761288198202975326,True
+Д.5,T73_published,2.5,quiet_24h_prepared_upper,100,"0,765850",upper,0.765849274655304675148497,0.765849274655304675148498,True
+Д.5,T73_published,2.5,quiet_returns_upper,100,"0,823630",upper,0.823629250724708453361138,0.823629250724708453361139,True
+Д.5,T73_published,3,risk_upper,1,"0,000581878",upper,0.000581877170730442218484210,0.000581877170730442218484211,True
+Д.5,T73_published,3,quiet_mission_upper,100,"0,736254",upper,0.736253860794247586662914,0.736253860794247586662915,True
+Д.5,T73_published,3,quiet_24h_prepared_upper,100,"0,755559",upper,0.755558374161353750008947,0.755558374161353750008948,True
+Д.5,T73_published,3,quiet_returns_upper,100,"0,780661",upper,0.780660279483914132524937,0.780660279483914132524938,True
+Д.5,T72_budgets_explicit_T73_extension,2.5,risk_upper,1,"0,001075514",upper,0.0010755139903965535,0.0010755139903965535,True
+Д.5,T72_budgets_explicit_T73_extension,2.5,quiet_mission_upper,100,"0,753063",upper,0.753062617468077522310141,0.753062617468077522310142,True
+Д.5,T72_budgets_explicit_T73_extension,2.5,quiet_24h_prepared_upper,100,"0,762715",upper,0.762714874316519080538313,0.762714874316519080538314,True
+Д.5,T72_budgets_explicit_T73_extension,2.5,quiet_returns_upper,100,"0,830144",upper,0.830143732008128088916533,0.830143732008128088916534,True
+Д.5,T72_budgets_explicit_T73_extension,3,risk_upper,1,"0,000667848",upper,0.000667847808512342973684210,0.000667847808512342973684211,True
+Д.5,T72_budgets_explicit_T73_extension,3,quiet_mission_upper,100,"0,742773",upper,0.742772570754672763174087,0.742772570754672763174088,True
+Д.5,T72_budgets_explicit_T73_extension,3,quiet_24h_prepared_upper,100,"0,752425",upper,0.752424827603114015346119,0.752424827603114015346120,True
+Д.5,T72_budgets_explicit_T73_extension,3,quiet_returns_upper,100,"0,787177",upper,0.787176493244873935133446,0.787176493244873935133447,True
+Д.5,T72_explicit_same_method_revision,2.5,risk_upper,1,"0,000997686",upper,0.000997685333992567132159368,0.000997685333992567132159369,True
+Д.5,T72_explicit_same_method_revision,2.5,quiet_mission_upper,100,"0,989600",upper,0.989599445173986818925168,0.989599445173986818925169,True
+Д.5,T72_explicit_same_method_revision,2.5,quiet_24h_prepared_upper,100,"0,994851",upper,0.994850213409556853364144,0.994850213409556853364145,True
+Д.5,T72_explicit_same_method_revision,2.5,quiet_returns_upper,100,"1,055678",upper,1.05567714721576315599572,1.05567714721576315599573,True
+Д.5,T72_explicit_same_method_revision,3,risk_upper,1,"0,000593417",upper,0.000593416370290725026896210,0.000593416370290725026896211,True
+Д.5,T72_explicit_same_method_revision,3,quiet_mission_upper,100,"0,983930",upper,0.983929825602544798507099,0.983929825602544798507100,True
+Д.5,T72_explicit_same_method_revision,3,quiet_24h_prepared_upper,100,"0,989181",upper,0.989180593838114832825148,0.989180593838114832825149,True
+Д.5,T72_explicit_same_method_revision,3,quiet_returns_upper,100,"1,019004",upper,1.01900345770896086239819,1.01900345770896086239820,True
+Д.5,T72_revision_shorter_return_hold,2.5,risk_upper,1,"0,000997686",upper,0.000997685333992567132159368,0.000997685333992567132159369,True
+Д.5,T72_revision_shorter_return_hold,2.5,quiet_mission_upper,100,"0,932674",upper,0.932673099585581029492879,0.932673099585581029492880,True
+Д.5,T72_revision_shorter_return_hold,2.5,quiet_24h_prepared_upper,100,"0,933986",upper,0.933985791887464110745980,0.933985791887464110745981,True
+Д.5,T72_revision_shorter_return_hold,2.5,quiet_returns_upper,100,"0,995351",upper,0.995350914191962389356439,0.995350914191962389356440,True
+Д.5,T72_revision_shorter_return_hold,3,risk_upper,1,"0,000593417",upper,0.000593416370290725026896210,0.000593416370290725026896211,True
+Д.5,T72_revision_shorter_return_hold,3,quiet_mission_upper,100,"0,930930",upper,0.930929352036791091754186,0.930929352036791091754187,True
+Д.5,T72_revision_shorter_return_hold,3,quiet_24h_prepared_upper,100,"0,932243",upper,0.932242044338674172977055,0.932242044338674172977056,True
+Д.5,T72_revision_shorter_return_hold,3,quiet_returns_upper,100,"0,963251",upper,0.963250810455234063705849,0.963250810455234063705850,True
+Е.1 period/price,T73_published,2.5,fixed_strong_M,1,73272630,exact,73272630,73272630,True
+Е.1 period/price,T73_published,2.5,fixed_period_upper_s,1,"0,0732733627263",exact,0.0732733627263,0.0732733627263,True
+Е.1 period/price,T73_published,2.5,fixed_cost_lower,100,"65,113273",lower,65.1132735374722563412175,65.1132735374722563412176,True
+Е.1 period/price,T73_published,3,fixed_strong_M,1,146959644,exact,146959644,146959644,True
+Е.1 period/price,T73_published,3,fixed_period_upper_s,1,"0,14696111359644",exact,0.14696111359644,0.14696111359644,True
+Е.1 period/price,T73_published,3,fixed_cost_lower,100,"32,464836",lower,32.4648364009373316419550,32.4648364009373316419551,True
+Е.1 period/price,T72_budgets_explicit_T73_extension,2.5,fixed_strong_M,1,68014971,exact,68014971,68014971,True
+Е.1 period/price,T72_budgets_explicit_T73_extension,2.5,fixed_period_upper_s,1,"0,06801565114971",exact,0.06801565114971,0.06801565114971,True
+Е.1 period/price,T72_budgets_explicit_T73_extension,2.5,fixed_cost_lower,100,"70,146626",lower,70.1466269830504827735589,70.1466269830504827735590,True
+Е.1 period/price,T72_budgets_explicit_T73_extension,3,fixed_strong_M,1,136417216,exact,136417216,136417216,True
+Е.1 period/price,T72_budgets_explicit_T73_extension,3,fixed_period_upper_s,1,"0,13641858017216",exact,0.13641858017216,0.13641858017216,True
+Е.1 period/price,T72_budgets_explicit_T73_extension,3,fixed_cost_lower,100,"34,973744",lower,34.9737440764074245029602,34.9737440764074245029603,True
+Е.1 period/price,T72_explicit_same_method_revision,2.5,fixed_strong_M,1,68014971,exact,68014971,68014971,True
+Е.1 period/price,T72_explicit_same_method_revision,2.5,fixed_period_upper_s,1,"0,06801565114971",exact,0.06801565114971,0.06801565114971,True
+Е.1 period/price,T72_explicit_same_method_revision,2.5,fixed_cost_lower,100,"69,375784",lower,69.3757849282916862595638,69.3757849282916862595639,True
+Е.1 period/price,T72_revision_shorter_return_hold,2.5,fixed_strong_M,1,68014971,exact,68014971,68014971,True
+Е.1 period/price,T72_revision_shorter_return_hold,2.5,fixed_period_upper_s,1,"0,06801565114971",exact,0.06801565114971,0.06801565114971,True
+Е.1 period/price,T72_revision_shorter_return_hold,2.5,fixed_cost_lower,100,"69,375784",lower,69.3757849282916862595638,69.3757849282916862595639,True
+Е.1 period/price,T72_explicit_same_method_revision,3,fixed_strong_M,1,136417216,exact,136417216,136417216,True
+Е.1 period/price,T72_explicit_same_method_revision,3,fixed_period_upper_s,1,"0,13641858017216",exact,0.13641858017216,0.13641858017216,True
+Е.1 period/price,T72_explicit_same_method_revision,3,fixed_cost_lower,100,"34,589417",lower,34.5894172184249253325980,34.5894172184249253325981,True
+Е.1 period/price,T72_revision_shorter_return_hold,3,fixed_strong_M,1,136417216,exact,136417216,136417216,True
+Е.1 period/price,T72_revision_shorter_return_hold,3,fixed_period_upper_s,1,"0,13641858017216",exact,0.13641858017216,0.13641858017216,True
+Е.1 period/price,T72_revision_shorter_return_hold,3,fixed_cost_lower,100,"34,589417",lower,34.5894172184249253325980,34.5894172184249253325981,True
+Е.1 M/M+1,T73_published,2.5,fixed_risk_upper,1,"0,000999999992306786",upper,0.000999999992306785770422543,0.000999999992306785770422544,True
+Е.1 M/M+1,T73_published,2.5,fixed_risk_next_quantum,1,"0,001000000005231120",lower,0.00100000000523112044090981,0.00100000000523112044090982,True
+Е.1 M/M+1,T73_published,3,fixed_risk_upper,1,"0,000999999999662412",upper,0.000999999999662411825315225,0.000999999999662411825315226,True
+Е.1 M/M+1,T73_published,3,fixed_risk_next_quantum,1,"0,001000000006106357",lower,0.00100000000610635775418813,0.00100000000610635775418814,True
+Е.1 M/M+1,T72_budgets_explicit_T73_extension,2.5,fixed_risk_upper,1,"0,000999999996775663",upper,0.000999999996775662491371924,0.000999999996775662491371925,True
+Е.1 M/M+1,T72_budgets_explicit_T73_extension,2.5,fixed_risk_next_quantum,1,"0,001000000009699287",lower,0.00100000000969928774404846,0.00100000000969928774404847,True
+Е.1 M/M+1,T72_explicit_same_method_revision,2.5,fixed_risk_upper,1,"0,000999999996775663",upper,0.000999999996775662491371924,0.000999999996775662491371925,True
+Е.1 M/M+1,T72_explicit_same_method_revision,2.5,fixed_risk_next_quantum,1,"0,001000000009699287",lower,0.00100000000969928774404846,0.00100000000969928774404847,True
+Е.1 M/M+1,T72_revision_shorter_return_hold,2.5,fixed_risk_upper,1,"0,000999999996775663",upper,0.000999999996775662491371924,0.000999999996775662491371925,True
+Е.1 M/M+1,T72_revision_shorter_return_hold,2.5,fixed_risk_next_quantum,1,"0,001000000009699287",lower,0.00100000000969928774404846,0.00100000000969928774404847,True
+Е.1 M/M+1,T72_budgets_explicit_T73_extension,3,fixed_risk_upper,1,"0,000999999998952628",upper,0.000999999998952627313631883,0.000999999998952627313631884,True
+Е.1 M/M+1,T72_budgets_explicit_T73_extension,3,fixed_risk_next_quantum,1,"0,001000000005396095",lower,0.00100000000539609555559210,0.00100000000539609555559211,True
+Е.1 M/M+1,T72_explicit_same_method_revision,3,fixed_risk_upper,1,"0,000999999998952628",upper,0.000999999998952627313631883,0.000999999998952627313631884,True
+Е.1 M/M+1,T72_explicit_same_method_revision,3,fixed_risk_next_quantum,1,"0,001000000005396095",lower,0.00100000000539609555559210,0.00100000000539609555559211,True
+Е.1 M/M+1,T72_revision_shorter_return_hold,3,fixed_risk_upper,1,"0,000999999998952628",upper,0.000999999998952627313631883,0.000999999998952627313631884,True
+Е.1 M/M+1,T72_revision_shorter_return_hold,3,fixed_risk_next_quantum,1,"0,001000000005396095",lower,0.00100000000539609555559210,0.00100000000539609555559211,True
+Е.2 tau_min_any,T73_published,2.5,E3_arbitrary_phase_tau_min_s,1,"4,77097294553110",lower,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 tau_min_any,T73_published,2.5,E3_arbitrary_phase_tau_min_s,1,"4,77097294553111",upper,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 J0,T73_published,2.5,E3_arbitrary_phase_J_required,1,24268,exact,24268,24268,True
+Е.2 tau_min_any,T73_published,3,E3_arbitrary_phase_tau_min_s,1,"4,77097294553110",lower,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 tau_min_any,T73_published,3,E3_arbitrary_phase_tau_min_s,1,"4,77097294553111",upper,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 J0,T73_published,3,E3_arbitrary_phase_J_required,1,24268,exact,24268,24268,True
+Е.2 tau_min_any,T72_budgets_explicit_T73_extension,2.5,E3_arbitrary_phase_tau_min_s,1,"4,77097294553110",lower,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 tau_min_any,T72_budgets_explicit_T73_extension,2.5,E3_arbitrary_phase_tau_min_s,1,"4,77097294553111",upper,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 J0,T72_budgets_explicit_T73_extension,2.5,E3_arbitrary_phase_J_required,1,24268,exact,24268,24268,True
+Е.2 tau_min_any,T72_budgets_explicit_T73_extension,3,E3_arbitrary_phase_tau_min_s,1,"4,77097294553110",lower,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 tau_min_any,T72_budgets_explicit_T73_extension,3,E3_arbitrary_phase_tau_min_s,1,"4,77097294553111",upper,4.77097294553110067002723,4.77097294553110067002724,True
+Е.2 J0,T72_budgets_explicit_T73_extension,3,E3_arbitrary_phase_J_required,1,24268,exact,24268,24268,True
+Е.2 tau_min_any,T72_explicit_same_method_revision,2.5,E3_arbitrary_phase_tau_min_s,1,"4,71854467297224",lower,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 tau_min_any,T72_explicit_same_method_revision,2.5,E3_arbitrary_phase_tau_min_s,1,"4,71854467297225",upper,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 J0,T72_explicit_same_method_revision,2.5,E3_arbitrary_phase_J_required,1,24538,exact,24538,24538,True
+Е.2 tau_min_any,T72_explicit_same_method_revision,3,E3_arbitrary_phase_tau_min_s,1,"4,71854467297224",lower,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 tau_min_any,T72_explicit_same_method_revision,3,E3_arbitrary_phase_tau_min_s,1,"4,71854467297225",upper,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 J0,T72_explicit_same_method_revision,3,E3_arbitrary_phase_J_required,1,24538,exact,24538,24538,True
+Е.2 tau_min_any,T72_revision_shorter_return_hold,2.5,E3_arbitrary_phase_tau_min_s,1,"4,71854467297224",lower,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 tau_min_any,T72_revision_shorter_return_hold,2.5,E3_arbitrary_phase_tau_min_s,1,"4,71854467297225",upper,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 J0,T72_revision_shorter_return_hold,2.5,E3_arbitrary_phase_J_required,1,24538,exact,24538,24538,True
+Е.2 tau_min_any,T72_revision_shorter_return_hold,3,E3_arbitrary_phase_tau_min_s,1,"4,71854467297224",lower,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 tau_min_any,T72_revision_shorter_return_hold,3,E3_arbitrary_phase_tau_min_s,1,"4,71854467297225",upper,4.71854467297224912920547,4.71854467297224912920548,True
+Е.2 J0,T72_revision_shorter_return_hold,3,E3_arbitrary_phase_J_required,1,24538,exact,24538,24538,True
+Е.2 witness risk,T73_published,2.5,E3_risk_lower,1,"0,0075867020",lower,0.00758670203071222352517867,0.00758670203071222352517868,True
+Е.2 witness risk,T73_published,3,E3_risk_lower,1,"0,0037875503",lower,0.00378755034053193191605828,0.00378755034053193191605829,True
+Е.2 witness risk,T72_budgets_explicit_T73_extension,2.5,E3_risk_lower,1,"0,0075866738",lower,0.00758667383858966104361944,0.00758667383858966104361945,True
+Е.2 witness risk,T72_budgets_explicit_T73_extension,3,E3_risk_lower,1,"0,0037875439",lower,0.00378754391222632701423503,0.00378754391222632701423504,True
+Е.2 witness risk,T72_explicit_same_method_revision,2.5,E3_risk_lower,1,"0,0075866738",lower,0.00758667384179404002587584,0.00758667384179404002587585,True
+Е.2 witness risk,T72_explicit_same_method_revision,3,E3_risk_lower,1,"0,0037875439",lower,0.00378754391382934382046657,0.00378754391382934382046658,True
+Е.2 witness risk,T72_revision_shorter_return_hold,2.5,E3_risk_lower,1,"0,0075866738",lower,0.00758667384179404002587584,0.00758667384179404002587585,True
+Е.2 witness risk,T72_revision_shorter_return_hold,3,E3_risk_lower,1,"0,0037875439",lower,0.00378754391382934382046657,0.00378754391382934382046658,True
+Е.1 peak percent,T73_published,2.5,fixed_peak_upper,100,"65,478055",upper,65.478054774,65.478054774,True
+Е.1 delay microseconds,T73_published,2.5,fixed_delay_upper_s,1000000,0.472195,upper,0.472194719210951548456734,0.472194719210951548456735,True
+Е.1 peak percent,T73_published,3,fixed_peak_upper,100,"32,647527",upper,32.647526472,32.647526472,True
+Е.1 delay microseconds,T73_published,3,fixed_delay_upper_s,1000000,0.303851,upper,0.303850024882740797235556,0.303850024882740797235557,True
+Е.1 peak percent,T72_budgets_explicit_T73_extension,2.5,fixed_peak_upper,100,"70,535361",upper,70.5353609182084732055664,70.5353609182084732055665,True
+Е.1 delay microseconds,T72_budgets_explicit_T73_extension,2.5,fixed_delay_upper_s,1000000,0.599215,upper,0.599214787753365211191670,0.599214787753365211191671,True
+Е.1 peak percent,T72_budgets_explicit_T73_extension,3,fixed_peak_upper,100,"35,172952",upper,35.172951726,35.172951726,True
+Е.1 delay microseconds,T72_budgets_explicit_T73_extension,3,fixed_delay_upper_s,1000000,0.308094,upper,0.308093029470943973089863,0.308093029470943973089864,True
+Е.1 peak percent,T72_explicit_same_method_revision,2.5,fixed_peak_upper,100,"69,764554",upper,69.7645532102084732055664,69.7645532102084732055665,True
+Е.1 delay microseconds,T72_explicit_same_method_revision,2.5,fixed_delay_upper_s,1000000,0.575021,upper,0.575020857333479809176769,0.575020857333479809176770,True
+Е.1 peak percent,T72_explicit_same_method_revision,3,fixed_peak_upper,100,"34,788548",upper,34.788547882,34.788547882,True
+Е.1 delay microseconds,T72_explicit_same_method_revision,3,fixed_delay_upper_s,1000000,0.305549,upper,0.305548875464928425362168,0.305548875464928425362169,True
+Е.1 peak percent,T72_revision_shorter_return_hold,2.5,fixed_peak_upper,100,"69,764554",upper,69.7645532102084732055664,69.7645532102084732055665,True
+Е.1 delay microseconds,T72_revision_shorter_return_hold,2.5,fixed_delay_upper_s,1000000,0.575021,upper,0.575020857333479809176769,0.575020857333479809176770,True
+Е.1 peak percent,T72_revision_shorter_return_hold,3,fixed_peak_upper,100,"34,788548",upper,34.788547882,34.788547882,True
+Е.1 delay microseconds,T72_revision_shorter_return_hold,3,fixed_delay_upper_s,1000000,0.305549,upper,0.305548875464928425362168,0.305548875464928425362169,True

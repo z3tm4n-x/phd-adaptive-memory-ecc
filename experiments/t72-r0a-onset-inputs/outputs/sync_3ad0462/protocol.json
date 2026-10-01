@@ -1,0 +1,102 @@
+{
+  "theory_sha": "3ad0462eac34d47176a6e1b36052855114a508df",
+  "previous_engineer_sha": "426704a12cffddf01463ef11a21c1eaa20baee05",
+  "engineer_sha": "commit containing this protocol; pinned pair in PR #77 (no self-reference)",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "source_files": {
+    "t73-burst-mode-count.md": {
+      "sha256": "d2e02860491870e138fb02ebc27814073fb006b777dc756642d2453bf116c121",
+      "git_blob": "cd2876f7f6b86c6875156dbdf843c1c370eced47",
+      "bytes": 36612
+    },
+    "t73-burst-mode-count-appendix.md": {
+      "sha256": "9fd2453087b9783d50f6cf43dadcd30b7acc703435a034c2dcb82b5e61314364",
+      "git_blob": "9a1a2bab81cf0b69ee0d8e8931cf855be5a4e18c",
+      "bytes": 84323
+    },
+    "t73-burst-mode-count-inputs.json": {
+      "sha256": "1ee101815fd7f388213a4c69e8aaac9ff5c36eca6ce3b42560e917a3ddbfbc20",
+      "git_blob": "1f57e163b9d7afab4f5361b3436f54c4193b1cc7",
+      "bytes": 40472
+    }
+  },
+  "source_sha256": {
+    "experiments/t72-r0a-onset-inputs/confirm_t73_sync.py": "b20e2feecb27f29e46fb857a10075205b81f29f2bc159d045260c2de649ac6d6",
+    "experiments/t72-r0a-onset-inputs/test_t73_sync.py": "eaf8c3eff35eb5d2e68a79a629db24c36c9a549aa4d23e7a7d5b6d28ef384e99",
+    "experiments/t72-r0a-onset-inputs/verify_t73.py": "8064790bddf79a24be370cb1cca0d4e80e99deeafdf55979ca76cd5587f11a7f",
+    "experiments/t72-r0a-onset-inputs/t73_calendar.py": "78bcdd6c4caf5a1b0999ed9190c55998fd38478b047b227fe34e0b2d8acda41c",
+    "experiments/t72-r0a-onset-inputs/t73_resources.py": "b398a3b272ad44a648306248c2ad3628ec8baf80180b13cb5c1269578363de7f",
+    "experiments/t72-r0a-onset-inputs/test_t73.py": "bf1ba4be0c9cefceb6d19151ecf58063107c2cb86395e3362d50e7703acfbc4b",
+    "experiments/t72-r0a-onset-inputs/test_t72.py": "46aa95bbed4517f9f8b7ff253d3893dc28c3fd81316c7810eb88e926ff4898ab",
+    "experiments/t72-r0a-onset-inputs/run.py": "e5911ac6c7a5da261a424e9f9075718a793170409e948ec3e8993fa5e7cb99eb",
+    "experiments/t72-r0a-onset-inputs/config.json": "30f5c4b181e68b68c961e120d3400bb5e7e56b4c1ff399ca1ad9083a121caaac",
+    "experiments/t72-r0a-onset-inputs/inputs/t72_explicit_changes.json": "ff0d298f2a785da61ab4a2a6ac3255b8cbe4a659ffe5ac4efe0788f8a8bcbe80",
+    "experiments/t58-fixed-baseline-r0b/certificate.py": "8a836276e8bcd958d524d25f17913bbeda25b3e54e0a5ca88e243f694df5f7af",
+    "experiments/t68-v21-inputs/outputs/numerics.csv": "85c2ed839bbf23f0a43f0d263c4a274f82e4a9a231ae72151b3b260a68ef5e40",
+    "experiments/t68-v21-inputs/outputs/service.csv": "4af5ec75e31dd1103fb6d653c3c8849460827dcc4568148f2a75a13541cf2384"
+  },
+  "input_fields_compared": 464,
+  "descriptive_changes": 2,
+  "unexpected_input_changes": 0,
+  "numerical_metrics_compared": 592,
+  "new_JSON_rows_confirmed": 8,
+  "text_claims_confirmed": 136,
+  "unit_tests_passed": 34,
+  "historical_tests": 27,
+  "added_tests": 7,
+  "LOW_integer_counts_enumerated": [
+    18501,
+    840001
+  ],
+  "paired_full_word_calendars": 8,
+  "historical_regressions": [
+    "t73_directed_bounds.csv",
+    "t73_summary.csv",
+    "t73_checked_inputs.json",
+    "verification_protocol.json",
+    "early/conditional_inputs.csv",
+    "early/reference_method.csv",
+    "early/fixed_necessity.csv",
+    "early/T68_16_63_audit.csv",
+    "early/theorist_inputs.json",
+    "early/method_grid.csv.gz"
+  ],
+  "repeated_geometry": {
+    "geometry_cases": 1024,
+    "ordered_temporal_pairs_checked": 6714112,
+    "forward_only_negative_control": {
+      "skipped_fence": 10,
+      "high_before": 9,
+      "low_after": 11,
+      "past_radius_required": true
+    }
+  },
+  "repeated_resources": {
+    "peak_phase_checks": 2400,
+    "FIFO": {
+      "cases": 66,
+      "max_observed_delay_ns_fraction": "36550451/50000",
+      "not_a_worst_case_proof": true
+    },
+    "price_strips": {
+      "extra_slots": 16,
+      "alarm_or_initial_strips": 7,
+      "D_ticks": 61,
+      "all_extra_slots_covered": true,
+      "consecutive_bad_windows_included": true
+    }
+  },
+  "historical_scientific_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+  "arbitrary_phase_edge": "2Wc_plus/T; only E3_arbitrary_phase_* justifies J0",
+  "paired_edge": "2c_plus/T; full occupied blocks and floor(iM/(W/2)) only",
+  "physical_qualification": false,
+  "scientific_review_performed": false,
+  "GOES_reprocessed": false,
+  "original_grid_changed": false,
+  "remaining_conditions": [
+    "full38/ERR/Theta coverage",
+    "joint U-WCET <=89.9991 ns for revisions",
+    "monitor a=1e11, A/a=1.001, actual delivery+compute <=9 ms"
+  ]
+}

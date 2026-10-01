@@ -1,0 +1,465 @@
+set,field,previous,current,status
+T73_published,scenario.memory,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,same
+T73_published,scenario.orbit,GEO,GEO,same
+T73_published,scenario.n,38,38,same
+T73_published,scenario.W,524288,524288,same
+T73_published,scenario.T_s,315576000,315576000,same
+T73_published,scenario.epsilon,0.001,0.001,same
+T73_published,environments[0].shield_g_cm2,2.5,2.5,same
+T73_published,environments[0].bbar_per_s,0.00016624,0.00016624,same
+T73_published,environments[0].solar_peak_per_s,0.346440,0.346440,same
+T73_published,environments[0].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T73_published,environments[0].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T73_published,environments[0].S2_rational_upper_per_s,13918,13918,same
+T73_published,environments[0].fixed_candidate_frame_ticks,279,279,same
+T73_published,environments[0].t68_data_only_direct_upper,0.01536626872599612,0.01536626872599612,same
+T73_published,environments[0].t68_data_only_direct_point,0.000035227371638739395,0.000035227371638739395,same
+T73_published,environments[1].shield_g_cm2,3,3,same
+T73_published,environments[1].bbar_per_s,0.000154704,0.000154704,same
+T73_published,environments[1].solar_peak_per_s,0.244528,0.244528,same
+T73_published,environments[1].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T73_published,environments[1].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T73_published,environments[1].S2_rational_upper_per_s,6940,6940,same
+T73_published,environments[1].fixed_candidate_frame_ticks,560,560,same
+T73_published,environments[1].t68_data_only_direct_upper,0.012299573120944566,0.012299573120944566,same
+T73_published,environments[1].t68_data_only_direct_point,0.000030971504388263915,0.000030971504388263915,same
+T73_published,environment_contract.quantity,"upper full-word load nu, not the observed counter and not automatically the parent rate","upper full-word load nu, not the observed counter and not automatically the parent rate",same
+T73_published,environment_contract.rarity,nu=b+s<=B; b<=bbar; integral(s)<=FS,nu=b+s<=B; b<=bbar; integral(s)<=FS,same
+T73_published,environment_contract.l_per_s,0.001,0.001,same
+T73_published,environment_contract.rho_entry_upper_per_s,0.048,0.048,same
+T73_published,environment_contract.rho_ongoing_upper_per_s,0.048,0.048,same
+T73_published,environment_contract.entry_definition,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,same
+T73_published,environment_contract.b_Q,bbar,bbar,same
+T73_published,environment_contract.D_Q_s,300,300,same
+T73_published,environment_contract.v_e_per_s,0.001,0.001,same
+T73_published,environment_contract.initial_intensity,free up to B; may begin in an ongoing burst,free up to B; may begin in an ongoing burst,same
+T73_published,environment_contract.coverage,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,same
+T73_published,environment_contract.data_status,"T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification","T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification",same
+T73_published,mark_contract.parents,exogenous marked NHPP; marks independent across parents; multiword marks allowed,exogenous marked NHPP; marks independent across parents; multiword marks allowed,same
+T73_published,mark_contract.per_word_non_smu_touch_rate,<=nu/W,<=nu/W,same
+T73_published,mark_contract.sum_non_smu_word_touch_rates,<=nu,<=nu,same
+T73_published,mark_contract.position_law,"time-invariant conditional bit-position distribution in each word, for non-SMU touches","time-invariant conditional bit-position distribution in each word, for non-SMU touches",same
+T73_published,mark_contract.chi_different_bit_pairs,37/(38*W),37/(38*W),same
+T73_published,mark_contract.D_star_full38_direct_exposure_upper,0.00005,0.00005,same
+T73_published,mark_contract.physical_qualification,False,False,same
+T73_published,mark_contract.unknown_full38_smu_upper,,,same
+T73_published,mark_contract.MCU_independence_or_zero_assumption,False,False,same
+T73_published,whole_mission_quotas.rho0,0.000001,0.000001,same
+T73_published,whole_mission_quotas.delta_exec,0.000001,0.000001,same
+T73_published,whole_mission_quotas.delta_svc,0.000001,0.000001,same
+T73_published,whole_mission_quotas.delta_E,0.000001,0.000001,same
+T73_published,whole_mission_quotas.delta_M,0.000001,0.000001,same
+T73_published,whole_mission_quotas.alpha_M,0.000001,0.000001,same
+T73_published,whole_mission_quotas.K0,1,1,same
+T73_published,whole_mission_quotas.initial_pending_write,excluded on the good initial event; qualification not claimed,excluded on the good initial event; qualification not claimed,same
+T73_published,whole_mission_quotas.fixed_competitor_quotas,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,same
+T73_published,service.mode,U unconditional complete-word write-back,U unconditional complete-word write-back,same
+T73_published,service.tick_nominal_s,0.000000001,0.000000001,same
+T73_published,service.constant_clock_scale_min,0.99999,0.99999,same
+T73_published,service.constant_clock_scale_max,1.00001,1.00001,same
+T73_published,service.c_ticks,91,91,same
+T73_published,service.fence_ticks,91,91,same
+T73_published,service.g_ticks,120,120,same
+T73_published,service.long_multiplier,129,129,same
+T73_published,service.slot_formula_ticks,2*g*floor(j/2)+c*(j%2),2*g*floor(j/2)+c*(j%2),same
+T73_published,service.word_formula,"inverse_mod(129,W)*j mod W","inverse_mod(129,W)*j mod W",same
+T73_published,service.mandatory_slots,j divisible by 129,j divisible by 129,same
+T73_published,service.decision_lead_ticks,51,51,same
+T73_published,service.gate_logic_wcet_s,0.000000005,0.000000005,same
+T73_published,service.hold_ticks,10000000000,10000000000,same
+T73_published,service.price_strip_physical_s,11,11,same
+T73_published,service.uniformity,"fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass","fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",same
+T73_published,service.correctness,"complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc","complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",same
+T73_published,service.timing,hard mask on every history; no unlimited retries,hard mask on every history; no unlimited retries,same
+T73_published,service.measured_wcet,,,same
+T73_published,service.same_ascending_address_order_in_both_modes,False,False,same
+T73_published,monitor.status,"required conditional interface, not an identified flight instrument","required conditional interface, not an identified flight instrument",same
+T73_published,monitor.ideal_count_lower_rate,a_M*nu,a_M*nu,same
+T73_published,monitor.a_M,1000000000,1000000000,same
+T73_published,monitor.quiet_upper_rate,A_M*b_nom + eta_M,A_M*b_nom + eta_M,same
+T73_published,monitor.A_M,1050000000,1050000000,same
+T73_published,monitor.eta_M_per_s,100,100,same
+T73_published,monitor.window_ticks,100000000,100000000,same
+T73_published,monitor.delivery_computation_deadline_after_window_ticks,50000000,50000000,same
+T73_published,monitor.required_delivery_computation_physical_max_s,0.049,0.049,same
+T73_published,monitor.lease_end_from_window_start_ticks,480000000,480000000,same
+T73_published,monitor.k,18500,18500,same
+T73_published,monitor.z,0.1,0.1,same
+T73_published,monitor.phi_rational_lower,0.095,0.095,same
+T73_published,monitor.H,42,42,same
+T73_published,monitor.v_c_per_s,0.000225,0.000225,same
+T73_published,monitor.recognized_bad_window_probability,0.000000001,0.000000001,same
+T73_published,monitor.independence_from_memory_required,False,False,same
+T73_published,monitor.missing_overflow_late_or_numeric_failure,"alarm, no LOW; safe S, price charged to declared window/global quotas","alarm, no LOW; safe S, price charged to declared window/global quotas",same
+T73_published,monitor.calibration_coverage_and_species_mapping,,,same
+T73_published,own_ERR.role,first available flag enters or extends S; a single zero never releases S,first available flag enters or extends S; a single zero never releases S,same
+T73_published,own_ERR.max_delivery_s,0.000001,0.000001,same
+T73_published,own_ERR.false_flag_rate_upper_per_s,0.000001,0.000001,same
+T73_published,own_ERR.true_count_cost_domination,each true flag on good execution charged to a removed word touch or one initial dirty word,each true flag on good execution charged to a removed word touch or one initial dirty word,same
+T73_published,own_ERR.under_and_over_count_contract_status,conditional; must be qualified for the full word and own latch,conditional; must be qualified for the full word and own latch,same
+T73_published,resources.price,"expected occupied common-bus time through T, including after hidden failure","expected occupied common-bus time through T, including after hidden failure",same
+T73_published,resources.b_nom,bbar for each shielding point,bbar for each shielding point,same
+T73_published,resources.quiet_tax_limit,0.01,0.01,same
+T73_published,resources.peak_limit,0.8,0.8,same
+T73_published,resources.peak_window_s,0.001,0.001,same
+T73_published,resources.application_delay_limit_s,0.000003,0.000003,same
+T73_published,resources.application_max_request_s,0.000000045,0.000000045,same
+T73_published,resources.application_sigma_s,0.000000045,0.000000045,same
+T73_published,resources.application_rate,0.04,0.04,same
+T73_published,resources.extra_monitor_control_rate,0.0001,0.0001,same
+T73_published,resources.extra_monitor_control_sigma_s,0.0000001,0.0000001,same
+T73_published,resources.extra_request_max_s,0.000000045,0.000000045,same
+T73_published,resources.quiet_return_example.T_Q_min,0.9*T,0.9*T,same
+T73_published,resources.quiet_return_example.K_Q_max,1000,1000,same
+T73_published,resources.quiet_return_example.status,"additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric","additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric",same
+T73_published,resources.resource_qualification,False,False,same
+T73_published,resources.T58_grid_changed,False,False,same
+T72_budgets_explicit_T73_extension,scenario.memory,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,same
+T72_budgets_explicit_T73_extension,scenario.orbit,GEO,GEO,same
+T72_budgets_explicit_T73_extension,scenario.n,38,38,same
+T72_budgets_explicit_T73_extension,scenario.W,524288,524288,same
+T72_budgets_explicit_T73_extension,scenario.T_s,315576000,315576000,same
+T72_budgets_explicit_T73_extension,scenario.epsilon,0.001,0.001,same
+T72_budgets_explicit_T73_extension,environments[0].shield_g_cm2,2.5,2.5,same
+T72_budgets_explicit_T73_extension,environments[0].bbar_per_s,0.00016623855053804845,0.00016623855053804845,same
+T72_budgets_explicit_T73_extension,environments[0].solar_peak_per_s,0.346439355082072,0.346439355082072,same
+T72_budgets_explicit_T73_extension,environments[0].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T72_budgets_explicit_T73_extension,environments[0].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T72_budgets_explicit_T73_extension,environments[0].S2_rational_upper_per_s,13918,13918,same
+T72_budgets_explicit_T73_extension,environments[0].fixed_candidate_frame_ticks,279,279,same
+T72_budgets_explicit_T73_extension,environments[0].t68_data_only_direct_upper,0.01536626872599612,0.01536626872599612,same
+T72_budgets_explicit_T73_extension,environments[0].t68_data_only_direct_point,0.000035227371638739395,0.000035227371638739395,same
+T72_budgets_explicit_T73_extension,environments[1].shield_g_cm2,3,3,same
+T72_budgets_explicit_T73_extension,environments[1].bbar_per_s,0.00015470350295316676,0.00015470350295316676,same
+T72_budgets_explicit_T73_extension,environments[1].solar_peak_per_s,0.24452779251706908,0.24452779251706908,same
+T72_budgets_explicit_T73_extension,environments[1].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T72_budgets_explicit_T73_extension,environments[1].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T72_budgets_explicit_T73_extension,environments[1].S2_rational_upper_per_s,6940,6940,same
+T72_budgets_explicit_T73_extension,environments[1].fixed_candidate_frame_ticks,560,560,same
+T72_budgets_explicit_T73_extension,environments[1].t68_data_only_direct_upper,0.012299573120944566,0.012299573120944566,same
+T72_budgets_explicit_T73_extension,environments[1].t68_data_only_direct_point,0.000030971504388263915,0.000030971504388263915,same
+T72_budgets_explicit_T73_extension,environment_contract.quantity,"upper full-word load nu, not the observed counter and not automatically the parent rate","upper full-word load nu, not the observed counter and not automatically the parent rate",same
+T72_budgets_explicit_T73_extension,environment_contract.rarity,nu=b+s<=B; b<=bbar; integral(s)<=FS,nu=b+s<=B; b<=bbar; integral(s)<=FS,same
+T72_budgets_explicit_T73_extension,environment_contract.l_per_s,0.001,0.001,same
+T72_budgets_explicit_T73_extension,environment_contract.rho_entry_upper_per_s,0.048,0.048,same
+T72_budgets_explicit_T73_extension,environment_contract.rho_ongoing_upper_per_s,0.048,0.048,same
+T72_budgets_explicit_T73_extension,environment_contract.entry_definition,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,same
+T72_budgets_explicit_T73_extension,environment_contract.b_Q,bbar,bbar,same
+T72_budgets_explicit_T73_extension,environment_contract.D_Q_s,300,300,same
+T72_budgets_explicit_T73_extension,environment_contract.v_e_per_s,0.001,0.001,same
+T72_budgets_explicit_T73_extension,environment_contract.initial_intensity,free up to B; may begin in an ongoing burst,free up to B; may begin in an ongoing burst,same
+T72_budgets_explicit_T73_extension,environment_contract.coverage,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,same
+T72_budgets_explicit_T73_extension,environment_contract.data_status,"T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification","T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification",same
+T72_budgets_explicit_T73_extension,mark_contract.parents,exogenous marked NHPP; marks independent across parents; multiword marks allowed,exogenous marked NHPP; marks independent across parents; multiword marks allowed,same
+T72_budgets_explicit_T73_extension,mark_contract.per_word_non_smu_touch_rate,<=nu/W,<=nu/W,same
+T72_budgets_explicit_T73_extension,mark_contract.sum_non_smu_word_touch_rates,<=nu,<=nu,same
+T72_budgets_explicit_T73_extension,mark_contract.position_law,"time-invariant conditional bit-position distribution in each word, for non-SMU touches","time-invariant conditional bit-position distribution in each word, for non-SMU touches",same
+T72_budgets_explicit_T73_extension,mark_contract.chi_different_bit_pairs,37/(38*W),37/(38*W),same
+T72_budgets_explicit_T73_extension,mark_contract.D_star_full38_direct_exposure_upper,0.0001,0.0001,same
+T72_budgets_explicit_T73_extension,mark_contract.physical_qualification,False,False,same
+T72_budgets_explicit_T73_extension,mark_contract.unknown_full38_smu_upper,,,same
+T72_budgets_explicit_T73_extension,mark_contract.MCU_independence_or_zero_assumption,False,False,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.rho0,0.00001,0.00001,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.delta_exec,0.000001,0.000001,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.delta_svc,0.00001,0.00001,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.delta_E,0.00001,0.00001,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.delta_M,0.00001,0.00001,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.alpha_M,0.000001,0.000001,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.K0,0,0,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.initial_pending_write,excluded on the good initial event; qualification not claimed,excluded on the good initial event; qualification not claimed,same
+T72_budgets_explicit_T73_extension,whole_mission_quotas.fixed_competitor_quotas,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,same
+T72_budgets_explicit_T73_extension,service.mode,U unconditional complete-word write-back,U unconditional complete-word write-back,same
+T72_budgets_explicit_T73_extension,service.tick_nominal_s,0.000000001,0.000000001,same
+T72_budgets_explicit_T73_extension,service.constant_clock_scale_min,0.99999,0.99999,same
+T72_budgets_explicit_T73_extension,service.constant_clock_scale_max,1.00001,1.00001,same
+T72_budgets_explicit_T73_extension,service.c_ticks,91,91,same
+T72_budgets_explicit_T73_extension,service.fence_ticks,91,91,same
+T72_budgets_explicit_T73_extension,service.g_ticks,120,120,same
+T72_budgets_explicit_T73_extension,service.long_multiplier,129,129,same
+T72_budgets_explicit_T73_extension,service.slot_formula_ticks,2*g*floor(j/2)+c*(j%2),2*g*floor(j/2)+c*(j%2),same
+T72_budgets_explicit_T73_extension,service.word_formula,"inverse_mod(129,W)*j mod W","inverse_mod(129,W)*j mod W",same
+T72_budgets_explicit_T73_extension,service.mandatory_slots,j divisible by 129,j divisible by 129,same
+T72_budgets_explicit_T73_extension,service.decision_lead_ticks,51,51,same
+T72_budgets_explicit_T73_extension,service.gate_logic_wcet_s,0.000000005,0.000000005,same
+T72_budgets_explicit_T73_extension,service.hold_ticks,10000000000,10000000000,same
+T72_budgets_explicit_T73_extension,service.price_strip_physical_s,11,11,same
+T72_budgets_explicit_T73_extension,service.uniformity,"fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass","fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",same
+T72_budgets_explicit_T73_extension,service.correctness,"complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc","complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",same
+T72_budgets_explicit_T73_extension,service.timing,hard mask on every history; no unlimited retries,hard mask on every history; no unlimited retries,same
+T72_budgets_explicit_T73_extension,service.measured_wcet,,,same
+T72_budgets_explicit_T73_extension,service.same_ascending_address_order_in_both_modes,False,False,same
+T72_budgets_explicit_T73_extension,monitor.status,"required conditional interface, not an identified flight instrument","required conditional interface, not an identified flight instrument",same
+T72_budgets_explicit_T73_extension,monitor.ideal_count_lower_rate,a_M*nu,a_M*nu,same
+T72_budgets_explicit_T73_extension,monitor.a_M,1000000000,1000000000,same
+T72_budgets_explicit_T73_extension,monitor.quiet_upper_rate,A_M*b_nom + eta_M,A_M*b_nom + eta_M,same
+T72_budgets_explicit_T73_extension,monitor.A_M,1050000000,1050000000,same
+T72_budgets_explicit_T73_extension,monitor.eta_M_per_s,100,100,same
+T72_budgets_explicit_T73_extension,monitor.window_ticks,100000000,100000000,same
+T72_budgets_explicit_T73_extension,monitor.delivery_computation_deadline_after_window_ticks,50000000,50000000,same
+T72_budgets_explicit_T73_extension,monitor.required_delivery_computation_physical_max_s,0.049,0.049,same
+T72_budgets_explicit_T73_extension,monitor.lease_end_from_window_start_ticks,480000000,480000000,same
+T72_budgets_explicit_T73_extension,monitor.k,18500,18500,same
+T72_budgets_explicit_T73_extension,monitor.z,0.1,0.1,same
+T72_budgets_explicit_T73_extension,monitor.phi_rational_lower,0.095,0.095,same
+T72_budgets_explicit_T73_extension,monitor.H,42,42,same
+T72_budgets_explicit_T73_extension,monitor.v_c_per_s,0.000225,0.000225,same
+T72_budgets_explicit_T73_extension,monitor.recognized_bad_window_probability,0.000000001,0.000000001,same
+T72_budgets_explicit_T73_extension,monitor.independence_from_memory_required,False,False,same
+T72_budgets_explicit_T73_extension,monitor.missing_overflow_late_or_numeric_failure,"alarm, no LOW; safe S, price charged to declared window/global quotas","alarm, no LOW; safe S, price charged to declared window/global quotas",same
+T72_budgets_explicit_T73_extension,monitor.calibration_coverage_and_species_mapping,,,same
+T72_budgets_explicit_T73_extension,own_ERR.role,first available flag enters or extends S; a single zero never releases S,first available flag enters or extends S; a single zero never releases S,same
+T72_budgets_explicit_T73_extension,own_ERR.max_delivery_s,0.000001,0.000001,same
+T72_budgets_explicit_T73_extension,own_ERR.false_flag_rate_upper_per_s,0.000001,0.000001,same
+T72_budgets_explicit_T73_extension,own_ERR.true_count_cost_domination,each true flag on good execution charged to a removed word touch or one initial dirty word,each true flag on good execution charged to a removed word touch or one initial dirty word,same
+T72_budgets_explicit_T73_extension,own_ERR.under_and_over_count_contract_status,conditional; must be qualified for the full word and own latch,conditional; must be qualified for the full word and own latch,same
+T72_budgets_explicit_T73_extension,resources.price,"expected occupied common-bus time through T, including after hidden failure","expected occupied common-bus time through T, including after hidden failure",same
+T72_budgets_explicit_T73_extension,resources.b_nom,bbar for each shielding point,bbar for each shielding point,same
+T72_budgets_explicit_T73_extension,resources.quiet_tax_limit,0.01,0.01,same
+T72_budgets_explicit_T73_extension,resources.peak_limit,0.8,0.8,same
+T72_budgets_explicit_T73_extension,resources.peak_window_s,0.001,0.001,same
+T72_budgets_explicit_T73_extension,resources.application_delay_limit_s,0.000003,0.000003,same
+T72_budgets_explicit_T73_extension,resources.application_max_request_s,0.000000045,0.000000045,same
+T72_budgets_explicit_T73_extension,resources.application_sigma_s,0.000000045,0.000000045,same
+T72_budgets_explicit_T73_extension,resources.application_rate,0.04,0.04,same
+T72_budgets_explicit_T73_extension,resources.extra_monitor_control_rate,0.0001,0.0001,same
+T72_budgets_explicit_T73_extension,resources.extra_monitor_control_sigma_s,0.0000001,0.0000001,same
+T72_budgets_explicit_T73_extension,resources.extra_request_max_s,0.000000045,0.000000045,same
+T72_budgets_explicit_T73_extension,resources.quiet_return_example.T_Q_min,0.9*T,0.9*T,same
+T72_budgets_explicit_T73_extension,resources.quiet_return_example.K_Q_max,1000,1000,same
+T72_budgets_explicit_T73_extension,resources.quiet_return_example.status,"additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric","additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric",same
+T72_budgets_explicit_T73_extension,resources.resource_qualification,False,False,same
+T72_budgets_explicit_T73_extension,resources.T58_grid_changed,False,False,same
+T72_explicit_same_method_revision,scenario.memory,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,same
+T72_explicit_same_method_revision,scenario.orbit,GEO,GEO,same
+T72_explicit_same_method_revision,scenario.n,38,38,same
+T72_explicit_same_method_revision,scenario.W,524288,524288,same
+T72_explicit_same_method_revision,scenario.T_s,315576000,315576000,same
+T72_explicit_same_method_revision,scenario.epsilon,0.001,0.001,same
+T72_explicit_same_method_revision,environments[0].shield_g_cm2,2.5,2.5,same
+T72_explicit_same_method_revision,environments[0].bbar_per_s,0.00016623855053804845,0.00016623855053804845,same
+T72_explicit_same_method_revision,environments[0].solar_peak_per_s,0.346439355082072,0.346439355082072,same
+T72_explicit_same_method_revision,environments[0].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T72_explicit_same_method_revision,environments[0].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T72_explicit_same_method_revision,environments[0].S2_rational_upper_per_s,13918,13918,same
+T72_explicit_same_method_revision,environments[0].fixed_candidate_frame_ticks,279,279,same
+T72_explicit_same_method_revision,environments[0].t68_data_only_direct_upper,0.01536626872599612,0.01536626872599612,same
+T72_explicit_same_method_revision,environments[0].t68_data_only_direct_point,0.000035227371638739395,0.000035227371638739395,same
+T72_explicit_same_method_revision,environments[1].shield_g_cm2,3,3,same
+T72_explicit_same_method_revision,environments[1].bbar_per_s,0.00015470350295316676,0.00015470350295316676,same
+T72_explicit_same_method_revision,environments[1].solar_peak_per_s,0.24452779251706908,0.24452779251706908,same
+T72_explicit_same_method_revision,environments[1].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T72_explicit_same_method_revision,environments[1].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T72_explicit_same_method_revision,environments[1].S2_rational_upper_per_s,6940,6940,same
+T72_explicit_same_method_revision,environments[1].fixed_candidate_frame_ticks,560,560,same
+T72_explicit_same_method_revision,environments[1].t68_data_only_direct_upper,0.012299573120944566,0.012299573120944566,same
+T72_explicit_same_method_revision,environments[1].t68_data_only_direct_point,0.000030971504388263915,0.000030971504388263915,same
+T72_explicit_same_method_revision,environment_contract.quantity,"upper full-word load nu, not the observed counter and not automatically the parent rate","upper full-word load nu, not the observed counter and not automatically the parent rate",same
+T72_explicit_same_method_revision,environment_contract.rarity,nu=b+s<=B; b<=bbar; integral(s)<=FS,nu=b+s<=B; b<=bbar; integral(s)<=FS,same
+T72_explicit_same_method_revision,environment_contract.l_per_s,0.001,0.001,same
+T72_explicit_same_method_revision,environment_contract.rho_entry_upper_per_s,0.048,0.048,same
+T72_explicit_same_method_revision,environment_contract.rho_ongoing_upper_per_s,0.048,0.048,same
+T72_explicit_same_method_revision,environment_contract.entry_definition,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,same
+T72_explicit_same_method_revision,environment_contract.b_Q,bbar,bbar,same
+T72_explicit_same_method_revision,environment_contract.D_Q_s,300,300,same
+T72_explicit_same_method_revision,environment_contract.v_e_per_s,0.001,0.001,same
+T72_explicit_same_method_revision,environment_contract.initial_intensity,free up to B; may begin in an ongoing burst,free up to B; may begin in an ongoing burst,same
+T72_explicit_same_method_revision,environment_contract.coverage,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,same
+T72_explicit_same_method_revision,environment_contract.data_status,"T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification","T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification",same
+T72_explicit_same_method_revision,mark_contract.parents,exogenous marked NHPP; marks independent across parents; multiword marks allowed,exogenous marked NHPP; marks independent across parents; multiword marks allowed,same
+T72_explicit_same_method_revision,mark_contract.per_word_non_smu_touch_rate,<=nu/W,<=nu/W,same
+T72_explicit_same_method_revision,mark_contract.sum_non_smu_word_touch_rates,<=nu,<=nu,same
+T72_explicit_same_method_revision,mark_contract.position_law,"time-invariant conditional bit-position distribution in each word, for non-SMU touches","time-invariant conditional bit-position distribution in each word, for non-SMU touches",same
+T72_explicit_same_method_revision,mark_contract.chi_different_bit_pairs,37/(38*W),37/(38*W),same
+T72_explicit_same_method_revision,mark_contract.D_star_full38_direct_exposure_upper,0.0001,0.0001,same
+T72_explicit_same_method_revision,mark_contract.physical_qualification,False,False,same
+T72_explicit_same_method_revision,mark_contract.unknown_full38_smu_upper,,,same
+T72_explicit_same_method_revision,mark_contract.MCU_independence_or_zero_assumption,False,False,same
+T72_explicit_same_method_revision,whole_mission_quotas.rho0,0.00001,0.00001,same
+T72_explicit_same_method_revision,whole_mission_quotas.delta_exec,0.000001,0.000001,same
+T72_explicit_same_method_revision,whole_mission_quotas.delta_svc,0.00001,0.00001,same
+T72_explicit_same_method_revision,whole_mission_quotas.delta_E,0.00001,0.00001,same
+T72_explicit_same_method_revision,whole_mission_quotas.delta_M,0.00001,0.00001,same
+T72_explicit_same_method_revision,whole_mission_quotas.alpha_M,0.000001,0.000001,same
+T72_explicit_same_method_revision,whole_mission_quotas.K0,0,0,same
+T72_explicit_same_method_revision,whole_mission_quotas.initial_pending_write,excluded on the good initial event; qualification not claimed,excluded on the good initial event; qualification not claimed,same
+T72_explicit_same_method_revision,whole_mission_quotas.fixed_competitor_quotas,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,same
+T72_explicit_same_method_revision,service.mode,U unconditional complete-word write-back,U unconditional complete-word write-back,same
+T72_explicit_same_method_revision,service.tick_nominal_s,0.000000001,0.000000001,same
+T72_explicit_same_method_revision,service.constant_clock_scale_min,0.99999,0.99999,same
+T72_explicit_same_method_revision,service.constant_clock_scale_max,1.00001,1.00001,same
+T72_explicit_same_method_revision,service.c_ticks,90,90,same
+T72_explicit_same_method_revision,service.fence_ticks,90,90,same
+T72_explicit_same_method_revision,service.g_ticks,119,119,same
+T72_explicit_same_method_revision,service.long_multiplier,85,85,same
+T72_explicit_same_method_revision,service.slot_formula_ticks,2*g*floor(j/2)+c*(j%2),2*g*floor(j/2)+c*(j%2),same
+T72_explicit_same_method_revision,service.word_formula,"inverse_mod(85,W)*j mod W","inverse_mod(85,W)*j mod W",same
+T72_explicit_same_method_revision,service.mandatory_slots,j divisible by 129,j divisible by 85,descriptive_129_to_85
+T72_explicit_same_method_revision,service.decision_lead_ticks,51,51,same
+T72_explicit_same_method_revision,service.gate_logic_wcet_s,0.000000005,0.000000005,same
+T72_explicit_same_method_revision,service.hold_ticks,5000000000,5000000000,same
+T72_explicit_same_method_revision,service.price_strip_physical_s,6,6,same
+T72_explicit_same_method_revision,service.uniformity,"fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass","fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",same
+T72_explicit_same_method_revision,service.correctness,"complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc","complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",same
+T72_explicit_same_method_revision,service.timing,hard mask on every history; no unlimited retries,hard mask on every history; no unlimited retries,same
+T72_explicit_same_method_revision,service.measured_wcet,,,same
+T72_explicit_same_method_revision,service.same_ascending_address_order_in_both_modes,False,False,same
+T72_explicit_same_method_revision,service.required_joint_U_WCET_physical_s,0.0000000899991,0.0000000899991,same
+T72_explicit_same_method_revision,service.warning,Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound.,Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound.,same
+T72_explicit_same_method_revision,monitor.status,"required conditional interface, not an identified flight instrument","required conditional interface, not an identified flight instrument",same
+T72_explicit_same_method_revision,monitor.ideal_count_lower_rate,a_M*nu,a_M*nu,same
+T72_explicit_same_method_revision,monitor.a_M,100000000000,100000000000,same
+T72_explicit_same_method_revision,monitor.quiet_upper_rate,A_M*b_nom + eta_M,A_M*b_nom + eta_M,same
+T72_explicit_same_method_revision,monitor.A_M,100100000000,100100000000,same
+T72_explicit_same_method_revision,monitor.eta_M_per_s,100,100,same
+T72_explicit_same_method_revision,monitor.window_ticks,50000000,50000000,same
+T72_explicit_same_method_revision,monitor.delivery_computation_deadline_after_window_ticks,10000000,10000000,same
+T72_explicit_same_method_revision,monitor.required_delivery_computation_physical_max_s,0.009,0.009,same
+T72_explicit_same_method_revision,monitor.lease_end_from_window_start_ticks,175000000,175000000,same
+T72_explicit_same_method_revision,monitor.k,840000,840000,same
+T72_explicit_same_method_revision,monitor.z,0.01,0.01,same
+T72_explicit_same_method_revision,monitor.phi_rational_lower,0.00995,0.00995,same
+T72_explicit_same_method_revision,monitor.H,42,42,same
+T72_explicit_same_method_revision,monitor.v_c_per_s,0.0001782,0.0001782,same
+T72_explicit_same_method_revision,monitor.recognized_bad_window_probability,0.000000001,0.000000001,same
+T72_explicit_same_method_revision,monitor.independence_from_memory_required,False,False,same
+T72_explicit_same_method_revision,monitor.missing_overflow_late_or_numeric_failure,"alarm, no LOW; safe S, price charged to declared window/global quotas","alarm, no LOW; safe S, price charged to declared window/global quotas",same
+T72_explicit_same_method_revision,monitor.calibration_coverage_and_species_mapping,,,same
+T72_explicit_same_method_revision,own_ERR.role,first available flag enters or extends S; a single zero never releases S,first available flag enters or extends S; a single zero never releases S,same
+T72_explicit_same_method_revision,own_ERR.max_delivery_s,0.000001,0.000001,same
+T72_explicit_same_method_revision,own_ERR.false_flag_rate_upper_per_s,0.000001,0.000001,same
+T72_explicit_same_method_revision,own_ERR.true_count_cost_domination,each true flag on good execution charged to a removed word touch or one initial dirty word,each true flag on good execution charged to a removed word touch or one initial dirty word,same
+T72_explicit_same_method_revision,own_ERR.under_and_over_count_contract_status,conditional; must be qualified for the full word and own latch,conditional; must be qualified for the full word and own latch,same
+T72_explicit_same_method_revision,resources.price,"expected occupied common-bus time through T, including after hidden failure","expected occupied common-bus time through T, including after hidden failure",same
+T72_explicit_same_method_revision,resources.b_nom,bbar for each shielding point,bbar for each shielding point,same
+T72_explicit_same_method_revision,resources.quiet_tax_limit,0.01,0.01,same
+T72_explicit_same_method_revision,resources.peak_limit,0.8,0.8,same
+T72_explicit_same_method_revision,resources.peak_window_s,0.001,0.001,same
+T72_explicit_same_method_revision,resources.application_delay_limit_s,0.000003,0.000003,same
+T72_explicit_same_method_revision,resources.application_max_request_s,0.000000045,0.000000045,same
+T72_explicit_same_method_revision,resources.application_sigma_s,0.000000045,0.000000045,same
+T72_explicit_same_method_revision,resources.application_rate,0.04,0.04,same
+T72_explicit_same_method_revision,resources.extra_monitor_control_rate,0.0001,0.0001,same
+T72_explicit_same_method_revision,resources.extra_monitor_control_sigma_s,0.0000001,0.0000001,same
+T72_explicit_same_method_revision,resources.extra_request_max_s,0.000000045,0.000000045,same
+T72_explicit_same_method_revision,resources.quiet_return_example.T_Q_min,0.9*T,0.9*T,same
+T72_explicit_same_method_revision,resources.quiet_return_example.K_Q_max,1000,1000,same
+T72_explicit_same_method_revision,resources.quiet_return_example.status,"additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric","additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric",same
+T72_explicit_same_method_revision,resources.resource_qualification,False,False,same
+T72_explicit_same_method_revision,resources.T58_grid_changed,False,False,same
+T72_revision_shorter_return_hold,scenario.memory,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,CY62167 internal 32+6+ERR candidate; architecture remains author's decision,same
+T72_revision_shorter_return_hold,scenario.orbit,GEO,GEO,same
+T72_revision_shorter_return_hold,scenario.n,38,38,same
+T72_revision_shorter_return_hold,scenario.W,524288,524288,same
+T72_revision_shorter_return_hold,scenario.T_s,315576000,315576000,same
+T72_revision_shorter_return_hold,scenario.epsilon,0.001,0.001,same
+T72_revision_shorter_return_hold,environments[0].shield_g_cm2,2.5,2.5,same
+T72_revision_shorter_return_hold,environments[0].bbar_per_s,0.00016623855053804845,0.00016623855053804845,same
+T72_revision_shorter_return_hold,environments[0].solar_peak_per_s,0.346439355082072,0.346439355082072,same
+T72_revision_shorter_return_hold,environments[0].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T72_revision_shorter_return_hold,environments[0].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T72_revision_shorter_return_hold,environments[0].S2_rational_upper_per_s,13918,13918,same
+T72_revision_shorter_return_hold,environments[0].fixed_candidate_frame_ticks,279,279,same
+T72_revision_shorter_return_hold,environments[0].t68_data_only_direct_upper,0.01536626872599612,0.01536626872599612,same
+T72_revision_shorter_return_hold,environments[0].t68_data_only_direct_point,0.000035227371638739395,0.000035227371638739395,same
+T72_revision_shorter_return_hold,environments[1].shield_g_cm2,3,3,same
+T72_revision_shorter_return_hold,environments[1].bbar_per_s,0.00015470350295316676,0.00015470350295316676,same
+T72_revision_shorter_return_hold,environments[1].solar_peak_per_s,0.24452779251706908,0.24452779251706908,same
+T72_revision_shorter_return_hold,environments[1].B_definition,bbar + solar_peak,bbar + solar_peak,same
+T72_revision_shorter_return_hold,environments[1].FS_definition,115776 * solar_peak,115776 * solar_peak,same
+T72_revision_shorter_return_hold,environments[1].S2_rational_upper_per_s,6940,6940,same
+T72_revision_shorter_return_hold,environments[1].fixed_candidate_frame_ticks,560,560,same
+T72_revision_shorter_return_hold,environments[1].t68_data_only_direct_upper,0.012299573120944566,0.012299573120944566,same
+T72_revision_shorter_return_hold,environments[1].t68_data_only_direct_point,0.000030971504388263915,0.000030971504388263915,same
+T72_revision_shorter_return_hold,environment_contract.quantity,"upper full-word load nu, not the observed counter and not automatically the parent rate","upper full-word load nu, not the observed counter and not automatically the parent rate",same
+T72_revision_shorter_return_hold,environment_contract.rarity,nu=b+s<=B; b<=bbar; integral(s)<=FS,nu=b+s<=B; b<=bbar; integral(s)<=FS,same
+T72_revision_shorter_return_hold,environment_contract.l_per_s,0.001,0.001,same
+T72_revision_shorter_return_hold,environment_contract.rho_entry_upper_per_s,0.048,0.048,same
+T72_revision_shorter_return_hold,environment_contract.rho_ongoing_upper_per_s,0.048,0.048,same
+T72_revision_shorter_return_hold,environment_contract.entry_definition,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory,same
+T72_revision_shorter_return_hold,environment_contract.b_Q,bbar,bbar,same
+T72_revision_shorter_return_hold,environment_contract.D_Q_s,300,300,same
+T72_revision_shorter_return_hold,environment_contract.v_e_per_s,0.001,0.001,same
+T72_revision_shorter_return_hold,environment_contract.initial_intensity,free up to B; may begin in an ongoing burst,free up to B; may begin in an ongoing burst,same
+T72_revision_shorter_return_hold,environment_contract.coverage,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned,same
+T72_revision_shorter_return_hold,environment_contract.data_status,"T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification","T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification",same
+T72_revision_shorter_return_hold,mark_contract.parents,exogenous marked NHPP; marks independent across parents; multiword marks allowed,exogenous marked NHPP; marks independent across parents; multiword marks allowed,same
+T72_revision_shorter_return_hold,mark_contract.per_word_non_smu_touch_rate,<=nu/W,<=nu/W,same
+T72_revision_shorter_return_hold,mark_contract.sum_non_smu_word_touch_rates,<=nu,<=nu,same
+T72_revision_shorter_return_hold,mark_contract.position_law,"time-invariant conditional bit-position distribution in each word, for non-SMU touches","time-invariant conditional bit-position distribution in each word, for non-SMU touches",same
+T72_revision_shorter_return_hold,mark_contract.chi_different_bit_pairs,37/(38*W),37/(38*W),same
+T72_revision_shorter_return_hold,mark_contract.D_star_full38_direct_exposure_upper,0.0001,0.0001,same
+T72_revision_shorter_return_hold,mark_contract.physical_qualification,False,False,same
+T72_revision_shorter_return_hold,mark_contract.unknown_full38_smu_upper,,,same
+T72_revision_shorter_return_hold,mark_contract.MCU_independence_or_zero_assumption,False,False,same
+T72_revision_shorter_return_hold,whole_mission_quotas.rho0,0.00001,0.00001,same
+T72_revision_shorter_return_hold,whole_mission_quotas.delta_exec,0.000001,0.000001,same
+T72_revision_shorter_return_hold,whole_mission_quotas.delta_svc,0.00001,0.00001,same
+T72_revision_shorter_return_hold,whole_mission_quotas.delta_E,0.00001,0.00001,same
+T72_revision_shorter_return_hold,whole_mission_quotas.delta_M,0.00001,0.00001,same
+T72_revision_shorter_return_hold,whole_mission_quotas.alpha_M,0.000001,0.000001,same
+T72_revision_shorter_return_hold,whole_mission_quotas.K0,0,0,same
+T72_revision_shorter_return_hold,whole_mission_quotas.initial_pending_write,excluded on the good initial event; qualification not claimed,excluded on the good initial event; qualification not claimed,same
+T72_revision_shorter_return_hold,whole_mission_quotas.fixed_competitor_quotas,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota,same
+T72_revision_shorter_return_hold,service.mode,U unconditional complete-word write-back,U unconditional complete-word write-back,same
+T72_revision_shorter_return_hold,service.tick_nominal_s,0.000000001,0.000000001,same
+T72_revision_shorter_return_hold,service.constant_clock_scale_min,0.99999,0.99999,same
+T72_revision_shorter_return_hold,service.constant_clock_scale_max,1.00001,1.00001,same
+T72_revision_shorter_return_hold,service.c_ticks,90,90,same
+T72_revision_shorter_return_hold,service.fence_ticks,90,90,same
+T72_revision_shorter_return_hold,service.g_ticks,119,119,same
+T72_revision_shorter_return_hold,service.long_multiplier,85,85,same
+T72_revision_shorter_return_hold,service.slot_formula_ticks,2*g*floor(j/2)+c*(j%2),2*g*floor(j/2)+c*(j%2),same
+T72_revision_shorter_return_hold,service.word_formula,"inverse_mod(85,W)*j mod W","inverse_mod(85,W)*j mod W",same
+T72_revision_shorter_return_hold,service.mandatory_slots,j divisible by 129,j divisible by 85,descriptive_129_to_85
+T72_revision_shorter_return_hold,service.decision_lead_ticks,51,51,same
+T72_revision_shorter_return_hold,service.gate_logic_wcet_s,0.000000005,0.000000005,same
+T72_revision_shorter_return_hold,service.hold_ticks,1000000000,1000000000,same
+T72_revision_shorter_return_hold,service.price_strip_physical_s,1.5,1.5,same
+T72_revision_shorter_return_hold,service.uniformity,"fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass","fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",same
+T72_revision_shorter_return_hold,service.correctness,"complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc","complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",same
+T72_revision_shorter_return_hold,service.timing,hard mask on every history; no unlimited retries,hard mask on every history; no unlimited retries,same
+T72_revision_shorter_return_hold,service.measured_wcet,,,same
+T72_revision_shorter_return_hold,service.same_ascending_address_order_in_both_modes,False,False,same
+T72_revision_shorter_return_hold,service.required_joint_U_WCET_physical_s,0.0000000899991,0.0000000899991,same
+T72_revision_shorter_return_hold,service.warning,Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound.,Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound.,same
+T72_revision_shorter_return_hold,monitor.status,"required conditional interface, not an identified flight instrument","required conditional interface, not an identified flight instrument",same
+T72_revision_shorter_return_hold,monitor.ideal_count_lower_rate,a_M*nu,a_M*nu,same
+T72_revision_shorter_return_hold,monitor.a_M,100000000000,100000000000,same
+T72_revision_shorter_return_hold,monitor.quiet_upper_rate,A_M*b_nom + eta_M,A_M*b_nom + eta_M,same
+T72_revision_shorter_return_hold,monitor.A_M,100100000000,100100000000,same
+T72_revision_shorter_return_hold,monitor.eta_M_per_s,100,100,same
+T72_revision_shorter_return_hold,monitor.window_ticks,50000000,50000000,same
+T72_revision_shorter_return_hold,monitor.delivery_computation_deadline_after_window_ticks,10000000,10000000,same
+T72_revision_shorter_return_hold,monitor.required_delivery_computation_physical_max_s,0.009,0.009,same
+T72_revision_shorter_return_hold,monitor.lease_end_from_window_start_ticks,175000000,175000000,same
+T72_revision_shorter_return_hold,monitor.k,840000,840000,same
+T72_revision_shorter_return_hold,monitor.z,0.01,0.01,same
+T72_revision_shorter_return_hold,monitor.phi_rational_lower,0.00995,0.00995,same
+T72_revision_shorter_return_hold,monitor.H,42,42,same
+T72_revision_shorter_return_hold,monitor.v_c_per_s,0.0001782,0.0001782,same
+T72_revision_shorter_return_hold,monitor.recognized_bad_window_probability,0.000000001,0.000000001,same
+T72_revision_shorter_return_hold,monitor.independence_from_memory_required,False,False,same
+T72_revision_shorter_return_hold,monitor.missing_overflow_late_or_numeric_failure,"alarm, no LOW; safe S, price charged to declared window/global quotas","alarm, no LOW; safe S, price charged to declared window/global quotas",same
+T72_revision_shorter_return_hold,monitor.calibration_coverage_and_species_mapping,,,same
+T72_revision_shorter_return_hold,own_ERR.role,first available flag enters or extends S; a single zero never releases S,first available flag enters or extends S; a single zero never releases S,same
+T72_revision_shorter_return_hold,own_ERR.max_delivery_s,0.000001,0.000001,same
+T72_revision_shorter_return_hold,own_ERR.false_flag_rate_upper_per_s,0.000001,0.000001,same
+T72_revision_shorter_return_hold,own_ERR.true_count_cost_domination,each true flag on good execution charged to a removed word touch or one initial dirty word,each true flag on good execution charged to a removed word touch or one initial dirty word,same
+T72_revision_shorter_return_hold,own_ERR.under_and_over_count_contract_status,conditional; must be qualified for the full word and own latch,conditional; must be qualified for the full word and own latch,same
+T72_revision_shorter_return_hold,resources.price,"expected occupied common-bus time through T, including after hidden failure","expected occupied common-bus time through T, including after hidden failure",same
+T72_revision_shorter_return_hold,resources.b_nom,bbar for each shielding point,bbar for each shielding point,same
+T72_revision_shorter_return_hold,resources.quiet_tax_limit,0.01,0.01,same
+T72_revision_shorter_return_hold,resources.peak_limit,0.8,0.8,same
+T72_revision_shorter_return_hold,resources.peak_window_s,0.001,0.001,same
+T72_revision_shorter_return_hold,resources.application_delay_limit_s,0.000003,0.000003,same
+T72_revision_shorter_return_hold,resources.application_max_request_s,0.000000045,0.000000045,same
+T72_revision_shorter_return_hold,resources.application_sigma_s,0.000000045,0.000000045,same
+T72_revision_shorter_return_hold,resources.application_rate,0.04,0.04,same
+T72_revision_shorter_return_hold,resources.extra_monitor_control_rate,0.0001,0.0001,same
+T72_revision_shorter_return_hold,resources.extra_monitor_control_sigma_s,0.0000001,0.0000001,same
+T72_revision_shorter_return_hold,resources.extra_request_max_s,0.000000045,0.000000045,same
+T72_revision_shorter_return_hold,resources.quiet_return_example.T_Q_min,0.9*T,0.9*T,same
+T72_revision_shorter_return_hold,resources.quiet_return_example.K_Q_max,1000,1000,same
+T72_revision_shorter_return_hold,resources.quiet_return_example.status,"additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric","additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric",same
+T72_revision_shorter_return_hold,resources.resource_qualification,False,False,same
+T72_revision_shorter_return_hold,resources.T58_grid_changed,False,False,same
