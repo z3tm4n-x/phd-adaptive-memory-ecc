@@ -32,8 +32,10 @@ def main():
     pinned=selection.download(manifest,args.cache/"raw",args.cache/"verified_manifest.json")
     analyze.main(pinned,inv,args.cache/"raw",args.out)
     from checks import integration_checks
+    from supplement import supplement
     from figures import make_figures
     integration_checks(pinned,args.cache/"raw",args.out)
+    supplement(pinned,args.cache/"raw",args.cache/"series",args.out)
     make_figures(pinned,args.cache/"series",args.out)
     print("T67 reproduction complete. Sources verified; future/continuous coverage NOT certified.")
 

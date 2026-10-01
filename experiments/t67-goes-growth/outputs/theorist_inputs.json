@@ -1,0 +1,40 @@
+{
+  "scenario": "R0-A diagnostic 32 data bits x 2^19, protons, 10 mm Al, isotropic equivalent per direction",
+  "candidates": [
+    {
+      "threshold_inversions_s-1": 0.001,
+      "rho_observed_native_s-1": 0.023585048836792813,
+      "rho_illustrative_2x_rounded_up_s-1": 0.048,
+      "proposal_status": "author decision; no future coverage assigned",
+      "conditional_min_e_fold_s_above_threshold": 20.833333333333332
+    },
+    {
+      "threshold_inversions_s-1": 0.01,
+      "rho_observed_native_s-1": 0.020954756763573855,
+      "rho_illustrative_2x_rounded_up_s-1": 0.042,
+      "proposal_status": "author decision; no future coverage assigned",
+      "conditional_min_e_fold_s_above_threshold": 23.809523809523807
+    },
+    {
+      "threshold_inversions_s-1": 0.1,
+      "rho_observed_native_s-1": 0.008774289048171003,
+      "rho_illustrative_2x_rounded_up_s-1": 0.018,
+      "proposal_status": "author decision; no future coverage assigned",
+      "conditional_min_e_fold_s_above_threshold": 55.55555555555556
+    }
+  ],
+  "recommended_starting_threshold_inversions_s-1": 0.001,
+  "recommendation_reason": "fixed significant absolute floor; retain .01/.1 sensitivity, not selected to pass T57",
+  "continuous_growth_contract": null,
+  "future_joint_coverage_probability": null,
+  "full_word_parent_mapping": null,
+  "operational_observation_delay_bound_s": null,
+  "confidence_intervals_computed": false,
+  "counter_impossibility_proved": false,
+  "adaptive_gain_proved": false,
+  "observed_peak_model_s-1": 0.42627360630964284,
+  "peak_status": "maximum retained 1-minute main-model bin, not a future ceiling",
+  "selected_union_exposure_reference": "selected_union.csv; per satellite/direction/mask, not mission fluence",
+  "future_exposure_budget": null,
+  "rho_status": "finite-bin diagnostic; measurement/model errors do not have simultaneous coverage"
+}

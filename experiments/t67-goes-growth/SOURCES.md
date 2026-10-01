@@ -32,6 +32,9 @@ URL каждого NetCDF и SHA-256 фактически использован
    различать пороги dead-time, out-of-band и относительной динамической
    ошибки. Последний сам по себе не является насыщением. Подробные
    агрегированные определения считываются из каждого NetCDF.
+   Полный PDF в этом сеансе вернул HTTP 403; доступен индексируемый
+   фрагмент первоисточника. Практическая семантика использованных флагов
+   проверялась по атрибутам самих исходных NetCDF, не по пересказу PUG.
 6. [NOAA/CIRES пример чтения SEISS](https://cires-stp.github.io/goesr-spwx-examples/examples/seiss/seiss_example.html)
    и [Unidata C API](https://docs.unidata.ucar.edu/netcdf-c/current/group__datasets.html).
    `nc_reader.py` читает стандартным NetCDF API; установленный в среде

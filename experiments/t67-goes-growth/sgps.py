@@ -20,6 +20,8 @@ EPOCH = datetime(2000, 1, 1, 12, tzinfo=timezone.utc).timestamp()
 
 
 def clean(a, attrs):
+    if str(attrs.get('_Unsigned','false')).lower()=='true':
+        raise ValueError('Unsigned packing requires an explicitly qualified reader')
     out = np.asarray(a, float).copy()
     valid = np.isfinite(out)
     if "_FillValue" in attrs:
@@ -29,6 +31,7 @@ def clean(a, attrs):
     if "valid_max" in attrs:
         valid &= out <= attrs["valid_max"]
     out[~valid] = np.nan
+    out = out * attrs.get('scale_factor',1.) + attrs.get('add_offset',0.)
     return out
 
 
@@ -73,6 +76,7 @@ class Source:
     flux: np.ndarray
     corrected: np.ndarray
     uncertainty: np.ndarray
+    complete: np.ndarray
     screened: np.ndarray
     strict: np.ndarray
     yaw: np.ndarray
@@ -163,6 +167,7 @@ def read(path):
         flux, corrected, unc = [directions(x, yaw) for x in (raw, corrected, unc)]
         strict = directions(strict.astype(float), yaw) == 1
         screened = directions(screened.astype(float), yaw) == 1
+        complete = directions((counts == cadence).astype(float), yaw) == 1
         audit = {"name": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
                  "bytes": path.stat().st_size, "satellite": sat, "cadence_s": cadence,
                  "records": len(t), "first_start_utc": datetime.fromtimestamp(t[0], timezone.utc).isoformat(),
@@ -180,4 +185,4 @@ def read(path):
                  "g19_P7_P8C_test_period": contamination_test,
                  "g18_temperature_dependence_caveat": sat == 18,
                  "flux_units": ["protons/(cm2 sr s MeV)"] * 13 + ["protons/(cm2 sr s)"]}
-        return Source(t, flux, corrected, unc, screened, strict, yaw, lo, hi, ef, cadence, signature, audit)
+        return Source(t, flux, corrected, unc, complete, screened, strict, yaw, lo, hi, ef, cadence, signature, audit)

@@ -8,7 +8,10 @@ import hashlib
 import io
 import json
 import platform
+import os
 from pathlib import Path
+import tempfile
+import zipfile
 import numpy as np
 import archive
 import growth
@@ -44,6 +47,25 @@ def write_csv(path, rows):
         raw.close()
 
 
+def save_series(path, arrays):
+    """Never expose a partially written derived archive as a usable cache."""
+    path=Path(path)
+    with tempfile.NamedTemporaryFile(dir=path.parent,prefix=path.stem+'.',suffix='.tmp',delete=False) as f:
+        temp=Path(f.name)
+        np.savez_compressed(f,**arrays)
+        f.flush()
+        os.fsync(f.fileno())
+    with zipfile.ZipFile(temp) as z:
+        if z.testzip() is not None:
+            raise IOError('Derived NPZ failed CRC verification: '+str(temp))
+    with np.load(temp) as z:
+        if set(z.files)!=set(arrays):raise IOError('Incomplete derived archive')
+        for key,value in arrays.items():
+            if not np.array_equal(z[key],value,equal_nan=True):
+                raise IOError('Derived array changed during write: '+key)
+    os.replace(temp,path)
+
+
 def coverage(inv):
     rows, holes = [], []
     for sat in (16, 18, 19):
@@ -77,7 +99,7 @@ def prepare_group(rows, cache, response):
             signatures[key] = len(signatures)
         signature = signatures[key]*3 + np.nan_to_num(src.yaw, nan=1).astype(int)
         a = {"time":src.time,"signature":signature,"file_index":np.full(len(src.time),idx),
-             "flux":src.flux,"flux_screened":src.screened,"flux_strict":src.strict}
+             "flux":src.flux,"flux_screened":src.screened,"flux_strict":src.strict,"complete":src.complete}
         a.update({k:v for k,v in model.items() if isinstance(v,np.ndarray)})
         pieces.append(a)
         audits.append({**src.audit,"url":row["url"],"gap_diagnostics":model["gap_diagnostics"]})
@@ -104,6 +126,21 @@ def series(group):
         yield name,"model_inversions_s-1",group[name],masks
 
 
+def union_summary(group,events,sat,cad):
+    t=group['time'];union=np.zeros(len(t),bool);rows=[]
+    for e in events:
+        union |= (t>=stamp(e['analysis_start']))&(t<stamp(e['analysis_end_exclusive']))
+    for direction,d in (('E',0),('W',1)):
+        for mask in ('reported','screened','strict'):
+            v=union&np.isfinite(group['main_loglog'][:,d])
+            if mask!='reported':v &= group[mask][:,d]
+            rows.append({'satellite':sat,'cadence_s':cad,'direction':direction,'mask':mask,
+                         'unique_retained_s':int(np.sum(v)*cad),
+                         'sum_model_inversions':float(np.sum(group['main_loglog'][v,d])*cad),
+                         'peak_model_s-1':float(np.max(group['main_loglog'][v,d])) if np.any(v) else None})
+    return rows
+
+
 def main(manifest, inv, cache, out):
     out.mkdir(parents=True, exist_ok=True)
     config=json.loads((HERE/"config.json").read_text())
@@ -114,6 +151,12 @@ def main(manifest, inv, cache, out):
     (out/"archive_indexes.json").write_text(json.dumps(inv["indexes"],indent=2)+"\n")
     write_csv(out/"archive_files.csv.gz", inv["files"])
     (out/"source_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+    historical=json.loads((REPO/'experiments/RE-GOES19-PROTON-RATE-01/input_manifest.json').read_text())['goes_archive']['files']
+    old_by_name={r['name']:r for r in historical}
+    write_csv(out/'historical_overlap.csv',[
+        {'name':r['name'],'current_sha256':r['sha256'],'historical_sha256':old_by_name[r['name']]['sha256'],
+         'same_bytes':r['sha256']==old_by_name[r['name']]['sha256'],'semantic_patch_applied':False}
+        for r in manifest['files'] if r['name'] in old_by_name])
     response=Response()
     metrics, summaries, crossings, audits, union_rows, availability = [], [], [], [], [], []
     plot_cache=cache.parent/"series"
@@ -127,20 +170,14 @@ def main(manifest, inv, cache, out):
             group,meta=prepare_group(files,cache,response)
             audits.extend(meta)
             t,sig=group["time"],group["signature"]
-            np.savez_compressed(plot_cache/f"g{sat}_{cad}.npz",**group)
-            union=np.zeros(len(t),bool)
-            for event in manifest["events"]:
-                a,b=stamp(event["analysis_start"]),stamp(event["analysis_end_exclusive"])
-                union |= (t>=a)&(t<b)
-            for direction,d in (("E",0),("W",1)):
-                for mask in ("reported","screened","strict"):
-                    v=union & (np.isfinite(group["main_loglog"][:,d]) if mask=="reported" else group[mask][:,d])
-                    union_rows.append({"satellite":sat,"cadence_s":cad,"direction":direction,"mask":mask,
-                                       "unique_retained_s":int(np.sum(v)*cad),"sum_model_inversions":float(np.sum(group["main_loglog"][v,d])*cad),
-                                       "peak_model_s-1":float(np.max(group["main_loglog"][v,d])) if np.any(v) else None})
+            save_series(plot_cache/f"g{sat}_{cad}.npz",group)
+            union_rows.extend(union_summary(group,manifest['events'],sat,cad))
             for event in manifest["events"]:
                 a,b=stamp(event["analysis_start"]),stamp(event["analysis_end_exclusive"])
                 bg0=stamp(event["background_start"])
+                bg_overlap=any(other['id']!=event['id'] and other['kind']=='NOAA_catalogue'
+                               and stamp(other['onset_utc'])<a
+                               and stamp(other['peak_utc'])+2*86400>bg0 for other in manifest['events'])
                 m=(t>=a)&(t<b)
                 bgm=(t>=bg0)&(t<a)
                 expected=int(np.ceil(b/cad)-np.ceil(a/cad))
@@ -162,11 +199,13 @@ def main(manifest, inv, cache, out):
                             x,v=values[m,d],valid[m,d]&np.isfinite(values[m,d])
                             bg_valid=bgm&valid[:,d]&np.isfinite(values[:,d])
                             bg_count=int(np.sum(bg_valid))
-                            bg=float(np.quantile(values[bg_valid,d],config["background_quantile"])) if bg_count>=expected_bg*config["background_min_coverage"] and bg_count else None
+                            bg_keys=set(sig[bg_valid].tolist())
+                            bg=float(np.quantile(values[bg_valid,d],config["background_quantile"])) if bg_count>=expected_bg*config["background_min_coverage"] and bg_count and len(bg_keys)==1 else None
                             base={"event_id":event["id"],"holdout":event["holdout"],"satellite":sat,"cadence_s":cad,
                                   "direction":direction,"series":name,"quantity":quantity,"mask":mask}
                             summary={**base,"retained_bins":int(np.sum(v)),"expected_bins":expected,"background_bins":bg_count,
-                                     "background":bg,"background_signature_count":len(set(sig[bg_valid].tolist())),
+                                     "background":bg,"background_signature_count":len(bg_keys),
+                                     "background_overlaps_catalogue_activity":bg_overlap,
                                      "peak":float(np.max(x[v])) if np.any(v) else None,
                                      "peak_start_utc":iso(et[np.flatnonzero(v)[np.argmax(x[v])]]) if np.any(v) else None,
                                      "bin_integral":float(np.sum(x[v])*cad),
@@ -181,7 +220,10 @@ def main(manifest, inv, cache, out):
                                 levels += [(f"abs_{level:g}",level) for level in config["absolute_rate_levels_s-1"]]
                             for label,level in levels:
                                 metric={**base,"level_label":label,"level":level}
-                                ef=growth.fastest_e_fold(et,x,v,es,cad,level)
+                                # Do not transfer a relative background across a
+                                # different processing or orientation signature.
+                                lv=v & np.isin(es,list(bg_keys)) if label.endswith('bg') else v
+                                ef=growth.fastest_e_fold(et,x,lv,es,cad,level)
                                 metric["e_completed_starts"]=ef["completed_starts"]
                                 if ef["fastest"]:
                                     elapsed,i,j=ef["fastest"]
@@ -189,7 +231,7 @@ def main(manifest, inv, cache, out):
                                                    "e_start_value":float(x[i]),"e_end_value":float(x[j]),
                                                    "e_bin_integral":float(np.sum(x[i:j])*cad)})
                                 for lag in config["windows_s"]:
-                                    ext=growth.window_extreme(et,x,v,es,cad,lag,level)
+                                    ext=growth.window_extreme(et,x,lv,es,cad,lag,level)
                                     metric[f"pairs_{lag}"]=ext["pairs"]
                                     for kind in ("h","log"):
                                         if ext.get(kind):

@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "file": "sci_sgps-l2-avg1m_g19_d20260119_v3-0-3.nc",
+      "typed_float_vs_double_equal": true,
+      "timestamp_and_cadence_checked": true,
+      "independent_spectrum_and_full_transport_max_relative_error": 1.4994437854573757e-15
+    },
+    {
+      "file": "sci_sgps-l2-avg5m_g19_d20260119_v3-0-3.nc",
+      "typed_float_vs_double_equal": true,
+      "timestamp_and_cadence_checked": true,
+      "independent_spectrum_and_full_transport_max_relative_error": 1.4864080055538953e-15
+    },
+    {
+      "file": "se_sgps-l2-avg5m_g16_s20172440000000_e20172732355000_v2_0_0.nc",
+      "typed_float_vs_double_equal": true,
+      "timestamp_and_cadence_checked": true,
+      "independent_spectrum_and_full_transport_max_relative_error": 1.0651928437762576e-15
+    }
+  ],
+  "status": "all assertions passed",
+  "does_not_validate_physics": true
+}

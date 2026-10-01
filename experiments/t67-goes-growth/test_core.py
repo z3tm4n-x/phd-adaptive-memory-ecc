@@ -98,6 +98,7 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(a[0], 0)
         self.assertEqual(a[-1]*1000, 10000)
         self.assertTrue(np.all(np.isnan(a[1:4])))
+        np.testing.assert_equal(clean([2,-999],{'_FillValue':-999,'scale_factor':.5,'add_offset':1}),[2,np.nan])
 
     def test_yaw_keeps_sensor_identity(self):
         a = np.array([[[10], [20]], [[30], [40]], [[50], [60]]])
@@ -157,6 +158,55 @@ class ResponseTests(unittest.TestCase):
         direct=BITS*np.trapezoid(behind*sigma.sigma_hat(r.energy,r.points,'main_loglog'),r.energy)
         self.assertAlmostEqual(float(flux@(kp+ks)), float(direct), places=13)
         np.testing.assert_equal(kp[:6]+ks[:6], 0)
+
+    def test_missing_unused_channel_cannot_mark_nan_response_usable(self):
+        from types import SimpleNamespace
+        from response import Response
+        lo=np.tile(np.r_[CORR_LO,[25.9,41,83,98.6,113.4,155.2,267]],(2,1))
+        hi=np.tile(np.r_[CORR_HI,[35.2,74,100.7,120.6,142.4,231.5,390]],(2,1))
+        f=np.ones((2,2,14));f[0,0,0]=np.nan
+        src=SimpleNamespace(signature='missing',lower=lo,upper=hi,energy=np.sqrt(lo*hi),
+                            time=np.arange(2)*60,yaw=np.zeros(2),corrected=f,uncertainty=np.ones_like(f),
+                            screened=np.isfinite(f),strict=np.isfinite(f))
+        r=Response().calculate(src)
+        self.assertTrue(np.isnan(r['main_loglog'][0,0]))
+        self.assertFalse(r['screened'][0,0])
+        self.assertFalse(r['core_strict'][0,0])
+
+
+class SelectionTests(unittest.TestCase):
+    def test_union_exposure_excludes_missing_response_and_overlap(self):
+        from analyze import union_summary
+        group={'time':np.array([0.,60.]),'main_loglog':np.array([[1.,np.nan],[np.nan,2.]]),
+               'screened':np.ones((2,2),bool),'strict':np.zeros((2,2),bool)}
+        e={'analysis_start':'1970-01-01T00:00:00+00:00','analysis_end_exclusive':'1970-01-01T00:02:00+00:00'}
+        r=union_summary(group,[e,e],19,60)
+        self.assertEqual(r[1]['sum_model_inversions'],60)
+        self.assertEqual(r[1]['unique_retained_s'],60)
+        self.assertEqual(r[4]['sum_model_inversions'],120)
+        self.assertIsNone(r[2]['peak_model_s-1'])
+
+    def test_atomic_cache_round_trip_including_nan_and_masks(self):
+        import tempfile
+        from pathlib import Path
+        from analyze import save_series
+        arrays={'x':np.array([0.,np.nan,2.]),'mask':np.array([True,False,True])}
+        with tempfile.TemporaryDirectory(prefix='t67-test-') as d:
+            p=Path(d)/'tiny.npz';save_series(p,arrays)
+            with np.load(p) as z:
+                for k,v in arrays.items():np.testing.assert_equal(z[k],v)
+
+    def test_catalogue_not_limited_and_author_date_not_duplicate(self):
+        from selection import select
+        rows=[{'onset_utc':f'2025-06-{d:02d}T00:00:00+00:00','peak_utc':f'2025-06-{d:02d}T12:00:00+00:00'} for d in range(1,16)]
+        rows.append({'onset_utc':'2026-01-18T22:55:00+00:00','peak_utc':'2026-01-19T19:15:00+00:00'})
+        cfg={'author_dates':['2026-01-19'],'cutoff_exclusive_utc':'2026-10-01T00:00:00Z',
+             'days_before_onset':2,'days_after_peak':2,'background_hours':24}
+        r=select({'catalogue':{'rows':rows},'files':[]},cfg)
+        self.assertEqual(len(r['events']),17) # all 16 catalogue rows + full month
+        self.assertEqual(sum(bool(e.get('author_dates')) for e in r['events']),1)
+        self.assertFalse(next(e for e in r['events'] if e.get('author_dates'))['holdout'])
+        self.assertTrue(r['files'][0]['name'].startswith('se_'))
 
 
 if __name__ == "__main__":

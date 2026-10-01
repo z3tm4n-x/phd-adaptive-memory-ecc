@@ -156,8 +156,10 @@ class Response:
                 m = src.yaw == yaw
                 screened[m, d] = np.all(src.screened[m, d][:, np.r_[active,13]], axis=1)
                 core_strict[m, d] = np.all(src.strict[m, d][:, active], axis=1)
-        output["screened"] = screened
-        output["core_strict"] = core_strict
+        # The adapter conservatively requires a complete spectrum even for
+        # zero-weight low-energy channels. Do not label a missing result usable.
+        output["screened"] = screened & valid
+        output["core_strict"] = core_strict & valid
         output["core_only"] = output["core_primary"] + output["core_secondary"]
         output["fallback"] = fallback
         output["gap_diagnostics"] = diag
