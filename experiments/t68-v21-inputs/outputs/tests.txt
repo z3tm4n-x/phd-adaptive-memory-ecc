@@ -1,0 +1,21 @@
+test_byte_pair_hypotheses_are_distinct (test_t68.GeometryAndService.test_byte_pair_hypotheses_are_distinct) ... ok
+test_calendar_span_differs_from_occupancy (test_t68.GeometryAndService.test_calendar_span_differs_from_occupancy) ... ok
+test_conditional_write_does_not_implement_U_fence (test_t68.GeometryAndService.test_conditional_write_does_not_implement_U_fence) ... ok
+test_err_read_only_is_lower_bound (test_t68.GeometryAndService.test_err_read_only_is_lower_bound) ... ok
+test_merge_transitivity_is_not_parent_identification (test_t68.GeometryAndService.test_merge_transitivity_is_not_parent_identification) ... ok
+test_merge_uses_l1_not_chebyshev (test_t68.GeometryAndService.test_merge_uses_l1_not_chebyshev) ... ok
+test_peak_bound_small_and_large_window (test_t68.GeometryAndService.test_peak_bound_small_and_large_window) ... ok
+test_duration_seconds_and_zero_components (test_t68.PhysicsAndUnits.test_duration_seconds_and_zero_components) ... ok
+test_full38_multiplier_includes_word_length (test_t68.PhysicsAndUnits.test_full38_multiplier_includes_word_length) ... ok
+test_peak_fluence_bound_with_mixed_pairs (test_t68.PhysicsAndUnits.test_peak_fluence_bound_with_mixed_pairs) ... ok
+test_point_period_does_not_certify_upper_smu (test_t68.PhysicsAndUnits.test_point_period_does_not_certify_upper_smu) ... ok
+test_positive_fluence_zero_peak_is_not_ignored (test_t68.PhysicsAndUnits.test_positive_fluence_zero_peak_is_not_ignored) ... ok
+test_xor_direct_mark_can_cancel (test_t68.PhysicsAndUnits.test_xor_direct_mark_can_cancel) ... ok
+test_both_v21_tables_match_printed_precision (test_t68.ReproducedInputs.test_both_v21_tables_match_printed_precision) ... ok
+test_numerical_reproduction_not_physical_qualification (test_t68.ReproducedInputs.test_numerical_reproduction_not_physical_qualification) ... ok
+test_six_smu_are_merged_objects (test_t68.ReproducedInputs.test_six_smu_are_merged_objects) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+OK

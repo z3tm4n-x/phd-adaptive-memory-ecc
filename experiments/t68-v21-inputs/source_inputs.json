@@ -1,0 +1,74 @@
+{
+  "main": {
+    "archive_name": "results.zip",
+    "archive_sha256": "84b578195499782bb70570dc1dd6d492711a3f6e7f167528912295bf6a2e7beb",
+    "members": {
+      "inputs/cosrad_main/gl_x.txt": {
+        "archive_member": "results/gl_x.txt",
+        "sha256": "7e507a77a5b1d7e3ae7e0e0c0c87ed9d87dc6a3b220d7b72b762b5d21ae72c02",
+        "bytes": 6335
+      },
+      "inputs/cosrad_main/gp_x.txt": {
+        "archive_member": "results/gp_x.txt",
+        "sha256": "c757eaef5f613b2714e0c54d889b3e32faa443b2d43c9084cf10a4c5638968e8",
+        "bytes": 6995
+      },
+      "inputs/cosrad_main/sfn.txt": {
+        "archive_member": "results/sfn.txt",
+        "sha256": "89e27e63de8ec6b554e5e42448a827a949722a2518a290a688d8fb333d91c6e0",
+        "bytes": 14073
+      },
+      "inputs/cosrad_main/sfxm.txt": {
+        "archive_member": "results/sfxm.txt",
+        "sha256": "0fdf380e4b912dcbfa89d66187624e07e5e5f994da18993c5035d35aa8d7923a",
+        "bytes": 14085
+      },
+      "inputs/cosrad_main/sl_x.txt": {
+        "archive_member": "results/sl_x.txt",
+        "sha256": "dbd44c3322293e9bb2238343af38ba08032e1a184da5cb2021942e86ac702350",
+        "bytes": 7191
+      },
+      "inputs/cosrad_main/sp_x.txt": {
+        "archive_member": "results/sp_x.txt",
+        "sha256": "1d6e2536011f41bbb74189a2730cb1eaa9102aa1fec42a6b10d4e8b32fbcc57a",
+        "bytes": 6173
+      }
+    }
+  },
+  "thin": {
+    "archive_name": "results2.zip",
+    "archive_sha256": "593d6bf547d9ed9a759791128d17515c1dec7fee8342734c3b1a00ff2dbc4b7b",
+    "members": {
+      "inputs/cosrad_thin/gl_x.txt": {
+        "archive_member": "results/gl_x.txt",
+        "sha256": "b47c7b265a38d28515f9443cdea71da7b0b784e02c0aecdbc2b3ed5e643c9d68",
+        "bytes": 5741
+      },
+      "inputs/cosrad_thin/gp_x.txt": {
+        "archive_member": "results/gp_x.txt",
+        "sha256": "3bf0f143414c9846cb85aba3ccb8d6e7d82a4ed096785b3052f9908bccd0f41b",
+        "bytes": 6335
+      },
+      "inputs/cosrad_thin/sfn.txt": {
+        "archive_member": "results/sfn.txt",
+        "sha256": "89e27e63de8ec6b554e5e42448a827a949722a2518a290a688d8fb333d91c6e0",
+        "bytes": 14073
+      },
+      "inputs/cosrad_thin/sfxm.txt": {
+        "archive_member": "results/sfxm.txt",
+        "sha256": "0fdf380e4b912dcbfa89d66187624e07e5e5f994da18993c5035d35aa8d7923a",
+        "bytes": 14085
+      },
+      "inputs/cosrad_thin/sl_x.txt": {
+        "archive_member": "results/sl_x.txt",
+        "sha256": "5cff56affeca2edd11897739f41ecaa587239c6662b1eb0a259f68e6e2057759",
+        "bytes": 6509
+      },
+      "inputs/cosrad_thin/sp_x.txt": {
+        "archive_member": "results/sp_x.txt",
+        "sha256": "d3714e7fb68dd302824f94e6e7b06ad86e09e28b09ed6a9aee778565853670a3",
+        "bytes": 5590
+      }
+    }
+  }
+}

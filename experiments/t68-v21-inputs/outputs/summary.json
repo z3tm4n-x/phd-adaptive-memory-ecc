@@ -1,0 +1,103 @@
+{
+  "input_checks": {
+    "inputs/article-cy62167-v21.docx": true,
+    "inputs/calc_v18.zip": true,
+    "inputs/cosrad_main/gl_x.txt": true,
+    "inputs/cosrad_main/gp_x.txt": true,
+    "inputs/cosrad_main/sfn.txt": true,
+    "inputs/cosrad_main/sfxm.txt": true,
+    "inputs/cosrad_main/sl_x.txt": true,
+    "inputs/cosrad_main/sp_x.txt": true,
+    "inputs/cosrad_thin/gl_x.txt": true,
+    "inputs/cosrad_thin/gp_x.txt": true,
+    "inputs/cosrad_thin/sfn.txt": true,
+    "inputs/cosrad_thin/sfxm.txt": true,
+    "inputs/cosrad_thin/sl_x.txt": true,
+    "inputs/cosrad_thin/sp_x.txt": true,
+    "raw_archive": true,
+    "clust_p1.5MeV.txt": true,
+    "clust_p40MeV.txt": true,
+    "clust_p0.9MeV.txt": true,
+    "clust_C1080MeV.txt": true,
+    "clust_XeLET57.txt": true,
+    "clust_p5MeV.txt": true,
+    "clust_Xe2700MeV.txt": true,
+    "clust_XeLET42.txt": true,
+    "clust_U35.7GeV.txt": true,
+    "clust_p164MeV.txt": true,
+    "clust_U190.4GeV.txt": true,
+    "clust_p1MeV.txt": true,
+    "clust_XeLET27.txt": true,
+    "clust_p29MeV.txt": true,
+    "clust_C360MeV.txt": true,
+    "clust_p1.1MeV.txt": true,
+    "clust_Ar548MeV.txt": true,
+    "clust_p3MeV.txt": true,
+    "clust_C720MeV.txt": true,
+    "clust_p124MeV.txt": true,
+    "clust_U45.2GeV.txt": true,
+    "clust_p2.5MeV.txt": true,
+    "clust_Ar1050MeV.txt": true,
+    "clust_p4MeV.txt": true,
+    "clust_U78.5GeV.txt": true,
+    "clust_U142.8GeV.txt": true,
+    "clust_p80MeV.txt": true,
+    "clust_p186MeV.txt": true
+  },
+  "clusters": {
+    "ordinary_clusters": 173802,
+    "cell_occurrences": 299026,
+    "HI_registered_clusters": 33696,
+    "HI_merged_objects": 33160,
+    "HI_grouping_distribution": {
+      "6": 10,
+      "0": 45
+    },
+    "gap45_observed": 155,
+    "gap45_expected": 18.753429265817008,
+    "gap45_ratio": 8.26515501794265,
+    "gap67_ratio": 1.880080623139395
+  },
+  "numeric": {
+    "v18_frozen_max_relative_difference": 0.0,
+    "effective_duration": {
+      "max_seconds": 115384.61538461539,
+      "max_days": 1.3354700854700856,
+      "energy_MeV_nucleon": 1.0,
+      "Z": 26,
+      "positive_components": 1050,
+      "zero_zero_components": 126,
+      "declared_seconds": 115776.0,
+      "nodes_within_declared_bound": true
+    },
+    "accumulation_38_to_32_factor": 1.4173387096774193,
+    "theta_upper_factor": 1.4285714285714286,
+    "point_sigma43_archived": 0.00011001100110011001,
+    "point_sigma43_from_unrounded_F": 0.00011001630911280775,
+    "point_sigma57_archived": 0.0004456824512534819,
+    "point_sigma57_from_unrounded_F": 0.00044570227282461747,
+    "quad_upper_max_relative_difference": 0.002588321703889118
+  },
+  "service": {
+    "thresholds_point_only": {
+      "internal_x8_known_writes_0": 2.0,
+      "internal_x8_known_writes_1": 2.25,
+      "internal_x8_unknown_writes_0": 2.75,
+      "internal_x8_unknown_writes_1": 3.5,
+      "internal_x16_known_writes_0": 2.0,
+      "internal_x16_known_writes_1": 2.25,
+      "internal_x16_unknown_writes_0": 2.25,
+      "internal_x16_unknown_writes_1": 2.75
+    },
+    "existing_executor_busy_upper_s": 0.12609755577058854,
+    "existing_executor_nominal_reserved_s": 0.12582912,
+    "peak_delay_qualified": false
+  },
+  "qualification": {
+    "conditional_model_only": true,
+    "full38_ready": false,
+    "full39_ready": false,
+    "accepted_theory_changed": false,
+    "original_manuscript_changed": false
+  }
+}
