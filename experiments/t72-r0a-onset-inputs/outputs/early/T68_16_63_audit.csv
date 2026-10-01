@@ -1,0 +1,5 @@
+mode,shield_g_cm2,write_fraction,reads,nominal_busy_s,point_period_s,occupancy_percent_at_point_period,interpretation,external_risk_period_applicable
+internal_x8_known,2.5,0.0,524288,0.02359296,0.0746526518455408,31.60364624262074,read-only lower bound,conditional v21 surrogate only
+internal_x8_known,3.0,0.0,524288,0.02359296,0.1503908499467867,15.68776292463802,read-only lower bound,conditional v21 surrogate only
+internal_x8_known,2.5,1.0,524288,0.04718592,0.0746526518455408,63.20729248524148,serial U total; ERR worst case,conditional v21 surrogate only
+internal_x8_known,3.0,1.0,524288,0.04718592,0.1503908499467867,31.37552584927604,serial U total; ERR worst case,conditional v21 surrogate only

@@ -1,0 +1,30 @@
+{
+  "base": "2c88749ee6103fcaee595ab22600357bb3f0649b",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "theory_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+  "engineer_revision": "git commit containing these source hashes (PR #77; no self-referential output SHA)",
+  "source_sha256": {
+    "experiments/t72-r0a-onset-inputs/config.json": "30f5c4b181e68b68c961e120d3400bb5e7e56b4c1ff399ca1ad9083a121caaac",
+    "experiments/t72-r0a-onset-inputs/inputs/t73_7ed0f6c.json": "0cec8d8c868a73ed4c9499db230a2a3b6197ec2864f91838f492b3e6f3489186",
+    "experiments/t67-goes-growth/outputs/source_manifest.json": "c11b6ec26610c26f16b79d578ae96e0e6a98d6cf1fcd56196f670ed5fc381ce6",
+    "experiments/t67-goes-growth/METHOD.md": "7cfc22d5bbea0db15c30f3971879ac297f73567d80cda064344f9be628d241e8",
+    "experiments/t58-fixed-baseline-r0b/certificate.py": "8a836276e8bcd958d524d25f17913bbeda25b3e54e0a5ca88e243f694df5f7af",
+    "experiments/t68-v21-inputs/outputs/numerics.csv": "85c2ed839bbf23f0a43f0d263c4a274f82e4a9a231ae72151b3b260a68ef5e40",
+    "experiments/t68-v21-inputs/outputs/service.csv": "4af5ec75e31dd1103fb6d653c3c8849460827dcc4568148f2a75a13541cf2384",
+    "experiments/t72-r0a-onset-inputs/controller.py": "a6fb7885ca866c983e47a597f7459f5176af76de13c1c14c3d6a2f883ddcf822",
+    "experiments/t72-r0a-onset-inputs/counts.py": "8e96b4920116f3369fb674a35091097b33a59ac54606a0ecf7164fa7f5f2e80c",
+    "experiments/t72-r0a-onset-inputs/onsets.py": "09fd0b652ff48baeaf4ba836ea05e45eed4a12bc3be5bcd337d7b0f7f58e4bf4",
+    "experiments/t72-r0a-onset-inputs/prepare.py": "2947f65867a40ad476a54556dd25417757e9bf6a789dfc562b23276cc1242aea",
+    "experiments/t72-r0a-onset-inputs/risk_inputs.py": "40e58b218cade8e7fa3cd333b3c780908bca6a594a8acab52709bcaf2d493519",
+    "experiments/t72-r0a-onset-inputs/run.py": "e5911ac6c7a5da261a424e9f9075718a793170409e948ec3e8993fa5e7cb99eb",
+    "experiments/t72-r0a-onset-inputs/t73_calendar.py": "78bcdd6c4caf5a1b0999ed9190c55998fd38478b047b227fe34e0b2d8acda41c",
+    "experiments/t72-r0a-onset-inputs/t73_resources.py": "b398a3b272ad44a648306248c2ad3628ec8baf80180b13cb5c1269578363de7f",
+    "experiments/t72-r0a-onset-inputs/test_t72.py": "46aa95bbed4517f9f8b7ff253d3893dc28c3fd81316c7810eb88e926ff4898ab",
+    "experiments/t72-r0a-onset-inputs/test_t73.py": "bf1ba4be0c9cefceb6d19151ecf58063107c2cb86395e3362d50e7703acfbc4b",
+    "experiments/t72-r0a-onset-inputs/verify_t73.py": "8064790bddf79a24be370cb1cca0d4e80e99deeafdf55979ca76cd5587f11a7f",
+    "experiments/t72-r0a-onset-inputs/inputs/t72_explicit_changes.json": "ff0d298f2a785da61ab4a2a6ac3255b8cbe4a659ffe5ac4efe0788f8a8bcbe80"
+  },
+  "source_bytes_manifest": "../t67-goes-growth/outputs/source_manifest.json",
+  "accepted_packages_modified": false
+}
