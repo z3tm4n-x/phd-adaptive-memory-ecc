@@ -1,0 +1,13 @@
+satellite,direction,series,pairs,native_5m_level_floor_s-1,median_absolute_relative_difference,p99_absolute_relative_difference,max_absolute_relative_difference,status
+16,E,core_only,8051,0.0001,1.6363776042753824e-08,5.384317180447553e-08,7.707206608756049e-08,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+16,E,main_loglog,8188,0.0001,0.00013518120224911267,0.0012964981082061186,0.0022043029689945847,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+16,W,core_only,10707,0.0001,4.1661876365128453e-07,0.0005119443293972016,0.010817732186812529,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+16,W,main_loglog,10932,0.0001,0.0001774410127018871,0.001878158313727132,0.011212758904696063,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+18,E,core_only,8470,0.0001,1.4699485343471364e-08,5.0219402270120306e-08,6.853101250809279e-08,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+18,E,main_loglog,8591,0.0001,0.00020391656884626266,0.0013356887087952907,0.0017988017081082609,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+18,W,core_only,14162,0.0001,1.7167594920195737e-08,0.0005148481017315896,0.0013361518261979911,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+18,W,main_loglog,14344,0.0001,0.00016181445739263582,0.0014072367115165888,0.01161616290544444,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+19,E,core_only,5020,0.0001,1.7902546334469424e-08,0.0004740212467118445,0.001178420775259474,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+19,E,main_loglog,5110,0.0001,0.00011343741221054099,0.0015088215801773409,0.008691609598657975,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+19,W,core_only,6031,0.0001,1.6387289718107594e-08,5.301010835563483e-08,7.150825070504192e-08,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions
+19,W,main_loglog,6099,0.0001,0.00016840338191619286,0.0013547967778515255,0.012954195243461041,descriptive; full source seconds; 5m reconstruction vs mean of 1m reconstructions

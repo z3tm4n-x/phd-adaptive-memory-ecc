@@ -1,0 +1,5 @@
+# Reproduction used Python 3.12.14, numpy 2.3.5, matplotlib 3.10.8.
+numpy==2.3.5
+matplotlib==3.10.8
+# Reader: netCDF4, OR an already installed standard libnetcdf (including VTK).
+# No package installation is performed by the reproduction command.

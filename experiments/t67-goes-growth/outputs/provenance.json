@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+  "upstream": {
+    "experiments/RE-GOES19-PROTON-RATE-01/goes19_adapter.py": "042eedfb3cee28e567c433850fbbc832c7c1704b953ab4b7d709d049398f0abb",
+    "experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py": "d3a1a577922a02d1d498146f2c6a6fa3888478b36a823d8d0a89f921d4ad1b52",
+    "experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/recovery/outputs/radar_transport.npz": "7f006d49c4e469b624db62b84925571c40f0602cfbd0f3b333211521dad60f9e",
+    "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972"
+  },
+  "events": 47,
+  "files": 1097,
+  "metrics_rows": 28992,
+  "crossings": 214,
+  "guaranteed_future_coverage": null,
+  "confidence_level": null,
+  "raw_temporal_interpolation": false
+}
