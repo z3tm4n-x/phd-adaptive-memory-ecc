@@ -1,0 +1,22 @@
+{
+  "rows": 7680,
+  "fixed_keys": [
+    "set",
+    "architecture",
+    "shield",
+    "margin",
+    "kind",
+    "mode",
+    "qratio",
+    "rho_e",
+    "DQ"
+  ],
+  "source_of_old_rows": "immutable outputs/t80/pilot_grid.csv.xz",
+  "channel_combinations": 12,
+  "arithmetic_reuse": "identical operands may share calculation id; environment labels and minima remain separate",
+  "counts": {
+    "pilot_tuples": 92160
+  },
+  "distinct_calculations": 93360,
+  "full_grid_expanded": false
+}

@@ -1,0 +1,421 @@
+{
+  "precision": 90,
+  "points": 68,
+  "checks": [
+    {
+      "context_id": 0,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "0E-34",
+        "quiet_upper": "2.82368972777971992604273520663364949077845027856719560492824484797E-25",
+        "returns_upper": "4.00067832022458610553702131612446044373384327542688042078580294359E-25"
+      }
+    },
+    {
+      "context_id": 1,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "6.796087428434000000000000000000000E-25",
+        "quiet_upper": "2.96830837983824302470660556731503181676494168745695960248636207861E-26",
+        "returns_upper": "6.54113543966454340465141472915210734132290939159887549392169899168E-26"
+      }
+    },
+    {
+      "context_id": 2,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "0E-31",
+        "quiet_upper": "8.18537799310611556187810718323169238232803652852103849960851118131E-25",
+        "returns_upper": "5.78196575283399064296420336373617494382158565419152302912995413828E-25"
+      }
+    },
+    {
+      "context_id": 3,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "2.625909331825000000000000000000E-25",
+        "quiet_upper": "2.375027091830128224626324295890464515874247042058377940388368979992E-25",
+        "returns_upper": "4.10522357218476811425752256707451954134058189869452978661757265628E-26"
+      }
+    },
+    {
+      "context_id": 9,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "9.033932520887050000000000000000000E-25",
+        "quiet_upper": "7.006708463030323736434633667095377290248726556550142333377001625059E-25",
+        "returns_upper": "7.26744357418757836151235058320529287487356069736504746885088961643E-26"
+      }
+    },
+    {
+      "context_id": 11,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "6.40956631206250000000000000000E-26",
+        "quiet_upper": "2.385942225227361066027648107752857080881504178440775459038591704141E-25",
+        "returns_upper": "7.07947030800741115313800125432079084256871530219204756106791033293E-26"
+      }
+    },
+    {
+      "context_id": 17,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "9.033932520887050000000000000000000E-25",
+        "quiet_upper": "7.006708463030323736434633667095377290248726556550142333377001625059E-25",
+        "returns_upper": "7.26744357418757836151235058320529287487356069736504746885088961643E-26"
+      }
+    },
+    {
+      "context_id": 19,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "6.40956631206250000000000000000E-26",
+        "quiet_upper": "2.385942225227361066027648107752857080881504178440775459038591704141E-25",
+        "returns_upper": "7.07947030800741115313800125432079084256871530219204756106791033293E-26"
+      }
+    },
+    {
+      "context_id": 25,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "9.033932520887050000000000000000000E-25",
+        "quiet_upper": "7.006708463030323736434633667095377290248726556550142333377001625059E-25",
+        "returns_upper": "7.26744357418757836151235058320529287487356069736504746885088961643E-26"
+      }
+    },
+    {
+      "context_id": 27,
+      "mode": "ERR-only",
+      "decimal90_differences": {
+        "risk_upper": "6.40956631206250000000000000000E-26",
+        "quiet_upper": "2.385942225227361066027648107752857080881504178440775459038591704141E-25",
+        "returns_upper": "7.07947030800741115313800125432079084256871530219204756106791033293E-26"
+      }
+    },
+    {
+      "context_id": 0,
+      "mode": "combined",
+      "risk_difference": "4.84631578947368421052631578947368421052631578947368421052631578947369E-25"
+    },
+    {
+      "context_id": 0,
+      "mode": "monitor-only",
+      "risk_difference": "4.84631578947368421052631578947368421052631578947368421052631578947369E-25"
+    },
+    {
+      "context_id": 1,
+      "mode": "combined",
+      "risk_difference": "6.10155789473684210526315789473684210526315789473684210526315789473685E-25"
+    },
+    {
+      "context_id": 1,
+      "mode": "monitor-only",
+      "risk_difference": "1.6842105263157894736842105263157894736842105263157894736842105263159E-26"
+    },
+    {
+      "context_id": 2,
+      "mode": "combined",
+      "risk_difference": "2.63157894736842105263157894736842105263157894736842105263157894736842E-25"
+    },
+    {
+      "context_id": 2,
+      "mode": "monitor-only",
+      "risk_difference": "6.84210526315789473684210526315789473684210526315789473684210526315789E-25"
+    },
+    {
+      "context_id": 3,
+      "mode": "combined",
+      "risk_difference": "1.41052631578947368421052631578947368421052631578947368421052631578947E-25"
+    },
+    {
+      "context_id": 3,
+      "mode": "monitor-only",
+      "risk_difference": "9.03157894736842105263157894736842105263157894736842105263157894736842E-25"
+    },
+    {
+      "context_id": 9,
+      "mode": "combined",
+      "risk_difference": "6.80967791631925565446948396210526315789473684210526315789473684210527E-25"
+    },
+    {
+      "context_id": 9,
+      "mode": "monitor-only",
+      "risk_difference": "6.62658662748950379950088603368421052631578947368421052631578947368422E-25"
+    },
+    {
+      "context_id": 10,
+      "mode": "combined",
+      "risk_difference": "1.58877324985568064469771381578947368421052631578947368421052631578947E-25"
+    },
+    {
+      "context_id": 10,
+      "mode": "monitor-only",
+      "risk_difference": "2.3214325494565531307181250000000000000000000000000000000000000000000E-26"
+    },
+    {
+      "context_id": 11,
+      "mode": "combined",
+      "risk_difference": "4.83118853359512041826072684210526315789473684210526315789473684210526E-25"
+    },
+    {
+      "context_id": 11,
+      "mode": "monitor-only",
+      "risk_difference": "2.36640676944459383909221736842105263157894736842105263157894736842105E-25"
+    },
+    {
+      "context_id": 17,
+      "mode": "combined",
+      "risk_difference": "6.80967791631925565446948396210526315789473684210526315789473684210527E-25"
+    },
+    {
+      "context_id": 17,
+      "mode": "monitor-only",
+      "risk_difference": "6.62658662748950379950088603368421052631578947368421052631578947368422E-25"
+    },
+    {
+      "context_id": 18,
+      "mode": "combined",
+      "risk_difference": "1.58877324985568064469771381578947368421052631578947368421052631578947E-25"
+    },
+    {
+      "context_id": 18,
+      "mode": "monitor-only",
+      "risk_difference": "2.3214325494565531307181250000000000000000000000000000000000000000000E-26"
+    },
+    {
+      "context_id": 19,
+      "mode": "combined",
+      "risk_difference": "4.83118853359512041826072684210526315789473684210526315789473684210526E-25"
+    },
+    {
+      "context_id": 19,
+      "mode": "monitor-only",
+      "risk_difference": "2.36640676944459383909221736842105263157894736842105263157894736842105E-25"
+    },
+    {
+      "context_id": 25,
+      "mode": "combined",
+      "risk_difference": "6.80967791631925565446948396210526315789473684210526315789473684210527E-25"
+    },
+    {
+      "context_id": 25,
+      "mode": "monitor-only",
+      "risk_difference": "6.62658662748950379950088603368421052631578947368421052631578947368422E-25"
+    },
+    {
+      "context_id": 26,
+      "mode": "combined",
+      "risk_difference": "1.58877324985568064469771381578947368421052631578947368421052631578947E-25"
+    },
+    {
+      "context_id": 26,
+      "mode": "monitor-only",
+      "risk_difference": "2.3214325494565531307181250000000000000000000000000000000000000000000E-26"
+    },
+    {
+      "context_id": 27,
+      "mode": "combined",
+      "risk_difference": "4.83118853359512041826072684210526315789473684210526315789473684210526E-25"
+    },
+    {
+      "context_id": 27,
+      "mode": "monitor-only",
+      "risk_difference": "2.36640676944459383909221736842105263157894736842105263157894736842105E-25"
+    },
+    {
+      "context_id": 0,
+      "mode": "fixed",
+      "M": 73272630,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 1,
+      "mode": "fixed",
+      "M": 146959644,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 2,
+      "mode": "fixed",
+      "M": 73272630,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 3,
+      "mode": "fixed",
+      "M": 146959644,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 4,
+      "mode": "fixed",
+      "M": 73221890,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 5,
+      "mode": "fixed",
+      "M": 146857878,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 6,
+      "mode": "fixed",
+      "M": 73221890,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 7,
+      "mode": "fixed",
+      "M": 146857878,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 8,
+      "mode": "fixed",
+      "M": 68014971,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 9,
+      "mode": "fixed",
+      "M": 136417216,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 10,
+      "mode": "fixed",
+      "M": 68014971,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 11,
+      "mode": "fixed",
+      "M": 136417216,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 12,
+      "mode": "fixed",
+      "M": 67967869,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 13,
+      "mode": "fixed",
+      "M": 136322744,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 14,
+      "mode": "fixed",
+      "M": 67967869,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 15,
+      "mode": "fixed",
+      "M": 136322744,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 16,
+      "mode": "fixed",
+      "M": 68014971,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 17,
+      "mode": "fixed",
+      "M": 136417216,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 18,
+      "mode": "fixed",
+      "M": 68014971,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 19,
+      "mode": "fixed",
+      "M": 136417216,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 20,
+      "mode": "fixed",
+      "M": 67967869,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 21,
+      "mode": "fixed",
+      "M": 136322744,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 22,
+      "mode": "fixed",
+      "M": 67967869,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 23,
+      "mode": "fixed",
+      "M": 136322744,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 24,
+      "mode": "fixed",
+      "M": 68014971,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 25,
+      "mode": "fixed",
+      "M": 136417216,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 26,
+      "mode": "fixed",
+      "M": 68014971,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 27,
+      "mode": "fixed",
+      "M": 136417216,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 28,
+      "mode": "fixed",
+      "M": 67967869,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 29,
+      "mode": "fixed",
+      "M": 136322744,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 30,
+      "mode": "fixed",
+      "M": 67967869,
+      "next_quantum_rejected": true
+    },
+    {
+      "context_id": 31,
+      "mode": "fixed",
+      "M": 136322744,
+      "next_quantum_rejected": true
+    }
+  ],
+  "independent_of_production_equations": true,
+  "delivered_CSV_rounding_tolerance": "1e-20; exact production acceptance remains directed",
+  "physical_qualification": false
+}

@@ -1,0 +1,34 @@
+{
+  "theory_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+  "architecture_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+  "previous_delivery_sha": "a0f6ecbba01d810433596f0d00d1db352193c009",
+  "baseline_theory_sha": "365b7386c1bc702e424ad4ee9cb4781ae2c24aeb",
+  "source_blobs": {
+    "t80-realistic-channel.md": "8bba82955dd86ea6ec600b5415d76f7c1aa9fe80",
+    "t80-realistic-channel-appendix.md": "e8d6cf6276aa8c5ac828cf0588fbeba0074d45ef",
+    "t80-realistic-channel-inputs.json": "6bfc02757b1bfd74b3a33c04945b565375e393eb"
+  },
+  "scope": "E.6 only; old 12 channel combinations, no full-grid extension",
+  "LOW_types_fixed_before_observations": ["reset-slow", "direct-fast"],
+  "baseline_stride_divisor": 2,
+  "addressed_stride_divisors_only_after_baseline_failure": [8, 32],
+  "vc_direct_candidates": ["old six theta values", "(bbar+v_flat)/2", "v_flat"],
+  "objective": "minimum max(whole-quiet upper, returning upper) within ONE fixed environment and lower-channel type; also retain whole-quiet minimum",
+  "tie_break": "smaller divisor, then old pilot order, then smaller ka, then earlier vc candidate",
+  "threshold": "largest safe k over the six registered z, chosen offline; analytic B6 and exact Poisson inversion are addressed checks",
+  "price_tail": "directed Poisson Chernoff upper at k+1, supplemented by directed exact-tail inversion in selected rows; never an empirical detection probability",
+  "cadence_contract": {
+    "baseline": "reuse conditional_linear_counter_v1",
+    "finer": "conditional required total rate envelope C_X=(N/2)*1e-4, same per-message burst sigma_X=1e-7 s with serialized subwindow delivery; not a measured increment",
+    "ring_counters_required": "N+1 with N=w/Delta; cumulative/subwindow native counts, no interpolated output",
+    "actual_increment_upper_s": null,
+    "physical_interface_qualified": false,
+    "g": "keep original retimed g, recheck peak/FIFO/rate with new C_X; no silent retuning"
+  },
+  "retained": "four budgets, full-word D*, quotas, K0, two shields, two architectures and 10%/5%; old outputs/t80 and code immutable",
+  "sufficient_changes": "only B7 a_suff or tighter delivery / stated U bound, separately labelled and fully re-evaluated; never mixed into original-grid minima",
+  "physical_D_upper": null,
+  "physical_ERR_lower": null,
+  "physical_monitor_lower": null,
+  "physical_joint_WCET_s": null
+}
