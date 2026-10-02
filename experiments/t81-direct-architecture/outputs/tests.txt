@@ -1,0 +1,29 @@
+test_angular_unknowns_and_family_budget (test_t81.AcceptedInputs.test_angular_unknowns_and_family_budget) ... ok
+test_budget_sums_and_monotonic_exposure (test_t81.AcceptedInputs.test_budget_sums_and_monotonic_exposure) ... ok
+test_exposure_normalization (test_t81.AcceptedInputs.test_exposure_normalization) ... ok
+test_external_all_seven_checks_and_pins (test_t81.AcceptedInputs.test_external_all_seven_checks_and_pins) ... ok
+test_full38_pair_types_not_a_cross_section_multiplier (test_t81.AcceptedInputs.test_full38_pair_types_not_a_cross_section_multiplier) ... ok
+test_fullword_forecast_does_not_credit_raw_exposure (test_t81.AcceptedInputs.test_fullword_forecast_does_not_credit_raw_exposure) ... ok
+test_hashes (test_t81.AcceptedInputs.test_hashes) ... ok
+test_legacy_regressions_and_quad (test_t81.AcceptedInputs.test_legacy_regressions_and_quad) ... ok
+test_no_unknown_promoted_to_zero (test_t81.AcceptedInputs.test_no_unknown_promoted_to_zero) ... ok
+test_selected_groupings_and_row_constraint (test_t81.AcceptedInputs.test_selected_groupings_and_row_constraint) ... ok
+test_x16_projection_is_not_DQ_error_count (test_t81.AcceptedInputs.test_x16_projection_is_not_DQ_error_count) ... ok
+test_budget_allocation (test_t81.Numerics.test_budget_allocation) ... ok
+test_interpolant_analytic_limits (test_t81.Numerics.test_interpolant_analytic_limits) ... ok
+test_no_spectral_extrapolation (test_t81.Numerics.test_no_spectral_extrapolation) ... ok
+test_root_and_limit (test_t81.Numerics.test_root_and_limit) ... ok
+test_root_degeneracies (test_t81.Numerics.test_root_degeneracies) ... ok
+test_unit_change_conserves_integral (test_t81.Numerics.test_unit_change_conserves_integral) ... ok
+test_zero_endpoint_independent_quadrature (test_t81.Numerics.test_zero_endpoint_independent_quadrature) ... ok
+test_fail_closed_invalid_or_unobserved_exposure (test_t81.Statistics.test_fail_closed_invalid_or_unobserved_exposure) ... ok
+test_multiple_comparisons_no_independence_required (test_t81.Statistics.test_multiple_comparisons_no_independence_required) ... ok
+test_nonzero_inversion_without_chi2 (test_t81.Statistics.test_nonzero_inversion_without_chi2) ... ok
+test_probability_and_xor_counterexample (test_t81.Statistics.test_probability_and_xor_counterexample) ... ok
+test_units_and_efficiency (test_t81.Statistics.test_units_and_efficiency) ... ok
+test_zero_boundary_probability (test_t81.Statistics.test_zero_boundary_probability) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.008s
+
+OK

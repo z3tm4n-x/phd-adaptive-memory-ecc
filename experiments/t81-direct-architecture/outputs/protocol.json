@@ -1,40 +1,5 @@
 {
-  "base_commit": "d2916599ca8456211da61bf58a4907a3a0738cec",
-  "scenario": {
-    "mission_seconds": 315576000,
-    "effective_sep_seconds": 115776,
-    "words": 524288,
-    "shields_g_cm2": [2.5, 3.0],
-    "direct_mean_targets": [0.00005, 0.0001],
-    "conditional_memory_epsilon": 0.001
-  },
-  "historical_envelope": {
-    "let_nodes_MeV_cm2_mg": [27, 29, 33, 42, 44, 57],
-    "sep_cutoff_MeV_cm2_mg": 32.6,
-    "gcr_integration_ceiling_MeV_cm2_mg": 200,
-    "fluence_relative_error_sensitivities": [0.0, 0.3],
-    "below_27_zero": "T68 assumption, not proved by zero observations",
-    "above_57_plateau": "T68 assumption, not a consequence of monotonicity",
-    "normal_equals_isotropic": "T68 scalar comparator only, not full-mark qualification"
-  },
-  "coverage": [
-    {"id": "point95", "alpha_family": 0.05, "comparisons": 1},
-    {"id": "fixed_group_nodes95", "alpha_family": 0.05, "comparisons": 6},
-    {"id": "selected55_nodes95", "alpha_family": 0.05, "comparisons": 330},
-    {"id": "fixed_group_nodes_1e-6", "alpha_family": 0.000001, "comparisons": 6}
-  ],
-  "angular_sensitivity": {
-    "status": "algebraic budget example only; not a qualified test grid or an order",
-    "polar_strata_deg": [[0, 30], [30, 45], [45, 60]],
-    "azimuth_domain_deg": [0, 360],
-    "architectures_in_joint_family": 2,
-    "alpha_family": 0.05,
-    "uncovered_direct_budget_R": null,
-    "mission_weights_per_stratum": null,
-    "registration_efficiency_lower": null,
-    "beam_to_area_normalization": null,
-    "outside_60_deg_and_backside": "must be bounded separately; not zero"
-  },
+  "source_base": "d2916599ca8456211da61bf58a4907a3a0738cec",
   "source_sha256": {
     "experiments/t68-v21-inputs/run.py": "6b47c1ccf2d1da08a5425867e517e920de40872d087ac51db6724a6d9ae86c91",
     "experiments/t68-v21-inputs/config.json": "69fe3195b7aad7b332c321ea5eccd1f68e6df560f0dea84dae3dd24620fa6b29",
@@ -58,13 +23,11 @@
     "experiments/t72-r0a-onset-inputs/contracts.md": "34f80e394f1994c112386adfcf2acf77dcffe31b2250c3b3a748c2487a26699a",
     "theory/t73-burst-mode-count.md": "d2e02860491870e138fb02ebc27814073fb006b777dc756642d2453bf116c121"
   },
-  "physical_inputs": {
-    "full38_direct_mean_upper": null,
-    "full39_direct_mean_upper": null,
-    "hidden_check_joint_marks": null,
-    "ecc_on_DQ_ERR_joint_marks": null,
-    "mission_angular_fluence_weights": null,
-    "angular_continuum_upper": null,
-    "joint_physical_theta_coverage": null
-  }
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "tests_returncode": 0,
+  "network_used_in_reproduction": false,
+  "accepted_inputs_unchanged": true,
+  "formula_scope": "conditional confidence bounds, not physical fullword qualification"
 }
