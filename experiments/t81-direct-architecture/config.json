@@ -1,0 +1,35 @@
+{
+  "base_commit": "d2916599ca8456211da61bf58a4907a3a0738cec",
+  "scenario": {
+    "mission_seconds": 315576000,
+    "effective_sep_seconds": 115776,
+    "words": 524288,
+    "shields_g_cm2": [2.5, 3.0],
+    "direct_mean_targets": [0.00005, 0.0001],
+    "conditional_memory_epsilon": 0.001
+  },
+  "historical_envelope": {
+    "let_nodes_MeV_cm2_mg": [27, 29, 33, 42, 44, 57],
+    "sep_cutoff_MeV_cm2_mg": 32.6,
+    "gcr_integration_ceiling_MeV_cm2_mg": 200,
+    "fluence_relative_error_sensitivities": [0.0, 0.3],
+    "below_27_zero": "T68 assumption, not proved by zero observations",
+    "above_57_plateau": "T68 assumption, not a consequence of monotonicity",
+    "normal_equals_isotropic": "T68 scalar comparator only, not full-mark qualification"
+  },
+  "coverage": [
+    {"id": "point95", "alpha_family": 0.05, "comparisons": 1},
+    {"id": "fixed_group_nodes95", "alpha_family": 0.05, "comparisons": 6},
+    {"id": "selected55_nodes95", "alpha_family": 0.05, "comparisons": 330},
+    {"id": "fixed_group_nodes_1e-6", "alpha_family": 0.000001, "comparisons": 6}
+  ],
+  "physical_inputs": {
+    "full38_direct_mean_upper": null,
+    "full39_direct_mean_upper": null,
+    "hidden_check_joint_marks": null,
+    "ecc_on_DQ_ERR_joint_marks": null,
+    "mission_angular_fluence_weights": null,
+    "angular_continuum_upper": null,
+    "joint_physical_theta_coverage": null
+  }
+}
