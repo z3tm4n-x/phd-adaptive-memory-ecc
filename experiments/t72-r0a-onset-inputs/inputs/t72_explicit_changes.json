@@ -1,0 +1,32 @@
+{
+  "status": "Unqualified explicit conditional revisions of the SAME T73 rule; not changes to measured inputs",
+  "first_revision": {
+    "service": {
+      "c_ticks": 90,
+      "fence_ticks": 90,
+      "g_ticks": 119,
+      "long_multiplier": 85,
+      "word_formula": "inverse_mod(85,W)*j mod W",
+      "hold_ticks": "5000000000",
+      "price_strip_physical_s": "6",
+      "required_joint_U_WCET_physical_s": "0.0000000899991",
+      "warning": "Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound."
+    },
+    "monitor": {
+      "a_M": "100000000000",
+      "A_M": "100100000000",
+      "window_ticks": "50000000",
+      "delivery_computation_deadline_after_window_ticks": "10000000",
+      "required_delivery_computation_physical_max_s": "0.009",
+      "lease_end_from_window_start_ticks": "175000000",
+      "k": 840000,
+      "z": "0.01",
+      "phi_rational_lower": "0.00995",
+      "v_c_per_s": "0.0001782"
+    }
+  },
+  "second_revision": {
+    "reason": "First revision fails the quiet-return price; no risk input or quota is reduced",
+    "service": {"hold_ticks": "1000000000", "price_strip_physical_s": "1.5"}
+  }
+}

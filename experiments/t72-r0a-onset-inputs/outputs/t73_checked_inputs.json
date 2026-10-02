@@ -1,0 +1,653 @@
+{
+  "theory_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+  "variants": [
+    {
+      "set": "T73_published",
+      "status": "All exact published inputs; conditional, not physical qualification",
+      "input": {
+        "issue": 73,
+        "instruction_and_parent_sha": "2c88749ee6103fcaee595ab22600357bb3f0649b",
+        "status": "conditional_theoretical_witness_pending_engineer_72_and_review_74",
+        "number_format": "decimal strings are exact rational numbers; no physical qualification is implied",
+        "scenario": {
+          "memory": "CY62167 internal 32+6+ERR candidate; architecture remains author's decision",
+          "orbit": "GEO",
+          "n": 38,
+          "W": 524288,
+          "T_s": "315576000",
+          "epsilon": "0.001"
+        },
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016624",
+            "solar_peak_per_s": "0.346440",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.000154704",
+            "solar_peak_per_s": "0.244528",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "environment_contract": {
+          "quantity": "upper full-word load nu, not the observed counter and not automatically the parent rate",
+          "rarity": "nu=b+s<=B; b<=bbar; integral(s)<=FS",
+          "l_per_s": "0.001",
+          "rho_entry_upper_per_s": "0.048",
+          "rho_ongoing_upper_per_s": "0.048",
+          "entry_definition": "first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory",
+          "b_Q": "bbar",
+          "D_Q_s": "300",
+          "v_e_per_s": "0.001",
+          "initial_intensity": "free up to B; may begin in an ongoing burst",
+          "coverage": "uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned",
+          "data_status": "T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification"
+        },
+        "mark_contract": {
+          "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+          "per_word_non_smu_touch_rate": "<=nu/W",
+          "sum_non_smu_word_touch_rates": "<=nu",
+          "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+          "chi_different_bit_pairs": "37/(38*W)",
+          "D_star_full38_direct_exposure_upper": "0.00005",
+          "physical_qualification": false,
+          "unknown_full38_smu_upper": null,
+          "MCU_independence_or_zero_assumption": false
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.000001",
+          "delta_exec": "0.000001",
+          "delta_svc": "0.000001",
+          "delta_E": "0.000001",
+          "delta_M": "0.000001",
+          "alpha_M": "0.000001",
+          "K0": 1,
+          "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+          "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+        },
+        "service": {
+          "mode": "U unconditional complete-word write-back",
+          "tick_nominal_s": "0.000000001",
+          "constant_clock_scale_min": "0.99999",
+          "constant_clock_scale_max": "1.00001",
+          "c_ticks": 91,
+          "fence_ticks": 91,
+          "g_ticks": 120,
+          "long_multiplier": 129,
+          "slot_formula_ticks": "2*g*floor(j/2)+c*(j%2)",
+          "word_formula": "inverse_mod(129,W)*j mod W",
+          "mandatory_slots": "j divisible by 129",
+          "decision_lead_ticks": 51,
+          "gate_logic_wcet_s": "0.000000005",
+          "hold_ticks": "10000000000",
+          "price_strip_physical_s": "11",
+          "uniformity": "fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",
+          "correctness": "complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",
+          "timing": "hard mask on every history; no unlimited retries",
+          "measured_wcet": null,
+          "same_ascending_address_order_in_both_modes": false
+        },
+        "monitor": {
+          "status": "required conditional interface, not an identified flight instrument",
+          "ideal_count_lower_rate": "a_M*nu",
+          "a_M": "1000000000",
+          "quiet_upper_rate": "A_M*b_nom + eta_M",
+          "A_M": "1050000000",
+          "eta_M_per_s": "100",
+          "window_ticks": "100000000",
+          "delivery_computation_deadline_after_window_ticks": "50000000",
+          "required_delivery_computation_physical_max_s": "0.049",
+          "lease_end_from_window_start_ticks": "480000000",
+          "k": 18500,
+          "z": "0.1",
+          "phi_rational_lower": "0.095",
+          "H": "42",
+          "v_c_per_s": "0.000225",
+          "recognized_bad_window_probability": "0.000000001",
+          "independence_from_memory_required": false,
+          "missing_overflow_late_or_numeric_failure": "alarm, no LOW; safe S, price charged to declared window/global quotas",
+          "calibration_coverage_and_species_mapping": null
+        },
+        "own_ERR": {
+          "role": "first available flag enters or extends S; a single zero never releases S",
+          "max_delivery_s": "0.000001",
+          "false_flag_rate_upper_per_s": "0.000001",
+          "true_count_cost_domination": "each true flag on good execution charged to a removed word touch or one initial dirty word",
+          "under_and_over_count_contract_status": "conditional; must be qualified for the full word and own latch"
+        },
+        "resources": {
+          "price": "expected occupied common-bus time through T, including after hidden failure",
+          "b_nom": "bbar for each shielding point",
+          "quiet_tax_limit": "0.01",
+          "peak_limit": "0.8",
+          "peak_window_s": "0.001",
+          "application_delay_limit_s": "0.000003",
+          "application_max_request_s": "0.000000045",
+          "application_sigma_s": "0.000000045",
+          "application_rate": "0.04",
+          "extra_monitor_control_rate": "0.0001",
+          "extra_monitor_control_sigma_s": "0.0000001",
+          "extra_request_max_s": "0.000000045",
+          "quiet_return_example": {
+            "T_Q_min": "0.9*T",
+            "K_Q_max": 1000,
+            "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+          },
+          "resource_qualification": false,
+          "T58_grid_changed": false
+        },
+        "engineer_handoff": {
+          "via": "orchestrator to existing Issue #72",
+          "instructions": "theory/t73-burst-mode-count-appendix.md, section Ж",
+          "checks_executed_by_theorist": false,
+          "requested": [
+            "directed rational risk and price, both shielding points and clock endpoints",
+            "finite positive LOW acceptance and bad-message regressions",
+            "small deterministic nested-calendar/pair/transition geometry",
+            "FIFO and peak with nonzero monitoring/control traffic",
+            "strong T52/T58 fixed comparator over the full allowed tick range and necessary lower bound"
+          ]
+        }
+      }
+    },
+    {
+      "set": "T72_budgets_explicit_T73_extension",
+      "status": "T72 D/four quotas/K0=0 retained; delta_exec=alpha_M=1e-6 ADDED explicitly. T73 monitor, total-load growth, 1ns paired calendar and full mark contract are additional assumptions; original T72 has no certified Poisson monitor.",
+      "input": {
+        "issue": 73,
+        "instruction_and_parent_sha": "2c88749ee6103fcaee595ab22600357bb3f0649b",
+        "status": "conditional_theoretical_witness_pending_engineer_72_and_review_74",
+        "number_format": "decimal strings are exact rational numbers; no physical qualification is implied",
+        "scenario": {
+          "memory": "CY62167 internal 32+6+ERR candidate; architecture remains author's decision",
+          "orbit": "GEO",
+          "n": 38,
+          "W": 524288,
+          "T_s": "315576000",
+          "epsilon": "0.001"
+        },
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016623855053804845",
+            "solar_peak_per_s": "0.346439355082072",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.00015470350295316676",
+            "solar_peak_per_s": "0.24452779251706908",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "environment_contract": {
+          "quantity": "upper full-word load nu, not the observed counter and not automatically the parent rate",
+          "rarity": "nu=b+s<=B; b<=bbar; integral(s)<=FS",
+          "l_per_s": "0.001",
+          "rho_entry_upper_per_s": "0.048",
+          "rho_ongoing_upper_per_s": "0.048",
+          "entry_definition": "first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory",
+          "b_Q": "bbar",
+          "D_Q_s": "300",
+          "v_e_per_s": "0.001",
+          "initial_intensity": "free up to B; may begin in an ongoing burst",
+          "coverage": "uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned",
+          "data_status": "T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification"
+        },
+        "mark_contract": {
+          "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+          "per_word_non_smu_touch_rate": "<=nu/W",
+          "sum_non_smu_word_touch_rates": "<=nu",
+          "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+          "chi_different_bit_pairs": "37/(38*W)",
+          "D_star_full38_direct_exposure_upper": "0.0001",
+          "physical_qualification": false,
+          "unknown_full38_smu_upper": null,
+          "MCU_independence_or_zero_assumption": false
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.00001",
+          "delta_exec": "0.000001",
+          "delta_svc": "0.00001",
+          "delta_E": "0.00001",
+          "delta_M": "0.00001",
+          "alpha_M": "0.000001",
+          "K0": 0,
+          "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+          "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+        },
+        "service": {
+          "mode": "U unconditional complete-word write-back",
+          "tick_nominal_s": "0.000000001",
+          "constant_clock_scale_min": "0.99999",
+          "constant_clock_scale_max": "1.00001",
+          "c_ticks": 91,
+          "fence_ticks": 91,
+          "g_ticks": 120,
+          "long_multiplier": 129,
+          "slot_formula_ticks": "2*g*floor(j/2)+c*(j%2)",
+          "word_formula": "inverse_mod(129,W)*j mod W",
+          "mandatory_slots": "j divisible by 129",
+          "decision_lead_ticks": 51,
+          "gate_logic_wcet_s": "0.000000005",
+          "hold_ticks": "10000000000",
+          "price_strip_physical_s": "11",
+          "uniformity": "fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",
+          "correctness": "complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",
+          "timing": "hard mask on every history; no unlimited retries",
+          "measured_wcet": null,
+          "same_ascending_address_order_in_both_modes": false
+        },
+        "monitor": {
+          "status": "required conditional interface, not an identified flight instrument",
+          "ideal_count_lower_rate": "a_M*nu",
+          "a_M": "1000000000",
+          "quiet_upper_rate": "A_M*b_nom + eta_M",
+          "A_M": "1050000000",
+          "eta_M_per_s": "100",
+          "window_ticks": "100000000",
+          "delivery_computation_deadline_after_window_ticks": "50000000",
+          "required_delivery_computation_physical_max_s": "0.049",
+          "lease_end_from_window_start_ticks": "480000000",
+          "k": 18500,
+          "z": "0.1",
+          "phi_rational_lower": "0.095",
+          "H": "42",
+          "v_c_per_s": "0.000225",
+          "recognized_bad_window_probability": "0.000000001",
+          "independence_from_memory_required": false,
+          "missing_overflow_late_or_numeric_failure": "alarm, no LOW; safe S, price charged to declared window/global quotas",
+          "calibration_coverage_and_species_mapping": null
+        },
+        "own_ERR": {
+          "role": "first available flag enters or extends S; a single zero never releases S",
+          "max_delivery_s": "0.000001",
+          "false_flag_rate_upper_per_s": "0.000001",
+          "true_count_cost_domination": "each true flag on good execution charged to a removed word touch or one initial dirty word",
+          "under_and_over_count_contract_status": "conditional; must be qualified for the full word and own latch"
+        },
+        "resources": {
+          "price": "expected occupied common-bus time through T, including after hidden failure",
+          "b_nom": "bbar for each shielding point",
+          "quiet_tax_limit": "0.01",
+          "peak_limit": "0.8",
+          "peak_window_s": "0.001",
+          "application_delay_limit_s": "0.000003",
+          "application_max_request_s": "0.000000045",
+          "application_sigma_s": "0.000000045",
+          "application_rate": "0.04",
+          "extra_monitor_control_rate": "0.0001",
+          "extra_monitor_control_sigma_s": "0.0000001",
+          "extra_request_max_s": "0.000000045",
+          "quiet_return_example": {
+            "T_Q_min": "0.9*T",
+            "K_Q_max": 1000,
+            "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+          },
+          "resource_qualification": false,
+          "T58_grid_changed": false
+        },
+        "engineer_handoff": {
+          "via": "orchestrator to existing Issue #72",
+          "instructions": "theory/t73-burst-mode-count-appendix.md, section Ж",
+          "checks_executed_by_theorist": false,
+          "requested": [
+            "directed rational risk and price, both shielding points and clock endpoints",
+            "finite positive LOW acceptance and bad-message regressions",
+            "small deterministic nested-calendar/pair/transition geometry",
+            "FIFO and peak with nonzero monitoring/control traffic",
+            "strong T52/T58 fixed comparator over the full allowed tick range and necessary lower bound"
+          ]
+        }
+      }
+    },
+    {
+      "set": "T72_explicit_same_method_revision",
+      "status": "Same rule and unchanged T72 environmental/direct/known error inputs; explicit proposed changes: U 90 ticks, g119, ka85, hold5s/D6s; monitor a=1e11,A/a=1.001,w=.05,d=.01,lease=.175,k840000,z.01,vc.0001782. Stronger monitor and new timing need author qualification; no silent adoption.",
+      "input": {
+        "issue": 73,
+        "instruction_and_parent_sha": "2c88749ee6103fcaee595ab22600357bb3f0649b",
+        "status": "conditional_theoretical_witness_pending_engineer_72_and_review_74",
+        "number_format": "decimal strings are exact rational numbers; no physical qualification is implied",
+        "scenario": {
+          "memory": "CY62167 internal 32+6+ERR candidate; architecture remains author's decision",
+          "orbit": "GEO",
+          "n": 38,
+          "W": 524288,
+          "T_s": "315576000",
+          "epsilon": "0.001"
+        },
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016623855053804845",
+            "solar_peak_per_s": "0.346439355082072",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.00015470350295316676",
+            "solar_peak_per_s": "0.24452779251706908",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "environment_contract": {
+          "quantity": "upper full-word load nu, not the observed counter and not automatically the parent rate",
+          "rarity": "nu=b+s<=B; b<=bbar; integral(s)<=FS",
+          "l_per_s": "0.001",
+          "rho_entry_upper_per_s": "0.048",
+          "rho_ongoing_upper_per_s": "0.048",
+          "entry_definition": "first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory",
+          "b_Q": "bbar",
+          "D_Q_s": "300",
+          "v_e_per_s": "0.001",
+          "initial_intensity": "free up to B; may begin in an ongoing burst",
+          "coverage": "uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned",
+          "data_status": "T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification"
+        },
+        "mark_contract": {
+          "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+          "per_word_non_smu_touch_rate": "<=nu/W",
+          "sum_non_smu_word_touch_rates": "<=nu",
+          "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+          "chi_different_bit_pairs": "37/(38*W)",
+          "D_star_full38_direct_exposure_upper": "0.0001",
+          "physical_qualification": false,
+          "unknown_full38_smu_upper": null,
+          "MCU_independence_or_zero_assumption": false
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.00001",
+          "delta_exec": "0.000001",
+          "delta_svc": "0.00001",
+          "delta_E": "0.00001",
+          "delta_M": "0.00001",
+          "alpha_M": "0.000001",
+          "K0": 0,
+          "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+          "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+        },
+        "service": {
+          "mode": "U unconditional complete-word write-back",
+          "tick_nominal_s": "0.000000001",
+          "constant_clock_scale_min": "0.99999",
+          "constant_clock_scale_max": "1.00001",
+          "c_ticks": 90,
+          "fence_ticks": 90,
+          "g_ticks": 119,
+          "long_multiplier": 85,
+          "slot_formula_ticks": "2*g*floor(j/2)+c*(j%2)",
+          "word_formula": "inverse_mod(85,W)*j mod W",
+          "mandatory_slots": "j divisible by 129",
+          "decision_lead_ticks": 51,
+          "gate_logic_wcet_s": "0.000000005",
+          "hold_ticks": "5000000000",
+          "price_strip_physical_s": "6",
+          "uniformity": "fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",
+          "correctness": "complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",
+          "timing": "hard mask on every history; no unlimited retries",
+          "measured_wcet": null,
+          "same_ascending_address_order_in_both_modes": false,
+          "required_joint_U_WCET_physical_s": "0.0000000899991",
+          "warning": "Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound."
+        },
+        "monitor": {
+          "status": "required conditional interface, not an identified flight instrument",
+          "ideal_count_lower_rate": "a_M*nu",
+          "a_M": "100000000000",
+          "quiet_upper_rate": "A_M*b_nom + eta_M",
+          "A_M": "100100000000",
+          "eta_M_per_s": "100",
+          "window_ticks": "50000000",
+          "delivery_computation_deadline_after_window_ticks": "10000000",
+          "required_delivery_computation_physical_max_s": "0.009",
+          "lease_end_from_window_start_ticks": "175000000",
+          "k": 840000,
+          "z": "0.01",
+          "phi_rational_lower": "0.00995",
+          "H": "42",
+          "v_c_per_s": "0.0001782",
+          "recognized_bad_window_probability": "0.000000001",
+          "independence_from_memory_required": false,
+          "missing_overflow_late_or_numeric_failure": "alarm, no LOW; safe S, price charged to declared window/global quotas",
+          "calibration_coverage_and_species_mapping": null
+        },
+        "own_ERR": {
+          "role": "first available flag enters or extends S; a single zero never releases S",
+          "max_delivery_s": "0.000001",
+          "false_flag_rate_upper_per_s": "0.000001",
+          "true_count_cost_domination": "each true flag on good execution charged to a removed word touch or one initial dirty word",
+          "under_and_over_count_contract_status": "conditional; must be qualified for the full word and own latch"
+        },
+        "resources": {
+          "price": "expected occupied common-bus time through T, including after hidden failure",
+          "b_nom": "bbar for each shielding point",
+          "quiet_tax_limit": "0.01",
+          "peak_limit": "0.8",
+          "peak_window_s": "0.001",
+          "application_delay_limit_s": "0.000003",
+          "application_max_request_s": "0.000000045",
+          "application_sigma_s": "0.000000045",
+          "application_rate": "0.04",
+          "extra_monitor_control_rate": "0.0001",
+          "extra_monitor_control_sigma_s": "0.0000001",
+          "extra_request_max_s": "0.000000045",
+          "quiet_return_example": {
+            "T_Q_min": "0.9*T",
+            "K_Q_max": 1000,
+            "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+          },
+          "resource_qualification": false,
+          "T58_grid_changed": false
+        },
+        "engineer_handoff": {
+          "via": "orchestrator to existing Issue #72",
+          "instructions": "theory/t73-burst-mode-count-appendix.md, section Ж",
+          "checks_executed_by_theorist": false,
+          "requested": [
+            "directed rational risk and price, both shielding points and clock endpoints",
+            "finite positive LOW acceptance and bad-message regressions",
+            "small deterministic nested-calendar/pair/transition geometry",
+            "FIFO and peak with nonzero monitoring/control traffic",
+            "strong T52/T58 fixed comparator over the full allowed tick range and necessary lower bound"
+          ]
+        }
+      }
+    },
+    {
+      "set": "T72_revision_shorter_return_hold",
+      "status": "Same explicit revision, hold reduced 5s -> 1s and price strip 6s -> 1.5s after the return-price bound failed. Both previous rows retained. Physical monitor/WCET requirements remain unqualified.",
+      "input": {
+        "issue": 73,
+        "instruction_and_parent_sha": "2c88749ee6103fcaee595ab22600357bb3f0649b",
+        "status": "conditional_theoretical_witness_pending_engineer_72_and_review_74",
+        "number_format": "decimal strings are exact rational numbers; no physical qualification is implied",
+        "scenario": {
+          "memory": "CY62167 internal 32+6+ERR candidate; architecture remains author's decision",
+          "orbit": "GEO",
+          "n": 38,
+          "W": 524288,
+          "T_s": "315576000",
+          "epsilon": "0.001"
+        },
+        "environments": [
+          {
+            "shield_g_cm2": "2.5",
+            "bbar_per_s": "0.00016623855053804845",
+            "solar_peak_per_s": "0.346439355082072",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "13918",
+            "fixed_candidate_frame_ticks": 279,
+            "t68_data_only_direct_upper": "0.01536626872599612",
+            "t68_data_only_direct_point": "0.000035227371638739395"
+          },
+          {
+            "shield_g_cm2": "3",
+            "bbar_per_s": "0.00015470350295316676",
+            "solar_peak_per_s": "0.24452779251706908",
+            "B_definition": "bbar + solar_peak",
+            "FS_definition": "115776 * solar_peak",
+            "S2_rational_upper_per_s": "6940",
+            "fixed_candidate_frame_ticks": 560,
+            "t68_data_only_direct_upper": "0.012299573120944566",
+            "t68_data_only_direct_point": "0.000030971504388263915"
+          }
+        ],
+        "environment_contract": {
+          "quantity": "upper full-word load nu, not the observed counter and not automatically the parent rate",
+          "rarity": "nu=b+s<=B; b<=bbar; integral(s)<=FS",
+          "l_per_s": "0.001",
+          "rho_entry_upper_per_s": "0.048",
+          "rho_ongoing_upper_per_s": "0.048",
+          "entry_definition": "first crossing of b_Q after D_Q of nu<=b_Q; entry ends at v_e; intraburst rebounds keep ongoing label until next qualified quiet prehistory",
+          "b_Q": "bbar",
+          "D_Q_s": "300",
+          "v_e_per_s": "0.001",
+          "initial_intensity": "free up to B; may begin in an ongoing burst",
+          "coverage": "uniform conditional guarantee inside declared Lambda/Theta; no unconditional coverage probability assigned",
+          "data_status": "T68 full38 accumulation response rounded outward, conditionally promoted to future bounds; T67 growth candidate is not a qualification"
+        },
+        "mark_contract": {
+          "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+          "per_word_non_smu_touch_rate": "<=nu/W",
+          "sum_non_smu_word_touch_rates": "<=nu",
+          "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+          "chi_different_bit_pairs": "37/(38*W)",
+          "D_star_full38_direct_exposure_upper": "0.0001",
+          "physical_qualification": false,
+          "unknown_full38_smu_upper": null,
+          "MCU_independence_or_zero_assumption": false
+        },
+        "whole_mission_quotas": {
+          "rho0": "0.00001",
+          "delta_exec": "0.000001",
+          "delta_svc": "0.00001",
+          "delta_E": "0.00001",
+          "delta_M": "0.00001",
+          "alpha_M": "0.000001",
+          "K0": 0,
+          "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+          "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+        },
+        "service": {
+          "mode": "U unconditional complete-word write-back",
+          "tick_nominal_s": "0.000000001",
+          "constant_clock_scale_min": "0.99999",
+          "constant_clock_scale_max": "1.00001",
+          "c_ticks": 90,
+          "fence_ticks": 90,
+          "g_ticks": 119,
+          "long_multiplier": 85,
+          "slot_formula_ticks": "2*g*floor(j/2)+c*(j%2)",
+          "word_formula": "inverse_mod(85,W)*j mod W",
+          "mandatory_slots": "j divisible by 129",
+          "decision_lead_ticks": 51,
+          "gate_logic_wcet_s": "0.000000005",
+          "hold_ticks": "1000000000",
+          "price_strip_physical_s": "1.5",
+          "uniformity": "fixed cyclic permutations, exact per-word periods; two-block frame, not a dense full pass",
+          "correctness": "complete-word cleanup at fence, including allowed latch-fence hits, except delta_svc",
+          "timing": "hard mask on every history; no unlimited retries",
+          "measured_wcet": null,
+          "same_ascending_address_order_in_both_modes": false,
+          "required_joint_U_WCET_physical_s": "0.0000000899991",
+          "warning": "Fast-clock c-minus is 89.9991 ns: nominal 45+45 ns is NOT a qualifying WCET. Requires this stricter joint service bound."
+        },
+        "monitor": {
+          "status": "required conditional interface, not an identified flight instrument",
+          "ideal_count_lower_rate": "a_M*nu",
+          "a_M": "100000000000",
+          "quiet_upper_rate": "A_M*b_nom + eta_M",
+          "A_M": "100100000000",
+          "eta_M_per_s": "100",
+          "window_ticks": "50000000",
+          "delivery_computation_deadline_after_window_ticks": "10000000",
+          "required_delivery_computation_physical_max_s": "0.009",
+          "lease_end_from_window_start_ticks": "175000000",
+          "k": 840000,
+          "z": "0.01",
+          "phi_rational_lower": "0.00995",
+          "H": "42",
+          "v_c_per_s": "0.0001782",
+          "recognized_bad_window_probability": "0.000000001",
+          "independence_from_memory_required": false,
+          "missing_overflow_late_or_numeric_failure": "alarm, no LOW; safe S, price charged to declared window/global quotas",
+          "calibration_coverage_and_species_mapping": null
+        },
+        "own_ERR": {
+          "role": "first available flag enters or extends S; a single zero never releases S",
+          "max_delivery_s": "0.000001",
+          "false_flag_rate_upper_per_s": "0.000001",
+          "true_count_cost_domination": "each true flag on good execution charged to a removed word touch or one initial dirty word",
+          "under_and_over_count_contract_status": "conditional; must be qualified for the full word and own latch"
+        },
+        "resources": {
+          "price": "expected occupied common-bus time through T, including after hidden failure",
+          "b_nom": "bbar for each shielding point",
+          "quiet_tax_limit": "0.01",
+          "peak_limit": "0.8",
+          "peak_window_s": "0.001",
+          "application_delay_limit_s": "0.000003",
+          "application_max_request_s": "0.000000045",
+          "application_sigma_s": "0.000000045",
+          "application_rate": "0.04",
+          "extra_monitor_control_rate": "0.0001",
+          "extra_monitor_control_sigma_s": "0.0000001",
+          "extra_request_max_s": "0.000000045",
+          "quiet_return_example": {
+            "T_Q_min": "0.9*T",
+            "K_Q_max": 1000,
+            "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+          },
+          "resource_qualification": false,
+          "T58_grid_changed": false
+        },
+        "engineer_handoff": {
+          "via": "orchestrator to existing Issue #72",
+          "instructions": "theory/t73-burst-mode-count-appendix.md, section Ж",
+          "checks_executed_by_theorist": false,
+          "requested": [
+            "directed rational risk and price, both shielding points and clock endpoints",
+            "finite positive LOW acceptance and bad-message regressions",
+            "small deterministic nested-calendar/pair/transition geometry",
+            "FIFO and peak with nonzero monitoring/control traffic",
+            "strong T52/T58 fixed comparator over the full allowed tick range and necessary lower bound"
+          ]
+        }
+      }
+    }
+  ]
+}

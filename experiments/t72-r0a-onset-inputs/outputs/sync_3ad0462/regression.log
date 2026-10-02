@@ -1,0 +1,159 @@
+test_ERR_adds_without_postponing_reference_and_missing_fails_safe (test_t72.ControllerChecks.test_ERR_adds_without_postponing_reference_and_missing_fails_safe) ... ok
+test_phases_full_W_resource_and_application_gap (test_t72.ControllerChecks.test_phases_full_W_resource_and_application_gap) ... ok
+test_piecewise_integral_independent (test_t72.ControllerChecks.test_piecewise_integral_independent) ... ok
+test_exact_xor_and_deficit (test_t72.CountChecks.test_exact_xor_and_deficit) ... ok
+test_lattice_against_independent_explicit_words (test_t72.CountChecks.test_lattice_against_independent_explicit_words) ... ok
+test_missing_not_zero (test_t72.CountChecks.test_missing_not_zero) ... ok
+test_packed_phases (test_t72.CountChecks.test_packed_phases) ... ok
+test_constant_necessity_is_separate_from_sufficient_test (test_t72.RiskChecks.test_constant_necessity_is_separate_from_sufficient_test) ... ok
+test_hidden_failure_cost_and_explicit_method_change (test_t72.RiskChecks.test_hidden_failure_cost_and_explicit_method_change) ... ok
+test_rounding_and_growth (test_t72.RiskChecks.test_rounding_and_growth) ... ok
+test_gap_breaks_history (test_t72.SegmentChecks.test_gap_breaks_history) ... ok
+test_not_reached_and_left_censor (test_t72.SegmentChecks.test_not_reached_and_left_censor) ... ok
+test_quiet_repeat_postpeak (test_t72.SegmentChecks.test_quiet_repeat_postpeak) ... ok
+test_all_good_counts_have_finite_acceptance (test_t73.CalendarChecks.test_all_good_counts_have_finite_acceptance) ... ok
+test_bad_messages_and_no_budget_reset (test_t73.CalendarChecks.test_bad_messages_and_no_budget_reset) ... ok
+test_exhaustive_pair_geometry (test_t73.CalendarChecks.test_exhaustive_pair_geometry) ... ok
+test_first_dirty_words_and_partial_last_cell (test_t73.CalendarChecks.test_first_dirty_words_and_partial_last_cell) ... ok
+test_leases_break_extend_and_irrevocable_block (test_t73.CalendarChecks.test_leases_break_extend_and_irrevocable_block) ... ok
+test_timer_overflow_is_explicit (test_t73.CalendarChecks.test_timer_overflow_is_explicit) ... ok
+test_both_sources_and_explicit_failure_repair (test_t73.DirectedChecks.test_both_sources_and_explicit_failure_repair) ... ok
+test_delivery_boundary (test_t73.DirectedChecks.test_delivery_boundary) ... ok
+test_phi_certificates (test_t73.DirectedChecks.test_phi_certificates) ... ok
+test_quota_zero_and_pq_clipping (test_t73.DirectedChecks.test_quota_zero_and_pq_clipping) ... ok
+test_arbitrary_phase_finite_horizon_edge (test_t73.ResourceChecks.test_arbitrary_phase_finite_horizon_edge) ... ok
+test_mask_all_phases (test_t73.ResourceChecks.test_mask_all_phases) ... ok
+test_nonzero_monitor_FIFO_and_transitions (test_t73.ResourceChecks.test_nonzero_monitor_FIFO_and_transitions) ... ok
+test_price_strips_with_adjacent_bad_windows (test_t73.ResourceChecks.test_price_strips_with_adjacent_bad_windows) ... ok
+test_LOW_all_counts_new_phi_delivery_boundary_and_WCET (test_t73_sync.SyncChecks.test_LOW_all_counts_new_phi_delivery_boundary_and_WCET) ... ok
+test_arbitrary_phase_edge_and_necessary_bound (test_t73_sync.SyncChecks.test_arbitrary_phase_edge_and_necessary_bound) ... ok
+test_new_JSON_eight_rows_and_text_directions (test_t73_sync.SyncChecks.test_new_JSON_eight_rows_and_text_directions) ... ok
+test_new_source_bytes_and_four_independent_inputs (test_t73_sync.SyncChecks.test_new_source_bytes_and_four_independent_inputs) ... ok
+test_paired_edge_full_W_and_small_direct_windows (test_t73_sync.SyncChecks.test_paired_edge_full_W_and_small_direct_windows) ... ok
+test_preserved_failures_and_return_price_repair (test_t73_sync.SyncChecks.test_preserved_failures_and_return_price_repair) ... ok
+test_strong_constant_M_next_resources_and_price (test_t73_sync.SyncChecks.test_strong_constant_M_next_resources_and_price) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 11.674s
+
+OK
+New arbitrary-phase edge: 23062 one-word finite windows; sum over W is valid.
+New paired edge: 82 small calendars, 17168 direct windows; 8 full-W calendars, 4194304 start/end extrema.
+{
+  "numerics": {
+    "theory_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+    "checked_sets": [
+      {
+        "set": "T73_published",
+        "shield_g_cm2": "2.5",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": true,
+        "risk_upper": "0.000989555583561280988",
+        "quiet_mission_upper": "0.00746544761288198202975326",
+        "quiet_24h_prepared_upper": "0.00765849274655304675148498",
+        "quiet_returns_upper": "0.00823629250724708453361139",
+        "peak_upper": "0.75858958052",
+        "app_delay_upper_s": "0.00000290476737158674585134560",
+        "fixed_cost_lower": "0.651132735374722563412175"
+      },
+      {
+        "set": "T73_published",
+        "shield_g_cm2": "3",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": true,
+        "risk_upper": "0.000581877170730442218484211",
+        "quiet_mission_upper": "0.00736253860794247586662915",
+        "quiet_24h_prepared_upper": "0.00755558374161353750008948",
+        "quiet_returns_upper": "0.00780660279483914132524938",
+        "peak_upper": "0.75858958052",
+        "app_delay_upper_s": "0.00000290476737158674585134560",
+        "fixed_cost_lower": "0.324648364009373316419550"
+      },
+      {
+        "set": "T72_budgets_explicit_T73_extension",
+        "shield_g_cm2": "2.5",
+        "all_scalar_tests_pass": false,
+        "passes_also_24h_and_returns": false,
+        "risk_upper": "0.0010755139903965535",
+        "quiet_mission_upper": "0.00753062617468077522310142",
+        "quiet_24h_prepared_upper": "0.00762714874316519080538314",
+        "quiet_returns_upper": "0.00830143732008128088916534",
+        "peak_upper": "0.75858958052",
+        "app_delay_upper_s": "0.00000290476737158674585134560",
+        "fixed_cost_lower": "0.701466269830504827735589"
+      },
+      {
+        "set": "T72_budgets_explicit_T73_extension",
+        "shield_g_cm2": "3",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": true,
+        "risk_upper": "0.000667847808512342973684211",
+        "quiet_mission_upper": "0.00742772570754672763174088",
+        "quiet_24h_prepared_upper": "0.00752424827603114015346120",
+        "quiet_returns_upper": "0.00787176493244873935133447",
+        "peak_upper": "0.75858958052",
+        "app_delay_upper_s": "0.00000290476737158674585134560",
+        "fixed_cost_lower": "0.349737440764074245029602"
+      },
+      {
+        "set": "T72_explicit_same_method_revision",
+        "shield_g_cm2": "2.5",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": false,
+        "risk_upper": "0.000997685333992567132159369",
+        "quiet_mission_upper": "0.00989599445173986818925169",
+        "quiet_24h_prepared_upper": "0.00994850213409556853364145",
+        "quiet_returns_upper": "0.0105567714721576315599573",
+        "peak_upper": "0.75655956018",
+        "app_delay_upper_s": "0.00000288044446541087826701201",
+        "fixed_cost_lower": "0.693757849282916862595638"
+      },
+      {
+        "set": "T72_explicit_same_method_revision",
+        "shield_g_cm2": "3",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": false,
+        "risk_upper": "0.000593416370290725026896211",
+        "quiet_mission_upper": "0.00983929825602544798507100",
+        "quiet_24h_prepared_upper": "0.00989180593838114832825149",
+        "quiet_returns_upper": "0.0101900345770896086239820",
+        "peak_upper": "0.75655956018",
+        "app_delay_upper_s": "0.00000288044446541087826701201",
+        "fixed_cost_lower": "0.345894172184249253325980"
+      },
+      {
+        "set": "T72_revision_shorter_return_hold",
+        "shield_g_cm2": "2.5",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": true,
+        "risk_upper": "0.000997685333992567132159369",
+        "quiet_mission_upper": "0.00932673099585581029492880",
+        "quiet_24h_prepared_upper": "0.00933985791887464110745981",
+        "quiet_returns_upper": "0.00995350914191962389356440",
+        "peak_upper": "0.75655956018",
+        "app_delay_upper_s": "0.00000288044446541087826701201",
+        "fixed_cost_lower": "0.693757849282916862595638"
+      },
+      {
+        "set": "T72_revision_shorter_return_hold",
+        "shield_g_cm2": "3",
+        "all_scalar_tests_pass": true,
+        "passes_also_24h_and_returns": true,
+        "risk_upper": "0.000593416370290725026896211",
+        "quiet_mission_upper": "0.00930929352036791091754187",
+        "quiet_24h_prepared_upper": "0.00932242044338674172977056",
+        "quiet_returns_upper": "0.00963250810455234063705850",
+        "peak_upper": "0.75655956018",
+        "app_delay_upper_s": "0.00000288044446541087826701201",
+        "fixed_cost_lower": "0.345894172184249253325980"
+      }
+    ],
+    "early_candidate_superseded_by_T73": {
+      "grid_rows": 1728,
+      "algebra_pass_rows": 129,
+      "physical_qualification": false,
+      "theory73_proof_available": false
+    },
+    "physical_qualification": false
+  }
+}

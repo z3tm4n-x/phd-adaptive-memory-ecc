@@ -1,0 +1,29 @@
+{
+  "theory_sha": "7ed0f6c0770ba21f12b03493171006dd0b82cc84",
+  "geometry": {
+    "geometry_cases": 1024,
+    "ordered_temporal_pairs_checked": 6714112,
+    "forward_only_negative_control": {
+      "skipped_fence": 10,
+      "high_before": 9,
+      "low_after": 11,
+      "past_radius_required": true
+    }
+  },
+  "resources": {
+    "peak_phase_checks": 2400,
+    "FIFO": {
+      "cases": 66,
+      "max_observed_delay_ns_fraction": "36550451/50000",
+      "not_a_worst_case_proof": true
+    },
+    "price_strips": {
+      "extra_slots": 16,
+      "alarm_or_initial_strips": 7,
+      "D_ticks": 61,
+      "all_extra_slots_covered": true,
+      "consecutive_bad_windows_included": true
+    }
+  },
+  "finite_checks_are_not_physical_qualification": true
+}
