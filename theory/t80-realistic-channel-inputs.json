@@ -1,6 +1,6 @@
 {
   "issue": 80,
-  "status": "day1_proved_draft_pending_engineering_curves_and_joint_inputs",
+  "status": "engineering_inputs_pinned_pending_T82_joint_pilot",
   "base_sha": "d2916599ca8456211da61bf58a4907a3a0738cec",
   "accepted_theory_sha": "3ad0462eac34d47176a6e1b36052855114a508df",
   "accepted_engineering_sha": "68c159de3a169f13841e4719f38c086e22e38ad7",
@@ -592,17 +592,44 @@
     }
   ],
   "new_engineering": {
+    "pilot_scientific_sha": "365b7386c1bc702e424ad4ee9cb4781ae2c24aeb",
     "issue81": {
-      "scientific_sha": null,
+      "scientific_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+      "handoff_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/106dcb50b836b47ae6ee7f549975c11d0dbb4982/experiments/t81-direct-architecture/outputs/handoff.json",
       "D_star_by_shield_and_architecture": null,
-      "full_word_and_token_contract": null
+      "full_word_and_token_contract": null,
+      "direct_quantity": "mean parents with >=2 distinct positions in at least one full word; no service-period reduction",
+      "conditional_D_targets": ["0.00005", "0.0001"],
+      "full38_full39_physical_direct_qualified": false,
+      "ERR_lower_token_qualified": false,
+      "data32_95percent_is_fullword_mission_coverage": false,
+      "full_U_clean_fence_qualified": false
     },
     "issue82": {
-      "scientific_sha": null,
+      "scientific_sha": "6275c434153f3c9fe540219e06a18e0095fe4683",
+      "report_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6275c434153f3c9fe540219e06a18e0095fe4683/experiments/t82-realistic-timing/REPORT.md",
       "joint_U_upper_s": null,
-      "monitor_profiles": null,
+      "monitor_profiles": {
+        "source_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6275c434153f3c9fe540219e06a18e0095fe4683/experiments/t82-realistic-timing/monitor_profiles.json",
+        "ids": ["SREM_PSI", "REM_ESA_ALC_2001"],
+        "a_M_full_R0A_lower": null,
+        "A_M_quiet_upper": null,
+        "whole_mission_delta_M": null,
+        "recognized_bad_window_probability": null,
+        "common_bus_cost_upper": null,
+        "overlapping_windows_cadence_qualified": false,
+        "physical_qualification": false
+      },
       "quiet_upper_means": null,
-      "measured_hardware_WCET": null
+      "measured_hardware_WCET": null,
+      "conditional_internal_retiming": [
+        {"margin": "0.10", "c_ticks": 100, "g_ticks_all_deadlines": 131, "nominal_90ns_additional_overhead_upper_s_rounded_down": "0.00000000090818"},
+        {"margin": "0.05", "c_ticks": 95, "g_ticks_all_deadlines": 125, "nominal_90ns_additional_overhead_upper_s_rounded_down": "0.00000000047528"}
+      ],
+      "external_executor_upper_s": "0.0000002405120006",
+      "external_executor_is_full_U": false,
+      "new_T80_curves_in_this_sha": false,
+      "old_always_S_and_fixed_tables": "appendix E.5; not a new ERR-only exit or a realistic-monitor 1percent result"
     }
   },
   "new_family": {
@@ -762,4 +789,3 @@
     "agents_spawned": false
   }
 }
-
