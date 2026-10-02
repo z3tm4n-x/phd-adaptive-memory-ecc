@@ -1,0 +1,43 @@
+test_all_good_counts_have_finite_acceptance (test_t73.CalendarChecks.test_all_good_counts_have_finite_acceptance) ... ok
+test_bad_messages_and_no_budget_reset (test_t73.CalendarChecks.test_bad_messages_and_no_budget_reset) ... ok
+test_exhaustive_pair_geometry (test_t73.CalendarChecks.test_exhaustive_pair_geometry) ... ok
+test_first_dirty_words_and_partial_last_cell (test_t73.CalendarChecks.test_first_dirty_words_and_partial_last_cell) ... ok
+test_leases_break_extend_and_irrevocable_block (test_t73.CalendarChecks.test_leases_break_extend_and_irrevocable_block) ... ok
+test_timer_overflow_is_explicit (test_t73.CalendarChecks.test_timer_overflow_is_explicit) ... ok
+test_both_sources_and_explicit_failure_repair (test_t73.DirectedChecks.test_both_sources_and_explicit_failure_repair) ... ok
+test_delivery_boundary (test_t73.DirectedChecks.test_delivery_boundary) ... ok
+test_phi_certificates (test_t73.DirectedChecks.test_phi_certificates) ... ok
+test_quota_zero_and_pq_clipping (test_t73.DirectedChecks.test_quota_zero_and_pq_clipping) ... ok
+test_arbitrary_phase_finite_horizon_edge (test_t73.ResourceChecks.test_arbitrary_phase_finite_horizon_edge) ... ok
+test_mask_all_phases (test_t73.ResourceChecks.test_mask_all_phases) ... ok
+test_nonzero_monitor_FIFO_and_transitions (test_t73.ResourceChecks.test_nonzero_monitor_FIFO_and_transitions) ... ok
+test_price_strips_with_adjacent_bad_windows (test_t73.ResourceChecks.test_price_strips_with_adjacent_bad_windows) ... ok
+test_LOW_all_counts_new_phi_delivery_boundary_and_WCET (test_t73_sync.SyncChecks.test_LOW_all_counts_new_phi_delivery_boundary_and_WCET) ... ok
+test_arbitrary_phase_edge_and_necessary_bound (test_t73_sync.SyncChecks.test_arbitrary_phase_edge_and_necessary_bound) ... ok
+test_new_JSON_eight_rows_and_text_directions (test_t73_sync.SyncChecks.test_new_JSON_eight_rows_and_text_directions) ... ok
+test_new_source_bytes_and_four_independent_inputs (test_t73_sync.SyncChecks.test_new_source_bytes_and_four_independent_inputs) ... ok
+test_paired_edge_full_W_and_small_direct_windows (test_t73_sync.SyncChecks.test_paired_edge_full_W_and_small_direct_windows) ... ok
+test_preserved_failures_and_return_price_repair (test_t73_sync.SyncChecks.test_preserved_failures_and_return_price_repair) ... ok
+test_strong_constant_M_next_resources_and_price (test_t73_sync.SyncChecks.test_strong_constant_M_next_resources_and_price) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 10.861s
+
+OK
+New arbitrary-phase edge: 23062 one-word finite windows; sum over W is valid.
+New paired edge: 82 small calendars, 17168 direct windows; 8 full-W calendars, 4194304 start/end extrema.
+test_ERR_fallback_and_next_bad_quantum (test_t82.TimingChecks.test_ERR_fallback_and_next_bad_quantum) ... ok
+test_all_old_JSON_rows_preserved (test_t82.TimingChecks.test_all_old_JSON_rows_preserved) ... ok
+test_clock_rounding_and_bad_neighbor (test_t82.TimingChecks.test_clock_rounding_and_bad_neighbor) ... ok
+test_external_not_90_and_not_double_clocked (test_t82.TimingChecks.test_external_not_90_and_not_double_clocked) ... ok
+test_gate_delivery_ERR_not_free (test_t82.TimingChecks.test_gate_delivery_ERR_not_free) ... ok
+test_independent_decimal_and_strong_fixed_neighbor (test_t82.TimingChecks.test_independent_decimal_and_strong_fixed_neighbor) ... ok
+test_margins_and_all_scientific_inputs_unchanged (test_t82.TimingChecks.test_margins_and_all_scientific_inputs_unchanged) ... ok
+test_no_calibration_from_area_or_electronics (test_t82.TimingChecks.test_no_calibration_from_area_or_electronics) ... ok
+test_no_external_risk_transfer_or_unstable_delay_bound (test_t82.TimingChecks.test_no_external_risk_transfer_or_unstable_delay_bound) ... ok
+test_resource_first_good_and_previous_bad (test_t82.TimingChecks.test_resource_first_good_and_previous_bad) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.450s
+
+OK
