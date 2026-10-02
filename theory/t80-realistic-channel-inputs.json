@@ -1,6 +1,6 @@
 {
   "issue": 80,
-  "status": "engineering_inputs_pinned_pending_T82_joint_pilot",
+  "status": "engineering_inputs_pinned_addressed_formula_amendment_pending_T82",
   "base_sha": "d2916599ca8456211da61bf58a4907a3a0738cec",
   "accepted_theory_sha": "3ad0462eac34d47176a6e1b36052855114a508df",
   "accepted_engineering_sha": "68c159de3a169f13841e4719f38c086e22e38ad7",
@@ -629,6 +629,23 @@
       "external_executor_upper_s": "0.0000002405120006",
       "external_executor_is_full_U": false,
       "new_T80_curves_in_this_sha": false,
+      "pilot_registration_sha_observed": "eec2120328aedfe2d12fb50f521805e5194bb54c",
+      "pilot_registration_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/eec2120328aedfe2d12fb50f521805e5194bb54c/experiments/t82-realistic-timing/t80_config.json",
+      "pilot_registration_is_completed_numerical_delivery": false,
+      "registered_diagnostic_profile": {
+        "id": "conditional_linear_counter_v1",
+        "upper_to_lower_ratio": "1",
+        "eta_per_s": "0.001",
+        "quiet_mean": "w_upper*(a_M*b_nom+eta)",
+        "false_ERR_rate_per_s": "0.000001",
+        "recognized_ERR_loss_rate_per_s": "0.000001",
+        "bad_window_probability": "0.000000001",
+        "resource_rate": "0.0001",
+        "resource_sigma_s": "0.0000001",
+        "window_interface": "cumulative/subwindow counts at w/2; finer cadence requires explicit revalidation",
+        "full_word_and_channel_physical_qualification": false,
+        "new_cadence_resource_increment_upper": null
+      },
       "old_always_S_and_fixed_tables": "appendix E.5; not a new ERR-only exit or a realistic-monitor 1percent result"
     }
   },
@@ -771,6 +788,74 @@
     ],
     "combinations_per_fixed_environment_and_profile": 12,
     "instructions": "appendix E; first test short-service/direct budget before channel tuning; no new GOES processing or adaptive Monte Carlo."
+  },
+  "addressed_formula_amendment": {
+    "version": "T80_joint_exposure_and_monitor_price_v2",
+    "baseline_scientific_sha": "365b7386c1bc702e424ad4ee9cb4781ae2c24aeb",
+    "inputs_only_sync_sha": "26c75e3758d36254dc22b4072369e6ad9a0c740c",
+    "exact_new_formula_sha": "recorded in PR86 and the handoff comment; not a self-referential hash",
+    "numerical_owner_issue": 82,
+    "new_campaign": false,
+    "baseline_family_retained": true,
+    "environment_classes_unchanged_and_not_pooled": true,
+    "joint_pair_risk": {
+      "applicability": "0 <= bbar < vc < B; otherwise retain old/mandatory upper",
+      "u": "(P_s+P_l)*bbar^2",
+      "v": "max((P_s+P_l)*(vc+bbar),(P_s*B^2-u)/(B-bbar),0)",
+      "Q_M": "min(P_s*S2+P_l*Vc,P_l*S2,u*T+v*FS)",
+      "replacement": "beta*Q_M replaces beta*(P_s*S2+P_l*Vc) in (6) and D_allow; all other terms unchanged",
+      "quotas_and_D_star_changed": false
+    },
+    "monitor_price_conflict": {
+      "conditions": "h0=w/2; qR<=2*bbar; b_nom=bbar; mu_Q>=a_M*bbar*w",
+      "conclusion": "every safe k satisfies p_M>=1-exp(-H), since a_M*m_R<=mu_Q",
+      "scope": "failure of the stated price certificate; no general impossibility claim"
+    },
+    "addressed_window_fractions": {
+      "after": "retain baseline rows and identify the conflict B3",
+      "stride_over_window": ["0.125", "0.03125"],
+      "h0": "w-Delta",
+      "required": "native cumulative/subwindow counts with cadence <=Delta; timing/errors/full cost revalidated",
+      "physical_cadence_qualified": false,
+      "J_H_DM_and_channel_cost": "recomputed; alpha_M is the same whole-mission quota",
+      "configuration_selection": "one configuration before observing data; no free runtime multiple testing"
+    },
+    "joint_threshold": {
+      "E_X": "2*c/T+C_X+sigma_X/T",
+      "A0": "(D_M+D_E*K0)/T+D_E*(b_nom+r_F)+p_q",
+      "p_star": "T/(J*D_M)*((0.01-C_s-E_X)/C_f-A0)-beta_M",
+      "k_price": "least nonnegative integer with PoissonUpperTail(mu_Q,k)<=p_star",
+      "k_safe": "greatest nonnegative integer with a_M*phi*m_R>=z*k+H",
+      "acceptance": "k_price<=k_safe, all coverage/timing/risk/resource tests pass",
+      "optional_all_z_lower_mgf": "B6: m-k+k*log(k/m)>=H for 0<k<m; k=0 limit m, k>=m rejects",
+      "explicit_channel_requirement": "B7; positive C and directed rounding; conditional, not global minimum",
+      "y_grid": ["1", "0.3", "0.1", "0.03", "0.01", "0.003"]
+    },
+    "return_edge_correction": {
+      "calendar_edge": "2*c*K_Q/T_Q",
+      "control_edge": "sigma_X*K_Q/T_Q; use sigma_E for ERR-only",
+      "mean_control_rate": "C_X unchanged; use C_E for ERR-only",
+      "whole_mission_bad_probability": "paid once, never multiplied by K_Q",
+      "whole_quiet_T_formula_changed": false
+    },
+    "all_history_price_cap": "min(formula price upper,C_f+2*c/T+C_X+sigma_X/T); ERR-only uses C_E/sigma_E, returns use K_Q/T_Q edges",
+    "new_ERR_only_risk_formula_changed": false,
+    "direct_fast_LOW_comparison": {
+      "basis": "accepted T73 direct fast-cone LOW, with T80 joint pair bound (6a)",
+      "selection": "choose reset-slow or direct-fast before data; same controller/calendar/quotas, no unbudgeted runtime OR",
+      "h_F_min": "w+d+Delta+G+gmax+f+P_s, with timing margin and directed rounding",
+      "m_F": "integral(u=0..w, max(L_b(vc,h_F-u)-b_U,0))",
+      "threshold": "replace m_R by m_F in (4), B5-B7; unchanged alpha_M",
+      "D_M_F": "D_M from (7) minus D_Q; retain all other terms and returning edges",
+      "vc_above_ve_allowed": "only with global-fast proof B7; reset-slow still requires vc<ve",
+      "v_flat": "B*(P_s*B/(P_s+P_l)-bbar)/(B-bbar)",
+      "addressed_vc": ["previous candidates", "(bbar+v_flat)/2", "v_flat"],
+      "new_candidate_condition": "v_flat>bbar, safe downward rounding, vc<B",
+      "same_environment_classes": true,
+      "numerical_result": null
+    },
+    "new_certified_tax": null,
+    "new_realistic_1percent_confirmed": false
   },
   "constraints": {
     "T_s": "315576000",
