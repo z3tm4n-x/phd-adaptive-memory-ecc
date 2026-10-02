@@ -1,0 +1,57 @@
+{
+  "theory_sha": "365b7386c1bc702e424ad4ee9cb4781ae2c24aeb",
+  "architecture_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+  "previous_delivery_sha": "6275c434153f3c9fe540219e06a18e0095fe4683",
+  "source_blobs": {
+    "t80-realistic-channel.md": "51c0cbf5dfb15ac4c6aae996edb1f7e1afa07ac9",
+    "t80-realistic-channel-appendix.md": "437958472f99d497d2a94a04049e749d74d07828",
+    "t80-realistic-channel-inputs.json": "df0a70a8ff2faffcea858b427192f90e56253712",
+    "t81-handoff.json": "c4d65a768585f2ae2355fcf6f7f294ce16a285fe"
+  },
+  "margins": ["0.10", "0.05"],
+  "diagnostic_profile": {
+    "id": "conditional_linear_counter_v1",
+    "status": "declared mathematical profile, not REM/SREM or a qualified instrument",
+    "lower_contracts": ["total_load", "solar_plus_upper_unobserved_load"],
+    "upper_to_lower_ratio": "1",
+    "eta_per_s": "0.001",
+    "quiet_mean_contract": "w_upper*(a_M*b_nom+eta); original quiet class, no zero-solar assumption",
+    "solar_b_U": "bbar as an explicit conditional bound on ALL invisible load",
+    "false_ERR_rate_per_s": "0.000001",
+    "recognized_ERR_loss_rate_per_s": "0.000001",
+    "bad_window_probability": "0.000000001",
+    "delivery_compute_upper": "grid d seconds; budget enlarged by margin and quantized",
+    "window_interface": "cumulative counter/subwindow counts at stride w/2, sufficient integer range",
+    "saturation": "none in declared Lambda under the diagnostic lower/upper contracts; unqualified physically",
+    "spectral_domain": "abstract full load nu or declared visible part; no flight response inferred",
+    "resource_rate": "0.0001",
+    "resource_sigma_s": "0.0000001",
+    "resource_scope": "same conservative combined envelope retained separately for each mode",
+    "global_quotas": "inherit each old set; omit only unused ERR or monitor quotas as T80 specifies"
+  },
+  "service_projection": {
+    "internal_nominal_basis_s": "0.00000009",
+    "internal_joint_WCET_s": null,
+    "internal_rule": "slots 100/95 ticks are conditional required joint deadlines, not measured WCET; report overhead allowed",
+    "external_existing_upper_s": "0.0000002405120006",
+    "external_clean_U_qualified": false,
+    "external_environment": "separate conditional full39 load class using stated numerical B,b,FS; not a measured transfer from full38"
+  },
+  "singleton_ERR": {
+    "a_E": "1-1/W",
+    "tau": "P_l_upper+d_E_budget_upper",
+    "physical_a_E": null,
+    "physical_status": "T81 supplies neither token lower calibration nor complete clean-U"
+  },
+  "search": {
+    "family_source": "pinned T80 JSON new_family and pilot, no extensions",
+    "first_gate": "short risk without long term; reject before monitor tuning",
+    "objective": "minimum upper quiet tax per fixed set/shield/architecture/margin/environment/channel tuple; report returns separately",
+    "tie_break": "smaller theta, then z order in T80, then smaller ka",
+    "price_tail": "T72 Bernstein upper, explicitly an upper on Poisson tail, not exact tail",
+    "arithmetic": "rational algebra and T58 directed exp; conservative timer quantization; no float acceptance",
+    "ERR_majorant": "T80 E1 finite cells with active refinement only up to B/65536",
+    "full_grid_after_pilot": true,
+    "physical_qualification": false
+  }
+}
