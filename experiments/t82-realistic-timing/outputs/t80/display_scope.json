@@ -1,0 +1,10 @@
+{
+  "qratio": "2",
+  "rho_e": "0.000001",
+  "DQ": "300",
+  "kind": "total_load",
+  "optimizer_scope": "within class only; never minimize over qR, rho_e or DQ",
+  "hard_bound_source": "T80 (11), same all-history mask at horizon; formula (8)/(10) retained separately",
+  "new_scientific_formulas": false,
+  "real_instrument_qualified": false
+}
