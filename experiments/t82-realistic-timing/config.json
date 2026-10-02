@@ -1,0 +1,20 @@
+{
+  "issue": 82,
+  "base_sha": "d2916599ca8456211da61bf58a4907a3a0738cec",
+  "accepted_theory_sha": "3ad0462eac34d47176a6e1b36052855114a508df",
+  "new_theory_80_sha": null,
+  "architecture_81_sha": null,
+  "stage": "old_T73_timing_and_channel_audit",
+  "margins": ["0.10", "0.05"],
+  "internal_nominal_read_s": "0.000000045",
+  "internal_nominal_write_s": "0.000000045",
+  "internal_joint_WCET_s": null,
+  "external_conditional_executor_upper_s": "0.0000002405120006",
+  "external_pending_upper_s": "0.0000001605080004",
+  "external_is_T73_unconditional_U": false,
+  "external_full39_risk_inputs_qualified": false,
+  "monitor_profiles": ["SREM_PSI", "REM_ESA_ALC_2001"],
+  "new_method_grid": null,
+  "mutate_direct_quotas_or_environment": false,
+  "physical_qualification": false
+}
