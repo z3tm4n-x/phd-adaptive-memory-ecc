@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "checked_date": "2026-10-03",
+  "status_values": ["documented", "conditional", "unknown"],
+  "profiles": [
+    {
+      "id": "SREM_PSI",
+      "flight_profile": "IREM_INTEGRAL",
+      "reused_from": "experiments/t82-realistic-timing/monitor_profiles.json",
+      "facts": {
+        "detector_area": {"value": [25,25,50], "unit": "mm2", "status": "documented", "source": "S4 p. 2 section 2"},
+        "entrance_half_angle": {"value": 20, "unit": "degree", "status": "documented", "source": "S4 p. 2; S3 p. 1106", "note": "High-energy side penetration and host shielding preclude a uniform geometric lower bound."},
+        "approximate_low_thresholds": {"value": {"proton": "10", "electron": "0.5"}, "unit": "MeV", "status": "documented", "source": "S4 p. 2 section 2", "note": "Not every counter: S3 Table I gives channel-dependent responses."},
+        "heavy_ion_channel_threshold": {"value": "150", "unit": "MeV/nucleon", "status": "documented", "source": "S4 p. 2 section 2", "note": "Approximate reported threshold, not a lower response to all GCR heavy ions or to memory LET."},
+        "broadcast_period": {"value": "8", "unit": "s", "status": "documented", "source": "S4 p. 2 section 4", "note": "Period, not acquisition duration or worst-case latency/jitter."},
+        "packet_size": {"value": 15, "unit": "words", "status": "documented", "source": "S4 p. 2 section 4", "note": "Word width and full wire framing not given here; do not convert to bytes."},
+        "radiation_words": {"value": 3, "unit": "words/TDB", "status": "documented", "source": "S4 p. 2 section 4", "note": "Dead-time-corrected preselected proton/electron/deep-dose scalers; not proved raw Poisson counts."},
+        "processing_rate": {"value": "100000", "unit": "s^-1", "status": "documented", "source": "S3 p. 1106 section II", "note": "Electronics processing capability; not a hard count-loss/saturation or full-channel bound."},
+        "deadtime_correction": {"value": "0.20", "unit": "fraction, less than", "status": "documented", "source": "S3 p. 1106 section II", "note": "Does not establish a pathwise or stochastic count-loss bound."},
+        "generic_SREM_mass": {"value": "2.5", "unit": "kg", "status": "documented", "source": "S1 Key Performance Features", "note": "Generic PSI profile; S3 quotes 2.6 kg for its description. Not a measured IREM delivery cost."},
+        "generic_SREM_power": {"value": "2", "unit": "W, less than", "status": "documented", "source": "S1 Key Performance Features"},
+        "existing_interface": {"value": "Host-compatible TM/TC, status/temperature; generic differential or single-ended lines. IREM broadcasts TDB including status and science/HK.", "unit": null, "status": "documented", "source": "S1 Host Spacecraft Accomodation; S4 p. 2 section 4"}
+      },
+      "physical_contract": {
+        "a_M_full_R0A_lower": null, "A_M_quiet_upper": null, "eta_quiet_per_s": null,
+        "unobserved_memory_load_upper_per_s": null, "response_domain_Theta_Lambda_lower": null,
+        "lower_laplace_contract": null, "upper_quiet_MGF_contract": null,
+        "count_loss_contract": null, "saturation_hard_count_rate_per_s": null,
+        "raw_count_window_s": null, "cadence_hard_upper_s": null, "cadence_jitter_s": null,
+        "end_to_end_delivery_compute_upper_s": null, "clock_error_bound_s": null,
+        "sequence_timestamp_valid_overflow_ICD": null, "counter_bits": null,
+        "detected_loss_delay_upper_s": null, "recovery_delay_upper_s": null,
+        "whole_mission_delta_M": null, "bad_window_probability": null,
+        "expected_detected_loss_time_s": null, "expected_recovery_count": null,
+        "bus_rate_upper": null, "bus_burst_upper_s": null, "atomic_bus_request_upper_s": null,
+        "decoder_WCET_s": null, "purchase_price": null
+      },
+      "verdict": "insufficient_data_for_full_contract",
+      "physical_qualification": false
+    },
+    {
+      "id": "REM_ESA_ALC_2001",
+      "flight_profile": "STRV_REM (not MIR_REM)",
+      "reused_from": "experiments/t82-realistic-timing/monitor_profiles.json",
+      "facts": {
+        "detector_area": {"value": [50,150], "unit": "mm2, e/p", "status": "documented", "source": "S5 p. 46; S7 Table 1 p. 4, STRV rows"},
+        "entrance_half_angle": {"value": 45, "unit": "degree", "status": "documented", "source": "S7 p. 3 Fig. 2", "note": "Rear detections possible; spacecraft-dependent angular lower bound unknown."},
+        "shielding": {"value": {"Al": "3", "extra_Ta_p": "0.75"}, "unit": "mm", "status": "documented", "source": "S7 p. 3 Fig. 2; p. 4 Table 1 STRV"},
+        "proton_threshold_e_p": {"value": ["24","35"], "unit": "MeV", "status": "documented", "source": "S7 p. 4 Table 1 STRV"},
+        "electron_threshold_e_p": {"value": ["1.4","2.6"], "unit": "MeV", "status": "documented", "source": "S7 p. 4 Table 1 STRV"},
+        "typical_integration": {"value": "100", "unit": "s", "status": "documented", "source": "S5 p. 46; S7 p. 4", "note": "Typical, not minimum or mandatory. Two histograms transferred to spacecraft memory."},
+        "ADC_resolution": {"value": 12, "unit": "bits", "status": "documented", "source": "S6; S7 p. 3", "note": "Not counter capacity."},
+        "histogram": {"value": {"detectors": 2, "bins_each": 16}, "unit": "histogram bins", "status": "documented", "source": "S7 pp. 3-4"},
+        "design_processable_rate": {"value": "20000", "unit": "Hz, less than", "status": "documented", "source": "S7 p. 3", "note": "Shield/design target, not certified hard saturation bound."},
+        "deadtime_support": {"value": "Built-in test pulser; regular dead-time measurement interpolated per accumulation; corrected rate = raw rate/(1-t_D).", "unit": null, "status": "documented", "source": "S7 pp. 4,6-7", "note": "No uniform interpolation/loss bound or probability contract is supplied."},
+        "ion_support": {"value": "Two highest bins expected to include ions; described flight counts not significant.", "unit": null, "status": "documented", "source": "S7 p. 6", "note": "Neither zero GCR sensitivity nor full GCR-memory coverage follows."},
+        "mass": {"value": ["1","1.8"], "unit": "kg, approximate modules", "status": "documented", "source": "S6; S7 p. 2"},
+        "power": {"value": "5", "unit": "W, less than", "status": "documented", "source": "S6; S7 p. 3"},
+        "existing_interface": {"value": "Digital TM/TC to on-board computer, two accumulated histograms to spacecraft memory; acquisition followed by voltage/temperature HK. Test-pulser support.", "unit": null, "status": "documented", "source": "S7 Fig. 1 p. 2; p. 4", "note": "Transfer mechanism does not specify a bound to rule software or freshness/overflow fields."}
+      },
+      "physical_contract": {
+        "a_M_full_R0A_lower": null, "A_M_quiet_upper": null, "eta_quiet_per_s": null,
+        "unobserved_memory_load_upper_per_s": null, "response_domain_Theta_Lambda_lower": null,
+        "lower_laplace_contract": null, "upper_quiet_MGF_contract": null,
+        "count_loss_contract": null, "saturation_hard_count_rate_per_s": null,
+        "raw_count_window_s": null, "cadence_hard_upper_s": null, "cadence_jitter_s": null,
+        "end_to_end_delivery_compute_upper_s": null, "clock_error_bound_s": null,
+        "sequence_timestamp_valid_overflow_ICD": null, "counter_bits": null,
+        "detected_loss_delay_upper_s": null, "recovery_delay_upper_s": null,
+        "whole_mission_delta_M": null, "bad_window_probability": null,
+        "expected_detected_loss_time_s": null, "expected_recovery_count": null,
+        "bus_rate_upper": null, "bus_burst_upper_s": null, "atomic_bus_request_upper_s": null,
+        "decoder_WCET_s": null, "purchase_price": null
+      },
+      "verdict": "insufficient_data_for_full_contract",
+      "physical_qualification": false
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "accepted_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+  "files": [
+    {
+      "path": "experiments/t58-fixed-baseline-r0b/certificate.py",
+      "sha256": "8a836276e8bcd958d524d25f17913bbeda25b3e54e0a5ca88e243f694df5f7af"
+    },
+    {
+      "path": "experiments/t72-r0a-onset-inputs/confirm_t73_sync.py",
+      "sha256": "b20e2feecb27f29e46fb857a10075205b81f29f2bc159d045260c2de649ac6d6"
+    },
+    {
+      "path": "experiments/t72-r0a-onset-inputs/verify_t73.py",
+      "sha256": "8064790bddf79a24be370cb1cca0d4e80e99deeafdf55979ca76cd5587f11a7f"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/config.json",
+      "sha256": "2457f7362a8354b4664db50a13e210cc54fa8a3bfeb00a756300474671452412"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/monitor_profiles.json",
+      "sha256": "53a0ae0ded7cdc4ef33205a33637e9b2e1862a750675e4293a2cd9064d75af38"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/run_t80.py",
+      "sha256": "dde6c0180a32c8b03f64a4fe559e243c5473905caf951e010d761b1b4a671d63"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/t80_config.json",
+      "sha256": "eb57591862304e19f45db40772f7db429a7392b6653696c59abe38284b98f86d"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/t80_engine.py",
+      "sha256": "3d569944a4b9ea6e46cfbacdb010ff627a0e2db562ec38bd7af21e86e8e99ce9"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/t80_err.py",
+      "sha256": "d15c34101455ba64a0b8f0aff007bdf34bb3cd6d5b5668954dc552a836ca404d"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/t80_joint.py",
+      "sha256": "9a22acb8f4a04646bad3a5128e5e55e0f0616e028ad418837fd349af06862bf2"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/t80_joint_config.json",
+      "sha256": "3c6319db072dbc90ae49a6783ffb1d0cb2dc78f13b91512edb65312d8973f3f3"
+    },
+    {
+      "path": "experiments/t82-realistic-timing/timing.py",
+      "sha256": "81ba1815e7f13acea6b543a19866b811db0bdbf94b572728ab8d63fba923a738"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/config.json",
+      "sha256": "3ababd6d3e98fe09a3ab78d28c11ced13673d8c55ece26ec9c85654c504fe05c"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/engine.py",
+      "sha256": "6f9c90e42d8f5f4c26e5ce40babddde195d167e7f360a8312b72d1fa8f4357d5"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/outputs/effective_inputs.json",
+      "sha256": "f2a14d172b5e119459951ffa6ce624fffa635c1bf266807a04c4731a6bfad295"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/outputs/selected.json",
+      "sha256": "d968ba69bee5e75ddcaa9bd8d61bb8b71e552a1b2f30507ef699061ca5dc5b5b"
+    }
+  ]
+}
