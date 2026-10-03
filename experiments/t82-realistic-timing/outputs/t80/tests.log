@@ -1,0 +1,20 @@
+test_E1_interval_majorant_and_no_information (test_t80.Numerical.test_E1_interval_majorant_and_no_information) ... ok
+test_fast_retrospective_saturation_and_zero (test_t80.Numerical.test_fast_retrospective_saturation_and_zero) ... ok
+test_integral_exp_branch_and_saturation (test_t80.Numerical.test_integral_exp_branch_and_saturation) ... ok
+test_k_next_integer_and_mission_H (test_t80.Numerical.test_k_next_integer_and_mission_H) ... ok
+test_low_deadline_margin_and_next_lease_quantum (test_t80.Numerical.test_low_deadline_margin_and_next_lease_quantum) ... ok
+test_odd_optimizer_against_full_integer_scan (test_t80.Numerical.test_odd_optimizer_against_full_integer_scan) ... ok
+test_selected_monitor_independent_decimal90 (test_t80.Numerical.test_selected_monitor_independent_decimal90) ... ok
+test_separate_price_strips_and_modes (test_t80.Numerical.test_separate_price_strips_and_modes) ... ok
+test_short_risk_first_with_beta0_and_external (test_t80.Numerical.test_short_risk_first_with_beta0_and_external) ... ok
+test_sources_four_budgets_and_unknowns (test_t80.Numerical.test_sources_four_budgets_and_unknowns) ... ok
+test_ERR_finite_exit_flags_losses_and_pending (test_t80.StateTransitions.test_ERR_finite_exit_flags_losses_and_pending) ... ok
+test_ERR_preserves_LOW_but_monitor_loss_clears (test_t80.StateTransitions.test_ERR_preserves_LOW_but_monitor_loss_clears) ... ok
+test_count_edges_bad_numbers_gap_and_deadline (test_t80.StateTransitions.test_count_edges_bad_numbers_gap_and_deadline) ... ok
+test_initial_peak_short_dip_and_actual_quiet_reset (test_t80.StateTransitions.test_initial_peak_short_dip_and_actual_quiet_reset) ... ok
+test_two_sided_LOW_and_mandatory_slot (test_t80.StateTransitions.test_two_sided_LOW_and_mandatory_slot) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.830s
+
+OK

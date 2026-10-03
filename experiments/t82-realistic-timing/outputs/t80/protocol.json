@@ -1,0 +1,48 @@
+{
+  "theory_sha": "365b7386c1bc702e424ad4ee9cb4781ae2c24aeb",
+  "architecture_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+  "preregistration_sha": "eec2120328aedfe2d12fb50f521805e5194bb54c",
+  "python": "3.12.14",
+  "stages": [
+    {
+      "stage": "pilot",
+      "channel_combinations": 12,
+      "rows": 92160,
+      "counts": {
+        "LOW_uninformative": 24960,
+        "certified_conditional": 10712,
+        "LOW_delay": 1768,
+        "short_risk": 54720
+      },
+      "contexts": 32
+    },
+    {
+      "stage": "full",
+      "channel_combinations": 140,
+      "rows": 1075200,
+      "counts": {
+        "LOW_uninformative": 344760,
+        "certified_conditional": 78304,
+        "LOW_delay": 13736,
+        "short_risk": 638400
+      },
+      "contexts": 32
+    }
+  ],
+  "tests_skipped": false,
+  "physical_qualification": false,
+  "quantity_semantics": "directed formula upper/lower bounds, not physical confidence intervals; requirements rounded to safe side",
+  "formula_versions_unchanged": true,
+  "hashes": {
+    "t80_engine.py": "3d569944a4b9ea6e46cfbacdb010ff627a0e2db562ec38bd7af21e86e8e99ce9",
+    "t80_err.py": "d15c34101455ba64a0b8f0aff007bdf34bb3cd6d5b5668954dc552a836ca404d",
+    "t80_policy.py": "35b58150f6dbfa9868b26e49e7b7634cf0fd1417e0bcfcf99c7b9501a0f3c9f3",
+    "t80_report.py": "0078776d49d846cd81b8b17ec68deff7872c98b5f5ffdb0ff96375f8e8446a5a",
+    "t80_validate.py": "095a21e55437251dadb2858a04d7f25a31d6be7a647a3851279d9d6007eff44c",
+    "run_t80.py": "dde6c0180a32c8b03f64a4fe559e243c5473905caf951e010d761b1b4a671d63",
+    "t80_config.json": "eb57591862304e19f45db40772f7db429a7392b6653696c59abe38284b98f86d",
+    "T80_METHOD.md": "a17d3711345da33998610c2909f258228ba607273e7af7db992d66b892de0f61"
+  },
+  "unit_tests_passed": 15,
+  "independent_points": 68
+}

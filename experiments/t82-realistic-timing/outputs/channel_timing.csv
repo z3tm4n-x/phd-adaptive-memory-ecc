@@ -1,0 +1,9 @@
+set,profile,positive_LOW_requires_lease_below_s,lease_required_at_least_s,necessary_timing_pass,a_M,calibration_qualified
+T73_published,REM_typical_window,4.6875,200,False,,False
+T73_published,IREM_broadcast_gap_8s_optimistic,4.6875,8,False,,False
+T72_budgets_explicit_T73_extension,REM_typical_window,4.6875,200,False,,False
+T72_budgets_explicit_T73_extension,IREM_broadcast_gap_8s_optimistic,4.6875,8,False,,False
+T72_explicit_same_method_revision,REM_typical_window,3.7125,200,False,,False
+T72_explicit_same_method_revision,IREM_broadcast_gap_8s_optimistic,3.7125,8,False,,False
+T72_revision_shorter_return_hold,REM_typical_window,3.7125,200,False,,False
+T72_revision_shorter_return_hold,IREM_broadcast_gap_8s_optimistic,3.7125,8,False,,False

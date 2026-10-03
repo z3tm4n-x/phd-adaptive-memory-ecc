@@ -1,0 +1,1579 @@
+{
+  "points": 360,
+  "checks": [
+    {
+      "kind": "B7_channel",
+      "calculation_id": 1901,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 1902,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 4231,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 4232,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 6561,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 8891,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 11221,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 11222,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 11223,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 13551,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 13552,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 13553,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 15881,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "2E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 18211,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "2E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 20541,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 20542,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 20543,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 22871,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 22872,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 22873,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 25201,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 27531,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 29861,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 29862,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 29863,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 32191,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 32192,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 32193,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 34521,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 36851,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 54781,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 54782,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 54783,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 57111,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 57112,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 57113,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 59441,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "2E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 61771,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 73461,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 73462,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 73463,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 75791,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 75792,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "2E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 75793,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 78121,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "B7_channel",
+      "calculation_id": 80451,
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "2E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 4,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 4,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 5,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 5,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 6,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 6,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 7,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 7,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 8,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 8,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 10,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 10,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 12,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 12,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 13,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 13,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 14,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 14,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 15,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 15,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 16,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 16,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 18,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 18,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 20,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 20,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 21,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 21,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 22,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 22,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 23,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 23,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 24,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 24,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 26,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 26,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 28,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 28,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "0",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 29,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 29,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 30,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 30,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 31,
+      "mode": "combined",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    },
+    {
+      "kind": "U_80ns",
+      "context_id": 31,
+      "mode": "monitor-only",
+      "precision": 90,
+      "points": 4,
+      "rows": 1,
+      "counts": {
+        "risk": 1,
+        "LOW": 1,
+        "price": 1,
+        "resource": 1
+      },
+      "maximum_price_difference": "1E-92",
+      "comparison_tolerance": "1e-70",
+      "independent_formulas": true,
+      "physical_qualification": false
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "checked_utc_date": "2026-10-02",
+  "physical_a_M_qualified": false,
+  "profiles": [
+    {
+      "id": "SREM_PSI",
+      "flight_profile": "IREM_INTEGRAL",
+      "sources": ["S1", "S2", "S3", "S4"],
+      "detector_areas_mm2": [25, 25, 50],
+      "aperture_half_angle_degrees": 20,
+      "native_count_window_s": null,
+      "onboard_broadcast_period_s": "8",
+      "onboard_packet_words": 15,
+      "onboard_delivery_compute_hard_upper_s": null,
+      "documented_processing_rate_per_s": "100000",
+      "processing_rate_is_hard_saturation_bound": false,
+      "documented_deadtime_correction_fraction_less_than": "0.20",
+      "count_loss_distribution_or_mgf_contract": null,
+      "response": "unit/channel/energy/angular/spacecraft dependent; overlapping counters",
+      "a_M_full_R0A_lower": null,
+      "A_M_quiet_upper": null,
+      "whole_mission_delta_M": null,
+      "recognized_bad_window_probability": null,
+      "common_bus_cost_upper": null,
+      "processing_WCET_s": null,
+      "physical_qualification": false
+    },
+    {
+      "id": "REM_ESA_ALC_2001",
+      "sources": ["S5", "S6"],
+      "detector_areas_mm2": [50, 150],
+      "typical_integration_s": "100",
+      "integration_is_hard_required_or_minimum": false,
+      "angular_response_lower": null,
+      "onboard_delivery_compute_hard_upper_s": null,
+      "ADC_bits": 12,
+      "histogram_bins": 16,
+      "counter_bits": null,
+      "deadtime_or_saturation_contract": null,
+      "a_M_full_R0A_lower": null,
+      "A_M_quiet_upper": null,
+      "whole_mission_delta_M": null,
+      "recognized_bad_window_probability": null,
+      "common_bus_cost_upper": null,
+      "processing_WCET_s": null,
+      "power_W_less_than": "5",
+      "mass_kg_approximate": "2.8",
+      "physical_qualification": false
+    }
+  ]
+}
