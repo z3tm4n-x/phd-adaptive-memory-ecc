@@ -1,0 +1,93 @@
+{
+  "issue": 89,
+  "base_sha": "578d45bb705814f37b6c7116259619e106cf60c9",
+  "T81_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+  "author_decision_PR91_sha": "bedae568e0fdec26bddc948fff0b7fd2ff38cc9e",
+  "scenario": {
+    "architecture": "internal38",
+    "word": "32 data + 6 check",
+    "W": 524288,
+    "orbit": "GEO",
+    "mission_seconds": 315576000,
+    "shields_g_cm2": ["3", "2.5"],
+    "baseline_D0": "0.00005",
+    "memory_epsilon_conditional": "0.001",
+    "SEP_exceedance_level_separate": "0.1"
+  },
+  "calculation": {
+    "hypothetical_new_count": 0,
+    "data_are_hypothetical": true,
+    "fluence_rounding_cm2_inv": "0.001",
+    "old_exposure_credit_cm2_inv": "0",
+    "old_exposure_credit_reason": "Explicit non-credit policy; data32 ECC-off is not full38 ECC-on",
+    "old_exposure_physical_eligibility": null
+  },
+  "conditional_scale": {
+    "status": "illustration only; not qualified physical inputs",
+    "test_LET_min_MeV_cm2_mg_sensitive_layer": "57",
+    "mission_GCR_LET_domain": ["27", "126"],
+    "mission_SEP_LET_domain": ["27", "32.6"],
+    "transfer": "one predeclared whole-array uniform cap; monotonicity down and separate high-LET plateau; T81 normal-as-isotropic comparator",
+    "R": "0",
+    "q_lower": "1",
+    "g_lower": "1",
+    "theta_F": "0.3",
+    "theta_F_coverage": "assumed deterministic lower factor, not measured 95% fluence interval",
+    "coverage_profiles": [
+      {"id": "point95_single_cap", "alpha_family": "0.05", "comparisons": 1},
+      {"id": "T81_fixed6_joint95", "alpha_family": "0.05", "comparisons": 6},
+      {"id": "T81_fixed6_joint_1e-6", "alpha_family": "0.000001", "comparisons": 6}
+    ]
+  },
+  "physical_contract": {
+    "C_rho_j_cm2_inv": null,
+    "R_mean_upper": null,
+    "q_lower": null,
+    "g_lower": null,
+    "theta_F": null,
+    "alpha_Theta_total": null,
+    "delta_F": null,
+    "delta_registration": null,
+    "delta_transfer_environment": null,
+    "full38_ECC_on_observed_count": null,
+    "uniform_angular_LET_envelope": null,
+    "actual_word_or_black_box_dominance": null,
+    "required_physical_fluence_cm2_inv": null
+  },
+  "angular_coefficient_illustration": {
+    "polar_strata_deg": [[0, 30], [30, 45], [45, 60]],
+    "azimuth_domain_deg": [0, 360],
+    "architectures_in_family": 1,
+    "alpha_family": "0.05",
+    "budget_allocation": "b_j=(D0-R)/3",
+    "C_rho_j_cm2_inv": null,
+    "R": null,
+    "q_lower": null,
+    "g_lower": null,
+    "theta_F": null,
+    "coefficient_only_assumptions": {"R": "0", "q_lower": "1", "g_lower": "1", "theta_F": "0.3"},
+    "candidate_polar_nodes_deg": [0, 30, 45, 60],
+    "candidate_azimuth_nodes_deg": [0, 45, 90, 135, 180, 225, 270, 315],
+    "candidate_nodes_status": "protocol seed only; no between-node upper or full angular coverage is implied"
+  },
+  "T88_handoff": {
+    "source_sha": null,
+    "status": "not_received",
+    "rows": [
+      {"variant": "combined", "shield_g_cm2": "3", "Dcrit_1pct_safe": null},
+      {"variant": "monitor-only", "shield_g_cm2": "3", "Dcrit_1pct_safe": null},
+      {"variant": "ERR-only", "shield_g_cm2": "3", "Dcrit_1pct_safe": null},
+      {"variant": "combined", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null},
+      {"variant": "monitor-only", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null},
+      {"variant": "ERR-only", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null}
+    ]
+  },
+  "source_sha256": {
+    "experiments/t81-direct-architecture/run.py": "7f6846a1cf36c3d57de184801b6ef53efe2abd563bbbd76644c27c51f754f681",
+    "experiments/t81-direct-architecture/METHOD.md": "18af87c90b9f8df84a7abd4ebbaa8eff797d8fded673f2cdb2d2cd6ee55af805",
+    "experiments/t81-direct-architecture/request_for_author.md": "ffe47ab7082f99be8ebec3a8b9bb0906488eb3eae6d0313940d63433b22c6cc9",
+    "experiments/t81-direct-architecture/outputs/mission_weights.csv": "56b35a86fd8f4b2bcce25b85507ca7a0bda2ffc2f29a297930cb9ad34cbfee22",
+    "experiments/t81-direct-architecture/outputs/prospective_fullword_exposure.csv": "cf71e92e0d31f3120179a163dab0096447a9a7cee13d550c446bf415272ebbab",
+    "experiments/t81-direct-architecture/outputs/handoff.json": "e1e51ae5eca569d656d918e231dab49c47f4b689e9b6b4320c188da46a739bf9"
+  }
+}

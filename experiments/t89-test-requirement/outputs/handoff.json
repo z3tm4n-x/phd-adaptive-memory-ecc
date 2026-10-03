@@ -1,0 +1,60 @@
+{
+  "issue": 89,
+  "T81_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+  "D0": "0.000050000000000000",
+  "T88": {
+    "source_sha": null,
+    "status": "not_received",
+    "rows": [
+      {
+        "variant": "combined",
+        "shield_g_cm2": "3",
+        "Dcrit_1pct_safe": null
+      },
+      {
+        "variant": "monitor-only",
+        "shield_g_cm2": "3",
+        "Dcrit_1pct_safe": null
+      },
+      {
+        "variant": "ERR-only",
+        "shield_g_cm2": "3",
+        "Dcrit_1pct_safe": null
+      },
+      {
+        "variant": "combined",
+        "shield_g_cm2": "2.5",
+        "Dcrit_1pct_safe": null
+      },
+      {
+        "variant": "monitor-only",
+        "shield_g_cm2": "2.5",
+        "Dcrit_1pct_safe": null
+      },
+      {
+        "variant": "ERR-only",
+        "shield_g_cm2": "2.5",
+        "Dcrit_1pct_safe": null
+      }
+    ]
+  },
+  "physical_contract": {
+    "C_rho_j_cm2_inv": null,
+    "R_mean_upper": null,
+    "q_lower": null,
+    "g_lower": null,
+    "theta_F": null,
+    "alpha_Theta_total": null,
+    "delta_F": null,
+    "delta_registration": null,
+    "delta_transfer_environment": null,
+    "full38_ECC_on_observed_count": null,
+    "uniform_angular_LET_envelope": null,
+    "actual_word_or_black_box_dominance": null,
+    "required_physical_fluence_cm2_inv": null
+  },
+  "physical_qualification": false,
+  "experiments_executed": false,
+  "zero_counts_are_hypothetical": true,
+  "ready": "formula, ECC-on protocol, baseline requirement; T88 safe thresholds pending"
+}
