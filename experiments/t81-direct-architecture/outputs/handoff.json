@@ -1,0 +1,121 @@
+{
+  "issue": 81,
+  "source_base": "d2916599ca8456211da61bf58a4907a3a0738cec",
+  "mission_seconds": 315576000,
+  "direct_quantity": "mean parents with >=2 distinct positions in any full word",
+  "architectures": [
+    {
+      "architecture": "internal38",
+      "shield_g_cm2": 2.5,
+      "W": 524288,
+      "n": 38,
+      "physical_word": "32 data + 6 hidden check",
+      "observed_domain": "ECC-off data cells;normal-incidence scenario;38/39 law unobserved",
+      "data32_reference_zero_groups_of_55": 45,
+      "data32_reference_F_at_57_cm2_inv": 8974.600857765849,
+      "data32_reference_sigma57_point95_theta03": 0.0004768588153918116,
+      "data32_reference_UR_T68_theta03": 0.003463085545709634,
+      "data32_reference_D_family95_theta03": 0.010127762953023717,
+      "data32_reference_applies_to_full_architecture": false,
+      "existing_qualified_fullword_F_cm2_inv": null,
+      "fullword_observed_direct_count": null,
+      "fullword_sigma_upper_cm2": null,
+      "fullword_D_upper": null,
+      "joint_coverage": null,
+      "direct_targets": "5e-5;1e-4",
+      "status": "insufficient_fullword_evidence",
+      "required_data": "internal_W_and_6check_joint_marks_angles_registration"
+    },
+    {
+      "architecture": "internal38",
+      "shield_g_cm2": 3.0,
+      "W": 524288,
+      "n": 38,
+      "physical_word": "32 data + 6 hidden check",
+      "observed_domain": "ECC-off data cells;normal-incidence scenario;38/39 law unobserved",
+      "data32_reference_zero_groups_of_55": 45,
+      "data32_reference_F_at_57_cm2_inv": 8974.600857765849,
+      "data32_reference_sigma57_point95_theta03": 0.0004768588153918116,
+      "data32_reference_UR_T68_theta03": 0.002772537646709901,
+      "data32_reference_D_family95_theta03": 0.008107683987045654,
+      "data32_reference_applies_to_full_architecture": false,
+      "existing_qualified_fullword_F_cm2_inv": null,
+      "fullword_observed_direct_count": null,
+      "fullword_sigma_upper_cm2": null,
+      "fullword_D_upper": null,
+      "joint_coverage": null,
+      "direct_targets": "5e-5;1e-4",
+      "status": "insufficient_fullword_evidence",
+      "required_data": "internal_W_and_6check_joint_marks_angles_registration"
+    },
+    {
+      "architecture": "external39",
+      "shield_g_cm2": 2.5,
+      "W": 524288,
+      "n": 39,
+      "physical_word": "M0:16 data;M1:16 data;M2:7 check+9 padding",
+      "observed_domain": "ECC-off data cells;normal-incidence scenario;38/39 law unobserved",
+      "data32_reference_zero_groups_of_55": 45,
+      "data32_reference_F_at_57_cm2_inv": 8974.600857765849,
+      "data32_reference_sigma57_point95_theta03": 0.0004768588153918116,
+      "data32_reference_UR_T68_theta03": 0.003463085545709634,
+      "data32_reference_D_family95_theta03": 0.010127762953023717,
+      "data32_reference_applies_to_full_architecture": false,
+      "existing_qualified_fullword_F_cm2_inv": null,
+      "fullword_observed_direct_count": null,
+      "fullword_sigma_upper_cm2": null,
+      "fullword_D_upper": null,
+      "joint_coverage": null,
+      "direct_targets": "5e-5;1e-4",
+      "status": "insufficient_fullword_evidence",
+      "required_data": "raw_to_pins_lane_ECC_on_DQ47:0_ERR2:0_joint_marks_crosschip_angles"
+    },
+    {
+      "architecture": "external39",
+      "shield_g_cm2": 3.0,
+      "W": 524288,
+      "n": 39,
+      "physical_word": "M0:16 data;M1:16 data;M2:7 check+9 padding",
+      "observed_domain": "ECC-off data cells;normal-incidence scenario;38/39 law unobserved",
+      "data32_reference_zero_groups_of_55": 45,
+      "data32_reference_F_at_57_cm2_inv": 8974.600857765849,
+      "data32_reference_sigma57_point95_theta03": 0.0004768588153918116,
+      "data32_reference_UR_T68_theta03": 0.002772537646709901,
+      "data32_reference_D_family95_theta03": 0.008107683987045654,
+      "data32_reference_applies_to_full_architecture": false,
+      "existing_qualified_fullword_F_cm2_inv": null,
+      "fullword_observed_direct_count": null,
+      "fullword_sigma_upper_cm2": null,
+      "fullword_D_upper": null,
+      "joint_coverage": null,
+      "direct_targets": "5e-5;1e-4",
+      "status": "insufficient_fullword_evidence",
+      "required_data": "raw_to_pins_lane_ECC_on_DQ47:0_ERR2:0_joint_marks_crosschip_angles"
+    }
+  ],
+  "conditional_target_D_ranges": {
+    "main": [
+      0,
+      5e-05
+    ],
+    "alternative": [
+      0,
+      0.0001
+    ]
+  },
+  "ranges_status": "requested_model_budgets_not_measured_or_qualified_bounds",
+  "ERR": {
+    "pin_exists": true,
+    "internal38_parity_only_completeness": null,
+    "external39_count_dominance": null,
+    "repeated_read_is_new_parent": false
+  },
+  "U": {
+    "required": "known word/aliases;full clean fence including hidden ECC;pending and latch-write hits charged",
+    "qualified_fullword_implementation": null,
+    "timing_owner": 82
+  },
+  "direct_not_reduced_by_shorter_service_period": true,
+  "impossibility_of_any_policy_established": false,
+  "additional_zero_data_are_hypothetical": true
+}
