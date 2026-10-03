@@ -1,0 +1,55 @@
+{
+  "issue": 90,
+  "base_sha": "06e889e0891a1049339c2a93faba04911a9b0017",
+  "instructions_sha": "c4c46c3df0fb5181324fd62a6f817bffcd7de48f",
+  "accepted_T88_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+  "accepted_T89_sha": "423448fbfa76050743fd24454a887f3c0302cf28",
+  "scientific_formula_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+  "margin": "1/10",
+  "selection": {"purpose": "working", "mode": "combined", "shields": ["3", "2.5"]},
+  "source_files": [
+    "experiments/t88-dstar-sensitivity/config.json",
+    "experiments/t88-dstar-sensitivity/outputs/selected.json",
+    "experiments/t88-dstar-sensitivity/outputs/effective_inputs.json",
+    "experiments/t82-realistic-timing/monitor_profiles.json",
+    "experiments/t82-realistic-timing/config.json",
+    "experiments/t82-realistic-timing/t80_config.json",
+    "experiments/t82-realistic-timing/t80_joint_config.json"
+  ],
+  "diagnostic_profile": {
+    "status": "declared mathematical hypothesis, NOT a physical instrument",
+    "a_M": "1000000",
+    "A_M": "1000000",
+    "eta_per_s": "0.001",
+    "b_U": "0",
+    "kind": "total_load",
+    "delivery_compute_nominal_s": "1",
+    "resource_rate": "0.0001",
+    "resource_sigma_s": "0.0000001",
+    "bad_window_probability": "0.000000001",
+    "LOW_type": "direct-fast",
+    "note": "All missing physical fields remain null in monitor_profiles.json. These positive diagnostic assumptions are inherited from T88, not inferred from documents. No fitting of D*, quotas, environment, g, ka or vc."
+  },
+  "addressed_cases": [
+    {
+      "id": "IREM_TDB_hypothesis",
+      "profile": "SREM_PSI",
+      "window_s": "16",
+      "stride_divisor": 2,
+      "status": "conditional diagnostic",
+      "rationale": "Two hypothetical contiguous raw 8-second increments, overlapping 16-second windows at an 8-second step. Only the 8-second broadcast is documented: raw increments, cadence jitter, window meaning and the new contract are NOT documented. This is not a native-window claim."
+    },
+    {
+      "id": "REM_typical_hypothesis",
+      "profile": "REM_ESA_ALC_2001",
+      "window_s": "100",
+      "stride_divisor": 2,
+      "status": "conditional diagnostic",
+      "rationale": "Documented typical 100-second integration; a hypothetical 50-second overlapping step preserves T88's divisor. That step and a 1-second delivery are NOT documented. 100 seconds is not a proved minimum."
+    }
+  ],
+  "search": "none; reproduce two exact T88 working rows and evaluate the two declared diagnostic cases at each row",
+  "physical_Dstar_upper": null,
+  "physical_joint_U_WCET_s": null,
+  "physical_qualification": false
+}

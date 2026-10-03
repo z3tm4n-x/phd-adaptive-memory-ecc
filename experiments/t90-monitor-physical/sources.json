@@ -1,0 +1,21 @@
+{
+  "checked_date": "2026-10-03",
+  "scope": "Two T82 instruments only. No memory qualification search, no new irradiation, no third monitor.",
+  "sources": [
+    {"id": "S1", "title": "PSI: SREM instrument", "url": "https://srem.psi.ch/static/srem_instrument.shtml", "locator": "Key Performance Features; Host Spacecraft Accomodation; Calibration", "kind": "instrument developer", "read_status": "read HTML", "sha256": null},
+    {"id": "S3", "title": "Sandberg et al., Unfolding and Validation of SREM Fluxes, IEEE TNS 59 (2012), DOI 10.1109/TNS.2012.2187216", "url": "https://members.noa.gr/anastasi/papers/B35.pdf", "locator": "pp. 1105-1107; Table I and Fig. 2 on p. 1106 (PDF page 2)", "kind": "authors' primary research paper", "read_status": "text and page image checked", "sha256": "11b43fcca8cb10d24831f37fa1461fd4f5c53337152afb3c05ed6db2c212cc2b"},
+    {"id": "S4", "title": "Hajdas et al., The INTEGRAL radiation environment monitor (2003)", "url": "https://arxiv.org/pdf/astro-ph/0308269", "locator": "p. 2, sections 2-4, Fig. 2; section 9 distinguishes ground products", "kind": "instrument team primary paper", "read_status": "text and page 2 image checked", "sha256": "5c5972f791887c549c347bfa9d51124c45d03491b19ae2c9399b636ab1e1a834"},
+    {"id": "S5", "title": "ESA/Alcatel TN 2200/2300 issue 2, 29 November 2001", "url": "https://swe.ssa.esa.int/TECEES/spweather/esa_initiatives/spweatherstudies/ALC/2200_2300_29Nov01.pdf", "locator": "Appendix A, 2.1.1, printed p. 46 / PDF page 46", "kind": "ESA contractor technical note", "read_status": "text and page image checked; corroborated with S7", "sha256": "b22d0a8f08076d7e4678d695af7fb09567feb4f2983cb18e25b3ca299f08cd73"},
+    {"id": "S6", "title": "PSI: REM instrument", "url": "https://srem.psi.ch/rem/html/rem_instrument.shtml", "locator": "REM instrument; modules; reference link", "kind": "instrument developer", "read_status": "web reader failed; public HTTPS download succeeded, HTML read", "sha256": "b2f84a4bc346f61fda114255f25c39197132337717c40b2c8b96e76f8e1e6900"},
+    {"id": "S7", "title": "Buehler et al., Radiation Environment Monitor, NIM A 386 (1996) 825-831; PSI author copy dated 24 September 1999", "url": "https://srem.psi.ch/rem/docs/REM_NIMA96.pdf.gz", "locator": "author-copy pp. 3-4 (Fig. 2, Table 1, acquisition/HK/test pulser); pp. 6-8 (ions, dead time and response)", "kind": "instrument team primary paper, linked by S6", "read_status": "public download; malformed text encoding, inspected rendered pages 1,3,4,6,7,8", "sha256_uncompressed_pdf": "a1e2d52bc5d14f9b18dd63cae7aea62205f978c8c6ff21cb5bcb3fc84f5dc442"}
+  ],
+  "unavailable": [
+    {"url": "http://pif.web.psi.ch/irem/IREM_USER_MANUAL_v3.pdf", "cited_by": "S4 p. 2 footnote 1", "status": "web reader unavailable; no ICD fields inferred from this reference"}
+  ],
+  "notes": [
+    "S7 adds documented REM aperture and test-pulser information absent from T82's summary. T82 files are not edited.",
+    "S7 Table 1 identifies STRV and MIR variants separately. This dossier keeps STRV's 50/150 mm2, not MIR's 25/150 mm2.",
+    "S5's diode-thickness typography is not used as a numerical input; S7 Table 1 gives variant-specific micrometre values.",
+    "No complete source PDF/HTML, third-party images or copied article text is redistributed in git. Offline replay uses the extracted facts and immutable project inputs."
+  ]
+}

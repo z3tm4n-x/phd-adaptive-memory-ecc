@@ -1,0 +1,50 @@
+{
+  "issue": 95,
+  "status": "inputs only; #95 not started by T90",
+  "T88_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+  "T89_sha": "423448fbfa76050743fd24454a887f3c0302cf28",
+  "scientific_formula_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+  "formulas_changed": false,
+  "exact_inputs": "outputs/pinned_inputs.json",
+  "checks": "outputs/reproduction.json",
+  "profiles": "monitor_profiles.json",
+  "interface": "INTERFACE.md",
+  "confirmed_real_monitor": null,
+  "main_shield_g_cm2": "3",
+  "working_rows": [
+    {
+      "shield": "3",
+      "Dstar": "560489/2000000000",
+      "g": 140,
+      "ka": 367,
+      "conditional_risk_upper": "21989385291401841648723253/23193359375000000000000000000",
+      "conditional_full_price_upper": "3320688338124622257206602048892743842504747549297489272011552655944135602828575653/1155245404945322851020000000000000000000000000000000000000000000000000000000000000000",
+      "full_goal_pass": true
+    },
+    {
+      "shield": "2.5",
+      "Dstar": "109073/2000000000",
+      "g": 131,
+      "ka": 3,
+      "conditional_risk_upper": "68845874668299754429259/72479248046875000000000000",
+      "conditional_full_price_upper": "300937464094126906172566356397447934871712031557084000000009421208724099243524614560847261/1178179432057900299600000000000000000000000000000000000000000000000000000000000000000000000",
+      "full_goal_pass": false
+    }
+  ],
+  "physical_Dstar_upper": null,
+  "physical_ERR_token_lower": null,
+  "physical_loss_detection_bound_s": null,
+  "physical_recovery_bound_s": null,
+  "expected_lost_time_s": null,
+  "expected_recovery_count": null,
+  "required_next_checks": [
+    "One common risk budget and start condition; separate certificates do not prove a switch.",
+    "Recognized outage duration/recoveries, plausible wrong counts, pending operations, and timer expiry are distinct.",
+    "ERR-only physical lower token contract remains conditional; ERR is not DED.",
+    "Do not reuse T82 sufficient a_M at another D*, or replace the 2.5 working row by its interior 1% row."
+  ],
+  "author_options": [
+    "Keep T88 conditional full-channel requirements; prefer IREM only as the more documented interface reference, not a qualified selection.",
+    "Carry the separate no-monitor/ERR-reserve branch into #95 with its explicit channel and cost conditions; do not claim <=1% or automatic switching."
+  ]
+}
