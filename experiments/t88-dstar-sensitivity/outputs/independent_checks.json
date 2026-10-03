@@ -1,0 +1,14 @@
+{
+  "precision": 90,
+  "counts": {
+    "monitor_risk_LOW_price_resource": 1480,
+    "ERR_equations": 249,
+    "ERR_E1_cells": 58919
+  },
+  "selected_rows": 453,
+  "independent_ERR_majorants": 57,
+  "success": true,
+  "comparison_tolerance_risk": "1e-75",
+  "comparison_tolerance_price": "1e-70",
+  "note": "certificates use exact rational / outward T82 intervals; Decimal90 is a separate confirmation"
+}
