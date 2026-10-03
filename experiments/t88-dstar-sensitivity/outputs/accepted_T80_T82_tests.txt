@@ -1,0 +1,47 @@
+test_E1_interval_majorant_and_no_information (test_t80.Numerical.test_E1_interval_majorant_and_no_information) ... ok
+test_fast_retrospective_saturation_and_zero (test_t80.Numerical.test_fast_retrospective_saturation_and_zero) ... ok
+test_integral_exp_branch_and_saturation (test_t80.Numerical.test_integral_exp_branch_and_saturation) ... ok
+test_k_next_integer_and_mission_H (test_t80.Numerical.test_k_next_integer_and_mission_H) ... ok
+test_low_deadline_margin_and_next_lease_quantum (test_t80.Numerical.test_low_deadline_margin_and_next_lease_quantum) ... ok
+test_odd_optimizer_against_full_integer_scan (test_t80.Numerical.test_odd_optimizer_against_full_integer_scan) ... ok
+test_selected_monitor_independent_decimal90 (test_t80.Numerical.test_selected_monitor_independent_decimal90) ... ok
+test_separate_price_strips_and_modes (test_t80.Numerical.test_separate_price_strips_and_modes) ... ok
+test_short_risk_first_with_beta0_and_external (test_t80.Numerical.test_short_risk_first_with_beta0_and_external) ... ok
+test_sources_four_budgets_and_unknowns (test_t80.Numerical.test_sources_four_budgets_and_unknowns) ... ok
+test_ERR_finite_exit_flags_losses_and_pending (test_t80.StateTransitions.test_ERR_finite_exit_flags_losses_and_pending) ... ok
+test_ERR_preserves_LOW_but_monitor_loss_clears (test_t80.StateTransitions.test_ERR_preserves_LOW_but_monitor_loss_clears) ... ok
+test_count_edges_bad_numbers_gap_and_deadline (test_t80.StateTransitions.test_count_edges_bad_numbers_gap_and_deadline) ... ok
+test_initial_peak_short_dip_and_actual_quiet_reset (test_t80.StateTransitions.test_initial_peak_short_dip_and_actual_quiet_reset) ... ok
+test_two_sided_LOW_and_mandatory_slot (test_t80.StateTransitions.test_two_sided_LOW_and_mandatory_slot) ... ok
+test_delivered_LOW_continuity_past_edge_and_initial_short (test_t80_joint.DirectPolicy.test_delivered_LOW_continuity_past_edge_and_initial_short) ... ok
+test_no_retroactive_use_or_unbudgeted_OR (test_t80_joint.DirectPolicy.test_no_retroactive_use_or_unbudgeted_OR) ... ok
+test_B3_nonzero_H_and_long_window_saturation (test_t80_joint.Joint.test_B3_nonzero_H_and_long_window_saturation) ... ok
+test_B6_zero_and_k_at_or_above_m (test_t80_joint.Joint.test_B6_zero_and_k_at_or_above_m) ... ok
+test_B7_negative_zero_positive_contrast_and_rounding (test_t80_joint.Joint.test_B7_negative_zero_positive_contrast_and_rounding) ... ok
+test_cadence_J_H_quotas_ring_and_unknown (test_t80_joint.Joint.test_cadence_J_H_quotas_ring_and_unknown) ... ok
+test_degenerate_fallback_and_flat_switch (test_t80_joint.Joint.test_degenerate_fallback_and_flat_switch) ... ok
+test_direct_above_ve_reset_rejects_and_initial_strip (test_t80_joint.Joint.test_direct_above_ve_reset_rejects_and_initial_strip) ... ok
+test_early_known_pass_both_shields_with_margin (test_t80_joint.Joint.test_early_known_pass_both_shields_with_margin) ... ok
+test_exact_tail_and_quantile (test_t80_joint.Joint.test_exact_tail_and_quantile) ... ok
+test_fast_exponential_integral_decimal90_and_Darboux (test_t80_joint.Joint.test_fast_exponential_integral_decimal90_and_Darboux) ... ok
+test_fast_integral_zero_age_and_outside_cone (test_t80_joint.Joint.test_fast_integral_zero_age_and_outside_cone) ... ok
+test_majorant_at_edges_both_sides_of_jump (test_t80_joint.Joint.test_majorant_at_edges_both_sides_of_jump) ... ok
+test_piecewise_ka_candidates_against_all_odd (test_t80_joint.Joint.test_piecewise_ka_candidates_against_all_odd) ... ok
+test_pinned_four_budgets_unchanged (test_t80_joint.Joint.test_pinned_four_budgets_unchanged) ... ok
+test_reset_pruning_and_bounded_subwindow_counts (test_t80_joint.Joint.test_reset_pruning_and_bounded_subwindow_counts) ... ok
+test_return_edges_multiple_intervals_not_multiple_quotas (test_t80_joint.Joint.test_return_edges_multiple_intervals_not_multiple_quotas) ... ok
+test_ERR_fallback_and_next_bad_quantum (test_t82.TimingChecks.test_ERR_fallback_and_next_bad_quantum) ... ok
+test_all_old_JSON_rows_preserved (test_t82.TimingChecks.test_all_old_JSON_rows_preserved) ... ok
+test_clock_rounding_and_bad_neighbor (test_t82.TimingChecks.test_clock_rounding_and_bad_neighbor) ... ok
+test_external_not_90_and_not_double_clocked (test_t82.TimingChecks.test_external_not_90_and_not_double_clocked) ... ok
+test_gate_delivery_ERR_not_free (test_t82.TimingChecks.test_gate_delivery_ERR_not_free) ... ok
+test_independent_decimal_and_strong_fixed_neighbor (test_t82.TimingChecks.test_independent_decimal_and_strong_fixed_neighbor) ... ok
+test_margins_and_all_scientific_inputs_unchanged (test_t82.TimingChecks.test_margins_and_all_scientific_inputs_unchanged) ... ok
+test_no_calibration_from_area_or_electronics (test_t82.TimingChecks.test_no_calibration_from_area_or_electronics) ... ok
+test_no_external_risk_transfer_or_unstable_delay_bound (test_t82.TimingChecks.test_no_external_risk_transfer_or_unstable_delay_bound) ... ok
+test_resource_first_good_and_previous_bad (test_t82.TimingChecks.test_resource_first_good_and_previous_bad) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 1.898s
+
+OK

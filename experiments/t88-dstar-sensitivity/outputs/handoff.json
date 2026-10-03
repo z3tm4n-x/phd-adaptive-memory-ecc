@@ -1,0 +1,335 @@
+{
+  "issue": 88,
+  "to_issue": 89,
+  "delivery_sha": "see immutable PR commit and protocol source hashes",
+  "versions": {
+    "base_sha": "578d45bb705814f37b6c7116259619e106cf60c9",
+    "theory_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+    "engineering_sha": "4e5d7683ccac3a74ca490a11f99a96755f542e2b",
+    "architecture_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982"
+  },
+  "contract": {
+    "issue": 88,
+    "base_sha": "578d45bb705814f37b6c7116259619e106cf60c9",
+    "instructions_sha": "bedae568e0fdec26bddc948fff0b7fd2ff38cc9e",
+    "theory_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+    "engineering_sha": "4e5d7683ccac3a74ca490a11f99a96755f542e2b",
+    "architecture_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+    "input_set": "T73_published",
+    "architecture": "internal38",
+    "shields_g_cm2": [
+      "3",
+      "2.5"
+    ],
+    "modes": [
+      "combined",
+      "monitor-only",
+      "ERR-only"
+    ],
+    "margin": "0.10",
+    "D_min": "0.00005",
+    "D_bracket_tolerance": "0.000000001",
+    "cost_limit": "0.01",
+    "working_risk_reserve_proposal": "0.00005",
+    "working_reserve_is_additional_author_requirement": false,
+    "monitor": {
+      "a_M": "1000000",
+      "A_M": "1000000",
+      "eta_per_s": "0.001",
+      "w_s": "1",
+      "d_s": "1",
+      "stride_divisor": 2,
+      "kind": "total_load",
+      "LOW_type": "direct-fast"
+    },
+    "environment": {
+      "q_R_over_bbar": "2",
+      "rho_e_per_s": "0.000001",
+      "D_Q_s": "300",
+      "rho_b_per_s": "0.048",
+      "l_per_s": "0.001",
+      "T_Q_fraction_min": "0.9",
+      "K_Q_max": 1000
+    },
+    "search": {
+      "status": "preregistered before pilot; runtime to be checked before full run",
+      "c": "fixed at accepted 100 ticks; no faster service",
+      "g": "all resource-feasible integers from accepted minimum through the analytic short-budget cap at D_min",
+      "ka": "all odd integers 1..4095; ka=1 separately labelled always-S",
+      "vc": "six original T80 theta values plus mid_flat and flat from B11 for each ka",
+      "z": [
+        "1",
+        "0.3",
+        "0.1",
+        "0.03",
+        "0.01",
+        "0.003"
+      ],
+      "monitor_hold_E_s": [
+        "1"
+      ],
+      "monitor_hold_M_s": [
+        "1"
+      ],
+      "ERR_hold_s": [
+        "1",
+        "5",
+        "10",
+        "30",
+        "60",
+        "120",
+        "300",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "ERR_majorant": "accepted E1: B/1024 initial cells, active refinement to B/65536; u multipliers 1,2,4,16",
+      "threshold": "largest accepted safe integer over registered z; no online switching between LOW types",
+      "full_method_completeness_claimed": false,
+      "threshold_label": "largest found certified D within the declared finite family; not optimum of all policies"
+    },
+    "physical_qualification": false,
+    "physical_D_upper": null,
+    "physical_ERR_lower": null,
+    "physical_monitor_lower": null,
+    "physical_joint_WCET_s": null
+  },
+  "only_safe_lower_ends_for_test_request": true,
+  "physical_qualification": false,
+  "thresholds": [
+    {
+      "shield": "3",
+      "mode": "combined",
+      "purpose": "cost_threshold",
+      "D_safe_lower": "510489/1000000000",
+      "bracket_upper": "51049/100000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 977,
+        "ka": 85,
+        "theta": null,
+        "vc": "2751266882839/1932850000000000",
+        "vc_kind": "mid_flat",
+        "z": "3/10"
+      },
+      "risk_upper": "92773369901336235674678249/92773437500000000000000000000",
+      "risk_slack": "67598663764325321751/92773437500000000000000000000",
+      "full_quiet_tax_upper": "199925937388044065059156170227732487669147076972524080000160160548309687139918447534403437/20029050344984305093200000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "3",
+      "mode": "combined",
+      "purpose": "certificate_threshold",
+      "D_safe_lower": "274987/500000000",
+      "bracket_upper": "21999/40000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 25659,
+        "ka": 3,
+        "theta": null,
+        "vc": "233865351185317/7641500000000000",
+        "vc_kind": "mid_flat",
+        "z": "3/100"
+      },
+      "risk_upper": "24414059863230786744249339/24414062500000000000000000000",
+      "risk_slack": "2636769213255750661/24414062500000000000000000000",
+      "full_quiet_tax_upper": "15840637275915614324407673991573009224520212620675600000000495853090742065448663924255119/62009443792521068400000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "3",
+      "mode": "monitor-only",
+      "purpose": "cost_threshold",
+      "D_safe_lower": "511489/1000000000",
+      "bracket_upper": "51149/100000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 977,
+        "ka": 85,
+        "theta": null,
+        "vc": "2751266882839/1932850000000000",
+        "vc_kind": "mid_flat",
+        "z": "3/10"
+      },
+      "risk_upper": "92773369901336235674678249/92773437500000000000000000000",
+      "risk_slack": "67598663764325321751/92773437500000000000000000000",
+      "full_quiet_tax_upper": "197452979987142471795817945386655438528530113024000000000160160548309687139918447534403437/20029050344984305093200000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "3",
+      "mode": "monitor-only",
+      "purpose": "certificate_threshold",
+      "D_safe_lower": "275487/500000000",
+      "bracket_upper": "22039/40000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 25659,
+        "ka": 3,
+        "theta": null,
+        "vc": "233865351185317/7641500000000000",
+        "vc_kind": "mid_flat",
+        "z": "3/100"
+      },
+      "risk_upper": "24414059863230786744249339/24414062500000000000000000000",
+      "risk_slack": "2636769213255750661/24414062500000000000000000000",
+      "full_quiet_tax_upper": "15833210739891187597299041627199381710854020198400000000000495853090742065448663924255119/62009443792521068400000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "3",
+      "mode": "ERR-only",
+      "purpose": "certificate_threshold",
+      "D_safe_lower": "3487/8000000",
+      "bracket_upper": "108969/250000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "Q": "203606734894803150446836763612592482216202539050324260631906281/379167509375000000000000000000000000000000000000000000000000",
+        "cells": 1043,
+        "h": "120",
+        "ka": 3,
+        "r0": "329676596733/800000000000",
+        "tau": "4120966909257/20000000000000",
+        "u": "47857901496813396980584256832100726825744451581/1000000000000000000000000000000000000000000000000000000",
+        "v": "873705981543328621411918777710241980603453291938419/47395938671875000000000000000000000000000000000000000"
+      },
+      "risk_upper": "75833496748217993194127742116822984299942270752275590220268345182468433/75833501875000000000000000000000000000000000000000000000000000000000000000",
+      "risk_slack": "5126782006805872257883177015700057729247724409779731654817531567/75833501875000000000000000000000000000000000000000000000000000000000000000",
+      "full_quiet_tax_upper": "317433118745601429031452230293505393383825448966971073907271299880500086921462129653/1175610074127704664918750000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "2.5",
+      "mode": "combined",
+      "purpose": "cost_threshold",
+      "D_safe_lower": "59073/1000000000",
+      "bracket_upper": "29537/500000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 1433,
+        "ka": 85,
+        "theta": null,
+        "vc": "938543038543/465528750000000",
+        "vc_kind": "mid_flat",
+        "z": "3/10"
+      },
+      "risk_upper": "231933395229439561348391/231933593750000000000000000",
+      "risk_slack": "198520560438651609/231933593750000000000000000",
+      "full_quiet_tax_upper": "200134353974401189388429882676668756421367135006824800000160160548309687139918447534403437/20029050344984305093200000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "2.5",
+      "mode": "combined",
+      "purpose": "certificate_threshold",
+      "D_safe_lower": "52333/500000000",
+      "bracket_upper": "104667/1000000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 36827,
+        "ka": 3,
+        "theta": null,
+        "vc": "1564267904479/36087500000000",
+        "vc_kind": "mid_flat",
+        "z": "3/100"
+      },
+      "risk_upper": "72479223133265574741759/72479248046875000000000000",
+      "risk_slack": "24913609425258241/72479248046875000000000000",
+      "full_quiet_tax_upper": "300982550145334597567445136397447934871712031557084000000009421208724099243524614560847261/1178179432057900299600000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "2.5",
+      "mode": "monitor-only",
+      "purpose": "cost_threshold",
+      "D_safe_lower": "60073/1000000000",
+      "bracket_upper": "30037/500000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 1433,
+        "ka": 85,
+        "theta": null,
+        "vc": "938543038543/465528750000000",
+        "vc_kind": "mid_flat",
+        "z": "3/10"
+      },
+      "risk_upper": "231933395229439561348391/231933593750000000000000000",
+      "risk_slack": "198520560438651609/231933593750000000000000000",
+      "full_quiet_tax_upper": "197452978040851214118816154373089196448603046400000000000160160548309687139918447534403437/20029050344984305093200000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "shield": "2.5",
+      "mode": "monitor-only",
+      "purpose": "certificate_threshold",
+      "D_safe_lower": "52833/500000000",
+      "bracket_upper": "105667/1000000000",
+      "upper_scope": "maximum over this declared finite, directed numerical family only",
+      "witness": {
+        "g": 131,
+        "k": 36827,
+        "ka": 3,
+        "theta": null,
+        "vc": "1564267904479/36087500000000",
+        "vc_kind": "mid_flat",
+        "z": "3/100"
+      },
+      "risk_upper": "72479223133265574741759/72479248046875000000000000",
+      "risk_slack": "24913609425258241/72479248046875000000000000",
+      "full_quiet_tax_upper": "300831003845916901752281224016748277918406402560000000000009421208724099243524614560847261/1178179432057900299600000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "unresolved": [
+    {
+      "shield": "3",
+      "mode": "ERR-only",
+      "D_1pct_lower": null,
+      "D_1pct_upper": null,
+      "D_certificate_lower": "3487/8000000",
+      "D_certificate_upper": "108969/250000000",
+      "always_S_certificate_lower": "541393/1000000000",
+      "status_1pct": "empty_established_region_D_ge_5e-5",
+      "status_certificate": "certified_finite_family_bracket",
+      "threshold_tolerance": "1/1000000000",
+      "global_optimum_claimed": false,
+      "frontier_witnesses": 621,
+      "working_D": "3887/16000000",
+      "working_risk_upper": "77643066242943307864833921301152189423618573519303878911658770264326039/81950569475000000000000000000000000000000000000000000000000000000000000000",
+      "working_risk_slack": "4307503232056692135166078698847810576381426480696121088341229735673961/81950569475000000000000000000000000000000000000000000000000000000000000000",
+      "working_cost_upper": "6192856518980767360119484703285533958864275985267208425192993798115017958446596403/42024733231509394557750000000000000000000000000000000000000000000000000000000000000",
+      "working_g": 143,
+      "working_ka": 5
+    },
+    {
+      "shield": "2.5",
+      "mode": "ERR-only",
+      "D_1pct_lower": null,
+      "D_1pct_upper": null,
+      "D_certificate_lower": null,
+      "D_certificate_upper": null,
+      "always_S_certificate_lower": "21079/250000000",
+      "status_1pct": "empty_established_region_D_ge_5e-5",
+      "status_certificate": "empty_established_two_mode_region",
+      "threshold_tolerance": "1/1000000000",
+      "global_optimum_claimed": false,
+      "frontier_witnesses": 0,
+      "working_D": null,
+      "working_risk_slack": null,
+      "working_note": "proposed reserve not achieved within established two-mode family"
+    }
+  ],
+  "effective_inputs_file": "effective_inputs.json",
+  "effective_inputs_sha256": "f2a14d172b5e119459951ffa6ce624fffa635c1bf266807a04c4731a6bfad295",
+  "engineering_source_sha256": {
+    "audit.py": "e67d3d764bf86dc1498f2d4a7f30d4248d9746fdb12dbe885cd0da1b3309a007",
+    "config.json": "3ababd6d3e98fe09a3ab78d28c11ced13673d8c55ece26ec9c85654c504fe05c",
+    "engine.py": "6f9c90e42d8f5f4c26e5ce40babddde195d167e7f360a8312b72d1fa8f4357d5",
+    "pilot.py": "0abc493333068de26b48b2351a344a53d6d566a42751260663ebeb5715e63731",
+    "plot.py": "032d166b9272b98e86d79a29f9d12a5ed6a756046cfcc231d43a198ff6e6ead1",
+    "report.py": "5171f18de2fdf3608fbdaea95b2c7a7d5bad997cc34e2aca405afba2f5d58304",
+    "run.py": "c6769329455834ea4bd594c613442f362fa483f9907767467e59572382b90898",
+    "test_t88.py": "82351ce6ab0e00884e5639de4bd6abded768453133382458ff3dbdba45a31b3a",
+    "verify.py": "540cedeee8cfafa87140646eac4d9f3b1b30af68906077bdeaa48800498f07f2"
+  }
+}

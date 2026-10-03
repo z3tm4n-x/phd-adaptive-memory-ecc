@@ -1,0 +1,156 @@
+{
+  "versions": {
+    "issue": 88,
+    "base_sha": "578d45bb705814f37b6c7116259619e106cf60c9",
+    "instructions_sha": "bedae568e0fdec26bddc948fff0b7fd2ff38cc9e",
+    "theory_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+    "engineering_sha": "4e5d7683ccac3a74ca490a11f99a96755f542e2b",
+    "architecture_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+    "input_set": "T73_published",
+    "architecture": "internal38",
+    "shields_g_cm2": [
+      "3",
+      "2.5"
+    ],
+    "modes": [
+      "combined",
+      "monitor-only",
+      "ERR-only"
+    ],
+    "margin": "0.10",
+    "D_min": "0.00005",
+    "D_bracket_tolerance": "0.000000001",
+    "cost_limit": "0.01",
+    "working_risk_reserve_proposal": "0.00005",
+    "working_reserve_is_additional_author_requirement": false,
+    "monitor": {
+      "a_M": "1000000",
+      "A_M": "1000000",
+      "eta_per_s": "0.001",
+      "w_s": "1",
+      "d_s": "1",
+      "stride_divisor": 2,
+      "kind": "total_load",
+      "LOW_type": "direct-fast"
+    },
+    "environment": {
+      "q_R_over_bbar": "2",
+      "rho_e_per_s": "0.000001",
+      "D_Q_s": "300",
+      "rho_b_per_s": "0.048",
+      "l_per_s": "0.001",
+      "T_Q_fraction_min": "0.9",
+      "K_Q_max": 1000
+    },
+    "search": {
+      "status": "preregistered before pilot; runtime to be checked before full run",
+      "c": "fixed at accepted 100 ticks; no faster service",
+      "g": "all resource-feasible integers from accepted minimum through the analytic short-budget cap at D_min",
+      "ka": "all odd integers 1..4095; ka=1 separately labelled always-S",
+      "vc": "six original T80 theta values plus mid_flat and flat from B11 for each ka",
+      "z": [
+        "1",
+        "0.3",
+        "0.1",
+        "0.03",
+        "0.01",
+        "0.003"
+      ],
+      "monitor_hold_E_s": [
+        "1"
+      ],
+      "monitor_hold_M_s": [
+        "1"
+      ],
+      "ERR_hold_s": [
+        "1",
+        "5",
+        "10",
+        "30",
+        "60",
+        "120",
+        "300",
+        "1000",
+        "10000",
+        "100000"
+      ],
+      "ERR_majorant": "accepted E1: B/1024 initial cells, active refinement to B/65536; u multipliers 1,2,4,16",
+      "threshold": "largest accepted safe integer over registered z; no online switching between LOW types",
+      "full_method_completeness_claimed": false,
+      "threshold_label": "largest found certified D within the declared finite family; not optimum of all policies"
+    },
+    "physical_qualification": false,
+    "physical_D_upper": null,
+    "physical_ERR_lower": null,
+    "physical_monitor_lower": null,
+    "physical_joint_WCET_s": null
+  },
+  "config_sha256": "3ababd6d3e98fe09a3ab78d28c11ced13673d8c55ece26ec9c85654c504fe05c",
+  "python": "3.12.14",
+  "wall_seconds": 52.732355849999294,
+  "workers": 2,
+  "calendar_jobs": 158,
+  "first_full_scan_wall_seconds": 839.9126236440006,
+  "freshly_computed_calendars": 0,
+  "cache_reused_calendars": 158,
+  "calendar_compute_seconds_sum": 1652.4928368459914,
+  "source_hashes": {
+    "audit.py": "e67d3d764bf86dc1498f2d4a7f30d4248d9746fdb12dbe885cd0da1b3309a007",
+    "config.json": "3ababd6d3e98fe09a3ab78d28c11ced13673d8c55ece26ec9c85654c504fe05c",
+    "engine.py": "6f9c90e42d8f5f4c26e5ce40babddde195d167e7f360a8312b72d1fa8f4357d5",
+    "pilot.py": "0abc493333068de26b48b2351a344a53d6d566a42751260663ebeb5715e63731",
+    "plot.py": "032d166b9272b98e86d79a29f9d12a5ed6a756046cfcc231d43a198ff6e6ead1",
+    "report.py": "5171f18de2fdf3608fbdaea95b2c7a7d5bad997cc34e2aca405afba2f5d58304",
+    "run.py": "c6769329455834ea4bd594c613442f362fa483f9907767467e59572382b90898",
+    "test_t88.py": "82351ce6ab0e00884e5639de4bd6abded768453133382458ff3dbdba45a31b3a",
+    "verify.py": "540cedeee8cfafa87140646eac4d9f3b1b30af68906077bdeaa48800498f07f2"
+  },
+  "regressions": [
+    {
+      "suite": "accepted_T80_T82",
+      "count": 42,
+      "returncode": 0
+    },
+    {
+      "suite": "T88",
+      "count": 12,
+      "returncode": 0
+    }
+  ],
+  "selected_rows": 453,
+  "independent_checks": {
+    "precision": 90,
+    "counts": {
+      "monitor_risk_LOW_price_resource": 1480,
+      "ERR_equations": 249,
+      "ERR_E1_cells": 58919
+    },
+    "selected_rows": 453,
+    "independent_ERR_majorants": 57,
+    "success": true,
+    "comparison_tolerance_risk": "1e-75",
+    "comparison_tolerance_price": "1e-70",
+    "note": "certificates use exact rational / outward T82 intervals; Decimal90 is a separate confirmation"
+  },
+  "envelope_checks": {
+    "exact_threshold_envelope_checks": 83325,
+    "calendar_mode_groups": 463,
+    "monotone_feasible_sets": true,
+    "no_interpolation_used_for_certification": true
+  },
+  "baseline_controls": {
+    "rows": 6,
+    "exact_monitor_comparisons": 4,
+    "ERR_formula_9_controls": 2,
+    "success": true
+  },
+  "constant_checks": {
+    "precision": 90,
+    "rows": 842,
+    "M_and_next_checked": true,
+    "resource_endpoints": 2,
+    "success": true
+  },
+  "accepted_files_unchanged": true,
+  "physical_qualification": false
+}
