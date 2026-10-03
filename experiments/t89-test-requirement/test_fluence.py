@@ -16,7 +16,7 @@ CFG = json.loads((HERE/"config.json").read_text(encoding="utf-8"))
 
 class TestT89(unittest.TestCase):
     def test_source_hashes(self):
-        self.assertEqual(len(verify_sources(CFG)), 6)
+        self.assertEqual(len(verify_sources(CFG)), 10)
 
     def test_exact_T81_reuse(self):
         self.assertEqual(T81_ALLOCATION.__code__.co_filename,
@@ -145,21 +145,22 @@ class TestT89(unittest.TestCase):
         self.assertEqual(base["alpha_cap_exact"], "1/20")
 
     def test_unknown_physical_handoff_preserved(self):
-        cfg = copy.deepcopy(CFG)
-        for row in cfg["T88_handoff"]["rows"]:
-            row["Dcrit_1pct_safe"] = None
-        rows, angular, *_ = calculate(cfg, Q(".00005"))
+        rows, angular, *_ = calculate(CFG, Q(".00005"))
         physical = [r for r in rows if r["target_kind"] == "baseline_physical"]
-        pending = [r for r in rows if r["target_kind"] == "T88_Dcrit_1pct"]
+        empty = [r for r in rows if r["target_kind"] == "T88_largest_found_certified_1pct"
+                 and r["D0"] is None]
         self.assertEqual(len(physical), 2)
-        self.assertEqual(len(pending), 6)
-        self.assertTrue(all(r["F_required"] is None for r in physical+pending))
+        self.assertEqual(len(empty), 2)
+        self.assertTrue(all(r["F_required"] is None for r in physical+empty))
+        self.assertTrue(all(r["variant"] == "ERR-only" and r["status"] == "empty_established_region_D_ge_5e-5"
+                            for r in empty))
         self.assertTrue(all(r["physical_Fnew"] is None for r in angular))
         self.assertTrue(all(v is None for v in CFG["physical_contract"].values()))
 
     def test_threshold_rejects_unpinned_unsafe_and_zero(self):
         for value in ("0", ".0001"):
             h = copy.deepcopy(CFG["T88_handoff"])
+            h["source_sha"] = None
             h["rows"][0]["Dcrit_1pct_safe"] = value
             with self.assertRaises(ValueError):
                 validate_threshold_handoff(h)

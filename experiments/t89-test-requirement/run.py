@@ -12,8 +12,8 @@ import sys
 import unittest
 from fractions import Fraction as Q
 
-from fluence import (HERE, REPO, allocation_budget, decimal_text, rational,
-                     validate_threshold_handoff, zero_fluence)
+from fluence import (HERE, REPO, allocation_budget, decimal_text, rational, zero_fluence)
+from t88_handoff import accepted_targets
 
 
 def verify_sources(cfg):
@@ -21,7 +21,7 @@ def verify_sources(cfg):
     for path, expected in cfg["source_sha256"].items():
         actual = hashlib.sha256((REPO/path).read_bytes()).hexdigest()
         if actual != expected:
-            raise ValueError("Accepted T81 source changed: " + path)
+            raise ValueError("Pinned T81/T88 source changed: " + path)
         checked[path] = actual
     return checked
 
@@ -73,7 +73,7 @@ def baseline_rows(cfg, target, weights, kind="baseline", variant="all"):
                          "E_old_credit_cm2_inv": cfg["calculation"]["old_exposure_credit_cm2_inv"], "theta_F": s["theta_F"],
                          "q_lower": s["q_lower"], "g_lower": s["g_lower"], "R": s["R"],
                          "domain": "T81 conditional normal-as-isotropic uniform-cap domain",
-                         "physical_qualification": False, **result})
+                         "physical_qualification": False, "physical_F_required": None, **result})
     return rows
 
 
@@ -87,15 +87,13 @@ def calculate(cfg, target):
                      "theta_F": None, "C_cm2_inv": None, "F_required": None,
                      "status": "undefined_physical_contract", "physical_qualification": False,
                      "missing": "C_rho_j,R,q,g,theta_F,coverage,full38_registration,envelope"})
-    for row in validate_threshold_handoff(cfg["T88_handoff"]):
-        d = row["Dcrit_1pct_safe"]
+    for row in accepted_targets(cfg):
+        d = row["D0_exact"]
         if d is None:
-            rows.append({"target_kind": "T88_Dcrit_1pct", "variant": row["variant"],
-                         "D0": None, "shield_g_cm2": row["shield_g_cm2"], "F_required": None,
-                         "status": "threshold_not_defined", "physical_qualification": False})
+            rows.append(dict(row, D0=None))
         else:
-            sub = baseline_rows(cfg, rational(d), weights, "T88_"+row["threshold_kind"], row["variant"])
-            rows += [dict(r, T88_sha=cfg["T88_handoff"]["source_sha"])
+            sub = baseline_rows(cfg, rational(d), weights, row["target_kind"], row["variant"])
+            rows += [dict(r, **row)
                      for r in sub if rational(r["shield_g_cm2"]) == rational(row["shield_g_cm2"])]
 
     angular = []
@@ -132,17 +130,27 @@ def table_markdown(rows):
     text = ["# D₀ / защита / добавочный флюенс / область / покрытие / остаток", "",
             "Флюенс — достаточное условное требование при будущем нуле, см⁻²;",
             "округление вверх до 0,001. Это не измеренная граница D*.", "",
-            "| D₀ / вариант | Защита, г/см² | F_new ≥, см⁻² | Покрытие счёта | Область | Остаток R |",
-            "|---|---:|---:|---|---|---|"]
-    for r in rows:
-        d = r["D0"] or "не определён"
-        if r["target_kind"] == "T88_largest_found_certified_1pct":
-            d += " (наибольшая найденная точка, не точный порог)"
-        f = r.get("F_required") or "не определён"
-        scope = (f"условная T81; q={r['q_lower']}, g={r['g_lower']}, θ_F={r['theta_F']}"
-                 if r.get("status") == "conditional_finite" else r["status"])
-        rem = str(r["R"])+" — только допущение масштаба" if r.get("R") is not None else "неизвестен"
-        text.append(f"| {d}; {r['variant']} | {r['shield_g_cm2']} | {f} | {r.get('coverage', 'handoff #88 отсутствует')} | {scope} | {rem} |")
+            "T88: наибольшие найденные сертифицированные точки объявленного конечного",
+            "семейства, не точные глобальные пороги. SHA `"+cfg_sha(rows)+"`.",
+            "Полные физические флюенсы остаются null. Цена/запас по риску — из T88,",
+            "не результат испытания; их точные дроби и witness находятся в JSON/CSV."]
+    groups = [("baseline", "Исходный D₀"), ("baseline_physical", "Физический контракт"),
+              ("T88_largest_found_certified_1pct", "T88: граница с налогом ≤1%"),
+              ("T88_certificate_only", "T88: сертификат без требования ≤1%"),
+              ("T88_working_risk_reserve_proposal", "T88: предложенные рабочие точки с запасом риска ≥5e−5"),
+              ("T88_interior_1pct_other_policy", "T88: тот же рабочий D₀, другая политика с налогом ≤1%")]
+    for kind, title in groups:
+        text += ["", "## "+title, "",
+                 "| D₀ / вариант | Защита | F_new ≥, см⁻² | Покрытие счёта | Область / статус | R | Налог ≤, % | Запас риска ≥ |",
+                 "|---|---:|---:|---|---|---|---:|---:|"]
+        for r in rows:
+            if r["target_kind"] != kind:
+                continue
+            d, f = r["D0"] or "не определён", r.get("F_required") or "не определён"
+            scope = (f"условная T81; q={r['q_lower']}, g={r['g_lower']}, θ_F={r['theta_F']}"
+                     if r.get("status") == "conditional_finite" else r["status"])
+            rem = str(r["R"])+" (допущение)" if r.get("R") is not None else "неизвестен"
+            text.append(f"| {d}; {r['variant']} | {r['shield_g_cm2']} | {f} | {r.get('coverage', '—')} | {scope} | {rem} | {r.get('T88_quiet_tax_upper_pct', '—')} | {r.get('T88_risk_slack_lower', '—')} |")
     text += ["", "Один новый заранее заданный cap не требует нового множителя 55. Две защиты",
              "используют одни сечения: для одновременного выполнения двух условий нужен максимум",
              "двух требований, не сумма флюенсов и не второй статистический штраф.",
@@ -151,6 +159,10 @@ def table_markdown(rows):
              "point95 — только статистическая граница одного cap; перенос на область условен.",
              "Ни 95%, ни 1−10⁻⁶ здесь не заменяют отдельные покрытия q/F/среды."]
     return "\n".join(text)+"\n"
+
+
+def cfg_sha(rows):
+    return next(r["T88_sha"] for r in rows if "T88_sha" in r)
 
 
 def main():
@@ -173,6 +185,9 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     write_csv(out/"requirements.csv", rows)
     write_json(out/"requirements.json", rows)
+    write_json(out/"t88_transfer.json", {"source_sha": cfg["T88_handoff"]["source_sha"],
+               "transfer_checked": True, "search_or_independent_review_repeated": False,
+               "physical_qualification": False, "targets": accepted_targets(cfg)})
     write_csv(out/"angular_coefficients.csv", angular)
     write_csv(out/"sensitivity.csv", sensitivity)
     write_csv(out/"mission_weights_reused.csv", weight_rows)
@@ -191,7 +206,11 @@ def main():
                 "physical_contract": cfg["physical_contract"],
                 "physical_qualification": False, "experiments_executed": False,
                 "zero_counts_are_hypothetical": True,
-                "ready": "formula, ECC-on protocol, baseline requirement; T88 safe thresholds pending"})
+                "ready": "formula, ECC-on protocol, baseline and four safe T88 1% endpoints delivered",
+                "T88_cost_endpoints": 4, "T88_cost_empty_regions": 2,
+                "T88_certificate_endpoints_separate": 5,
+                "T88_working_points_separate": 5, "T88_interior_1pct_policies_separate": 4,
+                "physical_blocker": "full38 registration/completeness, angular/LET envelope, residual and exposure bounds remain unknown"})
     write_json(out/"verification.json", {"python": platform.python_version(), "tests": test.testsRun,
                 "tests_passed": True, "randomness": "none; seed not applicable", "network": False,
                 "source_sha256": before, "accepted_files_unchanged": True,

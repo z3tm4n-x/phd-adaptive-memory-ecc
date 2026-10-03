@@ -71,15 +71,25 @@
     "candidate_nodes_status": "protocol seed only; no between-node upper or full angular coverage is implied"
   },
   "T88_handoff": {
-    "source_sha": null,
-    "status": "not_received",
+    "source_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+    "status": "received_conditional_finite_family",
+    "source_PR": 93,
+    "theory_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+    "T82_sha": "4e5d7683ccac3a74ca490a11f99a96755f542e2b",
+    "source_directory": "experiments/t88-dstar-sensitivity/outputs",
+    "snapshots": {
+      "handoff": "experiments/t89-test-requirement/inputs/t88-handoff.json",
+      "effective_inputs": "experiments/t89-test-requirement/inputs/t88-effective_inputs.json",
+      "protocol": "experiments/t89-test-requirement/inputs/t88-protocol.json",
+      "summary": "experiments/t89-test-requirement/inputs/t88-summary.json"
+    },
     "rows": [
-      {"variant": "combined", "shield_g_cm2": "3", "Dcrit_1pct_safe": null},
-      {"variant": "monitor-only", "shield_g_cm2": "3", "Dcrit_1pct_safe": null},
-      {"variant": "ERR-only", "shield_g_cm2": "3", "Dcrit_1pct_safe": null},
-      {"variant": "combined", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null},
-      {"variant": "monitor-only", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null},
-      {"variant": "ERR-only", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null}
+      {"variant": "combined", "shield_g_cm2": "3", "Dcrit_1pct_safe": "0.000510489", "safe_endpoint_confirmed": true, "architecture": "internal38", "timing_margin": "0.1", "threshold_kind": "largest_found_certified_1pct", "certificate_ref": "inputs/t88-handoff.json#3/combined/cost_threshold"},
+      {"variant": "monitor-only", "shield_g_cm2": "3", "Dcrit_1pct_safe": "0.000511489", "safe_endpoint_confirmed": true, "architecture": "internal38", "timing_margin": "0.1", "threshold_kind": "largest_found_certified_1pct", "certificate_ref": "inputs/t88-handoff.json#3/monitor-only/cost_threshold"},
+      {"variant": "ERR-only", "shield_g_cm2": "3", "Dcrit_1pct_safe": null, "status": "empty_established_region_D_ge_5e-5"},
+      {"variant": "combined", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": "0.000059073", "safe_endpoint_confirmed": true, "architecture": "internal38", "timing_margin": "0.1", "threshold_kind": "largest_found_certified_1pct", "certificate_ref": "inputs/t88-handoff.json#2.5/combined/cost_threshold"},
+      {"variant": "monitor-only", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": "0.000060073", "safe_endpoint_confirmed": true, "architecture": "internal38", "timing_margin": "0.1", "threshold_kind": "largest_found_certified_1pct", "certificate_ref": "inputs/t88-handoff.json#2.5/monitor-only/cost_threshold"},
+      {"variant": "ERR-only", "shield_g_cm2": "2.5", "Dcrit_1pct_safe": null, "status": "empty_established_region_D_ge_5e-5"}
     ]
   },
   "source_sha256": {
@@ -88,6 +98,10 @@
     "experiments/t81-direct-architecture/request_for_author.md": "ffe47ab7082f99be8ebec3a8b9bb0906488eb3eae6d0313940d63433b22c6cc9",
     "experiments/t81-direct-architecture/outputs/mission_weights.csv": "56b35a86fd8f4b2bcce25b85507ca7a0bda2ffc2f29a297930cb9ad34cbfee22",
     "experiments/t81-direct-architecture/outputs/prospective_fullword_exposure.csv": "cf71e92e0d31f3120179a163dab0096447a9a7cee13d550c446bf415272ebbab",
-    "experiments/t81-direct-architecture/outputs/handoff.json": "e1e51ae5eca569d656d918e231dab49c47f4b689e9b6b4320c188da46a739bf9"
+    "experiments/t81-direct-architecture/outputs/handoff.json": "e1e51ae5eca569d656d918e231dab49c47f4b689e9b6b4320c188da46a739bf9",
+    "experiments/t89-test-requirement/inputs/t88-handoff.json": "1fa4b860a0d33cc3bfc09ae69d7cf5afa0fb1be23720e2ec704445b6ea1cb314",
+    "experiments/t89-test-requirement/inputs/t88-effective_inputs.json": "f2a14d172b5e119459951ffa6ce624fffa635c1bf266807a04c4731a6bfad295",
+    "experiments/t89-test-requirement/inputs/t88-protocol.json": "0b3d4af36c73d8de71dd5f2569caf3b8dae13327ae43a78295e5a717236765ff",
+    "experiments/t89-test-requirement/inputs/t88-summary.json": "004878a504ae5820a4e21a4b4b946eaa05c4a3465d949a38b198c1c405545bc4"
   }
 }
