@@ -1,0 +1,98 @@
+{
+  "issue": 89,
+  "T81_sha": "106dcb50b836b47ae6ee7f549975c11d0dbb4982",
+  "D0": "0.000050000000000000",
+  "T88": {
+    "source_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+    "status": "received_conditional_finite_family",
+    "source_PR": 93,
+    "theory_sha": "ff85fc807ae35d4bc6fc2a81abadc9ce4d3c75bc",
+    "T82_sha": "4e5d7683ccac3a74ca490a11f99a96755f542e2b",
+    "source_directory": "experiments/t88-dstar-sensitivity/outputs",
+    "snapshots": {
+      "handoff": "experiments/t89-test-requirement/inputs/t88-handoff.json",
+      "effective_inputs": "experiments/t89-test-requirement/inputs/t88-effective_inputs.json",
+      "protocol": "experiments/t89-test-requirement/inputs/t88-protocol.json",
+      "summary": "experiments/t89-test-requirement/inputs/t88-summary.json"
+    },
+    "rows": [
+      {
+        "variant": "combined",
+        "shield_g_cm2": "3",
+        "Dcrit_1pct_safe": "0.000510489",
+        "safe_endpoint_confirmed": true,
+        "architecture": "internal38",
+        "timing_margin": "0.1",
+        "threshold_kind": "largest_found_certified_1pct",
+        "certificate_ref": "inputs/t88-handoff.json#3/combined/cost_threshold"
+      },
+      {
+        "variant": "monitor-only",
+        "shield_g_cm2": "3",
+        "Dcrit_1pct_safe": "0.000511489",
+        "safe_endpoint_confirmed": true,
+        "architecture": "internal38",
+        "timing_margin": "0.1",
+        "threshold_kind": "largest_found_certified_1pct",
+        "certificate_ref": "inputs/t88-handoff.json#3/monitor-only/cost_threshold"
+      },
+      {
+        "variant": "ERR-only",
+        "shield_g_cm2": "3",
+        "Dcrit_1pct_safe": null,
+        "status": "empty_established_region_D_ge_5e-5"
+      },
+      {
+        "variant": "combined",
+        "shield_g_cm2": "2.5",
+        "Dcrit_1pct_safe": "0.000059073",
+        "safe_endpoint_confirmed": true,
+        "architecture": "internal38",
+        "timing_margin": "0.1",
+        "threshold_kind": "largest_found_certified_1pct",
+        "certificate_ref": "inputs/t88-handoff.json#2.5/combined/cost_threshold"
+      },
+      {
+        "variant": "monitor-only",
+        "shield_g_cm2": "2.5",
+        "Dcrit_1pct_safe": "0.000060073",
+        "safe_endpoint_confirmed": true,
+        "architecture": "internal38",
+        "timing_margin": "0.1",
+        "threshold_kind": "largest_found_certified_1pct",
+        "certificate_ref": "inputs/t88-handoff.json#2.5/monitor-only/cost_threshold"
+      },
+      {
+        "variant": "ERR-only",
+        "shield_g_cm2": "2.5",
+        "Dcrit_1pct_safe": null,
+        "status": "empty_established_region_D_ge_5e-5"
+      }
+    ]
+  },
+  "physical_contract": {
+    "C_rho_j_cm2_inv": null,
+    "R_mean_upper": null,
+    "q_lower": null,
+    "g_lower": null,
+    "theta_F": null,
+    "alpha_Theta_total": null,
+    "delta_F": null,
+    "delta_registration": null,
+    "delta_transfer_environment": null,
+    "full38_ECC_on_observed_count": null,
+    "uniform_angular_LET_envelope": null,
+    "actual_word_or_black_box_dominance": null,
+    "required_physical_fluence_cm2_inv": null
+  },
+  "physical_qualification": false,
+  "experiments_executed": false,
+  "zero_counts_are_hypothetical": true,
+  "ready": "formula, ECC-on protocol, baseline and four safe T88 1% endpoints delivered",
+  "T88_cost_endpoints": 4,
+  "T88_cost_empty_regions": 2,
+  "T88_certificate_endpoints_separate": 5,
+  "T88_working_points_separate": 5,
+  "T88_interior_1pct_policies_separate": 4,
+  "physical_blocker": "full38 registration/completeness, angular/LET envelope, residual and exposure bounds remain unknown"
+}

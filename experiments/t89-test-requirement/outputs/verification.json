@@ -1,0 +1,29 @@
+{
+  "python": "3.12.14",
+  "tests": 26,
+  "tests_passed": true,
+  "randomness": "none; seed not applicable",
+  "network": false,
+  "source_sha256": {
+    "experiments/t81-direct-architecture/run.py": "7f6846a1cf36c3d57de184801b6ef53efe2abd563bbbd76644c27c51f754f681",
+    "experiments/t81-direct-architecture/METHOD.md": "18af87c90b9f8df84a7abd4ebbaa8eff797d8fded673f2cdb2d2cd6ee55af805",
+    "experiments/t81-direct-architecture/request_for_author.md": "ffe47ab7082f99be8ebec3a8b9bb0906488eb3eae6d0313940d63433b22c6cc9",
+    "experiments/t81-direct-architecture/outputs/mission_weights.csv": "56b35a86fd8f4b2bcce25b85507ca7a0bda2ffc2f29a297930cb9ad34cbfee22",
+    "experiments/t81-direct-architecture/outputs/prospective_fullword_exposure.csv": "cf71e92e0d31f3120179a163dab0096447a9a7cee13d550c446bf415272ebbab",
+    "experiments/t81-direct-architecture/outputs/handoff.json": "e1e51ae5eca569d656d918e231dab49c47f4b689e9b6b4320c188da46a739bf9",
+    "experiments/t89-test-requirement/inputs/t88-handoff.json": "1fa4b860a0d33cc3bfc09ae69d7cf5afa0fb1be23720e2ec704445b6ea1cb314",
+    "experiments/t89-test-requirement/inputs/t88-effective_inputs.json": "f2a14d172b5e119459951ffa6ce624fffa635c1bf266807a04c4731a6bfad295",
+    "experiments/t89-test-requirement/inputs/t88-protocol.json": "0b3d4af36c73d8de71dd5f2569caf3b8dae13327ae43a78295e5a717236765ff",
+    "experiments/t89-test-requirement/inputs/t88-summary.json": "004878a504ae5820a4e21a4b4b946eaa05c4a3465d949a38b198c1c405545bc4"
+  },
+  "accepted_files_unchanged": true,
+  "arithmetic": "T81 double regression; Fraction + 70-digit directed ln; Decimal-100 tests",
+  "source_hashes": {
+    "fluence.py": "2af4f0bbe3d134e8aa5d0c327edfdb32a24958e6126979bfa13b87ce50c1578d",
+    "run.py": "dcbcbe5e0c6e3ab9986bbc1e66ca51b85dfc7802aa8d481c8e7af21a9724d34c",
+    "t88_handoff.py": "253430f7f8c9b7b62385bb0b5a4f1c2f755b3c0d270f2cb861a4b8cb747b7be7",
+    "test_fluence.py": "daadf0b3011ccfc9fb3e5650f17abb623ba368b2e8163719389f192b42005da9",
+    "test_t88_handoff.py": "711d1360cb444d9e3b6a324340a15f7dee17fb8db537360192ad32aa3254bc53"
+  },
+  "config_sha256": "6910f37e78c3b8805a2c049c46fe43eda2132ceda1b1c319272d647720a941a3"
+}

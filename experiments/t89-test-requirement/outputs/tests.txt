@@ -1,0 +1,31 @@
+test_T81_published_regression (test_fluence.TestT89.test_T81_published_regression) ... ok
+test_budget_validation (test_fluence.TestT89.test_budget_validation) ... ok
+test_ceiling_exact (test_fluence.TestT89.test_ceiling_exact) ... ok
+test_config_residual_is_charged (test_fluence.TestT89.test_config_residual_is_charged) ... ok
+test_exact_T81_reuse (test_fluence.TestT89.test_exact_T81_reuse) ... ok
+test_invalid_inputs (test_fluence.TestT89.test_invalid_inputs) ... ok
+test_inverse_target_and_residual (test_fluence.TestT89.test_inverse_target_and_residual) ... ok
+test_log_enclosure_Decimal100 (test_fluence.TestT89.test_log_enclosure_Decimal100) ... ok
+test_monotonicity (test_fluence.TestT89.test_monotonicity) ... ok
+test_q_g_zero (test_fluence.TestT89.test_q_g_zero) ... ok
+test_residual_boundary (test_fluence.TestT89.test_residual_boundary) ... ok
+test_rounded_requirement_Decimal100_matrix (test_fluence.TestT89.test_rounded_requirement_Decimal100_matrix) ... ok
+test_source_hashes (test_fluence.TestT89.test_source_hashes) ... ok
+test_threshold_rejects_unpinned_unsafe_and_zero (test_fluence.TestT89.test_threshold_rejects_unpinned_unsafe_and_zero) ... ok
+test_units_and_no_55_factor (test_fluence.TestT89.test_units_and_no_55_factor) ... ok
+test_unknown_not_zero (test_fluence.TestT89.test_unknown_not_zero) ... ok
+test_unknown_physical_handoff_preserved (test_fluence.TestT89.test_unknown_physical_handoff_preserved) ... ok
+test_all_new_fluences_Decimal100 (test_t88_handoff.TestT88Transfer.test_all_new_fluences_Decimal100) ... ok
+test_config_rejects_upper_endpoint_and_unpinned (test_t88_handoff.TestT88Transfer.test_config_rejects_upper_endpoint_and_unpinned) ... ok
+test_four_safe_lower_endpoints_not_upper (test_t88_handoff.TestT88Transfer.test_four_safe_lower_endpoints_not_upper) ... ok
+test_rejects_always_short_and_duplicate (test_t88_handoff.TestT88Transfer.test_rejects_always_short_and_duplicate) ... ok
+test_rejects_bad_risk_or_price (test_t88_handoff.TestT88Transfer.test_rejects_bad_risk_or_price) ... ok
+test_rejects_snapshot_hash_corruption (test_t88_handoff.TestT88Transfer.test_rejects_snapshot_hash_corruption) ... ok
+test_rejects_wrong_context_and_qualification (test_t88_handoff.TestT88Transfer.test_rejects_wrong_context_and_qualification) ... ok
+test_same_D_different_policy_cost_and_reserve (test_t88_handoff.TestT88Transfer.test_same_D_different_policy_cost_and_reserve) ... ok
+test_supplementary_targets_never_promoted_to_one_percent (test_t88_handoff.TestT88Transfer.test_supplementary_targets_never_promoted_to_one_percent) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.176s
+
+OK
