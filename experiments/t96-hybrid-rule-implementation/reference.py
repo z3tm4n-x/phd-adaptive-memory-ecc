@@ -305,8 +305,11 @@ class Gate:
     def __init__(self, p):
         self.p = p
         self.active = None
+        self.applied_at = None
         self.last_sequence = -1
         self.holdE = 0
+        self.holdM = 0
+        self.revoked_at = -1
         self.blocked = False
         self.err_count = 0
         self.err_overflow = False
@@ -321,7 +324,8 @@ class Gate:
             valid = (cmd.crc == cmd.checksum() and cmd.mission_id == self.p.mission_id
                      and cmd.config_id == self.p.config_id and cmd.sequence > self.last_sequence
                      and cmd.issued_at <= now <= cmd.apply_by
-                     and now <= cmd.valid_until and cmd.low_left <= cmd.low_right)
+                     and now <= cmd.valid_until and cmd.low_left <= cmd.low_right
+                     and (cmd.force_S or cmd.issued_at > self.revoked_at))
         except (ValueError, TypeError):
             valid = False
         if not valid:
@@ -329,12 +333,16 @@ class Gate:
             self.ack = (cmd.sequence, now, "rejected_default_S")
             return False
         self.active = cmd  # atomic swap; never an incremental field update
+        self.applied_at = now
         self.last_sequence = cmd.sequence
         self.ack = (cmd.sequence, now, "applied")
         return True
 
-    def loss(self):
+    def loss(self, now):
+        uint(now)
         self.active = None  # decisions and pending work belong to other state
+        self.revoked_at = max(self.revoked_at, now)
+        self.holdM = max(self.holdM, min(U64, now + self.p.hold))
 
     def err(self, now):
         uint(now)
@@ -352,8 +360,8 @@ class Gate:
         left, right = max(0, slot.fence - p.Ps), min(p.end, slot.fence + p.Ps)
         timely = now == slot.decision and now >= 0
         good = (timely and left <= right and a is not None and not a.force_S and not self.blocked
-                and a.issued_at <= now < a.valid_until
-                and now >= max(a.holdE, self.holdE, a.holdM)
+                and self.applied_at <= now < a.valid_until
+                and now >= max(a.holdE, self.holdE, a.holdM, self.holdM)
                 and a.low_left <= left and a.low_right >= right)
         skip = bool(good and not slot.mandatory and not slot.initial)
         reason = ("initial" if slot.initial else "mandatory" if slot.mandatory else
@@ -441,11 +449,11 @@ class Executor:
         self.values[word] = value
         self.app_pending = None
 
-    def program_reset(self):
-        self.gate.loss()  # no j/pending/phase/mission reset
+    def program_reset(self, now):
+        self.gate.loss(now)  # no j/pending/phase/mission reset
 
-    def clock_reset(self):
-        self.gate.loss()
+    def clock_reset(self, now):
+        self.gate.loss(now)
         self.gate.blocked = True
         self.service_valid = False  # not a newly clean epoch
 

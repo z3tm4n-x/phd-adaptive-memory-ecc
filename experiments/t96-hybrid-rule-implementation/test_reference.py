@@ -109,7 +109,7 @@ class Fixed(unittest.TestCase):
             d = g.freeze(s, s.decision)
             if offset > 0:
                 g.err(s.decision + offset)
-            g.loss()
+            g.loss(s.decision+2)
             self.assertEqual(d.execute, offset <= 0)
             self.assertIs(g.freeze(s, s.start), d)
 
@@ -137,6 +137,33 @@ class Fixed(unittest.TestCase):
             if active:
                 g.receive(self.permissive(s, valid_until=s.decision), 0)
             self.assertTrue(g.freeze(s, s.decision).execute)
+
+    def test_queued_pre_loss_permission_cannot_resurrect_LOW(self):
+        s = self.optional_at(4_000_000_000)
+        g = Gate(self.p)
+        queued = self.permissive(s, issued_at=10, apply_by=s.decision)
+        g.loss(11)
+        self.assertFalse(g.receive(queued, 12))
+        self.assertIsNone(g.active)
+        self.assertTrue(g.freeze(s, s.decision).execute)
+        same_edge = self.permissive(s, sequence=2, issued_at=11)
+        self.assertFalse(g.receive(same_edge, 12))
+
+    def test_applied_not_issued_time_controls_first_eligible_decision(self):
+        s = self.optional_at(4_000_000_000)
+        g = Gate(self.p)
+        cmd = self.permissive(s, issued_at=0, apply_by=s.decision+10)
+        self.assertTrue(g.receive(cmd, s.decision+1))
+        # A late-arriving lease may affect later slots, never a past decision.
+        self.assertTrue(g.freeze(s, s.decision).execute)
+
+    def test_protected_new_command_cannot_reduce_hardware_loss_hold(self):
+        s = self.optional_at(4_000_000_000)
+        g = Gate(self.p)
+        g.loss(s.decision-10)
+        fresh = self.permissive(s, issued_at=s.decision-9, holdM=0)
+        self.assertTrue(g.receive(fresh, s.decision-8))
+        self.assertTrue(g.freeze(s, s.decision).execute)
 
     def test_ERR_overflow_never_wraps_and_cannot_be_cleared_by_lease(self):
         s = self.optional_at(3_000_000_000)
@@ -282,7 +309,7 @@ class Fixed(unittest.TestCase):
         s = self.optional_at(r.now)
         committed = g.freeze(s, s.decision)
         self.assertFalse(committed.execute)
-        g.loss()
+        g.loss(s.decision+1)
         r.loss(s.decision+1)
         self.assertIs(g.freeze(s, s.start), committed)
         after = self.optional_at(s.start+1000)
@@ -323,9 +350,9 @@ class Fixed(unittest.TestCase):
             e.start(g.freeze(s, 0), 0)
             e.latch(48, 123, err=True)
             if event == "loss":
-                g.loss()
+                g.loss(49)
             else:
-                e.program_reset()
+                e.program_reset(49)
             self.assertIsNotNone(e.pending)
             e.finish(100)
             self.assertEqual((e.values[0], e.j, g.err_count), (123, 1, 1))
@@ -351,7 +378,7 @@ class Fixed(unittest.TestCase):
         e = Executor(self.p, g)
         e.start(g.freeze(s, 0), 0)
         e.latch(48, 17)
-        e.clock_reset()
+        e.clock_reset(49)
         e.finish(100)
         self.assertFalse(e.service_valid)
         self.assertEqual(e.j, 1)

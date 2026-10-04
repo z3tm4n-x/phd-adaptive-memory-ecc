@@ -41,7 +41,7 @@ def trace(p):
         now = p.deadline(i)
         if i == 3:
             r.missing(i, now)
-            g.loss()
+            g.loss(now)
             status = "missing"
         else:
             status = r.message(packet(p, i), now)
