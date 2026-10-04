@@ -1,0 +1,53 @@
+{
+  "task": 95,
+  "base_sha": "2bed67c056eb6c551779828ddaf7998aa7637e26",
+  "T90_sha": "06db1af2474a511cf3070c72666f5f78de10fab3",
+  "T88_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+  "anchor_Dstar": "560489/2000000000",
+  "control_Dstar": "1/20000",
+  "bound": {
+    "P_split_s": "2",
+    "P_auxiliary_mesh_s": "1/1000000000",
+    "coarse_certificate_P_s": "4/25",
+    "note": "Inversion of one proved rational lower bound, not policy optimization or a new grid."
+  },
+  "sources": [
+    {
+      "path": "experiments/t90-monitor-physical/outputs/pinned_inputs.json",
+      "git_blob": "e7a254313cca2d538867e67070499d8a313c3e2e"
+    },
+    {
+      "path": "experiments/t90-monitor-physical/outputs/handoff.json",
+      "git_blob": "e10a41a75f39be630204ec957b99aa9ee74e9619"
+    },
+    {
+      "path": "experiments/t90-monitor-physical/outputs/reproduction.json",
+      "git_blob": "4f75c54abc382f81b021a4319773c83b642a2b9e"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/outputs/selected.json",
+      "git_blob": "7769616fd818af5a30409575232eb125a61ab795"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/outputs/constant_U.json",
+      "git_blob": "2ba3f8152d9521ad2b06f106919520330b176e25"
+    },
+    {
+      "path": "experiments/t90-monitor-physical/CONTRACT.md",
+      "git_blob": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39"
+    },
+    {
+      "path": "experiments/t90-monitor-physical/INTERFACE.md",
+      "git_blob": "3a58845113761b01464c9d13dabfb8a12abf2671"
+    }
+  ],
+  "unknowns": {
+    "physical_monitor": null,
+    "physical_Dstar": null,
+    "physical_ERR_lower": null,
+    "physical_joint_U_WCET": null,
+    "physical_loss_detection_s": null,
+    "expected_outage_s": null,
+    "expected_recoveries": null
+  }
+}

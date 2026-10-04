@@ -1,0 +1,124 @@
+{
+  "task": 95,
+  "status": "conditional theorem and implementation contract; not implementation #96 or physical qualification",
+  "source_base": "2bed67c056eb6c551779828ddaf7998aa7637e26",
+  "T90_sha": "06db1af2474a511cf3070c72666f5f78de10fab3",
+  "T88_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+  "scientific_files": [
+    "theory/t95-method-regime-selection.md",
+    "theory/t95-method-regime-selection-appendix.md"
+  ],
+  "working_selector": {
+    "path": "experiments/t90-monitor-physical/outputs/pinned_inputs.json",
+    "shield": "3",
+    "row": "selected_source_row",
+    "purpose": "working",
+    "mode": "combined",
+    "window": "actual_window_at_selected_g"
+  },
+  "fixed_contract": {
+    "W": 524288,
+    "n": 38,
+    "T_s": "315576000",
+    "epsilon": "1/1000",
+    "Dstar": "560489/2000000000",
+    "control_Dstar": "1/20000",
+    "clock_constant_scale_lower": "99999/100000",
+    "clock_constant_scale_upper": "100001/100000",
+    "tick_nominal_s": "1/1000000000",
+    "time_margin": "1/10",
+    "c_ticks": 100,
+    "g_ticks": 140,
+    "ka": 367,
+    "fence_ticks": 100,
+    "decision_lead_ticks": 56,
+    "mandatory": "j mod 367 == 0",
+    "short_start_ticks": "2*140*floor(j/2)+100*(j mod 2)",
+    "word": "inverse(367) mod 524288 * j mod 524288",
+    "hold_ERR_s": "1",
+    "hold_monitor_s": "1"
+  },
+  "monitor": {
+    "aM": "1000000",
+    "AM": "1000000",
+    "eta_per_s": "1/1000",
+    "k": 223,
+    "z": "3/10",
+    "H": 35,
+    "J": 631158312,
+    "lease_ticks": 2940811639,
+    "vc": "179451472649113/351509000000000000",
+    "nominal_window_s": "1",
+    "nominal_stride_s": "1/2",
+    "required_post_window_path_s": "1",
+    "rounded_delivery_upper_s": "110002200111001/100000000000000",
+    "interface": "experiments/t90-monitor-physical/INTERFACE.md",
+    "physically_confirmed": null
+  },
+  "software_state": [
+    "immutable input/epoch/config identifiers",
+    "absolute window sequence; at most one result per fixed window",
+    "three snapshots with acquisition times",
+    "LOW left/right",
+    "holdE/holdM and health/deadline",
+    "mission quotas are fixed, never reset"
+  ],
+  "software_operations": [
+    "validate full fresh count and deadline",
+    "finite Y<=223 test; no online exp/log",
+    "extend only overlapping LOW",
+    "update independent holds",
+    "publish protected lease/hold permission before decision deadline"
+  ],
+  "executor_state": [
+    "absolute j and fixed inverse address permutation",
+    "mandatory/initial scan mask",
+    "latch, pending write, fence",
+    "application reservations and protected gate"
+  ],
+  "loss_policy": {
+    "event": "recognized loss or invalid/expired LOW",
+    "action": "default S on original calendar; no cancellation of committed slots or pending write",
+    "risk_certificate": "same lifetime U_M; no restart or addition of U_S",
+    "recovery": "same config and absolute grid, fresh complete windows, holds and full two-sided LOW; no resampling same window",
+    "silent_wrong_counts": "must be covered by the single mission delta_M; timeout is not sufficient",
+    "ERR_only_transition_certified": false
+  },
+  "conditional_timing": {
+    "loss_notice_from_last_good_end_s": "160002700111001/100000000000000",
+    "alarm_to_first_new_fence_s": "2100021/6250000000000",
+    "alarm_to_all_words_s": "458758687541/6250000000000",
+    "joint_U_WCET_required_s": "99999/1100000000000",
+    "physical_joint_WCET_s": null,
+    "physical_loss_detection_s": null,
+    "physical_recovery_s": null
+  },
+  "outage_cost": {
+    "formula": "min(Ccap,Cnormal+C_f^+*E[|Q intersect union_i(a_i-DM,b_i+DM)|]/TQ)",
+    "DM_s": "104937501264519/20000000000000",
+    "expected_outage_s": null,
+    "expected_outage_count": null,
+    "resource_envelope_must_cover_recovery": true
+  },
+  "resources": {
+    "CX": "1/10000",
+    "sigmaX_s": "1/10000000",
+    "max_extra_atomic_request_s": "45/1000000000",
+    "peak_limit": "4/5",
+    "peak_window_s": "1/1000",
+    "app_delay_with_margin_limit_s": "3/1000000",
+    "TQ_min": "0.9*T",
+    "KQ_max": 1000,
+    "physical_qualification": false
+  },
+  "confirmation": "exact proof SHA to be supplied in PR/Issue comment; no self-referential commit hash",
+  "unknowns": {
+    "physical_monitor": null,
+    "physical_Dstar": null,
+    "physical_ERR_lower": null,
+    "physical_joint_U_WCET": null,
+    "physical_loss_detection_s": null,
+    "expected_outage_s": null,
+    "expected_recoveries": null
+  }
+}
