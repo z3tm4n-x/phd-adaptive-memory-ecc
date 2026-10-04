@@ -1,0 +1,344 @@
+{
+  "task": 96,
+  "stage": "A",
+  "issue": 103,
+  "base_sha": "5d54f07c4307cd968de73502d76853f542dc53e0",
+  "science_sha": "8ecc8fb24213e03110789646725481cd34d09ab9",
+  "scope": "executable specification, not RTL/firmware/physical qualification",
+  "source_blobs_checked": {
+    "theory/t95-method-regime-selection.md": "6694afa688f2b46ac50d815b7c2392ffdeff557d",
+    "theory/t95-method-regime-selection-appendix.md": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+    "experiments/t95-method-regime-map/handoff.json": "dbe1f7aab015ffbaf766080ecfa3da2289677dd0",
+    "experiments/t95-method-regime-map/inputs.json": "24b7c9c50adfa36c2e05a8610f990c67edb5745b",
+    "experiments/t95-method-regime-map/report.json": "dd236dce01f7de2d3e9523a2eecbff3905a150ec",
+    "experiments/t90-monitor-physical/CONTRACT.md": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39",
+    "experiments/t90-monitor-physical/INTERFACE.md": "3a58845113761b01464c9d13dabfb8a12abf2671",
+    "experiments/t90-monitor-physical/outputs/pinned_inputs.json": "e7a254313cca2d538867e67070499d8a313c3e2e"
+  },
+  "parameters": {
+    "W": 524288,
+    "ka": 367,
+    "c": 100,
+    "g": 140,
+    "fence": 100,
+    "lead": 56,
+    "window": 1000000000,
+    "stride": 500000000,
+    "delivery": 1100011001,
+    "lease": 2940811639,
+    "hold": 1000010001,
+    "k": 223,
+    "J": 631158312,
+    "end": 315579155791557916,
+    "mission_id": "T95-8ecc8fb-R0A-3g-10y",
+    "config_id": "conditional-aM-AM-1e6-eta-1e-3"
+  },
+  "address_inverse": 294287,
+  "test_count": 42,
+  "tests": [
+    "test_reference.Fixed.test_CPU_priority_only_when_request_fits",
+    "test_reference.Fixed.test_ERR_before_at_after_decision_and_immutability",
+    "test_reference.Fixed.test_ERR_overflow_never_wraps_and_cannot_be_cleared_by_lease",
+    "test_reference.Fixed.test_ERR_preserves_LOW_and_independent_hold",
+    "test_reference.Fixed.test_actual_gate_decisions_do_not_round_LOW",
+    "test_reference.Fixed.test_clock_rollback_and_range_fail_closed",
+    "test_reference.Fixed.test_command_atomicity_replay_and_wrong_mission",
+    "test_reference.Fixed.test_delayed_exit_needs_past_radius_and_hold",
+    "test_reference.Fixed.test_duplicate_and_reordering_cannot_extend_or_resample",
+    "test_reference.Fixed.test_early_wait_late_no_LOW",
+    "test_reference.Fixed.test_end_radius_is_clipped_conservatively",
+    "test_reference.Fixed.test_exact_4tick_calendar_and_non_4tick_lease",
+    "test_reference.Fixed.test_finite_window_family_and_integer_limits",
+    "test_reference.Fixed.test_full_W_permutation_no_duplicate_and_inverse",
+    "test_reference.Fixed.test_gap_and_missing_clear_only_working_LOW",
+    "test_reference.Fixed.test_good_window_overlap_three_records",
+    "test_reference.Fixed.test_heartbeat_does_not_renew_freshness",
+    "test_reference.Fixed.test_hidden_failure_continues_mask_and_cost",
+    "test_reference.Fixed.test_initial_and_mandatory_cannot_skip",
+    "test_reference.Fixed.test_late_command_and_crc_failure_default_S",
+    "test_reference.Fixed.test_loss_recovery_uses_original_index_and_full_fresh_epoch",
+    "test_reference.Fixed.test_lost_clock_invalidates_not_new_K0",
+    "test_reference.Fixed.test_missing_latch_or_shifted_fence_rejected",
+    "test_reference.Fixed.test_no_permission_or_expired_permission_is_S",
+    "test_reference.Fixed.test_old_pending_counterexample_is_detected",
+    "test_reference.Fixed.test_paired_edges_no_compressed_Wc_period",
+    "test_reference.Fixed.test_pending_write_drains_on_monitor_or_program_reset",
+    "test_reference.Fixed.test_period_and_phase_full_W_all_words",
+    "test_reference.Fixed.test_read_only_rejects_application_write",
+    "test_reference.Fixed.test_repeated_ERR_is_not_a_new_parent_counter",
+    "test_reference.Fixed.test_resource_bound_with_X_and_margin",
+    "test_reference.Fixed.test_return_after_loss_no_retroactive_revocation",
+    "test_reference.Fixed.test_sliding_window_exact_all_small_phase_edges",
+    "test_reference.Fixed.test_small_model_all_skip_masks_keep_mandatory_and_phase",
+    "test_reference.Fixed.test_sources_and_exact_anchor",
+    "test_reference.Fixed.test_threshold_223_224_and_loss_correction",
+    "test_reference.Fixed.test_two_sided_LOW_equal_and_one_tick_fail",
+    "test_reference.Fixed.test_unbounded_absolute_CPU_priority_counterexample",
+    "test_reference.Fixed.test_unconditional_write_even_zero_ERR",
+    "test_reference.Fixed.test_unknown_quality_overflow_saturation_and_bad_times",
+    "test_reference.Fixed.test_write_before_scrub_is_the_image_read_by_scrub",
+    "test_reference.Fixed.test_write_offer_during_pending_is_not_accepted"
+  ],
+  "coverage": {
+    "full_W_address_residues": 524288,
+    "full_W_phase_residues": 524288,
+    "small_W": 8,
+    "small_ka": 3,
+    "small_boolean_masks": 256,
+    "small_slots_per_mask": 16,
+    "small_model_probability_transfer": false,
+    "formal_RTL_proof_performed": false
+  },
+  "accepted_reference": {
+    "risk_upper": "21989385291401841648723253/23193359375000000000000000000",
+    "normal_price_upper": "3320688338124622257206602048892743842504747549297489272011552655944135602828575653/1155245404945322851020000000000000000000000000000000000000000000000000000000000000000",
+    "loss_forever_risk_upper": "21989385291401841648723253/23193359375000000000000000000",
+    "S_full_price_upper": "7890583398966506627777/11045049548400000000000",
+    "probability_margin": "1203974083598158351276747/23193359375000000000000000000",
+    "source": "accepted T95 anchor; not inferred from Stage-A tests"
+  },
+  "independent_resource_substitution": {
+    "peak_upper": "446585713/625000000",
+    "service_rate": "87488/699993",
+    "stability_slack": "594182807/6999930000",
+    "application_delay_upper_s": "15366714997/10936000000000000",
+    "application_delay_margin_upper_s": "169033864967/109360000000000000"
+  },
+  "clock_representation": {
+    "core_ticks": 4,
+    "calendar_exact": true,
+    "earlier_delivery_deadline_ticks": 1100011000,
+    "post_window_required_s": "9999999999/10000000000",
+    "joint_U_required_s": "99999/1100000000000",
+    "naive_rounded_45_plus_45_s": "3/31250000",
+    "lease_kept_exact_ticks": 2940811639,
+    "wrong_rounded_lease_margin_s": "-2344587/1000000000000000",
+    "correct_lease_margin_s": "655383/1000000000000000",
+    "hold_ticks": 1000010001,
+    "hold_min_s": "100000000089999/100000000000000",
+    "mission_end_conservative_ticks": 315579155791557916,
+    "alarm_to_first_fence_upper_s": "2100021/6250000000000",
+    "phase_and_clock_qualification": null
+  },
+  "directed_trace": [
+    {
+      "window": 0,
+      "deadline": 2100011001,
+      "status": "LOW",
+      "LOW": [
+        2100011001,
+        2940811639
+      ],
+      "holdM": 1000010001,
+      "decision": {
+        "slot": {
+          "j": 15000080,
+          "word": 268016,
+          "start": 2100011200,
+          "decision": 2100011144,
+          "fence": 2100011300,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": true,
+        "reason": "default_S",
+        "low_witness": null
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    },
+    {
+      "window": 1,
+      "deadline": 2600011001,
+      "status": "LOW",
+      "LOW": [
+        2100011001,
+        3440811639
+      ],
+      "holdM": 1000010001,
+      "decision": {
+        "slot": {
+          "j": 18571508,
+          "word": 150604,
+          "start": 2600011120,
+          "decision": 2600011064,
+          "fence": 2600011220,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": false,
+        "reason": "two_sided_LOW",
+        "low_witness": [
+          2526610900,
+          2673411540
+        ]
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    },
+    {
+      "window": 2,
+      "deadline": 3100011001,
+      "status": "LOW",
+      "LOW": [
+        2100011001,
+        3940811639
+      ],
+      "holdM": 1000010001,
+      "decision": {
+        "slot": {
+          "j": 22142937,
+          "word": 327479,
+          "start": 3100011140,
+          "decision": 3100011084,
+          "fence": 3100011240,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": false,
+        "reason": "two_sided_LOW",
+        "low_witness": [
+          3026610920,
+          3173411560
+        ]
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    },
+    {
+      "window": 3,
+      "deadline": 3600011001,
+      "status": "missing",
+      "LOW": null,
+      "holdM": 4600021002,
+      "decision": {
+        "slot": {
+          "j": 25714365,
+          "word": 210067,
+          "start": 3600011060,
+          "decision": 3600011004,
+          "fence": 3600011160,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": true,
+        "reason": "default_S",
+        "low_witness": null
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    },
+    {
+      "window": 4,
+      "deadline": 4100011001,
+      "status": "LOW",
+      "LOW": [
+        4100011001,
+        4940811639
+      ],
+      "holdM": 4600021002,
+      "decision": {
+        "slot": {
+          "j": 29285794,
+          "word": 386942,
+          "start": 4100011160,
+          "decision": 4100011104,
+          "fence": 4100011260,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": true,
+        "reason": "default_S",
+        "low_witness": null
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    },
+    {
+      "window": 5,
+      "deadline": 4600011001,
+      "status": "LOW",
+      "LOW": [
+        4100011001,
+        5440811639
+      ],
+      "holdM": 4600021002,
+      "decision": {
+        "slot": {
+          "j": 32857222,
+          "word": 269530,
+          "start": 4600011080,
+          "decision": 4600011024,
+          "fence": 4600011180,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": true,
+        "reason": "default_S",
+        "low_witness": null
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    },
+    {
+      "window": 6,
+      "deadline": 5100011001,
+      "status": "LOW",
+      "LOW": [
+        4100011001,
+        5940811639
+      ],
+      "holdM": 4600021002,
+      "decision": {
+        "slot": {
+          "j": 36428651,
+          "word": 446405,
+          "start": 5100011100,
+          "decision": 5100011044,
+          "fence": 5100011200,
+          "mandatory": false,
+          "initial": false
+        },
+        "execute": false,
+        "reason": "two_sided_LOW",
+        "low_witness": [
+          5026610880,
+          5173411520
+        ]
+      },
+      "certificate": [
+        "T95-8ecc8fb-R0A-3g-10y",
+        631158312,
+        "same lifetime U_M"
+      ]
+    }
+  ],
+  "not_confirmed": {
+    "physical_full38_clean_U": null,
+    "physical_Dstar": null,
+    "physical_monitor": null,
+    "physical_joint_WCET": null,
+    "FPGA_or_flight_CPU": null,
+    "STA_CDC": null,
+    "mission_probability_proved_by_simulation": false,
+    "stages_B_C_D_started": false
+  }
+}

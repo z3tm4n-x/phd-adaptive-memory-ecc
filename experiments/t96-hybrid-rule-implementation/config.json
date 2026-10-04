@@ -1,0 +1,58 @@
+{
+  "task": 96,
+  "stage": "A",
+  "issue": 103,
+  "base_sha": "5d54f07c4307cd968de73502d76853f542dc53e0",
+  "science_sha": "8ecc8fb24213e03110789646725481cd34d09ab9",
+  "handoff_path": "experiments/t95-method-regime-map/handoff.json",
+  "t90_interface": "experiments/t90-monitor-physical/INTERFACE.md",
+  "t90_contract": "experiments/t90-monitor-physical/CONTRACT.md",
+  "platform": "Python 3.10+ reference on x86-64; no flight CPU or FPGA selected",
+  "sources": {
+    "theory/t95-method-regime-selection.md": "6694afa688f2b46ac50d815b7c2392ffdeff557d",
+    "theory/t95-method-regime-selection-appendix.md": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+    "experiments/t95-method-regime-map/handoff.json": "dbe1f7aab015ffbaf766080ecfa3da2289677dd0",
+    "experiments/t95-method-regime-map/inputs.json": "24b7c9c50adfa36c2e05a8610f990c67edb5745b",
+    "experiments/t95-method-regime-map/report.json": "dd236dce01f7de2d3e9523a2eecbff3905a150ec",
+    "experiments/t90-monitor-physical/CONTRACT.md": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39",
+    "experiments/t90-monitor-physical/INTERFACE.md": "3a58845113761b01464c9d13dabfb8a12abf2671",
+    "experiments/t90-monitor-physical/outputs/pinned_inputs.json": "e7a254313cca2d538867e67070499d8a313c3e2e"
+  },
+  "reference_profile": {
+    "mission_id": "T95-8ecc8fb-R0A-3g-10y",
+    "monitor_config_id": "conditional-aM-AM-1e6-eta-1e-3",
+    "diagnostic_epoch": 1,
+    "diagnostic_loss_upper": 0,
+    "diagnostic_count": 0,
+    "diagnostic_latch_offset_ticks": 48,
+    "meaning": "synthetic directed fixtures, not a real monitor or CY62167 pin timing"
+  },
+  "clock_mapping": {
+    "core_period_virtual_ticks": 4,
+    "nominal_candidate_core_hz": 250000000,
+    "selected_hardware": null,
+    "policy": "exact absolute virtual timestamps; aligned calendar events; deadlines never rounded later, LOW never enlarged",
+    "pin_and_CDC_timing_qualified": false
+  },
+  "stage_G_plan_only": {
+    "event_id": "sep_20240608_0255",
+    "satellite": 16,
+    "direction": "E",
+    "cadence_s": 60,
+    "response": "main_loglog",
+    "mask": "screened",
+    "archive_file": "sci_sgps-l2-avg1m_g16_d20240608_v3-0-2.nc",
+    "archive_sha256": "eaa46c00686c3c62c15f7a5096df9dbe08fcac942a237e17c7e5dedd17062263",
+    "anchor_path": "experiments/t72-r0a-onset-inputs/outputs/author_events.csv",
+    "anchor_record_id": 2328,
+    "normalization_s_inv": "1/25",
+    "outage_start_utc": "2024-06-08T03:20:00Z",
+    "outage_duration_s": 10,
+    "seed": 103,
+    "status": "plan only; no data campaign or end-to-end simulation in A"
+  },
+  "physical_monitor": null,
+  "physical_Dstar": null,
+  "physical_joint_U_WCET_s": null,
+  "hardware_qualification": false
+}
