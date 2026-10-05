@@ -1,0 +1,89 @@
+{
+  "base_sha": "5b463280be672d1c0fcc839b95c786d7c624b8be",
+  "stage_A_sha": "96e1cc58ffe91ea5ef6ac3960fb4da03423b56d1",
+  "science_sha": "8ecc8fb24213e03110789646725481cd34d09ab9",
+  "sources": {
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/source_manifest.json": "277772c3337f586bf1803122f867f498ca71c238",
+    "experiments/t68-v21-inputs/contracts.md": "71ca00be060cc1967f89cff1e4dc01a6e18f8b3f",
+    "experiments/t90-monitor-physical/CONTRACT.md": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39",
+    "experiments/t90-monitor-physical/INTERFACE.md": "3a58845113761b01464c9d13dabfb8a12abf2671",
+    "experiments/t90-monitor-physical/outputs/pinned_inputs.json": "e7a254313cca2d538867e67070499d8a313c3e2e",
+    "experiments/t95-method-regime-map/handoff.json": "dbe1f7aab015ffbaf766080ecfa3da2289677dd0",
+    "experiments/t96-hybrid-rule-implementation/CONTRACT.md": "3c89dc968427ed2c2dc8d2cc4ee67d8c1de24d1e",
+    "experiments/t96-hybrid-rule-implementation/PROPERTIES.md": "6ce3fc9151b5e4c8f9ba3d9cc5fa213d7eb7cdbf",
+    "experiments/t96-hybrid-rule-implementation/config.json": "639577de20689b7527da1caefab7b222260a9824",
+    "experiments/t96-hybrid-rule-implementation/outputs/reproduction.json": "5ddad099c47ca1ae6584a9a32b43679adf5487a3",
+    "experiments/t96-hybrid-rule-implementation/reference.py": "b1130bda8eef6da72a5e93fa900278968aa2c485",
+    "experiments/t96-hybrid-rule-implementation/test_reference.py": "dacde8910d0ba473a07683584f4c5b991b5cef4c",
+    "theory/t95-method-regime-selection-appendix.md": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+    "theory/t95-method-regime-selection.md": "6694afa688f2b46ac50d815b7c2392ffdeff557d"
+  },
+  "datasheet": {
+    "document": "002-20054 Rev. *F, 2020-03-18",
+    "pages": [
+      10,
+      14
+    ],
+    "part": "CY62167GE30-45ZXI (timing candidate; not selected board)",
+    "url": "https://www.infineon.com/dgdl/Infineon-CY62167G30_CY62167GE30_16_Mbit_%281M_words_X_16_bit_2M_words_X_8_bit%29_Static_RAM_with_Error-Correcting_Code_%28ECC%29-DataSheet-v07_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0ee9e49f72cf",
+    "sha256": "a7d9faf23208b6c0f3b2be402feb8653ff0c6f649306fc246605189018a9ed1f",
+    "existing_manifest_match": true,
+    "visual_pages_checked": [
+      10,
+      14
+    ],
+    "read_cycle_min_ns": "45",
+    "address_access_max_ns": "45",
+    "write_cycle_min_ns": "45",
+    "output_disable_max_ns": "18",
+    "write_pulse_min_ns": "35",
+    "write_data_setup_min_ns": "25",
+    "parameter_scope": "pin limits under datasheet conditions; not system WCET"
+  },
+  "fixed_phase_candidates_ticks": [
+    "4",
+    "2",
+    "1",
+    "1/2",
+    "1/4"
+  ],
+  "diagnostic_counterexample": {
+    "path_ns": "1/4",
+    "status": "positive hypothetical path, not measurement or physical bound"
+  },
+  "command_projection": {
+    "core_ticks": 4,
+    "activation": "original nominal window deadline",
+    "receipt": "inactive protected shadow",
+    "alarm_order": "ERR/loss before command selection and decision",
+    "diagnostic_jitter_ns": "1/4",
+    "diagnostic_jitter_status": "requirement illustration only; actual jitter is unknown"
+  },
+  "queue_candidate": {
+    "scope": "additional sufficient admission contract, not established workload",
+    "count_burst": 8,
+    "count_rate_per_s": 2000000,
+    "total_outstanding_capacity": 16,
+    "counts_from": "first VALID, including CDC/mailboxes/response-held entries; work envelopes still required"
+  },
+  "physical_upper_bounds_s": {
+    "outbound_launch_and_board": null,
+    "inbound_board_and_capture": null,
+    "read_to_write_turnaround": null,
+    "write_completion_and_release": null,
+    "clock_edge_uncertainty": null,
+    "cdc_good_event_latency": null,
+    "command_validation": null,
+    "command_publication": null,
+    "full_U": null,
+    "application_request": null
+  },
+  "physical_binding": {
+    "FPGA": null,
+    "board": null,
+    "alias_mapping": null,
+    "jitter_qualification": null,
+    "STA": null
+  },
+  "decision": "no compatible implementation established; request PI choice before main RTL"
+}
