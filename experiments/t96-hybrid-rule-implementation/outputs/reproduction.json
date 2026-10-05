@@ -34,7 +34,7 @@
     "config_id": "conditional-aM-AM-1e6-eta-1e-3"
   },
   "address_inverse": 294287,
-  "test_count": 45,
+  "test_count": 49,
   "tests": [
     "test_reference.Fixed.test_CPU_priority_only_when_request_fits",
     "test_reference.Fixed.test_ERR_before_at_after_decision_and_immutability",
@@ -44,6 +44,9 @@
     "test_reference.Fixed.test_applied_not_issued_time_controls_first_eligible_decision",
     "test_reference.Fixed.test_clock_rollback_and_range_fail_closed",
     "test_reference.Fixed.test_command_atomicity_replay_and_wrong_mission",
+    "test_reference.Fixed.test_committed_skip_allows_crossing_application_write_W8",
+    "test_reference.Fixed.test_committed_skip_crossing_write_at_working_W_local_state",
+    "test_reference.Fixed.test_committed_skip_crossing_write_survives_ERR_and_loss",
     "test_reference.Fixed.test_delayed_exit_needs_past_radius_and_hold",
     "test_reference.Fixed.test_duplicate_and_reordering_cannot_extend_or_resample",
     "test_reference.Fixed.test_early_wait_late_no_LOW",
@@ -71,6 +74,7 @@
     "test_reference.Fixed.test_repeated_ERR_is_not_a_new_parent_counter",
     "test_reference.Fixed.test_resource_bound_with_X_and_margin",
     "test_reference.Fixed.test_return_after_loss_no_retroactive_revocation",
+    "test_reference.Fixed.test_skip_calendar_guards_and_executed_U_write_lock",
     "test_reference.Fixed.test_sliding_window_exact_all_small_phase_edges",
     "test_reference.Fixed.test_small_model_all_skip_masks_keep_mandatory_and_phase",
     "test_reference.Fixed.test_sources_and_exact_anchor",

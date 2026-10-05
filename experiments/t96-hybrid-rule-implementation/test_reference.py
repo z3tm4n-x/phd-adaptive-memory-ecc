@@ -46,6 +46,24 @@ class Fixed(unittest.TestCase):
                        max(0, slot.decision), p.end, 0, p.end,
                        0, 0, 0, False), **kw).sealed()
 
+    def small_committed_skip(self):
+        """Review #1: exact W=8 prefix and synthetic all-covering LOW."""
+        p = replace(self.p, W=8, ka=3)
+        c, g = Calendar(p), Gate(p)
+        e = Executor(p, g, functional_writes=True)
+        a = Permission(p.mission_id, p.config_id, 1, 0, 0, p.end,
+                       0, p.end, 0, 0, 0, False).sealed()
+        self.assertTrue(g.receive(a, 0))
+        for j in range(8):
+            s = c.slot(j)
+            e.start(g.freeze(s, max(0, s.decision)), s.start)
+            e.latch(s.start + 48, 0)
+            e.finish(s.fence)
+        s = c.slot(8)
+        d = g.freeze(s, s.decision)
+        self.assertFalse(d.execute)
+        return p, c, g, e, s, d
+
     def test_sources_and_exact_anchor(self):
         self.assertEqual((self.p.W, self.p.ka, self.p.g, self.p.c), (524288, 367, 140, 100))
         self.assertEqual(self.p.Ps, 73400320)
@@ -341,6 +359,159 @@ class Fixed(unittest.TestCase):
         e.latch(target.start+48, e.values[target.word])
         e.finish(target.fence)
         self.assertEqual(e.values[target.word], 99)
+
+    def test_committed_skip_allows_crossing_application_write_W8(self):
+        p, c, g, e, s, d = self.small_committed_skip()
+        self.assertEqual((c.slot(7).fence, s.decision, s.start, c.slot(9).start),
+                         (1040, 1064, 1120, 1220))
+        self.assertTrue(c.slot(9).mandatory)
+        self.assertTrue(e.write(s.word, 99, 1100, 44, c.slot(9).start))
+        accepted = e.app_pending
+        self.assertEqual(accepted, (s.word, 99, 1144))
+        e.start(d, s.start)
+        self.assertEqual(e.j, 9)
+        self.assertTrue(e.service_valid)
+        self.assertIs(e.app_pending, accepted)
+        self.assertIsNone(e.busy)
+        self.assertIsNone(e.pending)
+        self.assertEqual(e.values[s.word], 0)  # Not committed early at skip.
+        e.application_finish(1144)
+        self.assertEqual((e.values[s.word], e.versions[s.word], e.j), (99, 1, 9))
+        self.assertIsNone(e.app_pending)
+        self.assertEqual([x for x in e.trace if x[0] == "skip"],
+                         [("skip", 8, 1120, s.word)])
+        self.assertTrue(e.service_valid)
+        self.assertFalse(e.probability_scope)
+
+    def test_committed_skip_crossing_write_survives_ERR_and_loss(self):
+        for events in (("ERR",), ("loss",), ("ERR", "loss")):
+            with self.subTest(events=events):
+                p, c, g, e, s, d = self.small_committed_skip()
+                self.assertTrue(e.write(s.word, 99, 1100, 44, c.slot(9).start))
+                accepted = e.app_pending
+                if "ERR" in events:
+                    g.err(1104)
+                if "loss" in events:
+                    g.loss(1108)
+                self.assertIs(g.freeze(s, s.start), d)
+                self.assertFalse(d.execute)
+                e.start(d, s.start)
+                self.assertEqual(e.j, 9)
+                self.assertIs(e.app_pending, accepted)
+                e.application_finish(1144)
+                self.assertEqual((e.values[s.word], e.versions[s.word], e.j),
+                                 (99, 1, 9))
+                # Slot 9 is mandatory; slot 10 demonstrates the alarm effect
+                # on a not-yet-frozen OPTIONAL decision, independently per input.
+                n = c.slot(9)
+                e.start(g.freeze(n, n.decision), n.start)
+                e.latch(n.start + 48, 0)
+                e.finish(n.fence)
+                after = c.slot(10)
+                self.assertFalse(after.initial or after.mandatory)
+                later = g.freeze(after, after.decision)
+                self.assertTrue(later.execute)
+                self.assertEqual(later.reason, "default_S")
+                e.start(later, after.start)
+                e.latch(after.start + 48, 0)
+                e.finish(after.fence)
+                self.assertEqual(e.j, 11)
+                self.assertEqual(e.values[s.word], 99)
+                self.assertTrue(e.service_valid)
+                self.assertFalse(e.probability_scope)
+
+    def test_committed_skip_crossing_write_at_working_W_local_state(self):
+        p, r = self.p, self.fresh(4)
+        c, g = Calendar(p), Gate(p)
+        self.assertEqual((p.W, p.ka), (524288, 367))
+        self.assertEqual(r.now, 4_100_011_001)
+        self.assertTrue(g.receive(r.permission(r.now), r.now))
+        e = Executor(p, g, functional_writes=True)
+        # Declared local precondition, not a simulated 29-million-slot prefix:
+        # original j/phase retained, all earlier commitments completed, bus
+        # idle after previous fence, no repair/application pending; this word
+        # stores zero with version zero. The five full diagnostic windows
+        # above establish the actual Rule/Gate state, not an all-covering LOW.
+        e.j = 29_285_794
+        s = c.slot(e.j)
+        e.values[s.word], e.versions[s.word] = 0, 0
+        self.assertIsNone(e.busy)
+        self.assertIsNone(e.pending)
+        self.assertIsNone(e.app_pending)
+        self.assertEqual((c.slot(s.j-1).fence, s.decision, s.start,
+                          c.slot(s.j+1).start),
+                         (4_100_011_080, 4_100_011_104, 4_100_011_160,
+                          4_100_011_260))
+        d = g.freeze(s, s.decision)
+        self.assertFalse(d.execute)
+        self.assertTrue(e.write(s.word, 99, 4_100_011_140, 44,
+                                c.slot(s.j+1).start))
+        accepted = e.app_pending
+        self.assertEqual(accepted, (s.word, 99, 4_100_011_184))
+        e.start(d, s.start)
+        self.assertEqual(e.j, s.j+1)
+        self.assertIs(e.app_pending, accepted)
+        self.assertEqual(e.values[s.word], 0)
+        e.application_finish(4_100_011_184)
+        self.assertEqual((e.values[s.word], e.versions[s.word], e.j),
+                         (99, 1, s.j+1))
+        self.assertTrue(e.service_valid)
+        self.assertFalse(e.probability_scope)
+
+    def test_skip_calendar_guards_and_executed_U_write_lock(self):
+        # Advancing a skip still validates the complete slot and exact phase.
+        for bad in ("j", "word", "start", "decision", "fence", "time", "busy", "duplicate"):
+            with self.subTest(bad=bad):
+                p, c, g, e, s, d = self.small_committed_skip()
+                self.assertTrue(e.write(s.word, 99, 1100, 44, c.slot(9).start))
+                accepted = e.app_pending
+                now = s.start
+                if bad == "time":
+                    now += 4
+                elif bad == "busy":
+                    e.busy = c.slot(7)  # Inject an unfinished real U.
+                    e.pending = (e.busy.word, 0, 0)
+                elif bad == "duplicate":
+                    e.start(d, now)
+                else:
+                    d = replace(d, slot=replace(s, **{bad: getattr(s, bad)+1}))
+                before_j, before_trace = e.j, list(e.trace)
+                with self.assertRaises(ValueError):
+                    e.start(d, now)
+                self.assertEqual(e.j, before_j)
+                self.assertEqual(e.trace, before_trace)
+                self.assertIs(e.app_pending, accepted)
+                self.assertFalse(e.service_valid)
+
+        p, c, g, e, s, d = self.small_committed_skip()
+        e.start(d, s.start)
+        n = c.slot(9)
+        real = g.freeze(n, n.decision)
+        self.assertTrue(real.execute)
+        self.assertFalse(e.write(n.word, 99, 1200, 44, n.start))
+        self.assertIsNone(e.app_pending)
+        # Deliberately supply an incorrect next_reserved: start must detect
+        # the caller's illegal overlap even if the write was already accepted.
+        self.assertTrue(e.write(n.word, 99, 1200, 44, c.slot(10).start))
+        accepted = e.app_pending
+        with self.assertRaises(ValueError):
+            e.start(real, n.start)
+        self.assertEqual(e.j, 9)
+        self.assertIs(e.app_pending, accepted)
+        self.assertIsNone(e.busy)
+        self.assertFalse(e.service_valid)
+
+        # The opposite order stays locked: a new write cannot enter an active
+        # U; injected version drift must never permit the older repair commit.
+        g, s = Gate(p), c.slot(0)
+        e = Executor(p, g, functional_writes=True)
+        e.start(g.freeze(s, 0), 0)
+        e.latch(48, 1)
+        self.assertFalse(e.write(s.word, 99, 49, 44, c.slot(2).start))
+        e.values[s.word], e.versions[s.word] = 99, 1  # Deliberate lock violation.
+        with self.assertRaises(AssertionError):
+            e.finish(s.fence)
+        self.assertEqual(e.values[s.word], 99)
 
     def test_pending_write_drains_on_monitor_or_program_reset(self):
         for event in ("loss", "program_reset"):

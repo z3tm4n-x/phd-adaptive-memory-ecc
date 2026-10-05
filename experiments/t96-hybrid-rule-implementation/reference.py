@@ -393,8 +393,11 @@ class Executor:
 
     def start(self, decision, now):
         s = decision.slot
+        # A committed skip advances the calendar without occupying the bus.
+        # An accepted application write may cross it and keeps its own commit.
         if (s != Calendar(self.p).slot(self.j) or now != s.start
-                or self.busy is not None or self.app_pending is not None):
+                or self.busy is not None
+                or (decision.execute and self.app_pending is not None)):
             self.service_valid = False
             raise ValueError("missed/duplicate/shifted reservation")
         self.trace.append(("start" if decision.execute else "skip", s.j, now, s.word))
