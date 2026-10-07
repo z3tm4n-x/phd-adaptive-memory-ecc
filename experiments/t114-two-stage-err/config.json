@@ -1,0 +1,27 @@
+{
+  "task": 114,
+  "base_sha": "cdcf0373773869b2ca9bd83abe24fd82b9867b9a",
+  "accepted_T104_sha": "36f0dab3cfb1e051b9480d02c5aae303e943ecfe",
+  "accepted_T110_sha": "8d8cacde4f0069facee4415d8933425ed7abc04f",
+  "accepted_T113_sha": "d6668355a3d3fb6cbb409d38fa3c1f727154a1ed",
+  "external_docx_sha256": "8bd00062b8bea45576fffaff961bb7efff9a56d7da9d6ad1c10a5e365caa14af",
+  "calendar": {"batch": 8, "c_ticks": 164, "read_charge_ticks": 104, "gate_ticks": 320, "app_observed_charge_ticks": 240},
+  "growth_classes": [
+    {"name": "main", "rho_per_s": "0.048", "w_s": "90", "h_s": "180"},
+    {"name": "conditional_60s", "rho_per_s": "1/60", "w_s": "60", "h_s": "120"},
+    {"name": "conditional_180s", "rho_per_s": "1/180", "w_s": "40", "h_s": "90"}
+  ],
+  "profiles": [
+    {"name": "singleton_read", "g_ticks": 192, "a_parent": "1", "cluster_rate_ratio": "0", "observed_writes": false},
+    {"name": "singleton_write", "g_ticks": 196, "a_parent": "1", "cluster_rate_ratio": "0", "observed_writes": true},
+    {"name": "MCU_calibrated_write", "g_ticks": 196, "a_parent": "9/10", "cluster_rate_ratio": "1/10", "observed_writes": true},
+    {"name": "MCU2_write", "g_ticks": 196, "a_parent": "1/2", "cluster_rate_ratio": "1/2", "observed_writes": true},
+    {"name": "MCU4_write", "g_ticks": 196, "a_parent": "1/4", "cluster_rate_ratio": "1/2", "observed_writes": true},
+    {"name": "uncalibrated_write", "g_ticks": 196, "a_parent": "0", "cluster_rate_ratio": "1/2", "observed_writes": true}
+  ],
+  "price_contract": {"quiet_fraction": "9/10", "quiet_components": 1000, "outage_fraction_max": "1/10000", "recoveries_max": 1000, "false_flag_rate_max": "1/1000000", "X_rate": "1/10000", "X_burst_s": "209/1000000000"},
+  "timing_requirements": {"ERR_or_loss_to_rule_s": "3/2500000", "reply_backpressure_s": "1/10000000", "frame_margin": "11/10", "request_deadline_s": "3/1000000", "peak_window_s": "1/1000", "peak_max": "4/5"},
+  "numerical_contract": {"decimal_precision": 48, "initial_cells": 1024, "refinements": 8, "u_multipliers": [1,2,4,16], "ka_preview_max": 63, "preview_has_no_certificate_authority": true},
+  "unknowns": {"physical_ERR_lower_channel": null, "physical_MCU_multiplicity": null, "physical_cluster_rate": null, "application_write_preobservation": null, "actual_application_rate": null, "actual_application_burst": null, "actual_channel_availability": null, "continuous_growth_bound": null, "joint_WCET": null},
+  "scope": "Addressed deterministic calculation only; no radiation campaign, no RTL, no new physical qualification"
+}
