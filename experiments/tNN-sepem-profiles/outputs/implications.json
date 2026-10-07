@@ -1,0 +1,27 @@
+{
+  "historical": {
+    "value_type": "calculated_historical_reproduction",
+    "LET_ion_s-1": 0.22118220883031528,
+    "proton_s-1": {
+      "HEP": 0.02334558368674619,
+      "PDI_HEP": 0.33546204095255233
+    },
+    "LET_fraction_of_historical_nuS": 0.9045278925293644,
+    "LET_only_old_rectangle_S2_s-1": 5663.9436307859505,
+    "maximum_absolute_reproduction_difference": 7.605027718682322e-15,
+    "scope": "Historical aggregate LET includes unresolved species; not a new He or Z>=3 temporal estimate",
+    "sources_sha256": {
+      "experiments\\t68-v21-inputs\\inputs\\calc_v18.zip": "14ac38ff24c1bf1a199278f08a7c807176b8b613f434719309050248b8929b83",
+      "experiments\\t68-v21-inputs\\inputs\\cosrad_main\\sl_x.txt": "dbd44c3322293e9bb2238343af38ba08032e1a184da5cb2021942e86ac702350",
+      "experiments\\t68-v21-inputs\\inputs\\cosrad_main\\sp_x.txt": "1d6e2536011f41bbb74189a2730cb1eaa9102aa1fec42a6b10d4e8b32fbcc57a"
+    }
+  },
+  "multiplier_s": 1.0028638337787829e-07,
+  "issued_replacement_S2_s-1": null,
+  "established_freed_probability": null,
+  "old_accumulation": 0.0006959875006424753,
+  "old_direct": 0.00028024,
+  "old_remaining": 2.3772499357524672e-05,
+  "blocker": "Full R0-A species/response/time-envelope transfer and joint exceedance are not established by the empirical proton model",
+  "accepted_rules_or_certificates_modified": false
+}

@@ -1,0 +1,9 @@
+# Retain the exact bytes identified by manifests (including JSON/SVG line endings).
+# -text disables checkout normalization, not textual diff display.
+.gitattributes text eol=lf
+.gitignore text eol=lf
+requirements.txt text eol=lf
+inputs/* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Matplotlib's generated SVG path syntax contains intentional spaces at EOL.
+outputs/*.svg -whitespace

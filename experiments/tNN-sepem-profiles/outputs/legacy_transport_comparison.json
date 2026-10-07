@@ -1,0 +1,160 @@
+{
+  "status": "arithmetic_regression_and_model_difference_recorded",
+  "inputs": {
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/recovery/outputs/radar_transport.npz": "7f006d49c4e469b624db62b84925571c40f0602cfbd0f3b333211521dad60f9e",
+    "experiments/t67-goes-growth/response.py": "c9c97d0a45695168fd372f6957c08d39bbbd54ea1305614c8f74a46065da7201",
+    "experiments/t67-goes-growth/outputs/reference_events.csv": "191e1fad61a09226d155dd65d0e87a4338688ed674f4b7892607e33e654e625a",
+    "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+    "experiments/tNN-sepem-profiles/transport.py": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45",
+    "experiments/tNN-sepem-profiles/inputs/nist_pstar_al.csv": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9"
+  },
+  "matrix_energy_points": 192,
+  "matrix_thicknesses_mm_al": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    7.0,
+    10.0
+  ],
+  "d0_primary_identity_max_abs": 2.7755575615628914e-15,
+  "d0_secondary_max_abs": 0.0,
+  "response_points_identical": true,
+  "synthetic_spectra": [
+    {
+      "spectral_power": 0.0,
+      "incident_model": "(E/10 MeV)^(-power) exp(-E/350 MeV)",
+      "shield_g_cm2_al": 2.7,
+      "protected_bits": 19922944,
+      "angular_factor": 12.566370614359172,
+      "incident_support_MeV": "5..390",
+      "legacy_primary_s-1": 0.008789510128749525,
+      "legacy_secondary_s-1": 5.862547203293916e-06,
+      "legacy_total_s-1": 0.008795372675952819,
+      "legacy_native_0p11_390_total_s-1": 0.008795372675952819,
+      "new_CSDA_primary_only_s-1": 0.009031565587908678,
+      "new_over_legacy_primary": 1.0275391296686054,
+      "new_over_legacy_total": 1.0268542244493661,
+      "matrix_order_relative_difference": 2.80245757322954e-17,
+      "new_quadrature_24_48_relative_difference": 3.6878092081118705e-14,
+      "full38_over_data32": 1.1875,
+      "value_type": "calculated_diagnostic_not_physical_equivalence"
+    },
+    {
+      "spectral_power": 1.5,
+      "incident_model": "(E/10 MeV)^(-power) exp(-E/350 MeV)",
+      "shield_g_cm2_al": 2.7,
+      "protected_bits": 19922944,
+      "angular_factor": 12.566370614359172,
+      "incident_support_MeV": "5..390",
+      "legacy_primary_s-1": 0.0005504021002786306,
+      "legacy_secondary_s-1": 5.173848857649422e-07,
+      "legacy_total_s-1": 0.0005509194851643956,
+      "legacy_native_0p11_390_total_s-1": 0.0005509194851643957,
+      "new_CSDA_primary_only_s-1": 0.0005714081283559942,
+      "new_over_legacy_primary": 1.0381648763090288,
+      "new_over_legacy_total": 1.0371899047743514,
+      "matrix_order_relative_difference": 6.476674698198419e-17,
+      "new_quadrature_24_48_relative_difference": 5.5025228801947843e-14,
+      "full38_over_data32": 1.1874999999999998,
+      "value_type": "calculated_diagnostic_not_physical_equivalence"
+    },
+    {
+      "spectral_power": 3.0,
+      "incident_model": "(E/10 MeV)^(-power) exp(-E/350 MeV)",
+      "shield_g_cm2_al": 2.7,
+      "protected_bits": 19922944,
+      "angular_factor": 12.566370614359172,
+      "incident_support_MeV": "5..390",
+      "legacy_primary_s-1": 4.765293597206846e-05,
+      "legacy_secondary_s-1": 4.6784336998859724e-08,
+      "legacy_total_s-1": 4.769972030906732e-05,
+      "legacy_native_0p11_390_total_s-1": 4.769972030906732e-05,
+      "new_CSDA_primary_only_s-1": 4.979242213706629e-05,
+      "new_over_legacy_primary": 1.0448972580881875,
+      "new_over_legacy_total": 1.0438724129709658,
+      "matrix_order_relative_difference": 2.4000517410911736e-17,
+      "new_quadrature_24_48_relative_difference": 6.110452586866053e-14,
+      "full38_over_data32": 1.1875,
+      "value_type": "calculated_diagnostic_not_physical_equivalence"
+    }
+  ],
+  "preselected_T67_event_peaks": [
+    {
+      "event_id": "sep_20170910_1645",
+      "peak_start_utc": "2017-09-11T11:40:00+00:00",
+      "satellite": "16",
+      "direction": "W",
+      "cadence_s": 300,
+      "shield_mm_al": 10.0,
+      "shield_g_cm2_al": 2.7,
+      "T67_peak_data32_s-1": 0.03805361184839401,
+      "same_chain_scaled_full38_s-1": 0.04518866406996788,
+      "full38_over_data32": 1.1875,
+      "value_type": "calculated_legacy_and_normalization",
+      "scope": "directional screened maximum; not E/W mean; same-chain scaling assumes equal sensitivity of all 38 positions"
+    },
+    {
+      "event_id": "sep_20241009_0505",
+      "peak_start_utc": "2024-10-09T19:20:00+00:00",
+      "satellite": "18",
+      "direction": "W",
+      "cadence_s": 300,
+      "shield_mm_al": 10.0,
+      "shield_g_cm2_al": 2.7,
+      "T67_peak_data32_s-1": 0.011133000642447766,
+      "same_chain_scaled_full38_s-1": 0.013220438262906722,
+      "full38_over_data32": 1.1875,
+      "value_type": "calculated_legacy_and_normalization",
+      "scope": "directional screened maximum; not E/W mean; same-chain scaling assumes equal sensitivity of all 38 positions"
+    },
+    {
+      "event_id": "sep_20260118_2255",
+      "peak_start_utc": "2026-01-19T19:20:00+00:00",
+      "satellite": "19",
+      "direction": "E",
+      "cadence_s": 300,
+      "shield_mm_al": 10.0,
+      "shield_g_cm2_al": 2.7,
+      "T67_peak_data32_s-1": 0.3645542787458124,
+      "same_chain_scaled_full38_s-1": 0.4329082060106523,
+      "full38_over_data32": 1.1875,
+      "value_type": "calculated_legacy_and_normalization",
+      "scope": "directional screened maximum; not E/W mean; same-chain scaling assumes equal sensitivity of all 38 positions"
+    }
+  ],
+  "limitations": [
+    "Legacy primary includes the retained nuclear survival treatment and a different range table/discretization; new CSDA is primary only with NIST PSTAR ranges.",
+    "These differences are documented candidates for the observed discrepancy, not a quantified causal decomposition or a proof of accuracy.",
+    "Legacy matrices have only seven retained thicknesses, up to 10 mm Al = 2.7 g/cm2; no matrix for 3 g/cm2 is constructed or interpolated here.",
+    "Synthetic common-support folding excludes the legacy >390 MeV bridge/tail; retained real T67 peaks include their declared full historical chain.",
+    "T67 peaks are maxima over screened direction/satellite records, not a central E/W average, and have no common events with the 1974-2015 RDS archive.",
+    "Scaling T67 by 38/32 changes only the declared bit count, not shielding, instruments, event profile or confidence in the physical model.",
+    "No numerical agreement threshold between physical transport models is imposed; only arithmetic and unit normalization are tested."
+  ],
+  "RDS_noncoincident_examples": [
+    {
+      "event_id": "E0048",
+      "peak_utc": "1989-10-20T15:25:00Z",
+      "peak_lambda_s-1": "0.39277614627689045",
+      "N_expected_upsets": "17249.51380386036",
+      "S2_s-1": "1944.5545023651666"
+    },
+    {
+      "event_id": "E0098",
+      "peak_utc": "2003-10-29T02:40:00Z",
+      "peak_lambda_s-1": "0.27862458309878185",
+      "N_expected_upsets": "15994.212977313093",
+      "S2_s-1": "2623.126626869867"
+    },
+    {
+      "event_id": "E0105",
+      "peak_utc": "2005-01-20T07:45:00Z",
+      "peak_lambda_s-1": "0.1474532732091196",
+      "N_expected_upsets": "5112.377722709223",
+      "S2_s-1": "223.12157486985907"
+    }
+  ],
+  "RDS_events_input_sha256": "cb0c9bf29963002342bda99a0851743a7bc432b17703275faf2775d2a0f511e8"
+}

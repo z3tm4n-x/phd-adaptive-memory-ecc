@@ -1,0 +1,141 @@
+{
+  "status": "conditional_mean_cycle_scenario_not_calendar_forecast",
+  "mission_mean_events": 92.5548,
+  "exceedance_probability": 0.1,
+  "interpolation": "linear coefficients in log2(nbar); declared numerical choice under section 5.9",
+  "parameters": {
+    "fluence": {
+      "log10_c": 9.815235930735426,
+      "break_energy_mev": 14.44860495040084,
+      "gamma1": 1.3962578872541822,
+      "gamma2": 2.6104197536780895
+    },
+    "peak_flux": {
+      "log10_c": 3.5979314068461936,
+      "break_energy_mev": 16.429533633649495,
+      "gamma1": 1.378773661762547,
+      "gamma2": 2.486469137873314
+    }
+  },
+  "normalization": {
+    "protected_bits": 19922944,
+    "fluence_solid_angle_factor": 1.0,
+    "peak_flux_solid_angle_factor": 12.566370614359172,
+    "fluence_units": "cm-2 MeV-1",
+    "peak_flux_units": "cm-2 s-1 sr-1 MeV-1"
+  },
+  "incident_integrals_to_infinity": {
+    "fluence": {
+      "10": {
+        "value": 94471794744.78377,
+        "quad_estimated_absolute_error": 0.03487082703801285
+      },
+      "30": {
+        "value": 16808998937.899067,
+        "quad_estimated_absolute_error": 0.015203087440724898
+      },
+      "60": {
+        "value": 5079095389.808034,
+        "quad_estimated_absolute_error": 0.008300557864069611
+      },
+      "100": {
+        "value": 2023640532.170971,
+        "quad_estimated_absolute_error": 0.003245366914708606
+      }
+    },
+    "peak_flux": {
+      "10": {
+        "value": 77902.08785876702,
+        "quad_estimated_absolute_error": 1.4561113656748966e-07
+      },
+      "30": {
+        "value": 16617.192925024436,
+        "quad_estimated_absolute_error": 1.4737215243720056e-07
+      },
+      "60": {
+        "value": 5469.085633050271,
+        "quad_estimated_absolute_error": 1.4724855933882558e-07
+      },
+      "100": {
+        "value": 2322.490413160552,
+        "quad_estimated_absolute_error": 1.5283458829369527e-07
+      }
+    }
+  },
+  "integral_units": {
+    "fluence": "cm-2",
+    "peak_flux": "cm-2 s-1 sr-1"
+  },
+  "gost": {
+    "csda_3_pdi": {
+      "peak_lambda_s-1": 1.4250274255787554,
+      "N_expected_upsets": 114831.72264558254,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 9990.82897605946,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "csda_2p5_pdi": {
+      "peak_lambda_s-1": 1.9647297179265661,
+      "N_expected_upsets": 160559.29889374427,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 9990.820866208856,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "csda_3_no_pdi": {
+      "peak_lambda_s-1": 0.1575885418926746,
+      "N_expected_upsets": 11907.234046860272,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 9990.82897605946,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "csda_3_interpolant_upper": {
+      "peak_lambda_s-1": 3.597430060429968,
+      "N_expected_upsets": 291215.80642873776,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 9990.82897605946,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "bohr_3_pdi": {
+      "peak_lambda_s-1": 1.425518576477755,
+      "N_expected_upsets": 114874.28240551727,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 9990.832753384402,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "bohr_2p5_pdi": {
+      "peak_lambda_s-1": 1.9654749480662774,
+      "N_expected_upsets": 160624.46739972552,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 9990.824048495067,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "csda_3_cut289": {
+      "peak_lambda_s-1": 1.4182786258186002,
+      "N_expected_upsets": 114424.24975518265,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 289.14905609245875,
+      "value_type": "calculated_conditional_scenario"
+    },
+    "csda_3_cut1000": {
+      "peak_lambda_s-1": 1.4246182315736429,
+      "N_expected_upsets": 114811.18625417005,
+      "fluence_gt30_omni_cm-2": 16808998937.899067,
+      "incident_quadrature_min_MeV": 5.00460984143832,
+      "incident_quadrature_max_MeV": 999.5881533899462,
+      "value_type": "calculated_conditional_scenario"
+    }
+  },
+  "limitations": [
+    "Separate marginal peak and fluence levels do not establish a joint S2 quantile",
+    "Response convolution uses only supplied finite incident-energy quadrature support",
+    "Quadrature error estimates are diagnostics, not rigorous interval certificates",
+    "The chosen mean-cycle input is not a forecast under GOST 25645.302"
+  ]
+}

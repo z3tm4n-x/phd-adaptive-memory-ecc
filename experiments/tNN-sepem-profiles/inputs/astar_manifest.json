@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-10-07",
+  "energy_convention": "total kinetic MeV per alpha particle",
+  "url": "https://physics.nist.gov/cgi-bin/Star/ap_table-t.pl",
+  "documentation": "https://physics.nist.gov/PhysRefData/Star/Text/programs.html",
+  "scope": "ASTAR CSDA and stopping powers; not a secondary transport calculation",
+  "tables": [
+    {
+      "material": "ALUMINUM",
+      "post": {
+        "prog": "ASTAR",
+        "matno": "013",
+        "Energies": "",
+        "ShowDefault": "on"
+      },
+      "raw_response_sha256": "13d99096048b03796111cd1ebd118c131de890a7985c98d4e97b792686cb166c",
+      "derived_csv": "nist_astar_al.csv",
+      "derived_csv_sha256": "9a3e7084512a5c3bc628a352a919052b2f0bbae3bae7fb482fdb21a736710777",
+      "rows": 121,
+      "total_energy_MeV": [
+        0.001,
+        1000.0
+      ],
+      "energy_MeV_per_nucleon": [
+        0.00025,
+        250.0
+      ]
+    },
+    {
+      "material": "SILICON",
+      "post": {
+        "prog": "ASTAR",
+        "matno": "014",
+        "Energies": "",
+        "ShowDefault": "on"
+      },
+      "raw_response_sha256": "a56bb9a87ea9794b293d49206c16b5f20ea42ec1029329068613da67533b9a44",
+      "derived_csv": "nist_astar_si.csv",
+      "derived_csv_sha256": "a6ed4fccf392aa5d5d1f1028f539f985e0fb09286aea990dcc86687c609a904d",
+      "rows": 121,
+      "total_energy_MeV": [
+        0.001,
+        1000.0
+      ],
+      "energy_MeV_per_nucleon": [
+        0.00025,
+        250.0
+      ]
+    }
+  ]
+}
