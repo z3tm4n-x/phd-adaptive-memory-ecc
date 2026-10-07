@@ -1,0 +1,312 @@
+{
+  "task": 104,
+  "scope": "Option 2 timing inputs for addressed theoretical supplement; not a new scientific SHA",
+  "new_scientific_SHA": null,
+  "report": "outputs/budget.json",
+  "config": "budget_config.json",
+  "previous_engineering_sha": "6e745aa7423a33220180ff6059073348fee7e83a",
+  "T95_sha": "8ecc8fb24213e03110789646725481cd34d09ab9",
+  "A_sha": "96e1cc58ffe91ea5ef6ac3960fb4da03423b56d1",
+  "T90_sha": "06db1af2474a511cf3070c72666f5f78de10fab3",
+  "T88_sha": "da4de9c6684efa20de155b422dd0b25f50930108",
+  "pinned_sources": {
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/source_manifest.json": "277772c3337f586bf1803122f867f498ca71c238",
+    "experiments/t68-v21-inputs/contracts.md": "71ca00be060cc1967f89cff1e4dc01a6e18f8b3f",
+    "experiments/t90-monitor-physical/CONTRACT.md": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39",
+    "experiments/t90-monitor-physical/INTERFACE.md": "3a58845113761b01464c9d13dabfb8a12abf2671",
+    "experiments/t90-monitor-physical/outputs/pinned_inputs.json": "e7a254313cca2d538867e67070499d8a313c3e2e",
+    "experiments/t95-method-regime-map/handoff.json": "dbe1f7aab015ffbaf766080ecfa3da2289677dd0",
+    "experiments/t96-hybrid-rule-implementation/CONTRACT.md": "3c89dc968427ed2c2dc8d2cc4ee67d8c1de24d1e",
+    "experiments/t96-hybrid-rule-implementation/PROPERTIES.md": "6ce3fc9151b5e4c8f9ba3d9cc5fa213d7eb7cdbf",
+    "experiments/t96-hybrid-rule-implementation/config.json": "639577de20689b7527da1caefab7b222260a9824",
+    "experiments/t96-hybrid-rule-implementation/outputs/reproduction.json": "5ddad099c47ca1ae6584a9a32b43679adf5487a3",
+    "experiments/t96-hybrid-rule-implementation/reference.py": "b1130bda8eef6da72a5e93fa900278968aa2c485",
+    "experiments/t96-hybrid-rule-implementation/test_reference.py": "dacde8910d0ba473a07683584f4c5b991b5cef4c",
+    "theory/t95-method-regime-selection-appendix.md": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+    "theory/t95-method-regime-selection.md": "6694afa688f2b46ac50d815b7c2392ffdeff557d"
+  },
+  "T95_baseline_unchanged_not_new_timing": {
+    "W": 524288,
+    "n": 38,
+    "T_s": "315576000",
+    "epsilon": "1/1000",
+    "Dstar": "560489/2000000000",
+    "control_Dstar": "1/20000",
+    "clock_constant_scale_lower": "99999/100000",
+    "clock_constant_scale_upper": "100001/100000",
+    "tick_nominal_s": "1/1000000000",
+    "time_margin": "1/10",
+    "c_ticks": 100,
+    "g_ticks": 140,
+    "ka": 367,
+    "fence_ticks": 100,
+    "decision_lead_ticks": 56,
+    "mandatory": "j mod 367 == 0",
+    "short_start_ticks": "2*140*floor(j/2)+100*(j mod 2)",
+    "word": "inverse(367) mod 524288 * j mod 524288",
+    "hold_ERR_s": "1",
+    "hold_monitor_s": "1"
+  },
+  "monitor_baseline": {
+    "aM": "1000000",
+    "AM": "1000000",
+    "eta_per_s": "1/1000",
+    "k": 223,
+    "z": "3/10",
+    "H": 35,
+    "J": 631158312,
+    "lease_ticks": 2940811639,
+    "vc": "179451472649113/351509000000000000",
+    "nominal_window_s": "1",
+    "nominal_stride_s": "1/2",
+    "required_post_window_path_s": "1",
+    "rounded_delivery_upper_s": "110002200111001/100000000000000",
+    "interface": "experiments/t90-monitor-physical/INTERFACE.md",
+    "physically_confirmed": null
+  },
+  "loss_policy_unchanged": {
+    "event": "recognized loss or invalid/expired LOW",
+    "action": "default S on original calendar; no cancellation of committed slots or pending write",
+    "risk_certificate": "same lifetime U_M; no restart or addition of U_S",
+    "recovery": "same config and absolute grid, fresh complete windows, holds and full two-sided LOW; no resampling same window",
+    "silent_wrong_counts": "must be covered by the single mission delta_M; timeout is not sufficient",
+    "ERR_only_transition_certified": false
+  },
+  "T95_resource_baseline_not_new_atomic_limit": {
+    "CX": "1/10000",
+    "sigmaX_s": "1/10000000",
+    "max_extra_atomic_request_s": "45/1000000000",
+    "peak_limit": "4/5",
+    "peak_window_s": "1/1000",
+    "app_delay_with_margin_limit_s": "3/1000000",
+    "TQ_min": "0.9*T",
+    "KQ_max": 1000,
+    "physical_qualification": false
+  },
+  "fixed_goals": {
+    "epsilon": "1/1000",
+    "T_s": "315576000",
+    "time_margin": "1/10",
+    "peak_limit": "4/5",
+    "peak_window_s": "1/1000",
+    "app_delay_with_margin_limit_s": "3/1000000",
+    "quiet_control_load_limit": "1/100"
+  },
+  "rows": [
+    {
+      "shield": "3",
+      "Dstar": "560489/2000000000",
+      "environment": {
+        "T": "315576000",
+        "eps": "1/1000",
+        "W": 524288,
+        "n": 38,
+        "b": "9669/62500000",
+        "B": "15292669/62500000",
+        "FS": "442351152/15625",
+        "S2": "6940",
+        "K": 1,
+        "beta": "37/39845888",
+        "beta0": "1/1048576"
+      },
+      "quotas": {
+        "rho0": "0.000001",
+        "delta_exec": "0.000001",
+        "delta_svc": "0.000001",
+        "delta_E": "0.000001",
+        "delta_M": "0.000001",
+        "alpha_M": "0.000001",
+        "K0": 1,
+        "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+        "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+      },
+      "mark_contract": {
+        "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+        "per_word_non_smu_touch_rate": "<=nu/W",
+        "sum_non_smu_word_touch_rates": "<=nu",
+        "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+        "chi_different_bit_pairs": "37/(38*W)",
+        "D_star_full38_direct_exposure_upper": "variable prescribed axis D*, never optimized downward",
+        "physical_qualification": false,
+        "unknown_full38_smu_upper": null,
+        "MCU_independence_or_zero_assumption": false,
+        "Dstar_meaning": "E[number of parents touching >=2 positions of at least one full word / mission]"
+      },
+      "old_application_contract": {
+        "price": "expected occupied common-bus time through T, including after hidden failure",
+        "b_nom": "bbar for each shielding point",
+        "quiet_tax_limit": "0.01",
+        "peak_limit": "0.8",
+        "peak_window_s": "0.001",
+        "application_delay_limit_s": "0.000003",
+        "application_max_request_s": "0.000000045",
+        "application_sigma_s": "0.000000045",
+        "application_rate": "0.04",
+        "extra_monitor_control_rate": "0.0001",
+        "extra_monitor_control_sigma_s": "0.0000001",
+        "extra_request_max_s": "0.000000045",
+        "quiet_return_example": {
+          "T_Q_min": "0.9*T",
+          "K_Q_max": 1000,
+          "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+        },
+        "resource_qualification": false,
+        "T58_grid_changed": false
+      },
+      "source_selector": "experiments/t90-monitor-physical/outputs/pinned_inputs.json shield=3",
+      "new_selected_calendar": null,
+      "new_Q_upper": null
+    },
+    {
+      "shield": "2.5",
+      "Dstar": "109073/2000000000",
+      "environment": {
+        "T": "315576000",
+        "eps": "1/1000",
+        "W": 524288,
+        "n": 38,
+        "b": "1039/6250000",
+        "B": "2166289/6250000",
+        "FS": "125341992/3125",
+        "S2": "13918",
+        "K": 1,
+        "beta": "37/39845888",
+        "beta0": "1/1048576"
+      },
+      "quotas": {
+        "rho0": "0.000001",
+        "delta_exec": "0.000001",
+        "delta_svc": "0.000001",
+        "delta_E": "0.000001",
+        "delta_M": "0.000001",
+        "alpha_M": "0.000001",
+        "K0": 1,
+        "initial_pending_write": "excluded on the good initial event; qualification not claimed",
+        "fixed_competitor_quotas": "rho0 + delta_exec + delta_svc; no unnecessary monitor/statistical quota"
+      },
+      "mark_contract": {
+        "parents": "exogenous marked NHPP; marks independent across parents; multiword marks allowed",
+        "per_word_non_smu_touch_rate": "<=nu/W",
+        "sum_non_smu_word_touch_rates": "<=nu",
+        "position_law": "time-invariant conditional bit-position distribution in each word, for non-SMU touches",
+        "chi_different_bit_pairs": "37/(38*W)",
+        "D_star_full38_direct_exposure_upper": "variable prescribed axis D*, never optimized downward",
+        "physical_qualification": false,
+        "unknown_full38_smu_upper": null,
+        "MCU_independence_or_zero_assumption": false,
+        "Dstar_meaning": "E[number of parents touching >=2 positions of at least one full word / mission]"
+      },
+      "old_application_contract": {
+        "price": "expected occupied common-bus time through T, including after hidden failure",
+        "b_nom": "bbar for each shielding point",
+        "quiet_tax_limit": "0.01",
+        "peak_limit": "0.8",
+        "peak_window_s": "0.001",
+        "application_delay_limit_s": "0.000003",
+        "application_max_request_s": "0.000000045",
+        "application_sigma_s": "0.000000045",
+        "application_rate": "0.04",
+        "extra_monitor_control_rate": "0.0001",
+        "extra_monitor_control_sigma_s": "0.0000001",
+        "extra_request_max_s": "0.000000045",
+        "quiet_return_example": {
+          "T_Q_min": "0.9*T",
+          "K_Q_max": 1000,
+          "status": "additional price-only contract, not inferred from fluence; initial portions of quiet intervals remain in the metric"
+        },
+        "resource_qualification": false,
+        "T58_grid_changed": false
+      },
+      "source_selector": "experiments/t90-monitor-physical/outputs/pinned_inputs.json shield=2.5",
+      "new_selected_calendar": null,
+      "new_Q_upper": null
+    }
+  ],
+  "proposed_service_timing": {
+    "tick_min_ns": "99999/100000",
+    "tick_max_ns": "100001/100000",
+    "edge_span_ns": "1/2",
+    "margin_factor": "11/10",
+    "core_ticks": 4,
+    "control_ticks": {
+      "grant_lock": 0,
+      "launch_read": 4,
+      "capture_DQ_ERR": 60,
+      "decision_disable_outputs": 64,
+      "release_if_no_ERR": 92,
+      "drive_and_WE_low_if_ERR": 92,
+      "write_end": 132,
+      "controller_DQ_off": 140,
+      "release_if_ERR": 148
+    },
+    "application_write_ticks": {
+      "grant": 0,
+      "address_CE_BE_DQ": 4,
+      "WE_low": 12,
+      "write_end": 52,
+      "DQ_off": 60,
+      "release": 68
+    },
+    "upper_ns": {
+      "read_no_ERR": "2312523/25000",
+      "read_ERR_repair": "3712537/25000",
+      "unconditional_write_comparator": "3712537/25000",
+      "application_read16": "2312523/25000",
+      "application_write16": "1712517/25000",
+      "application_read16_with_inline_repair": "3712537/25000",
+      "application_read32_with_inline_repairs": "3712537/12500",
+      "application_read32_atomic_two_aliases": "2312523/12500",
+      "application_write32_atomic_two_aliases": "1712517/12500"
+    },
+    "charge_ticks_with_margin": {
+      "read_no_ERR": 104,
+      "read_ERR_repair": 164,
+      "application_read16": 104,
+      "application_write16": 76,
+      "application_read32_atomic": 208,
+      "application_write32_atomic": 152
+    },
+    "outside_lock_upper_ns": {
+      "request_CDC_validation": "51563/3125",
+      "response_CDC": "101251/2500",
+      "command_receive_validate_shadow": "203127/6250"
+    },
+    "first_VALID_to_done_no_queue_no_backpressure_ns": {
+      "read16": "3737537/25000",
+      "write16": "3137531/25000",
+      "read32_atomic": "302503/1250",
+      "write32_atomic": "606256/3125"
+    },
+    "unbounded_until_contract": [
+      "queue waiting",
+      "reply backpressure",
+      "CPU/monitor transport before command mailbox"
+    ],
+    "rounding_rule": "ceil((required_ns + 2*edge_abs)/(q*xi_min_ns))*q; upper=ticks*xi_max_ns+2*edge_abs"
+  },
+  "must_reprove": [
+    "E is not clean-U: a hit after clean observation and before old fence survives with no write",
+    "service/observation epochs and all in-operation hits, full38 ERR lower contract and existing delta_svc",
+    "paired calendar/nonoverlap, intervals per full word, initial scan, mandatory phases and finite horizon edges",
+    "command freeze/LOW/hold/lease with bounded edge error and full path; no early or retroactive permissions",
+    "Q(T) and probability margin at unchanged Dstar/environment/quotas for each shielding row",
+    "quiet control occupancy, returns, monitor loss with same whole-history U_M, availability",
+    "every sliding 1ms peak including arbitrary correction clusters/repeats and channel/control work",
+    "application transaction width and unchanged offered useful work, first-VALID delay, finite queue and CDC",
+    "strong constant-period E competitor with same implementation and a new justified lower price bound"
+  ],
+  "missing_physical_inputs": {
+    "FPGA_board_IO_voltage_load_STA": null,
+    "physical_clock_jitter_upper_s": null,
+    "physical_CDC_latency_upper_s": null,
+    "physical_application_or_X_workload": null,
+    "logical_request_width_and_atomicity": null,
+    "application_read_inline_repair_policy": null,
+    "response_backpressure_upper_s": null,
+    "full38_alias_mapping_and_ERR_contract": null,
+    "in_operation_hit_semantics_and_cell_commit": null,
+    "correction_count_envelope_every_sliding_window": null,
+    "physical_monitor_transport_and_CPU_WCET_s": null
+  },
+  "next": "new scientific SHA + checked new reference/contract before main RTL; old T95/A are immutable"
+}

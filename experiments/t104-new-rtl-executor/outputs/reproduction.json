@@ -1,0 +1,229 @@
+{
+  "task": 104,
+  "stage": "B",
+  "scope": "first timing gate before main RTL",
+  "base_sha": "5b463280be672d1c0fcc839b95c786d7c624b8be",
+  "stage_A_sha": "96e1cc58ffe91ea5ef6ac3960fb4da03423b56d1",
+  "science_sha": "8ecc8fb24213e03110789646725481cd34d09ab9",
+  "source_blobs": {
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/source_manifest.json": "277772c3337f586bf1803122f867f498ca71c238",
+    "experiments/t68-v21-inputs/contracts.md": "71ca00be060cc1967f89cff1e4dc01a6e18f8b3f",
+    "experiments/t90-monitor-physical/CONTRACT.md": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39",
+    "experiments/t90-monitor-physical/INTERFACE.md": "3a58845113761b01464c9d13dabfb8a12abf2671",
+    "experiments/t90-monitor-physical/outputs/pinned_inputs.json": "e7a254313cca2d538867e67070499d8a313c3e2e",
+    "experiments/t95-method-regime-map/handoff.json": "dbe1f7aab015ffbaf766080ecfa3da2289677dd0",
+    "experiments/t96-hybrid-rule-implementation/CONTRACT.md": "3c89dc968427ed2c2dc8d2cc4ee67d8c1de24d1e",
+    "experiments/t96-hybrid-rule-implementation/PROPERTIES.md": "6ce3fc9151b5e4c8f9ba3d9cc5fa213d7eb7cdbf",
+    "experiments/t96-hybrid-rule-implementation/config.json": "639577de20689b7527da1caefab7b222260a9824",
+    "experiments/t96-hybrid-rule-implementation/outputs/reproduction.json": "5ddad099c47ca1ae6584a9a32b43679adf5487a3",
+    "experiments/t96-hybrid-rule-implementation/reference.py": "b1130bda8eef6da72a5e93fa900278968aa2c485",
+    "experiments/t96-hybrid-rule-implementation/test_reference.py": "dacde8910d0ba473a07683584f4c5b991b5cef4c",
+    "theory/t95-method-regime-selection-appendix.md": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+    "theory/t95-method-regime-selection.md": "6694afa688f2b46ac50d815b7c2392ffdeff557d"
+  },
+  "units": "seconds unless field explicitly names ticks/ns/count",
+  "limits": {
+    "joint_U_s": "99999/1100000000000",
+    "application_s": "9/200000000",
+    "margin": "11/10",
+    "tick_min_s": "99999/100000000000000",
+    "tick_max_s": "100001/100000000000000"
+  },
+  "fixed_phase_candidates": [
+    {
+      "read": {
+        "phase_ticks": "4",
+        "phase_count": 12,
+        "virtual_duration_ticks": "48",
+        "fastest_interval_s": "299997/6250000000000",
+        "slowest_interval_s": "300003/6250000000000"
+      },
+      "write": {
+        "phase_ticks": "4",
+        "phase_count": 12,
+        "virtual_duration_ticks": "48",
+        "fastest_interval_s": "299997/6250000000000",
+        "slowest_interval_s": "300003/6250000000000"
+      },
+      "scope": "two separate full cycles; optimistic exclusion only",
+      "optimistic_two_cycle_s": "300003/3125000000000",
+      "U_residual_s": "-700257/137500000000000",
+      "minimum_4tick_slot_for_optimistic_U_with_margin": 108,
+      "U_arithmetic_fits_before_unknown_extras": false,
+      "application_arithmetic_fits_before_unknown_extras": false,
+      "physical_timing_qualified": false
+    },
+    {
+      "read": {
+        "phase_ticks": "2",
+        "phase_count": 23,
+        "virtual_duration_ticks": "46",
+        "fastest_interval_s": "2299977/50000000000000",
+        "slowest_interval_s": "2300023/50000000000000"
+      },
+      "write": {
+        "phase_ticks": "2",
+        "phase_count": 23,
+        "virtual_duration_ticks": "46",
+        "fastest_interval_s": "2299977/50000000000000",
+        "slowest_interval_s": "2300023/50000000000000"
+      },
+      "scope": "two separate full cycles; optimistic exclusion only",
+      "optimistic_two_cycle_s": "2300023/25000000000000",
+      "U_residual_s": "-300503/275000000000000",
+      "minimum_4tick_slot_for_optimistic_U_with_margin": 104,
+      "U_arithmetic_fits_before_unknown_extras": false,
+      "application_arithmetic_fits_before_unknown_extras": false,
+      "physical_timing_qualified": false
+    },
+    {
+      "read": {
+        "phase_ticks": "1",
+        "phase_count": 46,
+        "virtual_duration_ticks": "46",
+        "fastest_interval_s": "2299977/50000000000000",
+        "slowest_interval_s": "2300023/50000000000000"
+      },
+      "write": {
+        "phase_ticks": "1",
+        "phase_count": 46,
+        "virtual_duration_ticks": "46",
+        "fastest_interval_s": "2299977/50000000000000",
+        "slowest_interval_s": "2300023/50000000000000"
+      },
+      "scope": "two separate full cycles; optimistic exclusion only",
+      "optimistic_two_cycle_s": "2300023/25000000000000",
+      "U_residual_s": "-300503/275000000000000",
+      "minimum_4tick_slot_for_optimistic_U_with_margin": 104,
+      "U_arithmetic_fits_before_unknown_extras": false,
+      "application_arithmetic_fits_before_unknown_extras": false,
+      "physical_timing_qualified": false
+    },
+    {
+      "read": {
+        "phase_ticks": "1/2",
+        "phase_count": 91,
+        "virtual_duration_ticks": "91/2",
+        "fastest_interval_s": "9099909/200000000000000",
+        "slowest_interval_s": "9100091/200000000000000"
+      },
+      "write": {
+        "phase_ticks": "1/2",
+        "phase_count": 91,
+        "virtual_duration_ticks": "91/2",
+        "fastest_interval_s": "9099909/200000000000000",
+        "slowest_interval_s": "9100091/200000000000000"
+      },
+      "scope": "two separate full cycles; optimistic exclusion only",
+      "optimistic_two_cycle_s": "9100091/100000000000000",
+      "U_residual_s": "-102001/1100000000000000",
+      "minimum_4tick_slot_for_optimistic_U_with_margin": 104,
+      "U_arithmetic_fits_before_unknown_extras": false,
+      "application_arithmetic_fits_before_unknown_extras": false,
+      "physical_timing_qualified": false
+    },
+    {
+      "read": {
+        "phase_ticks": "1/4",
+        "phase_count": 181,
+        "virtual_duration_ticks": "181/4",
+        "fastest_interval_s": "18099819/400000000000000",
+        "slowest_interval_s": "18100181/400000000000000"
+      },
+      "write": {
+        "phase_ticks": "1/4",
+        "phase_count": 181,
+        "virtual_duration_ticks": "181/4",
+        "fastest_interval_s": "18099819/400000000000000",
+        "slowest_interval_s": "18100181/400000000000000"
+      },
+      "scope": "two separate full cycles; optimistic exclusion only",
+      "optimistic_two_cycle_s": "18100181/200000000000000",
+      "U_residual_s": "896009/2200000000000000",
+      "minimum_4tick_slot_for_optimistic_U_with_margin": 100,
+      "U_arithmetic_fits_before_unknown_extras": true,
+      "application_arithmetic_fits_before_unknown_extras": false,
+      "physical_timing_qualified": false
+    }
+  ],
+  "fixed_phase_necessary_application_s": "100001/2222200000000",
+  "nominal_two_cycle_U_residual_s": "999/1100000000000",
+  "positive_path_counterexample": {
+    "memory_read_s": "9/200000000",
+    "diagnostic_extra_path_s": "1/4000000000",
+    "completion_s": "181/4000000000",
+    "status": "datasheet-permitted late read plus hypothetical positive path; not measured"
+  },
+  "write_turnaround_constraints": {
+    "OE_high_to_drive_pin_min_s": "9/500000000",
+    "write_end_after_DQ_stable_min_s": "1/40000000",
+    "OE_low_WE_pulse_min_s": "43/1000000000",
+    "full_pin_timing_closed": false
+  },
+  "command_projection": {
+    "original_activation_ticks": 2100011001,
+    "core_ticks": 4,
+    "last_early_edge_ticks": 2100011000,
+    "first_eligible_edge_ticks": 2100011004,
+    "all_window_activations_same_residue": true,
+    "not_before_ticks": 2100011001,
+    "original_lease_ticks": 2940811639,
+    "zero_jitter_early_total_path_s": "9999999999/10000000000",
+    "diagnostic_edge_uncertainty_s": "1/4000000000",
+    "diagnostic_early_total_path_s": "27499999991/27500000000",
+    "actual_CDC_and_jitter_qualified": false
+  },
+  "queue": {
+    "count_burst": 8,
+    "count_rate_per_s": 2000000,
+    "delay_bound_used_s": "169033864967/109360000000000000",
+    "required_entries_conservative": 12,
+    "proposed_total_capacity": 16,
+    "fits_under_both_count_and_original_work_contracts": true,
+    "actual_workload_confirmed": false,
+    "hardware_implemented": false
+  },
+  "physical_upper_bounds_s": {
+    "outbound_launch_and_board": null,
+    "inbound_board_and_capture": null,
+    "read_to_write_turnaround": null,
+    "write_completion_and_release": null,
+    "clock_edge_uncertainty": null,
+    "cdc_good_event_latency": null,
+    "command_validation": null,
+    "command_publication": null,
+    "full_U": null,
+    "application_request": null
+  },
+  "decision": {
+    "continue_main_RTL": false,
+    "blocker": "45-ns complete application request has no allowance for the full pin-limited read path",
+    "all_possible_architectures_excluded": false,
+    "accepted_service_changed": false,
+    "RTL_formal_proof_performed": false,
+    "stages_C_D_started": false
+  },
+  "test_count": 15,
+  "tests": [
+    "test_timing.Timing.test_45_integer_ticks_do_not_meet_read_cycle_minimum",
+    "test_timing.Timing.test_all_original_windows_keep_residue_without_enumerating_mission",
+    "test_timing.Timing.test_continuous_limit_excludes_every_fixed_phase_count",
+    "test_timing.Timing.test_early_cutoff_preserves_original_deadline_and_lease",
+    "test_timing.Timing.test_early_shadow_never_enables_a_previous_decision",
+    "test_timing.Timing.test_existing_skip_write_regressions_remain_in_accepted_report",
+    "test_timing.Timing.test_fast_corner_rounding_then_slow_corner_check",
+    "test_timing.Timing.test_fine_phases_do_not_fix_application_limit",
+    "test_timing.Timing.test_finite_queue_needs_count_contract_as_well_as_work",
+    "test_timing.Timing.test_original_joint_and_application_limits",
+    "test_timing.Timing.test_pin_write_turnaround_is_separate_from_cycle_number",
+    "test_timing.Timing.test_positive_path_counterexample_is_not_a_measurement",
+    "test_timing.Timing.test_reference_still_buffers_early_and_rejects_late_window",
+    "test_timing.Timing.test_staged_command_loss_or_lateness_cannot_restore_LOW",
+    "test_timing.Timing.test_unknowns_are_not_zero_and_no_physical_pass"
+  ],
+  "accepted_reproductions": {
+    "stage_A_checks": 49,
+    "T95_checks": 71,
+    "accepted_outputs_rewritten": false
+  }
+}
