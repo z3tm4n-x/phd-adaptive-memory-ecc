@@ -1,0 +1,103 @@
+{
+  "issue": 113,
+  "directed_tests": 21,
+  "all_passed": true,
+  "source_sha256": {
+    "t67-goes-growth/config.json": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+    "t67-goes-growth/outputs/source_manifest.json": "c11b6ec26610c26f16b79d578ae96e0e6a98d6cf1fcd56196f670ed5fc381ce6",
+    "t67-goes-growth/analyze.py": "770ae024ad25d3ae19ef048f3c1217c271a2331d5d582b87da9327d433e11397",
+    "t67-goes-growth/response.py": "c9c97d0a45695168fd372f6957c08d39bbbd54ea1305614c8f74a46065da7201",
+    "t67-goes-growth/sgps.py": "fa22bf336275d3482aa76a83154c975fdc7fd9ea34eda5a8a5d48f0d431a9466",
+    "t67-goes-growth/nc_reader.py": "f88ec452055bdc51470431870e322d1221ea27f00deed457008dd661745bbac4",
+    "t72-r0a-onset-inputs/config.json": "30f5c4b181e68b68c961e120d3400bb5e7e56b4c1ff399ca1ad9083a121caaac",
+    "t72-r0a-onset-inputs/onsets.py": "09fd0b652ff48baeaf4ba836ea05e45eed4a12bc3be5bcd337d7b0f7f58e4bf4",
+    "t72-r0a-onset-inputs/prepare.py": "2947f65867a40ad476a54556dd25417757e9bf6a789dfc562b23276cc1242aea",
+    "t72-r0a-onset-inputs/outputs/onsets.csv.gz": "e32f53ad69095a712c2fd08f983273d0ec177b0cf1d7ecdb2252e56cb68d13d1",
+    "t72-r0a-onset-inputs/outputs/available_counts.csv.gz": "6983d50d2a79cfe67a3ea0976352d112610bebb90643ea3238b899c0e50a7f82",
+    "t72-r0a-onset-inputs/outputs/availability.csv": "b510da32db0f8b899bcb91c988298933a1c00a73bfe4517f6faf71b293ecaa14",
+    "t67-goes-growth/outputs/rho_candidates.csv": "77185773c0e2062f9c584db37feeaa263219b8d5149b2a6b9dc0e5e9d6381684",
+    "t67-goes-growth/selection.py": "968c07e1653871c81ea73a5a0c61886e9eb31c87c803a70917482eec5ef33fdb",
+    "t67-goes-growth/archive.py": "8040048255fba57b431378cffad16ef886ce939b49273cb1f15fd417c9edc7d0"
+  },
+  "source_series": {
+    "g16_300.json": {
+      "key": "6d01b68935cf258f65ccacaf212d1a736a7bac20c9c0ffddb8e72157dc24ed04",
+      "files": 220,
+      "bins": 71712,
+      "source_code_hash": "bbefda190c1c32acf5eec5a14bfd6d9d4023a6f89055aca07786710004db0400",
+      "T67_config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+      "derived_sha256": "b4c63f99ead608f531e0480e486ad8814140e97fd437395db7adb32b2605f9db"
+    },
+    "g16_60.json": {
+      "key": "fe06bd8a5df50fb98cf02411936eb689e32fa82c54394340a11e68407056a05e",
+      "files": 219,
+      "bins": 315360,
+      "source_code_hash": "bbefda190c1c32acf5eec5a14bfd6d9d4023a6f89055aca07786710004db0400",
+      "T67_config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+      "derived_sha256": "81660c0d90a918525b3d3a28b1a039d50306e35e1505741b1bb7aaefcb74b133"
+    },
+    "g18_300.json": {
+      "key": "9bc8deb03949cc247c151c7487e053d801702272ac2f12f6305b470b8cc28530",
+      "files": 220,
+      "bins": 63360,
+      "source_code_hash": "bbefda190c1c32acf5eec5a14bfd6d9d4023a6f89055aca07786710004db0400",
+      "T67_config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+      "derived_sha256": "1b67d0700559f57cab16c884a55d0f9948a75f69ca31f082061b3ce2d4bbce4a"
+    },
+    "g18_60.json": {
+      "key": "fbabb443c64eb7aa43557c8e2d816d1cf4e69c0f17a2d96b44bd0fd71380c430",
+      "files": 220,
+      "bins": 316800,
+      "source_code_hash": "bbefda190c1c32acf5eec5a14bfd6d9d4023a6f89055aca07786710004db0400",
+      "T67_config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+      "derived_sha256": "10a099f06339784476fbaddd469496bc5036a7c691bbf46e464863c9bef01a2a"
+    },
+    "g19_300.json": {
+      "key": "3097a71621b9cd243c61ee87b5daae898ff0ca9780d2141f1ecb1d7026d5064a",
+      "files": 109,
+      "bins": 31392,
+      "source_code_hash": "bbefda190c1c32acf5eec5a14bfd6d9d4023a6f89055aca07786710004db0400",
+      "T67_config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+      "derived_sha256": "745ead19eb3bc6f6a44f407d4cc58ef5495d4433fa7df4476ed16181c0686c3f"
+    },
+    "g19_60.json": {
+      "key": "986b5d969caf4f062c5c6a2a76c43a61e3172f1844038809a60328a94afb8336",
+      "files": 109,
+      "bins": 156960,
+      "source_code_hash": "bbefda190c1c32acf5eec5a14bfd6d9d4023a6f89055aca07786710004db0400",
+      "T67_config_sha256": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+      "derived_sha256": "ab58fd199c3b43aa27790f75b688c20a4a91d39d3388635d10ec40d1cf4b3fc6"
+    }
+  },
+  "output_sha256": {
+    "crossings.csv.gz": "6f27f263996663728ddcd5b93564659beb242964664fdf5572a9eef91d37bc37",
+    "declines_and_hold.csv.gz": "ae3818c1e25ee3c05fbce255f50c29a191d46efe16ca0592099649156a2d7b2c",
+    "coverage.csv.gz": "e2ab24b58a377f5b2d493b5530d7a3ecc2069cc37536c3ff6a855fdf56c7aea9",
+    "quiet_episodes.csv.gz": "71b3943f765b264a84208cd04f5d5a16bc4506b78e3d5e170b1c852bdaf4fcfb",
+    "growth_extrema.csv.gz": "9847696cf23e1280929abdf9a28a91beaa894f3fec58bf91973ca76378f7c059",
+    "growth_distribution.csv": "4fb29b97690df54b13c46d319499071f77f6885a02e3665d1bb72d383503b9a8",
+    "interval_envelopes.csv": "175dd35966b783cad531fcfbf864b0fd41ddde5d2c0411ec302ecb9be6fce409",
+    "hold_sensitivity.csv": "0f2ee273406e543e0cd50dcda21e3c3f36200e39a5d30cf6191aac60126ce2b3",
+    "event_levels.csv": "befce6fb65a4fdef9d592bc88378d0a4186ab7fcb0b32ccf19a197ff3a1bd223",
+    "count_index.csv.gz": "ac501beb0e3c108be4b78ff5fee9975cbe19613b99a4e35db19d3e6d872caa92",
+    "handoff.json": "6a0289586b44d773ae244aedbe9ae3a853c90bc7e7110964bca9ca3426ce3d7b",
+    "accepted_extrema_check.csv": "77224ba1abb970ed83f6a5ef6f8bea27603ebd905b1169949e3017f93a320b5e"
+  },
+  "audit": {
+    "checked_T72_target_rows": 10415,
+    "checked_T72_availability_rows": 10152,
+    "checked_T72_integrals": 5928,
+    "ambiguous_class_membership_pairs": 81697,
+    "retained_unique_pair_instances_across_thresholds_models_masks": 13919466,
+    "checked_T67_native_envelopes": 15
+  },
+  "config_sha256": "297159da9bd3304e27f79a75df6c9493a76424864673bc46e902961cf861a913",
+  "calculation_code_sha256": {
+    "onset_growth.py": "ac0057c7193da0ed5d5b744cfa7a3dc346fade7cb1c96bc69ca689982c14dc6a",
+    "pipeline.py": "33609b786ff06ab9d9d0d62c3b601b973dbe7fe1b7a5579b5f509cab22eeffba",
+    "run.py": "357561f885535d336624769fff8d7c8964014b9eccc279a21ec77997ede329a5",
+    "test_growth.py": "e496a98123491237749aec33ed3a9033fe19796af37289ee3198c1e5be53775c"
+  },
+  "python_requirement": ">=3.10",
+  "numpy_version": "2.3.5"
+}

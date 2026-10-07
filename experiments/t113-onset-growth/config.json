@@ -1,0 +1,59 @@
+{
+  "issue": 113,
+  "base_sha": "5b463280be672d1c0fcc839b95c786d7c624b8be",
+  "accepted_T67_sha": "6c4f084b0a86eb4e1e59e432f9bc161a6ef15772",
+  "accepted_T72_sha": "68c159de3a169f13841e4719f38c086e22e38ad7",
+  "quiet_level_s_inv": 0.0001,
+  "quiet_history_s": 86400,
+  "levels_s_inv": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "cadences_s": [
+    60,
+    300
+  ],
+  "responses": [
+    "main_loglog",
+    "core_only"
+  ],
+  "masks": [
+    "reported",
+    "screened",
+    "strict"
+  ],
+  "candidate_efold_s": [
+    60,
+    180
+  ],
+  "legacy_rho_s_inv": 0.048,
+  "illustrative_empirical_margin": 2,
+  "hold_candidates": [
+    {
+      "w_s": 60,
+      "h_s": 120
+    },
+    {
+      "w_s": 40,
+      "h_s": 90
+    }
+  ],
+  "source_sha256": {
+    "t67-goes-growth/config.json": "50d1cbe869ec9a154683de9d98abde47a70840dd13f3fe2a6463bd2e091512dd",
+    "t67-goes-growth/outputs/source_manifest.json": "c11b6ec26610c26f16b79d578ae96e0e6a98d6cf1fcd56196f670ed5fc381ce6",
+    "t67-goes-growth/analyze.py": "770ae024ad25d3ae19ef048f3c1217c271a2331d5d582b87da9327d433e11397",
+    "t67-goes-growth/response.py": "c9c97d0a45695168fd372f6957c08d39bbbd54ea1305614c8f74a46065da7201",
+    "t67-goes-growth/sgps.py": "fa22bf336275d3482aa76a83154c975fdc7fd9ea34eda5a8a5d48f0d431a9466",
+    "t67-goes-growth/nc_reader.py": "f88ec452055bdc51470431870e322d1221ea27f00deed457008dd661745bbac4",
+    "t72-r0a-onset-inputs/config.json": "30f5c4b181e68b68c961e120d3400bb5e7e56b4c1ff399ca1ad9083a121caaac",
+    "t72-r0a-onset-inputs/onsets.py": "09fd0b652ff48baeaf4ba836ea05e45eed4a12bc3be5bcd337d7b0f7f58e4bf4",
+    "t72-r0a-onset-inputs/prepare.py": "2947f65867a40ad476a54556dd25417757e9bf6a789dfc562b23276cc1242aea",
+    "t72-r0a-onset-inputs/outputs/onsets.csv.gz": "e32f53ad69095a712c2fd08f983273d0ec177b0cf1d7ecdb2252e56cb68d13d1",
+    "t72-r0a-onset-inputs/outputs/available_counts.csv.gz": "6983d50d2a79cfe67a3ea0976352d112610bebb90643ea3238b899c0e50a7f82",
+    "t72-r0a-onset-inputs/outputs/availability.csv": "b510da32db0f8b899bcb91c988298933a1c00a73bfe4517f6faf71b293ecaa14",
+    "t67-goes-growth/outputs/rho_candidates.csv": "77185773c0e2062f9c584db37feeaa263219b8d5149b2a6b9dc0e5e9d6381684",
+    "t67-goes-growth/selection.py": "968c07e1653871c81ea73a5a0c61886e9eb31c87c803a70917482eec5ef33fdb",
+    "t67-goes-growth/archive.py": "8040048255fba57b431378cffad16ef886ce939b49273cb1f15fd417c9edc7d0"
+  }
+}
