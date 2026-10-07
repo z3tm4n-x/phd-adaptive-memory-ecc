@@ -92,13 +92,16 @@ def hold_interval(below_start, upcross_start, cadence, w, h):
     if below_start is None or upcross_start <= below_start:
         return {'status': 'left_censored_decline', 'duration_bin_starts_s': None,
                 'label_duration_lower_s': None, 'label_duration_upper_s': None,
-                'longer_than_h_by_labels': None, 'longer_than_w_plus_h_by_labels': None}
+                'longer_than_h_by_labels': None, 'longer_than_w_plus_h_by_labels': None,
+                'h_not_excluded_by_label_bracket': None, 'w_plus_h_not_excluded_by_label_bracket': None}
     duration = float(upcross_start - below_start)
     lower, upper = max(0., duration - cadence), duration + cadence
     return {'status': 'resolved_bin_labels_only', 'duration_bin_starts_s': duration,
             'label_duration_lower_s': lower, 'label_duration_upper_s': upper,
             'longer_than_h_by_labels': lower >= h,
             'longer_than_w_plus_h_by_labels': lower >= w + h,
+            'h_not_excluded_by_label_bracket': upper >= h,
+            'w_plus_h_not_excluded_by_label_bracket': upper >= w + h,
             'last_alarm_deadline_relative_to_upcross_s': -h,
             'LOW_window_start_if_exit_at_upcross_relative_s': -w,
             'actual_ERR_state': 'unknown_requires_count_law_history_phase_delivery_and_exit_rule'}

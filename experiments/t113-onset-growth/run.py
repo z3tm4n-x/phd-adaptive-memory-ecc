@@ -10,7 +10,7 @@ import tempfile
 import unittest
 import numpy as np
 
-from pipeline import HERE, T67, T72, analyze, serialize, sha, verify_inputs
+from pipeline import HERE, T67, T72, analyze, serialize, sha, verify_inputs, verify_t67_extrema
 
 
 def verified_cache(cache):
@@ -41,6 +41,8 @@ def main():
         return
     manifest, series = verified_cache(args.cache)
     outputs = analyze(config, manifest, series)
+    outputs['accepted_extrema_check.csv'] = verify_t67_extrema(outputs['growth_distribution.csv'])
+    outputs['handoff.json']['audit']['checked_T67_native_envelopes'] = len(outputs['accepted_extrema_check.csv'])
     payloads = {name: serialize(name, value) for name, value in outputs.items()}
     reproduction = {
         'issue': 113, 'directed_tests': result.testsRun, 'all_passed': True,

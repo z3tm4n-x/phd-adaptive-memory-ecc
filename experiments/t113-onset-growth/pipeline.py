@@ -67,6 +67,32 @@ def verify_inputs(config):
             raise ValueError('Accepted input changed: ' + name)
 
 
+def verify_t67_extrema(distributions):
+    """Independent new native-pair computation must recover the accepted envelope."""
+    old = defaultdict(list)
+    for row in read_csv(T67 / 'outputs/rho_candidates.csv'):
+        if int(row['cadence_s']) == int(row['window_s']):
+            old[(int(row['cadence_s']), row['mask'], float(row['level_s-1']))].append(row)
+    checked = []
+    for (cad, mask, level), rows in sorted(old.items()):
+        witness = max(rows, key=lambda r: float(r['rho_observed_s-1']))
+        new = next(r for r in distributions if r['response'] == 'main_loglog' and r['cadence_s'] == cad
+                   and r['mask'] == mask and r['target_level_s_inv'] == level and r['metric'] == 'H'
+                   and r['zone'] == 'whole' and r['stratum'] == 'all_retained')
+        before, after = float(witness['rho_observed_s-1']), new['max_positive']
+        # None remains a missing positive slope; only compare it with T67's
+        # positive-part convention 0 when a native pair was actually retained.
+        actual = after if after is not None else 0.
+        if not math.isclose(before, actual, rel_tol=5e-13, abs_tol=5e-16):
+            raise AssertionError(f'T67 native envelope mismatch: {cad}/{mask}/{level}: {before} != {after}')
+        checked.append({'cadence_s': cad, 'mask': mask, 'level_s_inv': level,
+                        'T67_native_H_s_inv': before, 'T113_native_H_s_inv': after,
+                        'absolute_difference': abs(actual-before), 'status': 'agrees_at_float_tolerance',
+                        'T67_witness_event': witness['event_id'], 'T67_witness_start_utc': witness['start_utc'],
+                        'T113_witness_start_utc': new.get('maximum_from_utc')})
+    return checked
+
+
 def row_key(row):
     return (row['event_id'], int(row['satellite']), int(row['cadence_s']),
             row['response'], row['mask'], row['direction'])
@@ -219,7 +245,7 @@ def analyze(config, manifest, series):
                     approach_h, _ = pair_metrics(x[a:i + 1], L, cad)
                     efold = first_efold(x[i:last + 1], cad)
                     efold = (efold[0], efold[1] + i, efold[2] + i) if efold else None
-                    new = {**old, 'stratum': stratum, 'catalogue_phase': phase,
+                    new = {**old, 'instrument': f'GOES-{sat} SGPS', 'stratum': stratum, 'catalogue_phase': phase,
                            'first_crossing_in_available_continuous_history': first,
                            'T72_first_label_differs_from_continuous_history': first != (old['first_target_in_quiet_episode'] == 'True'),
                            'observed_repeat': not first, 'quiet_reference_confirmed': root is not None,
@@ -316,6 +342,7 @@ def analyze(config, manifest, series):
                     for metric, values in [('H', h), ('log', log)]:
                         v = values[take]
                         item = {**base, 'metric': metric, **quantiles(v)}
+                        item['instrument'] = f'GOES-{sat} SGPS'
                         indices = np.flatnonzero(take)
                         ex = extremum(v)
                         witness = (ex[0], int(indices[ex[1]]), int(indices[ex[1]]) + 1) if ex else None
@@ -323,6 +350,15 @@ def analyze(config, manifest, series):
                         if witness:
                             item['maximum_from_response_s_inv'] = float(full_x[witness[1]])
                             item['maximum_to_response_s_inv'] = float(full_x[witness[2]])
+                            contexts = []
+                            t0, t1 = time[witness[1]], time[witness[2]]
+                            for e in manifest['events']:
+                                if stamp(e['analysis_start']) <= t0 and t1 < stamp(e['analysis_end_exclusive']):
+                                    pk = None if e['kind'] == 'special_full_month' else stamp(e['peak_utc'])
+                                    phase = ('unknown_peak' if pk is None else 'pre_peak' if t1 <= pk
+                                             else 'post_peak' if t0 >= pk else 'straddles_peak')
+                                    contexts.append(e['id'] + ':' + phase)
+                            item['maximum_all_covering_window_phases'] = '|'.join(contexts)
                         item['equivalent_bin_efold_s'] = 1 / ex[0] if ex else None
                         item['illustrative_2x_empirical_rho_s_inv'] = config['illustrative_empirical_margin'] * ex[0] if ex else None
                         for seconds in config['candidate_efold_s']:
@@ -352,12 +388,68 @@ def analyze(config, manifest, series):
 
     crossings.sort(key=lambda r: int(r['record_id']))
     event_table = make_event_table(manifest, crossings, count_selected, coverage)
+    hold_sensitivity = summarize_hold_growth(holds, crossings, config)
+    interval_envelopes = summarize_intervals(crossings)
     handoff = make_handoff(config, audit, crossings, holds, coverage, distributions, manifest)
     return {'crossings.csv.gz': crossings, 'declines_and_hold.csv.gz': holds,
             'coverage.csv.gz': coverage, 'quiet_episodes.csv.gz': episodes,
             'growth_extrema.csv.gz': extrema, 'growth_distribution.csv': distributions,
+            'interval_envelopes.csv': interval_envelopes,
+            'hold_sensitivity.csv': hold_sensitivity,
             'event_levels.csv': event_table,
             'count_index.csv.gz': [count_index[k] for k in sorted(count_index)], 'handoff.json': handoff}
+
+
+def summarize_intervals(rows):
+    """Maxima including full T72 approaches, even when they begin in background."""
+    groups = defaultdict(list)
+    for row in rows:
+        groups[(row['response'], row['mask'], int(row['cadence_s']), float(row['target_level_s_inv']), row['stratum'])].append(row)
+    result = []
+    for key, rr in sorted(groups.items()):
+        model, mask, cad, L, stratum = key
+        entry = dict(response=model, mask=mask, cadence_s=cad, level_s_inv=L, stratum=stratum,
+                     scope='entire_crossing_intervals_including_T72_background; overlapping_rows_not_independent',
+                     crossing_context_rows=len(rr))
+        for prefix in ['approach_H', 'above_H', 'H', 'log', 'observed_efold_s']:
+            good = [r for r in rr if r[prefix + '_value'] is not None]
+            choose = min if prefix == 'observed_efold_s' else max
+            witness = choose(good, key=lambda r: r[prefix + '_value']) if good else None
+            entry[prefix + '_extreme'] = witness[prefix + '_value'] if witness else None
+            entry[prefix + '_record_id'] = witness['record_id'] if witness else None
+        result.append(entry)
+    return result
+
+
+def summarize_hold_growth(holds, crossings, config):
+    """Growth after declines with timer room; these are NOT inferred exits."""
+    by_id = {int(r['record_id']): r for r in crossings}
+    groups = defaultdict(list)
+    for h in holds:
+        for condition in ['longer_than_h_by_labels', 'longer_than_w_plus_h_by_labels',
+                          'h_not_excluded_by_label_bracket', 'w_plus_h_not_excluded_by_label_bracket']:
+            if h[condition] is True:
+                key = (h['response'], h['mask'], h['cadence_s'], h['target_level_s_inv'], h['w_s'], h['h_s'], condition)
+                groups[key].append(by_id[h['record_id']])
+    output = []
+    for key, rr in sorted(groups.items()):
+        model, mask, cad, L, w, h, condition = key
+        item = dict(response=model, mask=mask, cadence_s=cad, level_s_inv=L, w_s=w, h_s=h,
+                    label_condition=condition, crossing_context_rows=len(rr),
+                    unique_target_bins=len({(r['satellite'], r['direction'], r['target_bin_start_utc']) for r in rr}),
+                    status='timer_room_diagnostic; actual_ERR_state_unknown; no_physical_crossing_bound')
+        for prefix in ['approach_H', 'H', 'log']:
+            good = [r for r in rr if r[prefix + '_value'] is not None]
+            worst = max(good, key=lambda r: r[prefix + '_value']) if good else None
+            item[prefix + '_max_s_inv'] = worst[prefix + '_value'] if worst else None
+            item[prefix + '_witness_record_id'] = worst['record_id'] if worst else None
+            item[prefix + '_from_utc'] = worst[prefix + '_from_utc'] if worst else None
+            item[prefix + '_to_utc'] = worst[prefix + '_to_utc'] if worst else None
+            item[prefix + '_illustrative_2x_rho_s_inv'] = config['illustrative_empirical_margin'] * worst[prefix + '_value'] if worst else None
+            for sec in config['candidate_efold_s']:
+                item[f'{prefix}_context_rows_exceed_1_over_{sec}'] = sum(r[prefix + '_value'] > 1 / sec for r in good)
+        output.append(item)
+    return output
 
 
 def make_event_table(manifest, rows, counts, coverage):
@@ -371,7 +463,8 @@ def make_event_table(manifest, rows, counts, coverage):
                   and r['mask'] == 'screened' and int(r['cadence_s']) == cad and float(r['target_level_s_inv']) == level]
             scope = [r for r in rows if r['event_id'] == event['id'] and r['response'] == 'main_loglog'
                      and r['mask'] == 'screened' and int(r['cadence_s']) == cad and float(r['target_level_s_inv']) == level]
-            entry = [r for r in scope if r['stratum'] == 'confirmed_entry' and r['time_from_quiet_s']]
+            confirmed = [r for r in scope if r['stratum'] == 'confirmed_entry']
+            entry = [r for r in confirmed if r['time_from_quiet_s']]
             witness = min(entry, key=lambda r: (float(r['time_from_quiet_s']), int(r['record_id']))) if entry else None
             log_rows = [r for r in scope if r['log_value'] is not None]
             fast = max(log_rows, key=lambda r: r['log_value']) if log_rows else None
@@ -382,10 +475,11 @@ def make_event_table(manifest, rows, counts, coverage):
                     'response': 'main_loglog', 'mask': 'screened', 'cadence_s': cad, 'level_s_inv': level,
                     'availability_statuses': '|'.join(sorted({r.get('status', 'synthetic_test') for r in av})),
                     'retained_directional_bins_not_independent': sum(int(r['retained_bins']) for r in av),
-                    'crossing_rows': len(scope), 'confirmed_entry_rows': len(entry),
+                    'crossing_rows': len(scope), 'confirmed_entry_rows': len(confirmed),
+                    'resolved_confirmed_entry_rows': len(entry),
                     'repeat_rows': sum(r['observed_repeat'] for r in scope),
                     'censored_rows': sum(r['stratum'].startswith('censored') or r['right_censored'] for r in scope),
-                    'entry_status': 'confirmed_bin_entry' if witness else 'no_resolved_confirmed_entry_see_coverage',
+                    'entry_status': 'confirmed_bin_entry' if witness else 'confirmed_entry_unresolved_same_bin' if confirmed else 'no_confirmed_entry_see_coverage',
                     'entry_record_id': witness['record_id'] if witness else None,
                     'entry_satellite': witness['satellite'] if witness else None,
                     'entry_direction': witness['direction'] if witness else None,
@@ -428,15 +522,20 @@ def make_handoff(config, audit, rows, holds, coverage, distributions, manifest):
             'required_conditions': ['legal LOW under E at an actual window phase', 'delivery and late-exit bounds',
                 'last alarm plus h elapsed; no subsequent reset', 'original budget and calendar preserved'],
             } for rule in config['hold_candidates']],
+        'pair_distribution_scope': 'T67 analysis-window union; complete T72 approaches including background are in interval_envelopes.csv and crossings.csv.gz',
         'main_screened_60s_extrema_by_stratum_and_level': main,
         'candidate_classes': [class_contract(1 / sec, config['legacy_rho_s_inv']) for sec in config['candidate_efold_s']],
+        'conservative_conditional_fallback': {
+            **class_contract(config['legacy_rho_s_inv'], config['legacy_rho_s_inv']),
+            'reason': 'No uncertain interval is exempted from the entry cone by a catalogue label. Slow candidates require a separately proved causal held-state partition.',
+            'status': 'retains the old conditional cone; not a new physical or future-coverage certificate'},
         'illustrative_margin': {'factor_chosen_before_calculation': config['illustrative_empirical_margin'],
             'formula': 'rho_design = factor * measured_max_H; separate per cadence/model/mask/level/stratum',
             'status': 'design sensitivity only, no statistical or physical coverage'},
         'do_not_infer': ['catalogue post-peak means FAST', 'lambda low means zero ERR or LOW',
                         'oracle-U counts follow the E service law', 'bin extrema bound within-bin or future growth',
                         'strict selection proves absence of excluded fast fronts'],
-        'theorist_inputs': ['crossings.csv.gz', 'declines_and_hold.csv.gz', 'growth_distribution.csv',
+        'theorist_inputs': ['crossings.csv.gz', 'declines_and_hold.csv.gz', 'hold_sensitivity.csv', 'interval_envelopes.csv', 'growth_distribution.csv',
                            'growth_extrema.csv.gz', 'coverage.csv.gz', 'quiet_episodes.csv.gz', 'count_index.csv.gz'],
         'missing_transfer': {
             'spectral_response': 'energy/angular time series transfer from data32/proton/10mmAl to full38/background+SEP/3 and 2.5g/cm2',

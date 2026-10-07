@@ -83,6 +83,10 @@ class GrowthTests(unittest.TestCase):
     def test_hold_boundary_one_bin_allowance(self):
         self.assertFalse(hold_interval(0, 180, 60, 60, 120)['longer_than_w_plus_h_by_labels'])
         self.assertTrue(hold_interval(0, 240, 60, 60, 120)['longer_than_w_plus_h_by_labels'])
+        marginal = hold_interval(0, 120, 60, 40, 90)
+        self.assertFalse(marginal['longer_than_h_by_labels'])
+        self.assertTrue(marginal['h_not_excluded_by_label_bracket'])
+        self.assertTrue(marginal['w_plus_h_not_excluded_by_label_bracket'])
 
     def test_hold_missing_start_not_zero(self):
         self.assertIsNone(hold_interval(None, 600, 60, 40, 90)['duration_bin_starts_s'])
