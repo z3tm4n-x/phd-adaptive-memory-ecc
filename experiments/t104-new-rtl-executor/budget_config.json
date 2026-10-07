@@ -1,0 +1,71 @@
+{
+  "decision": "Issue #104, Решение Ивана 06.10.2026: option 2; engineering budget only",
+  "previous_delivery_sha": "6e745aa7423a33220180ff6059073348fee7e83a",
+  "status": "conditional design allocations, not measured or qualified WCET",
+  "legacy_blobs": {
+    "experiments/t104-new-rtl-executor/config.json": "4c9bdd1a265250c067d1ea9c5b155d20c680ee82",
+    "experiments/t104-new-rtl-executor/timing.py": "642fd70f3cc88a13b9ff7d4efe7f580233bde1a1",
+    "experiments/t104-new-rtl-executor/test_timing.py": "03b80c0c2a124cf97dbd44d4adc5c1dfb2658f52",
+    "experiments/t104-new-rtl-executor/run.py": "bde881abe37115edb470ad69a7609d3c3eec1345",
+    "experiments/t104-new-rtl-executor/outputs/reproduction.json": "d2efe6a9d854dc1df1456d0f1268b59c47598c57",
+    "experiments/t104-new-rtl-executor/TIMING.md": "17695a6ad259640a3135752897ef7915f1c7a891"
+  },
+  "application_note": {
+    "document": "001-88889 Rev. *C, AN88889",
+    "sections": ["4.2", "4.4", "5.1"],
+    "pages": [5, 7, 8],
+    "url": "https://community.infineon.com/gfawx74859/attachments/gfawx74859/NonVolatileRAM/1914/1/Infineon-AN88889_Mitigating_Single-Event_Upsets_Using_Infineon_65-nm_Asynchronous_SRAM-ApplicationNotes-v04_00-EN%201.pdf",
+    "bytes": 623211,
+    "sha256": "4fd1504873cd89fe73a2a68646cc159ff3b7804a1ee129261252d31eb60f17bc",
+    "interpretation": "One external x16 alias write includes the internal full32+6 read/correct/replace/parity/write. No extra external 45-ns cycle is added. Cell-level commit instant under irradiation is not specified."
+  },
+  "pin_ns": {
+    "tRC": "45", "tAA": "45", "tACE": "45", "tDBE": "45", "tDOE": "22",
+    "tOHA": "10", "tHZOE": "18", "tHZCE": "18",
+    "tWC": "45", "tSCE": "35", "tAW": "35", "tSA": "0",
+    "tPWE": "35", "tBW": "35", "tSD": "25", "tHD": "0", "tHA": "0",
+    "source": "Legacy config datasheet 002-20054 Rev. *F p.10 notes28-34, p.14 Fig.14; OE HIGH during write"
+  },
+  "design": {
+    "kind": "requirements declared before calculation; all must be verified for the eventual platform",
+    "core_ticks": 4,
+    "dispatch_cycles": 1,
+    "pin_output_upper_ns": "4",
+    "pin_output_lower_ns": "0",
+    "pin_output_lower_status": "conservative mathematical lower bound, not a claim of zero physical propagation",
+    "return_path_upper_ns": "2",
+    "capture_setup_ns": "1",
+    "capture_hold_ns": "1",
+    "decision_logic_upper_ns": "3",
+    "output_disable_and_settle_ns": "6",
+    "edge_error_abs_ns": "1/4",
+    "edge_error_scope": "absolute bounded deviation from one constant-scale clock, not independent frequency drift; pair difference <=1/2 ns",
+    "cpu_clock_upper_ns": "100001/10000",
+    "cpu_edge_error_abs_ns": "1/4",
+    "request_mailbox_mem_cycles": 4,
+    "response_mailbox_cpu_cycles": 4,
+    "command_mem_cycles": 8,
+    "cdc_scope": "bounded-latency good event only, bundled stable payload and ACK; failures within existing delta_exec, no new quota",
+    "command_breakdown": "3 capture/synchronizer +4 integrity/sequence validation +1 shadow publication; each stage must close timing",
+    "memory_mode": "CY62167GE30-45 x16, both byte enables; OE-high write, same alias; global interface lock",
+    "repair_queue_depth": 1,
+    "repair_queue_scope": "synchronous immediate correction; no deferred repair backlog or drop/coalescing",
+    "application_queue_candidate_entries": 16,
+    "application_count_burst_diagnostic": 8,
+    "application_count_rate_diagnostic_per_s": 2000000,
+    "application_count_status": "legacy additional diagnostic contract only; real transaction and work envelopes unresolved"
+  },
+  "unqualified": {
+    "FPGA_board_IO_voltage_load_STA": null,
+    "physical_clock_jitter_upper_s": null,
+    "physical_CDC_latency_upper_s": null,
+    "physical_application_or_X_workload": null,
+    "logical_request_width_and_atomicity": null,
+    "application_read_inline_repair_policy": null,
+    "response_backpressure_upper_s": null,
+    "full38_alias_mapping_and_ERR_contract": null,
+    "in_operation_hit_semantics_and_cell_commit": null,
+    "correction_count_envelope_every_sliding_window": null,
+    "physical_monitor_transport_and_CPU_WCET_s": null
+  }
+}

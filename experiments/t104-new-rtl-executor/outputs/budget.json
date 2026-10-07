@@ -1,0 +1,365 @@
+{
+  "status": "conditional design allocations, not measured or qualified WCET",
+  "previous_delivery_sha": "6e745aa7423a33220180ff6059073348fee7e83a",
+  "science_sha_unchanged": "8ecc8fb24213e03110789646725481cd34d09ab9",
+  "stage_A_sha_unchanged": "96e1cc58ffe91ea5ef6ac3960fb4da03423b56d1",
+  "source_blobs": {
+    "experiments/RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01/source_manifest.json": "277772c3337f586bf1803122f867f498ca71c238",
+    "experiments/t68-v21-inputs/contracts.md": "71ca00be060cc1967f89cff1e4dc01a6e18f8b3f",
+    "experiments/t90-monitor-physical/CONTRACT.md": "3095b11a49e5aacdb1d4db0278b4a56b5ced4f39",
+    "experiments/t90-monitor-physical/INTERFACE.md": "3a58845113761b01464c9d13dabfb8a12abf2671",
+    "experiments/t90-monitor-physical/outputs/pinned_inputs.json": "e7a254313cca2d538867e67070499d8a313c3e2e",
+    "experiments/t95-method-regime-map/handoff.json": "dbe1f7aab015ffbaf766080ecfa3da2289677dd0",
+    "experiments/t96-hybrid-rule-implementation/CONTRACT.md": "3c89dc968427ed2c2dc8d2cc4ee67d8c1de24d1e",
+    "experiments/t96-hybrid-rule-implementation/PROPERTIES.md": "6ce3fc9151b5e4c8f9ba3d9cc5fa213d7eb7cdbf",
+    "experiments/t96-hybrid-rule-implementation/config.json": "639577de20689b7527da1caefab7b222260a9824",
+    "experiments/t96-hybrid-rule-implementation/outputs/reproduction.json": "5ddad099c47ca1ae6584a9a32b43679adf5487a3",
+    "experiments/t96-hybrid-rule-implementation/reference.py": "b1130bda8eef6da72a5e93fa900278968aa2c485",
+    "experiments/t96-hybrid-rule-implementation/test_reference.py": "dacde8910d0ba473a07683584f4c5b991b5cef4c",
+    "theory/t95-method-regime-selection-appendix.md": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+    "theory/t95-method-regime-selection.md": "6694afa688f2b46ac50d815b7c2392ffdeff557d"
+  },
+  "historical_gate_blobs": {
+    "experiments/t104-new-rtl-executor/config.json": "4c9bdd1a265250c067d1ea9c5b155d20c680ee82",
+    "experiments/t104-new-rtl-executor/timing.py": "642fd70f3cc88a13b9ff7d4efe7f580233bde1a1",
+    "experiments/t104-new-rtl-executor/test_timing.py": "03b80c0c2a124cf97dbd44d4adc5c1dfb2658f52",
+    "experiments/t104-new-rtl-executor/run.py": "bde881abe37115edb470ad69a7609d3c3eec1345",
+    "experiments/t104-new-rtl-executor/outputs/reproduction.json": "d2efe6a9d854dc1df1456d0f1268b59c47598c57",
+    "experiments/t104-new-rtl-executor/TIMING.md": "17695a6ad259640a3135752897ef7915f1c7a891"
+  },
+  "primary_documents": [
+    {
+      "document": "002-20054 Rev. *F, 2020-03-18",
+      "pages": [
+        10,
+        14
+      ],
+      "part": "CY62167GE30-45ZXI (timing candidate; not selected board)",
+      "url": "https://www.infineon.com/dgdl/Infineon-CY62167G30_CY62167GE30_16_Mbit_%281M_words_X_16_bit_2M_words_X_8_bit%29_Static_RAM_with_Error-Correcting_Code_%28ECC%29-DataSheet-v07_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0ee9e49f72cf",
+      "sha256": "a7d9faf23208b6c0f3b2be402feb8653ff0c6f649306fc246605189018a9ed1f",
+      "existing_manifest_match": true,
+      "visual_pages_checked": [
+        10,
+        14
+      ],
+      "read_cycle_min_ns": "45",
+      "address_access_max_ns": "45",
+      "write_cycle_min_ns": "45",
+      "output_disable_max_ns": "18",
+      "write_pulse_min_ns": "35",
+      "write_data_setup_min_ns": "25",
+      "parameter_scope": "pin limits under datasheet conditions; not system WCET"
+    },
+    {
+      "document": "001-88889 Rev. *C, AN88889",
+      "sections": [
+        "4.2",
+        "4.4",
+        "5.1"
+      ],
+      "pages": [
+        5,
+        7,
+        8
+      ],
+      "url": "https://community.infineon.com/gfawx74859/attachments/gfawx74859/NonVolatileRAM/1914/1/Infineon-AN88889_Mitigating_Single-Event_Upsets_Using_Infineon_65-nm_Asynchronous_SRAM-ApplicationNotes-v04_00-EN%201.pdf",
+      "bytes": 623211,
+      "sha256": "4fd1504873cd89fe73a2a68646cc159ff3b7804a1ee129261252d31eb60f17bc",
+      "interpretation": "One external x16 alias write includes the internal full32+6 read/correct/replace/parity/write. No extra external 45-ns cycle is added. Cell-level commit instant under irradiation is not specified."
+    }
+  ],
+  "budget": {
+    "tick_min_ns": "99999/100000",
+    "tick_max_ns": "100001/100000",
+    "edge_span_ns": "1/2",
+    "margin_factor": "11/10",
+    "core_ticks": 4,
+    "control_ticks": {
+      "grant_lock": 0,
+      "launch_read": 4,
+      "capture_DQ_ERR": 60,
+      "decision_disable_outputs": 64,
+      "release_if_no_ERR": 92,
+      "drive_and_WE_low_if_ERR": 92,
+      "write_end": 132,
+      "controller_DQ_off": 140,
+      "release_if_ERR": 148
+    },
+    "application_write_ticks": {
+      "grant": 0,
+      "address_CE_BE_DQ": 4,
+      "WE_low": 12,
+      "write_end": 52,
+      "DQ_off": 60,
+      "release": 68
+    },
+    "upper_ns": {
+      "read_no_ERR": "2312523/25000",
+      "read_ERR_repair": "3712537/25000",
+      "unconditional_write_comparator": "3712537/25000",
+      "application_read16": "2312523/25000",
+      "application_write16": "1712517/25000",
+      "application_read16_with_inline_repair": "3712537/25000",
+      "application_read32_with_inline_repairs": "3712537/12500",
+      "application_read32_atomic_two_aliases": "2312523/12500",
+      "application_write32_atomic_two_aliases": "1712517/12500"
+    },
+    "charge_ticks_with_margin": {
+      "read_no_ERR": 104,
+      "read_ERR_repair": 164,
+      "application_read16": 104,
+      "application_write16": 76,
+      "application_read32_atomic": 208,
+      "application_write32_atomic": 152
+    },
+    "outside_lock_upper_ns": {
+      "request_CDC_validation": "51563/3125",
+      "response_CDC": "101251/2500",
+      "command_receive_validate_shadow": "203127/6250"
+    },
+    "first_VALID_to_done_no_queue_no_backpressure_ns": {
+      "read16": "3737537/25000",
+      "write16": "3137531/25000",
+      "read32_atomic": "302503/1250",
+      "write32_atomic": "606256/3125"
+    },
+    "unbounded_until_contract": [
+      "queue waiting",
+      "reply backpressure",
+      "CPU/monitor transport before command mailbox"
+    ],
+    "rounding_rule": "ceil((required_ns + 2*edge_abs)/(q*xi_min_ns))*q; upper=ticks*xi_max_ns+2*edge_abs"
+  },
+  "pin_and_margin_slack_ns": {
+    "DQ_ERR_capture_setup": "43743/12500",
+    "capture_hold_before_OE_CE_change": "62499/25000",
+    "ERR_decision_logic": "12499/25000",
+    "read_cycle": "52497/5000",
+    "SRAM_HIZ_before_FPGA_drive_or_release": "87493/25000",
+    "WE_pulse": "1249/2500",
+    "DQ_setup_to_earliest_WE_CE_end": "26249/2500",
+    "address_setup_to_WE_low": "1043739/12500",
+    "address_setup_to_write_end": "553117/6250",
+    "CE_setup_to_write_end": "553117/6250",
+    "BE_setup_to_write_end": "553117/6250",
+    "DQ_hold_to_controller_off": "43749/12500",
+    "address_hold_to_release": "35937/3125",
+    "write_cycle_before_next_launch": "81243/12500",
+    "FPGA_HIZ_before_next_grant": "18749/12500",
+    "app_write_address_setup": "43749/12500",
+    "app_write_WE_pulse": "1249/2500",
+    "app_write_address_CE_BE_setup": "26561/3125",
+    "app_write_DQ_setup": "57811/3125",
+    "app_write_DQ_hold": "43749/12500",
+    "app_write_address_hold": "35937/3125",
+    "app_write_write_cycle": "90621/6250",
+    "app_write_output_HIZ": "18749/12500",
+    "read_no_ERR_margin_reservation": "436987/250000",
+    "read_ERR_repair_margin_reservation": "36683/250000",
+    "application_read16_margin_reservation": "436987/250000",
+    "application_write16_margin_reservation": "37123/250000"
+  },
+  "internal_write": {
+    "external_reads_per_visit": 1,
+    "external_writes_no_ERR": 0,
+    "external_writes_ERR": 1,
+    "external_writes_unconditional": 1,
+    "extra_external_internal_RMW_cycle": false,
+    "microscopic_full38_commit_time": null
+  },
+  "completed_pass": {
+    "W": 524288,
+    "K_domain": [
+      0,
+      524288
+    ],
+    "formula_ns": "W*R + K*(E-R)",
+    "K_zero_upper_ns": "151553507328/3125",
+    "K_all_upper_ns": "243304824832/3125",
+    "max_busy_time_saving_fraction": "1400014/3712537",
+    "unchanged_calendar_period_saving_ns": 0,
+    "fixed_new_calendar_period_formula_ns": "W*g*xi; same for E and unconditional comparator",
+    "compact_serial_no_application_optimistic_ns": "sum of visit upper times; not certified service period",
+    "charged_work_ticks_formula": "524288*104 + K*(164-104)",
+    "unfinished_pass": "charge actual intersection of each busy interval with measurement horizon; never drop a pending tail"
+  },
+  "old_rows_not_transferred": [
+    {
+      "shield_g_cm2": "3",
+      "Dstar": "560489/2000000000",
+      "old_g": 140,
+      "old_ka": 367,
+      "old_period_ticks": 73400320,
+      "old_period_upper_ns": "45875658752/625",
+      "old_calendar_no_ERR_margin_deficit_ns": "563003/250000",
+      "old_calendar_ERR_overlap_ns": "612531/12500",
+      "new_reservation_unchanged_g": {
+        "nonoverlap": false,
+        "peak_upper": null,
+        "reason": "paired worst-case reservations overlap"
+      },
+      "new_Q_upper": null,
+      "new_quiet_control_load": null
+    },
+    {
+      "shield_g_cm2": "2.5",
+      "Dstar": "109073/2000000000",
+      "old_g": 131,
+      "old_ka": 3,
+      "old_period_ticks": 68681728,
+      "old_period_upper_ns": "214632546304/3125",
+      "old_calendar_no_ERR_margin_deficit_ns": "563003/250000",
+      "old_calendar_ERR_overlap_ns": "612531/12500",
+      "new_reservation_unchanged_g": {
+        "nonoverlap": false,
+        "peak_upper": null,
+        "reason": "paired worst-case reservations overlap"
+      },
+      "new_Q_upper": null,
+      "new_quiet_control_load": null
+    }
+  ],
+  "resource_algebra_only": {
+    "status": "conditional sufficient resource witness, NOT proposed/accepted scientific calendar",
+    "assumes_old_X_envelope_still_satisfied": true,
+    "old_X_envelope_revalidated": false,
+    "g_core_aligned_sufficient": 208,
+    "c_charge_ticks": 164,
+    "r_charge_ticks": 104,
+    "g_sufficient_before_rounding": "6623050000000000/32236431532461",
+    "derivation": "M(h,p,d)<=h*d/p+d; g>=d/[2*xi_min*(0.8-CX-(sigmaX+d)/h)]; no grid search",
+    "worst_corrections_every_visit": {
+      "nonoverlap": true,
+      "peak_upper": "2468505891/3125000000",
+      "full_control_ns": "2467880891/3125",
+      "read_control_upper_ns": "1570128126/3125",
+      "control_upper_ns": "2467880891/3125",
+      "correction_cap_intersecting_window": null,
+      "slack_to_80_percent": "31494109/3125000000"
+    },
+    "no_corrections_in_expanded_window": {
+      "nonoverlap": true,
+      "peak_upper": "785376563/1562500000",
+      "full_control_ns": "2467880891/3125",
+      "read_control_upper_ns": "1570128126/3125",
+      "control_upper_ns": "1570128126/3125",
+      "correction_cap_intersecting_window": 0,
+      "slack_to_80_percent": "464623437/1562500000"
+    },
+    "lower_adjacent_core_g": {
+      "nonoverlap": true,
+      "peak_upper": "5033522121/6250000000",
+      "full_control_ns": "5032272121/6250",
+      "read_control_upper_ns": "1600837807/3125",
+      "control_upper_ns": "5032272121/6250",
+      "correction_cap_intersecting_window": null,
+      "slack_to_80_percent": "-33522121/6250000000"
+    },
+    "period_upper_ns": "340790607872/3125",
+    "last_start_ticks_in_first_pass": 109051652,
+    "first_pass_release_upper_ns_no_ERR": "681580218859/6250",
+    "first_pass_release_upper_ns_all_ERR": "54526445509/500",
+    "only_last_visit_release_saving_ns": "700007/12500",
+    "period_not_selected_for_any_shield": true,
+    "correction_envelope": "K_I <= N visits whose correction intervals intersect I; no smaller bound currently supplied",
+    "longest_all_ERR_gap_ticks_at_actual_release": 104,
+    "longest_no_ERR_gap_ticks_at_actual_release": 160,
+    "atomic_gap_checks": {
+      "read16_no_inline_repair": {
+        "request_charge_ticks": 104,
+        "fits_one_gap_at_resource_example": true,
+        "g_sufficient_for_one_gap_only": 208
+      },
+      "read16_with_inline_repair": {
+        "request_charge_ticks": 164,
+        "fits_one_gap_at_resource_example": false,
+        "g_sufficient_for_one_gap_only": 240
+      },
+      "read32_atomic_no_inline_repair": {
+        "request_charge_ticks": 208,
+        "fits_one_gap_at_resource_example": false,
+        "g_sufficient_for_one_gap_only": 260
+      },
+      "write32_atomic": {
+        "request_charge_ticks": 152,
+        "fits_one_gap_at_resource_example": false,
+        "g_sufficient_for_one_gap_only": 232
+      }
+    },
+    "atomic_gap_scope": "one request can fit only; not a traffic/delay guarantee; fixed next control starts cannot move"
+  },
+  "command_comparison_only": {
+    "old_early_cutoff_ticks": 2100011000,
+    "total_post_window_with_old_deadline_ns": "109999999939/110",
+    "remaining_before_mailbox_ns": "34374998863739/34375",
+    "actual_monitor_CPU_path_ns": null,
+    "new_scientific_deadline": null,
+    "early_semantics": "inactive validated shadow; exact nominal not_before; alarms revoke shadow and active before future decisions; no retroactive skip"
+  },
+  "queue": {
+    "repair_depth": 1,
+    "repair_never_deferred": true,
+    "application_depth_candidate": 16,
+    "count_contract": "B >= ceil(b_count+rho_count*D_offer_to_departure); include CDC and held responses",
+    "D_offer_to_departure_ns": null,
+    "entries_if_old_diagnostic_count_and_whole_3us_delay_hold": 14,
+    "depth_certified": false
+  },
+  "unknowns": {
+    "FPGA_board_IO_voltage_load_STA": null,
+    "physical_clock_jitter_upper_s": null,
+    "physical_CDC_latency_upper_s": null,
+    "physical_application_or_X_workload": null,
+    "logical_request_width_and_atomicity": null,
+    "application_read_inline_repair_policy": null,
+    "response_backpressure_upper_s": null,
+    "full38_alias_mapping_and_ERR_contract": null,
+    "in_operation_hit_semantics_and_cell_commit": null,
+    "correction_count_envelope_every_sliding_window": null,
+    "physical_monitor_transport_and_CPU_WCET_s": null
+  },
+  "decision": {
+    "budget_pin_constraints_satisfied_conditionally": true,
+    "physical_WCET_qualified": false,
+    "new_risk_certificate": false,
+    "main_RTL_started": false,
+    "stages_C_D_started": false
+  },
+  "new_test_count": 28,
+  "new_tests": [
+    "test_budget.Budget.test_CDC_and_validation_are_not_free",
+    "test_budget.Budget.test_atomic32_and_queue_are_not_hidden_16bit_workload",
+    "test_budget.Budget.test_bus_peak_pass_does_not_prove_nonpreemptive_request_delay",
+    "test_budget.Budget.test_capture_one_core_edge_early_is_invalid",
+    "test_budget.Budget.test_clean_observation_is_not_clean_fence",
+    "test_budget.Budget.test_correction_tail_crossing_window_is_not_free",
+    "test_budget.Budget.test_fixed_calendar_saves_only_last_tail_not_W_tails",
+    "test_budget.Budget.test_handoff_preserves_rows_quotas_unknowns_and_loss",
+    "test_budget.Budget.test_historical_sources_and_fixed_versions",
+    "test_budget.Budget.test_larger_unknown_jitter_cannot_be_ignored",
+    "test_budget.Budget.test_new_application_grant_between_latch_and_repair_is_unsafe",
+    "test_budget.Budget.test_no_ERR_release_after_check_and_high_Z",
+    "test_budget.Budget.test_old_calendar_rejects_ERR_overlap_and_even_no_ERR_margin",
+    "test_budget.Budget.test_pass_count_zero_all_and_partial",
+    "test_budget.Budget.test_pin_intervals_and_design_margins_are_nonnegative",
+    "test_budget.Budget.test_postwrite_hold_and_release_one_edge_short_fail",
+    "test_budget.Budget.test_rare_mission_average_allows_one_dense_peak",
+    "test_budget.Budget.test_read_capture_at_adverse_clock_path_edge_vertices",
+    "test_budget.Budget.test_resource_witness_keeps_80_percent_and_separate_margins",
+    "test_budget.Budget.test_sliding_mask_matches_independent_event_edges",
+    "test_budget.Budget.test_source_numbers_read_write_not_double_counted",
+    "test_budget.Budget.test_standalone_write_requires_address_before_WE",
+    "test_budget.Budget.test_ten_percent_and_quantization_are_not_nominal_WCET",
+    "test_budget.Budget.test_turnaround_one_edge_short_fails",
+    "test_budget.Budget.test_turnaround_vertices_exclude_contention",
+    "test_budget.Budget.test_two_phase_bound_covers_all_binary_corrections_small_case",
+    "test_budget.Budget.test_write_pulse_and_data_at_all_skew_vertices",
+    "test_budget.Budget.test_write_pulse_one_edge_short_fails"
+  ],
+  "unchanged_reproductions": {
+    "first_timing_gate": 15,
+    "A": 49,
+    "T95": 71,
+    "original_outputs_rewritten": false
+  }
+}
