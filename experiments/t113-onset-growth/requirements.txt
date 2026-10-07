@@ -1,0 +1,3 @@
+numpy==2.3.5
+# Existing T67 reader: netCDF4 OR installed libnetcdf (including VTK).
+# No package installation or source selection is performed by run.py.
