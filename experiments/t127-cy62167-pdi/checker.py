@@ -122,5 +122,5 @@ def check(out):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=HERE/'outputs');a=p.parse_args()
     result=check(a.out)
-    (a.out/'independent-check.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    (a.out/'independent-check.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(result,indent=2))

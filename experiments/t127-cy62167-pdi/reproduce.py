@@ -23,7 +23,7 @@ def main():
         r=subprocess.run([sys.executable,'-X','utf8','-B']+args,cwd=ROOT,text=True,encoding='utf-8',capture_output=True)
         runs.append(dict(args=args,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))
         if r.returncode:
-            (out/'checks.json').write_text(json.dumps(runs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+            (out/'checks.json').write_text(json.dumps(runs,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
             raise RuntimeError(r.stderr)
     script=str(HERE/'calculate.py')
     optional=[]
@@ -46,10 +46,10 @@ def main():
     result=dict(status='PASS_COMPUTATIONAL_ONLY',elapsed_seconds=time.perf_counter()-start,
                 identical_second_run_files=stable,external_raw_rechecked=bool(a.zenodo),
                 SILSO_monthly_reaggregation=bool(a.silso),runs=runs)
-    (out/'checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (out/'checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     # Receipt deliberately excludes itself; avoids circular hashes/commit IDs.
     hashes={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(out.iterdir()) if f.is_file() and f.name!='output_hashes.json'}
-    (out/'output_hashes.json').write_text(json.dumps(hashes,indent=2)+'\n',encoding='utf-8')
+    (out/'output_hashes.json').write_text(json.dumps(hashes,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in result.items() if k!='runs'},indent=2))
 
 
