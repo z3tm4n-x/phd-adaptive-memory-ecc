@@ -1,0 +1,33 @@
+{
+  "status": "BLOCKED_DEVICE_SUPPORT",
+  "vivado_version": "Vivado v2025.2 (64-bit)\nSW Build 6299465 on Fri Nov 14 12:34:56 MST 2025\nIP Build 6300035 on Fri Nov 14 10:48:45 MST 2025\nTool Version Limit: 2025.11\nCopyright 1986-2022 Xilinx, Inc. All Rights Reserved.\nCopyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.\nSharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025",
+  "installed_part_count": 429,
+  "available_parts": [],
+  "missing_parts": [
+    "xc7z020clg484-1",
+    "xc7z020clg484-2"
+  ],
+  "synthesis_run": false,
+  "STA_run": false,
+  "wns_ns": null,
+  "tns_ns": null,
+  "whs_ns": null,
+  "ths_ns": null,
+  "resources": null,
+  "device_license_tested": false,
+  "elapsed_s": 12.537,
+  "inspect_tcl_sha256": "8a70541445ba79cff9cba187409ac805b5f01e95f688d2696bb1355df3923b99",
+  "console_sha256": "2319b184db1d462186ce20df232d013da946532c58afacfef28a1aa13cf3961f",
+  "command": [
+    "vivado-wsl",
+    "-mode",
+    "batch",
+    "-source",
+    "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/platform/inspect.tcl",
+    "-log",
+    "inventory.log",
+    "-journal",
+    "inventory.jou"
+  ],
+  "tool_exit_code": 2
+}

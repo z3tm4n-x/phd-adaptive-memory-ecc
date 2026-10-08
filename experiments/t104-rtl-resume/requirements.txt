@@ -1,3 +1,4 @@
 # Standard library only. Tested: Windows Python3.12.14, Ubuntu Python3.14.4.
 # Python>=3.10 reference; reported RTL run: Icarus12.0, Yosys0.52 fee39a3.
-# No pip dependency. Physical FPGA/IO library/STA constraints not yet selected.
+# No pip dependency. RPC PDR: yosys-abc bundled with Yosys0.52.
+# Vivado2025.2 starts; selected Zynq-7000 device support is missing locally.

@@ -59,7 +59,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--write", action="store_true")
     p.add_argument("--rtl", action="store_true", help="Icarus/vvp must be on PATH")
-    p.add_argument("--formal", action="store_true", help="Yosys must be on PATH")
+    p.add_argument("--formal", action="store_true", help="Yosys and yosys-abc must be on PATH")
     p.add_argument("--regression-A", action="store_true", dest="regression_a")
     args = p.parse_args()
     start = time.perf_counter()
@@ -71,7 +71,7 @@ def main():
         subprocess.run([sys.executable, "-B", "-m", "unittest", "discover", "-s",
                         str(ROOT/PRESERVE[3]), "-p", "test_reference.py"], check=True)
     for enabled, script in ((args.rtl, "rtl_check.py"), (args.rtl, "integration_check.py"),
-                            (args.formal, "yosys_check.py")):
+                            (args.formal, "yosys_check.py"), (args.formal, "pdr_check.py")):
         if enabled:
             subprocess.run([sys.executable, "-B", str(HERE/script)]
                            + (["--write"] if args.write else []), check=True)

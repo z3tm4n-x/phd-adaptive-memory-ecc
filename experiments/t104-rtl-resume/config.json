@@ -20,7 +20,9 @@
   "reply_backpressure_ns": "100",
   "seed": 104,
   "rule_parameters": null,
-  "physical_platform": null,
+  "physical_platform": "ZedBoard / xc7z020clg484-1 / 250 MHz; comparison -2/250",
+  "platform_contract": "platform/config.json",
+  "platform_STA_qualified": false,
   "physical_E_qualified": false,
   "stage": "B in progress; no C/G or new scientific certificate"
 }
