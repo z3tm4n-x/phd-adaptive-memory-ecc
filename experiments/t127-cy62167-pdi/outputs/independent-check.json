@@ -1,0 +1,67 @@
+{
+  "status": "PASS_COMPUTATIONAL_CHECKS_ONLY",
+  "independent_quadrature": [
+    {
+      "shield_g_cm2": 2.5,
+      "product": "fluence",
+      "scalar": 160559.29889371785,
+      "production": 160559.29889374637,
+      "relative_difference": 1.7763568394002505e-13
+    },
+    {
+      "shield_g_cm2": 2.5,
+      "product": "peak_flux",
+      "scalar": 1.9647297179262457,
+      "production": 1.9647297179265917,
+      "relative_difference": 1.7608137170554983e-13
+    },
+    {
+      "shield_g_cm2": 3.0,
+      "product": "fluence",
+      "scalar": 114831.72264558842,
+      "production": 114831.72264557469,
+      "relative_difference": 1.1968204205459188e-13
+    },
+    {
+      "shield_g_cm2": 3.0,
+      "product": "peak_flux",
+      "scalar": 1.4250274255788278,
+      "production": 1.4250274255786595,
+      "relative_difference": 1.1812772982011666e-13
+    },
+    {
+      "shield_g_cm2": 3.5,
+      "product": "fluence",
+      "scalar": 86490.32638209182,
+      "production": 86490.3263821009,
+      "relative_difference": 1.0502709812953981e-13
+    },
+    {
+      "shield_g_cm2": 3.5,
+      "product": "peak_flux",
+      "scalar": 1.086297198071512,
+      "production": 1.086297198071625,
+      "relative_difference": 1.0402789740737717e-13
+    },
+    {
+      "shield_g_cm2": 4.0,
+      "product": "fluence",
+      "scalar": 67770.28658732118,
+      "production": 67770.28658732408,
+      "relative_difference": 4.2743586448068527e-14
+    },
+    {
+      "shield_g_cm2": 4.0,
+      "product": "peak_flux",
+      "scalar": 0.8601717048721559,
+      "production": 0.8601717048721927,
+      "relative_difference": 4.285460875053104e-14
+    }
+  ],
+  "not_checked": [
+    "physical response uncertainty",
+    "isotropic response qualification",
+    "full38 Dstar",
+    "GOST/RDS event population identity"
+  ]
+}
