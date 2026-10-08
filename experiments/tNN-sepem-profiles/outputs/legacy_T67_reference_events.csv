@@ -1,0 +1,4 @@
+event_id,peak_start_utc,satellite,direction,cadence_s,shield_mm_al,shield_g_cm2_al,T67_peak_data32_s-1,same_chain_scaled_full38_s-1,full38_over_data32,value_type,scope
+sep_20170910_1645,2017-09-11T11:40:00+00:00,16,W,300,10.0,2.7,0.03805361184839401,0.04518866406996788,1.1875,calculated_legacy_and_normalization,directional screened maximum; not E/W mean; same-chain scaling assumes equal sensitivity of all 38 positions
+sep_20241009_0505,2024-10-09T19:20:00+00:00,18,W,300,10.0,2.7,0.011133000642447766,0.013220438262906722,1.1875,calculated_legacy_and_normalization,directional screened maximum; not E/W mean; same-chain scaling assumes equal sensitivity of all 38 positions
+sep_20260118_2255,2026-01-19T19:20:00+00:00,19,E,300,10.0,2.7,0.3645542787458124,0.4329082060106523,1.1875,calculated_legacy_and_normalization,directional screened maximum; not E/W mean; same-chain scaling assumes equal sensitivity of all 38 positions

@@ -1,0 +1,15 @@
+{
+  "source": "NIST PSTAR, aluminium (013)",
+  "retrieved": "2026-10-07",
+  "url": "https://physics.nist.gov/cgi-bin/Star/ap_table-t.pl",
+  "post": {
+    "prog": "PSTAR",
+    "matno": "013",
+    "Energies": "",
+    "ShowDefault": "on"
+  },
+  "raw_response_sha256": "641755f7996fa44033feedcdd776c66ce9f0bab239cc89b5ffab83e3e29a4365",
+  "derived_csv_sha256": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9",
+  "rows": 132,
+  "scope": "CSDA; not straggling or nuclear-secondary transport"
+}

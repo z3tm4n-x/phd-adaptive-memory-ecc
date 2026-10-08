@@ -1,0 +1,38 @@
+{
+  "type": "calculated from existing serialized model inputs; not measured",
+  "source_files": [
+    {
+      "path": "experiments/t68-v21-inputs/outputs/v21_reconstructed.json",
+      "sha256_checkout_bytes": "9497c95ea9fe1b800d58eec42d61419de95182cd82de710d9b58048ae9e137c4"
+    },
+    {
+      "path": "theory/t73-burst-mode-count-inputs.json",
+      "sha256_checkout_bytes": "1ee101815fd7f388213a4c69e8aaac9ff5c36eca6ce3b42560e917a3ddbfbc20"
+    }
+  ],
+  "protected_bits": 19922944,
+  "historical_nu_G_per_s": "0.00015470350295316676",
+  "historical_nu_S_per_s": "0.24452779251706908",
+  "historical_nu_S_PDI_per_s": "0.5566442497828752",
+  "historical_solar_exposure_upper": "28310.44970645618980608",
+  "historical_S2_components_per_s": {
+    "quiet": "7.5527352633076148306670104097272290176000",
+    "solar": "6922.6917718852384221172226986951640064",
+    "mixed": "8.7594514795364483868461488231326038016"
+  },
+  "historical_S2_sum_per_s": "6939.0039586280824853347358579280238392192000",
+  "accepted_rounded_S2_per_s": "6940",
+  "accepted_rounded_B_per_s": "0.244682704",
+  "PDI_formula_diagnostic_per_s": "35901.0129758175245188440037124266909113216000",
+  "PDI_note": "Alternate historical response; not a new estimate of S2 or a replacement of 6940",
+  "requested_fixed_period_s": "0.108",
+  "requested_accumulation_multiplier_s": "1.0028638337787828947368421052631578947368421052632E-7",
+  "requested_old_accumulation_bound": "0.00069598750064247532894736842105263157894736842105266",
+  "requested_direct_bound": "0.00028024",
+  "requested_remaining_probability": "0.00002377249935752467105263157894736842105263157894734",
+  "new_S2_A_per_s": null,
+  "new_S2_B_per_s": null,
+  "freed_probability": null,
+  "interpretation_gap": "Historical full LET+HEP envelope differs from the new conditional proton-PDI profile; mission mean is explicitly supplied by the new mean-cycle scenario",
+  "no_new_rules_or_certificates": true
+}

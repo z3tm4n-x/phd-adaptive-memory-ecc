@@ -1,0 +1,106 @@
+{
+  "status": "conditional model sensitivity only; not measured helium response or upper bound",
+  "bits": 19922944,
+  "angular_factor": 12.566370614359172,
+  "alpha_mass_number": 4,
+  "flux_units": "cm^-2 s^-1 sr^-1 (MeV/nucleon)^-1",
+  "integration_variable": "incident MeV/nucleon; j_alpha dE_alpha = j_nuc dE_nuc",
+  "nominal_cutoff_MeV_per_nucleon": 95.64,
+  "tail_sensitivity": "last pair slope limited to <= -2, continuous at 95.64, cutoff 250 MeV/nucleon",
+  "astar_max_total_energy_MeV": 1000.0,
+  "requested_tail_to_1000_MeV_per_nucleon": "unsupported by the saved ASTAR tables; not extrapolated",
+  "tail_above_250": null,
+  "interpolation": "log-log positive endpoints; linear j/logE for zero endpoint, clipped at zero at edges",
+  "response": "sigma_bit=2.6e-7*(1-exp(-((LET-0.15)/70)^1.2)) for LET>0.15; cm^2/bit",
+  "let_units": "MeV cm^2/mg; ASTAR Si electronic stopping divided by 1000",
+  "response_provenance": "experiments/t68-v21-inputs/inputs/calc_v18.zip: orbital.py sb",
+  "response_transfer_assumption": "species and incidence-angle invariance of historical LET Weibull",
+  "check_bit_sensitivity": "same as data bits, user-declared assumption",
+  "minimum_residual_energy_keV": 1.0,
+  "sub_keV_rule": "discarded as explicit computational cutoff, not proven zero physical response",
+  "stopping_threshold_MeV_per_nucleon": {
+    "2.5": 45.62427859045422,
+    "3.0": 50.54208514329774
+  },
+  "below_5_range_g_cm2": 0.05215999999999999,
+  "moment_lookup_relative_error_bound": 1.154095065915241e-05,
+  "lookup_bound_scope": "positive discrete quadrature only; excludes quadrature and model errors",
+  "helium_nuclear_response": null,
+  "Z_ge_3_rate": null,
+  "shared_dependencies": [
+    "audit.input_files",
+    "audit.digest",
+    "numpy"
+  ],
+  "production_proton_mapping_or_response_helpers_reused": false,
+  "reference_sha256": "232d068905d6fcc3dd79bd9b0ad69181f1d49496a523c6042a5455599d4a0f22",
+  "n": 4365792,
+  "rate_keys": [
+    "helium_3",
+    "helium_3_tail250",
+    "helium_2p5",
+    "helium_2p5_tail250"
+  ],
+  "zeros_by_channel": [
+    4006970,
+    3759428,
+    3914055,
+    3674622,
+    3765463,
+    3504642,
+    3733975,
+    3412081
+  ],
+  "code_sha256": "c7bded0604d496d775234c949a6720a4e74daf3fa94e0eedc24665654bfa9422",
+  "astar_manifest": {
+    "retrieved": "2026-10-07",
+    "energy_convention": "total kinetic MeV per alpha particle",
+    "url": "https://physics.nist.gov/cgi-bin/Star/ap_table-t.pl",
+    "documentation": "https://physics.nist.gov/PhysRefData/Star/Text/programs.html",
+    "scope": "ASTAR CSDA and stopping powers; not a secondary transport calculation",
+    "tables": [
+      {
+        "material": "ALUMINUM",
+        "post": {
+          "prog": "ASTAR",
+          "matno": "013",
+          "Energies": "",
+          "ShowDefault": "on"
+        },
+        "raw_response_sha256": "13d99096048b03796111cd1ebd118c131de890a7985c98d4e97b792686cb166c",
+        "derived_csv": "nist_astar_al.csv",
+        "derived_csv_sha256": "9a3e7084512a5c3bc628a352a919052b2f0bbae3bae7fb482fdb21a736710777",
+        "rows": 121,
+        "total_energy_MeV": [
+          0.001,
+          1000.0
+        ],
+        "energy_MeV_per_nucleon": [
+          0.00025,
+          250.0
+        ]
+      },
+      {
+        "material": "SILICON",
+        "post": {
+          "prog": "ASTAR",
+          "matno": "014",
+          "Energies": "",
+          "ShowDefault": "on"
+        },
+        "raw_response_sha256": "a56bb9a87ea9794b293d49206c16b5f20ea42ec1029329068613da67533b9a44",
+        "derived_csv": "nist_astar_si.csv",
+        "derived_csv_sha256": "a6ed4fccf392aa5d5d1f1028f539f985e0fb09286aea990dcc86687c609a904d",
+        "rows": 121,
+        "total_energy_MeV": [
+          0.001,
+          1000.0
+        ],
+        "energy_MeV_per_nucleon": [
+          0.00025,
+          250.0
+        ]
+      }
+    ]
+  }
+}

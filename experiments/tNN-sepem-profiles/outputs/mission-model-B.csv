@@ -1,0 +1,14 @@
+variant,method,q90,q90_MC95_lower,q90_MC95_upper,missions,value_type,units
+csda_3_pdi,B_compound_Poisson_empirical_events,19968.260830479496,19911.126960942853,20018.551525975156,200000,estimate,s-1
+csda_2p5_pdi,B_compound_Poisson_empirical_events,43857.66356526959,43735.15472853692,43985.610977776414,200000,estimate,s-1
+csda_3_no_pdi,B_compound_Poisson_empirical_events,79.01679128352269,78.81280091323268,79.22787571345353,200000,estimate,s-1
+csda_3_interpolant_upper,B_compound_Poisson_empirical_events,135791.9096028401,135440.87289808973,136127.82331930465,200000,estimate,s-1
+bohr_3_pdi,B_compound_Poisson_empirical_events,19988.27285390487,19930.76897653172,20038.039779150637,200000,estimate,s-1
+bohr_2p5_pdi,B_compound_Poisson_empirical_events,43905.62909872081,43782.34494002989,44032.19291421782,200000,estimate,s-1
+csda_3_cut289,B_compound_Poisson_empirical_events,19949.95320672404,19894.007158790493,20001.382090081945,200000,estimate,s-1
+csda_3_cut1000,B_compound_Poisson_empirical_events,19966.319343985837,19909.05339329399,20016.53045653296,200000,estimate,s-1
+csda_3_jlinear_logE,B_compound_Poisson_empirical_events,26649.26868362016,26578.819206340242,26732.00943947016,200000,estimate,s-1
+csda_3_pdi_plus_He_model,B_compound_Poisson_empirical_events,21756.392456273727,21695.526459367633,21812.23849444432,200000,estimate,s-1
+csda_2p5_pdi_plus_He_model,B_compound_Poisson_empirical_events,48661.30183940745,48525.8672276463,48803.45791428365,200000,estimate,s-1
+csda_3_pdi_plus_He_tail250_model,B_compound_Poisson_empirical_events,21756.392456273727,21695.526459367633,21812.23849444432,200000,estimate,s-1
+fluence_gt30_omni_cm-2,B_compound_Poisson_empirical_events,21478951098.987934,21436029808.07075,21518166441.10548,200000,estimate,cm-2

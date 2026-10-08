@@ -1,0 +1,209 @@
+{
+  "files": [
+    {
+      "name": "SEPEM_H_GOES01-02.txt",
+      "bytes": 43868225,
+      "sha256": "9a73b3fa2b8f49219d41cba0f3f403b386043f7f9154dd0f4865db839c3fa87f"
+    },
+    {
+      "name": "SEPEM_H_GOES05.txt",
+      "bytes": 27515588,
+      "sha256": "21cb068ba4e2a3a9888a2bb36f8aeced3c51f6fe03a9057ce51708de62901c9d"
+    },
+    {
+      "name": "SEPEM_H_GOES07.txt",
+      "bytes": 67525700,
+      "sha256": "e24e01597b665a1b31f396868bf4342fef4f3a0a2902fc85bd38708baab1d900"
+    },
+    {
+      "name": "SEPEM_H_GOES08.txt",
+      "bytes": 60495044,
+      "sha256": "70e09c24aeb8e16a2b1c9dc3fff8474c5e52ffcbc516273cccd7a63a90643a21"
+    },
+    {
+      "name": "SEPEM_H_GOES11.txt",
+      "bytes": 63760880,
+      "sha256": "a2f7dddb84bf0e8318f11d8ece2b5a562a71e7b068c2a674c4d75d5d3057d4d4"
+    },
+    {
+      "name": "SEPEM_H_GOES13.txt",
+      "bytes": 40558532,
+      "sha256": "5ffe7cf8a07666d32499acdc7626d5deface46e3bc1e1b9bec648b6f8b3a7407"
+    },
+    {
+      "name": "SEPEM_H_SMS01-02.txt",
+      "bytes": 23833796,
+      "sha256": "eaf384dd3c7d35742023f7bda019f21b052c04ff071e9246a1fda725b7548d4e"
+    },
+    {
+      "name": "SEPEM_H_reference.txt",
+      "bytes": 471505642,
+      "sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50"
+    },
+    {
+      "name": "SEPEM_He_GOES01-02.txt",
+      "bytes": 43868228,
+      "sha256": "e9a7d7209d3bc80b52b1af8437d432dc012e96d2de385ac6bf6637bd509ee489"
+    },
+    {
+      "name": "SEPEM_He_GOES05.txt",
+      "bytes": 27515588,
+      "sha256": "7a373d8f5e1331d5b94cdfd08ee4c616562d188b388f73f513c3390f3e985216"
+    },
+    {
+      "name": "SEPEM_He_GOES07.txt",
+      "bytes": 67525224,
+      "sha256": "1f25f8ed973e6656adda1c6482fe5d947a6eb8f054f14eda00bbd90e2e951c4d"
+    },
+    {
+      "name": "SEPEM_He_GOES08.txt",
+      "bytes": 60495044,
+      "sha256": "484d13b2f04c001403ca9ec59625c13af374276e8a686ab3afd22242cfe61f22"
+    },
+    {
+      "name": "SEPEM_He_GOES11.txt",
+      "bytes": 64960196,
+      "sha256": "c4d5d8a9c8f69c150b386f629335b3f0030f89cadb67a4f4f34fc2d9b058f7ce"
+    },
+    {
+      "name": "SEPEM_He_GOES13.txt",
+      "bytes": 40558532,
+      "sha256": "9ecb7978c0cb08d1ab92a7077a4c456fce6f9c4bbdc61e5d8772bdfd8e82c7d0"
+    },
+    {
+      "name": "SEPEM_He_SMS01-02.txt",
+      "bytes": 26830148,
+      "sha256": "6cf847b79684208c40502c7c151fecf3e1035b9b68fc6ba0c0dadf9c81abd7e4"
+    },
+    {
+      "name": "SEPEM_He_reference.txt",
+      "bytes": 366726609,
+      "sha256": "232d068905d6fcc3dd79bd9b0ad69181f1d49496a523c6042a5455599d4a0f22"
+    },
+    {
+      "name": "data_readme_ftp.txt",
+      "bytes": 9594,
+      "sha256": "9c8a8b606b69228dad6a80acbd3adfb3a64e0d9be7f5ef930c3a9a67ab0e3e7b"
+    }
+  ],
+  "reference_series": {
+    "SEPEM_H_reference.txt": {
+      "sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50",
+      "records": 4365792,
+      "channels": 11,
+      "first_bin_start": "1974-07-01T00:00:00",
+      "last_bin_start": "2015-12-31T23:55:00",
+      "end_exclusive": "2016-01-01T00:00:00",
+      "timestamp_timezone": "not encoded in rows; UTC convention must be sourced",
+      "sample_seconds": 300,
+      "off_grid_records": 0,
+      "gap_count": 0,
+      "gap_examples": [],
+      "duplicate_or_reverse_count": 0,
+      "nonfinite_values": 0,
+      "negative_values": 0,
+      "zeros_by_channel": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allzero_records": 0,
+      "minimum_by_channel": [
+        0.00835,
+        0.0109,
+        0.00838,
+        0.0011,
+        0.000777,
+        0.000462,
+        0.000346,
+        0.000457,
+        0.000162,
+        6.46e-05,
+        3.08e-05
+      ],
+      "maximum_by_channel": [
+        18800.0,
+        8030.0,
+        3410.0,
+        1340.0,
+        577.0,
+        212.0,
+        54.3,
+        11.1,
+        5.34,
+        2.51,
+        1.41
+      ],
+      "numerically_complete": true,
+      "original_observation_completeness": "unknown; supplier filled gaps/removed spikes"
+    },
+    "SEPEM_He_reference.txt": {
+      "sha256": "232d068905d6fcc3dd79bd9b0ad69181f1d49496a523c6042a5455599d4a0f22",
+      "records": 4365792,
+      "channels": 8,
+      "first_bin_start": "1974-07-01T00:00:00",
+      "last_bin_start": "2015-12-31T23:55:00",
+      "end_exclusive": "2016-01-01T00:00:00",
+      "timestamp_timezone": "not encoded in rows; UTC convention must be sourced",
+      "sample_seconds": 300,
+      "off_grid_records": 0,
+      "gap_count": 0,
+      "gap_examples": [],
+      "duplicate_or_reverse_count": 0,
+      "nonfinite_values": 0,
+      "negative_values": 0,
+      "zeros_by_channel": [
+        4006970,
+        3759428,
+        3914055,
+        3674622,
+        3765463,
+        3504642,
+        3733975,
+        3412081
+      ],
+      "allzero_records": 2184974,
+      "minimum_by_channel": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_by_channel": [
+        431.0,
+        191.0,
+        72.6,
+        31.1,
+        9.38,
+        2.74,
+        0.551,
+        0.229
+      ],
+      "numerically_complete": true,
+      "original_observation_completeness": "unknown; supplier filled gaps/removed spikes"
+    }
+  },
+  "named_file_manifest_sha256": "bb4c3f30d9b45d99969f2e3d67700ade4cb4c5117050ffe9d8ee6c845f150451",
+  "total_uncompressed_bytes": 1497552570,
+  "archive": {
+    "name": "SEPEM_RDS_v2-00.zip",
+    "bytes": 191770742,
+    "sha256": "dc44ca7a47a34de92d43410bb881df12eeb371b43c5487f03c414c0834c4dedb"
+  },
+  "extracted_bytes_match_archive": true,
+  "citation": "SEPEM Reference Data Set version 2.00, European Space Agency (2016)",
+  "download_date": null,
+  "download_date_note": "Filesystem timestamps are not proof of download date"
+}

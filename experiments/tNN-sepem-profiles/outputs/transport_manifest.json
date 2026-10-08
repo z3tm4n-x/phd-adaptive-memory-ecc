@@ -1,0 +1,49 @@
+{
+  "config_sha256": "ea3a35809cd10e54be7cc01e54462bf30eb0aace475e0d61c9b3b4d883c9f36a",
+  "code_sha256": {
+    "transport.py": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45",
+    "pipeline.py": "955c91c530ca713b18964d3df229bd877fa275b0c29c3b5ca942cf02f4935e49"
+  },
+  "reference_sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50",
+  "n": 4365792,
+  "first_bin_start": "1974-07-01T00:00:00",
+  "rate_keys": [
+    "csda_3_pdi",
+    "csda_2p5_pdi",
+    "csda_3_no_pdi",
+    "csda_3_interpolant_upper",
+    "bohr_3_pdi",
+    "bohr_2p5_pdi",
+    "csda_3_cut289",
+    "csda_3_cut1000",
+    "csda_3_jlinear_logE"
+  ],
+  "response": {
+    "bits": 19922944,
+    "angular_factor": 12.566370614359172,
+    "pdi_incident_energy_MeV_rho3": 50.724945076068465,
+    "stopping_threshold_MeV_rho3": 50.68748649652876,
+    "bohr_near_stopping_range_sd_g_cm2": {
+      "2.5": 0.03082974652850492,
+      "3": 0.03659438424885002
+    },
+    "lookup_relative_error_bound": 1.811954557643872e-05,
+    "lookup_scope": "positive discrete quadrature, excluding quadrature/model error",
+    "variants": [
+      "csda_3_pdi",
+      "csda_2p5_pdi",
+      "csda_3_no_pdi",
+      "csda_3_interpolant_upper",
+      "bohr_3_pdi",
+      "bohr_2p5_pdi"
+    ],
+    "nuclear_secondaries": "not included; not assumed absent",
+    "physical_sigma_upper_bound": null,
+    "helium_and_heavy_ion_rate": null
+  },
+  "diagnostics": {
+    "slope_min": -10.264592922713938,
+    "slope_max": 4.190135182561126,
+    "tail_slope_limited_rows": 2718109
+  }
+}

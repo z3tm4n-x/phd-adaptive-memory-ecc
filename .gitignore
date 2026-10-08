@@ -62,6 +62,15 @@ Thumbs.db
 **/generated/*
 **/waveforms/*
 
+# SEPEM RDS v2 raw archive and H/He series: keep external, at any depth
+SEPEM_RDS_v2-00*.zip
+SEPEM_H_reference.txt
+SEPEM_He_reference.txt
+SEPEM_H_GOES*.txt
+SEPEM_He_GOES*.txt
+SEPEM_H_SMS*.txt
+SEPEM_He_SMS*.txt
+
 # Zotero library/database and PDF library must not live here
 zotero.sqlite*
 *.zotero-ft-cache

@@ -1,0 +1,165 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.2",
+    "psutil": "7.2.2"
+  },
+  "base_commit": "3dc57116db443a8e963126eb18791b242e2dc7c0",
+  "elapsed_seconds": 187.29285809997236,
+  "steps": [
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "seconds": 2.568166100012604
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\audit.py",
+        "--archive",
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\Downloads\\Telegram Desktop\\SEPEM_RDS_v2-00.zip"
+      ],
+      "returncode": 0,
+      "seconds": 56.36821939999936
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\baseline.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.1770347999990918
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\check_numerics.py"
+      ],
+      "returncode": 0,
+      "seconds": 69.49438439996447
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\pipeline.py",
+        "--profiles-only"
+      ],
+      "returncode": 0,
+      "seconds": 28.68902250000974
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\finish.py",
+        "--with-helium"
+      ],
+      "returncode": 0,
+      "seconds": 23.50396020000335
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\check_legacy.py",
+        "--events",
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\outputs\\events.csv"
+      ],
+      "returncode": 0,
+      "seconds": 1.9061536999652162
+    },
+    {
+      "arguments": [
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles\\implications.py"
+      ],
+      "returncode": 0,
+      "seconds": 2.3268530999775976
+    },
+    {
+      "arguments": [
+        "-m",
+        "compileall",
+        "-q",
+        "-l",
+        "C:\\Users\\\u0418\u0432\u0430\u043d\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\sepem-profiles\\experiments\\tNN-sepem-profiles"
+      ],
+      "returncode": 0,
+      "seconds": 1.2245405000285245
+    }
+  ],
+  "scientific_outputs_sha256": {
+    "analysis_summary.json": "b0d7bacf8707d6f3a9cf50048453d7f4c0956901bc2fda5b7d738427c5e36a3f",
+    "baseline_audit.json": "e63dbab8124799b5d9e1efe1ec9e1d6c4ea2677b2c6a7c622c83b12060445a5e",
+    "design-model-A.csv": "56c7f998fb0334c6dbe8ee7926d207b5a4ff80a87e323e628c74e5cbcf7ff5a3",
+    "events.csv": "cb0c9bf29963002342bda99a0851743a7bc432b17703275faf2775d2a0f511e8",
+    "gost_convolution.json": "a6711ad8533be2dfbefd4a4dd3750e246eff1510b437389f38a9ccf019a9a80f",
+    "helium_manifest.json": "53f33590c44922c1fddd9b7532fcf9b9b948095d697471fcbdde2ce7a8e80f20",
+    "implications.json": "de12858c84e0178a7e7b018b5fc2ae9e5ba87950ba4be97384a5b68842aac854",
+    "input_audit.json": "0c0769114e5fd13b32169c3bb1a75aef2fbb55955c29456bc7221bea3fd52c27",
+    "largest-event-profiles.png": "f53fb9176663e1873d497686d9dd535e2edc886a29111380f6c9823758ca5ca5",
+    "largest-event-profiles.svg": "135ba87dea74c0df1bcdaa08cd96e2abe673d6534b94e4329e70e063edb4200c",
+    "largest-events.csv": "d5414ca0f6ffcff2b18bdcb287f7c665d03945250006a110512778e696f41b3a",
+    "legacy_T67_reference_events.csv": "bb26df48d6e97305a1b24106d863ed38e82ab170247691943d3ae6809a623b01",
+    "legacy_transport_comparison.csv": "4168155ce460565a99b8aca6934215179ce1328f61a308bcd2f8f759a16ea7c6",
+    "legacy_transport_comparison.json": "1310be90ed334286e3e7ba48a2209b014cfe63790c1ff4900b431ac589b8c14b",
+    "mission-model-B.csv": "f3af4d59121c37d5e678cdcf2bbecec4fe55e5e5cb17a2638e0a770aa079364a",
+    "mission-S2-cdf.csv": "40a822678ff63bbdee8aa8b245b4c125830b5d463ad6c510f7e3c1ac515286e2",
+    "mission-S2-distribution.png": "511b63a65fd728041eea8122b48d7f490a76be7c50a4269408ef744940168a5a",
+    "mission-S2-distribution.svg": "d6b1b487a2a86b12132c8a7f71bd35058238dd21e5a668199271c6d72c618f29",
+    "numerical_checks.json": "48d1707d67cfebeaa682204a866abe470de82708f4e2089b03fe6c22730c8059",
+    "probability-arithmetic.csv": "e25f2e1d0a32631d3d467e8c9f1583e7a52109bc00fe368d6a2ebaf1116bc3c4",
+    "requested-years-events.csv": "2e6b49fba13d644d873d7116210ba3fd4134a3398012f5114b27c62ef3d8fd41",
+    "sensitivity.csv": "7106a769be0c70d1f8e166f0741af579ef58eefe6b6695121f01e33f9fa10dfb",
+    "shape-by-size.png": "9c3ee264d4118768127671b8a7575a73f2779de366b7a38ede64026138e374b7",
+    "shape-by-size.svg": "7a7badcb50019af4e68337b6c4a4a7bc28b78194158d4d56e4cf41c5197ff5cf",
+    "ten-year-windows-daily.csv": "1e77c647285d52507ed2c6f7f1b02b69a00e360b622c3e6126ad7d2152adc379",
+    "transport_manifest.json": "cf2c16739faa8110e3befc3c995632c441192c5652f8512516dcb5af077b636c"
+  },
+  "source_code_sha256": {
+    "analysis.py": "de872a4cdc30031ea2c46d8fed2ee6adc59566f97569ef2cdb6dbcde4c0e73c4",
+    "audit.py": "a0e630885d4a997ee1a0d299439578ca6cccdfefc7f55d3694b23ff4b1177108",
+    "baseline.py": "2e1fd533176b46b0422063c36af2d4b64d7cf04188f3c5d11d5f64b267f37300",
+    "check_legacy.py": "28a70f8efb4c15502de38d0f95fbc1dda15547385d598755f9eb32e1b6507883",
+    "check_numerics.py": "b32d2386c9ffd006e7cfa344f2b51d9f86dec22987bf3e5b2b5f746923158eb7",
+    "finish.py": "461b30a15b03ee422f911c6223d351eb79f6811242801418934e7aaa2e68ea3e",
+    "gost.py": "cb8cceef2a51e110d59b171a7e64d3912ff2d804945c59db00971f8d77c12a28",
+    "helium.py": "c7bded0604d496d775234c949a6720a4e74daf3fa94e0eedc24665654bfa9422",
+    "implications.py": "2467919c593ab2765a960e7d636cf08e3c66c26d61a6c294b088f2529b610d3c",
+    "pipeline.py": "955c91c530ca713b18964d3df229bd877fa275b0c29c3b5ca942cf02f4935e49",
+    "prepare_inputs.py": "55374bdb208418ede97e48a2ce8dde93cd50d93b6780f13a0460e3df1f84720f",
+    "reproduce.py": "bd78c62ec827f7c80cab34627f3cbca2276fe4c174935a29c7fd0c170c75f736",
+    "test_analysis.py": "7da13465bb3f0553220e52b76a8b19c2a632e22fcecaaf3c620abe4d1e474160",
+    "test_audit.py": "75b4964aab7b8bea7745f746c43308c4fc7cc182a289d7e2aeb16f43379d4b81",
+    "test_gost.py": "bd59bb30a9416f14941c77856dba5eebbc0261f7291cfa178a5c1b181c1c2058",
+    "test_helium.py": "cc2c82cf5ac344d6b630551570a46a62b2798dcc3f66e74fa34566484ae38345",
+    "test_legacy.py": "257081067dae577213ff74ed72608fdfb78a59b9c1d73f8fe34fff7fbf02f31a",
+    "test_transport.py": "c373968ed2f1d9c216e11ac92a8ee8881c7ee222411da78d917bc79f14efd370",
+    "transport.py": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45"
+  },
+  "small_inputs_sha256": {
+    "astar_manifest.json": "86b9cd6915418333d69193787fa5b31b12b5730431c2deb82015e5d1f8793e0c",
+    "gost_selected_coefficients.csv": "8b2f0727d1a0331c44f47693077958392e941fee4546590f28571694cef19014",
+    "nist_astar_al.csv": "9a3e7084512a5c3bc628a352a919052b2f0bbae3bae7fb482fdb21a736710777",
+    "nist_astar_si.csv": "a6ed4fccf392aa5d5d1f1028f539f985e0fb09286aea990dcc86687c609a904d",
+    "nist_manifest.json": "058a1af4eb26cee4ff2322ef9e75a3e19411c4ec33ce0d7370597f6713802f33",
+    "nist_pstar_al.csv": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9"
+  },
+  "upstream_sources_sha256": {
+    "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+    "experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/recovery/outputs/radar_transport.npz": "7f006d49c4e469b624db62b84925571c40f0602cfbd0f3b333211521dad60f9e",
+    "experiments/t67-goes-growth/response.py": "c9c97d0a45695168fd372f6957c08d39bbbd54ea1305614c8f74a46065da7201",
+    "experiments/t67-goes-growth/outputs/reference_events.csv": "191e1fad61a09226d155dd65d0e87a4338688ed674f4b7892607e33e654e625a",
+    "experiments/t68-v21-inputs/inputs/calc_v18.zip": "14ac38ff24c1bf1a199278f08a7c807176b8b613f434719309050248b8929b83",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/sl_x.txt": "dbd44c3322293e9bb2238343af38ba08032e1a184da5cb2021942e86ac702350",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/sp_x.txt": "1d6e2536011f41bbb74189a2730cb1eaa9102aa1fec42a6b10d4e8b32fbcc57a",
+    "experiments/t68-v21-inputs/outputs/v21_reconstructed.json": "9497c95ea9fe1b800d58eec42d61419de95182cd82de710d9b58048ae9e137c4",
+    "theory/t73-burst-mode-count-inputs.json": "1ee101815fd7f388213a4c69e8aaac9ff5c36eca6ce3b42560e917a3ddbfbc20"
+  },
+  "config_sha256": "ea3a35809cd10e54be7cc01e54462bf30eb0aace475e0d61c9b3b4d883c9f36a",
+  "completion": "conditional profile calculations; full R0-A normative replacement not established"
+}
