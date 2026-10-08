@@ -32,6 +32,11 @@ def main():
                 raise RuntimeError((p.stdout+p.stderr)[-7000:])
             return p.stdout
         stats = {}
+        spacing_log = run(f'read_verilog -formal -sv "{HERE}/formal/spacing.sv"; '
+                          'prep -top spacing; flatten; chformal -lower; '
+                          'sat -set-def-inputs -prove-asserts -verify -timeout 30')
+        if "SUCCESS" not in spacing_log:
+            raise AssertionError("64-bit spacing equivalence not proved")
         for module in ("e_backend", "absolute_calendar", "permission_gate"):
             log = run(f'read_verilog -sv "{HERE}/rtl/{module}.sv"; '
                       f'synth -top {module}; check; tee -o stats.json stat -json')
@@ -62,7 +67,10 @@ def main():
         rpc_log = run(rpc_script)
         if "SUCCESS" not in rpc_log:
             raise AssertionError("no successful multi-clock RPC proof")
-        result = {"yosys": version, "backend_bounded_formal": {
+        result = {"yosys": version,
+            "spacing_equivalence": {"assertions": 2, "timestamp_bits": 64, "status": "proved",
+                                    "scope": "separate arithmetic miter; full core covered by regression, not this proof"},
+            "backend_bounded_formal": {
             "core_steps": args.steps, "xi_ticks": args.steps*4, "word_address_bits": 19,
             "assertion_status": "proved over the bounded initial-state traces",
             "assertions": 24,

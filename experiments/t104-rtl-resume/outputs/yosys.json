@@ -1,5 +1,11 @@
 {
   "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+  "spacing_equivalence": {
+    "assertions": 2,
+    "timestamp_bits": 64,
+    "status": "proved",
+    "scope": "separate arithmetic miter; full core covered by regression, not this proof"
+  },
   "backend_bounded_formal": {
     "core_steps": 60,
     "xi_ticks": 240,
@@ -114,36 +120,36 @@
       }
     },
     "integrated_executor": {
-      "num_wires": 30181,
-      "num_wire_bits": 48943,
-      "num_pub_wires": 501,
-      "num_pub_wire_bits": 18215,
+      "num_wires": 30084,
+      "num_wire_bits": 48968,
+      "num_pub_wires": 502,
+      "num_pub_wire_bits": 18216,
       "num_ports": 280,
       "num_port_bits": 7824,
       "num_memories": 0,
       "num_memory_bits": 0,
       "num_processes": 0,
-      "num_cells": 35523,
+      "num_cells": 35363,
       "num_cells_by_type": {
-        "$_ANDNOT_": 4217,
-        "$_AND_": 601,
+        "$_ANDNOT_": 4100,
+        "$_AND_": 563,
         "$_DFFE_PN_": 1,
-        "$_DFFE_PP_": 3164,
+        "$_DFFE_PP_": 3165,
         "$_DFF_P_": 431,
-        "$_MUX_": 598,
-        "$_NAND_": 362,
-        "$_NOR_": 527,
-        "$_NOT_": 705,
-        "$_ORNOT_": 1239,
-        "$_OR_": 1987,
+        "$_MUX_": 601,
+        "$_NAND_": 447,
+        "$_NOR_": 385,
+        "$_NOT_": 795,
+        "$_ORNOT_": 1175,
+        "$_OR_": 2073,
         "$_SDFFCE_PN0P_": 64,
         "$_SDFFE_PN0N_": 8,
         "$_SDFFE_PP0P_": 1077,
         "$_SDFFE_PP1P_": 24,
         "$_SDFF_PP0_": 11,
         "$_SDFF_PP1_": 1,
-        "$_XNOR_": 1674,
-        "$_XOR_": 18832
+        "$_XNOR_": 1629,
+        "$_XOR_": 18813
       }
     }
   },

@@ -184,6 +184,40 @@ def main():
             if result.returncode:
                 raise RuntimeError(result.stdout+result.stderr)
             print(result.stdout.strip())
+        gray_exe = temp / "gray.vvp"
+        modules = sorted(str(path) for path in (HERE/"rtl").glob("*.sv")
+                         if not path.name.startswith("tb_"))
+        compile_gray = subprocess.run([args.iverilog, "-g2012", "-s", "tb_gray", "-o", str(gray_exe),
+                                       *modules, str(HERE/"rtl/tb_gray.sv")], capture_output=True, text=True)
+        if compile_gray.returncode:
+            raise RuntimeError(compile_gray.stdout+compile_gray.stderr)
+        gray = subprocess.run([args.vvp, str(gray_exe)], check=True, capture_output=True,
+                              text=True, timeout=30)
+        if "T104_GRAY_PASS cases=185" not in gray.stdout:
+            raise AssertionError("incomplete Gray boundary regression")
+        print(gray.stdout.strip())
+        spacing_exe = temp / "spacing.vvp"
+        spacing_command = [args.iverilog, "-g2012", "-s", "tb_spacing", "-o", str(spacing_exe),
+                           *modules, str(HERE/"formal/tb_spacing.sv")]
+        subprocess.run(spacing_command, check=True, capture_output=True)
+        spacing = subprocess.run([args.vvp, str(spacing_exe)], check=True, capture_output=True,
+                                 text=True, timeout=30)
+        if "T104_SPACING_PASS cases=163" not in spacing.stdout:
+            raise AssertionError("incomplete real-core spacing regression")
+        print(spacing.stdout.strip())
+        original_core = str(HERE/"rtl/executor_core.sv")
+        core_text = Path(original_core).read_text(encoding="utf-8")
+        marker = "offer_overflow<=incoming[223:160]>64'hffffffffffffea7b;"
+        if core_text.count(marker) != 1:
+            raise AssertionError("overflow mutation target drifted")
+        mutant_core = temp/"no_spacing_overflow.sv"
+        mutant_core.write_text(core_text.replace(marker, "offer_overflow<=1'b0;"), encoding="utf-8")
+        mutant_command = [str(mutant_core) if x == original_core else x for x in spacing_command]
+        subprocess.run(mutant_command, check=True, capture_output=True)
+        bad_spacing = subprocess.run([args.vvp, str(spacing_exe)], capture_output=True, text=True, timeout=30)
+        if not bad_spacing.returncode or "spacing previous=" not in bad_spacing.stdout:
+            raise AssertionError("discarded-overflow mutant survived")
+        print("MUTATION_REJECTED: discarded spacing overflow")
         # Mechanical mutation in a temporary copy, never the committed source.
         source = (HERE/"rtl/e_backend.sv").read_text(encoding="utf-8")
         target = "op != READ32 && captured_err"
@@ -197,6 +231,9 @@ def main():
     summary = {"tools": versions, "backend_cases": n, "backend_edges": rows, "calendar_edges": calendar_rows,
                "permission_edges": permission_rows,
                "directed_guard_testbench_passed": True,
+               "gray_carry_boundary_cases": 185,
+               "actual_core_spacing_boundary_cases": 163,
+               "spacing_overflow_mutation_rejected": True,
                "calendar_word_count": 8, "backend_vector_sha256": hashlib.sha256(v.encode()).hexdigest(),
                "calendar_vector_sha256": hashlib.sha256(c.encode()).hexdigest(),
                "permission_vector_sha256": hashlib.sha256(commands.encode()).hexdigest(),

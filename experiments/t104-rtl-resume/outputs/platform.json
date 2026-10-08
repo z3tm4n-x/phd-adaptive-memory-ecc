@@ -1,12 +1,12 @@
 {
-  "status": "BLOCKED_DEVICE_SUPPORT",
+  "status": "DEVICE_SUPPORT_AVAILABLE_NOT_STA",
   "vivado_version": "Vivado v2025.2 (64-bit)\nSW Build 6299465 on Fri Nov 14 12:34:56 MST 2025\nIP Build 6300035 on Fri Nov 14 10:48:45 MST 2025\nTool Version Limit: 2025.11\nCopyright 1986-2022 Xilinx, Inc. All Rights Reserved.\nCopyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.\nSharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025",
-  "installed_part_count": 429,
-  "available_parts": [],
-  "missing_parts": [
+  "installed_part_count": 1039,
+  "available_parts": [
     "xc7z020clg484-1",
     "xc7z020clg484-2"
   ],
+  "missing_parts": [],
   "synthesis_run": false,
   "STA_run": false,
   "wns_ns": null,
@@ -15,11 +15,11 @@
   "ths_ns": null,
   "resources": null,
   "device_license_tested": false,
-  "elapsed_s": 12.537,
+  "elapsed_s": 17.498,
   "inspect_tcl_sha256": "8a70541445ba79cff9cba187409ac805b5f01e95f688d2696bb1355df3923b99",
-  "console_sha256": "2319b184db1d462186ce20df232d013da946532c58afacfef28a1aa13cf3961f",
+  "console_sha256": "0623528a586225596d2a432d923bc2a83abd4c718747e41faccbb668d31dabe8",
   "command": [
-    "vivado-wsl",
+    "/home/z3tm4n/bin/vivado-wsl",
     "-mode",
     "batch",
     "-source",
@@ -29,5 +29,5 @@
     "-journal",
     "inventory.jou"
   ],
-  "tool_exit_code": 2
+  "tool_exit_code": 0
 }

@@ -45,13 +45,15 @@ module executor_core #(
         .clk(clk),.wr(cfg_wr),.commit(cfg_commit),.start_ok(start_ok),
         .address(cfg_address),.data(cfg_data),.arm_due(arm),.locked(config_locked),
         .fault(config_fault),.compatible(config_compatible));
-    // Gray encode the core-edge counter, not a binary multi-bit CDC bus.
-    reg [63:0] published_time=0;
-    assign time_gray=(published_time>>2)^((published_time>>2)>>1);
+    // Register the ENCODED value. Combinational Gray after binary flops could
+    // glitch on a carry even though RTL samples show one-bit transitions.
+    // Same sampled value/latency as encoding the old published_time register.
+    reg [63:0] published_gray=0;
+    assign time_gray=published_gray;
     always @(posedge clk) begin
         if (arm) begin running<=1; now<=0; end
         else if(running) begin
-            published_time<=now;
+            published_gray<=(now>>2)^((now>>2)>>1);
             if(now>64'hfffffffffffffffb) time_fault<=1;
             else now<=now+4;
         end
@@ -91,7 +93,11 @@ module executor_core #(
     reg [63:0] last_id [0:1];
     reg [1:0] seen_id=0;
     reg [1:0] error_reply=0;
-    reg [63:0] last_offer=0;
+    // Precompute the acceptance threshold when the previous offer arrives.
+    // Overflow means NO 64-bit timestamp can satisfy the required spacing.
+    // This removes a variable 64-bit subtract from same-edge alarm priority.
+    reg [63:0] next_offer=0;
+    reg offer_overflow=0;
     reg seen_offer=0;
     reg active_app=0, owner=0;
     reg [31:0] result [0:1];
@@ -127,8 +133,8 @@ module executor_core #(
     wire [1:0] bad={bad_request(p1,seen_id[1],last_id[1]),bad_request(p0,seen_id[0],last_id[0])};
     // Allow48xi timestamp uncertainty; do NOT reject a conforming near-boundary
     // stream merely because the two Gray samples have different phase lag.
-    wire close0=seen_offer && (p0[223:160]<last_offer || p0[223:160]-last_offer<5508);
-    wire close1=seen_offer && (p1[223:160]<last_offer || p1[223:160]-last_offer<5508);
+    wire close0=seen_offer && (offer_overflow || p0[223:160]<next_offer);
+    wire close1=seen_offer && (offer_overflow || p1[223:160]<next_offer);
     // Same-edge loss priority: do not wait for the sticky diagnostic register
     // before a freeze decision at this edge.
     assign new_queue_loss=|(capture & bad) || (&capture)
@@ -183,7 +189,9 @@ module executor_core #(
                 if(!malformed) begin last_id[i]<=incoming[159:96]; seen_id[i]<=1; end
                 // This necessary monitor is not an envelope certificate.
                 if(i==0 ? close0 : close1) queue_fault<=1;
-                last_offer<=incoming[223:160]; seen_offer<=1;
+                next_offer<=incoming[223:160]+64'd5508;
+                offer_overflow<=incoming[223:160]>64'hffffffffffffea7b;
+                seen_offer<=1;
             end
             if(retire[i]) begin
                 if(state[i]!=3) queue_fault<=1;
