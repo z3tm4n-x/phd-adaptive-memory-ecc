@@ -1,13 +1,13 @@
 {
-  "code_commit": "59cd47091528b4527ef81fff1ddc952c251e3764",
+  "code_commit": "49bc2ddbe2e3ac729cf995676784c5ae1c7f1f38",
   "config_sha256": "80c582060889c64b325d4bbe5b3718f89a3c75ee883e7d6adbfac21982d9f32c",
-  "code_sha256": "cf379d9979b8432d7666ffc2afe55b0b19de8fe6418bec9876e9ff95591bf7b8",
+  "code_sha256": "907b431427f0568c325bea285baf1dd5ba47a5de8d21bca8b679cb2df9d2954c",
   "python": "3.12.14",
   "numpy": "2.3.5",
   "scipy": "1.18.1",
   "platform": "Windows-11-10.0.26200-SP0",
-  "ru_maxrss_bytes": 104513536,
-  "wall_seconds": 0.6630825000465848,
+  "ru_maxrss_bytes": 105009152,
+  "wall_seconds": 0.6779859000234865,
   "inputs_sha256": {
     "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
     "experiments/RE-CY62167-PROTON-01/source_manifest.json": "72812ce5e4c289cca3b9e0d2777b1b11c84bac9636ec5398c6abe659e86771b2",
@@ -34,13 +34,13 @@
     "experiments/tNN-sepem-profiles/transport.py": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45"
   },
   "outputs_sha256": {
-    "gost-proton-conditional.csv": "2c30236b5080b12699d5cbecb891565401c9eaa8da3db7dad501efa2121fbeed",
-    "inputs-126.json": "090d94e9018152501a3a7fa7f6846106e054271371f5f25fef201cdc62cce6cb",
-    "population.json": "fa9ffbc58f99a269150ec3f8e24e5ebcc656c4001b403d05148700ffd19fca67",
-    "service.json": "6a55db2ffec50565cf87760acd6c74fde76d4bf015a392ca913b827bb9d37a49",
-    "shield-conditional.csv": "aa028ef76c88e534867332c23979678d6b6bea9cf6e74326fda066a01a94e41e",
-    "silso-yearly-derived.csv": "d06428bc5bfb105c183d043e1eb750e815fc8156e44706861cb479503e49ce79",
-    "zenodo-check.json": "a9c5e13084469f34f380bfc261ccf670146c0c4dca157392bce711f7e0c93069"
+    "gost-proton-conditional.csv": "e385a0c5313f6dba5abbaf57478983ae9705782fc88d5f0c2e73242d97d256c0",
+    "inputs-126.json": "2b8e1bd80b8af80e849cd8098f69e9bc45002fbde1754e0aa2c89b10d990616d",
+    "population.json": "37b6f537eee7ef6d190fde4c7f2326aed7f55b5b934fc3fa7f27cfacd673989a",
+    "service.json": "86fccf3b079cc054b4ffd21fb9e2cf18c9c067ebbbcb6896c8e474d75695bf2b",
+    "shield-conditional.csv": "c34a0b83f140ca956b84f2c3750894319df6ccccfd7b60778e27fa8690a4390d",
+    "silso-yearly-derived.csv": "7c50f54fdd4e2427ccf9fd2bca535f0709dc6c1e172c43e0319476604224ced6",
+    "zenodo-check.json": "0271c042028b8786289d4b947de41161c74f34440928cb6c5dd4821e980fc671"
   },
   "scope": "reproduction with shared production dependencies; see independent checker for additional evidence"
 }
