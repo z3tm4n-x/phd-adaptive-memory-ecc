@@ -1,0 +1,30 @@
+{
+  "task": 119,
+  "base_sha": "3dc57116db443a8e963126eb18791b242e2dc7c0",
+  "accepted_T114_sha": "a8f57dc33f919ccca8e6474141615f55f88cb938",
+  "accepted_T104_sha": "36f0dab3cfb1e051b9480d02c5aae303e943ecfe",
+  "accepted_T110_sha": "8d8cacde4f0069facee4415d8933425ed7abc04f",
+  "accepted_T113_sha": "d6668355a3d3fb6cbb409d38fa3c1f727154a1ed",
+  "plan_commit_before_search": "2e56f19b215bbedc96544a3e8b517907b8ed4307",
+  "main_profile": "MCU_calibrated_write",
+  "rho_per_s": "0.048",
+  "timer_family_s": [[10,30],[20,60],[40,90],[60,120],[90,180]],
+  "first_multipliers": [1,3,5,9,17,33,63],
+  "addressed_neighbor": 7,
+  "numerics": {"phase_cells": 8, "q_cells": 192, "refinements": 5, "decimal_precision": 48},
+  "directed_cases": [
+    {"name":"same_rule_two", "ka":3, "stage":2, "w":90, "h":180, "profile":"MCU_calibrated_write", "shield":"3"},
+    {"name":"same_rule_one", "ka":3, "stage":1, "w":90, "h":180, "profile":"MCU_calibrated_write", "shield":"3"},
+    {"name":"two_presented", "ka":3, "stage":2, "w":40, "h":90, "profile":"MCU_calibrated_write", "shield":"3"},
+    {"name":"one_presented", "ka":5, "stage":1, "w":60, "h":120, "profile":"MCU_calibrated_write", "shield":"3"},
+    {"name":"two_next_rejected", "ka":5, "stage":2, "w":40, "h":90, "profile":"MCU_calibrated_write", "shield":"3"},
+    {"name":"one_next_rejected", "ka":7, "stage":1, "w":60, "h":120, "profile":"MCU_calibrated_write", "shield":"3"},
+    {"name":"singleton_two_sensitivity", "ka":3, "stage":2, "w":40, "h":90, "profile":"singleton_write", "shield":"3"},
+    {"name":"singleton_one_sensitivity", "ka":5, "stage":1, "w":60, "h":120, "profile":"singleton_write", "shield":"3"},
+    {"name":"shield25_two_sensitivity", "ka":3, "stage":2, "w":40, "h":90, "profile":"MCU_calibrated_write", "shield":"2.5"},
+    {"name":"shield25_one_sensitivity", "ka":5, "stage":1, "w":60, "h":120, "profile":"MCU_calibrated_write", "shield":"2.5"}
+  ],
+  "balance_addressed": {"ka":9,"stage":1,"w":90,"h":180,"alpha_per_s":"1/40","q0_per_s":".003","A":".288206","phase_cells":4,"q_cells":96,"z_cells":48},
+  "application_region_example": {"joint_burst":"1","joint_offer_rate_max_per_s":"10000","mean_write_rate_max_per_s":"1000","mean_read_rate_max_per_s":"1000","measured_application":null},
+  "scope":"Addressed proof and deterministic verification; no new monitor, RTL, physical campaign, or global optimizer"
+}
