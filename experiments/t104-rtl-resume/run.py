@@ -71,9 +71,11 @@ def main():
         subprocess.run([sys.executable, "-B", "-m", "unittest", "discover", "-s",
                         str(ROOT/PRESERVE[3]), "-p", "test_reference.py"], check=True)
     for enabled, script in ((args.rtl, "rtl_check.py"), (args.rtl, "integration_check.py"),
-                            (args.formal, "yosys_check.py"), (args.formal, "pdr_check.py")):
+                            (args.formal, "yosys_check.py"), (args.formal, "pdr_check.py"),
+                            (args.formal, "config_check.py")):
         if enabled:
             subprocess.run([sys.executable, "-B", str(HERE/script)]
+                           + (["--formal"] if script == "config_check.py" else [])
                            + (["--write"] if args.write else []), check=True)
     accepted = protected_bytes()
     report = {"stage": "integrated E executor; B in progress", "base_sha": BASE,

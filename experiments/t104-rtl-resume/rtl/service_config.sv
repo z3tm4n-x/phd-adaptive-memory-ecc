@@ -8,22 +8,31 @@ module service_config #(parameter integer WORD_BITS=19, INVERSE=174763)(
     output reg locked, fault,
     output wire compatible
 );
-    reg [31:0] fields [0:11];
+    // Only field equality is observable; retain it on the write edge instead
+    // of putting twelve 32-bit comparisons on the arm/cold_init fast path.
+    // Zero means either unwritten or a nonmatching LAST permitted write.
+    reg [11:0] field_match=0;
     initial begin locked=0; fault=0; end
-    reg [11:0] written=0;
-    integer i;
-    initial for (i=0;i<12;i=i+1) fields[i]=0;
-    assign compatible = written==12'hfff && WORD_BITS>=3 && WORD_BITS<=19
-        && ((64'd3*INVERSE)%(64'd1<<WORD_BITS)==1)
-        && fields[0]==32'h00104114 && fields[1]==(32'd1<<WORD_BITS)
-        && fields[2]==38 && fields[3]==3 && fields[4]==196 && fields[5]==164
-        && fields[6]==320 && fields[7]==8 && fields[8]==1312
-        && fields[9]==240 && fields[10]==208 && fields[11]==104;
+    assign compatible = (&field_match) && WORD_BITS>=3 && WORD_BITS<=19
+        && ((64'd3*INVERSE)%(64'd1<<WORD_BITS)==1);
     assign arm_due = commit && !wr && !locked && compatible && start_ok;
     always @(posedge clk) begin
         if (wr) begin
             if (locked || address>=12 || commit) fault<=1;
-            else begin fields[address]<=data; written[address]<=1; end
+            else case(address)
+                0: field_match[0]<=data==32'h00104114;
+                1: field_match[1]<=data==(32'd1<<WORD_BITS);
+                2: field_match[2]<=data==38;
+                3: field_match[3]<=data==3;
+                4: field_match[4]<=data==196;
+                5: field_match[5]<=data==164;
+                6: field_match[6]<=data==320;
+                7: field_match[7]<=data==8;
+                8: field_match[8]<=data==1312;
+                9: field_match[9]<=data==240;
+                10: field_match[10]<=data==208;
+                11: field_match[11]<=data==104;
+            endcase
         end
         if (commit) begin
             if (arm_due) locked<=1;

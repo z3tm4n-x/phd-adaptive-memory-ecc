@@ -62,8 +62,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--vivado", default="vivado-wsl")
     parser.add_argument("--parts", nargs="+", choices=PARTS, default=list(PARTS))
+    parser.add_argument("--series", help="new named output series; historical reports are never overwritten")
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
+    if args.series and not re.fullmatch(r"[a-z][a-z0-9-]{0,39}", args.series):
+        parser.error("series must be a short lowercase identifier")
+    output_root = HERE/"outputs/sta"
+    if args.series:
+        output_root /= args.series
+    if args.write and any((output_root/part).exists() for part in args.parts):
+        parser.error("refusing to overwrite recorded STA: select a fresh --series")
     aggregate = []
     for part in args.parts:
         run = HERE/".build"/f"sta-{part}-{time.time_ns()}"
@@ -94,7 +102,7 @@ def main():
                   "board_timing_qualified": False, "full_B_complete": False}
         aggregate.append(result)
         if args.write:
-            target = HERE/"outputs/sta"/part
+            target = output_root/part
             target.mkdir(parents=True, exist_ok=True)
             # Bounded text reports only; no log, DCP, tool database or raw project.
             with zipfile.ZipFile(target/"reports.zip", "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:

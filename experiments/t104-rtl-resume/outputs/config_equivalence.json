@@ -1,0 +1,303 @@
+{
+  "baseline_commit": "cd68afd309cc00a152dca51dd557b76991afdb13",
+  "gold_sha256": "d30206ef6b70686811bb65abf81f5b769548c7f5ff5a0e261a7231e1a758f2c2",
+  "production_sha256": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3",
+  "checker_sha256": "96895bda9da46edf7df7610706a7250e158121e6ee3c67b80858b9f7b9bf49c7",
+  "seed": 10420261008,
+  "harness_sha256": {
+    "config_equivalence.sv": "548569777ace25aa811700690dfaba178dff4614b3c25293c46e868da084e564",
+    "tb_config.sv": "dcc779ef777a4dbc7787248d9b97c5fbf0242d8aa0c3c47bf211e7cefcd3a23f"
+  },
+  "tools": {
+    "python": "3.14.4",
+    "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+    "iverilog": "Icarus Verilog version 12.0 (stable) ()"
+  },
+  "cases": [
+    {
+      "word_bits": 3,
+      "inverse": 3,
+      "edges": 1582,
+      "vector_sha256": "6be142817ce8c6e6612d7c17c87386e2e2e56f605fa0fd92aad3ddd8b65caf2a",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "aa7c84a414119e9a89ce2b0bf7ff164ac5361c9d47625196a62c7c5b5fe1d135"
+      }
+    },
+    {
+      "word_bits": 4,
+      "inverse": 11,
+      "edges": 1582,
+      "vector_sha256": "3a82fa2c7d15a39da6fa99632b48d62bd312ef119264a2694fd726b4635e0586",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "5152a324d57f23a8ac6e616aefd41b48b051b64b3c320ab6b9616cfca9490e3a"
+      }
+    },
+    {
+      "word_bits": 5,
+      "inverse": 11,
+      "edges": 1582,
+      "vector_sha256": "987674ed30dc5e9e2cd104227a299512bb47361b5216b2c83c36aba3923690bd",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "7ca06fdb35b7ed24986618f5f7c42a00a1f6fb7dc147f10ee1b59a2496d37ae3"
+      }
+    },
+    {
+      "word_bits": 6,
+      "inverse": 43,
+      "edges": 1582,
+      "vector_sha256": "37ddb6efb3c71a42fc780d35701a8d7a652ad3b4b2ddf8ec78544901f7893747",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "7782b05a92470eb9081f05af232357eceda516bdcc6773eed5b46f8662dbeea1"
+      }
+    },
+    {
+      "word_bits": 7,
+      "inverse": 43,
+      "edges": 1582,
+      "vector_sha256": "d3d4d6d28b063fa9f9be77ce08871136730b831732f98aedc2a2361bf9203d5d",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "8427fe2d3db677a838cf53fe944cf4bc5c1b39b6c1ca5630c3c2bb12f405a199"
+      }
+    },
+    {
+      "word_bits": 8,
+      "inverse": 171,
+      "edges": 1582,
+      "vector_sha256": "21fecf6a551eb0b7c23c6ed05a839ab874c0fb6ef0e1b4618150cec6f97dc468",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "3b028ccaec93b65e25a09ee1a7b36287e8c6b36fc8441deb8602c78ae72eb6df"
+      }
+    },
+    {
+      "word_bits": 9,
+      "inverse": 171,
+      "edges": 1582,
+      "vector_sha256": "b9642abdd96664167351a26515d91e7e94e2fde8370fd530211f4386fa9cf231",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "07bc46ea4f06ac2dd8925f36980bdf41b640f63b5372f2c3516d1842567e1465"
+      }
+    },
+    {
+      "word_bits": 10,
+      "inverse": 683,
+      "edges": 1582,
+      "vector_sha256": "41d3182bd3d4f101244c08bc25e80795cd5df2f41348e5d05e5dbc71dec8eaee",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "6f87aac6e4e0a9a2d83a1af43cc98fe2ca273a2e4caea1fa476e91f91d2d93ac"
+      }
+    },
+    {
+      "word_bits": 11,
+      "inverse": 683,
+      "edges": 1582,
+      "vector_sha256": "d8ceaf7774865fe8c6dc49ae75438b0e24b645f835a12f2e86541bd46a79d6c8",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "96fa942ad3886389bf0a0aacf4ae4d77a87cecfc53421637c73bfb1ce1035fd7"
+      }
+    },
+    {
+      "word_bits": 12,
+      "inverse": 2731,
+      "edges": 1582,
+      "vector_sha256": "ad430181669f5917995d36b70c524bb5df815232f6cccc5d5b9f6d18facdb905",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "8b1f7b28c7c2021fde21c186e9d24c16af40761f5d957593571d5b64683cd8ab"
+      }
+    },
+    {
+      "word_bits": 13,
+      "inverse": 2731,
+      "edges": 1582,
+      "vector_sha256": "b9c25fc826e6d7540ac63a5b04a3ba8e80d9cb744c5a81505601018667b8776c",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "edf7054cde8b1bf117da7d4724398db33dbb9728f191f1ecc3e7885cb5c1ad72"
+      }
+    },
+    {
+      "word_bits": 14,
+      "inverse": 10923,
+      "edges": 1582,
+      "vector_sha256": "1255bdba7f82c9df5aa351246c60276bff0f3d41dae4ae3f3b547cd4c9296c92",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "4e7067341b56ffd97fb36346df6e1c0d970f85940eb497d95066fd80ff2d66ea"
+      }
+    },
+    {
+      "word_bits": 15,
+      "inverse": 10923,
+      "edges": 1582,
+      "vector_sha256": "99fb7ad004a98bdfb806b1ec5e2925764b662fb727e192b512007e2f8cfe7dd6",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "4c2e8ebbafd8200207cf970d9dc5ce7bf75398aa139719bb06df5a75ce467a4c"
+      }
+    },
+    {
+      "word_bits": 16,
+      "inverse": 43691,
+      "edges": 1582,
+      "vector_sha256": "e5c77a0a9b0d4f2717956c50699306ff85f2c1f57b39da439b9c40f8692ef64c",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "6479337b124a8a758747aa84979c1eb0e7b983903eb5b436e4537b6da614bf38"
+      }
+    },
+    {
+      "word_bits": 17,
+      "inverse": 43691,
+      "edges": 1582,
+      "vector_sha256": "049ae0ce5b0d8e3af3c17e16dd4af2919c6be31f2f8f1bb2839a2fc962995fa1",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "e1f61d601af05ad741ad9b008d80c9a2dbc1256cdbf0463689a079896637d4db"
+      }
+    },
+    {
+      "word_bits": 18,
+      "inverse": 174763,
+      "edges": 1582,
+      "vector_sha256": "ff7c3b3be999d99e4e14ae80680164df3bec72cdec7116787cb9a3fc76aa755c",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "9a8013702718982d020c8dccbad43d94a84536412322b802a0674dcbdd03bf9f"
+      }
+    },
+    {
+      "word_bits": 19,
+      "inverse": 174763,
+      "edges": 1582,
+      "vector_sha256": "dab59d75ed4ebeba02411bc925b36b2c5b99793cd9911f2406e7b2bf739c4922",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "3603cbab66e4e8536c10b30dc1212112cbe1b4882ff253ddf2d675a924e5b954"
+      }
+    },
+    {
+      "word_bits": 2,
+      "inverse": 3,
+      "edges": 1582,
+      "vector_sha256": "90afb15a5d9d3ccf4ea57f0053ef55b6c8614b0423b2dd7687c31614460888fb",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "984925e0b5695fa97523a6d1b5442391290069f103f095bcfcd2fa1b0a5a0b5e"
+      }
+    },
+    {
+      "word_bits": 20,
+      "inverse": 699051,
+      "edges": 1582,
+      "vector_sha256": "1096e0c967e33db76bed2c2230192a94ea12b9960449f9ee0936c53cf3fa6604",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "14d0f2842d388b4ef8db2a088be2501143bb7142797800016b6d05d39b94de23"
+      }
+    },
+    {
+      "word_bits": 19,
+      "inverse": 1,
+      "edges": 1582,
+      "vector_sha256": "7dffed9f354f0a0856cb187ef4592a473cd9b89c5a4a3628498f567d46d37581",
+      "mutant_rejected": false,
+      "induction": {
+        "status": "proved",
+        "assertions": 16,
+        "k": 1,
+        "log_sha256": "8c4d27717c0cb4d94c250ed54e3f2641f321a0ea60f5c7805a028bb11b66179d"
+      }
+    }
+  ],
+  "mutants": {
+    "wr_commit": {
+      "vectors_available": 1582,
+      "first_mismatch_case": 1166,
+      "edge_phase": "pre",
+      "vector_sha256": "dab59d75ed4ebeba02411bc925b36b2c5b99793cd9911f2406e7b2bf739c4922",
+      "mutant_rejected": true
+    },
+    "sticky_match": {
+      "vectors_available": 1582,
+      "first_mismatch_case": 206,
+      "edge_phase": "post",
+      "vector_sha256": "dab59d75ed4ebeba02411bc925b36b2c5b99793cd9911f2406e7b2bf739c4922",
+      "mutant_rejected": true
+    }
+  },
+  "elapsed_s": 33.703,
+  "raw_directory": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/config-1791483107786407325",
+  "scope": "complete service_config interface under synchronous binary inputs; not whole executor",
+  "shared_dependencies": [
+    "Yosys SAT/translation",
+    "Icarus",
+    "declared constants"
+  ],
+  "proof_relation": "last matching written value iff field_match; asserted, not assumed"
+}
