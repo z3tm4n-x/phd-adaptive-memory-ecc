@@ -1,0 +1,143 @@
+{
+  "task": 126,
+  "complete_accepted_reproduction": true,
+  "checkout_sha": "ddc0434b5cc056cf4327796a313d0c3e678a8aee",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "seconds": 106.06463520001853,
+  "code_sha256": {
+    "bounds.py": "fdf08c80bc6c6abd5a087bb4a456ffc5e758c8c9948b56c66e072d90508b273b",
+    "checker.py": "48213137923fefac1abc596647af5b24dac2e46d69de9de4577449bae1f5ace7",
+    "engineering.py": "4e9d7e5f340114c9e8d9eba27966064a6e5c3b1fb1370c8879a43242534282b0",
+    "plot_map.py": "84d1b1a6ce6701b2596321812c4404ddec08b1cca7c0e6f4b4a1f9ca599b020a",
+    "reproduce.py": "6c8d045b5c6c16860edc0ead64f651da3fd841b6450004f5f4925aea19163f3a",
+    "test_bounds.py": "e4887666fb6406a6bd1a58f198f00847b4b7aa928bff686e3684a8d325f99083",
+    "test_engineering.py": "ceee585414e68459c68a22264e6cf097416745fd7166b55152dde3b0a8712ee5",
+    "verify.py": "d6f287f98760a33bac2eee41bb356fede4d286363973a0c67fcc262fdd45321f"
+  },
+  "output_sha256": {
+    "map.csv": "40905e998d283056c9b56b1a053266300766cc8c0a1df62ca54c7e2612add970",
+    "map.json": "71c37309121b87a70c47382b1a6c415d00fec3faa2f6c1e720a0b0ab7e941ccf",
+    "map.png": "4be5625191da90e31c754b14804431b654c468c22b0736c6af9b33a72789f7bd",
+    "map.svg": "471dedb981970071fe47fed8ade500d4bca3b42076b927a508e6d9c93b6a95b4"
+  },
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "experiments/t58-fixed-baseline-r0b/reproduce.py",
+        "--master-repo",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\t126-master.git"
+      ],
+      "seconds": 3.6150076999911107,
+      "returncode": 0,
+      "stdout": "T58: 31 checks; source hashes; 54 core points / 2916 diagnostic rows reproduced. No files changed.\n",
+      "stderr": "...............................\n----------------------------------------------------------------------\nRan 31 tests in 0.360s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "experiments/t95-method-regime-map/verify.py"
+      ],
+      "seconds": 1.180541300040204,
+      "returncode": 0,
+      "stdout": "{\n  \"checks\": 71,\n  \"P0_s\": \"0.155683181000\",\n  \"class_price_percent_lower\": \"33.676261830923\",\n  \"tail_risk_lower\": \"0.001605460011\",\n  \"rows\": [\n    {\n      \"name\": \"anchor\",\n      \"risk_upper_decimal\": \"0.000948089707\",\n      \"normal_price_percent_upper\": \"0.287444409986\",\n      \"fixed_M\": 111229285,\n      \"fixed_percent_upper\": \"47.135788025679\",\n      \"class_gain_decimal_lower\": \"117.157476\",\n      \"from_start_S_risk_decimal\": \"0.000756299276\",\n      \"S_full_price_percent_upper\": \"71.440000014392\",\n      \"ERR_model_risk_decimal\": \"0.000984744788\",\n      \"ERR_model_price_percent_upper\": \"14.738827447440\"\n    },\n    {\n      \"name\": \"control\",\n      \"risk_upper_decimal\": \"0.000998552592\",\n      \"normal_price_percent_upper\": \"0.208179834174\",\n      \"fixed_M\": 146959644,\n      \"fixed_percent_upper\": \"35.675644396705\",\n      \"class_gain_decimal_lower\": \"161.765244\",\n      \"from_start_S_risk_decimal\": \"0.000728792537\",\n      \"S_full_price_percent_upper\": \"50.011000010106\",\n      \"ERR_model_risk_decimal\": \"0.000998272867\",\n      \"ERR_model_price_percent_upper\": \"7.264644927077\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "experiments/t114-two-stage-err/verify.py"
+      ],
+      "seconds": 89.49556349997874,
+      "returncode": 0,
+      "stdout": "singleton_read main 2 7 Q<= 0.000999898475 C<= 8.502433217947 % gain>= 3.624106\nsingleton_read main 1 7 Q<= 0.000997685100 C<= 9.138829474720 % gain>= 3.371736\nsingleton_read conditional_60s 2 21 Q<= 0.000968203139 C<= 3.416045655306 % gain>= 9.020290\nsingleton_read conditional_60s 1 27 Q<= 0.000972254445 C<= 3.344159644720 % gain>= 9.214190\nsingleton_read conditional_180s 2 23 Q<= 0.000969187620 C<= 2.926609165519 % gain>= 10.528814\nsingleton_read conditional_180s 1 39 Q<= 0.000980801913 C<= 2.450945866243 % gain>= 12.572176\nsingleton_write main 2 5 Q<= 0.000998336624 C<= 11.023506305673 % gain>= 2.795274\nsingleton_write main 1 5 Q<= 0.000996842619 C<= 11.647070796570 % gain>= 2.645620\nsingleton_write conditional_60s 2 21 Q<= 0.000982419837 C<= 3.348144935127 % gain>= 9.203223\nsingleton_write conditional_60s 1 27 Q<= 0.000986550137 C<= 3.277863028849 % gain>= 9.400552\nsingleton_write conditional_180s 2 23 Q<= 0.000983415511 C<= 2.868744311081 % gain>= 10.741188\nsingleton_write conditional_180s 1 39 Q<= 0.000995271139 C<= 2.403186503592 % gain>= 12.822027\nMCU_calibrated_write main 2 3 Q<= 0.000993692053 C<= 17.444926434976 % gain>= 1.766343\nMCU_calibrated_write main 1 3 Q<= 0.000992477795 C<= 17.936971377034 % gain>= 1.717888\nMCU_calibrated_write conditional_60s 2 19 Q<= 0.000981692026 C<= 3.671208834070 % gain>= 8.393345\nMCU_calibrated_write conditional_60s 1 25 Q<= 0.000985386554 C<= 3.415200139199 % gain>= 9.022523\nMCU_calibrated_write conditional_180s 2 21 Q<= 0.000981994053 C<= 3.128877951804 % gain>= 9.848170\nMCU_calibrated_write conditional_180s 1 35 Q<= 0.000992311164 C<= 2.536439613265 % gain>= 12.148416\nMCU2_write main 2 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU2_write main 1 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU2_write conditional_60s 2 7 Q<= 0.000998032545 C<= 8.267364666466 % gain>= 3.727151\nMCU2_write conditional_60s 1 13 Q<= 0.000996810519 C<= 5.144176250641 % gain>= 5.990021\nMCU2_write conditional_180s 2 11 Q<= 0.000987182140 C<= 5.425387961827 % gain>= 5.679543\nMCU2_write conditional_180s 1 19 Q<= 0.000983517919 C<= 3.651997984153 % gain>= 8.437497\nMCU4_write main 2 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU4_write main 1 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU4_write conditional_60s 2 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU4_write conditional_60s 1 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU4_write conditional_180s 2 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nMCU4_write conditional_180s 1 3 Q<= 0.000996032403 C<= 16.881324794062 % gain>= 1.825314\nuncalibrated_write main 2 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nuncalibrated_write main 1 1 Q<= 0.000966325086 C<= 47.232428730439 % gain>= 0.652384\nT114: 19 state tests; 439 numeric/proof-boundary checks; accepted T110 unchanged.\n",
+      "stderr": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "experiments/t126-regime-map/verify.py"
+      ],
+      "seconds": 2.1948717000195757,
+      "returncode": 0,
+      "stdout": "T126: 32 tests; 7 anchor/missing-input rows; 3 cap witnesses; accepted sources unchanged.\nEngineering epsilon grid NOT run; physical qualification NOT claimed.\n",
+      "stderr": "................................\n----------------------------------------------------------------------\nRan 32 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\regime-map\\experiments\\t126-regime-map",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "seconds": 3.0600188999669626,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_S2_restricts_witness (test_bounds.NecessaryTests.test_S2_restricts_witness) ... ok\ntest_adaptation_necessary_requires_lower (test_bounds.NecessaryTests.test_adaptation_necessary_requires_lower) ... ok\ntest_arbitrary_phase_edge (test_bounds.NecessaryTests.test_arbitrary_phase_edge) ... ok\ntest_component_edge (test_bounds.NecessaryTests.test_component_edge) ... ok\ntest_constant_cap_rejected (test_bounds.NecessaryTests.test_constant_cap_rejected) ... ok\ntest_constant_case_no_division (test_bounds.NecessaryTests.test_constant_case_no_division) ... ok\ntest_constant_exclusion_not_adaptive_success (test_bounds.NecessaryTests.test_constant_exclusion_not_adaptive_success) ... ok\ntest_excess_restricts_witness (test_bounds.NecessaryTests.test_excess_restricts_witness) ... ok\ntest_float_input_rejected (test_bounds.NecessaryTests.test_float_input_rejected) ... ok\ntest_fluence_restricts_witness (test_bounds.NecessaryTests.test_fluence_restricts_witness) ... ok\ntest_free_initial_is_required (test_bounds.NecessaryTests.test_free_initial_is_required) ... ok\ntest_full_background_not_double_counted (test_bounds.NecessaryTests.test_full_background_not_double_counted) ... ok\ntest_independent_probability_arithmetic (test_bounds.NecessaryTests.test_independent_probability_arithmetic) ... ok\ntest_infinite_ratio (test_bounds.NecessaryTests.test_infinite_ratio) ... ok\ntest_integer_inputs_stay_exact (test_bounds.NecessaryTests.test_integer_inputs_stay_exact) ... ok\ntest_lower_domain_failure_is_not_zero_certificate (test_bounds.NecessaryTests.test_lower_domain_failure_is_not_zero_certificate) ... ok\ntest_mixed_term_not_missing (test_bounds.NecessaryTests.test_mixed_term_not_missing) ... ok\ntest_necessary_and_sufficient (test_bounds.NecessaryTests.test_necessary_and_sufficient) ... ok\ntest_negative_cap_rejected (test_bounds.NecessaryTests.test_negative_cap_rejected) ... ok\ntest_negative_failure_quota_rejected (test_bounds.NecessaryTests.test_negative_failure_quota_rejected) ... ok\ntest_no_fluence_no_plateau (test_bounds.NecessaryTests.test_no_fluence_no_plateau) ... ok\ntest_period_exclusion_conflict (test_bounds.NecessaryTests.test_period_exclusion_conflict) ... ok\ntest_price_boundary_is_closed (test_bounds.NecessaryTests.test_price_boundary_is_closed) ... ok\ntest_read_not_reserved_write_in_floor (test_bounds.NecessaryTests.test_read_not_reserved_write_in_floor) ... ok\ntest_reject_bbar_not_class (test_bounds.NecessaryTests.test_reject_bbar_not_class) ... ok\ntest_tail_domain_failure (test_bounds.NecessaryTests.test_tail_domain_failure) ... ok\ntest_uncapped_plateau (test_bounds.NecessaryTests.test_uncapped_plateau) ... ok\ntest_unknown_is_not_zero (test_bounds.NecessaryTests.test_unknown_is_not_zero) ... ok\ntest_unknown_not_impossible (test_bounds.NecessaryTests.test_unknown_not_impossible) ... ok\ntest_upper_ratios_are_not_ratio_upper (test_bounds.NecessaryTests.test_upper_ratios_are_not_ratio_upper) ... ok\ntest_zero_background_can_survive_cap (test_bounds.NecessaryTests.test_zero_background_can_survive_cap) ... ok\ntest_zero_denominator (test_bounds.NecessaryTests.test_zero_denominator) ... ok\ntest_36_full_range (test_engineering.EngineeringTests.test_36_full_range) ... ok\ntest_clock_and_write_full_calendar (test_engineering.EngineeringTests.test_clock_and_write_full_calendar) ... ok\ntest_finite_edges (test_engineering.EngineeringTests.test_finite_edges) ... ok\ntest_independent_all_rows (test_engineering.EngineeringTests.test_independent_all_rows) ... ok\ntest_independent_caps_and_constant_limit (test_engineering.EngineeringTests.test_independent_caps_and_constant_limit) ... ok\ntest_new_four_shields_one_example (test_engineering.EngineeringTests.test_new_four_shields_one_example) ... ok\ntest_per_bit_scaling (test_engineering.EngineeringTests.test_per_bit_scaling) ... ok\ntest_phi_lower_rejects_initial_and_empty_FS (test_engineering.EngineeringTests.test_phi_lower_rejects_initial_and_empty_FS) ... ok\ntest_resource_minimum_not_busy (test_engineering.EngineeringTests.test_resource_minimum_not_busy) ... ok\ntest_sentinel_input_hash (test_engineering.EngineeringTests.test_sentinel_input_hash) ... ok\ntest_sentinel_mixed_term (test_engineering.EngineeringTests.test_sentinel_mixed_term) ... ok\ntest_sentinel_quiet_not_mission (test_engineering.EngineeringTests.test_sentinel_quiet_not_mission) ... ok\ntest_sentinel_unknown_not_zero (test_engineering.EngineeringTests.test_sentinel_unknown_not_zero) ... ok\ntest_sentinel_upper_failure_not_impossibility (test_engineering.EngineeringTests.test_sentinel_upper_failure_not_impossibility) ... ok\ntest_sentinel_wrong_phase_edge (test_engineering.EngineeringTests.test_sentinel_wrong_phase_edge) ... ok\n\n----------------------------------------------------------------------\nRan 47 tests in 1.801s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\regime-map\\experiments\\t126-regime-map\\engineering.py"
+      ],
+      "seconds": 2.8977141000214033,
+      "returncode": 0,
+      "stdout": "{\"rows\": 283, \"statuses\": {\"constant_sufficient\": 76, \"unknown\": 185, \"adaptation_needed_and_sufficient\": 22}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\regime-map\\experiments\\t126-regime-map\\checker.py"
+      ],
+      "seconds": 1.1813152999966405,
+      "returncode": 0,
+      "stdout": "{\"r0b_rows\": 36, \"cy_rows\": 36, \"cap_witnesses\": 3, \"constant_E_export_checked\": true, \"independence\": \"no production imports; common input bytes, formulas, Fraction/Decimal only\", \"not_scientific_review\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\tmp\\goes16-venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-X",
+        "pycache_prefix=C:\\Users\\3C8A~1\\AppData\\Local\\Temp\\t126-compile-cache",
+        "-m",
+        "compileall",
+        "-q",
+        "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\regime-map\\experiments\\t126-regime-map"
+      ],
+      "seconds": 1.1885615000501275,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
