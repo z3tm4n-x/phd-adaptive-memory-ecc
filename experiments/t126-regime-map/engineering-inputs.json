@@ -1,0 +1,21 @@
+{
+  "main_base": "67bf34b4f06a0410461e728f4217b8c58f704b04",
+  "theory_sha": "f5b62105b4ac355165403948bafa51569179cb12",
+  "t127_sha": "2695d5ade64a2e13116dce937c7c95aa4dff3a51",
+  "t127_execution_sha": "49bc2ddbe2e3ac729cf995676784c5ae1c7f1f38",
+  "t127_git_blobs": {
+    "outputs/inputs-126.json": "803b8b47b5cc2ad6326ae0a1a4bc6599e23f978b",
+    "outputs/service.json": "04eec5dc5043aececb4559a2fe472f022bae5bbf",
+    "outputs/shield-conditional.csv": "e043933adbebf45346c8744970f7d635d9e3c265",
+    "HANDOFF.md": "7245929cbbad00cb4f9014c2f5018548b4635bc5",
+    "DATA_PASSPORT.md": "b93e7063922d070212b6d6a693964fdb752096a6",
+    "config.json": "e296396cf10f26d1a81b80ef1bd59128d5842577"
+  },
+  "necessary_split_s": "2",
+  "necessary_inverse_tick_s": "1/1000000000",
+  "necessary_bisection_steps_max": 64,
+  "boundary_refinement_rounds_used": 0,
+  "physical_qualification_claimed": false,
+  "new_theory_accepted": false,
+  "T119_used": false
+}

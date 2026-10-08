@@ -1,0 +1,48 @@
+{
+  "task": 126,
+  "base_sha": "67bf34b4f06a0410461e728f4217b8c58f704b04",
+  "deadline_moscow": "2026-10-14",
+  "stage": "theory_handoff_before_engineering_grid",
+  "plan_commit": "a0ab5456e849f7559cdf48cf21c499f5a0777edd",
+  "epsilon": ["0.01", "0.001", "0.0001"],
+  "quiet_protection_budgets": ["0.01", "0.1", "0.5"],
+  "r0b": {
+    "n": 39,
+    "W": [262144, 1935832],
+    "R_eff_bit_s": [64000000, 256000000],
+    "environment": "T58 rarity_diagnostic, hold per-bit rate",
+    "source": "experiments/t58-fixed-baseline-r0b/config.json",
+    "application": "unchanged T58 app_diagnostic",
+    "resources": "unchanged T58 reference_point_rule.table_resources",
+    "actions": "entire T58 integer-tick range, not legacy table",
+    "cells": 36,
+    "adaptive": "not established by T58; do not fabricate a policy"
+  },
+  "cy62167": {
+    "example_count": 1,
+    "physical_shield_rows": null,
+    "physical_input_from": "Issue #127, exact handoff SHA still required",
+    "accepted_control_facets": ["T95/U/combined", "T114/E/main_growth"],
+    "T95_Dstar_controls": ["0.0002802445", "0.00005"],
+    "T114_rule_rows": "existing presented rows, profile and growth kept separate",
+    "join_parameters_only_as_qualified_tuples": true
+  },
+  "other_sram": {
+    "part_revision": null,
+    "low_energy_proton_curve": null,
+    "source_lead_doi": "10.1109/REDW51883.2020.9325822",
+    "admission": "exact specimen, curve, units, die energy, test regime and uncertainty first"
+  },
+  "orbital_example": {
+    "iteration": 2,
+    "candidate": "SAC-C",
+    "online_information": ["declared available position", "time"],
+    "particle_data_role": "offline validation only",
+    "ephemerides_and_availability_contract": null
+  },
+  "boundary_refinement_rounds_max": 1,
+  "new_sufficient_proofs_or_rules": false,
+  "T119_accepted": false,
+  "numerics_owner": "engineer through orchestrator after #127",
+  "this_delivery_runs": "accepted anchors and addressed necessary-bound arithmetic only"
+}
