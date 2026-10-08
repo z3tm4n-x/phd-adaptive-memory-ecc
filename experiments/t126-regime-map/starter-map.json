@@ -1,0 +1,668 @@
+{
+  "task": 126,
+  "base_sha": "67bf34b4f06a0410461e728f4217b8c58f704b04",
+  "stage": "starter_anchor_map_not_engineering_grid",
+  "date": "2026-10-08",
+  "budgets": [
+    "1/100",
+    "1/10",
+    "1/2"
+  ],
+  "rows": [
+    {
+      "id": "r0b_262144",
+      "example_id": "A1",
+      "name": "R0-B малый / U",
+      "domain": "T58/rareness-diagnostic/full39/U/no-app-corrections",
+      "qualification": "conditional_model",
+      "n": 39,
+      "W": 262144,
+      "T": "157766400",
+      "epsilon": "1/100",
+      "Dstar": "0",
+      "Dstar_status": "exact zero in declared singleton model, not physical data",
+      "coordinates": {
+        "delta": "0",
+        "k_singleton": "19/10223616",
+        "S2_background_reference": "140492232371844553868373049344/3490080621302127838134765625",
+        "S2_excess_reference": "790095285661946629854265294592/3490080621302127838134765625",
+        "S2_reference": "930587518033791183722638343936/3490080621302127838134765625",
+        "eta_reference": {
+          "value": "3635107492319496811416556031/548797782702517788548332224",
+          "status": "finite"
+        },
+        "eta_actual": null,
+        "eta_kind": "attainable_reference_envelope_not_actual_or_ratio_bound",
+        "P_min_certified_family": "1279424/390625",
+        "sigma_reference": "1172269930694107525277014580389003/8507071514423936605453491210937500",
+        "sigma_is_necessary_impossibility_test": false
+      },
+      "risk_upper": "2177810307178391257789888592058932459/217781030769252777099609375000000000000",
+      "selected_tick": 2018037184,
+      "risk_at_resource_boundary": "2177810307178391257789888592058932459/217781030769252777099609375000000000000",
+      "fixed_class_risk_lower_at_1pct": "1286826730458576545573693376418856630104562997322757/1532495540865888858358347027150309183618739122183602176",
+      "constant_quiet_upper": "420037263360409913803/53063076930969600000000",
+      "constant_mission_upper": "420037263360409913803/53063076930969600000000",
+      "adaptive_quiet_upper": null,
+      "adaptive_mission_upper": null,
+      "price_metric": "protection occupancy, full-horizon quiet; no returning-Q contract",
+      "application": "T58 workload <= sigma+u*t, sigma=g=1e-7 s, u=.5; no ECC reset",
+      "full_bus_upper": "404273635932678653216341/795946153964544000000000",
+      "resource": {
+        "tau_lo": "31531831/1562500",
+        "tau_hi": "31531831/1562500",
+        "tax_upper": "420037263360409913803/53063076930969600000000",
+        "peak_upper": "12883/1600000",
+        "delay_upper": "8199816277/9995896000000000",
+        "service_rate_lower": "31237175/31531831",
+        "schedule_ok": true,
+        "tax_ok": true,
+        "peak_ok": true,
+        "delay_ok": true,
+        "mandatory_U_block_exclusion": false
+      },
+      "P_min_kind": "minimum of accepted sufficient resource tests, not architecture optimum",
+      "margin_10pct": "conditional extra requirement: joint operation WCET <= reserved c/1.1; not qualified by T58",
+      "channel": "none",
+      "statuses": [
+        "constant_sufficient",
+        "constant_sufficient",
+        "constant_sufficient"
+      ],
+      "constant_excluded_by_budget": [
+        false,
+        false,
+        false
+      ],
+      "unresolved": "adaptive lifetime certificate absent; physical class and preparation not qualified",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": null,
+          "upper": "420037263360409913803/530630769309696000000"
+        },
+        {
+          "budget": "1/10",
+          "lower": null,
+          "upper": "420037263360409913803/5306307693096960000000"
+        },
+        {
+          "budget": "1/2",
+          "lower": null,
+          "upper": "420037263360409913803/26531538465484800000000"
+        }
+      ]
+    },
+    {
+      "id": "r0b_1935832",
+      "example_id": "A2",
+      "name": "R0-B большой / U",
+      "domain": "T58/rareness-diagnostic/full39/U/no-app-corrections",
+      "qualification": "conditional_model",
+      "n": 39,
+      "W": 1935832,
+      "T": "157766400",
+      "epsilon": "1/100",
+      "Dstar": "0",
+      "Dstar_status": "exact zero in declared singleton model, not physical data",
+      "coordinates": {
+        "delta": "0",
+        "k_singleton": "19/75497448",
+        "S2_background_reference": "8574965354726840446067691/3906250000000000000000",
+        "S2_excess_reference": "3086309709616979022868223807/250000000000000000000000",
+        "S2_reference": "3635107492319496811416556031/250000000000000000000000",
+        "eta_reference": {
+          "value": "3635107492319496811416556031/548797782702517788548332224",
+          "status": "finite"
+        },
+        "eta_actual": null,
+        "eta_kind": "attainable_reference_envelope_not_actual_or_ratio_bound",
+        "P_min_certified_family": "78807873/12500000",
+        "sigma_reference": "1540428189683024489359799490945005903/786431750000000000000000000000000000",
+        "sigma_is_necessary_impossibility_test": false
+      },
+      "risk_upper": null,
+      "selected_tick": null,
+      "risk_at_resource_boundary": "203686931231417528529209347071764660107/1887436200000000000000000000000000000000",
+      "fixed_class_risk_lower_at_1pct": "8722702823821548292467064935756135074124203062314825/766247770432944429179173513575154591809369561091801088",
+      "constant_quiet_upper": null,
+      "constant_mission_upper": null,
+      "adaptive_quiet_upper": null,
+      "adaptive_mission_upper": null,
+      "price_metric": "protection occupancy, full-horizon quiet; no returning-Q contract",
+      "application": "T58 workload <= sigma+u*t, sigma=g=1e-7 s, u=.5; no ECC reset",
+      "full_bus_upper": null,
+      "resource": null,
+      "P_min_kind": "minimum of accepted sufficient resource tests, not architecture optimum",
+      "margin_10pct": "conditional extra requirement: joint operation WCET <= reserved c/1.1; not qualified by T58",
+      "channel": "none",
+      "statuses": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "constant_excluded_by_budget": [
+        true,
+        false,
+        false
+      ],
+      "unresolved": "adaptive lifetime certificate absent; physical class and preparation not qualified",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": null,
+          "upper": null
+        },
+        {
+          "budget": "1/10",
+          "lower": null,
+          "upper": null
+        },
+        {
+          "budget": "1/2",
+          "lower": null,
+          "upper": null
+        }
+      ]
+    },
+    {
+      "id": "cy_T95_anchor",
+      "example_id": "A3",
+      "name": "CY / U / монитор / anchor",
+      "domain": "T95/U/T80-slow-entry-fast-internal/combined/old-atomic-app",
+      "qualification": "conditional_monitor_not_a_device",
+      "n": 38,
+      "W": 524288,
+      "T": "315576000",
+      "epsilon": "1/1000",
+      "Dstar": "560489/2000000000",
+      "coordinates": {
+        "delta": "560489/2000000",
+        "k_singleton": "37/39845888",
+        "S2_background_reference": "3687882712767/488281250000",
+        "S2_excess_reference": "211531463831043/30517578125",
+        "S2_reference": "677638260801891/97656250000",
+        "eta_reference": {
+          "value": "125488566815165/136588248621",
+          "status": "finite"
+        },
+        "eta_actual": null,
+        "eta_kind": "attainable_reference_envelope_not_actual_or_ratio_bound",
+        "P_min_certified_family": null,
+        "sigma_reference": null,
+        "sigma_is_necessary_impossibility_test": false
+      },
+      "risk_upper": "21989385291401841648723253/23193359375000000000000000000",
+      "constant_risk_upper": "77823999863589654699257020469/77824000000000000000000000000000",
+      "constant_quiet_lower": "63114568785726104867276/187415601834320068359375",
+      "constant_quiet_upper": "1489074388994224607945857/3159116355884400000000000",
+      "adaptive_quiet_upper": "3320688338124622257206602048892743842504747549297489272011552655944135602828575653/1155245404945322851020000000000000000000000000000000000000000000000000000000000000000",
+      "adaptive_mission_upper": "7890583398966506627777/11045049548400000000000",
+      "mission_price_kind": "accepted all-FAST cap only; no new mission-price minimization",
+      "quiet_gain_lower": "60567524545733697696665232886155330524282880000000000000000000000000000000000000000000000000/516975323588844767425323981172739889219302106076587445180132786226381588943705255358192193",
+      "price_metric": "max(whole quiet mission, quiet returns), all protection/channel/control costs",
+      "application": "T95 joint U timing and old atomic-app contract only; T114 observed writes excluded",
+      "full_bus_upper": null,
+      "full_bus_unknown": "useful offered application work not specified",
+      "resource_pass": true,
+      "selected_short_period_upper": "89600896/1220703125",
+      "P_min_kind": "unknown global minimum; selected short period is not P_min",
+      "channel": {
+        "a_M": 1000000,
+        "A_M": 1000000,
+        "window_s": 1,
+        "step_s": "1/2",
+        "post_window_s": 1,
+        "eta": "1/1000",
+        "rho_entry": "1/1000000",
+        "rho_internal": "6/125",
+        "complete_contract": "theory/t95-method-regime-selection.md §1; T80 lower/MGF/upper",
+        "real_qualification": null
+      },
+      "statuses": [
+        "adaptation_needed_and_sufficient",
+        "adaptation_needed_and_sufficient",
+        "constant_sufficient"
+      ],
+      "constant_excluded_by_budget": [
+        true,
+        true,
+        false
+      ],
+      "unresolved": "full real-monitor/direct/WCET qualification; new #127 class not substituted",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": "252458275142904419469104/7496624073372802734375",
+          "upper": "1489074388994224607945857/31591163558844000000000"
+        },
+        {
+          "budget": "1/10",
+          "lower": "126229137571452209734552/37483120366864013671875",
+          "upper": "1489074388994224607945857/315911635588440000000000"
+        },
+        {
+          "budget": "1/2",
+          "lower": "126229137571452209734552/187415601834320068359375",
+          "upper": "1489074388994224607945857/1579558177942200000000000"
+        }
+      ]
+    },
+    {
+      "id": "cy_T95_control",
+      "example_id": "A3",
+      "name": "CY / U / монитор / control",
+      "domain": "T95/U/T80-slow-entry-fast-internal/combined/old-atomic-app",
+      "qualification": "conditional_monitor_not_a_device",
+      "n": 38,
+      "W": 524288,
+      "T": "315576000",
+      "epsilon": "1/1000",
+      "Dstar": "1/20000",
+      "coordinates": {
+        "delta": "1/20",
+        "k_singleton": "37/39845888",
+        "S2_background_reference": "3687882712767/488281250000",
+        "S2_excess_reference": "211531463831043/30517578125",
+        "S2_reference": "677638260801891/97656250000",
+        "eta_reference": {
+          "value": "125488566815165/136588248621",
+          "status": "finite"
+        },
+        "eta_actual": null,
+        "eta_kind": "attainable_reference_envelope_not_actual_or_ratio_bound",
+        "P_min_certified_family": null,
+        "sigma_reference": null,
+        "sigma_is_necessary_impossibility_test": false
+      },
+      "risk_upper": "2315978911978817597402331/2319335937500000000000000000",
+      "constant_risk_upper": "97279999967159422366665159187/97280000000000000000000000000000",
+      "constant_quiet_lower": "63114568785726104867276/187415601834320068359375",
+      "constant_quiet_upper": "620447662081224675946637/1739135123060400000000000",
+      "adaptive_quiet_upper": "2746061258744968954118269465180644799527285667662234818573820882314878118492436773/1319081297978310768000000000000000000000000000000000000000000000000000000000000000000",
+      "adaptive_mission_upper": "789105675823786661111/1577864221200000000000",
+      "mission_price_kind": "accepted all-FAST cap only; no new mission-price minimization",
+      "quiet_gain_lower": "69157157908713706984644355702370171092992000000000000000000000000000000000000000000000000000/427515551982280834523375240554491522021515129037365550124530318283006869114197481262014913",
+      "price_metric": "max(whole quiet mission, quiet returns), all protection/channel/control costs",
+      "application": "T95 joint U timing and old atomic-app contract only; T114 observed writes excluded",
+      "full_bus_upper": null,
+      "full_bus_unknown": "useful offered application work not specified",
+      "resource_pass": true,
+      "selected_short_period_upper": "25600256/244140625",
+      "P_min_kind": "unknown global minimum; selected short period is not P_min",
+      "channel": {
+        "a_M": 1000000,
+        "A_M": 1000000,
+        "window_s": 1,
+        "step_s": "1/2",
+        "post_window_s": 1,
+        "eta": "1/1000",
+        "rho_entry": "1/1000000",
+        "rho_internal": "6/125",
+        "complete_contract": "theory/t95-method-regime-selection.md §1; T80 lower/MGF/upper",
+        "real_qualification": null
+      },
+      "statuses": [
+        "adaptation_needed_and_sufficient",
+        "adaptation_needed_and_sufficient",
+        "constant_sufficient"
+      ],
+      "constant_excluded_by_budget": [
+        true,
+        true,
+        false
+      ],
+      "unresolved": "full real-monitor/direct/WCET qualification; new #127 class not substituted",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": "252458275142904419469104/7496624073372802734375",
+          "upper": "620447662081224675946637/17391351230604000000000"
+        },
+        {
+          "budget": "1/10",
+          "lower": "126229137571452209734552/37483120366864013671875",
+          "upper": "620447662081224675946637/173913512306040000000000"
+        },
+        {
+          "budget": "1/2",
+          "lower": "126229137571452209734552/187415601834320068359375",
+          "upper": "620447662081224675946637/869567561530200000000000"
+        }
+      ]
+    },
+    {
+      "id": "cy_T114_ERR",
+      "example_id": "A3",
+      "name": "CY / E / ERR / основной рост",
+      "domain": "T114/E/main-rho.048/MCU-a.9-zeta.1/observed-writes",
+      "qualification": "conditional_ERR_and_joint_WCET_not_measured",
+      "n": 38,
+      "W": 524288,
+      "T": "315576000",
+      "epsilon": "1/1000",
+      "Dstar": "560489/2000000000",
+      "coordinates": {
+        "delta": "560489/2000000",
+        "k_singleton": "37/39845888",
+        "S2_background_reference": "3687882712767/488281250000",
+        "S2_excess_reference": "211531463831043/30517578125",
+        "S2_reference": "677638260801891/97656250000",
+        "eta_reference": {
+          "value": "125488566815165/136588248621",
+          "status": "finite"
+        },
+        "eta_actual": null,
+        "eta_kind": "attainable_reference_envelope_not_actual_or_ratio_bound",
+        "P_min_certified_family": null,
+        "sigma_reference": null,
+        "sigma_is_necessary_impossibility_test": false
+      },
+      "sufficient_pair_coefficient": "1/1048576",
+      "risk_upper": "15162537414812372817100177026965384121050285156126954455669033517360719331/15258789062500000000000000000000000000000000000000000000000000000000000000000",
+      "adaptive_quiet_upper_intercept": "10063475837660132734026828586470167385380457834625026785547331849989250350857242796141/60190743301391601562500000000000000000000000000000000000000000000000000000000000000000",
+      "adaptive_mission_upper_intercept": "514511313590054943003350619268441914485743939382017687385961411528379517192004897010909/2949346421768188476562500000000000000000000000000000000000000000000000000000000000000000",
+      "write_observation_per_request": "2312523/25000000000000",
+      "adaptive_quiet_upper": "1476050821675605493695361898942492807759534703171185023789130514702628974355637049676132886914129/8024182346803797780715942382812500000000000000000000000000000000000000000000000000000000000000000",
+      "adaptive_mission_upper": "1534275757689530400695120113306032563376417998124566550386515688978027228750168299676132886914129/8024182346803797780715942382812500000000000000000000000000000000000000000000000000000000000000000",
+      "price_scope": "T114 full admitted burst=1 load envelope; read/write mix not invented",
+      "application": {
+        "burst": 1,
+        "rate_max": "2415031819974577000000/13331123134335531",
+        "quiet_expanded_write_rate_upper": "571594561232369682342549385/3155236885680802148142",
+        "full_bus_affine_write": "2712527/12500000000000",
+        "full_bus_affine_read": "2312523/12500000000000",
+        "note": "for total bus replace observation addend, do not add it twice"
+      },
+      "full_bus_quiet_upper": "1832642574545126391633053310985912011967880083594948574287884155294265060980742735105825181/8874583383100479125976562500000000000000000000000000000000000000000000000000000000000000000",
+      "full_bus_mission_upper": "632346058715564860407301823398433519526076171200163740448119295762964655743580911701941727/2958194461033493041992187500000000000000000000000000000000000000000000000000000000000000000",
+      "constant_quiet_lower": "42777602471405946944/138826458226318359375",
+      "constant_quiet_upper": null,
+      "constant_mission_lower": "42777602471405946944/138826458226318359375",
+      "constant_mission_upper": "13488226553894095965305390228030678847938232695056558709/29766309700175360435236345344000000000000000000000000000",
+      "constant_risk_upper": "10200547285550611091041238969476061/10200547328000000000000000000000000000",
+      "constant_resource_pass": true,
+      "constant_quiet_gap": "mission scalar not silently used for returning quiet upper; engineer to export accepted price formula",
+      "mission_gain_lower": "21385255722673822670443811673002522400000000000000000000000000000000000000000000000000000000000000000000/13270059961835544392270543213511920368954638991457242938518051636584874941393446885848150344355272624159",
+      "channel": {
+        "a": "9/10",
+        "zeta": "1/10",
+        "phi": "2359291/2621440",
+        "rho": "6/125",
+        "tau": "7707149832927/25000000000000",
+        "w": "2250000000062497/25000000000000",
+        "h": "900000000007499/5000000000000",
+        "ERR_or_loss_delivery_s": "3/2500000",
+        "lifetime_miss_quota": "1/1000000",
+        "complete_contract": "experiments/t114-two-stage-err/HANDOFF.md"
+      },
+      "one_stage": {
+        "risk_upper": "3028801864544451970941125536822895924967178010490539634447725042611698109/3051757812500000000000000000000000000000000000000000000000000000000000000000",
+        "quiet_intercept": "101498876126501912807839335157970612505076645828656268576237517905135703288757742949251/589869284353637695312500000000000000000000000000000000000000000000000000000000000000000",
+        "mission_intercept": "105804684696421611220830500519523136528389043928625968555065948080916953288757742949251/589869284353637695312500000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "resource": {
+        "peak_control_no_application": "23285593465319623/30624693750000000",
+        "all_bus_peak_at_sigma1_rate0": "46584478180025423/61249387500000000",
+        "rate_max_sigma1": "2415031819974577000000/13331123134335531",
+        "burst_max_latency": "80876469/53900539",
+        "frame_max": "4900049/3125000000000",
+        "app_margin_slack": "99403/125000000000000",
+        "placement_slack": "18711/1250000000000",
+        "gate_slack": "5630509/125000000000000",
+        "one_request_delay": "6677407/3125000000000"
+      },
+      "P_min_kind": "not inferred from chosen g196 or busy Wc",
+      "statuses": [
+        "unknown",
+        "unknown",
+        "adaptive_sufficient_necessity_unknown"
+      ],
+      "constant_excluded_by_budget": [
+        true,
+        true,
+        false
+      ],
+      "unresolved": "lower ERR channel/full direct/joint observed-write WCET remain unqualified; no new ERR tuning",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": "171110409885623787776/5553058329052734375",
+          "upper": null
+        },
+        {
+          "budget": "1/10",
+          "lower": "85555204942811893888/27765291645263671875",
+          "upper": null
+        },
+        {
+          "budget": "1/2",
+          "lower": "85555204942811893888/138826458226318359375",
+          "upper": null
+        }
+      ]
+    },
+    {
+      "id": "cy_physical",
+      "example_id": "A3",
+      "name": "CY / новая кривая защиты #127",
+      "qualification": "missing",
+      "statuses": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "unresolved": "full response, Dstar/S2 per thickness, coverage and lower-channel contract pending #127",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": null,
+          "upper": null
+        },
+        {
+          "budget": "1/10",
+          "lower": null,
+          "upper": null
+        },
+        {
+          "budget": "1/2",
+          "lower": null,
+          "upper": null
+        }
+      ]
+    },
+    {
+      "id": "other_sram",
+      "example_id": "A4",
+      "name": "Другая SRAM / external39",
+      "qualification": "missing",
+      "statuses": [
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "unresolved": "exact specimen/revision and transferable low-energy proton curve missing",
+      "constant_relative_quiet_price": [
+        {
+          "budget": "1/100",
+          "lower": null,
+          "upper": null
+        },
+        {
+          "budget": "1/10",
+          "lower": null,
+          "upper": null
+        },
+        {
+          "budget": "1/2",
+          "lower": null,
+          "upper": null
+        }
+      ]
+    }
+  ],
+  "necessary_cap_checks": [
+    {
+      "S2_fraction": "1",
+      "witness": {
+        "admissible": true,
+        "reason": null,
+        "L": "115776",
+        "F": "1205177238/15625",
+        "S2_background": "3687882712767/488281250000",
+        "S2_excess": "211531463831043/30517578125",
+        "S2": "677638260801891/97656250000",
+        "solar_exposure": "442351152/15625"
+      },
+      "P_split": "2",
+      "P0": "155683181/1000000000",
+      "Q_lower_at_P0": "99352806137365967287286087968304776946326330973619861433141319/99352805656698670665957952045920350697297023627997247858681000000",
+      "Q_lower_at_predecessor": "99352804860381571953731723575313799583807258735295112712779319/99352805017886839458793190516765830565414372673107968220681000000",
+      "tail_Q_lower": "17949493878816976347063929497841493064780363286814871128250313042074804744759934227/11180280887746443922790986720484561977626757990044804915933166246208321013065773000000",
+      "constant_price_lower": "63114568785726104867276/187415601834320068359375",
+      "scope": "arithmetic cap sensitivity; not physical #127 input or a new controller"
+    },
+    {
+      "S2_fraction": "1/2",
+      "witness": {
+        "admissible": true,
+        "reason": null,
+        "L": "6761631077167842/116932815827",
+        "F": "15053838141772989/239099031250",
+        "S2_background": "3687882712767/488281250000",
+        "S2_excess": "3380815538583921/976562500000",
+        "S2": "677638260801891/195312500000",
+        "solar_exposure": "3380815538583921/239099031250"
+      },
+      "P_split": "4",
+      "P0": "311738457/1000000000",
+      "Q_lower_at_P0": "23262973639168463749187256661078969790216632904198004488391388136974836429/23262973633554260206450879019540098509888726521630719635208026596163571000000",
+      "Q_lower_at_predecessor": "23262973489847131120747853288214581056738630051367849005940483885382694429/23262973558856194048279971429259643840700579330630698479704420188305571000000",
+      "tail_Q_lower": "10951278972338839510618551976518517411750159067101303553944454273674105086235395515954842425780556154141756656981016929/6829305671603296260403302661609095397832387910178083481637426091699765804852040247556202398628179184333326089983071000000",
+      "constant_price_lower": "513126574986206262164/3051049932037353515625",
+      "scope": "arithmetic cap sensitivity; not physical #127 input or a new controller"
+    },
+    {
+      "S2_fraction": "1/4",
+      "witness": {
+        "admissible": true,
+        "reason": null,
+        "L": "3373439773158387/116932815827",
+        "F": "26719484979536523/478198062500",
+        "S2_background": "3687882712767/488281250000",
+        "S2_excess": "3373439773158387/1953125000000",
+        "S2": "677638260801891/390625000000",
+        "solar_exposure": "3373439773158387/478198062500"
+      },
+      "P_split": "8",
+      "P0": "312550651/500000000",
+      "Q_lower_at_P0": "1332776131567232184221112895589413531051830430131099808219740239030270489/1332776130594953466142179850275439688970740801170932270740490480729511000000",
+      "Q_lower_at_predecessor": "848130262827851230008962983557743316860970873667434335493640677755794493/848130263565914639647938262121819865136726107599775034110527751205507000000",
+      "tail_Q_lower": "10628825298857048653736585748551191223506708283774570168572695587475528119711097038391276751421510795169292757873311/6645251267488682561794635064648704689894200777332551902720475416062891591011302108340499617251038761833931126689000000",
+      "constant_price_lower": "31557284298978489397396/376256882629302978515625",
+      "scope": "arithmetic cap sensitivity; not physical #127 input or a new controller"
+    }
+  ],
+  "sources": [
+    {
+      "path": "theory/fixed-period-resource-contract.md",
+      "git_blob": "77306f35c22aaefdb85abc4cddccc3ce5da2fe84",
+      "sha256": "f2a1aa261dea522bfdde9e15a00080b7eb1dfe0babeda51ab33d2583646a58ad"
+    },
+    {
+      "path": "theory/fixed-period-resource-contract-appendix.md",
+      "git_blob": "86403819c885453e61c3114c1671022d1ca13ef9",
+      "sha256": "fb5c0d886f4a9a1eafca969b80aace476b039eda6ed11d0b7186c046eeee86cd"
+    },
+    {
+      "path": "theory/t95-method-regime-selection.md",
+      "git_blob": "6694afa688f2b46ac50d815b7c2392ffdeff557d",
+      "sha256": "2d3f9b6682a54b1a6c2c6c982786fcf78cebf9bda43c4109d41706ad2246d22a"
+    },
+    {
+      "path": "theory/t95-method-regime-selection-appendix.md",
+      "git_blob": "3ece7198969c54e8dd1bb1c73a0f8a031ae19590",
+      "sha256": "fc6c94a1acac35f533a402ebfdfd866a4effc3eed7369388cc851f78e0ab8032"
+    },
+    {
+      "path": "theory/t114-two-stage-err.md",
+      "git_blob": "b7642fea2bc945df1785eeb60da24ca7fb4c5552",
+      "sha256": "41961835f5746631b94bfd3d23c6cfb5c096159cadb7d3f3d5e3972a4d6b55b3"
+    },
+    {
+      "path": "theory/t114-two-stage-err-appendix.md",
+      "git_blob": "1117eca2d37d4022a82e53a2bf8543dcf1a56d46",
+      "sha256": "77ff135eed507203d8a3d49407ee138744ab7e28f350ff0ccff6a2fe5744b0d8"
+    },
+    {
+      "path": "experiments/t58-fixed-baseline-r0b/config.json",
+      "git_blob": "7c3c7e1153ddae097331c152deebc417817a2189",
+      "sha256": "9847584f230fd5f8e9215375fa6ec37c8eb6c5a97797e24a337494d161ac1c58"
+    },
+    {
+      "path": "experiments/t58-fixed-baseline-r0b/certificate.py",
+      "git_blob": "9272d29c370c32253307cd5c61b918263004735b",
+      "sha256": "8a836276e8bcd958d524d25f17913bbeda25b3e54e0a5ca88e243f694df5f7af"
+    },
+    {
+      "path": "experiments/t58-fixed-baseline-r0b/summary.json",
+      "git_blob": "7f9ed733aa92e74f72842124631c829f9ac57965",
+      "sha256": "6bfbdd0918b39e47077bda9350ab467f2e3e086c85c5ae9f359e5cb2ac3c0280"
+    },
+    {
+      "path": "experiments/t95-method-regime-map/inputs.json",
+      "git_blob": "24b7c9c50adfa36c2e05a8610f990c67edb5745b",
+      "sha256": "c15f4d38affba45321483cb36734edebe162a526ecf82ab70ea7c920ef73dbf5"
+    },
+    {
+      "path": "experiments/t95-method-regime-map/report.json",
+      "git_blob": "dd236dce01f7de2d3e9523a2eecbff3905a150ec",
+      "sha256": "7616039cf274d670ff3d0adfbf89919b387a5c363745bbda5af06dd1d12ab523"
+    },
+    {
+      "path": "experiments/t90-monitor-physical/outputs/pinned_inputs.json",
+      "git_blob": "e7a254313cca2d538867e67070499d8a313c3e2e",
+      "sha256": "5ec2d7d92d7759619452b805745a23fd66e6fb66ed1df58e605e8749dc670e53"
+    },
+    {
+      "path": "experiments/t88-dstar-sensitivity/outputs/constant_U.json",
+      "git_blob": "2ba3f8152d9521ad2b06f106919520330b176e25",
+      "sha256": "9ffbca3528b4b81d6f6bc61fd2497600e8f1fcb275af0c3dda506e08c455d22d"
+    },
+    {
+      "path": "experiments/t110-err-write-service/report.json",
+      "git_blob": "400bea0a67451a36a7630e94a4aa9e6072dca1e8",
+      "sha256": "43ddaa417b5b763c7c5965b439b274577dec7341c1748b1e93ca639f6582d2cc"
+    },
+    {
+      "path": "experiments/t114-two-stage-err/report.json",
+      "git_blob": "267861539cfe2d1e861654ccbe118760e5a1a3c9",
+      "sha256": "a9914e965be9049e0a11d4ad73c99aac99864f4effdc48b79b82773117aadf73"
+    },
+    {
+      "path": "experiments/t114-two-stage-err/config.json",
+      "git_blob": "ea7bbd348995dd0f823987d5646a4b3d5846aa49",
+      "sha256": "b07faaf88f17e88e6a9e5e4b302e5b959be2a80d0deef9273e32db83c2fdd190"
+    },
+    {
+      "path": "experiments/t114-two-stage-err/HANDOFF.md",
+      "git_blob": "f7f58cf94b13f3178bda91ae75527bc7d9967cd6",
+      "sha256": "aa2dab73b6d71b4810b8f605c9ef53af98b15e9b5f6447b06ddfcd172c610576"
+    }
+  ],
+  "epsilon_grid_executed": false,
+  "physical_qualification_claimed": false,
+  "historical_comparison": {
+    "gain": "12.3873885545",
+    "source_repository": "z3tm4n-x/chapter4-risk-limited-scrubber",
+    "source_sha": "cf7ab706224f7872fdafcf34febda70e3f6c8dd1",
+    "role": "reported historical pass-count ratio only; not map color or lifetime robust gain"
+  },
+  "reproductions_completed": {
+    "T58": "31 tests; 54 core / 2916 old rows; source hashes",
+    "T95": "71 checks",
+    "T114": "19 state + 439 numeric checks including T110"
+  },
+  "independent_engineering_confirmation": "requested through orchestrator, not performed by this script",
+  "new_unit_tests": 32
+}
