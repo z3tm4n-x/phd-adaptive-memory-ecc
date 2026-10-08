@@ -1,8 +1,16 @@
 {
-  "stage": "reference E; B in progress",
+  "stage": "integrated E executor; B in progress",
   "base_sha": "e63964c2b9ddf6a53fe9c76bd5942f458f167f8e",
-  "unit_tests": 44,
+  "unit_tests": 48,
   "accepted_blobs_checked": 42,
+  "accepted_checkout_audit": {
+    "files": 42,
+    "raw_identical": 40,
+    "checkout_crlf_only": [
+      "experiments/t104-new-rtl-executor/requirements.txt",
+      "experiments/t96-hybrid-rule-implementation/requirements.txt"
+    ]
+  },
   "resource": {
     "joint_burst": "1",
     "joint_rate_per_s": "180000",
@@ -13,6 +21,22 @@
     "scope": "conditional bound; not measured FPGA timing or traffic"
   },
   "python": "3.14.4",
+  "integrated_contract": {
+    "type": "conditional rational upper, not measured WCET",
+    "control_owners_intersecting_1ms_upper": 5104,
+    "control_plus_X_upper": "2369564231/3125000000",
+    "whole_bus_peak_upper": "498534453779/625000000000",
+    "whole_bus_peak_upper_float": 0.7976551260464,
+    "physical_first_VALID_response_ns_upper_with_10pct": "42966407/20000",
+    "response_ns_float": 2148.32035,
+    "credit_return_ns_upper": "712507/12500",
+    "minimum_joint_offer_spacing_ns": "50000/9",
+    "placement_margin_ns": [
+      "36683/250000",
+      "36683/250000",
+      "2099383/125000"
+    ]
+  },
   "limitations": [
     "not physical E/ERR qualification",
     "not full-system RTL proof",

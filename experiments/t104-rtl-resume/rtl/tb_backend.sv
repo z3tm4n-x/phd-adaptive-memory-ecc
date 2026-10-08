@@ -9,9 +9,10 @@ module tb_backend;
     wire [18:0] word_out;
     wire [1:0] byte_enable;
     wire [15:0] dq_out;
-    wire sample,flag,err_due,done,commit_pulse,pending;
+    wire sample,flag,err_due,done,release_due,commit_pulse,pending;
     wire [31:0] read_data;
     wire [7:0] age;
+    wire [1:0] kind_active;
     wire [32:0] packed_actual = {err_due,rejected,accepted,ready,pending,commit_pulse,
                                 done,flag,sample,dq_out,byte_enable,alias_high,drive,we,oe,ce,busy};
     e_backend dut(.*);

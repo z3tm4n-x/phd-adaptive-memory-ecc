@@ -12,9 +12,10 @@ module formal_backend(
     wire [18:0] word_out;
     wire [1:0] byte_enable;
     wire [15:0] dq_out;
-    wire sample,flag,err_due,done,commit_pulse,pending;
+    wire sample,flag,err_due,done,release_due,commit_pulse,pending;
     wire [31:0] read_data;
     wire [7:0] age;
+    wire [1:0] kind_active;
     e_backend dut(.*);
     reg past_valid = 0;
     reg [1:0] accepted_kind = 0;
@@ -29,6 +30,7 @@ module formal_backend(
         assert(!flag || (busy && age == 64));
         assert(!commit_pulse || (busy && (age == 132 || age == 200)));
         assert(!busy || age <= 212);
+        assert(!busy || kind_active==accepted_kind);
         if (past_valid && $past(busy)) begin
             assert(word_out == $past(word_out));
             assert(age == $past(age) + 4);

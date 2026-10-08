@@ -1,6 +1,7 @@
 """Available-level formal/synthesis checks; no device library, STA or Fmax."""
 import argparse
 import json
+import re
 import shutil
 import subprocess
 import tempfile
@@ -13,6 +14,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--steps", type=int, default=60)
+    parser.add_argument("--rpc-steps", type=int, default=40)
     args = parser.parse_args()
     build = HERE / ".build"
     build.mkdir(exist_ok=True)
@@ -35,6 +37,10 @@ def main():
                       f'synth -top {module}; check; tee -o stats.json stat -json')
             s = json.loads((temp/"stats.json").read_text())
             stats[module] = s["modules"]["\\"+module]
+        from integration_check import MODULES
+        sources = " ".join(f'"{HERE}/rtl/{m}.sv"' for m in MODULES)
+        run(f'read_verilog -sv {sources}; synth -top executor; check; tee -o stats.json stat -json')
+        stats["integrated_executor"] = json.loads((temp/"stats.json").read_text())["design"]
         script = (f'read_verilog -formal -sv "{HERE}/rtl/e_backend.sv" "{HERE}/formal/backend.sv"; '
                   'prep -top formal_backend; flatten; async2sync; chformal -lower; '
                   f'sat -seq {args.steps} -set-def-inputs -prove-asserts -verify -timeout 60 '
@@ -42,12 +48,35 @@ def main():
         log = run(script)
         if "SUCCESS" not in log:
             raise AssertionError("no successful SAT proof reported")
+        induction_script = (f'read_verilog -formal -sv "{HERE}/rtl/e_backend.sv" "{HERE}/formal/backend.sv"; '
+            'prep -top formal_backend; flatten; async2sync; chformal -lower; opt_clean; '
+            'sat -seq 1 -tempinduct -maxsteps 64 -set-def-inputs -prove-asserts -verify -timeout 30')
+        induction_log = run(induction_script, timeout=90)
+        if "Induction step proven: SUCCESS" not in induction_log:
+            raise AssertionError("backend induction not closed")
+        induction_k = int(re.findall(r"\[induction step (\d+)\]", induction_log)[-1])
+        rpc_script = (f'read_verilog -formal -sv "{HERE}/rtl/rpc_cdc.sv" "{HERE}/formal/rpc.sv"; '
+                      'prep -top formal_rpc; flatten; clk2fflogic; chformal -lower; '
+                      f'sat -seq {args.rpc_steps} -set-def-inputs -prove-asserts -verify -timeout 60 '
+                      '-show-public -dump_json counterexample.json')
+        rpc_log = run(rpc_script)
+        if "SUCCESS" not in rpc_log:
+            raise AssertionError("no successful multi-clock RPC proof")
         result = {"yosys": version, "backend_bounded_formal": {
             "core_steps": args.steps, "xi_ticks": args.steps*4, "word_address_bits": 19,
             "assertion_status": "proved over the bounded initial-state traces",
-            "assertions": 17,
+            "assertions": 24,
             "assumptions": "RTL initialization; defined Boolean synchronous inputs, arbitrary go/reset/data/ERR",
-            "not_proved": "induction/full mission, physical E, metastability, integrated arbitration/queue"},
+            "not_proved": "physical E, metastability, integrated arbitration/queue"},
+            "backend_induction": {"k": induction_k, "assertions": 24, "word_address_bits": 19,
+                "status": "proved for all synchronous steps from declared RTL initialization",
+                "scope": "backend atomicity/control properties, not whole-executor induction"},
+            "rpc_bounded_formal": {"global_steps": args.rpc_steps, "assertions": 5,
+                "payload_bits": 8, "clock_model": "arbitrary defined source/destination edges via clk2fflogic",
+                "status": "bounded safety; no fairness/liveness or physical metastability guarantee"},
+            "inconclusive_attempts": ["RPC 8-bit100-step BMC:60s solver timeout",
+                "RPC 1-bit k-induction through40: base cases proved, induction not closed",
+                "backend17-assertion induction:90s timeout; strengthened reachable-state assertions then proved"],
             "generic_synthesis": stats, "platform_STA": None,
             "scope": "generic logic cells, not FPGA LUT/FF/Fmax or WCET"}
         if args.write:

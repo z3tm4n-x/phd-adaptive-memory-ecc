@@ -12,6 +12,7 @@ import unittest
 from pathlib import Path
 
 from reference import resource_contract
+from contract_check import check_contract
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -21,7 +22,7 @@ PRESERVE = ["experiments/t104-new-rtl-executor", "experiments/t110-err-write-ser
 
 
 def protected_bytes():
-    """Compare raw files with the base blobs, bypassing Git CRLF normalization."""
+    """Audit base blobs; report raw identity separately from checkout CRLF."""
     git = ["git"]
     pointer = ROOT / ".git"
     if os.name != "nt" and pointer.is_file():
@@ -35,6 +36,7 @@ def protected_bytes():
             git += [f"--git-dir={target}", f"--work-tree={ROOT}"]
     lines = subprocess.check_output([*git, "ls-tree", "-r", BASE, "--", *PRESERVE], cwd=ROOT).decode()
     count = 0
+    checkout_crlf_only = []
     for line in lines.splitlines():
         meta, rel = line.split("\t")
         expected = meta.split()[2]
@@ -47,8 +49,10 @@ def protected_bytes():
             canonical = hashlib.sha1(b"blob " + str(len(lf)).encode()+b"\0"+lf).hexdigest()
             if canonical != expected:
                 raise AssertionError(f"accepted input changed: {rel}")
+            checkout_crlf_only.append(rel)
         count += 1
-    return count
+    return {"files": count, "raw_identical": count-len(checkout_crlf_only),
+            "checkout_crlf_only": checkout_crlf_only}
 
 
 def main():
@@ -66,13 +70,17 @@ def main():
     if args.regression_a:
         subprocess.run([sys.executable, "-B", "-m", "unittest", "discover", "-s",
                         str(ROOT/PRESERVE[3]), "-p", "test_reference.py"], check=True)
-    for enabled, script in ((args.rtl, "rtl_check.py"), (args.formal, "yosys_check.py")):
+    for enabled, script in ((args.rtl, "rtl_check.py"), (args.rtl, "integration_check.py"),
+                            (args.formal, "yosys_check.py")):
         if enabled:
             subprocess.run([sys.executable, "-B", str(HERE/script)]
                            + (["--write"] if args.write else []), check=True)
-    report = {"stage": "reference E; B in progress", "base_sha": BASE,
-              "unit_tests": result.testsRun, "accepted_blobs_checked": protected_bytes(),
+    accepted = protected_bytes()
+    report = {"stage": "integrated E executor; B in progress", "base_sha": BASE,
+              "unit_tests": result.testsRun, "accepted_blobs_checked": accepted["files"],
+              "accepted_checkout_audit": accepted,
               "resource": resource_contract(), "python": platform.python_version(),
+              "integrated_contract": check_contract(),
               "limitations": ["not physical E/ERR qualification", "not full-system RTL proof",
                               "not platform STA or radiation/CDC failure probability"]}
     if args.write:

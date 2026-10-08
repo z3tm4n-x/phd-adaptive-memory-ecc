@@ -5,37 +5,56 @@
     "xi_ticks": 240,
     "word_address_bits": 19,
     "assertion_status": "proved over the bounded initial-state traces",
-    "assertions": 17,
+    "assertions": 24,
     "assumptions": "RTL initialization; defined Boolean synchronous inputs, arbitrary go/reset/data/ERR",
-    "not_proved": "induction/full mission, physical E, metastability, integrated arbitration/queue"
+    "not_proved": "physical E, metastability, integrated arbitration/queue"
   },
+  "backend_induction": {
+    "k": 43,
+    "assertions": 24,
+    "word_address_bits": 19,
+    "status": "proved for all synchronous steps from declared RTL initialization",
+    "scope": "backend atomicity/control properties, not whole-executor induction"
+  },
+  "rpc_bounded_formal": {
+    "global_steps": 40,
+    "assertions": 5,
+    "payload_bits": 8,
+    "clock_model": "arbitrary defined source/destination edges via clk2fflogic",
+    "status": "bounded safety; no fairness/liveness or physical metastability guarantee"
+  },
+  "inconclusive_attempts": [
+    "RPC 8-bit100-step BMC:60s solver timeout",
+    "RPC 1-bit k-induction through40: base cases proved, induction not closed",
+    "backend17-assertion induction:90s timeout; strengthened reachable-state assertions then proved"
+  ],
   "generic_synthesis": {
     "e_backend": {
-      "num_wires": 278,
-      "num_wire_bits": 497,
-      "num_pub_wires": 40,
-      "num_pub_wire_bits": 259,
-      "num_ports": 31,
-      "num_port_bits": 171,
+      "num_wires": 281,
+      "num_wire_bits": 501,
+      "num_pub_wires": 42,
+      "num_pub_wire_bits": 262,
+      "num_ports": 33,
+      "num_port_bits": 174,
       "num_memories": 0,
       "num_memory_bits": 0,
       "num_processes": 0,
-      "num_cells": 368,
+      "num_cells": 370,
       "num_cells_by_type": {
-        "$_ANDNOT_": 86,
-        "$_AND_": 40,
+        "$_ANDNOT_": 89,
+        "$_AND_": 39,
         "$_DFFE_PN_": 1,
-        "$_MUX_": 37,
-        "$_NAND_": 6,
-        "$_NOR_": 14,
+        "$_MUX_": 36,
+        "$_NAND_": 8,
+        "$_NOR_": 13,
         "$_NOT_": 6,
-        "$_ORNOT_": 20,
-        "$_OR_": 49,
+        "$_ORNOT_": 19,
+        "$_OR_": 50,
         "$_SDFFE_PP0P_": 92,
         "$_SDFFE_PP1P_": 4,
         "$_SDFF_PP0_": 4,
-        "$_XNOR_": 2,
-        "$_XOR_": 7
+        "$_XNOR_": 1,
+        "$_XOR_": 8
       }
     },
     "absolute_calendar": {
@@ -92,6 +111,39 @@
         "$_SDFF_PP0_": 2,
         "$_XNOR_": 254,
         "$_XOR_": 576
+      }
+    },
+    "integrated_executor": {
+      "num_wires": 30181,
+      "num_wire_bits": 48943,
+      "num_pub_wires": 501,
+      "num_pub_wire_bits": 18215,
+      "num_ports": 280,
+      "num_port_bits": 7824,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 35523,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 4217,
+        "$_AND_": 601,
+        "$_DFFE_PN_": 1,
+        "$_DFFE_PP_": 3164,
+        "$_DFF_P_": 431,
+        "$_MUX_": 598,
+        "$_NAND_": 362,
+        "$_NOR_": 527,
+        "$_NOT_": 705,
+        "$_ORNOT_": 1239,
+        "$_OR_": 1987,
+        "$_SDFFCE_PN0P_": 64,
+        "$_SDFFE_PN0N_": 8,
+        "$_SDFFE_PP0P_": 1077,
+        "$_SDFFE_PP1P_": 24,
+        "$_SDFF_PP0_": 11,
+        "$_SDFF_PP1_": 1,
+        "$_XNOR_": 1674,
+        "$_XOR_": 18832
       }
     }
   },

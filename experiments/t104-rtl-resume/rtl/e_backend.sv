@@ -20,8 +20,9 @@ module e_backend #(
     output wire ce, oe, we, drive, alias_high,
     output wire [1:0] byte_enable,
     output wire [15:0] dq_out,
-    output wire sample, flag, err_due, done, commit_pulse, pending,
+    output wire sample, flag, err_due, done, release_due, commit_pulse, pending,
     output wire [31:0] read_data,
+    output wire [1:0] kind_active,
     output reg [7:0] age
 );
     initial begin
@@ -66,10 +67,29 @@ module e_backend #(
     // Using flag at that edge would silently delay priority by one core cycle.
     assign err_due = busy && age == 60 && op != READ32 && captured_err;
     assign done = completed;
+    // Completion at THIS edge, for a reply crossing started only on release.
+    assign release_due = busy && next_age == end_age;
     assign commit_pulse = alive && ((repairing && age == 132)
                                 || (op == WRITE32 && age == 200));
     assign pending = busy && repairing && age >= 60;
     assign read_data = {high_data, low_data};
+    assign kind_active = op;
+
+`ifdef FORMAL
+    // Reachable-state invariants. Without these a k-induction step may start
+    // beyond an already-missed terminal age and wait for an8-bit wrap. These
+    // assertions are proved from initialization, not assumed as new physics.
+    always @(posedge clk) begin
+        assert(op<=WRITE32);
+        assert(age[1:0]==0);
+        if(busy) begin
+            if(op==CONTROL) assert(age <= (captured_err ? 144 : 88));
+            if(op==READ32) assert(age<=180);
+            if(op==WRITE32) assert(age<=212);
+        end
+        if(completed) assert(!busy && age==end_age);
+    end
+`endif
 
     always @(posedge clk) begin
         accepted <= 0;
