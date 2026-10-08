@@ -35,7 +35,9 @@ def main():
     run(['-m','unittest','discover','-s','experiments/tNN-sepem-profiles','-v'])
     # compileall writes only pycache (ignored), never source files.
     run(['-m','compileall','-q',str(HERE)])
-    with tempfile.TemporaryDirectory(prefix='t127-check-') as tmp:
+    # Keep the disposable repeat under the explicitly selected writable output
+    # root; Windows short-name %TEMP% aliases may not inherit sandbox access.
+    with tempfile.TemporaryDirectory(prefix='t127-check-',dir=out) as tmp:
         run([script,'--out',tmp]+optional)
         stable=['shield-conditional.csv','gost-proton-conditional.csv','service.json','population.json','inputs-126.json']
         for name in stable:
