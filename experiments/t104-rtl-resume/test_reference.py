@@ -1,10 +1,14 @@
 import random
+import json
 import unittest
 from dataclasses import replace
+from fractions import Fraction
+from math import ceil
+from pathlib import Path
 
 from reference import (ApplicationQueue, Calendar, CONTROL, ETransaction,
                        Permission, READ32, Request, ServiceConfig, U64,
-                       WRITE32, load_config, resource_contract)
+                       WRITE32, config_from_dict, load_config, resource_contract)
 from memory_oracle import MemoryOracle
 
 
@@ -91,6 +95,8 @@ class ServiceTests(unittest.TestCase):
                 req.validate(8)
         with self.assertRaises(ValueError):
             ETransaction(Request(0, 0), 0).step(1)
+        with self.assertRaises(ValueError):
+            ETransaction(Request(0, 0), 0).step(60)
 
 
 class FullWordOracleTests(unittest.TestCase):
@@ -286,12 +292,28 @@ class CalendarTests(unittest.TestCase):
         self.assertEqual(self.x.started, 2)
 
     def test_tuple_validation(self):
-        for k, value in (("words", 9), ("ka", 2), ("ka", 5), ("g", 192),
+        for k, value in (("words", 9), ("words", 1 << 20), ("batch", 0),
+                         ("ka", 2), ("ka", 5), ("g", 192),
                          ("lead", 256), ("app_charge", 208), ("core", 5)):
             with self.assertRaises(ValueError):
                 replace(self.c, **{k: value}).validate()
         with self.assertRaises(ValueError):
             self.c.start(U64)
+        base = json.loads(Path(__file__).with_name("config.json").read_text(encoding="utf-8"))
+        for k, value in (("protected_bits", 39), ("joint_rate_per_s", "200000"),
+                         ("app_read_charge_ticks", 45), ("rule_parameters", {"h": 1}),
+                         ("physical_E_qualified", True)):
+            with self.assertRaises(ValueError):
+                config_from_dict({**base, k: value})
+
+    def test_ten_year_absolute_arithmetic_fits_without_wrap(self):
+        ticks = ceil(Fraction(315576000 * 10**9 * 100000, 99999))
+        last_j_upper = (ticks // 1568 + 2) * 8
+        c = load_config()
+        self.assertLess(c.start(last_j_upper), U64)
+        self.assertLess(last_j_upper, 1 << 51)
+        for j in (last_j_upper, last_j_upper-1):
+            self.assertEqual(3*c.address(j) % c.words, j % c.words)
 
 
 class QueueTests(unittest.TestCase):
@@ -312,6 +334,7 @@ class QueueTests(unittest.TestCase):
         self.assertFalse(self.q.offer(Request(READ32, 1, request_id=3), 1340, 1356))
         self.q.complete(1, 1528)
         self.assertEqual(len(self.q.entries), 2)
+        self.q.publish_reply(1, 1568)
         self.q.consume(1, 1628)
         self.assertEqual(len(self.q.entries), 1)
 
@@ -331,6 +354,18 @@ class QueueTests(unittest.TestCase):
         self.q.grant(1312)
         with self.assertRaises(ValueError):
             self.q.complete(1, 1512)
+
+    def test_future_capture_cannot_be_granted_retroactively(self):
+        self.q.offer(Request(WRITE32, 1, request_id=1), 1300, 1320)
+        self.assertIsNone(self.q.grant(1312))
+
+    def test_excess_backpressure_marks_loss_not_cancellation(self):
+        self.q.offer(Request(READ32, 0, request_id=1), 0, 16)
+        self.q.grant(1312); self.q.complete(1, 1496)
+        self.q.publish_reply(1, 1536)
+        self.assertTrue(self.q.check_reply_deadline(1632))
+        self.assertFalse(self.q.check_reply_deadline(1636))
+        self.assertEqual(len(self.q.entries), 1)
 
 
 class ResourceTests(unittest.TestCase):

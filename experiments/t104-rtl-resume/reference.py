@@ -26,15 +26,17 @@ class ServiceConfig:
     core: int = 4
 
     def validate(self):
-        if (self.words < 8 or self.words & (self.words - 1)
-                or self.words % self.batch or self.ka < 1 or not self.ka & 1
-                or self.ka >= self.words):
-            raise ValueError("word count / permutation")
+        if any(type(x) is not int for x in vars(self).values()):
+            raise ValueError("integer configuration required")
         # First implementation accepts the pinned, mutually compatible service
         # tuple, not arbitrary values that happen to fit one trace.
         if (self.batch, self.g, self.c, self.lead, self.app_offset,
                 self.app_charge, self.core) != (8, 196, 164, 320, 1312, 240, 4):
             raise ValueError("unqualified service tuple")
+        if (not 8 <= self.words <= 524288 or self.words & (self.words - 1)
+                or self.words % self.batch or self.ka < 1 or not self.ka & 1
+                or self.ka >= self.words):
+            raise ValueError("word count / permutation")
         if self.ka != 3:
             raise ValueError("rule/permutation tuple not registered")
         return self
@@ -91,7 +93,8 @@ class ETransaction:
     last_t: int = -1
 
     def step(self, t, dq=0, err=False):
-        if t < self.start or t % 4 or t <= self.last_t or not 0 <= dq < 65536:
+        expected = self.start if self.last_t == -1 else self.last_t + 4
+        if t != expected or t % 4 or not 0 <= dq < 65536:
             raise ValueError("time or DQ")
         self.last_t = t
         age = t - self.start
@@ -262,9 +265,11 @@ class Calendar:
 class QueueEntry:
     request: Request
     offered: int
+    captured: int
     state: str = "queued"
     granted: int | None = None
     completed: int | None = None
+    reply_visible: int | None = None
 
 
 class ApplicationQueue:
@@ -289,7 +294,7 @@ class ApplicationQueue:
             self.fault = True
             return False
         self.seen.add(request.request_id)
-        self.entries.append(QueueEntry(request, first_valid))
+        self.entries.append(QueueEntry(request, first_valid, captured))
         return True
 
     def grant(self, t, bus_free=True):
@@ -298,7 +303,7 @@ class ApplicationQueue:
         if any(e.state == "active" for e in self.entries):
             raise ValueError("global lock already held")
         for e in self.entries:
-            if e.state == "queued":
+            if e.state == "queued" and e.captured <= t:
                 e.state, e.granted = "active", t
                 return e.request
         return None
@@ -310,14 +315,28 @@ class ApplicationQueue:
             raise ValueError("completion is not release")
         e.state, e.completed = "reply", t
 
-    def consume(self, request_id, t):
+    def publish_reply(self, request_id, t):
         e = next(e for e in self.entries if e.request.request_id == request_id)
         if e.state != "reply" or t < e.completed:
             raise ValueError("reply before completion")
+        e.reply_visible = t
+
+    def consume(self, request_id, t):
+        e = next(e for e in self.entries if e.request.request_id == request_id)
+        if e.state != "reply" or e.reply_visible is None or t < e.reply_visible:
+            raise ValueError("reply not visible at consumer")
         self.entries.remove(e)
 
     def soft_reset(self):
         self.fault = True  # obligations/occupancy are deliberately preserved
+
+    def check_reply_deadline(self, t):
+        # xi_max gives a conservative limit of floor(100ns/1.00001)=99 ticks.
+        # The first core check after breach marks loss; it never cancels reply.
+        if any(e.state == "reply" and e.reply_visible is not None
+               and t-e.reply_visible > 99 for e in self.entries):
+            self.fault = True
+        return not self.fault
 
 
 def resource_contract():
@@ -340,9 +359,20 @@ def resource_contract():
             "scope": "conditional bound; not measured FPGA timing or traffic"}
 
 
-def load_config():
-    x = json.loads(Path(__file__).with_name("config.json").read_text(encoding="utf-8"))
+def config_from_dict(x):
+    fixed = {"data_bits": 32, "protected_bits": 38, "read_charge_ticks": 104,
+             "app_read_charge_ticks": 208, "queue_capacity_including_replies": 2,
+             "joint_burst": "1", "joint_rate_per_s": "180000",
+             "reply_backpressure_ns": "100", "seed": 104,
+             "service_tuple": "T114-observed-write-g196-ka3", "rule_parameters": None,
+             "physical_E_qualified": False}
+    if any(k not in x or type(x[k]) is not type(v) or x[k] != v for k, v in fixed.items()):
+        raise ValueError("unregistered width/traffic/rule configuration")
     return ServiceConfig(words=x["word_count"], ka=x["ka"], batch=x["batch"],
                          g=x["g_ticks"], c=x["control_charge_ticks"],
                          lead=x["freeze_lead_ticks"], app_offset=x["app_grant_offset_ticks"],
                          app_charge=x["app_write_charge_ticks"], core=x["core_ticks"]).validate()
+
+
+def load_config():
+    return config_from_dict(json.loads(Path(__file__).with_name("config.json").read_text(encoding="utf-8")))

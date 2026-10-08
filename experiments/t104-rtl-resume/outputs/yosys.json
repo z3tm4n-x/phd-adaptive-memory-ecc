@@ -1,0 +1,100 @@
+{
+  "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+  "backend_bounded_formal": {
+    "core_steps": 60,
+    "xi_ticks": 240,
+    "word_address_bits": 19,
+    "assertion_status": "proved over the bounded initial-state traces",
+    "assertions": 17,
+    "assumptions": "RTL initialization; defined Boolean synchronous inputs, arbitrary go/reset/data/ERR",
+    "not_proved": "induction/full mission, physical E, metastability, integrated arbitration/queue"
+  },
+  "generic_synthesis": {
+    "e_backend": {
+      "num_wires": 278,
+      "num_wire_bits": 497,
+      "num_pub_wires": 40,
+      "num_pub_wire_bits": 259,
+      "num_ports": 31,
+      "num_port_bits": 171,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 368,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 86,
+        "$_AND_": 40,
+        "$_DFFE_PN_": 1,
+        "$_MUX_": 37,
+        "$_NAND_": 6,
+        "$_NOR_": 14,
+        "$_NOT_": 6,
+        "$_ORNOT_": 20,
+        "$_OR_": 49,
+        "$_SDFFE_PP0P_": 92,
+        "$_SDFFE_PP1P_": 4,
+        "$_SDFF_PP0_": 4,
+        "$_XNOR_": 2,
+        "$_XOR_": 7
+      }
+    },
+    "absolute_calendar": {
+      "num_wires": 1907,
+      "num_wire_bits": 3198,
+      "num_pub_wires": 38,
+      "num_pub_wire_bits": 670,
+      "num_ports": 24,
+      "num_port_bits": 312,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 2762,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 417,
+        "$_AND_": 156,
+        "$_DFFE_PP_": 149,
+        "$_MUX_": 23,
+        "$_NAND_": 139,
+        "$_NOR_": 175,
+        "$_NOT_": 27,
+        "$_ORNOT_": 108,
+        "$_OR_": 511,
+        "$_SDFFE_PP0P_": 399,
+        "$_SDFFE_PP1P_": 14,
+        "$_SDFF_PP0_": 5,
+        "$_XNOR_": 82,
+        "$_XOR_": 557
+      }
+    },
+    "permission_gate": {
+      "num_wires": 4280,
+      "num_wire_bits": 5350,
+      "num_pub_wires": 33,
+      "num_pub_wire_bits": 977,
+      "num_ports": 25,
+      "num_port_bits": 591,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 4830,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 2054,
+        "$_AND_": 142,
+        "$_DFFE_PP_": 1,
+        "$_MUX_": 194,
+        "$_NAND_": 123,
+        "$_NOR_": 81,
+        "$_NOT_": 3,
+        "$_ORNOT_": 629,
+        "$_OR_": 254,
+        "$_SDFFE_PP0P_": 516,
+        "$_SDFFE_PP1P_": 1,
+        "$_SDFF_PP0_": 2,
+        "$_XNOR_": 254,
+        "$_XOR_": 576
+      }
+    }
+  },
+  "platform_STA": null,
+  "scope": "generic logic cells, not FPGA LUT/FF/Fmax or WCET"
+}

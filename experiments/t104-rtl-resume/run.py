@@ -3,6 +3,8 @@ import argparse
 import hashlib
 import json
 import platform
+import os
+import re
 import subprocess
 import sys
 import time
@@ -20,7 +22,18 @@ PRESERVE = ["experiments/t104-new-rtl-executor", "experiments/t110-err-write-ser
 
 def protected_bytes():
     """Compare raw files with the base blobs, bypassing Git CRLF normalization."""
-    lines = subprocess.check_output(["git", "ls-tree", "-r", BASE, "--", *PRESERVE], cwd=ROOT).decode()
+    git = ["git"]
+    pointer = ROOT / ".git"
+    if os.name != "nt" and pointer.is_file():
+        # WSL can read a Windows-created worktree without rewriting its .git
+        # pointer or affecting the owning Windows checkout.
+        match = re.fullmatch(r"gitdir: ([A-Za-z]):[/\\](.+)\s*", pointer.read_text().strip())
+        if match:
+            target = Path("/mnt") / match[1].lower() / match[2].replace("\\", "/")
+            if not target.is_dir():
+                raise RuntimeError("Windows worktree Git directory is not mounted in WSL")
+            git += [f"--git-dir={target}", f"--work-tree={ROOT}"]
+    lines = subprocess.check_output([*git, "ls-tree", "-r", BASE, "--", *PRESERVE], cwd=ROOT).decode()
     count = 0
     for line in lines.splitlines():
         meta, rel = line.split("\t")
@@ -28,9 +41,10 @@ def protected_bytes():
         raw = (ROOT / rel).read_bytes()
         actual = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
         if actual != expected:
-            # core.autocrlf may alter checkout EOL. Only LF<->CRLF is tolerated
-            # if Git confirms the canonical blob; no accepted file is written.
-            canonical = subprocess.check_output(["git", "hash-object", "--", rel], cwd=ROOT).decode().strip()
+            # core.autocrlf may alter checkout EOL. Only CRLF->LF is tolerated
+            # if it reproduces the base blob exactly; no accepted file is written.
+            lf = raw.replace(b"\r\n", b"\n")
+            canonical = hashlib.sha1(b"blob " + str(len(lf)).encode()+b"\0"+lf).hexdigest()
             if canonical != expected:
                 raise AssertionError(f"accepted input changed: {rel}")
         count += 1
@@ -40,12 +54,22 @@ def protected_bytes():
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--write", action="store_true")
+    p.add_argument("--rtl", action="store_true", help="Icarus/vvp must be on PATH")
+    p.add_argument("--formal", action="store_true", help="Yosys must be on PATH")
+    p.add_argument("--regression-A", action="store_true", dest="regression_a")
     args = p.parse_args()
     start = time.perf_counter()
     suite = unittest.defaultTestLoader.discover(str(HERE), pattern="test_*.py")
     result = unittest.TextTestRunner(verbosity=1).run(suite)
     if not result.wasSuccessful():
         return 1
+    if args.regression_a:
+        subprocess.run([sys.executable, "-B", "-m", "unittest", "discover", "-s",
+                        str(ROOT/PRESERVE[3]), "-p", "test_reference.py"], check=True)
+    for enabled, script in ((args.rtl, "rtl_check.py"), (args.formal, "yosys_check.py")):
+        if enabled:
+            subprocess.run([sys.executable, "-B", str(HERE/script)]
+                           + (["--write"] if args.write else []), check=True)
     report = {"stage": "reference E; B in progress", "base_sha": BASE,
               "unit_tests": result.testsRun, "accepted_blobs_checked": protected_bytes(),
               "resource": resource_contract(), "python": platform.python_version(),

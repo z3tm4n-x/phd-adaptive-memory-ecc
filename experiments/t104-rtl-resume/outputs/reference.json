@@ -1,7 +1,7 @@
 {
   "stage": "reference E; B in progress",
   "base_sha": "e63964c2b9ddf6a53fe9c76bd5942f458f167f8e",
-  "unit_tests": 41,
+  "unit_tests": 44,
   "accepted_blobs_checked": 42,
   "resource": {
     "joint_burst": "1",
@@ -12,7 +12,7 @@
     "passes": true,
     "scope": "conditional bound; not measured FPGA timing or traffic"
   },
-  "python": "3.12.14",
+  "python": "3.14.4",
   "limitations": [
     "not physical E/ERR qualification",
     "not full-system RTL proof",
