@@ -332,6 +332,9 @@ def main():
                "t114-two-stage-err/calculate.py","t114-two-stage-err/config.json","t114-two-stage-err/intervals.py",
                "RE-CY62167-PROTON-01/source_manifest.json")]
     inputs += [HERE/'inputs/silso-yearly-derived.csv',ROOT/"experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv", ROOT/"experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py"]
+    produced=['shield-conditional.csv','gost-proton-conditional.csv','service.json','population.json','inputs-126.json']
+    if monthly: produced.append('silso-yearly-derived.csv')
+    if args.zenodo: produced.append('zenodo-check.json')
     write_json(out/"reproduction.json",dict(
         code_commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),
         config_sha256=sha(HERE/"config.json"), code_sha256=sha(Path(__file__)),
@@ -339,7 +342,7 @@ def main():
         ru_maxrss_bytes=__import__('psutil').Process().memory_info().peak_wset if sys.platform=='win32' else None,
         wall_seconds=time.perf_counter()-start,
         inputs_sha256={str(p.relative_to(ROOT)).replace("\\","/"):sha(p) for p in sorted(set(inputs))},
-        outputs_sha256={p.name:sha(p) for p in sorted(out.iterdir()) if p.is_file() and p.name!="reproduction.json"},
+        outputs_sha256={name:sha(out/name) for name in sorted(produced)},
         scope="reproduction with shared production dependencies; see independent checker for additional evidence"))
     print(json.dumps(dict(resource=resource, population=pop, rows=len(rows)),ensure_ascii=False,indent=2))
 
