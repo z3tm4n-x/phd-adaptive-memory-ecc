@@ -27,25 +27,28 @@ module permission_gate #(
     reg [63:0] shadow_expires = 0, shadow_issued = 0;
     wire alarm_now = soft_reset || loss || err_event || (cold_init && begun);
     wire overflow_now = overflow || (err_event && err_count == 64'hffffffffffffffff);
-    wire channel_good = (healthy || recover) && !alarm_now && !overflow_now;
-    wire valid_payload = cmd_integrity && cmd_mission == MISSION_ID && cmd_config == CONFIG_ID
+    // Alarm is a final, same-edge veto, not a payload property. Keep it out
+    // of the command-validation cone and the nested state-update enables.
+    wire usable_channel = (healthy || recover) && !overflow_now;
+    wire payload_good = cmd_integrity && cmd_mission == MISSION_ID && cmd_config == CONFIG_ID
         && cmd_sequence > last_sequence && (!revoked_valid || cmd_issued > revoked)
         && cmd_issued <= now && cmd_issued <= cmd_not_before
         && cmd_not_before <= cmd_deadline && cmd_deadline < cmd_expires
-        && now <= cmd_deadline && channel_good;
-    wire bad_command = cmd_valid && !valid_payload;
+        && now <= cmd_deadline;
+    wire bad_payload = cmd_valid && !payload_good;
+    wire command_blocked = bad_payload || (cmd_valid && !usable_channel);
     wire shadow_late = shadow && now > shadow_deadline;
     wire shadow_due = shadow && now >= shadow_not_before && !shadow_late
                      && (!revoked_valid || shadow_issued > revoked);
     // The calendar consumes this combinational pre-edge view. Therefore an
     // on-deadline command can affect the SAME edge; an alarm wins at that edge.
-    assign permit_at_edge = channel_good && !bad_command && !shadow_late
+    assign permit_at_edge = !alarm_now && usable_channel && !bad_payload && !shadow_late
         && ((active && now < active_expires) || shadow_due
-            || (cmd_valid && valid_payload && now >= cmd_not_before));
+            || (cmd_valid && now >= cmd_not_before));
 
     always @(posedge clk) begin
         command_ack <= cmd_valid;
-        command_accepted <= cmd_valid && valid_payload;
+        command_accepted <= cmd_valid && payload_good && usable_channel && !alarm_now;
         if (cold_init && !begun) begin
             begun <= 1; active <= 0; shadow <= 0; healthy <= 1;
             overflow <= 0; err_count <= 0; last_sequence <= 0;
@@ -58,17 +61,19 @@ module permission_gate #(
                 if (err_count == 64'hffffffffffffffff) overflow <= 1;
                 else err_count <= err_count + 1;
             end
-            if (alarm_now || bad_command || shadow_late) begin
+            if (alarm_now || command_blocked || shadow_late) begin
                 active <= 0; shadow <= 0; healthy <= 0;
                 revoked <= now; revoked_valid <= 1;
                 command_accepted <= 0;
             end else begin
                 if (recover) healthy <= 1;
                 if (active && now >= active_expires) active <= 0;
-                if (shadow_due && channel_good) begin
+                if (shadow_due && usable_channel) begin
                     active <= 1; active_expires <= shadow_expires; shadow <= 0;
                 end
-                if (cmd_valid && valid_payload) begin
+                // This branch already establishes !alarm and, whenever
+                // cmd_valid, both payload_good and usable_channel.
+                if (cmd_valid) begin
                     last_sequence <= cmd_sequence;
                     if (now < cmd_not_before) begin
                         shadow <= 1;

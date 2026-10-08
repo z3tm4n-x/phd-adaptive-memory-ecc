@@ -208,12 +208,15 @@ wrapper `/home/z3tm4n/bin/vivado-wsl`,2025.2 build6299465.
 эта остановка снята:1039variants, оба exact parts и synthesis license доступны.
 **Исполнено:** `platform/implement.tcl` выполнил полный OOC post-route−1/−2
 на cd68afd; после адресного упрощения конфигурации исполнен новый−1/250.
-Текущие WNS−5.706/TNS−9734.453/WHS−1.336/THS−977.085нс: время **не закрыто**.
+После конфигурации было WNS−5.706нс. Текущая пара после gate-правки:
+−1:WNS−4.840/TNS−8555.697/WHS−1.277/THS−992.901нс;
+−2:WNS−4.582/TNS−6110.559/WHS−1.101/THS−847.266нс: время **не закрыто**.
 Это отрицательный результат данной реализации, не отсутствие инструмента
 и не доказательство невозможности ZedBoard. Старые результаты сохранены.
 PLL/jitter, рабочая ревизия платы, SRAM-адаптер/pin map/load и внешние
 min/max ещё не квалифицированы. Источники и конкретный остаток —
-[новый checkpoint](platform/CONFIG_LOAD.md) и [история/источники](platform/README.md).
+[новый checkpoint](platform/ALARM_SHORT.md), [компоненты](board/README.md)
+и [история/источники](platform/README.md).
 VADJ3.3V — выбор, не измерение.
 Общий Yosys synthesis не заменяет LUT/BRAM/Fmax/post-route STA.
 Особенно проверить CRC-пути, сравнения64бит и совместные dispatch/merge/ERR≤3нс.
@@ -253,3 +256,46 @@ timebase/очереди/CRC. Нет квалификации E/ERR, началь
 адресная следующая цепь now→validation/alarm→calendar и физическая
 clock/SRAM/FMC-привязка выбранной платформы. Device support больше не блокер.
 Ни то ни другое не требует нового Q(T).
+
+## 6. Actual-endpoint композиция, ограниченная попытка после3a3656b
+
+`composition_check.py` использует весь production`executor`, включая оба
+app_frontend/RPC, command_bridge/receiver, настоящий core/очередь, calendar,
+gate и backend. Ширины19/64/256/97/416/32 сохранены; cfg/start и все четыре
+двоичных clock произвольны. Никакой подставной endpoint, forced arm, урезанный
+timebase или assumptions не добавлены. Мониторы находятся только в build
+копиях, production RTL не меняют. `clk2fflogic` делает произвольную дискретную
+последовательность фронтов; физической метастабильности здесь нет.
+
+16новых assertions: retire только при REPLY; ненулевая очередь означает
+occupied; при QUEUED/ACTIVE bridge готов принять ответ; normal release
+должен попасть в ready. В core проверяются go только при idle, appgrant
+при QUEUED и без control_due, допустимые kind/mask, ACTIVE↔busy/owner в
+нужном направлении, release при ACTIVE, отсутствие двух ACTIVE. Ещё6 —
+прежние backend-инварианты, снова **asserted**, не импортированы как assumptions.
+Отдельный root не имеет обычных output ports: только22 bad-state assertions.
+
+Результат первого корректного PDR:22/22undecided после120с. Последняя
+попытка добавляет4assertions: delivered эквивалентно ненулевой queue_state;
+replied влечёт REPLY. Тоже без assumptions:26/26undecided после120с.
+Итоги не являются доказанными границами длины трассы, liveness либо
+опровержением RTL. Встреченных контрпримеров в этих двух запусках нет;
+это также не доказательство safety. Монолитный автомат имеет8748/8752
+AIG latches; увеличение лимита по инерции не выполнялось.
+
+Первый технический экспорт ошибочно оставил414обычных output bits верхнего
+модуля. ABC рассматривал их вместе с22assertions как436проверок,12опровергнул.
+Строгая проверка количества отвергла весь результат до публикации; это
+не12дефектов RTL. Исправлен property-only root и проверяются ноль обычных
+outputs, точное количество bad и отсутствие constraints **до** запуска ABC.
+Первоначальный ожидаемый счёт23 также исправлен по исходным6backend assertions.
+Production при этих исправлениях не менялся. Generated sources/логи корректных
+попыток сохранены в `outputs/alarm-evidence.zip`; raw error log остаётся в.build.
+
+Невакуозные операции/ошибочные ответы/полный consume-retire повторяются
+в прежних десяти integrated трассах, но они не заменяют универсального
+доказательства. Следующий конкретный proof-шаг: разложить lifetime очереди
+и grant/release на проверяемые интерфейсные леммы, затем доказать их предпосылки
+на actual calendar/E, не превращая их в недоказанные assumptions. Для этого
+checkpoint цель общего proof остаётся **OPEN**. RPC-компонентный PDR, E-k43 и
+gate-equivalence сохраняют только собственные области.

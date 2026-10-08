@@ -118,7 +118,7 @@ def main():
     parser.add_argument("--detail-dir", type=Path)
     args = parser.parse_args()
     before = audit(PART, source_ref=BASELINE)
-    after = audit(PART, SERIES)
+    after = audit(PART, SERIES, source_ref="3a3656bdf09b7e99fd5f1de2baabb1b55e6a905d")
     old = json.loads((HERE/"outputs/sta"/PART/"summary.json").read_text())
     new = json.loads((SERIES/PART/"summary.json").read_text())
     if set(old["source_sha256"]) != set(new["source_sha256"]):

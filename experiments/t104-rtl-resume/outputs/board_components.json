@@ -1,0 +1,352 @@
+{
+  "source_url": "https://raw.githubusercontent.com/Digilent/digilent-xdc/master/Zedboard-Master.xdc",
+  "source_sha256": "4c3ae9d40dce0cb0ca86fdd381a3ec05e0cc099c6f17f8299e270690b2b58b5c",
+  "source_access_date": "2026-10-08",
+  "pin_plan_status": "engineering proposal for new adapter, not observed wiring",
+  "pin_plan": [
+    {
+      "port": "sram_a[0]",
+      "connector_signal": "FMC_LA00_CC_N",
+      "package_pin": "M20",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[1]",
+      "connector_signal": "FMC_LA00_CC_P",
+      "package_pin": "M19",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[2]",
+      "connector_signal": "FMC_LA01_CC_N",
+      "package_pin": "N20",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[3]",
+      "connector_signal": "FMC_LA01_CC_P",
+      "package_pin": "N19",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[4]",
+      "connector_signal": "FMC_LA02_N",
+      "package_pin": "P18",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[5]",
+      "connector_signal": "FMC_LA02_P",
+      "package_pin": "P17",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[6]",
+      "connector_signal": "FMC_LA03_N",
+      "package_pin": "P22",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[7]",
+      "connector_signal": "FMC_LA03_P",
+      "package_pin": "N22",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[8]",
+      "connector_signal": "FMC_LA04_N",
+      "package_pin": "M22",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[9]",
+      "connector_signal": "FMC_LA04_P",
+      "package_pin": "M21",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[10]",
+      "connector_signal": "FMC_LA05_N",
+      "package_pin": "K18",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[11]",
+      "connector_signal": "FMC_LA05_P",
+      "package_pin": "J18",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[12]",
+      "connector_signal": "FMC_LA06_N",
+      "package_pin": "L22",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[13]",
+      "connector_signal": "FMC_LA06_P",
+      "package_pin": "L21",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[14]",
+      "connector_signal": "FMC_LA07_N",
+      "package_pin": "T17",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[15]",
+      "connector_signal": "FMC_LA07_P",
+      "package_pin": "T16",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[16]",
+      "connector_signal": "FMC_LA08_N",
+      "package_pin": "J22",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[17]",
+      "connector_signal": "FMC_LA08_P",
+      "package_pin": "J21",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[18]",
+      "connector_signal": "FMC_LA09_N",
+      "package_pin": "R21",
+      "bank": 34
+    },
+    {
+      "port": "sram_a[19]",
+      "connector_signal": "FMC_LA09_P",
+      "package_pin": "R20",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[0]",
+      "connector_signal": "FMC_LA10_N",
+      "package_pin": "T19",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[1]",
+      "connector_signal": "FMC_LA10_P",
+      "package_pin": "R19",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[2]",
+      "connector_signal": "FMC_LA11_N",
+      "package_pin": "N18",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[3]",
+      "connector_signal": "FMC_LA11_P",
+      "package_pin": "N17",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[4]",
+      "connector_signal": "FMC_LA12_N",
+      "package_pin": "P21",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[5]",
+      "connector_signal": "FMC_LA12_P",
+      "package_pin": "P20",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[6]",
+      "connector_signal": "FMC_LA13_N",
+      "package_pin": "M17",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[7]",
+      "connector_signal": "FMC_LA13_P",
+      "package_pin": "L17",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[8]",
+      "connector_signal": "FMC_LA14_N",
+      "package_pin": "K20",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[9]",
+      "connector_signal": "FMC_LA14_P",
+      "package_pin": "K19",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[10]",
+      "connector_signal": "FMC_LA15_N",
+      "package_pin": "J17",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[11]",
+      "connector_signal": "FMC_LA15_P",
+      "package_pin": "J16",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[12]",
+      "connector_signal": "FMC_LA16_N",
+      "package_pin": "K21",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[13]",
+      "connector_signal": "FMC_LA16_P",
+      "package_pin": "J20",
+      "bank": 34
+    },
+    {
+      "port": "sram_dq[14]",
+      "connector_signal": "FMC_LA17_CC_N",
+      "package_pin": "B20",
+      "bank": 35
+    },
+    {
+      "port": "sram_dq[15]",
+      "connector_signal": "FMC_LA17_CC_P",
+      "package_pin": "B19",
+      "bank": 35
+    },
+    {
+      "port": "sram_ce_n",
+      "connector_signal": "FMC_LA18_CC_N",
+      "package_pin": "C20",
+      "bank": 35
+    },
+    {
+      "port": "sram_oe_n",
+      "connector_signal": "FMC_LA18_CC_P",
+      "package_pin": "D20",
+      "bank": 35
+    },
+    {
+      "port": "sram_we_n",
+      "connector_signal": "FMC_LA19_N",
+      "package_pin": "G16",
+      "bank": 35
+    },
+    {
+      "port": "sram_lb_n",
+      "connector_signal": "FMC_LA19_P",
+      "package_pin": "G15",
+      "bank": 35
+    },
+    {
+      "port": "sram_ub_n",
+      "connector_signal": "FMC_LA20_N",
+      "package_pin": "G21",
+      "bank": 35
+    },
+    {
+      "port": "sram_err",
+      "connector_signal": "FMC_LA20_P",
+      "package_pin": "G20",
+      "bank": 35
+    }
+  ],
+  "logic_tests": {
+    "actual": {
+      "exit_code": 0,
+      "stdout": "PADS_PASS cases=4096\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/board/tb_pads.sv:37: $finish called at 4097000 (1ps)"
+    },
+    "wrong_drive_polarity": {
+      "exit_code": 1,
+      "stdout": "FATAL: /mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/board/tb_pads.sv:31: PAD_MISMATCH case=0\n       Time: 1000  Scope: tb_pads"
+    }
+  },
+  "component_synthesis": {
+    "command": [
+      "/home/z3tm4n/bin/vivado-wsl",
+      "-mode",
+      "batch",
+      "-source",
+      "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/board/components.tcl",
+      "-log",
+      "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/board-components-1791485937867052673/vivado.log",
+      "-journal",
+      "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/board-components-1791485937867052673/vivado.jou",
+      "-tclargs",
+      "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/board-components-1791485937867052673"
+    ],
+    "generated_clocks_ns": {
+      "feedback": 10.0,
+      "mem_unbuffered": 4.0,
+      "cpu_unbuffered": 10.0,
+      "x_unbuffered": 8.0,
+      "command_unbuffered": 10.0
+    },
+    "iobufs": 16,
+    "part": "xc7z020clg484-1",
+    "scope": "component synthesis, NOT post-route IO timing",
+    "report_sha256": {
+      "clocks.rpt": "d828bf7c8522c2f0cd35fe0e908f15b2bdab7763c0f58e2b17557c3c7f050dbb",
+      "clock_properties.rpt": "d354b3592ea91c6b1d0b1742381e53a0b500d4b451b18dcf712e935a546636f5",
+      "clock_utilization.rpt": "d7c5d92c41e97b9ddcc81c4fe01ff8bdcaac8de62bd4c0eecb9ccaceefca732e",
+      "pad_io.rpt": "0205ef4fe4619d7c0991aca1b53750e9051d177af193b83566982aa69a8e43d3",
+      "pad_properties.rpt": "c87c04dec6c372920920198f08d1b104f8e5bcfac71d3fbd8c70deb2a910262a",
+      "pad_utilization.rpt": "a725f623343762926ba56d53ef0f2dafbd342929a002d41e34b52eda93ac9e76"
+    }
+  },
+  "conditional_margins": {
+    "read_capture_slack_ns": 3.499360000000003,
+    "second_read_capture_slack_ns": 3.4975199999999944,
+    "memory_off_before_fpga_drive_ns": 5.498440000000002,
+    "write_pulse_slack_over_35ns": 0.49775999999999954,
+    "write_data_setup_slack_over_25ns": 10.49776,
+    "write_data_hold_slack_over_0ns": 3.4972799999999893,
+    "fpga_off_before_next_read_ns": 23.49691999999999
+  },
+  "assumptions": {
+    "xi_ns": [
+      0.99999,
+      1.00001
+    ],
+    "edge_error_ns": 0.25,
+    "forward_ns": [
+      0,
+      4
+    ],
+    "return_ns": [
+      0,
+      2
+    ],
+    "setup_ns": 1,
+    "sram_read_max_ns": 45,
+    "sram_hz_max_ns": 18,
+    "vadj_V": 3.3,
+    "dq_drive_mA": 8,
+    "dq_slew": "SLOW",
+    "input_jitter_ns": 0.05
+  },
+  "unknown": {
+    "alias_mapping": null,
+    "actual_load_pF": null,
+    "trace_delay_ns": null,
+    "clock_tolerance_ppm_verified": null,
+    "runtime_clock_failure_containment": null,
+    "hazard_free_control_pad_waveform": null
+  },
+  "source_files_sha256": {
+    "board_check.py": "63e9c5c69b2c13fd3b3c30da48b94b4ee417056c1efa756a9aaffd9087771d84",
+    "board/clock_tree.sv": "a564c675adf997688e3f95d59cf7c5df4c517fef77105a932d5a6573acc1b87e",
+    "board/sram_pads.sv": "94ceae3e5412a03bb7852645188fa37a0a6873083ace2ebfcad08fa1713bdc2c",
+    "board/tb_pads.sv": "bde5e874dcdeaf4b900edc273d6701a96d0afa81de7050ebef5d6616dc0ab49b",
+    "board/components.tcl": "1ab8caa7ae6134bb96e74fc8e095b86984bf41d902e8c3bc6f29824733ed215c"
+  },
+  "raw_directory": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/board-components-1791485937867052673",
+  "elapsed_s": 46.974,
+  "physical_timing_qualified": false
+}
