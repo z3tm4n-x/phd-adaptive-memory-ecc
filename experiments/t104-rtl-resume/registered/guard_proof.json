@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "case": "actual",
+      "status": "proved",
+      "all": 4,
+      "proved": 4,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "source_assertions": 5,
+      "unique_exported": 4,
+      "returncode": 0,
+      "log_sha256": "6acc5beae2dc977cb22d954863c9d6e348975411a889fdbced47710e7633358e"
+    },
+    {
+      "case": "mutant",
+      "status": "disproved",
+      "all": 5,
+      "proved": 4,
+      "disproved": 1,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "source_assertions": 5,
+      "unique_exported": 5,
+      "returncode": 0,
+      "log_sha256": "c2377357d8505d734123a218f2f46a4f102c260bd22bde55a90e67ad9f8d0411"
+    }
+  ],
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-guard-proof-1791527105945325982",
+  "source_sha256": "eb9279d73a7bb07e6bba18950243a45a61338c34dbadca4c190d466bd89f9875",
+  "scope": "64-bit update, no reset, same-edge priority; no full LOW pipeline timing proof",
+  "independent_bound": "contract.json; at most 78894788947889481 fast edges per declared mission"
+}
