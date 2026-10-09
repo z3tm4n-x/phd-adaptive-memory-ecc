@@ -1,9 +1,9 @@
 {
   "task": 135,
-  "revision": 2,
-  "scientific_parent_sha": "71fa4680d1e737bb1fb3b0cce31ee24cec410f4a",
-  "engineer_input_sha": "5498bf5790cc8f90a26cc3a556e64768d31cbdbf",
-  "status": "one mathematical interface; engineer arithmetic compatible, complete implementation acceptance pending",
+  "revision": 3,
+  "scientific_parent_sha": "b3bbc5f2171c66ac4b975060111aab704ab3734b",
+  "engineer_input_sha": "eab470df3c4a33b101aaa4eeab64c426b9f10aeb",
+  "status": "one selected mathematical interface; registered lane and generation component delivered; composed LOW/WCET/pad acceptance pending",
   "recommended": {
     "environment": "original R0-A 3g/cm2; all v1 environment and lifetime quotas unchanged",
     "bound": "T119 same c164/g196/freeze320; two-stage ERR 90/180s",
@@ -12,9 +12,9 @@
     "app_charge_ticks": 240,
     "ka": 3,
     "freeze_ticks": 320,
-    "generation_bits_required": 32,
-    "generation_policy": "saturating, never wrap; end-to-end width, same-edge veto; exhaustion FAST forever, priced separately",
-    "delivered_generation_bits": 16,
+    "generation_bits_required": 64,
+    "generation_policy": "qualified zero start; no runtime reset/wrap; at most one coalesced increment per fast edge including ERR/loss/invalidate/config; saturation unreachable over declared horizon",
+    "delivered_generation_bits": 64,
     "generation_implementation_accepted": false,
     "R_s": "92.500920e-9",
     "E_s": "148.501480e-9",
@@ -38,14 +38,40 @@
     "ordinary_recovery_starts_max": 1000,
     "loss_rising_edges_max": 1001,
     "false_flags_rate_s": "1e-6",
-    "counter_saturation_price": "Markov on stopped increment count; combine with global bad probability ONLY in price; no new epsilon",
+    "counter_saturation_price": "exactly zero in the stated 10-year clock/startup domain; no probability quota added or removed",
     "application_joint_burst": 1,
     "application_joint_rate_s": 10000,
     "mean_reads_s": 1000,
     "mean_writes_s": 1000,
     "means_scope": "mission and 3us-expanded quiet components separately",
     "FIFO_condition": "app transport idle at admitted arrival; no frame traffic obstruction without included bound; frame metadata and app requests must have defined arbitration",
-    "conditional_service_status": "pinned arithmetic/trace correspondence; actual pad WCET and integrated STA not established"
+    "conditional_service_status": "registered lane equivalence and internal -1/250 STA reported by engineer; complete LOW/WCET/pad-to-pad not established",
+    "generation_component_delivered": true,
+    "generation_end_to_end_proved": false,
+    "effective_ERR_scope": "event detection/delivery, all state/timer processing and fresh decision applicable at target freeze; includes queue/frame wait; local veto is immediate, not delayed by this budget",
+    "invalidate_config_price": "no extra event-count restriction for saturation; non-scientific invalidations/denied LOW and recovery must fit the existing ordinary unavailability/false-flag/recovery contract; scientific configuration and lifetime budget unchanged",
+    "generation_clock_bound": {
+      "horizon_s": 315576000,
+      "fast_clock_min_s": "3.99996e-9",
+      "endpoint_span_s": "0.5e-9",
+      "max_edges_upper": 78894788947889481,
+      "initial_generation": 0,
+      "max_increments_per_edge": 1,
+      "runtime_reset_allowed": false,
+      "saturation_extra_unavailability_s": 0
+    },
+    "timers": {
+      "quantum_ticks": 20,
+      "bits": 34,
+      "N_w": 4500045002,
+      "N_h": 9000090002,
+      "N_recovery": 9015504896,
+      "tau_s": "0.30829479331708",
+      "recovery_lower_s": "180.308294798521",
+      "recovery_upper_s": "180.3119010214792",
+      "extra_rounding_s": "0.00000616966172",
+      "policy": "saturating countdown; incomplete first tick paid; equality FAST; preserve maximum old hold; recovery at least h_lower+tau; no phase/pending/budget reset"
+    }
   },
   "reserve100": {
     "service_input_type": "engineer arithmetic candidate, NOT measured complete executor",
@@ -63,11 +89,33 @@
     "conditional_demo_cap_approved": false
   },
   "unclosed_implementation_obligations": [
-    "compose frame protocol, app scheduler and local microsequence with invariant phases/mandatory slots",
-    "candidate generation corresponds to already processed ERR history; same-edge veto and no stale LOW",
-    "32-bit generation in all payloads/comparisons; no truncation",
-    "integrated candidate deadline, ERR/loss deadline and ordinary availability",
-    "bounded response without control-frame contention; full observed writes and repair not blocked by replies",
-    "clock/reset, pad-to-pad operation limits, setup/hold and stated STA target"
-  ]
+    "compose frame protocol, joint CPU/X scheduler and FIFO2 credits including inflight/held reply; keep phases/mandatory slots",
+    "64-bit coherent generation in every payload/stage/cache/comparison, processed-history correspondence and same-edge ERR/loss/config invalidation; no stale LOW",
+    "prove integrated 1us candidate-before-freeze, 32.500320ns local dispatch, 10us complete ERR/loss reaction and ordinary price availability",
+    "implement 34-bit slow countdown/recovery at updated counts, preserve maximum holds and no runtime reset of generation or lifetime state",
+    "prove full 320/320ns request/reply with new 20xi/4xi stages, frame contention and response readiness; repair never waits for slow/reply",
+    "preserve registered R/E and full-word lock; qualify startup/clock, pad limits and full active top STA for demonstration"
+  ],
+  "instructions_sha": "68982b44ea7b1eb52c7b608b4a16a86c05a2f347",
+  "registered_preparation": {
+    "source_request_extra_ticks": 20,
+    "source_reply_extra_ticks": 4,
+    "placement": "inside the existing handshake component interval, outside SRAM grant/release; no new independent endpoint jitter charge",
+    "inbound_component_sum_s": "274.002720e-9",
+    "outbound_component_sum_s": "217.002160e-9",
+    "inbound_unallocated_s": "45.997280e-9",
+    "outbound_unallocated_s": "102.997840e-9",
+    "decomposition_response_upper_s": "2.614174992e-6",
+    "status": "conditional arithmetic placement, idle/ready transport and unchanged preparation assumptions; NOT integrated WCET"
+  },
+  "actual_integrated_bounds": {
+    "application_inbound_s": null,
+    "application_outbound_s": null,
+    "candidate_precompute_and_delivery_s": null,
+    "local_dispatch_s": null,
+    "ERR_loss_processed_history_fresh_decision_s": null,
+    "frame_pipeline_II_ticks": null,
+    "pad_to_pad_s": null,
+    "active_LOW_STA": null
+  }
 }
