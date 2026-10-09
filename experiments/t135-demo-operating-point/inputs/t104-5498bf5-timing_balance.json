@@ -1,0 +1,135 @@
+{
+  "type": "conditional calculated bounds; no physical measurement or new certificate",
+  "xi_ns": [
+    "0.99999",
+    "1.00001"
+  ],
+  "endpoint_jitter_ns": "0.25",
+  "operations_250": {
+    "R": {
+      "min_ns": "2287477/25000",
+      "max_ns": "2312523/25000"
+    },
+    "E": {
+      "min_ns": "3687463/25000",
+      "max_ns": "3712537/25000"
+    },
+    "write16": {
+      "min_ns": "1687483/25000",
+      "max_ns": "1712517/25000"
+    },
+    "read32": {
+      "min_ns": "2287477/12500",
+      "max_ns": "2312523/12500"
+    },
+    "observed_write32": {
+      "min_ns": "2687473/12500",
+      "max_ns": "2712527/12500"
+    }
+  },
+  "ERR_250_snapshot_from_grant": {
+    "min_ns": "297497/5000",
+    "max_ns": "302503/5000"
+  },
+  "ERR_250_publication_from_grant": {
+    "min_ns": "396871/6250",
+    "max_ns": "403129/6250"
+  },
+  "components_250_50": {
+    "source_sampling": {
+      "min_ns": "0",
+      "max_ns": "102501/5000"
+    },
+    "request_preparation_budget": {
+      "min_ns": "0",
+      "max_ns": "50313/625"
+    },
+    "request_slow_queue_and_handshake_to_fast_consumer": {
+      "min_ns": "0",
+      "max_ns": "451567/3125"
+    },
+    "fast_prefetch_dispatch": {
+      "min_ns": "0",
+      "max_ns": "106251/12500"
+    },
+    "wait_one_calendar_frame": {
+      "min_ns": "0",
+      "max_ns": "9803223/6250"
+    },
+    "reply_outbox": {
+      "min_ns": "0",
+      "max_ns": "112501/25000"
+    },
+    "response_handshake_and_slow_queue_to_consumer": {
+      "min_ns": "0",
+      "max_ns": "651569/3125"
+    },
+    "observed_write32": {
+      "min_ns": "2687473/12500",
+      "max_ns": "2712527/12500"
+    }
+  },
+  "runtime_loss_to_fast_veto": {
+    "min_ns": "0",
+    "max_ns": "912509/25000"
+  },
+  "request_preparation_status": "80xi is a proposed allocation, not implemented/measured",
+  "transport_basis": "empty, reset-released slow FWFT queue <=4Ts; idle XPM handshake <=2Tsrc+6Tdst; destination ready; conditional digital IP bound, not analog metastability guarantee",
+  "end_to_end_upper_with_10pct_ns": "323471841/125000",
+  "end_to_end_upper_float_ns": 2587.774728,
+  "end_to_end_headroom_ns": "51528159/125000",
+  "reply_backpressure_ns": 100,
+  "queue_assumption": "joint burst1/rate<=180000 per s; no earlier pending application at arrival; reserved service each1568xi; empty queues and idle handshakes; not yet integrated",
+  "scrub_transport_constraint": "control slots every164xi MUST be generated locally from a preloaded frame, NOT sent one-by-one over this handshake; full frame protocol not implemented",
+  "worst_case_all_ERR_bus_upper": "498534453779/625000000000",
+  "worst_case_all_ERR_bus_upper_float": 0.7976551260464,
+  "bus_bound_condition": "same slot schedule and unchanged X_work209ns+0.0001*t; preparatory compute/CDC not SRAM traffic",
+  "freeze_lead_xi": 320,
+  "freeze_policy": "local ERR veto at freeze, no retroactive cancellation of committed skips",
+  "rounding": "fast4xi exact; slow20xi; lower release not_before rounded up, upper expiry rounded down; latency paid before freeze",
+  "actual_command_preparation_to_freeze_upper": null,
+  "actual_ERR_to_slow_rule_upper": null,
+  "exact_board_pad_timing": null,
+  "candidate_100_status": "arithmetic fallback only, not RTL/STA and not approved calendar",
+  "candidate_100_operations": {
+    "R": {
+      "min_ns": "1094989/10000",
+      "max_ns": "1105011/10000"
+    },
+    "E": {
+      "min_ns": "1694983/10000",
+      "max_ns": "1705017/10000"
+    },
+    "write16": {
+      "min_ns": "49687/625",
+      "max_ns": "50313/625"
+    },
+    "read32": {
+      "min_ns": "1094989/5000",
+      "max_ns": "1105011/5000"
+    },
+    "observed_write32": {
+      "min_ns": "99599/400",
+      "max_ns": "100401/400"
+    }
+  },
+  "candidate_100_ERR_snapshot": {
+    "min_ns": "694993/10000",
+    "max_ns": "705007/10000"
+  },
+  "candidate_100_ERR_publication": {
+    "min_ns": "49687/625",
+    "max_ns": "50313/625"
+  },
+  "candidate_100_pin_slacks_ns": {
+    "read_capture": "4687/625",
+    "turnaround": "74981/10000",
+    "write_pulse": "2487/5000",
+    "write_data_setup": "52487/5000",
+    "write_data_hold": "54969/10000",
+    "second_write_pulse": "2479/5000",
+    "second_write_setup": "204959/10000",
+    "second_write_hold": "54953/10000"
+  },
+  "candidate_100_queue_CDC_and_Q": null
+}
