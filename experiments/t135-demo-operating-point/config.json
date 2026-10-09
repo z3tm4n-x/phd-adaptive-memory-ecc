@@ -1,0 +1,60 @@
+{
+  "task": 135,
+  "base_main": "e63964c2b9ddf6a53fe9c76bd5942f458f167f8e",
+  "instructions_sha": "68982b44ea7b1eb52c7b608b4a16a86c05a2f347",
+  "plan_sha": "d061bc405e6181c641e06238d602014e69b51581",
+  "engineer_input_sha": "cc0ce6d7149dc8e69b4dd30c1603b7338ce9c47b",
+  "accepted_T114_sha": "a8f57dc33f919ccca8e6474141615f55f88cb938",
+  "accepted_T119_sha": "d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba",
+  "accepted_T126_sha": "2699d4ab4a2aa5258d25ae4b239e0c08300e925a",
+  "reference_row": 26,
+  "reference_map_id": "T114_26_MCU_calibrated_write_main_2_c1/2",
+  "reference_map_suffix_means": "quiet price budget 1/2, NOT an S2-cap",
+  "demo": {
+    "S2_cap": "677638260801891/195312500000",
+    "FS_cap": "3380815538583921/239099031250",
+    "author_acceptance": null,
+    "physical_qualification": null
+  },
+  "application": {
+    "joint_burst": "1",
+    "joint_rate_s": "10000",
+    "mean_write_s": "1000",
+    "mean_read_s": "1000",
+    "scope": "mission and 3us-expanded quiet sets separately; upper bounds, not measured load"
+  },
+  "dual_domain": {
+    "service_quantum_ticks": 4,
+    "timer_quantum_ticks": 20,
+    "g_ticks": 196,
+    "c_ticks": 164,
+    "app_charge_ticks": 240,
+    "gate_min_ticks": 2000,
+    "gate_max_ticks": 2020,
+    "request_to_queue_s": "320/1000000000",
+    "release_to_response_s": "320/1000000000",
+    "decision_transport_s": "1/1000000",
+    "ERR_or_loss_to_rule_s": "3/2500000",
+    "backpressure_s": "1/10000000",
+    "R_s": "2312523/25000000000000",
+    "E_s": "3712537/25000000000000",
+    "write16_s": "1712517/25000000000000",
+    "observed_write32_s": "2712527/12500000000000",
+    "read32_s": "2312523/12500000000000",
+    "measured": false
+  },
+  "prefetch": {
+    "precompute_and_transport_s": "1/1000000",
+    "earliest_candidate_lead_ticks": 1440,
+    "freeze_lead_ticks": 320,
+    "local_dispatch_s": "203127/6250000000000",
+    "required": "conditional candidate delivered before exact freeze; final short veto at freeze; earlier prepared LOW never committed blindly",
+    "engineer_equivalence_confirmed": null
+  },
+  "reserve_100MHz": {
+    "status": "WAITING_FOR_ENGINEER_SERVICE_TIMES",
+    "engineer_service_sha": null,
+    "risk_upper": null,
+    "slack": null
+  }
+}
