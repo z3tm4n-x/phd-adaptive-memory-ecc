@@ -1,0 +1,134 @@
+{
+  "status": "conditional digital bounds; no physical timing acceptance",
+  "operations_ns": {
+    "R": {
+      "rational": "2312523/25000",
+      "decimal": 92.50092
+    },
+    "E": {
+      "rational": "3712537/25000",
+      "decimal": 148.50148
+    },
+    "read32": {
+      "rational": "2312523/12500",
+      "decimal": 185.00184
+    },
+    "observed_write32": {
+      "rational": "2712527/12500",
+      "decimal": 217.00216
+    }
+  },
+  "application": {
+    "joint_burst": 1,
+    "joint_rate_s": 10000,
+    "inbound_ns": {
+      "rational": "4312543/25000",
+      "decimal": 172.50172
+    },
+    "outbound_ns": {
+      "rational": "2906279/12500",
+      "decimal": 232.50232
+    },
+    "input_budget_ns": 320,
+    "output_budget_ns": 320,
+    "backpressure_budget_ns": 100,
+    "response_with_10pct_ns": {
+      "rational": "347258703/125000",
+      "decimal": 2778.069624
+    },
+    "bus_any_1ms_upper": {
+      "rational": "4671778941136877831/6124938750000000000",
+      "decimal": 0.7627470464315872
+    },
+    "bus_control_ns": {
+      "rational": "11638060623771374/15312346875",
+      "decimal": 760044.2126067872
+    },
+    "bus_app_ns": {
+      "rational": "2991917281/1250000",
+      "decimal": 2393.5338248
+    },
+    "bus_other_ns": {
+      "rational": "3093/10",
+      "decimal": 309.3
+    }
+  },
+  "history": {
+    "loss_transitions_mission_max": 2002,
+    "ERR_min_spacing_ns": {
+      "rational": "4099959/25000",
+      "decimal": 163.99836
+    },
+    "loss_output_arrival_burst": 3,
+    "ERR_edge_span_ns": {
+      "rational": "1/2",
+      "decimal": 0.5
+    },
+    "FIFO_depth": 512,
+    "backlog_upper": {
+      "rational": "529819457677442/2049999999795",
+      "decimal": 258.4485159660605
+    },
+    "full_flag_occupancy_upper": 275,
+    "prefix_latency_ns": {
+      "rational": "5312553/25000",
+      "decimal": 212.50212
+    },
+    "processed_history_ns": {
+      "rational": "531869457677237/102498975000",
+      "decimal": 5189.022209024402
+    },
+    "last_history_to_fresh_applicable_including_loss_CDC_ns": {
+      "rational": "19717864121887/2049979500",
+      "decimal": 9618.566489024402
+    },
+    "ongoing_history": "local FAST immediately; no LOW until processed generation equals source",
+    "unresolved": "cycle bound assumes initialized XPM, continuous clocks, specified digital CDC resolution; not a formal proof of analog metastability"
+  },
+  "candidates": {
+    "preparation_and_delivery_ns": {
+      "rational": "600631/1250",
+      "decimal": 480.5048
+    },
+    "with_10pct_ns": {
+      "rational": "6606941/12500",
+      "decimal": 528.55528
+    },
+    "roundtrip_budget_ns": {
+      "rational": "300253/500",
+      "decimal": 600.506
+    },
+    "begin_before_target_xi": 3136,
+    "freeze_lead_xi": 320,
+    "dispatch_ns": {
+      "rational": "106251/12500",
+      "decimal": 8.50008
+    },
+    "tag_bits": 4,
+    "tag_wrap_min_ns": {
+      "rational": "78399216/3125",
+      "decimal": 25087.74912
+    },
+    "lease": "target f+2; no backwards revocation of frozen decisions"
+  },
+  "generation": {
+    "bits": 64,
+    "runtime_reset": false,
+    "mission_fast_edges_upper": 78894788947889481,
+    "saturation_reachable_in_10y": false,
+    "price_recalculated": false
+  },
+  "unchanged_theory_inputs": {
+    "T135": "b3bbc5f2171c66ac4b975060111aab704ab3734b",
+    "T135_64bit_confirmation": "5147d0d360e7483fb421c9b5d11ff96ac216ef78",
+    "R0-A": true,
+    "Q_recomputed": false,
+    "lifetime_price_recomputed": false
+  },
+  "limits": [
+    "all-history cycle/network-calculus derivation, not a trace maximum",
+    "accepted mean quotas for lifetime/quiet components still apply; no new lifetime price here",
+    "startup FIFO readiness, source-valid stability and backpressure are interface premises",
+    "no out-of-envelope application timing guarantee; conservation still checked"
+  ]
+}
