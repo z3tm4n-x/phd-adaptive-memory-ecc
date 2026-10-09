@@ -1,0 +1,64 @@
+{
+  "baseline": "3a3656bdf09b7e99fd5f1de2baabb1b55e6a905d",
+  "byte_identical_outputs": {
+    "integration.json": "c85122414c7839c11a7793b50e2e24bc1ea42dd4b57cfd70e52f57c836ffc881",
+    "rtl.json": "166dbdb32cfa3a29fa6289316d57dfa096855aa2859173cae47e2a7d29150613"
+  },
+  "accepted_inputs": {
+    "files": 42,
+    "raw_identical": 40,
+    "checkout_crlf_only": [
+      "experiments/t104-new-rtl-executor/requirements.txt",
+      "experiments/t96-hybrid-rule-implementation/requirements.txt"
+    ]
+  },
+  "composition_status": {
+    "composition.json": "inconclusive",
+    "composition_ownership.json": "inconclusive"
+  },
+  "archive_sha256": "1ad016232c827300c1c0e7a341f7fc47d34e6e9cf48fdbc06348e704a7afb7b8",
+  "entries_sha256": {
+    "gate/proof.log": "74dc0b9e7c162e3fa271fb7bc41477ad34756e3df694e4c6ed0f147b6465cebb",
+    "gate/proof.sv": "69050c82b42afe7f211b540cfbaa16f935d197dfc42c6d07238d4693ef2b16a9",
+    "gate/gold.sv": "a7dc56d8c623b241f83d206de09e28d7097b04e3fd967ff4f147cced4ee7fb36",
+    "gate/gate.sv": "799e5e908e4924f9dc06d172dbf8273679edf16e5faef5060b1cacd884f47b55",
+    "composition-base/build.ys": "d40b160302af9df545712318599df6504e7ff52d991b35aa858d927d1e4f8711",
+    "composition-base/yosys.log": "60eab4e6b8a540d73dec63532fce9b8d8ac1eee2490ca673c5c0d241298fd5d7",
+    "composition-base/abc.log": "683d50354a535e530edf0c084e190860dff1a378876f6b17d28597f35c865953",
+    "composition-base/absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "composition-base/app_frontend.sv": "9113b256b12932b4dcb0a2f6cf4dfda691690062f2d9efeb89cdd087236ab8bd",
+    "composition-base/command_receiver.sv": "2605a74e96b3dc8f9aefe3b7b17b1d53b382c5479d6255fa17a89fc5f766f999",
+    "composition-base/e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "composition-base/executor.sv": "e7dcd7ff65e00f7b1f9e3918dd91aaa547b94f5b0711a353159802adffa130db",
+    "composition-base/executor_core.sv": "cacdb149ef4bc523b8fae8fc54e98e83bd1d00e57888ea730703b6f10b8e1b71",
+    "composition-base/permission_gate.sv": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+    "composition-base/root.sv": "5d33d71acb0e0c36fc9f00cf2b9743ec29f34f5f3276c5fb31da6f13a261eac6",
+    "composition-base/rpc_cdc.sv": "d1fee9756e5c3adb6e8dfa34eb3286982da047eac360dc2413ba354cf19e37f2",
+    "composition-base/service_config.sv": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3",
+    "composition-ownership/build.ys": "d40b160302af9df545712318599df6504e7ff52d991b35aa858d927d1e4f8711",
+    "composition-ownership/yosys.log": "265a47b15046a17ca26d97d4bc7ac55941e7c9ffb6b874fcfe4b07d7177b3230",
+    "composition-ownership/abc.log": "e37882bd25b76ec63735a8fbff192f42c1f723de951ee0c10ecfceb8eeeb9811",
+    "composition-ownership/absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "composition-ownership/app_frontend.sv": "9113b256b12932b4dcb0a2f6cf4dfda691690062f2d9efeb89cdd087236ab8bd",
+    "composition-ownership/command_receiver.sv": "2605a74e96b3dc8f9aefe3b7b17b1d53b382c5479d6255fa17a89fc5f766f999",
+    "composition-ownership/e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "composition-ownership/executor.sv": "37db382b15306f654224f4fff263625b630221ab88ab9793f6275a1c421f6b2f",
+    "composition-ownership/executor_core.sv": "cacdb149ef4bc523b8fae8fc54e98e83bd1d00e57888ea730703b6f10b8e1b71",
+    "composition-ownership/permission_gate.sv": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+    "composition-ownership/root.sv": "5d33d71acb0e0c36fc9f00cf2b9743ec29f34f5f3276c5fb31da6f13a261eac6",
+    "composition-ownership/rpc_cdc.sv": "9014e1aa5b490405be30994444caa1975ac58ad7523430712f71610c2cf4e311",
+    "composition-ownership/service_config.sv": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3",
+    "regression/alarm-final-regression.log": "2d7cb49a64edc0e62d9b11e275c7387375f670300fa15fde3d5e8db94fff9ab2",
+    "regression/alarm-final-unit.log": "cf85c727b4bbd2c332dea7cbef6acdaa6b91c3f0dff53f9b7fc6b5a823d95f7b"
+  },
+  "full_regression_elapsed_s": 236.841,
+  "note": "earlier 22-property attempt used an earlier runner version; exact generated sources and logs retained",
+  "source_files_sha256": {
+    "delivery_check.py": "0bfc34da7789548660032ae8e2a63d39d90ae5b896278bb9cfe01e42c2e4b577",
+    "gate_check.py": "aca6719f4c9ee6be5dbe1cdcf589d98466e1ffa77af5baf1b49e8cdeae2cd62b",
+    "composition_check.py": "67187e388e95d4d365415460aaa06ab92fbbb5704ad5e5d62f1e252104bbffdf",
+    "board_check.py": "63e9c5c69b2c13fd3b3c30da48b94b4ee417056c1efa756a9aaffd9087771d84",
+    "compare_alarm.py": "cd88ff11b1e33ab199fcae1dcc092b1b18e8a877b58e47f8ebcbf2a21aa1f44b",
+    "alarm_detail.tcl": "9c281272027706a832d6c607cb162f0ebfed122c7c5b9e7b81dcb725a0814841"
+  }
+}

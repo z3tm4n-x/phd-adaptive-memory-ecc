@@ -1,0 +1,3 @@
+# Preserve Vivado's verbatim LF text, including its column padding/blank tail.
+# Do not reformat hash-identified evidence to satisfy prose lint.
+*.rpt text eol=lf -whitespace

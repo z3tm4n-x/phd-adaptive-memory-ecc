@@ -1,0 +1,55 @@
+{
+  "status": "inconclusive",
+  "all": 22,
+  "proved": 0,
+  "disproved": 0,
+  "undecided": 22,
+  "engine_validated_inductive_invariant": false,
+  "expected_properties": 22,
+  "new_properties": 16,
+  "aiger_header": "aig 102362 727 8748 0 92887 22 0 0 0",
+  "source_sha256": {
+    "e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "permission_gate.sv": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+    "service_config.sv": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3",
+    "rpc_cdc.sv": "d1fee9756e5c3adb6e8dfa34eb3286982da047eac360dc2413ba354cf19e37f2",
+    "app_frontend.sv": "9113b256b12932b4dcb0a2f6cf4dfda691690062f2d9efeb89cdd087236ab8bd",
+    "command_receiver.sv": "2605a74e96b3dc8f9aefe3b7b17b1d53b382c5479d6255fa17a89fc5f766f999",
+    "executor_core.sv": "07c8b47eed0d0bfc0e60c4842951c8ba1cf6a1d0e22b5bec0709942736ab33d2",
+    "executor.sv": "18fc83805e0fe6a826826c42b4bac14c1b38a6553f051682751b4ace1493d75f"
+  },
+  "checker_sha256": "a7e30e62774174db75a263f02ec2ef7c42a73c07a0ea8ecd1438a166f2e17613",
+  "build_source_sha256": {
+    "absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "app_frontend.sv": "9113b256b12932b4dcb0a2f6cf4dfda691690062f2d9efeb89cdd087236ab8bd",
+    "command_receiver.sv": "2605a74e96b3dc8f9aefe3b7b17b1d53b382c5479d6255fa17a89fc5f766f999",
+    "executor.sv": "e7dcd7ff65e00f7b1f9e3918dd91aaa547b94f5b0711a353159802adffa130db",
+    "executor_core.sv": "cacdb149ef4bc523b8fae8fc54e98e83bd1d00e57888ea730703b6f10b8e1b71",
+    "e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "permission_gate.sv": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+    "root.sv": "5d33d71acb0e0c36fc9f00cf2b9743ec29f34f5f3276c5fb31da6f13a261eac6",
+    "rpc_cdc.sv": "d1fee9756e5c3adb6e8dfa34eb3286982da047eac360dc2413ba354cf19e37f2",
+    "service_config.sv": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3"
+  },
+  "evidence_sha256": {
+    "abc.log": "683d50354a535e530edf0c084e190860dff1a378876f6b17d28597f35c865953",
+    "build.ys": "d40b160302af9df545712318599df6504e7ff52d991b35aa858d927d1e4f8711",
+    "design.aig": "dbbb1e1b0115375457d8bae5615fd61de488cf0f7e666a85fdb07edfb07755f1",
+    "design.map": "36c618f0c044cf0bbfd794ee9bc981bd721d7eaaebdd85ecf4ce3099d3cc6e94",
+    "invariant.pla": "9e47e4f4f73eee95dd19371906a09bf977994ec569b917f102a3960ec7a269ae",
+    "yosys.log": "60eab4e6b8a540d73dec63532fce9b8d8ac1eee2490ca673c5c0d241298fd5d7"
+  },
+  "raw_directory": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/composition-1791485924670776994",
+  "elapsed_s": 155.759,
+  "time_limit_s": 120,
+  "clock_model": "arbitrary Boolean edges; clk2fflogic",
+  "assumptions": 0,
+  "word_bits": 19,
+  "timestamp_bits": 64,
+  "limitations": [
+    "safety only; no bounded liveness or physical CDC",
+    "unproved properties must remain open",
+    "reachability/nonvacuity also exercised by integration regression"
+  ]
+}

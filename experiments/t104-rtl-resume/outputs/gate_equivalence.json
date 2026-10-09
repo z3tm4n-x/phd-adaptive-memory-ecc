@@ -1,0 +1,53 @@
+{
+  "baseline_commit": "3a3656bdf09b7e99fd5f1de2baabb1b55e6a905d",
+  "gold_sha256": "d546a95f8a35ad1e64cebae901bb65db9f73f333305d09da6bdfd73b0d41dec2",
+  "production_sha256": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+  "checker_sha256": "aca6719f4c9ee6be5dbe1cdcf589d98466e1ffa77af5baf1b49e8cdeae2cd62b",
+  "seed": 10420261009,
+  "simulation": {
+    "cases": 6384,
+    "phases": [
+      "pre-edge",
+      "post-edge"
+    ]
+  },
+  "vector_sha256": "c72ab336dbb4b774e44b085d63a5e131daf64418d377778f2fe7cf60f9eef67b",
+  "induction": {
+    "status": "proved",
+    "k": 1,
+    "assertions": 2,
+    "state_bits": 520,
+    "input_bits_excluding_clock": 455,
+    "assumptions": 0,
+    "log_sha256": "74dc0b9e7c162e3fa271fb7bc41477ad34756e3df694e4c6ed0f147b6465cebb"
+  },
+  "mutants": {
+    "removed_same_edge_veto": {
+      "rejected": true,
+      "phase": "pre",
+      "first_case": 12
+    },
+    "late_deadline": {
+      "rejected": true,
+      "phase": "pre",
+      "first_case": 1
+    },
+    "recover_overrides_alarm_state": {
+      "rejected": true,
+      "phase": "post",
+      "first_case": 207
+    }
+  },
+  "elapsed_s": 7.688,
+  "raw_directory": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/gate-equivalence-1791486768081102380",
+  "tools": {
+    "python": "3.14.4",
+    "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)"
+  },
+  "scope": "binary synchronous gate equivalence; no new timing/clock assumptions; not full-system proof",
+  "common_dependencies": [
+    "Yosys translation/SAT",
+    "Icarus",
+    "build-only port instrumentation"
+  ]
+}

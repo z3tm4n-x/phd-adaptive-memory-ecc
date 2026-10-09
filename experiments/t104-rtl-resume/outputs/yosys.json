@@ -1,0 +1,158 @@
+{
+  "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+  "spacing_equivalence": {
+    "assertions": 2,
+    "timestamp_bits": 64,
+    "status": "proved",
+    "scope": "separate arithmetic miter; full core covered by regression, not this proof"
+  },
+  "backend_bounded_formal": {
+    "core_steps": 60,
+    "xi_ticks": 240,
+    "word_address_bits": 19,
+    "assertion_status": "proved over the bounded initial-state traces",
+    "assertions": 24,
+    "assumptions": "RTL initialization; defined Boolean synchronous inputs, arbitrary go/reset/data/ERR",
+    "not_proved": "physical E, metastability, integrated arbitration/queue"
+  },
+  "backend_induction": {
+    "k": 43,
+    "assertions": 24,
+    "word_address_bits": 19,
+    "status": "proved for all synchronous steps from declared RTL initialization",
+    "scope": "backend atomicity/control properties, not whole-executor induction"
+  },
+  "rpc_bounded_formal": {
+    "global_steps": 40,
+    "assertions": 5,
+    "payload_bits": 8,
+    "clock_model": "arbitrary defined source/destination edges via clk2fflogic",
+    "status": "bounded safety; no fairness/liveness or physical metastability guarantee"
+  },
+  "inconclusive_attempts": [
+    "RPC 8-bit100-step BMC:60s solver timeout",
+    "RPC 1-bit k-induction through40: base cases proved, induction not closed",
+    "backend17-assertion induction:90s timeout; strengthened reachable-state assertions then proved"
+  ],
+  "generic_synthesis": {
+    "e_backend": {
+      "num_wires": 281,
+      "num_wire_bits": 501,
+      "num_pub_wires": 42,
+      "num_pub_wire_bits": 262,
+      "num_ports": 33,
+      "num_port_bits": 174,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 370,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 89,
+        "$_AND_": 39,
+        "$_DFFE_PN_": 1,
+        "$_MUX_": 36,
+        "$_NAND_": 8,
+        "$_NOR_": 13,
+        "$_NOT_": 6,
+        "$_ORNOT_": 19,
+        "$_OR_": 50,
+        "$_SDFFE_PP0P_": 92,
+        "$_SDFFE_PP1P_": 4,
+        "$_SDFF_PP0_": 4,
+        "$_XNOR_": 1,
+        "$_XOR_": 8
+      }
+    },
+    "absolute_calendar": {
+      "num_wires": 1907,
+      "num_wire_bits": 3198,
+      "num_pub_wires": 38,
+      "num_pub_wire_bits": 670,
+      "num_ports": 24,
+      "num_port_bits": 312,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 2762,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 417,
+        "$_AND_": 156,
+        "$_DFFE_PP_": 149,
+        "$_MUX_": 23,
+        "$_NAND_": 139,
+        "$_NOR_": 175,
+        "$_NOT_": 27,
+        "$_ORNOT_": 108,
+        "$_OR_": 511,
+        "$_SDFFE_PP0P_": 399,
+        "$_SDFFE_PP1P_": 14,
+        "$_SDFF_PP0_": 5,
+        "$_XNOR_": 82,
+        "$_XOR_": 557
+      }
+    },
+    "permission_gate": {
+      "num_wires": 4283,
+      "num_wire_bits": 5353,
+      "num_pub_wires": 33,
+      "num_pub_wire_bits": 977,
+      "num_ports": 25,
+      "num_port_bits": 591,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 4833,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 2060,
+        "$_AND_": 143,
+        "$_DFFE_PP_": 1,
+        "$_MUX_": 194,
+        "$_NAND_": 122,
+        "$_NOR_": 81,
+        "$_NOT_": 4,
+        "$_ORNOT_": 631,
+        "$_OR_": 248,
+        "$_SDFFE_PP0P_": 516,
+        "$_SDFFE_PP1P_": 1,
+        "$_SDFF_PP0_": 2,
+        "$_XNOR_": 254,
+        "$_XOR_": 576
+      }
+    },
+    "integrated_executor": {
+      "num_wires": 29761,
+      "num_wire_bits": 48211,
+      "num_pub_wires": 489,
+      "num_pub_wire_bits": 17800,
+      "num_ports": 280,
+      "num_port_bits": 7824,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 34669,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 4108,
+        "$_AND_": 567,
+        "$_DFFE_PN_": 1,
+        "$_DFFE_PP_": 2781,
+        "$_DFF_P_": 431,
+        "$_MUX_": 599,
+        "$_NAND_": 440,
+        "$_NOR_": 384,
+        "$_NOT_": 792,
+        "$_ORNOT_": 1163,
+        "$_OR_": 1778,
+        "$_SDFFCE_PN0P_": 64,
+        "$_SDFFE_PN0N_": 8,
+        "$_SDFFE_PP0P_": 1077,
+        "$_SDFFE_PP1P_": 24,
+        "$_SDFF_PP0_": 11,
+        "$_SDFF_PP1_": 1,
+        "$_XNOR_": 1628,
+        "$_XOR_": 18812
+      }
+    }
+  },
+  "platform_STA": null,
+  "scope": "generic logic cells, not FPGA LUT/FF/Fmax or WCET"
+}

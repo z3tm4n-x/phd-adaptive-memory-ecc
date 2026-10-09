@@ -1,0 +1,229 @@
+{
+  "minus1": {
+    "all_ports_WNS_ns": -2.214,
+    "all_ports_TNS_ns": -91.224,
+    "all_ports_WHS_ns": -3.537,
+    "all_ports_THS_ns": -549.821,
+    "fast_register_setup_ns": 0.244,
+    "fast_register_hold_ns": 0.056,
+    "all_register_setup_ns": 0.244,
+    "all_register_hold_ns": 0.051,
+    "LUT": 135.0,
+    "FF": 773.0,
+    "BRAM36_tiles": 2.5,
+    "DSP": 0.0,
+    "check_timing": [
+      [
+        "no_clock",
+        "0"
+      ],
+      [
+        "constant_clock",
+        "0"
+      ],
+      [
+        "pulse_width_clock",
+        "0"
+      ],
+      [
+        "unconstrained_internal_endpoints",
+        "0"
+      ],
+      [
+        "no_input_delay",
+        "0"
+      ],
+      [
+        "no_output_delay",
+        "0"
+      ],
+      [
+        "multiple_clock",
+        "0"
+      ],
+      [
+        "generated_clocks",
+        "0"
+      ],
+      [
+        "loops",
+        "0"
+      ],
+      [
+        "partial_input_delay",
+        "0"
+      ],
+      [
+        "partial_output_delay",
+        "0"
+      ],
+      [
+        "latch_loops",
+        "0"
+      ],
+      [
+        "no_clock",
+        "0"
+      ],
+      [
+        "constant_clock",
+        "0"
+      ],
+      [
+        "pulse_width_clock",
+        "0"
+      ],
+      [
+        "unconstrained_internal_endpoints",
+        "0"
+      ],
+      [
+        "no_input_delay",
+        "0"
+      ],
+      [
+        "no_output_delay",
+        "0"
+      ],
+      [
+        "multiple_clock",
+        "0"
+      ],
+      [
+        "generated_clocks",
+        "0"
+      ],
+      [
+        "loops",
+        "0"
+      ],
+      [
+        "partial_input_delay",
+        "0"
+      ],
+      [
+        "partial_output_delay",
+        "0"
+      ],
+      [
+        "latch_loops",
+        "0"
+      ]
+    ],
+    "ignored_exceptions": false
+  },
+  "minus2": {
+    "all_ports_WNS_ns": -1.37,
+    "all_ports_TNS_ns": -55.948,
+    "all_ports_WHS_ns": -3.087,
+    "all_ports_THS_ns": -478.195,
+    "fast_register_setup_ns": 0.568,
+    "fast_register_hold_ns": 0.05,
+    "all_register_setup_ns": 0.568,
+    "all_register_hold_ns": 0.05,
+    "LUT": 133.0,
+    "FF": 773.0,
+    "BRAM36_tiles": 2.5,
+    "DSP": 0.0,
+    "check_timing": [
+      [
+        "no_clock",
+        "0"
+      ],
+      [
+        "constant_clock",
+        "0"
+      ],
+      [
+        "pulse_width_clock",
+        "0"
+      ],
+      [
+        "unconstrained_internal_endpoints",
+        "0"
+      ],
+      [
+        "no_input_delay",
+        "0"
+      ],
+      [
+        "no_output_delay",
+        "0"
+      ],
+      [
+        "multiple_clock",
+        "0"
+      ],
+      [
+        "generated_clocks",
+        "0"
+      ],
+      [
+        "loops",
+        "0"
+      ],
+      [
+        "partial_input_delay",
+        "0"
+      ],
+      [
+        "partial_output_delay",
+        "0"
+      ],
+      [
+        "latch_loops",
+        "0"
+      ],
+      [
+        "no_clock",
+        "0"
+      ],
+      [
+        "constant_clock",
+        "0"
+      ],
+      [
+        "pulse_width_clock",
+        "0"
+      ],
+      [
+        "unconstrained_internal_endpoints",
+        "0"
+      ],
+      [
+        "no_input_delay",
+        "0"
+      ],
+      [
+        "no_output_delay",
+        "0"
+      ],
+      [
+        "multiple_clock",
+        "0"
+      ],
+      [
+        "generated_clocks",
+        "0"
+      ],
+      [
+        "loops",
+        "0"
+      ],
+      [
+        "partial_input_delay",
+        "0"
+      ],
+      [
+        "partial_output_delay",
+        "0"
+      ],
+      [
+        "latch_loops",
+        "0"
+      ]
+    ],
+    "ignored_exceptions": false
+  },
+  "status": "FAST_INTERNAL_CHECKPOINT_ONLY_FULL_B_OPEN"
+}

@@ -1,0 +1,391 @@
+{
+  "status": "pin proposal checked; physical top and pad timing NOT established",
+  "sources": {
+    "SRAM": "CY62167GE30-45ZXI,002-20054 Rev.*F,pp6,8-10",
+    "datasheet_sha256": "a7d9faf23208b6c0f3b2be402feb8653ff0c6f649306fc246605189018a9ed1f",
+    "board_master_xdc_sha256": "4c3ae9d40dce0cb0ca86fdd381a3ec05e0cc099c6f17f8299e270690b2b58b5c",
+    "reused_pin_plan_sha256": "aa61a14c3e809d47a69177a80e3a3b4d0b21444b7d4c28f9f432476166cc7d98"
+  },
+  "pin_plan": [
+    {
+      "port": "sram_a[0]",
+      "connector_signal": "FMC_LA00_CC_N",
+      "package_pin": "M20",
+      "bank": 34,
+      "TSOP_pin": 25
+    },
+    {
+      "port": "sram_a[1]",
+      "connector_signal": "FMC_LA00_CC_P",
+      "package_pin": "M19",
+      "bank": 34,
+      "TSOP_pin": 24
+    },
+    {
+      "port": "sram_a[2]",
+      "connector_signal": "FMC_LA01_CC_N",
+      "package_pin": "N20",
+      "bank": 34,
+      "TSOP_pin": 23
+    },
+    {
+      "port": "sram_a[3]",
+      "connector_signal": "FMC_LA01_CC_P",
+      "package_pin": "N19",
+      "bank": 34,
+      "TSOP_pin": 22
+    },
+    {
+      "port": "sram_a[4]",
+      "connector_signal": "FMC_LA02_N",
+      "package_pin": "P18",
+      "bank": 34,
+      "TSOP_pin": 21
+    },
+    {
+      "port": "sram_a[5]",
+      "connector_signal": "FMC_LA02_P",
+      "package_pin": "P17",
+      "bank": 34,
+      "TSOP_pin": 20
+    },
+    {
+      "port": "sram_a[6]",
+      "connector_signal": "FMC_LA03_N",
+      "package_pin": "P22",
+      "bank": 34,
+      "TSOP_pin": 19
+    },
+    {
+      "port": "sram_a[7]",
+      "connector_signal": "FMC_LA03_P",
+      "package_pin": "N22",
+      "bank": 34,
+      "TSOP_pin": 18
+    },
+    {
+      "port": "sram_a[8]",
+      "connector_signal": "FMC_LA04_N",
+      "package_pin": "M22",
+      "bank": 34,
+      "TSOP_pin": 8
+    },
+    {
+      "port": "sram_a[9]",
+      "connector_signal": "FMC_LA04_P",
+      "package_pin": "M21",
+      "bank": 34,
+      "TSOP_pin": 7
+    },
+    {
+      "port": "sram_a[10]",
+      "connector_signal": "FMC_LA05_N",
+      "package_pin": "K18",
+      "bank": 34,
+      "TSOP_pin": 6
+    },
+    {
+      "port": "sram_a[11]",
+      "connector_signal": "FMC_LA05_P",
+      "package_pin": "J18",
+      "bank": 34,
+      "TSOP_pin": 5
+    },
+    {
+      "port": "sram_a[12]",
+      "connector_signal": "FMC_LA06_N",
+      "package_pin": "L22",
+      "bank": 34,
+      "TSOP_pin": 4
+    },
+    {
+      "port": "sram_a[13]",
+      "connector_signal": "FMC_LA06_P",
+      "package_pin": "L21",
+      "bank": 34,
+      "TSOP_pin": 3
+    },
+    {
+      "port": "sram_a[14]",
+      "connector_signal": "FMC_LA07_N",
+      "package_pin": "T17",
+      "bank": 34,
+      "TSOP_pin": 2
+    },
+    {
+      "port": "sram_a[15]",
+      "connector_signal": "FMC_LA07_P",
+      "package_pin": "T16",
+      "bank": 34,
+      "TSOP_pin": 1
+    },
+    {
+      "port": "sram_a[16]",
+      "connector_signal": "FMC_LA08_N",
+      "package_pin": "J22",
+      "bank": 34,
+      "TSOP_pin": 48
+    },
+    {
+      "port": "sram_a[17]",
+      "connector_signal": "FMC_LA08_P",
+      "package_pin": "J21",
+      "bank": 34,
+      "TSOP_pin": 17
+    },
+    {
+      "port": "sram_a[18]",
+      "connector_signal": "FMC_LA09_N",
+      "package_pin": "R21",
+      "bank": 34,
+      "TSOP_pin": 16
+    },
+    {
+      "port": "sram_a[19]",
+      "connector_signal": "FMC_LA09_P",
+      "package_pin": "R20",
+      "bank": 34,
+      "TSOP_pin": 9
+    },
+    {
+      "port": "sram_dq[0]",
+      "connector_signal": "FMC_LA10_N",
+      "package_pin": "T19",
+      "bank": 34,
+      "TSOP_pin": 29
+    },
+    {
+      "port": "sram_dq[1]",
+      "connector_signal": "FMC_LA10_P",
+      "package_pin": "R19",
+      "bank": 34,
+      "TSOP_pin": 31
+    },
+    {
+      "port": "sram_dq[2]",
+      "connector_signal": "FMC_LA11_N",
+      "package_pin": "N18",
+      "bank": 34,
+      "TSOP_pin": 33
+    },
+    {
+      "port": "sram_dq[3]",
+      "connector_signal": "FMC_LA11_P",
+      "package_pin": "N17",
+      "bank": 34,
+      "TSOP_pin": 35
+    },
+    {
+      "port": "sram_dq[4]",
+      "connector_signal": "FMC_LA12_N",
+      "package_pin": "P21",
+      "bank": 34,
+      "TSOP_pin": 38
+    },
+    {
+      "port": "sram_dq[5]",
+      "connector_signal": "FMC_LA12_P",
+      "package_pin": "P20",
+      "bank": 34,
+      "TSOP_pin": 40
+    },
+    {
+      "port": "sram_dq[6]",
+      "connector_signal": "FMC_LA13_N",
+      "package_pin": "M17",
+      "bank": 34,
+      "TSOP_pin": 42
+    },
+    {
+      "port": "sram_dq[7]",
+      "connector_signal": "FMC_LA13_P",
+      "package_pin": "L17",
+      "bank": 34,
+      "TSOP_pin": 44
+    },
+    {
+      "port": "sram_dq[8]",
+      "connector_signal": "FMC_LA14_N",
+      "package_pin": "K20",
+      "bank": 34,
+      "TSOP_pin": 30
+    },
+    {
+      "port": "sram_dq[9]",
+      "connector_signal": "FMC_LA14_P",
+      "package_pin": "K19",
+      "bank": 34,
+      "TSOP_pin": 32
+    },
+    {
+      "port": "sram_dq[10]",
+      "connector_signal": "FMC_LA15_N",
+      "package_pin": "J17",
+      "bank": 34,
+      "TSOP_pin": 34
+    },
+    {
+      "port": "sram_dq[11]",
+      "connector_signal": "FMC_LA15_P",
+      "package_pin": "J16",
+      "bank": 34,
+      "TSOP_pin": 36
+    },
+    {
+      "port": "sram_dq[12]",
+      "connector_signal": "FMC_LA16_N",
+      "package_pin": "K21",
+      "bank": 34,
+      "TSOP_pin": 39
+    },
+    {
+      "port": "sram_dq[13]",
+      "connector_signal": "FMC_LA16_P",
+      "package_pin": "J20",
+      "bank": 34,
+      "TSOP_pin": 41
+    },
+    {
+      "port": "sram_dq[14]",
+      "connector_signal": "FMC_LA17_CC_N",
+      "package_pin": "B20",
+      "bank": 35,
+      "TSOP_pin": 43
+    },
+    {
+      "port": "sram_dq[15]",
+      "connector_signal": "FMC_LA17_CC_P",
+      "package_pin": "B19",
+      "bank": 35,
+      "TSOP_pin": 45
+    },
+    {
+      "port": "sram_ce_n",
+      "connector_signal": "FMC_LA18_CC_N",
+      "package_pin": "C20",
+      "bank": 35,
+      "TSOP_pin": 26
+    },
+    {
+      "port": "sram_oe_n",
+      "connector_signal": "FMC_LA18_CC_P",
+      "package_pin": "D20",
+      "bank": 35,
+      "TSOP_pin": 28
+    },
+    {
+      "port": "sram_we_n",
+      "connector_signal": "FMC_LA19_N",
+      "package_pin": "G16",
+      "bank": 35,
+      "TSOP_pin": 11
+    },
+    {
+      "port": "sram_lb_n",
+      "connector_signal": "FMC_LA19_P",
+      "package_pin": "G15",
+      "bank": 35,
+      "TSOP_pin": 15
+    },
+    {
+      "port": "sram_ub_n",
+      "connector_signal": "FMC_LA20_N",
+      "package_pin": "G21",
+      "bank": 35,
+      "TSOP_pin": 14
+    },
+    {
+      "port": "sram_err",
+      "connector_signal": "FMC_LA20_P",
+      "package_pin": "G20",
+      "bank": 35,
+      "TSOP_pin": 13
+    }
+  ],
+  "tie_plan": {
+    "VCC": [
+      12,
+      37,
+      47
+    ],
+    "VSS": [
+      27,
+      46
+    ],
+    "NC": [
+      10
+    ]
+  },
+  "tie_meaning": "CE2/BYTE high, x16 mode; pin45 is DQ15, not A20",
+  "source_parameters": {
+    "VCC_range_V": [
+      2.2,
+      3.6
+    ],
+    "AA_ACE_max_ns": 45,
+    "DOE_max_ns": 22,
+    "HZOE_max_ns": 18,
+    "LZOE_min_ns": 5,
+    "OHA_min_ns": 10,
+    "PWE_min_ns": 35,
+    "SD_min_ns": 25,
+    "HD_min_ns": 0,
+    "AC_test_load_pF": 30,
+    "AC_input_slew_max_ns": 3,
+    "input_capacitance_pF_at_25C_1MHz_max": 10,
+    "power_recovery_stable_or_linear_ramp_min_us_exclusive": 100
+  },
+  "clock_design": {
+    "ref_MHz": 100,
+    "pin": "Y9",
+    "MMCM_VCO_MHz": 1000,
+    "output_divisors": [
+      4,
+      20
+    ],
+    "BUFG_output_periods_ns": [
+      4,
+      20
+    ],
+    "input_jitter_ns_assumed": 0.05,
+    "frequency_tolerance_ppm_assumed": 10,
+    "edge_span_ns_assumed": 0.5
+  },
+  "assumptions": {
+    "VADJ_V": 3.3,
+    "I/O": "LVCMOS33;DQ8mA/SLOW",
+    "forward_ns": [
+      0,
+      4
+    ],
+    "return_ns": [
+      0,
+      2
+    ],
+    "setup_ns": 1
+  },
+  "conditional_margins_ns": {
+    "read_capture": 3.49936,
+    "second_read_capture": 3.49752,
+    "SRAM_off_before_FPGA_drive": 5.49844,
+    "WE_pulse_over_35ns": 0.49776,
+    "data_setup_over_25ns": 10.49776,
+    "data_hold_over_0ns": 3.49728,
+    "FPGA_off_before_next_read": 23.49692
+  },
+  "unknown": {
+    "ECC_two_alias_function": null,
+    "actual_board_adapter_revision": null,
+    "external_trace_and_connector_min_max_ns": null,
+    "actual_load_pF": null,
+    "pad_to_pad_delays_and_hold": null,
+    "clock_envelope_source_validation": null,
+    "qualified_clean_start_and_clock_failure_containment": null
+  },
+  "limitations": [
+    "pin numbers do not establish ECC grouping",
+    "30pF datasheet test load is NOT the selected adapter load",
+    "registered WE/OE removes RTL decode glitches, not physical pad skew",
+    "no pin programming, hardware testing or flight qualification"
+  ]
+}
