@@ -1,0 +1,259 @@
+{
+  "base": "cc0ce6d7149dc8e69b4dd30c1603b7338ce9c47b",
+  "instruction_version": "68982b44ea7b1eb52c7b608b4a16a86c05a2f347",
+  "sources": {
+    "experiments/t104-rtl-resume/pdr_check.py": "f1b21688c38bd7a1df5097502279ab1fb565484527fffb41f9aaafb5b65e9051",
+    "experiments/t104-rtl-resume/reference.py": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19",
+    "experiments/t104-rtl-resume/rtl/absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "experiments/t104-rtl-resume/rtl/e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "experiments/t104-rtl-resume/run.py": "12e2590dc0a297a5645fc53ba9b96772284f71136ba8bdbf8b0b20b0d1d8bea6",
+    "experiments/t104-rtl-resume/split/async_queue.sv": "7f50da920cd5f4e03c5ee394d73c6aff22e6f7172bc0f54f73669fea3fb8d69e",
+    "experiments/t104-rtl-resume/split/check.py": "f8149af4554f106e7f377b7dc7655589b05c400fec4015c6c70e21ba98f1c4f4",
+    "experiments/t104-rtl-resume/split/checkpoint.py": "f6f2ec244c0ab259309d27bb582e612ed1522a87e918c2a5dd20fa5621b40bdf",
+    "experiments/t104-rtl-resume/split/clock_250_50.sv": "2590c5447f20d34bb7046b6159f4edb043c4037e24224770cb8aa6a5d2a219e4",
+    "experiments/t104-rtl-resume/split/clocked_lane.sv": "fa423a54332760531be8c5699201ad795c653ef1a798dd6c267bdfa6fe630e93",
+    "experiments/t104-rtl-resume/split/component_input.xdc": "84b3e1e444ee354f210ef32c24ec5b94350598202822e1140e4aa1c2e1e80107",
+    "experiments/t104-rtl-resume/split/component_sta.tcl": "267a8a7e2ae758232567b3c5a7a5a356f5398bdcf2b276bb0757d2ea9315249d",
+    "experiments/t104-rtl-resume/split/formal_guard.sv": "7dd67188b0e7e79191ddb460b569800611929adeba7fa28510c5e11464afd79f",
+    "experiments/t104-rtl-resume/split/formal_lane_contract.sv": "4721bffe523a62ba60147dc0d09f0227d5003147b894a72c387471c254ee1e98",
+    "experiments/t104-rtl-resume/split/formal_vendor_boundary.sv": "5a597c4d8920675a5578eafd7619a0c64f5c798f1274f398d4a7509d0541398d",
+    "experiments/t104-rtl-resume/split/handshake_channel.sv": "0b3e1168cd869c731b8763591dd9d0cf2778bcb6be06494e8e58d9c1e6c264b7",
+    "experiments/t104-rtl-resume/split/operation_lane.sv": "215db0cf6a0b951a2c2b93d63fa6d11c630078d65d8a10c0c550ff22910f9e23",
+    "experiments/t104-rtl-resume/split/predecision_guard.sv": "bbf23aafc47bffe3037c815c639157016f336584f5a59bdf6e1d8891c126e158",
+    "experiments/t104-rtl-resume/split/prove_lane.py": "681ad5040d05a28fdd8b6b8eeb453c5963445ea3ef1c5c9352969e2c8192d1bd",
+    "experiments/t104-rtl-resume/split/relative_calendar.sv": "4795a9c09d5b7d899545ace5306e8c7005fd1a4fb95de5c2491be228e7d962c9",
+    "experiments/t104-rtl-resume/split/slow_queue.sv": "181f7da9596594c99681b6050886ea9f55a61de97d9d9e3bc2d108be655c60e0",
+    "experiments/t104-rtl-resume/split/tb_calendar.sv": "d8e2303a6bb17d9d6394a834789528fae005c06c4026a63c12fadd1356a30162",
+    "experiments/t104-rtl-resume/split/tb_guard.sv": "c69fd765c49b4e104d552ea5b9945993cc50dd52464a396d35e7c53c0c3ad1d0",
+    "experiments/t104-rtl-resume/split/tb_lane.sv": "1f5e2c09b94377f7ec139d9629c47a49d536623a905fab8491ca4834600b76bf",
+    "experiments/t104-rtl-resume/split/timing_balance.py": "32fdd5244d766090a92aa097ed6506413a8b3c3f74e0ea89aace2a561a270801",
+    "experiments/t104-rtl-resume/split/xsim.tcl": "b56209048d25d3cf5b2100bf6d46dd2213f92e14f6c09a8fe187c6e7f5ed3784"
+  },
+  "python": "3.14.4 (main, Apr  8 2026, 04:02:31) [GCC 15.2.0]",
+  "system": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/split-delivery-1791519640486820674",
+  "steps": {
+    "balance": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/split/timing_balance.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.068,
+      "log_sha256": "f1cd2eb4bad1747198908bc49f161924998aa77537556b2bb14c5d1e2673a214"
+    },
+    "safety": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/split/prove_lane.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 13.609,
+      "log_sha256": "570971df4074a9310c977d60a453ff99c4442586b991500eb0a627c9a614d916"
+    },
+    "components": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/split/check.py",
+        "--vendor",
+        "--write",
+        "--vivado",
+        "/home/z3tm4n/bin/vivado-wsl"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 110.594,
+      "log_sha256": "e9004d2edb7848f0d94cc11f40e3f5361d1ff7a75c13ad77aefb2d368c733f4f"
+    },
+    "compileall": {
+      "command": [
+        "/usr/bin/python3",
+        "-X",
+        "pycache_prefix=/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/split-delivery-1791519640486820674/pycache",
+        "-m",
+        "compileall",
+        "-q",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/split"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 1.22,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "baseline": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/run.py",
+        "--rtl",
+        "--formal",
+        "--regression-A"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 240.347,
+      "log_sha256": "9802e57d6cd39feebb1efae9f6f3ea4e8a589d3beb16c731cc485b54e8bcd14a"
+    },
+    "grade-1": {
+      "command": [
+        "/home/z3tm4n/bin/vivado-wsl",
+        "-mode",
+        "batch",
+        "-nojournal",
+        "-nolog",
+        "-source",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/split/component_sta.tcl",
+        "-tclargs",
+        "xc7z020clg484-1",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/split-delivery-1791519640486820674/grade-1"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 71.421,
+      "log_sha256": "1f250b7df19e66c4d84b2c998507721a196847dc1672958e0aa1fef1498f6485"
+    },
+    "grade-2": {
+      "command": [
+        "/home/z3tm4n/bin/vivado-wsl",
+        "-mode",
+        "batch",
+        "-nojournal",
+        "-nolog",
+        "-source",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/split/component_sta.tcl",
+        "-tclargs",
+        "xc7z020clg484-2",
+        "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/split-delivery-1791519640486820674/grade-2"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 69.666,
+      "log_sha256": "8a1920d66012bb08c88feec2b46d4536969cbb0d76c1d00eafe38abb3553fa77"
+    }
+  },
+  "STA": {
+    "grade-1": {
+      "full_WNS_ns": -4.801,
+      "full_TNS_ns": -426.672,
+      "setup_failing_endpoints": 435,
+      "setup_total_endpoints": 2824,
+      "full_WHS_ns": -3.529,
+      "full_THS_ns": -552.308,
+      "fast_register_setup_ns": -3.956,
+      "fast_register_hold_ns": 0.05,
+      "resources": {
+        "Slice LUTs": 141.0,
+        "Slice Registers": 1238.0,
+        "Block RAM Tile": 3.5,
+        "DSPs": 0.0
+      },
+      "check_timing": {
+        "no_clock": 0,
+        "constant_clock": 0,
+        "pulse_width_clock": 0,
+        "unconstrained_internal_endpoints": 0,
+        "no_input_delay": 0,
+        "no_output_delay": 0,
+        "multiple_clock": 0,
+        "generated_clocks": 0,
+        "loops": 0,
+        "partial_input_delay": 0,
+        "partial_output_delay": 0,
+        "latch_loops": 0
+      },
+      "XPM_max_delay_ns": [
+        4.0,
+        60.0
+      ],
+      "scope": "component OOC; functional non-clock ports virtual; not SRAM/FMC timing",
+      "component_timing_target_met": false
+    },
+    "grade-2": {
+      "full_WNS_ns": -3.873,
+      "full_TNS_ns": -194.901,
+      "setup_failing_endpoints": 252,
+      "setup_total_endpoints": 2823,
+      "full_WHS_ns": -3.079,
+      "full_THS_ns": -498.702,
+      "fast_register_setup_ns": -3.152,
+      "fast_register_hold_ns": 0.052,
+      "resources": {
+        "Slice LUTs": 139.0,
+        "Slice Registers": 1238.0,
+        "Block RAM Tile": 3.5,
+        "DSPs": 0.0
+      },
+      "check_timing": {
+        "no_clock": 0,
+        "constant_clock": 0,
+        "pulse_width_clock": 0,
+        "unconstrained_internal_endpoints": 0,
+        "no_input_delay": 0,
+        "no_output_delay": 0,
+        "multiple_clock": 0,
+        "generated_clocks": 0,
+        "loops": 0,
+        "partial_input_delay": 0,
+        "partial_output_delay": 0,
+        "latch_loops": 0
+      },
+      "XPM_max_delay_ns": [
+        4.0,
+        60.0
+      ],
+      "scope": "component OOC; functional non-clock ports virtual; not SRAM/FMC timing",
+      "component_timing_target_met": false
+    }
+  },
+  "scope": "first verifiable components and conditional balance; B remains open",
+  "vivado_version": "/home/z3tm4n/bin/vivado-wsl: line 4: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory\nvivado v2025.2 (64-bit)\nTool Version Limit: 2025.11\nSW Build 6299465 on Fri Nov 14 12:34:56 MST 2025\nIP Build 6300035 on Fri Nov 14 10:48:45 MST 2025\nSharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025\nCopyright 1986-2022 Xilinx, Inc. All Rights Reserved.\nCopyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.",
+  "installed_vendor_sources": {
+    "/home/z3tm4n/tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv": "27592359d8363d7e6575298f9d0faa7c9f9258ea77f19c9a38946fbaf3783f09",
+    "/home/z3tm4n/tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl": "c524b464dff2e91e30389fa624522c37bd1585068041e303918218ac66625c1c",
+    "/home/z3tm4n/tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv": "60f6087dbfbe0602796fefef3231963247559fd3eac4641241ccf6397bd91b9d"
+  },
+  "outputs": {
+    "checks.json": "e9004d2edb7848f0d94cc11f40e3f5361d1ff7a75c13ad77aefb2d368c733f4f",
+    "lane_proof.json": "570971df4074a9310c977d60a453ff99c4442586b991500eb0a627c9a614d916",
+    "timing_balance.json": "f1cd2eb4bad1747198908bc49f161924998aa77537556b2bb14c5d1e2673a214"
+  },
+  "archived_evidence": {
+    "balance.log": "f1cd2eb4bad1747198908bc49f161924998aa77537556b2bb14c5d1e2673a214",
+    "baseline.log": "9802e57d6cd39feebb1efae9f6f3ea4e8a589d3beb16c731cc485b54e8bcd14a",
+    "compileall.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "components.log": "e9004d2edb7848f0d94cc11f40e3f5361d1ff7a75c13ad77aefb2d368c733f4f",
+    "grade-1/before_route.xdc": "12102e4e89b03f88ac6b7e24928c36a258b9b4588643079ce7d72eb00ba1e54c",
+    "grade-1/cdc.rpt": "3b01d6fe5f0f0fbe986cff25de62eaaeb3584d8be77d373e0520e0dda41cbd62",
+    "grade-1/check_timing.rpt": "b24f5e0215de14fa3e925fd65564cb85676deab14d5c875e4952cd7607b4608e",
+    "grade-1/clocks.rpt": "85cd4560bf698d7334f79c05cf0c5e9bf663ad92e7db49f3788cc054dadce590",
+    "grade-1/effective.xdc": "1b3132c8af5c2f47f6ab110a68d2390fdc772e62f5aed675aaf57242e369794b",
+    "grade-1/exceptions.rpt": "ce287c484d00aa9a67f21f1e121f1629c97f14bbc98b26c116986d12904994b0",
+    "grade-1/fast_hold.rpt": "ec98638027c59d74298dc181f1572f0840c174f03ddd93de4458e909f17bb370",
+    "grade-1/fast_setup.rpt": "7e55ad1e42d178560b54aa6200ea2bfb240c53d7e31194b4d6f1a58fa202c572",
+    "grade-1/hierarchy.rpt": "cebe4f7bde354c2e1b5917cb73f6b40cf82b9937c91120db4d733866aaf5934b",
+    "grade-1/ignored.rpt": "93d65fedc55f458f095ab60ad7f5b8f04492ce23009c26aaa660329e8ca161bd",
+    "grade-1/interactions.rpt": "6741d530a3442013d307fccd3d851324e9e9f4b1f7cc759ee43a7f40fdf9b331",
+    "grade-1/route.rpt": "aef39c9d96c01f2eb244691e6a55758662679e07b6c0e087e1e58aea15729ba0",
+    "grade-1/timing.rpt": "39521e78db3db05612444101698d71d24d858c921fbb9aa9fed8ae99256be807",
+    "grade-1/utilization.rpt": "090d0c4c8a8191f60324e070e886282eca720286aca1fba81842503fda8c6fc5",
+    "grade-1.log": "1f250b7df19e66c4d84b2c998507721a196847dc1672958e0aa1fef1498f6485",
+    "grade-2/before_route.xdc": "44b74858bf5ec03b27a5b5de71d2f31d1adff12cb2845f6e86c517860d45a332",
+    "grade-2/cdc.rpt": "6b6e37266965779cd360f85b3ef8102027a738b6d131b7471dac7c10768af609",
+    "grade-2/check_timing.rpt": "07664e810e3fef5cfcf47a5aebf8fba1d7be04a2033067564b84ca8eb9c8d157",
+    "grade-2/clocks.rpt": "7db397ac3c6bca9ed544b1bd5a4694744282ec513cedfc805b3953b99198155e",
+    "grade-2/effective.xdc": "a8f39fc959858093bb09b72e547141a17f90c13ad06f593a66e46d76fc180492",
+    "grade-2/exceptions.rpt": "40fdc931a7ae9e26df7ecabfa5b2f2e0b302f74b3544725d60f221c4692402f8",
+    "grade-2/fast_hold.rpt": "f0269464e77eebbeed071af95346007d600ca70242882c8548347d0076b01628",
+    "grade-2/fast_setup.rpt": "32c507fe0303324d51eba8d05f08e438450a1a0bbf20fd8b6b7f5bc83cc6ee28",
+    "grade-2/hierarchy.rpt": "5df0e35532898ee2ea859054bed759fe359a8b182420fbc5dc68149689f72868",
+    "grade-2/ignored.rpt": "6435f8c56e2730f8bdf49ce2dada491859d10b7cc9698f3dae388132a8c55551",
+    "grade-2/interactions.rpt": "f29dc5e038723630d94b8e4d9ac228079df7e8f503fd7675d04b41773ff4f7fb",
+    "grade-2/route.rpt": "82dca5b98aa3c83554d5bf7b98ae0ef089cdeecc655e9e1a71250b1514fda0d3",
+    "grade-2/timing.rpt": "7e258e37e1d6bdc71b18565be02308a5e805d0ba0a2f98d5bf0c6979ea50c8bd",
+    "grade-2/utilization.rpt": "7e849853a076c0becc91544a5ef72ffd934dfcdac9d25ea4f79522bc66842486",
+    "grade-2.log": "8a1920d66012bb08c88feec2b46d4536969cbb0d76c1d00eafe38abb3553fa77",
+    "safety.log": "570971df4074a9310c977d60a453ff99c4442586b991500eb0a627c9a614d916",
+    "vivado-version.log": "6e304d7b6e60266336d0f90eb0a68b381a3afed9fc4522612156c7a4aa1248f8"
+  },
+  "evidence_zip_sha256": "0e17dc4e07ce76065e999ece5a336ba13b24ee1f84f9f6ca2784616384936585",
+  "elapsed_s": 508.188,
+  "B_closed": false
+}
