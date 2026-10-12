@@ -1,0 +1,265 @@
+{
+  "kind": "preflight_not_certificate",
+  "accepted_base": "e63964c2b9ddf6a53fe9c76bd5942f458f167f8e",
+  "source_blobs": {
+    "theory/t57-t58-diagnostic-inputs.json": "fceae13705f7c12fd9fd4886c31a4f51af4d011d",
+    "theory/t57_uniform_budget.py": "2d16b0a94255ecb1873579929cae369e39382904",
+    "experiments/t126-regime-map/outputs/map.json": "420185e63f2eb7b6eb05057532738d2d4d49c8e4"
+  },
+  "n": 39,
+  "epsilon": "1/100",
+  "T_s": "157766400",
+  "W_ratio": {
+    "exact": "241979/32768",
+    "decimal": 7.384613037109375
+  },
+  "B_to_b_ratio": {
+    "exact": "1658282707750/18650862321",
+    "decimal": 88.91185186021406
+  },
+  "clairvoyant_pair_relaxation_gain": {
+    "exact": "5734978226762746617486689454091584/977515385769231646905096636315121",
+    "decimal": 5.866893053810858
+  },
+  "eta_background_reference_not_gain": {
+    "exact": "3635107492319496811416556031/548797782702517788548332224",
+    "decimal": 6.6237649037477055
+  },
+  "points": [
+    {
+      "W": 262144,
+      "R_eff_bit_s": 64000000,
+      "peak_parent_rate_s_inverse": {
+        "exact": "106130093296/2363076171875",
+        "decimal": 0.04491183761198451
+      },
+      "quiet_parent_rate_s_inverse": {
+        "exact": "149206898568/295384521484375",
+        "decimal": 0.0005051276817695156
+      },
+      "ideal_peak_mean_wait_s": {
+        "exact": "2363076171875/106130093296",
+        "decimal": 22.2658446674904
+      },
+      "ideal_quiet_mean_wait_s": {
+        "exact": "295384521484375/149206898568",
+        "decimal": 1979.6974826184432
+      },
+      "ideal_peak_one_event_95pct_s": 66.70250946834102,
+      "expected_parents": {
+        "exact": "1000487758559640352/11815380859375",
+        "decimal": 84676.72523360058
+      },
+      "full_busy_pass_s": {
+        "exact": "2496/15625",
+        "decimal": 0.159744
+      },
+      "pair_approx_constant_period_s": {
+        "exact": "1393798596923217773437500000000/69067042354070439416914564589",
+        "decimal": 20.180371844764174
+      },
+      "pair_approx_constant_bus_fraction": {
+        "exact": "69067042354070439416914564589/8725201553255319595336914062500",
+        "decimal": 0.007915810532571817
+      },
+      "clairvoyant_pair_relaxation_bus_fraction": {
+        "exact": "18572792329615401291196836089987299/13765436383315000534057617187500000000",
+        "decimal": 0.0013492338210307207
+      }
+    },
+    {
+      "W": 262144,
+      "R_eff_bit_s": 256000000,
+      "peak_parent_rate_s_inverse": {
+        "exact": "106130093296/2363076171875",
+        "decimal": 0.04491183761198451
+      },
+      "quiet_parent_rate_s_inverse": {
+        "exact": "149206898568/295384521484375",
+        "decimal": 0.0005051276817695156
+      },
+      "ideal_peak_mean_wait_s": {
+        "exact": "2363076171875/106130093296",
+        "decimal": 22.2658446674904
+      },
+      "ideal_quiet_mean_wait_s": {
+        "exact": "295384521484375/149206898568",
+        "decimal": 1979.6974826184432
+      },
+      "ideal_peak_one_event_95pct_s": 66.70250946834102,
+      "expected_parents": {
+        "exact": "1000487758559640352/11815380859375",
+        "decimal": 84676.72523360058
+      },
+      "full_busy_pass_s": {
+        "exact": "624/15625",
+        "decimal": 0.039936
+      },
+      "pair_approx_constant_period_s": {
+        "exact": "1393798596923217773437500000000/69067042354070439416914564589",
+        "decimal": 20.180371844764174
+      },
+      "pair_approx_constant_bus_fraction": {
+        "exact": "69067042354070439416914564589/34900806213021278381347656250000",
+        "decimal": 0.0019789526331429543
+      },
+      "clairvoyant_pair_relaxation_bus_fraction": {
+        "exact": "18572792329615401291196836089987299/55061745533260002136230468750000000000",
+        "decimal": 0.00033730845525768016
+      }
+    },
+    {
+      "W": 1935832,
+      "R_eff_bit_s": 64000000,
+      "peak_parent_rate_s_inverse": {
+        "exact": "6633130831/20000000000",
+        "decimal": 0.33165654155
+      },
+      "quiet_parent_rate_s_inverse": {
+        "exact": "18650862321/5000000000000",
+        "decimal": 0.0037301724642
+      },
+      "ideal_peak_mean_wait_s": {
+        "exact": "20000000000/6633130831",
+        "decimal": 3.0151674238852353
+      },
+      "ideal_quiet_mean_wait_s": {
+        "exact": "5000000000000/18650862321",
+        "decimal": 268.08411932622727
+      },
+      "ideal_peak_one_event_95pct_s": 9.032634361901644,
+      "expected_parents": {
+        "exact": "31265242454988761/50000000000",
+        "decimal": 625304.8490997752
+      },
+      "full_busy_pass_s": {
+        "exact": "9437181/8000000",
+        "decimal": 1.179647625
+      },
+      "pair_approx_constant_period_s": {
+        "exact": "188743620000000000000000000000/69067042354070439416914564589",
+        "decimal": 2.7327595560326823
+      },
+      "pair_approx_constant_bus_fraction": {
+        "exact": "69067042354070439416914564589/160000000000000000000000000000",
+        "decimal": 0.4316690147129402
+      },
+      "clairvoyant_pair_relaxation_bus_fraction": {
+        "exact": "18572792329615401291196836089987299/252426240000000000000000000000000000",
+        "decimal": 0.07357710644351158
+      }
+    },
+    {
+      "W": 1935832,
+      "R_eff_bit_s": 256000000,
+      "peak_parent_rate_s_inverse": {
+        "exact": "6633130831/20000000000",
+        "decimal": 0.33165654155
+      },
+      "quiet_parent_rate_s_inverse": {
+        "exact": "18650862321/5000000000000",
+        "decimal": 0.0037301724642
+      },
+      "ideal_peak_mean_wait_s": {
+        "exact": "20000000000/6633130831",
+        "decimal": 3.0151674238852353
+      },
+      "ideal_quiet_mean_wait_s": {
+        "exact": "5000000000000/18650862321",
+        "decimal": 268.08411932622727
+      },
+      "ideal_peak_one_event_95pct_s": 9.032634361901644,
+      "expected_parents": {
+        "exact": "31265242454988761/50000000000",
+        "decimal": 625304.8490997752
+      },
+      "full_busy_pass_s": {
+        "exact": "9437181/32000000",
+        "decimal": 0.29491190625
+      },
+      "pair_approx_constant_period_s": {
+        "exact": "188743620000000000000000000000/69067042354070439416914564589",
+        "decimal": 2.7327595560326823
+      },
+      "pair_approx_constant_bus_fraction": {
+        "exact": "69067042354070439416914564589/640000000000000000000000000000",
+        "decimal": 0.10791725367823506
+      },
+      "clairvoyant_pair_relaxation_bus_fraction": {
+        "exact": "18572792329615401291196836089987299/1009704960000000000000000000000000000",
+        "decimal": 0.018394276610877894
+      }
+    }
+  ],
+  "accepted_T126_rows": [
+    {
+      "id": "R0B_W1935832_R64000000_e0.01_c0.01",
+      "R_eff_bit_s": 64000000,
+      "P_min": {
+        "exact": "483740219/20000000",
+        "decimal": 24.18701095
+      },
+      "risk_at_resource_boundary": {
+        "exact": "33410506194040309904964483778572504991/377487240000000000000000000000000000000",
+        "decimal": 0.08850764384523384
+      },
+      "Q_lower_at_budget": {
+        "exact": "34264241439125257991734200360664913144883911333502601/766247770432944429179173513575154591809369561091801088",
+        "decimal": 0.04471692155106085
+      },
+      "constant_excluded_at_quiet_1pct": true,
+      "adaptive_mission_upper": null,
+      "quiet_gain_lower": null
+    },
+    {
+      "id": "R0B_W1935832_R256000000_e0.01_c0.01",
+      "R_eff_bit_s": 256000000,
+      "P_min": {
+        "exact": "78807873/12500000",
+        "decimal": 6.30462984
+      },
+      "risk_at_resource_boundary": {
+        "exact": "1814342234108401407540799019326736399/78643175000000000000000000000000000000",
+        "decimal": 0.023070561865138346
+      },
+      "Q_lower_at_budget": {
+        "exact": "8722702823821548292467064935756135074124203062314825/766247770432944429179173513575154591809369561091801088",
+        "decimal": 0.01138365834186122
+      },
+      "constant_excluded_at_quiet_1pct": true,
+      "adaptive_mission_upper": null,
+      "quiet_gain_lower": null
+    }
+  ],
+  "T57_layer_launch_ceiling_s": {
+    "exact": "8711244000000000000000000000/3635107492319496811416556031",
+    "decimal": 2.3964199183671213
+  },
+  "T57_resource_period_s_by_peak": {
+    ".05": {
+      "exact": "14760719/2500000",
+      "decimal": 5.9042876
+    },
+    ".25": {
+      "exact": "14760719/12500000",
+      "decimal": 1.18085752
+    },
+    ".5": {
+      "exact": "12340929/12500000",
+      "decimal": 0.98727432
+    }
+  },
+  "limitations": [
+    "Dstar=0 only in independent uniform singleton diagnostic full39 class",
+    "ideal gain assumes known future and pair-cost approximation; not a causal guarantee or universal upper bound",
+    "parent event rates are not observed ERR rates; actual observation and decision delays unpaid in idealization",
+    "T57 launch ceiling excludes its affine-price layer only; T126 P_min belongs to a different resource family",
+    "25pct peak is a different point of the original grid, not validation under the 5pct contract"
+  ],
+  "proposed_large_gain": {
+    "threshold": 5,
+    "author_approved": false,
+    "metric": "lower cost of the whole declared constant class / upper adaptive cost; lifetime mean protection and control interface occupancy; equal nonzero useful workload",
+    "separate_costs": "total bus, calm interval, CPU, LUT/FF/BRAM, latency, observations and recovery"
+  }
+}
