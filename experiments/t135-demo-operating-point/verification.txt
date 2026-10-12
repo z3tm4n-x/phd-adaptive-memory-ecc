@@ -1,0 +1,13 @@
+T114: 19 state tests; 439 numeric/proof-boundary checks; accepted T110 unchanged.
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+OK
+original_T114 U_Q= 0.000993692052018 slack %= 0.6307947982856335 full mission %= 17.485126834975915
+original_FAST U_Q= 0.000966325085847 slack %= 3.367491415316715 full mission %= 47.27262913043831
+original_dual U_Q= 0.000993692061038 slack %= 0.6307938962752654 full mission %= 17.48512685892337
+demo_dual U_Q= 0.000641088832251 slack %= 35.8911167749505 full mission %= 17.070946897456402
+recommended_T119_prefetch U_Q= 0.000983050504490 slack %= 1.6949495510711672 full mission %= 17.48432056057559
+T135 read-only verification passed.
+T135: accepted T114 repeated; accepted T119 anchor exact; 11 addressed tests; report byte-identical; source pins preserved.

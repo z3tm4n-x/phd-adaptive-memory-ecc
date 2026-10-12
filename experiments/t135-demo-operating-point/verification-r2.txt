@@ -1,0 +1,18 @@
+...................
+----------------------------------------------------------------------
+Ran 19 tests in 0.039s
+
+OK
+original_250 U<= 0.000983050504490 slack% 1.6949495510711672 mission% 17.48570446778467 reply_us 2.778069624 admitted True
+recommended_250 U<= 0.000983050530494 slack% 1.694946950673694 mission% 17.485704584089678 reply_us 2.778069624 admitted True
+ERR_100us_250 U<= 0.000983050796468 slack% 1.6949203532948234 mission% 17.485705773574573 reply_us 2.778069624 admitted True
+same_grid_service_edges_250 U<= 0.000983050533145 slack% 1.6949466855940647 mission% 17.485845025149345 reply_us 2.778864848 admitted True
+extra_fast_cycle_E U<= 0.001022707602220 slack% -2.270760221909739 mission% 16.807444292399403 reply_us 2.8528703280000003 admitted False
+reserve100_original U<= 0.001117088704634 slack% -11.708870463313447 mission% 17.814225780960047 reply_us 3.11467299 admitted False
+reserve100_demo U<= 0.000702981167052 slack% 29.701883294860107 mission% 17.388722792985053 reply_us 3.11467299 admitted False
+reserve100_demo_rebalanced U<= 0.000702981167052 slack% 29.701883294860107 mission% 17.388722792985053 reply_us 2.96067299 admitted True
+reserve100_FAST_original U<= 0.001084298223813 slack% -8.429822381243566 mission% 48.130400543319034 reply_us 3.11467299 admitted False
+T135 r2 report reproduced byte-for-byte.
+T135 r2: 19 addressed tests passed (11 old + 8 new); engineer arithmetic exact;
+T119 anchor exact; report-r2 byte-identical; 14 accepted sources and v1 calculation/report preserved.
+No RTL/STA or new physical campaign executed; integrated hardware obligations remain open.

@@ -1,0 +1,39 @@
+{
+  "horizon_s": 315576000,
+  "fast_min_ns": "99999/25000",
+  "max_edges_upper": 78894788947889481,
+  "minimal_bits_for_this_bound": 57,
+  "implemented_bits": 64,
+  "saturation_unreachable_within_horizon": true,
+  "assumptions": [
+    "qualified generation=0 at mission start, no runtime reset",
+    "common xi>=0.99999 ns and endpoint spread<=0.5 ns",
+    "at most one coalesced generation increment per fast edge"
+  ],
+  "extra_unavailability_from_saturation_in_this_domain_s": 0,
+  "not_claimed": [
+    "unbounded mission duration",
+    "composed LOW pipeline equivalence",
+    "availability of external input or hardware outside its contract"
+  ],
+  "theory_input": "71fa4680d1e737bb1fb3b0cce31ee24cec410f4a",
+  "application_envelope": {
+    "joint_burst": 1,
+    "joint_rate_per_s": 10000,
+    "mean_read_per_s": 1000,
+    "mean_write_per_s": 1000,
+    "means_scope": "mission and quiet components expanded by 3 us"
+  },
+  "unconfirmed_ns": {
+    "candidate_preparation_to_freeze": null,
+    "joint_ERR_loss_to_rule_veto": null,
+    "full_top_din": null,
+    "full_top_dout": null
+  },
+  "component_deadlines_ns": {
+    "R": "2312523/25000",
+    "E": "3712537/25000",
+    "read32": "2312523/12500",
+    "observed_write32": "2712527/12500"
+  }
+}

@@ -1,0 +1,16 @@
+.........................
+----------------------------------------------------------------------
+Ran 25 tests in 0.061s
+
+OK
+risk_upper 0.00098305053049327
+slack 0.00001694946950674
+relative_slack 0.01694946950673695
+full_bus_quiet 0.16758702335182209
+full_bus_mission 0.17484320676880600
+T135 r3 report reproduced byte-for-byte.
+T135 r3: 25 addressed tests passed (19 historical + 6 new).
+Engineer contract_check.calculate() exact; registered source stages fit 320/320ns.
+Report-r3 byte-identical; selected risk/resources/calendar equal r2; only saturation price removed.
+14 accepted sources, historical r1/r2 calculation/report/test files preserved byte-for-byte.
+No RTL/STA/physical campaign; composed LOW/WCET/pad acceptance remains open.
