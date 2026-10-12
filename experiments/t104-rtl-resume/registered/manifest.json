@@ -1,0 +1,162 @@
+{
+  "base_sha": "5498bf5790cc8f90a26cc3a556e64768d31cbdbf",
+  "instructions_sha": "68982b44ea7b1eb52c7b608b4a16a86c05a2f347",
+  "theory_sha": "71fa4680d1e737bb1fb3b0cce31ee24cec410f4a",
+  "sources_sha256": {
+    "registered/backend_sta.tcl": "8c724d6dfb50629dcdd5a19eaaa600749ef648c1af8de50162f39874a911edfb",
+    "registered/contract_check.py": "7f5994a007e3bd36b26e91a045bae6dec1f7945c26d66e98027c3dda3c5e94a7",
+    "registered/e_backend_registered.sv": "b824217b11b8b9d912a76038b5a3ede04eafca79c8b1296cfbb55f863be3d9ad",
+    "registered/generation_guard.sv": "eb9279d73a7bb07e6bba18950243a45a61338c34dbadca4c190d466bd89f9875",
+    "registered/handshake_channel.sv": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+    "registered/inspect_routed.tcl": "325eaf26852b96dd9022b12bffe7e02788687b98b9d30cbff37e1095b5f86ff0",
+    "registered/lane_assertions.sv": "119215dd5e0236d4e766ae130223e033ceb3c922cc347754e751e845c663b808",
+    "registered/lane_sta.tcl": "83c12f098dc48c9f422f0168726665578b9a7c913803e401d4469a37f2f9b7de",
+    "registered/operation_lane.sv": "65b9d95161af17fd52c94023573d8bf0c0a2779d4ea304c9d1229992686fb8b5",
+    "registered/prove_equivalence.py": "0e36cc7231dbe0df277869e524f5e99fe96bd3691b399a8e65190854dceca6d9",
+    "registered/prove_guard.py": "8492e0d6f7daa6c9aec19d4a45f35b9c4aa8412952e0dd36c87d8a75965c95cb",
+    "registered/prove_lane.py": "1cf34fba70ac202752c966069bc3388ca96c719ae3eb3bedffd406b5b717b20f",
+    "registered/reproduce.py": "2618bd18ede4b976366955ce6602814df40e78022bc301b24b409432ecc006bb",
+    "registered/tb_equivalence.sv": "14037b45add3d90611066b43283778591026e9af806b43273b44c73fb948f7a5",
+    "registered/tb_generation.sv": "0ddfb49327553a928ac79c48869bcadb7a885add40fad4a2a115589729804b8a",
+    "registered/verify.py": "7530c457da677d09c34a3225d2cc22b8109f89cd46402ec30962184b9ad96055",
+    "registered/xsim.tcl": "bbc733155297360fa7a040927bf8572c0e6926f8972ef1df87c6ff97d7655ba4",
+    "split/async_queue.sv": "7f50da920cd5f4e03c5ee394d73c6aff22e6f7172bc0f54f73669fea3fb8d69e",
+    "split/slow_queue.sv": "181f7da9596594c99681b6050886ea9f55a61de97d9d9e3bc2d108be655c60e0",
+    "split/clock_250_50.sv": "2590c5447f20d34bb7046b6159f4edb043c4037e24224770cb8aa6a5d2a219e4",
+    "split/clocked_lane.sv": "fa423a54332760531be8c5699201ad795c653ef1a798dd6c267bdfa6fe630e93",
+    "split/component_input.xdc": "84b3e1e444ee354f210ef32c24ec5b94350598202822e1140e4aa1c2e1e80107",
+    "split/tb_lane.sv": "1f5e2c09b94377f7ec139d9629c47a49d536623a905fab8491ca4834600b76bf",
+    "split/check.py": "f8149af4554f106e7f377b7dc7655589b05c400fec4015c6c70e21ba98f1c4f4",
+    "split/formal_vendor_boundary.sv": "5a597c4d8920675a5578eafd7619a0c64f5c798f1274f398d4a7509d0541398d",
+    "rtl/e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "reference.py": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19",
+    "pdr_check.py": "f1b21688c38bd7a1df5097502279ab1fb565484527fffb41f9aaafb5b65e9051"
+  },
+  "outputs_sha256": {
+    "checks.json": "e6fbfd6f195393367542194c0cd8cc3d453ca70d2af224609248ece9cb8804e5",
+    "equivalence.json": "363bfb1a023950020eca7ea1adcefcfe59f7c2cbb2079d410a0ac4d19e3e292b",
+    "lane_proof.json": "ad6a1236b7b0396ff8d2efd39b5644af6d2c40f3a8344b076d2e60394799415d",
+    "guard_proof.json": "b391a3d0f79ada6ac22656cd5954495196dcd5c24158f53805af4caaa458c048",
+    "contract.json": "f6e5c4d84f1a171c034f04648316529fcce556ce290a685a551882ddcd1a18f3",
+    "sta.json": "b14e71279279904f34878859a2b8ad6ae428ec73aa3a435bd8939cc605bca4fa"
+  },
+  "evidence_sha256": {
+    "minus1/all_internal_hold.rpt": "2323853dcab4cf754d4154583a7c59c191ca2a7d08329b73c55f5b1037ac0be0",
+    "minus1/all_internal_setup.rpt": "4e83eaa7bd41309f857d2a6e4702e20c238a648809ef2d8e88b27a2fa04744e3",
+    "minus1/before_route.xdc": "2d54364c5014bb152c3cfbdd79484edc3e293bb0d4c11cff5b38ab10b68ada15",
+    "minus1/cdc.rpt": "55ad61706cbba6a8c33c1b6807dc5d19d0b64f1094931016f31a06476b52d14d",
+    "minus1/check_timing.rpt": "49df298158dc2d17d65c989258b2fff7a6c98ba4376b9a8c1cdf82613a61f485",
+    "minus1/clocks.rpt": "e1b9316f6a68d2d74a68de65e89c40a57f9d2d7421b6cbc58bf6a746b351acb2",
+    "minus1/effective.xdc": "8c5b68ddc49bfd46ab51816e5b4cb3946be319fc1732c87eb03b1df172b7e7a0",
+    "minus1/exceptions.rpt": "6d817d5b29c33eb6f97415a4ad4a95edc5afc923c4c6540184d598b7e8733fa5",
+    "minus1/fast_hold.rpt": "b5238faf2853146c3cb1b1d4a58aeecfcf53967819c69353d036a35efe894b16",
+    "minus1/fast_setup.rpt": "822bf49a098c33cea94bbec7506eab4a11eeacd4fe7b1dc61df095430b25f272",
+    "minus1/hierarchy.rpt": "baf86f9efb4828a6fca5f0b4e9c7e02aaa47c50a8315fb41683e1d7da8fca356",
+    "minus1/ignored.rpt": "466911588195a8e5e689619977743335100426e5620f73254052feade94aadbe",
+    "minus1/interactions.rpt": "31401565e3557c197496e7d5aaff2d36c726bd03d7a03fcef3b0e5eb6587b746",
+    "minus1/internal_slack.txt": "18c7046cf7beac5d92cf6980ca4e32ab00bfcc93038ea7d0c2d829be6e5f870e",
+    "minus1/route.rpt": "df0a19c309878b7f69613d1b8e7650639aba6623a0813c9a4ba72b9ab49c4c63",
+    "minus1/timing.rpt": "c2c8c0879fe0f774c85be2af1d1b554c560ff3a7852a95257115d19a4a65bbb9",
+    "minus1/utilization.rpt": "308faae55205ae28a23caa5c37163b37a9b52c974cacdd1ddd140af0cb5a0d42",
+    "minus2/all_internal_hold.rpt": "f7bdea69357dc5f3116a7313ebbc676005557a628881b175b7114639a37455d2",
+    "minus2/all_internal_setup.rpt": "b21fc388dd003cb08388af3709ca36632cc328724028802c0f6982a8687f5841",
+    "minus2/before_route.xdc": "ddbc7a3e859e1ce9a1f6f94a17eac2a3412e0c8199420e207e02f337af816e67",
+    "minus2/cdc.rpt": "3d736b15304c984658213f6f326233971252177dcffe2c8373b7bbd4333995c5",
+    "minus2/check_timing.rpt": "cf85634e18cb9e74e7674ce5585010a085d59df575fc1ffdc670c1f528a9c6bf",
+    "minus2/clocks.rpt": "d83b39909e9771cc3b65d1cdec128d335f5383c5679c4be4989ee384550d9fc2",
+    "minus2/effective.xdc": "b53617270b2d17292b10d813dcbc9de708244a58f64ace33bc0997de5a4b648e",
+    "minus2/exceptions.rpt": "42c428c85052a9f0af97a0012a163b9f430bacba2f702032d00dfb92872d1a9a",
+    "minus2/fast_hold.rpt": "0582f55c0168d793c2e024b9a0ee92cbe6e0fe04fbd6cdca3126d4aad201c514",
+    "minus2/fast_setup.rpt": "c1c5ff68747d5a9de6448146f21dce43fac95b76f43414bc04cd074207ccd49c",
+    "minus2/hierarchy.rpt": "22774e3ac9fb5fd82eff2f08c38c57218bff582373af0e4c9f07dd9bff628794",
+    "minus2/ignored.rpt": "c562490481cde9f354da3a520e8f9f3f1b71105efb9bd297dadccd2833c10969",
+    "minus2/interactions.rpt": "bc0acd4ba2f31f0c8b0f64e8a0dffddcdea61388286ab4a68dfafe6f9a9c78b7",
+    "minus2/internal_slack.txt": "9c3513e8a4607026b6b5e6be37ab77c25e4fc6c9ef84cc31e9687800739cf848",
+    "minus2/route.rpt": "df0a19c309878b7f69613d1b8e7650639aba6623a0813c9a4ba72b9ab49c4c63",
+    "minus2/timing.rpt": "a88141b5cfeb227a6318e7709590cf9808317982ba1fb143b6aed36e7328b000",
+    "minus2/utilization.rpt": "16e9ac9406bf4bdcb704db07a50edf96afaac49e2f21c66f10678f32c0d17497",
+    "baseline.log": "1f338599241b2070022bcd7ea13d7988cc64f80bdf2016b6b581d53af0451a7d",
+    "equivalence/actual-synth.log": "039bcd7f86ad81deb9c157ea898dad557917f193554661c9aacb64a3f69f0175",
+    "equivalence/actual.log": "2a2cccdf57904bd39157b74172349c57ca747d490634eff1d1d0fbd37ad87e6c",
+    "equivalence/mutant-synth.log": "10681425acff1de5fc7cbd5724d696eeb96c3458c75a8f03534ade6a5f9bba0e",
+    "equivalence/mutant.log": "fba1d184ae8a4b0de094c5bed4057cfdae4bb3ca5d113944d13dad119f4ca501",
+    "equivalence/prevalidated-synth.log": "4052d6886e7f6f36e8a8f3c3f8501cd60fd24073f84567426182e8580ef1359a",
+    "equivalence/prevalidated.log": "3959717f11afefe7ff45c4de7725f89663baff2dbf19684b11a046cee349117a",
+    "lane/actual-synth.log": "43a3cd8b6a066c4d3be03c11ce5251b6ade2d91e5a5df0c7436eb9a339b98eb9",
+    "lane/actual.log": "d03929f75fb85c50f7cf94451221a60619e8b623629b9f18a9a8426de874252a",
+    "lane/mutant-synth.log": "be0bf0a299d1e235f00611a50b9ca8ab8030e34675b7542f5bc6c02d80753cc9",
+    "lane/mutant.log": "dacaf37b99a82ca01c2a7a3a7c832128ccb142f2bc46d106a00217ad15a3eba7",
+    "guard/actual-synth.log": "d3141b11c721b202e7e111ee7ea3f5b9f563bcf2f0b103995261f2ae6882e41f",
+    "guard/actual.log": "6acc5beae2dc977cb22d954863c9d6e348975411a889fdbced47710e7633358e",
+    "guard/mutant-synth.log": "c9fac9421d067ad366f091ef2efa1c7490de5d4c0c8c16a8ef1419e129e8e287",
+    "guard/mutant.log": "c2377357d8505d734123a218f2f46a4f102c260bd22bde55a90e67ad9f8d0411",
+    "simulation/equivalence-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "simulation/equivalence.log": "1b59acaafbc74ff934b69d8672a7fffb293f19832dd8b01f7676c781040f9d56",
+    "simulation/generation-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "simulation/generation.log": "cb68b0c7c9833f67218df7578dedb754abaf3988731e90255e1bac76489d4e49",
+    "simulation/release-mutant-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "simulation/release-mutant.log": "d24f9236781c9334d6233cd3898a129976cae329b9d9e768ba784e17180c4929",
+    "simulation/xsim-0-0.log": "030c5a1299a316ea658f68becf656dd5a60f43026721f02dc11584a76dd41409",
+    "simulation/xsim-0-1.log": "1ed2f7f817ac03f47e7a2de89e9c67602628005599a4710afabf79ce8efe1c9b",
+    "simulation/xsim-1-0.log": "46dd0d4a8a843101c9981a7fffa06e77b1517d915446f3cb2c483cc34ab04986",
+    "simulation/xsim-1-1.log": "b75bb1e182b4144e543d1ed422c2929c6ee2a8989aba0927dab2a295aea779de",
+    "simulation/xsim-3-0.log": "0866f9621586a55365f8f2ffe4d9ba5165c189ba31ddac67c39a9448c71a6481",
+    "simulation/xsim-3-1.log": "0b5c35146bb10114a3f39c9cd14f3153f191d649c6a68162b042923207d25c74"
+  },
+  "environment": {
+    "python": "3.14.4 (main, Apr  8 2026, 04:02:31) [GCC 15.2.0]",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+    "vivado": "2025.2, SW 6299465, IP 6300035 (full version in evidence logs)"
+  },
+  "runs": {
+    "compileall": {
+      "elapsed_s": 1.4195257749999994,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/compileall.log"
+    },
+    "contract_check": {
+      "elapsed_s": 0.06996263599999963,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/contract_check.log"
+    },
+    "prove_equivalence": {
+      "elapsed_s": 103.683311565,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/prove_equivalence.log"
+    },
+    "prove_lane": {
+      "elapsed_s": 4.529642433999996,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/prove_lane.log"
+    },
+    "prove_guard": {
+      "elapsed_s": 72.645028196,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/prove_guard.log"
+    },
+    "simulation": {
+      "elapsed_s": 113.41255302799999,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/simulation.log"
+    },
+    "baseline": {
+      "elapsed_s": 240.209831109,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/baseline.log"
+    },
+    "sta-1": {
+      "elapsed_s": 57.63596174199995,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/sta-1.log"
+    },
+    "inspect-1": {
+      "elapsed_s": 12.255513427999972,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/inspect-1.log"
+    },
+    "sta-2": {
+      "elapsed_s": 56.08761730000003,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/sta-2.log"
+    },
+    "inspect-2": {
+      "elapsed_s": 12.15580253500002,
+      "log": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-delivery-1791526996177717352/inspect-2.log"
+    }
+  },
+  "baseline_elapsed_s": 240.116,
+  "scope": "registered lane; not whole executor, pad timing, LOW composition, or qualification",
+  "evidence_archive_sha256": "40a244f0a72a51577b2e846b486350100cb15fa246db1f36b2044a7f0f2d0c9e",
+  "evidence_archive_bytes": 909724
+}

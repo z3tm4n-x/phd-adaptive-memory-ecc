@@ -1,0 +1,26 @@
+{
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-join-1791824252324336078",
+  "cases": [
+    {
+      "case": "actual",
+      "proved": true,
+      "counterexample": false,
+      "log_sha256": "6b08d859768cb53e20bfb6a3d91fb9fc71cb93f9211711cc2fa08fcc30b1896a"
+    },
+    {
+      "case": "id-mutant",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "45fc2574c60854c804a629e0e4213b1fd05ae5746a052926b7650ef4e952d42a"
+    },
+    {
+      "case": "third-credit",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "ab2a0309fffaabd5a673c74cfafc13fcd04de4dad86556d570c1e33c12556980"
+    }
+  ],
+  "source_sha256": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+  "contract": "ordered metadata XPM FIFO; ordered E response channel from transport+chain lemmas",
+  "scope": "full64-bit ID, owner, response pairing, two credits incl held reply"
+}

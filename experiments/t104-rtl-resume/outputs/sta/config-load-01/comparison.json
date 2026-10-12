@@ -1,0 +1,726 @@
+{
+  "baseline_commit": "cd68afd309cc00a152dca51dd557b76991afdb13",
+  "series": "config-load-01",
+  "part": "xc7z020clg484-1",
+  "changed_implementation_inputs": [
+    "platform_run.py",
+    "rtl/service_config.sv"
+  ],
+  "constraints_unchanged": true,
+  "before": {
+    "part": "xc7z020clg484-1",
+    "archive_and_source_hashes_match": true,
+    "timing": {
+      "WNS_ns": -6.439,
+      "TNS_ns": -11244.293,
+      "setup_failing_endpoints": 4393,
+      "setup_total_endpoints": 10015,
+      "WHS_ns": -1.338,
+      "THS_ns": -1413.252,
+      "hold_failing_endpoints": 1329,
+      "hold_total_endpoints": 8786,
+      "WPWS_ns": 1.5,
+      "TPWS_ns": 0.0,
+      "pulse_failing_endpoints": 0,
+      "pulse_total_endpoints": 4500
+    },
+    "resources": {
+      "Slice LUTs": 5248,
+      "Slice Registers": 4500,
+      "RAMB36/FIFO*": 0,
+      "RAMB18": 0,
+      "DSPs": 0,
+      "BUFGCTRL": 0,
+      "MMCME2_ADV": 0
+    },
+    "check_timing": {
+      "no_clock": "0",
+      "constant_clock": "0",
+      "pulse_width_clock": "0",
+      "unconstrained_internal_endpoints": "0",
+      "no_input_delay": "0",
+      "no_output_delay": "0",
+      "multiple_clock": "0",
+      "generated_clocks": "0",
+      "loops": "0",
+      "partial_input_delay": "0",
+      "partial_output_delay": "0",
+      "latch_loops": "0"
+    },
+    "CDC_unwaived_summary": [
+      [
+        "CDC-1",
+        "Critical",
+        "1042",
+        "1-bit unknown CDC circuitry"
+      ],
+      [
+        "CDC-3",
+        "Info",
+        "14",
+        "1-bit synchronized with ASYNC_REG property"
+      ],
+      [
+        "CDC-6",
+        "Warning",
+        "2",
+        "Multi-bit synchronized with ASYNC_REG property"
+      ],
+      [
+        "CDC-15",
+        "Warning",
+        "1164",
+        "Clock enable controlled CDC structure detected"
+      ]
+    ],
+    "routing_errors": 0,
+    "scope": "report integrity/extraction; no independent STA or automatic PASS"
+  },
+  "after": {
+    "part": "xc7z020clg484-1",
+    "archive_and_source_hashes_match": true,
+    "timing": {
+      "WNS_ns": -5.706,
+      "TNS_ns": -9734.453,
+      "setup_failing_endpoints": 4280,
+      "setup_total_endpoints": 9265,
+      "WHS_ns": -1.336,
+      "THS_ns": -977.085,
+      "hold_failing_endpoints": 937,
+      "hold_total_endpoints": 8036,
+      "WPWS_ns": 1.5,
+      "TPWS_ns": 0.0,
+      "pulse_failing_endpoints": 0,
+      "pulse_total_endpoints": 4122
+    },
+    "resources": {
+      "Slice LUTs": 5073,
+      "Slice Registers": 4122,
+      "RAMB36/FIFO*": 0,
+      "RAMB18": 0,
+      "DSPs": 0,
+      "BUFGCTRL": 0,
+      "MMCME2_ADV": 0
+    },
+    "check_timing": {
+      "no_clock": "0",
+      "constant_clock": "0",
+      "pulse_width_clock": "0",
+      "unconstrained_internal_endpoints": "0",
+      "no_input_delay": "0",
+      "no_output_delay": "0",
+      "multiple_clock": "0",
+      "generated_clocks": "0",
+      "loops": "0",
+      "partial_input_delay": "0",
+      "partial_output_delay": "0",
+      "latch_loops": "0"
+    },
+    "CDC_unwaived_summary": [
+      [
+        "CDC-1",
+        "Critical",
+        "1042",
+        "1-bit unknown CDC circuitry"
+      ],
+      [
+        "CDC-3",
+        "Info",
+        "14",
+        "1-bit synchronized with ASYNC_REG property"
+      ],
+      [
+        "CDC-6",
+        "Warning",
+        "2",
+        "Multi-bit synchronized with ASYNC_REG property"
+      ],
+      [
+        "CDC-15",
+        "Warning",
+        "1164",
+        "Clock enable controlled CDC structure detected"
+      ]
+    ],
+    "routing_errors": 0,
+    "scope": "report integrity/extraction; no independent STA or automatic PASS"
+  },
+  "differences_after_minus_before": {
+    "WNS_ns": 0.733,
+    "TNS_ns": 1509.84,
+    "WHS_ns": 0.002,
+    "THS_ns": 436.167
+  },
+  "memory_paths": [
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/calendar/decisions_reg[3]/D",
+      "slack_ns": -5.706,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "9.137ns  (logic 3.105ns (33.981%)  route 6.032ns (66.019%))",
+      "logic_levels": "16  (CARRY4=7 LUT4=1 LUT5=2 LUT6=6)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/calendar/decisions_reg[0]/D",
+      "slack_ns": -5.647,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "9.081ns  (logic 3.105ns (34.191%)  route 5.976ns (65.809%))",
+      "logic_levels": "16  (CARRY4=7 LUT4=1 LUT5=2 LUT6=6)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/calendar/decisions_reg[1]/D",
+      "slack_ns": -5.632,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "9.066ns  (logic 3.105ns (34.247%)  route 5.961ns (65.753%))",
+      "logic_levels": "16  (CARRY4=7 LUT4=1 LUT5=2 LUT6=6)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/calendar/decisions_reg[2]/D",
+      "slack_ns": -5.627,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "9.062ns  (logic 3.105ns (34.266%)  route 5.957ns (65.734%))",
+      "logic_levels": "16  (CARRY4=7 LUT4=1 LUT5=2 LUT6=6)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/gate/shadow_not_before_reg[54]/CE",
+      "slack_ns": -5.536,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "8.733ns  (logic 2.981ns (34.133%)  route 5.752ns (65.867%))",
+      "logic_levels": "15  (CARRY4=7 LUT4=1 LUT5=2 LUT6=5)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/gate/active_expires_reg[52]/CE",
+      "slack_ns": -5.528,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "8.724ns  (logic 2.981ns (34.169%)  route 5.743ns (65.831%))",
+      "logic_levels": "15  (CARRY4=7 LUT4=2 LUT5=2 LUT6=4)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/gate/active_expires_reg[57]/CE",
+      "slack_ns": -5.528,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "8.724ns  (logic 2.981ns (34.169%)  route 5.743ns (65.831%))",
+      "logic_levels": "15  (CARRY4=7 LUT4=2 LUT5=2 LUT6=4)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/gate/shadow_deadline_reg[42]/CE",
+      "slack_ns": -5.525,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "8.719ns  (logic 2.981ns (34.192%)  route 5.738ns (65.808%))",
+      "logic_levels": "15  (CARRY4=7 LUT4=1 LUT5=2 LUT6=5)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/gate/shadow_issued_reg[35]/CE",
+      "slack_ns": -5.525,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "8.719ns  (logic 2.981ns (34.192%)  route 5.738ns (65.808%))",
+      "logic_levels": "15  (CARRY4=7 LUT4=1 LUT5=2 LUT6=5)"
+    },
+    {
+      "start": "core/now_reg[13]/C",
+      "end": "core/gate/shadow_issued_reg[37]/CE",
+      "slack_ns": -5.525,
+      "type": "Setup (Max at Slow Process Corner)",
+      "delay_breakdown": "8.719ns  (logic 2.981ns (34.192%)  route 5.738ns (65.808%))",
+      "logic_levels": "15  (CARRY4=7 LUT4=1 LUT5=2 LUT6=5)"
+    }
+  ],
+  "cdc_groups": [
+    {
+      "from_clock": "command_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "receiver/saved_reg[*]/D",
+      "count": 416
+    },
+    {
+      "from_clock": "command_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "command_bridge/consume_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "command_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "command_bridge/request_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/calendar/decisions_reg[*]/D",
+      "count": 4
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/error_reply_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/active_expires_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/active_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/command_accepted_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/healthy_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/last_sequence_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/revoked_reg[*]/CE",
+      "count": 62
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/revoked_valid_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_deadline_reg[*]/CE",
+      "count": 62
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_expires_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_issued_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_not_before_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/last_id_reg[0][*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/queue_fault_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/seen_id_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/state_reg[0][*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/gate/active_expires_reg[*]/D",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/last_id_reg[0][*]/D",
+      "count": 64
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/next_offer_reg[*]/D",
+      "count": 62
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/offer_overflow_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/request_reg[0][*]/D",
+      "count": 183
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "fault_cpu_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "ports[0].bridge/consume_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "cpu_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "ports[0].bridge/request_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "command_clk",
+      "id": "CDC-3",
+      "destination": "command_bridge/credit_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "command_clk",
+      "id": "CDC-3",
+      "destination": "command_bridge/response_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "cpu_clk",
+      "id": "CDC-3",
+      "destination": "ports[0].bridge/credit_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "cpu_clk",
+      "id": "CDC-3",
+      "destination": "ports[0].bridge/response_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "cpu_clk",
+      "id": "CDC-6",
+      "destination": "ports[0].gt1_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "x_clk",
+      "id": "CDC-3",
+      "destination": "ports[1].bridge/credit_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "x_clk",
+      "id": "CDC-3",
+      "destination": "ports[1].bridge/response_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "mem_clk",
+      "to_clock": "x_clk",
+      "id": "CDC-6",
+      "destination": "ports[1].gt1_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/calendar/decisions_reg[*]/D",
+      "count": 4
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/error_reply_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/active_expires_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/active_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/command_accepted_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/healthy_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/last_sequence_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/revoked_reg[*]/CE",
+      "count": 62
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/revoked_valid_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_deadline_reg[*]/CE",
+      "count": 62
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_expires_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_issued_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_not_before_reg[*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/gate/shadow_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/last_id_reg[1][*]/CE",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/queue_fault_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/seen_id_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-1",
+      "destination": "core/state_reg[1][*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/gate/active_expires_reg[*]/D",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/last_id_reg[1][*]/D",
+      "count": 64
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/next_offer_reg[*]/D",
+      "count": 62
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/offer_overflow_reg/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-15",
+      "destination": "core/request_reg[1][*]/D",
+      "count": 183
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "fault_x_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "ports[1].bridge/consume_sync_reg[*]/D",
+      "count": 1
+    },
+    {
+      "from_clock": "x_clk",
+      "to_clock": "mem_clk",
+      "id": "CDC-3",
+      "destination": "ports[1].bridge/request_sync_reg[*]/D",
+      "count": 1
+    }
+  ],
+  "checkpoint_detail": {
+    "hold": [
+      {
+        "clock": "command_clk",
+        "source_class": "port",
+        "failing_endpoints": 417,
+        "worst_ns": -1.268,
+        "sum_printed_slacks_ns": -441.206
+      },
+      {
+        "clock": "cpu_clk",
+        "source_class": "port",
+        "failing_endpoints": 249,
+        "worst_ns": -1.336,
+        "sum_printed_slacks_ns": -265.594
+      },
+      {
+        "clock": "mem_clk",
+        "source_class": "port",
+        "failing_endpoints": 15,
+        "worst_ns": -1.071,
+        "sum_printed_slacks_ns": -12.526
+      },
+      {
+        "clock": "x_clk",
+        "source_class": "port",
+        "failing_endpoints": 256,
+        "worst_ns": -1.273,
+        "sum_printed_slacks_ns": -257.804
+      }
+    ],
+    "sum_printed_slacks_ns": -977.13,
+    "total_rounding_envelope_ns": 0.46900000000000003,
+    "gray_dynamic_endpoints": 124,
+    "gray_constant_inputs_without_timed_path": [
+      "ports[0].gt1_reg[62]/D",
+      "ports[0].gt1_reg[63]/D",
+      "ports[1].gt1_reg[62]/D",
+      "ports[1].gt1_reg[63]/D"
+    ],
+    "gray_min_slack_ns": 1.749,
+    "gray_max_data_path_ns": 2.025
+  },
+  "detail_zip_sha256": "fb2abc79a769ddde25c77fa55598d847a96a833ec21c064fa0be27b6377b2cb4",
+  "checkpoint_sha256": "c74a30d26f8b0ccd76dd4a32d8d9da8706245e5d9886d8fe6db41211b5df6cbc",
+  "detail_script_sha256": "b18c480e55cf16bcb28697673945f9b96d3bad88672fdf62c789f5b769e93e9a",
+  "scope": "same Vivado engine; extraction/coverage only, no CDC waivers or physical qualification"
+}

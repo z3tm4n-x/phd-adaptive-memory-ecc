@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "name": "actual",
+      "status": "proved",
+      "all": 25,
+      "proved": 25,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "aiger_header": "aig 7586 143 1445 0 5998 25 0 0 0",
+      "elapsed_s": 7.046,
+      "log_sha256": "d42e3706d5a44764bb80abc61c3ee634f6473622694c4b6c884165f25dad0bd7"
+    },
+    {
+      "name": "mutant",
+      "status": "disproved",
+      "all": 25,
+      "proved": 11,
+      "disproved": 14,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "aiger_header": "aig 7582 143 1445 0 5994 25 0 0 0",
+      "elapsed_s": 6.44,
+      "log_sha256": "5baa2f5f29c56aad3d6bab0f3621a20599c01c051f8146fd72b6511c39e6ed6e"
+    }
+  ],
+  "scope": "our lane under nondeterministic vendor boundaries; no XPM/liveness/board proof",
+  "assumptions": "RTL initialization, running fast clock; arbitrary queue capacity/valid/payload/loss; no added assumes",
+  "source_sha256": "215db0cf6a0b951a2c2b93d63fa6d11c630078d65d8a10c0c550ff22910f9e23",
+  "prior_attempts": [
+    "four-state SAT required explicit binary boundary inputs",
+    "k-induction30s step timeout; strengthened version180s wall timeout; not negative RTL results"
+  ],
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/split-lane-proof-1791519640689613674"
+}

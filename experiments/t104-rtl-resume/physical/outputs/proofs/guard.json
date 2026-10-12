@@ -1,0 +1,28 @@
+{
+  "status": "proved",
+  "engine": "SAT joint-invariant induction",
+  "source_sha256": "c555496399334b8927e299a46783b6974998067759b1ffc847577dfac6b52c10",
+  "assumption": "constructed generation changes on invalidate; actual wrapping and saturating counters are stricter",
+  "abstraction": "arbitrary packets/CRC accept; tag rejection removed; generation acceptance weakened to one bit; symmetric theorem for each of64 bits",
+  "comparator_implication": "full64-bit implication proved from actual RTL RHS; registered one-cycle alignment unchanged",
+  "comparator_log_sha256": "37e9438ea95e818681f047096b833fce664c5a02fdd004bf4438c6476f7ebb3d",
+  "log_sha256": "820d41fd0fabe0139598d6cc6c1aa19703eb6c4fe47a319dee47faea21a0075a",
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-components-1791824953836220411/.build/integrated-guard-1791825078488144503",
+  "sentinels": [
+    {
+      "case": "same-edge-veto-mutant",
+      "counterexample": true,
+      "log_sha256": "5427c0df416436a2179cf61bac26cc76d167b2c66737d72d53b0dbaed4c601a3"
+    },
+    {
+      "case": "generation-gate-mutant",
+      "counterexample": true,
+      "log_sha256": "5ffd2d8b634dedab9fb34be7122e445f94ed060605d320f45ea8585cafee0535"
+    },
+    {
+      "case": "permit-reachable",
+      "counterexample": true,
+      "log_sha256": "587f77db573ba715970e536e0ce051e4ffb02fb89ce84033d1db5a3fcce26621"
+    }
+  ]
+}

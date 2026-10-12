@@ -1,0 +1,455 @@
+{
+  "scope": "conditional full external phase budget, not manufactured adapter qualification",
+  "source_reports": {
+    "clocked_input_Slow_min.rpt": "38565c6ff5c045edc70fc4d26aaaa98a6205c0cc6f87c3860c6cfc58464a2dfc",
+    "clocked_output_Slow_min.rpt": "d09d2278323216170ec437ed3deee5d89124aab37aae899cfc4a3da6d6f55bb1",
+    "clocked_input_Slow_max.rpt": "310f4b5aaf81513acd48b88f3beb86550d815ace6ed3cfb510564b4ed973d5de",
+    "clocked_output_Slow_max.rpt": "87bdaa04e18285a22d9e15f80b8bb01b8faea60b85ea6f7c84363842cf88422f",
+    "clocked_input_Fast_min.rpt": "89f1527548116e2bc2e252a6a408a452e7b577a85d0e871696862fcbd62fbbeb",
+    "clocked_output_Fast_min.rpt": "fa5d8b1d38b30fbd1dd3c5c139414a574f9b2504e9f5872c34d9214a96133e9d",
+    "clocked_input_Fast_max.rpt": "6cb18f2c75ce2ec34ffe2b1ebb7ac5e2ca78dac814a3eed217f4671e9a031d9a",
+    "clocked_output_Fast_max.rpt": "d9925d7176ba5b7cf3d444ee196503a7717207f2744870323886b7c505cebdae"
+  },
+  "datasheet_crosscheck_ns": {
+    "source": "AMD DS187 v1.21 (2020-12-01), HR -1C LVCMOS33_F8, tables52/53/56/57",
+    "TIOPI": {
+      "rational": "141/100",
+      "decimal": 1.41
+    },
+    "TIOOP": {
+      "rational": "78/25",
+      "decimal": 3.12
+    },
+    "TIOTP": {
+      "rational": "313/100",
+      "decimal": 3.13
+    },
+    "TIOTPHZ": {
+      "rational": "237/100",
+      "decimal": 2.37
+    },
+    "TOCKQ": {
+      "rational": "14/25",
+      "decimal": 0.56
+    },
+    "ILOGIC_D_setup": {
+      "rational": "1/100",
+      "decimal": 0.01
+    },
+    "ILOGIC_D_hold": {
+      "rational": "33/100",
+      "decimal": 0.33
+    },
+    "routed_input_setup_before_rounding": {
+      "rational": "11/1000",
+      "decimal": 0.011
+    },
+    "routed_input_hold_before_rounding": {
+      "rational": "191/1000",
+      "decimal": 0.191
+    },
+    "note": "datasheet output values use reference load; actual15pF paths are taken from routed speed model; no double addition; published minima not supplied"
+  },
+  "extrema_ns": {
+    "input_min": {
+      "rational": "211/1000",
+      "decimal": 0.211
+    },
+    "input_max": {
+      "rational": "377/250",
+      "decimal": 1.508
+    },
+    "output_min": {
+      "rational": "127/125",
+      "decimal": 1.016
+    },
+    "output_max": {
+      "rational": "3787/1000",
+      "decimal": 3.787
+    },
+    "clock_min": {
+      "rational": "-148/125",
+      "decimal": -1.184
+    },
+    "clock_max": {
+      "rational": "-67/250",
+      "decimal": -0.268
+    },
+    "clock_spread": {
+      "rational": "229/250",
+      "decimal": 0.916
+    },
+    "input_setup": {
+      "rational": "3/250",
+      "decimal": 0.012
+    },
+    "input_hold": {
+      "rational": "331/1000",
+      "decimal": 0.331
+    },
+    "jitter_and_uncertainty": {
+      "rational": "283/500",
+      "decimal": 0.566
+    },
+    "pin_interval_penalty": {
+      "rational": "4653/1000",
+      "decimal": 4.653
+    },
+    "outward_rounding_per_reported_quantity": {
+      "rational": "1/1000",
+      "decimal": 0.001
+    }
+  },
+  "conditions": {
+    "flight_ns": [
+      {
+        "rational": "1/10",
+        "decimal": 0.1
+      },
+      {
+        "rational": "1/2",
+        "decimal": 0.5
+      }
+    ],
+    "load_pf_each_direction": 15,
+    "SRAM_transition_ns_max": 3,
+    "nominal_ref_MHz": 100,
+    "xi_ns": [
+      {
+        "rational": "99999/100000",
+        "decimal": 0.99999
+      },
+      {
+        "rational": "100001/100000",
+        "decimal": 1.00001
+      }
+    ],
+    "PVT": "Vivado -1 all Slow/Fast min/max; SRAM45ns industrial table at VCC2.2..3.6V",
+    "pulse_protocol": "OE HIGH during all writes; not the datasheet OE-LOW write example",
+    "assumptions": "qualified clock span; adapter SI/fronts; lighter-load monotonic upper bound; clean qualified start"
+  },
+  "checks": [
+    {
+      "check": "CE_to_data_and_ERR_capture_both_reads",
+      "available_lower_ns": {
+        "rational": "1205261/25000",
+        "decimal": 48.21044
+      },
+      "required_min_ns": {
+        "rational": "45",
+        "decimal": 45.0
+      },
+      "margin_ns": {
+        "rational": "80261/25000",
+        "decimal": 3.21044
+      },
+      "met": true
+    },
+    {
+      "check": "address_to_capture_first_and_second",
+      "available_lower_ns": {
+        "rational": "65263/1250",
+        "decimal": 52.2104
+      },
+      "required_min_ns": {
+        "rational": "45",
+        "decimal": 45.0
+      },
+      "margin_ns": {
+        "rational": "9013/1250",
+        "decimal": 7.2104
+      },
+      "met": true
+    },
+    {
+      "check": "OE_to_capture",
+      "available_lower_ns": {
+        "rational": "1205261/25000",
+        "decimal": 48.21044
+      },
+      "required_min_ns": {
+        "rational": "22",
+        "decimal": 22.0
+      },
+      "margin_ns": {
+        "rational": "655261/25000",
+        "decimal": 26.21044
+      },
+      "met": true
+    },
+    {
+      "check": "byte_enable_to_capture",
+      "available_lower_ns": {
+        "rational": "1205261/25000",
+        "decimal": 48.21044
+      },
+      "required_min_ns": {
+        "rational": "45",
+        "decimal": 45.0
+      },
+      "margin_ns": {
+        "rational": "80261/25000",
+        "decimal": 3.21044
+      },
+      "met": true
+    },
+    {
+      "check": "capture_hold_before_OE_or_CE_off",
+      "available_lower_ns": {
+        "rational": "12328/3125",
+        "decimal": 3.94496
+      },
+      "required_min_ns": {
+        "rational": "331/1000",
+        "decimal": 0.331
+      },
+      "margin_ns": {
+        "rational": "90349/25000",
+        "decimal": 3.61396
+      },
+      "met": true
+    },
+    {
+      "check": "WE_pulse_92_to132_and160_to200",
+      "available_lower_ns": {
+        "rational": "176733/5000",
+        "decimal": 35.3466
+      },
+      "required_min_ns": {
+        "rational": "35",
+        "decimal": 35.0
+      },
+      "margin_ns": {
+        "rational": "1733/5000",
+        "decimal": 0.3466
+      },
+      "met": true
+    },
+    {
+      "check": "write_CE_second_152_to200",
+      "available_lower_ns": {
+        "rational": "1083663/25000",
+        "decimal": 43.34652
+      },
+      "required_min_ns": {
+        "rational": "35",
+        "decimal": 35.0
+      },
+      "margin_ns": {
+        "rational": "208663/25000",
+        "decimal": 8.34652
+      },
+      "met": true
+    },
+    {
+      "check": "write_address_second_148_to200",
+      "available_lower_ns": {
+        "rational": "591831/12500",
+        "decimal": 47.34648
+      },
+      "required_min_ns": {
+        "rational": "35",
+        "decimal": 35.0
+      },
+      "margin_ns": {
+        "rational": "154331/12500",
+        "decimal": 12.34648
+      },
+      "met": true
+    },
+    {
+      "check": "write_byte_enable_second_148_to200",
+      "available_lower_ns": {
+        "rational": "591831/12500",
+        "decimal": 47.34648
+      },
+      "required_min_ns": {
+        "rational": "35",
+        "decimal": 35.0
+      },
+      "margin_ns": {
+        "rational": "154331/12500",
+        "decimal": 12.34648
+      },
+      "met": true
+    },
+    {
+      "check": "write_address_to_start_second_148_to160",
+      "available_lower_ns": {
+        "rational": "22959/3125",
+        "decimal": 7.34688
+      },
+      "required_min_ns": {
+        "rational": "0",
+        "decimal": 0.0
+      },
+      "margin_ns": {
+        "rational": "22959/3125",
+        "decimal": 7.34688
+      },
+      "met": true
+    },
+    {
+      "check": "write_data_setup_first_92_to132",
+      "available_lower_ns": {
+        "rational": "176733/5000",
+        "decimal": 35.3466
+      },
+      "required_min_ns": {
+        "rational": "25",
+        "decimal": 25.0
+      },
+      "margin_ns": {
+        "rational": "51733/5000",
+        "decimal": 10.3466
+      },
+      "met": true
+    },
+    {
+      "check": "write_data_setup_second_152_to200",
+      "available_lower_ns": {
+        "rational": "1083663/25000",
+        "decimal": 43.34652
+      },
+      "required_min_ns": {
+        "rational": "25",
+        "decimal": 25.0
+      },
+      "margin_ns": {
+        "rational": "458663/25000",
+        "decimal": 18.34652
+      },
+      "met": true
+    },
+    {
+      "check": "write_data_hold_commit_to_drive_off",
+      "available_lower_ns": {
+        "rational": "83673/25000",
+        "decimal": 3.34692
+      },
+      "required_min_ns": {
+        "rational": "0",
+        "decimal": 0.0
+      },
+      "margin_ns": {
+        "rational": "83673/25000",
+        "decimal": 3.34692
+      },
+      "met": true
+    },
+    {
+      "check": "write_address_and_mask_hold",
+      "available_lower_ns": {
+        "rational": "283671/25000",
+        "decimal": 11.34684
+      },
+      "required_min_ns": {
+        "rational": "0",
+        "decimal": 0.0
+      },
+      "margin_ns": {
+        "rational": "283671/25000",
+        "decimal": 11.34684
+      },
+      "met": true
+    },
+    {
+      "check": "write_cycle_92_to160",
+      "available_lower_ns": {
+        "rational": "791829/12500",
+        "decimal": 63.34632
+      },
+      "required_min_ns": {
+        "rational": "45",
+        "decimal": 45.0
+      },
+      "margin_ns": {
+        "rational": "229329/12500",
+        "decimal": 18.34632
+      },
+      "met": true
+    },
+    {
+      "check": "read_cycle_4_to96",
+      "available_lower_ns": {
+        "rational": "545913/6250",
+        "decimal": 87.34608
+      },
+      "required_min_ns": {
+        "rational": "45",
+        "decimal": 45.0
+      },
+      "margin_ns": {
+        "rational": "264663/6250",
+        "decimal": 42.34608
+      },
+      "met": true
+    },
+    {
+      "check": "read_to_FPGA_drive_64_to92",
+      "available_lower_ns": {
+        "rational": "145917/6250",
+        "decimal": 23.34672
+      },
+      "required_min_ns": {
+        "rational": "18",
+        "decimal": 18.0
+      },
+      "margin_ns": {
+        "rational": "33417/6250",
+        "decimal": 5.34672
+      },
+      "met": true
+    },
+    {
+      "check": "FPGA_release_to_next_read_140_to168",
+      "available_lower_ns": {
+        "rational": "145917/6250",
+        "decimal": 23.34672
+      },
+      "required_min_ns": {
+        "rational": "0",
+        "decimal": 0.0
+      },
+      "margin_ns": {
+        "rational": "145917/6250",
+        "decimal": 23.34672
+      },
+      "met": true
+    },
+    {
+      "check": "repair_complete_before_E_release",
+      "available_lower_ns": {
+        "rational": "269929/25000",
+        "decimal": 10.79716
+      },
+      "required_min_ns": {
+        "rational": "0",
+        "decimal": 0.0
+      },
+      "margin_ns": {
+        "rational": "269929/25000",
+        "decimal": 10.79716
+      },
+      "met": true
+    },
+    {
+      "check": "write32_complete_before_app_release",
+      "available_lower_ns": {
+        "rational": "282429/25000",
+        "decimal": 11.29716
+      },
+      "required_min_ns": {
+        "rational": "0",
+        "decimal": 0.0
+      },
+      "margin_ns": {
+        "rational": "282429/25000",
+        "decimal": 11.29716
+      },
+      "met": true
+    }
+  ],
+  "all_met": true,
+  "late_memory_sentinel_rejected": true
+}

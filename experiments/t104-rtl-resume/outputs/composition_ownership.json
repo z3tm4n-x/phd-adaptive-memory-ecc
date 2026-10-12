@@ -1,0 +1,56 @@
+{
+  "status": "inconclusive",
+  "all": 26,
+  "proved": 0,
+  "disproved": 0,
+  "undecided": 26,
+  "engine_validated_inductive_invariant": false,
+  "expected_properties": 26,
+  "new_properties": 20,
+  "aiger_header": "aig 101441 727 8752 0 91962 26 0 0 0",
+  "ownership_invariants": true,
+  "source_sha256": {
+    "e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "permission_gate.sv": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+    "service_config.sv": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3",
+    "rpc_cdc.sv": "d1fee9756e5c3adb6e8dfa34eb3286982da047eac360dc2413ba354cf19e37f2",
+    "app_frontend.sv": "9113b256b12932b4dcb0a2f6cf4dfda691690062f2d9efeb89cdd087236ab8bd",
+    "command_receiver.sv": "2605a74e96b3dc8f9aefe3b7b17b1d53b382c5479d6255fa17a89fc5f766f999",
+    "executor_core.sv": "07c8b47eed0d0bfc0e60c4842951c8ba1cf6a1d0e22b5bec0709942736ab33d2",
+    "executor.sv": "18fc83805e0fe6a826826c42b4bac14c1b38a6553f051682751b4ace1493d75f"
+  },
+  "checker_sha256": "67187e388e95d4d365415460aaa06ab92fbbb5704ad5e5d62f1e252104bbffdf",
+  "build_source_sha256": {
+    "absolute_calendar.sv": "8adea3d33acfb39b03c90417cd165fa65da9e9d92ba8db5aaaffce05acadf562",
+    "app_frontend.sv": "9113b256b12932b4dcb0a2f6cf4dfda691690062f2d9efeb89cdd087236ab8bd",
+    "command_receiver.sv": "2605a74e96b3dc8f9aefe3b7b17b1d53b382c5479d6255fa17a89fc5f766f999",
+    "executor.sv": "37db382b15306f654224f4fff263625b630221ab88ab9793f6275a1c421f6b2f",
+    "executor_core.sv": "cacdb149ef4bc523b8fae8fc54e98e83bd1d00e57888ea730703b6f10b8e1b71",
+    "e_backend.sv": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+    "permission_gate.sv": "d071a7671155dff706f3030ef66ecd9b7b512f6f5ca08b051de936e8fb314edf",
+    "root.sv": "5d33d71acb0e0c36fc9f00cf2b9743ec29f34f5f3276c5fb31da6f13a261eac6",
+    "rpc_cdc.sv": "9014e1aa5b490405be30994444caa1975ac58ad7523430712f71610c2cf4e311",
+    "service_config.sv": "3eea364227d33318713ba30296168dc28d668468679963b43dc9ddb150bafad3"
+  },
+  "evidence_sha256": {
+    "abc.log": "e37882bd25b76ec63735a8fbff192f42c1f723de951ee0c10ecfceb8eeeb9811",
+    "build.ys": "d40b160302af9df545712318599df6504e7ff52d991b35aa858d927d1e4f8711",
+    "design.aig": "2a3bf173d4d28856463e8dbd908079727aee1972a2ad529d6285ba710a51a1f3",
+    "design.map": "36c618f0c044cf0bbfd794ee9bc981bd721d7eaaebdd85ecf4ce3099d3cc6e94",
+    "invariant.pla": "6e82c4d766358f1a76020bb7c9c17478363fb4770db6ae6b0d0d54ed0a190910",
+    "yosys.log": "265a47b15046a17ca26d97d4bc7ac55941e7c9ffb6b874fcfe4b07d7177b3230"
+  },
+  "raw_directory": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/composition-1791486212922629948",
+  "elapsed_s": 155.255,
+  "time_limit_s": 120,
+  "clock_model": "arbitrary Boolean edges; clk2fflogic",
+  "assumptions": 0,
+  "word_bits": 19,
+  "timestamp_bits": 64,
+  "limitations": [
+    "safety only; no bounded liveness or physical CDC",
+    "unproved properties must remain open",
+    "reachability/nonvacuity also exercised by integration regression"
+  ]
+}

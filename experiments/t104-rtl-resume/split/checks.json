@@ -1,0 +1,132 @@
+{
+  "base": "cc0ce6d7149dc8e69b4dd30c1603b7338ce9c47b",
+  "scope": "components, not full executor or board closure",
+  "calendar": [
+    {
+      "word_bits": 3,
+      "cycles": 120000,
+      "matched": true
+    },
+    {
+      "word_bits": 4,
+      "cycles": 120000,
+      "matched": true
+    },
+    {
+      "word_bits": 19,
+      "cycles": 120000,
+      "matched": true
+    }
+  ],
+  "sources": {
+    "async_queue.sv": "7f50da920cd5f4e03c5ee394d73c6aff22e6f7172bc0f54f73669fea3fb8d69e",
+    "check.py": "f8149af4554f106e7f377b7dc7655589b05c400fec4015c6c70e21ba98f1c4f4",
+    "checkpoint.py": "f6f2ec244c0ab259309d27bb582e612ed1522a87e918c2a5dd20fa5621b40bdf",
+    "clock_250_50.sv": "2590c5447f20d34bb7046b6159f4edb043c4037e24224770cb8aa6a5d2a219e4",
+    "clocked_lane.sv": "fa423a54332760531be8c5699201ad795c653ef1a798dd6c267bdfa6fe630e93",
+    "component_sta.tcl": "267a8a7e2ae758232567b3c5a7a5a356f5398bdcf2b276bb0757d2ea9315249d",
+    "formal_guard.sv": "7dd67188b0e7e79191ddb460b569800611929adeba7fa28510c5e11464afd79f",
+    "formal_lane_contract.sv": "4721bffe523a62ba60147dc0d09f0227d5003147b894a72c387471c254ee1e98",
+    "formal_vendor_boundary.sv": "5a597c4d8920675a5578eafd7619a0c64f5c798f1274f398d4a7509d0541398d",
+    "handshake_channel.sv": "0b3e1168cd869c731b8763591dd9d0cf2778bcb6be06494e8e58d9c1e6c264b7",
+    "operation_lane.sv": "215db0cf6a0b951a2c2b93d63fa6d11c630078d65d8a10c0c550ff22910f9e23",
+    "predecision_guard.sv": "bbf23aafc47bffe3037c815c639157016f336584f5a59bdf6e1d8891c126e158",
+    "prove_lane.py": "681ad5040d05a28fdd8b6b8eeb453c5963445ea3ef1c5c9352969e2c8192d1bd",
+    "relative_calendar.sv": "4795a9c09d5b7d899545ace5306e8c7005fd1a4fb95de5c2491be228e7d962c9",
+    "slow_queue.sv": "181f7da9596594c99681b6050886ea9f55a61de97d9d9e3bc2d108be655c60e0",
+    "tb_calendar.sv": "d8e2303a6bb17d9d6394a834789528fae005c06c4026a63c12fadd1356a30162",
+    "tb_guard.sv": "c69fd765c49b4e104d552ea5b9945993cc50dd52464a396d35e7c53c0c3ad1d0",
+    "tb_lane.sv": "1f5e2c09b94377f7ec139d9629c47a49d536623a905fab8491ca4834600b76bf",
+    "timing_balance.py": "32fdd5244d766090a92aa097ed6506413a8b3c3f74e0ea89aace2a561a270801",
+    "xsim.tcl": "b56209048d25d3cf5b2100bf6d46dd2213f92e14f6c09a8fe187c6e7f5ed3784"
+  },
+  "shared_reference_sha256": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19",
+  "shared_backend_sha256": "5532798c4b17c1716c0c2d250865873e4e8e65ec7d735e7e47117db645c8e9c5",
+  "vendor": [
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 719,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 4708.0,
+      "first_accept_to_grant_ns_empty_queue": 108.0,
+      "max_release_to_reply_ns": 3964.0,
+      "max_accept_to_reply_ns": 5120.0,
+      "log_sha256": "3f5475140b9048dbae4c2c0b5b61432506c18b60d6fc89d1619d9700bd279352",
+      "phase_ns": 0,
+      "stress": true
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 725,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 4119.0,
+      "first_accept_to_grant_ns_empty_queue": 107.0,
+      "max_release_to_reply_ns": 4005.0,
+      "max_accept_to_reply_ns": 4540.0,
+      "log_sha256": "510a630c48df640d78204e4e49db4bda894c23cd3ec3ce7e5341078734572650",
+      "phase_ns": 1,
+      "stress": true
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 725,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 4117.0,
+      "first_accept_to_grant_ns_empty_queue": 105.0,
+      "max_release_to_reply_ns": 4007.0,
+      "max_accept_to_reply_ns": 4540.0,
+      "log_sha256": "72b693045d2414746012b859efe07d0efd465c554cbb0dd4c61b008307673fc4",
+      "phase_ns": 3,
+      "stress": true
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 698,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 108.0,
+      "first_accept_to_grant_ns_empty_queue": 108.0,
+      "max_release_to_reply_ns": 208.0,
+      "max_accept_to_reply_ns": 520.0,
+      "log_sha256": "b1fa605197ddfd142fe3fa35dab3929fc2a1cd56db9cb453b5715dd43a62ae93",
+      "phase_ns": 0,
+      "stress": false
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 698,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 107.0,
+      "first_accept_to_grant_ns_empty_queue": 107.0,
+      "max_release_to_reply_ns": 205.0,
+      "max_accept_to_reply_ns": 520.0,
+      "log_sha256": "75a65a57f1c5cc67c7534b16b6806136cba85c30f4ba904aab29fbd8f8ba7359",
+      "phase_ns": 1,
+      "stress": false
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 698,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 105.0,
+      "first_accept_to_grant_ns_empty_queue": 105.0,
+      "max_release_to_reply_ns": 207.0,
+      "max_accept_to_reply_ns": 520.0,
+      "log_sha256": "1f03b231ae289a182719027f40d7538e6948d1a0b3e390bc73d93e26c8c21f1c",
+      "phase_ns": 3,
+      "stress": false
+    }
+  ],
+  "guard_generations_exercised": 65536,
+  "guard_induction": {
+    "assertions": 3,
+    "status": "proved",
+    "assumptions": "binary inputs and RTL initialization"
+  },
+  "same_edge_mutant_rejected": true,
+  "one_cycle_calendar_mutant_rejected": true,
+  "tools": {
+    "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+    "python": "3.14.4 (main, Apr  8 2026, 04:02:31) [GCC 15.2.0]"
+  },
+  "local_build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/split-check-1791519654320659468"
+}

@@ -1,0 +1,5 @@
+# Evidence hashes refer to exact tool-produced bytes on every checkout OS.
+# Do not let core.autocrlf rewrite reports or JSON after publication.
+outputs/** -text -whitespace
+.gitattributes text eol=lf
+.gitignore text eol=lf

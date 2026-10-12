@@ -1,0 +1,75 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Oct 12 19:53:04 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_clocks -file clocks.rpt
+| Design       : board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock     Period(ns)  Waveform(ns)    Attributes  Sources
+ref100    10.000      {0.000 5.000}   P           {ref100}
+fast_raw  4.000       {0.000 2.000}   P,G,A       {core/clocks/mmcm/CLKOUT0}
+feedback  10.000      {0.000 5.000}   P,G,A       {core/clocks/mmcm/CLKFBOUT}
+slow_raw  20.000      {0.000 10.000}  P,G,A       {core/clocks/mmcm/CLKOUT1}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : fast_raw
+Master Source       : core/clocks/mmcm/CLKIN1
+Master Clock        : ref100
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 -3.000 -6.000}
+Generated Sources   : {core/clocks/mmcm/CLKOUT0}
+
+Generated Clock     : feedback
+Master Source       : core/clocks/mmcm/CLKIN1
+Master Clock        : ref100
+Multiply By         : 1
+Generated Sources   : {core/clocks/mmcm/CLKFBOUT}
+
+Generated Clock     : slow_raw
+Master Source       : core/clocks/mmcm/CLKIN1
+Master Clock        : ref100
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 5.000 10.000}
+Generated Sources   : {core/clocks/mmcm/CLKOUT1}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+From Clock  To Clock  Setup(ns)  Hold(ns)  Edges
+fast_raw    fast_raw  0.500      0.100     rf -> rf
+feedback    feedback  0.500      0.100     rf -> rf
+ref100      ref100    0.500      0.100     rf -> rf
+slow_raw    slow_raw  0.500      0.100     rf -> rf
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock   Jitter(ns)
+ref100  0.050
+

@@ -1,0 +1,114 @@
+{
+  "equivalence": {
+    "matched": true,
+    "log": "PASS registered equivalence edges=307936 cases=128\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/registered/tb_equivalence.sv:66: $finish called at 1231744000 (1ps)\n",
+    "sha256": "1b59acaafbc74ff934b69d8672a7fffb293f19832dd8b01f7676c781040f9d56"
+  },
+  "release-mutant": {
+    "matched": false,
+    "log": "DIFF edge=223 age=144 kind=0 flags 14012/10012 data 00006c93/00006c93\nFATAL: /mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/registered/tb_equivalence.sv:41: registered E mismatch\n       Time: 894100  Scope: tb_equivalence.tick\n",
+    "sha256": "d24f9236781c9334d6233cd3898a129976cae329b9d9e768ba784e17180c4929"
+  },
+  "generation": {
+    "matched": true,
+    "log": "PASS generation 70000 coalesced invalidations, no reset\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/registered/tb_generation.sv:25: $finish called at 280004200 (1ps)\n",
+    "sha256": "cb68b0c7c9833f67218df7578dedb754abaf3988731e90255e1bac76489d4e49"
+  },
+  "vendor": [
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 716,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 4768.0,
+      "first_accept_to_grant_ns_empty_queue": 128.0,
+      "max_release_to_reply_ns": 3924.0,
+      "max_accept_to_reply_ns": 5100.0,
+      "log_sha256": "1ed2f7f817ac03f47e7a2de89e9c67602628005599a4710afabf79ce8efe1c9b",
+      "phase_ns": 0,
+      "stress": true
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 690,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 4047.0,
+      "first_accept_to_grant_ns_empty_queue": 127.0,
+      "max_release_to_reply_ns": 3965.0,
+      "max_accept_to_reply_ns": 4540.0,
+      "log_sha256": "b75bb1e182b4144e543d1ed422c2929c6ee2a8989aba0927dab2a295aea779de",
+      "phase_ns": 1,
+      "stress": true
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 690,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 4045.0,
+      "first_accept_to_grant_ns_empty_queue": 125.0,
+      "max_release_to_reply_ns": 3967.0,
+      "max_accept_to_reply_ns": 4540.0,
+      "log_sha256": "0b5c35146bb10114a3f39c9cd14f3153f191d649c6a68162b042923207d25c74",
+      "phase_ns": 3,
+      "stress": true
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 713,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 128.0,
+      "first_accept_to_grant_ns_empty_queue": 128.0,
+      "max_release_to_reply_ns": 208.0,
+      "max_accept_to_reply_ns": 540.0,
+      "log_sha256": "030c5a1299a316ea658f68becf656dd5a60f43026721f02dc11584a76dd41409",
+      "phase_ns": 0,
+      "stress": false
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 713,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 127.0,
+      "first_accept_to_grant_ns_empty_queue": 127.0,
+      "max_release_to_reply_ns": 209.0,
+      "max_accept_to_reply_ns": 540.0,
+      "log_sha256": "46dd0d4a8a843101c9981a7fffa06e77b1517d915446f3cb2c483cc34ab04986",
+      "phase_ns": 1,
+      "stress": false
+    },
+    {
+      "packets": 360,
+      "pin_edges_checked": 15960,
+      "operation_edges_with_slow_loss": 713,
+      "max_accept_to_grant_ns_including_deliberate_out_of_contract_stall": 125.0,
+      "first_accept_to_grant_ns_empty_queue": 125.0,
+      "max_release_to_reply_ns": 211.0,
+      "max_accept_to_reply_ns": 540.0,
+      "log_sha256": "0866f9621586a55365f8f2ffe4d9ba5165c189ba31ddac67c39a9448c71a6481",
+      "phase_ns": 3,
+      "stress": false
+    }
+  ],
+  "sources": {
+    "backend_sta.tcl": "8c724d6dfb50629dcdd5a19eaaa600749ef648c1af8de50162f39874a911edfb",
+    "contract_check.py": "7f5994a007e3bd36b26e91a045bae6dec1f7945c26d66e98027c3dda3c5e94a7",
+    "e_backend_registered.sv": "b824217b11b8b9d912a76038b5a3ede04eafca79c8b1296cfbb55f863be3d9ad",
+    "generation_guard.sv": "eb9279d73a7bb07e6bba18950243a45a61338c34dbadca4c190d466bd89f9875",
+    "handshake_channel.sv": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+    "inspect_routed.tcl": "325eaf26852b96dd9022b12bffe7e02788687b98b9d30cbff37e1095b5f86ff0",
+    "lane_assertions.sv": "119215dd5e0236d4e766ae130223e033ceb3c922cc347754e751e845c663b808",
+    "lane_sta.tcl": "83c12f098dc48c9f422f0168726665578b9a7c913803e401d4469a37f2f9b7de",
+    "operation_lane.sv": "65b9d95161af17fd52c94023573d8bf0c0a2779d4ea304c9d1229992686fb8b5",
+    "prove_equivalence.py": "0e36cc7231dbe0df277869e524f5e99fe96bd3691b399a8e65190854dceca6d9",
+    "prove_guard.py": "8492e0d6f7daa6c9aec19d4a45f35b9c4aa8412952e0dd36c87d8a75965c95cb",
+    "prove_lane.py": "1cf34fba70ac202752c966069bc3388ca96c719ae3eb3bedffd406b5b717b20f",
+    "reproduce.py": "2618bd18ede4b976366955ce6602814df40e78022bc301b24b409432ecc006bb",
+    "tb_equivalence.sv": "14037b45add3d90611066b43283778591026e9af806b43273b44c73fb948f7a5",
+    "tb_generation.sv": "0ddfb49327553a928ac79c48869bcadb7a885add40fad4a2a115589729804b8a",
+    "verify.py": "7530c457da677d09c34a3225d2cc22b8109f89cd46402ec30962184b9ad96055",
+    "xsim.tcl": "bbc733155297360fa7a040927bf8572c0e6926f8972ef1df87c6ff97d7655ba4"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/registered-check-1791527178632178034",
+  "shared_reference_sha256": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19",
+  "shared_checker_sha256": "f8149af4554f106e7f377b7dc7655589b05c400fec4015c6c70e21ba98f1c4f4",
+  "shared_vendor_bench_sha256": "1f5e2c09b94377f7ec139d9629c47a49d536623a905fab8491ca4834600b76bf"
+}

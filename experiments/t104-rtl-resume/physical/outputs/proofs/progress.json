@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "case": "slow-fast",
+      "status": "proved",
+      "all": 10,
+      "proved": 10,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "log_sha256": "04c5bb45f7619aa9b72055b1a69435100b620b94996e42618423d925cd5ea8bf"
+    },
+    {
+      "case": "fast-slow",
+      "status": "proved",
+      "all": 10,
+      "proved": 10,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "log_sha256": "7a0778d403028b907003d97ae5ef23a90fe9b799b89aceb375d5511eb5ebd2bb"
+    },
+    {
+      "case": "stuck-ack-mutant",
+      "status": "disproved",
+      "all": 10,
+      "proved": 9,
+      "disproved": 1,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "log_sha256": "656ccff69cbdc6456fe275f9ff7cdc0ebe6a9b77353827bca1de7f7f826e5259"
+    },
+    {
+      "case": "consumption-reachable",
+      "status": "disproved",
+      "all": 11,
+      "proved": 10,
+      "disproved": 1,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "log_sha256": "f078348b5154bb84540e251cf85815f985d76619e9fe8bf813503a7119a08e20"
+    }
+  ],
+  "source_sha256": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+  "fast_edges_upper": 80,
+  "bound_nominal_ns": 320,
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-progress-1791823649156359916",
+  "shared_dependency": "same explicit XPM digital abstraction as transport safety; not independent analog evidence"
+}

@@ -1,0 +1,71 @@
+{
+  "part": "xc7z020clg484-1",
+  "top": "board_top",
+  "frequency_MHz": [
+    250,
+    50
+  ],
+  "uncertainty_ns": {
+    "setup": 0.5,
+    "hold": 0.1
+  },
+  "timing": {
+    "setup_ns": 0.135,
+    "hold_ns": 0.028,
+    "pulse_width_ns": 1.02,
+    "setup_failing_endpoints": 0,
+    "hold_failing_endpoints": 0,
+    "pulse_failing_endpoints": 0
+  },
+  "resources": {
+    "LUT": 1899.0,
+    "slice_FF": 3656.0,
+    "IOB_FF": 74.0,
+    "ILOGIC": 17.0,
+    "OLOGIC": 41.0,
+    "BRAM36_equiv": 4.5,
+    "BUFG": 4.0,
+    "MMCM": 1.0,
+    "DSP": 0.0
+  },
+  "check_timing": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 0,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "elapsed_s": 279.04351331600003,
+  "log_sha256": "981eee3bd7ad9f59ead29da38b42f6e3934035af472624efb99c8bac80b94e38",
+  "peak_memory_MB": 3342.574,
+  "compiled_inputs": {
+    "split/async_queue.sv": "7f50da920cd5f4e03c5ee394d73c6aff22e6f7172bc0f54f73669fea3fb8d69e",
+    "split/slow_queue.sv": "181f7da9596594c99681b6050886ea9f55a61de97d9d9e3bc2d108be655c60e0",
+    "split/clock_250_50.sv": "2590c5447f20d34bb7046b6159f4edb043c4037e24224770cb8aa6a5d2a219e4",
+    "registered/handshake_channel.sv": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+    "integrated/event_fifo.sv": "f0eeca3f32aeb544ae8dded00642549640648c99884e9bb025df67da7f4270c6",
+    "integrated/slow_rule.sv": "74024a7b3847fbda372c2b3fd63f249c1aea03c374ab0450beafd091290129b0",
+    "physical/e_backend_registered.sv": "0c70625e355b39b9d3a57484215b85dcc325f5fd5db0fe618dde4ed04d5e8503",
+    "physical/segmented_counter.sv": "16d7fcf05616c9a80a7a9981f15ff59644407d94556f369c1ab7614d7ce4d85f",
+    "physical/candidate_link.sv": "c555496399334b8927e299a46783b6974998067759b1ffc847577dfac6b52c10",
+    "physical/frame_engine.sv": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+    "physical/executor.sv": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+    "physical/address_map.sv": "8897494d19155893c7bd9de313556a7148ade11282eaf71eb79a7ece936c786d",
+    "physical/top.sv": "16868e913ea79053f8a88950f912128365ddcc94562430bce6060483c0fb9c43",
+    "physical/board_top.sv": "f42cc53410432c7af9b91a8a0449dfe55f9e9c498768dc30d6061705729f2b7f",
+    "physical/board_sta.tcl": "4fd9bac6ab4eeb090ccd72d3c4a0899687e692e395bc6a3ff4f2d612b1be6086",
+    "physical/board_pins.xdc": "cce17fca8bfc604790a6c24c32b2ab7f00a2d2eba805663e98517f90f2b14753",
+    "split/component_input.xdc": "84b3e1e444ee354f210ef32c24ec5b94350598202822e1140e4aa1c2e1e80107"
+  },
+  "DRC": "2 warnings PLBUFGOPT-1/ZPS7-1 and3 WRITE_FIRST advisories; no errors; see report dispositions",
+  "CDC": "16 informational CDC-3; standard XPM exceptions, no warning/critical",
+  "raw_run": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-sta-1791823709343438952",
+  "checkpoint_sha256": "ba9fdb2300ee3e5670362229f9bd9f4b8ecbf1046b379de6c78f0832df1def00"
+}

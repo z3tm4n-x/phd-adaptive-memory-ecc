@@ -1,0 +1,31 @@
+{
+  "commits": {
+    "base_commit": "99c0a4147048da57c8b59f6a2d4cfd5183cbcf0f",
+    "instructions": "8d85fe3d6ea3b3fb99a8e36600ecbfda43dbfc23",
+    "read_main": "a9378e5a1d307783f6b86c9bd2c28ab2d898560e",
+    "theory_r4": "fa4b4c150e668422e36a6c7a0e30810b26604e7c"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "yosys": "Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)",
+    "iverilog": "Icarus Verilog version 12.0 (stable) ()",
+    "Vivado": "2025.2 Build6299465, production -1 speedfile1.12 (2019-11-22)"
+  },
+  "inherited_byte_identical": {
+    "experiments/t104-rtl-resume/split/async_queue.sv": "7f50da920cd5f4e03c5ee394d73c6aff22e6f7172bc0f54f73669fea3fb8d69e",
+    "experiments/t104-rtl-resume/split/slow_queue.sv": "181f7da9596594c99681b6050886ea9f55a61de97d9d9e3bc2d108be655c60e0",
+    "experiments/t104-rtl-resume/split/clock_250_50.sv": "2590c5447f20d34bb7046b6159f4edb043c4037e24224770cb8aa6a5d2a219e4",
+    "experiments/t104-rtl-resume/registered/handshake_channel.sv": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+    "experiments/t104-rtl-resume/integrated/event_fifo.sv": "f0eeca3f32aeb544ae8dded00642549640648c99884e9bb025df67da7f4270c6",
+    "experiments/t104-rtl-resume/integrated/slow_rule.sv": "74024a7b3847fbda372c2b3fd63f249c1aea03c374ab0450beafd091290129b0",
+    "experiments/t104-rtl-resume/split/component_input.xdc": "84b3e1e444ee354f210ef32c24ec5b94350598202822e1140e4aa1c2e1e80107",
+    "experiments/t68-v21-inputs/contracts.md": "adee2d76848518f2cafc275d46d3473ce05ce5adf6012de9f33330d3b35fdbb2",
+    "experiments/t68-v21-inputs/inputs/article-cy62167-v21.docx": "1de5ee1f05e5e2355928f5ff4d1a221d2e8cb9e7bfef86e2bd31aebbe0655385",
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/REPORT.md": "d3302d577a35ee3e0f26e0b3834cb4a305d7e9fb16ae73a548837244928ced2e",
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/w32seq_scenario.json": "ef1cb6591fd618238c6d602f2f676eaa39e83aa6725a669d6fc256469bc5a97c"
+  },
+  "checkpoint_in_git": false,
+  "raw_location": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build",
+  "packaging_does_not_rerun_proofs": true
+}

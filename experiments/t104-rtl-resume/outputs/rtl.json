@@ -1,0 +1,20 @@
+{
+  "tools": {
+    "iverilog": "Icarus Verilog version 12.0 (stable) ()",
+    "vvp": "Icarus Verilog runtime version 12.0 (stable) ()"
+  },
+  "backend_cases": 1540,
+  "backend_edges": 69644,
+  "calendar_edges": 100352,
+  "permission_edges": 5000,
+  "directed_guard_testbench_passed": true,
+  "gray_carry_boundary_cases": 185,
+  "actual_core_spacing_boundary_cases": 163,
+  "spacing_overflow_mutation_rejected": true,
+  "calendar_word_count": 8,
+  "backend_vector_sha256": "3aa77678f5e123d44bef8a55927a15248086960fce8241821a25d57c2c667ca8",
+  "calendar_vector_sha256": "bfee8112d59d6ff5d8205682b88b8a5c3764534185dc515caa512ff07fb5babe",
+  "permission_vector_sha256": "f5092c6db9cad5e29b910da4b913d3f1ecd06ca443c6601a131c7ff07a22cb38",
+  "lost_app_ERR_mutation_rejected": true,
+  "scope": "component trace comparisons, not integrated full-W RTL proof/STA"
+}

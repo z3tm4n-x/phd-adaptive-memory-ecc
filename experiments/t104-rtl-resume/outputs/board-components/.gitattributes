@@ -1,0 +1,2 @@
+# Preserve tool-generated column padding and LF, as in outputs/sta.
+*.rpt text eol=lf -whitespace

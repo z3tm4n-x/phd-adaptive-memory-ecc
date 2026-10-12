@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "case": "counter",
+      "status": "proved",
+      "engine": "SAT joint-invariant induction",
+      "abstraction": null,
+      "source_sha256": "16d7fcf05616c9a80a7a9981f15ff59644407d94556f369c1ab7614d7ce4d85f",
+      "log_sha256": "8d7d1f7b957e15832b31ee110e2c4bd47a12a9f938ac6948b9a44e218cda2758"
+    },
+    {
+      "case": "frame",
+      "status": "proved",
+      "engine": "SAT joint-invariant induction",
+      "abstraction": "arbitrary must_execute at every edge; actual warmup/mod3 recurrences separate",
+      "source_sha256": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+      "log_sha256": "8443fbebd90442b2299556b036887f638d6317fdfee1999232a9f405c3bb9d5b"
+    },
+    {
+      "case": "warmup",
+      "status": "proved",
+      "all": 8,
+      "proved": 8,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "properties": 8,
+      "source_sha256": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+      "abstraction": null,
+      "log_sha256": "cac41cd5a7425cc585763416d306c5b9470d6f70e1d45cb60f56786922415f2a"
+    },
+    {
+      "case": "rule",
+      "status": "proved",
+      "engine": "SAT joint-invariant induction",
+      "abstraction": null,
+      "source_sha256": "74024a7b3847fbda372c2b3fd63f249c1aea03c374ab0450beafd091290129b0",
+      "log_sha256": "9759467723459d71e8e2ed4e527fa725262089bcfe5b27960e23da2df1a2919c"
+    },
+    {
+      "case": "counter-mutant",
+      "status": "disproved",
+      "all": 11,
+      "proved": 0,
+      "disproved": 2,
+      "undecided": 9,
+      "engine_validated_inductive_invariant": false,
+      "properties": 11,
+      "source_sha256": "16d7fcf05616c9a80a7a9981f15ff59644407d94556f369c1ab7614d7ce4d85f",
+      "abstraction": null,
+      "log_sha256": "8b3764d79533758896c418b610eac242f1f4b0e5ef6be9e40340fb7ceb95797b"
+    },
+    {
+      "case": "frame-mutant",
+      "status": "disproved",
+      "all": 40,
+      "proved": 0,
+      "disproved": 1,
+      "undecided": 39,
+      "engine_validated_inductive_invariant": false,
+      "properties": 40,
+      "source_sha256": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+      "abstraction": "arbitrary must_execute at every edge; actual warmup/mod3 recurrences separate",
+      "log_sha256": "99be7ca1de650b7cbed9b77f60aa737891123d54c7dbf43b8e5f534830fac878"
+    }
+  ],
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-components-1791824953836220411/.build/integrated-proof-1791824953923292358",
+  "assumptions": "binary inputs, initialized RTL, clock edges; no added assume",
+  "scope": "counter arithmetic, schedule recurrences and rule transitions; not complete CDC liveness"
+}

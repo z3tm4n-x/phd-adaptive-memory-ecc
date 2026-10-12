@@ -1,0 +1,26 @@
+{
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-transport-1791824532330141333",
+  "source_sha256": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+  "width_argument": "wrapper control is independent of every data bit; pointwise1-bit proof",
+  "cases": [
+    {
+      "case": "actual",
+      "proved": true,
+      "counterexample": false,
+      "log_sha256": "079184ca4068c2fd0f33b614bf618b713e4cbde92328237626c73b9c85eb26ed"
+    },
+    {
+      "case": "stale-payload",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "fdd311a750d421f6995eb1bdc68dc0863e9eabf8dfdea0a2a587b2725202e80e"
+    },
+    {
+      "case": "repeat",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "4133f47cec2de72ec4e2bfc16bc77d371db1f1fbc763365a56fdde56fe6520be"
+    }
+  ],
+  "scope": "initialized digital contract; safety for any clock interleaving; no analog proof"
+}

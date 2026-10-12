@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "case": "actual",
+      "passed": true,
+      "returncode": 0,
+      "log_sha256": "63174c2cf513eea76e1af1da62ed143bfec11c94f1742d58f0d06ce749283d5a"
+    },
+    {
+      "case": "polynomial-mutant",
+      "passed": false,
+      "returncode": 1,
+      "log_sha256": "0f4a01baea71a8bfb7dc802c6e9ca1c6e5f20c103f98c6e9f4477170fcc22c2b"
+    },
+    {
+      "case": "comparison-mutant",
+      "passed": false,
+      "returncode": 1,
+      "log_sha256": "d42b730836296c6966744bdb9adb5d7414f833e6b7a72f4a3367260ceba3db7d"
+    }
+  ],
+  "vectors": 163,
+  "independent_oracle": "zlib.crc32; zero + full GF(2) basis",
+  "source_sha256": "c555496399334b8927e299a46783b6974998067759b1ffc847577dfac6b52c10",
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-crc-1791824531400481673",
+  "scope": "all fixed payloads by affine basis; pipeline scheduling separately proved"
+}

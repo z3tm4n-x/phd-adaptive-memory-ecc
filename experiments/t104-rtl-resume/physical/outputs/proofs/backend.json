@@ -1,0 +1,44 @@
+{
+  "source_sha256": "0c70625e355b39b9d3a57484215b85dcc325f5fd5db0fe618dde4ed04d5e8503",
+  "reference_sha256": "b824217b11b8b9d912a76038b5a3ede04eafca79c8b1296cfbb55f863be3d9ad",
+  "scope": "All semantic outputs on all initialized binary-input traces. Native byte enables equal while busy; when idle CE is inactive and pre-restoring byte enables is observationally irrelevant. Other native pins equal always. Analog timing separate.",
+  "cases": [
+    {
+      "case": "actual",
+      "status": "proved",
+      "all": 29,
+      "proved": 29,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "elapsed_s": 59.79832946800002,
+      "aiger_header": "aig 4124 78 852 0 3194 29 0 0 0",
+      "log_sha256": "36f99acfd48c5ea61d839311773fe2abcd169244fff824f5f1117ef54a5a6e14"
+    },
+    {
+      "case": "prevalidated",
+      "status": "proved",
+      "all": 29,
+      "proved": 29,
+      "disproved": 0,
+      "undecided": 0,
+      "engine_validated_inductive_invariant": true,
+      "elapsed_s": 63.48926763199995,
+      "aiger_header": "aig 4096 78 852 0 3166 29 0 0 0",
+      "log_sha256": "e990a3840a559038cfa2b227f27044eaee6845db83f7aeee20036f381633e099"
+    },
+    {
+      "case": "mutant",
+      "status": "disproved",
+      "all": 29,
+      "proved": 0,
+      "disproved": 28,
+      "undecided": 1,
+      "engine_validated_inductive_invariant": false,
+      "elapsed_s": 120.95399750299987,
+      "aiger_header": "aig 4122 78 852 0 3192 29 0 0 0",
+      "log_sha256": "5599b092febf9fb5d216feb50a4afbf2f83446fa229ae834a9b526afc8c2a639"
+    }
+  ],
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-e-proof-1791823724875520858"
+}

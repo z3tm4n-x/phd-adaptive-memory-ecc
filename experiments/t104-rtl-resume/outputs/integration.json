@@ -1,0 +1,219 @@
+{
+  "integrated_runs": [
+    {
+      "scenario": 0,
+      "word_count": 8,
+      "trace_edges": 100001,
+      "operations": 2105,
+      "application_requests": 64,
+      "ERR_events": 1042,
+      "skips": 0,
+      "expected_fault": false,
+      "request_CDC_ticks_max": 13.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 1835.0,
+      "traffic_inside_declared_envelope": true,
+      "trace_sha256": "67486f23843bbe684a5b9e2b4a7764db0716444da1231b09d8bc67bd3f1db892",
+      "clocks_ns": [
+        4,
+        10,
+        8
+      ]
+    },
+    {
+      "scenario": 1,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 365,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 36,
+      "expected_fault": false,
+      "request_CDC_ticks_max": 13.0,
+      "command_CDC_ticks_max": 32.0,
+      "first_VALID_to_consumption_ns_nominal_max": 1765.0,
+      "traffic_inside_declared_envelope": true,
+      "trace_sha256": "33e268a4f4799d45a08d59f31eeae8fb2050c62a32e9ffae96a015ede46b36f3",
+      "clocks_ns": [
+        4,
+        10,
+        8
+      ]
+    },
+    {
+      "scenario": 2,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 401,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 0,
+      "expected_fault": true,
+      "request_CDC_ticks_max": 13.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 2620.0,
+      "traffic_inside_declared_envelope": false,
+      "trace_sha256": "e65849e6e1d1563694cda13467dd27b09924217364a6c621a42103bb17772911",
+      "clocks_ns": [
+        4,
+        10,
+        8
+      ]
+    },
+    {
+      "scenario": 3,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 401,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 0,
+      "expected_fault": true,
+      "request_CDC_ticks_max": 13.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 2620.0,
+      "traffic_inside_declared_envelope": false,
+      "trace_sha256": "5c1bc92b21f8f2bd00133dc5bb70ff20964196c35878160db3edb2abe6f5bc68",
+      "clocks_ns": [
+        4,
+        10,
+        8
+      ]
+    },
+    {
+      "scenario": 4,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 401,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 0,
+      "expected_fault": true,
+      "request_CDC_ticks_max": 15.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 3075.0,
+      "traffic_inside_declared_envelope": false,
+      "trace_sha256": "e40a1e7013547972ab5fca8ec25aa99b0c5b1694f525841d4a5742ffa11a201e",
+      "clocks_ns": [
+        4,
+        10,
+        8
+      ]
+    },
+    {
+      "scenario": 0,
+      "word_count": 8,
+      "trace_edges": 100001,
+      "operations": 2105,
+      "application_requests": 64,
+      "ERR_events": 1042,
+      "skips": 0,
+      "expected_fault": false,
+      "request_CDC_ticks_max": 16.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 1820.0,
+      "traffic_inside_declared_envelope": true,
+      "trace_sha256": "0d0161c28d2b34dee5a9558f58112dd6a6c86886e0a461156e94f0e899827828",
+      "clocks_ns": [
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "scenario": 1,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 365,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 36,
+      "expected_fault": false,
+      "request_CDC_ticks_max": 16.0,
+      "command_CDC_ticks_max": 30.0,
+      "first_VALID_to_consumption_ns_nominal_max": 1756.0,
+      "traffic_inside_declared_envelope": true,
+      "trace_sha256": "8e4f60e20d906d31d518c793e17e4dd8489cbf73f8c72e2e7c8ec54581df7244",
+      "clocks_ns": [
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "scenario": 2,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 401,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 0,
+      "expected_fault": true,
+      "request_CDC_ticks_max": 16.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 2625.0,
+      "traffic_inside_declared_envelope": false,
+      "trace_sha256": "eabaea679018a10fb409e458c6bae743f33d3ddfc3d074da116e6ba199671d30",
+      "clocks_ns": [
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "scenario": 3,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 401,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 0,
+      "expected_fault": true,
+      "request_CDC_ticks_max": 16.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 2625.0,
+      "traffic_inside_declared_envelope": false,
+      "trace_sha256": "cef63e5cb01a3ad75441b2ac1fc7ea38b8e47b7470f3df44defa36e75fed35fb",
+      "clocks_ns": [
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "scenario": 4,
+      "word_count": 8,
+      "trace_edges": 19001,
+      "operations": 401,
+      "application_requests": 12,
+      "ERR_events": 1,
+      "skips": 0,
+      "expected_fault": true,
+      "request_CDC_ticks_max": 16.0,
+      "command_CDC_ticks_max": null,
+      "first_VALID_to_consumption_ns_nominal_max": 3092.0,
+      "traffic_inside_declared_envelope": false,
+      "trace_sha256": "e5afe365419defc37c6dc6254e89612cf22aac70d9379214bed3270026279546",
+      "clocks_ns": [
+        4,
+        8,
+        10
+      ]
+    }
+  ],
+  "interface_guards": "passed",
+  "core_error_guards": "passed",
+  "mutations": [
+    {
+      "mutation": "reset_cancels_pending",
+      "rejected": true,
+      "reason": "bounded driver still pending after deliberately cancelled operation"
+    },
+    {
+      "mutation": "credit_released_before_reply",
+      "rejected": true,
+      "reason": "independent offer/operation/reply invariant mismatch"
+    }
+  ],
+  "scope": "bounded multi-clock traces; conditional E; no physical CDC/STA proof"
+}
