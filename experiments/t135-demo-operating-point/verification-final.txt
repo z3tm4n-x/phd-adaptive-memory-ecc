@@ -1,0 +1,23 @@
+T135 final addressed applicability check, 12.10.2026
+Theory r4: fa4b4c150e668422e36a6c7a0e30810b26604e7c
+Engineer: 8ce9104462d34f6d7daede73b3346e6dfa91f19a
+Commands:
+  python -B experiments/t135-demo-operating-point/final_contract_check.py
+  python -B -m unittest discover -s experiments/t135-demo-operating-point -p 'test_*.py'
+No new RTL/solver/STA/physical runs and no scientific Q/price recalculation.
+
+T135 final applicability: r4 executor contract retained; continuous STA-shell workload excluded.
+Engineer bounds JSON byte-identical; proof-result/source/STA-input hashes checked, not solver or STA rerun.
+eligible_ns 1106261/6250 177.00176
+outbound_ns 2906279/12500 232.50232
+recycle_ns 2905029/5000 581.0058
+remaining_until_next_arrival_ns 12027741297/125000 96221.930376
+reaction_from_loss_slow_ns 19717864121887/2049979500 9618.566489024402
+reaction_from_stable_loss_switch_ns 99414445558103/10249897500 9699.067289024402
+r4 contract, outcome, calculator/config and 14 accepted sources byte-identical.
+Report-final reproduced byte-for-byte.
+.................................
+----------------------------------------------------------------------
+Ran 33 tests in 0.138s
+
+OK
