@@ -1,0 +1,39 @@
+{
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-chain-1791824250315105877",
+  "cases": [
+    {
+      "case": "actual",
+      "proved": true,
+      "counterexample": false,
+      "source_sha256": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+      "log_sha256": "3186291f9c9bcb66d59a87f3b4fe7e12d8ade8861bc5eb386c96f9f6ca5ef9c9"
+    },
+    {
+      "case": "payload-mutant",
+      "proved": false,
+      "counterexample": true,
+      "source_sha256": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+      "log_sha256": "4b3dcba8acfbf7304d0441a6f52615673e7d8981e759d1859e6d2b36fadda21c"
+    },
+    {
+      "case": "response-mutant",
+      "proved": false,
+      "counterexample": true,
+      "source_sha256": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+      "log_sha256": "637c0ade35e85e3589417d50d6bb820bcd071d6b28cb647147eaec0cc1df78cc"
+    },
+    {
+      "case": "duplicate-mutant",
+      "proved": false,
+      "counterexample": true,
+      "source_sha256": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+      "log_sha256": "012963adb9cb8aa4fdb994eeddca7a7accd997830119d8e1e7778db34aca4c6a"
+    }
+  ],
+  "contracts": [
+    "actual frame engine: exclusive prepare then due, no overlapping atomic operations",
+    "E: one release, valid completed read_data, ERR strictly before release",
+    "ordered channel boundary; arbitrary backpressure; startup initialized, no runtime reset"
+  ],
+  "scope": "payload capture/preparation/dispatch and response formation, ordering and exact-once conservation"
+}

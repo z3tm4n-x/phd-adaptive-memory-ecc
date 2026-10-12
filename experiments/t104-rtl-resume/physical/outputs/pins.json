@@ -1,0 +1,448 @@
+{
+  "scope": "proposed adapter, independently checked pin facts, not manufactured wiring",
+  "rows": [
+    {
+      "port": "sram_a[0]",
+      "FPGA_pin": "A22",
+      "FMC_net": "FMC_LA32_N",
+      "FMC_contact": "H38",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 25,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[1]",
+      "FPGA_pin": "M19",
+      "FMC_net": "FMC_LA00_CC_P",
+      "FMC_contact": "G6",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 24,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[2]",
+      "FPGA_pin": "N20",
+      "FMC_net": "FMC_LA01_CC_N",
+      "FMC_contact": "D9",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 23,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[3]",
+      "FPGA_pin": "N19",
+      "FMC_net": "FMC_LA01_CC_P",
+      "FMC_contact": "D8",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 22,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[4]",
+      "FPGA_pin": "P18",
+      "FMC_net": "FMC_LA02_N",
+      "FMC_contact": "H8",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 21,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[5]",
+      "FPGA_pin": "P17",
+      "FMC_net": "FMC_LA02_P",
+      "FMC_contact": "H7",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 20,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[6]",
+      "FPGA_pin": "P22",
+      "FMC_net": "FMC_LA03_N",
+      "FMC_contact": "G10",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 19,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[7]",
+      "FPGA_pin": "N22",
+      "FMC_net": "FMC_LA03_P",
+      "FMC_contact": "G9",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 18,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[8]",
+      "FPGA_pin": "M22",
+      "FMC_net": "FMC_LA04_N",
+      "FMC_contact": "H11",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 8,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[9]",
+      "FPGA_pin": "M21",
+      "FMC_net": "FMC_LA04_P",
+      "FMC_contact": "H10",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 7,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[10]",
+      "FPGA_pin": "K18",
+      "FMC_net": "FMC_LA05_N",
+      "FMC_contact": "D12",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 6,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[11]",
+      "FPGA_pin": "J18",
+      "FMC_net": "FMC_LA05_P",
+      "FMC_contact": "D11",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 5,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[12]",
+      "FPGA_pin": "L22",
+      "FMC_net": "FMC_LA06_N",
+      "FMC_contact": "C11",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 4,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[13]",
+      "FPGA_pin": "L21",
+      "FMC_net": "FMC_LA06_P",
+      "FMC_contact": "C10",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 3,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[14]",
+      "FPGA_pin": "T17",
+      "FMC_net": "FMC_LA07_N",
+      "FMC_contact": "H14",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 2,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[15]",
+      "FPGA_pin": "T16",
+      "FMC_net": "FMC_LA07_P",
+      "FMC_contact": "H13",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 1,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[16]",
+      "FPGA_pin": "J22",
+      "FMC_net": "FMC_LA08_N",
+      "FMC_contact": "G13",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 48,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[17]",
+      "FPGA_pin": "J21",
+      "FMC_net": "FMC_LA08_P",
+      "FMC_contact": "G12",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 17,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[18]",
+      "FPGA_pin": "R21",
+      "FMC_net": "FMC_LA09_N",
+      "FMC_contact": "D15",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 16,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_a[19]",
+      "FPGA_pin": "R20",
+      "FMC_net": "FMC_LA09_P",
+      "FMC_contact": "D14",
+      "bank": 34,
+      "SRAM_TSOP48_pin": 9,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[0]",
+      "FPGA_pin": "B20",
+      "FMC_net": "FMC_LA17_CC_N",
+      "FMC_contact": "D21",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 29,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[1]",
+      "FPGA_pin": "B19",
+      "FMC_net": "FMC_LA17_CC_P",
+      "FMC_contact": "D20",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 31,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[2]",
+      "FPGA_pin": "C20",
+      "FMC_net": "FMC_LA18_CC_N",
+      "FMC_contact": "C23",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 33,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[3]",
+      "FPGA_pin": "D20",
+      "FMC_net": "FMC_LA18_CC_P",
+      "FMC_contact": "C22",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 35,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[4]",
+      "FPGA_pin": "G16",
+      "FMC_net": "FMC_LA19_N",
+      "FMC_contact": "H23",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 38,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[5]",
+      "FPGA_pin": "G15",
+      "FMC_net": "FMC_LA19_P",
+      "FMC_contact": "H22",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 40,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[6]",
+      "FPGA_pin": "G21",
+      "FMC_net": "FMC_LA20_N",
+      "FMC_contact": "G22",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 42,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[7]",
+      "FPGA_pin": "G20",
+      "FMC_net": "FMC_LA20_P",
+      "FMC_contact": "G21",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 44,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[8]",
+      "FPGA_pin": "E20",
+      "FMC_net": "FMC_LA21_N",
+      "FMC_contact": "H26",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 30,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[9]",
+      "FPGA_pin": "E19",
+      "FMC_net": "FMC_LA21_P",
+      "FMC_contact": "H25",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 32,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[10]",
+      "FPGA_pin": "F19",
+      "FMC_net": "FMC_LA22_N",
+      "FMC_contact": "G25",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 34,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[11]",
+      "FPGA_pin": "G19",
+      "FMC_net": "FMC_LA22_P",
+      "FMC_contact": "G24",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 36,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[12]",
+      "FPGA_pin": "D15",
+      "FMC_net": "FMC_LA23_N",
+      "FMC_contact": "D24",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 39,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[13]",
+      "FPGA_pin": "E15",
+      "FMC_net": "FMC_LA23_P",
+      "FMC_contact": "D23",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 41,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[14]",
+      "FPGA_pin": "A19",
+      "FMC_net": "FMC_LA24_N",
+      "FMC_contact": "H29",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 43,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_dq[15]",
+      "FPGA_pin": "A18",
+      "FMC_net": "FMC_LA24_P",
+      "FMC_contact": "H28",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 45,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_ce_n",
+      "FPGA_pin": "C22",
+      "FMC_net": "FMC_LA25_N",
+      "FMC_contact": "G28",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 26,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_oe_n",
+      "FPGA_pin": "D22",
+      "FMC_net": "FMC_LA25_P",
+      "FMC_contact": "G27",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 28,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_we_n",
+      "FPGA_pin": "E18",
+      "FMC_net": "FMC_LA26_N",
+      "FMC_contact": "D27",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 11,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_lb_n",
+      "FPGA_pin": "F18",
+      "FMC_net": "FMC_LA26_P",
+      "FMC_contact": "D26",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 15,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_ub_n",
+      "FPGA_pin": "D21",
+      "FMC_net": "FMC_LA27_N",
+      "FMC_contact": "C27",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 14,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    },
+    {
+      "port": "sram_err",
+      "FPGA_pin": "E21",
+      "FMC_net": "FMC_LA27_P",
+      "FMC_contact": "C26",
+      "bank": 35,
+      "SRAM_TSOP48_pin": 13,
+      "standard": "LVCMOS33",
+      "VADJ_V": 3.3
+    }
+  ],
+  "ref100": {
+    "pin": "Y9",
+    "source": "HW UG v2.2 section2.5 p18, IC17 Fox767-100-136",
+    "nominal_MHz": 100,
+    "frequency_span_qualification": "project condition, not established for stock oscillator"
+  },
+  "straps": {
+    "SRAM_CE2_pin12": "VCC",
+    "SRAM_BYTE_pin47": "VCC selects x16",
+    "SRAM_VCC_pin37": "3.3V common rail",
+    "SRAM_VSS_pins27_46": "GND",
+    "SRAM_NC_pin10": "unconnected",
+    "note": "pin45 is DQ15 in x16 and A20 in x8; not the BYTE strap"
+  },
+  "master_XDC_SHA256": "4c3ae9d40dce0cb0ca86fdd381a3ec05e0cc099c6f17f8299e270690b2b58b5c",
+  "master_reread": true,
+  "source_urls": [
+    "https://raw.githubusercontent.com/Digilent/digilent-xdc/master/Zedboard-Master.xdc",
+    "https://digilent.com/reference/_media/reference/programmable-logic/zedboard/zedboard_sch.pdf"
+  ],
+  "xdc_SHA256": "cce17fca8bfc604790a6c24c32b2ab7f00a2d2eba805663e98517f90f2b14753",
+  "io_report_SHA256": "669eff8fb10c68368a0e12d038ff7f37b315904bca60dc6044128ac0ad4dd9cd",
+  "duplicate_pin_mutant_rejected": true
+}

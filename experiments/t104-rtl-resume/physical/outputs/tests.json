@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "directory": "experiments/t104-rtl-resume",
+      "tests": 82,
+      "returncode": 0,
+      "log_sha256": "efe8744903190d539ba86a7bc47bb273b81af3e8a0ae46d57bfa4e6daba0d6c9"
+    },
+    {
+      "directory": "experiments/t104-rtl-resume/integrated",
+      "tests": 7,
+      "returncode": 0,
+      "log_sha256": "0027d35b45398a7ba9c68b451bc8527aca33ffb26ebe324bb5ebae44c6342cff"
+    },
+    {
+      "directory": "experiments/t104-rtl-resume/physical",
+      "tests": 8,
+      "returncode": 0,
+      "log_sha256": "9504275a6c2bf822b90645eeefa8509a22ce90fc2f75baf027a8bd9040867608"
+    }
+  ],
+  "unit_tests_total": 97,
+  "compiled_python_files": 64,
+  "elapsed_s": 12.495639751,
+  "status": "completed"
+}

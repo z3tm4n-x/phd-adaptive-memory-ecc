@@ -1,0 +1,2159 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Oct 12 19:55:42 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_timing -from [get_ports {sram_err {sram_dq[*]}}] -to [all_registers] -corner Fast -delay_type max -max_paths 400 -nworst 4 -file /mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/io-inspect-final/clocked_input_Fast_max.rpt
+| Design       : board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             4.294ns  (required time - arrival time)
+  Source:                 sram_dq[9]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.463ns  (logic 0.463ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E19                                               0.000    -2.278 r  sram_dq[9] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[9].p/IO
+    E19                  IBUF (Prop_ibuf_I_O)         0.463    -1.815 r  core/data_pads[9].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.815    core/controller/backend/dq_sample_reg[15]_0[9]
+    ILOGIC_X1Y108        FDRE                                         r  core/controller/backend/dq_sample_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y108        FDRE                                         r  core/controller/backend/dq_sample_reg[9]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y108        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[9]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.815    
+  -------------------------------------------------------------------
+                         slack                                  4.294    
+
+Slack (MET) :             4.294ns  (required time - arrival time)
+  Source:                 sram_dq[9]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.463ns  (logic 0.463ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E19                                               0.000    -2.278 f  sram_dq[9] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[9].p/IO
+    E19                  IBUF (Prop_ibuf_I_O)         0.463    -1.815 f  core/data_pads[9].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.815    core/controller/backend/dq_sample_reg[15]_0[9]
+    ILOGIC_X1Y108        FDRE                                         f  core/controller/backend/dq_sample_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y108        FDRE                                         r  core/controller/backend/dq_sample_reg[9]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y108        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[9]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.815    
+  -------------------------------------------------------------------
+                         slack                                  4.294    
+
+Slack (MET) :             4.298ns  (required time - arrival time)
+  Source:                 sram_dq[8]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.458ns  (logic 0.458ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E20                                               0.000    -2.278 r  sram_dq[8] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[8].p/IO
+    E20                  IBUF (Prop_ibuf_I_O)         0.458    -1.820 r  core/data_pads[8].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.820    core/controller/backend/dq_sample_reg[15]_0[8]
+    ILOGIC_X1Y107        FDRE                                         r  core/controller/backend/dq_sample_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y107        FDRE                                         r  core/controller/backend/dq_sample_reg[8]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y107        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[8]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.820    
+  -------------------------------------------------------------------
+                         slack                                  4.298    
+
+Slack (MET) :             4.298ns  (required time - arrival time)
+  Source:                 sram_dq[8]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.458ns  (logic 0.458ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E20                                               0.000    -2.278 f  sram_dq[8] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[8].p/IO
+    E20                  IBUF (Prop_ibuf_I_O)         0.458    -1.820 f  core/data_pads[8].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.820    core/controller/backend/dq_sample_reg[15]_0[8]
+    ILOGIC_X1Y107        FDRE                                         f  core/controller/backend/dq_sample_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y107        FDRE                                         r  core/controller/backend/dq_sample_reg[8]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y107        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[8]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.820    
+  -------------------------------------------------------------------
+                         slack                                  4.298    
+
+Slack (MET) :             4.309ns  (required time - arrival time)
+  Source:                 sram_dq[0]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.440ns  (logic 0.440ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    B20                                               0.000    -2.278 r  sram_dq[0] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[0].p/IO
+    B20                  IBUF (Prop_ibuf_I_O)         0.440    -1.838 r  core/data_pads[0].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.838    core/controller/backend/dq_sample_reg[15]_0[0]
+    ILOGIC_X1Y123        FDRE                                         r  core/controller/backend/dq_sample_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y123        FDRE                                         r  core/controller/backend/dq_sample_reg[0]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y123        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.838    
+  -------------------------------------------------------------------
+                         slack                                  4.309    
+
+Slack (MET) :             4.309ns  (required time - arrival time)
+  Source:                 sram_dq[0]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.440ns  (logic 0.440ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    B20                                               0.000    -2.278 f  sram_dq[0] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[0].p/IO
+    B20                  IBUF (Prop_ibuf_I_O)         0.440    -1.838 f  core/data_pads[0].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.838    core/controller/backend/dq_sample_reg[15]_0[0]
+    ILOGIC_X1Y123        FDRE                                         f  core/controller/backend/dq_sample_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y123        FDRE                                         r  core/controller/backend/dq_sample_reg[0]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y123        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[0]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.838    
+  -------------------------------------------------------------------
+                         slack                                  4.309    
+
+Slack (MET) :             4.314ns  (required time - arrival time)
+  Source:                 sram_dq[3]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.435ns  (logic 0.435ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    D20                                               0.000    -2.278 r  sram_dq[3] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[3].p/IO
+    D20                  IBUF (Prop_ibuf_I_O)         0.435    -1.843 r  core/data_pads[3].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.843    core/controller/backend/dq_sample_reg[15]_0[3]
+    ILOGIC_X1Y122        FDRE                                         r  core/controller/backend/dq_sample_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y122        FDRE                                         r  core/controller/backend/dq_sample_reg[3]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y122        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[3]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.843    
+  -------------------------------------------------------------------
+                         slack                                  4.314    
+
+Slack (MET) :             4.314ns  (required time - arrival time)
+  Source:                 sram_dq[3]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.435ns  (logic 0.435ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    D20                                               0.000    -2.278 f  sram_dq[3] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[3].p/IO
+    D20                  IBUF (Prop_ibuf_I_O)         0.435    -1.843 f  core/data_pads[3].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.843    core/controller/backend/dq_sample_reg[15]_0[3]
+    ILOGIC_X1Y122        FDRE                                         f  core/controller/backend/dq_sample_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y122        FDRE                                         r  core/controller/backend/dq_sample_reg[3]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y122        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[3]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.843    
+  -------------------------------------------------------------------
+                         slack                                  4.314    
+
+Slack (MET) :             4.315ns  (required time - arrival time)
+  Source:                 sram_dq[14]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.435ns  (logic 0.435ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.317ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.405ns = ( 3.595 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    A19                                               0.000    -2.278 r  sram_dq[14] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[14].p/IO
+    A19                  IBUF (Prop_ibuf_I_O)         0.435    -1.843 r  core/data_pads[14].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.843    core/controller/backend/dq_sample_reg[15]_0[14]
+    ILOGIC_X1Y129        FDRE                                         r  core/controller/backend/dq_sample_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.705     3.595    core/controller/backend/fast_clk
+    ILOGIC_X1Y129        FDRE                                         r  core/controller/backend/dq_sample_reg[14]/C
+                         clock pessimism             -0.556     3.039    
+                         clock uncertainty           -0.565     2.474    
+    ILOGIC_X1Y129        FDRE (Setup_fdre_C_D)       -0.002     2.472    core/controller/backend/dq_sample_reg[14]
+  -------------------------------------------------------------------
+                         required time                          2.472    
+                         arrival time                           1.843    
+  -------------------------------------------------------------------
+                         slack                                  4.315    
+
+Slack (MET) :             4.315ns  (required time - arrival time)
+  Source:                 sram_dq[14]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.435ns  (logic 0.435ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.317ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.405ns = ( 3.595 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    A19                                               0.000    -2.278 f  sram_dq[14] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[14].p/IO
+    A19                  IBUF (Prop_ibuf_I_O)         0.435    -1.843 f  core/data_pads[14].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.843    core/controller/backend/dq_sample_reg[15]_0[14]
+    ILOGIC_X1Y129        FDRE                                         f  core/controller/backend/dq_sample_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.705     3.595    core/controller/backend/fast_clk
+    ILOGIC_X1Y129        FDRE                                         r  core/controller/backend/dq_sample_reg[14]/C
+                         clock pessimism             -0.556     3.039    
+                         clock uncertainty           -0.565     2.474    
+    ILOGIC_X1Y129        FDRE (Setup_fdre_C_D)       -0.002     2.472    core/controller/backend/dq_sample_reg[14]
+  -------------------------------------------------------------------
+                         required time                          2.472    
+                         arrival time                           1.843    
+  -------------------------------------------------------------------
+                         slack                                  4.315    
+
+Slack (MET) :             4.316ns  (required time - arrival time)
+  Source:                 sram_dq[13]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.440ns  (logic 0.440ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E15                                               0.000    -2.278 r  sram_dq[13] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[13].p/IO
+    E15                  IBUF (Prop_ibuf_I_O)         0.440    -1.838 r  core/data_pads[13].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.838    core/controller/backend/dq_sample_reg[15]_0[13]
+    ILOGIC_X1Y144        FDRE                                         r  core/controller/backend/dq_sample_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y144        FDRE                                         r  core/controller/backend/dq_sample_reg[13]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y144        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[13]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.838    
+  -------------------------------------------------------------------
+                         slack                                  4.316    
+
+Slack (MET) :             4.316ns  (required time - arrival time)
+  Source:                 sram_dq[13]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.440ns  (logic 0.440ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E15                                               0.000    -2.278 f  sram_dq[13] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[13].p/IO
+    E15                  IBUF (Prop_ibuf_I_O)         0.440    -1.838 f  core/data_pads[13].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.838    core/controller/backend/dq_sample_reg[15]_0[13]
+    ILOGIC_X1Y144        FDRE                                         f  core/controller/backend/dq_sample_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y144        FDRE                                         r  core/controller/backend/dq_sample_reg[13]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y144        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[13]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.838    
+  -------------------------------------------------------------------
+                         slack                                  4.316    
+
+Slack (MET) :             4.316ns  (required time - arrival time)
+  Source:                 sram_dq[15]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.434ns  (logic 0.434ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.317ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.405ns = ( 3.595 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    A18                                               0.000    -2.278 r  sram_dq[15] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[15].p/IO
+    A18                  IBUF (Prop_ibuf_I_O)         0.434    -1.844 r  core/data_pads[15].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.844    core/controller/backend/dq_sample_reg[15]_0[15]
+    ILOGIC_X1Y130        FDRE                                         r  core/controller/backend/dq_sample_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.705     3.595    core/controller/backend/fast_clk
+    ILOGIC_X1Y130        FDRE                                         r  core/controller/backend/dq_sample_reg[15]/C
+                         clock pessimism             -0.556     3.039    
+                         clock uncertainty           -0.565     2.474    
+    ILOGIC_X1Y130        FDRE (Setup_fdre_C_D)       -0.002     2.472    core/controller/backend/dq_sample_reg[15]
+  -------------------------------------------------------------------
+                         required time                          2.472    
+                         arrival time                           1.844    
+  -------------------------------------------------------------------
+                         slack                                  4.316    
+
+Slack (MET) :             4.316ns  (required time - arrival time)
+  Source:                 sram_dq[15]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.434ns  (logic 0.434ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.317ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.405ns = ( 3.595 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    A18                                               0.000    -2.278 f  sram_dq[15] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[15].p/IO
+    A18                  IBUF (Prop_ibuf_I_O)         0.434    -1.844 f  core/data_pads[15].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.844    core/controller/backend/dq_sample_reg[15]_0[15]
+    ILOGIC_X1Y130        FDRE                                         f  core/controller/backend/dq_sample_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.705     3.595    core/controller/backend/fast_clk
+    ILOGIC_X1Y130        FDRE                                         r  core/controller/backend/dq_sample_reg[15]/C
+                         clock pessimism             -0.556     3.039    
+                         clock uncertainty           -0.565     2.474    
+    ILOGIC_X1Y130        FDRE (Setup_fdre_C_D)       -0.002     2.472    core/controller/backend/dq_sample_reg[15]
+  -------------------------------------------------------------------
+                         required time                          2.472    
+                         arrival time                           1.844    
+  -------------------------------------------------------------------
+                         slack                                  4.316    
+
+Slack (MET) :             4.317ns  (required time - arrival time)
+  Source:                 sram_dq[1]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.432ns  (logic 0.432ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    B19                                               0.000    -2.278 r  sram_dq[1] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[1].p/IO
+    B19                  IBUF (Prop_ibuf_I_O)         0.432    -1.846 r  core/data_pads[1].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.846    core/controller/backend/dq_sample_reg[15]_0[1]
+    ILOGIC_X1Y124        FDRE                                         r  core/controller/backend/dq_sample_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y124        FDRE                                         r  core/controller/backend/dq_sample_reg[1]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y124        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[1]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.846    
+  -------------------------------------------------------------------
+                         slack                                  4.317    
+
+Slack (MET) :             4.317ns  (required time - arrival time)
+  Source:                 sram_dq[1]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.432ns  (logic 0.432ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    B19                                               0.000    -2.278 f  sram_dq[1] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[1].p/IO
+    B19                  IBUF (Prop_ibuf_I_O)         0.432    -1.846 f  core/data_pads[1].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.846    core/controller/backend/dq_sample_reg[15]_0[1]
+    ILOGIC_X1Y124        FDRE                                         f  core/controller/backend/dq_sample_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y124        FDRE                                         r  core/controller/backend/dq_sample_reg[1]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y124        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[1]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.846    
+  -------------------------------------------------------------------
+                         slack                                  4.317    
+
+Slack (MET) :             4.318ns  (required time - arrival time)
+  Source:                 sram_dq[12]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.438ns  (logic 0.438ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    D15                                               0.000    -2.278 r  sram_dq[12] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[12].p/IO
+    D15                  IBUF (Prop_ibuf_I_O)         0.438    -1.840 r  core/data_pads[12].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.840    core/controller/backend/dq_sample_reg[15]_0[12]
+    ILOGIC_X1Y143        FDRE                                         r  core/controller/backend/dq_sample_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y143        FDRE                                         r  core/controller/backend/dq_sample_reg[12]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y143        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[12]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.840    
+  -------------------------------------------------------------------
+                         slack                                  4.318    
+
+Slack (MET) :             4.318ns  (required time - arrival time)
+  Source:                 sram_dq[12]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.438ns  (logic 0.438ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    D15                                               0.000    -2.278 f  sram_dq[12] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[12].p/IO
+    D15                  IBUF (Prop_ibuf_I_O)         0.438    -1.840 f  core/data_pads[12].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.840    core/controller/backend/dq_sample_reg[15]_0[12]
+    ILOGIC_X1Y143        FDRE                                         f  core/controller/backend/dq_sample_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y143        FDRE                                         r  core/controller/backend/dq_sample_reg[12]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y143        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[12]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.840    
+  -------------------------------------------------------------------
+                         slack                                  4.318    
+
+Slack (MET) :             4.319ns  (required time - arrival time)
+  Source:                 sram_err
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/sampled_err_reg/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.435ns  (logic 0.435ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.321ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.401ns = ( 3.599 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E21                                               0.000    -2.278 r  sram_err (IN)
+                         net (fo=0)                   0.000    -2.278    core/sram_err
+    E21                  IBUF (Prop_ibuf_I_O)         0.435    -1.843 r  core/ep/O
+                         net (fo=1, routed)           0.000    -1.843    core/controller/backend/err_in
+    ILOGIC_X1Y116        FDRE                                         r  core/controller/backend/sampled_err_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.709     3.599    core/controller/backend/fast_clk
+    ILOGIC_X1Y116        FDRE                                         r  core/controller/backend/sampled_err_reg/C
+                         clock pessimism             -0.556     3.043    
+                         clock uncertainty           -0.565     2.478    
+    ILOGIC_X1Y116        FDRE (Setup_fdre_C_D)       -0.002     2.476    core/controller/backend/sampled_err_reg
+  -------------------------------------------------------------------
+                         required time                          2.476    
+                         arrival time                           1.843    
+  -------------------------------------------------------------------
+                         slack                                  4.319    
+
+Slack (MET) :             4.319ns  (required time - arrival time)
+  Source:                 sram_err
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/sampled_err_reg/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.435ns  (logic 0.435ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.321ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.401ns = ( 3.599 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    E21                                               0.000    -2.278 f  sram_err (IN)
+                         net (fo=0)                   0.000    -2.278    core/sram_err
+    E21                  IBUF (Prop_ibuf_I_O)         0.435    -1.843 f  core/ep/O
+                         net (fo=1, routed)           0.000    -1.843    core/controller/backend/err_in
+    ILOGIC_X1Y116        FDRE                                         f  core/controller/backend/sampled_err_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.709     3.599    core/controller/backend/fast_clk
+    ILOGIC_X1Y116        FDRE                                         r  core/controller/backend/sampled_err_reg/C
+                         clock pessimism             -0.556     3.043    
+                         clock uncertainty           -0.565     2.478    
+    ILOGIC_X1Y116        FDRE (Setup_fdre_C_D)       -0.002     2.476    core/controller/backend/sampled_err_reg
+  -------------------------------------------------------------------
+                         required time                          2.476    
+                         arrival time                           1.843    
+  -------------------------------------------------------------------
+                         slack                                  4.319    
+
+Slack (MET) :             4.322ns  (required time - arrival time)
+  Source:                 sram_dq[2]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.427ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    C20                                               0.000    -2.278 r  sram_dq[2] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[2].p/IO
+    C20                  IBUF (Prop_ibuf_I_O)         0.427    -1.851 r  core/data_pads[2].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.851    core/controller/backend/dq_sample_reg[15]_0[2]
+    ILOGIC_X1Y121        FDRE                                         r  core/controller/backend/dq_sample_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y121        FDRE                                         r  core/controller/backend/dq_sample_reg[2]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y121        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[2]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.851    
+  -------------------------------------------------------------------
+                         slack                                  4.322    
+
+Slack (MET) :             4.322ns  (required time - arrival time)
+  Source:                 sram_dq[2]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.427ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.316ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.406ns = ( 3.594 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    C20                                               0.000    -2.278 f  sram_dq[2] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[2].p/IO
+    C20                  IBUF (Prop_ibuf_I_O)         0.427    -1.851 f  core/data_pads[2].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.851    core/controller/backend/dq_sample_reg[15]_0[2]
+    ILOGIC_X1Y121        FDRE                                         f  core/controller/backend/dq_sample_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.704     3.594    core/controller/backend/fast_clk
+    ILOGIC_X1Y121        FDRE                                         r  core/controller/backend/dq_sample_reg[2]/C
+                         clock pessimism             -0.556     3.038    
+                         clock uncertainty           -0.565     2.473    
+    ILOGIC_X1Y121        FDRE (Setup_fdre_C_D)       -0.002     2.471    core/controller/backend/dq_sample_reg[2]
+  -------------------------------------------------------------------
+                         required time                          2.471    
+                         arrival time                           1.851    
+  -------------------------------------------------------------------
+                         slack                                  4.322    
+
+Slack (MET) :             4.330ns  (required time - arrival time)
+  Source:                 sram_dq[5]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.427ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G15                                               0.000    -2.278 r  sram_dq[5] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[5].p/IO
+    G15                  IBUF (Prop_ibuf_I_O)         0.427    -1.851 r  core/data_pads[5].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.851    core/controller/backend/dq_sample_reg[15]_0[5]
+    ILOGIC_X1Y142        FDRE                                         r  core/controller/backend/dq_sample_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y142        FDRE                                         r  core/controller/backend/dq_sample_reg[5]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y142        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[5]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.851    
+  -------------------------------------------------------------------
+                         slack                                  4.330    
+
+Slack (MET) :             4.330ns  (required time - arrival time)
+  Source:                 sram_dq[5]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.427ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G15                                               0.000    -2.278 f  sram_dq[5] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[5].p/IO
+    G15                  IBUF (Prop_ibuf_I_O)         0.427    -1.851 f  core/data_pads[5].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.851    core/controller/backend/dq_sample_reg[15]_0[5]
+    ILOGIC_X1Y142        FDRE                                         f  core/controller/backend/dq_sample_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y142        FDRE                                         r  core/controller/backend/dq_sample_reg[5]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y142        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[5]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.851    
+  -------------------------------------------------------------------
+                         slack                                  4.330    
+
+Slack (MET) :             4.336ns  (required time - arrival time)
+  Source:                 sram_dq[4]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.420ns  (logic 0.420ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G16                                               0.000    -2.278 r  sram_dq[4] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[4].p/IO
+    G16                  IBUF (Prop_ibuf_I_O)         0.420    -1.858 r  core/data_pads[4].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.858    core/controller/backend/dq_sample_reg[15]_0[4]
+    ILOGIC_X1Y141        FDRE                                         r  core/controller/backend/dq_sample_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y141        FDRE                                         r  core/controller/backend/dq_sample_reg[4]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y141        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[4]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.858    
+  -------------------------------------------------------------------
+                         slack                                  4.336    
+
+Slack (MET) :             4.336ns  (required time - arrival time)
+  Source:                 sram_dq[4]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.420ns  (logic 0.420ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G16                                               0.000    -2.278 f  sram_dq[4] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[4].p/IO
+    G16                  IBUF (Prop_ibuf_I_O)         0.420    -1.858 f  core/data_pads[4].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.858    core/controller/backend/dq_sample_reg[15]_0[4]
+    ILOGIC_X1Y141        FDRE                                         f  core/controller/backend/dq_sample_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y141        FDRE                                         r  core/controller/backend/dq_sample_reg[4]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y141        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[4]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.858    
+  -------------------------------------------------------------------
+                         slack                                  4.336    
+
+Slack (MET) :             4.339ns  (required time - arrival time)
+  Source:                 sram_dq[10]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.417ns  (logic 0.417ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    F19                                               0.000    -2.278 r  sram_dq[10] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[10].p/IO
+    F19                  IBUF (Prop_ibuf_I_O)         0.417    -1.861 r  core/data_pads[10].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.861    core/controller/backend/dq_sample_reg[15]_0[10]
+    ILOGIC_X1Y109        FDRE                                         r  core/controller/backend/dq_sample_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y109        FDRE                                         r  core/controller/backend/dq_sample_reg[10]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y109        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[10]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.861    
+  -------------------------------------------------------------------
+                         slack                                  4.339    
+
+Slack (MET) :             4.339ns  (required time - arrival time)
+  Source:                 sram_dq[10]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.417ns  (logic 0.417ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    F19                                               0.000    -2.278 f  sram_dq[10] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[10].p/IO
+    F19                  IBUF (Prop_ibuf_I_O)         0.417    -1.861 f  core/data_pads[10].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.861    core/controller/backend/dq_sample_reg[15]_0[10]
+    ILOGIC_X1Y109        FDRE                                         f  core/controller/backend/dq_sample_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y109        FDRE                                         r  core/controller/backend/dq_sample_reg[10]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y109        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[10]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.861    
+  -------------------------------------------------------------------
+                         slack                                  4.339    
+
+Slack (MET) :             4.342ns  (required time - arrival time)
+  Source:                 sram_dq[6]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.414ns  (logic 0.414ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G21                                               0.000    -2.278 r  sram_dq[6] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[6].p/IO
+    G21                  IBUF (Prop_ibuf_I_O)         0.414    -1.864 r  core/data_pads[6].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.864    core/controller/backend/dq_sample_reg[15]_0[6]
+    ILOGIC_X1Y105        FDRE                                         r  core/controller/backend/dq_sample_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y105        FDRE                                         r  core/controller/backend/dq_sample_reg[6]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y105        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[6]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.864    
+  -------------------------------------------------------------------
+                         slack                                  4.342    
+
+Slack (MET) :             4.342ns  (required time - arrival time)
+  Source:                 sram_dq[6]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.414ns  (logic 0.414ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G21                                               0.000    -2.278 f  sram_dq[6] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[6].p/IO
+    G21                  IBUF (Prop_ibuf_I_O)         0.414    -1.864 f  core/data_pads[6].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.864    core/controller/backend/dq_sample_reg[15]_0[6]
+    ILOGIC_X1Y105        FDRE                                         f  core/controller/backend/dq_sample_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y105        FDRE                                         r  core/controller/backend/dq_sample_reg[6]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y105        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[6]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.864    
+  -------------------------------------------------------------------
+                         slack                                  4.342    
+
+Slack (MET) :             4.346ns  (required time - arrival time)
+  Source:                 sram_dq[7]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.411ns  (logic 0.411ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G20                                               0.000    -2.278 r  sram_dq[7] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[7].p/IO
+    G20                  IBUF (Prop_ibuf_I_O)         0.411    -1.867 r  core/data_pads[7].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.867    core/controller/backend/dq_sample_reg[15]_0[7]
+    ILOGIC_X1Y106        FDRE                                         r  core/controller/backend/dq_sample_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y106        FDRE                                         r  core/controller/backend/dq_sample_reg[7]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y106        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[7]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.867    
+  -------------------------------------------------------------------
+                         slack                                  4.346    
+
+Slack (MET) :             4.346ns  (required time - arrival time)
+  Source:                 sram_dq[7]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.411ns  (logic 0.411ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G20                                               0.000    -2.278 f  sram_dq[7] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[7].p/IO
+    G20                  IBUF (Prop_ibuf_I_O)         0.411    -1.867 f  core/data_pads[7].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.867    core/controller/backend/dq_sample_reg[15]_0[7]
+    ILOGIC_X1Y106        FDRE                                         f  core/controller/backend/dq_sample_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y106        FDRE                                         r  core/controller/backend/dq_sample_reg[7]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y106        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[7]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.867    
+  -------------------------------------------------------------------
+                         slack                                  4.346    
+
+Slack (MET) :             4.356ns  (required time - arrival time)
+  Source:                 sram_dq[11]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.400ns  (logic 0.400ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G19                                               0.000    -2.278 r  sram_dq[11] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[11].p/IO
+    G19                  IBUF (Prop_ibuf_I_O)         0.400    -1.878 r  core/data_pads[11].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.878    core/controller/backend/dq_sample_reg[15]_0[11]
+    ILOGIC_X1Y110        FDRE                                         r  core/controller/backend/dq_sample_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y110        FDRE                                         r  core/controller/backend/dq_sample_reg[11]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y110        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[11]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.878    
+  -------------------------------------------------------------------
+                         slack                                  4.356    
+
+Slack (MET) :             4.356ns  (required time - arrival time)
+  Source:                 sram_dq[11]
+                            (input port clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_sample_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            4.000ns  (fast_raw rise@4.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.400ns  (logic 0.400ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.323ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.399ns = ( 3.601 - 4.000 ) 
+    Source Clock Delay      (SCD):    -2.278ns
+    Clock Pessimism Removal (CPR):    -0.556ns
+  Clock Uncertainty:      0.565ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.108ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+  -------------------------------------------------------------------    -------------------
+                         input delay                  0.000    -2.278    
+    G19                                               0.000    -2.278 f  sram_dq[11] (INOUT)
+                         net (fo=1, unset)            0.000    -2.278    core/data_pads[11].p/IO
+    G19                  IBUF (Prop_ibuf_I_O)         0.400    -1.878 f  core/data_pads[11].p/IBUF/O
+                         net (fo=1, routed)           0.000    -1.878    core/controller/backend/dq_sample_reg[15]_0[11]
+    ILOGIC_X1Y110        FDRE                                         f  core/controller/backend/dq_sample_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      4.000     4.000 r  
+    Y9                                                0.000     4.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     4.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     4.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     4.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421     2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518     2.796    core/clocks/fast_raw
+    BUFGCTRL_X0Y15       BUFG (Prop_bufg_I_O)         0.026     2.822 r  core/clocks/fast_replica/O
+                         net (fo=3, routed)           0.042     2.864    core/clocks/fast_clk_repN
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     2.890 r  core/clocks/fast/O
+                         net (fo=2229, routed)        0.711     3.601    core/controller/backend/fast_clk
+    ILOGIC_X1Y110        FDRE                                         r  core/controller/backend/dq_sample_reg[11]/C
+                         clock pessimism             -0.556     3.045    
+                         clock uncertainty           -0.565     2.480    
+    ILOGIC_X1Y110        FDRE (Setup_fdre_C_D)       -0.002     2.478    core/controller/backend/dq_sample_reg[11]
+  -------------------------------------------------------------------
+                         required time                          2.478    
+                         arrival time                           1.878    
+  -------------------------------------------------------------------
+                         slack                                  4.356    
+
+
+
+

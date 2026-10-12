@@ -1,0 +1,58 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Oct 12 19:53:00 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_utilization -hierarchical -file hierarchy.rpt
+| Design       : board_top
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------------------+-----------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                    Instance                    |               Module              | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------------------------------+-----------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| board_top                                      |                             (top) |       1899 |       1893 |       0 |    6 | 3656 |      4 |      1 |          0 |
+|   (board_top)                                  |                             (top) |        122 |        122 |       0 |    0 |  455 |      0 |      0 |          0 |
+|   core                                         |                      physical_top |       1778 |       1772 |       0 |    6 | 3183 |      4 |      1 |          0 |
+|     controller                                 |               integrated_executor |       1777 |       1771 |       0 |    6 | 3181 |      4 |      1 |          0 |
+|       (controller)                             |               integrated_executor |          3 |          3 |       0 |    0 |  415 |      0 |      0 |          0 |
+|       app_requests                             |                       async_queue |         75 |         75 |       0 |    0 |  268 |      1 |      0 |          0 |
+|         forward.crossing                       |                 handshake_channel |          5 |          5 |       0 |    0 |  241 |      0 |      0 |          0 |
+|           (forward.crossing)                   |                 handshake_channel |          3 |          3 |       0 |    0 |  119 |      0 |      0 |          0 |
+|           transfer                             |                 xpm_cdc_handshake |          2 |          2 |       0 |    0 |  122 |      0 |      0 |          0 |
+|             (transfer)                         |                 xpm_cdc_handshake |          2 |          2 |       0 |    0 |  116 |      0 |      0 |          0 |
+|       app_responses                            |       async_queue__parameterized0 |         31 |         31 |       0 |    0 |  172 |      0 |      1 |          0 |
+|         backward.crossing                      | handshake_channel__parameterized0 |          5 |          5 |       0 |    0 |  145 |      0 |      0 |          0 |
+|           (backward.crossing)                  | handshake_channel__parameterized0 |          3 |          3 |       0 |    0 |   71 |      0 |      0 |          0 |
+|           transfer                             | xpm_cdc_handshake__parameterized0 |          2 |          2 |       0 |    0 |   74 |      0 |      0 |          0 |
+|             (transfer)                         | xpm_cdc_handshake__parameterized0 |          2 |          2 |       0 |    0 |   68 |      0 |      0 |          0 |
+|       backend                                  |              e_backend_registered |         91 |         86 |       0 |    5 |  144 |      0 |      0 |          0 |
+|       calendar                                 |                      frame_engine |        128 |        128 |       0 |    0 |  100 |      0 |      0 |          0 |
+|       candidates                               |                    candidate_link |        624 |        623 |       0 |    1 | 1495 |      0 |      0 |          0 |
+|         (candidates)                           |                    candidate_link |        595 |        594 |       0 |    1 |  990 |      0 |      0 |          0 |
+|         candidates                             | handshake_channel__parameterized2 |         16 |         16 |       0 |    0 |  476 |      0 |      0 |          0 |
+|           (candidates)                         | handshake_channel__parameterized2 |         14 |         14 |       0 |    0 |  207 |      0 |      0 |          0 |
+|           transfer                             | xpm_cdc_handshake__parameterized2 |          2 |          2 |       0 |    0 |  269 |      0 |      0 |          0 |
+|             (transfer)                         | xpm_cdc_handshake__parameterized2 |          2 |          2 |       0 |    0 |  263 |      0 |      0 |          0 |
+|       history                                  |                        event_fifo |        194 |        194 |       0 |    0 |  160 |      2 |      0 |          0 |
+|         (history)                              |                        event_fifo |        102 |        102 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         fifo                                   |                    xpm_fifo_async |         92 |         92 |       0 |    0 |  160 |      2 |      0 |          0 |
+|           gnuram_async_fifo.xpm_fifo_base_inst |     xpm_fifo_base__parameterized2 |         92 |         92 |       0 |    0 |  160 |      2 |      0 |          0 |
+|       rule                                     |                         slow_rule |        414 |        414 |       0 |    0 |  234 |      0 |      0 |          0 |
+|       timestamp                                |                 segmented_counter |         90 |         90 |       0 |    0 |   73 |      0 |      0 |          0 |
+|       version                                  |               segmented_counter_0 |        106 |        106 |       0 |    0 |   73 |      0 |      0 |          0 |
++------------------------------------------------+-----------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

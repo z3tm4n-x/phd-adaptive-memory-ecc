@@ -1,0 +1,25 @@
+{
+  "source_sha256": "6ef2def34631c233e79170bb3b620e9e42f0be9e1b412fc8b4abfd36f44ac026",
+  "cases": [
+    {
+      "case": "actual",
+      "proved": true,
+      "counterexample": false,
+      "log_sha256": "e4717913919f9e4cf1d99b95fe3c03f1439bba64a6a5e62f3bc09edd4c70c4ab"
+    },
+    {
+      "case": "wrong-generation",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "3b7559e2fd6bbc502c407e427d6dee040a19e049e85dc89fe560e9f8175df9dd"
+    },
+    {
+      "case": "wrong-time",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "9fd81d9ec491fe3a304f78d1d3351970887387b3a60aa15e4ab8e9d18c5f329b"
+    }
+  ],
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-history-1791824254783159403",
+  "scope": "all consecutive source edges and128 generation/timestamp bits; no FIFO behavior assumed in the staging proof"
+}

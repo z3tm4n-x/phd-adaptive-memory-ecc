@@ -1,0 +1,1263 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Oct 12 19:52:59 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_timing -from [all_registers] -to [get_ports {{sram_a[*]} {sram_dq[*]} sram_ce_n sram_oe_n sram_we_n sram_lb_n sram_ub_n}] -delay_type max -max_paths 80 -file output_max.rpt
+| Design       : board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.214ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[9]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.786ns  (logic 3.785ns (99.974%)  route 0.001ns (0.026%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y108                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[9]/C
+    OLOGIC_X1Y108        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[9]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[9].p/T
+    E19                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.233     3.786 r  core/data_pads[9].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.786    sram_dq[9]
+    E19                                                               r  sram_dq[9] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.786    
+  -------------------------------------------------------------------
+                         slack                                  1.214    
+
+Slack (MET) :             1.218ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[8]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.782ns  (logic 3.781ns (99.974%)  route 0.001ns (0.026%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y107                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[8]/C
+    OLOGIC_X1Y107        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[8]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[8].p/T
+    E20                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.229     3.782 r  core/data_pads[8].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.782    sram_dq[8]
+    E20                                                               r  sram_dq[8] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.782    
+  -------------------------------------------------------------------
+                         slack                                  1.218    
+
+Slack (MET) :             1.236ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[13]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.764ns  (logic 3.763ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y144                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[13]/C
+    OLOGIC_X1Y144        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[13]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[13].p/T
+    E15                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.211     3.764 r  core/data_pads[13].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.764    sram_dq[13]
+    E15                                                               r  sram_dq[13] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.764    
+  -------------------------------------------------------------------
+                         slack                                  1.236    
+
+Slack (MET) :             1.237ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[0]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.763ns  (logic 3.762ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y123                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[0]/C
+    OLOGIC_X1Y123        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[0]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[0].p/T
+    B20                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.210     3.763 r  core/data_pads[0].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.763    sram_dq[0]
+    B20                                                               r  sram_dq[0] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.763    
+  -------------------------------------------------------------------
+                         slack                                  1.237    
+
+Slack (MET) :             1.238ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[12]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.762ns  (logic 3.761ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y143                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[12]/C
+    OLOGIC_X1Y143        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[12]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[12].p/T
+    D15                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.209     3.762 r  core/data_pads[12].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.762    sram_dq[12]
+    D15                                                               r  sram_dq[12] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.762    
+  -------------------------------------------------------------------
+                         slack                                  1.238    
+
+Slack (MET) :             1.242ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[14]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.758ns  (logic 3.757ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y129                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[14]/C
+    OLOGIC_X1Y129        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[14]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[14].p/T
+    A19                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.205     3.758 r  core/data_pads[14].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.758    sram_dq[14]
+    A19                                                               r  sram_dq[14] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.758    
+  -------------------------------------------------------------------
+                         slack                                  1.242    
+
+Slack (MET) :             1.242ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[3]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.758ns  (logic 3.757ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y122                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[3]/C
+    OLOGIC_X1Y122        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[3]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[3].p/T
+    D20                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.205     3.758 r  core/data_pads[3].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.758    sram_dq[3]
+    D20                                                               r  sram_dq[3] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.758    
+  -------------------------------------------------------------------
+                         slack                                  1.242    
+
+Slack (MET) :             1.243ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[15]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.757ns  (logic 3.756ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y130                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[15]/C
+    OLOGIC_X1Y130        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[15]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[15].p/T
+    A18                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.204     3.757 r  core/data_pads[15].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.757    sram_dq[15]
+    A18                                                               r  sram_dq[15] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.757    
+  -------------------------------------------------------------------
+                         slack                                  1.243    
+
+Slack (MET) :             1.244ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[1]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.756ns  (logic 3.755ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y124                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[1]/C
+    OLOGIC_X1Y124        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[1]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[1].p/T
+    B19                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.203     3.756 r  core/data_pads[1].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.756    sram_dq[1]
+    B19                                                               r  sram_dq[1] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.756    
+  -------------------------------------------------------------------
+                         slack                                  1.244    
+
+Slack (MET) :             1.250ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[2]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.750ns  (logic 3.749ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y121                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[2]/C
+    OLOGIC_X1Y121        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[2]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[2].p/T
+    C20                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.197     3.750 r  core/data_pads[2].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.750    sram_dq[2]
+    C20                                                               r  sram_dq[2] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.750    
+  -------------------------------------------------------------------
+                         slack                                  1.250    
+
+Slack (MET) :             1.250ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[5]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.750ns  (logic 3.749ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y142                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[5]/C
+    OLOGIC_X1Y142        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[5]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[5].p/T
+    G15                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.197     3.750 r  core/data_pads[5].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.750    sram_dq[5]
+    G15                                                               r  sram_dq[5] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.750    
+  -------------------------------------------------------------------
+                         slack                                  1.250    
+
+Slack (MET) :             1.257ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[4]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.743ns  (logic 3.742ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y141                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[4]/C
+    OLOGIC_X1Y141        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[4]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[4].p/T
+    G16                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.190     3.743 r  core/data_pads[4].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.743    sram_dq[4]
+    G16                                                               r  sram_dq[4] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.743    
+  -------------------------------------------------------------------
+                         slack                                  1.257    
+
+Slack (MET) :             1.260ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[10]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.740ns  (logic 3.739ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y109                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[10]/C
+    OLOGIC_X1Y109        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[10]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[10].p/T
+    F19                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.187     3.740 r  core/data_pads[10].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.740    sram_dq[10]
+    F19                                                               r  sram_dq[10] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.740    
+  -------------------------------------------------------------------
+                         slack                                  1.260    
+
+Slack (MET) :             1.262ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[6]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.738ns  (logic 3.737ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y105                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[6]/C
+    OLOGIC_X1Y105        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[6]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[6].p/T
+    G21                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.185     3.738 r  core/data_pads[6].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.738    sram_dq[6]
+    G21                                                               r  sram_dq[6] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.738    
+  -------------------------------------------------------------------
+                         slack                                  1.262    
+
+Slack (MET) :             1.266ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[7]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.734ns  (logic 3.733ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y106                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[7]/C
+    OLOGIC_X1Y106        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[7]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[7].p/T
+    G20                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.181     3.734 r  core/data_pads[7].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.734    sram_dq[7]
+    G20                                                               r  sram_dq[7] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.734    
+  -------------------------------------------------------------------
+                         slack                                  1.266    
+
+Slack (MET) :             1.277ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_t_n_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_dq[11]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.723ns  (logic 3.722ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y110                                     0.000     0.000 r  core/controller/backend/pad_t_n_reg[11]/C
+    OLOGIC_X1Y110        FDRE (Prop_fdre_C_Q)         0.552     0.552 f  core/controller/backend/pad_t_n_reg[11]/Q
+                         net (fo=1, routed)           0.001     0.553    core/data_pads[11].p/T
+    G19                  OBUFT (TriStatE_obuft_T_O)
+                                                      3.170     3.723 r  core/data_pads[11].p/OBUFT/O
+                         net (fo=1, unset)            0.000     3.723    sram_dq[11]
+    G19                                                               r  sram_dq[11] (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.723    
+  -------------------------------------------------------------------
+                         slack                                  1.277    
+
+Slack (MET) :             1.283ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[15]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.717ns  (logic 3.716ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y58                                      0.000     0.000 r  core/pad_word_reg[14]/C
+    OLOGIC_X1Y58         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[14]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[14]
+    T16                  OBUF (Prop_obuf_I_O)         3.244     3.717 r  core/address_pads[15].p/O
+                         net (fo=0)                   0.000     3.717    sram_a[15]
+    T16                                                               r  sram_a[15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.717    
+  -------------------------------------------------------------------
+                         slack                                  1.283    
+
+Slack (MET) :             1.289ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[14]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.711ns  (logic 3.710ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y57                                      0.000     0.000 r  core/pad_word_reg[13]/C
+    OLOGIC_X1Y57         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[13]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[13]
+    T17                  OBUF (Prop_obuf_I_O)         3.238     3.711 r  core/address_pads[14].p/O
+                         net (fo=0)                   0.000     3.711    sram_a[14]
+    T17                                                               r  sram_a[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.711    
+  -------------------------------------------------------------------
+                         slack                                  1.289    
+
+Slack (MET) :             1.318ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[18]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[19]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.682ns  (logic 3.681ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y66                                      0.000     0.000 r  core/pad_word_reg[18]/C
+    OLOGIC_X1Y66         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[18]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[18]
+    R20                  OBUF (Prop_obuf_I_O)         3.209     3.682 r  core/address_pads[19].p/O
+                         net (fo=0)                   0.000     3.682    sram_a[19]
+    R20                                                               r  sram_a[19] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.682    
+  -------------------------------------------------------------------
+                         slack                                  1.318    
+
+Slack (MET) :             1.320ns  (required time - arrival time)
+  Source:                 core/controller/backend/alias_high_reg/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[0]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.680ns  (logic 3.679ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y119                                     0.000     0.000 r  core/controller/backend/alias_high_reg/C
+    OLOGIC_X1Y119        FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/controller/backend/alias_high_reg/Q
+                         net (fo=1, routed)           0.001     0.473    core/alias_high
+    A22                  OBUF (Prop_obuf_I_O)         3.207     3.680 r  core/address_pads[0].p/O
+                         net (fo=0)                   0.000     3.680    sram_a[0]
+    A22                                                               r  sram_a[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.680    
+  -------------------------------------------------------------------
+                         slack                                  1.320    
+
+Slack (MET) :             1.321ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[5]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.679ns  (logic 3.678ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y60                                      0.000     0.000 r  core/pad_word_reg[4]/C
+    OLOGIC_X1Y60         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[4]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[4]
+    P17                  OBUF (Prop_obuf_I_O)         3.206     3.679 r  core/address_pads[5].p/O
+                         net (fo=0)                   0.000     3.679    sram_a[5]
+    P17                                                               r  sram_a[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.679    
+  -------------------------------------------------------------------
+                         slack                                  1.321    
+
+Slack (MET) :             1.324ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_ce_n_reg/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_ce_n
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.676ns  (logic 3.675ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y117                                     0.000     0.000 r  core/controller/backend/pad_ce_n_reg/C
+    OLOGIC_X1Y117        FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/controller/backend/pad_ce_n_reg/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_ce_n
+    C22                  OBUF (Prop_obuf_I_O)         3.203     3.676 r  core/cp/O
+                         net (fo=0)                   0.000     3.676    sram_ce_n
+    C22                                                               r  sram_ce_n (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.676    
+  -------------------------------------------------------------------
+                         slack                                  1.324    
+
+Slack (MET) :             1.327ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[18]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.673ns  (logic 3.672ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y65                                      0.000     0.000 r  core/pad_word_reg[17]/C
+    OLOGIC_X1Y65         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[17]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[17]
+    R21                  OBUF (Prop_obuf_I_O)         3.200     3.673 r  core/address_pads[18].p/O
+                         net (fo=0)                   0.000     3.673    sram_a[18]
+    R21                                                               r  sram_a[18] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.673    
+  -------------------------------------------------------------------
+                         slack                                  1.327    
+
+Slack (MET) :             1.330ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_be_n_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_ub_n
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.670ns  (logic 3.669ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y115                                     0.000     0.000 r  core/controller/backend/pad_be_n_reg[1]/C
+    OLOGIC_X1Y115        FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/controller/backend/pad_be_n_reg[1]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_be_n[1]
+    D21                  OBUF (Prop_obuf_I_O)         3.197     3.670 r  core/up/O
+                         net (fo=0)                   0.000     3.670    sram_ub_n
+    D21                                                               r  sram_ub_n (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.670    
+  -------------------------------------------------------------------
+                         slack                                  1.330    
+
+Slack (MET) :             1.331ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_oe_n_reg/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_oe_n
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.669ns  (logic 3.668ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y118                                     0.000     0.000 r  core/controller/backend/pad_oe_n_reg/C
+    OLOGIC_X1Y118        FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/controller/backend/pad_oe_n_reg/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_oe_n
+    D22                  OBUF (Prop_obuf_I_O)         3.196     3.669 r  core/op/O
+                         net (fo=0)                   0.000     3.669    sram_oe_n
+    D22                                                               r  sram_oe_n (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.669    
+  -------------------------------------------------------------------
+                         slack                                  1.331    
+
+Slack (MET) :             1.344ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[16]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.656ns  (logic 3.655ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y83                                      0.000     0.000 r  core/pad_word_reg[15]/C
+    OLOGIC_X1Y83         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[15]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[15]
+    J22                  OBUF (Prop_obuf_I_O)         3.183     3.656 r  core/address_pads[16].p/O
+                         net (fo=0)                   0.000     3.656    sram_a[16]
+    J22                                                               r  sram_a[16] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.656    
+  -------------------------------------------------------------------
+                         slack                                  1.344    
+
+Slack (MET) :             1.350ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[3]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.650ns  (logic 3.649ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y72                                      0.000     0.000 r  core/pad_word_reg[2]/C
+    OLOGIC_X1Y72         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[2]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[2]
+    N19                  OBUF (Prop_obuf_I_O)         3.177     3.650 r  core/address_pads[3].p/O
+                         net (fo=0)                   0.000     3.650    sram_a[3]
+    N19                                                               r  sram_a[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.650    
+  -------------------------------------------------------------------
+                         slack                                  1.350    
+
+Slack (MET) :             1.350ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[6]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.650ns  (logic 3.649ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y67                                      0.000     0.000 r  core/pad_word_reg[5]/C
+    OLOGIC_X1Y67         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[5]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[5]
+    P22                  OBUF (Prop_obuf_I_O)         3.177     3.650 r  core/address_pads[6].p/O
+                         net (fo=0)                   0.000     3.650    sram_a[6]
+    P22                                                               r  sram_a[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.650    
+  -------------------------------------------------------------------
+                         slack                                  1.350    
+
+Slack (MET) :             1.351ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[7]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.649ns  (logic 3.648ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y68                                      0.000     0.000 r  core/pad_word_reg[6]/C
+    OLOGIC_X1Y68         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[6]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[6]
+    N22                  OBUF (Prop_obuf_I_O)         3.176     3.649 r  core/address_pads[7].p/O
+                         net (fo=0)                   0.000     3.649    sram_a[7]
+    N22                                                               r  sram_a[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.649    
+  -------------------------------------------------------------------
+                         slack                                  1.351    
+
+Slack (MET) :             1.351ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[8]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.649ns  (logic 3.648ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y69                                      0.000     0.000 r  core/pad_word_reg[7]/C
+    OLOGIC_X1Y69         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[7]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[7]
+    M22                  OBUF (Prop_obuf_I_O)         3.176     3.649 r  core/address_pads[8].p/O
+                         net (fo=0)                   0.000     3.649    sram_a[8]
+    M22                                                               r  sram_a[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.649    
+  -------------------------------------------------------------------
+                         slack                                  1.351    
+
+Slack (MET) :             1.354ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[11]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.646ns  (logic 3.645ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y86                                      0.000     0.000 r  core/pad_word_reg[10]/C
+    OLOGIC_X1Y86         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[10]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[10]
+    J18                  OBUF (Prop_obuf_I_O)         3.173     3.646 r  core/address_pads[11].p/O
+                         net (fo=0)                   0.000     3.646    sram_a[11]
+    J18                                                               r  sram_a[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.646    
+  -------------------------------------------------------------------
+                         slack                                  1.354    
+
+Slack (MET) :             1.357ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[9]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.643ns  (logic 3.642ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y70                                      0.000     0.000 r  core/pad_word_reg[8]/C
+    OLOGIC_X1Y70         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[8]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[8]
+    M21                  OBUF (Prop_obuf_I_O)         3.170     3.643 r  core/address_pads[9].p/O
+                         net (fo=0)                   0.000     3.643    sram_a[9]
+    M21                                                               r  sram_a[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.643    
+  -------------------------------------------------------------------
+                         slack                                  1.357    
+
+Slack (MET) :             1.360ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[17]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.640ns  (logic 3.639ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y84                                      0.000     0.000 r  core/pad_word_reg[16]/C
+    OLOGIC_X1Y84         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[16]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[16]
+    J21                  OBUF (Prop_obuf_I_O)         3.167     3.640 r  core/address_pads[17].p/O
+                         net (fo=0)                   0.000     3.640    sram_a[17]
+    J21                                                               r  sram_a[17] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.640    
+  -------------------------------------------------------------------
+                         slack                                  1.360    
+
+Slack (MET) :             1.361ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[10]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.639ns  (logic 3.638ns (99.973%)  route 0.001ns (0.027%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y85                                      0.000     0.000 r  core/pad_word_reg[9]/C
+    OLOGIC_X1Y85         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[9]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[9]
+    K18                  OBUF (Prop_obuf_I_O)         3.166     3.639 r  core/address_pads[10].p/O
+                         net (fo=0)                   0.000     3.639    sram_a[10]
+    K18                                                               r  sram_a[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.639    
+  -------------------------------------------------------------------
+                         slack                                  1.361    
+
+Slack (MET) :             1.365ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[4]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.635ns  (logic 3.634ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y59                                      0.000     0.000 r  core/pad_word_reg[3]/C
+    OLOGIC_X1Y59         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[3]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[3]
+    P18                  OBUF (Prop_obuf_I_O)         3.162     3.635 r  core/address_pads[4].p/O
+                         net (fo=0)                   0.000     3.635    sram_a[4]
+    P18                                                               r  sram_a[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.635    
+  -------------------------------------------------------------------
+                         slack                                  1.365    
+
+Slack (MET) :             1.366ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[12]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.634ns  (logic 3.633ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y79                                      0.000     0.000 r  core/pad_word_reg[11]/C
+    OLOGIC_X1Y79         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[11]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[11]
+    L22                  OBUF (Prop_obuf_I_O)         3.161     3.634 r  core/address_pads[12].p/O
+                         net (fo=0)                   0.000     3.634    sram_a[12]
+    L22                                                               r  sram_a[12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.634    
+  -------------------------------------------------------------------
+                         slack                                  1.366    
+
+Slack (MET) :             1.373ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[2]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.627ns  (logic 3.626ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y71                                      0.000     0.000 r  core/pad_word_reg[1]/C
+    OLOGIC_X1Y71         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[1]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[1]
+    N20                  OBUF (Prop_obuf_I_O)         3.154     3.627 r  core/address_pads[2].p/O
+                         net (fo=0)                   0.000     3.627    sram_a[2]
+    N20                                                               r  sram_a[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.627    
+  -------------------------------------------------------------------
+                         slack                                  1.373    
+
+Slack (MET) :             1.375ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_we_n_reg/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_we_n
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.625ns  (logic 3.624ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y139                                     0.000     0.000 r  core/controller/backend/pad_we_n_reg/C
+    OLOGIC_X1Y139        FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/controller/backend/pad_we_n_reg/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_we_n
+    E18                  OBUF (Prop_obuf_I_O)         3.152     3.625 r  core/wp/O
+                         net (fo=0)                   0.000     3.625    sram_we_n
+    E18                                                               r  sram_we_n (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.625    
+  -------------------------------------------------------------------
+                         slack                                  1.375    
+
+Slack (MET) :             1.375ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[13]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.625ns  (logic 3.624ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y80                                      0.000     0.000 r  core/pad_word_reg[12]/C
+    OLOGIC_X1Y80         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[12]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[12]
+    L21                  OBUF (Prop_obuf_I_O)         3.152     3.625 r  core/address_pads[13].p/O
+                         net (fo=0)                   0.000     3.625    sram_a[13]
+    L21                                                               r  sram_a[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.625    
+  -------------------------------------------------------------------
+                         slack                                  1.375    
+
+Slack (MET) :             1.380ns  (required time - arrival time)
+  Source:                 core/pad_word_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_a[1]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.620ns  (logic 3.619ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y74                                      0.000     0.000 r  core/pad_word_reg[0]/C
+    OLOGIC_X1Y74         FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/pad_word_reg[0]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_word[0]
+    M19                  OBUF (Prop_obuf_I_O)         3.147     3.620 r  core/address_pads[1].p/O
+                         net (fo=0)                   0.000     3.620    sram_a[1]
+    M19                                                               r  sram_a[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.620    
+  -------------------------------------------------------------------
+                         slack                                  1.380    
+
+Slack (MET) :             1.380ns  (required time - arrival time)
+  Source:                 core/controller/backend/pad_be_n_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            sram_lb_n
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            5.000ns  (MaxDelay Path 5.000ns)
+  Data Path Delay:        3.620ns  (logic 3.619ns (99.972%)  route 0.001ns (0.028%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 5.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X1Y140                                     0.000     0.000 r  core/controller/backend/pad_be_n_reg[0]/C
+    OLOGIC_X1Y140        FDRE (Prop_fdre_C_Q)         0.472     0.472 r  core/controller/backend/pad_be_n_reg[0]/Q
+                         net (fo=1, routed)           0.001     0.473    core/pad_be_n[0]
+    F18                  OBUF (Prop_obuf_I_O)         3.147     3.620 r  core/lp/O
+                         net (fo=0)                   0.000     3.620    sram_lb_n
+    F18                                                               r  sram_lb_n (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    5.000     5.000    
+                         output delay                -0.000     5.000    
+  -------------------------------------------------------------------
+                         required time                          5.000    
+                         arrival time                          -3.620    
+  -------------------------------------------------------------------
+                         slack                                  1.380    
+
+
+
+

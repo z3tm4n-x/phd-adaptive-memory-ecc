@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "case": "normal",
+      "proved": true,
+      "counterexample": false
+    },
+    {
+      "case": "collision",
+      "proved": false,
+      "counterexample": true
+    }
+  ],
+  "source_sha256": "8897494d19155893c7bd9de313556a7148ade11282eaf71eb79a7ece936c786d",
+  "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-map-1791824250144133879"
+}

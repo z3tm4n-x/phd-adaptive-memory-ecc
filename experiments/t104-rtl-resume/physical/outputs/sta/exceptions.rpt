@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Mon Oct 12 19:53:03 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_exceptions -file exceptions.rpt
+| Design       : board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Exceptions Report
+
+Position  From                                 Through         To                                                                                Setup           Hold            Status           
+--------  -----------------------------------  --------------  --------------------------------------------------------------------------------  --------------  --------------  -----------------
+6         [get_cells src_gray_ff_reg*]         *               [get_cells {dest_graysync_ff_reg[0]*}]                                            max_dpo=20      -               
+8         [get_cells src_gray_ff_reg*]         *               [get_cells {dest_graysync_ff_reg[0]*}]                                            max_dpo=4       -               
+14        [get_cells src_hsdata_ff_reg*]       *               [get_cells dest_hsdata_ff_reg*]                                                   max_dpo=12      -               
+16        [get_cells src_hsdata_ff_reg*]       *               [get_cells dest_hsdata_ff_reg*]                                                   max_dpo=60      -               
+18        [get_cells src_hsdata_ff_reg*]       *               [get_cells dest_hsdata_ff_reg*]                                                   max_dpo=60      -               
+20        [get_cells src_hsdata_ff_reg*]       *               [get_cells dest_hsdata_ff_reg*]                                                   max_dpo=4       -               
+21        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+22        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+23        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+24        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+25        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+26        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+27        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+28        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+29        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+30        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+31        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+32        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+33        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+34        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+35        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+36        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+37        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+38        *                                    *               [get_cells {syncstages_ff_reg[0]}]                                                false           false           
+46        [get_ports {sram_err {sram_dq[*]}}]  *               [all_registers]                                                                   max_dpo=2.5     -               
+47        [get_ports {sram_err {sram_dq[*]}}]  *               [all_registers]                                                                   -               min=0           
+48        [all_registers]                      *               [get_ports {{sram_a[*]} {sram_dq[*]} sram_ce_n sram_oe_n sram_we_n sram_lb_n sra  max_dpo=5       -               
+                                                               m_ub_n}]                                                                                                          
+49        [all_registers]                      *               [get_ports {{sram_a[*]} {sram_dq[*]} sram_ce_n sram_oe_n sram_we_n sram_lb_n sra  -               min=0           
+                                                               m_ub_n}]                                                                                                          
+

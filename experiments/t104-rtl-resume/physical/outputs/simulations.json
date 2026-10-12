@@ -1,0 +1,87 @@
+[
+  {
+    "mode": "sim",
+    "phase": 0,
+    "stress": 0,
+    "returncode": 0,
+    "elapsed_s": 41.269527530999994,
+    "log_sha256": "fc7d6e5c3a174ba0a6d4cf11fd712d947bf0180583251d9a31405e9e37b8895b",
+    "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-sim-1791823990517834121",
+    "trace": {
+      "requests": 10,
+      "slots": 6120,
+      "skips": 3942,
+      "pin_edges": 53720,
+      "history_events": 71,
+      "max_history_delivery_ns": 172.0,
+      "candidates": 752,
+      "max_credits": 1,
+      "max_release_to_consumed_ns": 164.0,
+      "max_first_valid_to_eligible_ns": 138.0,
+      "max_beacon_to_candidate_ns": 276.0,
+      "max_first_valid_to_consumed_ns": 1870.0,
+      "sha256": "fc7d6e5c3a174ba0a6d4cf11fd712d947bf0180583251d9a31405e9e37b8895b"
+    }
+  },
+  {
+    "mode": "sim",
+    "phase": 3,
+    "stress": 2,
+    "returncode": 0,
+    "elapsed_s": 40.81974071499985,
+    "log_sha256": "8d44dcd71e7fe2397c408856a0ef7a289c8687f8c94a48efa925a7da9e13b04c",
+    "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-sim-1791824032560348887",
+    "trace": {
+      "requests": 10,
+      "slots": 6120,
+      "skips": 3888,
+      "pin_edges": 57634,
+      "history_events": 2215,
+      "max_history_delivery_ns": 3447.0,
+      "candidates": 733,
+      "max_credits": 1,
+      "max_release_to_consumed_ns": 167.0,
+      "max_first_valid_to_eligible_ns": 135.0,
+      "max_beacon_to_candidate_ns": 272.0,
+      "max_first_valid_to_consumed_ns": 1870.0,
+      "sha256": "8d44dcd71e7fe2397c408856a0ef7a289c8687f8c94a48efa925a7da9e13b04c"
+    }
+  },
+  {
+    "mode": "sim",
+    "phase": 3,
+    "stress": 1,
+    "returncode": 0,
+    "elapsed_s": 47.494177736,
+    "log_sha256": "49e61cc63c6c277c3c74d58f482347f9f7f493686ae2eac25bbc75a7fa7a1380",
+    "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-sim-1791824361952088799",
+    "trace": {
+      "requests": 120,
+      "slots": 6120,
+      "skips": 3942,
+      "pin_edges": 59330,
+      "history_events": 74,
+      "max_history_delivery_ns": 171.0,
+      "candidates": 752,
+      "max_credits": 2,
+      "max_release_to_consumed_ns": 1539.0,
+      "max_first_valid_to_eligible_ns": 3095.0,
+      "max_beacon_to_candidate_ns": 272.0,
+      "max_first_valid_to_consumed_ns": 6090.0,
+      "sha256": "49e61cc63c6c277c3c74d58f482347f9f7f493686ae2eac25bbc75a7fa7a1380"
+    }
+  },
+  {
+    "mode": "pads",
+    "phase": 0,
+    "stress": 0,
+    "returncode": 0,
+    "elapsed_s": 21.232855470000004,
+    "log_sha256": "936076236442f6fa74a4d232193fb79ca90be52750c6d21fe06d7f7635741935",
+    "build": "/mnt/c/Users/Иван/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t104-rtl-resume/experiments/t104-rtl-resume/.build/physical-pads-1791824074185041170",
+    "pad_test": {
+      "requests": 5,
+      "max_response_ns": 1210.0
+    }
+  }
+]
