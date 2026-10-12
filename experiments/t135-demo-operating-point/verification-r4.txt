@@ -1,0 +1,23 @@
+T135 r4 addressed verification, 12.10.2026
+Command: python -B experiments/t135-demo-operating-point/verify-r4.py
+Theory parent: 5147d0d360e7483fb421c9b5d11ff96ac216ef78
+Engineer: 99c0a4147048da57c8b59f6a2d4cfd5183cbcf0f
+Instructions: 8d85fe3d6ea3b3fb99a8e36600ecbfda43dbfc23
+
+.................................
+----------------------------------------------------------------------
+Ran 33 tests in 0.128s
+
+OK
+selected_r3_original U 0.000983050530493263 slack% 1.694946950673694 quiet% 16.75870233785255 mission% 17.484320679283904 timer_bits 34
+one_stage_h180_original U 0.00098230336145126 slack% 1.7696638548739823 quiet% 17.24644117792742 mission% 17.976400999934746 timer_bits 34
+longer_holds_180_360_original U 0.00098230336145126 slack% 1.7696638548739823 quiet% 17.689754030362337 mission% 19.161540021570943 timer_bits 35
+FAST_same_service_original U 0.0009663250858468329 slack% 3.367491415316715 quiet% 47.27262913315836 mission% 47.27262913333805 timer_bits 34
+existing_demo_250_50 U 0.0006354033713142243 slack% 36.459662868577574 quiet% 16.732362218504477 mission% 17.070516207668238 timer_bits 34
+floor 0.0009662748477153885 margin_ceiling% 3.3725152284611544
+T135 r4 report reproduced byte-for-byte.
+T135 r4: 33 addressed tests passed (25 historical + 8 new).
+Integrated bounds.calculate() repeated read-only at 99c0a41; report-r4 byte-identical.
+Selected risk/calendar/resources equal r3 exactly; only bounded recovery tails added to price.
+14 accepted sources, 10 historical T135 files and 3 address-contract sources unchanged.
+Five predeclared rows only; no RTL/STA/PDR/physical campaign; complete hardware acceptance remains open.
