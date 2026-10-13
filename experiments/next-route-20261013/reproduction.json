@@ -1,0 +1,108 @@
+{
+  "task": 146,
+  "all_pass": true,
+  "new_assertions": 130,
+  "final_addressed_checks": 51,
+  "abstract_ARM_histories": 8192,
+  "route_substitutions": 15,
+  "potentials_and_joint_channel_checks": 28,
+  "T95_checks": 71,
+  "T88_unittests": 12,
+  "T90_unittests": 10,
+  "no_hardware_or_independent_review_claim": true,
+  "report_sha256": {
+    "arm-report.json": "f06631b57ae46bd41486be6f98b0808524f3d7056106117f2c1ef884e1f548af",
+    "route-report.json": "e4b3b80a751c2076de516c447c52eeaaf66abac89be70045549f83fde941428f",
+    "potential-report.json": "d3b6d68f7d556f0f9ab81f65165a2e8f483b0f283f8b7b16d88778eef4c88d3a",
+    "final-report.json": "042d4640c4760aca4711a705d0c8e4b46c12d47be898e6805f4c2c056b7708a6"
+  },
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/next-route-20261013/arm_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: arm-report.json reproduced byte-for-byte; 16 checks, 8192 abstract histories\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/next-route-20261013/route_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 35,\n  \"rows\": 15,\n  \"byte_match\": true,\n  \"fixed_lower_percent\": \"33.676261830923\",\n  \"fixed_witness_upper_percent\": \"47.135788025679\",\n  \"recommended_risk_upper\": \"0.000946196859757\",\n  \"risk_relative_margin_percent\": \"5.380314024306\",\n  \"recommended_paid_mission_percent\": \"6.412824349269\",\n  \"recommended_paid_quiet_percent\": \"0.799880588728\",\n  \"recommended_gain_lower\": \"5.251393145481\",\n  \"remaining_bus_percentage_points\": \"0.322428016916\",\n  \"full_bus_percent\": \"10.412824349269\",\n  \"full_peak_percent\": \"60.960422074429\",\n  \"app_delay_us\": \"0.794234303563\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/next-route-20261013/potential_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 28,\n  \"byte_match\": true,\n  \"historical_Gideal\": \"7.242959917732\",\n  \"A2_diagnostic_Gideal\": \"5.866893053810\",\n  \"R0A_witness_Gideal\": \"368.078163729905\",\n  \"R0A_oracle_mission_percent_lower\": \"0.583183206014\",\n  \"R0A_oracle_mission_percent_upper\": \"0.583206566709\",\n  \"R0A_declared_fixed_oracle_gain_lower\": \"80.821771763702\",\n  \"R0A_declared_fixed_oracle_gain_upper\": \"80.825009258701\",\n  \"post_window_sufficient_s\": \"1.018929\",\n  \"post_window_next_test_failure_s\": \"1.018930\",\n  \"joint_at_delay_endpoint_mission_percent\": \"6.412828100447\",\n  \"joint_at_delay_endpoint_quiet_percent\": \"0.799884756704\",\n  \"joint_at_delay_endpoint_gain_lower\": \"5.251390073683\",\n  \"anchor_dilated_outage_cap\": \"0.004169828077\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/next-route-20261013/final_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 51,\n  \"byte_match\": true,\n  \"N\": \"5.25\",\n  \"ARM\": {\n    \"literal_B_upper_ns_floor\": \"1672.481575487\",\n    \"preparation_B_upper_s_floor\": \"44.999997041735\",\n    \"non_hold_tail_upper_ns\": \"6675.537049025\",\n    \"expiry_tail_upper_ns\": \"1369.513680\",\n    \"preparation_margin_s_lower\": \"89.997994083470\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/t95-method-regime-map/verify.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 71,\n  \"P0_s\": \"0.155683181000\",\n  \"class_price_percent_lower\": \"33.676261830923\",\n  \"tail_risk_lower\": \"0.001605460011\",\n  \"rows\": [\n    {\n      \"name\": \"anchor\",\n      \"risk_upper_decimal\": \"0.000948089707\",\n      \"normal_price_percent_upper\": \"0.287444409986\",\n      \"fixed_M\": 111229285,\n      \"fixed_percent_upper\": \"47.135788025679\",\n      \"class_gain_decimal_lower\": \"117.157476\",\n      \"from_start_S_risk_decimal\": \"0.000756299276\",\n      \"S_full_price_percent_upper\": \"71.440000014392\",\n      \"ERR_model_risk_decimal\": \"0.000984744788\",\n      \"ERR_model_price_percent_upper\": \"14.738827447440\"\n    },\n    {\n      \"name\": \"control\",\n      \"risk_upper_decimal\": \"0.000998552592\",\n      \"normal_price_percent_upper\": \"0.208179834174\",\n      \"fixed_M\": 146959644,\n      \"fixed_percent_upper\": \"35.675644396705\",\n      \"class_gain_decimal_lower\": \"161.765244\",\n      \"from_start_S_risk_decimal\": \"0.000728792537\",\n      \"S_full_price_percent_upper\": \"50.011000010106\",\n      \"ERR_model_risk_decimal\": \"0.000998272867\",\n      \"ERR_model_price_percent_upper\": \"7.264644927077\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/t88-dstar-sensitivity",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.129s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/t90-monitor-physical/run.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "T90: two exact T88 rows, four addressed hypotheses, tests and source pins OK.\nReal monitors: full contract NOT confirmed; see outputs/tables.md and INTERFACE.md.\n",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
