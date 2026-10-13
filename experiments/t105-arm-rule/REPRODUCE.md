@@ -1,5 +1,31 @@
 # Повтор T105
 
+## Новый startup-пакет (после0871ef5)
+
+В обычную команду добавлены startup_check.py и startup_host_check.py:
+дважды собирается startup.elf; фактические ARM-инструкции выполняются с
+явной эмуляцией CP15/PS registers; независимый decoder проверяет все
+L1/L2 mappings.5 Tcl-исходов,28 ISA-исходов и3 мутации;7 новых unit tests,
+всего33. Host Tcl исполняется через установленную libtcl8.6 (здесь8.6.17),
+без подключения JTAG, без Vivado и без аппаратных записей. На новом Linux
+нужна libtcl8.6; отсутствие библиотеки — явная ошибка, тест не пропускается.
+
+```sh
+python3 experiments/t105-arm-rule/startup_check.py
+python3 experiments/t105-arm-rule/startup_host_check.py
+python3 -m unittest discover -s experiments/t105-arm-rule -p test_startup.py
+```
+
+Адресный повтор занимает несколько секунд хоста; это не время ARM.
+Предварительно нужны build_firmware.py и закреплённые .tools/analysis.
+Полный повтор ниже использует их автоматически. startup_host.tcl только
+определяет процедуру; воспроизведение НИКОГДА не связывает callbacks с
+аппаратурой. Физический запуск не назначен. Условия реального будущего
+загрузчика и qualified-switch перечислены в STARTUP.md, не предполагаются
+выполненными по успеху эмулятора. Runtime C0 конфигурация не меняется.
+
+## Прежняя проверка конечности (0871ef5)
+
 Текущий первый выход к16.10 добавляет `service_work.py` (проверка рангов
 закреплённого ELF), `service_progress.py` (индукция actual-mailbox,
 две мутации и6 AXI-stall traces), `service_budget.py` (UNKNOWN-safe ledger),
