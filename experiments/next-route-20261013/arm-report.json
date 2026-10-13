@@ -1,0 +1,62 @@
+{
+  "task": 146,
+  "part": "A",
+  "engineer_sha": "e8b1225fe71ceb34bb3684a6b8890c8f1f3adb67",
+  "scope": "conditional mathematical contract and abstract regressions, NOT ARM WCET/RTL proof",
+  "ns_exact": {
+    "history": "531869457677237/102498975000",
+    "external": "50313/625",
+    "certificate": "300253/500",
+    "calendar": "18712687/25000",
+    "fixed": "6783932061251/1024989750",
+    "literal_two_round_B": "3465965438749/2049979500",
+    "literal_capture_plus_compute_limit": "3465965438749/1024989750",
+    "hold_min": "450000000052499/5000",
+    "install_slack": "102501/5000",
+    "conditional_maturity_B_NOT_authorized": "224999999974999/5000",
+    "summary_count_interval_cap": "214746217215103/2500",
+    "pair_min": "225000000076249/2500",
+    "existing_tail_bound": "136098891122479/20499795000",
+    "trace_arithmetic_residual_NOT_CPU_WCET": "144998648749/2049979500"
+  },
+  "ns_display": {
+    "literal_two_round_B": 1690.7317554877989,
+    "conditional_maturity_B_NOT_authorized": 44999999994.9998,
+    "existing_tail_bound": 6639.036689024402
+  },
+  "checks": {
+    "pinned_constants": true,
+    "finite_summary_at_maturity_bound": true,
+    "literal_limit_boundary": true,
+    "zero_cpu_trace_is_not_wcet": true,
+    "one_ms_preserves_maturity_not_literal_reaction": true,
+    "summary_equals_raw_exhaustive_8192": true,
+    "pair_equality_and_next_tick": true,
+    "long_summary_rejected_not_free_fast": true,
+    "freeze_same_edge_veto_stale_generation_maturity": true,
+    "snapshot_boundary_invalidates_old_permission": true,
+    "last_recovery_absolute_deadline": true,
+    "persistent_certificate_no_periodic_cpu_refresh": true,
+    "late_delivery_counterexample_30s": true,
+    "cpu_time_must_not_reload_timer": true,
+    "generation_timestamp_sequence_not_wrapped": true,
+    "recovery_and_exit_tail_within_existing_allowance": true
+  },
+  "check_count": 16,
+  "abstract_histories": 8192,
+  "accepted_r4_unchanged": {
+    "U_Q_upper": ".000983050530494",
+    "whole_bus_mission_upper_percent": "17.484321",
+    "conditional_on": "same scientific/timing assumptions; maturity substitution requires explicit disposition"
+  },
+  "source_sha256": {
+    "rule.h": "f281f370332de201af89b314b5cf9dca68dd39ae3bb626176a755d6bec1a4b8b",
+    "rule.c": "bf27728f7735a94bd1e9ef7586d4ff78323c6c93faa4c874ea788135fa27a933",
+    "batch.c": "2d1e7253b9ede2f8133492c117e77edbfb4a4da82be73729fc87275025ec4186",
+    "history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "interval_link.sv": "b01b708fbda4c4fba114f9d9fe404dca15ea250e35003e88cb08bfe4254827a5",
+    "interval_guard.sv": "a090a61fc21ef0a104c32a959f9e01f88901e18c0cef2c14b9427313825022b1",
+    "arm_executor.sv": "08a504716be56449f31e4c99b66a77f50e9d11a346d046f14cb59db723594285",
+    "batch_budget.py": "b09b4bd2e1d039b979cacc9a4936bc4c2138c80c8f8cd5edfd1faa5e533d2133"
+  }
+}
