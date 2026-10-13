@@ -1,0 +1,86 @@
+T140 deterministic verification, 2026-10-13
+Base: 3a8720ac389ffb9666eecedf7060f398d466b34e
+Accepted preflight and 8 source blobs checked; no accepted outputs written.
+
+--- t57 ---
+test_affine_exposure_and_remainder_monotonicity (__main__.T57Checks.test_affine_exposure_and_remainder_monotonicity) ... ok
+test_exposure_budget_is_additive_on_adaptive_partition (__main__.T57Checks.test_exposure_budget_is_additive_on_adaptive_partition) ... ok
+test_mark_weight_without_word_independence (__main__.T57Checks.test_mark_weight_without_word_independence) ... ok
+test_minimum_gap_includes_cycle_boundaries (__main__.T57Checks.test_minimum_gap_includes_cycle_boundaries) ... ok
+test_nonempty_symbolic_construction_regression (__main__.T57Checks.test_nonempty_symbolic_construction_regression) ... ok
+test_nonperiodic_packing_bound_at_all_extreme_windows (__main__.T57Checks.test_nonperiodic_packing_bound_at_all_extreme_windows) ... ok
+test_one_parent_can_appear_in_two_cycle_counts (__main__.T57Checks.test_one_parent_can_appear_in_two_cycle_counts) ... ok
+test_pending_arrival_can_be_erased_without_count (__main__.T57Checks.test_pending_arrival_can_be_erased_without_count) ... ok
+test_period_change_has_old_period_word_age (__main__.T57Checks.test_period_change_has_old_period_word_age) ... ok
+test_positive_growth_lower_integral_against_piecewise_formula (__main__.T57Checks.test_positive_growth_lower_integral_against_piecewise_formula) ... ok
+test_quantized_affine_weights_bound_exact_phases (__main__.T57Checks.test_quantized_affine_weights_bound_exact_phases) ... ok
+test_residual_phase_integral (__main__.T57Checks.test_residual_phase_integral) ... ok
+test_service_curve_supports_fifo_completion_bound (__main__.T57Checks.test_service_curve_supports_fifo_completion_bound) ... ok
+test_token_domination_on_small_transition_trace (__main__.T57Checks.test_token_domination_on_small_transition_trace) ... ok
+test_uniform_integral_uses_reads_not_busy_sum (__main__.T57Checks.test_uniform_integral_uses_reads_not_busy_sum) ... ok
+test_xor_cancellation_requires_coupling_break (__main__.T57Checks.test_xor_cancellation_requires_coupling_break) ... ok
+test_all_good_extremes_install_and_accept_in_finite_arithmetic (__main__.T57ReviewCorrectionChecks.test_all_good_extremes_install_and_accept_in_finite_arithmetic) ... ok
+test_dyadic_exposure_error_and_fixed_memory (__main__.T57ReviewCorrectionChecks.test_dyadic_exposure_error_and_fixed_memory) ... ok
+test_fixed_term_log_enclosure_independently (__main__.T57ReviewCorrectionChecks.test_fixed_term_log_enclosure_independently) ... ok
+test_guard_boundary_is_exact_not_float_tolerance (__main__.T57ReviewCorrectionChecks.test_guard_boundary_is_exact_not_float_tolerance) ... ok
+test_integer_H_keeps_A_and_B_bit_bounds (__main__.T57ReviewCorrectionChecks.test_integer_H_keeps_A_and_B_bit_bounds) ... ok
+test_numerical_precision_failure_has_no_strong_price (__main__.T57ReviewCorrectionChecks.test_numerical_precision_failure_has_no_strong_price) ... ok
+test_probability_is_capped_at_one (__main__.T57ReviewCorrectionChecks.test_probability_is_capped_at_one) ... ok
+test_rational_H_bit_bounds_cover_dyadic_and_odd_denominators (__main__.T57ReviewCorrectionChecks.test_rational_H_bit_bounds_cover_dyadic_and_odd_denominators) ... ok
+test_rational_H_review_counterexample_has_valid_bit_bound (__main__.T57ReviewCorrectionChecks.test_rational_H_review_counterexample_has_valid_bit_bound) ... ok
+test_reference_finite_certificate_has_proved_precision_and_margin (__main__.T57ReviewCorrectionChecks.test_reference_finite_certificate_has_proved_precision_and_margin) ... ok
+test_reserve_promise_survives_numerical_failure_after_long_action (__main__.T57ReviewCorrectionChecks.test_reserve_promise_survives_numerical_failure_after_long_action) ... ok
+test_review_counterexample_is_covered (__main__.T57ReviewCorrectionChecks.test_review_counterexample_is_covered) ... ok
+test_safe_skip_failure_and_late_update_do_not_claim_good_block_price (__main__.T57ReviewCorrectionChecks.test_safe_skip_failure_and_late_update_do_not_claim_good_block_price) ... ok
+test_undercount_requires_risk_allocation_but_not_double_payment (__main__.T57ReviewCorrectionChecks.test_undercount_requires_risk_allocation_but_not_double_payment) ... ok
+test_whole_horizon_undercount_paid_once_not_per_block (__main__.T57ReviewCorrectionChecks.test_whole_horizon_undercount_paid_once_not_per_block) ... ok
+test_zero_length_margin_is_not_a_positive_numerical_certificate (__main__.T57ReviewCorrectionChecks.test_zero_length_margin_is_not_a_positive_numerical_certificate) ... ok
+test_zero_lower_channel_quota_preserves_price (__main__.T57ReviewCorrectionChecks.test_zero_lower_channel_quota_preserves_price) ... ok
+test_A_and_B_witnesses_use_original_sizes_and_positive_growth (__main__.T57StrengtheningChecks.test_A_and_B_witnesses_use_original_sizes_and_positive_growth) ... ok
+test_affine_cap_matches_endpoint_infimum (__main__.T57StrengtheningChecks.test_affine_cap_matches_endpoint_infimum) ... ok
+test_affine_launch_ceiling_and_peak_barrier (__main__.T57StrengtheningChecks.test_affine_launch_ceiling_and_peak_barrier) ... ok
+test_all_four_accepted_fixed_candidates_are_preserved (__main__.T57StrengtheningChecks.test_all_four_accepted_fixed_candidates_are_preserved) ... ok
+test_all_original_1458_resource_tuples (__main__.T57StrengtheningChecks.test_all_original_1458_resource_tuples) ... ok
+test_batch_alpha_and_poisson_tail_are_certified (__main__.T57StrengtheningChecks.test_batch_alpha_and_poisson_tail_are_certified) ... ok
+test_each_parent_contributes_at_most_m_counts_across_cycles (__main__.T57StrengtheningChecks.test_each_parent_contributes_at_most_m_counts_across_cycles) ... ok
+test_exp_enclosure_against_independent_decimal (__main__.T57StrengtheningChecks.test_exp_enclosure_against_independent_decimal) ... ok
+test_integer_choice_agrees_with_small_complete_domain (__main__.T57StrengtheningChecks.test_integer_choice_agrees_with_small_complete_domain) ... ok
+test_nominal_lower_excludes_only_price_density_layer (__main__.T57StrengtheningChecks.test_nominal_lower_excludes_only_price_density_layer) ... ok
+test_old_integer_barrier_all_original_sizes (__main__.T57StrengtheningChecks.test_old_integer_barrier_all_original_sizes) ... ok
+test_old_pair_barrier_original_array (__main__.T57StrengtheningChecks.test_old_pair_barrier_original_array) ... ok
+test_original_snapshot_and_same_per_bit_scaling (__main__.T57StrengtheningChecks.test_original_snapshot_and_same_per_bit_scaling) ... ok
+test_positive_growth_threshold_and_saturation (__main__.T57StrengtheningChecks.test_positive_growth_threshold_and_saturation) ... ok
+test_predictable_whole_cycles_leave_only_two_boundary_fragments (__main__.T57StrengtheningChecks.test_predictable_whole_cycles_leave_only_two_boundary_fragments) ... ok
+test_prospective_cells_cover_word_lifetime_and_bound_transition (__main__.T57StrengtheningChecks.test_prospective_cells_cover_word_lifetime_and_bound_transition) ... ok
+test_reference_launch_usefulness_and_resource (__main__.T57StrengtheningChecks.test_reference_launch_usefulness_and_resource) ... ok
+test_reference_positive_growth_domain_and_failure (__main__.T57StrengtheningChecks.test_reference_positive_growth_domain_and_failure) ... ok
+test_reference_tax_compares_upper_to_fixed_lower (__main__.T57StrengtheningChecks.test_reference_tax_compares_upper_to_fixed_lower) ... ok
+test_scalar_exposure_lower_on_entire_action_range (__main__.T57StrengtheningChecks.test_scalar_exposure_lower_on_entire_action_range) ... ok
+test_squared_exposure_cost_uses_same_partition (__main__.T57StrengtheningChecks.test_squared_exposure_cost_uses_same_partition) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 1.127s
+
+OK
+
+--- t58 ---
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.470s
+
+OK
+
+--- t126 ---
+................................
+----------------------------------------------------------------------
+Ran 32 tests in 0.002s
+
+OK
+
+--- t140 (final) ---
+T140 report byte-identical; accepted source blobs verified
+................
+----------------------------------------------------------------------
+Ran 16 tests in 0.452s
+
+OK
