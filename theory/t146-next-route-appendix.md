@@ -502,5 +502,5 @@ X≤100нс+.0011t/атом45нс. В пике идеальный lower aB=24468
   Counting Fireflies: .25-с изображения ASC и бортовой счёт следов; среда Юпитера,
   не R0-A. Это сообщение команды об инструменте, не численная матрица отклика.
 - **[J2] STScI ACS Data Handbook§4.3**, [Dark Current, Hot Pixels, and Cosmic Rays](https://hst-docs.stsci.edu/acsdhb/chapter-4-acs-data-processing-considerations/4-3-dark-current-hot-pixels-and-cosmic-rays),
-  §4.3.3: наблюдаемые пиксели/диффузия и длинные экспозиции. Не источник
+  §4.3.5: наблюдаемые пиксели/диффузия и длинные экспозиции. Не источник
   оперативного секундного канала или независимого закона его счёта.
