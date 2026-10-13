@@ -1,0 +1,84 @@
+{
+  "task": 146,
+  "all_pass": true,
+  "new_assertions": 51,
+  "abstract_ARM_histories": 8192,
+  "route_substitutions": 15,
+  "T95_checks": 71,
+  "T88_unittests": 12,
+  "T90_unittests": 10,
+  "no_hardware_or_independent_review_claim": true,
+  "report_sha256": {
+    "arm-report.json": "f06631b57ae46bd41486be6f98b0808524f3d7056106117f2c1ef884e1f548af",
+    "route-report.json": "e4b3b80a751c2076de516c447c52eeaaf66abac89be70045549f83fde941428f"
+  },
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/next-route-20261013/arm_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: arm-report.json reproduced byte-for-byte; 16 checks, 8192 abstract histories\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/next-route-20261013/route_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 35,\n  \"rows\": 15,\n  \"byte_match\": true,\n  \"fixed_lower_percent\": \"33.676261830923\",\n  \"fixed_witness_upper_percent\": \"47.135788025679\",\n  \"recommended_risk_upper\": \"0.000946196859757\",\n  \"risk_relative_margin_percent\": \"5.380314024306\",\n  \"recommended_paid_mission_percent\": \"6.412824349269\",\n  \"recommended_paid_quiet_percent\": \"0.799880588728\",\n  \"recommended_gain_lower\": \"5.251393145481\",\n  \"remaining_bus_percentage_points\": \"0.322428016916\",\n  \"full_bus_percent\": \"10.412824349269\",\n  \"full_peak_percent\": \"60.960422074429\",\n  \"app_delay_us\": \"0.794234303563\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/t95-method-regime-map/verify.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 71,\n  \"P0_s\": \"0.155683181000\",\n  \"class_price_percent_lower\": \"33.676261830923\",\n  \"tail_risk_lower\": \"0.001605460011\",\n  \"rows\": [\n    {\n      \"name\": \"anchor\",\n      \"risk_upper_decimal\": \"0.000948089707\",\n      \"normal_price_percent_upper\": \"0.287444409986\",\n      \"fixed_M\": 111229285,\n      \"fixed_percent_upper\": \"47.135788025679\",\n      \"class_gain_decimal_lower\": \"117.157476\",\n      \"from_start_S_risk_decimal\": \"0.000756299276\",\n      \"S_full_price_percent_upper\": \"71.440000014392\",\n      \"ERR_model_risk_decimal\": \"0.000984744788\",\n      \"ERR_model_price_percent_upper\": \"14.738827447440\"\n    },\n    {\n      \"name\": \"control\",\n      \"risk_upper_decimal\": \"0.000998552592\",\n      \"normal_price_percent_upper\": \"0.208179834174\",\n      \"fixed_M\": 146959644,\n      \"fixed_percent_upper\": \"35.675644396705\",\n      \"class_gain_decimal_lower\": \"161.765244\",\n      \"from_start_S_risk_decimal\": \"0.000728792537\",\n      \"S_full_price_percent_upper\": \"50.011000010106\",\n      \"ERR_model_risk_decimal\": \"0.000998272867\",\n      \"ERR_model_price_percent_upper\": \"7.264644927077\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/t88-dstar-sensitivity",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.215s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "experiments/t90-monitor-physical/run.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "T90: two exact T88 rows, four addressed hypotheses, tests and source pins OK.\nReal monitors: full contract NOT confirmed; see outputs/tables.md and INTERFACE.md.\n",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
