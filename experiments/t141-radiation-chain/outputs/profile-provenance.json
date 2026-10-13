@@ -1,0 +1,56 @@
+{
+  "input": {
+    "fingerprint": {
+      "raw_sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50",
+      "kernel_code_sha256": "d6f19199718a385149b755d62d6cac139ad1275223fdd733e2f776daae43d3bb",
+      "transport_sha256": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45",
+      "sigma_sha256": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+      "sigma_module_sha256": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+      "config_sha256": "b4ad9359ba050c8215ea4f8da2906d6888b0d3258289ca4892a9524bf0caf59b",
+      "pstar_sha256": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9"
+    },
+    "n": 4365792,
+    "dt_s": 300,
+    "arrays_sha256": {
+      "bands.npy": "8f90fa5773d75cc0aa5ce836bd3478fddb5d6fd96cd1c9e0d4752e0e65529189",
+      "flux30.npy": "7a4efdd5dc91a7b06507955af2db34ba61e296ad7f339a44dbd34280586a33f9"
+    },
+    "lookup_relative_upper": 1.811954557643872e-05,
+    "lookup_scope": "positive discrete quadrature only; not response/transport/physical uncertainty"
+  },
+  "code_sha256": "e11f986a6656dc8a70e1c4e9c16a970a1f6982f10f5191b63b9db0771fcc51f2",
+  "conditions_sha256": "b65e215e07a0877d27ea4514e092c6016b53c292600ac8d84b669cd65f9ef66d",
+  "shared_code_sha256": {
+    "chain.py": "0590d62ad9707fa917fc7e2b19c6b74e2586aeb79bac92ca13dfe0b36860ddc2",
+    "calculate.py": "191eb42bb629e54703325ea34e9054b6b336b0176217ba76e7256ebdcd9badcb",
+    "config.json": "b4ad9359ba050c8215ea4f8da2906d6888b0d3258289ca4892a9524bf0caf59b"
+  },
+  "analysis_code_sha256": "de872a4cdc30031ea2c46d8fed2ee6adc59566f97569ef2cdb6dbcde4c0e73c4",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "scipy": "1.18.1",
+  "random_generator": "PCG64",
+  "seed": 2026101301,
+  "missions_per_case": 20000,
+  "nominal_events": 131,
+  "legacy_event_S2_max_relative_difference": 1.732560589299522e-09,
+  "spectral_bands_are_not_pure_mechanism_labels": true,
+  "HI_time_model": "r times H excess, r from COSRAD peak ratio; a transfer assumption, not measured ions",
+  "calendar": "whole empirical events packed disjointly into T; remaining time uses off-mask moments",
+  "rare_tail_coverage": null,
+  "physical_joint_quantile": null,
+  "compact_inputs_sha256": {
+    "experiments/tNN-sepem-profiles/outputs/events.csv": "cb0c9bf29963002342bda99a0851743a7bc432b17703275faf2775d2a0f511e8",
+    "experiments/t127-cy62167-pdi/outputs/population.json": "37b6f537eee7ef6d190fde4c7f2326aed7f55b5b934fc3fa7f27cfacd673989a"
+  },
+  "outputs_sha256": {
+    "cycle-windows.csv": "521b23e7c9bcfcfd659835ef3b93bc0ec193bacd8b716c0e7eb63c9b7369ad82",
+    "profile-background.csv": "aa8af57d671ba77f25c6af6b6b03d4a2018b9481b41d0b4aa5612918fa97a837",
+    "profile-events.csv": "292f5d4eca4f069a782ec9e0a68e8dd37879c919749323b355bd370c86bc9fa0",
+    "profile-missions.csv": "947b32cee6dafaf885bbe52a0ad5c0da7092cb6f6a7ded13d8fc952269547153",
+    "profile-sensitivity.csv": "ebbe0b4a02374749db884bf60fe4dd5e3ed5a7d93442b34a0f267d8ed526788e",
+    "segmentation.csv": "bb3dabb0d9e787939aa5c9a57b3e86efab0c09b4bf8d89be00e923f7752e2945",
+    "shape-transfer.csv": "088ea8f65b5cade5b20d9ac68bcf772e82904c7b6173d7b8c6fa735368a33ace"
+  }
+}

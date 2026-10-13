@@ -1,0 +1,45 @@
+{
+  "accepted_base": "3a8720ac389ffb9666eecedf7060f398d466b34e",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1",
+  "inputs_sha256": {
+    "experiments/t68-v21-inputs/inputs/cosrad_main/gl_x.txt": "7e507a77a5b1d7e3ae7e0e0c0c87ed9d87dc6a3b220d7b72b762b5d21ae72c02",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/gp_x.txt": "c757eaef5f613b2714e0c54d889b3e32faa443b2d43c9084cf10a4c5638968e8",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/sfn.txt": "89e27e63de8ec6b554e5e42448a827a949722a2518a290a688d8fb333d91c6e0",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/sfxm.txt": "0fdf380e4b912dcbfa89d66187624e07e5e5f994da18993c5035d35aa8d7923a",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/sl_x.txt": "dbd44c3322293e9bb2238343af38ba08032e1a184da5cb2021942e86ac702350",
+    "experiments/t68-v21-inputs/inputs/cosrad_main/sp_x.txt": "1d6e2536011f41bbb74189a2730cb1eaa9102aa1fec42a6b10d4e8b32fbcc57a",
+    "experiments/t68-v21-inputs/inputs/calc_v18.zip": "14ac38ff24c1bf1a199278f08a7c807176b8b613f434719309050248b8929b83",
+    "experiments/t68-v21-inputs/inputs/article-cy62167-v21.docx": "1de5ee1f05e5e2355928f5ff4d1a221d2e8cb9e7bfef86e2bd31aebbe0655385",
+    "experiments/t68-v21-inputs/source_inputs.json": "e1e948c6a07818f7de825b0f3a22baf7e969a8ad77d295976ab3728d5efe8e38",
+    "experiments/tNN-sepem-profiles/transport.py": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45",
+    "experiments/tNN-sepem-profiles/gost.py": "cb8cceef2a51e110d59b171a7e64d3912ff2d804945c59db00971f8d77c12a28",
+    "experiments/tNN-sepem-profiles/inputs/nist_pstar_al.csv": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9",
+    "experiments/tNN-sepem-profiles/inputs/gost_selected_coefficients.csv": "8b2f0727d1a0331c44f47693077958392e941fee4546590f28571694cef19014",
+    "experiments/tNN-sepem-profiles/config.json": "ea3a35809cd10e54be7cc01e54462bf30eb0aace475e0d61c9b3b4d883c9f36a",
+    "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+    "experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+    "experiments/t127-cy62167-pdi/outputs/shield-conditional.csv": "c34a0b83f140ca956b84f2c3750894319df6ccccfd7b60778e27fa8690a4390d",
+    "experiments/t127-cy62167-pdi/outputs/inputs-126.json": "2b8e1bd80b8af80e849cd8098f69e9bc45002fbde1754e0aa2c89b10d990616d",
+    "experiments/t113-onset-growth/outputs/handoff.json": "6a0289586b44d773ae244aedbe9ae3a853c90bc7e7110964bca9ca3426ce3d7b",
+    "experiments/t126-regime-map/ANCHORS.md": "d26061f2dd819b657aae0115ab701c6f9d51e6cd87e660bd07aec9cd9230ed0e",
+    "theory/t73-burst-mode-count-inputs.json": "1ee101815fd7f388213a4c69e8aaac9ff5c36eca6ce3b42560e917a3ddbfbc20"
+  },
+  "code_sha256": {
+    "chain.py": "0590d62ad9707fa917fc7e2b19c6b74e2586aeb79bac92ca13dfe0b36860ddc2",
+    "calculate.py": "191eb42bb629e54703325ea34e9054b6b336b0176217ba76e7256ebdcd9badcb",
+    "config.json": "b4ad9359ba050c8215ea4f8da2906d6888b0d3258289ca4892a9524bf0caf59b",
+    "conditions.json": "b65e215e07a0877d27ea4514e092c6016b53c292600ac8d84b669cd65f9ef66d"
+  },
+  "output_sha256": {
+    "discrepancies.csv": "c780c7386599125293aa64a3d5c0deb83d70bf41f6ea1283ef0ca90b8d626054",
+    "components.csv": "ccc525abc8ae8bb7194fe78cae9a3b095e5de3148614eba0709d62ecaedfff57",
+    "shield-summary.csv": "1b86103f00d8bd18bcfd4e3a7324351275d4d4359f487622af891c7ce50b69f0",
+    "cross-terms.csv": "7ea86fe3238d69532b23fd1304955b0f1d0623e7726bf3aad15208e9dba66282",
+    "sensitivity.csv": "2f6a54dbccd33485d4741dc76d995fad255108b9e59fea0b1d44f2afce09c7cc",
+    "spectra-transfer.csv": "e055421c033178ef4f843626d9ee47b34e7aa7d3870deb63ea941c471f2dfb93",
+    "Teff-by-species.csv": "8a09a79eebae624b8e273d4981b960e146d49d4822d52868a0034de06af07dda",
+    "contract.json": "3060378a71e650b1fb9f404e01d1b638d51819b46d8394b93dfd9cca67441f46"
+  }
+}

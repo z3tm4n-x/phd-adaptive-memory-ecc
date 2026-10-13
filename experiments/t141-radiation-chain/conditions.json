@@ -1,0 +1,142 @@
+[
+  {
+    "id": "C01",
+    "condition": "Входные байты совпадают с паспортами закреплённой базы",
+    "basis_type": "SOURCE",
+    "source": "T68/source_inputs.json; T127/DATA_PASSPORT.md; SEPEM/DATA_PASSPORT.md",
+    "verification_status": "CHECKED_FOR_USED_INPUTS",
+    "verification_artifact": "outputs/provenance.json; outputs/checks.json; outputs/profile-provenance.json",
+    "dependent_claim": "Воспроизведение чисел этой поставки",
+    "on_violation": "Остановить воспроизведение, новая версия входов требует нового расчёта"
+  },
+  {
+    "id": "C02",
+    "condition": "Энергия σH задана после Al, перед BEOL, отклик уже включает тестовый BEOL",
+    "basis_type": "SOURCE_AND_ASSUMPTION",
+    "source": "Coronetti TNS 2021 DOI10.1109/TNS.2021.3061209 §II–IV, PDF 4–8; T127 паспорт",
+    "verification_status": "SOURCE_CHECKED; PACKAGE_AND_LOT_TRANSFER_UNKNOWN",
+    "verification_artifact": "DATA_PASSPORT.md; test_chain.py:test_no_double_transport",
+    "dependent_claim": "Применимость энергетической свёртки H",
+    "on_violation": "Заменить оператор отклика; не добавлять второй BEOL к измеренной σ"
+  },
+  {
+    "id": "C03",
+    "condition": "Поток omni/per_sr, LET/energy и data32/full38 нормированы однократно",
+    "basis_type": "SOURCE_AND_OWN_RESULT",
+    "source": "Заголовки COSRAD; README RDSv2; Spectrum/fold",
+    "verification_status": "CHECKED_NUMERICALLY",
+    "verification_artifact": "test_chain.py; outputs/discrepancies.csv",
+    "dependent_claim": "Единицы и масштаб λ,N,S2",
+    "on_violation": "Пересчитать λ,N линейно, S2 квадратично; прежние числа недействительны"
+  },
+  {
+    "id": "C04",
+    "condition": "Исключительный LET-остаток не включает уже посчитанные протоны; He повторно не добавлен",
+    "basis_type": "UNKNOWN_AND_ASSUMPTION",
+    "source": "COSRAD gl_x/sl_x не разделены по видам; параметр q_LET",
+    "verification_status": "BOOKKEEPING_CHECKED; PHYSICAL_PARTITION_UNKNOWN",
+    "verification_artifact": "chain.py:validate_components; outputs/sensitivity.csv exclusive_LET_fraction",
+    "dependent_claim": "Сумма без повторного учёта одного канала",
+    "on_violation": "Оставить q_LET параметром; q=1 служит только конвертом неотрицательного остатка при заявленном покрытии"
+  },
+  {
+    "id": "C05",
+    "condition": "Полная протонная σ разделена на непересекающиеся энергии <5 и ≥5 MeV",
+    "basis_type": "OWN_RESULT",
+    "source": "PROTON/sigma_bit_experimental.csv; main_loglog",
+    "verification_status": "CHECKED; MECHANISM_FRACTIONS_WITHIN_BANDS_UNKNOWN",
+    "verification_artifact": "test_chain.py:test_partition; outputs/components.csv",
+    "dependent_claim": "Нет второго HEP поверх полной протонной кривой",
+    "on_violation": "Запретить суммирование full+low/high; названия диапазонов не считать измеренным разделением механизмов"
+  },
+  {
+    "id": "C06",
+    "condition": "Нормальная тестовая σ переносима на сферическое облучение, корпус, партию и напряжение",
+    "basis_type": "ASSUMPTION_AND_UNKNOWN",
+    "source": "TNS 2021 §IV сообщает отсутствие угловых измерений; T127 паспорт",
+    "verification_status": "NOT_ESTABLISHED",
+    "verification_artifact": "outputs/sensitivity.csv proton_geometry, sigma_scale; DATA_PASSPORT.md",
+    "dependent_claim": "Физический абсолютный λ прибора",
+    "on_violation": "Геометрический множитель и отклик остаются параметрами; численные сценарии не квалифицируют CY"
+  },
+  {
+    "id": "C07",
+    "condition": "Один положительный оператор переносит всю принятую огибающую F≤Teff p",
+    "basis_type": "ASSUMPTION",
+    "source": "T68 sfn/sfxm, contracts §2; сохранённая ошибка замыкания COSRAD SEE",
+    "verification_status": "NODE_RATIO_CHECKED; POST_SHIELD_OPERATOR_UNKNOWN",
+    "verification_artifact": "outputs/Teff-by-species.csv; outputs/spectra-transfer.csv",
+    "dependent_claim": "Консервативный условный N≤Teff p и S2",
+    "on_violation": "Teff — свободный параметр; расчётный N не объявлять измеренным/миссионным верхом"
+  },
+  {
+    "id": "C08",
+    "condition": "П=.1 покрывает совместную миссионную величину S2, включая межвидовую структуру",
+    "basis_type": "UNKNOWN",
+    "source": "ГОСТ Р 25645.165-2025 §3.8–3.9,5.1,5.6; METHOD.md",
+    "verification_status": "NOT_ESTABLISHED",
+    "verification_artifact": "outputs/contract.json design_probability; probability_release",
+    "dependent_claim": "Физическая 90%-квантиль S2 и освобождение запаса R0-A",
+    "on_violation": "physical_q90=null; сохранить осторожный условный конверт; не умножать отдельные квантили"
+  },
+  {
+    "id": "C09",
+    "condition": "События SEPEM и прогнозная популяция совпадают по полноте и сегментации",
+    "basis_type": "UNKNOWN_AND_ASSUMPTION",
+    "source": "SEPEM METHOD; T127 population.json; алгоритмические 131 события",
+    "verification_status": "COUNT_DIFFERENCE_CHECKED; POPULATION_IDENTITY_UNKNOWN",
+    "verification_artifact": "outputs/profile-missions.csv; outputs/segmentation.csv; outputs/cycle-windows.csv",
+    "dependent_claim": "Перенос эмпирической формы и bootstrap на следующие 10 лет",
+    "on_violation": "Показать 31.6/92.6/100.6 как разные модели; не масштабировать автоматически частотой"
+  },
+  {
+    "id": "C10",
+    "condition": "300-секундные бины ограничивают истинные пики и внутрибиновую дисперсию",
+    "basis_type": "UNKNOWN",
+    "source": "README RDSv2; identity S2_true=S2_bin+integral variance",
+    "verification_status": "IDENTITY_CHECKED; FINITE_VARIANCE_UPPER_UNKNOWN",
+    "verification_artifact": "test_chain.py:test_subbin; outputs/profile-sensitivity.csv",
+    "dependent_claim": "Физический верх S2 из биновой формы",
+    "on_violation": "Добавить неотрицательный неизвестный момент; без предела нет конечного физического верха"
+  },
+  {
+    "id": "C11",
+    "condition": "Восстановленные данные, ненаблюдавшиеся редкие события и цикл покрыты моделью",
+    "basis_type": "UNKNOWN",
+    "source": "RDSv2 не содержит quality mask; T127 паспорт; SILSO производные",
+    "verification_status": "NOT_ESTABLISHED",
+    "verification_artifact": "outputs/profile-sensitivity.csv; REPORT.md",
+    "dependent_claim": "Достоверность будущего хвоста",
+    "on_violation": "Интервал MC оставлять только численной погрешностью при фиксированной популяции; ввести tail-массу и амплитуду"
+  },
+  {
+    "id": "C12",
+    "condition": "Фон вне событий и общая хронология видов заданы явно",
+    "basis_type": "ASSUMPTION_AND_OWN_RESULT",
+    "source": "profiles.py; b_COSRAD+max(H-p10,0), HI proxy; METHOD.md",
+    "verification_status": "MOMENTS_CHECKED; PHYSICAL_TRANSFER_UNKNOWN",
+    "verification_artifact": "outputs/profile-events.csv; outputs/profile-missions.csv; outputs/profile-background.csv",
+    "dependent_claim": "Полная модельная ∫λ²dt с 2bN и всеми межвидовыми членами",
+    "on_violation": "Пересчитать совместную хронологию либо использовать Cauchy/peak-integral верх, не независимость"
+  },
+  {
+    "id": "C13",
+    "condition": "Полное слово, check-биты, родительские группы, D* и нижний ERR-канал установлены",
+    "basis_type": "UNKNOWN_AND_ASSUMPTION",
+    "source": "T68 contracts; PROTON ECC-off; T127 inputs-126.json",
+    "verification_status": "NOT_ESTABLISHED",
+    "verification_artifact": "outputs/contract.json physical_unresolved; outputs/sensitivity.csv check_ratio",
+    "dependent_claim": "Риск Q(T), гарантия исправления и цена управления",
+    "on_violation": "Не выводить D* или ERR из σ_bit; не переносить R0-A/А2 автоматически"
+  },
+  {
+    "id": "C14",
+    "condition": "Остаточные вторичные/хвосты отклика имеют установленный дополнительный момент",
+    "basis_type": "UNKNOWN",
+    "source": "CSDA — только первичные; агрегат LET; ограниченная энергетическая поддержка",
+    "verification_status": "NOT_ESTABLISHED",
+    "verification_artifact": "outputs/sensitivity.csv unknown_residual_S2; outputs/contract.json",
+    "dependent_claim": "Полнота физического тракта",
+    "on_violation": "Полный результат остаётся параметрическим: (sqrt(S2_covered)+sqrt(S2_unknown))²"
+  }
+]

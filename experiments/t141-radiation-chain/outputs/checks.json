@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "independent_scalar_folds": [
+    {
+      "shield_g_cm2": 3.0,
+      "band": "low",
+      "scalar_s_inv": 0.6059709428499482,
+      "production_s_inv": 0.6059709428499477,
+      "relative_difference": 9.160695225778113e-16,
+      "quad_error_diagnostic_s_inv": 6.728050047726422e-15
+    },
+    {
+      "shield_g_cm2": 3.0,
+      "band": "high",
+      "scalar_s_inv": 0.15398917508041607,
+      "production_s_inv": 0.15398917508041615,
+      "relative_difference": 5.407310403695797e-16,
+      "quad_error_diagnostic_s_inv": 1.7096232771731232e-15
+    }
+  ],
+  "historical_hash_matches": {
+    "inputs/cosrad_main/gl_x.txt": true,
+    "inputs/cosrad_main/gp_x.txt": true,
+    "inputs/cosrad_main/sfn.txt": true,
+    "inputs/cosrad_main/sfxm.txt": true,
+    "inputs/cosrad_main/sl_x.txt": true,
+    "inputs/cosrad_main/sp_x.txt": true,
+    "calc_v18.zip": true,
+    "article-cy62167-v21.docx": true
+  },
+  "complete_square_checks": [
+    {
+      "shield_g_cm2": 2.5,
+      "sum_components_s_inv": 215430.31505600028,
+      "cross_s_inv": 113970.74699369767
+    },
+    {
+      "shield_g_cm2": 3.0,
+      "sum_components_s_inv": 111494.59126391285,
+      "cross_s_inv": 60528.286961696744
+    },
+    {
+      "shield_g_cm2": 3.5,
+      "sum_components_s_inv": 64322.69986253338,
+      "cross_s_inv": 35703.910169966155
+    },
+    {
+      "shield_g_cm2": 4.0,
+      "sum_components_s_inv": 39917.98170273496,
+      "cross_s_inv": 22534.947316318096
+    }
+  ],
+  "profile_band_square_max_relative_difference": 1.1871959193735024e-15,
+  "physical_unknowns_preserved": true,
+  "source_independence": "same published inputs; separate scalar evaluator and adaptive nodes; not independent scientific review"
+}
