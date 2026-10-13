@@ -1,0 +1,15 @@
+{
+  "task": "T105", "base": "3a8720ac389ffb9666eecedf7060f398d466b34e",
+  "accepted_executor": "8ce9104462d34f6d7daede73b3346e6dfa91f19a",
+  "theory_r4": "fa4b4c150e668422e36a6c7a0e30810b26604e7c",
+  "final_check": "5ab03cd1795659b281cb518b6a06e894defead49",
+  "part": "xc7z020clg484-1", "fast_mhz": 250, "slow_mhz": 50,
+  "cpu": "cortex-a9", "cpu_hz": null, "abi": "AAPCS32 little-endian soft-float ARM",
+  "compiler_flags": ["-mcpu=cortex-a9", "-marm", "-mfloat-abi=soft", "-O2", "-std=c11", "-ffreestanding", "-fno-builtin", "-fno-common"],
+  "NW": 4500045002, "NH": 9000090002, "NR": 9015504896,
+  "PAIR_WINDOW": 22500225010, "generation_bits": 64,
+  "seed": 10520261013, "functional_random_steps": 20000,
+  "axi_diagnostic": {"data_bits": 32, "clock_mhz": 50, "history_bits": 130, "loss_transitions": 2002},
+  "limits_ns": {"candidate": 1000, "reaction": 10000, "input": 320, "output": 320, "backpressure": 100, "application": 3000},
+  "cpu_wcet_ns": null, "axi_wcet_ns": null, "integrated_top_sta": null
+}
