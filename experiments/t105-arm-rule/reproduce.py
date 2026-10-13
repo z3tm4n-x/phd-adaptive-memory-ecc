@@ -1,4 +1,4 @@
-"""One-command early checkpoint. No hardware access and no Stage G run."""
+"""One-command T105 functional/formal checkpoint; optional vendor runs."""
 import argparse, hashlib, json, platform, py_compile, subprocess, sys
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
@@ -6,9 +6,11 @@ ROOT=HERE.parents[1]
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--bootstrap',action='store_true')
-    p.add_argument('--ps7',action='store_true');p.add_argument('--repeat-binary',action='store_true');a=p.parse_args()
+    p.add_argument('--ps7',action='store_true');p.add_argument('--repeat-binary',action='store_true')
+    p.add_argument('--integration',action='store_true');p.add_argument('--full',action='store_true');a=p.parse_args()
     if a.bootstrap:subprocess.run([sys.executable,str(HERE/'setup_tools.py')],check=True)
-    for name in ('verify.py','budget.py'):
+    for name in ('verify.py','budget.py','verify_batch.py','verify_batch_rtl.py','verify_mailbox.py',
+                 'prove_interval.py','prove_join.py','build_firmware.py','batch_budget.py','package_checks.py'):
         subprocess.run([sys.executable,str(HERE/name)],check=True)
     if a.repeat_binary:
         before=hashlib.sha256((HERE/'outputs/rule-test.elf').read_bytes()).hexdigest()
@@ -21,6 +23,14 @@ def main():
     (HERE/'outputs/tests.txt').write_text(tests.stdout+tests.stderr)
     if tests.returncode:raise RuntimeError(tests.stdout+tests.stderr)
     for path in HERE.glob('*.py'):py_compile.compile(str(path),doraise=True)
+    if a.integration:
+        for phase,stress in ((0,0),(3,1),(11,2)):
+            subprocess.run([sys.executable,str(HERE/'run_integration.py'),
+                            '--phase',str(phase),'--stress',str(stress)],check=True)
+    if a.full:
+        from run_full import main as route
+        build=route()
+        subprocess.run([sys.executable,str(HERE/'collect_full.py'),str(build)],check=True)
     if a.ps7:
         out=HERE/'.build/ps7-probe'
         run=subprocess.run(['/home/z3tm4n/bin/vivado-wsl','-mode','batch','-nojournal','-nolog',
@@ -43,6 +53,6 @@ def main():
                     not any(part.startswith('.') or part=='__pycache__' for part in path.relative_to(HERE).parts)
                     and path.name!='manifest.json'}}
     (HERE/'outputs/manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('T105 early checkpoint reproduced; full timing and integrated top remain OPEN.')
+    print('T105 functional/RTL checkpoint reproduced. ARM WCET and full10us remain OPEN.')
 
 if __name__=='__main__':main()

@@ -1,0 +1,646 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Tue Oct 13 10:10:26 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_timing -from [get_ports {sram_err {sram_dq[*]}}] -to [all_registers] -delay_type min -max_paths 40 -file input_min.rpt
+| Design       : arm_board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 sram_dq[11]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.212ns  (logic 0.212ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    G19                                               0.000     0.000 r  sram_dq[11] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[11].p/IO
+    G19                  IBUF (Prop_ibuf_I_O)         0.212     0.212 r  core/data_pads[11].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.212    core/controller/backend/dq_sample_reg[15]_0[11]
+    ILOGIC_X1Y110        FDRE                                         r  core/controller/backend/dq_sample_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y110        FDRE                                         r  core/controller/backend/dq_sample_reg[11]/C
+
+Slack:                    inf
+  Source:                 sram_dq[7]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.223ns  (logic 0.223ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    G20                                               0.000     0.000 r  sram_dq[7] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[7].p/IO
+    G20                  IBUF (Prop_ibuf_I_O)         0.223     0.223 r  core/data_pads[7].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.223    core/controller/backend/dq_sample_reg[15]_0[7]
+    ILOGIC_X1Y106        FDRE                                         r  core/controller/backend/dq_sample_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y106        FDRE                                         r  core/controller/backend/dq_sample_reg[7]/C
+
+Slack:                    inf
+  Source:                 sram_dq[6]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.227ns  (logic 0.227ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    G21                                               0.000     0.000 r  sram_dq[6] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[6].p/IO
+    G21                  IBUF (Prop_ibuf_I_O)         0.227     0.227 r  core/data_pads[6].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.227    core/controller/backend/dq_sample_reg[15]_0[6]
+    ILOGIC_X1Y105        FDRE                                         r  core/controller/backend/dq_sample_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y105        FDRE                                         r  core/controller/backend/dq_sample_reg[6]/C
+
+Slack:                    inf
+  Source:                 sram_dq[10]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.229ns  (logic 0.229ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    F19                                               0.000     0.000 r  sram_dq[10] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[10].p/IO
+    F19                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  core/data_pads[10].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.229    core/controller/backend/dq_sample_reg[15]_0[10]
+    ILOGIC_X1Y109        FDRE                                         r  core/controller/backend/dq_sample_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y109        FDRE                                         r  core/controller/backend/dq_sample_reg[10]/C
+
+Slack:                    inf
+  Source:                 sram_dq[4]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.232ns  (logic 0.232ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    G16                                               0.000     0.000 r  sram_dq[4] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[4].p/IO
+    G16                  IBUF (Prop_ibuf_I_O)         0.232     0.232 r  core/data_pads[4].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.232    core/controller/backend/dq_sample_reg[15]_0[4]
+    ILOGIC_X1Y141        FDRE                                         r  core/controller/backend/dq_sample_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y141        FDRE                                         r  core/controller/backend/dq_sample_reg[4]/C
+
+Slack:                    inf
+  Source:                 sram_dq[5]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.239ns  (logic 0.239ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    G15                                               0.000     0.000 r  sram_dq[5] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[5].p/IO
+    G15                  IBUF (Prop_ibuf_I_O)         0.239     0.239 r  core/data_pads[5].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.239    core/controller/backend/dq_sample_reg[15]_0[5]
+    ILOGIC_X1Y142        FDRE                                         r  core/controller/backend/dq_sample_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y142        FDRE                                         r  core/controller/backend/dq_sample_reg[5]/C
+
+Slack:                    inf
+  Source:                 sram_dq[2]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.239ns  (logic 0.239ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.704ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.704ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    C20                                               0.000     0.000 r  sram_dq[2] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[2].p/IO
+    C20                  IBUF (Prop_ibuf_I_O)         0.239     0.239 r  core/data_pads[2].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.239    core/controller/backend/dq_sample_reg[15]_0[2]
+    ILOGIC_X1Y121        FDRE                                         r  core/controller/backend/dq_sample_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.981    -0.704    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y121        FDRE                                         r  core/controller/backend/dq_sample_reg[2]/C
+
+Slack:                    inf
+  Source:                 sram_dq[1]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.244ns  (logic 0.244ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.705ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.705ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    B19                                               0.000     0.000 r  sram_dq[1] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[1].p/IO
+    B19                  IBUF (Prop_ibuf_I_O)         0.244     0.244 r  core/data_pads[1].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.244    core/controller/backend/dq_sample_reg[15]_0[1]
+    ILOGIC_X1Y124        FDRE                                         r  core/controller/backend/dq_sample_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.980    -0.705    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y124        FDRE                                         r  core/controller/backend/dq_sample_reg[1]/C
+
+Slack:                    inf
+  Source:                 sram_dq[15]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.246ns  (logic 0.246ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.703ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.703ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A18                                               0.000     0.000 r  sram_dq[15] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[15].p/IO
+    A18                  IBUF (Prop_ibuf_I_O)         0.246     0.246 r  core/data_pads[15].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.246    core/controller/backend/dq_sample_reg[15]_0[15]
+    ILOGIC_X1Y130        FDRE                                         r  core/controller/backend/dq_sample_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.982    -0.703    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y130        FDRE                                         r  core/controller/backend/dq_sample_reg[15]/C
+
+Slack:                    inf
+  Source:                 sram_err
+                            (input port)
+  Destination:            core/controller/backend/sampled_err_reg/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.247ns  (logic 0.247ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.699ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.699ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    E21                                               0.000     0.000 r  sram_err (IN)
+                         net (fo=0)                   0.000     0.000    core/sram_err
+    E21                  IBUF (Prop_ibuf_I_O)         0.247     0.247 r  core/ep/O
+                         net (fo=1, routed)           0.000     0.247    core/controller/backend/err_in
+    ILOGIC_X1Y116        FDRE                                         r  core/controller/backend/sampled_err_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.986    -0.699    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y116        FDRE                                         r  core/controller/backend/sampled_err_reg/C
+
+Slack:                    inf
+  Source:                 sram_dq[3]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.247ns  (logic 0.247ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.704ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.704ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 r  sram_dq[3] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[3].p/IO
+    D20                  IBUF (Prop_ibuf_I_O)         0.247     0.247 r  core/data_pads[3].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.247    core/controller/backend/dq_sample_reg[15]_0[3]
+    ILOGIC_X1Y122        FDRE                                         r  core/controller/backend/dq_sample_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.981    -0.704    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y122        FDRE                                         r  core/controller/backend/dq_sample_reg[3]/C
+
+Slack:                    inf
+  Source:                 sram_dq[14]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.247ns  (logic 0.247ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.703ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.703ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    A19                                               0.000     0.000 r  sram_dq[14] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[14].p/IO
+    A19                  IBUF (Prop_ibuf_I_O)         0.247     0.247 r  core/data_pads[14].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.247    core/controller/backend/dq_sample_reg[15]_0[14]
+    ILOGIC_X1Y129        FDRE                                         r  core/controller/backend/dq_sample_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.982    -0.703    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y129        FDRE                                         r  core/controller/backend/dq_sample_reg[14]/C
+
+Slack:                    inf
+  Source:                 sram_dq[12]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.250ns  (logic 0.250ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D15                                               0.000     0.000 r  sram_dq[12] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[12].p/IO
+    D15                  IBUF (Prop_ibuf_I_O)         0.250     0.250 r  core/data_pads[12].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.250    core/controller/backend/dq_sample_reg[15]_0[12]
+    ILOGIC_X1Y143        FDRE                                         r  core/controller/backend/dq_sample_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y143        FDRE                                         r  core/controller/backend/dq_sample_reg[12]/C
+
+Slack:                    inf
+  Source:                 sram_dq[0]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.252ns  (logic 0.252ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.705ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.705ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    B20                                               0.000     0.000 r  sram_dq[0] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[0].p/IO
+    B20                  IBUF (Prop_ibuf_I_O)         0.252     0.252 r  core/data_pads[0].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.252    core/controller/backend/dq_sample_reg[15]_0[0]
+    ILOGIC_X1Y123        FDRE                                         r  core/controller/backend/dq_sample_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.980    -0.705    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y123        FDRE                                         r  core/controller/backend/dq_sample_reg[0]/C
+
+Slack:                    inf
+  Source:                 sram_dq[13]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.252ns  (logic 0.252ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    E15                                               0.000     0.000 r  sram_dq[13] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[13].p/IO
+    E15                  IBUF (Prop_ibuf_I_O)         0.252     0.252 r  core/data_pads[13].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.252    core/controller/backend/dq_sample_reg[15]_0[13]
+    ILOGIC_X1Y144        FDRE                                         r  core/controller/backend/dq_sample_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y144        FDRE                                         r  core/controller/backend/dq_sample_reg[13]/C
+
+Slack:                    inf
+  Source:                 sram_dq[8]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.270ns  (logic 0.270ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    E20                                               0.000     0.000 r  sram_dq[8] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[8].p/IO
+    E20                  IBUF (Prop_ibuf_I_O)         0.270     0.270 r  core/data_pads[8].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.270    core/controller/backend/dq_sample_reg[15]_0[8]
+    ILOGIC_X1Y107        FDRE                                         r  core/controller/backend/dq_sample_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y107        FDRE                                         r  core/controller/backend/dq_sample_reg[8]/C
+
+Slack:                    inf
+  Source:                 sram_dq[9]
+                            (input port)
+  Destination:            core/controller/backend/dq_sample_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.274ns  (logic 0.274ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        -0.697ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.697ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    E19                                               0.000     0.000 r  sram_dq[9] (INOUT)
+                         net (fo=1, unset)            0.000     0.000    core/data_pads[9].p/IO
+    E19                  IBUF (Prop_ibuf_I_O)         0.274     0.274 r  core/data_pads[9].p/IBUF/O
+                         net (fo=1, routed)           0.000     0.274    core/controller/backend/dq_sample_reg[15]_0[9]
+    ILOGIC_X1Y108        FDRE                                         r  core/controller/backend/dq_sample_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.988    -0.697    core/controller/backend/pad_be_n_reg[1]_1
+    ILOGIC_X1Y108        FDRE                                         r  core/controller/backend/dq_sample_reg[9]/C
+
+
+
+

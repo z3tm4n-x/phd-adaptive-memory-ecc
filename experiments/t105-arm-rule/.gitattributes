@@ -1,4 +1,7 @@
 * text eol=lf
 outputs/*.elf binary
+outputs/*.zip binary
 # Preserve unedited tool logs, including their trailing spaces.
 outputs/*.txt -whitespace
+outputs/io/*.rpt -whitespace
+outputs/sta/* -whitespace

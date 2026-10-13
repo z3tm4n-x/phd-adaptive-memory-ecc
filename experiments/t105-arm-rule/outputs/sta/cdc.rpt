@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Tue Oct 13 10:10:28 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_cdc -details -file cdc.rpt
+| Design       : arm_board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  ------------------------------------------
+CDC-3  Info         15  1-bit synchronized with ASYNC_REG property
+
+Source Clock: slow_raw
+Destination Clock: fast_raw
+CDC Type: Safely Timed
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)                                                                                                        Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------------------------------------------------------------------------------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/app_requests/forward.crossing/transfer/src_sendd_ff_reg/C                                            core/controller/app_requests/forward.crossing/transfer/xpm_cdc_single_src2dest_inst/syncstages_ff_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/app_responses/backward.crossing/acknowledged_reg/C                                                   core/controller/app_responses/backward.crossing/transfer/xpm_cdc_single_dest2src_inst/syncstages_ff_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/candidates/crossing/transfer/src_sendd_ff_reg/C                                                      core/controller/candidates/crossing/transfer/xpm_cdc_single_src2dest_inst/syncstages_ff_reg[0]/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/candidates/fault_cdc/src_ff_reg/C                                                                    core/controller/candidates/fault_cdc/syncstages_ff_reg[0]/D
+  5  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg/C  core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst/syncstages_ff_reg[0]/D
+  6  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/loss_cdc/src_ff_reg/C                                                                                core/controller/loss_cdc/syncstages_ff_reg[0]/D
+  7  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/rule_fault_cdc/src_ff_reg/C                                                                          core/controller/rule_fault_cdc/syncstages_ff_reg[0]/D
+  8  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/start_cdc/src_ff_reg/C                                                                               core/controller/start_cdc/syncstages_ff_reg[0]/D
+
+Source Clock: fast_raw
+Destination Clock: slow_raw
+CDC Type: Safely Timed
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)                                                                                                        Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------------------------------------------------------------------------------------------------------------  ----------------------------------------------------------------------------------------------------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/app_requests/forward.crossing/acknowledged_reg/C                                                     core/controller/app_requests/forward.crossing/transfer/xpm_cdc_single_dest2src_inst/syncstages_ff_reg[0]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/app_responses/backward.crossing/transfer/src_sendd_ff_reg/C                                          core/controller/app_responses/backward.crossing/transfer/xpm_cdc_single_src2dest_inst/syncstages_ff_reg[0]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/candidates/crossing/acknowledged_reg/C                                                               core/controller/candidates/crossing/transfer/xpm_cdc_single_dest2src_inst/syncstages_ff_reg[0]/D
+  4  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_wr_rst_ic_reg/C  core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst/syncstages_ff_reg[0]/D
+  5  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/history_fault_cdc/src_ff_reg/C                                                                       core/controller/history_fault_cdc/syncstages_ff_reg[0]/D
+  6  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  core/controller/running_cdc/src_ff_reg/C                                                                             core/controller/running_cdc/syncstages_ff_reg[0]/D
+  7  CDC-3  Info      1-bit synchronized with ASYNC_REG property      3  False Path  fault_sync/src_ff_reg/C                                                                                              fault_sync/syncstages_ff_reg[0]/D
+

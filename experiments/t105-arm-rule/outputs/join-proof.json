@@ -1,0 +1,26 @@
+{
+  "source_sha256": "08a504716be56449f31e4c99b66a77f50e9d11a346d046f14cb59db723594285",
+  "shared_contract_sha256": "00888994dc6843b6f77e2b2ee0b02deea427d3fa8a3949c3d5f2e131c61030a6",
+  "cases": [
+    {
+      "case": "actual",
+      "proved": true,
+      "counterexample": false,
+      "log_sha256": "c0043e78bab5648feaca1a025e1afa3e402c46dafac5bd0194e6ca11922db663"
+    },
+    {
+      "case": "id-mutant",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "1f575b0475afb4d5e5487f16c090468958f71de099e7e916842ddb850bc33a87"
+    },
+    {
+      "case": "third-credit",
+      "proved": false,
+      "counterexample": true,
+      "log_sha256": "bff0a12aff6314d414e54bb4450308a7cc5d706ab6fe479c8ce9be39d8d75182"
+    }
+  ],
+  "scope": "actual T105 admission/ID join; two total credits including held response",
+  "assumptions": "ordered metadata XPM FIFO and ordered E responses; separate accepted transport/chain lemmas"
+}

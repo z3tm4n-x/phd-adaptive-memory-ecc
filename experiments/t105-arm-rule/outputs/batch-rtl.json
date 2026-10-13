@@ -1,0 +1,20 @@
+{
+  "status": "actual RTL collector checked, including immutable snapshots",
+  "source_sha256": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+  "source_events": 2002,
+  "snapshot_count": 9,
+  "cases": [
+    {
+      "case": "actual",
+      "matches": true,
+      "exit": 0,
+      "log": "HISTORY_BATCH_OK\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_history_batch.sv:31: $finish called at 90200000 (1ps)\n"
+    },
+    {
+      "case": "cut-event-omitted",
+      "matches": false,
+      "exit": 1,
+      "log": "FATAL: /mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_history_batch.sv:22: collector fault at 4\n       Time: 91000  Scope: tb_history_batch\n"
+    }
+  ]
+}

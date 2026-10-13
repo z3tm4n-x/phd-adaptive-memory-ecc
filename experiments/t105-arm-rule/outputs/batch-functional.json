@@ -1,0 +1,13 @@
+{
+  "status": "functional packet/interval computation; no ARM WCET",
+  "native_packets": 20019,
+  "represented_raw_events": 91300,
+  "ARM_packets": 512,
+  "internal_recovery_mutant_rejected": true,
+  "invalid_packets_rejected": 8,
+  "packet_bytes": 96,
+  "state_bytes": 72,
+  "decision_bytes": 32,
+  "cpu_wcet_ns": null,
+  "ELF_sha256": "80ed73becba18a3afd5b7ba42d9c936a8651cbeb99f676b6305fc702ad58769e"
+}

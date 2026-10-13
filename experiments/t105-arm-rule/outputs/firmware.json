@@ -1,0 +1,76 @@
+{
+  "kind": "compiled Cortex-A9 OCM/MMIO firmware, not booted PS7/BSP or WCET",
+  "ELF_sha256": "71513f748b7a4ae8f0e50df6d2d73be746c6573e4ef2b15cac042d8018f5332a",
+  "symbols": [
+    {
+      "name": "t105_driver_init",
+      "bytes": 28,
+      "kind": "T"
+    },
+    {
+      "name": "t105_batch_init",
+      "bytes": 32,
+      "kind": "T"
+    },
+    {
+      "name": "main",
+      "bytes": 56,
+      "kind": "T"
+    },
+    {
+      "name": "t105_crc32",
+      "bytes": 68,
+      "kind": "T"
+    },
+    {
+      "name": "t105_init",
+      "bytes": 72,
+      "kind": "T"
+    },
+    {
+      "name": "controller",
+      "bytes": 208,
+      "kind": "b"
+    },
+    {
+      "name": "t105_decide",
+      "bytes": 256,
+      "kind": "T"
+    },
+    {
+      "name": "t105_driver_step",
+      "bytes": 416,
+      "kind": "T"
+    },
+    {
+      "name": "table.0",
+      "bytes": 1024,
+      "kind": "t"
+    },
+    {
+      "name": "t105_batch_apply",
+      "bytes": 2008,
+      "kind": "T"
+    }
+  ],
+  "linked_code_and_rodata_bytes": 4016,
+  "working_static_bytes": 208,
+  "static_function_frames": {
+    "t105_batch_init": 8,
+    "t105_batch_apply": 112,
+    "t105_decide": 32,
+    "t105_crc32": 0,
+    "t105_driver_init": 8,
+    "t105_driver_step": 16,
+    "main": 8,
+    "t105_init": 8,
+    "t105_apply": 48,
+    "t105_low": 0
+  },
+  "program_stack_conservative_bytes": 240,
+  "stack_scope": "compiler static frames only; no exception/BSP stack or CPU cycles",
+  "BSP_qualification": false,
+  "CPU_WCET": null,
+  "driver_native_assertions_passed": true,
+  "ARM_barrier_instructions": 10
+}

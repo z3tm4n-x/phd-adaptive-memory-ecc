@@ -1,0 +1,1859 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Tue Oct 13 10:10:26 2026
+| Host         : kompik running 64-bit Ubuntu 26.04 LTS
+| Command      : report_timing -from [all_registers] -to [all_registers] -delay_type min -max_paths 30 -file internal_hold.rpt
+| Design       : arm_board_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Physopt postRoute
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.044ns  (arrival time - required time)
+  Source:                 core/controller/app_requests/forward.crossing/transfer/dest_hsdata_ff_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/app_snapshot_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (fast_raw rise@0.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.706%)  route 0.117ns (45.294%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.038ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.780ns
+    Source Clock Delay      (SCD):    -0.546ns
+    Clock Pessimism Removal (CPR):    -0.272ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.633    -0.546    core/controller/app_requests/forward.crossing/transfer/dest_clk
+    SLICE_X109Y85        FDRE                                         r  core/controller/app_requests/forward.crossing/transfer/dest_hsdata_ff_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y85        FDRE (Prop_fdre_C_Q)         0.141    -0.405 r  core/controller/app_requests/forward.crossing/transfer/dest_hsdata_ff_reg[13]/Q
+                         net (fo=1, routed)           0.117    -0.288    core/controller/forward_data[13]
+    SLICE_X110Y85        FDRE                                         r  core/controller/app_snapshot_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.905    -0.780    core/controller/full_reg
+    SLICE_X110Y85        FDRE                                         r  core/controller/app_snapshot_reg[13]/C
+                         clock pessimism              0.272    -0.508    
+                         clock uncertainty            0.100    -0.408    
+    SLICE_X110Y85        FDRE (Hold_fdre_C_D)         0.076    -0.332    core/controller/app_snapshot_reg[13]
+  -------------------------------------------------------------------
+                         required time                          0.332    
+                         arrival time                          -0.288    
+  -------------------------------------------------------------------
+                         slack                                  0.044    
+
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[179]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[179]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.240ns  (logic 0.141ns (58.691%)  route 0.099ns (41.309%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.755ns
+    Source Clock Delay      (SCD):    -0.520ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.658    -0.520    core/controller/mailbox/CLK
+    SLICE_X65Y116        FDRE                                         r  core/controller/mailbox/shadow_reg[179]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y116        FDRE (Prop_fdre_C_Q)         0.141    -0.379 r  core/controller/mailbox/shadow_reg[179]/Q
+                         net (fo=1, routed)           0.099    -0.280    core/controller/mailbox/shadow[179]
+    SLICE_X67Y115        FDRE                                         r  core/controller/mailbox/checking_reg[179]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.930    -0.755    core/controller/mailbox/CLK
+    SLICE_X67Y115        FDRE                                         r  core/controller/mailbox/checking_reg[179]/C
+                         clock pessimism              0.250    -0.505    
+                         clock uncertainty            0.100    -0.405    
+    SLICE_X67Y115        FDRE (Hold_fdre_C_D)         0.075    -0.330    core/controller/mailbox/checking_reg[179]
+  -------------------------------------------------------------------
+                         required time                          0.330    
+                         arrival time                          -0.280    
+  -------------------------------------------------------------------
+                         slack                                  0.050    
+
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/collector/start_tick_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/collector/snapshot_reg[273]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.812%)  route 0.116ns (45.188%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.805ns
+    Source Clock Delay      (SCD):    -0.570ns
+    Clock Pessimism Removal (CPR):    -0.272ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.609    -0.570    core/controller/mailbox/collector/CLK
+    SLICE_X97Y96         FDRE                                         r  core/controller/mailbox/collector/start_tick_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X97Y96         FDRE (Prop_fdre_C_Q)         0.141    -0.429 r  core/controller/mailbox/collector/start_tick_reg[17]/Q
+                         net (fo=1, routed)           0.116    -0.312    core/controller/mailbox/collector/start_tick[17]
+    SLICE_X101Y96        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[273]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.880    -0.805    core/controller/mailbox/collector/CLK
+    SLICE_X101Y96        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[273]/C
+                         clock pessimism              0.272    -0.533    
+                         clock uncertainty            0.100    -0.433    
+    SLICE_X101Y96        FDRE (Hold_fdre_C_D)         0.070    -0.363    core/controller/mailbox/collector/snapshot_reg[273]
+  -------------------------------------------------------------------
+                         required time                          0.363    
+                         arrival time                          -0.312    
+  -------------------------------------------------------------------
+                         slack                                  0.050    
+
+Slack (MET) :             0.051ns  (arrival time - required time)
+  Source:                 stimulus1_reg[41]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/app_requests/forward.queue/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DIBDI[9]
+                            (rising edge-triggered cell RAMB36E1 clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.523ns  (logic 0.209ns (39.954%)  route 0.314ns (60.046%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.076ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.770ns
+    Source Clock Delay      (SCD):    -0.575ns
+    Clock Pessimism Removal (CPR):    -0.272ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.604    -0.575    slow_clk
+    SLICE_X102Y82        FDRE                                         r  stimulus1_reg[41]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y82        FDRE (Prop_fdre_C_Q)         0.164    -0.411 r  stimulus1_reg[41]/Q
+                         net (fo=2, routed)           0.151    -0.259    core/controller/app_requests/forward.queue/gen_wr_a.gen_word_narrow.mem_reg[92]
+    SLICE_X103Y83        LUT3 (Prop_lut3_I2_O)        0.045    -0.214 r  core/controller/app_requests/forward.queue/fifo_i_17__0/O
+                         net (fo=1, routed)           0.163    -0.051    core/controller/app_requests/forward.queue/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[41]
+    RAMB36_X5Y16         RAMB36E1                                     r  core/controller/app_requests/forward.queue/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/DIBDI[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.914    -0.770    core/controller/app_requests/forward.queue/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    RAMB36_X5Y16         RAMB36E1                                     r  core/controller/app_requests/forward.queue/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+                         clock pessimism              0.272    -0.498    
+                         clock uncertainty            0.100    -0.398    
+    RAMB36_X5Y16         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_DIBDI[9])
+                                                      0.296    -0.102    core/controller/app_requests/forward.queue/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg
+  -------------------------------------------------------------------
+                         required time                          0.102    
+                         arrival time                          -0.051    
+  -------------------------------------------------------------------
+                         slack                                  0.051    
+
+Slack (MET) :             0.051ns  (arrival time - required time)
+  Source:                 core/controller/app_requests/forward.crossing/hold_data_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.243ns  (logic 0.141ns (58.024%)  route 0.102ns (41.976%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.784ns
+    Source Clock Delay      (SCD):    -0.546ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.633    -0.546    core/controller/app_requests/forward.crossing/CLK
+    SLICE_X107Y84        FDRE                                         r  core/controller/app_requests/forward.crossing/hold_data_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y84        FDRE (Prop_fdre_C_Q)         0.141    -0.405 r  core/controller/app_requests/forward.crossing/hold_data_reg[19]/Q
+                         net (fo=1, routed)           0.102    -0.303    core/controller/app_requests/forward.crossing/transfer/src_in[19]
+    SLICE_X109Y84        FDRE                                         r  core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.901    -0.784    core/controller/app_requests/forward.crossing/transfer/src_clk
+    SLICE_X109Y84        FDRE                                         r  core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[19]/C
+                         clock pessimism              0.252    -0.532    
+                         clock uncertainty            0.100    -0.432    
+    SLICE_X109Y84        FDRE (Hold_fdre_C_D)         0.078    -0.354    core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[19]
+  -------------------------------------------------------------------
+                         required time                          0.354    
+                         arrival time                          -0.303    
+  -------------------------------------------------------------------
+                         slack                                  0.051    
+
+Slack (MET) :             0.051ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[56]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[56]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.241ns  (logic 0.141ns (58.464%)  route 0.100ns (41.536%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.758ns
+    Source Clock Delay      (SCD):    -0.522ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.656    -0.522    core/controller/mailbox/CLK
+    SLICE_X65Y118        FDRE                                         r  core/controller/mailbox/shadow_reg[56]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y118        FDRE (Prop_fdre_C_Q)         0.141    -0.381 r  core/controller/mailbox/shadow_reg[56]/Q
+                         net (fo=1, routed)           0.100    -0.281    core/controller/mailbox/shadow[56]
+    SLICE_X66Y118        FDRE                                         r  core/controller/mailbox/checking_reg[56]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.927    -0.758    core/controller/mailbox/CLK
+    SLICE_X66Y118        FDRE                                         r  core/controller/mailbox/checking_reg[56]/C
+                         clock pessimism              0.250    -0.508    
+                         clock uncertainty            0.100    -0.408    
+    SLICE_X66Y118        FDRE (Hold_fdre_C_D)         0.076    -0.332    core/controller/mailbox/checking_reg[56]
+  -------------------------------------------------------------------
+                         required time                          0.332    
+                         arrival time                          -0.281    
+  -------------------------------------------------------------------
+                         slack                                  0.051    
+
+Slack (MET) :             0.051ns  (arrival time - required time)
+  Source:                 signature_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            signature_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.284ns  (logic 0.186ns (65.445%)  route 0.098ns (34.555%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.731ns
+    Source Clock Delay      (SCD):    -0.496ns
+    Clock Pessimism Removal (CPR):    -0.248ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.682    -0.496    slow_clk
+    SLICE_X95Y129        FDRE                                         r  signature_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y129        FDRE (Prop_fdre_C_Q)         0.141    -0.355 r  signature_reg[4]/Q
+                         net (fo=2, routed)           0.098    -0.257    p_0_in[5]
+    SLICE_X94Y129        LUT2 (Prop_lut2_I1_O)        0.045    -0.212 r  signature[5]_i_1/O
+                         net (fo=1, routed)           0.000    -0.212    signature[5]_i_1_n_0
+    SLICE_X94Y129        FDRE                                         r  signature_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.954    -0.731    slow_clk
+    SLICE_X94Y129        FDRE                                         r  signature_reg[5]/C
+                         clock pessimism              0.248    -0.483    
+                         clock uncertainty            0.100    -0.383    
+    SLICE_X94Y129        FDRE (Hold_fdre_C_D)         0.120    -0.263    signature_reg[5]
+  -------------------------------------------------------------------
+                         required time                          0.263    
+                         arrival time                          -0.212    
+  -------------------------------------------------------------------
+                         slack                                  0.051    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/EXT_LPF[2].exr_lpf_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/lpf_exr_reg/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.186ns (72.506%)  route 0.071ns (27.494%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.773ns
+    Source Clock Delay      (SCD):    -0.539ns
+    Clock Pessimism Removal (CPR):    -0.247ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.639    -0.539    ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/aclk
+    SLICE_X49Y106        FDRE                                         r  ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/EXT_LPF[2].exr_lpf_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y106        FDRE (Prop_fdre_C_Q)         0.141    -0.398 r  ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/EXT_LPF[2].exr_lpf_reg[2]/Q
+                         net (fo=2, routed)           0.071    -0.328    ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/p_1_in
+    SLICE_X48Y106        LUT5 (Prop_lut5_I1_O)        0.045    -0.283 r  ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/lpf_exr_i_1/O
+                         net (fo=1, routed)           0.000    -0.283    ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/lpf_exr_i_1_n_0
+    SLICE_X48Y106        FDRE                                         r  ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/lpf_exr_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.912    -0.773    ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/aclk
+    SLICE_X48Y106        FDRE                                         r  ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/lpf_exr_reg/C
+                         clock pessimism              0.247    -0.526    
+                         clock uncertainty            0.100    -0.426    
+    SLICE_X48Y106        FDRE (Hold_fdre_C_D)         0.092    -0.334    ps/ps_delivery_i/axi_path/inst/clk_map/psr_aclk/U0/EXT_LPF/lpf_exr_reg
+  -------------------------------------------------------------------
+                         required time                          0.334    
+                         arrival time                          -0.283    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 signature_reg[53]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            signature_reg[54]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.186ns (72.773%)  route 0.070ns (27.227%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.775ns
+    Source Clock Delay      (SCD):    -0.541ns
+    Clock Pessimism Removal (CPR):    -0.247ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.638    -0.541    slow_clk
+    SLICE_X111Y93        FDRE                                         r  signature_reg[53]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y93        FDRE (Prop_fdre_C_Q)         0.141    -0.400 r  signature_reg[53]/Q
+                         net (fo=2, routed)           0.070    -0.330    p_0_in[54]
+    SLICE_X110Y93        LUT2 (Prop_lut2_I1_O)        0.045    -0.285 r  signature[54]_i_1/O
+                         net (fo=1, routed)           0.000    -0.285    signature[54]_i_1_n_0
+    SLICE_X110Y93        FDRE                                         r  signature_reg[54]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.910    -0.775    slow_clk
+    SLICE_X110Y93        FDRE                                         r  signature_reg[54]/C
+                         clock pessimism              0.247    -0.528    
+                         clock uncertainty            0.100    -0.428    
+    SLICE_X110Y93        FDRE (Hold_fdre_C_D)         0.091    -0.337    signature_reg[54]
+  -------------------------------------------------------------------
+                         required time                          0.337    
+                         arrival time                          -0.285    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[38]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[38]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.470%)  route 0.059ns (31.530%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.829ns
+    Source Clock Delay      (SCD):    -0.593ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.586    -0.593    core/controller/mailbox/CLK
+    SLICE_X88Y97         FDRE                                         r  core/controller/mailbox/shadow_reg[38]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X88Y97         FDRE (Prop_fdre_C_Q)         0.128    -0.465 r  core/controller/mailbox/shadow_reg[38]/Q
+                         net (fo=1, routed)           0.059    -0.406    core/controller/mailbox/shadow[38]
+    SLICE_X89Y97         FDRE                                         r  core/controller/mailbox/checking_reg[38]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.856    -0.829    core/controller/mailbox/CLK
+    SLICE_X89Y97         FDRE                                         r  core/controller/mailbox/checking_reg[38]/C
+                         clock pessimism              0.249    -0.580    
+                         clock uncertainty            0.100    -0.480    
+    SLICE_X89Y97         FDRE (Hold_fdre_C_D)         0.022    -0.458    core/controller/mailbox/checking_reg[38]
+  -------------------------------------------------------------------
+                         required time                          0.458    
+                         arrival time                          -0.406    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[31]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.141ns (58.263%)  route 0.101ns (41.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.757ns
+    Source Clock Delay      (SCD):    -0.521ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.657    -0.521    core/controller/mailbox/CLK
+    SLICE_X65Y117        FDRE                                         r  core/controller/mailbox/shadow_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y117        FDRE (Prop_fdre_C_Q)         0.141    -0.380 r  core/controller/mailbox/shadow_reg[31]/Q
+                         net (fo=1, routed)           0.101    -0.279    core/controller/mailbox/shadow[31]
+    SLICE_X67Y117        FDRE                                         r  core/controller/mailbox/checking_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.928    -0.757    core/controller/mailbox/CLK
+    SLICE_X67Y117        FDRE                                         r  core/controller/mailbox/checking_reg[31]/C
+                         clock pessimism              0.250    -0.507    
+                         clock uncertainty            0.100    -0.407    
+    SLICE_X67Y117        FDRE (Hold_fdre_C_D)         0.076    -0.331    core/controller/mailbox/checking_reg[31]
+  -------------------------------------------------------------------
+                         required time                          0.331    
+                         arrival time                          -0.279    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/controller/app_requests/forward.crossing/hold_data_reg[36]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[36]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.397%)  route 0.059ns (31.603%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.779ns
+    Source Clock Delay      (SCD):    -0.543ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.636    -0.543    core/controller/app_requests/forward.crossing/CLK
+    SLICE_X107Y91        FDRE                                         r  core/controller/app_requests/forward.crossing/hold_data_reg[36]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y91        FDRE (Prop_fdre_C_Q)         0.128    -0.415 r  core/controller/app_requests/forward.crossing/hold_data_reg[36]/Q
+                         net (fo=1, routed)           0.059    -0.355    core/controller/app_requests/forward.crossing/transfer/src_in[36]
+    SLICE_X106Y91        FDRE                                         r  core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[36]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.906    -0.779    core/controller/app_requests/forward.crossing/transfer/src_clk
+    SLICE_X106Y91        FDRE                                         r  core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[36]/C
+                         clock pessimism              0.249    -0.530    
+                         clock uncertainty            0.100    -0.430    
+    SLICE_X106Y91        FDRE (Hold_fdre_C_D)         0.022    -0.408    core/controller/app_requests/forward.crossing/transfer/src_hsdata_ff_reg[36]
+  -------------------------------------------------------------------
+                         required time                          0.408    
+                         arrival time                          -0.355    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/decision_reg[63]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/stored_sequence_reg[63]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.397%)  route 0.059ns (31.603%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.756ns
+    Source Clock Delay      (SCD):    -0.520ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.658    -0.520    core/controller/mailbox/CLK
+    SLICE_X80Y120        FDRE                                         r  core/controller/mailbox/decision_reg[63]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X80Y120        FDRE (Prop_fdre_C_Q)         0.128    -0.392 r  core/controller/mailbox/decision_reg[63]/Q
+                         net (fo=1, routed)           0.059    -0.333    core/controller/mailbox/decision_reg_n_0_[63]
+    SLICE_X81Y120        FDRE                                         r  core/controller/mailbox/stored_sequence_reg[63]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.929    -0.756    core/controller/mailbox/CLK
+    SLICE_X81Y120        FDRE                                         r  core/controller/mailbox/stored_sequence_reg[63]/C
+                         clock pessimism              0.249    -0.507    
+                         clock uncertainty            0.100    -0.407    
+    SLICE_X81Y120        FDRE (Hold_fdre_C_D)         0.022    -0.385    core/controller/mailbox/stored_sequence_reg[63]
+  -------------------------------------------------------------------
+                         required time                          0.385    
+                         arrival time                          -0.333    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/collector/first_source_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/collector/snapshot_reg[363]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.241ns  (logic 0.141ns (58.464%)  route 0.100ns (41.536%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.735ns
+    Source Clock Delay      (SCD):    -0.499ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.679    -0.499    core/controller/mailbox/collector/CLK
+    SLICE_X95Y123        FDRE                                         r  core/controller/mailbox/collector/first_source_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y123        FDRE (Prop_fdre_C_Q)         0.141    -0.358 r  core/controller/mailbox/collector/first_source_reg[43]/Q
+                         net (fo=1, routed)           0.100    -0.258    core/controller/mailbox/collector/first_source_reg_n_0_[43]
+    SLICE_X96Y123        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[363]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.950    -0.735    core/controller/mailbox/collector/CLK
+    SLICE_X96Y123        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[363]/C
+                         clock pessimism              0.249    -0.486    
+                         clock uncertainty            0.100    -0.386    
+    SLICE_X96Y123        FDRE (Hold_fdre_C_D)         0.076    -0.310    core/controller/mailbox/collector/snapshot_reg[363]
+  -------------------------------------------------------------------
+                         required time                          0.310    
+                         arrival time                          -0.258    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.052ns  (arrival time - required time)
+  Source:                 core/controller/app_command_reg[41]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend_command_reg[41]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (fast_raw rise@0.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.190ns  (logic 0.128ns (67.295%)  route 0.062ns (32.705%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.689ns
+    Source Clock Delay      (SCD):    -0.458ns
+    Clock Pessimism Removal (CPR):    -0.244ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.720    -0.458    core/controller/full_reg
+    SLICE_X111Y106       FDRE                                         r  core/controller/app_command_reg[41]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y106       FDRE (Prop_fdre_C_Q)         0.128    -0.330 r  core/controller/app_command_reg[41]/Q
+                         net (fo=1, routed)           0.062    -0.268    core/controller/app_command[41]
+    SLICE_X110Y106       FDRE                                         r  core/controller/backend_command_reg[41]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.996    -0.689    core/controller/full_reg
+    SLICE_X110Y106       FDRE                                         r  core/controller/backend_command_reg[41]/C
+                         clock pessimism              0.244    -0.445    
+                         clock uncertainty            0.100    -0.345    
+    SLICE_X110Y106       FDRE (Hold_fdre_C_D)         0.025    -0.320    core/controller/backend_command_reg[41]
+  -------------------------------------------------------------------
+                         required time                          0.320    
+                         arrival time                          -0.268    
+  -------------------------------------------------------------------
+                         slack                                  0.052    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[26]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.141ns (58.263%)  route 0.101ns (41.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.757ns
+    Source Clock Delay      (SCD):    -0.521ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.657    -0.521    core/controller/mailbox/CLK
+    SLICE_X65Y117        FDRE                                         r  core/controller/mailbox/shadow_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y117        FDRE (Prop_fdre_C_Q)         0.141    -0.380 r  core/controller/mailbox/shadow_reg[26]/Q
+                         net (fo=1, routed)           0.101    -0.279    core/controller/mailbox/shadow[26]
+    SLICE_X67Y117        FDRE                                         r  core/controller/mailbox/checking_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.928    -0.757    core/controller/mailbox/CLK
+    SLICE_X67Y117        FDRE                                         r  core/controller/mailbox/checking_reg[26]/C
+                         clock pessimism              0.250    -0.507    
+                         clock uncertainty            0.100    -0.407    
+    SLICE_X67Y117        FDRE (Hold_fdre_C_D)         0.075    -0.332    core/controller/mailbox/checking_reg[26]
+  -------------------------------------------------------------------
+                         required time                          0.332    
+                         arrival time                          -0.279    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/decision_reg[116]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/candidates/processed_generation_reg[52]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.243ns  (logic 0.141ns (58.024%)  route 0.102ns (41.976%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.756ns
+    Source Clock Delay      (SCD):    -0.520ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.658    -0.520    core/controller/mailbox/CLK
+    SLICE_X83Y120        FDRE                                         r  core/controller/mailbox/decision_reg[116]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X83Y120        FDRE (Prop_fdre_C_Q)         0.141    -0.379 r  core/controller/mailbox/decision_reg[116]/Q
+                         net (fo=1, routed)           0.102    -0.277    core/controller/candidates/after_tick_reg[63]_0[52]
+    SLICE_X84Y120        FDRE                                         r  core/controller/candidates/processed_generation_reg[52]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.929    -0.756    core/controller/candidates/CLK
+    SLICE_X84Y120        FDRE                                         r  core/controller/candidates/processed_generation_reg[52]/C
+                         clock pessimism              0.250    -0.506    
+                         clock uncertainty            0.100    -0.406    
+    SLICE_X84Y120        FDRE (Hold_fdre_C_D)         0.076    -0.330    core/controller/candidates/processed_generation_reg[52]
+  -------------------------------------------------------------------
+                         required time                          0.330    
+                         arrival time                          -0.277    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[84]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[84]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.213ns  (logic 0.164ns (76.958%)  route 0.049ns (23.042%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.754ns
+    Source Clock Delay      (SCD):    -0.518ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.660    -0.518    core/controller/mailbox/CLK
+    SLICE_X82Y118        FDRE                                         r  core/controller/mailbox/shadow_reg[84]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X82Y118        FDRE (Prop_fdre_C_Q)         0.164    -0.354 r  core/controller/mailbox/shadow_reg[84]/Q
+                         net (fo=1, routed)           0.049    -0.305    core/controller/mailbox/shadow[84]
+    SLICE_X83Y118        FDRE                                         r  core/controller/mailbox/checking_reg[84]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.931    -0.754    core/controller/mailbox/CLK
+    SLICE_X83Y118        FDRE                                         r  core/controller/mailbox/checking_reg[84]/C
+                         clock pessimism              0.249    -0.505    
+                         clock uncertainty            0.100    -0.405    
+    SLICE_X83Y118        FDRE (Hold_fdre_C_D)         0.047    -0.358    core/controller/mailbox/checking_reg[84]
+  -------------------------------------------------------------------
+                         required time                          0.358    
+                         arrival time                          -0.305    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 core/controller/backend/low_write_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/backend/dq_level_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (fast_raw rise@0.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.209ns (80.975%)  route 0.049ns (19.025%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.700ns
+    Source Clock Delay      (SCD):    -0.467ns
+    Clock Pessimism Removal (CPR):    -0.246ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.711    -0.467    core/controller/backend/pad_be_n_reg[1]_1
+    SLICE_X112Y120       FDRE                                         r  core/controller/backend/low_write_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y120       FDRE (Prop_fdre_C_Q)         0.164    -0.303 r  core/controller/backend/low_write_reg[2]/Q
+                         net (fo=1, routed)           0.049    -0.254    core/controller/backend/low_write[2]
+    SLICE_X113Y120       LUT4 (Prop_lut4_I0_O)        0.045    -0.209 r  core/controller/backend/dq_level[2]_i_1/O
+                         net (fo=1, routed)           0.000    -0.209    core/controller/backend/dq_level[2]_i_1_n_0
+    SLICE_X113Y120       FDRE                                         r  core/controller/backend/dq_level_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.985    -0.700    core/controller/backend/pad_be_n_reg[1]_1
+    SLICE_X113Y120       FDRE                                         r  core/controller/backend/dq_level_reg[2]/C
+                         clock pessimism              0.246    -0.454    
+                         clock uncertainty            0.100    -0.354    
+    SLICE_X113Y120       FDRE (Hold_fdre_C_D)         0.092    -0.262    core/controller/backend/dq_level_reg[2]
+  -------------------------------------------------------------------
+                         required time                          0.262    
+                         arrival time                          -0.209    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 core/controller/event_staged_reg[88]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/DIADI[16]
+                            (rising edge-triggered cell RAMB36E1 clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (fast_raw rise@0.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.457ns  (logic 0.128ns (28.019%)  route 0.329ns (71.981%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.677ns
+    Source Clock Delay      (SCD):    -0.490ns
+    Clock Pessimism Removal (CPR):    -0.248ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.688    -0.490    core/controller/full_reg
+    SLICE_X105Y115       FDRE                                         r  core/controller/event_staged_reg[88]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y115       FDRE (Prop_fdre_C_Q)         0.128    -0.362 r  core/controller/event_staged_reg[88]/Q
+                         net (fo=1, routed)           0.329    -0.033    core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/dina[88]
+    RAMB36_X5Y22         RAMB36E1                                     r  core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/DIADI[16]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        1.007    -0.677    core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    RAMB36_X5Y22         RAMB36E1                                     r  core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/CLKBWRCLK
+                         clock pessimism              0.248    -0.430    
+                         clock uncertainty            0.100    -0.330    
+    RAMB36_X5Y22         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_DIADI[16])
+                                                      0.243    -0.087    core/controller/history/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1
+  -------------------------------------------------------------------
+                         required time                          0.087    
+                         arrival time                          -0.033    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.053ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[113]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[113]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.261ns  (logic 0.141ns (53.926%)  route 0.120ns (46.074%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.753ns
+    Source Clock Delay      (SCD):    -0.517ns
+    Clock Pessimism Removal (CPR):    -0.269ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.661    -0.517    core/controller/mailbox/CLK
+    SLICE_X80Y117        FDRE                                         r  core/controller/mailbox/shadow_reg[113]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X80Y117        FDRE (Prop_fdre_C_Q)         0.141    -0.376 r  core/controller/mailbox/shadow_reg[113]/Q
+                         net (fo=1, routed)           0.120    -0.256    core/controller/mailbox/shadow[113]
+    SLICE_X82Y117        FDRE                                         r  core/controller/mailbox/checking_reg[113]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.932    -0.753    core/controller/mailbox/CLK
+    SLICE_X82Y117        FDRE                                         r  core/controller/mailbox/checking_reg[113]/C
+                         clock pessimism              0.269    -0.484    
+                         clock uncertainty            0.100    -0.384    
+    SLICE_X82Y117        FDRE (Hold_fdre_C_D)         0.075    -0.309    core/controller/mailbox/checking_reg[113]
+  -------------------------------------------------------------------
+                         required time                          0.309    
+                         arrival time                          -0.256    
+  -------------------------------------------------------------------
+                         slack                                  0.053    
+
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[211]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[211]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.706%)  route 0.117ns (45.294%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.753ns
+    Source Clock Delay      (SCD):    -0.518ns
+    Clock Pessimism Removal (CPR):    -0.269ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.660    -0.518    core/controller/mailbox/CLK
+    SLICE_X63Y112        FDRE                                         r  core/controller/mailbox/shadow_reg[211]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y112        FDRE (Prop_fdre_C_Q)         0.141    -0.377 r  core/controller/mailbox/shadow_reg[211]/Q
+                         net (fo=1, routed)           0.117    -0.260    core/controller/mailbox/shadow[211]
+    SLICE_X64Y112        FDRE                                         r  core/controller/mailbox/checking_reg[211]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.932    -0.753    core/controller/mailbox/CLK
+    SLICE_X64Y112        FDRE                                         r  core/controller/mailbox/checking_reg[211]/C
+                         clock pessimism              0.269    -0.484    
+                         clock uncertainty            0.100    -0.384    
+    SLICE_X64Y112        FDRE (Hold_fdre_C_D)         0.070    -0.314    core/controller/mailbox/checking_reg[211]
+  -------------------------------------------------------------------
+                         required time                          0.314    
+                         arrival time                          -0.260    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/collector/first_tick_reg[59]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/collector/snapshot_reg[507]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.192ns  (logic 0.128ns (66.728%)  route 0.064ns (33.272%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.757ns
+    Source Clock Delay      (SCD):    -0.521ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.657    -0.521    core/controller/mailbox/collector/CLK
+    SLICE_X88Y122        FDRE                                         r  core/controller/mailbox/collector/first_tick_reg[59]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X88Y122        FDRE (Prop_fdre_C_Q)         0.128    -0.393 r  core/controller/mailbox/collector/first_tick_reg[59]/Q
+                         net (fo=1, routed)           0.064    -0.329    core/controller/mailbox/collector/first_tick[59]
+    SLICE_X89Y122        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[507]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.928    -0.757    core/controller/mailbox/collector/CLK
+    SLICE_X89Y122        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[507]/C
+                         clock pessimism              0.249    -0.508    
+                         clock uncertainty            0.100    -0.408    
+    SLICE_X89Y122        FDRE (Hold_fdre_C_D)         0.025    -0.383    core/controller/mailbox/collector/snapshot_reg[507]
+  -------------------------------------------------------------------
+                         required time                          0.383    
+                         arrival time                          -0.329    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 ps/ps_delivery_i/axi_path/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/gen_single_rank.data_reg[98]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/written1[-1111111109]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.489ns  (logic 0.164ns (33.520%)  route 0.325ns (66.480%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.260ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.862ns
+    Source Clock Delay      (SCD):    -0.621ns
+    Clock Pessimism Removal (CPR):    -0.502ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.558    -0.621    ps/ps_delivery_i/axi_path/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/s_sc_aclk
+    SLICE_X42Y93         FDRE                                         r  ps/ps_delivery_i/axi_path/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/gen_single_rank.data_reg[98]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y93         FDRE (Prop_fdre_C_Q)         0.164    -0.457 r  ps/ps_delivery_i/axi_path/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/gen_single_rank.data_reg[98]/Q
+                         net (fo=2, routed)           0.325    -0.131    core/controller/mailbox/awaddr_reg[11]_0[4]
+    SLICE_X53Y97         FDRE                                         r  core/controller/mailbox/written1[-1111111109]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.823    -0.862    core/controller/mailbox/CLK
+    SLICE_X53Y97         FDRE                                         r  core/controller/mailbox/written1[-1111111109]/C
+                         clock pessimism              0.502    -0.360    
+                         clock uncertainty            0.100    -0.260    
+    SLICE_X53Y97         FDRE (Hold_fdre_C_D)         0.075    -0.185    core/controller/mailbox/written1[-1111111109]
+  -------------------------------------------------------------------
+                         required time                          0.185    
+                         arrival time                          -0.131    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/collector/first_source_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/collector/snapshot_reg[344]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.214ns  (logic 0.164ns (76.598%)  route 0.050ns (23.402%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.804ns
+    Source Clock Delay      (SCD):    -0.569ns
+    Clock Pessimism Removal (CPR):    -0.248ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.610    -0.569    core/controller/mailbox/collector/CLK
+    SLICE_X104Y93        FDRE                                         r  core/controller/mailbox/collector/first_source_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X104Y93        FDRE (Prop_fdre_C_Q)         0.164    -0.405 r  core/controller/mailbox/collector/first_source_reg[24]/Q
+                         net (fo=1, routed)           0.050    -0.354    core/controller/mailbox/collector/first_source_reg_n_0_[24]
+    SLICE_X105Y93        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[344]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.881    -0.804    core/controller/mailbox/collector/CLK
+    SLICE_X105Y93        FDRE                                         r  core/controller/mailbox/collector/snapshot_reg[344]/C
+                         clock pessimism              0.248    -0.556    
+                         clock uncertainty            0.100    -0.456    
+    SLICE_X105Y93        FDRE (Hold_fdre_C_D)         0.047    -0.409    core/controller/mailbox/collector/snapshot_reg[344]
+  -------------------------------------------------------------------
+                         required time                          0.409    
+                         arrival time                          -0.354    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 core/controller/candidates/processed_generation_reg[56]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/candidates/sending_reg[57]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.243ns  (logic 0.141ns (57.962%)  route 0.102ns (42.038%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.757ns
+    Source Clock Delay      (SCD):    -0.520ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.658    -0.520    core/controller/candidates/CLK
+    SLICE_X84Y120        FDRE                                         r  core/controller/candidates/processed_generation_reg[56]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X84Y120        FDRE (Prop_fdre_C_Q)         0.141    -0.379 r  core/controller/candidates/processed_generation_reg[56]/Q
+                         net (fo=1, routed)           0.102    -0.277    core/controller/candidates/processed_generation_reg_n_0_[56]
+    SLICE_X82Y121        FDRE                                         r  core/controller/candidates/sending_reg[57]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.928    -0.757    core/controller/candidates/CLK
+    SLICE_X82Y121        FDRE                                         r  core/controller/candidates/sending_reg[57]/C
+                         clock pessimism              0.250    -0.507    
+                         clock uncertainty            0.100    -0.407    
+    SLICE_X82Y121        FDRE (Hold_fdre_C_D)         0.076    -0.331    core/controller/candidates/sending_reg[57]
+  -------------------------------------------------------------------
+                         required time                          0.331    
+                         arrival time                          -0.277    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[212]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[212]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.261ns  (logic 0.141ns (54.089%)  route 0.120ns (45.912%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.753ns
+    Source Clock Delay      (SCD):    -0.518ns
+    Clock Pessimism Removal (CPR):    -0.269ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.660    -0.518    core/controller/mailbox/CLK
+    SLICE_X63Y112        FDRE                                         r  core/controller/mailbox/shadow_reg[212]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y112        FDRE (Prop_fdre_C_Q)         0.141    -0.377 r  core/controller/mailbox/shadow_reg[212]/Q
+                         net (fo=1, routed)           0.120    -0.257    core/controller/mailbox/shadow[212]
+    SLICE_X64Y112        FDRE                                         r  core/controller/mailbox/checking_reg[212]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.932    -0.753    core/controller/mailbox/CLK
+    SLICE_X64Y112        FDRE                                         r  core/controller/mailbox/checking_reg[212]/C
+                         clock pessimism              0.269    -0.484    
+                         clock uncertainty            0.100    -0.384    
+    SLICE_X64Y112        FDRE (Hold_fdre_C_D)         0.072    -0.312    core/controller/mailbox/checking_reg[212]
+  -------------------------------------------------------------------
+                         required time                          0.312    
+                         arrival time                          -0.257    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[220]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[220]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.254ns  (logic 0.141ns (55.533%)  route 0.113ns (44.467%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.755ns
+    Source Clock Delay      (SCD):    -0.519ns
+    Clock Pessimism Removal (CPR):    -0.269ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.659    -0.519    core/controller/mailbox/CLK
+    SLICE_X63Y115        FDRE                                         r  core/controller/mailbox/shadow_reg[220]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y115        FDRE (Prop_fdre_C_Q)         0.141    -0.378 r  core/controller/mailbox/shadow_reg[220]/Q
+                         net (fo=1, routed)           0.113    -0.265    core/controller/mailbox/shadow[220]
+    SLICE_X64Y115        FDRE                                         r  core/controller/mailbox/checking_reg[220]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.930    -0.755    core/controller/mailbox/CLK
+    SLICE_X64Y115        FDRE                                         r  core/controller/mailbox/checking_reg[220]/C
+                         clock pessimism              0.269    -0.486    
+                         clock uncertainty            0.100    -0.386    
+    SLICE_X64Y115        FDRE (Hold_fdre_C_D)         0.066    -0.320    core/controller/mailbox/checking_reg[220]
+  -------------------------------------------------------------------
+                         required time                          0.320    
+                         arrival time                          -0.265    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 core/controller/mailbox/shadow_reg[244]/C
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            core/controller/mailbox/checking_reg[244]/D
+                            (rising edge-triggered cell FDRE clocked by slow_raw  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             slow_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (slow_raw rise@0.000ns - slow_raw rise@0.000ns)
+  Data Path Delay:        0.243ns  (logic 0.141ns (58.024%)  route 0.102ns (41.976%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.751ns
+    Source Clock Delay      (SCD):    -0.517ns
+    Clock Pessimism Removal (CPR):    -0.250ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.661    -0.517    core/controller/mailbox/CLK
+    SLICE_X65Y111        FDRE                                         r  core/controller/mailbox/shadow_reg[244]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y111        FDRE (Prop_fdre_C_Q)         0.141    -0.376 r  core/controller/mailbox/shadow_reg[244]/Q
+                         net (fo=1, routed)           0.102    -0.274    core/controller/mailbox/shadow[244]
+    SLICE_X67Y111        FDRE                                         r  core/controller/mailbox/checking_reg[244]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock slow_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT1
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/slow_raw
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/slow/O
+                         net (fo=4239, routed)        0.934    -0.751    core/controller/mailbox/CLK
+    SLICE_X67Y111        FDRE                                         r  core/controller/mailbox/checking_reg[244]/C
+                         clock pessimism              0.250    -0.501    
+                         clock uncertainty            0.100    -0.401    
+    SLICE_X67Y111        FDRE (Hold_fdre_C_D)         0.072    -0.329    core/controller/mailbox/checking_reg[244]
+  -------------------------------------------------------------------
+                         required time                          0.329    
+                         arrival time                          -0.274    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.056ns  (arrival time - required time)
+  Source:                 core/controller/event_snapshot_reg[32]/C
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            core/controller/event_staged_reg[32]/D
+                            (rising edge-triggered cell FDRE clocked by fast_raw  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             fast_raw
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (fast_raw rise@0.000ns - fast_raw rise@0.000ns)
+  Data Path Delay:        0.220ns  (logic 0.164ns (74.580%)  route 0.056ns (25.420%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.724ns
+    Source Clock Delay      (SCD):    -0.490ns
+    Clock Pessimism Removal (CPR):    -0.234ns
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.440     0.698    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.421    -1.722 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.518    -1.204    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026    -1.178 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.688    -0.490    core/controller/full_reg
+    SLICE_X102Y113       FDRE                                         r  core/controller/event_snapshot_reg[32]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y113       FDRE (Prop_fdre_C_Q)         0.164    -0.326 r  core/controller/event_snapshot_reg[32]/Q
+                         net (fo=1, routed)           0.056    -0.270    core/controller/event_snapshot[32]
+    SLICE_X102Y113       FDRE                                         r  core/controller/event_staged_reg[32]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fast_raw rise edge)
+                                                      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  ref100 (IN)
+                         net (fo=0)                   0.000     0.000    core/clocks/ref100
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  core/clocks/input_buffer/O
+                         net (fo=1, routed)           0.480     0.926    core/clocks/reference
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.204    -2.278 r  core/clocks/mmcm/CLKOUT0
+                         net (fo=1, routed)           0.564    -1.714    core/clocks/fast_raw
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029    -1.685 r  core/clocks/fast/O
+                         net (fo=1294, routed)        0.961    -0.724    core/controller/full_reg
+    SLICE_X102Y113       FDRE                                         r  core/controller/event_staged_reg[32]/C
+                         clock pessimism              0.234    -0.490    
+                         clock uncertainty            0.100    -0.390    
+    SLICE_X102Y113       FDRE (Hold_fdre_C_D)         0.064    -0.326    core/controller/event_staged_reg[32]
+  -------------------------------------------------------------------
+                         required time                          0.326    
+                         arrival time                          -0.270    
+  -------------------------------------------------------------------
+                         slack                                  0.056    
+
+
+
+
