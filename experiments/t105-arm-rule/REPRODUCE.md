@@ -1,5 +1,26 @@
 # Повтор T105
 
+Текущий первый выход к16.10 добавляет `service_work.py` (проверка рангов
+закреплённого ELF), `service_progress.py` (индукция actual-mailbox,
+две мутации и6 AXI-stall traces), `service_budget.py` (UNKNOWN-safe ledger),
+10 unit tests. Все входят в обычную команду reproduce ниже; всего26 tests.
+Дополнительное время — десятки секунд хоста, не время A9. Малые proof logs,
+SAT-контрпримеры и trace summaries публикуются в service-evidence.zip.
+Выходы не назначают WCET или аппаратное время по числу инструкций.
+
+Адресный повтор новых проверок после build_firmware.py:
+
+```sh
+python3 experiments/t105-arm-rule/service_work.py
+python3 experiments/t105-arm-rule/service_progress.py
+python3 experiments/t105-arm-rule/service_budget.py
+python3 -m unittest discover -s experiments/t105-arm-rule -p test_service.py
+```
+
+ISA/RTL регрессия дополнительно проверяет, что наблюдённая длина завершённых
+driver calls не превосходит структурный верх; наблюдения не заменяют доказательство
+рангов. Граф строится по текущему ELF с pinned hash, не по сохранённому stdout.
+
 WSL Ubuntu 26.04, Python 3.14.4, GCC 15.2.0, ARM GCC 14.2.1,
 binutils 2.45.50, QEMU 10.2.1; Vivado 2025.2 build 6299465.
 Yosys/Icarus используются для малых формальных/AXI проверок.

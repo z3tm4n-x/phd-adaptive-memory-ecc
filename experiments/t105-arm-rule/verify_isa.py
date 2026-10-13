@@ -9,7 +9,7 @@ from pathlib import Path
 from analysis_tools import activate
 activate()
 from unicorn import Uc,UC_ARCH_ARM,UC_MODE_ARM,UC_HOOK_CODE,UC_HOOK_MEM_READ,UC_HOOK_MEM_WRITE,UC_MEM_READ
-from unicorn.arm_const import UC_CPU_ARM_CORTEX_A9
+from unicorn.arm_const import UC_CPU_ARM_CORTEX_A9, UC_ARM_REG_LR
 from elftools.elf.elffile import ELFFile
 from batch_model import collect
 from verify_batch import decision_expected
@@ -29,6 +29,7 @@ def execute(build,stall=0,mutation='none',variant='optimized'):
         sym={s.name:s['st_value'] for s in elf.get_section_by_name('.symtab').iter_symbols()}
     n=0;calls=0;mmio=[];log=[];counts=collections.Counter();last_cut=0;rounds=[]
     pcs=collections.Counter();rng=random.Random(10520261015);failure=0;finished=False
+    visit_start=None;visit_return=None;visit_lengths=[]
     def rpc(op,addr=0,value=0,delay=0):
         child.stdin.write(f'{op} {addr:x} {value:x} {delay}\n');child.stdin.flush()
         while True:
@@ -38,13 +39,17 @@ def execute(build,stall=0,mutation='none',variant='optimized'):
             if line.startswith('ISA_REPLY '):
                 _,resp,data,tick=line.split();return int(resp),int(data,16),int(tick)
     def instruction(u,pc,size,_):
-        nonlocal n,calls,failure,finished
+        nonlocal n,calls,failure,finished,visit_start,visit_return
         n+=1;pcs[pc]+=1
+        if visit_start is not None and pc==visit_return:
+            visit_lengths.append(n-visit_start);visit_start=None
         if pc==sym['t105_driver_step']:
             calls+=1
             seq=struct.unpack('<Q',u.mem_read(sym['controller']+56,8))[0]
             phase,failure=struct.unpack('<II',u.mem_read(sym['controller']+200,8))
             if seq>=32 and phase in (0,1):finished=True;u.emu_stop()
+            else:
+                visit_start=n;visit_return=u.reg_read(UC_ARM_REG_LR)
         if bytes(u.mem_read(pc,4))==bytes.fromhex('03f020e3'): # ARM WFI on explicit fault
             failure=struct.unpack('<I',u.mem_read(sym['controller']+204,4))[0]
             u.emu_stop()
@@ -94,6 +99,13 @@ def execute(build,stall=0,mutation='none',variant='optimized'):
     ranges={}
     for name in ('t105_batch_apply','t105_decide','t105_driver_step','t105_crc32'):
         ranges[name]=sum(v for pc,v in pcs.items() if sym[name]<=pc<min(x for x in sym.values() if x>sym[name]))
+    structural=None
+    if variant=='optimized':
+        from service_work import analyze, parse
+        i,f=parse((HERE/'outputs/firmware-disassembly.txt').read_text(),
+                  (HERE/'outputs/firmware-symbols.txt').read_text())
+        structural=analyze(i,f)['t105_driver_step']['upper']['instructions']
+        assert visit_lengths and max(visit_lengths)<=structural
     return {'variant':variant,'stall_max_slow_ticks':stall,'mutation':mutation,'firmware_completed_rounds':packets,
       'driver_calls':calls,'ARM_instructions':n,'function_instruction_counts':ranges,
       'MMIO':dict(counts),'peripheral_model_ticks':tick,'round_peripheral_ticks':rounds,
@@ -101,6 +113,8 @@ def execute(build,stall=0,mutation='none',variant='optimized'):
       'driver_fault':failure,'raw_events':len(raw),'independent_packet_matches':len(records),
       'ELF_sha256':hashlib.sha256(elfpath.read_bytes()).hexdigest(),
       'mmio_sha256':hashlib.sha256((folder/'mmio.json').read_bytes()).hexdigest(),
+      'completed_driver_visits':len(visit_lengths),'observed_max_instructions_per_visit':max(visit_lengths),
+      'structural_instructions_per_visit_upper':structural,
       'CPU_cycles':None,'CPU_WCET_ns':None,'PS7_latency_ns':None,
       'qualification':'zero instruction time, direct mailbox, no GP0/SmartConnect model'}
 

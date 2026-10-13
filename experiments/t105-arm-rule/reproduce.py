@@ -14,8 +14,8 @@ def main():
             subprocess.run([sys.executable,str(HERE/name)],check=True)
     for name in ('verify.py','budget.py','verify_batch.py','verify_batch_rtl.py','verify_mailbox.py',
                  'prove_interval.py','prove_join.py','prove_compact.py','verify_driver.py',
-                 'build_firmware.py','verify_isa.py','batch_budget.py','timing_residual.py','check_route_reuse.py',
-                 'advance_budget.py','verify_advance.py'):
+                 'build_firmware.py','service_work.py','verify_isa.py','batch_budget.py','timing_residual.py','check_route_reuse.py',
+                 'advance_budget.py','verify_advance.py','service_progress.py','service_budget.py'):
         subprocess.run([sys.executable,str(HERE/name)],check=True)
     if a.repeat_binary:
         before=hashlib.sha256((HERE/'outputs/rule-test.elf').read_bytes()).hexdigest()
@@ -66,6 +66,6 @@ def main():
                     not any(part.startswith('.') or part=='__pycache__' for part in path.relative_to(HERE).parts)
                     and path.name!='manifest.json'}}
     (HERE/'outputs/manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-    print('T105 checkpoint reproduced. New V contract authorized; selected 1ms ARM service upper remains OPEN.')
+    print('T105 checkpoint reproduced: structural work/local response checked; PS/OCM/GP completion upper remains OPEN.')
 
 if __name__=='__main__':main()
