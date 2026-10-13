@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "tests_output": "test_BEOL_boundary_rejected (test_chain.ChainTests.test_BEOL_boundary_rejected) ... ok\ntest_background_cross (test_chain.ChainTests.test_background_cross) ... ok\ntest_constant_fold_units (test_chain.ChainTests.test_constant_fold_units) ... ok\ntest_double_count_rejected (test_chain.ChainTests.test_double_count_rejected) ... ok\ntest_envelope_achieved (test_chain.ChainTests.test_envelope_achieved) ... ok\ntest_fluence_no_time_factor (test_chain.ChainTests.test_fluence_no_time_factor) ... ok\ntest_impossible_moments (test_chain.ChainTests.test_impossible_moments) ... ok\ntest_invalid_nonfinite_negative (test_chain.ChainTests.test_invalid_nonfinite_negative) ... ok\ntest_no_double_transport (test_chain.ChainTests.test_no_double_transport) ... ok\ntest_no_implicit_transport (test_chain.ChainTests.test_no_implicit_transport) ... ok\ntest_noncoincident_upper (test_chain.ChainTests.test_noncoincident_upper) ... ok\ntest_partition (test_chain.ChainTests.test_partition) ... ok\ntest_scaling_linear_and_square (test_chain.ChainTests.test_scaling_linear_and_square) ... ok\ntest_solid_angle_once (test_chain.ChainTests.test_solid_angle_once) ... ok\ntest_square_full_sum (test_chain.ChainTests.test_square_full_sum) ... ok\ntest_subbin (test_chain.ChainTests.test_subbin) ... ok\ntest_t127_regression (test_chain.ChainTests.test_t127_regression) ... ok\ntest_unknown_not_zero (test_chain.ChainTests.test_unknown_not_zero) ... ok\ntest_word_normalization_once (test_chain.ChainTests.test_word_normalization_once) ... ok\ntest_common_spectrum_low_plus_high (test_profiles.ProfileTests.test_common_spectrum_low_plus_high) ... ok\ntest_mask_moments_partition (test_profiles.ProfileTests.test_mask_moments_partition) ... ok\ntest_no_overlap_without_room_rejected (test_profiles.ProfileTests.test_no_overlap_without_room_rejected) ... ok\ntest_packed_history_exact_square (test_profiles.ProfileTests.test_packed_history_exact_square) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.418s\n\nOK\n",
+  "separate_process_output_hash_identity": true,
+  "repeat_scope": "compact moments/statistics and independent fold; raw convolution reused only after hash verification",
+  "output_sha256": {
+    "checks.json": "1e05589e61e629f0772ba76efe006e7d4090c725ee8fb58d71d7d2bfc10d2f9e",
+    "components.csv": "ccc525abc8ae8bb7194fe78cae9a3b095e5de3148614eba0709d62ecaedfff57",
+    "contract.json": "3060378a71e650b1fb9f404e01d1b638d51819b46d8394b93dfd9cca67441f46",
+    "cross-terms.csv": "7ea86fe3238d69532b23fd1304955b0f1d0623e7726bf3aad15208e9dba66282",
+    "cycle-windows.csv": "521b23e7c9bcfcfd659835ef3b93bc0ec193bacd8b716c0e7eb63c9b7369ad82",
+    "discrepancies.csv": "c780c7386599125293aa64a3d5c0deb83d70bf41f6ea1283ef0ca90b8d626054",
+    "profile-background.csv": "aa8af57d671ba77f25c6af6b6b03d4a2018b9481b41d0b4aa5612918fa97a837",
+    "profile-events.csv": "292f5d4eca4f069a782ec9e0a68e8dd37879c919749323b355bd370c86bc9fa0",
+    "profile-missions.csv": "947b32cee6dafaf885bbe52a0ad5c0da7092cb6f6a7ded13d8fc952269547153",
+    "profile-provenance.json": "19f726d5711e6e1c2cff648bf79152b3c2f58129e6e5e83fedc75071701cdc24",
+    "profile-sensitivity.csv": "ebbe0b4a02374749db884bf60fe4dd5e3ed5a7d93442b34a0f267d8ed526788e",
+    "provenance.json": "c1c5bb92e83fb9d5cc8aa31a8461fc8f4f0251a3b5e74688f0819848fc6f7b4f",
+    "segmentation.csv": "bb3dabb0d9e787939aa5c9a57b3e86efab0c09b4bf8d89be00e923f7752e2945",
+    "sensitivity.csv": "2f6a54dbccd33485d4741dc76d995fad255108b9e59fea0b1d44f2afce09c7cc",
+    "shape-transfer.csv": "088ea8f65b5cade5b20d9ac68bcf772e82904c7b6173d7b8c6fa735368a33ace",
+    "shield-summary.csv": "1b86103f00d8bd18bcfd4e3a7324351275d4d4359f487622af891c7ce50b69f0",
+    "spectra-transfer.csv": "e055421c033178ef4f843626d9ee47b34e7aa7d3870deb63ea941c471f2dfb93",
+    "Teff-by-species.csv": "8a09a79eebae624b8e273d4981b960e146d49d4822d52868a0034de06af07dda"
+  },
+  "validation_code_sha256": {
+    "reproduce.py": "d20a583e9eabc32019e996c39c4f4cfea51152f18f702c32abf95f285379c45b",
+    "checker.py": "18c8dd66bcf0c8bb612d15c869eacc07d989aceabe84bfdbd29d9eca7b161367",
+    "test_chain.py": "316339340914b4719990f9e14ebd2177ec9098fc470799b98dbcc8e16f1cf2ee",
+    "test_profiles.py": "bbdd0889bbbc555d54584ccd0b75fb975fe3fae65a1bf1e9e39971cdfed21bb2"
+  },
+  "independent_scientific_review": "not performed; numerical checker is not a review verdict"
+}

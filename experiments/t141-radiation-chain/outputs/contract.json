@@ -1,0 +1,289 @@
+{
+  "schema": "t141.radiation-chain.v1",
+  "task": 141,
+  "accepted_base": "3a8720ac389ffb9666eecedf7060f398d466b34e",
+  "status": "DRAFT_CONDITIONAL_MODEL_WITH_EXPLICIT_PHYSICAL_GAPS",
+  "horizon_s": 315576000,
+  "words": 524288,
+  "data_bits": 32,
+  "check_bits": 6,
+  "lambda_definition": "first moment of bit inversions per second over the full array; NOT parent or ERR rate",
+  "units": {
+    "lambda": "s^-1",
+    "N": "expected bit inversions",
+    "S2": "s^-1",
+    "sigma_bit": "cm^2/bit",
+    "proton_energy": "MeV before BEOL",
+    "LET": "MeV cm^2/mg"
+  },
+  "partitions": [
+    "H: E_pre_BEOL<5 MeV",
+    "H: E_pre_BEOL>=5 MeV",
+    "non-H exclusive remainder of aggregate LET, includes He; no separate He addition"
+  ],
+  "proton_mechanism_separation": "energy partition only; within-band mechanism fractions UNKNOWN",
+  "design_probability": {
+    "Pi": 0.1,
+    "definition": "Pr[S2_actual(T)>S2_design | specified physical model and mission class]",
+    "horizon_s": 315576000,
+    "verified_joint_coverage": false,
+    "marginal_products_are_quantiles": false,
+    "physical_q90_s_inv": null,
+    "release_requires": [
+      "joint scalar/spectral coverage",
+      "physical response/transfer",
+      "rare-tail control"
+    ],
+    "union_budget_example": {
+      "peak": 0.05,
+      "fluence": 0.05,
+      "scope": "only if these are genuine scalar bounds over the same mission and all other conditions fixed; not available here"
+    },
+    "hypothetical_two_SCALAR_marginal_Pi_0p1_joint_coverage_lower_bound": 0.8,
+    "pointwise_spectral_quantiles_do_not_automatically_bound_a_convolution": true
+  },
+  "scenarios": [
+    {
+      "shield_g_cm2": 2.5,
+      "scenario": "conservative_shape1_geometry1_exclusive1",
+      "background_s_inv": 0.0001701089460953027,
+      "peak_upper_s_inv": 1.3640645940538823,
+      "N_solar_upper": 157906.2479078392,
+      "N_total_upper": 211588.54868081043,
+      "S2_background_s_inv": 9.131839608461192,
+      "S2_background_solar_s_inv": 53.72253082693224,
+      "S2_solar_diagonal_s_inv": 101396.71369186723,
+      "S2_solar_cross_s_inv": 113970.74699369767,
+      "S2_upper_s_inv": 215430.3150560003,
+      "status": "CONDITIONAL_COVERED_MODEL; physical_total_and_joint_q90_UNKNOWN"
+    },
+    {
+      "shield_g_cm2": 3.0,
+      "scenario": "conservative_shape1_geometry1_exclusive1",
+      "background_s_inv": 0.00015859810317245875,
+      "peak_upper_s_inv": 0.9813008496992157,
+      "N_solar_upper": 113592.7253207835,
+      "N_total_upper": 163642.48032753536,
+      "S2_background_s_inv": 7.937796208317113,
+      "S2_background_solar_s_inv": 36.03118154013278,
+      "S2_solar_diagonal_s_inv": 50922.335324467655,
+      "S2_solar_cross_s_inv": 60528.286961696744,
+      "S2_upper_s_inv": 111494.59126391285,
+      "status": "CONDITIONAL_COVERED_MODEL; physical_total_and_joint_q90_UNKNOWN"
+    },
+    {
+      "shield_g_cm2": 3.5,
+      "scenario": "conservative_shape1_geometry1_exclusive1",
+      "background_s_inv": 0.00014894697601938237,
+      "peak_upper_s_inv": 0.7453310849671245,
+      "N_solar_upper": 86274.2072080582,
+      "N_total_upper": 133278.2981123508,
+      "S2_background_s_inv": 7.001117200734541,
+      "S2_background_solar_s_inv": 25.70056454421974,
+      "S2_solar_diagonal_s_inv": 28586.08801082227,
+      "S2_solar_cross_s_inv": 35703.910169966155,
+      "S2_upper_s_inv": 64322.69986253338,
+      "status": "CONDITIONAL_COVERED_MODEL; physical_total_and_joint_q90_UNKNOWN"
+    },
+    {
+      "shield_g_cm2": 4.0,
+      "scenario": "conservative_shape1_geometry1_exclusive1",
+      "background_s_inv": 0.00014080422614866996,
+      "peak_upper_s_inv": 0.5871390856080213,
+      "N_solar_upper": 67960.31302526768,
+      "N_total_upper": 112394.74749636035,
+      "S2_background_s_inv": 6.256556160055989,
+      "S2_background_solar_s_inv": 19.13819856868838,
+      "S2_solar_diagonal_s_inv": 17357.639631688122,
+      "S2_solar_cross_s_inv": 22534.947316318096,
+      "S2_upper_s_inv": 39917.98170273496,
+      "status": "CONDITIONAL_COVERED_MODEL; physical_total_and_joint_q90_UNKNOWN"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "C01",
+      "condition": "Входные байты совпадают с паспортами закреплённой базы",
+      "basis_type": "SOURCE",
+      "source": "T68/source_inputs.json; T127/DATA_PASSPORT.md; SEPEM/DATA_PASSPORT.md",
+      "verification_status": "CHECKED_FOR_USED_INPUTS",
+      "verification_artifact": "outputs/provenance.json; outputs/checks.json; outputs/profile-provenance.json",
+      "dependent_claim": "Воспроизведение чисел этой поставки",
+      "on_violation": "Остановить воспроизведение, новая версия входов требует нового расчёта"
+    },
+    {
+      "id": "C02",
+      "condition": "Энергия σH задана после Al, перед BEOL, отклик уже включает тестовый BEOL",
+      "basis_type": "SOURCE_AND_ASSUMPTION",
+      "source": "Coronetti TNS 2021 DOI10.1109/TNS.2021.3061209 §II–IV, PDF 4–8; T127 паспорт",
+      "verification_status": "SOURCE_CHECKED; PACKAGE_AND_LOT_TRANSFER_UNKNOWN",
+      "verification_artifact": "DATA_PASSPORT.md; test_chain.py:test_no_double_transport",
+      "dependent_claim": "Применимость энергетической свёртки H",
+      "on_violation": "Заменить оператор отклика; не добавлять второй BEOL к измеренной σ"
+    },
+    {
+      "id": "C03",
+      "condition": "Поток omni/per_sr, LET/energy и data32/full38 нормированы однократно",
+      "basis_type": "SOURCE_AND_OWN_RESULT",
+      "source": "Заголовки COSRAD; README RDSv2; Spectrum/fold",
+      "verification_status": "CHECKED_NUMERICALLY",
+      "verification_artifact": "test_chain.py; outputs/discrepancies.csv",
+      "dependent_claim": "Единицы и масштаб λ,N,S2",
+      "on_violation": "Пересчитать λ,N линейно, S2 квадратично; прежние числа недействительны"
+    },
+    {
+      "id": "C04",
+      "condition": "Исключительный LET-остаток не включает уже посчитанные протоны; He повторно не добавлен",
+      "basis_type": "UNKNOWN_AND_ASSUMPTION",
+      "source": "COSRAD gl_x/sl_x не разделены по видам; параметр q_LET",
+      "verification_status": "BOOKKEEPING_CHECKED; PHYSICAL_PARTITION_UNKNOWN",
+      "verification_artifact": "chain.py:validate_components; outputs/sensitivity.csv exclusive_LET_fraction",
+      "dependent_claim": "Сумма без повторного учёта одного канала",
+      "on_violation": "Оставить q_LET параметром; q=1 служит только конвертом неотрицательного остатка при заявленном покрытии"
+    },
+    {
+      "id": "C05",
+      "condition": "Полная протонная σ разделена на непересекающиеся энергии <5 и ≥5 MeV",
+      "basis_type": "OWN_RESULT",
+      "source": "PROTON/sigma_bit_experimental.csv; main_loglog",
+      "verification_status": "CHECKED; MECHANISM_FRACTIONS_WITHIN_BANDS_UNKNOWN",
+      "verification_artifact": "test_chain.py:test_partition; outputs/components.csv",
+      "dependent_claim": "Нет второго HEP поверх полной протонной кривой",
+      "on_violation": "Запретить суммирование full+low/high; названия диапазонов не считать измеренным разделением механизмов"
+    },
+    {
+      "id": "C06",
+      "condition": "Нормальная тестовая σ переносима на сферическое облучение, корпус, партию и напряжение",
+      "basis_type": "ASSUMPTION_AND_UNKNOWN",
+      "source": "TNS 2021 §IV сообщает отсутствие угловых измерений; T127 паспорт",
+      "verification_status": "NOT_ESTABLISHED",
+      "verification_artifact": "outputs/sensitivity.csv proton_geometry, sigma_scale; DATA_PASSPORT.md",
+      "dependent_claim": "Физический абсолютный λ прибора",
+      "on_violation": "Геометрический множитель и отклик остаются параметрами; численные сценарии не квалифицируют CY"
+    },
+    {
+      "id": "C07",
+      "condition": "Один положительный оператор переносит всю принятую огибающую F≤Teff p",
+      "basis_type": "ASSUMPTION",
+      "source": "T68 sfn/sfxm, contracts §2; сохранённая ошибка замыкания COSRAD SEE",
+      "verification_status": "NODE_RATIO_CHECKED; POST_SHIELD_OPERATOR_UNKNOWN",
+      "verification_artifact": "outputs/Teff-by-species.csv; outputs/spectra-transfer.csv",
+      "dependent_claim": "Консервативный условный N≤Teff p и S2",
+      "on_violation": "Teff — свободный параметр; расчётный N не объявлять измеренным/миссионным верхом"
+    },
+    {
+      "id": "C08",
+      "condition": "П=.1 покрывает совместную миссионную величину S2, включая межвидовую структуру",
+      "basis_type": "UNKNOWN",
+      "source": "ГОСТ Р 25645.165-2025 §3.8–3.9,5.1,5.6; METHOD.md",
+      "verification_status": "NOT_ESTABLISHED",
+      "verification_artifact": "outputs/contract.json design_probability; probability_release",
+      "dependent_claim": "Физическая 90%-квантиль S2 и освобождение запаса R0-A",
+      "on_violation": "physical_q90=null; сохранить осторожный условный конверт; не умножать отдельные квантили"
+    },
+    {
+      "id": "C09",
+      "condition": "События SEPEM и прогнозная популяция совпадают по полноте и сегментации",
+      "basis_type": "UNKNOWN_AND_ASSUMPTION",
+      "source": "SEPEM METHOD; T127 population.json; алгоритмические 131 события",
+      "verification_status": "COUNT_DIFFERENCE_CHECKED; POPULATION_IDENTITY_UNKNOWN",
+      "verification_artifact": "outputs/profile-missions.csv; outputs/segmentation.csv; outputs/cycle-windows.csv",
+      "dependent_claim": "Перенос эмпирической формы и bootstrap на следующие 10 лет",
+      "on_violation": "Показать 31.6/92.6/100.6 как разные модели; не масштабировать автоматически частотой"
+    },
+    {
+      "id": "C10",
+      "condition": "300-секундные бины ограничивают истинные пики и внутрибиновую дисперсию",
+      "basis_type": "UNKNOWN",
+      "source": "README RDSv2; identity S2_true=S2_bin+integral variance",
+      "verification_status": "IDENTITY_CHECKED; FINITE_VARIANCE_UPPER_UNKNOWN",
+      "verification_artifact": "test_chain.py:test_subbin; outputs/profile-sensitivity.csv",
+      "dependent_claim": "Физический верх S2 из биновой формы",
+      "on_violation": "Добавить неотрицательный неизвестный момент; без предела нет конечного физического верха"
+    },
+    {
+      "id": "C11",
+      "condition": "Восстановленные данные, ненаблюдавшиеся редкие события и цикл покрыты моделью",
+      "basis_type": "UNKNOWN",
+      "source": "RDSv2 не содержит quality mask; T127 паспорт; SILSO производные",
+      "verification_status": "NOT_ESTABLISHED",
+      "verification_artifact": "outputs/profile-sensitivity.csv; REPORT.md",
+      "dependent_claim": "Достоверность будущего хвоста",
+      "on_violation": "Интервал MC оставлять только численной погрешностью при фиксированной популяции; ввести tail-массу и амплитуду"
+    },
+    {
+      "id": "C12",
+      "condition": "Фон вне событий и общая хронология видов заданы явно",
+      "basis_type": "ASSUMPTION_AND_OWN_RESULT",
+      "source": "profiles.py; b_COSRAD+max(H-p10,0), HI proxy; METHOD.md",
+      "verification_status": "MOMENTS_CHECKED; PHYSICAL_TRANSFER_UNKNOWN",
+      "verification_artifact": "outputs/profile-events.csv; outputs/profile-missions.csv; outputs/profile-background.csv",
+      "dependent_claim": "Полная модельная ∫λ²dt с 2bN и всеми межвидовыми членами",
+      "on_violation": "Пересчитать совместную хронологию либо использовать Cauchy/peak-integral верх, не независимость"
+    },
+    {
+      "id": "C13",
+      "condition": "Полное слово, check-биты, родительские группы, D* и нижний ERR-канал установлены",
+      "basis_type": "UNKNOWN_AND_ASSUMPTION",
+      "source": "T68 contracts; PROTON ECC-off; T127 inputs-126.json",
+      "verification_status": "NOT_ESTABLISHED",
+      "verification_artifact": "outputs/contract.json physical_unresolved; outputs/sensitivity.csv check_ratio",
+      "dependent_claim": "Риск Q(T), гарантия исправления и цена управления",
+      "on_violation": "Не выводить D* или ERR из σ_bit; не переносить R0-A/А2 автоматически"
+    },
+    {
+      "id": "C14",
+      "condition": "Остаточные вторичные/хвосты отклика имеют установленный дополнительный момент",
+      "basis_type": "UNKNOWN",
+      "source": "CSDA — только первичные; агрегат LET; ограниченная энергетическая поддержка",
+      "verification_status": "NOT_ESTABLISHED",
+      "verification_artifact": "outputs/sensitivity.csv unknown_residual_S2; outputs/contract.json",
+      "dependent_claim": "Полнота физического тракта",
+      "on_violation": "Полный результат остаётся параметрическим: (sqrt(S2_covered)+sqrt(S2_unknown))²"
+    }
+  ],
+  "physical_unresolved": {
+    "additional_exclusive_species_or_secondaries_rate": null,
+    "full38_Dstar": null,
+    "ERR_lower_informativeness": null,
+    "joint_S2_q90": null,
+    "full38_grouped_parent_law": null
+  },
+  "parameter_rules": {
+    "check_bit_response": "W*(32+6*r_check), once",
+    "exclusive_LET": "q*LET_export, 0<=q<=1; response-weighted apportionment assumption, not species identification",
+    "additional_rate": "S2_total <= (sqrt(S2_covered)+sqrt(S2_unknown))^2",
+    "subbin_variance": "S2_true = S2_300s + sum integral(lambda-lambda_binmean)^2; no finite upper without an extra bound",
+    "Dstar_and_ERR": "separate unknown inputs; never derived from sigma_bit"
+  },
+  "profile_model": {
+    "summary": "profile-missions.csv",
+    "same_input_shape_transfer": "shape-transfer.csv",
+    "chronology": "nonoverlapping packed RDS histories; remaining time uses outside-mask moments",
+    "H_baseline": "p10 removed proportionally from bands; constant COSRAD GCR added",
+    "ion_time_law": "HI_exclusive(t)=COSRAD_peak_ratio*H_excess(t), an unverified assumption",
+    "unknown_ion_correlation": "main envelope uses Cauchy/peak-integral cap; sensitivity varies extra event overlap",
+    "statistical_intervals": "order statistics MC only, fixed empirical population; no physical coverage",
+    "saved_sha256": {
+      "profile-missions.csv": "947b32cee6dafaf885bbe52a0ad5c0da7092cb6f6a7ded13d8fc952269547153",
+      "shape-transfer.csv": "088ea8f65b5cade5b20d9ac68bcf772e82904c7b6173d7b8c6fa735368a33ace",
+      "profile-provenance.json": "19f726d5711e6e1c2cff648bf79152b3c2f58129e6e5e83fedc75071701cdc24"
+    }
+  },
+  "differences_from_R0A": {
+    "accepted_S2_s_inv": 6940.0,
+    "accepted_b_s_inv": 0.000154704,
+    "accepted_solar_peak_s_inv": 0.244528,
+    "accepted_B_s_inv": 0.244682704,
+    "accepted_solar_N_upper": 28310.473728,
+    "accepted_scope": "conditional declared Lambda/Theta, not unconditional physical coverage",
+    "accepted_full38_Dstar_axis": 0.0002802445,
+    "new_Dstar_inferred": false,
+    "replacement_authorized": false,
+    "response": "full experimental proton curve; total-bit LET without residual fr subtraction",
+    "geometry": "proton factor1 in main sensitivity model vs historical0.5",
+    "joint_probability": "not established by marginal Pi=.1 exports",
+    "A2_per_bit_law_changed": false,
+    "old_probability_or_cost_conclusions_transferred": false
+  }
+}
