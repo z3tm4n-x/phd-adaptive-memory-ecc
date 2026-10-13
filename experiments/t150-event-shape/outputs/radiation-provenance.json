@@ -1,0 +1,59 @@
+{
+  "task": 150,
+  "base": "a69fe3df97eac5a509f65446395891e71a8e9553",
+  "T141_sha": "ea789fc4b4d69699696d66a41b2738099d4154bb",
+  "plan_sha": "faf2f82d0158e32fcdd54264d5c93a29b852f645",
+  "cache": {
+    "fingerprint": {
+      "raw_sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50",
+      "kernel_code_sha256": "d6f19199718a385149b755d62d6cac139ad1275223fdd733e2f776daae43d3bb",
+      "transport_sha256": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45",
+      "sigma_sha256": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+      "sigma_module_sha256": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+      "config_sha256": "b4ad9359ba050c8215ea4f8da2906d6888b0d3258289ca4892a9524bf0caf59b",
+      "pstar_sha256": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9"
+    },
+    "n": 4365792,
+    "dt_s": 300,
+    "arrays_sha256": {
+      "bands.npy": "8f90fa5773d75cc0aa5ce836bd3478fddb5d6fd96cd1c9e0d4752e0e65529189",
+      "flux30.npy": "7a4efdd5dc91a7b06507955af2db34ba61e296ad7f339a44dbd34280586a33f9"
+    },
+    "lookup_relative_upper": 1.811954557643872e-05,
+    "lookup_scope": "positive discrete quadrature only; not response/transport/physical uncertainty"
+  },
+  "code_sha256": {
+    "radiation.py": "8b784eecf519f879cd2d6d5c576a68ce8308e9f76cf8bc1517bedd7012c00d75",
+    "moments.py": "9682c30cce77fefdce8bef3923c66b9d834bc758614cac39ee35ca4d1287ab16"
+  },
+  "input_sha256": {
+    "experiments/t141-radiation-chain/outputs/contract.json": "3060378a71e650b1fb9f404e01d1b638d51819b46d8394b93dfd9cca67441f46",
+    "experiments/t141-radiation-chain/outputs/profile-provenance.json": "19f726d5711e6e1c2cff648bf79152b3c2f58129e6e5e83fedc75071701cdc24",
+    "experiments/t141-radiation-chain/outputs/profile-missions.csv": "947b32cee6dafaf885bbe52a0ad5c0da7092cb6f6a7ded13d8fc952269547153",
+    "experiments/t141-radiation-chain/outputs/profile-events.csv": "292f5d4eca4f069a782ec9e0a68e8dd37879c919749323b355bd370c86bc9fa0",
+    "experiments/tNN-sepem-profiles/outputs/events.csv": "cb0c9bf29963002342bda99a0851743a7bc432b17703275faf2775d2a0f511e8",
+    "experiments/tNN-sepem-profiles/outputs/analysis_summary.json": "b0d7bacf8707d6f3a9cf50048453d7f4c0956901bc2fda5b7d738427c5e36a3f",
+    "experiments/t141-radiation-chain/chain.py": "0590d62ad9707fa917fc7e2b19c6b74e2586aeb79bac92ca13dfe0b36860ddc2",
+    "experiments/t141-radiation-chain/calculate.py": "191eb42bb629e54703325ea34e9054b6b336b0176217ba76e7256ebdcd9badcb",
+    "experiments/t141-radiation-chain/profiles.py": "e11f986a6656dc8a70e1c4e9c16a970a1f6982f10f5191b63b9db0771fcc51f2",
+    "experiments/t141-radiation-chain/config.json": "b4ad9359ba050c8215ea4f8da2906d6888b0d3258289ca4892a9524bf0caf59b",
+    "experiments/tNN-sepem-profiles/analysis.py": "de872a4cdc30031ea2c46d8fed2ee6adc59566f97569ef2cdb6dbcde4c0e73c4",
+    "experiments/tNN-sepem-profiles/transport.py": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45"
+  },
+  "output_sha256": {
+    "shape-transfer.csv": "c077e83ceb6977a01dd0fff3028b88341e78fd1d02980bbfac44c3cfce3557cd",
+    "mission-model.csv": "5c4c379415908295ebd1ed7a72d3cea36969e31c060fef44e24ebe4d02bf4c03",
+    "event-shapes.csv": "9db38ec6ceeedc723f9c1318b72044328e374d4f00449290746939d92ff9bc0f",
+    "window-shapes.csv": "cfa19f9d802c47dd8839c5d03483004edcabbcf5a1c0304a861b5ab45150b426",
+    "square-decomposition.csv": "91ab890f49957fd95b420a805061eefc91b52cc4ea1ec590dc38562459653c24",
+    "overflow.csv": "c80fcdf989b35e547b7b345bd28741b0e7b32ce929076a34c5361649bb7be928",
+    "archive-moments.csv": "e53853202b5fdfc7af3dae5d201ad21cd7dd7893fb689e5a3ae9d1c5cb070619",
+    "tail-and-bin-sensitivity.csv": "5ea1aad553b47e3b765f66dd51b10e5035d98dba84f8fa3a7aa73fd76e7b7d9d",
+    "segmentation.csv": "d7288620adff1ec76a71adaf7b3107c84118302022efe001e99f1c2bba56fd2d",
+    "window-all-starts.csv": "90ad50cf2ca086589581ea2dcd77fb45bdf954bbd17cd9bddd564200da63046b",
+    "statistics.json": "81a849e59be819ba4ef8a458f2f88665e880df623e046155b51a2f8130ed1702"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1"
+}

@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "pinned_tracked_dependencies": 1709,
+  "tests_output": "test_exact_capacity_fits (test_moments.MomentTests.test_exact_capacity_fits) ... ok\ntest_full_square_has_all_six_cross_terms (test_moments.MomentTests.test_full_square_has_all_six_cross_terms) ... ok\ntest_infeasible_shape_rejected (test_moments.MomentTests.test_infeasible_shape_rejected) ... ok\ntest_ion_trace_is_frozen_under_low_energy_removal (test_moments.MomentTests.test_ion_trace_is_frozen_under_low_energy_removal) ... ok\ntest_marginal_quantile_product_is_not_joint (test_moments.MomentTests.test_marginal_quantile_product_is_not_joint) ... ok\ntest_nonoverlap_packing_matches_literal_history (test_moments.MomentTests.test_nonoverlap_packing_matches_literal_history) ... ok\ntest_overflow_is_counted_not_conditioned_away (test_moments.MomentTests.test_overflow_is_counted_not_conditioned_away) ... ok\ntest_poisson_overflow_bound_encloses_exact_tail (test_moments.MomentTests.test_poisson_overflow_bound_encloses_exact_tail) ... ok\ntest_rate_scale_does_not_change_ideal_potential (test_moments.MomentTests.test_rate_scale_does_not_change_ideal_potential) ... ok\ntest_rolling_odd_and_even_endpoints (test_moments.MomentTests.test_rolling_odd_and_even_endpoints) ... ok\ntest_shape_transfer_preserves_background_cross (test_moments.MomentTests.test_shape_transfer_preserves_background_cross) ... ok\ntest_subbin_variance_leaves_first_moment (test_moments.MomentTests.test_subbin_variance_leaves_first_moment) ... ok\ntest_zero_events_retains_offmask_and_background (test_moments.MomentTests.test_zero_events_retains_offmask_and_background) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.344s\n\nOK\n",
+  "separate_process_hash_identity": true,
+  "scalar_real_event_checks": [
+    {
+      "rho": 2.5,
+      "case": "full",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 3.4277265155608613e-16
+    },
+    {
+      "rho": 2.5,
+      "case": "no_low",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 0.0
+    },
+    {
+      "rho": 3.0,
+      "case": "full",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 0.0
+    },
+    {
+      "rho": 3.0,
+      "case": "no_low",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 1.9317404908382432e-16
+    },
+    {
+      "rho": 3.5,
+      "case": "full",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 0.0
+    },
+    {
+      "rho": 3.5,
+      "case": "no_low",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 0.0
+    },
+    {
+      "rho": 4.0,
+      "case": "full",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 0.0
+    },
+    {
+      "rho": 4.0,
+      "case": "no_low",
+      "event": 131,
+      "bins": 85,
+      "relative_S2_difference": 0.0
+    }
+  ],
+  "outputs_sha256": {
+    "archive-moments.csv": "e53853202b5fdfc7af3dae5d201ad21cd7dd7893fb689e5a3ae9d1c5cb070619",
+    "controller-comparison.csv": "3cb015a0b3fc4cb9c1099711ca4cc37f19753191987172c998e65f43333e9800",
+    "controller-contract.json": "0b18e7a83687c23ec7b990ba8960a2f20609a03c983393094d19806f118b6cf5",
+    "controller-provenance.json": "72b03d4b61a6a21144bed12641b164c17616355b8a37a8da15ba43a77b25ed35",
+    "controller-requirements.csv": "7afd5c7c3c2e449a84e4adcf6f1eb35376326b295476cd8aedd6d9c6cc9dbc7e",
+    "event-shapes.csv": "9db38ec6ceeedc723f9c1318b72044328e374d4f00449290746939d92ff9bc0f",
+    "mission-model.csv": "5c4c379415908295ebd1ed7a72d3cea36969e31c060fef44e24ebe4d02bf4c03",
+    "overflow.csv": "c80fcdf989b35e547b7b345bd28741b0e7b32ce929076a34c5361649bb7be928",
+    "potentials.csv": "25c0fbe8a2d6a58501e70e08833f476bb654c43d0ca5f83fd51fd1dfeda0c36a",
+    "radiation-provenance.json": "8be6570407d0e3e6dd13670b72123820761b819bb9f0ffafdb8530965fa2fc49",
+    "segmentation.csv": "d7288620adff1ec76a71adaf7b3107c84118302022efe001e99f1c2bba56fd2d",
+    "shape-transfer.csv": "c077e83ceb6977a01dd0fff3028b88341e78fd1d02980bbfac44c3cfce3557cd",
+    "square-decomposition.csv": "91ab890f49957fd95b420a805061eefc91b52cc4ea1ec590dc38562459653c24",
+    "statistics.json": "81a849e59be819ba4ef8a458f2f88665e880df623e046155b51a2f8130ed1702",
+    "tail-and-bin-sensitivity.csv": "5ea1aad553b47e3b765f66dd51b10e5035d98dba84f8fa3a7aa73fd76e7b7d9d",
+    "window-all-starts.csv": "90ad50cf2ca086589581ea2dcd77fb45bdf954bbd17cd9bddd564200da63046b",
+    "window-shapes.csv": "cfa19f9d802c47dd8839c5d03483004edcabbcf5a1c0304a861b5ab45150b426"
+  },
+  "code_sha256": {
+    "controller.py": "bb610c4c0a7258be3c5769e26cfec572ec7eca4963905d76e4283ab5a442e239",
+    "moments.py": "9682c30cce77fefdce8bef3923c66b9d834bc758614cac39ee35ca4d1287ab16",
+    "radiation.py": "8b784eecf519f879cd2d6d5c576a68ce8308e9f76cf8bc1517bedd7012c00d75",
+    "reproduce.py": "b4ebe273c02f9f7922139400e0e6bbe4975573437fc6fd25299cca977118ca1e",
+    "test_moments.py": "b8ca9480c65a0c61f3fe882101d7a2c7291bd9c504608f5d6c4e233d33f76b7b"
+  },
+  "scope": "calculation checks; no independent scientific review of T150 performed"
+}
