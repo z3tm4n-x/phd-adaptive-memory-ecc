@@ -15,7 +15,7 @@ module tb_mailbox;
   .s_axi_rdata(rdata),.s_axi_rresp(rresp),.s_axi_rvalid(rvalid),.s_axi_rready(rready),
   .decision_valid(decision_valid),.decision_ready(decision_ready),.decision(decision),
   .tick(tick),.fault(fault));
- integer q=-1,gen=0,rawfile,tracefile,packet,word,mode=0,accepted=0;
+ integer q=-1,gen=0,rawfile,tracefile,packet,word,mode=0,accepted=0,config_rejected=0;
  reg [767:0] snapshot;reg [255:0] reply,submitted;
  reg [31:0] readback;reg [63:0] source_time;
  // Independent exogenous raw events; CPU reads never stop the collector.
@@ -84,7 +84,7 @@ module tb_mailbox;
    $t105_decide_batch(snapshot,reply);
    $fdisplay(tracefile,"%h %h",snapshot,reply);
    submitted=reply;
-   if(packet==2 && mode!=0) begin
+   if(packet==2 && mode>=1 && mode<=3) begin
     if(mode==1) submitted[255:224]=~submitted[255:224];
     if(mode==2) begin submitted[63:0]=submitted[63:0]-1;submitted[255:224]=crc32(submitted[223:0]);end
     if(mode==3) begin submitted[127:64]=submitted[127:64]-1;submitted[255:224]=crc32(submitted[223:0]);end
@@ -95,8 +95,8 @@ module tb_mailbox;
    write_bus(12'h008,1,15,0,2);
    if(decision_valid) $fatal(1,"partially written answer published");
    write_bus(12'h20c,submitted[127:96],4'b1000,1,0);
-   write_bus(12'h008,1,15,2,(packet==2 && mode!=0)?2:0);
-   if(packet==2 && mode!=0) begin
+   write_bus(12'h008,1,15,2,(packet==2 && mode>=1 && mode<=3)?2:0);
+   if(packet==2 && mode>=1 && mode<=3) begin
     repeat(5) @(posedge clk);
     if(!fault || decision_valid || accepted!=2) $fatal(1,"invalid decision accepted");
     $display("MAILBOX_REJECTED mode=%d accepted=%d",mode,accepted);$finish;
@@ -108,6 +108,21 @@ module tb_mailbox;
    read_bus(12'h010,readback);if(readback!=packet+1) $fatal(1,"wrong slow ACK");
   end
   if(accepted!=12 || fault) $fatal(1,"delivery count/fault");
+  if(mode==4) begin
+   // No runtime configuration ABI exists. Every aligned address outside
+   // CLAIM/COMMIT/FAULT and the decision bank must reject without state
+   // publication, reset or a changed acknowledged prefix.
+   snapshot=dut.snapshot;reply=decision;
+   for(word=0;word<1024;word=word+1)
+    if(word!=1 && word!=2 && word!=3 && !(word>=128 && word<136)) begin
+     write_bus(12'(word*4),32'hffffffff,15,word%3,2);
+     config_rejected=config_rejected+1;
+     if(decision_valid || decision!==reply || dut.snapshot!==snapshot ||
+        dut.stored_sequence!=12 || accepted!=12 || fault)
+      $fatal(1,"runtime config write changed retained state");
+    end
+   $display("CONFIG_READONLY rejected=%0d",config_rejected);
+  end
   $display("MAILBOX_OK packets=%d events=%d",accepted,gen);$finish;
  end
  initial begin #10000000;$fatal(1,"mailbox timeout");end

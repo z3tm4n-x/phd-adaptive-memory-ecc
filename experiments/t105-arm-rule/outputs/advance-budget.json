@@ -1,0 +1,138 @@
+{
+  "status": "CONDITIONAL_PREPARATION_THEOREM; author permits new V contract; ARM upper open",
+  "base": "e8b1225fe71ceb34bb3684a6b8890c8f1f3adb67",
+  "issue105_updated_at": "2026-10-13T11:42:08Z",
+  "theory146_read": "f7763ad91699bec47c6c5b766794d14438724f3d",
+  "selected_service_allocation_ns": {
+    "rational": "1000000",
+    "decimal": 1000000.0
+  },
+  "selected_service_is_WCET": false,
+  "selected_max_nominal_slow_ticks": 49999,
+  "selected_source_span_upper_ns": {
+    "rational": "103035046956651827/102498975000",
+    "decimal": 1005230.0226090244
+  },
+  "selected_collector_count_upper": 50003,
+  "selected_preparation_margin_ns": {
+    "rational": "2306175536402940779503/25624743750",
+    "decimal": 89997994083.47023
+  },
+  "selected_first_event_reply_upper_ns": {
+    "rational": "205543913206138343/102498975000",
+    "decimal": 2005326.5235690244
+  },
+  "hold_lower_ns": {
+    "NW": {
+      "rational": "450000000052499/5000",
+      "decimal": 90000000010.4998
+    },
+    "NH": {
+      "rational": "900000000007499/5000",
+      "decimal": 180000000001.4998
+    },
+    "NR": {
+      "rational": "180308294798521/1000",
+      "decimal": 180308294798.521
+    }
+  },
+  "historical_published_B_limit_ns": {
+    "rational": "3465965438749/2049979500",
+    "decimal": 1690.7317554877989
+  },
+  "old_literal_fresh_history_B_limit_ns": {
+    "rational": "342855294387769/204997950000",
+    "decimal": 1672.4815754877989
+  },
+  "history_ns": {
+    "rational": "531869457677237/102498975000",
+    "decimal": 5189.022209024402
+  },
+  "external_loss_ns": {
+    "rational": "50313/625",
+    "decimal": 80.5008
+  },
+  "loss_slow_to_fast_ns": {
+    "rational": "912509/25000",
+    "decimal": 36.50036
+  },
+  "historical_ledger_correction": "batch_budget.py omitted loss_slow->loss_fast 36.500360ns; corrected here, accepted B unchanged",
+  "cut_refresh_edge_ns": {
+    "rational": "102501/5000",
+    "decimal": 20.5002
+  },
+  "derived_link_with_refresh_ns": {
+    "rational": "14150141/25000",
+    "decimal": 566.00564
+  },
+  "certificate_allocation_ns": {
+    "rational": "300253/500",
+    "decimal": 600.506
+  },
+  "certificate_10pct_ns": {
+    "rational": "3302783/5000",
+    "decimal": 660.5566
+  },
+  "calendar_ns": {
+    "rational": "18712687/25000",
+    "decimal": 748.50748
+  },
+  "prepare_fixed_ns": {
+    "rational": "607514455619693/102498975000",
+    "decimal": 5927.029569024402
+  },
+  "preparation_B_limit_ns": {
+    "rational": "2306226785890440779503/51249487500",
+    "decimal": 44999997041.735115
+  },
+  "source_span_B_limit_ns": {
+    "rational": "9224907217054221086083/102498975000",
+    "decimal": 89999994800.47699
+  },
+  "count32_B_limit_ns": {
+    "rational": "429492434330207/5000",
+    "decimal": 85898486866.0414
+  },
+  "joint_B_limit_ns": {
+    "rational": "2306226785890440779503/51249487500",
+    "decimal": 44999997041.735115
+  },
+  "joint_B_limit_s": {
+    "rational": "2306226785890440779503/51249487500000000000",
+    "decimal": 44.999997041735114
+  },
+  "max_collector_events_in_B": 2250022355,
+  "mission_fast_edges_upper": 78894788947889481,
+  "expiry_to_first_usable_operation_ns": {
+    "rational": "17118921/12500",
+    "decimal": 1369.51368
+  },
+  "non_hold_tail_including_history_ns": {
+    "rational": "342117852549763/51249487500",
+    "decimal": 6675.537049024402
+  },
+  "remaining_to_10us_ns": {
+    "rational": "170377022450237/51249487500",
+    "decimal": 3324.462950975598
+  },
+  "B_definition": "cut-to-cut including accepted reply and next CLAIM; first cut within B",
+  "preparation_inequality": "external + loss_fast_CDC + history + 2*B + slow_edge + certificate <= min hold lower",
+  "literal_processed_G_10us_implied": false,
+  "new_physical_ARM_upper_ns": null,
+  "CPU_nominal_hz": 600000000,
+  "conditional_CPU_frequency_min_hz": {
+    "rational": "60000000000000/100001",
+    "decimal": 599994000.0599993
+  },
+  "conditional_CPU_frequency_max_hz": {
+    "rational": "20000000000000/33333",
+    "decimal": 600006000.0600007
+  },
+  "CPU_clock_scope": "chosen +/-10ppm period envelope, not qualified PS oscillator/PLL",
+  "platform_model": "isolated A9/OCM/Device GP0 with symbolic finite service B; no CPI assigned",
+  "platform_service_established": false,
+  "Q_recalculated": false,
+  "mission_price_recalculated": false,
+  "production_changed": false,
+  "finite_B_violation": "local FAST may remain safe but its unbounded extra price is NOT certified"
+}

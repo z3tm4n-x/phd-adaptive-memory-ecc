@@ -18,9 +18,47 @@ Ubuntu packages распаковываются только в .tools, без su
 Повтор проверяет прежние 20 165 C / 512 ARM переходов, 20 019 пакетов / 512 ARM,
 RTL-collector, AXI, четыре SAT-композиции и их мутации, 20 019 driver vectors,
 три успешных ARM-ISA/RTL трассы и две fault-трассы, драйвер/firmware,
-11 unit tests, Python compilation и хеши пакета. Порядка 30–90 с хоста;
+16 unit tests, Python compilation и хеши пакета. Порядка 30–90 с хоста;
 не время ARM. Для ELF проверяется повторная сборка прежнего теста,
 firmware имеет отдельный детерминированный SHA.
+
+## Предварительное разрешение: текущая проверка
+
+```sh
+python3 experiments/t105-arm-rule/reproduce.py --repeat-binary --advance
+```
+
+Новая проверка выполняет полную регрессию, точный рациональный бюджет,
+110 случаев/4167 пакетов/16910 raw-событий с полными таймерами и три
+vendor-XPM/link/calendar теста (фазы0/3/11нс). Дополнение --advance
+занимало около45с хоста, не времени ARM, и не выполняет STA.
+Без этого флага проверяются hashes опубликованного advance-evidence.zip
+и всех связанных source-файлов; это проверка сохранённого свидетельства,
+не повтор vendor-модели. ARM ELF и production C/RTL неизменны.
+
+Модульный harness перескакивает длительные бездействующие входные ticks,
+но не уменьшает штатные NW/NH/NR. CPU service1мс — инжектированное
+условие адресной трассы; результат не измеряет A9/OCM/PS–PL.
+Исходное ограничение processed_G≤10мкс заменено решением автора в
+inputs/issue105-advance.json; новый договор — ADVANCE_CONTRACT.
+Старые batch-budget.json/timing-residual.json воспроизводят e8b1225,
+включая раскрытый пропуск второго loss CDC. Для текущих сроков использовать
+advance-budget.json, не историческую достаточную оценку.
+
+Адресный повтор:
+
+```sh
+python3 experiments/t105-arm-rule/advance_budget.py
+python3 experiments/t105-arm-rule/verify_advance.py
+python3 experiments/t105-arm-rule/run_advance.py
+python3 experiments/t105-arm-rule/run_advance.py --check-published
+python3 experiments/t105-arm-rule/verify_mailbox.py
+```
+
+Последняя команда включает1013 отклонённых некомандных AXI-записей
+режима C0 (нет runtime-конфигурации), без изменения snapshot/decision/ACK.
+C/raw Oracle не пользуется RTL-update helper. XPM/компилятор/ISA emulator
+остаются общими доверенными зависимостями; полного временного эталона PS7 нет.
 
 Полный повтор трёх коротких vendor-XPM трасс, двух сервисных по4мс и post-route:
 
@@ -89,6 +127,8 @@ firmware-reference.elf сохраняет алгоритм a477950; filename/com
 После a477950 production RTL/recipe/XDC не изменены: check_route_reuse
 сверяет9 файлов с сохранённым routed manifest. Поэтому новый Vivado run
 в этом продолжении не нужен; --full доступен для независимого повтора.
+В текущем продолжении заново выполнены только малые новые vendor-трассы,
+а не старые4мс сервисные прогоны или полный route.
 
 Обходы среды раскрыты: установленный iverilog-vpi передаёт ошибочный
 литерал `0-3` в compiler flags. VPI bridge собирается напрямую GCC против

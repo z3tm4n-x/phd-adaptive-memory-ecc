@@ -21,12 +21,14 @@ def main():
     subprocess.run(["iverilog","-g2012","-s","tb_mailbox","-o",str(exe),
       *[str(HERE/x) for x in ("history_batch.sv","rule_mailbox.sv","tb_mailbox.sv")]],check=True)
     results=[]
-    for mode,label in enumerate(("valid","bad-crc","replay-sequence","wrong-generation")):
+    for mode,label in enumerate(("valid","bad-crc","replay-sequence","wrong-generation",
+                                 "forbidden-runtime-config")):
         folder=root/label;folder.mkdir(exist_ok=True)
         run=subprocess.run(["vvp","-M",str(root),"-m","mailbox_vpi",str(exe),"+MODE="+str(mode)],
                            cwd=folder,text=True,capture_output=True,timeout=30)
         log=run.stdout+run.stderr;(folder/"run.log").write_text(log)
-        assert run.returncode==0 and ("MAILBOX_OK" if mode==0 else "MAILBOX_REJECTED") in log,log
+        assert run.returncode==0 and ("MAILBOX_OK" if mode in (0,4) else "MAILBOX_REJECTED") in log,log
+        if mode==4:assert "CONFIG_READONLY rejected=1013" in log,log
         raw=[]
         for line in (folder/"raw.txt").read_text().splitlines():
             q,v=line.split();q=int(q);v=int(v,16)
@@ -49,7 +51,9 @@ def main():
     out={"kind":"native production C + actual AXI-Lite/collector RTL; NOT ARM/AXI timing",
          "independent_checker":"Python raw-event Oracle, no batch C or RTL helper",
          "cases":results,"partial_commit_rejected":True,"immutable_banks":True,
-         "independent_AW_W_and_BR_backpressure":True,"CPU_WCET":None}
+         "independent_AW_W_and_BR_backpressure":True,
+         "runtime_configuration":"absent; all 1013 non-command aligned addresses reject with no retained snapshot/decision/ACK change",
+         "CPU_WCET":None}
     (HERE/"outputs/mailbox.json").write_text(json.dumps(out,indent=2)+"\n")
     print(json.dumps(out,indent=2))
 if __name__=="__main__":main()

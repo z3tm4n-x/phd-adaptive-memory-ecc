@@ -7,7 +7,7 @@ def main():
     for folder in ('interval-proof','arm-join','compact-proof'):
         files += [(folder+'/'+p.name,p) for p in (HERE/'.build'/folder).iterdir()
                   if p.suffix in ('.log','.sv','.json')]
-    for label in ('valid','bad-crc','replay-sequence','wrong-generation'):
+    for label in ('valid','bad-crc','replay-sequence','wrong-generation','forbidden-runtime-config'):
         files += [('mailbox/'+label+'/'+name,HERE/'.build/mailbox'/label/name)
                   for name in ('raw.txt','trace.txt','run.log')]
     for label in ('reference-0-none','optimized-0-none','optimized-7-none','optimized-0-bad-crc','optimized-0-bad-sequence'):
