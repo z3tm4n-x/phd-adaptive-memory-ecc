@@ -1,0 +1,12 @@
+{
+  "raw_oracle_packets": 20019,
+  "full_bank_baseline_matches": 20019,
+  "wide_carry_vectors": 3,
+  "explicit_faults": 5,
+  "driver_size_bytes": 208,
+  "source_sha256": {
+    "driver.c": "40135fb0643e5115d2470f13bfef40a7899b8d41ccf6acf99610c2dd9ed82514",
+    "driver_reference.c": "6bf294366a46e720e3c7621dfba488b9760aa6cf2a6a88e5f3cc8745a6b13701"
+  },
+  "scope": "software semantics; collector identities separately proved; not timing or corrupt-memory coverage"
+}

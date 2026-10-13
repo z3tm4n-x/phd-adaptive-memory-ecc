@@ -1,0 +1,17 @@
+{
+  "kind": "hash identity of all new production sources/top recipe, not a new route",
+  "routed_delivery": "a477950890020cd27845c9a27170efad29dac4b7",
+  "matched_sha256": {
+    "arm_board_top.sv": "c3e1a9ba92eebc6009e818a6594cf06457835df26c9ed6fff0f3a0e9b5e18895",
+    "arm_executor.sv": "08a504716be56449f31e4c99b66a77f50e9d11a346d046f14cb59db723594285",
+    "arm_physical_top.sv": "56899b46240470128f8bd2d233108cf8fb3f72272cf9a049719bf4de5eb13d86",
+    "history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "rule_mailbox.sv": "dd616d13403d186bbdd09e7370aa85ffe45b5f7e79fa0281ff20d9d5378036d4",
+    "interval_guard.sv": "a090a61fc21ef0a104c32a959f9e01f88901e18c0cef2c14b9427313825022b1",
+    "interval_link.sv": "b01b708fbda4c4fba114f9d9fe404dca15ea250e35003e88cb08bfe4254827a5",
+    "full_top.tcl": "af2ae84d415f46b008ef01efffa20457022ce833cf52a781c1997df8d192353a",
+    "ps_delivery.tcl": "f36516a967637f4061ef0bb1ecdf39cffd5788dbe70d6c50056c6e233052083c"
+  },
+  "old_B_sources": "unchanged accepted sources, Git diff checked at delivery",
+  "excluded": "simulation-only tb_arm.sv, integration_sim.tcl and new test harnesses"
+}

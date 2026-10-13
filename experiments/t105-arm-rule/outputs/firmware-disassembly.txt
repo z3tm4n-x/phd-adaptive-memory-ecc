@@ -13,11 +13,11 @@ fffc0010:	e3a02000 	mov	r2, #0
 fffc0014:	e1500001 	cmp	r0, r1
 fffc0018:	34802004 	strcc	r2, [r0], #4
 fffc001c:	3afffffc 	bcc	fffc0014 <_start+0x14>
-fffc0020:	eb0002d4 	bl	fffc0b78 <main>
+fffc0020:	eb00030d 	bl	fffc0c5c <main>
 fffc0024:	eafffffe 	b	fffc0024 <_start+0x24>
 fffc0028:	fffff000 	.word	0xfffff000
-fffc002c:	fffc0fb0 	.word	0xfffc0fb0
-fffc0030:	fffc1080 	.word	0xfffc1080
+fffc002c:	fffc1098 	.word	0xfffc1098
+fffc0030:	fffc1168 	.word	0xfffc1168
 fffc0034:	00000000 	.word	0x00000000
 
 fffc0038 <t105_init>:
@@ -623,7 +623,7 @@ fffc0974:	eaffffea 	b	fffc0924 <t105_decide+0xac>
 fffc0978 <t105_crc32>:
 fffc0978:	e3510000 	cmp	r1, #0
 fffc097c:	0a00000c 	beq	fffc09b4 <t105_crc32+0x3c>
-fffc0980:	e300cbb0 	movw	ip, #2992	@ 0xbb0
+fffc0980:	e300cc94 	movw	ip, #3220	@ 0xc94
 fffc0984:	e0801001 	add	r1, r0, r1
 fffc0988:	e3e02000 	mvn	r2, #0
 fffc098c:	e34fcffc 	movt	ip, #65532	@ 0xfffc
@@ -653,9 +653,9 @@ fffc09d8:	e59030cc 	ldr	r3, [r0, #204]	@ 0xcc
 fffc09dc:	e3530000 	cmp	r3, #0
 fffc09e0:	1a000022 	bne	fffc0a70 <t105_driver_step+0x98>
 fffc09e4:	e92d4070 	push	{r4, r5, r6, lr}
-fffc09e8:	e1a05000 	mov	r5, r0
+fffc09e8:	e1a04000 	mov	r4, r0
 fffc09ec:	e5913000 	ldr	r3, [r1]
-fffc09f0:	e1a06001 	mov	r6, r1
+fffc09f0:	e1a05001 	mov	r5, r1
 fffc09f4:	f57ff05f 	dmb	sy
 fffc09f8:	e3130010 	tst	r3, #16
 fffc09fc:	1a000010 	bne	fffc0a44 <t105_driver_step+0x6c>
@@ -663,13 +663,13 @@ fffc0a00:	e59020c8 	ldr	r2, [r0, #200]	@ 0xc8
 fffc0a04:	e3520001 	cmp	r2, #1
 fffc0a08:	0a00001a 	beq	fffc0a78 <t105_driver_step+0xa0>
 fffc0a0c:	e3520002 	cmp	r2, #2
-fffc0a10:	0a00002d 	beq	fffc0acc <t105_driver_step+0xf4>
+fffc0a10:	0a000069 	beq	fffc0bbc <t105_driver_step+0x1e4>
 fffc0a14:	e3520000 	cmp	r2, #0
 fffc0a18:	1a00000d 	bne	fffc0a54 <t105_driver_step+0x7c>
 fffc0a1c:	e3130008 	tst	r3, #8
 fffc0a20:	0a000005 	beq	fffc0a3c <t105_driver_step+0x64>
 fffc0a24:	e3130007 	tst	r3, #7
-fffc0a28:	1a00004c 	bne	fffc0b60 <t105_driver_step+0x188>
+fffc0a28:	1a000079 	bne	fffc0c14 <t105_driver_step+0x23c>
 fffc0a2c:	e3a03001 	mov	r3, #1
 fffc0a30:	e5813004 	str	r3, [r1, #4]
 fffc0a34:	f57ff05f 	dmb	sy
@@ -691,147 +691,204 @@ fffc0a70:	e3e00000 	mvn	r0, #0
 fffc0a74:	e12fff1e 	bx	lr
 fffc0a78:	e3130001 	tst	r3, #1
 fffc0a7c:	0affffee 	beq	fffc0a3c <t105_driver_step+0x64>
-fffc0a80:	e2813c01 	add	r3, r1, #256	@ 0x100
-fffc0a84:	e2804044 	add	r4, r0, #68	@ 0x44
-fffc0a88:	e28010a4 	add	r1, r0, #164	@ 0xa4
-fffc0a8c:	e4932004 	ldr	r2, [r3], #4
-fffc0a90:	e5a42004 	str	r2, [r4, #4]!
-fffc0a94:	e1540001 	cmp	r4, r1
-fffc0a98:	1afffffb 	bne	fffc0a8c <t105_driver_step+0xb4>
-fffc0a9c:	f57ff05f 	dmb	sy
-fffc0aa0:	e2851048 	add	r1, r5, #72	@ 0x48
-fffc0aa4:	e1a00005 	mov	r0, r5
-fffc0aa8:	ebfffd7c 	bl	fffc00a0 <t105_batch_apply>
-fffc0aac:	e3500000 	cmp	r0, #0
-fffc0ab0:	1a000018 	bne	fffc0b18 <t105_driver_step+0x140>
-fffc0ab4:	e3a02003 	mov	r2, #3
-fffc0ab8:	e3a03001 	mov	r3, #1
-fffc0abc:	e58520cc 	str	r2, [r5, #204]	@ 0xcc
-fffc0ac0:	e586300c 	str	r3, [r6, #12]
-fffc0ac4:	f57ff05f 	dmb	sy
-fffc0ac8:	eaffffdf 	b	fffc0a4c <t105_driver_step+0x74>
-fffc0acc:	e2133007 	ands	r3, r3, #7
-fffc0ad0:	1affffd9 	bne	fffc0a3c <t105_driver_step+0x64>
-fffc0ad4:	e591c010 	ldr	ip, [r1, #16]
-fffc0ad8:	e5911014 	ldr	r1, [r1, #20]
-fffc0adc:	f57ff05f 	dmb	sy
-fffc0ae0:	e5900038 	ldr	r0, [r0, #56]	@ 0x38
-fffc0ae4:	e595203c 	ldr	r2, [r5, #60]	@ 0x3c
-fffc0ae8:	e1510002 	cmp	r1, r2
-fffc0aec:	015c0000 	cmpeq	ip, r0
-fffc0af0:	0a000005 	beq	fffc0b0c <t105_driver_step+0x134>
-fffc0af4:	e3a02004 	mov	r2, #4
-fffc0af8:	e3a03001 	mov	r3, #1
-fffc0afc:	e58520cc 	str	r2, [r5, #204]	@ 0xcc
-fffc0b00:	e586300c 	str	r3, [r6, #12]
-fffc0b04:	f57ff05f 	dmb	sy
-fffc0b08:	eaffffcf 	b	fffc0a4c <t105_driver_step+0x74>
-fffc0b0c:	e3a00001 	mov	r0, #1
-fffc0b10:	e58530c8 	str	r3, [r5, #200]	@ 0xc8
-fffc0b14:	e8bd8070 	pop	{r4, r5, r6, pc}
-fffc0b18:	e28510a8 	add	r1, r5, #168	@ 0xa8
-fffc0b1c:	e1a00005 	mov	r0, r5
-fffc0b20:	ebffff54 	bl	fffc0878 <t105_decide>
-fffc0b24:	e3500000 	cmp	r0, #0
-fffc0b28:	0affffe1 	beq	fffc0ab4 <t105_driver_step+0xdc>
-fffc0b2c:	e2863c02 	add	r3, r6, #512	@ 0x200
-fffc0b30:	e28510c4 	add	r1, r5, #196	@ 0xc4
-fffc0b34:	e5b42004 	ldr	r2, [r4, #4]!
-fffc0b38:	e1540001 	cmp	r4, r1
-fffc0b3c:	e4832004 	str	r2, [r3], #4
-fffc0b40:	1afffffb 	bne	fffc0b34 <t105_driver_step+0x15c>
-fffc0b44:	f57ff05f 	dmb	sy
-fffc0b48:	e3a03001 	mov	r3, #1
-fffc0b4c:	e5863008 	str	r3, [r6, #8]
-fffc0b50:	f57ff05f 	dmb	sy
-fffc0b54:	e3a03002 	mov	r3, #2
-fffc0b58:	e58530c8 	str	r3, [r5, #200]	@ 0xc8
-fffc0b5c:	eaffffb6 	b	fffc0a3c <t105_driver_step+0x64>
-fffc0b60:	e3a02002 	mov	r2, #2
-fffc0b64:	e3a03001 	mov	r3, #1
-fffc0b68:	e58020cc 	str	r2, [r0, #204]	@ 0xcc
-fffc0b6c:	e581300c 	str	r3, [r1, #12]
-fffc0b70:	f57ff05f 	dmb	sy
-fffc0b74:	eaffffb4 	b	fffc0a4c <t105_driver_step+0x74>
+fffc0a80:	e5912100 	ldr	r2, [r1, #256]	@ 0x100
+fffc0a84:	e5903038 	ldr	r3, [r0, #56]	@ 0x38
+fffc0a88:	e590003c 	ldr	r0, [r0, #60]	@ 0x3c
+fffc0a8c:	e5842048 	str	r2, [r4, #72]	@ 0x48
+fffc0a90:	e5941008 	ldr	r1, [r4, #8]
+fffc0a94:	e1933000 	orrs	r3, r3, r0
+fffc0a98:	e5953104 	ldr	r3, [r5, #260]	@ 0x104
+fffc0a9c:	e594e00c 	ldr	lr, [r4, #12]
+fffc0aa0:	e584304c 	str	r3, [r4, #76]	@ 0x4c
+fffc0aa4:	e5953110 	ldr	r3, [r5, #272]	@ 0x110
+fffc0aa8:	e5843058 	str	r3, [r4, #88]	@ 0x58
+fffc0aac:	e5953114 	ldr	r3, [r5, #276]	@ 0x114
+fffc0ab0:	e584305c 	str	r3, [r4, #92]	@ 0x5c
+fffc0ab4:	e5953118 	ldr	r3, [r5, #280]	@ 0x118
+fffc0ab8:	e5843060 	str	r3, [r4, #96]	@ 0x60
+fffc0abc:	e595311c 	ldr	r3, [r5, #284]	@ 0x11c
+fffc0ac0:	e5841050 	str	r1, [r4, #80]	@ 0x50
+fffc0ac4:	e584e054 	str	lr, [r4, #84]	@ 0x54
+fffc0ac8:	e5843064 	str	r3, [r4, #100]	@ 0x64
+fffc0acc:	0a00004b 	beq	fffc0c00 <t105_driver_step+0x228>
+fffc0ad0:	e1c424d0 	ldrd	r2, [r4, #64]	@ 0x40
+fffc0ad4:	e1c426f8 	strd	r2, [r4, #104]	@ 0x68
+fffc0ad8:	e5943058 	ldr	r3, [r4, #88]	@ 0x58
+fffc0adc:	e3a06000 	mov	r6, #0
+fffc0ae0:	e5952154 	ldr	r2, [r5, #340]	@ 0x154
+fffc0ae4:	e594c05c 	ldr	ip, [r4, #92]	@ 0x5c
+fffc0ae8:	e1530001 	cmp	r3, r1
+fffc0aec:	e584209c 	str	r2, [r4, #156]	@ 0x9c
+fffc0af0:	e0dc000e 	sbcs	r0, ip, lr
+fffc0af4:	e5950158 	ldr	r0, [r5, #344]	@ 0x158
+fffc0af8:	e58460a4 	str	r6, [r4, #164]	@ 0xa4
+fffc0afc:	e58400a0 	str	r0, [r4, #160]	@ 0xa0
+fffc0b00:	3a000049 	bcc	fffc0c2c <t105_driver_step+0x254>
+fffc0b04:	e0533001 	subs	r3, r3, r1
+fffc0b08:	e3e01000 	mvn	r1, #0
+fffc0b0c:	e0ccc00e 	sbc	ip, ip, lr
+fffc0b10:	e1510003 	cmp	r1, r3
+fffc0b14:	e0d6600c 	sbcs	r6, r6, ip
+fffc0b18:	3a000043 	bcc	fffc0c2c <t105_driver_step+0x254>
+fffc0b1c:	e3520000 	cmp	r2, #0
+fffc0b20:	e5843098 	str	r3, [r4, #152]	@ 0x98
+fffc0b24:	e285cf4a 	add	ip, r5, #296	@ 0x128
+fffc0b28:	e284306c 	add	r3, r4, #108	@ 0x6c
+fffc0b2c:	e284108c 	add	r1, r4, #140	@ 0x8c
+fffc0b30:	1a000029 	bne	fffc0bdc <t105_driver_step+0x204>
+fffc0b34:	e5a32004 	str	r2, [r3, #4]!
+fffc0b38:	e1510003 	cmp	r1, r3
+fffc0b3c:	1afffffc 	bne	fffc0b34 <t105_driver_step+0x15c>
+fffc0b40:	e2100004 	ands	r0, r0, #4
+fffc0b44:	15953148 	ldrne	r3, [r5, #328]	@ 0x148
+fffc0b48:	05840090 	streq	r0, [r4, #144]	@ 0x90
+fffc0b4c:	15843090 	strne	r3, [r4, #144]	@ 0x90
+fffc0b50:	1595014c 	ldrne	r0, [r5, #332]	@ 0x14c
+fffc0b54:	e5840094 	str	r0, [r4, #148]	@ 0x94
+fffc0b58:	f57ff05f 	dmb	sy
+fffc0b5c:	e2841048 	add	r1, r4, #72	@ 0x48
+fffc0b60:	e1a00004 	mov	r0, r4
+fffc0b64:	ebfffd4d 	bl	fffc00a0 <t105_batch_apply>
+fffc0b68:	e3500000 	cmp	r0, #0
+fffc0b6c:	0a000034 	beq	fffc0c44 <t105_driver_step+0x26c>
+fffc0b70:	e28410a8 	add	r1, r4, #168	@ 0xa8
+fffc0b74:	e1a00004 	mov	r0, r4
+fffc0b78:	ebffff3e 	bl	fffc0878 <t105_decide>
+fffc0b7c:	e3500000 	cmp	r0, #0
+fffc0b80:	0a00002f 	beq	fffc0c44 <t105_driver_step+0x26c>
+fffc0b84:	e28430a4 	add	r3, r4, #164	@ 0xa4
+fffc0b88:	e2852c02 	add	r2, r5, #512	@ 0x200
+fffc0b8c:	e28400c4 	add	r0, r4, #196	@ 0xc4
+fffc0b90:	e5b31004 	ldr	r1, [r3, #4]!
+fffc0b94:	e1530000 	cmp	r3, r0
+fffc0b98:	e4821004 	str	r1, [r2], #4
+fffc0b9c:	1afffffb 	bne	fffc0b90 <t105_driver_step+0x1b8>
+fffc0ba0:	f57ff05f 	dmb	sy
+fffc0ba4:	e3a03001 	mov	r3, #1
+fffc0ba8:	e5853008 	str	r3, [r5, #8]
+fffc0bac:	f57ff05f 	dmb	sy
+fffc0bb0:	e3a03002 	mov	r3, #2
+fffc0bb4:	e58430c8 	str	r3, [r4, #200]	@ 0xc8
+fffc0bb8:	eaffff9f 	b	fffc0a3c <t105_driver_step+0x64>
+fffc0bbc:	e3130007 	tst	r3, #7
+fffc0bc0:	1affff9d 	bne	fffc0a3c <t105_driver_step+0x64>
+fffc0bc4:	e3a03001 	mov	r3, #1
+fffc0bc8:	e5813004 	str	r3, [r1, #4]
+fffc0bcc:	f57ff05f 	dmb	sy
+fffc0bd0:	e1a00003 	mov	r0, r3
+fffc0bd4:	e58430c8 	str	r3, [r4, #200]	@ 0xc8
+fffc0bd8:	e8bd8070 	pop	{r4, r5, r6, pc}
+fffc0bdc:	e49c2004 	ldr	r2, [ip], #4
+fffc0be0:	e5a32004 	str	r2, [r3, #4]!
+fffc0be4:	e1530001 	cmp	r3, r1
+fffc0be8:	0affffd4 	beq	fffc0b40 <t105_driver_step+0x168>
+fffc0bec:	e49c2004 	ldr	r2, [ip], #4
+fffc0bf0:	e5a32004 	str	r2, [r3, #4]!
+fffc0bf4:	e1530001 	cmp	r3, r1
+fffc0bf8:	1afffff7 	bne	fffc0bdc <t105_driver_step+0x204>
+fffc0bfc:	eaffffcf 	b	fffc0b40 <t105_driver_step+0x168>
+fffc0c00:	e5953120 	ldr	r3, [r5, #288]	@ 0x120
+fffc0c04:	e5843068 	str	r3, [r4, #104]	@ 0x68
+fffc0c08:	e5953124 	ldr	r3, [r5, #292]	@ 0x124
+fffc0c0c:	e584306c 	str	r3, [r4, #108]	@ 0x6c
+fffc0c10:	eaffffb0 	b	fffc0ad8 <t105_driver_step+0x100>
+fffc0c14:	e3a02002 	mov	r2, #2
+fffc0c18:	e3a03001 	mov	r3, #1
+fffc0c1c:	e58020cc 	str	r2, [r0, #204]	@ 0xcc
+fffc0c20:	e581300c 	str	r3, [r1, #12]
+fffc0c24:	f57ff05f 	dmb	sy
+fffc0c28:	eaffff87 	b	fffc0a4c <t105_driver_step+0x74>
+fffc0c2c:	e3a02006 	mov	r2, #6
+fffc0c30:	e3a03001 	mov	r3, #1
+fffc0c34:	e58420cc 	str	r2, [r4, #204]	@ 0xcc
+fffc0c38:	e585300c 	str	r3, [r5, #12]
+fffc0c3c:	f57ff05f 	dmb	sy
+fffc0c40:	eaffff81 	b	fffc0a4c <t105_driver_step+0x74>
+fffc0c44:	e3a02003 	mov	r2, #3
+fffc0c48:	e3a03001 	mov	r3, #1
+fffc0c4c:	e58420cc 	str	r2, [r4, #204]	@ 0xcc
+fffc0c50:	e585300c 	str	r3, [r5, #12]
+fffc0c54:	f57ff05f 	dmb	sy
+fffc0c58:	eaffff7b 	b	fffc0a4c <t105_driver_step+0x74>
 
-fffc0b78 <main>:
-fffc0b78:	e92d4010 	push	{r4, lr}
-fffc0b7c:	e3004fb0 	movw	r4, #4016	@ 0xfb0
-fffc0b80:	e3000fb0 	movw	r0, #4016	@ 0xfb0
-fffc0b84:	e34f4ffc 	movt	r4, #65532	@ 0xfffc
-fffc0b88:	e34f0ffc 	movt	r0, #65532	@ 0xfffc
-fffc0b8c:	ebffff8a 	bl	fffc09bc <t105_driver_init>
-fffc0b90:	e3a01101 	mov	r1, #1073741824	@ 0x40000000
-fffc0b94:	e1a00004 	mov	r0, r4
-fffc0b98:	ebffff8e 	bl	fffc09d8 <t105_driver_step>
-fffc0b9c:	e3500000 	cmp	r0, #0
-fffc0ba0:	aafffffa 	bge	fffc0b90 <main+0x18>
-fffc0ba4:	e320f003 	wfi
-fffc0ba8:	e320f003 	wfi
-fffc0bac:	eafffffc 	b	fffc0ba4 <main+0x2c>
+fffc0c5c <main>:
+fffc0c5c:	e92d4010 	push	{r4, lr}
+fffc0c60:	e3014098 	movw	r4, #4248	@ 0x1098
+fffc0c64:	e3010098 	movw	r0, #4248	@ 0x1098
+fffc0c68:	e34f4ffc 	movt	r4, #65532	@ 0xfffc
+fffc0c6c:	e34f0ffc 	movt	r0, #65532	@ 0xfffc
+fffc0c70:	ebffff51 	bl	fffc09bc <t105_driver_init>
+fffc0c74:	e3a01101 	mov	r1, #1073741824	@ 0x40000000
+fffc0c78:	e1a00004 	mov	r0, r4
+fffc0c7c:	ebffff55 	bl	fffc09d8 <t105_driver_step>
+fffc0c80:	e3500000 	cmp	r0, #0
+fffc0c84:	aafffffa 	bge	fffc0c74 <main+0x18>
+fffc0c88:	e320f003 	wfi
+fffc0c8c:	e320f003 	wfi
+fffc0c90:	eafffffc 	b	fffc0c88 <main+0x2c>
 
-fffc0bb0 <table.0>:
-fffc0bb0:	00000000 77073096 ee0e612c 990951ba     .....0.w,a...Q..
-fffc0bc0:	076dc419 706af48f e963a535 9e6495a3     ..m...jp5.c...d.
-fffc0bd0:	0edb8832 79dcb8a4 e0d5e91e 97d2d988     2......y........
-fffc0be0:	09b64c2b 7eb17cbd e7b82d07 90bf1d91     +L...|.~.-......
-fffc0bf0:	1db71064 6ab020f2 f3b97148 84be41de     d.... .jHq...A..
-fffc0c00:	1adad47d 6ddde4eb f4d4b551 83d385c7     }......mQ.......
-fffc0c10:	136c9856 646ba8c0 fd62f97a 8a65c9ec     V.l...kdz.b...e.
-fffc0c20:	14015c4f 63066cd9 fa0f3d63 8d080df5     O\...l.cc=......
-fffc0c30:	3b6e20c8 4c69105e d56041e4 a2677172     . n;^.iL.A`.rqg.
-fffc0c40:	3c03e4d1 4b04d447 d20d85fd a50ab56b     ...<G..K....k...
-fffc0c50:	35b5a8fa 42b2986c dbbbc9d6 acbcf940     ...5l..B....@...
-fffc0c60:	32d86ce3 45df5c75 dcd60dcf abd13d59     .l.2u\.E....Y=..
-fffc0c70:	26d930ac 51de003a c8d75180 bfd06116     .0.&:..Q.Q...a..
-fffc0c80:	21b4f4b5 56b3c423 cfba9599 b8bda50f     ...!#..V........
-fffc0c90:	2802b89e 5f058808 c60cd9b2 b10be924     ...(..._....$...
-fffc0ca0:	2f6f7c87 58684c11 c1611dab b6662d3d     .|o/.LhX..a.=-f.
-fffc0cb0:	76dc4190 01db7106 98d220bc efd5102a     .A.v.q... ..*...
-fffc0cc0:	71b18589 06b6b51f 9fbfe4a5 e8b8d433     ...q........3...
-fffc0cd0:	7807c9a2 0f00f934 9609a88e e10e9818     ...x4...........
-fffc0ce0:	7f6a0dbb 086d3d2d 91646c97 e6635c01     ..j.-=m..ld..\c.
-fffc0cf0:	6b6b51f4 1c6c6162 856530d8 f262004e     .Qkkbal..0e.N.b.
-fffc0d00:	6c0695ed 1b01a57b 8208f4c1 f50fc457     ...l{.......W...
-fffc0d10:	65b0d9c6 12b7e950 8bbeb8ea fcb9887c     ...eP.......|...
-fffc0d20:	62dd1ddf 15da2d49 8cd37cf3 fbd44c65     ...bI-...|..eL..
-fffc0d30:	4db26158 3ab551ce a3bc0074 d4bb30e2     Xa.M.Q.:t....0..
-fffc0d40:	4adfa541 3dd895d7 a4d1c46d d3d6f4fb     A..J...=m.......
-fffc0d50:	4369e96a 346ed9fc ad678846 da60b8d0     j.iC..n4F.g...`.
-fffc0d60:	44042d73 33031de5 aa0a4c5f dd0d7cc9     s-.D...3_L...|..
-fffc0d70:	5005713c 270241aa be0b1010 c90c2086     <q.P.A.'..... ..
-fffc0d80:	5768b525 206f85b3 b966d409 ce61e49f     %.hW..o ..f...a.
-fffc0d90:	5edef90e 29d9c998 b0d09822 c7d7a8b4     ...^...)".......
-fffc0da0:	59b33d17 2eb40d81 b7bd5c3b c0ba6cad     .=.Y....;\...l..
-fffc0db0:	edb88320 9abfb3b6 03b6e20c 74b1d29a      ..............t
-fffc0dc0:	ead54739 9dd277af 04db2615 73dc1683     9G...w...&.....s
-fffc0dd0:	e3630b12 94643b84 0d6d6a3e 7a6a5aa8     ..c..;d.>jm..Zjz
-fffc0de0:	e40ecf0b 9309ff9d 0a00ae27 7d079eb1     ........'......}
-fffc0df0:	f00f9344 8708a3d2 1e01f268 6906c2fe     D.......h......i
-fffc0e00:	f762575d 806567cb 196c3671 6e6b06e7     ]Wb..ge.q6l...kn
-fffc0e10:	fed41b76 89d32be0 10da7a5a 67dd4acc     v....+..Zz...J.g
-fffc0e20:	f9b9df6f 8ebeeff9 17b7be43 60b08ed5     o.......C......`
-fffc0e30:	d6d6a3e8 a1d1937e 38d8c2c4 4fdff252     ....~......8R..O
-fffc0e40:	d1bb67f1 a6bc5767 3fb506dd 48b2364b     .g..gW.....?K6.H
-fffc0e50:	d80d2bda af0a1b4c 36034af6 41047a60     .+..L....J.6`z.A
-fffc0e60:	df60efc3 a867df55 316e8eef 4669be79     ..`.U.g...n1y.iF
-fffc0e70:	cb61b38c bc66831a 256fd2a0 5268e236     ..a...f...o%6.hR
-fffc0e80:	cc0c7795 bb0b4703 220216b9 5505262f     .w...G....."/&.U
-fffc0e90:	c5ba3bbe b2bd0b28 2bb45a92 5cb36a04     .;..(....Z.+.j.\
-fffc0ea0:	c2d7ffa7 b5d0cf31 2cd99e8b 5bdeae1d     ....1......,...[
-fffc0eb0:	9b64c2b0 ec63f226 756aa39c 026d930a     ..d.&.c...ju..m.
-fffc0ec0:	9c0906a9 eb0e363f 72076785 05005713     ....?6...g.r.W..
-fffc0ed0:	95bf4a82 e2b87a14 7bb12bae 0cb61b38     .J...z...+.{8...
-fffc0ee0:	92d28e9b e5d5be0d 7cdcefb7 0bdbdf21     ...........|!...
-fffc0ef0:	86d3d2d4 f1d4e242 68ddb3f8 1fda836e     ....B......hn...
-fffc0f00:	81be16cd f6b9265b 6fb077e1 18b74777     ....[&...w.owG..
-fffc0f10:	88085ae6 ff0f6a70 66063bca 11010b5c     .Z..pj...;.f\...
-fffc0f20:	8f659eff f862ae69 616bffd3 166ccf45     ..e.i.b...kaE.l.
-fffc0f30:	a00ae278 d70dd2ee 4e048354 3903b3c2     x.......T..N...9
-fffc0f40:	a7672661 d06016f7 4969474d 3e6e77db     a&g...`.MGiI.wn>
-fffc0f50:	aed16a4a d9d65adc 40df0b66 37d83bf0     Jj...Z..f..@.;.7
-fffc0f60:	a9bcae53 debb9ec5 47b2cf7f 30b5ffe9     S..........G...0
-fffc0f70:	bdbdf21c cabac28a 53b39330 24b4a3a6     ........0..S...$
-fffc0f80:	bad03605 cdd70693 54de5729 23d967bf     .6......)W.T.g.#
-fffc0f90:	b3667a2e c4614ab8 5d681b02 2a6f2b94     .zf..Ja...h].+o*
-fffc0fa0:	b40bbe37 c30c8ea1 5a05df1b 2d02ef8d     7..........Z...-
+fffc0c94 <table.0>:
+fffc0c94:	00000000 77073096 ee0e612c 990951ba     .....0.w,a...Q..
+fffc0ca4:	076dc419 706af48f e963a535 9e6495a3     ..m...jp5.c...d.
+fffc0cb4:	0edb8832 79dcb8a4 e0d5e91e 97d2d988     2......y........
+fffc0cc4:	09b64c2b 7eb17cbd e7b82d07 90bf1d91     +L...|.~.-......
+fffc0cd4:	1db71064 6ab020f2 f3b97148 84be41de     d.... .jHq...A..
+fffc0ce4:	1adad47d 6ddde4eb f4d4b551 83d385c7     }......mQ.......
+fffc0cf4:	136c9856 646ba8c0 fd62f97a 8a65c9ec     V.l...kdz.b...e.
+fffc0d04:	14015c4f 63066cd9 fa0f3d63 8d080df5     O\...l.cc=......
+fffc0d14:	3b6e20c8 4c69105e d56041e4 a2677172     . n;^.iL.A`.rqg.
+fffc0d24:	3c03e4d1 4b04d447 d20d85fd a50ab56b     ...<G..K....k...
+fffc0d34:	35b5a8fa 42b2986c dbbbc9d6 acbcf940     ...5l..B....@...
+fffc0d44:	32d86ce3 45df5c75 dcd60dcf abd13d59     .l.2u\.E....Y=..
+fffc0d54:	26d930ac 51de003a c8d75180 bfd06116     .0.&:..Q.Q...a..
+fffc0d64:	21b4f4b5 56b3c423 cfba9599 b8bda50f     ...!#..V........
+fffc0d74:	2802b89e 5f058808 c60cd9b2 b10be924     ...(..._....$...
+fffc0d84:	2f6f7c87 58684c11 c1611dab b6662d3d     .|o/.LhX..a.=-f.
+fffc0d94:	76dc4190 01db7106 98d220bc efd5102a     .A.v.q... ..*...
+fffc0da4:	71b18589 06b6b51f 9fbfe4a5 e8b8d433     ...q........3...
+fffc0db4:	7807c9a2 0f00f934 9609a88e e10e9818     ...x4...........
+fffc0dc4:	7f6a0dbb 086d3d2d 91646c97 e6635c01     ..j.-=m..ld..\c.
+fffc0dd4:	6b6b51f4 1c6c6162 856530d8 f262004e     .Qkkbal..0e.N.b.
+fffc0de4:	6c0695ed 1b01a57b 8208f4c1 f50fc457     ...l{.......W...
+fffc0df4:	65b0d9c6 12b7e950 8bbeb8ea fcb9887c     ...eP.......|...
+fffc0e04:	62dd1ddf 15da2d49 8cd37cf3 fbd44c65     ...bI-...|..eL..
+fffc0e14:	4db26158 3ab551ce a3bc0074 d4bb30e2     Xa.M.Q.:t....0..
+fffc0e24:	4adfa541 3dd895d7 a4d1c46d d3d6f4fb     A..J...=m.......
+fffc0e34:	4369e96a 346ed9fc ad678846 da60b8d0     j.iC..n4F.g...`.
+fffc0e44:	44042d73 33031de5 aa0a4c5f dd0d7cc9     s-.D...3_L...|..
+fffc0e54:	5005713c 270241aa be0b1010 c90c2086     <q.P.A.'..... ..
+fffc0e64:	5768b525 206f85b3 b966d409 ce61e49f     %.hW..o ..f...a.
+fffc0e74:	5edef90e 29d9c998 b0d09822 c7d7a8b4     ...^...)".......
+fffc0e84:	59b33d17 2eb40d81 b7bd5c3b c0ba6cad     .=.Y....;\...l..
+fffc0e94:	edb88320 9abfb3b6 03b6e20c 74b1d29a      ..............t
+fffc0ea4:	ead54739 9dd277af 04db2615 73dc1683     9G...w...&.....s
+fffc0eb4:	e3630b12 94643b84 0d6d6a3e 7a6a5aa8     ..c..;d.>jm..Zjz
+fffc0ec4:	e40ecf0b 9309ff9d 0a00ae27 7d079eb1     ........'......}
+fffc0ed4:	f00f9344 8708a3d2 1e01f268 6906c2fe     D.......h......i
+fffc0ee4:	f762575d 806567cb 196c3671 6e6b06e7     ]Wb..ge.q6l...kn
+fffc0ef4:	fed41b76 89d32be0 10da7a5a 67dd4acc     v....+..Zz...J.g
+fffc0f04:	f9b9df6f 8ebeeff9 17b7be43 60b08ed5     o.......C......`
+fffc0f14:	d6d6a3e8 a1d1937e 38d8c2c4 4fdff252     ....~......8R..O
+fffc0f24:	d1bb67f1 a6bc5767 3fb506dd 48b2364b     .g..gW.....?K6.H
+fffc0f34:	d80d2bda af0a1b4c 36034af6 41047a60     .+..L....J.6`z.A
+fffc0f44:	df60efc3 a867df55 316e8eef 4669be79     ..`.U.g...n1y.iF
+fffc0f54:	cb61b38c bc66831a 256fd2a0 5268e236     ..a...f...o%6.hR
+fffc0f64:	cc0c7795 bb0b4703 220216b9 5505262f     .w...G....."/&.U
+fffc0f74:	c5ba3bbe b2bd0b28 2bb45a92 5cb36a04     .;..(....Z.+.j.\
+fffc0f84:	c2d7ffa7 b5d0cf31 2cd99e8b 5bdeae1d     ....1......,...[
+fffc0f94:	9b64c2b0 ec63f226 756aa39c 026d930a     ..d.&.c...ju..m.
+fffc0fa4:	9c0906a9 eb0e363f 72076785 05005713     ....?6...g.r.W..
+fffc0fb4:	95bf4a82 e2b87a14 7bb12bae 0cb61b38     .J...z...+.{8...
+fffc0fc4:	92d28e9b e5d5be0d 7cdcefb7 0bdbdf21     ...........|!...
+fffc0fd4:	86d3d2d4 f1d4e242 68ddb3f8 1fda836e     ....B......hn...
+fffc0fe4:	81be16cd f6b9265b 6fb077e1 18b74777     ....[&...w.owG..
+fffc0ff4:	88085ae6 ff0f6a70 66063bca 11010b5c     .Z..pj...;.f\...
+fffc1004:	8f659eff f862ae69 616bffd3 166ccf45     ..e.i.b...kaE.l.
+fffc1014:	a00ae278 d70dd2ee 4e048354 3903b3c2     x.......T..N...9
+fffc1024:	a7672661 d06016f7 4969474d 3e6e77db     a&g...`.MGiI.wn>
+fffc1034:	aed16a4a d9d65adc 40df0b66 37d83bf0     Jj...Z..f..@.;.7
+fffc1044:	a9bcae53 debb9ec5 47b2cf7f 30b5ffe9     S..........G...0
+fffc1054:	bdbdf21c cabac28a 53b39330 24b4a3a6     ........0..S...$
+fffc1064:	bad03605 cdd70693 54de5729 23d967bf     .6......)W.T.g.#
+fffc1074:	b3667a2e c4614ab8 5d681b02 2a6f2b94     .zf..Ja...h].+o*
+fffc1084:	b40bbe37 c30c8ea1 5a05df1b 2d02ef8d     7..........Z...-

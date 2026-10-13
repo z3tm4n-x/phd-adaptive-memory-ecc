@@ -4,7 +4,7 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--phase',type=int,default=0)
-    ap.add_argument('--stress',type=int,default=0);args=ap.parse_args()
+    ap.add_argument('--stress',type=int,default=0);ap.add_argument('--cycles',type=int,default=120000);args=ap.parse_args()
     build=HERE/'.build'/('integration-'+str(time.time_ns()));build.mkdir(parents=True)
     stage=build/'source';stage.mkdir()
     hashes={}
@@ -24,19 +24,19 @@ def main():
     subprocess.run(['gcc','-shared','-fPIC','-O2','-std=c11','-Wall','-Wextra','-Werror',
        *[str(c/f) for f in ('rule.c','batch.c','crc32.c','mailbox_dpi.c')],'-o',str(build/'dpi.so')],check=True)
     command=[os.environ.get('VIVADO','/home/z3tm4n/bin/vivado-wsl'),'-mode','batch','-nojournal','-nolog',
-      '-source',str(c/'integration_sim.tcl'),'-tclargs',str(build/'xsim'),str(args.phase),str(args.stress),str(build)]
+      '-source',str(c/'integration_sim.tcl'),'-tclargs',str(build/'xsim'),str(args.phase),str(args.stress),str(build),str(args.cycles)]
     print('BUILD',build,flush=True);before=time.monotonic()
     with (build/'vivado.log').open('w') as f:
         run=subprocess.run(command,cwd=build,stdout=f,stderr=subprocess.STDOUT,timeout=600)
     meta={'kind':'vendor-XPM/native-C functional composition; NOT CPU/PS7 timing',
-          'build':str(build),'phase_ns':args.phase,'stress':args.stress,'elapsed_s':time.monotonic()-before,
+          'build':str(build),'phase_ns':args.phase,'stress':args.stress,'cycles':args.cycles,'elapsed_s':time.monotonic()-before,
           'source_hashes':hashes,'diagnostic_timers':{'NW':40,'NH':80,'NR':130,'PAIR':22500225010},
           'returncode':run.returncode}
     (build/'manifest.json').write_text(json.dumps(meta,indent=2)+'\n')
     log=(build/'vivado.log').read_text()
     assert run.returncode==0 and 'PASS ARM integrated' in log and 'Fatal:' not in log,log[-6000:]
     from check_integration import check
-    result=check(build/'vivado.log');meta['check']=result
+    result=check(build/'vivado.log',price_mode=args.stress if args.stress>=3 else 0);meta['check']=result
     (build/'summary.json').write_text(json.dumps(meta,indent=2)+'\n')
     (HERE/'outputs'/f'integration-{args.phase}-{args.stress}.json').write_text(json.dumps(meta,indent=2)+'\n')
     print(json.dumps(result,indent=2))

@@ -16,6 +16,12 @@ def main():
       '-Wl,--gc-sections','-Wl,--build-id=none','-Wl,-z,noexecstack',
       '-T',str(HERE/'link.ld'),*[str(HERE/x) for x in ['start.S']+core+['firmware.c']],
       '-o',str(elf)],env=env,check=True)
+    subprocess.run(['arm-none-eabi-gcc',*flags,'-Wall','-Wextra','-Werror',
+      '-ffunction-sections','-fdata-sections','-Wa,--noexecstack','-nostdlib',
+      '-Wl,--gc-sections','-Wl,--build-id=none','-Wl,-z,noexecstack',
+      '-T',str(HERE/'link.ld'),*[str(HERE/x) for x in
+          ['start.S','rule.c','batch.c','crc32.c','driver_reference.c','firmware.c']],
+      '-o',str(out/'firmware-reference.elf')],env=env,check=True)
     symbols=subprocess.check_output(['arm-none-eabi-nm','-S','--size-sort',str(elf)],env=env,text=True)
     assembly=subprocess.check_output(['arm-none-eabi-objdump','-d',str(elf)],env=env,text=True)
     (out/'firmware-symbols.txt').write_text(symbols);(out/'firmware-disassembly.txt').write_text(assembly)

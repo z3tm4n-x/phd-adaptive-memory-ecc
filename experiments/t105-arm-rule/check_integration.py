@@ -11,7 +11,7 @@ HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/'t104-rtl-resume'))
 from reference import ETransaction,Request,ServiceConfig
 
-def check(path):
+def check(path,price_mode=0):
     offers={};accepts=[];responses=[];grants={};appgrants=[];releases={}
     events=[];history=[];programs=[];groups=[];start=None;latest=0;lease=None
     previous=0;pin_edges=0;max_credits=0;max_response=0;max_output=0
@@ -93,7 +93,10 @@ def check(path):
     for (b,d),(eb,state) in zip(programs,expected):
         assert b==eb,('batch differs from raw events',b,eb)
         assert d==decision_expected(b[0],state),('rule differs',b,d,state)
-    assert accepts==responses and len(responses)>0 and skips>0 and veto>0 and installed>0
+    assert accepts==responses and len(responses)>0
+    if price_mode==3:assert skips==0 and installed==0 and not programs
+    elif price_mode==4:assert skips>0 and installed>0 and not veto
+    else:assert skips>0 and veto>0 and installed>0
     assert [e for _,e in events]==[e for _,e,_ in history],'raw history loss/repetition'
     assert 'PASS ARM integrated' in path.read_text()
     return {'packets':len(programs),'raw_events':len(history),'installed_certificates':installed,

@@ -25,7 +25,26 @@ int t105_driver_step(t105_driver *d, volatile uint32_t *m) {
         m[1]=1;barrier();d->phase=1;return 0;
     case 1:
         if(!(status&1u)) return 0;
-        for(uint32_t i=0;i<24;i++) d->input.words[i]=m[64+i];
+        /* The immutable collector bank already proves these identities:
+         * base_G = previous bank's end_G; start never changes after start;
+         * reserved = 0; count = end_G - base_G (overflow sets fault).
+         * Reconstruct only those identities; do NOT move policy to PL.
+         * The full sequence is still read and validated, including first
+         * startup. No assumption that an old bank is the requested bank. */
+        for(uint32_t i=0;i<2;i++) d->input.words[i]=m[64+i];
+        for(uint32_t i=4;i<8;i++) d->input.words[i]=m[64+i];
+        d->input.batch.base_generation=d->rule.rule.generation;
+        if(d->rule.sequence==0) {
+            d->input.words[8]=m[72];d->input.words[9]=m[73];
+        } else d->input.batch.start_tick=d->rule.start_tick;
+        d->input.batch.err_count=m[85];d->input.batch.flags=m[86];
+        d->input.batch.reserved=0;
+        if(d->input.batch.end_generation<d->input.batch.base_generation ||
+           d->input.batch.end_generation-d->input.batch.base_generation>UINT32_MAX)
+            return fail(d,m,6);
+        d->input.batch.event_count=(uint32_t)(d->input.batch.end_generation-d->input.batch.base_generation);
+        for(uint32_t i=10;i<18;i++) d->input.words[i]=d->input.batch.err_count?m[64+i]:0;
+        for(uint32_t i=18;i<20;i++) d->input.words[i]=(d->input.batch.flags&B_RECOVERY)?m[64+i]:0;
         barrier();
         if(!t105_batch_apply(&d->rule,&d->input.batch) ||
            !t105_decide(&d->rule,&d->output.decision)) {
@@ -37,13 +56,12 @@ int t105_driver_step(t105_driver *d, volatile uint32_t *m) {
         barrier();m[2]=1;barrier();d->phase=2;return 0;
     case 2:
         if(status&7u) return 0;
-        /* Only read ACK after snapshot/validation/output are all clear.
-         * ACK means accepted by slow interval delivery, NOT fast applied. */
-        {uint32_t lo=m[4],hi=m[5];barrier();
-         if((((uint64_t)hi<<32)|lo)!=d->rule.sequence) {
-             return fail(d,m,4);
-         }}
-        d->phase=0;return 1;
+        /* RTL clears snapshot only after the sequence/G/CRC-checked
+         * decision was accepted. Status is NOT a fast-domain ACK.
+         * There is one owner, no runtime reset, and no other clear path.
+         * Start the next snapshot now, without a redundant ACK read or
+         * second status read in phase 0. Faults still stop before CLAIM. */
+        m[1]=1;barrier();d->phase=1;return 1;
     default:return fail(d,m,5);
     }
 }

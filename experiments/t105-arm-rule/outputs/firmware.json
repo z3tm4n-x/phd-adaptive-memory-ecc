@@ -1,6 +1,6 @@
 {
   "kind": "compiled Cortex-A9 OCM/MMIO firmware, not booted PS7/BSP or WCET",
-  "ELF_sha256": "71513f748b7a4ae8f0e50df6d2d73be746c6573e4ef2b15cac042d8018f5332a",
+  "ELF_sha256": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09",
   "symbols": [
     {
       "name": "t105_driver_init",
@@ -39,7 +39,7 @@
     },
     {
       "name": "t105_driver_step",
-      "bytes": 416,
+      "bytes": 644,
       "kind": "T"
     },
     {
@@ -53,7 +53,7 @@
       "kind": "T"
     }
   ],
-  "linked_code_and_rodata_bytes": 4016,
+  "linked_code_and_rodata_bytes": 4244,
   "working_static_bytes": 208,
   "static_function_frames": {
     "t105_batch_init": 8,

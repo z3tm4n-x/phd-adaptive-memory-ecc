@@ -8,9 +8,12 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--bootstrap',action='store_true')
     p.add_argument('--ps7',action='store_true');p.add_argument('--repeat-binary',action='store_true')
     p.add_argument('--integration',action='store_true');p.add_argument('--full',action='store_true');a=p.parse_args()
-    if a.bootstrap:subprocess.run([sys.executable,str(HERE/'setup_tools.py')],check=True)
+    if a.bootstrap:
+        for name in ('setup_tools.py','analysis_tools.py'):
+            subprocess.run([sys.executable,str(HERE/name)],check=True)
     for name in ('verify.py','budget.py','verify_batch.py','verify_batch_rtl.py','verify_mailbox.py',
-                 'prove_interval.py','prove_join.py','build_firmware.py','batch_budget.py','package_checks.py'):
+                 'prove_interval.py','prove_join.py','prove_compact.py','verify_driver.py',
+                 'build_firmware.py','verify_isa.py','batch_budget.py','timing_residual.py','check_route_reuse.py'):
         subprocess.run([sys.executable,str(HERE/name)],check=True)
     if a.repeat_binary:
         before=hashlib.sha256((HERE/'outputs/rule-test.elf').read_bytes()).hexdigest()
@@ -27,6 +30,11 @@ def main():
         for phase,stress in ((0,0),(3,1),(11,2)):
             subprocess.run([sys.executable,str(HERE/'run_integration.py'),
                             '--phase',str(phase),'--stress',str(stress)],check=True)
+        for stress in (3,4):
+            subprocess.run([sys.executable,str(HERE/'run_integration.py'),
+                            '--stress',str(stress),'--cycles','1000000'],check=True)
+    for name in ('check_price.py','package_checks.py'):
+        subprocess.run([sys.executable,str(HERE/name)],check=True)
     if a.full:
         from run_full import main as route
         build=route()

@@ -63,7 +63,9 @@ module tb_arm;
 
     initial begin
         wait(running);repeat(12) @(posedge slow_clk);
-        forever begin
+        // STRESS=3/4: same legal application, stationary FAST/LOW price.
+        // FAST does not need the software rule; keep mailbox unclaimed.
+        while(STRESS!=3) begin
             write_bus(12'h004,1,15,packet_number%3,0);
             for(word=0;word<24;word=word+1) begin
                 read_bus(12'h100+word*4,readback);snapshot[word*32+:32]=readback;
@@ -108,10 +110,11 @@ module tb_arm;
     always @(negedge slow_clk) begin
         slow_i=slow_i+1;
         if(!rst) begin
-            loss=STRESS==2 ? (slow_i>=200 && slow_i<2202 && slow_i%2==0) :
+            loss=STRESS>=3 ? 0 : STRESS==2 ? (slow_i>=200 && slow_i<2202 && slow_i%2==0) :
                 (slow_i>=500 && slow_i<517) || (slow_i>=1300 && slow_i<1302);
-            rr=STRESS==1 && (slow_i%201<70)?0:3;
-            if(rv==0 && slow_i>=next_offer && offered<(STRESS==1?30:4)) begin
+            rr=(STRESS==1 && (slow_i%201<70)) ||
+               (STRESS>=3 && slow_i%17<4)?0:3;
+            if(rv==0 && slow_i>=next_offer && offered<(STRESS>=3?8:STRESS==1?30:4)) begin
                 ident=offered;
                 packet={ident,4'((offered%15)+1),32'hca000000|32'(offered),
                          19'(offered%(1<<WB)),2'(1+(offered%2))};
@@ -119,7 +122,7 @@ module tb_arm;
                 rv=offered%2?2:1;
                 $display("OFFER %0t %0d %h",$time,offered%2,packet);
                 offered=offered+1;
-                next_offer=slow_i+(STRESS==1?2:5001);
+                next_offer=slow_i+(STRESS>=3?25001:STRESS==1?2:5001);
             end
         end
     end
@@ -142,7 +145,7 @@ module tb_arm;
     end
     always @(negedge fast_clk) begin
         i=i+1;
-        err=STRESS==2 ? (i>=600 && i<13000) :
+        err=STRESS>=3 ? 0 : STRESS==2 ? (i>=600 && i<13000) :
             (i>=2000 && i<5500 && i%97<31) || (i>=22000 && i<24000);
         dq=alias_high?16'hc3a5:16'h5a3c;
         if(i==CYCLES) begin

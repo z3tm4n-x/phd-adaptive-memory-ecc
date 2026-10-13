@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "case": "collector",
+      "induction": true,
+      "counterexample": false,
+      "log_sha256": "e94bafd236156ca42df0b02f5b083219167d9e8ae31aac4b56287d67112ae6ac"
+    },
+    {
+      "case": "ack",
+      "induction": true,
+      "counterexample": false,
+      "log_sha256": "cf4199e53ce2a4f35d63855e16eadc3d5816467a94ac087a813d064430fca038"
+    },
+    {
+      "case": "missing-event",
+      "induction": false,
+      "counterexample": true,
+      "log_sha256": "4df01f26b72e35d6a3697bcd053306a29d9b52618b16af1afaebe537f76a0086"
+    },
+    {
+      "case": "early-ack",
+      "induction": false,
+      "counterexample": true,
+      "log_sha256": "140f8cb4bad9d0f9da122174590f4e0ab7e4317755d83f23d01ab7f63fc0c145"
+    }
+  ],
+  "source_sha256": {
+    "history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "rule_mailbox.sv": "dd616d13403d186bbdd09e7370aa85ffe45b5f7e79fa0281ff20d9d5378036d4"
+  },
+  "assumptions": [
+    "production initial values, no runtime reset",
+    "one software owner for ACK interpretation",
+    "Device/non-cacheable MMIO and ordered completion, no silent corruption"
+  ],
+  "scope": "G64/count and immutable-bank identities; ACK/control only, not a new CRC proof or ARM timing"
+}

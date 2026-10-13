@@ -11,7 +11,9 @@ foreach f {segmented_counter.sv frame_engine.sv e_backend_registered.sv} {add_fi
 foreach f {history_batch.sv rule_mailbox.sv interval_guard.sv interval_link.sv arm_executor.sv} {add_files [file join $here $f]}
 add_files -fileset sim_1 [file join $here tb_arm.sv]
 set_property top tb_arm [get_filesets sim_1]
-set_property generic [list PHASE=[lindex $argv 1] STRESS=[lindex $argv 2]] [get_filesets sim_1]
+set generics [list PHASE=[lindex $argv 1] STRESS=[lindex $argv 2]]
+if {[llength $argv]>4} {lappend generics CYCLES=[lindex $argv 4]}
+set_property generic $generics [get_filesets sim_1]
 set_property -dict [list xsim.elaborate.xelab.more_options "-sv_lib dpi -sv_root $dpi"] [get_filesets sim_1]
 set_property xsim.simulate.runtime all [get_filesets sim_1]
 set_property xsim.simulate.log_all_signals false [get_filesets sim_1]
