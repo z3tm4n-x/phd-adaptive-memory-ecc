@@ -1,7 +1,8 @@
 {
   "task": 146,
   "all_pass": true,
-  "new_assertions": 79,
+  "new_assertions": 130,
+  "final_addressed_checks": 51,
   "abstract_ARM_histories": 8192,
   "route_substitutions": 15,
   "potentials_and_joint_channel_checks": 28,
@@ -12,7 +13,8 @@
   "report_sha256": {
     "arm-report.json": "f06631b57ae46bd41486be6f98b0808524f3d7056106117f2c1ef884e1f548af",
     "route-report.json": "e4b3b80a751c2076de516c447c52eeaaf66abac89be70045549f83fde941428f",
-    "potential-report.json": "d3b6d68f7d556f0f9ab81f65165a2e8f483b0f283f8b7b16d88778eef4c88d3a"
+    "potential-report.json": "d3b6d68f7d556f0f9ab81f65165a2e8f483b0f283f8b7b16d88778eef4c88d3a",
+    "final-report.json": "042d4640c4760aca4711a705d0c8e4b46c12d47be898e6805f4c2c056b7708a6"
   },
   "commands": [
     {
@@ -49,6 +51,16 @@
       "command": [
         "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
         "-B",
+        "experiments/next-route-20261013/final_check.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 51,\n  \"byte_match\": true,\n  \"N\": \"5.25\",\n  \"ARM\": {\n    \"literal_B_upper_ns_floor\": \"1672.481575487\",\n    \"preparation_B_upper_s_floor\": \"44.999997041735\",\n    \"non_hold_tail_upper_ns\": \"6675.537049025\",\n    \"expiry_tail_upper_ns\": \"1369.513680\",\n    \"preparation_margin_s_lower\": \"89.997994083470\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
         "experiments/t95-method-regime-map/verify.py"
       ],
       "exit_code": 0,
@@ -69,7 +81,7 @@
       ],
       "exit_code": 0,
       "stdout": "",
-      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.184s\n\nOK\n"
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.129s\n\nOK\n"
     },
     {
       "command": [

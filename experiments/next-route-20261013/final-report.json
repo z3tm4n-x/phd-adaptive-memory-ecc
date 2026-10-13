@@ -1,0 +1,153 @@
+{
+  "task": 146,
+  "scope": "final conditional U theorem and addressed ARM arithmetic; NOT E transfer or platform WCET",
+  "science_input_sha": "e8d2df32b87c33a1a9ab1ad1de3112225f9d8bf7",
+  "instructions_sha": "bc44a9adec1afee72dd65d5c6e36e1786078fa13",
+  "engineer_sha": "976409126c21bde4773f9583847e6ce9cde2a2fc",
+  "unchanged_report_sha256": {
+    "route-report.json": "e4b3b80a751c2076de516c447c52eeaaf66abac89be70045549f83fde941428f",
+    "potential-report.json": "d3b6d68f7d556f0f9ab81f65165a2e8f483b0f283f8b7b16d88778eef4c88d3a",
+    "arm-report.json": "f06631b57ae46bd41486be6f98b0808524f3d7056106117f2c1ef884e1f548af"
+  },
+  "engineer_source_sha256": {
+    "ADVANCE_CONTRACT.md": "bfe3ed0a32fc49e495e7f9b844f2be8bb71153939fbb089117b225707f01e14f",
+    "HANDOFF.md": "509b7986615edc37c67f7fd179f8046c2f45e6806342b976c1eb826231f4f5a3",
+    "advance_budget.py": "08cd483a7026efd7f9ba828cee935327c8857ff2c887d049d284b3daf493e2c4",
+    "outputs/advance-budget.json": "f1c5ffeb20f4c5f6c33f50b630e4bd3cdafa8fef53456bba2aac3262a2149e35",
+    "config.json": "043959e5a28b7ab6d2adb88b34a43d34e6b681c40636b546a35ea9f722e8d71a"
+  },
+  "theorem_outward_summaries": {
+    "fixed_lower_percent": "33.676261830923",
+    "fixed_witness_upper_percent": "47.135788025679",
+    "recommended_risk_upper": "0.000946196859757",
+    "risk_relative_margin_percent": "5.380314024306",
+    "recommended_paid_mission_percent": "6.412824349269",
+    "recommended_paid_quiet_percent": "0.799880588728",
+    "recommended_gain_lower": "5.251393145481",
+    "remaining_bus_percentage_points": "0.322428016916",
+    "full_bus_percent": "10.412824349269",
+    "full_peak_percent": "60.960422074429",
+    "app_delay_us": "0.794234303563"
+  },
+  "gain_from_rounded_published_endpoints_lower": "5.251393145480",
+  "full_bus_with_finite_app_edges_upper": "280256878319902825054192405993828080215240342923056791261705738679351032547803606048252672333390604243305942570209/2691458810016351264000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "proved_N": "5.25",
+  "E_transfer_proved": false,
+  "T119_report_sha256": "eedf2c803ec9cad8e95a93c3a0eb2adcf7c1ebe8b2c94e152aec354bc9103a62",
+  "E_only_scope_diagnostic": {
+    "fixed_E_read_lower": "42777602471405946944/138826458226318359375",
+    "sufficient_price_for_5_25_if_other_premises_proved": "171110409885623787776/2915355622752685546875",
+    "price_percent_safe_floor": "5.869280870923",
+    "NOT_a_new_E_certificate_or_impossibility": true
+  },
+  "E_remaining": [
+    "E-cross and residuals in combined LOW rule",
+    "actual E price and observed application writes",
+    "same-service fixed E comparator and resource/calendar"
+  ],
+  "ARM_ns_exact": {
+    "old_literal_fresh_history_B_limit_ns": "342855294387769/204997950000",
+    "loss_slow_to_fast_ns": "912509/25000",
+    "prepare_fixed_ns": "607514455619693/102498975000",
+    "preparation_B_limit_ns": "2306226785890440779503/51249487500",
+    "source_span_B_limit_ns": "9224907217054221086083/102498975000",
+    "count32_B_limit_ns": "429492434330207/5000",
+    "joint_B_limit_ns": "2306226785890440779503/51249487500",
+    "expiry_to_first_usable_operation_ns": "17118921/12500",
+    "non_hold_tail_including_history_ns": "342117852549763/51249487500",
+    "selected_preparation_margin_ns": "2306175536402940779503/25624743750",
+    "selected_source_span_upper_ns": "103035046956651827/102498975000",
+    "selected_first_event_reply_upper_ns": "205543913206138343/102498975000"
+  },
+  "ARM_review_151_counterexample_ns": {
+    "B": "1680",
+    "historical_total_missing_second_CDC": "10227897621251/1024989750",
+    "corrected_total": "1026531011612231/102498975000",
+    "deadline": "10000"
+  },
+  "ARM_safe_displays": {
+    "literal_B_upper_ns_floor": "1672.481575487",
+    "preparation_B_upper_s_floor": "44.999997041735",
+    "non_hold_tail_upper_ns": "6675.537049025",
+    "expiry_tail_upper_ns": "1369.513680",
+    "preparation_margin_s_lower": "89.997994083470"
+  },
+  "ARM_selected_allocation_ns": "1000000",
+  "ARM_platform_WCET_ns": null,
+  "ARM_qualified_start_tick_upper": 18430965106904468822,
+  "literal_processed_history_10us_satisfied": false,
+  "new_internal_contract_authorized": true,
+  "r4_delta_Q_and_bus_price_if_all_premises": [
+    0,
+    0
+  ],
+  "CPU_reserved_cores_not_bus_gain": 1,
+  "device_classes": {
+    "specialized_monitor": {
+      "qualified_a": null,
+      "qualified_latency": null
+    },
+    "star_tracker_full_frames": {
+      "qualified_a": null,
+      "qualified_latency": null
+    },
+    "science_CCD_available_frames": {
+      "qualified_a": null,
+      "qualified_latency": null
+    }
+  },
+  "checks": [
+    "unchanged_science_output:route-report.json",
+    "unchanged_science_output:potential-report.json",
+    "unchanged_science_output:arm-report.json",
+    "outward_upper:recommended_risk_upper",
+    "outward_upper:recommended_paid_mission_percent",
+    "outward_upper:recommended_paid_quiet_percent",
+    "outward_upper:fixed_witness_upper_percent",
+    "outward_upper:full_bus_percent",
+    "outward_upper:full_peak_percent",
+    "outward_upper:app_delay_us",
+    "outward_lower:fixed_lower_percent",
+    "outward_lower:recommended_gain_lower",
+    "outward_lower:risk_relative_margin_percent",
+    "outward_lower:remaining_bus_percentage_points",
+    "5_25_from_published_endpoints",
+    "5_251393145481_from_exact_fractions",
+    "risk_and_quiet",
+    "post_window_is_one_second_not_margin_value",
+    "rounded_delay_is_not_new_nominal_1_1",
+    "no_whole_bus_5x_at_4percent",
+    "full_bus_display_also_pays_finite_app_edges",
+    "unchanged_T119_source",
+    "E_lower_not_U_lower",
+    "same_U_price_not_5_25_via_E_lower",
+    "E_sufficient_price_threshold_rounds_down",
+    "E_cannot_fit_U100_slot",
+    "production_unchanged",
+    "engineer_fraction:old_literal_fresh_history_B_limit_ns",
+    "engineer_fraction:loss_slow_to_fast_ns",
+    "engineer_fraction:prepare_fixed_ns",
+    "engineer_fraction:preparation_B_limit_ns",
+    "engineer_fraction:source_span_B_limit_ns",
+    "engineer_fraction:count32_B_limit_ns",
+    "engineer_fraction:joint_B_limit_ns",
+    "engineer_fraction:expiry_to_first_usable_operation_ns",
+    "engineer_fraction:non_hold_tail_including_history_ns",
+    "engineer_fraction:selected_preparation_margin_ns",
+    "engineer_fraction:selected_source_span_upper_ns",
+    "engineer_fraction:selected_first_event_reply_upper_ns",
+    "second_CDC_not_double_or_zero",
+    "literal_boundary_and_next_ns",
+    "review_151_B1680_old_passes_corrected_fails",
+    "preparation_boundary_and_next_ns",
+    "1ms_passes_new_not_literal",
+    "all_summary_limits",
+    "49999_ticks_pass_50000_fail",
+    "count32_not_ERR_rate_assumption",
+    "G64_no_runtime_reset",
+    "qualified_start_no_tick_wrap",
+    "deadline_link_and_total_tail",
+    "UNKNOWN_service_preserved"
+  ],
+  "check_count": 51
+}
