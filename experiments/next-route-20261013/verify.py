@@ -18,6 +18,7 @@ def main():
     commands = [
         [sys.executable, "-B", str(HERE/"arm_check.py")],
         [sys.executable, "-B", str(HERE/"route_check.py")],
+        [sys.executable, "-B", str(HERE/"potential_check.py")],
         [sys.executable, "-B", "experiments/t95-method-regime-map/verify.py"],
         [sys.executable, "-B", "-m", "unittest", "discover",
          "-s", "experiments/t88-dstar-sensitivity", "-p", "test_*.py"],
@@ -42,11 +43,12 @@ def main():
     allowed = lambda p: p.startswith("experiments/next-route-20261013/") or p.startswith("theory/t146-")
     assert all(allowed(p) for p in changed), changed
     hashes = {}
-    for path in (HERE/"arm-report.json", HERE/"route-report.json"):
+    for path in (HERE/"arm-report.json", HERE/"route-report.json", HERE/"potential-report.json"):
         hashes[path.name] = hashlib.sha256(path.read_bytes()).hexdigest()
     record = {
-        "task": 146, "all_pass": True, "new_assertions": 51,
+        "task": 146, "all_pass": True, "new_assertions": 79,
         "abstract_ARM_histories": 8192, "route_substitutions": 15,
+        "potentials_and_joint_channel_checks": 28,
         "T95_checks": 71, "T88_unittests": 12, "T90_unittests": 10,
         "no_hardware_or_independent_review_claim": True,
         "report_sha256": hashes, "commands": records,
