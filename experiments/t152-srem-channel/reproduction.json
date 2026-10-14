@@ -1,0 +1,36 @@
+{
+  "task": 152,
+  "date": "2026-10-14",
+  "base_sha": "140f8d36751f117cfc96969d7732f85456476a5d",
+  "accepted_science_sha": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+  "scope": "Addressed source-data audit. No new gain/risk certificate for hardware.",
+  "commands": [
+    {
+      "command": "python experiments/t152-srem-channel/check.py --cache source-cache --write",
+      "exit_code": 0,
+      "role": "initial generation of this new task's report only"
+    },
+    {
+      "command": "python experiments/t152-srem-channel/check.py --cache /tmp/t152-psi-fresh --fetch --check",
+      "exit_code": 0,
+      "stdout": "PASS: 25 addressed checks; report matches byte-for-byte",
+      "role": "fresh external cache, both sources downloaded and hash checked"
+    },
+    {
+      "command": "python experiments/t152-srem-channel/check.py --cache source-cache --check",
+      "exit_code": 0,
+      "stdout": "PASS: 25 addressed checks; report matches byte-for-byte",
+      "role": "network-free replay of downloaded source files"
+    }
+  ],
+  "check_count": 25,
+  "report_sha256": "bc14c154dfba5e1b9cb82f90d716e15966aa02927d7f4aa1dbf2987826ffdd86",
+  "check_py_sha256": "e570532f49ab68f8a79c061a62da53ba1335ff298efbc0f60cb8b87439bc0e0d",
+  "accepted_input_blob_checks": 6,
+  "full_previous_theorem_regression_rerun": false,
+  "independent_review_performed": false,
+  "physical_instrument_contract_confirmed": false,
+  "source_PDF_HTML_redistributed": false,
+  "unknowns_replaced_by_zero": false,
+  "main_merged": false
+}
