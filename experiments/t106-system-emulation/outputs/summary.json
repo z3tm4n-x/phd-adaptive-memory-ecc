@@ -1,0 +1,80 @@
+{
+  "scope": "first actual run of scenario4 only; four other scenarios remain",
+  "common_input_sha256": {
+    "injections.txt": "c3c3f8397135a4767063263d8c72925e1b08c2d1f3e4b5d9b58afa0960ba7e33",
+    "application.txt": "c436601d1285ae2fbe789a943567c5f9f0c5925f6f5dd82d1b6e6065e2ac5364"
+  },
+  "comparison": [
+    {
+      "mode": "adaptive",
+      "mean_bus_fraction": 0.47752333333333336,
+      "peak_any_1ms_fraction": 0.479224,
+      "observed_model_max_application_ns": 2050,
+      "completed_operations": 6171,
+      "unfinished_operations_at_horizon": 0,
+      "application_completed": 48,
+      "ERR_events": 3,
+      "first_exceedance_relative_ns": null
+    },
+    {
+      "mode": "fixed",
+      "mean_bus_fraction": 0.47752333333333336,
+      "peak_any_1ms_fraction": 0.479224,
+      "observed_model_max_application_ns": 2050,
+      "completed_operations": 6171,
+      "unfinished_operations_at_horizon": 0,
+      "application_completed": 48,
+      "ERR_events": 3,
+      "first_exceedance_relative_ns": null
+    }
+  ],
+  "bus_fraction_difference_fixed_minus_adaptive": 0.0,
+  "resources_reused_not_resynthesized": {
+    "LUT": 2476.0,
+    "slice_FF": 5442.0,
+    "IOB_FF": 74.0,
+    "ILOGIC": 17.0,
+    "OLOGIC": 41.0,
+    "BRAM36_equiv": 4.5,
+    "BUFG": 3.0,
+    "MMCM": 1.0,
+    "DSP": 0.0
+  },
+  "STA_reused_not_rerun": {
+    "setup_ns": 0.225,
+    "hold_ns": 0.044,
+    "pulse_width_ns": 1.02,
+    "setup_failing_endpoints": 0,
+    "hold_failing_endpoints": 0,
+    "pulse_failing_endpoints": 0
+  },
+  "startup_bytes": 1268,
+  "firmware_bytes": 4244,
+  "OCM_reserved_bytes": 57344,
+  "CPU_core_allocation_adaptive": 1,
+  "CPU_runtime_use_fixed": 0,
+  "physical_board_available": null,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "software_environment": {
+    "Python": "3.14.4 (main, Apr  8 2026, 04:02:31) [GCC 15.2.0]",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  },
+  "Q_T_certified_by_emulation": false,
+  "main_modified": false,
+  "outputs_sha256": {
+    "cold-adaptive.json": "f237c819801b9f88ba053760fea9e8546f579dc05e52980c2dd3d517ebfb681f",
+    "cold-adaptive.trace.gz": "aba6cee49ecc47df4cb6b0cb604c608f5c1a87502d992387ec310cc1caa0a664",
+    "cold-fixed.json": "f4c34ed20551980f540eb35e83ca32ffc10148b93ba0cd3ca57d41e10ec7be3a",
+    "cold-fixed.trace.gz": "12dfdbcc49f4151ed643616906a4400abc2872e3dc6d2387f7f0bc4f1c82e463",
+    "mutations.json": "87a345ff5e15fe5c275eacd12df77df1739d48cdb9d50b3ad4e0745e63c02b85"
+  },
+  "remaining": [
+    "scenario1 full-timer quiet/false signal",
+    "scenario2 extracted accepted temporal profile and normalization",
+    "scenario3 loss/recovery with full holds",
+    "scenario5 long-lived data and writes",
+    "long-interval accelerator with production equivalence",
+    "all-five resource table and review"
+  ]
+}

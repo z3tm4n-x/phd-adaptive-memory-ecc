@@ -105,12 +105,15 @@ def execute(mode,c):
             if pc==symbols['startup_trap']:raise AssertionError('cold-start trap')
             if cp[SCT]&1:assert translate(u,cp,pc,'execute')[0]==pc
             if pc==0xfffc0000:
-                entered=True;startup_insns=n;ready_pages=page_audit(u,cp)
+                # Entry hook precedes the first firmware instruction.
+                entered=True;startup_insns=n-1;ready_pages=page_audit(u,cp)
             if visit_return is not None and pc==visit_return:
                 driver_instructions.append(n-visit_start);visits+=1;visit_return=None
                 if mission:
                     rpc(4,delay=c['model_driver_visit_delay_slow_ticks'])
-                    if done:u.emu_stop();return
+                    if done:
+                        # Stop before this caller instruction executes.
+                        n-=1;mission_insns-=1;u.emu_stop();return
             if pc==symbols['t105_driver_step']:
                 calls+=1
                 if not mission and calls==4:
@@ -119,7 +122,10 @@ def execute(mode,c):
                     assert all(gic.read(a)==0 for a in gic.FIELDS)
                     assert ready_pages==15
                     mission=True;rpc(3)
-                    if mode=='fixed':u.emu_stop();return
+                    if mode=='fixed':
+                        # The fourth phase0 entry is a stop marker, not work.
+                        n-=1;u.emu_stop();return
+                    mission_insns+=1  # this first runtime instruction WILL execute
                 visit_start=n;visit_return=u.reg_read(UC_ARM_REG_LR)
             bits=word(u,pc)
             if bits==0xe320f003:raise AssertionError('firmware WFI/fault')

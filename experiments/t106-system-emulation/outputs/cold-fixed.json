@@ -1,0 +1,92 @@
+{
+  "mode": "fixed",
+  "scenario": 4,
+  "host_elapsed_s": 20.250143875999996,
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 14226,
+  "ARM_instructions_runtime": 0,
+  "driver_calls": 4,
+  "completed_driver_visits": 3,
+  "max_observed_instructions_per_driver_visit": 21,
+  "MMIO": {
+    "boot_read": 4
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_delay_per_visit_slow_ticks": 4000,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run.py": "f45c099501d8f2ddbc1048dd61ec0ce135aa29b93f86e85505120ba4e0fed983",
+    "experiments/t106-system-emulation/bridge.c": "6a193b8a32a8011d8f43aad600f5bf90d903b946ae3816ec39a32a1d07996000",
+    "experiments/t106-system-emulation/tb_system.sv": "4af93c1b173f1ec6b5d48885fc5fef79fca4f12f51e2987de590e83da97363df",
+    "experiments/t106-system-emulation/sim.tcl": "96609dababea8e52c92e1ff685aaf6c6de59ee1e0be4adb9eb9c59d340a21fe9",
+    "experiments/t106-system-emulation/config.json": "3d4402d11e0ad6c464f74d6688bc77eac260d707097c7be04c29e1f267e83540",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "injections.txt": "c3c3f8397135a4767063263d8c72925e1b08c2d1f3e4b5d9b58afa0960ba7e33",
+    "application.txt": "c436601d1285ae2fbe789a943567c5f9f0c5925f6f5dd82d1b6e6065e2ac5364"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/cold-fixed-1791971008344245785",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "check": {
+    "scenario": 4,
+    "mode": "fixed",
+    "t0_ns": 670,
+    "horizon_ns": 1200000,
+    "records_checked": 180424,
+    "pin_edges_checked": 149428,
+    "full_word_observations": 6195,
+    "injections": 8,
+    "ERR_events": 3,
+    "raw_history_matches": 3,
+    "ARM_packets_checked": 0,
+    "calendar_slots": 6123,
+    "completed_operations": 6171,
+    "unfinished_operations_at_horizon": 0,
+    "application_completed": 48,
+    "max_credits": 1,
+    "physical_alias_writes": 50,
+    "bus_work_ns": {
+      "control": 563428,
+      "app_read": 4416,
+      "app_write": 5184
+    },
+    "corrective_extra_within_control_ns": 112,
+    "mean_bus_fraction": 0.47752333333333336,
+    "peak_any_1ms_fraction": 0.479224,
+    "peak_window_start_relative_ns": 0,
+    "observed_model_max_application_ns": 2050,
+    "model_max_cut_to_cut_ns": null,
+    "first_exceedance_relative_ns": null,
+    "first_cut_relative_ns": null,
+    "remaining_error_positions": 3,
+    "whole_mission_Q_inferred": false
+  }
+}
