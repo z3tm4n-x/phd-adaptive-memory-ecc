@@ -1,0 +1,98 @@
+{
+  "Pi_event": "P[S2_model(T)>s] <= .1; includes infinite overflow outcomes",
+  "horizon_s": 315576000,
+  "missions": 20000,
+  "seed": 2026101301,
+  "means": [
+    31.563922422323373,
+    92.5548,
+    100.56812028745298
+  ],
+  "event_max_order_statistic": {
+    "assumption": "iid event shapes, stationary population; NOT established",
+    "events": 131,
+    "confidence": 0.95,
+    "tail_probability_upper": 0.022608690169639956,
+    "probability_any_future_shape_above_archive_max_upper": 0.8970707554085716,
+    "sufficient_event_tail_for_mission_exceedance_point1": 0.0010476532260588667,
+    "iid_events_needed_for_95pct_tolerance": 2858,
+    "warning": "this is occurrence of an uncovered event, not itself proof of S2 exceedance"
+  },
+  "physical_S2_q90": null,
+  "physical_shape_bound": null,
+  "physical_Gcert": null,
+  "numerical_checks": [
+    {
+      "check": "T141_nominal_q90",
+      "rho": 2.5,
+      "mu": 31.563922422323373,
+      "relative_delta": 4.3227841861894253e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 2.5,
+      "mu": 92.5548,
+      "relative_delta": 3.8949854558790247e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 2.5,
+      "mu": 100.56812028745298,
+      "relative_delta": 3.6121266650480347e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 3.0,
+      "mu": 31.563922422323373,
+      "relative_delta": 0.0
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 3.0,
+      "mu": 92.5548,
+      "relative_delta": 2.1898780189100134e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 3.0,
+      "mu": 100.56812028745298,
+      "relative_delta": 4.075247503067947e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 3.5,
+      "mu": 31.563922422323373,
+      "relative_delta": 2.459533218324705e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 3.5,
+      "mu": 92.5548,
+      "relative_delta": 0.0
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 3.5,
+      "mu": 100.56812028745298,
+      "relative_delta": 0.0
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 4.0,
+      "mu": 31.563922422323373,
+      "relative_delta": 1.3468939014112274e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 4.0,
+      "mu": 92.5548,
+      "relative_delta": 1.2096882536682378e-16
+    },
+    {
+      "check": "T141_nominal_q90",
+      "rho": 4.0,
+      "mu": 100.56812028745298,
+      "relative_delta": 0.0
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+shield_g_cm2,response_case,choice,D_assumed,policy,risk_upper,risk_sufficient,price_upper,channel_a_assumed,fixed_feasible,G_vs_declared_fixed_conditional,G_cert_optimum_constant,physical_Gcert,status
+3,old_R0A,accepted_rectangle,0.0,ERR_ka1_a0.999998,0.0006147691717865455,True,0.5784450291739618,,True,0.5858204879915012,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0,ERR_ka3_a0.999998,0.0007574606322929935,True,0.23761184538116484,,True,1.4261281828073789,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0,ERR_ka3_a0,0.0018362213861865455,False,0.238163495435933,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0,channel_T146_a100000,0.0006659523597569386,True,0.0639849337799236,100000,True,5.296011564729842,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+3,old_R0A,accepted_rectangle,0.0002802445,ERR_ka1_a0.999998,0.0008950136717865456,True,0.5785883388867183,,True,0.8146688216410318,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0002802445,ERR_ka3_a0.999998,0.0010377051322929935,False,0.23775515509392134,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0002802445,ERR_ka3_a0,0.0021164658861865457,False,0.2383068051486895,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0002802445,channel_T146_a100000,0.0009461968597569387,True,0.0641282434926801,100000,True,7.350238437606477,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+3,old_R0A,accepted_rectangle,0.0005,ERR_ka1_a0.999998,0.0011147691717865455,False,0.5787007161058312,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0005,ERR_ka3_a0.999998,0.0012574606322929935,False,0.23786753231303417,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0005,ERR_ka3_a0,0.0023362213861865457,False,0.23841918236780232,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3,old_R0A,accepted_rectangle,0.0005,channel_T146_a100000,0.0011659523597569387,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,full,rectangle,0.0,ERR_ka1_a0.999998,0.018962297381374574,False,0.5887951347569369,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0,ERR_ka3_a0.999998,0.01977451104587876,False,0.24834896229028808,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0,ERR_ka3_a0,0.056878411988585106,False,0.26732292747513553,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0,channel_T146_a100000,0.01854440083462523,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,full,rectangle,0.0002802445,ERR_ka1_a0.999998,0.019242541881374572,False,0.5889384444696935,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0002802445,ERR_ka3_a0.999998,0.02005475554587876,False,0.2484922720030446,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0002802445,ERR_ka3_a0,0.057158656488585105,False,0.26746623718789203,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0002802445,channel_T146_a100000,0.018824645334625228,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,full,rectangle,0.0005,ERR_ka1_a0.999998,0.019462297381374574,False,0.5890508216888062,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0005,ERR_ka3_a0.999998,0.02027451104587876,False,0.24860464922215741,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0005,ERR_ka3_a0,0.05737841198858511,False,0.2675786144070048,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,rectangle,0.0005,channel_T146_a100000,0.01904440083462523,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,full,model_r_q90,0.0,ERR_ka1_a0.999998,0.0060155571483845385,False,0.5821745101811723,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0,ERR_ka3_a0.999998,0.006827770812888725,False,0.2417283377145235,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0,ERR_ka3_a0,0.018038191289615,False,0.24746105374784177,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0,channel_T146_a100000,0.00923953595990671,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,full,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.006295801648384539,False,0.5823178198939288,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.007108015312888725,False,0.24187164742728,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0002802445,ERR_ka3_a0,0.018318435789615003,False,0.24760436346059828,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0002802445,channel_T146_a100000,0.00951978045990671,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,full,model_r_q90,0.0005,ERR_ka1_a0.999998,0.006515557148384539,False,0.5824301971130417,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0005,ERR_ka3_a0.999998,0.007327770812888724,False,0.24198402464639282,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0005,ERR_ka3_a0,0.018538191289615,False,0.24771674067971108,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,full,model_r_q90,0.0005,channel_T146_a100000,0.00973953595990671,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,no_low,rectangle,0.0,ERR_ka1_a0.999998,0.0025950204452521264,False,0.5804015343513979,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0,ERR_ka3_a0.999998,0.002888704699902783,False,0.23965591277356185,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0,ERR_ka3_a0,0.007776883853492256,False,0.24215559983397958,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0,channel_T146_a100000,0.002607736971288084,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,no_low,rectangle,0.0002802445,ERR_ka1_a0.999998,0.0028752649452521263,False,0.5805448440641543,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0002802445,ERR_ka3_a0.999998,0.003168949199902783,False,0.23979922248631835,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0002802445,ERR_ka3_a0,0.008057128353492257,False,0.24229890954673608,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0002802445,channel_T146_a100000,0.002887981471288084,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,no_low,rectangle,0.0005,ERR_ka1_a0.999998,0.0030950204452521264,False,0.5806572212832671,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0005,ERR_ka3_a0.999998,0.003388704699902783,False,0.2399115997054312,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0005,ERR_ka3_a0,0.008276883853492257,False,0.2424112867658489,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,rectangle,0.0005,channel_T146_a100000,0.003107736971288084,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,no_low,model_r_q90,0.0,ERR_ka1_a0.999998,0.0008157222308941763,True,0.5794916477487784,,True,0.7772698928654465,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0,ERR_ka3_a0.999998,0.0011094064855448331,False,0.23874602617094237,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0,ERR_ka3_a0,0.002438989210418406,False,0.2394259400261211,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0,channel_T146_a100000,0.0020951949489984786,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,no_low,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.0010959667308941764,False,0.5796349574615348,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.0013896509855448333,False,0.23888933588369887,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0002802445,ERR_ka3_a0,0.002719233710418406,False,0.2395692497388776,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0002802445,channel_T146_a100000,0.0023754394489984786,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+2.5,no_low,model_r_q90,0.0005,ERR_ka1_a0.999998,0.0013157222308941765,False,0.5797473346806477,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0005,ERR_ka3_a0.999998,0.0016094064855448331,False,0.2390017131028117,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0005,ERR_ka3_a0,0.002938989210418406,False,0.23968162695799045,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+2.5,no_low,model_r_q90,0.0005,channel_T146_a100000,0.0025951949489984786,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,full,rectangle,0.0,ERR_ka1_a0.999998,0.009815794857141279,False,0.5834038455623334,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0,ERR_ka3_a0.999998,0.010392586943323394,False,0.2428220220118517,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0,ERR_ka3_a0,0.029439039150070567,False,0.2525618798673293,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0,channel_T146_a100000,0.009628264282879304,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,full,rectangle,0.0002802445,ERR_ka1_a0.999998,0.01009603935714128,False,0.5835471552750898,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0002802445,ERR_ka3_a0.999998,0.010672831443323394,False,0.2429653317246082,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0002802445,ERR_ka3_a0,0.029719283650070566,False,0.2527051895800858,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0002802445,channel_T146_a100000,0.009908508782879305,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,full,rectangle,0.0005,ERR_ka1_a0.999998,0.01031579485714128,False,0.5836595324942027,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0005,ERR_ka3_a0.999998,0.010892586943323394,False,0.24307770894372102,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0005,ERR_ka3_a0,0.029939039150070564,False,0.25281756679919865,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,rectangle,0.0005,channel_T146_a100000,0.010128264282879305,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,full,model_r_q90,0.0,ERR_ka1_a0.999998,0.003160334417561007,False,0.5800004170423856,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0,ERR_ka3_a0.999998,0.0037371265037431218,False,0.2394185934919039,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0,ERR_ka3_a0,0.009472657831329749,False,0.24235159430748587,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0,channel_T146_a100000,0.005511393866433136,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,full,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.003440578917561007,False,0.580143726755142,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.004017371003743122,False,0.2395619032046604,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0002802445,ERR_ka3_a0,0.009752902331329747,False,0.24249490402024237,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0002802445,channel_T146_a100000,0.005791638366433136,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,full,model_r_q90,0.0005,ERR_ka1_a0.999998,0.003660334417561007,False,0.5802561039742549,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0005,ERR_ka3_a0.999998,0.004237126503743122,False,0.2396742804237732,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0005,ERR_ka3_a0,0.009972657831329747,False,0.24260728123935518,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,full,model_r_q90,0.0005,channel_T146_a100000,0.006011393866433136,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,no_low,rectangle,0.0,ERR_ka1_a0.999998,0.0014400268819968428,False,0.5791018842282172,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0,ERR_ka3_a0.999998,0.001658125431528459,False,0.2383124711813656,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0,ERR_ka3_a0,0.0043119485285807654,False,0.23966956695218405,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0,channel_T146_a100000,0.001472813498680946,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,no_low,rectangle,0.0002802445,ERR_ka1_a0.999998,0.0017202713819968428,False,0.5792451939409737,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0002802445,ERR_ka3_a0.999998,0.0019383699315284589,False,0.2384557808941221,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0002802445,ERR_ka3_a0,0.004592193028580766,False,0.23981287666494056,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0002802445,channel_T146_a100000,0.001753057998680946,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,no_low,rectangle,0.0005,ERR_ka1_a0.999998,0.0019400268819968428,False,0.5793575711600865,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0005,ERR_ka3_a0.999998,0.0021581254315284587,False,0.2385681581132349,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0005,ERR_ka3_a0,0.004811948528580765,False,0.2399252538840534,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,rectangle,0.0005,channel_T146_a100000,0.001972813498680946,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,no_low,model_r_q90,0.0,ERR_ka1_a0.999998,0.0004592684912003792,True,0.5786003500205215,,True,0.4366172680398581,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0,ERR_ka3_a0.999998,0.0006773670407319952,True,0.23781093697366992,,True,1.062301453952205,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0,ERR_ka3_a0,0.0013696733561913744,False,0.23816496432909703,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0,channel_T146_a100000,0.0014215785880531723,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,no_low,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.0007395129912003792,True,0.578743659733278,,True,0.6071800263856407,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.0009576115407319952,True,0.23795424668642642,,True,1.4767611651430088,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0002802445,ERR_ka3_a0,0.0016499178561913744,False,0.23830827404185354,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0002802445,channel_T146_a100000,0.0017018230880531723,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.0,no_low,model_r_q90,0.0005,ERR_ka1_a0.999998,0.0009592684912003792,True,0.5788560369523909,,True,0.8754831717775611,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0005,ERR_ka3_a0.999998,0.0011773670407319952,False,0.23806662390553923,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0005,ERR_ka3_a0,0.0018696733561913744,False,0.23842065126096634,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.0,no_low,model_r_q90,0.0005,channel_T146_a100000,0.0019215785880531723,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,full,rectangle,0.0,ERR_ka1_a0.999998,0.005664585371461552,False,0.5806840688864933,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0,ERR_ka3_a0.999998,0.0060989999539766485,False,0.24002002794606764,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0,ERR_ka3_a0,0.016985493755219183,False,0.24558709634377576,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0,channel_T146_a100000,0.005578192833309539,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,full,rectangle,0.0002802445,ERR_ka1_a0.999998,0.005944829871461552,False,0.5808273785992497,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0002802445,ERR_ka3_a0.999998,0.006379244453976648,False,0.24016333765882414,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0002802445,ERR_ka3_a0,0.017265738255219182,False,0.24573040605653226,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0002802445,channel_T146_a100000,0.005858437333309539,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,full,rectangle,0.0005,ERR_ka1_a0.999998,0.006164585371461552,False,0.5809397558183625,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0005,ERR_ka3_a0.999998,0.006598999953976648,False,0.24027571487793697,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0005,ERR_ka3_a0,0.017485493755219184,False,0.24584278327564507,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,rectangle,0.0005,channel_T146_a100000,0.006078192833309538,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,full,model_r_q90,0.0,ERR_ka1_a0.999998,0.001854281456323273,False,0.5787355790513905,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0,ERR_ka3_a0.999998,0.0022886960388383694,False,0.23807153811096493,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0,ERR_ka3_a0,0.0055545820098043455,False,0.23974162683846761,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0,channel_T146_a100000,0.0036560058671300287,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,full,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.002134525956323273,False,0.5788788887641471,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.0025689405388383693,False,0.23821484782372143,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0002802445,ERR_ka3_a0,0.005834826509804345,False,0.23988493655122411,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0002802445,channel_T146_a100000,0.003936250367130028,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,full,model_r_q90,0.0005,ERR_ka1_a0.999998,0.002354281456323273,False,0.5789912659832599,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0005,ERR_ka3_a0.999998,0.0027886960388383694,False,0.23832722504283424,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0005,ERR_ka3_a0,0.006054582009804345,False,0.23999731377033692,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,full,model_r_q90,0.0005,channel_T146_a100000,0.004156005867130028,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,no_low,rectangle,0.0,ERR_ka1_a0.999998,0.0008886196066383335,True,0.5782260035313328,,True,0.8489261962088931,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0,ERR_ka3_a0.999998,0.0010596125067026828,False,0.2374092808792083,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0,ERR_ka3_a0,0.0026577551366257952,False,0.2382265292506775,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0,channel_T146_a100000,0.0009278185522759289,True,0.06411668164012907,100000,True,7.655904659602658,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+3.5,no_low,rectangle,0.0002802445,ERR_ka1_a0.999998,0.0011688641066383335,False,0.5783693132440892,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0002802445,ERR_ka3_a0.999998,0.0013398570067026828,False,0.2375525905919648,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0002802445,ERR_ka3_a0,0.002937999636625795,False,0.238369838963434,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0002802445,channel_T146_a100000,0.001208063052275929,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,no_low,rectangle,0.0005,ERR_ka1_a0.999998,0.0013886196066383335,False,0.5784816904632021,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0005,ERR_ka3_a0.999998,0.0015596125067026828,False,0.23766496781107763,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0005,ERR_ka3_a0,0.0031577551366257952,False,0.23848221618254684,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,rectangle,0.0005,channel_T146_a100000,0.001427818552275929,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,no_low,model_r_q90,0.0,ERR_ka1_a0.999998,0.0002802409474028589,True,0.5779148945857434,,True,0.26523856635561666,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0,ERR_ka3_a0.999998,0.00045123384746720817,True,0.23709817193361893,,True,0.6465056936769452,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0,ERR_ka3_a0,0.0008326191589193715,True,0.2372932024139094,,True,0.6459743328344698,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0,channel_T146_a100000,0.0009278185522759289,True,0.06411668164012907,100000,True,2.3907244447838423,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+3.5,no_low,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.0005604854474028589,True,0.5780582042985,,True,0.36885282596729957,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.0007314783474672081,True,0.23724148164637543,,True,0.8987399705541412,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0002802445,ERR_ka3_a0,0.0011128636589193715,False,0.2374365121266659,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0002802445,channel_T146_a100000,0.001208063052275929,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+3.5,no_low,model_r_q90,0.0005,ERR_ka1_a0.999998,0.0007802409474028589,True,0.5781705815176127,,True,0.5318428674356709,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0005,ERR_ka3_a0.999998,0.0009512338474672082,True,0.23735385886548824,,True,1.295516750437745,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0005,ERR_ka3_a0,0.0013326191589193715,False,0.2375488893457787,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+3.5,no_low,model_r_q90,0.0005,channel_T146_a100000,0.001427818552275929,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,full,rectangle,0.0,ERR_ka1_a0.999998,0.0035169208551770067,False,0.5790829666684281,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0,ERR_ka3_a0.999998,0.0038575722583363645,False,0.2383646698085911,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0,ERR_ka3_a0,0.010542555890506157,False,0.24178319571760334,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0,channel_T146_a100000,0.0034806038615205403,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,full,rectangle,0.0002802445,ERR_ka1_a0.999998,0.0037971653551770066,False,0.5792262763811846,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0002802445,ERR_ka3_a0.999998,0.004137816758336364,False,0.2385079795213476,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0002802445,ERR_ka3_a0,0.010822800390506156,False,0.24192650543035985,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0002802445,channel_T146_a100000,0.0037608483615205403,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,full,rectangle,0.0005,ERR_ka1_a0.999998,0.004016920855177007,False,0.5793386536002973,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0005,ERR_ka3_a0.999998,0.004357572258336364,False,0.23862035674046045,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0005,ERR_ka3_a0,0.011042555890506156,False,0.24203888264947265,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,rectangle,0.0005,channel_T146_a100000,0.00398060386152054,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,full,model_r_q90,0.0,ERR_ka1_a0.999998,0.0011249833492962703,False,0.5778597923442245,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0,ERR_ka3_a0.999998,0.0014656347524556281,False,0.23714149548438754,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0,ERR_ka3_a0,0.0033667433728639473,False,0.23811367274499257,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0,channel_T146_a100000,0.0025551554081868683,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,full,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.0014052278492962702,False,0.578003102056981,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.0017458792524556281,False,0.23728480519714404,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0002802445,ERR_ka3_a0,0.0036469878728639473,False,0.23825698245774907,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0002802445,channel_T146_a100000,0.0028353999081868683,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,full,model_r_q90,0.0005,ERR_ka1_a0.999998,0.0016249833492962703,False,0.5781154792760939,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0005,ERR_ka3_a0.999998,0.001965634752455628,False,0.23739718241625685,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0005,ERR_ka3_a0,0.0038667433728639474,False,0.23836935967686187,,False,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,full,model_r_q90,0.0005,channel_T146_a100000,0.0030551554081868684,False,,100000,False,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,no_low,rectangle,0.0,ERR_ka1_a0.999998,0.0005846216891674214,True,0.5775697020901993,,True,0.5578276069624686,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0,ERR_ka3_a0.999998,0.0007230919746436392,True,0.23673411719753928,,True,1.360954342301916,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0,ERR_ka3_a0,0.0017457810790602983,False,0.23725709367626824,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0,channel_T146_a100000,0.0006364189253511406,True,0.06396256417448877,100000,True,5.037076435711497,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+4.0,no_low,rectangle,0.0002802445,ERR_ka1_a0.999998,0.0008648661891674214,True,0.5777130118029559,,True,0.7757403493110104,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0002802445,ERR_ka3_a0.999998,0.0010033364746436391,False,0.23687742691029579,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0002802445,ERR_ka3_a0,0.0020260255790602983,False,0.23740040338902474,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0002802445,channel_T146_a100000,0.0009166634253511406,True,0.06410587388724527,100000,True,6.990861623160985,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+4.0,no_low,rectangle,0.0005,ERR_ka1_a0.999998,0.0010846216891674213,False,0.5778253890220687,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0005,ERR_ka3_a0.999998,0.0012230919746436392,False,0.2369898041294086,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0005,ERR_ka3_a0,0.0022457810790602983,False,0.23751278060813755,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,rectangle,0.0005,channel_T146_a100000,0.0011364189253511407,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible
+4.0,no_low,model_r_q90,0.0,ERR_ka1_a0.999998,0.00017719224655189092,True,0.5773613533219282,,True,0.16645386465620154,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0,ERR_ka3_a0.999998,0.0003156625320281087,True,0.2365257684292681,,True,0.40631525774879385,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0,ERR_ka3_a0,0.0005234927512137068,True,0.23663204737145468,,True,0.4061327687061325,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0,channel_T146_a100000,0.0006364189253511406,True,0.06396256417448877,100000,True,1.5025043133261429,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+4.0,no_low,model_r_q90,0.0002802445,ERR_ka1_a0.999998,0.0004574367465518909,True,0.5775046630346846,,True,0.23147826714693293,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0002802445,ERR_ka3_a0.999998,0.0005959070320281087,True,0.2366690781420246,,True,0.5648383798931319,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0002802445,ERR_ka3_a0,0.0008037372512137069,True,0.23677535708421119,,True,0.5645848466443146,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0002802445,channel_T146_a100000,0.0009166634253511406,True,0.06410587388724527,100000,True,2.0852968778441316,,,certified_conditional; extra outage=.001 and X=.001 charged when admissible
+4.0,no_low,model_r_q90,0.0005,ERR_ka1_a0.999998,0.000677192246551891,True,0.5776170402537975,,True,0.33376467303799234,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0005,ERR_ka3_a0.999998,0.0008156625320281087,True,0.23678145536113743,,True,0.8142029631815652,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0005,ERR_ka3_a0,0.0010234927512137069,False,0.23688773430332402,,True,,,,conditional arithmetic under required parents/ERR/growth/quiet/service; not accepted new physics
+4.0,no_low,model_r_q90,0.0005,channel_T146_a100000,0.0011364189253511407,False,,100000,True,,,,long_risk; extra outage=.001 and X=.001 charged when admissible

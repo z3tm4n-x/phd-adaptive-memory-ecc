@@ -1,0 +1,23 @@
+{
+  "old_R0A_S2": 6940,
+  "Dstar_old": 0.0002802445,
+  "T119_ERR_E_gain_lower": "5151330042037076978914092908544000000000000000000000000000000000000000000000000000000000000000000000/1836181080255530941205171007245585218916240132257271579721712519530127231330627114835595958123585001",
+  "T119_ERR_E_gain_decimal": 2.8054586213905415,
+  "T119_scope": "accepted E service, g196 ka5 h120; not full-U or r4 ka3",
+  "T135_scope": "accepted E/r4 implementation point remains unchanged; no numerical transplant",
+  "T146_fullU_class_gain_lower": "20158363488542812136938181604442676133888000000000000000000000000000000000000000000000000000000000000000000000000000000000/3838669650145631299082570108267023079290254466541759929610764697650872537525228564694687931516134540587138156504778993547",
+  "T146_fullU_class_gain_decimal": 5.251393145481546,
+  "T146_service": "full-U100, g176 ka101; different from T119 E",
+  "common_channel_full_peak_upper": "6369559238705077/10448679687500000",
+  "common_channel_application_delay_upper": "5311167894241/6687155000000000000",
+  "new_Gcert_optimum_constant": null,
+  "required_before_release": [
+    "physical or explicitly assumed joint deterministic radiation cap",
+    "marked-parent law/word uniformity and full38 Dstar",
+    "lower ERR or lower-Laplace channel, growth and delays",
+    "quiet fraction and return/outage/price requirements",
+    "matching service and a new lower of optimum constant class"
+  ],
+  "Pi_vs_epsilon": "If the environment lies outside the admitted cap with probability .1, a conditional memory bound .001 alone gives only unconditional <=.1+.9*.001, not .001.",
+  "scope": "selected fixed comparator and sufficient requirements; no new class-optimal certificate"
+}

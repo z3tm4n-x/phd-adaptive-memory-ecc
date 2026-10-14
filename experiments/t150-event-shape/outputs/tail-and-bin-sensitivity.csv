@@ -1,0 +1,29 @@
+shield_g_cm2,case,S2_q90_s_inv,MC95_low_s_inv,MC95_high_s_inv,ratio_to_full,basis
+2.5,subbin_S2_x2,161018.35340628735,159511.05079626164,162739.15347900227,1.9984265946217072,"subbin variance assumption; F preserved, true peak can increase"
+2.5,subbin_S2_x10,804584.6738133319,797063.4957474242,813168.5857817613,9.985839351595367,"subbin variance assumption; F preserved, true peak can increase"
+2.5,overlap_Cauchy_0.01,89939.65645227302,89181.5179735749,90874.33729372596,1.1162566102749871,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+2.5,overlap_Cauchy_1,1036795.3165233267,1021825.0256167816,1046737.9443625631,12.867845744835087,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+2.5,rare_p0.01_amplitude10,82152.45295354216,81508.03618632481,82831.57679153097,1.019608282675164,unobserved-tail parameter; same overflow rule; not estimated frequency
+2.5,rare_p0.1_amplitude10,1466612.8384794705,1460967.3001780533,1470568.550204109,18.202385246330305,unobserved-tail parameter; same overflow rule; not estimated frequency
+2.5,rare_p0.2_amplitude10,1501171.0399441908,1499683.76034884,1502706.37929937,18.63129305347408,unobserved-tail parameter; same overflow rule; not estimated frequency
+3.0,subbin_S2_x2,71342.68329612278,70724.41543236875,72098.84977811348,1.9979438266513394,"subbin variance assumption; F preserved, true peak can increase"
+3.0,subbin_S2_x10,356419.72869608534,353308.5087321677,360183.72209064645,9.981494439862054,"subbin variance assumption; F preserved, true peak can increase"
+3.0,overlap_Cauchy_0.01,39923.41603963392,39553.848804314715,40293.15282161586,1.1180507787202139,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+3.0,overlap_Cauchy_1,455873.04716109764,450157.0145934983,461084.70642902143,12.766673444727992,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+3.0,rare_p0.01_amplitude10,36419.773844489646,36136.85075805999,36778.24173403409,1.0199316728614063,unobserved-tail parameter; same overflow rule; not estimated frequency
+3.0,rare_p0.1_amplitude10,644182.3560370076,641667.5057965206,645755.5943881253,18.040254473464703,unobserved-tail parameter; same overflow rule; not estimated frequency
+3.0,rare_p0.2_amplitude10,659375.0960320213,658776.4848864484,659906.3535190227,18.46572544933149,unobserved-tail parameter; same overflow rule; not estimated frequency
+3.5,subbin_S2_x2,35359.79804140018,35124.67534928099,35723.898697718774,1.9969189415908106,"subbin variance assumption; F preserved, true peak can increase"
+3.5,subbin_S2_x10,176574.53844244772,175388.40665690444,178399.4981363409,9.971918957385995,"subbin variance assumption; F preserved, true peak can increase"
+3.5,overlap_Cauchy_0.01,19778.93733503045,19613.550705066675,19974.136038870813,1.1170011367886186,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+3.5,overlap_Cauchy_1,225113.02628592445,222317.43791573346,227701.6935313244,12.713094844684017,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+3.5,rare_p0.01_amplitude10,18081.19068827197,17906.038121463404,18268.40487278637,1.0211221265927777,unobserved-tail parameter; same overflow rule; not estimated frequency
+3.5,rare_p0.1_amplitude10,334146.5207401766,332948.7971722778,334918.7933179961,18.87068234245783,unobserved-tail parameter; same overflow rule; not estimated frequency
+3.5,rare_p0.2_amplitude10,341662.9010054229,341394.2760757912,341981.3731834738,19.295164464960227,unobserved-tail parameter; same overflow rule; not estimated frequency
+4.0,subbin_S2_x2,16116.659120398466,15990.020582425841,16258.589746063146,1.9953585850530127,"subbin variance assumption; F preserved, true peak can increase"
+4.0,subbin_S2_x10,80442.31901876211,79796.36366474825,81130.84541814117,9.959339007952645,"subbin variance assumption; F preserved, true peak can increase"
+4.0,overlap_Cauchy_0.01,8995.330192888692,8928.471186644678,9095.698746493268,1.1136867257463752,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+4.0,overlap_Cauchy_1,102508.14774023503,101057.93424764877,104185.0709475145,12.691247677533774,Cauchy interevent term at frozen first/off-mask moments; not a generated timeline
+4.0,rare_p0.01_amplitude10,8239.874782923729,8161.20062367653,8336.43212124595,1.0201558998700342,unobserved-tail parameter; same overflow rule; not estimated frequency
+4.0,rare_p0.1_amplitude10,160524.66851740846,160001.84233491783,160907.28690061465,19.87411119427342,unobserved-tail parameter; same overflow rule; not estimated frequency
+4.0,rare_p0.2_amplitude10,163964.73268250917,163846.3770321581,164102.94834066334,20.300015937538678,unobserved-tail parameter; same overflow rule; not estimated frequency

@@ -1,0 +1,25 @@
+{
+  "code_sha256": "bb610c4c0a7258be3c5769e26cfec572ec7eca4963905d76e4283ab5a442e239",
+  "input_sha256": {
+    "experiments/next-route-20261013/route-report.json": "e4b3b80a751c2076de516c447c52eeaaf66abac89be70045549f83fde941428f",
+    "experiments/t119-err-joint-bound/report.json": "eedf2c803ec9cad8e95a93c3a0eb2adcf7c1ebe8b2c94e152aec354bc9103a62",
+    "experiments/t135-demo-operating-point/report-final.json": "40e421d8cd2aa3c6ce5d1de4c3e55dff7d9740db9d86159531d3d13c5f78a834",
+    "experiments/t150-event-shape/controller.py": "bb610c4c0a7258be3c5769e26cfec572ec7eca4963905d76e4283ab5a442e239",
+    "experiments/t58-fixed-baseline-r0b/certificate.py": "8a836276e8bcd958d524d25f17913bbeda25b3e54e0a5ca88e243f694df5f7af",
+    "experiments/t72-r0a-onset-inputs/confirm_t73_sync.py": "b20e2feecb27f29e46fb857a10075205b81f29f2bc159d045260c2de649ac6d6",
+    "experiments/t72-r0a-onset-inputs/verify_t73.py": "8064790bddf79a24be370cb1cca0d4e80e99deeafdf55979ca76cd5587f11a7f",
+    "experiments/t82-realistic-timing/run_t80.py": "dde6c0180a32c8b03f64a4fe559e243c5473905caf951e010d761b1b4a671d63",
+    "experiments/t82-realistic-timing/t80_engine.py": "3d569944a4b9ea6e46cfbacdb010ff627a0e2db562ec38bd7af21e86e8e99ce9",
+    "experiments/t82-realistic-timing/t80_err.py": "d15c34101455ba64a0b8f0aff007bdf34bb3cd6d5b5668954dc552a836ca404d",
+    "experiments/t82-realistic-timing/t80_joint.py": "9a22acb8f4a04646bad3a5128e5e55e0f0616e028ad418837fd349af06862bf2",
+    "experiments/t82-realistic-timing/timing.py": "81ba1815e7f13acea6b543a19866b811db0bdbf94b572728ab8d63fba923a738",
+    "experiments/t88-dstar-sensitivity/engine.py": "6f9c90e42d8f5f4c26e5ce40babddde195d167e7f360a8312b72d1fa8f4357d5"
+  },
+  "declared_radiation_sha256": "c077e83ceb6977a01dd0fff3028b88341e78fd1d02980bbfac44c3cfce3557cd",
+  "output_sha256": {
+    "controller-requirements.csv": "7afd5c7c3c2e449a84e4adcf6f1eb35376326b295476cd8aedd6d9c6cc9dbc7e",
+    "controller-comparison.csv": "3cb015a0b3fc4cb9c1099711ca4cc37f19753191987172c998e65f43333e9800",
+    "potentials.csv": "25c0fbe8a2d6a58501e70e08833f476bb654c43d0ca5f83fd51fd1dfeda0c36a",
+    "controller-contract.json": "0b18e7a83687c23ec7b990ba8960a2f20609a03c983393094d19806f118b6cf5"
+  }
+}
