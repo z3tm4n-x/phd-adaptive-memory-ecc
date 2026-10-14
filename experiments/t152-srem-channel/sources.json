@@ -1,0 +1,113 @@
+{
+  "checked_date": "2026-10-14",
+  "scope": "One family only: SREM/IREM. IREM/INTEGRAL is the primary candidate. Herschel format is a separately labelled family document, not an IREM operating mode.",
+  "sources": [
+    {
+      "id": "P1",
+      "title": "PSI SREM technical notes catalogue",
+      "url": "https://srem.psi.ch/static/srem_publications.shtml",
+      "version": "HTML retrieved 2026-10-14",
+      "locator": "Technical notes: IREM electron and proton matrices; Herschel/Planck TM format",
+      "sha256": "d0e400ab8eef2c5225146a4159a6c0c751a5acb32784fc7ff3cf3b315c2eeddd",
+      "status": "HTML and actual href attributes read; links hidden by web text extraction recovered from public HTML"
+    },
+    {
+      "id": "P2",
+      "title": "IREM including spacecraft: electron response matrix",
+      "url": "https://srem.psi.ch/docs/technotes/IREM_eresp.drm",
+      "cache_name": "IREM_eresp.drm",
+      "version": "September 2002",
+      "sha256": "8d708d04c11b8b30d33378446aa51ac78c54d44cef342a18951f4503f37c2bff",
+      "locator": "Whole numeric file; column 16 TC3; angle ranges in header",
+      "status": "HTTP 200; 2858 bytes; numeric rows parsed, no digitisation",
+      "expected_rows": 15,
+      "expected_range_MeV": ["0.300", "15.000"],
+      "expected_zero_TC3_rows": 2,
+      "expected_all_zero_rows": 1,
+      "sample_energy_min_MeV": ["0.300", "1.105"]
+    },
+    {
+      "id": "P3",
+      "title": "IREM including spacecraft: proton response matrix",
+      "url": "https://srem.psi.ch/docs/technotes/IREM_presp.drm",
+      "cache_name": "IREM_presp.drm",
+      "version": "September 2002",
+      "sha256": "e6b44f015dc0d8ca4319faff40b1db03859098b7267e3fc1f63aa5a51a759e83",
+      "locator": "Whole numeric file; column 16 TC3; angle ranges in header",
+      "status": "HTTP 200; 5061 bytes; numeric rows parsed, no digitisation",
+      "expected_rows": 30,
+      "expected_range_MeV": ["9.000", "800.000"],
+      "expected_zero_TC3_rows": 0,
+      "expected_all_zero_rows": 0,
+      "sample_energy_min_MeV": ["9.000", "46.647"]
+    },
+    {
+      "id": "P4",
+      "title": "Hajdas et al., Radiation environment along the INTEGRAL orbit measured with the IREM monitor",
+      "url": "https://arxiv.org/pdf/astro-ph/0308269",
+      "version": "2003 author paper; accepted T90 S4 copy",
+      "sha256": "5c5972f791887c549c347bfa9d51124c45d03491b19ae2c9399b636ab1e1a834",
+      "locator": "PDF p.2, sections 2-4 and Fig.2",
+      "status": "Downloaded; text checked. Response integrated over 4pi; TDB 15 words every 8s, three corrected radiation scalers. Not a one-second raw-count ICD."
+    },
+    {
+      "id": "P5",
+      "title": "Sandberg et al., Unfolding and Validation of SREM Fluxes, IEEE TNS 59 (2012) 1105-1112",
+      "url": "https://members.noa.gr/anastasi/papers/B35.pdf",
+      "doi": "10.1109/TNS.2012.2187216",
+      "sha256": "11b43fcca8cb10d24831f37fa1461fd4f5c53337152afb3c05ed6db2c212cc2b",
+      "locator": "pp.1106-1107, Table I, sections II-III",
+      "status": "Downloaded; text checked. Mixed/overlapping channels, 100kHz processing description, omnidirectional simulated response; stated omission of response/discretisation uncertainties in unfolding."
+    },
+    {
+      "id": "P6",
+      "title": "Paul Buehler, Herschel/SREM TM data",
+      "url": "https://srem.psi.ch/docs/technotes/HPSREM_TMformat.pdf.gz",
+      "version": "Issue 1.3, 27 March 2008",
+      "sha256": "f21c18bab07b2a994d969eba745618ba96f6ef67bd177da47aa84a1d1b086193",
+      "uncompressed_pdf_sha256": "954c649647af211d2161206cdd0a8c68a6f178ee9cd1027b30e7697d0260482a",
+      "locator": "Printed pp.3-6, tables 3-5; table 4 on PDF p.7 visually checked",
+      "status": "Downloaded and decompressed. Configurable integration parameter and start/stop fields documented, permitted minimum/half-second snapshots and hard post-window path not specified here. Different spacecraft: cannot replace IREM ICD."
+    },
+    {
+      "id": "P7",
+      "title": "PSI IREM data format",
+      "url": "https://srem.psi.ch/static/irem_dataformat.shtml",
+      "version": "HTML retrieved 2026-10-14",
+      "sha256": "bc28833e244bb8017ee318e51fdbc9bf4ce431de3cf3007bcf6641ea7e546e60",
+      "locator": "Principal zVariables: EPOCH and COUNTRATE",
+      "status": "CDF archive count-rates in 16 counters; not an operational count-window/deadline definition or mapping to all 15 matrix channels"
+    },
+    {
+      "id": "P8",
+      "title": "PSI SREM instrument",
+      "url": "https://srem.psi.ch/static/srem_instrument.shtml",
+      "version": "HTML read 2026-10-14; accepted T90 S1",
+      "sha256": null,
+      "locator": "Key Performance Features; Host Spacecraft Accomodation; Calibration",
+      "status": "Primary product description: power below 2W and interface family are not bounds on this integration's shared SRAM, CPU, delivery or availability"
+    },
+    {
+      "id": "P9",
+      "title": "PSI Standard Radiation Environment Monitor SREM calibration slides",
+      "url": "https://www.cosmos.esa.int/documents/12133/1028864/Standard%2BRadiation%2BEnvironment%2BMonitor%2BSREM",
+      "version": "No revision asserted; retrieved 2026-10-14",
+      "sha256": "d52085fea4d211000429e3e1a642898ef4dacba4a9e92e55ff063cd9c6a3224f",
+      "locator": "Slides 1 and 7",
+      "status": "Read narrow scope: processing and beam dead-time correction. Beam flux in cm^-2 s^-1 is not the same unit as aB counts/s; no population-wide one-sided loss law inferred."
+    }
+  ],
+  "unavailable": [
+    {
+      "title": "IREM User Manual v3, URL cited by P4 footnote 1",
+      "url": "https://pif.web.psi.ch/irem/IREM_USER_MANUAL_v3.pdf",
+      "status": "Web reader unavailable; direct public HTTPS returned HTTP 502 on 2026-10-14. Document contents unknown, not proved absent. No contact requests sent."
+    }
+  ],
+  "limits": [
+    "No complete third-party PDF/HTML is redistributed in git.",
+    "Only four short numeric diagnostic rows and aggregate structure enter the report; complete matrix audit re-fetches the two original files with fixed hashes.",
+    "An MC zero is not a proved zero physical response; a positive tabulated response is not a confidence lower bound.",
+    "No new instrument, calendar, E transfer, radiation calculation or data campaign."
+  ]
+}

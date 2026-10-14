@@ -1,0 +1,210 @@
+{
+  "task": 152,
+  "checked_date": "2026-10-14",
+  "base_sha": "140f8d36751f117cfc96969d7732f85456476a5d",
+  "science_sha": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+  "kind": "external-file audit and exact requirement arithmetic, not a new physical certificate",
+  "matrices": [
+    {
+      "source": "P2",
+      "sha256": "8d708d04c11b8b30d33378446aa51ac78c54d44cef342a18951f4503f37c2bff",
+      "rows": 15,
+      "columns": 19,
+      "channels": [
+        "tc1",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "tc2",
+        "s25",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "tc3",
+        "s32",
+        "s33",
+        "s34"
+      ],
+      "energy_range_MeV": [
+        "0.300",
+        "15.000"
+      ],
+      "angle_header_degrees": {
+        "Theta_min": "0",
+        "Theta_max": "180",
+        "Phi_min": "0",
+        "Phi_max": "360"
+      },
+      "angular_resolved_axis_in_file": false,
+      "other_particle_species_in_file": false,
+      "zero_TC3_rows": 2,
+      "all_zero_rows": 1,
+      "sample_rows": [
+        {
+          "energy_MeV_exact": [
+            "3/10",
+            "389/1000"
+          ],
+          "simulated_N": "60000000",
+          "tabulated_f_per_cm2": "763944",
+          "TC3_simulated_count": "0",
+          "TC3_over_f_cm2_exact": "0",
+          "TC3_over_f_cm2_decimal_enclosure": [
+            "0.000000000000000",
+            "0.000000000000000"
+          ],
+          "kind": "normalised table entry, NOT a confidence lower, angular lower, or memory ratio"
+        },
+        {
+          "energy_MeV_exact": [
+            "221/200",
+            "287/200"
+          ],
+          "simulated_N": "60000000",
+          "tabulated_f_per_cm2": "763944",
+          "TC3_simulated_count": "7081",
+          "TC3_over_f_cm2_exact": "7081/763944",
+          "TC3_over_f_cm2_decimal_enclosure": [
+            "0.009269004010765",
+            "0.009269004010766"
+          ],
+          "kind": "normalised table entry, NOT a confidence lower, angular lower, or memory ratio"
+        }
+      ]
+    },
+    {
+      "source": "P3",
+      "sha256": "e6b44f015dc0d8ca4319faff40b1db03859098b7267e3fc1f63aa5a51a759e83",
+      "rows": 30,
+      "columns": 19,
+      "channels": [
+        "tc1",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "tc2",
+        "s25",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "tc3",
+        "s32",
+        "s33",
+        "s34"
+      ],
+      "energy_range_MeV": [
+        "9.000",
+        "800.000"
+      ],
+      "angle_header_degrees": {
+        "Theta_min": "0",
+        "Theta_max": "180",
+        "Phi_min": "0",
+        "Phi_max": "360"
+      },
+      "angular_resolved_axis_in_file": false,
+      "other_particle_species_in_file": false,
+      "zero_TC3_rows": 0,
+      "all_zero_rows": 0,
+      "sample_rows": [
+        {
+          "energy_MeV_exact": [
+            "9",
+            "2613/250"
+          ],
+          "simulated_N": "37295100",
+          "tabulated_f_per_cm2": "561031",
+          "TC3_simulated_count": "137",
+          "TC3_over_f_cm2_exact": "137/561031",
+          "TC3_over_f_cm2_decimal_enclosure": [
+            "0.000244193279872",
+            "0.000244193279873"
+          ],
+          "kind": "normalised table entry, NOT a confidence lower, angular lower, or memory ratio"
+        },
+        {
+          "energy_MeV_exact": [
+            "46647/1000",
+            "54173/1000"
+          ],
+          "simulated_N": "3725000",
+          "tabulated_f_per_cm2": "560351/10",
+          "TC3_simulated_count": "1628",
+          "TC3_over_f_cm2_exact": "1480/50941",
+          "TC3_over_f_cm2_decimal_enclosure": [
+            "0.029053218429163",
+            "0.029053218429164"
+          ],
+          "kind": "normalised table entry, NOT a confidence lower, angular lower, or memory ratio"
+        }
+      ]
+    }
+  ],
+  "requirement_arithmetic": {
+    "ideal_peak_lower_counts_per_s": "15292669/625",
+    "ideal_peak_lower_counts_per_s_decimal": "24468.2704",
+    "ideal_quiet_example_mu": "7735777357/500000000",
+    "broadcast_period_over_required_stride": "16",
+    "specific_requested_window_wait_s": "7",
+    "required_post_window_s": "1",
+    "X_all_chain_budget_seconds": {
+      "1ms": "3/2500000",
+      "0.5s": "5501/10000000",
+      "1s": "11001/10000000"
+    },
+    "expanded_outage_allowance_s": "315576",
+    "note": "All numbers here are mathematical requirements/diagnostics, not measured channel properties."
+  },
+  "candidate_physical_parameters": {
+    "retained_count_lower_a": null,
+    "angular_species_memory_joint_lower": null,
+    "invisible_dangerous_component_b_U": null,
+    "lower_Laplace_and_lifetime_coupling": null,
+    "quiet_MGF_mu_upper": null,
+    "dead_time_loss_saturation_law": null,
+    "one_second_windows_half_second_stride": null,
+    "post_window_delivery_processing_upper_s": null,
+    "expanded_outage_fraction_upper": null,
+    "shared_bus_envelope": null,
+    "CPU_cost_and_deadline": null,
+    "physical_U100_WCET": null
+  },
+  "joint_channel_contract_confirmed": false,
+  "standard_IREM_broadcast_meets_unchanged_window_deadlines": false,
+  "physical_U100_qualified": false,
+  "instrument_specific_gain": null,
+  "decision": "Stop this addressed public-data check with two independent gaps. Keep T146 as a conditional requirements theorem. No numerical a or instrument-specific gain is assigned.",
+  "checks": [
+    "unchanged accepted input: theory/t146-next-route.md",
+    "unchanged accepted input: theory/t146-next-route-appendix.md",
+    "unchanged accepted input: experiments/next-route-20261013/final-report.json",
+    "unchanged accepted input: experiments/t90-monitor-physical/sources.json",
+    "unchanged accepted input: experiments/t90-monitor-physical/CONTRACT.md",
+    "unchanged accepted input: experiments/t90-monitor-physical/INTERFACE.md",
+    "accepted theorem still N=5.25 and no E transfer",
+    "epsilon/D*/horizon unchanged",
+    "selected a/mu/window/stride/d unchanged",
+    "lifetime quotas/outage/full X retained",
+    "matrix hash/schema/dimensions/ranges/counts: P2",
+    "matrix hash/schema/dimensions/ranges/counts: P3",
+    "one primary instrument, distinct p/e arrays",
+    "required ideal peak arithmetic",
+    "quiet ideal arithmetic",
+    "accepted ideal quiet sufficient example",
+    "8s broadcasts exceed stride plus deadline",
+    "causal requested-window deadline missed",
+    "all-chain 1ms shared-bus allowance is 1200ns",
+    "outage allowance is not a fresh risk budget",
+    "physical unknowns remain null",
+    "same-Y raw-mode verification not asserted",
+    "outward interval regression, inexact fraction enclosed",
+    "outward interval regression, exact value preserved",
+    "changed matrix rejected before use"
+  ],
+  "check_count": 25,
+  "all_audit_checks_pass": true
+}
