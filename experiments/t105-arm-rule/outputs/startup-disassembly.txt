@@ -76,23 +76,23 @@ fffe00f4:	e2811001 	add	r1, r1, #1
 fffe00f8:	e3510011 	cmp	r1, #17
 fffe00fc:	1afffff5 	bne	fffe00d8 <startup_main+0x5c>
 fffe0100:	e3a03101 	mov	r3, #1073741824	@ 0x40000000
-fffe0104:	e5931000 	ldr	r1, [r3]
-fffe0108:	e3510000 	cmp	r1, #0
-fffe010c:	1a0000bb 	bne	fffe0400 <startup_main+0x384>
-fffe0110:	e3a03a01 	mov	r3, #4096	@ 0x1000
-fffe0114:	e3a02000 	mov	r2, #0
-fffe0118:	e34f38f0 	movt	r3, #63728	@ 0xf8f0
-fffe011c:	e34f28f0 	movt	r2, #63728	@ 0xf8f0
-fffe0120:	e3a00e1e 	mov	r0, #480	@ 0x1e0
-fffe0124:	e5831000 	str	r1, [r3]
-fffe0128:	e5820100 	str	r0, [r2, #256]	@ 0x100
-fffe012c:	e5933000 	ldr	r3, [r3]
-fffe0130:	e3130003 	tst	r3, #3
-fffe0134:	1a0000a7 	bne	fffe03d8 <startup_main+0x35c>
-fffe0138:	e5923100 	ldr	r3, [r2, #256]	@ 0x100
-fffe013c:	e7e83053 	ubfx	r3, r3, #0, #9
-fffe0140:	e1530000 	cmp	r3, r0
-fffe0144:	1a0000a3 	bne	fffe03d8 <startup_main+0x35c>
+fffe0104:	e5933000 	ldr	r3, [r3]
+fffe0108:	e3530000 	cmp	r3, #0
+fffe010c:	1a0000c0 	bne	fffe0414 <startup_main+0x398>
+fffe0110:	e3a02a01 	mov	r2, #4096	@ 0x1000
+fffe0114:	e3a01000 	mov	r1, #0
+fffe0118:	e34f28f0 	movt	r2, #63728	@ 0xf8f0
+fffe011c:	e34f18f0 	movt	r1, #63728	@ 0xf8f0
+fffe0120:	e5823000 	str	r3, [r2]
+fffe0124:	e5813100 	str	r3, [r1, #256]	@ 0x100
+fffe0128:	f57ff04f 	dsb	sy
+fffe012c:	f57ff06f 	isb	sy
+fffe0130:	e5923000 	ldr	r3, [r2]
+fffe0134:	e3130003 	tst	r3, #3
+fffe0138:	1a0000b0 	bne	fffe0400 <startup_main+0x384>
+fffe013c:	e5913100 	ldr	r3, [r1, #256]	@ 0x100
+fffe0140:	e313001f 	tst	r3, #31
+fffe0144:	1a0000ad 	bne	fffe0400 <startup_main+0x384>
 fffe0148:	e3a03a02 	mov	r3, #8192	@ 0x2000
 fffe014c:	e34f38f0 	movt	r3, #63728	@ 0xf8f0
 fffe0150:	e5932f60 	ldr	r2, [r3, #3936]	@ 0xf60
@@ -100,7 +100,7 @@ fffe0154:	e3c22203 	bic	r2, r2, #805306368	@ 0x30000000
 fffe0158:	e5832f60 	str	r2, [r3, #3936]	@ 0xf60
 fffe015c:	e5932f60 	ldr	r2, [r3, #3936]	@ 0xf60
 fffe0160:	e2122203 	ands	r2, r2, #805306368	@ 0x30000000
-fffe0164:	1a0000aa 	bne	fffe0414 <startup_main+0x398>
+fffe0164:	1a00009b 	bne	fffe03d8 <startup_main+0x35c>
 fffe0168:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
 fffe016c:	e24dd01c 	sub	sp, sp, #28
 fffe0170:	ee113f30 	mrc	15, 0, r3, cr1, cr0, {1}
@@ -257,7 +257,7 @@ fffe03c8:	e3e03a12 	mvn	r3, #73728	@ 0x12000
 fffe03cc:	e1a00001 	mov	r0, r1
 fffe03d0:	e5031fff 	str	r1, [r3, #-4095]	@ 0xfffff001
 fffe03d4:	e12fff1e 	bx	lr
-fffe03d8:	e3a03003 	mov	r3, #3
+fffe03d8:	e3a03005 	mov	r3, #5
 fffe03dc:	e3e02a12 	mvn	r2, #73728	@ 0x12000
 fffe03e0:	e1a00003 	mov	r0, r3
 fffe03e4:	e5023fff 	str	r3, [r2, #-4095]	@ 0xfffff001
@@ -267,12 +267,12 @@ fffe03f0:	e3a02004 	mov	r2, #4
 fffe03f4:	e3a00004 	mov	r0, #4
 fffe03f8:	e5032fff 	str	r2, [r3, #-4095]	@ 0xfffff001
 fffe03fc:	eaffffe9 	b	fffe03a8 <startup_main+0x32c>
-fffe0400:	e3a03002 	mov	r3, #2
+fffe0400:	e3a03003 	mov	r3, #3
 fffe0404:	e3e02a12 	mvn	r2, #73728	@ 0x12000
 fffe0408:	e1a00003 	mov	r0, r3
 fffe040c:	e5023fff 	str	r3, [r2, #-4095]	@ 0xfffff001
 fffe0410:	e12fff1e 	bx	lr
-fffe0414:	e3a03005 	mov	r3, #5
+fffe0414:	e3a03002 	mov	r3, #2
 fffe0418:	e3e02a12 	mvn	r2, #73728	@ 0x12000
 fffe041c:	e1a00003 	mov	r0, r3
 fffe0420:	e5023fff 	str	r3, [r2, #-4095]	@ 0xfffff001

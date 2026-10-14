@@ -50,9 +50,14 @@ int startup_main(void) {
   if((R(expectations[i][0])&expectations[i][1])!=expectations[i][2]) return report[0]=0x100+i;
  /* qualified_start must be held externally low, not asserted by a CPU write. */
  if(R(0x40000000)!=0) return report[0]=2;
- /* No interrupt forwarding, including bypass when CPU interface is disabled. */
- R(0xf8f01000)=0; R(0xf8f00100)=0x1e0;
- if((R(0xf8f01000)&3) || (R(0xf8f00100)&0x1ff)!=0x1e0) return report[0]=3;
+ /* Cortex-A9 GICv1, Secure access: ICDDCR[1:0], ICCICR[4:0].
+  * Higher bits are reserved, NOT the GICv2 bypass-disable controls.
+  * Both interfaces disabled leaves legacy IRQ/FIQ pass-through enabled.
+  * IRQ is masked by CPSR.I; NMFI=1 means CPSR.F is NOT our FIQ guarantee.
+  * External FIQ must remain inactive from cold entry through the mission.
+  * This is a platform precondition, not established by these readbacks. */
+ R(0xf8f01000)=0; R(0xf8f00100)=0; sync();
+ if((R(0xf8f01000)&3) || (R(0xf8f00100)&0x1f)) return report[0]=3;
  /* No L2 prefetch and no L2 use. Reject dirty/warm starts, do not flush them. */
  R(0xf8f02f60) &= ~0x30000000u;
  if(R(0xf8f02f60)&0x30000000u) return report[0]=5;

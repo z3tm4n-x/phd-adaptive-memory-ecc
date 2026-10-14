@@ -1,0 +1,130 @@
+{
+  "scope": "GICv1 cold-start repair only; no WCET search, no stage G, no PL modification",
+  "parent": "fee483f35cb5934202ac67d9df2ac8850126b1b9",
+  "canonical_main_read": "4e786567bef625705d55867ed7c12f2e6423b6a8",
+  "instructions_read": [
+    "AGENTS.md",
+    "agents/00_RULES.md",
+    "agents/02_ENGINEER.md",
+    "STATUS.md",
+    "MAP.md (current stage V section)"
+  ],
+  "issue": {
+    "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/105",
+    "updated_at": "2026-10-14T06:12:48Z",
+    "body": "# Решение автора — 14.10.2026, 09:06 МСК\n\nАвтор подтвердил: **после исправления холодного запуска и положительной адресной проверки принять В как функциональный демонстратор** с условием обслуживания программной части ≤1 мс, **без заявления доказанного времени реального ARM**. Дополнительного решения по этому критерию не требуется; само исправление и его приёмка пока не выполнены.\n\n**Обязательная формулировка отчёта и будущего текста:** выполнение требования к сбоеустойчивости не зависит от соблюдения срока ARM: при опоздании аппаратная часть не разрешает редкий режим. От условия ≤1 мс зависит оценка затрат, а не сохранение требования по Q(T). Это утверждение относится к задержке корректной программы в объявленной модели при выполнении остальных условий аппаратного исполнителя; произвольная порча программы/остановка ПЛИС сюда не добавлены.\n\nСервисное условие сохраняет прежнее полное определение B: cut→следующий cut с обработкой/доставкой/принятием ответа, CRC/ACK и следующим CLAIM; ≤1 мс нельзя переименовать во время только вычислительной функции. Нельзя также объявить опоздания бесплатными: без границы дополнительного FAST прежняя оценка затрат не переносится.\n\nВ отчёт добавить короткое отдельное обоснование двух свойств по уже существующим локаторам: (1) stale G/loss/fault не разрешают LOW, collector/срочные реакции не ждут CPU; (2) bounded service нужен для своевременного возврата и цены. Для невалидного/слишком длинного summary сохраняется отказ в LOW, не ослабление проверок. Опора: T146-arm-contract §§1,2,4; ADVANCE_CONTRACT (предварительная подготовка, поздний ответ, fault); вердикт #155. Это пояснение действующей архитектуры, не новая общая исследовательская кампания.\n\n**Позже:** измерение реального времени обслуживания на плате — в рамках Г, только если автор отдельно запустит Г. Оно не является условием завершения В и не назначено сейчас; наблюдавшийся максимум сам по себе не становится WCET. Радиационные испытания, закупки и лётная квалификация не разрешаются.\n\nАвтор сообщил, что передаёт задание инженеру; факт приёма исполнителем отмечается отдельно.\n\n# Адресное исправление по рецензии — 14.10.2026\n\nРецензия #155 к **fee483f35cb5934202ac67d9df2ac8850126b1b9**: [ИСПРАВИТЬ, один cold-start дефект](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/144#issuecomment-6160796775). Математическая условная композиция и проверенная логика истории подтверждены; cold-start пока не принят. Нижняя запись о его реализации описывает поставку, а не положительный вердикт.\n\n**Задание инженеру, автор передаёт 14.10; срок 1 рабочий день, выход до конца 15.10 (МСК):**\n1. Исправить ICCICR write/readback для целевого GICv1 Cortex-A9, не использовать зарезервированные GICv2 bypass-биты. Указать допустимый механизм/предпосылку исключения IRQ/FIQ, включая NMFI; отсутствие внешней FIQ-активности нельзя подменять отсутствующим аппаратным запретом.\n2. Исправить MMIO-модель checker по первичным описаниям полей. Нормальный GICv1 с RAZ/WI зарезервированных битов должен проходить; недопустимое состояние — отвергаться. Прежний ELF должен воспроизводить найденный отказ. Не смягчать тест до безусловного успеха.\n3. Пересобрать затронутый startup-пакет, обновить хеши/ресурсы и сопряжённые STARTUP/HANDOFF. Проверить неизменность firmware/PL/научного договора. Нового route для неизменной PL не требуется.\n4. Поставить исправление в существующий PR144 и дать ответ по одному замечанию: причина → изменение → проверки → новый точный SHA. После поставки в #155 нужна только адресная перепроверка GIC/cold-start и затронутых артефактов, не новая полная рецензия.\n\nСпособ корректной реализации выбирает инженер. Это исправление локального дефекта, не возобновление WCET-поиска, Г, физических испытаний или смена платформы. Источники: ARM IHI0048B, табл.4-31; ARM DDI0407I, табл.3-9; локаторы и цифровой контрпример — в рецензии. Оркестратор сверил первые два первоисточника; контрпример на ELF повторён рецензентом, не оркестратором.\n\n**Критерий В заменён решением автора выше.** PR144 остаётся draft только до исправления/положительной адресной проверки; прежний поиск физического WCET не возобновлять.\n\n\n"
+  },
+  "review": {
+    "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/144#issuecomment-6160796775",
+    "sha": "fee483f35cb5934202ac67d9df2ac8850126b1b9",
+    "comment_id": 6160796775
+  },
+  "theory_sha": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+  "original_startup": {
+    "path": "inputs/startup-fee483f.elf",
+    "sha256": "57a38ebec013ab2986613020f8a5020fc0fbe24a34b7a0fc889075bd1c996dea"
+  },
+  "sources": [
+    {
+      "url": "https://documentation-service.arm.com/static/5f8ff21df86e16515cdbfafe?token=",
+      "document": "ARM IHI 0048B (2011)",
+      "locator": "Table 4-31, pp. 4-126 to 4-128; Secure GICv1 fields [4:0], [31:5] reserved"
+    },
+    {
+      "url": "https://documentation-service.arm.com/static/5e8e108088295d1e18d347a5?token=",
+      "document": "ARM DDI 0407I (2012)",
+      "locator": "Tables 3-2 (ICDDCR [1:0]), 3-8 (control reset zero), 3-9 (architecture version 1)"
+    },
+    {
+      "url": "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/CPU-Interrupt-Signal-Pass-through?contentId=VzrDaJeaSHkOI_UwuzBceQ",
+      "document": "AMD UG585 1.15 (2026-02-06)",
+      "locator": "Pass-through Mode table, row FIQEn=EnableS=EnableNS=0"
+    },
+    {
+      "url": "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Implementation-Defined-Configurations?contentId=gLKaI6J3_cwSYFayOyPOPg",
+      "document": "AMD UG585 1.15",
+      "locator": "SCTLR NMFI [27] = 1"
+    }
+  ],
+  "source_access": "Official web-extracted PDF/table content read 2026-10-14. PDF screenshot failed; direct local download DNS failed. No claim of local PDF hash or rendered inspection.",
+  "protected_task_sha256": {
+    "ADVANCE_CONTRACT.md": "bfe3ed0a32fc49e495e7f9b844f2be8bb71153939fbb089117b225707f01e14f",
+    "CONTRACT.md": "fd726bfa875ea3a367692dfefbfe2ef2056c93ab6d306be236f3794f79ee21f0",
+    "advance_sim.tcl": "62ea654744e125b962cece8f3b8cec3423d0eb9b44ec45a4459697d28e7fa919",
+    "arm_batch_test.c": "cccf3bb20b6785bd185689e393def7cf2f6c17e3925ae628897b58a3e46ad8d4",
+    "arm_board_top.sv": "c3e1a9ba92eebc6009e818a6594cf06457835df26c9ed6fff0f3a0e9b5e18895",
+    "arm_executor.sv": "08a504716be56449f31e4c99b66a77f50e9d11a346d046f14cb59db723594285",
+    "arm_physical_top.sv": "56899b46240470128f8bd2d233108cf8fb3f72272cf9a049719bf4de5eb13d86",
+    "arm_test.c": "c0533feb56eb9d871791a2471415c98d87d406025b4946e1ea4bac0b01f21c32",
+    "batch.c": "2d1e7253b9ede2f8133492c117e77edbfb4a4da82be73729fc87275025ec4186",
+    "batch.h": "c266e71b2f1a8f9596e4205282737a97f7bcd83170e3e8edc2facba2dc2cc709",
+    "config.json": "043959e5a28b7ab6d2adb88b34a43d34e6b681c40636b546a35ea9f722e8d71a",
+    "crc32.c": "a2a3e38c714bcc3f883936eb363abf164d182f0ebe9b5923302836b1af204e06",
+    "driver.c": "40135fb0643e5115d2470f13bfef40a7899b8d41ccf6acf99610c2dd9ed82514",
+    "driver.h": "c670241ad79249a3aeccd8576e6adfe3703cce790e03ce644e7d80398fbac1d0",
+    "driver_reference.c": "6bf294366a46e720e3c7621dfba488b9760aa6cf2a6a88e5f3cc8745a6b13701",
+    "firmware.c": "9ab48d88f3c784fe8b6833dd22563638fed1ecc543050f6e3c3a70e589965006",
+    "full_top.tcl": "af2ae84d415f46b008ef01efffa20457022ce833cf52a781c1997df8d192353a",
+    "history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "integration_sim.tcl": "cf8e1a74b36f3cadfd43ea3193c9166247b09ebbfee1d7d5f4a02a90aaf45877",
+    "interval_guard.sv": "a090a61fc21ef0a104c32a959f9e01f88901e18c0cef2c14b9427313825022b1",
+    "interval_link.sv": "b01b708fbda4c4fba114f9d9fe404dca15ea250e35003e88cb08bfe4254827a5",
+    "isa_vpi.c": "eea4c4095a86f7ec955201261ff35efdb135d31b268ae85bc5613e618a3944a3",
+    "link.ld": "32da00a2743d5752a92c01207f9e4c3c10569284de9d94d639c378eebdd0968c",
+    "mailbox_dpi.c": "6559ef1766abd521a4481aa7b93b8e6a3b6db74b840b64f52cb631a66214b5cc",
+    "mailbox_vpi.c": "40b1d14c5f50d47a5f413839be94c3d82b7c81e186f951d7e159f3bbd299e51a",
+    "outputs/advance-budget.json": "f1c5ffeb20f4c5f6c33f50b630e4bd3cdafa8fef53456bba2aac3262a2149e35",
+    "outputs/advance-functional.json": "6837d7732f1587f58af445d31a1987a2cbc1c4bbbd117b6b47ba5ee17365338e",
+    "outputs/firmware-reference.elf": "2e7b1ee3c84bd197fe5f11ca33862764b3d3ddbf7fb9d334472ef4c205ed6a9b",
+    "outputs/firmware-symbols.txt": "21532dab0b9111a56f9c868b83b606163f53baeea462a878cca8e4381efa6102",
+    "outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09",
+    "outputs/firmware.json": "17b2656f688e4997580a9a84c0135304231f8485f86cf835ad3ef3ecc9f8a3c0",
+    "outputs/full-top.json": "92beeb8713c7bb5ab47137312d302d272684c65f5480f0358368550ea91a27d7",
+    "outputs/price.json": "e7d56b122cd477ef405c1adbe1e8ae73069ac2bb60693965752512f4ec62f144",
+    "outputs/route-reuse.json": "e0c0071b8f1f5126da0706c4fcf6e411553ae4f04ba58caa9ea1dfe02fcf8464",
+    "outputs/service-budget.json": "0e3d8262974e814a12704118a213802e954f3e5596b167c664099ae118b66860",
+    "outputs/sta/effective.xdc": "80ab3654eba8cbe54b98cc2349c83e96680b94eff50eae21236bb9dd435a4c1d",
+    "probe_ps7.tcl": "1987cf0ce89815afd08058dfae1372b97bbe59271acd9e4dee422bd19da15c9c",
+    "ps_delivery.tcl": "f36516a967637f4061ef0bb1ecdf39cffd5788dbe70d6c50056c6e233052083c",
+    "rule.c": "bf27728f7735a94bd1e9ef7586d4ff78323c6c93faa4c874ea788135fa27a933",
+    "rule.h": "f281f370332de201af89b314b5cf9dca68dd39ae3bb626176a755d6bec1a4b8b",
+    "rule_mailbox.sv": "dd616d13403d186bbdd09e7370aa85ffe45b5f7e79fa0281ff20d9d5378036d4",
+    "start.S": "46c491aa4aa5bdad342788dcc9719a1abe719a704e304604f3f8b965a545a099",
+    "startup.S": "463d435ee952a4be677280f32cee9e07633fdf24cfb01d00068d12723d34154f",
+    "startup.ld": "a5141f34d5e31cb19d00407dc8c6812e6cc4fe95ff5347913996a8122a8c9620",
+    "startup_host.tcl": "ca0dcc7ae3c5b2e85078c1851d7e86b299743082cb18f3fe941d19a5cb1d632e",
+    "startup_host_check.tcl": "f208f33e5ebb9a5edddeefa537059fa33723991e7587d34da518283b69f34f03",
+    "tb_advance.sv": "f9243b9efcbcdac8a3d7d207f5c19cd5c795ac80a4df5b0e1ad87a0ad756def0",
+    "tb_arm.sv": "cf09e255ca56214f977c2b3d74b1490484341ed4feeceb8b7cf37c5be92b4930",
+    "tb_history_batch.sv": "affe4d47f7473e24816ac701c3f569496f9082affbe73c85cd519901e3569325",
+    "tb_isa.sv": "4d9d1a8b22260c271fea86a43527d48674300f7f8f15e5a995eb2f6b07106437",
+    "tb_mailbox.sv": "956b889fa7aca14917b38baf5c30682d6db7db5d1f380d15d7b34398562b42ef",
+    "tb_service_progress.sv": "c5c2c0f973de48260ed3fa014afb34205e943e66cc6b476c35053dcab30a4909",
+    "test_driver.c": "ea4d623c6b6865cf8173cdbc269ec0cdc7cf382bc89c48146af7e6f17a35e9cf"
+  },
+  "protected_repo_sha256": {
+    "experiments/t104-rtl-resume/integrated/slow_rule.sv": "74024a7b3847fbda372c2b3fd63f249c1aea03c374ab0450beafd091290129b0",
+    "experiments/t104-rtl-resume/reference.py": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19",
+    "experiments/t104-rtl-resume/physical/CONTRACT.md": "29070c8996346af55c9862b83ca9d093a1f138d847129c19ce5f7d3968c37fd5",
+    "experiments/t104-rtl-resume/physical/VALIDATION.md": "6d383e8109cab62f83e39836c2a411b098f8c3d63cead7b55ef0a7d31db1ffc8",
+    "experiments/t104-rtl-resume/physical/bounds.py": "f88aca10c2c747154f20030d6d40635381e5ca42fe00ac1e85bab9136613c754",
+    "experiments/t104-rtl-resume/physical/outputs/bounds.json": "015607a5464dd767b590a7b4a30d2e021025c5ad9193e0a13feb7a57e1002fab",
+    "experiments/t135-demo-operating-point/common-contract.json": "fcc8c3bd3ccf974da23c61f4d8da2e9e60ca4ea43ae2a1c11ef55269d496f771",
+    "theory/t135-final-engineer-check.md": "4899c7d4720d6ad34cdf508cda90e0f8ec228e40ce8537fb75951dd7d6c10c1a"
+  },
+  "branch_instruction_sha256": {
+    "AGENTS.md": "6e11c226a08881f1fd60f60893189669b3675afa8510b78d8bee58ccd35191f0",
+    "agents/00_RULES.md": "ecf3699fda9adf7717ab9101ad647c11c162d72e3c056b366c382216e795880c",
+    "agents/02_ENGINEER.md": "044a285ac05a8b9e9f66cc587c045696a5c52c7c48b94fe33f4036c9a5f7d98d"
+  },
+  "branch_instruction_hash_scope": "Provenance of inherited branch only, not a functional invariant; current instructions read at canonical_main_read.",
+  "path_dependent_diagnostics_sha256": {
+    "outputs/firmware-disassembly.txt": "1fe6d1cb385608a6ef53d8c53f9a8a377e0409119e68bee88bbc1f5d407fcb29",
+    "outputs/firmware.elf-batch.su": "080aaa80b81d32d0a15f2e8cbda95a881cc60abeb14eee9a9fa89330bb8957cd",
+    "outputs/firmware.elf-crc32.su": "6b09d64d4a65d6711de87e8e0825fb03b35f163508e2fa0aa4c8b9089dbeb601",
+    "outputs/firmware.elf-driver.su": "454e9024ce5098657489c0c2f7b3626ca43e4872c4b5308d4cace406bd8c78a5",
+    "outputs/firmware.elf-firmware.su": "ea17cbc92cb34fba21a5e4cd0048332b34fb8bac5c52c151d5425927cbd69d27",
+    "outputs/firmware.elf-rule.su": "5226d38705afe1e34732df16320e34f34cdd01c16b570c55857b241a5b768054"
+  },
+  "path_dependent_diagnostics_scope": "Original diagnostic hashes retained as provenance, not location-independent assertions: objdump header and .su include checkout paths. Firmware ELF, source and semantic resource JSON remain protected."
+}

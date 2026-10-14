@@ -7,6 +7,7 @@ import hashlib,json,struct,subprocess
 from pathlib import Path
 from analysis_tools import activate
 from setup_tools import environment
+from gicv1_model import GicV1Controls
 activate()
 from elftools.elf.elffile import ELFFile
 from unicorn import Uc, UC_ARCH_ARM, UC_MODE_ARM, UC_HOOK_CODE, UC_HOOK_MEM_READ, UC_HOOK_MEM_WRITE, UC_MEM_WRITE
@@ -20,6 +21,10 @@ EXPECT={0xf8000100:(0x7f01f,0x24000),0xf800010c:(1,1),0xf8000120:(0x1f003f30,0x1
  0xf8000910:(15,15),0xf8f00000:(3,3),0xf8f00040:(0xfff00000,0),
  0xf8f00044:(0xfff00000,0xffe00000),0xf8f02100:(1,0),
  0xf8007014:(0xc0000000,0x40000000),0xf8007080:(0xf0000000,0x20000000)}
+LEGACY=HERE/'inputs/startup-fee483f.elf'
+LEGACY_SHA256='57a38ebec013ab2986613020f8a5020fc0fbe24a34b7a0fc889075bd1c996dea'
+GIC_FAULTS={**{f'gic-cpu-stuck-{b}':(0xf8f00100,b) for b in range(5)},
+            **{f'gic-distributor-stuck-{b}':(0xf8f01000,b) for b in range(2)}}
 
 def build():
     env=environment();out=HERE/'outputs'
@@ -82,20 +87,22 @@ def page_audit(uc,cp):
         else:raise AssertionError('forbidden aperture open')
     return len(actual)
 
-def execute(mutation=None,host_regs=None):
+def execute(mutation=None,host_regs=None,startup_image=None,expect_success=None,gic_initial=None):
+    if expect_success is None:expect_success=mutation is None
     uc=Uc(UC_ARCH_ARM,UC_MODE_ARM)
     uc.mem_map(0xfffc0000,0x40000);uc.mem_map(0x40000000,4096)
     uc.mem_map(0xf8000000,0x10000);uc.mem_map(0xf8f00000,0x4000)
     symbols={}
-    for file in ('startup.elf','firmware.elf'):
-        with (HERE/'outputs'/file).open('rb') as f:
+    for file in (startup_image or HERE/'outputs/startup.elf',HERE/'outputs/firmware.elf'):
+        with Path(file).open('rb') as f:
             e=ELFFile(f)
             for seg in e.iter_segments():
                 if seg['p_type']=='PT_LOAD':uc.mem_write(seg['p_vaddr'],seg.data())
             symbols.update({s.name:s['st_value'] for s in e.get_section_by_name('.symtab').iter_symbols()})
     cp={SCT:0x08c50078,ACT:0,TTB:0,TTC:0,DAC:0,(0,2,0,1):0,
         (0,0,0,0):0x413fc090,(0,0,0,5):0x80000000,(0,1,1,0):0,(0,12,0,0):0}
-    regs={a:v for a,(mask,v) in EXPECT.items()};regs.update({0xf8f01000:1,0xf8f00100:1,0xf8f02f60:0x30000000})
+    regs={a:v for a,(mask,v) in EXPECT.items()};regs[0xf8f02f60]=0x30000000
+    gic=GicV1Controls(gic_initial,stuck=GIC_FAULTS.get(mutation))
     if host_regs is not None:
         for a in EXPECT:
             if a not in (0xf8007014,0xf8007080,0xf8f02100):regs[a]=host_regs[a]
@@ -142,35 +149,67 @@ def execute(mutation=None,host_regs=None):
             for x in (a,a+size-1):assert translate(u,cp,x,'write' if kind==UC_MEM_WRITE else 'read')[0]==x
         if 0xf8000000<=a<0xfffc0000 and a!=0x40000000:
             if kind==17: # UC_MEM_WRITE, not the HOOK bitmask
+                if a in gic.FIELDS:
+                    assert size==4
+                    gic.write(a,value)
+                    trace.append(['gicv1-write',hex(a),value,gic.read(a)])
                 trace.append(['write',hex(a),value])
             elif kind==16:
-                if mutation=='gic-readback' and a==0xf8f00100:u.mem_write(a,struct.pack('<I',0))
+                if a in gic.FIELDS:
+                    assert size==4
+                    # Authoritative register state, not Unicorn RAM's last STR.
+                    # Unicorn write hooks precede the RAM write, so masking
+                    # RAM only on writes would itself be an incorrect model.
+                    u.mem_write(a,struct.pack('<I',gic.read(a)))
                 trace.append(['read',hex(a),word(u,a)])
     uc.hook_add(UC_HOOK_CODE,code)
     uc.hook_add(UC_HOOK_MEM_READ|UC_HOOK_MEM_WRITE,access)
     uc.emu_start(0xfffe0000,0,count=100000)
     report=list(struct.unpack('<8I',uc.mem_read(0xfffed000,32)))
-    if mutation is None:
+    if expect_success:
         assert entered and not trapped and calls==4 and report[0]==0x43305244
         # NMFI-specific FIQ masking is not a Unicorn CP15 claim. Hardware
-        # contract excludes FIQ via GIC/bypass/routing, not CPSR.F alone.
+        # contract requires inactive external FIQ: GICv1 bypass is NOT blocked.
         assert (uc.reg_read(UC_ARM_REG_CPSR)&0x180)==0x180
         assert word(uc,symbols['controller']+200)==0
         assert page_audit(uc,cp)==15
         # Entry invalidation and barriers are decoded instructions; they are
         # NOT a proof that a PS7 pipeline/cache performs them in bounded time.
         assert all(k in cp for k in [(0,8,7,0),(0,7,5,0),(0,7,5,6)])
+        assert all(gic.read(a)==0 for a in gic.FIELDS)
     else:assert trapped and not entered,mutation
     return {'case':str(mutation),'policy_entered':entered,'trapped':trapped,
       'report':[hex(x) for x in report],'prestart_driver_visits':calls,'trace':trace,
+      'gicv1_controls':{hex(a):hex(gic.read(a)) for a in gic.FIELDS},
       'observed_ISA_instructions_not_cycles':insns}
+
+def legacy_rejection():
+    assert hashlib.sha256(LEGACY.read_bytes()).hexdigest()==LEGACY_SHA256
+    r=execute(startup_image=LEGACY,expect_success=False)
+    assert r['report'][0]=='0x3'
+    assert ['gicv1-write','0xf8f00100',0x1e0,0] in r['trace']
+    r['case']='unchanged fee483f ELF under GICv1 RAZ/WI'
+    return r
+
+def preservation():
+    """Compare to published fee483f hashes, not freshly generated expectations."""
+    pinned=json.loads((HERE/'inputs/issue105-gicv1-repair.json').read_text())
+    checked={}
+    for field,root in (('protected_task_sha256',HERE),('protected_repo_sha256',HERE.parents[1])):
+        for path,expected in pinned[field].items():
+            actual=hashlib.sha256((root/path).read_bytes()).hexdigest()
+            assert actual==expected,('unrelated firmware/PL/contract change',path,expected,actual)
+            checked[f'{field}/{path}']=actual
+    return {'baseline':pinned['parent'],'checked_files':len(checked),'all_equal':True,
+            'sha256':checked}
 
 def main():
     assert hashlib.sha256((HERE/'outputs/firmware.elf').read_bytes()).hexdigest()==PROFILE['firmware_sha256']
     digest=build();assert digest==build(),'startup ELF not reproducible'
-    cases=[execute()]
+    cases=[execute(),execute(gic_initial={0xf8f00100:31,0xf8f01000:3})]
+    cases[1]['case']='all implemented control bits initially set, then cleared'
     for m in ['wrong-core','wrong-midr','nonsecure','mmu-on','dcache-on','icache-on','wrong-mode',
-              'early-start','ignore-ttbr','gic-readback',*EXPECT]:cases.append(execute(m))
+              'early-start','ignore-ttbr',*GIC_FAULTS,*EXPECT]:cases.append(execute(m))
     caught=[]
     for m in ['cached-mmio','alias-ocm','domain-manager']:
         try:execute(m)
@@ -189,8 +228,12 @@ def main():
       'startup_sha256':digest,'firmware_sha256':PROFILE['firmware_sha256'],'repeat_equal':True,
       'physical_launch':False,'CP15_PS7_hardware_model':False,'full_service_upper_ns':None,
       'resources':resource,'cases':cases,'independent_mutations_rejected':caught,
+      'gic_model':'Secure GICv1 control subset; reserved RAZ/WI, external FIQ inactivity assumed',
+      'legacy_startup_sha256':LEGACY_SHA256,'legacy_rejection':legacy_rejection(),
+      'preservation':preservation(),
       'scope':'ISA functional; CP15 reads/writes intercepted, not hardware behavior or elapsed time'}
     (HERE/'outputs/startup-check.json').write_text(json.dumps(result,indent=2)+'\n')
-    print(json.dumps({k:v for k,v in result.items() if k!='cases'},indent=2))
+    print(json.dumps({k:v for k,v in result.items()
+                     if k not in ('cases','legacy_rejection','preservation')},indent=2))
 
 if __name__=='__main__':main()
