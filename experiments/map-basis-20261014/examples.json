@@ -1,0 +1,1920 @@
+{
+  "task": 161,
+  "status": "draft_basis_for_orchestrator_acceptance",
+  "date": "2026-10-14",
+  "base": "140f8d36751f117cfc96969d7732f85456476a5d",
+  "scientific_base": "94f0b8ffb35e6840e1ff03e55e32989aa8ac4a7d",
+  "numeric_policy": "Exact source values retained (rational strings or original saved decimal); no new physical calculation. Source-bound type is not changed by precision.",
+  "scope": "Five anchor rows, not five independent physical memories or a completed final map. Different contracts must not be joined on shield alone.",
+  "entries": [
+    {
+      "id": "R0A_ERR_T119_ka5",
+      "name": "R0-A / T119 / ERR ka=5",
+      "acceptance_sections": [
+        "MAP 705-740"
+      ],
+      "source_ids": [
+        "119",
+        "119text",
+        "env119"
+      ],
+      "status": "accepted_conditional",
+      "environment": "Old R0-A GEO, 3 g/cm2; not T150 radiation input",
+      "word": "CY62167 model internal32+6/full38; physical grouping and marks unqualified",
+      "observations": "Own ERR and observed full/partial writes; a_parent>=0.9, cluster ratio<=0.1, lifetime quotas retained",
+      "service": "E with read/repair aperture and residuals, g196/c164/freeze320, one-stage 60/120s; not clean full-U",
+      "useful_work": "Joint burst<=1, offers<=10000/s, mean writes and reads each<=1000/s on mission and expanded quiet sets; prescribed, not measured",
+      "price_metric": "Expected common-bus occupation through T, including after failure. G lower uses mandatory-read lower for whole constant-E cost and full adaptive bus upper with stated application",
+      "radiation": {
+        "T": {
+          "value": "315576000",
+          "unit": "s",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/T"
+          }
+        },
+        "epsilon": {
+          "value": "1/1000",
+          "unit": "1",
+          "kind": "requirement",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/eps"
+          }
+        },
+        "W": {
+          "value": 524288,
+          "unit": "word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/W"
+          }
+        },
+        "n": {
+          "value": 38,
+          "unit": "bit/word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/n"
+          }
+        },
+        "b": {
+          "value": "9669/62500000",
+          "unit": "s^-1 per array",
+          "kind": "envelope_bound",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/b"
+          }
+        },
+        "B": {
+          "value": "15292669/62500000",
+          "unit": "s^-1 per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/B"
+          }
+        },
+        "F_solar": {
+          "value": "442351152/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/FS"
+          }
+        },
+        "S2": {
+          "value": "6940",
+          "unit": "s^-1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/environment/S2"
+          }
+        },
+        "Dstar": {
+          "value": "560489/2000000000",
+          "unit": "expected direct parents per mission",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "env119",
+            "pointer": "/rows/0/Dstar"
+          }
+        },
+        "F": {
+          "value": "1205177238/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/F"
+          },
+          "note": "Same old b,T,FS as inherited T119; equality checked without transferring the r4 controller"
+        }
+      },
+      "fixed": {
+        "class_name": "deterministic constant-E with matching T119 service and useful work",
+        "status": "nonempty: accepted feasible witness, not known optimum",
+        "metrics": {
+          "period_upper": {
+            "value": "2780750907231/25000000000000",
+            "unit": "s",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "119",
+              "pointer": "/constant_E/3/period_max"
+            }
+          },
+          "Q_upper": {
+            "value": "10200547285550611091041238969476061/10200547328000000000000000000000000000",
+            "unit": "1",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "119",
+              "pointer": "/constant_E/3/risk_upper"
+            }
+          },
+          "L_fixed": {
+            "value": "42777602471405946944/138826458226318359375",
+            "unit": "bus fraction",
+            "kind": "lower",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "119",
+              "pointer": "/constant_E/3/class_lower/read_price_lower"
+            }
+          },
+          "witness_price_upper_intercept": {
+            "value": "5748716341070396383464717965420477797817600699/13173644054523677184000000000000000000000000000",
+            "unit": "bus fraction",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "119",
+              "pointer": "/constant_E/3/mission_price_upper_intercept"
+            }
+          }
+        }
+      },
+      "metrics": {
+        "Q_upper": {
+          "value": "9989804456425759218484709687421427162970853448506563185338681572556070550178329/10000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/risk_upper"
+          }
+        },
+        "risk_slack": {
+          "value": "10195543574240781515290312578572837029146551493436814661318427443929449821671/10000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/risk_slack"
+          }
+        },
+        "U_adaptive": {
+          "value": "212298069960985514074883997049577372982166539303154243932291979049556562933825738606562017831/1932883670970000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/joint_application_example/whole_bus_mission_upper"
+          }
+        },
+        "protection_plus_observation": {
+          "value": "211699836511538592487283997049577372982166539303154243932291979049556562933825738606562017831/1932883670970000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/joint_application_example/protection_mission_upper"
+          }
+        },
+        "G_cert": {
+          "value": "5151330042037076978914092908544000000000000000000000000000000000000000000000000000000000000000000000/1836181080255530941205171007245585218916240132257271579721712519530127231330627114835595958123585001",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/gain_at_nonzero_application_lower"
+          }
+        },
+        "peak": {
+          "value": "4671778941136877831/6124938750000000000",
+          "unit": "bus fraction per 1 ms",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/joint_application_example/whole_bus_peak_upper"
+          }
+        },
+        "response": {
+          "value": "570492923/250000000000000",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/joint_application_example/response_upper"
+          }
+        },
+        "P_s": {
+          "value": "627206272/6103515625",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/calendar/Ps"
+          }
+        },
+        "P_l": {
+          "value": "627206272/1220703125",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "119",
+            "pointer": "/rows/3/calendar/Pl"
+          }
+        }
+      },
+      "potentials": {
+        "ideal": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "E_POTENTIAL",
+          "note": "Not established in this contract; not zero"
+        },
+        "declared_fixed_over_oracle": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "E_POTENTIAL",
+          "note": "Not established in this contract; not zero"
+        }
+      },
+      "gaps": [
+        "CY_PHYSICS",
+        "ACTUAL_WORKLOAD",
+        "E_POTENTIAL"
+      ],
+      "next_action": "Use accepted ka5 reference as-is; establish matching E oracle only if a potential comparison is requested"
+    },
+    {
+      "id": "R0A_r4_B_V",
+      "name": "R0-A / r4 ka=3 / accepted B and V",
+      "status": "accepted_conditional_implementation",
+      "acceptance_sections": [
+        "MAP 17-27",
+        "MAP 239-327"
+      ],
+      "source_ids": [
+        "135",
+        "135final",
+        "135text",
+        "Vreport",
+        "Vstartup"
+      ],
+      "environment": "Same old R0-A radiation; original selected_r3_original, not reduced demo caps",
+      "word": "internal32+6/full38; two x16 aliases per word are an explicit conditional map",
+      "observations": "Two-stage own ERR, 90/180s; full64 generation, source timestamps, same-edge veto, qualified start; no runtime reset",
+      "service": "r4 E/g196/c164/ka3/freeze320. B processed-history bound and V not_before preparation are separate timing contracts",
+      "useful_work": "Same r4 joint burst1/rate10000/s, mean reads/writes<=1000/s each. Continuous STA-shell traffic is outside this mission-price workload",
+      "price_metric": "Full common-bus mission upper under r4 workload; V preserves price only with bounded full ARM cut-to-cut service. CPU allocation is separate",
+      "radiation": {
+        "T": {
+          "value": "315576000",
+          "unit": "s",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/T"
+          }
+        },
+        "epsilon": {
+          "value": "1/1000",
+          "unit": "1",
+          "kind": "requirement",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/eps"
+          }
+        },
+        "W": {
+          "value": 524288,
+          "unit": "word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/W"
+          }
+        },
+        "n": {
+          "value": 38,
+          "unit": "bit/word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/n"
+          }
+        },
+        "b": {
+          "value": "9669/62500000",
+          "unit": "s^-1 per array",
+          "kind": "envelope_bound",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/b"
+          }
+        },
+        "B": {
+          "value": "15292669/62500000",
+          "unit": "s^-1 per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/B"
+          }
+        },
+        "F_solar": {
+          "value": "442351152/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/FS"
+          }
+        },
+        "S2": {
+          "value": "6940",
+          "unit": "s^-1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/S2"
+          }
+        },
+        "F": {
+          "value": "1205177238/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/F"
+          }
+        },
+        "Dstar": {
+          "value": "560489/2000000000",
+          "unit": "expected direct parents per mission",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "135",
+            "pointer": "/environment/D"
+          }
+        }
+      },
+      "fixed": {
+        "class_name": "requires matched constant-E with r4 transport/application and V accounting",
+        "status": "matched witness/class price not re-established in the accepted r4/V source; not an empty-class claim",
+        "metrics": {
+          "L_fixed": {
+            "value": null,
+            "unit": "bus fraction",
+            "kind": "unknown",
+            "evidence": "UNKNOWN",
+            "gap": "R4_MATCHED_FIXED",
+            "note": "Not established in this contract; not zero"
+          },
+          "witness_price": {
+            "value": null,
+            "unit": "bus fraction",
+            "kind": "unknown",
+            "evidence": "UNKNOWN",
+            "gap": "R4_MATCHED_FIXED",
+            "note": "Not established in this contract; not zero"
+          }
+        }
+      },
+      "metrics": {
+        "Q_upper": {
+          "value": "3932202121973052236588694319683188052625303136939984331024278554459021098515417/4000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/risk_upper"
+          },
+          "note": "Saved r4 bound under its full timing contract. With unbounded correct ARM lateness the accepted V claim is only Q<=epsilon; neither actual Q nor the price is declared unchanged."
+        },
+        "risk_slack": {
+          "value": "67797878026947763411305680316811947374696863060015668975721445540978901484583/4000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/slack"
+          }
+        },
+        "relative_risk_slack": {
+          "value": "67797878026947763411305680316811947374696863060015668975721445540978901484583/4000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/relative_slack"
+          }
+        },
+        "U_adaptive": {
+          "value": "135180631755963838127446805309431199563294735675294032762223498902505875428641718648049500263/773153468388000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/full_bus_mission"
+          }
+        },
+        "quiet_price": {
+          "value": "129570488381927826825222951126084912163096740997106133436373498902505875428641718648049500263/773153468388000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/full_bus_quiet"
+          }
+        },
+        "peak": {
+          "value": "4671778941136877831/6124938750000000000",
+          "unit": "bus fraction per 1 ms",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/resources/whole_bus_peak"
+          }
+        },
+        "response": {
+          "value": "347258703/125000000000000",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135final",
+            "pointer": "/preserved_r4_outcome/resources/response_upper"
+          }
+        },
+        "G_cert": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "R4_MATCHED_FIXED",
+          "note": "Not established in this contract; not zero"
+        },
+        "R": {
+          "value": "2312523/25000000000000",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135",
+            "pointer": "/service/R_s"
+          }
+        },
+        "E": {
+          "value": "3712537/25000000000000",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "135",
+            "pointer": "/service/E_s"
+          }
+        }
+      },
+      "potentials": {
+        "ideal": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "E_POTENTIAL",
+          "note": "Not established in this contract; not zero"
+        },
+        "declared_fixed_over_oracle": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "R4_MATCHED_FIXED",
+          "note": "Not established in this contract; not zero"
+        }
+      },
+      "implementation": {
+        "B": "Accepted 8ce9104 with final r4 applicability 5ab03cd; full loss reaction<=9.699067289025 us is a B digital bound, not physical monitor delay or V ARM service",
+        "V": "Accepted b0ca4fb functional demonstrator; late correct ARM cannot authorize stale LOW, Q<=epsilon retained under other executor assumptions; extra FAST can increase price",
+        "V_service_allocation": {
+          "value": "1000000",
+          "unit": "ns",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "Vadvance",
+            "pointer": "/selected_service_allocation_ns/rational"
+          },
+          "note": "Full cut-to-next-cut including compute/delivery/CRC/ACK/CLAIM; not CPU WCET"
+        },
+        "V_LUT": {
+          "value": 2476.0,
+          "unit": "LUT",
+          "kind": "implementation_count",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "Vtop",
+            "pointer": "/resources/LUT"
+          }
+        },
+        "V_slice_FF": {
+          "value": 5442.0,
+          "unit": "FF",
+          "kind": "implementation_count",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "Vtop",
+            "pointer": "/resources/slice_FF"
+          }
+        },
+        "V_IOB_FF": {
+          "value": 74.0,
+          "unit": "FF",
+          "kind": "implementation_count",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "Vtop",
+            "pointer": "/resources/IOB_FF"
+          }
+        },
+        "V_BRAM": {
+          "value": 4.5,
+          "unit": "BRAM36 equivalent",
+          "kind": "implementation_count",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "Vtop",
+            "pointer": "/resources/BRAM36_equiv"
+          }
+        },
+        "V_setup": {
+          "value": 0.225,
+          "unit": "ns",
+          "kind": "reported_STA_margin",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "Vtop",
+            "pointer": "/timing/setup_ns"
+          }
+        },
+        "V_hold": {
+          "value": 0.044,
+          "unit": "ns",
+          "kind": "reported_STA_margin",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "Vtop",
+            "pointer": "/timing/hold_ns"
+          }
+        },
+        "CPU": "100% of one polling core reserved; measured useful CPU time unknown",
+        "measured_ARM_WCET": {
+          "value": null,
+          "unit": "s",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "ARM_TIME_PRICE",
+          "note": "Not established in this contract; not zero"
+        }
+      },
+      "gaps": [
+        "CY_PHYSICS",
+        "ACTUAL_WORKLOAD",
+        "R4_MATCHED_FIXED",
+        "ARM_TIME_PRICE",
+        "E_POTENTIAL"
+      ],
+      "next_action": "G/#106 supplies matched scenario prices; separately instantiate the constant-E comparator with the same transport and CPU price before reporting a new G_cert"
+    },
+    {
+      "id": "R0A_fullU_T146",
+      "name": "R0-A / full-U100 / joint channel",
+      "status": "accepted_conditional_theorem",
+      "acceptance_sections": [
+        "MAP 89-101"
+      ],
+      "source_ids": [
+        "146",
+        "146pot",
+        "146text",
+        "146conditions"
+      ],
+      "environment": "Old R0-A GEO,3g/cm2; exogenous full38 marked-parent contract",
+      "word": "internal32+6/full38; physical grouping/marks unqualified",
+      "observations": "Own ERR plus joint lower-Laplace channel: a>=100000, quiet MGF/count upper, lifetime corruption/statistic quotas, dilated outages and complete cost all required together",
+      "service": "full-U100, occupied whole100-tick block, g176/ka101; distinct from E/r4; physical U-WCET unqualified",
+      "useful_work": "Same useful-work envelope sigma=45ns, rate<=0.04, atomic<=45ns; quiet>=90%T with<=1000 components",
+      "price_metric": "G_cert uses protection+observation+control mission bus cost, not whole bus including useful work. Whole-bus comparison at app cap exported separately",
+      "radiation": {
+        "T": {
+          "value": "315576000",
+          "unit": "s",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/T_s"
+          }
+        },
+        "epsilon": {
+          "value": "1/1000",
+          "unit": "1",
+          "kind": "requirement",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/epsilon"
+          }
+        },
+        "W": {
+          "value": 524288,
+          "unit": "word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/W"
+          }
+        },
+        "n": {
+          "value": 38,
+          "unit": "bit/word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/n"
+          }
+        },
+        "b": {
+          "value": "9669/62500000",
+          "unit": "s^-1 per array",
+          "kind": "envelope_bound",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/b_per_s"
+          }
+        },
+        "B": {
+          "value": "15292669/62500000",
+          "unit": "s^-1 per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/B_per_s"
+          }
+        },
+        "F_solar": {
+          "value": "442351152/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/FS"
+          }
+        },
+        "Dstar": {
+          "value": "560489/2000000000",
+          "unit": "expected direct parents per mission",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/Dstar"
+          }
+        },
+        "F": {
+          "value": "1205177238/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "witness_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/F"
+          }
+        },
+        "S2": {
+          "value": "677638260801891/97656250000",
+          "unit": "s^-1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/fixed_witness_recomputed/square_upper"
+          },
+          "note": "Tight rarity cap, not rounded 6940"
+        }
+      },
+      "fixed": {
+        "class_name": "nonempty deterministic constant full-U100, every phase/period in declared class",
+        "status": "feasible witness and necessary class lower both accepted; witness not claimed optimum",
+        "metrics": {
+          "L_fixed": {
+            "value": "63114568785726104867276/187415601834320068359375",
+            "unit": "bus fraction",
+            "kind": "lower",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "146",
+              "pointer": "/fixed_lower"
+            }
+          },
+          "witness_price": {
+            "value": "1489074388994224607945857/3159116355884400000000000",
+            "unit": "bus fraction",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "146",
+              "pointer": "/fixed_witness_upper"
+            }
+          },
+          "period_upper": {
+            "value": "2224607945857/20000000000000",
+            "unit": "s",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "146",
+              "pointer": "/fixed_witness_recomputed/period_upper_s"
+            }
+          },
+          "Q_upper": {
+            "value": "77823999863589654699257020469/77824000000000000000000000000000",
+            "unit": "1",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "146",
+              "pointer": "/fixed_witness_recomputed/risk_upper"
+            }
+          },
+          "peak": {
+            "value": "47376173757/100000000000",
+            "unit": "bus fraction per 1 ms",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "146",
+              "pointer": "/fixed_witness_recomputed/peak_upper"
+            }
+          },
+          "response": {
+            "value": "55011520939680744657/155800739325700000000000000",
+            "unit": "s",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "146",
+              "pointer": "/fixed_witness_recomputed/delay_upper_s"
+            }
+          }
+        }
+      },
+      "metrics": {
+        "Q_upper": {
+          "value": "27431854759798940566933157/28991699218750000000000000000",
+          "unit": "1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/risk_upper"
+          }
+        },
+        "risk_slack": {
+          "value": "1559844458951059433066843/28991699218750000000000000000",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/risk_slack"
+          }
+        },
+        "U_adaptive": {
+          "value": "172598525919247623117220290853828080215240342923056791261705738679351032547803606048252672333390604243305942570209/2691458810016351264000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/mission_paid_upper"
+          }
+        },
+        "G_cert": {
+          "value": "20158363488542812136938181604442676133888000000000000000000000000000000000000000000000000000000000000000000000000000000000/3838669650145631299082570108267023079290254466541759929610764697650872537525228564694687931516134540587138156504778993547",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/gain_lower"
+          }
+        },
+        "whole_bus": {
+          "value": "280256878319901673677220290853828080215240342923056791261705738679351032547803606048252672333390604243305942570209/2691458810016351264000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/full_bus_upper_with_app"
+          }
+        },
+        "whole_bus_G_at_equal_app_cap": {
+          "value": "157869139182752494030282902591098732937216000000000000000000000000000000000000000000000000000000000000000000000000000000000/43631282313972228165293622117869161555031781265792319507275352883556107762676599952862815520612941784109967095533452954829",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/full_bus_gain_lower_if_equal_app_rate_at_cap"
+          }
+        },
+        "peak": {
+          "value": "6369559238705077/10448679687500000",
+          "unit": "bus fraction per 1 ms",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/full_peak_with_app_upper"
+          }
+        },
+        "response": {
+          "value": "5311167894241/6687155000000000000",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/app_delay_with_margin_s"
+          }
+        },
+        "P_s": {
+          "value": "563205632/6103515625",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/Ps_upper_s"
+          }
+        },
+        "P_l": {
+          "value": "56883768832/6103515625",
+          "unit": "s",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/Pl_upper_s"
+          }
+        },
+        "a_channel": {
+          "value": "100000",
+          "unit": "count per expected bit inversion",
+          "kind": "requirement",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/aM_requirement"
+          }
+        },
+        "quiet_mu": {
+          "value": "7735777357/500000000",
+          "unit": "count/window",
+          "kind": "requirement_upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/quiet_mu_upper"
+          }
+        },
+        "post_window": {
+          "value": "1",
+          "unit": "s",
+          "kind": "requirement_upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/post_window_requirement_s"
+          }
+        },
+        "dilated_outages": {
+          "value": "1/1000",
+          "unit": "fraction of T",
+          "kind": "requirement_upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/outage_dilated_fraction_requirement"
+          }
+        }
+      },
+      "potentials": {
+        "ideal": {
+          "value": "183338796116956065/498097453701409",
+          "unit": "1",
+          "kind": "modeled_diagnostic",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/G_ideal_quadratic"
+          },
+          "note": "Initial peak plateau witness, then b; cost-free known future, no bus/clock/phase cost; not actual trace or class-wide gain"
+        },
+        "witness_F": {
+          "value": "1205177238/15625",
+          "unit": "expected bit inversions per array",
+          "kind": "witness_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/F"
+          }
+        },
+        "witness_S2": {
+          "value": "677638260801891/97656250000",
+          "unit": "s^-1",
+          "kind": "witness_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/S2"
+          }
+        },
+        "declared_fixed_over_oracle_lower": {
+          "value": "16710556591450990651684432246831557/206758107707753462330955413818486",
+          "unit": "1",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/G_declared_fixed_oracle_lower"
+          },
+          "note": "Specific cost-free nested g176/ka101 oracle; not optimum oracle or paid G_cert"
+        },
+        "declared_fixed_over_oracle_upper": {
+          "value": "183819798865175102836414324140547127/2274293570159872452171351718905746",
+          "unit": "1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/G_declared_fixed_oracle_upper"
+          }
+        },
+        "profile_peak_duration": {
+          "value": "115776",
+          "unit": "s",
+          "kind": "witness_parameter",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/L_s"
+          }
+        },
+        "fixed_numerator_lower": {
+          "value": "1654527098879997775392054143/3510129284316000000000000000",
+          "unit": "bus fraction",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/declared_fixed_cost_lower"
+          }
+        },
+        "fixed_numerator_upper": {
+          "value": "1654527098880002224607945857/3510129284316000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/declared_fixed_cost_upper"
+          }
+        },
+        "oracle_denominator_lower": {
+          "value": "51117238822488889777798889/8765211051234000000000000000",
+          "unit": "bus fraction",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/oracle_mission_cost_lower"
+          }
+        },
+        "oracle_denominator_upper": {
+          "value": "4647114914650252906214299/796821431706000000000000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/R0A_potentials/oracle_mission_cost_upper"
+          }
+        },
+        "actual_trace_ideal": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "CY_PHYSICS",
+          "note": "No accepted physical R0-A trace; the model witness is explicitly selected"
+        }
+      },
+      "gaps": [
+        "CY_PHYSICS",
+        "CHANNEL_JOINT",
+        "FULL_U_SERVICE"
+      ],
+      "next_action": "Joint real-channel input from #152; keep conditional theorem if no supported physical channel is found"
+    },
+    {
+      "id": "A2_T140_pointwise",
+      "name": "A2 / full39 / T57 pointwise layer",
+      "status": "accepted_scoped_bound",
+      "acceptance_sections": [
+        "MAP 89-97"
+      ],
+      "source_ids": [
+        "140",
+        "140text",
+        "146pot"
+      ],
+      "environment": "Diagnostic A2/T126 class, five-year source horizon; not CY62167 response",
+      "word": "External SEC-DED(39,32), independent uniform singleton inversions and D=0 are diagnostic assumptions",
+      "observations": "Own corrections of full external words; latch-to-fence silent losses included; no assertion that physical ERR is Poisson",
+      "service": "256 Mbit/s full-U, c=39/R; 25% protection peak per1ms; calendar period differs from Wc",
+      "useful_work": "Same arbitrary nonzero read-only flow within sigma+0.5t, sigma/atomic=0.1us. Writes/foreign corrections excluded",
+      "price_metric": "Mission protection bus fraction plus extra observation/control/recovery. Useful work reported separately",
+      "radiation": {
+        "T": {
+          "value": "157766400",
+          "unit": "s",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/T_s"
+          }
+        },
+        "epsilon": {
+          "value": "1/100",
+          "unit": "1",
+          "kind": "requirement",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/epsilon"
+          }
+        },
+        "W": {
+          "value": 1935832,
+          "unit": "word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/W"
+          }
+        },
+        "n": {
+          "value": 39,
+          "unit": "bit/word",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/n"
+          }
+        },
+        "b": {
+          "value": "18650862321/5000000000000",
+          "unit": "s^-1 per array",
+          "kind": "envelope_bound",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/b"
+          }
+        },
+        "B": {
+          "value": "6633130831/20000000000",
+          "unit": "s^-1 per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/B"
+          }
+        },
+        "F_solar": {
+          "value": "1840448402190617/50000000000",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/FS"
+          }
+        },
+        "F": {
+          "value": "31265242454988761/50000000000",
+          "unit": "expected bit inversions per array",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/F0"
+          }
+        },
+        "S2": {
+          "value": "3635107492319496811416556031/250000000000000000000000",
+          "unit": "s^-1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/inputs/S2"
+          }
+        }
+      },
+      "fixed": {
+        "class_name": "deterministic constant full-U in the diagnostic A2 class",
+        "status": "nonempty with accepted sufficient witness and necessary lower",
+        "metrics": {
+          "L_fixed": {
+            "value": "12407250169726870965767/116245210822963200000000",
+            "unit": "bus fraction",
+            "kind": "lower",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "140",
+              "pointer": "/fixed/optimal_fixed_price_lower"
+            }
+          },
+          "witness_price": {
+            "value": "4411466881536078946387/40878235142553600000000",
+            "unit": "bus fraction",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "140",
+              "pointer": "/fixed/optimal_fixed_price_upper"
+            }
+          },
+          "period": {
+            "value": "54655191/20000000",
+            "unit": "s",
+            "kind": "exact_calendar_parameter",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "140",
+              "pointer": "/fixed/witness/resource/tau_hi"
+            }
+          },
+          "Q_upper": {
+            "value": "1258290797222269831261798052764543833/125829080000000000000000000000000000000",
+            "unit": "1",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "140",
+              "pointer": "/fixed/risk"
+            }
+          },
+          "peak": {
+            "value": "736651/6400000",
+            "unit": "bus fraction per 1 ms",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "140",
+              "pointer": "/fixed/witness/resource/peak_upper"
+            }
+          },
+          "response": {
+            "value": "4387666795021/11391519353600000000",
+            "unit": "s",
+            "kind": "upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "140",
+              "pointer": "/fixed/witness/resource/delay_upper"
+            }
+          }
+        }
+      },
+      "metrics": {
+        "Q_upper": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "A2_COMPLETE_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "risk_slack": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "A2_COMPLETE_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "U_adaptive": {
+          "value": null,
+          "unit": "bus fraction",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "A2_COMPLETE_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "G_cert": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "A2_COMPLETE_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "known_candidate_Q_upper": {
+          "value": "908263544277619415195840772174223901888040570093920349/95780971304118053647396689196894323976171195136475136000",
+          "unit": "1",
+          "kind": "partial_upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/candidate/risk_upper"
+          }
+        },
+        "remaining_candidate_risk_allowance": {
+          "value": "49546168763561121278126119794719337873671381270831011/95780971304118053647396689196894323976171195136475136000",
+          "unit": "1",
+          "kind": "remaining_allowance",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/candidate/risk_remainder"
+          }
+        },
+        "candidate_mission_cap_before_extras": {
+          "value": "9235645056000019703/12318400512000000000",
+          "unit": "whole bus fraction",
+          "kind": "partial_upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/budgets/full_bus_candidate_mission_cap"
+          }
+        },
+        "pointwise_price_lower_free_information": {
+          "value": "64910118758239771058099565707189130506587962077048131277/2446255873335326147683782865811489115578346844160000000000",
+          "unit": "bus fraction",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/layers/T57_even_free_information/lifetime_mean_price_lower"
+          }
+        },
+        "pointwise_gain_upper": {
+          "value": "12208815093210026757055568060387567361336004420983362811215421275/3001878794169773278518749420629091693121262313987695818654815229",
+          "unit": "1",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/layers/T57_even_free_information/gain_ceiling_with_presented_fixed_upper"
+          }
+        },
+        "required_decision_extra_bus": {
+          "value": "1/6400000",
+          "unit": "s per 1 ms",
+          "kind": "remaining_allowance",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/candidate/extra_control_bus_per_1ms_s"
+          }
+        }
+      },
+      "potentials": {
+        "ideal": {
+          "value": "5734978226762746617486689454091584/977515385769231646905096636315121",
+          "unit": "1",
+          "kind": "modeled_diagnostic",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/A2_5p87/G_ideal"
+          },
+          "note": "Two-level profile, known future without peak resource; not causal result"
+        },
+        "witness_F": {
+          "value": "31265242454988761/50000000000",
+          "unit": "expected bit inversions per array",
+          "kind": "witness_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/A2_5p87/F_diagnostic"
+          }
+        },
+        "witness_S2": {
+          "value": "3635107492319496811416556031/250000000000000000000000",
+          "unit": "s^-1",
+          "kind": "witness_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "146pot",
+            "pointer": "/A2_5p87/S2_diagnostic"
+          }
+        },
+        "pair_constant_over_pair_relaxation": {
+          "value": "105278231550595781350341914089756369881728107228536287067987652071681/25228851201992333571696374720286275797869171880000000000000000000000",
+          "unit": "1",
+          "kind": "modeled_diagnostic",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/relaxation/gain"
+          },
+          "note": "Same 25% peak; numerator is continuous constant pair cost, NOT admissible finite-clock Fixed witness; not a universal lower or gain ceiling"
+        },
+        "realized_oracle_price": {
+          "value": null,
+          "unit": "bus fraction",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "A2_COMPLETE_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "declared_fixed_over_oracle": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "A2_COMPLETE_CONTROLLER",
+          "note": "The 4.17293 value below is a pair relaxation, not a same-calendar oracle certificate"
+        },
+        "pair_relaxation_denominator": {
+          "value": "630721280049808339292409368007156894946729297/24388646848003619372448015930582522678864000000",
+          "unit": "bus fraction",
+          "kind": "modeled_diagnostic",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/relaxation/pair_cost"
+          }
+        },
+        "pair_relaxation_numerator_formula": {
+          "formula": "W*c*((n-1)/(2*n*W))*S2/epsilon",
+          "unit": "bus fraction",
+          "kind": "continuous_pair_diagnostic",
+          "source_ids": [
+            "140",
+            "140calc"
+          ],
+          "locator": "inputs.W,n,c_s,S2,epsilon; clipped_pair_relaxation: fixed_pair=full*(A+S)/eps",
+          "note": "No tick, endpoint or information cost. The exact expression is checked against gain*pair_cost; no new physical calculation."
+        }
+      },
+      "gaps": [
+        "A2_COMPLETE_CONTROLLER",
+        "A2_PHYSICAL_TRANSFER"
+      ],
+      "next_action": "Keep scoped <4.067058 bound; no parameter tuning within that layer to promise5x. A new architecture or joint budget needs separate authorization"
+    },
+    {
+      "id": "CY_T150_shape_input",
+      "name": "CY62167 / T150 / fixed-input shape at3g/cm2",
+      "status": "accepted_parameterized_input_only",
+      "acceptance_sections": [
+        "MAP 54-67"
+      ],
+      "source_ids": [
+        "150shape",
+        "150pot",
+        "150req",
+        "150stats",
+        "150text",
+        "150method"
+      ],
+      "environment": "One T141 chain: fixed COSRAD b,p,F; nominal complete H response and exclusive LET, all terms before square; shape transfer is an assumption",
+      "word": "Same assumed full38; bit-rate is not a qualified parent or word/direct-ERR process",
+      "observations": "SEPEM archive is offline profile evidence, not an online controller observation contract",
+      "service": "Only hypothetical full-U100 comparator from T150; physical service and new controller contract not qualified",
+      "useful_work": "Hypothetical T146 service/workload used solely to expose sufficient-test requirements",
+      "price_metric": "No new guaranteed mission price; oracle is a pair-functional diagnostic",
+      "radiation": {
+        "b": {
+          "value": "0.00015859810317245875",
+          "unit": "s^-1 per array",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "background_s_inv"
+          }
+        },
+        "solar_peak": {
+          "value": "0.9811422515960433",
+          "unit": "s^-1 per array",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "solar_peak_s_inv"
+          }
+        },
+        "F_solar": {
+          "value": "113592.7253207835",
+          "unit": "expected bit inversions per array",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "F_solar"
+          }
+        },
+        "F": {
+          "value": "163642.48032753536",
+          "unit": "expected bit inversions per array",
+          "kind": "modeled_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "F"
+          }
+        },
+        "S2": {
+          "value": "35865.11529071494",
+          "unit": "s^-1",
+          "kind": "modeled_moment",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "S2_s_inv"
+          }
+        },
+        "r": {
+          "value": "0.32140822166960087",
+          "unit": "1",
+          "kind": "modeled_quantile",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "r"
+          }
+        },
+        "mu": {
+          "value": "100.56812028745298",
+          "unit": "event/mission",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "mean_events"
+          }
+        },
+        "T": {
+          "value": 315576000,
+          "unit": "s",
+          "kind": "contract_parameter",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "150stats",
+            "pointer": "/horizon_s"
+          }
+        },
+        "epsilon": {
+          "value": "1/1000",
+          "unit": "1",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/epsilon"
+          },
+          "note": "Only the hypothetical sufficient-test setup explicitly inherited by T150 METHOD; no new physical controller contract"
+        },
+        "W": {
+          "value": 524288,
+          "unit": "word",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/W"
+          },
+          "note": "Only the hypothetical sufficient-test setup explicitly inherited by T150 METHOD; no new physical controller contract"
+        },
+        "n": {
+          "value": 38,
+          "unit": "bit/word",
+          "kind": "assumption",
+          "evidence": "ASSUMPTION",
+          "source": {
+            "source": "146",
+            "pointer": "/recommended/n"
+          },
+          "note": "Only the hypothetical sufficient-test setup explicitly inherited by T150 METHOD; no new physical controller contract"
+        },
+        "Dstar": {
+          "value": null,
+          "unit": "expected direct parents per mission",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "physical_S2_q90": {
+          "value": null,
+          "unit": "s^-1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_JOINT",
+          "note": "Not established in this contract; not zero"
+        }
+      },
+      "fixed": {
+        "class_name": "new full-U100 environment with explicitly assumed new cap and Dref only for diagnostic substitution",
+        "status": "tested sufficient candidate fails resources; class emptiness/nonemptiness not established",
+        "metrics": {
+          "candidate_price": {
+            "value": "2.4362288674496675",
+            "unit": "bus fraction",
+            "kind": "infeasible_candidate_upper",
+            "evidence": "OWN_RESULT",
+            "source": {
+              "source": "150pot",
+              "where": {
+                "shield_g_cm2": "3.0",
+                "response_case": "full",
+                "choice": "model_r_q90",
+                "D_assumed": "0.0002802445"
+              },
+              "column": "fixed_price_upper"
+            }
+          },
+          "assumed_D_for_test": {
+            "value": "0.0002802445",
+            "unit": "expected direct parents per mission",
+            "kind": "assumption",
+            "evidence": "ASSUMPTION",
+            "source": {
+              "source": "150pot",
+              "where": {
+                "shield_g_cm2": "3.0",
+                "response_case": "full",
+                "choice": "model_r_q90",
+                "D_assumed": "0.0002802445"
+              },
+              "column": "D_assumed"
+            }
+          },
+          "L_fixed": {
+            "value": null,
+            "unit": "bus fraction",
+            "kind": "unknown",
+            "evidence": "UNKNOWN",
+            "gap": "T150_CONTROLLER",
+            "note": "Not established in this contract; not zero"
+          },
+          "admissible_witness": {
+            "value": null,
+            "unit": "1",
+            "kind": "unknown",
+            "evidence": "UNKNOWN",
+            "gap": "T150_CONTROLLER",
+            "note": "Not established in this contract; not zero"
+          }
+        }
+      },
+      "metrics": {
+        "Q_upper": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "risk_slack": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "U_adaptive": {
+          "value": null,
+          "unit": "bus fraction",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "G_cert": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_CONTROLLER",
+          "note": "Not established in this contract; not zero"
+        },
+        "sufficient_channel_D_max": {
+          "value": "-0.004511393866433136",
+          "unit": "expected direct parents per mission",
+          "kind": "sufficient_test_threshold",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "150req",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "choice": "model_r_q90"
+            },
+            "column": "D_max_channel_g176_ka101"
+          },
+          "note": "Negative threshold: failure of this formula/point, not impossibility of all adaptation"
+        },
+        "S2_rectangle": {
+          "value": "111494.59126391285",
+          "unit": "s^-1",
+          "kind": "modeled_envelope",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "",
+              "choice": "rectangle"
+            },
+            "column": "S2_s_inv"
+          }
+        }
+      },
+      "potentials": {
+        "ideal": {
+          "value": "422.6531317949967",
+          "unit": "1",
+          "kind": "modeled_diagnostic",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "150shape",
+            "where": {
+              "shield_g_cm2": "3.0",
+              "response_case": "full",
+              "mean_events": "100.56812028745298",
+              "choice": "model_r_q90"
+            },
+            "column": "G_ideal"
+          },
+          "note": "Fixed declared moments; not physical q90 or class-wide guarantee"
+        },
+        "declared_fixed_over_oracle": {
+          "value": null,
+          "unit": "1",
+          "kind": "unknown",
+          "evidence": "UNKNOWN",
+          "gap": "T150_CONTROLLER",
+          "note": "No admissible fixed witness here; do not divide by zero or claim infinite gain"
+        }
+      },
+      "gaps": [
+        "T150_JOINT",
+        "T150_CONTROLLER",
+        "CY_PHYSICS"
+      ],
+      "next_action": "Retain conditional envelope and shape sensitivity. A future change needs physical joint transfer and a fresh matched controller/fixed contract; no more MC alone"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "CY_PHYSICS",
+      "missing": "Full38 ECC grouping, parent/position law, direct D* and lower ERR are not physically qualified",
+      "next_action": "Keep as explicit applicability conditions; do not replace them by bit-rate moments"
+    },
+    {
+      "id": "ACTUAL_WORKLOAD",
+      "missing": "Actual joint application rate/burst and physical service assumptions are not measurements",
+      "next_action": "Use declared common useful work; measure only inside separately authorized G scope"
+    },
+    {
+      "id": "E_POTENTIAL",
+      "missing": "A matching E oracle with residuals, observed-write price and fixed comparator has not been supplied for these rows",
+      "next_action": "Do not import full-U quadratic/80.82 values into E; formulate a matched relaxation if needed"
+    },
+    {
+      "id": "R4_MATCHED_FIXED",
+      "missing": "No new matched constant-E/V lifetime witness and G_cert are furnished by the accepted r4/V report",
+      "next_action": "Instantiate constant-E under r4 transport/application and separate CPU cost before computing a ratio"
+    },
+    {
+      "id": "ARM_TIME_PRICE",
+      "missing": "Physical full cut-to-cut ARM service bound and useful CPU cost are unknown;1ms is an allocation for the price contract",
+      "next_action": "Use accepted safe-lateness behavior; record extra FAST cost in G, no WCET search in this task"
+    },
+    {
+      "id": "CHANNEL_JOINT",
+      "missing": "A real device meeting simultaneous lower sensitivity, quiet count, latency, corruption/outage and price conditions is unqualified",
+      "next_action": "Receive concrete result of #152; keep T146 as a conditional requirement theorem"
+    },
+    {
+      "id": "FULL_U_SERVICE",
+      "missing": "The full-U100 service/clock/complete-word timing is a conditional model, not the implemented E/r4/V service",
+      "next_action": "Keep the U and E services separate; a hardware comparison needs the same paid service and explicit full-word qualification"
+    },
+    {
+      "id": "A2_COMPLETE_CONTROLLER",
+      "missing": "Candidate extra information/control/recovery costs, decision service and lifetime error allowances are not a complete causal certificate",
+      "next_action": "Keep known partial bounds; scoped layer result does not exclude all adaptive methods"
+    },
+    {
+      "id": "A2_PHYSICAL_TRANSFER",
+      "missing": "Diagnostic full39 singleton law and growth/count premises are not a qualified SRAM/environment pair",
+      "next_action": "Require a separate response/word/service source before a physical point"
+    },
+    {
+      "id": "T150_JOINT",
+      "missing": "Future joint spectral/species/event shape, subbin peaks, rare tail and physical Pi=.1 are unresolved",
+      "next_action": "Retain parameterized shape and conservative envelope; no marginal-quantile products or MC qualification"
+    },
+    {
+      "id": "T150_CONTROLLER",
+      "missing": "New D*/parents/lower ERR, feasible fixed witness and class lower on the same new input are unresolved",
+      "next_action": "Use finite sufficient requirements; no automatic transplant of old 6940, D* or G_cert"
+    }
+  ],
+  "remaining_groups": [
+    {
+      "group": "A1: small memory",
+      "status": "accepted conditional Fixed examples exist in T126",
+      "missing": "matched two potentials and chosen common useful work for the final presentation",
+      "next_action": "Select an existing feasible T126 row and carry its exact word/rate/epsilon; no fresh broad grid",
+      "source_ids": [
+        "map126"
+      ]
+    },
+    {
+      "group": "A2: large diagnostic memory",
+      "status": "scoped T140 pointwise bound included",
+      "missing": "complete differently structured controller or supported physical response/word/service",
+      "next_action": "Retain scoped bound; only a separately chosen architecture or budget can change the layer",
+      "source_ids": [
+        "140",
+        "140text"
+      ]
+    },
+    {
+      "group": "A3: CY62167 shielding family",
+      "status": "old R0-A contracts and separate parameterized T150 input are mapped",
+      "missing": "joint physical future S2, full38 marks/D*, information and matched comparator",
+      "next_action": "Use the accepted remaining shielding rows when a physical/explicit conditional contract is supplied; do not interpolate acceptance",
+      "source_ids": [
+        "150text",
+        "146conditions"
+      ]
+    },
+    {
+      "group": "A4: another SRAM",
+      "status": "source candidate only; no qualified numerical map row",
+      "missing": "EV30LL-45ZXA date-code-specific upper response with event/fluence counts, HEP/PDI transfer, full39 marks and service",
+      "next_action": "Use T126 addressed source inventory to obtain the exact numerical/protocol input within authorized access; no new external request here",
+      "source_ids": [
+        "sources126"
+      ]
+    },
+    {
+      "group": "A5: LEO/position",
+      "status": "both potentials and G_cert unknown",
+      "missing": "synchronized numerical UTC/position/exposure/gaps, online accuracy and delivery, memory/full word/service and full solar-plus-background envelope outside the coordinate zone",
+      "next_action": "First define the memory and available numeric trajectory/online tube; offline ICARE is validation, not a hidden runtime detector",
+      "source_ids": [
+        "sources126",
+        "146pot"
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "new physical data search/experiments",
+    "codes t>1",
+    "changing protected regions",
+    "chapters",
+    "main merge"
+  ]
+}
