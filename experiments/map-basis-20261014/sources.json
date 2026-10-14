@@ -1,0 +1,376 @@
+{
+  "base": "140f8d36751f117cfc96969d7732f85456476a5d",
+  "acceptance_source": "acceptance",
+  "acceptances": [
+    {
+      "id": "T119",
+      "scientific_sha": "d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba",
+      "accepted": "2026-10-08",
+      "MAP_lines": [
+        705,
+        740
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/121#issuecomment-6057692500"
+    },
+    {
+      "id": "T126",
+      "scientific_sha": "2699d4ab4a2aa5258d25ae4b239e0c08300e925a",
+      "accepted": "2026-10-08",
+      "MAP_lines": [
+        705,
+        752
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/131#issuecomment-6058042373"
+    },
+    {
+      "id": "T135_B",
+      "scientific_sha": "fa4b4c150e668422e36a6c7a0e30810b26604e7c",
+      "final_applicability_sha": "5ab03cd1795659b281cb518b6a06e894defead49",
+      "engineer_sha": "8ce9104462d34f6d7daede73b3346e6dfa91f19a",
+      "accepted": "2026-10-12",
+      "MAP_lines": [
+        239,
+        327
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/134#issuecomment-6130663641"
+    },
+    {
+      "id": "V",
+      "scientific_sha": "b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf",
+      "accepted": "2026-10-14",
+      "MAP_lines": [
+        17,
+        27
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/144#issuecomment-6164051312"
+    },
+    {
+      "id": "T140",
+      "scientific_sha": "51eb2c31149dee11b6beb0b19982de2f81e6e1a2",
+      "accepted": "2026-10-13",
+      "MAP_lines": [
+        89,
+        97
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/143#issuecomment-6144558010"
+    },
+    {
+      "id": "T146",
+      "scientific_sha": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+      "accepted": "2026-10-13",
+      "MAP_lines": [
+        89,
+        101
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/149#issuecomment-6151750665"
+    },
+    {
+      "id": "T150",
+      "scientific_sha": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "accepted": "2026-10-14",
+      "MAP_lines": [
+        54,
+        67
+      ],
+      "review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/154#issuecomment-6160640189"
+    }
+  ],
+  "sources": {
+    "acceptance": {
+      "path": "MAP.md",
+      "commit": "140f8d36751f117cfc96969d7732f85456476a5d",
+      "sha256": "5ef9ef37262211f955933d3a31c966edebb1cfff6db59e7e5af29a92bd5cb6fa",
+      "git_blob": "ac56e7e32f012a319682408f9f6a21bb8d67d6bf",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/140f8d36751f117cfc96969d7732f85456476a5d/MAP.md",
+      "locator": "lines 17-27;54-67;89-101;239-327;705-752",
+      "scope": "Current acceptance overrides historical draft/unaccepted labels, without rewriting them",
+      "identical_at_base": true
+    },
+    "plan": {
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "140f8d36751f117cfc96969d7732f85456476a5d",
+      "sha256": "ce8a9f4a2ce3325e3e36a685c80ff28a8a06226c1a224c752779241fb687ecae",
+      "git_blob": "9735d1bffbd2b7049cc504816203c1d5de42b927",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/140f8d36751f117cfc96969d7732f85456476a5d/thesis/RESEARCH_PLAN.md",
+      "locator": "section 3.3",
+      "scope": "Limited first map basis, not the complete final map",
+      "identical_at_base": true
+    },
+    "map126": {
+      "path": "experiments/t126-regime-map/REPORT.md",
+      "commit": "2699d4ab4a2aa5258d25ae4b239e0c08300e925a",
+      "sha256": "5eff4af7441342b71ee027582d3ae4dae483cf022b2de1e4212b4254d6af8704",
+      "git_blob": "020e833d04f1e925ec77ffe8fd10f919e52fb397",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/2699d4ab4a2aa5258d25ae4b239e0c08300e925a/experiments/t126-regime-map/REPORT.md",
+      "locator": "sections 1-3",
+      "scope": "Accepted conditional first map; historical candidate labels superseded by MAP",
+      "identical_at_base": true
+    },
+    "sources126": {
+      "path": "experiments/t126-regime-map/SOURCES.md",
+      "commit": "2699d4ab4a2aa5258d25ae4b239e0c08300e925a",
+      "sha256": "709f46ca0e837794be10779c173bbe1bd5ecd1793074f132ff6db1d2da0cf825",
+      "git_blob": "4c36cfb7da875467e68671653b4f6b517d79852d",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/2699d4ab4a2aa5258d25ae4b239e0c08300e925a/experiments/t126-regime-map/SOURCES.md",
+      "locator": "last A4/A5 addressed updates, not superseded initial access failures",
+      "scope": "Known outstanding source inputs; no new primary-literature verification",
+      "identical_at_base": true
+    },
+    "env119": {
+      "path": "experiments/t104-new-rtl-executor/handoff.json",
+      "commit": "d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba",
+      "sha256": "9c7ed717e6266ba5cadfbcb70dd55bea147ddfb8165aeed2e29a9360c2b7205c",
+      "git_blob": "463fb5c40e58b43844797dbbf8fd1cd1726bc0b8",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba/experiments/t104-new-rtl-executor/handoff.json",
+      "locator": "rows[0].environment and mark_contract",
+      "scope": "Read-only inherited T119 environmental contract; old_application_contract is NOT T119 application",
+      "identical_at_base": true
+    },
+    "119": {
+      "path": "experiments/t119-err-joint-bound/report.json",
+      "commit": "d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba",
+      "sha256": "eedf2c803ec9cad8e95a93c3a0eb2adcf7c1ebe8b2c94e152aec354bc9103a62",
+      "git_blob": "2ad7185662bb01cc9a99e4c2bcbd77af17f4bc41",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba/experiments/t119-err-joint-bound/report.json",
+      "locator": "rows[name=one_presented]; constant_E.3",
+      "scope": "Accepted conditional ERR-only ka5",
+      "identical_at_base": true
+    },
+    "119config": {
+      "path": "experiments/t119-err-joint-bound/config.json",
+      "commit": "d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba",
+      "sha256": "beeaf73b7c6e6a719ef61f232622b09e252cc3e3cfc7386c6eb4f644bc710801",
+      "git_blob": "a66454a410f172e7f584ea071a28fa285e788d66",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba/experiments/t119-err-joint-bound/config.json",
+      "locator": "application_region_example;main_profile;rho_per_s",
+      "scope": "Declared application, not measured traffic",
+      "identical_at_base": true
+    },
+    "119text": {
+      "path": "experiments/t119-err-joint-bound/HANDOFF.md",
+      "commit": "d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba",
+      "sha256": "33acf535801ac235d72ed7b455e6f4039a19d844500ca04e07c3bb6eaa644e03",
+      "git_blob": "fa4493388f4bb98d90526558290df89fc1a38be7",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d0ce4425a8f3a75a9eb37c897dc4f09c6f43e5ba/experiments/t119-err-joint-bound/HANDOFF.md",
+      "locator": "sections 1-3",
+      "scope": "Complete word, E service, observation and constant comparison",
+      "identical_at_base": true
+    },
+    "135": {
+      "path": "experiments/t135-demo-operating-point/report-r4.json",
+      "commit": "fa4b4c150e668422e36a6c7a0e30810b26604e7c",
+      "sha256": "dee4b884e1d645f03710892c0fa46b5fe2c8e7cfc608186173feaccfcb5e4248",
+      "git_blob": "70eacaf0e9778a6773a181e7f154d137a0970c65",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/fa4b4c150e668422e36a6c7a0e30810b26604e7c/experiments/t135-demo-operating-point/report-r4.json",
+      "locator": "environment; service; rows.selected_r3_original",
+      "scope": "Original R0-A r4; NOT the unaccepted conditional_demo_environment or existing_demo_250_50",
+      "identical_at_base": true
+    },
+    "135contract": {
+      "path": "experiments/t135-demo-operating-point/common-contract.json",
+      "commit": "fa4b4c150e668422e36a6c7a0e30810b26604e7c",
+      "sha256": "fcc8c3bd3ccf974da23c61f4d8da2e9e60ca4ea43ae2a1c11ef55269d496f771",
+      "git_blob": "8516fec2ba82bab6ee31bcac95cb7440ba5778f6",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/fa4b4c150e668422e36a6c7a0e30810b26604e7c/experiments/t135-demo-operating-point/common-contract.json",
+      "locator": "recommended;conditional_address_map",
+      "scope": "Read with final acceptance; old open-implementation flags are historical",
+      "identical_at_base": true
+    },
+    "135final": {
+      "path": "experiments/t135-demo-operating-point/report-final.json",
+      "commit": "5ab03cd1795659b281cb518b6a06e894defead49",
+      "sha256": "40e421d8cd2aa3c6ce5d1de4c3e55dff7d9740db9d86159531d3d13c5f78a834",
+      "git_blob": "7542dbdf581e46e2234ba49f2a6aeb4adffbb053",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/5ab03cd1795659b281cb518b6a06e894defead49/experiments/t135-demo-operating-point/report-final.json",
+      "locator": "preserved_r4_outcome;engineer_reported_STA;shell_scope",
+      "scope": "Final applicability of r4 to accepted B; continuous timing-shell traffic excluded",
+      "identical_at_base": true
+    },
+    "135text": {
+      "path": "theory/t135-final-engineer-check.md",
+      "commit": "5ab03cd1795659b281cb518b6a06e894defead49",
+      "sha256": "4899c7d4720d6ad34cdf508cda90e0f8ec228e40ce8537fb75951dd7d6c10c1a",
+      "git_blob": "23e403c2ed2bd4958ea0068feb563393420de19e",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/5ab03cd1795659b281cb518b6a06e894defead49/theory/t135-final-engineer-check.md",
+      "locator": "sections 1-2",
+      "scope": "Same input/price; matched full constant comparator not re-established here",
+      "identical_at_base": true
+    },
+    "Vreport": {
+      "path": "experiments/t105-arm-rule/REPORT.md",
+      "commit": "b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf",
+      "sha256": "62a538f00351cee24e2daa5f47376d8d6d8af83c97e4a7e167fef9d628a1efc8",
+      "git_blob": "0f3f780a7c34ce6fe88237cd703058087a026313",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf/experiments/t105-arm-rule/REPORT.md",
+      "locator": "first section; Two properties: requirement and price",
+      "scope": "Accepted functional V; safety under lateness separated from conditional timely price",
+      "identical_at_base": true
+    },
+    "Vstartup": {
+      "path": "experiments/t105-arm-rule/STARTUP.md",
+      "commit": "b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf",
+      "sha256": "f427816b5a6e0db0b0627013d9ab30f34a025bbc74b21f2df5d3dbdbfbf07ac9",
+      "git_blob": "4a8ede6e1d0ed0781465e5b71ac303e3247b5e9e",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf/experiments/t105-arm-rule/STARTUP.md",
+      "locator": "GICv1, NMFI/external FIQ, resource table",
+      "scope": "Platform startup assumptions, no measured physical WCET",
+      "identical_at_base": true
+    },
+    "Vtop": {
+      "path": "experiments/t105-arm-rule/outputs/full-top.json",
+      "commit": "b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf",
+      "sha256": "92beeb8713c7bb5ab47137312d302d272684c65f5480f0358368550ea91a27d7",
+      "git_blob": "62716b0c33c07f5d2ff72f45f081c2d3c128065b",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf/experiments/t105-arm-rule/outputs/full-top.json",
+      "locator": "timing;resources",
+      "scope": "Saved post-route V topology, not a new run",
+      "identical_at_base": true
+    },
+    "Vadvance": {
+      "path": "experiments/t105-arm-rule/outputs/advance-budget.json",
+      "commit": "b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf",
+      "sha256": "f1c5ffeb20f4c5f6c33f50b630e4bd3cdafa8fef53456bba2aac3262a2149e35",
+      "git_blob": "111399698e97f1a04cd62373109fea84be18577a",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/b0ca4fb7a08f1e355d0b0720bcde5b2ccf64afdf/experiments/t105-arm-rule/outputs/advance-budget.json",
+      "locator": "selected_service_allocation_ns;selected_service_is_WCET",
+      "scope": "Full cut-to-cut allocation for price; not measured ARM time",
+      "identical_at_base": true
+    },
+    "146": {
+      "path": "experiments/next-route-20261013/route-report.json",
+      "commit": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+      "sha256": "e4b3b80a751c2076de516c447c52eeaaf66abac89be70045549f83fde941428f",
+      "git_blob": "e713be06719fb79145a6089981117895891ea922",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/c31017517fa81667b58ab4929f7db55ff383bd0f/experiments/next-route-20261013/route-report.json",
+      "locator": "recommended;fixed_witness_recomputed;fixed_lower",
+      "scope": "Accepted conditional full-U100, distinct from E/r4",
+      "identical_at_base": true
+    },
+    "146pot": {
+      "path": "experiments/next-route-20261013/potential-report.json",
+      "commit": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+      "sha256": "d3b6d68f7d556f0f9ab81f65165a2e8f483b0f283f8b7b16d88778eef4c88d3a",
+      "git_blob": "510ebd239346f2120e5b4ff76cbbde705d4706a9",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/c31017517fa81667b58ab4929f7db55ff383bd0f/experiments/next-route-20261013/potential-report.json",
+      "locator": "R0A_potentials;A2_5p87;LEO_potentials",
+      "scope": "Witness-specific potentials, not a class-wide physical forecast",
+      "identical_at_base": true
+    },
+    "146text": {
+      "path": "experiments/next-route-20261013/HANDOFF.md",
+      "commit": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+      "sha256": "d2d8b4627973a69a2d57a017e858651247f9a9648c06a2a89b18210cad4c79ec",
+      "git_blob": "5cc08b2acf61f1be335e9ce20376eba1818031ac",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/c31017517fa81667b58ab4929f7db55ff383bd0f/experiments/next-route-20261013/HANDOFF.md",
+      "locator": "part B; supplement",
+      "scope": "Full price, information, latency and resource contract",
+      "identical_at_base": true
+    },
+    "146conditions": {
+      "path": "theory/t146-next-route-appendix.md",
+      "commit": "c31017517fa81667b58ab4929f7db55ff383bd0f",
+      "sha256": "67204dfcf3904da26565a8b7185a009b16161ac14f40171b1cd38477909e0502",
+      "git_blob": "012db2cac931b5aae32a5265678e4c695d2a628a",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/c31017517fa81667b58ab4929f7db55ff383bd0f/theory/t146-next-route-appendix.md",
+      "locator": "section Г, joint conditions;section Е",
+      "scope": "Full joint requirements, not independently selectable marginal extrema",
+      "identical_at_base": false,
+      "base_difference": {
+        "commit": "140f8d36751f117cfc96969d7732f85456476a5d",
+        "sha256": "851168c62e71b0b61d610bc26944b050e70d7b63ae3a3731aba74d2679d44f30",
+        "git_blob": "3d253d39d91c3c0dd1bd9df1051f28ff7ee512e5",
+        "note": "Only the STScI source subsection locator changed from 4.3.3 to 4.3.5. No numeric or contract change. This manifest retains the accepted snapshot."
+      }
+    },
+    "140": {
+      "path": "experiments/t140-a2-signal/report.json",
+      "commit": "51eb2c31149dee11b6beb0b19982de2f81e6e1a2",
+      "sha256": "b9266fe2308bd669676d2ffe445b9a295de439dbf221f7d63984292756176557",
+      "git_blob": "1bdff904213b5f496f506733222f4e169b6c767a",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/51eb2c31149dee11b6beb0b19982de2f81e6e1a2/experiments/t140-a2-signal/report.json",
+      "locator": "inputs;fixed;layers;candidate;budgets",
+      "scope": "Accepted pointwise T57 layer bound, not impossibility of all A2 adaptation",
+      "identical_at_base": true
+    },
+    "140text": {
+      "path": "experiments/t140-a2-signal/README.md",
+      "commit": "51eb2c31149dee11b6beb0b19982de2f81e6e1a2",
+      "sha256": "5560e37519b0b9674e21fc8b00cd8a6674ec0018221abc95dfe00055fba51bcd",
+      "git_blob": "916ff55f9192ebf83f8f59ed6e258d7a505a9219",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/51eb2c31149dee11b6beb0b19982de2f81e6e1a2/experiments/t140-a2-signal/README.md",
+      "locator": "main numbers;observation;budgets",
+      "scope": "Diagnostic full39 memory; not CY62167",
+      "identical_at_base": true
+    },
+    "140calc": {
+      "path": "experiments/t140-a2-signal/analyze.py",
+      "commit": "51eb2c31149dee11b6beb0b19982de2f81e6e1a2",
+      "sha256": "982bb097452eb63992de9a7b592d6ce2f7b308818584227386e56c84e9aaddf5",
+      "git_blob": "f8c205fb36feb53ba47f8d9f0858b5f1c82b0175",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/51eb2c31149dee11b6beb0b19982de2f81e6e1a2/experiments/t140-a2-signal/analyze.py",
+      "locator": "clipped_pair_relaxation, lines185-208",
+      "scope": "Numerator is continuous constant pair cost, not finite-clock admissible Fixed witness",
+      "identical_at_base": true
+    },
+    "150shape": {
+      "path": "experiments/t150-event-shape/outputs/shape-transfer.csv",
+      "commit": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "sha256": "c077e83ceb6977a01dd0fff3028b88341e78fd1d02980bbfac44c3cfce3557cd",
+      "git_blob": "bf941dec4e7ba2f7dc8eb8aa2fd33e9d5a3b9122",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/shape-transfer.csv",
+      "locator": "full,shield=3.0,mu=100.56812028745298,model_r_q90 or rectangle",
+      "scope": "Fixed COSRAD b,p,F with parameterized shape transfer",
+      "identical_at_base": true
+    },
+    "150pot": {
+      "path": "experiments/t150-event-shape/outputs/potentials.csv",
+      "commit": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "sha256": "25c0fbe8a2d6a58501e70e08833f476bb654c43d0ca5f83fd51fd1dfeda0c36a",
+      "git_blob": "e51b05cfc9fad5b31c089cd92b0999cb666141cd",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/potentials.csv",
+      "locator": "full,shield=3.0,model_r_q90,D=0.0002802445",
+      "scope": "A sufficient fixed candidate fails resources; not empty-class proof",
+      "identical_at_base": true
+    },
+    "150req": {
+      "path": "experiments/t150-event-shape/outputs/controller-requirements.csv",
+      "commit": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "sha256": "7afd5c7c3c2e449a84e4adcf6f1eb35376326b295476cd8aedd6d9c6cc9dbc7e",
+      "git_blob": "06ad3b17d8fb850467ea3681ab04444d45cd0ba4",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/controller-requirements.csv",
+      "locator": "full,shield=3.0,model_r_q90",
+      "scope": "Requirements for declared sufficient formulas only",
+      "identical_at_base": true
+    },
+    "150stats": {
+      "path": "experiments/t150-event-shape/outputs/statistics.json",
+      "commit": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "sha256": "81a849e59be819ba4ef8a458f2f88665e880df623e046155b51a2f8130ed1702",
+      "git_blob": "155018457b334eb6a6ab2f5d575adfe614510d66",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/statistics.json",
+      "locator": "horizon_s;physical_S2_q90;physical_Gcert",
+      "scope": "Model probability only; no new physical qualification",
+      "identical_at_base": true
+    },
+    "150text": {
+      "path": "experiments/t150-event-shape/REPORT.md",
+      "commit": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "sha256": "b3e57eee758c132a5b9af1b33412c29cf9e846d08c0366bf798a5783d625f10b",
+      "git_blob": "c87cb25f4ab99492d9e3877c79cacda9b0599adb",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/REPORT.md",
+      "locator": "tables and scope",
+      "scope": "Accepted parameterized result; historical review-pending sentence superseded by MAP",
+      "identical_at_base": true
+    },
+    "150method": {
+      "path": "experiments/t150-event-shape/METHOD.md",
+      "commit": "960d9200a1be9d087135ca2d5e4b59129bdd5174",
+      "sha256": "683cd0b66651ef43f41f33ed0cc925136260a870c4591916e3ab56658c1b4548",
+      "git_blob": "c4e6a349b74fb1276315857ab736c2d1bd8f26d7",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/METHOD.md",
+      "locator": "sections about potentials and sufficient controller tests",
+      "scope": "Same hypothetical U100, full38, epsilon=.001 and resources; not a physical acceptance",
+      "identical_at_base": true
+    }
+  }
+}
