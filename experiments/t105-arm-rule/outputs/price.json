@@ -1,0 +1,102 @@
+{
+  "kind": "calculated from finite HDL traces, not mission price or CPU WCET",
+  "cases": [
+    {
+      "mode": "constant_FAST",
+      "measurement_ns": [
+        100982.0,
+        3100982.0
+      ],
+      "duration_ns": 3000000.0,
+      "operation_counts": {
+        "control": {
+          "started": 15307,
+          "complete": 15306,
+          "clipped": 1
+        },
+        "read32": {
+          "started": 3,
+          "complete": 3,
+          "clipped": 0
+        },
+        "write32": {
+          "started": 3,
+          "complete": 3,
+          "clipped": 0
+        }
+      },
+      "busy_ns": {
+        "control": 1408240.0,
+        "read32": 552.0,
+        "write32": 648.0
+      },
+      "mean_bus_fraction": 0.46981333333333336,
+      "max_any_1ms_bus_fraction_in_window": 0.469968,
+      "physical_reads": 15316,
+      "physical_write_commits": 6,
+      "offered_requests": 8,
+      "application_offer_hash": "fafbe96c7a80483ddb7017232154a4eccdacdd8132a9fb6f9915fe0ce1648be1",
+      "max_observed_response_ns": 1990.0,
+      "responses": 8,
+      "source_trace_sha256": "7332f61afdf57da795bd816b2b4b1fee02ce64752649bf7608139c61e76ab369"
+    },
+    {
+      "mode": "stationary_eligible_LOW",
+      "measurement_ns": [
+        100982.0,
+        3100982.0
+      ],
+      "duration_ns": 3000000.0,
+      "operation_counts": {
+        "control": {
+          "started": 5102,
+          "complete": 5102,
+          "clipped": 0
+        },
+        "read32": {
+          "started": 3,
+          "complete": 3,
+          "clipped": 0
+        },
+        "write32": {
+          "started": 3,
+          "complete": 3,
+          "clipped": 0
+        }
+      },
+      "busy_ns": {
+        "control": 469384.0,
+        "read32": 552.0,
+        "write32": 648.0
+      },
+      "mean_bus_fraction": 0.15686133333333332,
+      "max_any_1ms_bus_fraction_in_window": 0.157076,
+      "physical_reads": 5111,
+      "physical_write_commits": 6,
+      "offered_requests": 8,
+      "application_offer_hash": "fafbe96c7a80483ddb7017232154a4eccdacdd8132a9fb6f9915fe0ce1648be1",
+      "max_observed_response_ns": 1990.0,
+      "responses": 8,
+      "source_trace_sha256": "877336911644f52d97d50a233b8897829fc2cfcf982e80dd233426d2a7d50830"
+    }
+  ],
+  "freed_bus_fraction_same_quiet_trace": 0.312952,
+  "analytical_stationary_control_fraction": {
+    "FAST": 0.46938775510204084,
+    "LOW": 0.1564625850340136
+  },
+  "CPU_allocation": {
+    "constant_FAST": "no continuing rule task required",
+    "current_firmware": "one exclusively reserved polling core (100% allocation, not measured useful CPU utilization)",
+    "CPU_cycles_or_useful_percent": null
+  },
+  "production_code_bytes": 4244,
+  "limitations": [
+    "same routed production topology, functional WB=4 and staged timers40/80/130",
+    "stationary after warmup only: full W524288 startup not timed by the accelerated trace",
+    "post-warmup slot/must-execute arithmetic independent of WORD_BITS; full top resources use19",
+    "no ERR/loss in this quiet service example; not full R0-A price17.484321%",
+    "no ARM runtime in native-C/DPI service trace; CPU/OCM/AXI service remains open",
+    "no claim of energy savings or optimal fixed policy; no new Q(T) calculation"
+  ]
+}

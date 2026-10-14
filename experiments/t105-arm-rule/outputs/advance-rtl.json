@@ -1,0 +1,67 @@
+{
+  "status": "PASS actual link/guard/calendar + vendor XPM, full-width time boundary tests",
+  "runs": [
+    {
+      "phase_ns": 0,
+      "elapsed_s": 22.118485278999998,
+      "lines": [
+        "ALLOW 1 tick=9015504901 G=00000000fffffffe wall=8460000",
+        "LOCAL_CONTROL reason=1 latency_ns=320.000 no_CPU_reply=1",
+        "ALLOW 2 tick=22515640158 G=0000000100000000 wall=13820000",
+        "LOCAL_CONTROL reason=2 latency_ns=32.000 no_CPU_reply=1",
+        "ALLOW 3 tick=31531145094 G=0000000100000002 wall=14840000",
+        "ALLOW 4 tick=36031190105 G=0000000100000003 wall=15120000",
+        "ALLOW 5 tick=45031280217 G=0000000100000013 wall=17640000",
+        "ALLOW 6 tick=45031280258 G=0000000100000014 wall=18460000",
+        "PASS ADVANCE phase=0 allows=6 skips=11 full_timers=1"
+      ],
+      "log_sha256": "0641a0b1d626f66e55a142c57defb63a7d110f9d04df2dfd18e1c55c0a0897e0"
+    },
+    {
+      "phase_ns": 3,
+      "elapsed_s": 13.05710420199999,
+      "lines": [
+        "ALLOW 1 tick=9015504901 G=00000000fffffffe wall=8440000",
+        "LOCAL_CONTROL reason=1 latency_ns=156.000 no_CPU_reply=1",
+        "ALLOW 2 tick=22515640143 G=0000000100000000 wall=13460000",
+        "LOCAL_CONTROL reason=2 latency_ns=64.000 no_CPU_reply=1",
+        "ALLOW 3 tick=31531145081 G=0000000100000002 wall=14520000",
+        "ALLOW 4 tick=36031190090 G=0000000100000003 wall=14760000",
+        "ALLOW 5 tick=45031280202 G=0000000100000013 wall=17280000",
+        "ALLOW 6 tick=45031280242 G=0000000100000014 wall=18080000",
+        "PASS ADVANCE phase=3 allows=6 skips=10 full_timers=1"
+      ],
+      "log_sha256": "7da39a24a0bc9250544faf3c8a2814a7e6de7c1373ba78f57146951c019c0b84"
+    },
+    {
+      "phase_ns": 11,
+      "elapsed_s": 14.56514553800001,
+      "lines": [
+        "ALLOW 1 tick=9015504901 G=00000000fffffffe wall=8448000",
+        "LOCAL_CONTROL reason=1 latency_ns=320.000 no_CPU_reply=1",
+        "ALLOW 2 tick=22515640159 G=0000000100000000 wall=13788000",
+        "LOCAL_CONTROL reason=2 latency_ns=64.000 no_CPU_reply=1",
+        "ALLOW 3 tick=31531145097 G=0000000100000002 wall=14848000",
+        "ALLOW 4 tick=36031190106 G=0000000100000003 wall=15088000",
+        "ALLOW 5 tick=45031280218 G=0000000100000013 wall=17608000",
+        "ALLOW 6 tick=45031280258 G=0000000100000014 wall=18408000",
+        "PASS ADVANCE phase=11 allows=6 skips=11 full_timers=1"
+      ],
+      "log_sha256": "da0e83ee9a200132a179535e229cba08be2cc2948d986be340be13f96e78a9bf"
+    }
+  ],
+  "source_sha256": {
+    "interval_link.sv": "b01b708fbda4c4fba114f9d9fe404dca15ea250e35003e88cb08bfe4254827a5",
+    "interval_guard.sv": "a090a61fc21ef0a104c32a959f9e01f88901e18c0cef2c14b9427313825022b1",
+    "tb_advance.sv": "f9243b9efcbcdac8a3d7d207f5c19cd5c795ac80a4df5b0e1ad87a0ad756def0",
+    "advance_sim.tcl": "62ea654744e125b962cece8f3b8cec3423d0eb9b44ec45a4459697d28e7fa919",
+    "../t104-rtl-resume/registered/handshake_channel.sv": "c3017a5d6bc988b0fab7998fc95a7cfc8d28f6302775a9676356b768f6a90fbd",
+    "../t104-rtl-resume/physical/frame_engine.sv": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5"
+  },
+  "limitations": [
+    "module-level idle-time jumps; not a mission trace",
+    "decision input tests separately composed with C/raw Oracle",
+    "no ARM/OCM/PS timing; not physical metastability proof"
+  ],
+  "new_STA": false
+}

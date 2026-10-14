@@ -1,0 +1,81 @@
+{
+  "raw_build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/.build/full-1791875167207173571",
+  "top": "arm_board_top",
+  "part": "xc7z020clg484-1",
+  "PL_MHz": [
+    250,
+    50
+  ],
+  "PS_nominal_MHz": 600,
+  "uncertainty_ns": {
+    "setup": 0.5,
+    "hold": 0.1
+  },
+  "timing": {
+    "setup_ns": 0.225,
+    "hold_ns": 0.044,
+    "pulse_width_ns": 1.02,
+    "setup_failing_endpoints": 0,
+    "hold_failing_endpoints": 0,
+    "pulse_failing_endpoints": 0
+  },
+  "resources": {
+    "LUT": 2476.0,
+    "slice_FF": 5442.0,
+    "IOB_FF": 74.0,
+    "ILOGIC": 17.0,
+    "OLOGIC": 41.0,
+    "BRAM36_equiv": 4.5,
+    "BUFG": 3.0,
+    "MMCM": 1.0,
+    "DSP": 0.0
+  },
+  "check_timing": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 0,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "CDC": "informational CDC-3 only",
+  "DRC": "no errors; WRITE_FIRST advisories retained",
+  "setup_margin_target_ns": 0.1,
+  "STA_margin_target_met": true,
+  "external_io_all_met": true,
+  "external_io_min_margin_ns": 0.3066,
+  "pins": "same conditional FMC map checked; no new manufactured-board claim",
+  "source_hashes": {
+    "t105-arm-rule/arm_board_top.sv": "c3e1a9ba92eebc6009e818a6594cf06457835df26c9ed6fff0f3a0e9b5e18895",
+    "t105-arm-rule/arm_executor.sv": "08a504716be56449f31e4c99b66a77f50e9d11a346d046f14cb59db723594285",
+    "t105-arm-rule/arm_physical_top.sv": "56899b46240470128f8bd2d233108cf8fb3f72272cf9a049719bf4de5eb13d86",
+    "t105-arm-rule/full_top.tcl": "af2ae84d415f46b008ef01efffa20457022ce833cf52a781c1997df8d192353a",
+    "t105-arm-rule/history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "t105-arm-rule/integration_sim.tcl": "f881f2317d10055c6f376490fefc39b4ac561a3b18dba147edb82a0e98bae579",
+    "t105-arm-rule/interval_guard.sv": "a090a61fc21ef0a104c32a959f9e01f88901e18c0cef2c14b9427313825022b1",
+    "t105-arm-rule/interval_link.sv": "b01b708fbda4c4fba114f9d9fe404dca15ea250e35003e88cb08bfe4254827a5",
+    "t105-arm-rule/probe_ps7.tcl": "1987cf0ce89815afd08058dfae1372b97bbe59271acd9e4dee422bd19da15c9c",
+    "t105-arm-rule/ps_delivery.tcl": "f36516a967637f4061ef0bb1ecdf39cffd5788dbe70d6c50056c6e233052083c",
+    "t105-arm-rule/rule_mailbox.sv": "dd616d13403d186bbdd09e7370aa85ffe45b5f7e79fa0281ff20d9d5378036d4",
+    "t105-arm-rule/tb_arm.sv": "bf6b700ec9fe3455961f601f00f4cda67d0dfaa96e712c414e1fc8d36b2cc4f3",
+    "t105-arm-rule/tb_history_batch.sv": "affe4d47f7473e24816ac701c3f569496f9082affbe73c85cd519901e3569325",
+    "t105-arm-rule/tb_mailbox.sv": "8dcbd4feafe1d58a9e3e35c65be50e3c8fc0634be7b8cde4e18bca81cb3e6463"
+  },
+  "checkpoint_sha256": "23ca247e46a32cea091115002320d0b5eee4d5043763f24f9531b6bdbd5cb710",
+  "run_log_sha256": "33541e730c38d0893ed5e0fe6fac86a82a4fad6f9a962a51ea7d9633fb5f6b8a",
+  "elapsed_s": 260.285411951,
+  "peak_memory_MB": 3867.52,
+  "not_established": [
+    "ARM WCET",
+    "PS7 boot/BSP",
+    "full end-to-end10us",
+    "mean CPU/interface price"
+  ],
+  "application_timing_shell": "unchanged B dynamic endpoints, NOT application software or mean R0-A workload"
+}

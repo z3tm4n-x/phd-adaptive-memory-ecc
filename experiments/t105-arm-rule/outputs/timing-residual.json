@@ -1,0 +1,65 @@
+{
+  "B_available_ns": 1690.7317554877989,
+  "cases": [
+    {
+      "case": "reference-0-none",
+      "nominal_peripheral_tick_ns": 20,
+      "cut_intervals": 31,
+      "observed_min_cut_ns": 1940,
+      "observed_max_cut_ns": 1980,
+      "ARM_instructions_between_claims_min": 743,
+      "ARM_instructions_between_claims_max": 900,
+      "MMIO_reads": 994,
+      "MMIO_writes": 320,
+      "not_yet_paid_ns_at_observed_max": -289.26824451220114,
+      "CPU_instruction_time_charged": false,
+      "GP0_SmartConnect_time_charged": false
+    },
+    {
+      "case": "optimized-0-none",
+      "nominal_peripheral_tick_ns": 20,
+      "cut_intervals": 31,
+      "observed_min_cut_ns": 1180,
+      "observed_max_cut_ns": 1620,
+      "ARM_instructions_between_claims_min": 686,
+      "ARM_instructions_between_claims_max": 849,
+      "MMIO_reads": 667,
+      "MMIO_writes": 321,
+      "not_yet_paid_ns_at_observed_max": 70.73175548779886,
+      "CPU_instruction_time_charged": false,
+      "GP0_SmartConnect_time_charged": false
+    },
+    {
+      "case": "optimized-7-none",
+      "nominal_peripheral_tick_ns": 20,
+      "cut_intervals": 31,
+      "observed_min_cut_ns": 2140,
+      "observed_max_cut_ns": 3640,
+      "ARM_instructions_between_claims_min": 653,
+      "ARM_instructions_between_claims_max": 803,
+      "MMIO_reads": 468,
+      "MMIO_writes": 321,
+      "not_yet_paid_ns_at_observed_max": -1949.2682445122011,
+      "CPU_instruction_time_charged": false,
+      "GP0_SmartConnect_time_charged": false
+    }
+  ],
+  "classification": "full 10us result NOT ESTABLISHED; sampled direct-mailbox test only",
+  "required_upper_inputs": [
+    "minimum actual ARM clock; PLL/clock tolerance and qualified initial clock state",
+    "instruction/data service upper in selected cache/OCM configuration, including cold paths",
+    "ordered Device GP0/SmartConnect and DMB completion bound under declared owners/arbitration",
+    "bounded polling/software progress, exceptions and fault disposition; no silent restart"
+  ],
+  "fixed_software_conditions": [
+    "one owning bare-metal core; IRQ/FIQ disabled at entry",
+    "no second core/DMA/OS competitors admitted; Device/shareable/non-cacheable mailbox",
+    "qualified initial OCM/PS/PL state; startup-only state initialization"
+  ],
+  "not_inferred": [
+    "sampled maximum is not WCET",
+    "ISA instruction count is not ARM cycles",
+    "negative allocation residual does not prove the entire 10us requirement impossible",
+    "positive residual does not prove CPU/PS fit; no arbitrary CPI fills the gap"
+  ]
+}

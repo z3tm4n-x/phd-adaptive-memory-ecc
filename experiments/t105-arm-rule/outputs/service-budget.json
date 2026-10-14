@@ -1,0 +1,45 @@
+{
+  "kind": "conditional response-time composition, not measured or established PS timing",
+  "visit_weights": {
+    "core_fetch_ns": 1009,
+    "ocm_beat_ns": 416,
+    "gp_read_ns": 21,
+    "gp_write_ns": 15,
+    "dmb_ns": 10
+  },
+  "platform_upper_parameters_ns": {
+    "core_fetch_ns": null,
+    "ocm_beat_ns": null,
+    "gp_read_ns": null,
+    "gp_write_ns": null,
+    "dmb_ns": null
+  },
+  "missing_parameters": [
+    "core_fetch_ns",
+    "ocm_beat_ns",
+    "gp_read_ns",
+    "gp_write_ns",
+    "dmb_ns"
+  ],
+  "visit_upper_ns": null,
+  "PL_tail_upper_ns": {
+    "rational": "3310033/5000",
+    "decimal": 662.0066
+  },
+  "round_formula": "5*d + certificate_allocation + 3*slow_edge",
+  "d_definition": "one whole driver_step plus main loop, all permitted inputs and admitted PS microstates",
+  "visit_limit_for_1ms_ns": {
+    "rational": "4996689967/25000",
+    "decimal": 199867.59868
+  },
+  "full_round_upper_ns": null,
+  "within_selected_1ms_if_parameters_valid": null,
+  "established_on_PS7": false,
+  "initial_cut_condition": "qualified startup with CPU already initialized/polling, bounded by 2*d+3*slow_edge",
+  "assumptions": [
+    "continuous isolated polling, no WFI/interrupts on healthy path",
+    "ordered Device accesses with end-to-end completion bound, no stale status cache",
+    "accepted finite XPM progress, clocks continue, no silent corruption",
+    "finite per-instruction/memory/ordering envelope independent of observed traces"
+  ]
+}

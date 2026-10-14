@@ -1,0 +1,31 @@
+{
+  "source_sha256": "a090a61fc21ef0a104c32a959f9e01f88901e18c0cef2c14b9427313825022b1",
+  "cases": [
+    {
+      "case": "actual",
+      "induction": true,
+      "counterexample": false,
+      "log_sha256": "7a4b0863ce2f0a05c83a383489a69af5dfed2d82400a79750f06ec2f9480f72a"
+    },
+    {
+      "case": "late-veto",
+      "induction": false,
+      "counterexample": true,
+      "log_sha256": "e5f33716c6d682074a2136c731d1bf90646f2b53fff809c2a010fec998921252"
+    },
+    {
+      "case": "wrong-generation",
+      "induction": false,
+      "counterexample": true,
+      "log_sha256": "320cb8a04e81771c2596d83c7d8bdaa15061eb189224d1c20c72595ad1715e10"
+    }
+  ],
+  "scope": "all 65 payload bits and 64 G bits; initial G=0 and change only on invalidate",
+  "not_proved": [
+    "analog CDC",
+    "ARM computation",
+    "CRC",
+    "CPU WCET",
+    "full executor"
+  ]
+}

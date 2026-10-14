@@ -1,0 +1,78 @@
+{
+  "status": "early checkpoint, NOT full ARM timing acceptance",
+  "reaction_limit_ns": 10000,
+  "candidate_limit_ns": 1000,
+  "ledger": [
+    {
+      "stage": "external stable loss -> loss_slow",
+      "ns_upper": "50313/625",
+      "status": "conditional reused component; source stability required"
+    },
+    {
+      "stage": "history staging/FIFO/PS request/CPU state update/publication",
+      "ns_upper": null,
+      "status": "UNKNOWN; combined allocation below, not old 5189 ns"
+    },
+    {
+      "stage": "candidate/beacon/freeze suffix incl local loss veto",
+      "ns_upper": "110738607/25000",
+      "status": "conditional on unchanged downstream lease and flight"
+    },
+    {
+      "stage": "ARM load/store/OCM/cache/arbitration",
+      "ns_upper": null,
+      "status": "UNKNOWN; instruction count is not cycles"
+    },
+    {
+      "stage": "PS AXI read/write and barriers -> PL shadow commit",
+      "ns_upper": null,
+      "status": "UNKNOWN; no finite bound inferred from AXI protocol"
+    },
+    {
+      "stage": "polling/interrupt interference",
+      "ns_upper": null,
+      "status": "candidate dedicated-core assumptions not yet platform configured"
+    }
+  ],
+  "available_for_history_CPU_PSPL_ns": "137248873/25000",
+  "old_RTL_history_ns": "531869457677237/102498975000",
+  "old_residual_ns": "3084529441897/10249897500",
+  "raw_32bit_50MHz": {
+    "source_events": 2000,
+    "source_period_ns": 20,
+    "source_duration_ns": 39980,
+    "rises": 1000,
+    "ordinary_recoveries": 1000,
+    "no_ERR_needed": true,
+    "quota_check": "1000 ordinary recoveries <=1000; 1000 rises <=1001; 2000 transitions <=2002",
+    "bits_per_event": 130,
+    "packed_total_beats": 8125,
+    "packed_tail_lower_ns": "122500",
+    "padded_record_beats": 5,
+    "padded_tail_lower_ns": "160000",
+    "excludes": [
+      "CPU time",
+      "read address/response overhead",
+      "CDC",
+      "candidate publication"
+    ],
+    "result": "cannot meet 10 us on this permitted history; not impossibility of ARM or compressed transport"
+  },
+  "application": {
+    "unchanged_boundary_requirements_ns": [
+      320,
+      320,
+      100
+    ],
+    "response_limit_ns": 3000,
+    "bus_any_1ms_limit": "0.8",
+    "new_AXI_master_included": false,
+    "price_claim": false,
+    "mean_traffic": "joint >=100 us; mean read/write <=1000/s each"
+  },
+  "CPU_wcet_ns": null,
+  "CPU_load_percent": null,
+  "PSPL_upper_ns": null,
+  "modified_top_LUT_FF_BRAM": null,
+  "modified_top_STA": null
+}

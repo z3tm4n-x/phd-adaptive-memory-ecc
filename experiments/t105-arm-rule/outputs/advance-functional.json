@@ -1,0 +1,1265 @@
+{
+  "status": "PASS functional preparation checks; NOT hardware time",
+  "cases": [
+    {
+      "case": "startup",
+      "packets": 4,
+      "last": [
+        9015504897,
+        0,
+        9015504897,
+        1
+      ],
+      "deadlines_sha256": "9dbdb8207f330c67bf2ca14986d4a6ad8112e7f57ee2b5d8e2f8abc6607f05d3"
+    },
+    {
+      "case": "pair_-1",
+      "packets": 5,
+      "last": [
+        22565639910,
+        2,
+        22565639910,
+        1
+      ],
+      "deadlines_sha256": "b09af28cdd6b63488f3c6b99b4b2cd3fecaddb6a94bf2b2c6c0412a506d9c5ea"
+    },
+    {
+      "case": "pair_0",
+      "packets": 5,
+      "last": [
+        22565639910,
+        2,
+        22565639910,
+        1
+      ],
+      "deadlines_sha256": "b09af28cdd6b63488f3c6b99b4b2cd3fecaddb6a94bf2b2c6c0412a506d9c5ea"
+    },
+    {
+      "case": "pair_1",
+      "packets": 5,
+      "last": [
+        22565639911,
+        2,
+        22565639911,
+        1
+      ],
+      "deadlines_sha256": "c900f0fedebcdbf54c076a78cba254b5d0a85300145ddfb903fbd485947a6d02"
+    },
+    {
+      "case": "internal_recovery",
+      "packets": 4,
+      "last": [
+        18031009794,
+        3,
+        18031009794,
+        1
+      ],
+      "deadlines_sha256": "fbdbeed8198d1e841077cfb71986bdcb93012f91e6b56fb4f175144d918fa423"
+    },
+    {
+      "case": "loss_remains",
+      "packets": 5,
+      "last": [
+        99170553857,
+        2,
+        99170553857,
+        1
+      ],
+      "deadlines_sha256": "629abb8fc07bffcc610aae55f79fe63efdcb7b9a531f6514b3bb96402b89f5b5"
+    },
+    {
+      "case": "event_at_expiry",
+      "packets": 4,
+      "last": [
+        13515549898,
+        1,
+        13515549898,
+        1
+      ],
+      "deadlines_sha256": "a4817393ba5d3a664abc874c3c2d2d6bc59c09523f6eb04cef98a451d0c598fd"
+    },
+    {
+      "case": "loss_burst_2002",
+      "packets": 2,
+      "last": [
+        9015506898,
+        2002,
+        9015506898,
+        1
+      ],
+      "deadlines_sha256": "60bc456bbadcca4a51547cb1769f5cf8c08a9d53f2a921c1e348ddcafc1d3893"
+    },
+    {
+      "case": "continuous_err",
+      "packets": 11,
+      "last": [
+        40015594898,
+        2200,
+        40015594898,
+        1
+      ],
+      "deadlines_sha256": "0568ed90a994cae82711d2e8ff589ce1f756198656ae71fc3257bfa58de43faa"
+    },
+    {
+      "case": "selected_ms_round",
+      "packets": 22,
+      "last": [
+        27082099774,
+        19,
+        27082099774,
+        1
+      ],
+      "deadlines_sha256": "994c4e220833f8578396c9983a2b09c3e9050ee82aaa30136483a0154f75df43"
+    },
+    {
+      "case": "random_0",
+      "packets": 41,
+      "last": [
+        35865595513,
+        106,
+        35865595513,
+        1
+      ],
+      "deadlines_sha256": "166a22999225b24a4d09357ddc4deb698b06316e6e71c66c5281b0518523cb74"
+    },
+    {
+      "case": "random_1",
+      "packets": 41,
+      "last": [
+        31565595709,
+        145,
+        31565595709,
+        1
+      ],
+      "deadlines_sha256": "e5fa1655f409248eac9104aa18022c8767baec61493efb985600786e5c19bdb2"
+    },
+    {
+      "case": "random_2",
+      "packets": 41,
+      "last": [
+        43015595107,
+        133,
+        0,
+        0
+      ],
+      "deadlines_sha256": "9afd14c145bf93c053cb00f8fedaf963906e8f59f89c2229b9f93bde4b43841e"
+    },
+    {
+      "case": "random_3",
+      "packets": 41,
+      "last": [
+        46965595359,
+        117,
+        46965595359,
+        1
+      ],
+      "deadlines_sha256": "4587e9c68a514b5486e6feb9de4bd8fe0fb62abfe024bf5720b5b97ecab68bba"
+    },
+    {
+      "case": "random_4",
+      "packets": 41,
+      "last": [
+        31965595309,
+        104,
+        31965595309,
+        1
+      ],
+      "deadlines_sha256": "0e3d8bf6aec6f532a9d94389529537846ce2f6e5cb0abcf43ad0f8d27399b02e"
+    },
+    {
+      "case": "random_5",
+      "packets": 41,
+      "last": [
+        40515595555,
+        120,
+        0,
+        0
+      ],
+      "deadlines_sha256": "31b93f0f75bf42637ece855f23b392b54ae9199606c46e888920f981cc9c7ac4"
+    },
+    {
+      "case": "random_6",
+      "packets": 41,
+      "last": [
+        31715595461,
+        113,
+        31715595461,
+        1
+      ],
+      "deadlines_sha256": "add064369a0c86a47110fa90aa0ccc9e684ce78eb5a875eeaffcee713b71c67b"
+    },
+    {
+      "case": "random_7",
+      "packets": 41,
+      "last": [
+        31965595358,
+        145,
+        31965595358,
+        1
+      ],
+      "deadlines_sha256": "eeb3d155ae97bad776e0453bd0bc1af198d27fa226c3d3f7cf33951fdf0199c7"
+    },
+    {
+      "case": "random_8",
+      "packets": 41,
+      "last": [
+        22915595612,
+        89,
+        22915595612,
+        1
+      ],
+      "deadlines_sha256": "de703f7a33bc4c71050ffb6319695406c2aef145a6b956aad90817d610854fc5"
+    },
+    {
+      "case": "random_9",
+      "packets": 41,
+      "last": [
+        38315595458,
+        150,
+        0,
+        0
+      ],
+      "deadlines_sha256": "b362d9ee9117cba09025ce70645932c9caf8f694194b0a4ea64cf38b64e275f9"
+    },
+    {
+      "case": "random_10",
+      "packets": 41,
+      "last": [
+        44765595458,
+        122,
+        44765595458,
+        1
+      ],
+      "deadlines_sha256": "78136ceb272f1babb16e6eb35797f113a0eea018d2c1c216c2c081642f249830"
+    },
+    {
+      "case": "random_11",
+      "packets": 41,
+      "last": [
+        34115595505,
+        118,
+        0,
+        0
+      ],
+      "deadlines_sha256": "c36d65589468c80221818366429032a2ad7d834289c279d2e570bdd441761e90"
+    },
+    {
+      "case": "random_12",
+      "packets": 41,
+      "last": [
+        40715595453,
+        161,
+        0,
+        0
+      ],
+      "deadlines_sha256": "2ab1b9b3606e7e2054ba36371931ca8dfc00879bfe84d37242e4cd1bda3462dc"
+    },
+    {
+      "case": "random_13",
+      "packets": 41,
+      "last": [
+        42415595511,
+        131,
+        42415595511,
+        1
+      ],
+      "deadlines_sha256": "38ebe5c0d1d179bc62d8685c357159dc952bbf91a5dc31f0a093626059b14dde"
+    },
+    {
+      "case": "random_14",
+      "packets": 41,
+      "last": [
+        45065595207,
+        111,
+        0,
+        0
+      ],
+      "deadlines_sha256": "5adef20c5798eedf5dbb210c129fb184dc7bc9e9fc501b8900d57cf5c1b57a89"
+    },
+    {
+      "case": "random_15",
+      "packets": 41,
+      "last": [
+        42765595455,
+        145,
+        42765595455,
+        1
+      ],
+      "deadlines_sha256": "a131463e88ab355eaaeec700ff705fb11be675926590b9c2131d5338b4b88ee4"
+    },
+    {
+      "case": "random_16",
+      "packets": 41,
+      "last": [
+        27315595610,
+        122,
+        27315595610,
+        1
+      ],
+      "deadlines_sha256": "13b439b77dcc0830404470e0015b187ef360358b5f221d7b827740b471c2404e"
+    },
+    {
+      "case": "random_17",
+      "packets": 41,
+      "last": [
+        55865595255,
+        130,
+        0,
+        0
+      ],
+      "deadlines_sha256": "ff8d7914d3848f0db6ea165f1f31aff627bc175ad1e3a13f43c822db0cffb239"
+    },
+    {
+      "case": "random_18",
+      "packets": 41,
+      "last": [
+        42665595359,
+        110,
+        0,
+        0
+      ],
+      "deadlines_sha256": "7d83cc11117e168c997fab96505953c72ec8accf00a08daba97b875cc790f771"
+    },
+    {
+      "case": "random_19",
+      "packets": 41,
+      "last": [
+        40615595259,
+        97,
+        0,
+        0
+      ],
+      "deadlines_sha256": "8339ff655a20c530fd4d86f04989e5366f5dcb38a7095372b71383d8ad5e8b9d"
+    },
+    {
+      "case": "random_20",
+      "packets": 41,
+      "last": [
+        36115595508,
+        145,
+        36115595508,
+        1
+      ],
+      "deadlines_sha256": "1cc29b01e618024a453bb4c12743efcdb64f6cabeb6674b354e2c6f4fb3a628d"
+    },
+    {
+      "case": "random_21",
+      "packets": 41,
+      "last": [
+        36165595654,
+        133,
+        0,
+        0
+      ],
+      "deadlines_sha256": "110eeecde7981dd6bb152c4f4d6df9a36a84a32c2834e0b8fd987ac97361838a"
+    },
+    {
+      "case": "random_22",
+      "packets": 41,
+      "last": [
+        31715595363,
+        109,
+        31715595363,
+        1
+      ],
+      "deadlines_sha256": "fac92383edabe8954af6ada7d1b1f66216c2d2ab387bf72fe5c09fe2bc6cde1b"
+    },
+    {
+      "case": "random_23",
+      "packets": 41,
+      "last": [
+        46965595653,
+        139,
+        46965595653,
+        1
+      ],
+      "deadlines_sha256": "e64b60ae41410f0efd70ca4ccee5764243a78010c279d2cb22dd702cf6973949"
+    },
+    {
+      "case": "random_24",
+      "packets": 41,
+      "last": [
+        38415595309,
+        119,
+        38415595309,
+        1
+      ],
+      "deadlines_sha256": "13a3732a25df95aba024af0983c5302102aeeee0c3fffef2744b3ff4472e3b10"
+    },
+    {
+      "case": "random_25",
+      "packets": 41,
+      "last": [
+        40715595404,
+        132,
+        0,
+        0
+      ],
+      "deadlines_sha256": "86a553a2708768d1605c0d64ee15ed3d9099bd52268d43ef710207cde4c08eaa"
+    },
+    {
+      "case": "random_26",
+      "packets": 41,
+      "last": [
+        38365595261,
+        126,
+        38365595261,
+        1
+      ],
+      "deadlines_sha256": "8d7aaef34d30089a38cbce03c8377f23d14ba12940abb3508d43e8adfdcfebf6"
+    },
+    {
+      "case": "random_27",
+      "packets": 41,
+      "last": [
+        40465595360,
+        134,
+        40465595360,
+        1
+      ],
+      "deadlines_sha256": "e16901a472d43f8c58d16098b7568fa043d059ad5735e461ebb477d4a120de0a"
+    },
+    {
+      "case": "random_28",
+      "packets": 41,
+      "last": [
+        32015595357,
+        126,
+        32015595357,
+        1
+      ],
+      "deadlines_sha256": "9ba436d3629cf08515f7551a0a09421ac141a0b491a0fe71206302471bd1749e"
+    },
+    {
+      "case": "random_29",
+      "packets": 41,
+      "last": [
+        46915595311,
+        139,
+        0,
+        0
+      ],
+      "deadlines_sha256": "70ad7953ed07772dc44c2fb833d2e619b80046927290089fa2389848d5155cdf"
+    },
+    {
+      "case": "random_30",
+      "packets": 41,
+      "last": [
+        29615595509,
+        120,
+        29615595509,
+        1
+      ],
+      "deadlines_sha256": "620e20032b37a19e875ae7e291bdbfda4c13094d7c661e709c27f2858e45a2c9"
+    },
+    {
+      "case": "random_31",
+      "packets": 41,
+      "last": [
+        44815595261,
+        123,
+        44815595261,
+        1
+      ],
+      "deadlines_sha256": "7116bbe1ab9e13d92ca36c1aefb7ca732a156e64feefd7bd29841ecfa2670300"
+    },
+    {
+      "case": "random_32",
+      "packets": 41,
+      "last": [
+        55765595404,
+        135,
+        0,
+        0
+      ],
+      "deadlines_sha256": "e2929e9cbc2761f6a81bf7c2d64ed2ff25456e8cd2c9a6b54dd9eb85cdd30c90"
+    },
+    {
+      "case": "random_33",
+      "packets": 41,
+      "last": [
+        40515595212,
+        107,
+        0,
+        0
+      ],
+      "deadlines_sha256": "48eca260654fd8ce8a62793c2694cde629dc10b672128b191399b013cbcffcc7"
+    },
+    {
+      "case": "random_34",
+      "packets": 41,
+      "last": [
+        38515595160,
+        106,
+        38515595160,
+        1
+      ],
+      "deadlines_sha256": "6673ab0cb943825e26e56b7f83de206e23ab4ad90e8b36ba1939ba782e28355e"
+    },
+    {
+      "case": "random_35",
+      "packets": 41,
+      "last": [
+        46915595507,
+        119,
+        0,
+        0
+      ],
+      "deadlines_sha256": "a6587fd8140f6c8d74053bdee19597baf30434519009db076d85e8c84a4d95c6"
+    },
+    {
+      "case": "random_36",
+      "packets": 41,
+      "last": [
+        40715595208,
+        127,
+        0,
+        0
+      ],
+      "deadlines_sha256": "1e9ab81de797d27dcb7ff871a89fc5f623d59b56d12eccd0d370734e6aa5bd8c"
+    },
+    {
+      "case": "random_37",
+      "packets": 41,
+      "last": [
+        36215595261,
+        114,
+        0,
+        0
+      ],
+      "deadlines_sha256": "adf1de1d570833fac8d997e0e995f9afaa1d649347e461cfc22ca56825310884"
+    },
+    {
+      "case": "random_38",
+      "packets": 41,
+      "last": [
+        47015595505,
+        137,
+        47015595505,
+        1
+      ],
+      "deadlines_sha256": "34ccb6b3de07f132a14b239c7047b7fa8d39ce2a590b811c14f7648dc077b369"
+    },
+    {
+      "case": "random_39",
+      "packets": 41,
+      "last": [
+        49365595305,
+        107,
+        0,
+        0
+      ],
+      "deadlines_sha256": "cf2e3473b6aa03c9bb7436f1b57772cfda39dcb265e45901098e4fa0f5321775"
+    },
+    {
+      "case": "random_40",
+      "packets": 41,
+      "last": [
+        40715595306,
+        130,
+        40715595306,
+        1
+      ],
+      "deadlines_sha256": "1f09ac8f3fa8b1175c91e82cee08b543e3fc87466bcaa469800deb6818fc903d"
+    },
+    {
+      "case": "random_41",
+      "packets": 41,
+      "last": [
+        38415595358,
+        151,
+        0,
+        0
+      ],
+      "deadlines_sha256": "95ff38411b35ff77ac8578ac0916d8c11ca1689bc2784b69d8c25fa859ddaca3"
+    },
+    {
+      "case": "random_42",
+      "packets": 41,
+      "last": [
+        38165595412,
+        110,
+        38165595412,
+        1
+      ],
+      "deadlines_sha256": "6afe3eebde1af9d0426c93238c7b295d537c2d935c2c14bd662109c43627391a"
+    },
+    {
+      "case": "random_43",
+      "packets": 41,
+      "last": [
+        44815595310,
+        119,
+        44815595310,
+        1
+      ],
+      "deadlines_sha256": "a91860ddedd3b4ea00d98a223655b2ac962a888ca766825a01fb5e493214a377"
+    },
+    {
+      "case": "random_44",
+      "packets": 41,
+      "last": [
+        38265595312,
+        119,
+        0,
+        0
+      ],
+      "deadlines_sha256": "374c43c3e8d2d219d7bda49041f2417aa9004b416c8e376f64c86a44efa83539"
+    },
+    {
+      "case": "random_45",
+      "packets": 41,
+      "last": [
+        27365595413,
+        102,
+        27365595413,
+        1
+      ],
+      "deadlines_sha256": "f59e62b0cd9b366b7413dcd3dfde1dd1ec1f32f46ae0ff4374ecca0f56ef0fc8"
+    },
+    {
+      "case": "random_46",
+      "packets": 41,
+      "last": [
+        42865595257,
+        119,
+        0,
+        0
+      ],
+      "deadlines_sha256": "2f1e8e5c885106433835fb7f8e5d3cb58a08c00ba174eb89c9159db0c0e8a332"
+    },
+    {
+      "case": "random_47",
+      "packets": 41,
+      "last": [
+        42815595307,
+        134,
+        0,
+        0
+      ],
+      "deadlines_sha256": "89aa0f03741319b2a652dc2dfd5c8efab076b928249b25159c18bb54733b06c8"
+    },
+    {
+      "case": "random_48",
+      "packets": 41,
+      "last": [
+        44665595558,
+        109,
+        44665595558,
+        1
+      ],
+      "deadlines_sha256": "7bd9d3265f1a13e7f7b63da431f9e21fe0545ddd1afe5918c26a1ebf31300d6f"
+    },
+    {
+      "case": "random_49",
+      "packets": 41,
+      "last": [
+        36065595509,
+        139,
+        0,
+        0
+      ],
+      "deadlines_sha256": "89ba2b3c4a4acbefe9b500aca5fe4c4b9ee865c50db2a3a455dcb1eb55628745"
+    },
+    {
+      "case": "random_50",
+      "packets": 41,
+      "last": [
+        38515595258,
+        121,
+        38515595258,
+        1
+      ],
+      "deadlines_sha256": "da0ad424445c7fcee1c7c540ba7634a132f3168f20bbd5a7e9f0afdb94a82cd7"
+    },
+    {
+      "case": "random_51",
+      "packets": 41,
+      "last": [
+        49115595457,
+        115,
+        0,
+        0
+      ],
+      "deadlines_sha256": "12251b46310ee3dcd1967cd266d98c71b2c0ef51687711c3489b34e0fa7ea45a"
+    },
+    {
+      "case": "random_52",
+      "packets": 41,
+      "last": [
+        42865595208,
+        122,
+        42865595208,
+        1
+      ],
+      "deadlines_sha256": "50c7822d5f7c7e3a77ea303c5908d4b1cc8c40cbfc1024b3d4228781581300d7"
+    },
+    {
+      "case": "random_53",
+      "packets": 41,
+      "last": [
+        51465595355,
+        143,
+        0,
+        0
+      ],
+      "deadlines_sha256": "912ad199db377a80b0c1fc6f537d19d22d41fb4f56f59bab30adac3d95dd41cf"
+    },
+    {
+      "case": "random_54",
+      "packets": 41,
+      "last": [
+        49065595458,
+        106,
+        0,
+        0
+      ],
+      "deadlines_sha256": "8c504caf6f3af321df0573232d2859987abef9d6ec66890efa940de8a526cd69"
+    },
+    {
+      "case": "random_55",
+      "packets": 41,
+      "last": [
+        38265595410,
+        109,
+        38265595410,
+        1
+      ],
+      "deadlines_sha256": "8fb4523a3a2637367dabd031175d03f556d3c0a54e90763689a15bf9601e7ef7"
+    },
+    {
+      "case": "random_56",
+      "packets": 41,
+      "last": [
+        49065595360,
+        102,
+        49065595360,
+        1
+      ],
+      "deadlines_sha256": "cc90fae70544c18ca49b52617ccfc31f3a09f54e04ce008b638c1eeac230f41f"
+    },
+    {
+      "case": "random_57",
+      "packets": 41,
+      "last": [
+        44965595209,
+        133,
+        0,
+        0
+      ],
+      "deadlines_sha256": "5c7201d57900a9c9bd8fe8f1e340a0ce91f9dde8e26c91eff98cb1f5be761591"
+    },
+    {
+      "case": "random_58",
+      "packets": 41,
+      "last": [
+        36065595509,
+        125,
+        0,
+        0
+      ],
+      "deadlines_sha256": "3ba431c7baf29551db62e7ed9ed437c3049e65ba68e43a8bd65912dd24533216"
+    },
+    {
+      "case": "random_59",
+      "packets": 41,
+      "last": [
+        55965595106,
+        133,
+        0,
+        0
+      ],
+      "deadlines_sha256": "788ae7340e9baa3843cb733ef322766af94b62f703bf9020c9e166bb97dccfe3"
+    },
+    {
+      "case": "random_60",
+      "packets": 41,
+      "last": [
+        36165595507,
+        114,
+        36165595507,
+        1
+      ],
+      "deadlines_sha256": "e7f45a56c77c164b2a9c5b67e5241fb4523d7124f4dded36a239ef2bb7d889d0"
+    },
+    {
+      "case": "random_61",
+      "packets": 41,
+      "last": [
+        47115595209,
+        128,
+        47115595209,
+        1
+      ],
+      "deadlines_sha256": "2a8eec0f6d91aa4d483c480443393aa0bd5848f38959fad2cb5c32b9a599752b"
+    },
+    {
+      "case": "random_62",
+      "packets": 41,
+      "last": [
+        44865595456,
+        128,
+        44865595456,
+        1
+      ],
+      "deadlines_sha256": "3ab764484fbfea3f4774d0c9fb08246b4dbf70ef084ff649ca12e4c5b1a7fe38"
+    },
+    {
+      "case": "random_63",
+      "packets": 41,
+      "last": [
+        42915595256,
+        144,
+        42915595256,
+        1
+      ],
+      "deadlines_sha256": "b339074ec70669c538c5a779d36d5fae1e0f753075d09fd12d904f2a62375bde"
+    },
+    {
+      "case": "random_64",
+      "packets": 41,
+      "last": [
+        49065595458,
+        139,
+        0,
+        0
+      ],
+      "deadlines_sha256": "059899ba53cf9ce7d92768ac4caba3b8884418a630fe17a41c741f753de1c539"
+    },
+    {
+      "case": "random_65",
+      "packets": 41,
+      "last": [
+        36265595358,
+        118,
+        36265595358,
+        1
+      ],
+      "deadlines_sha256": "7d4204907ed74e4e4a4d8ac63cf217a7b9d3bcc4cf1b3604109dbbb158b11a88"
+    },
+    {
+      "case": "random_66",
+      "packets": 41,
+      "last": [
+        42615595507,
+        147,
+        42615595507,
+        1
+      ],
+      "deadlines_sha256": "6835798f4daf36dee914264c5f4e3021cbcc2949b411f7b45ea49c29f780eb0a"
+    },
+    {
+      "case": "random_67",
+      "packets": 41,
+      "last": [
+        42765595406,
+        129,
+        42765595406,
+        1
+      ],
+      "deadlines_sha256": "6b0457252c171c8707d97a2ebebeddf420a76d7ab5a62c4d03cbedc74264fb5f"
+    },
+    {
+      "case": "random_68",
+      "packets": 41,
+      "last": [
+        31865595262,
+        116,
+        31865595262,
+        1
+      ],
+      "deadlines_sha256": "11cf8f321687c2b9325f8f54a4a2ddfbbf73d30eda561c989bee3dee2f044912"
+    },
+    {
+      "case": "random_69",
+      "packets": 41,
+      "last": [
+        42515595411,
+        124,
+        0,
+        0
+      ],
+      "deadlines_sha256": "85749af39c41f462d44e93dc04342709eb16ad557f94f6361f92bff5393661fe"
+    },
+    {
+      "case": "random_70",
+      "packets": 41,
+      "last": [
+        40565595358,
+        119,
+        0,
+        0
+      ],
+      "deadlines_sha256": "4a4a8e3c400638fa814d5b5b94bdd161c5ed16cc7284a5d4f59cdfcbe18aa353"
+    },
+    {
+      "case": "random_71",
+      "packets": 41,
+      "last": [
+        38365595457,
+        123,
+        38365595457,
+        1
+      ],
+      "deadlines_sha256": "fed235c9b5a45cb0937f7b5ea5b2068e0a1e7294a9f588dee17ef2b61b50ae85"
+    },
+    {
+      "case": "random_72",
+      "packets": 41,
+      "last": [
+        31765595362,
+        113,
+        31765595362,
+        1
+      ],
+      "deadlines_sha256": "0aed843eafba1d09e9b085a415bc145ed37a130fd150d9384f661b7c77db040b"
+    },
+    {
+      "case": "random_73",
+      "packets": 41,
+      "last": [
+        44715595753,
+        153,
+        0,
+        0
+      ],
+      "deadlines_sha256": "5a1dd80b16730b594daa6885b4786567c24888fdbd2cf986266af3edc1d99706"
+    },
+    {
+      "case": "random_74",
+      "packets": 41,
+      "last": [
+        40515595506,
+        163,
+        40515595506,
+        1
+      ],
+      "deadlines_sha256": "0bdbb41649cc55ddf24af2ed2c3b428c9dc771bc41b7330c8c37fdd2e781ab10"
+    },
+    {
+      "case": "random_75",
+      "packets": 41,
+      "last": [
+        43015595303,
+        144,
+        0,
+        0
+      ],
+      "deadlines_sha256": "3bbb4d1f8337acf617da807f5c57861bad4c91bd928a6b3bbf30d0b411fc32c0"
+    },
+    {
+      "case": "random_76",
+      "packets": 41,
+      "last": [
+        38515595258,
+        143,
+        38515595258,
+        1
+      ],
+      "deadlines_sha256": "c3991f05850158167a58dc13453dcbf05d640ab8f750595d72db2ae2e2092887"
+    },
+    {
+      "case": "random_77",
+      "packets": 41,
+      "last": [
+        44915595308,
+        133,
+        44915595308,
+        1
+      ],
+      "deadlines_sha256": "682287b44a6cf292f0cb87a48e51dca5ccf826a5aac7f1b32e5084504b915301"
+    },
+    {
+      "case": "random_78",
+      "packets": 41,
+      "last": [
+        38415595309,
+        125,
+        0,
+        0
+      ],
+      "deadlines_sha256": "976896590a8ee1acd1e72d0101c4cd51334ad3581167ef7a7401f2cdcb8f29dd"
+    },
+    {
+      "case": "random_79",
+      "packets": 41,
+      "last": [
+        31765595411,
+        112,
+        0,
+        0
+      ],
+      "deadlines_sha256": "4de421a245069dfb62301b0492281e48c12d5c30d484224f6b478efa421c149a"
+    },
+    {
+      "case": "random_80",
+      "packets": 41,
+      "last": [
+        42565595410,
+        154,
+        0,
+        0
+      ],
+      "deadlines_sha256": "a07b9d1b31cafd34ef6d358535e54be0c70fd4735c7759df6d497ed87fc6b29f"
+    },
+    {
+      "case": "random_81",
+      "packets": 41,
+      "last": [
+        55715595356,
+        129,
+        55715595356,
+        1
+      ],
+      "deadlines_sha256": "e6eb44d441bb7718b5d6707790604a77ec3e68ca44899c8cadf119a4d491c9fa"
+    },
+    {
+      "case": "random_82",
+      "packets": 41,
+      "last": [
+        47115595503,
+        153,
+        0,
+        0
+      ],
+      "deadlines_sha256": "39180761d43962fc2d05489bfb71d52469ae14ba6ed32df25ed575793153dbb1"
+    },
+    {
+      "case": "random_83",
+      "packets": 41,
+      "last": [
+        44965595307,
+        106,
+        44965595307,
+        1
+      ],
+      "deadlines_sha256": "eb30f223cc5477e8d3a1dbc4aaa8b543214b74f0dd4588bdd044115d320ac99b"
+    },
+    {
+      "case": "random_84",
+      "packets": 41,
+      "last": [
+        47265595157,
+        141,
+        47265595157,
+        1
+      ],
+      "deadlines_sha256": "5a4628a6b42bd1725c2486e332f9f40188d47fc5193c2caf8dd104f4bf6bb8ec"
+    },
+    {
+      "case": "random_85",
+      "packets": 41,
+      "last": [
+        36115595410,
+        115,
+        36115595410,
+        1
+      ],
+      "deadlines_sha256": "0f1a135423952e91d82d2bbaafbabc017528bae062eb3472613033f223b7e538"
+    },
+    {
+      "case": "random_86",
+      "packets": 41,
+      "last": [
+        44965595209,
+        122,
+        44965595209,
+        1
+      ],
+      "deadlines_sha256": "2fd6b9a49cddf46b2eeef9b9b0c208d12a1f6ef4ada9f5b81730b5d0d2c9fccc"
+    },
+    {
+      "case": "random_87",
+      "packets": 41,
+      "last": [
+        47265595353,
+        141,
+        0,
+        0
+      ],
+      "deadlines_sha256": "dae0227c10f65a765af842ae26e187c9969ae1fb19d0cc4914cd9c88ed226f59"
+    },
+    {
+      "case": "random_88",
+      "packets": 41,
+      "last": [
+        44815595506,
+        150,
+        44815595506,
+        1
+      ],
+      "deadlines_sha256": "8d5708f86c607599bb5bd4f620a46547d508e5437afa83eb9201d9c4f73ee1e4"
+    },
+    {
+      "case": "random_89",
+      "packets": 41,
+      "last": [
+        49215595210,
+        113,
+        49215595210,
+        1
+      ],
+      "deadlines_sha256": "1697004d31539aae40c831f796f02c259dabebc26ed36f019a109bdbfc5fe266"
+    },
+    {
+      "case": "random_90",
+      "packets": 41,
+      "last": [
+        33965595459,
+        116,
+        33965595459,
+        1
+      ],
+      "deadlines_sha256": "f1cd6fd572d38dae04db65ce8e824f8c4f418b7eb522de0ffb5f68c67d7b2189"
+    },
+    {
+      "case": "random_91",
+      "packets": 41,
+      "last": [
+        44715595410,
+        117,
+        44715595410,
+        1
+      ],
+      "deadlines_sha256": "561b86118e1a0e17a689b27c1e136288ede4b0b5114bbe1a080abf5c48cc6eb8"
+    },
+    {
+      "case": "random_92",
+      "packets": 41,
+      "last": [
+        36065595509,
+        137,
+        0,
+        0
+      ],
+      "deadlines_sha256": "ce66fc08177274fba8c30039c441b1d19846df7c362fdba73ca16ee424c42a48"
+    },
+    {
+      "case": "random_93",
+      "packets": 41,
+      "last": [
+        38465595455,
+        148,
+        0,
+        0
+      ],
+      "deadlines_sha256": "0bc471aa2ee46ea26cc373af38c10fe99fa18a0f5677473a3ccfac5e438cf4a2"
+    },
+    {
+      "case": "random_94",
+      "packets": 41,
+      "last": [
+        51415595405,
+        141,
+        0,
+        0
+      ],
+      "deadlines_sha256": "546c4ab69307b95dd95c38bb2b4dbfbf67ec43b2bfcb6806c46a00384d5a3f86"
+    },
+    {
+      "case": "random_95",
+      "packets": 41,
+      "last": [
+        42665595408,
+        135,
+        0,
+        0
+      ],
+      "deadlines_sha256": "4fecceeadd14f72370638fb980a5429909bb3f3d152bf9773c434b785871a1cf"
+    },
+    {
+      "case": "random_96",
+      "packets": 41,
+      "last": [
+        42765595357,
+        157,
+        42765595357,
+        1
+      ],
+      "deadlines_sha256": "6c04f981ed7299898d381951284aa81864401a6d14158fc575694d75f829efba"
+    },
+    {
+      "case": "random_97",
+      "packets": 41,
+      "last": [
+        44715595312,
+        118,
+        44715595312,
+        1
+      ],
+      "deadlines_sha256": "ddf7d360b1fcfa070cc6415b0a03456692141ae505a9ef67018def0445640c2d"
+    },
+    {
+      "case": "random_98",
+      "packets": 41,
+      "last": [
+        44915595308,
+        128,
+        0,
+        0
+      ],
+      "deadlines_sha256": "95597ac8a116f8c2bf2a77f4a79ce50facf2340a7b7a62d7d5e06f53bf819b44"
+    },
+    {
+      "case": "random_99",
+      "packets": 41,
+      "last": [
+        42615595458,
+        134,
+        0,
+        0
+      ],
+      "deadlines_sha256": "7b3ec915f1009963b1044c7c2945f2eaa33404374f6f9b4433783c944bc7d270"
+    }
+  ],
+  "packet_count": 4167,
+  "raw_event_count": 16910,
+  "full_timer_constants": {
+    "NW": 4500045002,
+    "NH": 9000090002,
+    "NR": 9015504896,
+    "PAIR_WINDOW": 22500225010
+  },
+  "unbounded_summary_counterexample": {
+    "batch": [
+      1,
+      0,
+      2,
+      4500045004,
+      0,
+      0,
+      22500225011,
+      1,
+      4500045004,
+      0,
+      2,
+      2,
+      11,
+      0
+    ],
+    "C_accepts": false,
+    "decision_flags": 2
+  },
+  "CPU_epoch_mutant": {
+    "correct_deadline_tick": 4500045102,
+    "wrong_deadline_tick": 4550045102,
+    "unpaid_extra_FAST_nominal_ns": 1000000000
+  },
+  "late_delivery_counterexample": {
+    "deadline_tick": 4500045102,
+    "delivery_tick": 4500045602,
+    "late_by_nominal_ns": 10000
+  },
+  "literal_fresh_history_counterexample": {
+    "cut_period_nominal_ns": 1000000,
+    "event_tick": 10000000001,
+    "reply_tick": 10000099999,
+    "processed_G_delay_nominal_ns": 1999960,
+    "actual_C_not_before": 14500045003,
+    "generation": 1,
+    "preparation_lead_nominal_ns": 89998900080,
+    "note": "violates literal10us processed_G, does not delay the future rule expiry; not an ARM timing measurement"
+  },
+  "independence": "raw absolute deadlines vs C countdown; shared inputs/ABI/ctypes loader only",
+  "CPU_upper_ns": null
+}

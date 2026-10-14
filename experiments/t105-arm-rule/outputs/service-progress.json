@@ -1,0 +1,71 @@
+{
+  "kind": "local responder progress, not hard-PS/OCM/SmartConnect WCET",
+  "inductive_cases": [
+    {
+      "case": "actual",
+      "inductive": true,
+      "counterexample": false
+    },
+    {
+      "case": "no-read-response",
+      "inductive": false,
+      "counterexample": true
+    },
+    {
+      "case": "stopped-crc",
+      "inductive": false,
+      "counterexample": true
+    }
+  ],
+  "witnesses": [
+    {
+      "channel": "R",
+      "held_ticks": 7,
+      "nominal_held_ns": 140,
+      "log": "SERVICE_STALL_OK kind=0 ticks=7 elapsed_ns=161 completions=1 collector_G=1\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_service_progress.sv:64: $finish called at 271000 (1ps)"
+    },
+    {
+      "channel": "R",
+      "held_ticks": 50001,
+      "nominal_held_ns": 1000020,
+      "log": "SERVICE_STALL_OK kind=0 ticks=50001 elapsed_ns=1000041 completions=1 collector_G=1\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_service_progress.sv:64: $finish called at 1000151000 (1ps)"
+    },
+    {
+      "channel": "R",
+      "held_ticks": 100001,
+      "nominal_held_ns": 2000020,
+      "log": "SERVICE_STALL_OK kind=0 ticks=100001 elapsed_ns=2000041 completions=1 collector_G=1\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_service_progress.sv:64: $finish called at 2000151000 (1ps)"
+    },
+    {
+      "channel": "B",
+      "held_ticks": 7,
+      "nominal_held_ns": 140,
+      "log": "SERVICE_STALL_OK kind=1 ticks=7 elapsed_ns=181 completions=1 collector_G=1\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_service_progress.sv:64: $finish called at 291000 (1ps)"
+    },
+    {
+      "channel": "B",
+      "held_ticks": 50001,
+      "nominal_held_ns": 1000020,
+      "log": "SERVICE_STALL_OK kind=1 ticks=50001 elapsed_ns=1000061 completions=1 collector_G=1\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_service_progress.sv:64: $finish called at 1000171000 (1ps)"
+    },
+    {
+      "channel": "B",
+      "held_ticks": 100001,
+      "nominal_held_ns": 2000020,
+      "log": "SERVICE_STALL_OK kind=1 ticks=100001 elapsed_ns=2000061 completions=1 collector_G=1\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_service_progress.sv:64: $finish called at 2000171000 (1ps)"
+    }
+  ],
+  "local_response": {
+    "read": "RVALID in the state after AR acceptance edge",
+    "ordinary_write": "BVALID one edge after last AW/W acceptance",
+    "complete_COMMIT": "BVALID eight edges after last AW/W acceptance"
+  },
+  "unbounded_by_AXI_safety": "request presentation, response consumption, PS return and CPU completion",
+  "source_hashes": {
+    "history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "rule_mailbox.sv": "dd616d13403d186bbdd09e7370aa85ffe45b5f7e79fa0281ff20d9d5378036d4",
+    "tb_service_progress.sv": "c5c2c0f973de48260ed3fa014afb34205e943e66cc6b476c35053dcab30a4909"
+  },
+  "counterexample_scope": "arbitrarily delayed ready is permitted by the verified port contract; NOT an observed or predicted PS7 stall",
+  "full_ARM_service_upper_ns": null
+}

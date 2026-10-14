@@ -1,0 +1,113 @@
+{
+  "kind": "structural upper per driver invocation plus main loop, NOT cycles or WCET",
+  "ELF_sha256": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09",
+  "functions": {
+    "t105_batch_apply": {
+      "symbol_32bit_words": 502,
+      "code_locations": 500,
+      "calls": [],
+      "upper": {
+        "instructions": 500,
+        "ocm_data_32bit_beats": 234,
+        "mmio_reads": 0,
+        "mmio_writes": 0,
+        "dmb": 0
+      }
+    },
+    "t105_crc32": {
+      "symbol_32bit_words": 17,
+      "code_locations": 17,
+      "calls": [],
+      "upper": {
+        "instructions": 206,
+        "ocm_data_32bit_beats": 56,
+        "mmio_reads": 0,
+        "mmio_writes": 0,
+        "dmb": 0
+      }
+    },
+    "t105_decide": {
+      "symbol_32bit_words": 64,
+      "code_locations": 64,
+      "calls": [
+        "t105_crc32"
+      ],
+      "upper": {
+        "instructions": 270,
+        "ocm_data_32bit_beats": 101,
+        "mmio_reads": 0,
+        "mmio_writes": 0,
+        "dmb": 0
+      }
+    },
+    "t105_driver_step": {
+      "symbol_32bit_words": 161,
+      "code_locations": 161,
+      "calls": [
+        "t105_batch_apply",
+        "t105_decide"
+      ],
+      "upper": {
+        "instructions": 1004,
+        "ocm_data_32bit_beats": 416,
+        "mmio_reads": 21,
+        "mmio_writes": 15,
+        "dmb": 10
+      }
+    }
+  },
+  "service_visit_upper": {
+    "instructions": 1009,
+    "ocm_data_32bit_beats": 416,
+    "mmio_reads": 21,
+    "mmio_writes": 15,
+    "dmb": 10
+  },
+  "ranked_loops": [
+    {
+      "function": "t105_crc32",
+      "first": "0xfffc0990",
+      "last": "0xfffc09a8",
+      "visits_upper": 28,
+      "ranking": "r0 increments by 1 to initial r0+28"
+    },
+    {
+      "function": "t105_driver_step",
+      "first": "0xfffc0b34",
+      "last": "0xfffc0b3c",
+      "visits_upper": 8,
+      "ranking": "r3: controller+108 -> +140, step 4"
+    },
+    {
+      "function": "t105_driver_step",
+      "first": "0xfffc0b90",
+      "last": "0xfffc0b9c",
+      "visits_upper": 8,
+      "ranking": "r3: controller+164 -> +196, step 4"
+    },
+    {
+      "function": "t105_driver_step",
+      "first": "0xfffc0bdc",
+      "last": "0xfffc0bf8",
+      "visits_upper": 4,
+      "ranking": "r3: controller+108 -> +140, step 8; early exit safe"
+    }
+  ],
+  "aggregation": "sum ALL branch alternatives, then add callees; intentionally not a feasible longest path",
+  "unbounded_in_source": "number of status-poll visits; per-access hardware completion; fault WFI is terminal",
+  "model_parameters_ns": {
+    "instruction_fetch_and_core_progress": null,
+    "OCM_32bit_data_access": null,
+    "GP_read_completion": null,
+    "GP_write_completion": null,
+    "DMB_additional_ordering": null
+  },
+  "service_upper_ns": null,
+  "is_WCET": false,
+  "assumptions": [
+    "fixed binary and reviewed ranking templates",
+    "valid aligned disjoint OCM/MMIO pointers",
+    "no code/data corruption or asynchronous exceptions",
+    "architectural execution terminates each instruction; no time implied"
+  ]
+}

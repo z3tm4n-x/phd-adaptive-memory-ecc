@@ -1,0 +1,46 @@
+{
+  "kind": "native production C + actual AXI-Lite/collector RTL; NOT ARM/AXI timing",
+  "independent_checker": "Python raw-event Oracle, no batch C or RTL helper",
+  "cases": [
+    {
+      "case": "valid",
+      "packets": 12,
+      "events": 2001,
+      "log": "MAILBOX_OK packets=         12 events=       2001\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_mailbox.sv:126: $finish called at 58720000 (1ps)",
+      "trace_sha256": "8b162e966d93a61c068610e4a18efc1bb57339ca7fb43f5d794cdadccccfdc5e"
+    },
+    {
+      "case": "bad-crc",
+      "packets": 3,
+      "events": 724,
+      "log": "MAILBOX_REJECTED mode=          1 accepted=          2\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_mailbox.sv:102: $finish called at 14550000 (1ps)",
+      "trace_sha256": "80a84af13de4aad079b71959262fc932cc733c9291e55af1e780e4e97db244d4"
+    },
+    {
+      "case": "replay-sequence",
+      "packets": 3,
+      "events": 724,
+      "log": "MAILBOX_REJECTED mode=          2 accepted=          2\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_mailbox.sv:102: $finish called at 14550000 (1ps)",
+      "trace_sha256": "80a84af13de4aad079b71959262fc932cc733c9291e55af1e780e4e97db244d4"
+    },
+    {
+      "case": "wrong-generation",
+      "packets": 3,
+      "events": 724,
+      "log": "MAILBOX_REJECTED mode=          3 accepted=          2\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_mailbox.sv:102: $finish called at 14550000 (1ps)",
+      "trace_sha256": "80a84af13de4aad079b71959262fc932cc733c9291e55af1e780e4e97db244d4"
+    },
+    {
+      "case": "forbidden-runtime-config",
+      "packets": 12,
+      "events": 2003,
+      "log": "CONFIG_READONLY rejected=1013\nMAILBOX_OK packets=         12 events=       2003\n/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t105-arm-rule/experiments/t105-arm-rule/tb_mailbox.sv:126: $finish called at 227520000 (1ps)",
+      "trace_sha256": "8b162e966d93a61c068610e4a18efc1bb57339ca7fb43f5d794cdadccccfdc5e"
+    }
+  ],
+  "partial_commit_rejected": true,
+  "immutable_banks": true,
+  "independent_AW_W_and_BR_backpressure": true,
+  "runtime_configuration": "absent; all 1013 non-command aligned addresses reject with no retained snapshot/decision/ACK change",
+  "CPU_WCET": null
+}

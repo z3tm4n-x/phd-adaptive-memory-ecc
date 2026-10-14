@@ -1,0 +1,36 @@
+{
+  "status": "conditional allocation, NOT established ARM upper time",
+  "external_loss_ns": 80.5008,
+  "unchanged_history_ns": 5189.022209024402,
+  "derived_digital_certificate_ns": 545.50544,
+  "certificate_allocation_ns": 600.506,
+  "certificate_with_10pct_ns": 660.5566,
+  "calendar_after_permit_ns": 748.50748,
+  "fixed_sum_ns": 6618.536489024403,
+  "round_max_allowed_ns": 1690.7317554877989,
+  "round_max_allowed_rational": "3465965438749/2049979500",
+  "reaction_equation": "external + accepted_history + 2*B + certificate + calendar <= 10000 ns",
+  "B_definition": "maximum full cut-to-cut service round; includes polling, all MMIO, program, CRC and ACK",
+  "CRC_words": 7,
+  "CRC_processing_ns": 140.5014,
+  "history_bytes": 96,
+  "reply_bytes": 32,
+  "CPU_round_upper_ns": null,
+  "PS_AXI_upper_ns": null,
+  "B_established_upper_ns": null,
+  "reaction_established_upper_ns": null,
+  "CPU_load": null,
+  "whole_system_price_claim": false,
+  "assumptions": [
+    "accepted initialized digital XPM progress, continuous250/50 clocks",
+    "new guard ready within3fast edges; at most one older XPM transaction",
+    "every event prefix is retained; invalid packets are faults, not priced recovery",
+    "not_before is a policy hold, not an unpriced service wait",
+    "the first post-eligibility freeze/operation is charged; already frozen slots unchanged"
+  ],
+  "open": [
+    "finite CPU/OCM/MMIO/barrier bound and BSP",
+    "full round including previous-round phase",
+    "qualification of complete program-to-fast liveness, not only sampled traces"
+  ]
+}

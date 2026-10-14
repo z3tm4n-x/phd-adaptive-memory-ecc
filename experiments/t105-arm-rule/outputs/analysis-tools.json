@@ -1,0 +1,13 @@
+{
+  "purpose": "ISA execution, NOT cycle-accurate Cortex-A9",
+  "packages": [
+    "unicorn==2.1.4",
+    "capstone==5.0.6",
+    "pyelftools==0.33"
+  ],
+  "wheels": {
+    "capstone-5.0.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "0358855773100bb91ae6681fabce7299df83156945ba943f6211061a592c54a6",
+    "pyelftools-0.33-py3-none-any.whl": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036",
+    "unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239"
+  }
+}

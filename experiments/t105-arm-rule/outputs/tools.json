@@ -1,0 +1,161 @@
+{
+  "status": "user-local extraction",
+  "packages": [
+    {
+      "name": "binutils-arm-none-eabi_2.45.50.20251209-1ubuntu1+23build1_amd64.deb",
+      "bytes": 3258532,
+      "sha256": "abccb894e824f007bd2f969e2164d164d308badf507910f105c3c3641345b416"
+    },
+    {
+      "name": "gcc-arm-none-eabi_15%3a14.2.rel1-1_amd64.deb",
+      "bytes": 67345738,
+      "sha256": "43e626970e5b2c7b25bf03fb84508a4aff6d85216544038ff80bf6363787c12d"
+    },
+    {
+      "name": "libaio1t64_0.3.113-8build1_amd64.deb",
+      "bytes": 7356,
+      "sha256": "b8e32a2b871e65a85b3dd882b096a0a3020006bea74233479b0b08543b6808df"
+    },
+    {
+      "name": "libasound2-data_1.2.15.3-1ubuntu1_all.deb",
+      "bytes": 21410,
+      "sha256": "58de2389bf26156f357530db74065ca4b39e15497b956b7610f3030c1fd769b9"
+    },
+    {
+      "name": "libasound2t64_1.2.15.3-1ubuntu1_amd64.deb",
+      "bytes": 417982,
+      "sha256": "bf19fe95f14e25c770fcdbe5e70e7d44bb4a9b1bedf58f239e86d4c677b7d10a"
+    },
+    {
+      "name": "libbrlapi0.8_6.7-1ubuntu6_amd64.deb",
+      "bytes": 28614,
+      "sha256": "b3218fd4461a1b5f59cc28b5213e521cf251f0d55fd068c02c15d2777ff4c305"
+    },
+    {
+      "name": "libcacard0_1%3a2.8.1-2_amd64.deb",
+      "bytes": 36404,
+      "sha256": "0a05436cc271ef202315548cdbc34cc77b9cab48a9e865e3006a8eb226f5f35f"
+    },
+    {
+      "name": "libdaxctl1_81-1ubuntu1_amd64.deb",
+      "bytes": 22714,
+      "sha256": "10b4620f07da833cf9ec0b0f762e53b7fdbe7432b27387cabd1d34d468066315"
+    },
+    {
+      "name": "libfdt1_1.7.2-2ubuntu1_amd64.deb",
+      "bytes": 21298,
+      "sha256": "7bbd25e194947a08997deef90fadea37dd255a9bc0bdcf7fea6d4c17131904d4"
+    },
+    {
+      "name": "libibverbs1_61.0-2ubuntu3_amd64.deb",
+      "bytes": 70568,
+      "sha256": "1d9e2e86e6500dabb6143c04adea8d122c7caa72aae3832de88d7ada4fa97201"
+    },
+    {
+      "name": "libmpathcmd0_0.14.3-2ubuntu1_amd64.deb",
+      "bytes": 13278,
+      "sha256": "9496fa468ad9fecc9cd14f8bfa5a2ba3923e2302e8c48f7713d552bf8494877e"
+    },
+    {
+      "name": "libmpathpersist0_0.14.3-2ubuntu1_amd64.deb",
+      "bytes": 18244,
+      "sha256": "d2028797a57a2b7355e9890931a7baefc649422c8f7767bdb2c21ac6c8a5a3c2"
+    },
+    {
+      "name": "libmultipath0_0.14.3-2ubuntu1_amd64.deb",
+      "bytes": 166302,
+      "sha256": "ee956e9782407ef8fa7c42c424f89b77c754816ae1898409bdae9628de772909"
+    },
+    {
+      "name": "libndctl6_81-1ubuntu1_amd64.deb",
+      "bytes": 63150,
+      "sha256": "3dd50f8ecb34e8252257b070e41a48513619352adf2cfafc11ecf6d7d51bb7ba"
+    },
+    {
+      "name": "libnl-3-200_3.12.0-2_amd64.deb",
+      "bytes": 58810,
+      "sha256": "52fda1b991baa2d0fbe82f5dfb15584dcb1f25a7e3d311e2e319cc33858b4f2c"
+    },
+    {
+      "name": "libnl-route-3-200_3.12.0-2_amd64.deb",
+      "bytes": 204148,
+      "sha256": "58c5fa3c2f5226ffb1846db6cf7318196dbf5294a4354edd00fdae2db30a45dc"
+    },
+    {
+      "name": "libnspr4_2%3a4.38.2-1ubuntu1_amd64.deb",
+      "bytes": 118396,
+      "sha256": "2f28284b35765aaccad1785ab017425e1ca378c395256331f9c662d04335d43f"
+    },
+    {
+      "name": "libnss3_2%3a3.120-1ubuntu2_amd64.deb",
+      "bytes": 1515202,
+      "sha256": "2d6d4480a86b0fbc9d36a61c50d5480b2f8c931845bc5392c5374f7a2108e22b"
+    },
+    {
+      "name": "libnuma1_2.0.19-1build1_amd64.deb",
+      "bytes": 23654,
+      "sha256": "af7bc28b60948609a36719c249a89aef834812833909774538c19f9d984bef31"
+    },
+    {
+      "name": "libpcsclite1_2.4.1-1_amd64.deb",
+      "bytes": 24558,
+      "sha256": "9287a7219e33c52f2a647bdfbaf4b6156de843b191d69aa60d101baeb5160032"
+    },
+    {
+      "name": "libpmem1_1.13.1-1.1ubuntu4_amd64.deb",
+      "bytes": 80192,
+      "sha256": "12baaed97903ad6af5ee00ac77c01e7e061839f47aa79232725dd7016c6a8d76"
+    },
+    {
+      "name": "librdmacm1t64_61.0-2ubuntu3_amd64.deb",
+      "bytes": 73612,
+      "sha256": "3472f83075c2aecfde7b09e02f3f40e96b3356a4cbd1e21b5b33e6c54bff8c0e"
+    },
+    {
+      "name": "libslirp0_4.9.1-1ubuntu1_amd64.deb",
+      "bytes": 67206,
+      "sha256": "46fcf69586c8ad63b3d47fd1956fd7469d6dbe3fa1e2533497fa16f7aeb8e2f2"
+    },
+    {
+      "name": "liburcu8t64_0.15.6-1_amd64.deb",
+      "bytes": 64652,
+      "sha256": "de2e04225d0f1324ab5ee880e61427a5fa23de0a3563610386f5fc3eca653a02"
+    },
+    {
+      "name": "liburing2_2.14-1_amd64.deb",
+      "bytes": 25404,
+      "sha256": "c0f1ed55d2eaa6e5d1224513b787c71348c6ab983e9c4178a417a7ffac3a8a00"
+    },
+    {
+      "name": "libusb-1.0-0_2%3a1.0.29-2build1_amd64.deb",
+      "bytes": 56906,
+      "sha256": "0f3f167c22d00994276b6425a306d1c0b6047e2ea2eb850afbdaf00968330484"
+    },
+    {
+      "name": "libusbredirparser1t64_0.15.0-1build1_amd64.deb",
+      "bytes": 16770,
+      "sha256": "3049b91a94ec938db9da3166ed56fecc9de00587becf53c3af4828f89c9f3b0c"
+    },
+    {
+      "name": "qemu-system-arm_1%3a10.2.1+ds-1ubuntu3_amd64.deb",
+      "bytes": 11322342,
+      "sha256": "37f6309f2e79dc836490e11a1df27848219b0d208a84b7811f3273ccd0daa831"
+    },
+    {
+      "name": "qemu-system-common_1%3a10.2.1+ds-1ubuntu3_amd64.deb",
+      "bytes": 1031404,
+      "sha256": "4af56406c0d00611c9d85a0dcff2eb1c838bfd7fdbdc43420ce513d426655bfb"
+    },
+    {
+      "name": "qemu-system-data_1%3a10.2.1+ds-1ubuntu3_all.deb",
+      "bytes": 2374084,
+      "sha256": "908d03cc03f7d42673c87a428a4689a0078992347db88e32bbbcdf4de918b497"
+    }
+  ],
+  "versions": {
+    "arm-none-eabi-gcc": "arm-none-eabi-gcc (15:14.2.rel1-1) 14.2.1 20241119",
+    "arm-none-eabi-objdump": "GNU objdump (2.45.50.20251209-1ubuntu1+23build1) 2.45.50.20251209",
+    "qemu-system-arm": "QEMU emulator version 10.2.1 (Debian 1:10.2.1+ds-1ubuntu3)"
+  },
+  "system_modified": false
+}
