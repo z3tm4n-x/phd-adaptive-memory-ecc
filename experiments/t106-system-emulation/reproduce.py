@@ -41,5 +41,14 @@ def main():
     subprocess.run([sys.executable,str(HERE/'verify_sparse.py')]+(['--execute'] if args.execute_sparse else []),check=True)
     subprocess.run([sys.executable,str(HERE/'burst_inputs.py')],check=True)
     subprocess.run([sys.executable,str(HERE/'summary.py')]+(['--regenerate'] if args.execute or args.execute_empty else []),check=True)
-    print('T106 scenarios1/3/4/5 checked; scenario2 and final five-case package remain open')
+    subprocess.run([sys.executable,str(HERE/'replay_burst.py')],check=True)
+    subprocess.run([sys.executable,str(HERE/'replay_burst.py'),'--case','cold-envelope'],check=True)
+    reports=[HERE/f'outputs/burst-burst-{m}-skip-checked.json' for m in ('adaptive','fixed')]
+    if all(p.exists() for p in reports):
+        subprocess.run([sys.executable,str(HERE/'replay_burst.py'),'--case','burst'],check=True)
+        subprocess.run([sys.executable,str(HERE/'five_scenarios.py')],check=True)
+        print('All five digital scenario checks completed; scientific acceptance is separate')
+    else:
+        subprocess.run([sys.executable,str(HERE/'five_scenarios.py'),'--allow-incomplete'],check=True)
+        print('Four scenarios + full-profile pilot checked; complete scenario2 still pending')
 if __name__=='__main__':main()

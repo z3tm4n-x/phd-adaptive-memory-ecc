@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import time
 from burst_run_inputs import build
 
 HERE=Path(__file__).resolve().parent
@@ -15,7 +16,7 @@ def load(name):
 
 
 def normalize(case,mode,result,meta):
-    cold=case==4
+    cold='ERR_events' in result  # historical schema only
     h=result['horizon_ns']
     work=result['bus_work_ns']
     if cold:
@@ -67,7 +68,14 @@ def collect(require_full=True):
                 assert meta['stimulus']==build()
                 assert result['horizon_ns']==363900_000_000_000 and result['injections']==5237
             elif case==4:
-                meta=load(f'cold-{mode}.json');result=meta['check']
+                stem=f'burst-cold-envelope-{mode}-skip'
+                path=OUT/f'{stem}-checked.json'
+                if not path.exists():
+                    missing.append(f'scenario4 in-envelope/{mode}');continue
+                report=json.loads(path.read_text())
+                for p,h in report['sha256'].items():
+                    assert hashlib.sha256((REPO/p).read_bytes()).hexdigest()==h,p
+                meta=load(stem+'.json');result=report['results']
             else:
                 stem=f'{"sparse" if case==5 else "accel"}-{name}-{mode}-skip'
                 result=(sparse if case==5 else acc)[stem];meta=load(stem+'.json')
@@ -80,12 +88,15 @@ def collect(require_full=True):
     previous=load('summary.json')
     return dict(status='complete_digital_evidence_pending_review' if not missing else 'INCOMPLETE',
         missing=missing,rows=rows,
+        historical_cold_stress=[normalize(4,m,load(f'cold-{m}.json')['check'],load(f'cold-{m}.json'))
+            for m in ('adaptive','fixed')],
         common_resources={k:previous[k] for k in
             ('resources_reused_not_resynthesized','STA_reused_not_rerun','startup_bytes','firmware_bytes','OCM_reserved_bytes')},
         physical_board_available=None,actual_ARM_time_ns=None,ARM_WCET_ns=None,Q_T_certified_by_emulation=False,
         constant='same PL image, all-slot FAST; no claim of best constant class',
         important_scope=['all numbers calculated in nominal digital model',
-            'scenario4 uses original variable model service, others fixed188160ns',
+            'main comparison uses model service188160ns; historical cold stress kept separately',
+            'historical cold20us application spacing is outside joint r4; NOT an in-envelope cost',
             'no application in1/2/3; app delay not applicable, not zero',
             'different scenarios are not combined into a mission-average gain',
             'lossless traces independently replayed; source/ABI/tool dependencies declared',
@@ -111,7 +122,18 @@ def markdown(data):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--allow-incomplete',action='store_true')
-    p.add_argument('--record',action='store_true');a=p.parse_args()
+    p.add_argument('--record',action='store_true')
+    p.add_argument('--wait-for-full',action='store_true',help='In-task dependency wait, no publication or notifications')
+    a=p.parse_args()
+    if a.wait_for_full:
+        assert not a.allow_incomplete
+        deadline=time.monotonic()+8*3600
+        while True:
+            state=json.loads((HERE/'.build/full-profile/state.json').read_text())
+            if state['status']=='verified_both':break
+            if state['status']!='running':raise RuntimeError(('full execution failed',state))
+            if time.monotonic()>deadline:raise TimeoutError('full profile did not finish within8h')
+            time.sleep(20)
     data=collect(not a.allow_incomplete)
     if a.record:
         assert not a.allow_incomplete,'incomplete tables are previews, not published final outputs'
