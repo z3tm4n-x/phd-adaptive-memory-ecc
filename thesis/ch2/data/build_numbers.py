@@ -48,7 +48,10 @@ def show(rel: str) -> str:
 
 def blob(rel: str) -> str:
     r = subprocess.run(["git", "-C", str(ROOT), "rev-parse", f"{PIN}:{rel}"], capture_output=True, text=True)
-    return r.stdout.strip()
+    sha = r.stdout.strip()
+    if r.returncode != 0 or re.fullmatch(r"[0-9a-f]{40}", sha) is None:
+        raise FileNotFoundError(f"Объект источника {rel} отсутствует в {PIN[:12]}")
+    return sha
 
 
 def dec(x) -> Decimal:
@@ -224,7 +227,7 @@ add("N2.1-kG", "2.1", "Коэффициент среднего числа соб
     "событий на сумму среднемесячных чисел Вольфа", "НОРМАТИВНЫЙ ПАРАМЕТР (перенос в коде цепочки; текст ГОСТ не сверен)",
     "none", 3, "формула числа событий популяции Φ(≥30 МэВ) ≥ 10⁵ см⁻²", A127,
     R=("experiments/tNN-sepem-profiles/gost.py", r'"1\.0": (0\.\d+)', 1))
-add("N2.1-kO", "2.1", "Коэффициент среднего числа событий СКЛ по формуле (Б.2) ОСТ 134-1044-2007", 
+add("N2.1-kO", "2.1", "Коэффициент среднего числа событий СКЛ по формуле (Б.2) ОСТ 134-1044-2007",
     "событий на сумму среднемесячных чисел Вольфа", "НОРМАТИВНЫЙ ПАРАМЕТР (сверен с копией ОСТ 15.10)", "none", 3,
     "ОСТ 134-1044-2007, переиздание по изм. № 2 с изм. 1, прил. Б", A127,
     M=(["experiments/t50-lambda-inputs/inputs.md"], ["0.0135 ΣW_i"]), val="0.0135")
@@ -484,7 +487,7 @@ def main() -> int:
             v = r["value"]
             text = r.get("text") or ("" if v is None else fmt(v, r["rnd"], r["sig"]))
             src = r["rel"]
-            sha = blob(src) if src and "N2." not in src else ""
+            sha = blob(src) if src and "N2." not in src and src != "вычислено" else ""
             w.writerow([r["id"], r["sec"], r["name"], "" if v is None else str(v), text, r["rnd"], r["unit"],
                         r["typ"], r["cond"], src, r["loc"], sha, PIN, r["area"], r["status"]])
     print(f"чисел: {len(rows)}; ошибок: {len(FAIL)}; закреплено на {PIN[:12]}")
