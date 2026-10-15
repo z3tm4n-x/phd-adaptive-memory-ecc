@@ -121,6 +121,18 @@ def markdown(data):
     return '\n'.join(text)
 
 
+def record_table(data, output=OUT):
+    """Publish only a complete table; reject changed prior data before writing."""
+    assert data['status']=='complete_digital_evidence_pending_review' and not data['missing']
+    documents={output/'five-scenarios.json':json.dumps(data,indent=2,allow_nan=False)+'\n',
+               output/'five-scenarios.md':markdown(data)}
+    for path,content in documents.items():
+        if path.exists():
+            assert path.read_text()==content,('published table changed; preserve and investigate',str(path))
+    for path,content in documents.items():
+        if not path.exists():path.write_text(content)
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--allow-incomplete',action='store_true')
     p.add_argument('--record',action='store_true')
@@ -138,6 +150,5 @@ if __name__=='__main__':
     data=collect(not a.allow_incomplete)
     if a.record:
         assert not a.allow_incomplete,'incomplete tables are previews, not published final outputs'
-        (OUT/'five-scenarios.json').write_text(json.dumps(data,indent=2)+'\n')
-        (OUT/'five-scenarios.md').write_text(markdown(data))
+        record_table(data)
     else:print(markdown(data))

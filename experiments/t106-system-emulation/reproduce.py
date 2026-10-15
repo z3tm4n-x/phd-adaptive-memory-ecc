@@ -16,6 +16,7 @@ def bootstrap():
         '--target',str(HERE/'.tools/analysis'),*files],check=True)
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--execute',action='store_true');ap.add_argument('--bootstrap',action='store_true')
+    ap.add_argument('--allow-incomplete',action='store_true',help='Development-only replay of available evidence; final package requires both full profiles')
     ap.add_argument('--execute-empty',action='store_true',help='Repeat literal RTL calendar and actual accepted ELF empty-transition checks')
     ap.add_argument('--execute-accel',action='store_true',help='Repeat full-top/ELF long clean cases and two acceleration witnesses')
     ap.add_argument('--execute-sparse',action='store_true',help='Repeat full-top/ELF nonempty-memory cases and lossless trace packing')
@@ -56,4 +57,6 @@ def main():
     else:
         subprocess.run([sys.executable,str(HERE/'five_scenarios.py'),'--allow-incomplete'],check=True)
         print('Four scenarios + full-profile pilot checked; complete scenario2 still pending')
+        if not args.allow_incomplete:
+            raise SystemExit('INCOMPLETE: both full scenario2 results are required; use --allow-incomplete only for a development checkpoint')
 if __name__=='__main__':main()

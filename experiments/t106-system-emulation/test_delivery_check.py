@@ -1,9 +1,26 @@
 import copy
+from pathlib import Path
+import tempfile
 import unittest
 from final_price_check import check_fixed, fixed_slots
+from five_scenarios import record_table
 
 
 class DeliveryCheckTests(unittest.TestCase):
+    def test_cannot_publish_incomplete_or_replace_table(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output=Path(folder)
+            with self.assertRaises(AssertionError):
+                record_table(dict(status='INCOMPLETE',missing=['scenario2']),output)
+            self.assertFalse(list(output.iterdir()))
+            data=dict(status='complete_digital_evidence_pending_review',missing=[],rows=[])
+            record_table(data,output)
+            before={p.name:p.read_bytes() for p in output.iterdir()}
+            record_table(data,output)
+            changed=copy.deepcopy(data);changed['new_unreviewed_result']=1
+            with self.assertRaises(AssertionError):record_table(changed,output)
+            self.assertEqual(before,{p.name:p.read_bytes() for p in output.iterdir()})
+
     def test_closed_form_against_enumerated_pulses(self):
         for horizon in range(1, 8000, 7):
             starts = [1568 * q + 164 * i for q in range(6) for i in range(8)]
