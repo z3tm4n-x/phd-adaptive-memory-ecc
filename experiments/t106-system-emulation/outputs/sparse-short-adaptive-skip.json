@@ -1,0 +1,163 @@
+{
+  "mode": "adaptive",
+  "scenario": "short",
+  "accelerated": true,
+  "macros": [
+    {
+      "begin_ns": 165970,
+      "end_ns": 918610,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      },
+      "before": "c80f0000000000000100000000000000880a000000000000462f390c0100000000000000000000005da05d1902000000270000000000000001000000000000002500000000000000",
+      "after": "c8a20000000000000100000000000000880a000000000000469c380c0100000000000000000000005d0d5d1902000000270000000000000005000000000000002500000000000000",
+      "decision": "0500000000000000010000000000000025b05d190200000001000000670e7c8b",
+      "packets": 4,
+      "step_slow_ticks": 9408,
+      "represented_elapsed_ns": 752640
+    },
+    {
+      "begin_ns": 1106190,
+      "end_ns": 1858830,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      },
+      "before": "88c70000000000000100000000000000880a0000000000008677380c0100000000000000000000009de85c1902000000270000000000000006000000000000002500000000000000",
+      "after": "885a0100000000000100000000000000880a00000000000086e4370c0100000000000000000000009d555c190200000027000000000000000a000000000000002500000000000000",
+      "decision": "0a00000000000000010000000000000025b05d190200000001000000dc15da82",
+      "packets": 4,
+      "step_slow_ticks": 9408,
+      "represented_elapsed_ns": 752640
+    }
+  ],
+  "host_elapsed_s": 17.849346645000004,
+  "stimulus": {
+    "scenario": "short",
+    "horizon_ns": 2000000,
+    "initial_data": "0xa5a50000 XOR word",
+    "initial_errors": 0,
+    "injections": [
+      {
+        "at_ns": 2002,
+        "word": 400000,
+        "bit": 37,
+        "parent": 1
+      },
+      {
+        "at_ns": 3002,
+        "word": 500000,
+        "bit": 7,
+        "parent": 2
+      },
+      {
+        "at_ns": 3502,
+        "word": 500001,
+        "bit": 12,
+        "parent": 3
+      },
+      {
+        "at_ns": 3506,
+        "word": 500001,
+        "bit": 12,
+        "parent": 4
+      }
+    ],
+    "applications": [
+      {
+        "at_ns": 10000,
+        "owner": 0,
+        "packet": "1e2468000186a02"
+      },
+      {
+        "at_ns": 1010000,
+        "owner": 1,
+        "packet": "3e2468000386a01"
+      }
+    ],
+    "false_ERR_interval_ns": [
+      0,
+      0
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "ready_low_ns": 80,
+    "ready_period_ns": 340
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 15644,
+  "ARM_instructions_runtime": 1418,
+  "driver_calls": 9,
+  "completed_driver_visits": 9,
+  "max_observed_instructions_per_driver_visit": 686,
+  "MMIO": {
+    "boot_read": 4,
+    "runtime_read": 32,
+    "runtime_write": 21
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_sparse.py": "f80086c5ab428da48aea4521258497baae723a5ecd20e28bcb2ddbd4f3594135",
+    "experiments/t106-system-emulation/bridge.c": "6a193b8a32a8011d8f43aad600f5bf90d903b946ae3816ec39a32a1d07996000",
+    "experiments/t106-system-emulation/tb_sparse.sv": "0fd44ef6db03b06c3a3b856ccaa1637c229aade2d00b8e73003f5c17fa2845ae",
+    "experiments/t106-system-emulation/sparse.tcl": "36a0085249ad9f761f3262b352eefce7568bb86c511b44429592e6017a0735a9",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "ab3df56fbe3d7fedf9655e3f263b61585f03e837750fedea59e3a632c90af040",
+    "injections.txt": "17b4c2d687163478f921cf0dce5d8cfed25bfe68947d1307e2da2071280db9ff",
+    "application.txt": "4a15102309fbddfef2c9cf482494a0c2951ada4d6f74c156289bacc988758064"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/sparse-short-adaptive-1-1792071540430853207",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 8,
+  "represented_driver_visits": 16,
+  "represented_MMIO_reads": 80,
+  "represented_MMIO_writes": 80,
+  "represented_ISA_count": null,
+  "trace_sha256": "104bf06dbe684417317bc2e5017929b95afdeaa531a38ac03eb8d0e7ab617249"
+}
