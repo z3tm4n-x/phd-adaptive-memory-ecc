@@ -11,9 +11,51 @@ import threading
 import unittest
 from burst_run_inputs import HERE,build
 from trace_codec import pack,digest
+from burst_price import Ledger,integral
 
 
 class BurstRunTests(unittest.TestCase):
+    def test_integral_against_direct_slots(self):
+        for low in (False,True):
+            pulses=[((j//8)*1568+(j%8)*164,(j//8)*1568+(j%8)*164+92)
+                    for j in range(250) if not low or j%3==0]
+            for t in range(0,40000,13):
+                self.assertEqual(integral(t,low),sum(max(0,min(b,t)-a) for a,b in pulses))
+
+    def test_peak_against_direct_sum(self):
+        import random
+        rng=random.Random(106)
+        for case in range(16):
+            ledger=Ledger();pulses=[]
+            for j in range(150):
+                a=(j//8)*1568+(j%8)*164
+                if rng.randrange(3)==0:continue
+                b=a+(148 if rng.randrange(8)==0 else 92)
+                pulses.append((a,b));ledger.explicit(a,b)
+            h=32000;width=1017+case*137
+            candidates={0,h-width}
+            for a,b in pulses:
+                candidates.update(x for x in (a,b,a-width,b-width) if 0<=x<=h-width)
+            expected=max((sum(max(0,min(b,x+width)-max(a,x)) for a,b in pulses),-x) for x in candidates)
+            got=ledger.peak(h,width)
+            self.assertEqual(got,(expected[0],-expected[1]))
+            self.assertEqual(ledger.total,sum(b-a for a,b in pulses))
+
+    def test_price_rejects_overlap(self):
+        ledger=Ledger();ledger.explicit(0,92)
+        with self.assertRaises(AssertionError):ledger.explicit(64,156)
+
+    def test_large_block_lossless_and_truncation(self):
+        import burst_codec as c
+        src=HERE/'outputs/sparse-short-adaptive-skip.trace.ctz'
+        with tempfile.TemporaryDirectory(dir=HERE/'.build') as d:
+            dest=Path(d)/'trial.ct3'
+            report=c.pack(src,dest)
+            self.assertEqual(report['raw_sha256'],digest(src))
+            self.assertEqual(c.digest(dest),digest(src))
+            dest.write_bytes(dest.read_bytes()[:-1])
+            with self.assertRaises(ValueError):list(c.lines(dest))
+
     def test_fixed_full_input(self):
         a=build()
         self.assertEqual(a['horizon_ns'],363900_000_000_000)

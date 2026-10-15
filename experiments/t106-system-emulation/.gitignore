@@ -3,3 +3,5 @@
 __pycache__/
 # Reproducible raw-format copies; lossless column-block traces are published.
 /outputs/sparse-*.trace.gz
+# Full burst CT2 is a temporary lossless staging format; publish CT3 instead.
+/outputs/burst-burst-*.trace.ctz
