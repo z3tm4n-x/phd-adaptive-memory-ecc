@@ -8,10 +8,18 @@
     "comparison.svg"
   ],
   "sha256": {
-    "results.json": "7607413aa24e2dda63b8237e5cd04f5e17ac75eaeefb77df5399787b23cae8b9",
+    "results.json": "b25625e9032653a8eaebb0d6efe111c6f233da7bb251e64ff4b4edd5817b39bf",
     "table.md": "e31d15c26f47ad9cc8c7e4ed1fead26acd0e0f70256e49d2c551e032f07bfab7",
-    "comparison.png": "55f9e19d61da30a028af8c0f81a8b3d91addf9fc7f71a632fe7ecb1e9dd65732",
-    "comparison.svg": "c42529a9af1fa1fd5e6aad0c6671658575226bcc1453f7725924d86ec836f57d"
+    "comparison.png": "09bf5ed6519c5a4092fcecdaed0cdb4136d25c59ccb0f24b9101de4c2b8b5b98",
+    "comparison.svg": "2d134f2f419298efadfde162d96fb3bd4c3978f990d2c31ac3715fd8233e06f2"
   },
-  "meaning": "Two complete local runs with unchanged code and preregistered seeds match these four files byte-for-byte. Repetition does not add independent MC trials."
+  "checked_by": "orchestrator, 2026-10-15",
+  "original_delivery": "7fa90e09d81064f53220cbb4c86d424e272e6d0c",
+  "scientific_comparison_to_original": {
+    "all_rational_exact_and_bound_fields_identical": true,
+    "all_MC_counts_identical": true,
+    "table_byte_identical": true
+  },
+  "context_regression": "Current-main MAP/RESEARCH_PLAN accepted; modified T45 checkout rejected; all9 pinned Git objects mandatory",
+  "meaning": "Two complete local runs after the context-audit fix match these four files byte-for-byte. Cross-environment float64 last digits and rendering bytes may differ. Repetition does not add independent MC trials."
 }

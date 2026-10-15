@@ -8,13 +8,13 @@
   "initial_state": "all words clean, no pending write; synthetic specified state, no physical preparation claim",
   "source_sha256": {
     "inputs.json": "bf27d65f0393058fdad58d3852bfa375fd695102b57f78fff7e5be1ce9a6319a",
-    "sources.json": "1686a68865811f3472931d0eff7d516f60c48e9c63bcab7957ee4156cfdeb361",
+    "sources.json": "45d65876ecd6f7ea71ea93e6c2ac50188d128b0340a29a9d5e6ae722c6bd81a7",
     "PLAN.md": "3c18787605e1c3dde6e8d358c0f2e42c47ffb3d51058bb270eda890b7a783e59",
     "exact.py": "2cf666f738fc3922a89b38fb7969f6de7dfd7a0d686d498dc108eb9e9354c9a0",
     "enumerated.py": "10eb4b97f601157dcc16cbd99dea44570e51defaf6468e2bfd5550a6cc5c0044",
     "mc.py": "b6221ad2628e511cf2bf3c61e9a42e28719da9bcdba8d30de5c2f3666b5a1cbf",
     "checks.py": "25e810ba021a75d673df47076935ec30f91fd5bb406d098b5996d5a26441dc75",
-    "reproduce.py": "76871e04bc0fd8e57365b461b1dece800fe69da2a244c976df7de6762bdc58b1",
+    "reproduce.py": "5043caabab8101a5c096f2173da5f36bed1df7c0a29120235a97f1d11afda571",
     "requirements.txt": "508b82d2fe4efe28965be42608c3d3ec0551642f959d687cf1e4b38761e2e822",
     "METHOD.md": "68c4b54194b90e015a6af26009e42353e0606100b1f1d063be8ff8905e7bc01e"
   },
@@ -366,7 +366,7 @@
         "events_Q": 38351,
         "Q_MC": 0.191755,
         "CI_95_pointwise": [
-          0.19003162339479357,
+          0.1900316233947936,
           0.19348731523839288
         ],
         "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
@@ -749,8 +749,8 @@
         "events_Q": 38547,
         "Q_MC": 0.192735,
         "CI_95_pointwise": [
-          0.19100825495189727,
-          0.19447065522965706
+          0.19100825495189722,
+          0.19447065522965704
         ],
         "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
         "seed_entropy": [
@@ -2901,12 +2901,12 @@
         ]
       },
       "enumerated_reference": {
-        "Q": 0.10635954279106813,
+        "Q": 0.10635954279106809,
         "states": 257,
         "max_mass_drift": 8.881784197001252e-16,
         "min_probability": 0.0,
         "precision": "float64 cross-check, not the certificate",
-        "difference_from_certified_midpoint": 2.220446049250313e-16
+        "difference_from_certified_midpoint": 1.8041124150158794e-16
       },
       "MC": {
         "trials": 200000,
@@ -3645,12 +3645,12 @@
         ]
       },
       "enumerated_reference": {
-        "Q": 0.124462728094639,
+        "Q": 0.12446272809463883,
         "states": 257,
-        "max_mass_drift": 1.7763568394002505e-15,
+        "max_mass_drift": 9.992007221626409e-16,
         "min_probability": 0.0,
         "precision": "float64 cross-check, not the certificate",
-        "difference_from_certified_midpoint": 1.1102230246251565e-16
+        "difference_from_certified_midpoint": 2.7755575615628914e-16
       },
       "MC": {
         "trials": 200000,
@@ -4379,19 +4379,19 @@
         ]
       },
       "enumerated_reference": {
-        "Q": 0.1243371491478619,
+        "Q": 0.12433714914786183,
         "states": 257,
-        "max_mass_drift": 7.771561172376096e-16,
+        "max_mass_drift": 1.3322676295501878e-15,
         "min_probability": 0.0,
         "precision": "float64 cross-check, not the certificate",
-        "difference_from_certified_midpoint": 1.3877787807814457e-16
+        "difference_from_certified_midpoint": 2.0816681711721685e-16
       },
       "MC": {
         "trials": 200000,
         "events_Q": 24729,
         "Q_MC": 0.123645,
         "CI_95_pointwise": [
-          0.12220531013699816,
+          0.12220531013699815,
           0.12509560767979425
         ],
         "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",

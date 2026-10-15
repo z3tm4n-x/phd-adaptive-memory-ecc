@@ -64,6 +64,7 @@
     },
     {
       "id": "acceptance",
+      "checkout_role": "historical_context",
       "path": "MAP.md",
       "commit": "d135c665039a30014f12e2946a676da7ee64e2aa",
       "identical_at_base": true,
@@ -74,6 +75,7 @@
     },
     {
       "id": "plan",
+      "checkout_role": "historical_context",
       "path": "thesis/RESEARCH_PLAN.md",
       "commit": "d135c665039a30014f12e2946a676da7ee64e2aa",
       "identical_at_base": true,
