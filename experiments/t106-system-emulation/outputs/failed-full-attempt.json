@@ -1,0 +1,61 @@
+{
+  "status": "FAILED_ATTEMPT_NOT_A_SCIENTIFIC_RESULT",
+  "runner_commit": "e501fd8a6360dc8dd2e4abccf297bbbae51167ca",
+  "started_utc": "2026-10-15T15:59:25.857600+00:00",
+  "finished_utc": "2026-10-15T17:54:16.568570+00:00",
+  "fixed": "Stand safety assertion rejected a jump containing a pending same-edge event.",
+  "adaptive": "Engineer cancelled after identifying the common stand defect; not a valid full result.",
+  "diagnostic": {
+    "fatal": "nonempty input/dirty word inside jump",
+    "parent": 3476,
+    "event_relative_ns": 202379545401330,
+    "event_absolute_ns": 202379545402000,
+    "offset_ns": 202377882147840,
+    "simulator_local_ns": 1663254160,
+    "requested_jump_services": 25474,
+    "service_ns": 188160
+  },
+  "second_defect": "XSim %t rounds large ps values; v2 uses uint64 decimal ps. Partial traces are NOT retrospectively repaired.",
+  "local_root": "C:\\Users\\Иван\\.codex\\.chatgpt-projects\\g-p-6a8f0744f95081919477f597a4962b6b\\t106-system-emulation\\experiments\\t106-system-emulation\\",
+  "local_only_files": [
+    {
+      "path": ".build/full-profile/state.json",
+      "bytes": 392,
+      "sha256": "1e85cc02055ed0adf8eff7f668bc650857047a8cb1f4369872352f6ace0a25b2"
+    },
+    {
+      "path": ".build/full-profile/fixed.log",
+      "bytes": 5743,
+      "sha256": "a78c5de34bd791b749c2da0e47609d8576614c60deaa9591f0d0f98141d9c3f9"
+    },
+    {
+      "path": ".build/full-profile/adaptive.log",
+      "bytes": 6246,
+      "sha256": "197cf8ba9c728cb8aec225eb34a233f34ce672b8b1dcc3e73af6de149deb0268"
+    },
+    {
+      "path": ".build/burst-burst-fixed-1-1792079967261674092/vendor.log",
+      "bytes": 24562,
+      "sha256": "01bb10a22a0a68bd86be0412dd461c13dde158d0517cce57585811dbaee07da9"
+    },
+    {
+      "path": ".build/burst-burst-fixed-1-1792079967261674092/trace.ctz",
+      "bytes": 97753280,
+      "sha256": "b556ba3eb4cc78367c14e415135bf37a3675ab04573f77eee3ba1f29d6a98011"
+    },
+    {
+      "path": ".build/burst-burst-adaptive-1-1792079996494725593/vendor.log",
+      "bytes": 24687,
+      "sha256": "a03410767fe64c3ff07ec145a51ee07868b54e3e51b6706d607f9f84caf3bf55"
+    },
+    {
+      "path": ".build/burst-burst-adaptive-1-1792079996494725593/trace.ctz",
+      "bytes": 113153137,
+      "sha256": "659bf19834171df365c75f9063d7345bef59cd88decea7917e6bdb9fcf59ce6a"
+    }
+  ],
+  "independently_repeatable_counterexample": "verify_burst_repair.py --execute --record",
+  "repair": "BURST_REPAIR.md",
+  "accepted_inputs_changed": false,
+  "valid_full_scenarios_produced": 0
+}

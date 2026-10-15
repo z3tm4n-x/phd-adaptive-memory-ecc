@@ -1,0 +1,117 @@
+{
+  "mode": "fixed",
+  "scenario": "boundary",
+  "accelerated": true,
+  "macros": [
+    {
+      "begin_ns": 160070,
+      "end_ns": 1665350,
+      "empty_services": 8,
+      "low": false,
+      "price": {
+        "occupied_ns": 706560,
+        "started": 7680,
+        "completed": 7680,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    }
+  ],
+  "host_elapsed_s": 18.73278602299999,
+  "stimulus": {
+    "scenario": "boundary",
+    "horizon_ns": 2000000,
+    "initial_data": "0xa5a50000 XOR word",
+    "initial_errors": 0,
+    "injections": [
+      {
+        "at_ns": 80070,
+        "word": 212333,
+        "bit": 10,
+        "parent": 3476
+      }
+    ],
+    "applications": [],
+    "false_ERR_interval_ns": [
+      0,
+      0
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "ready_low_ns": 80,
+    "ready_period_ns": 340
+  },
+  "trace_storage": {
+    "records": 73233,
+    "raw_sha256": "6d2d03f2f8137e5747ed18647db4d5a1d37f85a5152d48cf3a6acd2afbb2c9e9",
+    "bytes": 28583
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 14226,
+  "ARM_instructions_runtime": 0,
+  "driver_calls": 4,
+  "completed_driver_visits": 3,
+  "max_observed_instructions_per_driver_visit": 21,
+  "MMIO": {
+    "boot_read": 4
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_burst_v2.py": "6f2711894d290583de3eb5faf149f0a91973dcf40967210b1bf3c122ccd0990f",
+    "experiments/t106-system-emulation/bridge_burst.c": "08bdc939c071578777e1ba85b3a744c787c51f1473dacd0ae8c56e1419d38200",
+    "experiments/t106-system-emulation/tb_burst_v2.sv": "738d46ee422494656c8c85d39beddf94495ffcca8baa0123afbf680bf995ba4c",
+    "experiments/t106-system-emulation/burst_v2.tcl": "cbecab8c9c809ea869b5066bdd4578e89bcb187ef0c4599749c73fda8c6ed90e",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t106-system-emulation/BURST_RUN.md": "fc77870ea35fbb3c98bf5234cf17daae1708e09086bb2392cee9fe1e16b254e4",
+    "experiments/t106-system-emulation/BURST_REPAIR.md": "423fa16bd79282027281fe1e1e257a84aece3381168b7fe8b1bd0e869fe3fa6a",
+    "experiments/t106-system-emulation/burst_boundary.py": "2e82af9081ac37c2ef373744614836fb0663ed5a6a1cd221c157cb87f8e4f541",
+    "experiments/t106-system-emulation/burst_run_inputs.py": "c85dcbd11ca43937346946ac5a293af96bfd58c4e5c9a526082e710bf3928522",
+    "experiments/t106-system-emulation/trace_codec.py": "1cddbbdd5e86dc915bbc91e1bd84bb26b925f7d9550121f8632d6a4346ba7dc3",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "b99351676e44e282189113b6e39df8c278d562f7f99047ac88a4cf83cfd040ab",
+    "injections.txt": "3557d9598c8a4f8117a732e97f750a400b5f00a81e968996af1e92a98f8e6c7a",
+    "application.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/burst2-boundary-fixed-1-1792087749692625167",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 0,
+  "represented_driver_visits": 0,
+  "represented_MMIO_reads": 0,
+  "represented_MMIO_writes": 0,
+  "represented_ISA_count": null,
+  "trace_sha256": "6d2d03f2f8137e5747ed18647db4d5a1d37f85a5152d48cf3a6acd2afbb2c9e9"
+}

@@ -1,0 +1,752 @@
+{
+  "mode": "fixed",
+  "scenario": "pilot20",
+  "accelerated": true,
+  "macros": [
+    {
+      "begin_ns": 80070,
+      "end_ns": 1852101107910,
+      "empty_services": 9843224,
+      "low": false,
+      "price": {
+        "occupied_ns": 869353543680,
+        "started": 9449495040,
+        "completed": 9449495040,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 1852101508110,
+      "end_ns": 1852175643150,
+      "empty_services": 394,
+      "low": false,
+      "price": {
+        "occupied_ns": 34798080,
+        "started": 378240,
+        "completed": 378240,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 1852176043450,
+      "end_ns": 6172937776570,
+      "empty_services": 22963232,
+      "low": false,
+      "price": {
+        "occupied_ns": 2028112650240,
+        "started": 22044702720,
+        "completed": 22044702720,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 6172938016670,
+      "end_ns": 6172990325150,
+      "empty_services": 278,
+      "low": false,
+      "price": {
+        "occupied_ns": 24552960,
+        "started": 266880,
+        "completed": 266880,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 6172990645250,
+      "end_ns": 11397905960450,
+      "empty_services": 27768470,
+      "low": false,
+      "price": {
+        "occupied_ns": 2452511270400,
+        "started": 26657731200,
+        "completed": 26657731200,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 11397906040450,
+      "end_ns": 11397971520130,
+      "empty_services": 348,
+      "low": false,
+      "price": {
+        "occupied_ns": 30735360,
+        "started": 334080,
+        "completed": 334080,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 11397971760130,
+      "end_ns": 28506823551490,
+      "empty_services": 90927146,
+      "low": false,
+      "price": {
+        "occupied_ns": 8030685534720,
+        "started": 87290060160,
+        "completed": 87290060160,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 28506823791590,
+      "end_ns": 28506898302950,
+      "empty_services": 396,
+      "low": false,
+      "price": {
+        "occupied_ns": 34974720,
+        "started": 380160,
+        "completed": 380160,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 28506898623150,
+      "end_ns": 31805391215790,
+      "empty_services": 17530254,
+      "low": false,
+      "price": {
+        "occupied_ns": 1548272033280,
+        "started": 16829043840,
+        "completed": 16829043840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 31805391455890,
+      "end_ns": 31805484406930,
+      "empty_services": 494,
+      "low": false,
+      "price": {
+        "occupied_ns": 43630080,
+        "started": 474240,
+        "completed": 474240,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 31805484487030,
+      "end_ns": 32417245708150,
+      "empty_services": 3251282,
+      "low": false,
+      "price": {
+        "occupied_ns": 287153226240,
+        "started": 3121230720,
+        "completed": 3121230720,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 32417245948250,
+      "end_ns": 32417286214490,
+      "empty_services": 214,
+      "low": false,
+      "price": {
+        "occupied_ns": 18900480,
+        "started": 205440,
+        "completed": 205440,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 32417286534690,
+      "end_ns": 42878065819170,
+      "empty_services": 55595128,
+      "low": false,
+      "price": {
+        "occupied_ns": 4910161704960,
+        "started": 53371322880,
+        "completed": 53371322880,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 42878066059170,
+      "end_ns": 42878103691170,
+      "empty_services": 200,
+      "low": false,
+      "price": {
+        "occupied_ns": 17664000,
+        "started": 192000,
+        "completed": 192000,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 42878104011170,
+      "end_ns": 46259206370210,
+      "empty_services": 17969294,
+      "low": false,
+      "price": {
+        "occupied_ns": 1587048046080,
+        "started": 17250522240,
+        "completed": 17250522240,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 46259206450210,
+      "end_ns": 46259303164450,
+      "empty_services": 514,
+      "low": false,
+      "price": {
+        "occupied_ns": 45396480,
+        "started": 493440,
+        "completed": 493440,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 46259303404650,
+      "end_ns": 48539427789930,
+      "empty_services": 12118008,
+      "low": false,
+      "price": {
+        "occupied_ns": 1070262466560,
+        "started": 11633287680,
+        "completed": 11633287680,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 48539428190130,
+      "end_ns": 48539491788210,
+      "empty_services": 338,
+      "low": false,
+      "price": {
+        "occupied_ns": 29852160,
+        "started": 324480,
+        "completed": 324480,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 48539492028410,
+      "end_ns": 51543662867450,
+      "empty_services": 15966044,
+      "low": false,
+      "price": {
+        "occupied_ns": 1410121006080,
+        "started": 15327402240,
+        "completed": 15327402240,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 51543663267650,
+      "end_ns": 51543710307650,
+      "empty_services": 250,
+      "low": false,
+      "price": {
+        "occupied_ns": 22080000,
+        "started": 240000,
+        "completed": 240000,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 51543710547650,
+      "end_ns": 53646376721090,
+      "empty_services": 11174884,
+      "low": false,
+      "price": {
+        "occupied_ns": 986965754880,
+        "started": 10727888640,
+        "completed": 10727888640,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 53646376801090,
+      "end_ns": 53646423088450,
+      "empty_services": 246,
+      "low": false,
+      "price": {
+        "occupied_ns": 21726720,
+        "started": 236160,
+        "completed": 236160,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 53646423408450,
+      "end_ns": 55932162864450,
+      "empty_services": 12147850,
+      "low": false,
+      "price": {
+        "occupied_ns": 1072898112000,
+        "started": 11661936000,
+        "completed": 11661936000,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 55932163104650,
+      "end_ns": 55932257937290,
+      "empty_services": 504,
+      "low": false,
+      "price": {
+        "occupied_ns": 44513280,
+        "started": 483840,
+        "completed": 483840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 55932258177390,
+      "end_ns": 57760837323630,
+      "empty_services": 9718214,
+      "low": false,
+      "price": {
+        "occupied_ns": 858312660480,
+        "started": 9329485440,
+        "completed": 9329485440,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 57760837563830,
+      "end_ns": 57760882722230,
+      "empty_services": 240,
+      "low": false,
+      "price": {
+        "occupied_ns": 21196800,
+        "started": 230400,
+        "completed": 230400,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 57760882802230,
+      "end_ns": 62667324146230,
+      "empty_services": 26075900,
+      "low": false,
+      "price": {
+        "occupied_ns": 2303023488000,
+        "started": 25032864000,
+        "completed": 25032864000,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 62667324466430,
+      "end_ns": 62667341777150,
+      "empty_services": 92,
+      "low": false,
+      "price": {
+        "occupied_ns": 8125440,
+        "started": 88320,
+        "completed": 88320,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 62667341937250,
+      "end_ns": 62964533883490,
+      "empty_services": 1579464,
+      "low": false,
+      "price": {
+        "occupied_ns": 139498260480,
+        "started": 1516285440,
+        "completed": 1516285440,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 62964533963490,
+      "end_ns": 62964553155810,
+      "empty_services": 102,
+      "low": false,
+      "price": {
+        "occupied_ns": 9008640,
+        "started": 97920,
+        "completed": 97920,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 62964553315810,
+      "end_ns": 65949956700130,
+      "empty_services": 15866302,
+      "low": false,
+      "price": {
+        "occupied_ns": 1401311792640,
+        "started": 15231649920,
+        "completed": 15231649920,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 65949956940130,
+      "end_ns": 65949968982370,
+      "empty_services": 64,
+      "low": false,
+      "price": {
+        "occupied_ns": 5652480,
+        "started": 61440,
+        "completed": 61440,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 65949969382570,
+      "end_ns": 69289506444970,
+      "empty_services": 17748390,
+      "low": false,
+      "price": {
+        "occupied_ns": 1567537804800,
+        "started": 17038454400,
+        "completed": 17038454400,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 69289506765170,
+      "end_ns": 69289512786290,
+      "empty_services": 32,
+      "low": false,
+      "price": {
+        "occupied_ns": 2826240,
+        "started": 30720,
+        "completed": 30720,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 69289513186490,
+      "end_ns": 73351436755130,
+      "empty_services": 21587604,
+      "low": false,
+      "price": {
+        "occupied_ns": 1906617185280,
+        "started": 20724099840,
+        "completed": 20724099840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 73351437075330,
+      "end_ns": 73351463041410,
+      "empty_services": 138,
+      "low": false,
+      "price": {
+        "occupied_ns": 12188160,
+        "started": 132480,
+        "completed": 132480,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 73351463441410,
+      "end_ns": 74572390404610,
+      "empty_services": 6488770,
+      "low": false,
+      "price": {
+        "occupied_ns": 573088166400,
+        "started": 6229219200,
+        "completed": 6229219200,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 74572390644610,
+      "end_ns": 74572477950850,
+      "empty_services": 464,
+      "low": false,
+      "price": {
+        "occupied_ns": 40980480,
+        "started": 445440,
+        "completed": 445440,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 74572478191050,
+      "end_ns": 90774751394250,
+      "empty_services": 86109020,
+      "low": false,
+      "price": {
+        "occupied_ns": 7605148646400,
+        "started": 82664659200,
+        "completed": 82664659200,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 90774751794450,
+      "end_ns": 90774793189650,
+      "empty_services": 220,
+      "low": false,
+      "price": {
+        "occupied_ns": 19430400,
+        "started": 211200,
+        "completed": 211200,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 90774793509850,
+      "end_ns": 90775751620570,
+      "empty_services": 5092,
+      "low": false,
+      "price": {
+        "occupied_ns": 449725440,
+        "started": 4888320,
+        "completed": 4888320,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    }
+  ],
+  "host_elapsed_s": 52.95863868800001,
+  "stimulus": {
+    "scenario": "burst-pilot",
+    "horizon_ns": 90775751724696,
+    "initial_data": "0xa5a50000 XOR word",
+    "initial_errors": 0,
+    "injections": [
+      {
+        "at_ns": 1852101493674,
+        "word": 386357,
+        "bit": 14,
+        "parent": 1
+      },
+      {
+        "at_ns": 6172937989910,
+        "word": 115260,
+        "bit": 11,
+        "parent": 2
+      },
+      {
+        "at_ns": 11397906013930,
+        "word": 329759,
+        "bit": 29,
+        "parent": 3
+      },
+      {
+        "at_ns": 28506823763498,
+        "word": 208741,
+        "bit": 35,
+        "parent": 4
+      },
+      {
+        "at_ns": 31805391399838,
+        "word": 167047,
+        "bit": 22,
+        "parent": 5
+      },
+      {
+        "at_ns": 32417245871650,
+        "word": 284527,
+        "bit": 25,
+        "parent": 6
+      },
+      {
+        "at_ns": 42878066001902,
+        "word": 475185,
+        "bit": 22,
+        "parent": 7
+      },
+      {
+        "at_ns": 46259206388346,
+        "word": 73967,
+        "bit": 23,
+        "parent": 8
+      },
+      {
+        "at_ns": 48539428149926,
+        "word": 311834,
+        "bit": 13,
+        "parent": 9
+      },
+      {
+        "at_ns": 51543663212362,
+        "word": 165608,
+        "bit": 31,
+        "parent": 10
+      },
+      {
+        "at_ns": 53646376769446,
+        "word": 214188,
+        "bit": 7,
+        "parent": 11
+      },
+      {
+        "at_ns": 55932163054250,
+        "word": 92780,
+        "bit": 13,
+        "parent": 12
+      },
+      {
+        "at_ns": 57760837531998,
+        "word": 97012,
+        "bit": 32,
+        "parent": 13
+      },
+      {
+        "at_ns": 62667324387374,
+        "word": 22227,
+        "bit": 25,
+        "parent": 14
+      },
+      {
+        "at_ns": 62964533938378,
+        "word": 70155,
+        "bit": 11,
+        "parent": 15
+      },
+      {
+        "at_ns": 65949956876634,
+        "word": 278060,
+        "bit": 0,
+        "parent": 16
+      },
+      {
+        "at_ns": 69289506743782,
+        "word": 162455,
+        "bit": 37,
+        "parent": 17
+      },
+      {
+        "at_ns": 73351437019134,
+        "word": 222356,
+        "bit": 22,
+        "parent": 18
+      },
+      {
+        "at_ns": 74572390565194,
+        "word": 248073,
+        "bit": 21,
+        "parent": 19
+      },
+      {
+        "at_ns": 90774751724694,
+        "word": 26967,
+        "bit": 8,
+        "parent": 20
+      }
+    ],
+    "applications": [],
+    "false_ERR_interval_ns": [
+      0,
+      0
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "ready_low_ns": 80,
+    "ready_period_ns": 340,
+    "pilot_only": true
+  },
+  "trace_storage": {
+    "records": 1578944,
+    "raw_sha256": "59d5f530e19060200f503978bd234fca9f3fef03affe8ab6381e4ef7618115e0",
+    "bytes": 619856
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 14226,
+  "ARM_instructions_runtime": 0,
+  "driver_calls": 4,
+  "completed_driver_visits": 3,
+  "max_observed_instructions_per_driver_visit": 21,
+  "MMIO": {
+    "boot_read": 4
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_burst_v2.py": "6f2711894d290583de3eb5faf149f0a91973dcf40967210b1bf3c122ccd0990f",
+    "experiments/t106-system-emulation/bridge_burst.c": "08bdc939c071578777e1ba85b3a744c787c51f1473dacd0ae8c56e1419d38200",
+    "experiments/t106-system-emulation/tb_burst_v2.sv": "738d46ee422494656c8c85d39beddf94495ffcca8baa0123afbf680bf995ba4c",
+    "experiments/t106-system-emulation/burst_v2.tcl": "cbecab8c9c809ea869b5066bdd4578e89bcb187ef0c4599749c73fda8c6ed90e",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t106-system-emulation/BURST_RUN.md": "fc77870ea35fbb3c98bf5234cf17daae1708e09086bb2392cee9fe1e16b254e4",
+    "experiments/t106-system-emulation/BURST_REPAIR.md": "423fa16bd79282027281fe1e1e257a84aece3381168b7fe8b1bd0e869fe3fa6a",
+    "experiments/t106-system-emulation/burst_boundary.py": "2e82af9081ac37c2ef373744614836fb0663ed5a6a1cd221c157cb87f8e4f541",
+    "experiments/t106-system-emulation/burst_run_inputs.py": "c85dcbd11ca43937346946ac5a293af96bfd58c4e5c9a526082e710bf3928522",
+    "experiments/t106-system-emulation/trace_codec.py": "1cddbbdd5e86dc915bbc91e1bd84bb26b925f7d9550121f8632d6a4346ba7dc3",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "8ae02966db34535f827d31ccf04fe4491a4564b07ebdd4c6e72a053750a7f136",
+    "injections.txt": "16a2a85b65c4d172b443ddc2e405243862c7bfc71481b40aa9c1e6d58d9d4034",
+    "application.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/burst2-burst-fixed-1-1792088205217067383",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 0,
+  "represented_driver_visits": 0,
+  "represented_MMIO_reads": 0,
+  "represented_MMIO_writes": 0,
+  "represented_ISA_count": null,
+  "trace_sha256": "59d5f530e19060200f503978bd234fca9f3fef03affe8ab6381e4ef7618115e0"
+}

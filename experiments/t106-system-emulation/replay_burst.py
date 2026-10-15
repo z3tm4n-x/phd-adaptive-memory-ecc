@@ -44,4 +44,5 @@ def verify(stem):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--case',choices=['pilot20','burst','cold-envelope'],default='pilot20')
     a=p.parse_args()
-    for mode in ('adaptive','fixed'):verify(f'burst-{a.case}-{mode}-skip')
+    prefix='burst2' if a.case=='burst' else 'burst'
+    for mode in ('adaptive','fixed'):verify(f'{prefix}-{a.case}-{mode}-skip')

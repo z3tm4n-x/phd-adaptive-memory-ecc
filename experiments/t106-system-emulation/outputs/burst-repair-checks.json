@@ -1,0 +1,147 @@
+{
+  "scope": "technical stand regressions ONLY; full scenario2 not inferred",
+  "negative": {
+    "rejected": true,
+    "returncode": 1,
+    "fatal": "nonempty input/dirty word inside jump"
+  },
+  "results": {
+    "boundary": {
+      "mode": "fixed",
+      "scenario": "boundary",
+      "horizon_ns": 2000000,
+      "pin_edges_checked": 60600,
+      "explicit_operations": 2525,
+      "represented_operations": 7680,
+      "unfinished_operations": 0,
+      "completed_operations": 10205,
+      "calendar_slots": 10205,
+      "empty_blocks": 1,
+      "represented_services": 0,
+      "programs_checked": 0,
+      "err_events": 0,
+      "history_events": 0,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 938860,
+      "mean_bus_fraction": 0.46943,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [],
+      "model_full_service_ns": null,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 1,
+      "memory_samples_checked": 2525,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": null,
+      "remaining_error_positions": 1,
+      "application_completed": 0,
+      "max_credits": 0,
+      "application_work_ns": {
+        "read": 0,
+        "write": 0
+      },
+      "control_corrective_extra_ns": 0,
+      "max_application_delay_ns": null,
+      "read_results": [],
+      "logical_data_words_changed": 0,
+      "never_written_words": 524288
+    },
+    "short": {
+      "mode": "adaptive",
+      "scenario": "short",
+      "horizon_ns": 2000000,
+      "pin_edges_checked": 60702,
+      "explicit_operations": 2527,
+      "represented_operations": 7680,
+      "unfinished_operations": 0,
+      "completed_operations": 10207,
+      "calendar_slots": 10205,
+      "empty_blocks": 2,
+      "represented_services": 8,
+      "programs_checked": 4,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 2,
+      "bus_work_ns": 939260,
+      "mean_bus_fraction": 0.46963,
+      "peak_any_1ms_fraction": 0.469728,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 4,
+      "memory_samples_checked": 2528,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": null,
+      "remaining_error_positions": 1,
+      "application_completed": 2,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 184,
+        "write": 216
+      },
+      "control_corrective_extra_ns": 0,
+      "max_application_delay_ns": 1450,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 1011460,
+          "data": "12340000"
+        }
+      ],
+      "logical_data_words_changed": 1,
+      "never_written_words": 524287
+    }
+  },
+  "time_formats": [
+    {
+      "ns": 670,
+      "old_ps": 670000,
+      "integer_ps": 670000,
+      "old_floor_error_ns": 0
+    },
+    {
+      "ns": 90775751724002,
+      "old_ps": 90775751724002000,
+      "integer_ps": 90775751724002000,
+      "old_floor_error_ns": 0
+    },
+    {
+      "ns": 202376233820426,
+      "old_ps": 202376233820425984,
+      "integer_ps": 202376233820426000,
+      "old_floor_error_ns": -1
+    },
+    {
+      "ns": 202379545401958,
+      "old_ps": 202379545401958016,
+      "integer_ps": 202379545401958000,
+      "old_floor_error_ns": 0
+    },
+    {
+      "ns": 363900000000002,
+      "old_ps": 363900000000001984,
+      "integer_ps": 363900000000002000,
+      "old_floor_error_ns": -1
+    }
+  ],
+  "sha256": {
+    "experiments/t106-system-emulation/outputs/burst-time-format.txt": "394c123dc607b929aeb28da7f997b9e884ddd1b1207fa691d92003bcfc070a24",
+    "experiments/t106-system-emulation/outputs/burst-boundary-negative.json": "2f85268bb2721e7ebb2a3d91451d20c7cafea54367ebe09ccbd0201711512d6f",
+    "experiments/t106-system-emulation/outputs/burst2-boundary-fixed-skip.json": "4e19aa1e18b445b24d75597518a14c16403902428c73307ee164c24d60089b46",
+    "experiments/t106-system-emulation/outputs/burst2-boundary-fixed-skip.trace.ct3": "df61b41235fb43adb08eedfd6af2d85163eb776dc268a40264187618eae0f5b8",
+    "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.json": "a01d4be9c95acdf8e0f6067337156fae6091bd41df4e913134e395cd09bb94ab",
+    "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.trace.ct3": "aa861291b02d23fe2912bb05deec55814799053d900fd22a62d98f001ccce5b1",
+    "experiments/t106-system-emulation/verify_burst_repair.py": "336d60e65ba6c6c849e426ebb20863b1fb17cb539b833abd8719c1f656bb515f",
+    "experiments/t106-system-emulation/test_burst_boundary.py": "5236183281909934bed32914b73e4e1700427174a52c0cd44308236825670321",
+    "experiments/t106-system-emulation/tb_time_format.sv": "44c886b5b4194c2f0764114afd598a2580b442ecee4a3af0161980137587f7c4",
+    "experiments/t106-system-emulation/time_format.tcl": "a36938d30873607aba55a9825ebbbcdecf56a1ad9eb251f1816f84a7652f8938",
+    "experiments/t106-system-emulation/BURST_REPAIR.md": "423fa16bd79282027281fe1e1e257a84aece3381168b7fe8b1bd0e869fe3fa6a",
+    "experiments/t106-system-emulation/report_guard.py": "5ac294b3452b9b271056bfec2c3e10ed158f7ff24ec32a8ec7981af4d9091ddf"
+  }
+}

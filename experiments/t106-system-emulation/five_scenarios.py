@@ -57,14 +57,14 @@ def collect(require_full=True):
     for case,name in ((1,'quiet'),(2,'burst'),(3,'loss'),(4,'cold'),(5,'memory')):
         for mode in ('adaptive','fixed'):
             if case==2:
-                path=OUT/f'burst-burst-{mode}-skip-checked.json'
+                path=OUT/f'burst2-burst-{mode}-skip-checked.json'
                 if not path.exists():
                     missing.append(f'complete scenario2/{mode}');continue
                 report=json.loads(path.read_text())
                 assert report['scope']=='complete frozen scenario2, digital model ONLY'
                 for p,h in report['sha256'].items():
                     assert hashlib.sha256((REPO/p).read_bytes()).hexdigest()==h,p
-                result=report['results'];meta=load(f'burst-burst-{mode}-skip.json')
+                result=report['results'];meta=load(f'burst2-burst-{mode}-skip.json')
                 assert meta['stimulus']==build()
                 assert result['horizon_ns']==363900_000_000_000 and result['injections']==5237
             elif case==4:
@@ -82,7 +82,7 @@ def collect(require_full=True):
             rows.append(normalize(case,mode,result,meta))
     if require_full:assert not missing,('full delivery is not ready',missing)
     if not missing:
-        a,b=[load(f'burst-burst-{mode}-skip.json') for mode in ('adaptive','fixed')]
+        a,b=[load(f'burst2-burst-{mode}-skip.json') for mode in ('adaptive','fixed')]
         assert a['stimulus']==b['stimulus']
         for k in ('injections.txt','application.txt'):assert a['input_sha256'][k]==b['input_sha256'][k]
     previous=load('summary.json')
@@ -116,6 +116,7 @@ def markdown(data):
             f"{r['completed_operations']} / {r['unfinished_operations']} |")
     if data['missing']:text+=['','Не выполнено: '+', '.join(data['missing'])+'.']
     text+=['','Полные CPU/MMIO/шина по видам — five-scenarios.json. CPU и шина не складываются.',
+        'Числа операций включают точно свёрнутые пустые интервалы; не все операции исполнялись буквально.',
         'ПЛИС — один и тот же принятый образ; аппаратные ARM-время/WCET не измерены.','']
     return '\n'.join(text)
 
@@ -129,7 +130,7 @@ if __name__=='__main__':
         assert not a.allow_incomplete
         deadline=time.monotonic()+8*3600
         while True:
-            state=json.loads((HERE/'.build/full-profile/state.json').read_text())
+            state=json.loads((HERE/'.build/full-profile-v2/state.json').read_text())
             if state['status']=='verified_both':break
             if state['status']!='running':raise RuntimeError(('full execution failed',state))
             if time.monotonic()>deadline:raise TimeoutError('full profile did not finish within8h')

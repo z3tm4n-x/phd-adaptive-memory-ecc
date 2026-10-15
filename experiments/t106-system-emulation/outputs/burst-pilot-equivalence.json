@@ -1,0 +1,33 @@
+{
+  "scope": "same original 20-event technical prefix; not full scenario2",
+  "comparisons": {
+    "adaptive": {
+      "raw_trace_sha256": "660e0f894ea87fe1a941aab6da6dd9b7df69255dd60c9985a243baa6bb40ed5d",
+      "identical_inputs": true,
+      "identical_raw_trace": true,
+      "identical_results": true,
+      "horizon_ns": 90775751724696,
+      "injections": 20
+    },
+    "fixed": {
+      "raw_trace_sha256": "59d5f530e19060200f503978bd234fca9f3fef03affe8ab6381e4ef7618115e0",
+      "identical_inputs": true,
+      "identical_raw_trace": true,
+      "identical_results": true,
+      "horizon_ns": 90775751724696,
+      "injections": 20
+    }
+  },
+  "sha256": {
+    "experiments/t106-system-emulation/verify_burst_upgrade.py": "85dec01bad7b499db670d8794ae670725464d52ffb6ca64b2342a6b40505b2c1",
+    "experiments/t106-system-emulation/outputs/failed-full-attempt.json": "61e42296848d9350373ad4de19705f48568d835a788fbf5201038542a8419988",
+    "experiments/t106-system-emulation/outputs/burst-pilot20-adaptive-skip.json": "5b9733eaa062040900f506a71b3c3b3948e57d59772991076a4eeb7fd033acca",
+    "experiments/t106-system-emulation/outputs/burst-pilot20-adaptive-skip-checked.json": "8ba56f5922ad0910fc13d9ceb13959b5d1eb41a7e275a1129dac37f7863f6dc5",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-adaptive-skip.json": "96d965fd454d31f6c86b9932614dd5c4be952e4b31f3297f4e7f5c30c83c7a8e",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-adaptive-skip-checked.json": "22e3c005d79feadfd6ee08440d68c14f8220bfc4c624ebbaa3fa71cd6d632740",
+    "experiments/t106-system-emulation/outputs/burst-pilot20-fixed-skip.json": "b10b2bf96aef45296eba949ad2dbbca8ecc5673e8509ad7c034aa94441d54a12",
+    "experiments/t106-system-emulation/outputs/burst-pilot20-fixed-skip-checked.json": "09afc35358dafdad8b5f9168d01a5ae569cd938e361312a67b48875396a0a841",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-fixed-skip.json": "24b369c8026821369c012951ceaa227fd75383c74bfd01823c542b4815d9655d",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-fixed-skip-checked.json": "a5abf3b4d0436d8f48e73092a3370aff7e136f5af3cbeeb3850996a944fc11c3"
+  }
+}

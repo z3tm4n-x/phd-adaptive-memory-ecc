@@ -43,7 +43,11 @@ def main():
     subprocess.run([sys.executable,str(HERE/'summary.py')]+(['--regenerate'] if args.execute or args.execute_empty else []),check=True)
     subprocess.run([sys.executable,str(HERE/'replay_burst.py')],check=True)
     subprocess.run([sys.executable,str(HERE/'replay_burst.py'),'--case','cold-envelope'],check=True)
-    reports=[HERE/f'outputs/burst-burst-{m}-skip-checked.json' for m in ('adaptive','fixed')]
+    if (HERE/'outputs/burst-repair-checks.json').exists():
+        subprocess.run([sys.executable,str(HERE/'verify_burst_repair.py')],check=True)
+    if (HERE/'outputs/burst-pilot-equivalence.json').exists():
+        subprocess.run([sys.executable,str(HERE/'verify_burst_upgrade.py')],check=True)
+    reports=[HERE/f'outputs/burst2-burst-{m}-skip-checked.json' for m in ('adaptive','fixed')]
     if all(p.exists() for p in reports):
         subprocess.run([sys.executable,str(HERE/'replay_burst.py'),'--case','burst'],check=True)
         subprocess.run([sys.executable,str(HERE/'five_scenarios.py')],check=True)
