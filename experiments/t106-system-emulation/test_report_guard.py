@@ -4,10 +4,16 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 from report_guard import canonical, prepare, publish_or_compare
 
 
 class ReportGuardTests(unittest.TestCase):
+    def test_read_only_repair_replay_creates_no_scratch_directory(self):
+        from verify_burst_repair import main
+        with patch.object(Path, 'mkdir', side_effect=AssertionError('read-only replay created a directory')):
+            main()
+
     def sample(self):
         return dict(scope='digital only', results=dict(count=2**63+1,
             mean=0.123456789012345, permissions=[(9, False, None)]),

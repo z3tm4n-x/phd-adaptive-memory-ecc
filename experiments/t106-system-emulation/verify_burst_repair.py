@@ -23,9 +23,9 @@ def main(execute=False, record=False):
     from report_guard import publish_or_compare
     out = HERE/'outputs'
     folder = HERE/'.build/burst-repair'
-    folder.mkdir(exist_ok=True)
     if execute:
         assert record
+        folder.mkdir(parents=True, exist_ok=True)
         with (folder/'old-boundary.log').open('w') as log:
             bad = subprocess.run([sys.executable, str(Path(__file__).resolve()), '--old-boundary-child'],
                                  stdout=log, stderr=subprocess.STDOUT)

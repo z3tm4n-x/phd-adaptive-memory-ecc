@@ -137,11 +137,31 @@
     "experiments/t106-system-emulation/outputs/burst2-boundary-fixed-skip.trace.ct3": "df61b41235fb43adb08eedfd6af2d85163eb776dc268a40264187618eae0f5b8",
     "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.json": "a01d4be9c95acdf8e0f6067337156fae6091bd41df4e913134e395cd09bb94ab",
     "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.trace.ct3": "aa861291b02d23fe2912bb05deec55814799053d900fd22a62d98f001ccce5b1",
-    "experiments/t106-system-emulation/verify_burst_repair.py": "336d60e65ba6c6c849e426ebb20863b1fb17cb539b833abd8719c1f656bb515f",
+    "experiments/t106-system-emulation/verify_burst_repair.py": "2782e5a04c1c8b072a94539e9becda657b29535c5e30fcd77261a33a297df52f",
     "experiments/t106-system-emulation/test_burst_boundary.py": "5236183281909934bed32914b73e4e1700427174a52c0cd44308236825670321",
     "experiments/t106-system-emulation/tb_time_format.sv": "44c886b5b4194c2f0764114afd598a2580b442ecee4a3af0161980137587f7c4",
     "experiments/t106-system-emulation/time_format.tcl": "a36938d30873607aba55a9825ebbbcdecf56a1ad9eb251f1816f84a7652f8938",
     "experiments/t106-system-emulation/BURST_REPAIR.md": "423fa16bd79282027281fe1e1e257a84aece3381168b7fe8b1bd0e869fe3fa6a",
     "experiments/t106-system-emulation/report_guard.py": "5ac294b3452b9b271056bfec2c3e10ed158f7ff24ec32a8ec7981af4d9091ddf"
-  }
+  },
+  "verification_history": [
+    {
+      "previous_canonical_report_sha256": "0f98b5cdf12cbcb1c41c4f38cb407d190cf3a04acf917bcf071a3cac78e9a14b",
+      "previous_sha256": {
+        "experiments/t106-system-emulation/outputs/burst-time-format.txt": "394c123dc607b929aeb28da7f997b9e884ddd1b1207fa691d92003bcfc070a24",
+        "experiments/t106-system-emulation/outputs/burst-boundary-negative.json": "2f85268bb2721e7ebb2a3d91451d20c7cafea54367ebe09ccbd0201711512d6f",
+        "experiments/t106-system-emulation/outputs/burst2-boundary-fixed-skip.json": "4e19aa1e18b445b24d75597518a14c16403902428c73307ee164c24d60089b46",
+        "experiments/t106-system-emulation/outputs/burst2-boundary-fixed-skip.trace.ct3": "df61b41235fb43adb08eedfd6af2d85163eb776dc268a40264187618eae0f5b8",
+        "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.json": "a01d4be9c95acdf8e0f6067337156fae6091bd41df4e913134e395cd09bb94ab",
+        "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.trace.ct3": "aa861291b02d23fe2912bb05deec55814799053d900fd22a62d98f001ccce5b1",
+        "experiments/t106-system-emulation/verify_burst_repair.py": "336d60e65ba6c6c849e426ebb20863b1fb17cb539b833abd8719c1f656bb515f",
+        "experiments/t106-system-emulation/test_burst_boundary.py": "5236183281909934bed32914b73e4e1700427174a52c0cd44308236825670321",
+        "experiments/t106-system-emulation/tb_time_format.sv": "44c886b5b4194c2f0764114afd598a2580b442ecee4a3af0161980137587f7c4",
+        "experiments/t106-system-emulation/time_format.tcl": "a36938d30873607aba55a9825ebbbcdecf56a1ad9eb251f1816f84a7652f8938",
+        "experiments/t106-system-emulation/BURST_REPAIR.md": "423fa16bd79282027281fe1e1e257a84aece3381168b7fe8b1bd0e869fe3fa6a",
+        "experiments/t106-system-emulation/report_guard.py": "5ac294b3452b9b271056bfec2c3e10ed158f7ff24ec32a8ec7981af4d9091ddf"
+      },
+      "reason": "verification provenance refreshed; scientific payload and trace hashes unchanged"
+    }
+  ]
 }
