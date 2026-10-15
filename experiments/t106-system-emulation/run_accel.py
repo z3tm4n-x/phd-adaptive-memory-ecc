@@ -51,7 +51,7 @@ def inputs(folder,c):
     (folder/'application.txt').write_text(''.join(lines))
     return {p.name:digest(p) for p in (folder/'injections.txt',folder/'application.txt')}
 
-def execute(mode,c,case_name='short',accelerate=True):
+def execute(mode,c,case_name='short',accelerate=True,no_low_jump=False):
     folder=HERE/'.build'/f'accel-{case_name}-{mode}-{int(accelerate)}-{time.time_ns()}'
     folder.mkdir(parents=True)
     source_hashes={str(p.relative_to(REPO)):digest(p) for p in
@@ -60,7 +60,7 @@ def execute(mode,c,case_name='short',accelerate=True):
     from empty_rule import State,Batch,Decision,advance_empty,library
     from empty_time import integrate,first_slot,slot
     lib=library()
-    horizon={'short':1200000,'quiet':272000000000,'loss':362000000000}[case_name]
+    horizon={'short':1200000,'quiet':272000000000,'loss':362000000000,'lowprobe':180312000000}[case_name]
     j=first_slot(181000000000);j+=(-j)%3
     fb=slot(j)+58 if case_name=='quiet' else 0
     fe=fb+4 if fb else 0
@@ -185,6 +185,7 @@ def execute(mode,c,case_name='short',accelerate=True):
             else:return
             flags=rpc(6)[1]
             low=bool(flags&2)
+            if no_low_jump and low:return
             if bool(flags&4)!=low and mode!='fixed':return
             now=(last_tick+offset_ticks)*20
             limit=t0+horizon
@@ -194,7 +195,7 @@ def execute(mode,c,case_name='short',accelerate=True):
             if st is not None:
                 d=Decision.from_buffer_copy(bytes(u.mem_read(symbols['controller']+168,32)))
                 if d.flags==1 and d.not_before*20>now:limit=min(limit,d.not_before*20)
-            n=max(0,(limit-now-10000)//376320)*2
+            n=min((1<<31)-2,max(0,(limit-now-10000)//376320)*2)
             if n==0:return
             end=now+n*188160
             price=integrate(now-t0,end-t0,low=low)
@@ -232,6 +233,8 @@ def execute(mode,c,case_name='short',accelerate=True):
     text=(folder/'vendor.log').read_text(errors='replace')
     assert not any(x in text for x in ('Fatal:', 'FATAL:', 'ERROR:')),text[-3000:]
     meta={'mode':mode,'scenario':case_name,'accelerated':accelerate,'macros':macros,'host_elapsed_s':time.monotonic()-before,
+        'stimulus':{'horizon_ns':horizon,'false_ERR_interval_ns':[fb,fe],'loss_slow_interval_ns':[lb,le],
+                    'initial_data':hex(0xa5a50000),'initial_errors':0,'application_requests':0},
         'startup_instructions':startup_insns,'ARM_instructions_including_boot':n,
         'ARM_instructions_runtime':mission_insns,'driver_calls':calls,'completed_driver_visits':visits,
         'max_observed_instructions_per_driver_visit':max(driver_instructions),
@@ -241,9 +244,15 @@ def execute(mode,c,case_name='short',accelerate=True):
         'actual_ARM_time_ns':None,'ARM_WCET_ns':None,'CPU_utilization_measured':None,
         'source_sha256':source_hashes,'input_sha256':input_hashes,'build':str(folder),
         'scope':'actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET'}
+    represented=sum(m['empty_services'] for m in macros) if mode=='adaptive' else 0
+    meta['represented_full_services']=represented
+    meta['represented_driver_visits']=2*represented
+    meta['represented_MMIO_reads']=10*represented
+    meta['represented_MMIO_writes']=10*represented
+    meta['represented_ISA_count']=None
     (folder/'run.json').write_text(json.dumps(meta,indent=2)+'\n')
     out=HERE/'outputs';out.mkdir(exist_ok=True)
-    stem=f'accel-{case_name}-{mode}-{"skip" if accelerate else "literal"}'
+    stem=f'accel-{case_name}-{mode}-{"no-low" if no_low_jump else "skip" if accelerate else "literal"}'
     meta['trace_sha256']=digest(folder/'trace.txt')
     (out/f'{stem}.json').write_text(json.dumps(meta,indent=2)+'\n')
     with (out/f'{stem}.trace.gz').open('wb') as raw:
@@ -256,9 +265,10 @@ def execute(mode,c,case_name='short',accelerate=True):
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--mode',choices=['adaptive','fixed','both'],default='adaptive')
-    ap.add_argument('--case',choices=['short','quiet','loss'],default='short')
+    ap.add_argument('--case',choices=['short','quiet','loss','lowprobe'],default='short')
     ap.add_argument('--literal',action='store_true')
+    ap.add_argument('--no-low-jump',action='store_true',help='Validation: same full initial hold, then literal LOW tail')
     args=ap.parse_args();c=read_config()
     for mode in (['adaptive','fixed'] if args.mode=='both' else [args.mode]):
-        print('START',args.case,mode,flush=True);execute(mode,c,args.case,not args.literal)
+        print('START',args.case,mode,flush=True);execute(mode,c,args.case,not args.literal,args.no_low_jump)
 if __name__=='__main__':main()

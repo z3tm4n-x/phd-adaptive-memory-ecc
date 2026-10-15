@@ -41,7 +41,9 @@ def compare_short(a,b):
     jumps=[f for f in br if f[0]=='JUMP']
     assert jumps,'no accelerated interval exercised'
     intervals=[(int(f[1]),int(f[1])+int(f[2])*1000) for f in jumps]
-    expected=[f for f in ar if not any(x<=int(f[1])<y for x,y in intervals)]
+    for f in ar:
+        if f[0]=='JUMP':assert f in br,'baseline jump changed'
+    expected=[f for f in ar if f[0]!='JUMP' and not any(x<=int(f[1])<y for x,y in intervals)]
     actual=[f for f in br if f[0]!='JUMP']
     assert len(expected)==len(actual),('tail length',len(expected),len(actual))
     for i,(x,y) in enumerate(zip(expected,actual)):
@@ -63,6 +65,41 @@ def clean_work(t,low):
         ans+=q*92+min(rem,92)
     return ans
 
+def window_peak(intervals,blocks,horizon,width=1000000):
+    """Exact continuous-window maximum for explicit pulses + periodic blocks.
+
+    A wholly internal window repeats every4704ns. All other extrema occur at
+    pulse boundaries or a boundary minus width; enumerate those near each
+    block edge, as well as every explicit pulse. No sampled-time maximum.
+    """
+    intervals=sorted(intervals);blocks=sorted(blocks)
+    ends=[b for a,b in intervals];sums=[0]
+    for a,b in intervals:sums.append(sums[-1]+b-a)
+    bend=[b for a,b,l in blocks];bsum=[0]
+    for a,b,l in blocks:bsum.append(bsum[-1]+clean_work(b,l)-clean_work(a,l))
+    def prefix(t):
+        i=bisect.bisect_right(ends,t);value=sums[i]
+        if i<len(intervals):value+=max(0,t-intervals[i][0])
+        j=bisect.bisect_right(bend,t);value+=bsum[j]
+        if j<len(blocks):
+            a,b,l=blocks[j]
+            if t>a:value+=clean_work(t,l)-clean_work(a,l)
+        return value
+    candidates={0,horizon-width}
+    for a,b in intervals:
+        candidates.update((a,b,a-width,b-width))
+    for a,b,l in blocks:
+        candidates.update((a,b,a-width,b-width))
+        for center in (a,b):
+            first=max(a,center-width-4704);last=min(b,center+width+4704)
+            for frame in range(max(0,first//1568-1),last//1568+2):
+                for k in range(8):
+                    if l and (frame*8+k)%3:continue
+                    p=frame*1568+k*164
+                    if a<=p<=b:candidates.update((p,p+92,p-width,p+92-width))
+    best=max((prefix(x+width)-prefix(x),-x) for x in candidates if 0<=x<=horizon-width)
+    return best[0],-best[1]
+
 def check(path,meta):
     cfg=ServiceConfig(words=W).validate();raw=[];history=[];oracle=Oracle()
     slot=0;freeze=2;frozen={0:True,1:True};t0=None;horizon=None;rule_start=None
@@ -70,6 +107,10 @@ def check(path,meta):
     last_end=None;old_gen=0;healthy=True;processed=0;latest_deadline=None
     operations=0;completed=0;skipped_completed=0;pin_edges=0;writes=0
     intervals=[];blocks=[];cuts=[];programs=0;represented=0;permissions=[];err_events=0
+    local_loss=False;current_permit=0;loss_edges=[]
+    false_slot=(181000000000//1568)*8
+    while cfg.start(false_slot)<181000000000 or false_slot%3:false_slot+=1
+    false_begin=cfg.start(false_slot)+58 if meta['scenario']=='quiet' else 0
     fname=Path(path).name
 
     def verify_program(b,d,count=1):
@@ -128,7 +169,7 @@ def check(path,meta):
                 assert int(f[2])==active and t==started+60
                 alias,dq,err,mask=[int(x,16) for x in f[3:]]
                 assert (alias,dq,mask)==(0,0,0)
-                assert err in (0,1)  # false ERR is a named external input, not a memory bit
+                assert err==int(bool(false_begin) and false_begin<=t-t0<false_begin+4)
             elif kind=='PIN':
                 ident,age=int(f[2]),int(f[3]);v=[int(x,16) for x in f[4:]]
                 assert ident==active and t==started+age and v[16]==0
@@ -146,14 +187,24 @@ def check(path,meta):
             elif kind=='EVENT':
                 e=int(f[2],16);gen+=1
                 assert e>>66==gen and (e>>2)&((1<<64)-1)==(t-t0)//4
+                assert not current_permit,'publication must veto on this fast edge'
                 if e&1:
                     assert active is not None and transaction.latch_err and t==started+64
+                    assert meta['scenario']=='quiet' and t-t0==false_begin+6
                     err_events+=1
+                if bool(e&2)!=local_loss:
+                    assert meta['scenario']=='loss'
+                    scheduled=(181000000000,181002000000)[len(loss_edges)]
+                    assert 0<=t-t0-scheduled<=100,'bounded slow-input to fast publication CDC'
+                    loss_edges.append(t-t0);local_loss=bool(e&2)
                 raw.append(e)
-            elif kind=='HISTORY':history.append((t,int(f[2],16),int(f[3],16)))
+            elif kind=='HISTORY':
+                assert len(history)<len(raw) and int(f[2],16)==raw[len(history)],'history loss/repetition'
+                history.append((t,int(f[2],16),int(f[3],16)))
             elif kind=='CUT':
                 tick=int(f[2],16)
                 if previous_cut is not None:assert tick-previous_cut==STEP,('cut spacing',tick-previous_cut)
+                else:assert 0<t-t0<=1000000,'initial full-service deadline'
                 previous_cut=tick;cuts.append(t)
             elif kind=='PROGRAM':verify_program(packet(f[2]),decision(f[3]))
             elif kind=='JUMP':
@@ -173,12 +224,18 @@ def check(path,meta):
             elif kind=='PERMISSION':
                 permit,low,loss,g,pg,deadline=[int(x,16) for x in f[2:]]
                 if low:
-                    assert t//20>=deadline and processed==pg
+                    # slow posedges are 10+20*k ns; after that edge tick=k+1.
+                    # PERMISSION is sampled by the fast clock, not at a cut.
+                    assert deadline==latest_deadline and (t+10)//20>=deadline and processed==pg,(t,deadline,latest_deadline,pg,processed)
                     assert oracle.healthy and not oracle.fault
-                if permit:assert not loss and g==pg
+                # loss in this record is the EXTERNAL slow-domain pin. Its
+                # standard CDC precedes fast publication/local invalidation.
+                if permit:assert not local_loss and g==pg and latest_deadline is not None and (t+10)//20>=latest_deadline
+                current_permit=permit
                 permissions.append((t-t0,permit,low,loss,g,pg,deadline))
             elif kind=='HORIZON':
                 horizon=t-t0
+                assert horizon==meta['stimulus']['horizon_ns'],'declared horizon changed'
                 assert int(f[2])==(-1 if active is None else active)
                 if active is not None:intervals.append((started-t0,horizon))
             elif kind in ('QUALIFIED','END'):pass
@@ -186,17 +243,22 @@ def check(path,meta):
         except (AssertionError,IndexError,KeyError,ValueError) as e:
             raise AssertionError(f'{fname}:{line}:{kind} t={t}ns: {e}') from e
     assert horizon and raw==[e for _,e,_ in history]
+    assert err_events==int(meta['scenario']=='quiet')
+    assert len(loss_edges)==(2 if meta['scenario']=='loss' else 0)
     assert len(blocks)==len(meta['macros'])
     for block,m in zip(blocks,meta['macros']):
         assert block==(m['begin_ns'],m['end_ns'],m['low'])
         assert clean_work(block[1],block[2])-clean_work(block[0],block[2])==m['price']['occupied_ns']
     work=sum(b-a for a,b in intervals)+sum(clean_work(b,l)-clean_work(a,l) for a,b,l in blocks)
+    peak,peak_at=window_peak(intervals,blocks,horizon)
+    assert peak<=800000
     return dict(mode=meta['mode'],scenario=meta['scenario'],horizon_ns=horizon,
         pin_edges_checked=pin_edges,explicit_operations=completed,represented_operations=skipped_completed,
         unfinished_operations=int(active is not None),completed_operations=completed+skipped_completed,
         calendar_slots=slot,empty_blocks=len(blocks),represented_services=represented,programs_checked=programs,
-        err_events=err_events,history_events=len(history),physical_alias_writes=writes,
-        bus_work_ns=work,mean_bus_fraction=work/horizon,permissions=permissions,
+        err_events=err_events,history_events=len(history),loss_publication_relative_ns=loss_edges,physical_alias_writes=writes,
+        bus_work_ns=work,mean_bus_fraction=work/horizon,peak_any_1ms_fraction=peak/1000000,
+        peak_window_start_relative_ns=peak_at,permissions=permissions,
         model_full_service_ns=PERIOD if cuts else None,hardware_ARM_time_ns=None,whole_mission_Q_inferred=False)
 
 def main():
@@ -204,7 +266,9 @@ def main():
     ap.add_argument('--compare',action='store_true');args=ap.parse_args()
     stem=f'accel-{args.case}-{args.mode}-skip';meta=json.loads((HERE/f'outputs/{stem}.json').read_text())
     path=HERE/f'outputs/{stem}.trace.gz';result=check(path,meta)
-    if args.compare:result['literal_equivalence']=compare_short(HERE/f'outputs/accel-short-{args.mode}-literal.trace.gz',path)
+    if args.compare:
+        base=f'accel-{args.case}-{args.mode}-'+('no-low' if args.case=='lowprobe' else 'literal')
+        result['literal_equivalence']=compare_short(HERE/f'outputs/{base}.trace.gz',path)
     print(json.dumps(result,indent=2))
     (HERE/f'outputs/{stem}-check.json').write_text(json.dumps(result,indent=2)+'\n')
 

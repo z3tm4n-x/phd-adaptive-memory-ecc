@@ -85,8 +85,13 @@ module tb_accel;
    end else if(op==5) begin
     if(!jump_safe || delay<=0 || delay%2) $fatal(1,"unsafe/nonperiodic jump");
     jump_ns=64'd188160*delay;shift_words=(64'd320*delay)%524288;
-    if((false_begin && ($time+offset)-t0<false_end && ($time+offset)-t0+jump_ns>=false_begin) ||
-       (loss_begin && ($time+offset)-t0<loss_end && ($time+offset)-t0+jump_ns>=loss_begin))
+    if(dut.uptime>64'hffffffffffffffff-jump_ns/4 ||
+       dut.slow_tick>64'hffffffffffffffff-jump_ns/20)
+      $fatal(1,"jump would overflow mission time");
+    if((false_begin && ($time+offset)-t0<false_begin && ($time+offset)-t0+jump_ns>=false_begin) ||
+       (false_end && ($time+offset)-t0<false_end && ($time+offset)-t0+jump_ns>=false_end) ||
+       (loss_begin && ($time+offset)-t0<loss_begin && ($time+offset)-t0+jump_ns>=loss_begin) ||
+       (loss_end && ($time+offset)-t0<loss_end && ($time+offset)-t0+jump_ns>=loss_end))
       $fatal(1,"external input inside jump");
     if(dut.candidates.active && dut.candidates.allowed &&
        dut.slow_tick<dut.candidates.after_tick &&
@@ -117,9 +122,9 @@ module tb_accel;
     dut.calendar.word_due=dut.calendar.word_due+shift_words;
     dut.backend_command[20:2]=dut.backend_command[20:2]+shift_words;
     dut.backend.word_out=dut.backend.word_out+shift_words;
-    if(dut.calendar.warmup_left<=delay*960) begin
+    if(dut.calendar.warmup_left<=64'd960*delay) begin
      dut.calendar.warmup_left=0;dut.calendar.warmup_active=0;
-    end else dut.calendar.warmup_left=dut.calendar.warmup_left-delay*960;
+    end else dut.calendar.warmup_left=dut.calendar.warmup_left-64'd960*delay;
     dut.event_snapshot[65:2]=dut.event_snapshot[65:2]+jump_ns/4;
     dut.event_staged[65:2]=dut.event_staged[65:2]+jump_ns/4;
     serial=serial+skip_done;
