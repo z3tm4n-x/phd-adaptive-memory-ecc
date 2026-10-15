@@ -1,0 +1,81 @@
+{
+  "task": 166,
+  "date": "2026-10-15",
+  "base": "d135c665039a30014f12e2946a676da7ee64e2aa",
+  "status": "preregistered_synthetic_matrix",
+  "W": [
+    4,
+    8
+  ],
+  "n": 39,
+  "code": "SEC-DED(39,32), first Hamming weight >1",
+  "T_s": "17/5",
+  "period_s": "1",
+  "read_offset_s": "0",
+  "read_to_fence_s": [
+    "0",
+    "1/20"
+  ],
+  "profiles": {
+    "constant": [
+      {
+        "start": "0",
+        "end": "17/5",
+        "lambda_array_s_inv": "4/5"
+      }
+    ],
+    "piecewise": [
+      {
+        "start": "0",
+        "end": "3/5",
+        "lambda_array_s_inv": "2/5"
+      },
+      {
+        "start": "3/5",
+        "end": "7/5",
+        "lambda_array_s_inv": "8/5"
+      },
+      {
+        "start": "7/5",
+        "end": "17/5",
+        "lambda_array_s_inv": "3/5"
+      }
+    ]
+  },
+  "ordering": "W ascending; profile constant then piecewise; gap zero then 1/20",
+  "calendar": "read(k,w)=k*period+w*period/W; fence=read+gap; execute only times<=T",
+  "service": "U: unconditional atomic full-word write of correctly decoded latched image at fence; arrivals in gap remain live and may cause absorbing Q",
+  "events": "NHPP on array; each event uniformly picks one word and one of all39 bits, XOR inversion; independent marks",
+  "initial": "all words clean, no pending write; synthetic specified state, no physical preparation claim",
+  "controller_fault_probability": "0 as model assumption",
+  "scope_excluded": [
+    "MCU/MBU",
+    "nonuniform or correlated marks",
+    "adaptive control and statistical prediction",
+    "ERR-conditional E/C service",
+    "application/ARM",
+    "physical service faults",
+    "large SRAM/missions"
+  ],
+  "mc": {
+    "trials_per_case": 200000,
+    "seed_base": 2026101501,
+    "seed_rule": "SeedSequence([seed_base,case_index]) with PCG64; zero-based declared ordering",
+    "confidence": 0.95,
+    "procedure": "two-sided equal-tailed Clopper-Pearson",
+    "coverage": "pointwise; not simultaneous for8 cases",
+    "seed_selection": "fixed before calculating any Q or MC counts"
+  },
+  "exact": {
+    "uniformization_terms": 32,
+    "output_decimal_places": 36,
+    "max_enclosure_width": "1e-30",
+    "arithmetic": "Fraction; positive Taylor/Poisson tails bounded geometrically, decimal output rounded outward"
+  },
+  "main_bounds": {
+    "L": "T45 (1)-(2): product over no-service cells split at profile changes; p=(n-1)/(2*n)*(lambda*cell_length/W)^2*exp(-lambda*cell_length/W)",
+    "U": "T52 (3), appendix B.1-B.2: min(1,(n-1)/(2*n)*sum_over_word_fence_intervals (integral(lambda)/W)^2)",
+    "U_token": "T57 (5) first expression: min(1,1/2*sum_over_word_fence_intervals (integral(lambda)/W)^2)",
+    "U_coarse": "T36 (8) pair witness with all resets ignored, clean start, d=0: min(1,F^2/(2*W))"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "task": 166,
+  "base": "d135c665039a30014f12e2946a676da7ee64e2aa",
+  "sources": [
+    {
+      "id": "T36",
+      "path": "theory/t36-robust-count.md",
+      "commit": "377d05529cbebc9f1947ee210438d2b25e7a9790",
+      "identical_at_base": true,
+      "git_blob": "04f7e9714d7b794ec5cabe0034ef9be6e54c9988",
+      "sha256": "0f05803d1efa42a313964288453b918997a90ca0aac45ad7cd8c2d591bbe2dc9",
+      "locator": "section1 event/service; section3 equation8 pair witness",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/377d05529cbebc9f1947ee210438d2b25e7a9790/theory/t36-robust-count.md"
+    },
+    {
+      "id": "T45",
+      "path": "theory/t45-lambda-rarity.md",
+      "commit": "7b7a06601030619f47b877fde50e2d98fe8ef688",
+      "identical_at_base": true,
+      "git_blob": "26c93bf687ad6fd3d0061e43bf93a7df311836c8",
+      "sha256": "cecf9539ebb236855dffe8f394c30cbd7eaafcfba360974efca271f39631e50b",
+      "locator": "section2 equations1-2",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7b7a06601030619f47b877fde50e2d98fe8ef688/theory/t45-lambda-rarity.md"
+    },
+    {
+      "id": "T45_proof",
+      "path": "theory/t45-lambda-rarity-appendices.md",
+      "commit": "7b7a06601030619f47b877fde50e2d98fe8ef688",
+      "identical_at_base": true,
+      "git_blob": "e5e9bf4d0dc0d9037584cbf9830e0928fade9574",
+      "sha256": "1f52c76bf12b1ecfd6416b8d12b52279ec1594ab525d3c9b7941e8ce45cbbe90",
+      "locator": "appendix A.1; no-service cells and uniform conditional probabilities",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7b7a06601030619f47b877fde50e2d98fe8ef688/theory/t45-lambda-rarity-appendices.md"
+    },
+    {
+      "id": "T52",
+      "path": "theory/fixed-period-resource-contract.md",
+      "commit": "f7180c5b99da0a16db7195ddf407e1fea5029488",
+      "identical_at_base": true,
+      "git_blob": "77306f35c22aaefdb85abc4cddccc3ce5da2fe84",
+      "sha256": "f2a1aa261dea522bfdde9e15a00080b7eb1dfe0babeda51ab33d2583646a58ad",
+      "locator": "section1 service U; section2 equation3; section3 finite service",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/f7180c5b99da0a16db7195ddf407e1fea5029488/theory/fixed-period-resource-contract.md"
+    },
+    {
+      "id": "T52_proof",
+      "path": "theory/fixed-period-resource-contract-appendix.md",
+      "commit": "f7180c5b99da0a16db7195ddf407e1fea5029488",
+      "identical_at_base": true,
+      "git_blob": "86403819c885453e61c3114c1671022d1ca13ef9",
+      "sha256": "fb5c0d886f4a9a1eafca969b80aace476b039eda6ed11d0b7186c046eeee86cd",
+      "locator": "B.1 spatial coefficient; B.2 first-hit inclusion; no 1-exp(-U) replacement",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/f7180c5b99da0a16db7195ddf407e1fea5029488/theory/fixed-period-resource-contract-appendix.md"
+    },
+    {
+      "id": "T57",
+      "path": "theory/t57-uniform-count.md",
+      "commit": "e0e3281bb84177aa50568e428c2add32796f6dd4",
+      "identical_at_base": true,
+      "git_blob": "4be5aa5c73ab615a5d94086d6c214148f9c8a26c",
+      "sha256": "857c5ae4ae34f2f208cd715535696cade44c5ba5d20a48c57f648e2ad9d0d9ef",
+      "locator": "section1.5 U; section2 phases and first bound of equation5",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/e0e3281bb84177aa50568e428c2add32796f6dd4/theory/t57-uniform-count.md"
+    },
+    {
+      "id": "acceptance",
+      "checkout_role": "historical_context",
+      "path": "MAP.md",
+      "commit": "d135c665039a30014f12e2946a676da7ee64e2aa",
+      "identical_at_base": true,
+      "git_blob": "eca44a75cc4e9cb85dffa8d56d8dbd2d4e6b785a",
+      "sha256": "98a7ce075b992fd9feea3c8f8656f7ba3d2972a91dc454e873735f32d4d437b8",
+      "locator": "lines1119-1144; T36/T45/T52/T57 accepted in stated scopes",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d135c665039a30014f12e2946a676da7ee64e2aa/MAP.md"
+    },
+    {
+      "id": "plan",
+      "checkout_role": "historical_context",
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "d135c665039a30014f12e2946a676da7ee64e2aa",
+      "identical_at_base": true,
+      "git_blob": "3648580c286518f1295ca12e1f3411d1db5cf994",
+      "sha256": "15dc745766c3b0827af0a2cc112ff9f8656bf66f6f87380b2e5b3ebd40ff802b",
+      "locator": "section3.11 / issue166",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d135c665039a30014f12e2946a676da7ee64e2aa/thesis/RESEARCH_PLAN.md"
+    },
+    {
+      "id": "RES001_scope",
+      "path": "results/RES-001-exp001-four-word-identified-set.md",
+      "commit": "d135c665039a30014f12e2946a676da7ee64e2aa",
+      "identical_at_base": true,
+      "git_blob": "4401ef6d61a2f8d019d56f0bdc7e8d940282a5e7",
+      "sha256": "21a3b259e0e02b021afbeeabde53da0c1d59ef41679884aa49fa537d1089839b",
+      "locator": "prior synchronous model is not the sequential reference",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/d135c665039a30014f12e2946a676da7ee64e2aa/results/RES-001-exp001-four-word-identified-set.md"
+    }
+  ],
+  "preregistration_sha256": {
+    "inputs.json": "bf27d65f0393058fdad58d3852bfa375fd695102b57f78fff7e5be1ce9a6319a",
+    "PLAN.md": "3c18787605e1c3dde6e8d358c0f2e42c47ffb3d51058bb270eda890b7a783e59"
+  },
+  "status": "accepted source formulas; new validation not yet reviewed"
+}
