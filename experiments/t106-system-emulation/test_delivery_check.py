@@ -1,12 +1,22 @@
 import copy
 from pathlib import Path
+import runpy
+import sys
 import tempfile
 import unittest
+from unittest.mock import call, patch
 from final_price_check import check_fixed, fixed_slots
 from five_scenarios import record_table
 
 
 class DeliveryCheckTests(unittest.TestCase):
+    def test_full_replay_routes_to_checkpointed_verifier(self):
+        path=Path(__file__).resolve().parent/'replay_burst.py'
+        with patch.object(sys,'argv',[str(path),'--case','burst']):
+            with patch('verify_burst_v3.verify') as verify:
+                runpy.run_path(str(path),run_name='__main__')
+        self.assertEqual(verify.call_args_list,[call('adaptive'),call('fixed')])
+
     def test_cannot_publish_incomplete_or_replace_table(self):
         with tempfile.TemporaryDirectory() as folder:
             output=Path(folder)
