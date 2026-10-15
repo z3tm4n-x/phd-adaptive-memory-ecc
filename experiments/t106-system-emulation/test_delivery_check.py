@@ -1,0 +1,40 @@
+import copy
+import unittest
+from final_price_check import check_fixed, fixed_slots
+
+
+class DeliveryCheckTests(unittest.TestCase):
+    def test_closed_form_against_enumerated_pulses(self):
+        for horizon in range(1, 8000, 7):
+            starts = [1568 * q + 164 * i for q in range(6) for i in range(8)]
+            work = sum(max(0, min(92, horizon - s)) for s in starts)
+            complete = sum(s + 92 <= horizon for s in starts)
+            partial = sum(s < horizon < s + 92 for s in starts)
+            self.assertEqual(fixed_slots(horizon), (work, complete, partial))
+
+    def test_large_full_burst_without_float_conversion(self):
+        work, complete, partial = fixed_slots(363_900_000_000_000)
+        self.assertEqual(complete, 1_856_632_653_062)
+        self.assertEqual(partial, 1)
+        self.assertEqual(work, 1_856_632_653_062 * 92 + 40)
+
+    def test_detects_resource_and_terminal_mutations(self):
+        row = dict(scenario=2, horizon_ns=363_900_000_000_000,
+            application_completed=0, completed_operations=1_856_632_653_062,
+            unfinished_operations=1,
+            bus_work_ns={'control_base_including_partial': 1_856_632_653_062 * 92 + 40},
+            CPU={'ARM_instructions_runtime': 0})
+        check_fixed(row)
+        variants = []
+        wrong = copy.deepcopy(row); wrong['bus_work_ns']['control_base_including_partial'] += 1
+        variants.append(wrong)
+        wrong = copy.deepcopy(row); wrong['completed_operations'] -= 1; variants.append(wrong)
+        wrong = copy.deepcopy(row); wrong['unfinished_operations'] = 0; variants.append(wrong)
+        wrong = copy.deepcopy(row); wrong['CPU']['ARM_instructions_runtime'] = 1; variants.append(wrong)
+        for wrong in variants:
+            with self.assertRaises(AssertionError):
+                check_fixed(wrong)
+
+
+if __name__ == '__main__':
+    unittest.main()
