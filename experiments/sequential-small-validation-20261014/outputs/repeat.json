@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "command": "python -B experiments/sequential-small-validation-20261014/reproduce.py",
+  "unchanged_files": [
+    "results.json",
+    "table.md",
+    "comparison.png",
+    "comparison.svg"
+  ],
+  "sha256": {
+    "results.json": "7607413aa24e2dda63b8237e5cd04f5e17ac75eaeefb77df5399787b23cae8b9",
+    "table.md": "e31d15c26f47ad9cc8c7e4ed1fead26acd0e0f70256e49d2c551e032f07bfab7",
+    "comparison.png": "55f9e19d61da30a028af8c0f81a8b3d91addf9fc7f71a632fe7ecb1e9dd65732",
+    "comparison.svg": "c42529a9af1fa1fd5e6aad0c6671658575226bcc1453f7725924d86ec836f57d"
+  },
+  "meaning": "Two complete local runs with unchanged code and preregistered seeds match these four files byte-for-byte. Repetition does not add independent MC trials."
+}
