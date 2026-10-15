@@ -47,6 +47,7 @@ def main():
     if all(p.exists() for p in reports):
         subprocess.run([sys.executable,str(HERE/'replay_burst.py'),'--case','burst'],check=True)
         subprocess.run([sys.executable,str(HERE/'five_scenarios.py')],check=True)
+        subprocess.run([sys.executable,str(HERE/'final_price_check.py')],check=True)
         print('All five digital scenario checks completed; scientific acceptance is separate')
     else:
         subprocess.run([sys.executable,str(HERE/'five_scenarios.py'),'--allow-incomplete'],check=True)

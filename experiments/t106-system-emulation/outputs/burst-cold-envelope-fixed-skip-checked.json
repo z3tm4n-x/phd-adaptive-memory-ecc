@@ -190,15 +190,31 @@
   "sha256": {
     "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.json": "1720895d233fc8407af92beb70b338f46d0028fd3f914857ef17d466851111d6",
     "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.trace.ct3": "c2383702d8c51c83b43bee69d7d9947f08958156a64efcd3ab3f88682c25e808",
-    "experiments/t106-system-emulation/cold_envelope.py": "17a692d9c7e2d19152eaf5bd992ef772369552034d6c26e20b027d3fd3134948",
+    "experiments/t106-system-emulation/cold_envelope.py": "3c02f80cba0422b537327476bd3066d2733b03e9d8bad4659b5557e4ccddc849",
     "experiments/t106-system-emulation/COLD_ENVELOPE.md": "31d69b0c95248e607f3d300c7d9e928e2c04df37a74280c626eaa1b2f225609d",
     "experiments/t106-system-emulation/check_burst.py": "24c205824c0a067824224520ad05f5826474a4e107024816c0148b8cad94c332",
     "experiments/t106-system-emulation/burst_price.py": "a6b92c13699801b066ea50ed8719123b176005ef1ef5327c0f1fb599d31c9d9c",
-    "experiments/t106-system-emulation/burst_codec.py": "116073d847e6e19c62a321f4174228c0169c6915ef173e535d8a9f617ff4cec2"
+    "experiments/t106-system-emulation/burst_codec.py": "116073d847e6e19c62a321f4174228c0169c6915ef173e535d8a9f617ff4cec2",
+    "experiments/t106-system-emulation/report_guard.py": "5ac294b3452b9b271056bfec2c3e10ed158f7ff24ec32a8ec7981af4d9091ddf"
   },
   "application_interval_ns": 1000000,
   "read_rate_per_s": 500,
   "write_rate_per_s": 500,
   "hardware_ARM_time_ns": null,
-  "Q_T_certified_by_emulation": false
+  "Q_T_certified_by_emulation": false,
+  "verification_history": [
+    {
+      "previous_canonical_report_sha256": "1229552b0771ce7371ac11a99809490642ec30af3db2d85b44bbe01debcd0946",
+      "previous_sha256": {
+        "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.json": "1720895d233fc8407af92beb70b338f46d0028fd3f914857ef17d466851111d6",
+        "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.trace.ct3": "c2383702d8c51c83b43bee69d7d9947f08958156a64efcd3ab3f88682c25e808",
+        "experiments/t106-system-emulation/cold_envelope.py": "17a692d9c7e2d19152eaf5bd992ef772369552034d6c26e20b027d3fd3134948",
+        "experiments/t106-system-emulation/COLD_ENVELOPE.md": "31d69b0c95248e607f3d300c7d9e928e2c04df37a74280c626eaa1b2f225609d",
+        "experiments/t106-system-emulation/check_burst.py": "24c205824c0a067824224520ad05f5826474a4e107024816c0148b8cad94c332",
+        "experiments/t106-system-emulation/burst_price.py": "a6b92c13699801b066ea50ed8719123b176005ef1ef5327c0f1fb599d31c9d9c",
+        "experiments/t106-system-emulation/burst_codec.py": "116073d847e6e19c62a321f4174228c0169c6915ef173e535d8a9f617ff4cec2"
+      },
+      "reason": "verification provenance refreshed; scientific payload and trace hashes unchanged"
+    }
+  ]
 }

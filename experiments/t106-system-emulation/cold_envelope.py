@@ -6,6 +6,7 @@ from pathlib import Path
 import sys
 from unittest.mock import patch
 from burst_run_inputs import build as original_build
+from report_guard import publish_or_compare
 
 HERE=Path(__file__).resolve().parent
 REPO=HERE.parents[1]
@@ -56,14 +57,13 @@ def verify(mode,execute=False,record=False):
     assert all(b['at_ns']-a['at_ns']>=100000 for a,b in zip(apps,apps[1:]))
     assert 24/(result['horizon_ns']/1e9)<=1000
     sources=[path,trace]+[HERE/f for f in
-        ('cold_envelope.py','COLD_ENVELOPE.md','check_burst.py','burst_price.py','burst_codec.py')]
+        ('cold_envelope.py','COLD_ENVELOPE.md','check_burst.py','burst_price.py','burst_codec.py','report_guard.py')]
     report=dict(scope='scenario4 additional in-envelope cold-start; historical stress retained',
         results=result,sha256={p.relative_to(REPO).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
         application_interval_ns=1000000,read_rate_per_s=500,write_rate_per_s=500,
         hardware_ARM_time_ns=None,Q_T_certified_by_emulation=False)
     dest=HERE/f'outputs/{stem}-checked.json'
-    if record:dest.write_text(json.dumps(report,indent=2)+'\n')
-    else:assert json.loads(dest.read_text())==report
+    publish_or_compare(dest,report,record)
     print(json.dumps({k:result[k] for k in ('mode','mean_bus_fraction','peak_any_1ms_fraction',
         'application_completed','max_application_delay_ns','first_exceedance_relative_ns')}),flush=True)
 

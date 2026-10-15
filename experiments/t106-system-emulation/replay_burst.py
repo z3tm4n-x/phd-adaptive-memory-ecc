@@ -1,8 +1,6 @@
-"""Read-only published-result verification with JSON-canonical containers.
+"""Read-only published-result verification with exact JSON containers.
 
-The first execution recorder compares Python tuples with decoded JSON lists
-in its optional read-only branch. Normalize containers, NOT numerical values.
-The running record-mode processes and frozen numerical checker stay unchanged.
+This command never updates a report or its recorded provenance.
 """
 import argparse
 import hashlib
@@ -11,12 +9,9 @@ from pathlib import Path
 from burst_run_inputs import HERE,build
 from burst_codec import digest
 from check_burst import check
+from report_guard import canonical,encoded
 
 REPO=HERE.parents[1]
-
-
-def canonical(x):
-    return json.loads(json.dumps(x))
 
 
 def verify(stem):
@@ -41,7 +36,7 @@ def verify(stem):
              'represented_full_services','represented_driver_visits','represented_MMIO_reads',
              'represented_MMIO_writes','represented_ISA_count','MMIO')}
         result['CPU']['actual_ARM_time_ns']=None
-    assert canonical(result)==report['results'],('independent replay changed',stem)
+    assert encoded(result)==encoded(report['results']),('independent replay changed',stem)
     print(stem,': read-only replay matched; injections',result['injections'],flush=True)
     return result
 
