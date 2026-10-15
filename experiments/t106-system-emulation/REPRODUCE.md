@@ -31,9 +31,10 @@ SHA исходного текста. Отдельная арифметика FAS
 ```sh
 python3 experiments/t106-system-emulation/verify_burst_repair.py
 python3 experiments/t106-system-emulation/verify_burst_upgrade.py
+python3 experiments/t106-system-emulation/verify_trace_upgrade.py
 python3 experiments/t106-system-emulation/replay_burst.py --case cold-envelope
 # После появления обоих полных результатов:
-python3 experiments/t106-system-emulation/replay_burst.py --case burst
+python3 experiments/t106-system-emulation/verify_burst_v3.py
 python3 experiments/t106-system-emulation/five_scenarios.py
 python3 experiments/t106-system-emulation/final_price_check.py
 ```
@@ -61,7 +62,10 @@ export T106_ANALYSIS="$PWD/../t105-arm-rule/experiments/t105-arm-rule/.tools/ana
 python3 experiments/t106-system-emulation/verify_burst_repair.py --execute --record
 python3 experiments/t106-system-emulation/verify_burst_v2.py --pilot-events 20 --execute --record
 python3 experiments/t106-system-emulation/verify_burst_upgrade.py --record
-python3 experiments/t106-system-emulation/run_full_profile_v2.py
+python3 experiments/t106-system-emulation/run_burst_v3.py --case short --mode adaptive
+python3 experiments/t106-system-emulation/verify_burst_v3.py --pilot-events 20 --execute --record
+python3 experiments/t106-system-emulation/verify_trace_upgrade.py --record
+python3 experiments/t106-system-emulation/run_full_profile_v3.py
 python3 experiments/t106-system-emulation/five_scenarios.py --record
 python3 experiments/t106-system-emulation/reproduce.py
 ```
@@ -76,7 +80,7 @@ t105-arm-rule/outputs/analysis-tools.json, глобальная среда не 
 `cold_envelope.py --execute --record`.
 
 Полный supervisor запускает два режима, прекращает парный путь при отказе
-одного и сохраняет состояние в .build/full-profile-v2/state.json.
+одного и сохраняет состояние в .build/full-profile-v3/state.json.
 Статус verified_both включает независимый checker, а не только exit0
 симулятора. Финальная таблица не публикуется без обоих полных результатов.
 Изменение уже проверенного результата/trace отклоняется; обновление только
@@ -93,6 +97,10 @@ CT3, metadata и исходники. Они не зависят от Windows-п�
 место для .build нужно отдельно от компактного поставляемого журнала.
 Первая неудачная полная попытка не используется как результат:
 outputs/failed-full-attempt.json содержит её происхождение и локальные хеши.
+Вторая попытка отклонена из-за таймаута постобработки; её факты/хеши —
+outputs/failed-postprocessing-attempt.json. V3 сохраняет исходный ASCII SHA
+и metadata до длительной проверки, затем подтверждает тот же SHA/число строк
+при транскодировании и полном независимом replay. Подробности — POSTPROCESSING.md.
 
 Измерено на хосте после исправления: пилот adaptive 97,76 с / FAST 52,96 с
 без независимого replay; согласованный cold — 74,22 / 72,75 с.

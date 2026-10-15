@@ -1,0 +1,47 @@
+{
+  "scope": "storage repair only; real short and pilot20 executions, not full scenario2",
+  "comparisons": {
+    "adaptive": {
+      "raw_trace_sha256": "660e0f894ea87fe1a941aab6da6dd9b7df69255dd60c9985a243baa6bb40ed5d",
+      "identical_inputs": true,
+      "identical_raw_trace": true,
+      "identical_results": true,
+      "identical_compact_archive": true,
+      "injections": 20
+    },
+    "fixed": {
+      "raw_trace_sha256": "59d5f530e19060200f503978bd234fca9f3fef03affe8ab6381e4ef7618115e0",
+      "identical_inputs": true,
+      "identical_raw_trace": true,
+      "identical_results": true,
+      "identical_compact_archive": true,
+      "injections": 20
+    },
+    "short_adaptive": {
+      "identical_raw_trace": true,
+      "raw_trace_sha256": "104bf06dbe684417317bc2e5017929b95afdeaa531a38ac03eb8d0e7ab617249"
+    }
+  },
+  "sha256": {
+    "experiments/t106-system-emulation/verify_trace_upgrade.py": "9d25d0f6583d5601a306cd0274718d1fb5a9cf14733cb3f4d4e00522b8d6a006",
+    "experiments/t106-system-emulation/POSTPROCESSING.md": "287ce72c166a21865596f4cc58d9e34bc13f600b261e9ab36f9299e1db52122f",
+    "experiments/t106-system-emulation/trace_pipeline_v3.py": "585171a72af0cdf5461a1b33339265f7cfcd6265843fe7c0d2741397176c6457",
+    "experiments/t106-system-emulation/test_trace_pipeline.py": "053743ede6638ef1ce1115beb6ad94d567f49d074e0b420d29cfd12d24784d57",
+    "experiments/t106-system-emulation/outputs/failed-postprocessing-attempt.json": "b187ceb8eb1e9c9574f739003920fa37321704959c7a15a68061aa482f300e10",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-adaptive-skip.json": "96d965fd454d31f6c86b9932614dd5c4be952e4b31f3297f4e7f5c30c83c7a8e",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-adaptive-skip-checked.json": "22e3c005d79feadfd6ee08440d68c14f8220bfc4c624ebbaa3fa71cd6d632740",
+    "experiments/t106-system-emulation/outputs/burst3-pilot20-adaptive-skip.json": "450618b6ead4d0ca880a6db3109f589f007852e0f6109a99c2999bb23745b138",
+    "experiments/t106-system-emulation/outputs/burst3-pilot20-adaptive-skip-checked.json": "8b83f4b5193dbc5281cf2eaf45fb84750af989574378ffa1d10db5e5c8fbd44f",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-adaptive-skip.trace.ct3": "becefb5bef5cee889332fe2f15a23c895c17107088bd219e62c1b5ad839eb789",
+    "experiments/t106-system-emulation/outputs/burst3-pilot20-adaptive-skip.trace.ct3": "becefb5bef5cee889332fe2f15a23c895c17107088bd219e62c1b5ad839eb789",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-fixed-skip.json": "24b369c8026821369c012951ceaa227fd75383c74bfd01823c542b4815d9655d",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-fixed-skip-checked.json": "a5abf3b4d0436d8f48e73092a3370aff7e136f5af3cbeeb3850996a944fc11c3",
+    "experiments/t106-system-emulation/outputs/burst3-pilot20-fixed-skip.json": "c61667cdf182b799dfeefea3fa76d7b04d8094235c363c4ac53b680eea1d8caa",
+    "experiments/t106-system-emulation/outputs/burst3-pilot20-fixed-skip-checked.json": "8a2a3c34bea2011483dc173d8c067cbd2f0ef740a17aa8b067b7fe3291bae0ff",
+    "experiments/t106-system-emulation/outputs/burst2-pilot20-fixed-skip.trace.ct3": "0f97fbf119fb50bc6d4d88285bae2df75b821a41b4970ba10f11df5bb42a38ec",
+    "experiments/t106-system-emulation/outputs/burst3-pilot20-fixed-skip.trace.ct3": "0f97fbf119fb50bc6d4d88285bae2df75b821a41b4970ba10f11df5bb42a38ec",
+    "experiments/t106-system-emulation/outputs/burst2-short-adaptive-skip.json": "a01d4be9c95acdf8e0f6067337156fae6091bd41df4e913134e395cd09bb94ab",
+    "experiments/t106-system-emulation/outputs/burst3-short-adaptive-skip.json": "667f26fb3c33b6a483190b831da0c9334f56d2cb6028c071e0e9756f62ac4ae2",
+    "experiments/t106-system-emulation/outputs/burst3-short-adaptive-skip.trace.ctz": "a9c4477324060772e18c0d564fa7a4f8fb7614bc2e5d798a148eb453566ea7ed"
+  }
+}

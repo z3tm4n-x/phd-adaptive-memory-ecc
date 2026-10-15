@@ -48,9 +48,11 @@ def main():
         subprocess.run([sys.executable,str(HERE/'verify_burst_repair.py')],check=True)
     if (HERE/'outputs/burst-pilot-equivalence.json').exists():
         subprocess.run([sys.executable,str(HERE/'verify_burst_upgrade.py')],check=True)
-    reports=[HERE/f'outputs/burst2-burst-{m}-skip-checked.json' for m in ('adaptive','fixed')]
+    if (HERE/'outputs/trace-pipeline-equivalence.json').exists():
+        subprocess.run([sys.executable,str(HERE/'verify_trace_upgrade.py')],check=True)
+    reports=[HERE/f'outputs/burst3-burst-{m}-skip-checked.json' for m in ('adaptive','fixed')]
     if all(p.exists() for p in reports):
-        subprocess.run([sys.executable,str(HERE/'replay_burst.py'),'--case','burst'],check=True)
+        subprocess.run([sys.executable,str(HERE/'verify_burst_v3.py')],check=True)
         subprocess.run([sys.executable,str(HERE/'five_scenarios.py')],check=True)
         subprocess.run([sys.executable,str(HERE/'final_price_check.py')],check=True)
         print('All five digital scenario checks completed; scientific acceptance is separate')
