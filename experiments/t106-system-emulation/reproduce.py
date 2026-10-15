@@ -15,10 +15,12 @@ def bootstrap():
     subprocess.run([sys.executable,'-m','pip','install','--no-deps','--no-index',
         '--target',str(HERE/'.tools/analysis'),*files],check=True)
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--execute',action='store_true');ap.add_argument('--bootstrap',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--execute',action='store_true');ap.add_argument('--bootstrap',action='store_true')
+    ap.add_argument('--execute-empty',action='store_true',help='Repeat literal RTL calendar and actual accepted ELF empty-transition checks')
+    args=ap.parse_args()
     for p in HERE.glob('*.py'):py_compile.compile(str(p),doraise=True)
     subprocess.run([sys.executable,str(HERE/'provenance.py')],check=True)
-    subprocess.run([sys.executable,'-m','unittest','discover','-s',str(HERE),'-p','test_system.py'],check=True)
+    subprocess.run([sys.executable,'-m','unittest','discover','-s',str(HERE),'-p','test_*.py'],check=True)
     if args.bootstrap:bootstrap()
     if args.execute:subprocess.run([sys.executable,str(HERE/'run.py')],check=True)
     else:
@@ -28,6 +30,10 @@ def main():
             assert hashlib.sha256((HERE/'outputs'/name).read_bytes()).hexdigest()==digest,name
     subprocess.run([sys.executable,str(HERE/'check.py')],check=True)
     subprocess.run([sys.executable,str(HERE/'mutations.py')],check=True)
+    if args.execute_empty:
+        subprocess.run([sys.executable,str(HERE/'verify_empty_calendar.py'),'--execute'],check=True)
+        subprocess.run([sys.executable,str(HERE/'verify_empty_rule.py'),'--execute-elf'],check=True)
+    subprocess.run([sys.executable,str(HERE/'check_empty.py')],check=True)
     subprocess.run([sys.executable,str(HERE/'summary.py')],check=True)
-    print('T106 scenario4 checked; four remaining scenarios NOT claimed complete')
+    print('T106 scenario4 + empty-transition components checked; four remaining integrated scenarios NOT claimed complete')
 if __name__=='__main__':main()

@@ -1,5 +1,14 @@
 {
-  "scope": "first actual run of scenario4 only; four other scenarios remain",
+  "scope": "accepted scenario4 + checked empty-transition components; four integrated scenarios remain",
+  "empty_transition_components": {
+    "scope": "not a full accelerated arm_executor",
+    "RTL_slots_per_instance": 527384,
+    "full_W_RTL_slots_per_instance": 525312,
+    "literal_empty_C_packets": 631209,
+    "accepted_ELF_vectors": 41,
+    "accepted_ELF_function_ISA": 19192,
+    "new_full_service_upper_ns": null
+  },
   "common_input_sha256": {
     "injections.txt": "c3c3f8397135a4767063263d8c72925e1b08c2d1f3e4b5d9b58afa0960ba7e33",
     "application.txt": "c436601d1285ae2fbe789a943567c5f9f0c5925f6f5dd82d1b6e6065e2ac5364"
@@ -67,6 +76,12 @@
     "cold-adaptive.trace.gz": "aba6cee49ecc47df4cb6b0cb604c608f5c1a87502d992387ec310cc1caa0a664",
     "cold-fixed.json": "f4c34ed20551980f540eb35e83ca32ffc10148b93ba0cd3ca57d41e10ec7be3a",
     "cold-fixed.trace.gz": "12dfdbcc49f4151ed643616906a4400abc2872e3dc6d2387f7f0bc4f1c82e463",
+    "empty-calendar-19.txt": "51cc8fb70329064102422bccc4b89a30f52f8f54aeed3b296c2458a97c91b4a4",
+    "empty-calendar-3.txt": "a96e3057f251e754cdda4a5d68a125fd56ea2d15f6844224fd7ee3579f9cd6b1",
+    "empty-calendar-4.txt": "d43cb462c65c36012ec52b273400656ba257bf229de068b09506a773b01df6b3",
+    "empty-calendar.json": "983f18fa737254ae6954616d052e9f5a14cd4de600c7805f4d722bf6abaa1f80",
+    "empty-rule-vectors.json": "663c57a10aaf1d1cc37ff23cb96f99d261d53246530d2f609215fb7074224fac",
+    "empty-rule.json": "8b817cbf3f94d1f55df6edfb185dfb8009895dd0c4436ee306ba491ed7bf2afb",
     "mutations.json": "87a345ff5e15fe5c275eacd12df77df1739d48cdb9d50b3ad4e0745e63c02b85"
   },
   "remaining": [
@@ -74,7 +89,7 @@
     "scenario2 extracted accepted temporal profile and normalization",
     "scenario3 loss/recovery with full holds",
     "scenario5 long-lived data and writes",
-    "long-interval accelerator with production equivalence",
+    "compose checked empty transitions with actual collector/CDC/frozen bits/memory/application",
     "all-five resource table and review"
   ]
 }
