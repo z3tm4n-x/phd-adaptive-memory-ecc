@@ -1,10 +1,11 @@
 """Pair first-run inputs, make resources/acceptance explicit; no Q inference."""
-import hashlib,json,platform,sys
+import argparse,hashlib,json,platform,sys
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 ARM=HERE.parent/'t105-arm-rule'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def main():
+def main(regenerate=False):
+    saved=json.loads((HERE/'outputs/summary.json').read_text())
     a=json.loads((HERE/'outputs/cold-adaptive.json').read_text())
     f=json.loads((HERE/'outputs/cold-fixed.json').read_text())
     assert a['input_sha256']==f['input_sha256'],'not comparable inputs'
@@ -35,12 +36,16 @@ def main():
         'startup_bytes':1268,'firmware_bytes':4244,'OCM_reserved_bytes':57344,
         'CPU_core_allocation_adaptive':1,'CPU_runtime_use_fixed':0,
         'physical_board_available':None,'actual_ARM_time_ns':None,'ARM_WCET_ns':None,
-        'software_environment':{'Python':sys.version,'platform':platform.platform()},
+        'software_environment':{'Python':sys.version,'platform':platform.platform()} if regenerate else saved['software_environment'],
         'Q_T_certified_by_emulation':False,'main_modified':False,
-        'outputs_sha256':{p.name:sha(p) for p in sorted((HERE/'outputs').glob('*')) if p.name!='summary.json'},
+        'outputs_sha256':{p.name:sha(p) for p in sorted((HERE/'outputs').glob('*'))
+                          if p.name.startswith(('cold-','empty-')) or p.name=='mutations.json'},
         'remaining':['scenario1 full-timer quiet/false signal','scenario2 extracted accepted temporal profile and normalization',
                      'scenario3 loss/recovery with full holds','scenario5 long-lived data and writes',
                      'compose checked empty transitions with actual collector/CDC/frozen bits/memory/application',
                      'all-five resource table and review']}
-    (HERE/'outputs/summary.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2))
-if __name__=='__main__':main()
+    if regenerate:(HERE/'outputs/summary.json').write_text(json.dumps(out,indent=2)+'\n')
+    else:assert out==saved,'historical cold/component summary changed'
+    print('Historical cold/component summary verified; current scope is in accel-summary.json')
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--regenerate',action='store_true');args=p.parse_args();main(args.regenerate)

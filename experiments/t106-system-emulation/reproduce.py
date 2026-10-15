@@ -36,6 +36,6 @@ def main():
         subprocess.run([sys.executable,str(HERE/'verify_empty_rule.py'),'--execute-elf'],check=True)
     subprocess.run([sys.executable,str(HERE/'check_empty.py')],check=True)
     subprocess.run([sys.executable,str(HERE/'verify_accel.py')]+(['--execute'] if args.execute_accel else []),check=True)
-    subprocess.run([sys.executable,str(HERE/'summary.py')],check=True)
+    subprocess.run([sys.executable,str(HERE/'summary.py')]+(['--regenerate'] if args.execute or args.execute_empty else []),check=True)
     print('T106 scenarios1/3/4 + empty-transition components checked; scenarios2/5 NOT claimed complete')
 if __name__=='__main__':main()
