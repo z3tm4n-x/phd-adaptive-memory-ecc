@@ -8,3 +8,5 @@ __pycache__/
 /outputs/burst2-*.trace.ctz
 /outputs/burst3-*.trace.ctz
 !/outputs/burst3-short-*.trace.ctz
+# Incomplete compact-trace staging files are never a published result.
+/outputs/*.part
