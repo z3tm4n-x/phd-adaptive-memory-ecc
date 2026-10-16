@@ -1,15 +1,51 @@
 import copy
+import importlib.util
 from pathlib import Path
 import runpy
+import subprocess
 import sys
 import tempfile
+import threading
 import unittest
 from unittest.mock import call, patch
 from final_price_check import check_fixed, fixed_slots
 from five_scenarios import record_table
 
+# Other accepted packages also contain reproduce.py and amend sys.path.
+# Bind this entry point by path, not a process-global generic module name.
+_spec=importlib.util.spec_from_file_location('t106_reproduce',Path(__file__).resolve().parent/'reproduce.py')
+_reproduce=importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_reproduce)
+
 
 class DeliveryCheckTests(unittest.TestCase):
+    def test_full_readonly_checks_start_both_and_wait_for_both(self):
+        barrier=threading.Barrier(2)
+        finished=[]
+        def run(command,check):
+            self.assertTrue(check)
+            self.assertEqual(command[-2],'--mode')
+            self.assertNotIn('--execute',command)
+            self.assertNotIn('--record',command)
+            barrier.wait(timeout=5)
+            finished.append(command[-1])
+        with patch.object(_reproduce.subprocess,'run',side_effect=run):
+            _reproduce.verify_full_profiles()
+        self.assertCountEqual(finished,['adaptive','fixed'])
+
+    def test_one_failed_full_check_cannot_be_accepted(self):
+        barrier=threading.Barrier(2)
+        finished=[]
+        def run(command,check):
+            barrier.wait(timeout=5)
+            finished.append(command[-1])
+            if command[-1]=='adaptive':
+                raise subprocess.CalledProcessError(1,command)
+        with patch.object(_reproduce.subprocess,'run',side_effect=run):
+            with self.assertRaises(subprocess.CalledProcessError):
+                _reproduce.verify_full_profiles()
+        self.assertCountEqual(finished,['adaptive','fixed'])
+
     def test_full_replay_routes_to_checkpointed_verifier(self):
         path=Path(__file__).resolve().parent/'replay_burst.py'
         with patch.object(sys,'argv',[str(path),'--case','burst']):

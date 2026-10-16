@@ -1,8 +1,22 @@
 """One entry point: portable trace check, optionally repeat actual ISA/RTL."""
 import argparse,hashlib,json,os,py_compile,subprocess,sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 ARM=HERE.parent/'t105-arm-rule'
+
+def verify_full_profiles():
+    """Two independent read-only processes; both must succeed before the table.
+
+    No scientific checker, trace, tolerance or frozen execution is changed.
+    Each child reads its own complete trace and compares its own pinned report.
+    Exiting the executor also joins the peer when one child fails.
+    """
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        jobs=[pool.submit(subprocess.run,
+            [sys.executable,str(HERE/'verify_burst_v3.py'),'--mode',mode],check=True)
+            for mode in ('adaptive','fixed')]
+        for job in jobs:job.result()
 def bootstrap():
     manifest=json.loads((ARM/'outputs/analysis-tools.json').read_text())
     wheels=HERE/'.tools/wheels';wheels.mkdir(parents=True,exist_ok=True)
@@ -52,7 +66,7 @@ def main():
         subprocess.run([sys.executable,str(HERE/'verify_trace_upgrade.py')],check=True)
     reports=[HERE/f'outputs/burst3-burst-{m}-skip-checked.json' for m in ('adaptive','fixed')]
     if all(p.exists() for p in reports):
-        subprocess.run([sys.executable,str(HERE/'verify_burst_v3.py')],check=True)
+        verify_full_profiles()
         subprocess.run([sys.executable,str(HERE/'five_scenarios.py')],check=True)
         subprocess.run([sys.executable,str(HERE/'final_price_check.py')],check=True)
         print('All five digital scenario checks completed; scientific acceptance is separate')
