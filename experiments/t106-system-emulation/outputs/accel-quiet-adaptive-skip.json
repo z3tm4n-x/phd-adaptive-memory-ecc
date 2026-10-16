@@ -1,0 +1,160 @@
+{
+  "mode": "adaptive",
+  "scenario": "quiet",
+  "accelerated": true,
+  "macros": [
+    {
+      "begin_ns": 165570,
+      "end_ns": 180309754050,
+      "empty_services": 958278,
+      "low": false,
+      "price": {
+        "occupied_ns": 84635112960,
+        "started": 919946880,
+        "completed": 919946880,
+        "partial_begin": 0,
+        "partial_end": 0
+      },
+      "before": "c80f00000000000000000000000000000000000000000000000000000000000000000000000000005da05d1902000000230000000000000001000000000000002500000000000000",
+      "after": "485c5d19020000000000000000000000000000000000000000000000000000000000000000000000dd530000000000002300000000000000479f0e00000000002500000000000000",
+      "decision": "479f0e0000000000000000000000000025b05d1902000000010000006413ed3a",
+      "packets": 958278,
+      "step_slow_ticks": 9408,
+      "represented_elapsed_ns": 180309588480
+    },
+    {
+      "begin_ns": 180310130170,
+      "end_ns": 180999924730,
+      "empty_services": 3666,
+      "low": true,
+      "price": {
+        "occupied_ns": 107927040,
+        "started": 1173120,
+        "completed": 1173120,
+        "partial_begin": 0,
+        "partial_end": 0
+      },
+      "before": "c8a55d190200000000000000000000000000000000000000000000000000000000000000000000005d0a0000000000002300000000000000499f0e00000000002500000000000000",
+      "after": "48eb6b1b020000000000000000000000000000000000000000000000000000000000000000000000000000000000000023000000000000009bad0e00000000002500000000000000",
+      "decision": "9bad0e0000000000000000000000000048eb6b1b0200000001000000ea31b704",
+      "packets": 3666,
+      "step_slow_ticks": 9408,
+      "represented_elapsed_ns": 689794560
+    },
+    {
+      "begin_ns": 181000113410,
+      "end_ns": 271000804610,
+      "empty_services": 478320,
+      "low": false,
+      "price": {
+        "occupied_ns": 42245222400,
+        "started": 459187200,
+        "completed": 459187200,
+        "partial_begin": 0,
+        "partial_end": 0
+      },
+      "before": "08106c1b020000000100000000000000ce341c890a0000007b37390c010000000000000000000000000000000000000027000000000000009cad0e00000000002500000000000000",
+      "after": "0824a527030000000100000000000000ce341c890a0000007b230000000000000000000000000000000000000000000027000000000000000cfa1500000000002500000000000000",
+      "decision": "0cfa15000000000001000000000000008347a52703000000010000008e22de3f",
+      "packets": 478320,
+      "step_slow_ticks": 9408,
+      "represented_elapsed_ns": 90000691200
+    },
+    {
+      "begin_ns": 271000992250,
+      "end_ns": 271999745530,
+      "empty_services": 5308,
+      "low": true,
+      "price": {
+        "occupied_ns": 156267520,
+        "started": 1698560,
+        "completed": 1698560,
+        "partial_begin": 0,
+        "partial_end": 0
+      },
+      "before": "c848a527030000000100000000000000ce341c890a00000000000000000000000000000000000000000000000000000027000000000000000dfa1500000000002500000000000000",
+      "after": "c8459f2a030000000100000000000000ce341c890a0000000000000000000000000000000000000000000000000000002700000000000000c90e1600000000002500000000000000",
+      "decision": "c90e1600000000000100000000000000c8459f2a0300000001000000823d2055",
+      "packets": 5308,
+      "step_slow_ticks": 9408,
+      "represented_elapsed_ns": 998753280
+    }
+  ],
+  "host_elapsed_s": 19.340583126999988,
+  "stimulus": {
+    "horizon_ns": 272000000000,
+    "false_ERR_interval_ns": [
+      181000000306,
+      181000000310
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "initial_data": "0xa5a50000",
+    "initial_errors": 0,
+    "application_requests": 0
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 18144,
+  "ARM_instructions_runtime": 3918,
+  "driver_calls": 16,
+  "completed_driver_visits": 16,
+  "max_observed_instructions_per_driver_visit": 678,
+  "MMIO": {
+    "boot_read": 4,
+    "runtime_read": 71,
+    "runtime_write": 60
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_accel.py": "b4d631dfd4051e1fa1c0ee6148d8c1773bdc37f0f3382ebefcf77a29b4f69c1c",
+    "experiments/t106-system-emulation/bridge.c": "6a193b8a32a8011d8f43aad600f5bf90d903b946ae3816ec39a32a1d07996000",
+    "experiments/t106-system-emulation/tb_accel.sv": "740eb51e13416fa03b3e95ea7f457efffbb3c01a4073740c4d1d7de41d10b9a8",
+    "experiments/t106-system-emulation/accel.tcl": "e27ede9ce7e30cb7a9a8a34e2fbe8029fd452444094456cf5c8c1c5984da1689",
+    "experiments/t106-system-emulation/ACCELERATION.md": "38d86eabe90d3c7cb329449d620f19fa490931dbf8aab382b0e2b8880d958688",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "b8d470835417944248f2c9dfab16e48b46d50b483c4c5378f059da8d1aa8d533",
+    "injections.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "application.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/accel-quiet-adaptive-1-1792059863735407843",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 1445572,
+  "represented_driver_visits": 2891144,
+  "represented_MMIO_reads": 14455720,
+  "represented_MMIO_writes": 14455720,
+  "represented_ISA_count": null,
+  "trace_sha256": "d0bbe3732e7de12f099e20d7a3724bbd6fb7ed2db700c1c06047cf026445b7d0"
+}

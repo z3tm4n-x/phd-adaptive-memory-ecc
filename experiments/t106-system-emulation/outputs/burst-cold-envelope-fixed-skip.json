@@ -1,0 +1,1009 @@
+{
+  "mode": "fixed",
+  "scenario": "cold-envelope",
+  "accelerated": true,
+  "macros": [
+    {
+      "begin_ns": 80070,
+      "end_ns": 832710,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 1072810,
+      "end_ns": 1825450,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 2065650,
+      "end_ns": 2818290,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 3058390,
+      "end_ns": 3811030,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 4051230,
+      "end_ns": 4803870,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 5043970,
+      "end_ns": 5796610,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 6036610,
+      "end_ns": 6789250,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 7029250,
+      "end_ns": 7781890,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 8021990,
+      "end_ns": 8774630,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 9014730,
+      "end_ns": 9767370,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 10087570,
+      "end_ns": 10840210,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 11080410,
+      "end_ns": 11833050,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 12073150,
+      "end_ns": 12825790,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 13065890,
+      "end_ns": 13818530,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 14058530,
+      "end_ns": 14811170,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 15051170,
+      "end_ns": 15803810,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 16043910,
+      "end_ns": 16796550,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 17036750,
+      "end_ns": 17789390,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 18029490,
+      "end_ns": 18782130,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 19022330,
+      "end_ns": 19774970,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 20015070,
+      "end_ns": 20767710,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 21087810,
+      "end_ns": 21840450,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 22080450,
+      "end_ns": 22833090,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 23073090,
+      "end_ns": 23825730,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 24065930,
+      "end_ns": 24818570,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 25058670,
+      "end_ns": 25811310,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 26051510,
+      "end_ns": 26804150,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 27044250,
+      "end_ns": 27796890,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 28037090,
+      "end_ns": 28789730,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 29029730,
+      "end_ns": 29406050,
+      "empty_services": 2,
+      "low": false,
+      "price": {
+        "occupied_ns": 176640,
+        "started": 1920,
+        "completed": 1920,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 30046150,
+      "end_ns": 30798790,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 31038990,
+      "end_ns": 31791630,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 32031730,
+      "end_ns": 32784370,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 33024570,
+      "end_ns": 33777210,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 34017310,
+      "end_ns": 34769950,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 35011970,
+      "end_ns": 35764610,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 36084690,
+      "end_ns": 36837330,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 37077530,
+      "end_ns": 37830170,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 38070270,
+      "end_ns": 38822910,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 39063110,
+      "end_ns": 39815750,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 40055850,
+      "end_ns": 40808490,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 41048490,
+      "end_ns": 41801130,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 42041130,
+      "end_ns": 42793770,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 43033870,
+      "end_ns": 43786510,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 44026610,
+      "end_ns": 44779250,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 45019450,
+      "end_ns": 45772090,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 46012190,
+      "end_ns": 46764830,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 47085030,
+      "end_ns": 47837670,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    }
+  ],
+  "host_elapsed_s": 72.747150767,
+  "stimulus": {
+    "scenario": "cold-envelope",
+    "horizon_ns": 48000000,
+    "initial_data": "0xa5a50000 XOR word",
+    "initial_errors": 0,
+    "injections": [
+      {
+        "at_ns": 2,
+        "word": 0,
+        "bit": 32,
+        "parent": 1
+      },
+      {
+        "at_ns": 62,
+        "word": 0,
+        "bit": 32,
+        "parent": 5
+      },
+      {
+        "at_ns": 66,
+        "word": 0,
+        "bit": 32,
+        "parent": 6
+      },
+      {
+        "at_ns": 198,
+        "word": 174763,
+        "bit": 4,
+        "parent": 2
+      },
+      {
+        "at_ns": 298,
+        "word": 349526,
+        "bit": 6,
+        "parent": 3
+      },
+      {
+        "at_ns": 302,
+        "word": 349526,
+        "bit": 6,
+        "parent": 4
+      },
+      {
+        "at_ns": 19998,
+        "word": 400000,
+        "bit": 37,
+        "parent": 7
+      },
+      {
+        "at_ns": 29998,
+        "word": 400001,
+        "bit": 17,
+        "parent": 8
+      }
+    ],
+    "applications": [
+      {
+        "at_ns": 10000,
+        "owner": 0,
+        "packet": "22468000186a02"
+      },
+      {
+        "at_ns": 1010000,
+        "owner": 1,
+        "packet": "222468000386a01"
+      },
+      {
+        "at_ns": 2010000,
+        "owner": 0,
+        "packet": "442468000586a06"
+      },
+      {
+        "at_ns": 3010000,
+        "owner": 1,
+        "packet": "642468000786a05"
+      },
+      {
+        "at_ns": 4010000,
+        "owner": 0,
+        "packet": "882468000986a0a"
+      },
+      {
+        "at_ns": 5010000,
+        "owner": 1,
+        "packet": "a82468000b86a09"
+      },
+      {
+        "at_ns": 6010000,
+        "owner": 0,
+        "packet": "d02468000d86a0e"
+      },
+      {
+        "at_ns": 7010000,
+        "owner": 1,
+        "packet": "f02468000f86a0d"
+      },
+      {
+        "at_ns": 8010000,
+        "owner": 0,
+        "packet": "11e2468001186a12"
+      },
+      {
+        "at_ns": 9010000,
+        "owner": 1,
+        "packet": "13e2468001386a11"
+      },
+      {
+        "at_ns": 10010000,
+        "owner": 0,
+        "packet": "1422468001586a16"
+      },
+      {
+        "at_ns": 11010000,
+        "owner": 1,
+        "packet": "1622468001786a15"
+      },
+      {
+        "at_ns": 12010000,
+        "owner": 0,
+        "packet": "1842468001986a1a"
+      },
+      {
+        "at_ns": 13010000,
+        "owner": 1,
+        "packet": "1a42468001b86a19"
+      },
+      {
+        "at_ns": 14010000,
+        "owner": 0,
+        "packet": "1c82468001d86a1e"
+      },
+      {
+        "at_ns": 15010000,
+        "owner": 1,
+        "packet": "1e82468001f86a1d"
+      },
+      {
+        "at_ns": 16010000,
+        "owner": 0,
+        "packet": "2102468002186a22"
+      },
+      {
+        "at_ns": 17010000,
+        "owner": 1,
+        "packet": "2302468002386a21"
+      },
+      {
+        "at_ns": 18010000,
+        "owner": 0,
+        "packet": "25e2468002586a26"
+      },
+      {
+        "at_ns": 19010000,
+        "owner": 1,
+        "packet": "27e2468002786a25"
+      },
+      {
+        "at_ns": 20010000,
+        "owner": 0,
+        "packet": "2822468002986a2a"
+      },
+      {
+        "at_ns": 21010000,
+        "owner": 1,
+        "packet": "2a22468002b86a29"
+      },
+      {
+        "at_ns": 22010000,
+        "owner": 0,
+        "packet": "2c42468002d86a2e"
+      },
+      {
+        "at_ns": 23010000,
+        "owner": 1,
+        "packet": "2e42468002f86a2d"
+      },
+      {
+        "at_ns": 24010000,
+        "owner": 0,
+        "packet": "3082468003186a32"
+      },
+      {
+        "at_ns": 25010000,
+        "owner": 1,
+        "packet": "3282468003386a31"
+      },
+      {
+        "at_ns": 26010000,
+        "owner": 0,
+        "packet": "3502468003586a36"
+      },
+      {
+        "at_ns": 27010000,
+        "owner": 1,
+        "packet": "3702468003786a35"
+      },
+      {
+        "at_ns": 28010000,
+        "owner": 0,
+        "packet": "39e2468003986a3a"
+      },
+      {
+        "at_ns": 29010000,
+        "owner": 1,
+        "packet": "3be2468003b86a39"
+      },
+      {
+        "at_ns": 30010000,
+        "owner": 0,
+        "packet": "3c22468003d86a3e"
+      },
+      {
+        "at_ns": 31010000,
+        "owner": 1,
+        "packet": "3e22468003f86a3d"
+      },
+      {
+        "at_ns": 32010000,
+        "owner": 0,
+        "packet": "4042468004186a42"
+      },
+      {
+        "at_ns": 33010000,
+        "owner": 1,
+        "packet": "4242468004386a41"
+      },
+      {
+        "at_ns": 34010000,
+        "owner": 0,
+        "packet": "4482468004586a46"
+      },
+      {
+        "at_ns": 35010000,
+        "owner": 1,
+        "packet": "4682468004786a45"
+      },
+      {
+        "at_ns": 36010000,
+        "owner": 0,
+        "packet": "4902468004986a4a"
+      },
+      {
+        "at_ns": 37010000,
+        "owner": 1,
+        "packet": "4b02468004b86a49"
+      },
+      {
+        "at_ns": 38010000,
+        "owner": 0,
+        "packet": "4de2468004d86a4e"
+      },
+      {
+        "at_ns": 39010000,
+        "owner": 1,
+        "packet": "4fe2468004f86a4d"
+      },
+      {
+        "at_ns": 40010000,
+        "owner": 0,
+        "packet": "5022468005186a52"
+      },
+      {
+        "at_ns": 41010000,
+        "owner": 1,
+        "packet": "5222468005386a51"
+      },
+      {
+        "at_ns": 42010000,
+        "owner": 0,
+        "packet": "5442468005586a56"
+      },
+      {
+        "at_ns": 43010000,
+        "owner": 1,
+        "packet": "5642468005786a55"
+      },
+      {
+        "at_ns": 44010000,
+        "owner": 0,
+        "packet": "5882468005986a5a"
+      },
+      {
+        "at_ns": 45010000,
+        "owner": 1,
+        "packet": "5a82468005b86a59"
+      },
+      {
+        "at_ns": 46010000,
+        "owner": 0,
+        "packet": "5d02468005d86a5e"
+      },
+      {
+        "at_ns": 47010000,
+        "owner": 1,
+        "packet": "5f02468005f86a5d"
+      }
+    ],
+    "false_ERR_interval_ns": [
+      0,
+      0
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "ready_low_ns": 80,
+    "ready_period_ns": 340
+  },
+  "trace_storage": {
+    "records": 1815382,
+    "raw_sha256": "c2cb4a6c4cc76072c266765b5986edb2a8794a62ec8b0c127280a40744122451",
+    "bytes": 716829
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 14226,
+  "ARM_instructions_runtime": 0,
+  "driver_calls": 4,
+  "completed_driver_visits": 3,
+  "max_observed_instructions_per_driver_visit": 21,
+  "MMIO": {
+    "boot_read": 4
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_burst.py": "e66db21c9083c8e05c8b88ec77d420d085ee24ecb751367a02e0ef4820eb3805",
+    "experiments/t106-system-emulation/bridge_burst.c": "08bdc939c071578777e1ba85b3a744c787c51f1473dacd0ae8c56e1419d38200",
+    "experiments/t106-system-emulation/tb_burst.sv": "f23da9f0233b9c92fb8b624ecccbfca7f39cdfa41dcf50b5b34642d1cfb00183",
+    "experiments/t106-system-emulation/burst.tcl": "0c2ce21b4a4dda57e735b4e73850b5f8c1bec30ad3088f82c3ed3d3afd7118a6",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t106-system-emulation/BURST_RUN.md": "fc77870ea35fbb3c98bf5234cf17daae1708e09086bb2392cee9fe1e16b254e4",
+    "experiments/t106-system-emulation/burst_run_inputs.py": "c85dcbd11ca43937346946ac5a293af96bfd58c4e5c9a526082e710bf3928522",
+    "experiments/t106-system-emulation/trace_codec.py": "1cddbbdd5e86dc915bbc91e1bd84bb26b925f7d9550121f8632d6a4346ba7dc3",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "22390a49a78d774cc50852e3f152cc8a8a9a7d61c9197df8076af6f5e604199e",
+    "injections.txt": "c3c3f8397135a4767063263d8c72925e1b08c2d1f3e4b5d9b58afa0960ba7e33",
+    "application.txt": "e4b37776a75af4e1e3a7d0252e31a3b7453d2b3cd1b9d803c071b6ca9ee30b03"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/burst-cold-envelope-fixed-1-1792080605745469285",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 0,
+  "represented_driver_visits": 0,
+  "represented_MMIO_reads": 0,
+  "represented_MMIO_writes": 0,
+  "represented_ISA_count": null,
+  "trace_sha256": "c2cb4a6c4cc76072c266765b5986edb2a8794a62ec8b0c127280a40744122451"
+}

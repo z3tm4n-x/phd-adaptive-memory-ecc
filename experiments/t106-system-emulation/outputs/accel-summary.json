@@ -1,0 +1,583 @@
+{
+  "preregistered_commit": "0ebba34",
+  "scope": "scenarios1/3 plus prior4; 2/5 remain open",
+  "results": {
+    "accel-short-adaptive-literal": {
+      "mode": "adaptive",
+      "scenario": "short",
+      "horizon_ns": 1200000,
+      "pin_edges_checked": 146952,
+      "explicit_operations": 6123,
+      "represented_operations": 0,
+      "unfinished_operations": 0,
+      "completed_operations": 6123,
+      "calendar_slots": 6123,
+      "empty_blocks": 0,
+      "represented_services": 0,
+      "programs_checked": 6,
+      "err_events": 0,
+      "history_events": 0,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 563316,
+      "mean_bus_fraction": 0.46943,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "CPU": {
+        "ARM_instructions_runtime": 3860,
+        "completed_driver_visits": 16,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 63,
+          "runtime_write": 60
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-short-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "short",
+      "horizon_ns": 1200000,
+      "pin_edges_checked": 54792,
+      "explicit_operations": 2283,
+      "represented_operations": 3840,
+      "unfinished_operations": 0,
+      "completed_operations": 6123,
+      "calendar_slots": 6123,
+      "empty_blocks": 1,
+      "represented_services": 4,
+      "programs_checked": 3,
+      "err_events": 0,
+      "history_events": 0,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 563316,
+      "mean_bus_fraction": 0.46943,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "literal_equivalence": {
+        "compared_rows": 66215,
+        "represented_intervals": 1
+      },
+      "CPU": {
+        "ARM_instructions_runtime": 1304,
+        "completed_driver_visits": 8,
+        "represented_full_services": 4,
+        "represented_driver_visits": 8,
+        "represented_MMIO_reads": 40,
+        "represented_MMIO_writes": 40,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 23,
+          "runtime_write": 20
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-lowprobe-adaptive-no-low": {
+      "mode": "adaptive",
+      "scenario": "lowprobe",
+      "horizon_ns": 180312000000,
+      "pin_edges_checked": 140088,
+      "explicit_operations": 5837,
+      "represented_operations": 919946880,
+      "unfinished_operations": 0,
+      "completed_operations": 919952717,
+      "calendar_slots": 919959184,
+      "empty_blocks": 1,
+      "represented_services": 958278,
+      "programs_checked": 13,
+      "err_events": 0,
+      "history_events": 0,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 84635649964,
+      "mean_bus_fraction": 0.4693844556324593,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "CPU": {
+        "ARM_instructions_runtime": 7659,
+        "completed_driver_visits": 29,
+        "represented_full_services": 958278,
+        "represented_driver_visits": 1916556,
+        "represented_MMIO_reads": 9582780,
+        "represented_MMIO_writes": 9582780,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 124,
+          "runtime_write": 121
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-lowprobe-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "lowprobe",
+      "horizon_ns": 180312000000,
+      "pin_edges_checked": 78648,
+      "explicit_operations": 3277,
+      "represented_operations": 919949440,
+      "unfinished_operations": 0,
+      "completed_operations": 919952717,
+      "calendar_slots": 919959184,
+      "empty_blocks": 2,
+      "represented_services": 958286,
+      "programs_checked": 6,
+      "err_events": 0,
+      "history_events": 0,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 84635649964,
+      "mean_bus_fraction": 0.4693844556324593,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "literal_equivalence": {
+        "compared_rows": 97742,
+        "represented_intervals": 2
+      },
+      "CPU": {
+        "ARM_instructions_runtime": 2603,
+        "completed_driver_visits": 13,
+        "represented_full_services": 958286,
+        "represented_driver_visits": 1916572,
+        "represented_MMIO_reads": 9582860,
+        "represented_MMIO_writes": 9582860,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 44,
+          "runtime_write": 41
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-quiet-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "quiet",
+      "horizon_ns": 272000000000,
+      "pin_edges_checked": 106598,
+      "explicit_operations": 4441,
+      "represented_operations": 1382005760,
+      "unfinished_operations": 0,
+      "completed_operations": 1382010201,
+      "calendar_slots": 1387755104,
+      "empty_blocks": 4,
+      "represented_services": 1445572,
+      "programs_checked": 10,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 1,
+      "bus_work_ns": 127144938548,
+      "mean_bus_fraction": 0.4674446270147059,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          181000000312,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9049992008
+        ],
+        [
+          181000109384,
+          0,
+          0,
+          0,
+          1,
+          1,
+          13550045059
+        ],
+        [
+          271000900504,
+          0,
+          1,
+          0,
+          1,
+          1,
+          13550045059
+        ],
+        [
+          271000900612,
+          1,
+          1,
+          0,
+          1,
+          1,
+          13550045059
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "CPU": {
+        "ARM_instructions_runtime": 3918,
+        "completed_driver_visits": 16,
+        "represented_full_services": 1445572,
+        "represented_driver_visits": 2891144,
+        "represented_MMIO_reads": 14455720,
+        "represented_MMIO_writes": 14455720,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 71,
+          "runtime_write": 60
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-quiet-fixed-skip": {
+      "mode": "fixed",
+      "scenario": "quiet",
+      "horizon_ns": 272000000000,
+      "pin_edges_checked": 51455,
+      "explicit_operations": 2143,
+      "represented_operations": 1387752960,
+      "unfinished_operations": 1,
+      "completed_operations": 1387755103,
+      "calendar_slots": 1387755104,
+      "empty_blocks": 2,
+      "represented_services": 0,
+      "programs_checked": 0,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 1,
+      "bus_work_ns": 127673469568,
+      "mean_bus_fraction": 0.46938775576470587,
+      "peak_any_1ms_fraction": 0.469568,
+      "peak_window_start_relative_ns": 180999000448,
+      "permissions": [],
+      "model_full_service_ns": null,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-loss-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "loss",
+      "horizon_ns": 362000000000,
+      "pin_edges_checked": 204720,
+      "explicit_operations": 8530,
+      "represented_operations": 1842243840,
+      "unfinished_operations": 0,
+      "completed_operations": 1842252370,
+      "calendar_slots": 1846938776,
+      "empty_blocks": 5,
+      "represented_services": 1923884,
+      "programs_checked": 15,
+      "err_events": 0,
+      "history_events": 2,
+      "loss_publication_relative_ns": [
+        181000000036,
+        181002000036
+      ],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 169487218040,
+      "mean_bus_fraction": 0.46819673491712704,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          181000000012,
+          1,
+          1,
+          1,
+          0,
+          0,
+          9049992008
+        ],
+        [
+          181000000036,
+          0,
+          1,
+          1,
+          0,
+          0,
+          9049992008
+        ],
+        [
+          181000108904,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          181002000012,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          361312098104,
+          0,
+          1,
+          0,
+          2,
+          2,
+          18065604939
+        ],
+        [
+          361312098212,
+          1,
+          1,
+          0,
+          2,
+          2,
+          18065604939
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "CPU": {
+        "ARM_instructions_runtime": 6424,
+        "completed_driver_visits": 25,
+        "represented_full_services": 1923884,
+        "represented_driver_visits": 3847768,
+        "represented_MMIO_reads": 19238840,
+        "represented_MMIO_writes": 19238840,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 106,
+          "runtime_write": 101
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "accel-loss-fixed-skip": {
+      "mode": "fixed",
+      "scenario": "loss",
+      "horizon_ns": 362000000000,
+      "pin_edges_checked": 58944,
+      "explicit_operations": 2456,
+      "represented_operations": 1846936320,
+      "unfinished_operations": 0,
+      "completed_operations": 1846938776,
+      "calendar_slots": 1846938776,
+      "empty_blocks": 3,
+      "represented_services": 0,
+      "programs_checked": 0,
+      "err_events": 0,
+      "history_events": 2,
+      "loss_publication_relative_ns": [
+        181000000036,
+        181002000036
+      ],
+      "physical_alias_writes": 0,
+      "bus_work_ns": 169918367392,
+      "mean_bus_fraction": 0.4693877552265193,
+      "peak_any_1ms_fraction": 0.469512,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [
+        [
+          181000000012,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          181002000012,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "model_full_service_ns": null,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4
+        },
+        "actual_ARM_time_ns": null
+      }
+    }
+  },
+  "profile2_input": {
+    "bins": 6065,
+    "usable_bins": 6065,
+    "profile_sha256": "bdc6a396abf9a5c4d3b5d987be99f6acf77797d92ee2a46a570c5727c90ffe52",
+    "R0A_normalization": "NOT_APPLIED; no policy comparison on this extraction",
+    "source_model": {
+      "bits": 16777216,
+      "Al_mm": 10,
+      "is_R0A_full38_3g_calibration": false
+    }
+  },
+  "shared_dependencies": [
+    "accepted ETransaction/ServiceConfig/raw Oracle",
+    "corrected startup CP15/GIC harness",
+    "vendor XPM",
+    "ABI/constants",
+    "Unicorn/XSim"
+  ],
+  "not_claimed": [
+    "hardware WCET",
+    "probability Q(T) over mission",
+    "five-scenario completion",
+    "new routed STA"
+  ],
+  "sha256": {
+    "experiments/t106-system-emulation/outputs/accel-short-adaptive-literal.json": "6135814c6c47f39118147e1abd827042370f4ef0dc4c042ce0314c7389b46758",
+    "experiments/t106-system-emulation/outputs/accel-short-adaptive-literal.trace.gz": "688a61ca3601ac3cb3d628842bd2f720e6d17fa9f6f400ad4584b0b1e60c0e6a",
+    "experiments/t106-system-emulation/outputs/accel-short-adaptive-skip.json": "752020d810b1473703b38eab6b8bc536430e8359fa9ec9ea9c7045f4ca1e6b84",
+    "experiments/t106-system-emulation/outputs/accel-short-adaptive-skip.trace.gz": "4e31c626b31d3ab4e9a7b514422a7a42130d33c48faf94fd055b9c298492fe75",
+    "experiments/t106-system-emulation/outputs/accel-lowprobe-adaptive-no-low.json": "25cb5645ae6e85339e776278cf4d10b346d6f6d2ae69d49101004d7252588e3f",
+    "experiments/t106-system-emulation/outputs/accel-lowprobe-adaptive-no-low.trace.gz": "6b76842095cc262830c65a6df44d64fea45b9706c6a58f19f2f074d98e64934d",
+    "experiments/t106-system-emulation/outputs/accel-lowprobe-adaptive-skip.json": "db437082491bbde1476542ffbec0db6a633b8e7fb14d20aa465271c8acb4eff4",
+    "experiments/t106-system-emulation/outputs/accel-lowprobe-adaptive-skip.trace.gz": "8272151b06fff0098998732cdbca31a38e1db34f4a8dc71e4a358c17b6b21b5e",
+    "experiments/t106-system-emulation/outputs/accel-quiet-adaptive-skip.json": "5889296f47ba7553ad37ead78800d89cd9c6b9abd1c1537d29e7e1db1baef8e9",
+    "experiments/t106-system-emulation/outputs/accel-quiet-adaptive-skip.trace.gz": "bacf4d115a5a798f25fc0165f93e11393f9a293afb6310e894180116c4d61a76",
+    "experiments/t106-system-emulation/outputs/accel-quiet-fixed-skip.json": "ddc1dbbd50b55b96759e0dbe7593ee66926400285dbe203762f2f9234b1b94d6",
+    "experiments/t106-system-emulation/outputs/accel-quiet-fixed-skip.trace.gz": "aed04ac4c88a13f433cf3cd900ccdb43ce31de70f1c7b3b859ce1592d7440e75",
+    "experiments/t106-system-emulation/outputs/accel-loss-adaptive-skip.json": "96ecfe5a35a06775a856c63766814b8e73062c11e167f75c5d7d04f80ad8367e",
+    "experiments/t106-system-emulation/outputs/accel-loss-adaptive-skip.trace.gz": "a2539d0c299d1e920f191271ff6e711824ba3245ab6f090cb246ce667b25ae7c",
+    "experiments/t106-system-emulation/outputs/accel-loss-fixed-skip.json": "3bc47eab74566b9c669743018973080e25caa2cc4fb09e43a83ee4513d3c3de4",
+    "experiments/t106-system-emulation/outputs/accel-loss-fixed-skip.trace.gz": "86705a2c81e43bff61fdf1941f47947b397f05c207bbcd22ef1d3ddd5895535b",
+    "experiments/t106-system-emulation/run_accel.py": "b4d631dfd4051e1fa1c0ee6148d8c1773bdc37f0f3382ebefcf77a29b4f69c1c",
+    "experiments/t106-system-emulation/tb_accel.sv": "740eb51e13416fa03b3e95ea7f457efffbb3c01a4073740c4d1d7de41d10b9a8",
+    "experiments/t106-system-emulation/accel.tcl": "e27ede9ce7e30cb7a9a8a34e2fbe8029fd452444094456cf5c8c1c5984da1689",
+    "experiments/t106-system-emulation/bridge.c": "6a193b8a32a8011d8f43aad600f5bf90d903b946ae3816ec39a32a1d07996000",
+    "experiments/t106-system-emulation/empty_rule.py": "b62d2b3858accb97f94bec16c3ed956576a90217d2cd0be330e7239dfeb47b44",
+    "experiments/t106-system-emulation/empty_time.py": "51c0fa81638ec86695ebf447d59334a84f9cbe61bd5898bc6453e63a063ee5d9",
+    "experiments/t106-system-emulation/check_accel.py": "b20b972f5b6edd78801141a23c7ec56d6ce141dc4f42c689fc9b18c7142b8726",
+    "experiments/t106-system-emulation/test_accel.py": "d0632d7ae7c249647cce6a8e47f5724bc4ff77d1f496646a2b759fbe24318cf8",
+    "experiments/t106-system-emulation/verify_accel.py": "c493a3c8a214821096deffbd0cb0e7211a80655274e9c2b1969f7aa2cbfe44d4",
+    "experiments/t106-system-emulation/ACCELERATION.md": "38d86eabe90d3c7cb329449d620f19fa490931dbf8aab382b0e2b8880d958688",
+    "experiments/t106-system-emulation/outputs/t67-profile.json": "406832783d377f933628727b54eb050169a7cca96d17ede9654e8080a4dc9e4d",
+    "experiments/t106-system-emulation/outputs/t67-profile.json.gz": "bdc6a396abf9a5c4d3b5d987be99f6acf77797d92ee2a46a570c5727c90ffe52"
+  }
+}

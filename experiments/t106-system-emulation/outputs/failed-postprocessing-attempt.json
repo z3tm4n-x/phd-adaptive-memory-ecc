@@ -1,0 +1,58 @@
+{
+  "status": "failed_not_accepted",
+  "runner_commit": "e85b0226f5aaa8d4431f0e983371fd924b3fb051",
+  "started_utc": "2026-10-15T18:24:52.045166+00:00",
+  "finished_utc": "2026-10-15T21:03:50.060517+00:00",
+  "fixed": {
+    "vendor_exit": 0,
+    "local_finish_ns": 2512172160,
+    "scope": "simulation finished; capture producer hash and complete metadata not persisted; not a verified full result",
+    "failure": "writer.join(600) expired during trace_codec.pack internal archive reread"
+  },
+  "adaptive": {
+    "status": "cancelled_after_peer_failure",
+    "scope": "partial; not a complete result"
+  },
+  "runtime_injection": {
+    "executed": false,
+    "reason": "process no longer existed before sys.remote_exec submission; no running-state modification"
+  },
+  "preserved_local_files": [
+    {
+      "path": "experiments/t106-system-emulation/.build/full-profile-v2/state.json",
+      "bytes": 480,
+      "sha256": "dd23e67f75d573d797863c5671bc2941bbd291c56223ef1de3dfd223b621d496"
+    },
+    {
+      "path": "experiments/t106-system-emulation/.build/full-profile-v2/fixed.log",
+      "bytes": 8766,
+      "sha256": "b7212b247d8df9f26379476494efed2f036d5cbab076d876838b260ce2cd3901"
+    },
+    {
+      "path": "experiments/t106-system-emulation/.build/full-profile-v2/adaptive.log",
+      "bytes": 9630,
+      "sha256": "ded88838fa7ec363370bc809c00c15dc42e8a7c53258830b36ac988c0e5899a4"
+    },
+    {
+      "path": "experiments/t106-system-emulation/.build/burst2-burst-fixed-1-1792088692840238718/trace.ctz",
+      "bytes": 146117191,
+      "sha256": "fd24cecbddd392f04645eceb323cbc556b02631a222a9adcdc0719762f9fb11e"
+    },
+    {
+      "path": "experiments/t106-system-emulation/.build/burst2-burst-fixed-1-1792088692840238718/vendor.log",
+      "bytes": 24544,
+      "sha256": "233307836be91779312dcf3986b32f2526328fa6eb856791ed3da72ffb9d194d"
+    },
+    {
+      "path": "experiments/t106-system-emulation/.build/burst2-burst-adaptive-1-1792088722711667616/trace.ctz",
+      "bytes": 157393831,
+      "sha256": "d2d5b9d1051c14d0402ac9e42e09061b9db13acf763f63a8e4b37a466c099133"
+    },
+    {
+      "path": "experiments/t106-system-emulation/.build/burst2-burst-adaptive-1-1792088722711667616/vendor.log",
+      "bytes": 24840,
+      "sha256": "3842fa5887e0cd49d490fbb3b5ca2ef1eec9250db8363e6fe92a8fe4560a7cc4"
+    }
+  ],
+  "replacement": "POSTPROCESSING.md; durable capture then separate verification; new complete pair"
+}

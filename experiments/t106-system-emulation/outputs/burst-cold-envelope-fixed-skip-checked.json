@@ -1,0 +1,220 @@
+{
+  "scope": "scenario4 additional in-envelope cold-start; historical stress retained",
+  "results": {
+    "mode": "fixed",
+    "scenario": "cold-envelope",
+    "horizon_ns": 48000000,
+    "pin_edges_checked": 1502456,
+    "explicit_operations": 62546,
+    "represented_operations": 182400,
+    "unfinished_operations": 1,
+    "completed_operations": 244946,
+    "calendar_slots": 244899,
+    "empty_blocks": 48,
+    "represented_services": 0,
+    "programs_checked": 0,
+    "err_events": 4,
+    "history_events": 4,
+    "loss_publication_relative_ns": [],
+    "physical_alias_writes": 51,
+    "bus_work_ns": 22540440,
+    "mean_bus_fraction": 0.4695925,
+    "peak_any_1ms_fraction": 0.46984,
+    "peak_window_start_relative_ns": 0,
+    "permissions": [],
+    "model_full_service_ns": null,
+    "hardware_ARM_time_ns": null,
+    "whole_mission_Q_inferred": false,
+    "injections": 8,
+    "memory_samples_checked": 62570,
+    "full_domain_state_checked": true,
+    "first_exceedance_relative_ns": null,
+    "remaining_error_positions": 2,
+    "application_completed": 48,
+    "max_credits": 1,
+    "application_work_ns": {
+      "read": 4416,
+      "write": 5184
+    },
+    "control_corrective_extra_ns": 168,
+    "max_application_delay_ns": 2070,
+    "read_results": [
+      {
+        "id": 1,
+        "word": 400000,
+        "at_ns": 1011460,
+        "data": "a5a31a00"
+      },
+      {
+        "id": 3,
+        "word": 400001,
+        "at_ns": 3010660,
+        "data": "a5a30081"
+      },
+      {
+        "id": 5,
+        "word": 400002,
+        "at_ns": 5011420,
+        "data": "a5341a82"
+      },
+      {
+        "id": 7,
+        "word": 400003,
+        "at_ns": 7010620,
+        "data": "12a31a83"
+      },
+      {
+        "id": 9,
+        "word": 400004,
+        "at_ns": 9011460,
+        "data": "12340008"
+      },
+      {
+        "id": 11,
+        "word": 400005,
+        "at_ns": 11010660,
+        "data": "a5a31a0a"
+      },
+      {
+        "id": 13,
+        "word": 400006,
+        "at_ns": 13011360,
+        "data": "a5a30086"
+      },
+      {
+        "id": 15,
+        "word": 400007,
+        "at_ns": 15010560,
+        "data": "a5341a87"
+      },
+      {
+        "id": 17,
+        "word": 400008,
+        "at_ns": 17011320,
+        "data": "12a31a88"
+      },
+      {
+        "id": 19,
+        "word": 400009,
+        "at_ns": 19010520,
+        "data": "12340012"
+      },
+      {
+        "id": 21,
+        "word": 400010,
+        "at_ns": 21011300,
+        "data": "a5a31a14"
+      },
+      {
+        "id": 23,
+        "word": 400011,
+        "at_ns": 23012060,
+        "data": "a5a3008b"
+      },
+      {
+        "id": 25,
+        "word": 400012,
+        "at_ns": 25011260,
+        "data": "a5341a8c"
+      },
+      {
+        "id": 27,
+        "word": 400013,
+        "at_ns": 27012080,
+        "data": "12a31a8d"
+      },
+      {
+        "id": 29,
+        "word": 400014,
+        "at_ns": 29011280,
+        "data": "1234001c"
+      },
+      {
+        "id": 31,
+        "word": 400015,
+        "at_ns": 31012000,
+        "data": "a5a31a1e"
+      },
+      {
+        "id": 33,
+        "word": 400016,
+        "at_ns": 33011200,
+        "data": "a5a30090"
+      },
+      {
+        "id": 35,
+        "word": 400017,
+        "at_ns": 35011960,
+        "data": "a5341a91"
+      },
+      {
+        "id": 37,
+        "word": 400018,
+        "at_ns": 37011160,
+        "data": "12a31a92"
+      },
+      {
+        "id": 39,
+        "word": 400019,
+        "at_ns": 39011940,
+        "data": "12340026"
+      },
+      {
+        "id": 41,
+        "word": 400020,
+        "at_ns": 41011140,
+        "data": "a5a31a28"
+      },
+      {
+        "id": 43,
+        "word": 400021,
+        "at_ns": 43011900,
+        "data": "a5a30095"
+      },
+      {
+        "id": 45,
+        "word": 400022,
+        "at_ns": 45011100,
+        "data": "a5341a96"
+      },
+      {
+        "id": 47,
+        "word": 400023,
+        "at_ns": 47011900,
+        "data": "12a31a97"
+      }
+    ],
+    "logical_data_words_changed": 24,
+    "never_written_words": 524264
+  },
+  "sha256": {
+    "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.json": "1720895d233fc8407af92beb70b338f46d0028fd3f914857ef17d466851111d6",
+    "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.trace.ct3": "c2383702d8c51c83b43bee69d7d9947f08958156a64efcd3ab3f88682c25e808",
+    "experiments/t106-system-emulation/cold_envelope.py": "3c02f80cba0422b537327476bd3066d2733b03e9d8bad4659b5557e4ccddc849",
+    "experiments/t106-system-emulation/COLD_ENVELOPE.md": "31d69b0c95248e607f3d300c7d9e928e2c04df37a74280c626eaa1b2f225609d",
+    "experiments/t106-system-emulation/check_burst.py": "24c205824c0a067824224520ad05f5826474a4e107024816c0148b8cad94c332",
+    "experiments/t106-system-emulation/burst_price.py": "a6b92c13699801b066ea50ed8719123b176005ef1ef5327c0f1fb599d31c9d9c",
+    "experiments/t106-system-emulation/burst_codec.py": "116073d847e6e19c62a321f4174228c0169c6915ef173e535d8a9f617ff4cec2",
+    "experiments/t106-system-emulation/report_guard.py": "5ac294b3452b9b271056bfec2c3e10ed158f7ff24ec32a8ec7981af4d9091ddf"
+  },
+  "application_interval_ns": 1000000,
+  "read_rate_per_s": 500,
+  "write_rate_per_s": 500,
+  "hardware_ARM_time_ns": null,
+  "Q_T_certified_by_emulation": false,
+  "verification_history": [
+    {
+      "previous_canonical_report_sha256": "1229552b0771ce7371ac11a99809490642ec30af3db2d85b44bbe01debcd0946",
+      "previous_sha256": {
+        "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.json": "1720895d233fc8407af92beb70b338f46d0028fd3f914857ef17d466851111d6",
+        "experiments/t106-system-emulation/outputs/burst-cold-envelope-fixed-skip.trace.ct3": "c2383702d8c51c83b43bee69d7d9947f08958156a64efcd3ab3f88682c25e808",
+        "experiments/t106-system-emulation/cold_envelope.py": "17a692d9c7e2d19152eaf5bd992ef772369552034d6c26e20b027d3fd3134948",
+        "experiments/t106-system-emulation/COLD_ENVELOPE.md": "31d69b0c95248e607f3d300c7d9e928e2c04df37a74280c626eaa1b2f225609d",
+        "experiments/t106-system-emulation/check_burst.py": "24c205824c0a067824224520ad05f5826474a4e107024816c0148b8cad94c332",
+        "experiments/t106-system-emulation/burst_price.py": "a6b92c13699801b066ea50ed8719123b176005ef1ef5327c0f1fb599d31c9d9c",
+        "experiments/t106-system-emulation/burst_codec.py": "116073d847e6e19c62a321f4174228c0169c6915ef173e535d8a9f617ff4cec2"
+      },
+      "reason": "verification provenance refreshed; scientific payload and trace hashes unchanged"
+    }
+  ]
+}

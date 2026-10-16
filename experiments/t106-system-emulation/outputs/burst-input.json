@@ -1,0 +1,28 @@
+{
+  "scope": "declared digital R0-A envelope subcase; NOT physical response calibration",
+  "source_sha256": {
+    "experiments/t106-system-emulation/outputs/t67-profile.json.gz": "bdc6a396abf9a5c4d3b5d987be99f6acf77797d92ee2a46a570c5727c90ffe52",
+    "experiments/t106-system-emulation/outputs/t67-profile.json": "406832783d377f933628727b54eb050169a7cca96d17ede9654e8080a4dc9e4d",
+    "experiments/t106-system-emulation/burst_inputs.py": "61ec2cc1218d717d7d2dd3a070fad23e6523d607858f674f4ae0e50fae8143cc",
+    "experiments/t106-system-emulation/BURST.md": "cb777218119d1765cea25bf7d80baa280efcc4f8eb19808db72e117b6ef66548",
+    "theory/t135-demo-operating-point.md": "9cb52e441d4b832f96e6dc7bd283337e521e40744107a95dc4c75335b05ed22d"
+  },
+  "horizon_s": 363900,
+  "peak_rate_per_s": 0.244682704,
+  "solar_expected_parents": 5265.819621309562,
+  "expected_parents": 5322.116406909561,
+  "integral_rate_squared_per_s": 636.0154217622338,
+  "max_H_l_relative_growth_per_s": 0.01884359660840893,
+  "seed": 10620261014,
+  "proposals": 88907,
+  "generated_parents": 5237,
+  "python": "3.14.4 (main, Apr  8 2026, 04:02:31) [GCC 15.2.0]",
+  "policy_execution": false,
+  "unknowns": [
+    "physical calibration of this normalized temporal shape",
+    "mission Q(T)",
+    "hardware ARM time"
+  ],
+  "burst-rate_sha256": "8cca54f23552215bbf6f592ea93128057d46a882361b2b83d7a23dc1ed00402e",
+  "burst-stimulus_sha256": "5a822364a42dfbd12cc8f3b17b9215357f23369e77ded96160ae1d6c07e78d0a"
+}

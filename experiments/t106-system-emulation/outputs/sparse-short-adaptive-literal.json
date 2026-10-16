@@ -1,0 +1,124 @@
+{
+  "mode": "adaptive",
+  "scenario": "short",
+  "accelerated": false,
+  "macros": [],
+  "host_elapsed_s": 30.005632165,
+  "stimulus": {
+    "scenario": "short",
+    "horizon_ns": 2000000,
+    "initial_data": "0xa5a50000 XOR word",
+    "initial_errors": 0,
+    "injections": [
+      {
+        "at_ns": 2002,
+        "word": 400000,
+        "bit": 37,
+        "parent": 1
+      },
+      {
+        "at_ns": 3002,
+        "word": 500000,
+        "bit": 7,
+        "parent": 2
+      },
+      {
+        "at_ns": 3502,
+        "word": 500001,
+        "bit": 12,
+        "parent": 3
+      },
+      {
+        "at_ns": 3506,
+        "word": 500001,
+        "bit": 12,
+        "parent": 4
+      }
+    ],
+    "applications": [
+      {
+        "at_ns": 10000,
+        "owner": 0,
+        "packet": "1e2468000186a02"
+      },
+      {
+        "at_ns": 1010000,
+        "owner": 1,
+        "packet": "3e2468000386a01"
+      }
+    ],
+    "false_ERR_interval_ns": [
+      0,
+      0
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "ready_low_ns": 80,
+    "ready_period_ns": 340
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 20812,
+  "ARM_instructions_runtime": 6586,
+  "driver_calls": 25,
+  "completed_driver_visits": 25,
+  "max_observed_instructions_per_driver_visit": 686,
+  "MMIO": {
+    "boot_read": 4,
+    "runtime_read": 112,
+    "runtime_write": 101
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_sparse.py": "f80086c5ab428da48aea4521258497baae723a5ecd20e28bcb2ddbd4f3594135",
+    "experiments/t106-system-emulation/bridge.c": "6a193b8a32a8011d8f43aad600f5bf90d903b946ae3816ec39a32a1d07996000",
+    "experiments/t106-system-emulation/tb_sparse.sv": "0fd44ef6db03b06c3a3b856ccaa1637c229aade2d00b8e73003f5c17fa2845ae",
+    "experiments/t106-system-emulation/sparse.tcl": "36a0085249ad9f761f3262b352eefce7568bb86c511b44429592e6017a0735a9",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "ab3df56fbe3d7fedf9655e3f263b61585f03e837750fedea59e3a632c90af040",
+    "injections.txt": "17b4c2d687163478f921cf0dce5d8cfed25bfe68947d1307e2da2071280db9ff",
+    "application.txt": "4a15102309fbddfef2c9cf482494a0c2951ada4d6f74c156289bacc988758064"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/sparse-short-adaptive-0-1792071502382954859",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 0,
+  "represented_driver_visits": 0,
+  "represented_MMIO_reads": 0,
+  "represented_MMIO_writes": 0,
+  "represented_ISA_count": null,
+  "trace_sha256": "5b6a8ba9d9ffc3d76fc168a33c1516a0dcb655fd432cb2bfc2351f86e99ab69a"
+}

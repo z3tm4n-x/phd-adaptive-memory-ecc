@@ -1,0 +1,22 @@
+{
+  "drop_ERR": {
+    "rejected": true,
+    "first_difference": "mutant.trace:73:EVENT t=898ns: "
+  },
+  "duplicate_reply": {
+    "rejected": true,
+    "first_difference": "mutant.trace:1760:REPLY t=11770ns: list index out of range"
+  },
+  "erase_post_start_error": {
+    "rejected": true,
+    "first_difference": "mutant.trace:46:WRITE t=802ns: "
+  },
+  "corrupt_partial_write": {
+    "rejected": true,
+    "first_difference": "mutant.trace:1724:WRITE t=11590ns: "
+  },
+  "premature_LOW": {
+    "rejected": true,
+    "first_difference": "mutant.trace:8:FREEZE t=678ns: premature LOW in cold scenario"
+  }
+}
