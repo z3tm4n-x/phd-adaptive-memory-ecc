@@ -57,7 +57,8 @@
     "sha256": "12f30fa17183c4c1de688d3efafc4f407fb7055c26ca9ad205833bcf35b6a193",
     "original_log_sha256": "297a8ef41c710faf305f133dd184e651393314287aeb9060d9a5735df257d347",
     "original_log_bytes": 9906,
-    "verbatim_log_preservation_verified": true
+    "verbatim_log_preservation_verified": true,
+    "windows_checkout_with_core_autocrlf_true_preserves_sha256": true
   },
   "scientific_output_sha256": {
     "burst3-burst-adaptive-skip.json": "345acf6abe5d7764161a13ccf87d7d843d9cf815e140eec1cfc2e01b7f74cd08",
