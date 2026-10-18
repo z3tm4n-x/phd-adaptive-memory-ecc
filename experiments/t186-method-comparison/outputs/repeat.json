@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "equal_runs": 2,
+  "outputs_sha256": {
+    "results.json": "9ac4621e64084e4da62723130af3cfb1f1975207cc844bcee305eea7ac76bd81",
+    "validation.json": "c016723b8bf32d7595434eb8c6d3daac6d19470dbf98a59b8e72bb2106be727e",
+    "table.md": "a57045b8e5d86be78dde5dc58ddd6ecf2c5128b75c636d6176a3dbdd32fdc3ae",
+    "cost-budget.json": "98e78c91dc746586d2685114ea6f0813c3a490e42c1f4db4a3aa0deca18435ec"
+  },
+  "meaning": "deterministic reproducibility; no new statistical samples"
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "planning diagnostic under uniform singleton Poisson; not a qualified R0-A law",
+  "expected_marks": 77131.343232,
+  "expected_distinct_words": 71725.99128020545,
+  "watch_all_expected_visits": 220269586837944.8,
+  "row_budget_upper": 480,
+  "zero_failure_binomial_sample_sizes": [
+    {
+      "epsilon": 0.001,
+      "one_sided_alpha": 0.05,
+      "one_row": 2995,
+      "family480_bonferroni_per_row": 9165
+    },
+    {
+      "epsilon": 0.0001,
+      "one_sided_alpha": 0.05,
+      "one_row": 29956,
+      "family480_bonferroni_per_row": 91691
+    }
+  ]
+}
