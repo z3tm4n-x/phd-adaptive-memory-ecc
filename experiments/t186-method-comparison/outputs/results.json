@@ -1,0 +1,653 @@
+{
+  "status": "OWN RESULT; first stage awaiting contract review",
+  "inputs_sha256": "61c50b5a84f06b9ebc4ebabac6a1354326cb9d07052a072090b09573ec9ed039",
+  "implementation_sha256": {
+    "inputs.json": "61c50b5a84f06b9ebc4ebabac6a1354326cb9d07052a072090b09573ec9ed039",
+    "sources.json": "3a2b62f25f7c3f14a80069bf094be5133f47567a420fca4f0aabdb3bd23d1997",
+    "model.py": "010e7cea0dceb41ccf20bb34adaf874b7a480c1100b90f89d81572e838c495d4",
+    "checks.py": "4b87b7df859ca9b56360e36fcefce26139acfbbf096bc4eaee592fafaec004a5",
+    "reproduce.py": "92ba1f43f35e81106c98ed40cd8a60924a8efee22907f16aaad4c1ab7ed20d3c"
+  },
+  "results": [
+    {
+      "method": "constant_fast",
+      "horizon_ns": 400000000050,
+      "words": 524288,
+      "bits": 38,
+      "Q": null,
+      "probability_status": "not estimated; deterministic implementation pilot",
+      "first_exceedance": {
+        "t": 390000000001,
+        "word": 2,
+        "bits": [
+          2,
+          3
+        ]
+      },
+      "err_events": [
+        {
+          "t": 181063909440,
+          "event": "ERR",
+          "word": 0,
+          "slot": 923795456
+        },
+        {
+          "t": 181063909932,
+          "event": "ERR",
+          "word": 1,
+          "slot": 923795459
+        },
+        {
+          "t": 390078661656,
+          "event": "ERR",
+          "word": 2,
+          "slot": 1990197254
+        }
+      ],
+      "started_control_operations": 2040816328,
+      "completed_control_operations": 2040816328,
+      "started_application_operations": 6,
+      "unfinished_operations": [],
+      "bus": {
+        "control_base_ns": 187755102176,
+        "correction_extra_ns": 168,
+        "application_read_ns": 1104,
+        "total_ns": 187755103448
+      },
+      "mean_bus_fraction_exact": "3237156956/6896551725",
+      "mean_bus_percent": 46.93877585613265,
+      "bus_after_first_exceedance": {
+        "control_base_ns": 4693877536,
+        "correction_extra_ns": 56,
+        "application_read_ns": 368,
+        "total_ns": 4693877960
+      },
+      "mode_history": [
+        {
+          "t_ns": 0,
+          "low": false
+        }
+      ],
+      "effective_segments": [
+        {
+          "first_slot": 0,
+          "end_slot": 2040816328,
+          "low": false
+        }
+      ],
+      "processed_ERR_history": [],
+      "nominal_driver_services": 0,
+      "allocated_CPU_cores": 0,
+      "CPU_use_percent": null,
+      "CPU_time_ns": null,
+      "max_application_delay_ns": 2344,
+      "application": [
+        {
+          "arrival_ns": 1000000000,
+          "grant_ns": 1000001152,
+          "response_ns": 1000001736,
+          "delay_ns": 1736,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 180500000000,
+          "grant_ns": 180500001440,
+          "response_ns": 180500002024,
+          "delay_ns": 2024,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 181100000000,
+          "grant_ns": 181100001344,
+          "response_ns": 181100001928,
+          "delay_ns": 1928,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 361500000000,
+          "grant_ns": 361500000704,
+          "response_ns": 361500001288,
+          "delay_ns": 1288,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 390100000000,
+          "grant_ns": 390100000832,
+          "response_ns": 390100001416,
+          "delay_ns": 1416,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 399000000000,
+          "grant_ns": 399000001760,
+          "response_ns": 399000002344,
+          "delay_ns": 2344,
+          "response_within_horizon": true
+        }
+      ],
+      "residual_errors": {},
+      "trace": [
+        {
+          "t": 181000000000,
+          "event": "injection",
+          "word": 0,
+          "bit": 0,
+          "weight": 1
+        },
+        {
+          "t": 181020000000,
+          "event": "injection",
+          "word": 1,
+          "bit": 1,
+          "weight": 1
+        },
+        {
+          "t": 181063909440,
+          "event": "ERR",
+          "word": 0,
+          "slot": 923795456
+        },
+        {
+          "t": 181063909508,
+          "event": "commit",
+          "word": 0,
+          "remaining": []
+        },
+        {
+          "t": 181063909932,
+          "event": "ERR",
+          "word": 1,
+          "slot": 923795459
+        },
+        {
+          "t": 181063910000,
+          "event": "commit",
+          "word": 1,
+          "remaining": []
+        },
+        {
+          "t": 390000000000,
+          "event": "injection",
+          "word": 2,
+          "bit": 2,
+          "weight": 1
+        },
+        {
+          "t": 390000000001,
+          "event": "injection",
+          "word": 2,
+          "bit": 3,
+          "weight": 2
+        },
+        {
+          "t": 390078661656,
+          "event": "ERR",
+          "word": 2,
+          "slot": 1990197254
+        },
+        {
+          "t": 390078661724,
+          "event": "commit",
+          "word": 2,
+          "remaining": []
+        }
+      ],
+      "explicit_nonempty_operations": [
+        {
+          "start_ns": 1000001152,
+          "word": 100,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 1000001336
+        },
+        {
+          "start_ns": 180500001440,
+          "word": 101,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 180500001624
+        },
+        {
+          "start_ns": 181063909376,
+          "word": 0,
+          "kind": "control",
+          "slot": 923795456,
+          "err": true,
+          "end_ns": 181063909524
+        },
+        {
+          "start_ns": 181063909868,
+          "word": 1,
+          "kind": "control",
+          "slot": 923795459,
+          "err": true,
+          "end_ns": 181063910016
+        },
+        {
+          "start_ns": 181100001344,
+          "word": 102,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 181100001528
+        },
+        {
+          "start_ns": 361500000704,
+          "word": 103,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 361500000888
+        },
+        {
+          "start_ns": 390078661592,
+          "word": 2,
+          "kind": "control",
+          "slot": 1990197254,
+          "err": true,
+          "end_ns": 390078661740
+        },
+        {
+          "start_ns": 390100000832,
+          "word": 104,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 390100001016
+        },
+        {
+          "start_ns": 399000001760,
+          "word": 105,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 399000001944
+        }
+      ],
+      "simulator_work": {
+        "event_counts": {
+          "control_start": 11679,
+          "snapshot": 11685,
+          "release": 11685,
+          "app_start": 6,
+          "injection": 4,
+          "publish": 3,
+          "commit": 3
+        },
+        "explicit_transactions": 11685,
+        "watched_words": 3
+      }
+    },
+    {
+      "method": "our_err_r4",
+      "horizon_ns": 400000000050,
+      "words": 524288,
+      "bits": 38,
+      "Q": null,
+      "probability_status": "not estimated; deterministic implementation pilot",
+      "first_exceedance": {
+        "t": 390000000001,
+        "word": 2,
+        "bits": [
+          2,
+          3
+        ]
+      },
+      "err_events": [
+        {
+          "t": 181269430336,
+          "event": "ERR",
+          "word": 0,
+          "slot": 924844032
+        },
+        {
+          "t": 181269430828,
+          "event": "ERR",
+          "word": 1,
+          "slot": 924844035
+        },
+        {
+          "t": 390284182552,
+          "event": "ERR",
+          "word": 2,
+          "slot": 1991245830
+        }
+      ],
+      "started_control_operations": 1938870979,
+      "completed_control_operations": 1938870979,
+      "started_application_operations": 6,
+      "unfinished_operations": [],
+      "bus": {
+        "control_base_ns": 178376130068,
+        "correction_extra_ns": 168,
+        "application_read_ns": 1104,
+        "total_ns": 178376131340
+      },
+      "mean_bus_fraction_exact": "17837613134/40000000005",
+      "mean_bus_percent": 44.59403282942574,
+      "bus_after_first_exceedance": {
+        "control_base_ns": 4604949600,
+        "correction_extra_ns": 56,
+        "application_read_ns": 368,
+        "total_ns": 4604950024
+      },
+      "mode_history": [
+        {
+          "t_ns": 0,
+          "low": false
+        },
+        {
+          "t_ns": 180310152960,
+          "low": true
+        },
+        {
+          "t_ns": 181269430336,
+          "low": false
+        },
+        {
+          "t_ns": 361271527680,
+          "low": true
+        },
+        {
+          "t_ns": 390284182552,
+          "low": false
+        }
+      ],
+      "effective_segments": [
+        {
+          "first_slot": 0,
+          "end_slot": 919949762,
+          "low": false
+        },
+        {
+          "first_slot": 919949762,
+          "end_slot": 924844035,
+          "low": true
+        },
+        {
+          "first_slot": 924844035,
+          "end_slot": 1843222082,
+          "low": false
+        },
+        {
+          "first_slot": 1843222082,
+          "end_slot": 1991245832,
+          "low": true
+        },
+        {
+          "first_slot": 1991245832,
+          "end_slot": 2040816328,
+          "low": false
+        }
+      ],
+      "processed_ERR_history": [
+        {
+          "processed_ns": 181269580800,
+          "source_ns": 181269430336,
+          "generation": 1,
+          "short_deadline_ns": 271270480840,
+          "long_deadline_ns": 0
+        },
+        {
+          "processed_ns": 181269580800,
+          "source_ns": 181269430828,
+          "generation": 2,
+          "short_deadline_ns": 271270480840,
+          "long_deadline_ns": 361271380840
+        },
+        {
+          "processed_ns": 390284294400,
+          "source_ns": 390284182552,
+          "generation": 3,
+          "short_deadline_ns": 480285194440,
+          "long_deadline_ns": 361271380840
+        }
+      ],
+      "nominal_driver_services": 2125850,
+      "allocated_CPU_cores": 1,
+      "CPU_use_percent": null,
+      "CPU_time_ns": null,
+      "max_application_delay_ns": 2344,
+      "application": [
+        {
+          "arrival_ns": 1000000000,
+          "grant_ns": 1000001152,
+          "response_ns": 1000001736,
+          "delay_ns": 1736,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 180500000000,
+          "grant_ns": 180500001440,
+          "response_ns": 180500002024,
+          "delay_ns": 2024,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 181100000000,
+          "grant_ns": 181100001344,
+          "response_ns": 181100001928,
+          "delay_ns": 1928,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 361500000000,
+          "grant_ns": 361500000704,
+          "response_ns": 361500001288,
+          "delay_ns": 1288,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 390100000000,
+          "grant_ns": 390100000832,
+          "response_ns": 390100001416,
+          "delay_ns": 1416,
+          "response_within_horizon": true
+        },
+        {
+          "arrival_ns": 399000000000,
+          "grant_ns": 399000001760,
+          "response_ns": 399000002344,
+          "delay_ns": 2344,
+          "response_within_horizon": true
+        }
+      ],
+      "residual_errors": {},
+      "trace": [
+        {
+          "t": 180310152960,
+          "event": "permission",
+          "low": true
+        },
+        {
+          "t": 181000000000,
+          "event": "injection",
+          "word": 0,
+          "bit": 0,
+          "weight": 1
+        },
+        {
+          "t": 181020000000,
+          "event": "injection",
+          "word": 1,
+          "bit": 1,
+          "weight": 1
+        },
+        {
+          "t": 181269430336,
+          "event": "ERR",
+          "word": 0,
+          "slot": 924844032
+        },
+        {
+          "t": 181269430336,
+          "event": "permission",
+          "low": false
+        },
+        {
+          "t": 181269430404,
+          "event": "commit",
+          "word": 0,
+          "remaining": []
+        },
+        {
+          "t": 181269430828,
+          "event": "ERR",
+          "word": 1,
+          "slot": 924844035
+        },
+        {
+          "t": 181269430896,
+          "event": "commit",
+          "word": 1,
+          "remaining": []
+        },
+        {
+          "t": 361271527680,
+          "event": "permission",
+          "low": true
+        },
+        {
+          "t": 390000000000,
+          "event": "injection",
+          "word": 2,
+          "bit": 2,
+          "weight": 1
+        },
+        {
+          "t": 390000000001,
+          "event": "injection",
+          "word": 2,
+          "bit": 3,
+          "weight": 2
+        },
+        {
+          "t": 390284182552,
+          "event": "ERR",
+          "word": 2,
+          "slot": 1991245830
+        },
+        {
+          "t": 390284182552,
+          "event": "permission",
+          "low": false
+        },
+        {
+          "t": 390284182620,
+          "event": "commit",
+          "word": 2,
+          "remaining": []
+        }
+      ],
+      "explicit_nonempty_operations": [
+        {
+          "start_ns": 1000001152,
+          "word": 100,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 1000001336
+        },
+        {
+          "start_ns": 180500001440,
+          "word": 101,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 180500001624
+        },
+        {
+          "start_ns": 181100001344,
+          "word": 102,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 181100001528
+        },
+        {
+          "start_ns": 181269430272,
+          "word": 0,
+          "kind": "control",
+          "slot": 924844032,
+          "err": true,
+          "end_ns": 181269430420
+        },
+        {
+          "start_ns": 181269430764,
+          "word": 1,
+          "kind": "control",
+          "slot": 924844035,
+          "err": true,
+          "end_ns": 181269430912
+        },
+        {
+          "start_ns": 361500000704,
+          "word": 103,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 361500000888
+        },
+        {
+          "start_ns": 390100000832,
+          "word": 104,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 390100001016
+        },
+        {
+          "start_ns": 390284182488,
+          "word": 2,
+          "kind": "control",
+          "slot": 1991245830,
+          "err": true,
+          "end_ns": 390284182636
+        },
+        {
+          "start_ns": 399000001760,
+          "word": 105,
+          "kind": "read32",
+          "slot": null,
+          "err": false,
+          "end_ns": 399000001944
+        }
+      ],
+      "simulator_work": {
+        "event_counts": {
+          "control_start": 11679,
+          "snapshot": 11103,
+          "release": 11103,
+          "app_start": 6,
+          "expiry": 3,
+          "injection": 4,
+          "publish": 3,
+          "commit": 3,
+          "process": 3
+        },
+        "explicit_transactions": 11103,
+        "watched_words": 3
+      }
+    }
+  ],
+  "resource_checks": {
+    "peak_any_1ms_bus_upper_fraction": "4758984929/6250000000",
+    "peak_any_1ms_bus_upper_percent": 76.143758864,
+    "peak_is_upper_not_observed_max": true,
+    "control_E_with_10pct_ns": "40837907/250000",
+    "control_slot_ns": 164,
+    "application_read_with_10pct_ns": "25437753/125000",
+    "application_reservation_ns": 240,
+    "response_with_10pct_ns": "340037753/125000",
+    "response_limit_ns": 3000,
+    "minimum_application_arrival_spacing_ns": 600000000,
+    "mean_read_rate_per_s": 0.014999999998125,
+    "pass_peak": true,
+    "pass_service_reserve": true,
+    "pass_response": true,
+    "pass_app_envelope": true,
+    "scope": "r4 conditional scalar bounds; nominal grid; no physical WCET qualification"
+  }
+}

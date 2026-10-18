@@ -1,0 +1,69 @@
+{
+  "sources": {
+    "status": "PASS",
+    "repository_sources": 19,
+    "pre_run_files": 3,
+    "pre_run_commit": "f4621db235d7f074c84ca35303e0847b90b733dc",
+    "external_PDFs_required_for_numeric_repeat": false,
+    "external_source_scope": "sources.json/SOURCES.md; no network silently needed"
+  },
+  "directed": {
+    "status": "PASS",
+    "checks": 35,
+    "items": [
+      "absolute calendar and permutation match accepted B",
+      "80 pulse integrals and counts match literal sums including warmup/partial",
+      "first-slot inversion brackets exact starts",
+      "startup full recovery hold and equality FAST",
+      "local unprocessed veto 1",
+      "two-stage deadlines agree with independent accepted Oracle 1",
+      "local unprocessed veto 2",
+      "two-stage deadlines agree with independent accepted Oracle 2",
+      "local unprocessed veto 3",
+      "two-stage deadlines agree with independent accepted Oracle 3",
+      "pair extends long hold",
+      "different words use permutation without phase reset",
+      "constant_fast: sparse and literal equality",
+      "constant_fast: first exceedance survives XOR and repair",
+      "our_err_r4: sparse and literal equality",
+      "our_err_r4: first exceedance survives XOR and repair",
+      "post-start residual remains on first E commit",
+      "post-start preserving E agrees with accepted memory oracle",
+      "sample/ERR/commit/release agree with accepted E pin schedule",
+      "clean latch causes no write; late error survives",
+      "partial corrective operation charges only in-horizon tail",
+      "clean partial final operation is charged",
+      "zero-time start at T is not charged",
+      "future suffix cannot alter prefix decisions or prices",
+      "new later mark preserves earlier observed trace",
+      "new LOW begins only at the first freeze-qualified slot",
+      "freeze lead is not silently dropped",
+      "ERR after freeze preserves already committed skip",
+      "ERR veto forces next unfrozen optional slot FAST",
+      "application partial before snapshot is charged",
+      "application starting at T is excluded",
+      "pass_peak",
+      "pass_service_reserve",
+      "pass_response",
+      "pass_app_envelope"
+    ],
+    "scope": "directed implementation checks; accepted code reused read-only; not new scientific review"
+  },
+  "independent_price": {
+    "status": "PASS",
+    "rows": [
+      {
+        "method": "constant_fast",
+        "status": "PASS",
+        "independent_base_work_ns": 187755102176
+      },
+      {
+        "method": "our_err_r4",
+        "status": "PASS",
+        "independent_base_work_ns": 178376130068
+      }
+    ],
+    "own_observation_streams_differ": true,
+    "scope": "numeric cross-check of pilot price, not independent scientific review"
+  }
+}
