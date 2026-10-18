@@ -43,6 +43,12 @@ def resource_bounds(app,H):
     response=320+1568+write+320+80
     counts=app.summary(H)['counts']
     means={kind:str(F(x['arrived']*10**9,H)) for kind,x in counts.items()}
+    # Each of m arithmetic progressions has <= length/epoch + 1 arrivals
+    # in any closed component. This charges the possible endpoint excess;
+    # it does NOT make the unmodified strict per-component cap admissible.
+    per_component=(read+write)*app.m
+    quiet_length=F(9,10)*H
+    endpoint_fraction=1000*per_component/quiet_length
     return dict(scope='conditional r4 service upper for declared application spacing; endpoint-excess recorded separately',
                 peak_any_1ms_percent=float(peak/10000),peak_any_1ms_fraction_exact=str(peak/1000000),
                 response_with_10_percent_ns=str(response*F(11,10)),
@@ -51,5 +57,9 @@ def resource_bounds(app,H):
                 write_fits_240ns_with_reserve=write*F(11,10)<=240,
                 joint_min_spacing_ge_100us=app.min_spacing is None or app.min_spacing>=100000,
                 exact_arrival_mean_per_s=means,
-                finite_interval_quiet_excess='possible at boundaries; at most per-residue endpoint counts, not waived',
+                quiet_endpoint_count_excess_per_type_per_component=app.m,
+                quiet_endpoint_bus_ns_per_component=str(per_component),
+                quiet_endpoint_bus_fraction_upper_K1000_TQ09T=str(endpoint_fraction),
+                quiet_endpoint_bus_percent_upper_K1000_TQ09T=float(100*endpoint_fraction),
+                finite_interval_quiet_excess='count <= 1000*length_seconds + m per type; extra price displayed, strict cap not waived',
                 full_r4_certificate=False)
