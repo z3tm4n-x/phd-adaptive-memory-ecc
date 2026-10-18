@@ -1,0 +1,6 @@
+.gitattributes text eol=lf
+*.txt text eol=lf
+# Empty source fields include trailing spaces; retain them in quoted samples.
+audit/samples/SOL_*_first10.txt whitespace=-blank-at-eol
+# Preserve downloaded metadata exactly; inputs.json records the original bytes.
+metadata/** -text
