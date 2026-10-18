@@ -1,0 +1,17 @@
+{
+  "config_sha256": "2d36f1277ee45f4a9045cafab2486ba63c4c7b93a9022b303e67229a0d2f24f9",
+  "plan_sha256": "77c8a7c968e9df2f4b1b5d47d78c28234f5712b99e39ab354097eee5f697bad5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "reproduce_sha256": "a4d921f6c8f3195c124d42925c1e4bf71f747133a51346613df729d107380088",
+  "supporting_source_sha256": {
+    "requirements.txt": "f95464c6c7b966626125cb454fbc3073b52cff2397c4bb490de04604307132d5",
+    "test_reader.py": "daa9a4994f0cffb6be277e24eacff0aacd7784b6f8c5f36ac97649c79b61f118",
+    "verify.py": "435adaad16d07e0650d2750e5b3bc1abb1ff9ef05d08d7b53aaf3ccf300712da"
+  },
+  "utc_run": "2026-10-18T18:47:26.958069+00:00",
+  "versions": {
+    "matplotlib": "3.10.7",
+    "numpy": "2.3.5"
+  }
+}
