@@ -1,0 +1,316 @@
+{
+  "S2": {
+    "exact": "677638260801891/97656250000",
+    "value": 6939.015790611364
+  },
+  "application": {
+    "bursty": {
+      "aggregate_cap": true,
+      "expanded_quiet_rate_upper_s": {
+        "exact": "355023006253775/355024420092",
+        "value": 999.9960176310558
+      },
+      "individual_component_cap": false,
+      "rate_per_type_s": {
+        "exact": "250000000/250001",
+        "value": 999.9960000159999
+      }
+    },
+    "uniform": {
+      "aggregate_cap": true,
+      "expanded_quiet_rate_upper_s": {
+        "exact": "23668200083585/23668673364",
+        "value": 999.9800039314531
+      },
+      "individual_component_cap": false,
+      "rate_per_type_s": {
+        "exact": "50000000/50001",
+        "value": 999.980000399992
+      }
+    }
+  },
+  "delivery_upper_ns": {
+    "420": {
+      "exact": "48207737/5000",
+      "value": 9641.5474
+    },
+    "552": {
+      "exact": "122169359/12500",
+      "value": 9773.54872
+    }
+  },
+  "methods": {
+    "chen_0.1": {
+      "CPU_price": null,
+      "energy_price": null,
+      "epsilon": "1/1000",
+      "full_expected_SRAM_price_upper": {
+        "exact": "407070774209716935466849619/536912130825000000000000000",
+        "value": 0.7581701936669349
+      },
+      "lifetime_Q_upper": {
+        "exact": "883495376516814222152396113289/48640000000000000000000000000000",
+        "value": 0.018163967444835817
+      },
+      "missing_risk_term": "rule-specific joint-skip upper or independent necessary counterexample",
+      "price_scope": "full lifetime conditional bound, not the sampled history mean; includes app, X and global bad histories",
+      "risk_basis": "T196 support27; price uses hard always-E envelope on every history",
+      "risk_status": "not established; upper above epsilon is not rejection"
+    },
+    "constant_1": {
+      "CPU_price": null,
+      "energy_price": null,
+      "epsilon": "1/1000",
+      "full_expected_SRAM_price_upper": {
+        "exact": "6976830108025916373663247613473418054153779703225377/14758869336914062500000000000000000000000000000000000",
+        "value": 0.4727211786187345
+      },
+      "lifetime_Q_upper": {
+        "exact": "23065805206202676747832391179/24320000000000000000000000000000",
+        "value": 0.0009484294903866232
+      },
+      "missing_risk_term": null,
+      "price_scope": "full lifetime conditional bound, not the sampled history mean; includes app, X and global bad histories",
+      "risk_basis": "T196 deterministic support1, conservative six-quota upper",
+      "risk_status": "conditionally established"
+    },
+    "constant_sufficient": {
+      "CPU_price": null,
+      "energy_price": null,
+      "epsilon": "1/1000",
+      "full_expected_SRAM_price_upper": {
+        "exact": "89906441267335276506468530804399942421859685914697238496815901/205839320907806784000000000000000000000000000000000000000000000",
+        "value": 0.43677972153631134
+      },
+      "lifetime_Q_upper": {
+        "exact": "6375341997680519370573447598616893/6375342080000000000000000000000000000",
+        "value": 0.0009999999870878332
+      },
+      "missing_risk_term": null,
+      "price_scope": "full lifetime conditional bound, not the sampled history mean; includes app, X and global bad histories",
+      "risk_basis": "T196 fixed schedule, three relevant lifetime quotas",
+      "risk_status": "conditionally established"
+    },
+    "krasnikov_0.001_longest": {
+      "CPU_price": null,
+      "energy_price": null,
+      "epsilon": "1/1000",
+      "full_expected_SRAM_price_upper": {
+        "exact": "407070774209716935466849619/536912130825000000000000000",
+        "value": 0.7581701936669349
+      },
+      "lifetime_Q_upper": {
+        "exact": "883495376516814222152396113289/48640000000000000000000000000000",
+        "value": 0.018163967444835817
+      },
+      "missing_risk_term": "rule-specific joint-skip upper or independent necessary counterexample",
+      "price_scope": "full lifetime conditional bound, not the sampled history mean; includes app, X and global bad histories",
+      "risk_basis": "T196 support27; price uses hard always-E envelope on every history",
+      "risk_status": "not established; upper above epsilon is not rejection"
+    },
+    "our_r4": {
+      "CPU_price": null,
+      "energy_price": null,
+      "epsilon": "1/1000",
+      "full_expected_SRAM_price_upper": {
+        "exact": "135180631755963838127446805309431199563294735675294032762223498902505875428641718648049500263/773153468388000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "value": 0.17484320679283905
+      },
+      "lifetime_Q_upper": {
+        "exact": "3932202121973052236588694319683188052625303136939984331024278554459021098515417/4000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "value": 0.000983050530493263
+      },
+      "missing_risk_term": null,
+      "price_scope": "full lifetime conditional bound, not the sampled history mean; includes app, X and global bad histories",
+      "risk_basis": "T119/r4 full information/coupling contract",
+      "risk_status": "conditionally established"
+    },
+    "patent_60": {
+      "CPU_price": null,
+      "energy_price": null,
+      "epsilon": "1/1000",
+      "full_expected_SRAM_price_upper": {
+        "exact": "407070774209716935466849619/536912130825000000000000000",
+        "value": 0.7581701936669349
+      },
+      "lifetime_Q_upper": {
+        "exact": "883495376516814222152396113289/48640000000000000000000000000000",
+        "value": 0.018163967444835817
+      },
+      "missing_risk_term": "rule-specific joint-skip upper or independent necessary counterexample",
+      "price_scope": "full lifetime conditional bound, not the sampled history mean; includes app, X and global bad histories",
+      "risk_basis": "T196 support27; price uses hard always-E envelope on every history",
+      "risk_status": "not established; upper above epsilon is not rejection"
+    }
+  },
+  "necessary_fixed_class": {
+    "bursty": {
+      "P0_s": {
+        "exact": "38949327/250000000",
+        "lower": "0.155797308000000000",
+        "upper": "0.155797308000000000"
+      },
+      "exclusion_lower": {
+        "exact": "9606341886180031630797933130657156488740384358481787654911938992342269463675927/9606341877147097178727976661107318263807004191362673150328062267054609324073000000",
+        "lower": "0.001000000000940309",
+        "upper": "0.001000000000940310"
+      },
+      "gain_over_our_r4_bus_lower": {
+        "exact": "1030267148881972165452455142387608767692800000000000000000000000000000000000000000000000000000000000/585021625592201281928027013868571330643669317466177011467172922870871384610159051718319766436685889",
+        "lower": "1.761075324077227232",
+        "upper": "1.761075324077227233"
+      },
+      "ignored_positive_application_cost": true,
+      "middle_lower": {
+        "exact": "162750963658591424954667224337905446594260421893643466886585837246138987811303757/127669720233378824803779471003808909255503515925409568876455462292708431696243000000",
+        "lower": "0.001274781235214461",
+        "upper": "0.001274781235214462"
+      },
+      "mission_read_price_floor": {
+        "exact": "18046821019909135804970073427/58610309683570861816406250000",
+        "lower": "0.307912057065411915",
+        "upper": "0.307912057065411916"
+      },
+      "neighbor_lower": {
+        "exact": "1988512744899570797853301927357989662545169656486787467595930354867385978530766889/1988512755793212484010337312264670254332799502455989243456839387194254580233111000000",
+        "lower": "0.000999999994521713",
+        "upper": "0.000999999994521714"
+      },
+      "status": "necessary P<P0 for full declared class",
+      "tail": {
+        "cell_s": {
+          "exact": "2894393072709397351/5811000000000000000",
+          "lower": "0.498088637533883557",
+          "upper": "0.498088637533883558"
+        },
+        "lower": {
+          "exact": "13794710051519596645578170387074041500175507475054634707901740005838333245792178993006319583/8625034240565747362392940563327637369137544645019699654407556147561985895231687410680417000000",
+          "lower": "0.001599380323226954",
+          "upper": "0.001599380323226955"
+        },
+        "windows_per_word_upper": 58110,
+        "writes_per_word_upper": 221
+      }
+    },
+    "none": {
+      "P0_s": {
+        "exact": "38919611/250000000",
+        "lower": "0.155678444000000000",
+        "upper": "0.155678444000000000"
+      },
+      "exclusion_lower": {
+        "exact": "62093614246561035549584014561934763284386908619347922923961672782290308920829727/62093614144243425278974862989424924188208575117194465117389079061861352170273000000",
+        "lower": "0.001000000001647796",
+        "upper": "0.001000000001647797"
+      },
+      "gain_over_our_r4_bus_lower": {
+        "exact": "9272404339944811006845466262613742269235200000000000000000000000000000000000000000000000000000000000/5261177602676359509987198085835796918266800990830266065726994072344455596897193948153532458980357693",
+        "lower": "1.762419944772049061",
+        "upper": "1.762419944772049062"
+      },
+      "ignored_positive_application_cost": true,
+      "middle_lower": {
+        "exact": "10250201573178847816690449472472848386658930069252967424115506921916369157029727/7979435781008959856776547226019698868085527015596268563692679199601115970273000000",
+        "lower": "0.001284577237600471",
+        "upper": "0.001284577237600472"
+      },
+      "mission_read_price_floor": {
+        "exact": "18046821019922879591663673427/58565593533210754394531250000",
+        "lower": "0.308147154859603362",
+        "upper": "0.308147154859603363"
+      },
+      "neighbor_lower": {
+        "exact": "62093613448445542226660134240723140298572448680588534567220117663298379839379727/62093613744986030528257188391429114569413141861822450357017577135240433620273000000",
+        "lower": "0.000999999995224299",
+        "upper": "0.000999999995224300"
+      },
+      "status": "necessary P<P0 for full declared class",
+      "tail": {
+        "cell_s": {
+          "exact": "2894393089284397351/5788900000000000000",
+          "lower": "0.499990168993141590",
+          "upper": "0.499990168993141591"
+        },
+        "lower": {
+          "exact": "13742279718799569952564367996858128844612573547264429160310493652285641149635659958931319583/8559607000560875202827767195764053892898505472052736481896792390444676085825721485680417000000",
+          "lower": "0.001605480218647783",
+          "upper": "0.001605480218647784"
+        },
+        "windows_per_word_upper": 57889,
+        "writes_per_word_upper": 0
+      }
+    },
+    "uniform": {
+      "P0_s": {
+        "exact": "38949327/250000000",
+        "lower": "0.155797308000000000",
+        "upper": "0.155797308000000000"
+      },
+      "exclusion_lower": {
+        "exact": "110472931698363165531587307935712738112576075601671032513664358085699383134030973/110472931587198910364441951749887462625575201650803321835835500193585892969027000000",
+        "lower": "0.001000000001006257",
+        "upper": "0.001000000001006258"
+      },
+      "gain_over_our_r4_bus_lower": {
+        "exact": "1030267148881972165452455142387608767692800000000000000000000000000000000000000000000000000000000000/585021625592184232510138140116147330643669317466177011467172922870871384610159051718319766436685889",
+        "lower": "1.761075324077278555",
+        "upper": "1.761075324077278556"
+      },
+      "ignored_positive_application_cost": true,
+      "middle_lower": {
+        "exact": "81375481883376976544709118540699972861401724437083188283251071371006154672253441/63834860116743493720038429156969856942718344442781525969809220880591886746559000000",
+        "lower": "0.001274781236060587",
+        "upper": "0.001274781236060588"
+      },
+      "mission_read_price_floor": {
+        "exact": "18046821019909135804970073427/58610309683570861816406250000",
+        "lower": "0.307912057065411915",
+        "upper": "0.307912057065411916"
+      },
+      "neighbor_lower": {
+        "exact": "994256372515420614080777967366980885553076446523083206633137079674106737434328757/994256377896671877285958063925430906316459392905915989122622259701933808671243000000",
+        "lower": "0.000999999994587662",
+        "upper": "0.000999999994587663"
+      },
+      "status": "necessary P<P0 for full declared class",
+      "tail": {
+        "cell_s": {
+          "exact": "2894393072709397351/5811000000000000000",
+          "lower": "0.498088637533883557",
+          "upper": "0.498088637533883558"
+        },
+        "lower": {
+          "exact": "13794710051519596645578170387074041500175507475054634707901740005838333245792178993006319583/8625034240565747362392940563327637369137544645019699654407556147561985895231687410680417000000",
+          "lower": "0.001599380323226954",
+          "upper": "0.001599380323226955"
+        },
+        "windows_per_word_upper": 58110,
+        "writes_per_word_upper": 221
+      }
+    }
+  },
+  "queue": {
+    "allocated_records": 4096,
+    "inflight_upper": 253,
+    "packet_upper": 1253,
+    "processing_before_next_cut": true,
+    "simultaneous_safe_upper": 2759
+  },
+  "source_terms": {
+    "direct_expected_count": {
+      "exact": "560489/2000000000",
+      "value": 0.0002802445
+    },
+    "extra_protected_SRAM": "all extra work must satisfy the existing X envelope; numerical allocation uses a separate transport/state store",
+    "false": "expected rate on the required time intervals; no pathwise count cap",
+    "global_six_quotas": "6e-6 once per lifetime",
+    "initial": {
+      "exact": "39287487583871680181/819200000000000000000000000",
+      "value": 4.795835886703086e-08
+    },
+    "our_price_bad_coupling": "full accepted beta0 U119 in imported price; not replaced by physical beta",
+    "outage": "pathwise <=1e-4 T; recoveries<=1000; loss-rises<=1001"
+  },
+  "status": "OWN RESULT / implementation applicability pending theorist agreement and independent review",
+  "theory_sha": "e49314a9a0fbf97699f9c8b0c62d25bae5e3097d"
+}

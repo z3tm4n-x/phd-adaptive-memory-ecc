@@ -1,0 +1,19 @@
+{
+  "command": [
+    "experiments/t186-method-comparison/stage4/reproduce.py",
+    "--record",
+    "--budget-seconds",
+    "180"
+  ],
+  "deterministic_hashes": {
+    "bounds.json": "ad9540831f7f8a77db353c8505e34e25f7d6e8d8d31d981fea3ffa5fceec8bb6",
+    "inputs.json": "bf27380a833d435d56055e800cfbdb3ee4a7013b6a6d155ad1e5da2aeebd09d4",
+    "results.json": "1813c0f2b022a8f080f07c619a0611859b73447e96fb49395e1d4f695e4a223a",
+    "table.md": "874b980694a50b0e95d82d68325e0e4407e026e1ec7f0e5d6d744d8be853448e",
+    "validation.json": "fb1f4021fa3da175e3e3d3495ce1c71e304c1130fab24ce5f6e7011df6860033"
+  },
+  "git_head": "3b3f5aa801797b7fb1be334bcc9b0cbcade2aab5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "signature": "5ecda2db6eda17ae4cd79eaf72c66f17122cefa0380f6acf13db976582269228"
+}
