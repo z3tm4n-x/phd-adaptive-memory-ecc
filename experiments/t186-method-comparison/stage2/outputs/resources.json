@@ -1,0 +1,19 @@
+{
+  "algorithm_CPU_time_and_energy": null,
+  "control_with_10_percent_ns": "40837907/250000",
+  "flags": {
+    "control_with_10_percent_fits": true,
+    "peak_below_80_percent": true,
+    "read_with_10_percent_fits": true,
+    "response_with_10_percent_below_3us": true
+  },
+  "full_application_write_load": "not implemented in stage2",
+  "full_r4_ERR_rule_budget_ns": 10000,
+  "nominal_cut_transfer_to_full_r4": "not established; immediate local veto preserved, cut exceeds r4 budget",
+  "nominal_delivery_cut_ns": 188160,
+  "peak_any_1ms_bus_percent": 76.051257944,
+  "peak_any_1ms_bus_percent_exact": "9506407243/125000000",
+  "read_with_10_percent_ns": "25437753/125000",
+  "response_with_10_percent_ns": "340037753/125000",
+  "scope": "conditional r4 scalar service upper, all methods, all histories of registered sparse read-only load; not measured WCET/STA"
+}

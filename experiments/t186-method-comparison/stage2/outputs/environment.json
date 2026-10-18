@@ -1,0 +1,10 @@
+{
+  "command": [
+    "experiments/t186-method-comparison/stage2/reproduce.py",
+    "--record",
+    "--skip-benchmark"
+  ],
+  "git_head": "00cc1762271a4e9e270741f252f926b50351c20c",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}
