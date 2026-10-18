@@ -1,0 +1,82 @@
+# T186 этап 3: полная цена зарегистрированных историй
+
+OWN RESULT / pending review. Полная bus-цена включает приложение; CPU/энергия параметрические.
+Q_MC не оценивается. Время моделирования включает все операции после первого A.
+
+| Эпизод | Приложение | Правило | bus, % | ERR write / все | Первое A, с |
+|---|---|---|---:|---:|---:|
+| s3_quiet | none | constant_1 | 46.938775511 | 0 / 15 | нет |
+| s3_quiet | none | our_r4 | 16.228890096 | 0 / 15 | нет |
+| s3_quiet | none | krasnikov_0.001_longest | 1.738526928 | 0 / 15 | нет |
+| s3_quiet | none | patent_60 | 1.769862267 | 0 / 15 | нет |
+| s3_quiet | none | chen_0.1 | 13.038548816 | 0 / 15 | нет |
+| s3_quiet | uniform | constant_1 | 46.978775511 | 0 / 15 | нет |
+| s3_quiet | uniform | our_r4 | 16.268890096 | 0 / 15 | нет |
+| s3_quiet | uniform | krasnikov_0.001_longest | 1.778526928 | 0 / 15 | нет |
+| s3_quiet | uniform | patent_60 | 1.809862267 | 0 / 15 | нет |
+| s3_quiet | uniform | chen_0.1 | 13.078548816 | 0 / 15 | нет |
+| s3_quiet | bursty | constant_1 | 46.978775511 | 0 / 15 | нет |
+| s3_quiet | bursty | our_r4 | 16.268890096 | 0 / 15 | нет |
+| s3_quiet | bursty | krasnikov_0.001_longest | 1.778526928 | 0 / 15 | нет |
+| s3_quiet | bursty | patent_60 | 1.809862267 | 0 / 15 | нет |
+| s3_quiet | bursty | chen_0.1 | 13.078548816 | 0 / 15 | нет |
+| s3_initial_peak | none | constant_1 | 46.938775552 | 0 / 640 | нет |
+| s3_initial_peak | none | our_r4 | 17.375376277 | 0 / 640 | нет |
+| s3_initial_peak | none | krasnikov_0.001_longest | 1.744804400 | 0 / 640 | нет |
+| s3_initial_peak | none | patent_60 | 3.322415421 | 0 / 640 | нет |
+| s3_initial_peak | none | chen_0.1 | 13.038548857 | 0 / 640 | нет |
+| s3_initial_peak | uniform | constant_1 | 46.978775552 | 0 / 640 | нет |
+| s3_initial_peak | uniform | our_r4 | 17.415376277 | 0 / 640 | нет |
+| s3_initial_peak | uniform | krasnikov_0.001_longest | 1.784692746 | 2 / 640 | нет |
+| s3_initial_peak | uniform | patent_60 | 3.362415421 | 0 / 640 | нет |
+| s3_initial_peak | uniform | chen_0.1 | 13.078548857 | 0 / 640 | нет |
+| s3_initial_peak | bursty | constant_1 | 46.978775552 | 0 / 640 | нет |
+| s3_initial_peak | bursty | our_r4 | 17.415376277 | 0 / 640 | нет |
+| s3_initial_peak | bursty | krasnikov_0.001_longest | 1.784692746 | 2 / 640 | нет |
+| s3_initial_peak | bursty | patent_60 | 3.362415421 | 0 / 640 | нет |
+| s3_initial_peak | bursty | chen_0.1 | 13.078548857 | 0 / 640 | нет |
+| s3_rise_fall | none | constant_1 | 46.938775573 | 0 / 971 | нет |
+| s3_rise_fall | none | our_r4 | 18.060418522 | 0 / 971 | нет |
+| s3_rise_fall | none | krasnikov_0.001_longest | 1.748439377 | 0 / 971 | нет |
+| s3_rise_fall | none | patent_60 | 4.260207578 | 0 / 971 | нет |
+| s3_rise_fall | none | chen_0.1 | 13.762912696 | 0 / 971 | нет |
+| s3_rise_fall | uniform | constant_1 | 46.978775573 | 0 / 971 | нет |
+| s3_rise_fall | uniform | our_r4 | 18.100418522 | 0 / 971 | нет |
+| s3_rise_fall | uniform | krasnikov_0.001_longest | 1.788439377 | 0 / 971 | нет |
+| s3_rise_fall | uniform | patent_60 | 4.300207578 | 0 / 971 | нет |
+| s3_rise_fall | uniform | chen_0.1 | 13.802912696 | 0 / 971 | нет |
+| s3_rise_fall | bursty | constant_1 | 46.978775573 | 0 / 971 | нет |
+| s3_rise_fall | bursty | our_r4 | 18.100418522 | 0 / 971 | нет |
+| s3_rise_fall | bursty | krasnikov_0.001_longest | 1.788439377 | 0 / 971 | нет |
+| s3_rise_fall | bursty | patent_60 | 4.300207578 | 0 / 971 | нет |
+| s3_rise_fall | bursty | chen_0.1 | 13.802912696 | 0 / 971 | нет |
+| s3_repeat_rise | none | constant_1 | 46.938775642 | 0 / 2040 | нет |
+| s3_repeat_rise | none | our_r4 | 20.204568522 | 0 / 2040 | нет |
+| s3_repeat_rise | none | krasnikov_0.001_longest | 1.758881156 | 0 / 2040 | нет |
+| s3_repeat_rise | none | patent_60 | 6.602193217 | 0 / 2040 | нет |
+| s3_repeat_rise | none | chen_0.1 | 14.342403819 | 0 / 2040 | нет |
+| s3_repeat_rise | uniform | constant_1 | 46.978775642 | 0 / 2040 | нет |
+| s3_repeat_rise | uniform | our_r4 | 20.244568522 | 0 / 2040 | нет |
+| s3_repeat_rise | uniform | krasnikov_0.001_longest | 1.798881155 | 8 / 2040 | нет |
+| s3_repeat_rise | uniform | patent_60 | 6.642193217 | 0 / 2040 | нет |
+| s3_repeat_rise | uniform | chen_0.1 | 14.382403818 | 7 / 2040 | нет |
+| s3_repeat_rise | bursty | constant_1 | 46.978775642 | 0 / 2040 | нет |
+| s3_repeat_rise | bursty | our_r4 | 20.244568522 | 0 / 2040 | нет |
+| s3_repeat_rise | bursty | krasnikov_0.001_longest | 1.798881155 | 8 / 2040 | нет |
+| s3_repeat_rise | bursty | patent_60 | 6.642193217 | 0 / 2040 | нет |
+| s3_repeat_rise | bursty | chen_0.1 | 14.382403818 | 7 / 2040 | нет |
+| s3_mission | none | constant_1 | 46.938775511 | 0 / 68764 | нет |
+| s3_mission | none | our_r4 | 16.096687223 | 0 / 68764 | нет |
+| s3_mission | none | krasnikov_0.001_longest | 1.738527534 | 0 / 68764 | нет |
+| s3_mission | none | patent_60 | 1.751849090 | 0 / 68764 | нет |
+| s3_mission | none | chen_0.1 | 1.744541760 | 0 / 68764 | нет |
+| s3_mission | uniform | constant_1 | 46.978775511 | 7 / 68764 | нет |
+| s3_mission | uniform | our_r4 | 16.136687223 | 20 / 68764 | нет |
+| s3_mission | uniform | krasnikov_0.001_longest | 1.778527228 | 173 / 68764 | нет |
+| s3_mission | uniform | patent_60 | 1.791849090 | 127 / 68764 | нет |
+| s3_mission | uniform | chen_0.1 | 1.784541760 | 155 / 68764 | нет |
+| s3_mission | bursty | constant_1 | 46.978775511 | 7 / 68764 | нет |
+| s3_mission | bursty | our_r4 | 16.136687223 | 20 / 68764 | нет |
+| s3_mission | bursty | krasnikov_0.001_longest | 1.778527228 | 173 / 68764 | нет |
+| s3_mission | bursty | patent_60 | 1.791849090 | 127 / 68764 | нет |
+| s3_mission | bursty | chen_0.1 | 1.784541760 | 155 / 68764 | нет |
