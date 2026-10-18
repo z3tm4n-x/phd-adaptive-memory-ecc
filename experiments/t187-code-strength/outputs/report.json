@@ -1,0 +1,723 @@
+{
+  "task": 187,
+  "base": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+  "preregistration_sha": "d69a1f3655c42a5044240b2d7da9b8546c302150",
+  "code_constructions": [
+    {
+      "n": 39,
+      "rank": 7,
+      "k": 32,
+      "t": 1,
+      "distinct_correctable_syndromes": 40,
+      "columns": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ]
+    },
+    {
+      "n": 44,
+      "rank": 12,
+      "k": 32,
+      "t": 2,
+      "distinct_correctable_syndromes": 991,
+      "columns": [
+        65,
+        514,
+        196,
+        1544,
+        336,
+        2592,
+        963,
+        3782,
+        1100,
+        920,
+        3312,
+        1187,
+        1413,
+        3466,
+        3732,
+        1640,
+        851,
+        2790,
+        1487,
+        3998,
+        3708,
+        123,
+        565,
+        233,
+        1553,
+        354,
+        2567,
+        974,
+        3804,
+        1144,
+        947,
+        3301,
+        1161,
+        1426,
+        3492,
+        3723,
+        1622,
+        876,
+        2779,
+        1526,
+        4015,
+        3677,
+        122,
+        567
+      ]
+    }
+  ],
+  "comparison": {
+    "grid": [
+      {
+        "t": 1,
+        "P_s": "1/400",
+        "moment_upper": "3401/7800000",
+        "moment_upper_decimal": "0.000436025641025641025641025641025641",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 1,
+        "P_s": "1/200",
+        "moment_upper": "3401/3900000",
+        "moment_upper_decimal": "0.000872051282051282051282051282051282",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 1,
+        "P_s": "1/100",
+        "moment_upper": "3401/1950000",
+        "moment_upper_decimal": "0.001744102564102564102564102564102564",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "1/50",
+        "moment_upper": "3401/975000",
+        "moment_upper_decimal": "0.003488205128205128205128205128205128",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "1/20",
+        "moment_upper": "3401/390000",
+        "moment_upper_decimal": "0.008720512820512820512820512820512820",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "1/10",
+        "moment_upper": "3401/195000",
+        "moment_upper_decimal": "0.017441025641025641025641025641025641",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "1/5",
+        "moment_upper": "3401/97500",
+        "moment_upper_decimal": "0.034882051282051282051282051282051282",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "1/2",
+        "moment_upper": "3401/39000",
+        "moment_upper_decimal": "0.087205128205128205128205128205128205",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "1",
+        "moment_upper": "3401/19500",
+        "moment_upper_decimal": "0.174410256410256410256410256410256410",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 1,
+        "P_s": "2",
+        "moment_upper": "3401/9750",
+        "moment_upper_decimal": "0.348820512820512820512820512820512820",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 2,
+        "P_s": "1/400",
+        "moment_upper": "3877181/47455200000000",
+        "moment_upper_decimal": "0.000000081701920969672448962389790792",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/200",
+        "moment_upper": "3877181/11863800000000",
+        "moment_upper_decimal": "0.000000326807683878689795849559163168",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/100",
+        "moment_upper": "3877181/2965950000000",
+        "moment_upper_decimal": "0.000001307230735514759183398236652674",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/50",
+        "moment_upper": "3877181/741487500000",
+        "moment_upper_decimal": "0.000005228922942059036733592946610698",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/20",
+        "moment_upper": "3877181/118638000000",
+        "moment_upper_decimal": "0.000032680768387868979584955916316863",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/10",
+        "moment_upper": "3877181/29659500000",
+        "moment_upper_decimal": "0.000130723073551475918339823665267452",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/5",
+        "moment_upper": "3877181/7414875000",
+        "moment_upper_decimal": "0.000522892294205903673359294661069808",
+        "calendar_ok": true,
+        "accepted": true
+      },
+      {
+        "t": 2,
+        "P_s": "1/2",
+        "moment_upper": "3877181/1186380000",
+        "moment_upper_decimal": "0.003268076838786897958495591631686306",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 2,
+        "P_s": "1",
+        "moment_upper": "3877181/296595000",
+        "moment_upper_decimal": "0.013072307355147591833982366526745224",
+        "calendar_ok": true,
+        "accepted": false
+      },
+      {
+        "t": 2,
+        "P_s": "2",
+        "moment_upper": "3877181/74148750",
+        "moment_upper_decimal": "0.052289229420590367335929466106980899",
+        "calendar_ok": true,
+        "accepted": false
+      }
+    ],
+    "selected": [
+      {
+        "t": 1,
+        "n": 39,
+        "k": 32,
+        "W": 8,
+        "useful_bits": 256,
+        "physical_bits": 312,
+        "profile": "constant",
+        "P_s": "1/200",
+        "service_s": "1/100000",
+        "array_parent_exposure": "68/25",
+        "Q": {
+          "lower": "0.000661804209970230820691418125594729",
+          "upper": "0.000661804209970230820691418125594730"
+        },
+        "L": {
+          "lower": "0.000659052281301614073855997320614496",
+          "upper": "0.000659052281301614073855997320614497"
+        },
+        "cell_upper": "12913756277/19500000000000",
+        "cell_upper_decimal": "0.000662243911641025641025641025641025",
+        "moment_upper": "323/487500",
+        "moment_upper_decimal": "0.000662564102564102564102564102564102",
+        "risk_margin": "329/975000",
+        "relative_margin": "329/975",
+        "cost": "2/125",
+        "cost_percent": "1.600000000000000000000000000000000000",
+        "calendar_service_duty": "2/125"
+      },
+      {
+        "t": 1,
+        "n": 39,
+        "k": 32,
+        "W": 8,
+        "useful_bits": 256,
+        "physical_bits": 312,
+        "profile": "piecewise",
+        "P_s": "1/200",
+        "service_s": "1/100000",
+        "array_parent_exposure": "68/25",
+        "Q": {
+          "lower": "0.000870457528648980609491807205912938",
+          "upper": "0.000870457528648980609491807205912939"
+        },
+        "L": {
+          "lower": "0.000865954681394713843568168128168358",
+          "upper": "0.000865954681394713843568168128168359"
+        },
+        "cell_upper": "20911460173/24000000000000",
+        "cell_upper_decimal": "0.000871310840541666666666666666666666",
+        "moment_upper": "3401/3900000",
+        "moment_upper_decimal": "0.000872051282051282051282051282051282",
+        "risk_margin": "499/3900000",
+        "relative_margin": "499/3900",
+        "cost": "2/125",
+        "cost_percent": "1.600000000000000000000000000000000000",
+        "calendar_service_duty": "2/125"
+      },
+      {
+        "t": 2,
+        "n": 44,
+        "k": 32,
+        "W": 8,
+        "useful_bits": 256,
+        "physical_bits": 352,
+        "profile": "constant",
+        "P_s": "1/5",
+        "service_s": "1/50000",
+        "array_parent_exposure": "2992/975",
+        "Q": {
+          "lower": "0.000231922359723441051041019935200704",
+          "upper": "0.000231922359723441051041019935200705"
+        },
+        "L": {
+          "lower": "0.000230555389293587244946116233060969",
+          "upper": "0.000230555389293587244946116233060970"
+        },
+        "cell_upper": "5465724312433/23171484375000000",
+        "cell_upper_decimal": "0.000235881492267713211618537062324044",
+        "moment_upper": "225148/926859375",
+        "moment_upper_decimal": "0.000242914951364655506667340986867614",
+        "risk_margin": "5613691/7414875000",
+        "relative_margin": "5613691/7414875",
+        "cost": "1/1250",
+        "cost_percent": "0.080000000000000000000000000000000000",
+        "calendar_service_duty": "1/1250"
+      },
+      {
+        "t": 2,
+        "n": 44,
+        "k": 32,
+        "W": 8,
+        "useful_bits": 256,
+        "physical_bits": 352,
+        "profile": "piecewise",
+        "P_s": "1/5",
+        "service_s": "1/50000",
+        "array_parent_exposure": "2992/975",
+        "Q": {
+          "lower": "0.000471585659420181844909109354184142",
+          "upper": "0.000471585659420181844909109354184143"
+        },
+        "L": {
+          "lower": "0.000444348892211603138639332823495132",
+          "upper": "0.000444348892211603138639332823495133"
+        },
+        "cell_upper": "450524602027972087/926859375000000000000",
+        "cell_upper_decimal": "0.000486076544274013613985400967649488",
+        "moment_upper": "3877181/7414875000",
+        "moment_upper_decimal": "0.000522892294205903673359294661069808",
+        "risk_margin": "1768847/3707437500",
+        "relative_margin": "3537694/7414875",
+        "cost": "1/1250",
+        "cost_percent": "0.080000000000000000000000000000000000",
+        "calendar_service_duty": "1/1250"
+      }
+    ],
+    "price_sensitivity": [
+      {
+        "c2_s": "1/50000",
+        "c2_over_c1": "2",
+        "cost2": "1/1250",
+        "cost2_percent": "0.080000000000000000000000000000000000",
+        "chosen_cost_ratio_1_over_2": "20",
+        "calendar_ok": true,
+        "risk_certification": "same period moment upper, independent of c2 while c2<=P2/W"
+      },
+      {
+        "c2_s": "1/5000",
+        "c2_over_c1": "20",
+        "cost2": "1/125",
+        "cost2_percent": "0.800000000000000000000000000000000000",
+        "chosen_cost_ratio_1_over_2": "2",
+        "calendar_ok": true,
+        "risk_certification": "same period moment upper, independent of c2 while c2<=P2/W"
+      },
+      {
+        "c2_s": "1/2500",
+        "c2_over_c1": "40",
+        "cost2": "2/125",
+        "cost2_percent": "1.600000000000000000000000000000000000",
+        "chosen_cost_ratio_1_over_2": "1",
+        "calendar_ok": true,
+        "risk_certification": "same period moment upper, independent of c2 while c2<=P2/W"
+      },
+      {
+        "c2_s": "1/1250",
+        "c2_over_c1": "80",
+        "cost2": "4/125",
+        "cost2_percent": "3.200000000000000000000000000000000000",
+        "chosen_cost_ratio_1_over_2": "1/2",
+        "calendar_ok": true,
+        "risk_certification": "same period moment upper, independent of c2 while c2<=P2/W"
+      }
+    ],
+    "break_even_c2_s": "1/2500",
+    "break_even_c2_over_c1": "40",
+    "scope": "selected sufficient U schedules, not optimal code/policy or hardware WCET"
+  },
+  "regressions": {
+    "pinned_source_blobs": {
+      "experiments/sequential-small-validation-20261014/exact.py": "2af0bdedef79b16c8488ab3cc3bbe12c7a80552a",
+      "experiments/sequential-small-validation-20261014/inputs.json": "0a62572c2c9b5b6c33ba37c49c878a75bedb18f3",
+      "experiments/sequential-err-small-validation-20261015/exact.py": "30f4a2622b6043ee5e1bee72c8c4235b23c728d2",
+      "experiments/sequential-err-small-validation-20261015/arithmetic.py": "b2ef4334c96e432aabe92def96724b4723e37757",
+      "experiments/sequential-err-small-validation-20261015/inputs.json": "0cf3de9195c98f77e4b62e8f7474125f7e446c72"
+    },
+    "rows": [
+      {
+        "source": 166,
+        "id": "W4_constant_D0",
+        "Q": {
+          "lower": "0.191872325704171641532398489508094093",
+          "upper": "0.191872325704171641532398489508094094"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W4_constant_D1-20",
+        "Q": {
+          "lower": "0.191337811378291427829744995868167183",
+          "upper": "0.191337811378291427829744995868167184"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W4_piecewise_D0",
+        "Q": {
+          "lower": "0.218640190415486694840840431556575070",
+          "upper": "0.218640190415486694840840431556575071"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W4_piecewise_D1-20",
+        "Q": {
+          "lower": "0.218833242632303961022717536861923557",
+          "upper": "0.218833242632303961022717536861923558"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W8_constant_D0",
+        "Q": {
+          "lower": "0.106477975487663706529797915876262098",
+          "upper": "0.106477975487663706529797915876262099"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W8_constant_D1-20",
+        "Q": {
+          "lower": "0.106359542791067900969934604241868363",
+          "upper": "0.106359542791067900969934604241868364"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W8_piecewise_D0",
+        "Q": {
+          "lower": "0.124462728094639108843245994642931088",
+          "upper": "0.124462728094639108843245994642931089"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 166,
+        "id": "W8_piecewise_D1-20",
+        "Q": {
+          "lower": "0.124337149147862033903167171714686790",
+          "upper": "0.124337149147862033903167171714686791"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W4_constant_D0",
+        "Q": {
+          "lower": "0.191752496028792404122963041255954325",
+          "upper": "0.191752496028792404122963041255954326"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W4_constant_D1-20",
+        "Q": {
+          "lower": "0.204675114732817960256362015248450211",
+          "upper": "0.204675114732817960256362015248450212"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W4_piecewise_D0",
+        "Q": {
+          "lower": "0.218505506411553422178799178874712416",
+          "upper": "0.218505506411553422178799178874712417"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W4_piecewise_D1-20",
+        "Q": {
+          "lower": "0.231895491686778217170439927385769414",
+          "upper": "0.231895491686778217170439927385769415"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W8_constant_D0",
+        "Q": {
+          "lower": "0.106408213041277987243328931450520638",
+          "upper": "0.106408213041277987243328931450520639"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W8_constant_D1-20",
+        "Q": {
+          "lower": "0.114793425960913034235613606992629079",
+          "upper": "0.114793425960913034235613606992629080"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W8_piecewise_D0",
+        "Q": {
+          "lower": "0.124381930548651901537539031747791405",
+          "upper": "0.124381930548651901537539031747791406"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      },
+      {
+        "source": 177,
+        "id": "W8_piecewise_D1-20",
+        "Q": {
+          "lower": "0.133429261165661909749803275213801541",
+          "upper": "0.133429261165661909749803275213801542"
+        },
+        "upper_exact_equal": true,
+        "intervals_overlap": true
+      }
+    ],
+    "count": 16,
+    "method": "read-only exact-code replay; no MC or accepted output rewrite"
+  },
+  "checks": {
+    "count": 23,
+    "tests": [
+      {
+        "test": "same k=32; ranks7/12; syndromes40/991",
+        "passed": true
+      },
+      {
+        "test": "full-mask arrival enumeration equals weight kernel",
+        "passed": true
+      },
+      {
+        "test": "finite witness enumeration for compound marks",
+        "passed": true
+      },
+      {
+        "test": "2+1 term nonzero when triple-singleton term zero",
+        "passed": true
+      },
+      {
+        "test": "overlapping double groups: no disjoint pair, first exceedance4",
+        "passed": true
+      },
+      {
+        "test": "coefficient12",
+        "passed": true
+      },
+      {
+        "test": "coefficient22",
+        "passed": true
+      },
+      {
+        "test": "coefficient111",
+        "passed": true
+      },
+      {
+        "test": "t1 cross reduces to accepted E pair",
+        "passed": true
+      },
+      {
+        "test": "zero aperture gives no cross",
+        "passed": true
+      },
+      {
+        "test": "clean read then hit: E release preserves hit",
+        "passed": true
+      },
+      {
+        "test": "dirty read then XOR cancellation: pending still writes",
+        "passed": true
+      },
+      {
+        "test": "initial double residual plus outside singleton fails t2",
+        "passed": true
+      },
+      {
+        "test": "first exceedance persists despite later XOR",
+        "passed": true
+      },
+      {
+        "test": "two allowed errors give one ERR not two parents",
+        "passed": true
+      },
+      {
+        "test": "bit count also misses cancelling parents",
+        "passed": true
+      },
+      {
+        "test": "lower witness valid from every correctable weight",
+        "passed": true
+      },
+      {
+        "test": "t2 mixed E exact interval under compound upper",
+        "passed": true
+      },
+      {
+        "test": "series refinement encloses same t2 E probability",
+        "passed": true
+      },
+      {
+        "test": "tail pending not completed at T",
+        "passed": true
+      },
+      {
+        "test": "zero flow exact zero",
+        "passed": true
+      },
+      {
+        "test": "extra physical bits raise same-environment array rate",
+        "passed": true
+      },
+      {
+        "test": "overlapping-service calendar rejected",
+        "passed": true
+      }
+    ],
+    "mixed_E_test": {
+      "n": 5,
+      "t": 2,
+      "W": 2,
+      "T_s": "23/10",
+      "P_s": "1",
+      "D_s": "1/10",
+      "m1_rate": "1/5",
+      "m2_rate": "1/20",
+      "Q": {
+        "lower": "0.027531874599541787981698459332948887",
+        "upper": "0.027531874599541787981698459332948888"
+      },
+      "upper": "909529/25000000",
+      "V": "1535123/50000000",
+      "X": "56787/10000000"
+    }
+  },
+  "input_sha256": "8a90775a3e7725354283ff68cb2a3365b7fd87002f525c7043b8b7a03bce673c",
+  "implementation_sha256": {
+    "model.py": "72c503a3cde45a60b16ab715a367cc2000cc87ca09170b4b0407599460a70667",
+    "calculate.py": "fb3b9e00727f4719de473ef135ea7c509f063bcac53fed19e69840295c17f0db"
+  }
+}
