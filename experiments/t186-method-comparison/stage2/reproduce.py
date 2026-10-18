@@ -19,6 +19,7 @@ from engine import run
 from policies import make,NS
 from scenarios import generate,save,digest,dumps,benchmark_marks
 from training import fit
+from resources import calculate as resource_bounds
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
@@ -179,7 +180,7 @@ def main():
     out.mkdir(parents=True,exist_ok=True)
     results=comparison(cfg,trained['weights'],out,args.record)
     limits=calculate(cfg)
-    for name,obj in [('validation.json',val),('results.json',results),('bounds.json',limits)]:
+    for name,obj in [('validation.json',val),('results.json',results),('bounds.json',limits),('resources.json',resource_bounds(cfg))]:
         save(out/name,obj)
         if not args.record:
             assert json.loads((HERE/'outputs'/name).read_text(encoding='utf-8'))==obj,('replay differs',name)

@@ -1,6 +1,7 @@
 """Directed and differential implementation checks; not scientific acceptance."""
 from copy import deepcopy
 from fractions import Fraction as F
+from decimal import Decimal,localcontext
 import importlib.util
 import json
 from pathlib import Path
@@ -10,6 +11,7 @@ from engine import Grid,run
 from policies import Constant,Our,Krasnikov,Patent,Chen,make,HOUR,NS,next_cut
 from scenarios import digest,generate
 from training import fit
+from bounds import upper_log_ratio,exp_upper,fixed_phase_factor
 
 
 def validate(cfg,root):
@@ -26,6 +28,23 @@ def validate(cfg,root):
         assert grid.count(a,b,k)==sum(grid.eligible(j,k) for j in range(a,b))
     ok('160 exact pulse integrals/counts, four strides and warmup',True)
     ok('nested masks retain every stride-27 slot',all(grid.eligible(j,k) for j in range(524313,525000,27) for k in [1,3,9,27]))
+    for W in [8,32,128]:
+        g=Grid(W)
+        for k in [1,3,9,27]:
+            for phase in range(0,10000,197):
+                n=max(-1,(g.first(phase+1)-1)//k)
+                waits=[g.start(k*(n+i))-phase for i in range(1,W+1)]
+                assert F(sum(waits),W)<=F(k*W*196,2)+98*k+224
+    ok('fixed-period mean phase bound, 612 independent explicit phase samples',True)
+    with localcontext() as ctx:
+        ctx.prec=200
+        dec=lambda x:Decimal(x.numerator)/Decimal(x.denominator)
+        lo,hi=upper_log_ratio(F('.000154704'),F('.244682704'))
+        exact=(Decimal('.244682704')/Decimal('.000154704')).ln()
+        assert dec(lo)<=exact<=dec(hi)
+        for x in [F(0),F('.005'),F('.15')]:
+            assert dec(exp_upper(x))>=dec(x).exp()
+    ok('rational log/exp upper enclosures versus independent 200-digit decimal',True)
     small=dict(NW=10,NH=20,NR=10,timer_tick_ns=20,pair_source_ticks=100,source_tick_ns=4)
     weights=['1','0','0','0','0','0','0']
     for spec in cfg['methods']:
