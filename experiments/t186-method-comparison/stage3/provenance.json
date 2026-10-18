@@ -1,0 +1,236 @@
+{
+  "working_dependencies": [
+    {
+      "path": "experiments/t186-method-comparison/stage2/engine.py",
+      "sha256": "36f3c70ad9a8db4fbd08f0a1e814e816239e2432fc77bc53859657bc98a719d4"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/policies.py",
+      "sha256": "619374dac1664f9fa1a299034757f31a8ead8292a604f9a7905dfffe52058009"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/scenarios.py",
+      "sha256": "effc107b1274574ff504845953dc51594e8e1d4c186e581aa6e444a69850e132"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/inputs.json",
+      "sha256": "bc95feccf3ddf35aef09c9e43ea7f749a7c1ccf4061f070d60b1f0d5d4d18e20"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/training.json",
+      "sha256": "a84728753a7eae6773e326bbff4eff207a02af49081c3ba604ea4c450cf0072d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/inputs.json",
+      "sha256": "61c50b5a84f06b9ebc4ebabac6a1354326cb9d07052a072090b09573ec9ed039"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage3/inputs.json",
+      "sha256": "2ab2a807527ba7720b4001139f45d9214210680c65da58c4d28bc19bdd8876cb"
+    },
+    {
+      "path": "experiments/t104-rtl-resume/memory_oracle.py",
+      "sha256": "9465ea3bcc57e2856b29edefd64ce470d54fef9223718258547a0efd7d75ad8f"
+    },
+    {
+      "path": "experiments/t104-rtl-resume/reference.py",
+      "sha256": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19"
+    }
+  ],
+  "documentary_snapshots": [
+    {
+      "path": "experiments/t135-demo-operating-point/common-contract.json",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "fcc8c3bd3ccf974da23c61f4d8da2e9e60ca4ea43ae2a1c11ef55269d496f771",
+      "use": "T135 r4 service and original R0-A"
+    },
+    {
+      "path": "experiments/t104-rtl-resume/reference.py",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "3fe43213c76b52a725e802bd6ae5be3cb68e5b9078dde08b9139788174e37a19",
+      "use": "B absolute calendar and ETransaction"
+    },
+    {
+      "path": "experiments/t104-rtl-resume/memory_oracle.py",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "9465ea3bcc57e2856b29edefd64ce470d54fef9223718258547a0efd7d75ad8f",
+      "use": "B/G preserving post-start error births"
+    },
+    {
+      "path": "experiments/t105-arm-rule/config.json",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "043959e5a28b7ab6d2adb88b34a43d34e6b681c40636b546a35ea9f722e8d71a",
+      "use": "accepted V constants"
+    },
+    {
+      "path": "experiments/t105-arm-rule/oracle.py",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "b47a848ad6d9bde7145a4d03b928646ea591573b377f4fdd2099bb974008253e",
+      "use": "accepted V independent deadline oracle"
+    },
+    {
+      "path": "experiments/t106-system-emulation/check_accel.py",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "b20b972f5b6edd78801141a23c7ec56d6ce141dc4f42c689fc9b18c7142b8726",
+      "use": "accepted G independent periodic price integral"
+    },
+    {
+      "path": "experiments/t106-system-emulation/CONDITIONS.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "6892233ddad87945e338e08c17cbc1864dea49f03a15cf04786476fab6099ddd",
+      "use": "accepted G application and timing scope"
+    },
+    {
+      "path": "experiments/t106-system-emulation/CONTRACT.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "5c14236047162ea5ec7954819fc839b058e968ebc4fd030fabcd4056eed2228c",
+      "use": "G nominal full38 E semantics"
+    },
+    {
+      "path": "experiments/t106-system-emulation/ACCELERATION.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "38d86eabe90d3c7cb329449d620f19fa490931dbf8aab382b0e2b8880d958688",
+      "use": "G chosen model cut cadence"
+    },
+    {
+      "path": "experiments/map-basis-20261014/REPORT.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "dd2c813fa7407c9a2e1892d599540564a901960601e3f9cff60d24a8373731db",
+      "use": "separate T119/r4/U contracts"
+    },
+    {
+      "path": "theory/t126-regime-map.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "3bbec1d05a46409051185032ed5e5a9eae97d81585d4b4ef3721363066ab5569",
+      "use": "common Q event and evaluation discipline"
+    },
+    {
+      "path": "docs/paper_cards/PAPER-011-chen-et-al-2025.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "4f57bf37bbf075e456aef8f0e29467ea63b2452f39e6273d7b53e05884ae92e7",
+      "use": "accepted primary extraction, exact page locators"
+    },
+    {
+      "path": "docs/paper_cards/PAPER-009-chen-et-al-2023.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "a0cfeb372bd85af2d83a773fad384bed9266c0f1ce75a92076f23b31b756bae6",
+      "use": "version relationship, no new reading"
+    },
+    {
+      "path": "docs/paper_cards/PAPER-010-chen-et-al-2024.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "c02fafc7b2af7a9333052ba5b68c693c9cc7a84e3b8af8dbd237d069d65cbbbf",
+      "use": "version relationship, no new reading"
+    },
+    {
+      "path": "docs/literature_mapping/L1-robust-count-38_conditions.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "531f13fdc1ee8cf5475491faad39520cf051df5b4aafe05a22bd3a79bf387676",
+      "use": "earlier controlled journal/PDF audit"
+    },
+    {
+      "path": "docs/literature_mapping/ASSEMBLY-NOVELTY-20261009.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "3c07ac62b2f1fcdfd3fe654c4011d567c4e72c185e3a4331399bd1fbc6ac8bf5",
+      "use": "patent context"
+    },
+    {
+      "path": "MAP.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "869df2855108eb2267d23707e5f125489d211d154568e7d0884ff995fc93c291",
+      "use": "acceptance scope snapshot"
+    },
+    {
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "af03c3a4ca6658bc5eef0a89aa841ee57e60a9a196bc7b2dc2d5be9b414a4ec3",
+      "use": "3.3 and 3.8"
+    },
+    {
+      "path": "experiments/t105-arm-rule/rule.c",
+      "commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+      "sha256": "bf27728f7735a94bd1e9ef7586d4ff78323c6c93faa4c874ea788135fa27a933",
+      "use": "accepted V two-stage source rule; semantic reference, not executed C"
+    },
+    {
+      "path": "MAP.md",
+      "commit": "0ff2de464aea2e597c35d41e211e69247a60c535",
+      "sha256": "8577ca405f21e92a292ce04f98c7b095994d1fb1129c9426c3aeb1e1a0a5522b",
+      "use": "documentary snapshot; current working file is deliberately not compared"
+    },
+    {
+      "path": "STATUS.md",
+      "commit": "0ff2de464aea2e597c35d41e211e69247a60c535",
+      "sha256": "16878e0c67ca0ab5af5b470d0c443618e0d568f672b158b84d3cd35c07998781",
+      "use": "documentary snapshot; current working file is deliberately not compared"
+    },
+    {
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "0ff2de464aea2e597c35d41e211e69247a60c535",
+      "sha256": "37fb82212f82512e5b117ff78ee08ac1b61d85a5b1211e362b7d12f33b130e6e",
+      "use": "documentary snapshot; current working file is deliberately not compared"
+    },
+    {
+      "path": "experiments/t186-method-comparison/SOURCES.md",
+      "commit": "b9acf142a2fa54998eaca679a37e1d149344186a",
+      "sha256": "39d07acace3f4890f619dc7e962bad21fb6c8335c4b3cec3b3b90ba13329da29",
+      "use": "documentary snapshot; current working file is deliberately not compared"
+    },
+    {
+      "path": "experiments/t186-method-comparison/CONTRACT.md",
+      "commit": "b9acf142a2fa54998eaca679a37e1d149344186a",
+      "sha256": "5bdc367c3f13a8e433f914f23f65818e56d55c36487a90be0f7b088c3c41a2f0",
+      "use": "documentary snapshot; current working file is deliberately not compared"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/PLAN.md",
+      "commit": "449de0e12863196476b819ccbd4c864eea3429c0",
+      "sha256": "7ec21daac99c4d4ba178ad7896748b4eb01c8823048ca318db810d8830748060",
+      "use": "documentary snapshot; current working file is deliberately not compared"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage3/PLAN.md",
+      "commit": "42f839b827b91019c335a40e3ab1dcea8990de15",
+      "sha256": "cb609dd178da8641e2d1ed25b2976b80ca96088ec6ad867f6578dc0f0a81635a",
+      "use": "frozen stage3 input before numerical matrix"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage3/CONTRACT_TO_THEORIST.md",
+      "commit": "42f839b827b91019c335a40e3ab1dcea8990de15",
+      "sha256": "3484d103a7f0a2dbccd3626fb03f05c885c432bb033210eb4af9befa868e123f",
+      "use": "frozen stage3 input before numerical matrix"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage3/inputs.json",
+      "commit": "42f839b827b91019c335a40e3ab1dcea8990de15",
+      "sha256": "2ab2a807527ba7720b4001139f45d9214210680c65da58c4d28bc19bdd8876cb",
+      "use": "frozen stage3 input before numerical matrix"
+    }
+  ],
+  "external_source_basis": [
+    {
+      "id": "K2018",
+      "url": "https://www.niime.ru/upload/zhurnal-mikroelektronika/001-080%20Book%20B.pdf",
+      "sha256": "11cfb7ea89a59009dad4526721f957482e02558844d83e8829e4396ca5db3242",
+      "pages": "68, 74-75 of 80-page issue; equations 7-10 and figure 4",
+      "checked": "2026-10-18 PDF text and rendered pp74-75; full issue copy differs from historical nine-page extraction",
+      "redistributed": false
+    },
+    {
+      "id": "C2025",
+      "url": "https://doi.org/10.1007/s10836-025-06183-5",
+      "historical_pdf_sha256": "1e7b1d2514bf401e4a765804aac8f5a51602514f7091e4bc6a6a4ff6d654d6d9",
+      "pages": "278 section3.3;279-281 section3.4;281-282 section4.1/Table2",
+      "checked": "publisher identity/availability live; full-text findings reused from accepted PAPER-011 and L1, full PDF not recovered in this checkout; not claimed re-read",
+      "redistributed": false
+    },
+    {
+      "id": "US8452403B2",
+      "url": "https://patents.google.com/patent/US8452403B2/en",
+      "pages": "description of Fig3 controller330; claims4-7,12-14",
+      "checked": "2026-10-18 live patent description and claims; thresholds/hysteresis",
+      "redistributed": false
+    }
+  ],
+  "text_eol": "CRLF normalized to LF"
+}
