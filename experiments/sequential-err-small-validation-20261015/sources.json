@@ -1,0 +1,93 @@
+{
+  "task": 177,
+  "base": "3300d614442977bcc750cffe853270298cc8d377",
+  "sources": [
+    {
+      "id": "T110",
+      "path": "theory/t110-err-write-service.md",
+      "commit": "8d8cacde4f0069facee4415d8933425ed7abc04f",
+      "sha256": "4b07203d07be41323dbcb562176bea33e25192011ab8e037f1f218e8b44ce2d0",
+      "git_blob": "d1730d0bd758b0d253c60a07608fba612de4792e",
+      "locator": "section1 premise4; section3 pair-witness inclusion and X_E",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/8d8cacde4f0069facee4415d8933425ed7abc04f/theory/t110-err-write-service.md"
+    },
+    {
+      "id": "T110_appendix",
+      "path": "theory/t110-err-write-service-appendix.md",
+      "commit": "8d8cacde4f0069facee4415d8933425ed7abc04f",
+      "sha256": "193c8b3b2b0295bef77b11e1382343400e7afe0ffad9e118b8946456106cb4eb",
+      "git_blob": "d941c5af8235b4139140e9b64595198a57d44486",
+      "locator": "A.1 operator obligation; A.2 first-hit witness; A.3 exact pair sum before relaxation",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/8d8cacde4f0069facee4415d8933425ed7abc04f/theory/t110-err-write-service-appendix.md"
+    },
+    {
+      "id": "T114",
+      "path": "theory/t114-two-stage-err.md",
+      "commit": "a8f57dc33f919ccca8e6474141615f55f88cb938",
+      "sha256": "41961835f5746631b94bfd3d23c6cfb5c096159cadb7d3f3d5e3972a4d6b55b3",
+      "git_blob": "b7642fea2bc945df1785eeb60da24ca7fb4c5552",
+      "locator": "A4 E semantics; not old numerical timings",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/a8f57dc33f919ccca8e6474141615f55f88cb938/theory/t114-two-stage-err.md"
+    },
+    {
+      "id": "T135_r4",
+      "path": "experiments/t135-demo-operating-point/common-contract.json",
+      "commit": "fa4b4c150e668422e36a6c7a0e30810b26604e7c",
+      "sha256": "fcc8c3bd3ccf974da23c61f4d8da2e9e60ca4ea43ae2a1c11ef55269d496f771",
+      "git_blob": "8516fec2ba82bab6ee31bcac95cb7440ba5778f6",
+      "locator": "revision4 recommended R_s/E_s; conditional_address_map full38; not physical timing qualification",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/fa4b4c150e668422e36a6c7a0e30810b26604e7c/experiments/t135-demo-operating-point/common-contract.json"
+    },
+    {
+      "id": "T45",
+      "path": "theory/t45-lambda-rarity.md",
+      "commit": "7b7a06601030619f47b877fde50e2d98fe8ef688",
+      "sha256": "cecf9539ebb236855dffe8f394c30cbd7eaafcfba360974efca271f39631e50b",
+      "git_blob": "26c93bf687ad6fd3d0061e43bf93a7df311836c8",
+      "locator": "section2 equations1-2 no-service lower cells",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7b7a06601030619f47b877fde50e2d98fe8ef688/theory/t45-lambda-rarity.md"
+    },
+    {
+      "id": "T45_appendix",
+      "path": "theory/t45-lambda-rarity-appendices.md",
+      "commit": "7b7a06601030619f47b877fde50e2d98fe8ef688",
+      "sha256": "1f52c76bf12b1ecfd6416b8d12b52279ec1594ab525d3c9b7941e8ce45cbbe90",
+      "git_blob": "e5e9bf4d0dc0d9037584cbf9830e0928fade9574",
+      "locator": "A.1 arbitrary correctable initial state and product bound",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7b7a06601030619f47b877fde50e2d98fe8ef688/theory/t45-lambda-rarity-appendices.md"
+    },
+    {
+      "id": "T166_inputs",
+      "path": "experiments/sequential-small-validation-20261014/inputs.json",
+      "commit": "6597dfb108f884a3b5a34f6fa03300d417162d16",
+      "sha256": "bf27d65f0393058fdad58d3852bfa375fd695102b57f78fff7e5be1ce9a6319a",
+      "git_blob": "0a62572c2c9b5b6c33ba37c49c878a75bedb18f3",
+      "locator": "eight profiles/calendar input; n39/U replaced only in new task",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6597dfb108f884a3b5a34f6fa03300d417162d16/experiments/sequential-small-validation-20261014/inputs.json"
+    },
+    {
+      "id": "T166_arithmetic",
+      "path": "experiments/sequential-small-validation-20261014/exact.py",
+      "commit": "6597dfb108f884a3b5a34f6fa03300d417162d16",
+      "sha256": "2cf666f738fc3922a89b38fb7969f6de7dfd7a0d686d498dc108eb9e9354c9a0",
+      "git_blob": "2af0bdedef79b16c8488ab3cc3bbe12c7a80552a",
+      "locator": "exponential_enclosure, fixed_decimal, enclosure reused; U solve is not used",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6597dfb108f884a3b5a34f6fa03300d417162d16/experiments/sequential-small-validation-20261014/exact.py"
+    },
+    {
+      "id": "T166_MC",
+      "path": "experiments/sequential-small-validation-20261014/mc.py",
+      "commit": "6597dfb108f884a3b5a34f6fa03300d417162d16",
+      "sha256": "b6221ad2628e511cf2bf3c61e9a42e28719da9bcdba8d30de5c2f3666b5a1cbf",
+      "git_blob": "0e124332f93f881e919903f846f5afe44f963a54",
+      "locator": "independent explicit-bit simulation design; conditional-write operator newly implemented",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6597dfb108f884a3b5a34f6fa03300d417162d16/experiments/sequential-small-validation-20261014/mc.py"
+    }
+  ],
+  "preregistration_sha256": {
+    "PLAN.md": "6215a6de83bb807b4172cd759965d42692d9cab61f200d8650ad3af6a2d8cd8d",
+    "inputs.json": "273fd644f1362e9387d5a3e9393782f755919bf5ee4d247ad6bb4ff95a228333"
+  },
+  "accepted_U_tree": "bf65e4f0cc552a2efc73903b31152a9071faee5f",
+  "issue": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/177"
+}
