@@ -1,0 +1,11 @@
+#{"startDate":"2005-12-09T13:01:57Z","stopDate":"2014-11-27T09:18:42Z","cadence":"PT192S","description":"<br/> Sampling: 192S<br/> Provider: IRF","resourceID":"spase://CNES/NumericalData/CDPP-AMDA/VEX/IMA/vex-ima-bg","parameters":[{"name":"Time","type":"isotime","length":24,"units":"UTC","fill":null},{"name":"vex_ima_bg","type":"double","units":"cnts","fill":"-1e31"},{"name":"vex_ima_totct","type":"double","units":"cnts","fill":"-1e31"}],"HAPI":"2.0","status":{"code":1200,"message":"OK","x_request":"http://localhost:8999/amda/hapi/data?id=vex-ima-bg&time.min=2012-03-01T00:00:00Z&time.max=2012-03-23T00:00:00Z&format=csv&include=header","x_startDateRequested":"2012-03-01T00:00:00Z","x_stopDateRequested":"2012-03-23T00:00:00Z","x_parentDataset":"vex-ima-bg"},"format":"csv"}
+2012-03-01T03:03:56.009Z,0.05,54397
+2012-03-01T03:07:08.009Z,0.13,51046
+2012-03-01T03:10:21.000Z,0.14,50446
+2012-03-01T03:13:33.000Z,0.12,52801
+2012-03-01T03:16:45.001Z,0.14,44876
+2012-03-01T03:19:57.001Z,0.06,40459
+2012-03-01T03:23:09.001Z,0.1,38773
+2012-03-01T03:26:21.001Z,0.12,45136
+2012-03-01T03:29:33.001Z,0.1,39970
+2012-03-01T03:32:45.002Z,0.06,39306

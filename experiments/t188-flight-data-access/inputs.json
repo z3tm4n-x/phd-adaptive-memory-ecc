@@ -1,0 +1,151 @@
+{
+  "issue": 188,
+  "plan_commit": "ca9675648965112cc0c5fe081587fec6c8fc3903",
+  "base_commit": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+  "retrieved_on_utc": "2026-10-18",
+  "dataset": {
+    "id": 22700146,
+    "title": "EDAC data with SEP detections",
+    "doi": "10.25392/leicester.data.22700146.v1",
+    "version": 1,
+    "published_date": "2023-05-02T09:45:41Z",
+    "license": {
+      "value": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "inputs": [
+    {
+      "local_name": "EDAC.zip",
+      "url": "https://ndownloader.figshare.com/files/40379297",
+      "sha256": "bc377daddbb58a0ef44fc258b93ba808267d13783df6579f0e1da778350810f0",
+      "bytes": 3067650,
+      "download_completed_utc": "2026-10-18T16:59:19.991262+00:00",
+      "required_for_audit": true,
+      "md5": "0c011bfa14936c688b6e1beebdbd68bb"
+    },
+    {
+      "local_name": "figshare-22700146.json",
+      "url": "https://api.figshare.com/v2/articles/22700146",
+      "sha256": "19e98d70a40b6b359982a6ce61333d65c1196d0c37eba5cce9ba6d242b17af86",
+      "bytes": 4935,
+      "download_completed_utc": "2026-10-18T16:59:05.940026+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "sanchez-cano-2023.pdf",
+      "url": "https://pure.tudelft.nl/ws/portalfiles/portal/157356686/Space_Weather_2023_S_nchez_Cano.pdf",
+      "sha256": "1495b9b71b5604ea9b379c130ae6e8c903be2cd5f7667376077e2f1d9f4b5604",
+      "bytes": 7248263,
+      "download_completed_utc": "2026-10-18T16:58:49.881746+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "solo_L2_epd-het-sun-rates_20220904_V01.cdf",
+      "url": "https://espada.uah.es/epd/data/api/file/solo_L2_epd-het-sun-rates_20220904_V01.cdf",
+      "sha256": "933d2c54babde82aa4f1d5b27c39e2dbb58661c2aae40036ab5a9dfa4131db67",
+      "bytes": 681330,
+      "download_completed_utc": "2026-10-18T17:01:10.981726+00:00",
+      "required_for_audit": true,
+      "reader": "cdf"
+    },
+    {
+      "local_name": "epd-20220904-files.txt",
+      "url": "https://espada.uah.es/epd/data/api/search?level=l2&product=het-rates&from=2022-09-04&to=2022-09-04",
+      "sha256": "fb4ad972cd3eb819d854d90f9e4ddcd18934b6cbd86cf3a45273e23415e32a62",
+      "bytes": 176,
+      "download_completed_utc": "2026-10-18T17:00:47.005511+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "epd-portal.html",
+      "url": "https://espada.uah.es/epd/EPD_data.php",
+      "sha256": "641ff1868132eefd3affdef9c54d49a3193bec737f227a16d30ccd4fcddee5d5",
+      "bytes": 10284,
+      "download_completed_utc": "2026-10-18T17:00:16.607843+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "epd-release-notes.txt",
+      "url": "https://espada.uah.es/epd/docs/Release_Notes.txt",
+      "sha256": "f2c14c65b2a84293eed8a01db66f20977beea84812c7ce5f07ec0c83745257a9",
+      "bytes": 1903,
+      "download_completed_utc": "2026-10-18T17:00:47.305823+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "epd-dpdd.pdf",
+      "url": "https://espada.uah.es/epd/docs/SO-EPD-PO-TN-0038_iss1_rev2_DPDD.pdf",
+      "sha256": "192946ed51edb3deff92d66d78b7961696d906f5c4a85fb9684f179af25db37a",
+      "bytes": 2506773,
+      "download_completed_utc": "2026-10-18T17:00:48.201874+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "futaana-2022.pdf",
+      "url": "https://arxiv.org/pdf/2204.01377",
+      "sha256": "e83ac9ef993d130024a7c023411eda58f0c3fa116f084bcd75e23be89ed79059",
+      "bytes": 2983113,
+      "download_completed_utc": "2026-10-18T17:00:46.666271+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "spider-d5.2.pdf",
+      "url": "https://spider-europlanet.irap.omp.eu/static/img/about/Deliverable_D5.2.pdf",
+      "sha256": "71147fce3202cc0fca4844e572b0221318737ff94456e928eec9f899d3c18b86",
+      "bytes": 1083939,
+      "download_completed_utc": "2026-10-18T17:03:12.348230+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "spider-databases.html",
+      "url": "https://spider-europlanet.irap.omp.eu/databases",
+      "sha256": "29156b011393967e53d552361bd21639007113366868a552475ea32ec8415ffd",
+      "bytes": 4971,
+      "download_completed_utc": "2026-10-18T17:02:36.650147+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "amda-vex-info.json",
+      "url": "https://amda.irap.omp.eu/service/hapi/info?id=vex-ima-bg",
+      "sha256": "fdc1010f54e4ddb43439689c8f51b73860333f06b2bf66f0c2a6524b61eb02b1",
+      "bytes": 492,
+      "download_completed_utc": "2026-10-18T17:03:38.060486+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "amda-vex-spase.xml",
+      "url": "https://spase-metadata.org/CNES/NumericalData/CDPP-AMDA/VEX/IMA/vex-ima-bg.xml",
+      "sha256": "474e9af59acf86fe89a2a97b3d23feda54092bb86bf4a8bfa5c26a8f90aa1c22",
+      "bytes": 4625,
+      "download_completed_utc": "2026-10-18T17:05:23.022733+00:00",
+      "required_for_audit": false
+    },
+    {
+      "local_name": "vex-ima-bg-20061201-20061220.csv",
+      "url": "https://amda.irap.omp.eu/service/hapi/data?id=vex-ima-bg&time.min=2006-12-01T00:00:00Z&time.max=2006-12-20T00:00:00Z&format=csv&include=header",
+      "sha256": "883eae44bd8db85560dfc8a5a27e5a9b968f9839f0c5b6697987253f4ad3b631",
+      "bytes": 51696,
+      "download_completed_utc": "2026-10-18T17:04:39.955707+00:00",
+      "required_for_audit": true
+    },
+    {
+      "local_name": "vex-ima-bg-20120301-20120323.csv",
+      "url": "https://amda.irap.omp.eu/service/hapi/data?id=vex-ima-bg&time.min=2012-03-01T00:00:00Z&time.max=2012-03-23T00:00:00Z&format=csv&include=header",
+      "sha256": "a13d502ff3e8b395032a13d64434cc8654c63ba685377f8707a1a465cdada95c",
+      "bytes": 62004,
+      "download_completed_utc": "2026-10-18T17:04:45.175668+00:00",
+      "required_for_audit": true
+    },
+    {
+      "local_name": "epd-20220904-11-files.txt",
+      "url": "https://espada.uah.es/epd/data/api/search?level=l2&product=het-rates&descriptor=het-sun-rates&from=2022-09-04&to=2022-09-11",
+      "sha256": "3132adae30047f46702fd48d6e7d33d4a082b38d6cb8dea912339871476b141a",
+      "bytes": 343,
+      "download_completed_utc": "2026-10-18T17:09:53.940355+00:00",
+      "required_for_audit": false
+    }
+  ],
+  "note": "Only required_for_audit inputs are fetched/read by reproduce.py; documentation URLs/hashes record source provenance. Cache directory is ignored by Git."
+}
