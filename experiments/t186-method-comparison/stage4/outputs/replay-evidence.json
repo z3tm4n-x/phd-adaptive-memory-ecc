@@ -1,0 +1,47 @@
+{
+  "status": "OWN RESULT / clean replay matched; pending independent review",
+  "source_commit": "d7fae337ef32d73768e7b97aa6f9985f0ce828ce",
+  "code_commit": "3b3f5aa801797b7fb1be334bcc9b0cbcade2aab5",
+  "clean_checkout_status_before_and_after": "",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "deterministic_sha256": {
+    "validation.json": "fb1f4021fa3da175e3e3d3495ce1c71e304c1130fab24ce5f6e7011df6860033",
+    "results.json": "1813c0f2b022a8f080f07c619a0611859b73447e96fb49395e1d4f695e4a223a",
+    "inputs.json": "bf27380a833d435d56055e800cfbdb3ee4a7013b6a6d155ad1e5da2aeebd09d4",
+    "bounds.json": "ad9540831f7f8a77db353c8505e34e25f7d6e8d8d31d981fea3ffa5fceec8bb6",
+    "table.md": "874b980694a50b0e95d82d68325e0e4407e026e1ec7f0e5d6d744d8be853448e"
+  },
+  "complete_rows": 60,
+  "new_checks": 44,
+  "accepted_unchanged_checks": 59,
+  "main_replay_exit_code": 0,
+  "operational_budget_s": 180,
+  "main_replay_elapsed_s": 124.83386880000035,
+  "sum_solver_s": 82.3968917999955,
+  "resumption": {
+    "initial_complete_rows": 1,
+    "first_partial_exit_code": 3,
+    "reused_rows": 1,
+    "new_rows": 59,
+    "preserved_row_name": "s4_quiet__uniform__constant_1.json",
+    "preserved_row_sha256": "9d111fd452bb4cf5d3e80b8be660dac0a336ff81ae86697d71cea17ceb77237e",
+    "preserved_row_mtime": true
+  },
+  "negative_checks": {
+    "changed_input_rejected": true,
+    "corrupt_checkpoint_rejected": true,
+    "stale_signature_rejected": true,
+    "one_microsecond_budget_exit_code": 3,
+    "one_microsecond_budget_completed_rows": 0
+  },
+  "commands": [
+    "git clone --local --shared --no-checkout . .cache/t186-stage4-clean",
+    "git -C .cache/t186-stage4-clean sparse-checkout set experiments/t186-method-comparison experiments/t104-rtl-resume",
+    "git -C .cache/t186-stage4-clean checkout --detach d7fae337ef32d73768e7b97aa6f9985f0ce828ce",
+    "python -B <clean>/experiments/t186-method-comparison/stage4/reproduce.py --output <clean>/.cache/replay --max-new-rows 1",
+    "python -B <clean>/experiments/t186-method-comparison/stage4/reproduce.py --output <clean>/.cache/replay --max-new-rows 0",
+    "python -B <clean>/experiments/t186-method-comparison/stage4/reproduce.py --output <clean>/.cache/replay --budget-seconds 180"
+  ],
+  "scope": "separate checkout and fresh cache; same Windows host/Python, not independent scientific review or hardware qualification"
+}

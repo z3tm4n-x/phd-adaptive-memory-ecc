@@ -14,6 +14,7 @@ OWN RESULT / pending review. Продолжение принятого этап�
 - [Точные границы](outputs/bounds.json) отдельно от численных историй.
 - [Проверки](outputs/validation.json), [паспорт](provenance.json),
   [среда и хеши](outputs/environment.json).
+- [Чистый повтор, возобновление и отрицательные проверки](outputs/replay-evidence.json).
 
 В корне checkout, Python 3.12, только стандартная библиотека:
 
