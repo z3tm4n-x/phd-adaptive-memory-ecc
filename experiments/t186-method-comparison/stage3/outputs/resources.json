@@ -1,0 +1,68 @@
+{
+  "bursty": {
+    "control_with_10_percent_ns": "40837907/250000",
+    "exact_arrival_mean_per_s": {
+      "read32": "1000",
+      "write32": "1000"
+    },
+    "finite_interval_quiet_excess": "count <= 1000*length_seconds + m per type; extra price displayed, strict cap not waived",
+    "full_r4_certificate": false,
+    "joint_min_spacing_ge_100us": true,
+    "peak_any_1ms_fraction_exact": "2384161261/3125000000",
+    "peak_any_1ms_percent": 76.293160352,
+    "peak_below_80_percent": true,
+    "quiet_endpoint_bus_fraction_upper_K1000_TQ09T": "100501/14200920000000000",
+    "quiet_endpoint_bus_ns_per_component": "100501/50",
+    "quiet_endpoint_bus_percent_upper_K1000_TQ09T": 7.077076696439385e-10,
+    "quiet_endpoint_count_excess_per_type_per_component": 5,
+    "response_below_3us_with_reserve": true,
+    "response_with_10_percent_ns": "344437797/125000",
+    "scope": "conditional r4 service upper for declared application spacing; endpoint-excess recorded separately",
+    "write_fits_240ns_with_reserve": true,
+    "write_with_10_percent_ns": "29837797/125000"
+  },
+  "none": {
+    "control_with_10_percent_ns": "40837907/250000",
+    "exact_arrival_mean_per_s": {
+      "read32": "0",
+      "write32": "0"
+    },
+    "finite_interval_quiet_excess": "count <= 1000*length_seconds + m per type; extra price displayed, strict cap not waived",
+    "full_r4_certificate": false,
+    "joint_min_spacing_ge_100us": true,
+    "peak_any_1ms_fraction_exact": "7425074/9765625",
+    "peak_any_1ms_percent": 76.03275776,
+    "peak_below_80_percent": true,
+    "quiet_endpoint_bus_fraction_upper_K1000_TQ09T": "0",
+    "quiet_endpoint_bus_ns_per_component": "0",
+    "quiet_endpoint_bus_percent_upper_K1000_TQ09T": 0.0,
+    "quiet_endpoint_count_excess_per_type_per_component": 0,
+    "response_below_3us_with_reserve": true,
+    "response_with_10_percent_ns": "344437797/125000",
+    "scope": "conditional r4 service upper for declared application spacing; endpoint-excess recorded separately",
+    "write_fits_240ns_with_reserve": true,
+    "write_with_10_percent_ns": "29837797/125000"
+  },
+  "uniform": {
+    "control_with_10_percent_ns": "40837907/250000",
+    "exact_arrival_mean_per_s": {
+      "read32": "1000",
+      "write32": "1000"
+    },
+    "finite_interval_quiet_excess": "count <= 1000*length_seconds + m per type; extra price displayed, strict cap not waived",
+    "full_r4_certificate": false,
+    "joint_min_spacing_ge_100us": true,
+    "peak_any_1ms_fraction_exact": "2378736207/3125000000",
+    "peak_any_1ms_percent": 76.119558624,
+    "peak_below_80_percent": true,
+    "quiet_endpoint_bus_fraction_upper_K1000_TQ09T": "100501/71004600000000000",
+    "quiet_endpoint_bus_ns_per_component": "100501/250",
+    "quiet_endpoint_bus_percent_upper_K1000_TQ09T": 1.4154153392878771e-10,
+    "quiet_endpoint_count_excess_per_type_per_component": 1,
+    "response_below_3us_with_reserve": true,
+    "response_with_10_percent_ns": "344437797/125000",
+    "scope": "conditional r4 service upper for declared application spacing; endpoint-excess recorded separately",
+    "write_fits_240ns_with_reserve": true,
+    "write_with_10_percent_ns": "29837797/125000"
+  }
+}

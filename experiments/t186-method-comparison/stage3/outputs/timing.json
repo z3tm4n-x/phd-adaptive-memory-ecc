@@ -1,0 +1,476 @@
+{
+  "budget_s": 180,
+  "elapsed_s": 83.29309569999896,
+  "rows": [
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.00025270000332966447,
+      "episode": "s3_quiet",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.0004490999999688938,
+      "episode": "s3_quiet",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.0008023999980650842,
+      "episode": "s3_quiet",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.0007605999999213964,
+      "episode": "s3_quiet",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.0011097999959019944,
+      "episode": "s3_quiet",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.0007557999997516163,
+      "episode": "s3_quiet",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.000897399993846193,
+      "episode": "s3_quiet",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.0016501000063726678,
+      "episode": "s3_quiet",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.001625899996724911,
+      "episode": "s3_quiet",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.0017458000002079643,
+      "episode": "s3_quiet",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.0017921000035130419,
+      "episode": "s3_quiet",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.0020447999995667487,
+      "episode": "s3_quiet",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.0026985000004060566,
+      "episode": "s3_quiet",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.0026532000047154725,
+      "episode": "s3_quiet",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.0027902000001631677,
+      "episode": "s3_quiet",
+      "method": "chen_0.1"
+    },
+    {
+      "episode": "s3_quiet",
+      "generation_s": 0.0008372000011149794
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.00754909999523079,
+      "episode": "s3_initial_peak",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.009337399998912588,
+      "episode": "s3_initial_peak",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.04279360000509769,
+      "episode": "s3_initial_peak",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.00983289999567205,
+      "episode": "s3_initial_peak",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.008544699994672555,
+      "episode": "s3_initial_peak",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.011882500002684537,
+      "episode": "s3_initial_peak",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.01595620000443887,
+      "episode": "s3_initial_peak",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.06418030000349972,
+      "episode": "s3_initial_peak",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.016864299999724608,
+      "episode": "s3_initial_peak",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.013195300001825672,
+      "episode": "s3_initial_peak",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.013380800002778415,
+      "episode": "s3_initial_peak",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.015734299995529,
+      "episode": "s3_initial_peak",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.06745419999788282,
+      "episode": "s3_initial_peak",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.017879300001368392,
+      "episode": "s3_initial_peak",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.015064200000779238,
+      "episode": "s3_initial_peak",
+      "method": "chen_0.1"
+    },
+    {
+      "episode": "s3_initial_peak",
+      "generation_s": 0.0335175000000163
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.014673600002424791,
+      "episode": "s3_rise_fall",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.013846499998180661,
+      "episode": "s3_rise_fall",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.06668850000278326,
+      "episode": "s3_rise_fall",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.015212000005703885,
+      "episode": "s3_rise_fall",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.04664460000640247,
+      "episode": "s3_rise_fall",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.018358100001933053,
+      "episode": "s3_rise_fall",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.022657699999399483,
+      "episode": "s3_rise_fall",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.09972209999978077,
+      "episode": "s3_rise_fall",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.024213199998484924,
+      "episode": "s3_rise_fall",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.07716879999497905,
+      "episode": "s3_rise_fall",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.02024600000004284,
+      "episode": "s3_rise_fall",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.023726400002487935,
+      "episode": "s3_rise_fall",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.10247430000163149,
+      "episode": "s3_rise_fall",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.026174999999057036,
+      "episode": "s3_rise_fall",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.0823584999961895,
+      "episode": "s3_rise_fall",
+      "method": "chen_0.1"
+    },
+    {
+      "episode": "s3_rise_fall",
+      "generation_s": 0.05289069999707863
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.024755500002356712,
+      "episode": "s3_repeat_rise",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.030355399998370558,
+      "episode": "s3_repeat_rise",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.1449069000009331,
+      "episode": "s3_repeat_rise",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.03250869999465067,
+      "episode": "s3_repeat_rise",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.08685939999850234,
+      "episode": "s3_repeat_rise",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.0377128999971319,
+      "episode": "s3_repeat_rise",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.046278599998913705,
+      "episode": "s3_repeat_rise",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.21691809999902034,
+      "episode": "s3_repeat_rise",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.051816500003042165,
+      "episode": "s3_repeat_rise",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 0.14225489999807905,
+      "episode": "s3_repeat_rise",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.04097520000505028,
+      "episode": "s3_repeat_rise",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.04879109999455977,
+      "episode": "s3_repeat_rise",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.22932589999982156,
+      "episode": "s3_repeat_rise",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.05551800000102958,
+      "episode": "s3_repeat_rise",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 0.1500467000005301,
+      "episode": "s3_repeat_rise",
+      "method": "chen_0.1"
+    },
+    {
+      "episode": "s3_repeat_rise",
+      "generation_s": 0.10834639999666251
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 0.9534402000062983,
+      "episode": "s3_mission",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 1.8159824999966077,
+      "episode": "s3_mission",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 5.3638798000029055,
+      "episode": "s3_mission",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 3.1735065000029863,
+      "episode": "s3_mission",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "none",
+      "elapsed_s": 3.816946300001291,
+      "episode": "s3_mission",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 1.4720223999975133,
+      "episode": "s3_mission",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 2.6364758999989135,
+      "episode": "s3_mission",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 7.975625499995658,
+      "episode": "s3_mission",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 5.258746500003326,
+      "episode": "s3_mission",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "uniform",
+      "elapsed_s": 6.269959800003562,
+      "episode": "s3_mission",
+      "method": "chen_0.1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 1.5421866999968188,
+      "episode": "s3_mission",
+      "method": "constant_1"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 2.6915791999999783,
+      "episode": "s3_mission",
+      "method": "our_r4"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 8.327340900003037,
+      "episode": "s3_mission",
+      "method": "krasnikov_0.001_longest"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 5.460130999999819,
+      "episode": "s3_mission",
+      "method": "patent_60"
+    },
+    {
+      "application_profile": "bursty",
+      "elapsed_s": 6.447734900000796,
+      "episode": "s3_mission",
+      "method": "chen_0.1"
+    },
+    {
+      "episode": "s3_mission",
+      "generation_s": 3.2896421999976155
+    }
+  ]
+}
