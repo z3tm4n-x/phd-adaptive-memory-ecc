@@ -1,0 +1,33 @@
+{
+  "task": 187,
+  "registered_date": "2026-10-18",
+  "base": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+  "status": "preregistered_conditional_model_not_hardware",
+  "W": 8,
+  "k": 32,
+  "T_s": "17/5",
+  "epsilon": "1/1000",
+  "initial": "clean, no pending; model assumption",
+  "codes": [
+    {"n": 39, "k": 32, "t": 1, "construction": "binary parity columns (x,1), x=0..38", "service_s": "1/100000"},
+    {"n": 44, "k": 32, "t": 2, "construction": "GF(64), modulus x^6+x+1; columns (alpha^j,alpha^(3j)), j=0..43", "service_s": "1/50000"}
+  ],
+  "reference_positions": 312,
+  "reference_array_profiles": {
+    "constant": [{"start": "0", "end": "17/5", "rate": "4/5"}],
+    "piecewise": [
+      {"start": "0", "end": "3/5", "rate": "2/5"},
+      {"start": "3/5", "end": "7/5", "rate": "8/5"},
+      {"start": "7/5", "end": "17/5", "rate": "3/5"}
+    ]
+  },
+  "environment": "independent singleton XOR per physical bit at reference_array_rate/312; same per-bit law for both codes",
+  "period_grid_s": ["1/400", "1/200", "1/100", "1/50", "1/20", "1/10", "1/5", "1/2", "1", "2"],
+  "selection": "largest grid P with W*c<=P and max over the two profiles of W*falling(n,t+1)/(t+1)! * P^t * integral(per_bit_rate^(t+1)) <= epsilon",
+  "calendar": "snapshot=ell*P+w*P/W; unconditional full-image restore at snapshot+c; only actions <=T; no application",
+  "price": "bus occupied on each [snapshot,snapshot+c] intersect [0,T], including work after hidden failure; c includes control and coding",
+  "direct_budget": "0: all parents singleton by this declared example class",
+  "channel_service_budget": "0: ideal model, not physical qualification",
+  "exact": {"terms": 32, "internal_places": 48, "output_places": 36, "max_width": "1e-28"},
+  "not_claimed": ["new code WCET", "physical CY62167 t=2", "R0 mission qualification", "globally optimal period", "adaptive t=2 coverage"]
+}
