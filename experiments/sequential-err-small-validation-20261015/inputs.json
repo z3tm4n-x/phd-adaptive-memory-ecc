@@ -1,0 +1,97 @@
+{
+  "task": 177,
+  "date": "2026-10-18",
+  "base": "3300d614442977bcc750cffe853270298cc8d377",
+  "status": "preregistered_synthetic_matrix",
+  "W": [
+    4,
+    8
+  ],
+  "n": 38,
+  "code": "conditional internal32+6; first Hamming weight>1",
+  "T_s": "17/5",
+  "period_s": "1",
+  "read_offset_s": "0",
+  "read_to_fence_s": [
+    "0",
+    "1/20"
+  ],
+  "profiles": {
+    "constant": [
+      {
+        "start": "0",
+        "end": "17/5",
+        "lambda_array_s_inv": "4/5"
+      }
+    ],
+    "piecewise": [
+      {
+        "start": "0",
+        "end": "3/5",
+        "lambda_array_s_inv": "2/5"
+      },
+      {
+        "start": "3/5",
+        "end": "7/5",
+        "lambda_array_s_inv": "8/5"
+      },
+      {
+        "start": "7/5",
+        "end": "17/5",
+        "lambda_array_s_inv": "3/5"
+      }
+    ]
+  },
+  "ordering": "W ascending; profile constant then piecewise; gap zero then 1/20",
+  "calendar": "begin=snapshot=k*P+w*P/W; correction if ERR=1 and release=begin+D; only actions<=T",
+  "service": "E: latch ERR and correctly decoded original image; write that full image at release iff latched ERR=1, otherwise preserve memory",
+  "events": "NHPP on array; each event independently chooses one word and one of all38 bits uniformly; XOR inversion",
+  "initial": "all words clean, no pending write; synthetic specified state, no physical preparation claim",
+  "controller_fault_probability": "0 as model assumption",
+  "scope_excluded": [
+    "MCU/MBU",
+    "nonuniform or correlated marks",
+    "adaptive control and monitor",
+    "application/ARM",
+    "physical service faults or qualification",
+    "large SRAM or mission probability",
+    "signal-count distribution and operation price"
+  ],
+  "mc": {
+    "trials_per_case": 200000,
+    "seed_base": 2026101801,
+    "seed_rule": "SeedSequence([seed_base,case_index]) with PCG64; zero-based declared ordering",
+    "confidence": 0.95,
+    "procedure": "two-sided equal-tailed Clopper-Pearson",
+    "coverage": "pointwise; not simultaneous for8 cases",
+    "seed_selection": "fixed before calculating any Q or MC counts"
+  },
+  "exact": {
+    "maximum_uniformization_index": 32,
+    "internal_decimal_places": 48,
+    "output_decimal_places": 36,
+    "max_enclosure_width": "1e-30",
+    "arithmetic": "Fraction positive-series bounds and outward rounding at every propagation step"
+  },
+  "main_bounds": {
+    "L": "T45 section2 (1)-(2), appendix A.1; no-service cells",
+    "V": "(n-1)/(2n) * sum word exposure squared over virtual begin cells",
+    "X_E": "(n-1)/n * sum previous-begin-to-begin exposure times begin-to-release exposure, clipped at0,T",
+    "U_E": "min(1,V+X_E); T110 section3 pair witness / appendix A.2-A.3, fixed schedule"
+  },
+  "service_times": {
+    "begin_equals_snapshot": true,
+    "conditional_write_equals_release": true,
+    "release_for_ERR0": "same reserved end, no write",
+    "D_zero_order": "snapshot then conditional write/release",
+    "maximum_overlapping_operations": 1
+  },
+  "model_zero_terms": {
+    "K0": 0,
+    "rho0": 0,
+    "D_star": 0,
+    "delta_exec": 0,
+    "delta_svc": 0,
+    "reason": "clean initial state, singleton parents, ideal controller/service; specified synthetic assumptions"
+  }
+}
