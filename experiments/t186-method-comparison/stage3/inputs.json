@@ -1,0 +1,150 @@
+{
+  "stage": 3,
+  "base": "07802ad4872a880bf34eb69e3bffaae57d3b8413",
+  "accepted_stage2": "d7369a2ab307b063a11c36f258d09b31bad06aad",
+  "memory": {
+    "words": 524288,
+    "bits": 38
+  },
+  "environment": {
+    "background_per_s": "0.000154704",
+    "peak_per_s": "0.244682704",
+    "solar_fluence_budget": "28310.473728",
+    "rho_per_s": "0.048",
+    "mission_s": 315576000,
+    "epsilon": "0.001"
+  },
+  "delivery": {
+    "cut_ns": 188160,
+    "proposed_cut_ns": 4000,
+    "proposed_status": "not agreed; no 10us claim"
+  },
+  "application": {
+    "first_ns": 100000,
+    "address_multiplier": 5,
+    "inbound_ns": 320,
+    "outbound_ns": 320,
+    "ready_ns": 80,
+    "profiles": [
+      {
+        "id": "none",
+        "pairs_per_epoch": 0,
+        "epoch_ns": 1000000,
+        "read_offsets_ns": [],
+        "write_offset_ns": 0
+      },
+      {
+        "id": "uniform",
+        "pairs_per_epoch": 1,
+        "epoch_ns": 1000000,
+        "read_offsets_ns": [
+          0
+        ],
+        "write_offset_ns": 500000
+      },
+      {
+        "id": "bursty",
+        "pairs_per_epoch": 5,
+        "epoch_ns": 5000000,
+        "read_offsets_ns": [
+          0,
+          200000,
+          400000,
+          600000,
+          800000
+        ],
+        "write_offset_ns": 100000
+      }
+    ]
+  },
+  "episodes": [
+    {
+      "id": "s3_quiet",
+      "shape": "quiet",
+      "seed": 2026102300,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s3_initial_peak",
+      "shape": "initial_peak",
+      "seed": 2026102301,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s3_rise_fall",
+      "shape": "rise_fall",
+      "seed": 2026102302,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s3_repeat_rise",
+      "shape": "repeat_rise",
+      "seed": 2026102303,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s3_mission",
+      "shape": "mission",
+      "seed": 2026102304,
+      "horizon_s": 315576000,
+      "first_peak_s": 86400,
+      "peak_interval_s": 15778800,
+      "peaks": 20,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800
+    }
+  ],
+  "method_ids": [
+    "constant_1",
+    "our_r4",
+    "krasnikov_0.001_longest",
+    "patent_60",
+    "chen_0.1"
+  ],
+  "training": {
+    "additional_tuning_budget": 0,
+    "weights_source": "../stage2/training.json",
+    "use_test_for_fit": false
+  },
+  "generator": {
+    "algorithm": "inverse integrated intensity, piecewise constant/exponential",
+    "rng": "random.Random 53-bit open uniforms",
+    "time_rounding": "ceil ns",
+    "counter_check_runs": 512,
+    "counter_check_seed": 2026102399
+  },
+  "budgets": {
+    "comparison_wall_s": 180,
+    "benchmark_wall_s": 120
+  },
+  "benchmark": {
+    "repeats": 3,
+    "generator_day": 86400,
+    "generator_mission": 315576000
+  }
+}
