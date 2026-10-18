@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": "python -B experiments/sequential-err-small-validation-20261015/reproduce.py",
+  "unchanged_files": [
+    "results.json",
+    "table.md",
+    "comparison.png",
+    "comparison.svg",
+    "validation.json"
+  ],
+  "sha256": {
+    "results.json": "bb949e074b8f700fe8c76e96c2f6cb39acbb713813b4e4ab076c79977fc720ad",
+    "table.md": "98af3d0373f86081c5f8c148538f4aea2337a0c89506a1a84e1926e3102daa61",
+    "comparison.png": "75b437c48ae593a15b06496714bdc01e8b872f4ae490212d9d375876f1da03a4",
+    "comparison.svg": "87b3d6652e32a6e6402e9351d5d5612bbf89f71f202db4211d8b0bad44830a6c",
+    "validation.json": "40f3f2c2dd1197035c787dbdad747381c6c4aa254e1d64cb5dc4d7e51e5f6799"
+  },
+  "meaning": "Two complete local runs with unchanged code, fixed input and preregistered seeds match byte-for-byte. Repetition does not add independent MC trials."
+}
