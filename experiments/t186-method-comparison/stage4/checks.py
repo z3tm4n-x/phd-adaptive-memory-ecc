@@ -4,7 +4,7 @@ from fractions import Fraction as F
 import heapq
 import json
 import random
-from adapter import Adapter,HOUR
+from adapter import Adapter,HOUR,encode_record,decode_record
 from application import Application,DURATION
 from engine import run
 from grid import Grid
@@ -113,6 +113,16 @@ def validate(cfg):
     ad=Adapter(ours,cfg['delivery'],words=16,our_cfg=small)
     run(30000,[],app,ad,faults=[dict(t=f+4,kind='ERR')])
     ok('source after freeze does not cancel a committed skip',ad.mode(f)==3 and not app.grid.eligible(j,ad.mode(f)) and ad.mode(f+4)==1)
+    for source in [f-4,f]:
+        ad=Adapter(ours,cfg['delivery'],words=16,our_cfg=small)
+        run(30000,[],app,ad,faults=[dict(t=source,kind='ERR')])
+        assert ad.mode(f)==1 and app.grid.eligible(j,ad.mode(f))
+    ok('source before/on freeze vetoes LOW; equality is FAST',True)
+    a,tr=exercise(fast,cfg['delivery'],[dict(t=0,kind='ERR'),dict(t=0,kind='FALSE')],20000)
+    ok('one source-edge combines causes, not independent transaction ERR',len(a.records)==len(a.delivered)==1 and a.coalesced==1)
+    packet=dict(t=315576000*10**9,g=2**63+7,causes=['ERR','GAP'],covers=[2**63,2**63+6])
+    wire=encode_record(packet);decoded=decode_record(wire)
+    ok('32-byte wire format preserves full G64, timestamp and GAP endpoints',len(wire)==32 and decoded['g']==packet['g'] and decoded['t']==packet['t'] and decoded['payload']==packet['covers'])
     # Strong valid source stream, with compression of <=1000 ns ingress.
     dense=[dict(t=t,kind='ERR',ingress_ns=max(0,3996-t) if 3000<=t<=3996 else 0) for t in range(0,24000,4)]
     a,tr=exercise(fast,cfg['delivery'],dense,40000)
@@ -138,6 +148,8 @@ def validate(cfg):
         b=run(edge,marks,app,Adapter(fast,cfg['delivery'],words=16),literal=True)
         assert all(a[k]==b[k] for k in a if k!='simulator_work'),edge
     ok('write boundaries, late births and packet/reply pending preserved',a['residual_errors'].get('0')=={'1':s+140})
+    a=run(s+216,marks,app,Adapter(ours,cfg['delivery'],words=16,our_cfg=small),faults=[dict(t=s+128,kind='GAP'),dict(t=s+144,kind='RESTORE')])
+    ok('GAP/RESTORE during pending write do not cancel either commit',a['residual_errors'].get('0')=={'1':s+140} and a['algorithm']['pending_records']>=2)
     g=Grid(cfg['memory']['words'],cfg['fixed']['period_ns'])
     frames=[g.phase(r+1)-g.phase(r) for r in range(g.groups-1)]+[g.period-g.phase(g.groups-1)]
     ok('full fixed phases/startup: 1696/1700 frames and 552 gap',set(frames)=={1696,1700} and g.max_gap==552 and all(g.start(g.words+j)-g.start(j)<=g.period for j in range(g.words)))

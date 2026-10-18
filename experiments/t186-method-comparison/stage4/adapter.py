@@ -6,9 +6,29 @@ predicate; competitors' natural timers are packet jobs.
 """
 from bisect import bisect_right
 from collections import deque
+import struct
 from reuse import policies
 
 HOUR=3600*10**9
+
+def encode_record(r):
+    """32-byte wire record: 60-bit fast timestamp + 4 causes, full G64.
+
+    GAP stores two full G64 endpoints; normal payload holds word/origin.
+    The ten-year fast timestamp fits60 bits. Simulation-only arrival/drop
+    annotations are not part of the wire record or the claimed buffer.
+    """
+    bits={'ERR':1,'FALSE':2,'GAP':4,'RESTORE':8}
+    assert r['t']%4==0 and 0<=r['t']//4<2**60 and 0<=r['g']<2**64
+    flags=sum(bits[k] for k in r['causes'])
+    if 'GAP' in r['causes']:lo,hi=r.get('covers',[r['g'],r['g']])
+    else:lo=r.get('word',0)+(int(r.get('origin')=='write32')<<32);hi=0
+    return struct.pack('>QQQQ',(flags<<60)|(r['t']//4),r['g'],lo,hi)
+
+def decode_record(raw):
+    header,g,lo,hi=struct.unpack('>QQQQ',raw)
+    causes=[s for s,b in [('ERR',1),('FALSE',2),('GAP',4),('RESTORE',8)] if header>>60&b]
+    return dict(t=(header&((1<<60)-1))*4,g=g,causes=causes,payload=[lo,hi])
 
 class Adapter:
     def __init__(self,spec,config,words=524288,weights=None,our_cfg=None):
@@ -67,6 +87,8 @@ class Adapter:
         if t in self.source_by_time:
             r=self.source_by_time[t]
             assert kind not in r['causes'],'duplicate source cause/alias'
+            assert extra.get('drop',r.get('drop',False))==r.get('drop',False),'coalescence cannot change transport disposition'
+            assert extra.get('ingress_ns',r.get('ingress_ns',self.ingress))==r.get('ingress_ns',self.ingress),'coalescence cannot retime ingress'
             r['causes'].append(kind);r.update(extra);self.coalesced+=1
         else:
             assert self.generation<2**64-1,'G64 must not wrap or reset'
@@ -171,6 +193,7 @@ class Adapter:
             self._job(cut)['records'].append(x)
         elif kind=='adapter_capture':
             job=self.jobs[x];job['records'].sort(key=lambda r:r['g']);job['captured']=True
+            assert all(len(encode_record(r))==self.record_bytes for r in job['records'])
             assert len(job['records'])<=self.bank,'packet exceeds one bank'
             self.peak_batch=max(self.peak_batch,len(job['records']))
             self.captured.update(r['g'] for r in job['records'])
@@ -218,7 +241,7 @@ class Adapter:
                     processed_G=self.processed,current_G=self.generation,UNKNOWN_ranges=len(self.unknown_ranges),
                     pending_records=len(self.pending_records),pending_inflight=len(self.inflight),
                     pending_captured=len(self.captured),nominal_cut_services=H//self.cut,
-                    nominal_ready_services=max(0,(H-self.delay)//self.cut),nonempty_or_timer_packets=self.processed_jobs,
+                    nominal_ready_services=max(0,(H-self.delay)//self.cut),materialized_packets=self.processed_jobs,
                     logical_updates=self.updates if self.core is None else self.core.updates,
                     precomputed_expiry_evaluations=self.expiries,forecast_attempts=self.forecast_attempts,
                     full_hourly_forecasts=self.forecasts,UNKNOWN_forecasts=self.unknown_forecasts,
