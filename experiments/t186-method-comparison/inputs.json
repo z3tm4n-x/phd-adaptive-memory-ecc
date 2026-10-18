@@ -1,0 +1,87 @@
+{
+  "task": 186,
+  "stage": "frozen deterministic pilot; no probability estimate",
+  "base": "546f80b22166ee7bc5f21c88f6cd62419cdc6cc0",
+  "words": 524288,
+  "bits": 38,
+  "horizon_ns": 400000000050,
+  "epsilon_mission": "0.001",
+  "calendar": {
+    "frame_ns": 1568,
+    "batch": 8,
+    "c_ns": 164,
+    "g_ns": 196,
+    "freeze_ns": 320,
+    "ka": 3
+  },
+  "policy": {
+    "NW": 4500045002,
+    "NH": 9000090002,
+    "NR": 9015504896,
+    "timer_tick_ns": 20,
+    "pair_source_ticks": 22500225010,
+    "source_tick_ns": 4,
+    "cut_ns": 188160
+  },
+  "injections": [
+    {
+      "t": 181000000000,
+      "word": 0,
+      "bit": 0
+    },
+    {
+      "t": 181020000000,
+      "word": 1,
+      "bit": 1
+    },
+    {
+      "t": 390000000000,
+      "word": 2,
+      "bit": 2
+    },
+    {
+      "t": 390000000001,
+      "word": 2,
+      "bit": 3
+    }
+  ],
+  "application_reads": [
+    {
+      "arrival_ns": 1000000000,
+      "word": 100
+    },
+    {
+      "arrival_ns": 180500000000,
+      "word": 101
+    },
+    {
+      "arrival_ns": 181100000000,
+      "word": 102
+    },
+    {
+      "arrival_ns": 361500000000,
+      "word": 103
+    },
+    {
+      "arrival_ns": 390100000000,
+      "word": 104
+    },
+    {
+      "arrival_ns": 399000000000,
+      "word": 105
+    }
+  ],
+  "app": {
+    "inbound_ns": 320,
+    "outbound_ns": 320,
+    "ready_ns": 80,
+    "slot_offset_ns": 1312,
+    "read_ns": 184
+  },
+  "methods": [
+    "constant_fast",
+    "our_err_r4"
+  ],
+  "tuning": "none; settings inherited and pilot frozen before outputs",
+  "probability_output": null
+}
