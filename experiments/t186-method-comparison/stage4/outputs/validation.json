@@ -141,9 +141,10 @@
     "loss repair: 3396: combined loss during pending write, first-hit and full price match literal",
     "loss repair: combined source at freeze-4: veto/frozen skip retained",
     "loss repair: combined source at freeze0: veto/frozen skip retained",
-    "loss repair: combined source at freeze4: veto/frozen skip retained"
+    "loss repair: combined source at freeze4: veto/frozen skip retained",
+    "validation evidence has canonical JSON roundtrip"
   ],
-  "count": 76,
+  "count": 77,
   "details": {
     "delivery_boundaries": [
       {
@@ -1694,7 +1695,7 @@
   },
   "provenance": {
     "documentary_snapshots": 45,
-    "signature": "7661310b78b9dbd6b7716d1c755f1f85166a9fbffcaa7d4e07f0fd2db73985cf",
+    "signature": "fb59a7026aa2182b595c7381c2174e2e6a8bfcea28dc553e7bf0aab44106f12e",
     "working_dependencies": 46
   },
   "scope": "addressed changed-interface verification; no physical/WCET/MC qualification",

@@ -1,7 +1,7 @@
 {
   "status": "OWN RESULT / full 60-row comparison after R1/R2; pending review",
   "baseline": "3c684acefbe0376f7e22ec712d0c862e61f1bc51",
-  "code": "8c90809259304485748dc274ffa0ebeea0e5563d",
+  "code": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
   "rows": 60,
   "all_previous_row_fields_equal_except_whole_result_hash": true,
   "equal_previous_leaf_fields": 10505,
@@ -46,14 +46,18 @@
     "outputs/bounds.json": "ad9540831f7f8a77db353c8505e34e25f7d6e8d8d31d981fea3ffa5fceec8bb6",
     "outputs/table.md": "874b980694a50b0e95d82d68325e0e4407e026e1ec7f0e5d6d744d8be853448e"
   },
-  "new_checks": 76,
+  "new_checks": 77,
   "accepted_checks": 59,
   "loss_repair_checks": 32,
   "cause_permutation_runs": 320,
   "previous_signature": "5ecda2db6eda17ae4cd79eaf72c66f17122cefa0380f6acf13db976582269228",
-  "new_signature": "7661310b78b9dbd6b7716d1c755f1f85166a9fbffcaa7d4e07f0fd2db73985cf",
-  "matrix_elapsed_s": 138.38291149999895,
-  "solver_total_s": 93.74593839999761,
+  "new_signature": "fb59a7026aa2182b595c7381c2174e2e6a8bfcea28dc553e7bf0aab44106f12e",
+  "matrix_elapsed_s": 138.65710840000065,
+  "solver_total_s": 93.75887519999742,
   "reused_rows": 0,
-  "scope": "all old numerical fields compared, including every prior algorithm/cost field; new explicit loss-state/action fields only, no tuning"
+  "scope": "all old numerical fields compared, including every prior algorithm/cost field; new explicit loss-state/action fields only, no tuning",
+  "diagnostic_format_repair_comparison": {
+    "baseline": "992c8da3128d04c8b03372e8b61af3792ac12a47",
+    "all_60_rows_including_whole_result_hash_equal": true
+  }
 }
