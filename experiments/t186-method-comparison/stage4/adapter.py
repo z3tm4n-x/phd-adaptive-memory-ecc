@@ -10,6 +10,12 @@ import struct
 from reuse import policies
 
 HOUR=3600*10**9
+CAUSE_BITS={'GAP':4,'ERR':1,'FALSE':2,'RESTORE':8}
+
+
+def canonical_causes(causes):
+    assert causes and len(set(causes))==len(causes) and set(causes)<=CAUSE_BITS.keys()
+    return [cause for cause in CAUSE_BITS if cause in causes]
 
 def encode_record(r):
     """32-byte wire record: 60-bit fast timestamp + 4 causes, full G64.
@@ -18,17 +24,23 @@ def encode_record(r):
     The ten-year fast timestamp fits60 bits. Simulation-only arrival/drop
     annotations are not part of the wire record or the claimed buffer.
     """
-    bits={'ERR':1,'FALSE':2,'GAP':4,'RESTORE':8}
     assert r['t']%4==0 and 0<=r['t']//4<2**60 and 0<=r['g']<2**64
-    flags=sum(bits[k] for k in r['causes'])
-    if 'GAP' in r['causes']:lo,hi=r.get('covers',[r['g'],r['g']])
+    flags=sum(CAUSE_BITS[k] for k in canonical_causes(r['causes']))
+    if 'GAP' in r['causes']:
+        lo,hi=r.get('covers',[r['g'],r['g']])
+        assert 0<lo<=hi<=r['g'],'GAP range must refer to this prefix'
     else:lo=r.get('word',0)+(int(r.get('origin')=='write32')<<32);hi=0
     return struct.pack('>QQQQ',(flags<<60)|(r['t']//4),r['g'],lo,hi)
 
 def decode_record(raw):
     header,g,lo,hi=struct.unpack('>QQQQ',raw)
-    causes=[s for s,b in [('ERR',1),('FALSE',2),('GAP',4),('RESTORE',8)] if header>>60&b]
-    return dict(t=(header&((1<<60)-1))*4,g=g,causes=causes,payload=[lo,hi])
+    causes=canonical_causes([s for s,b in CAUSE_BITS.items() if header>>60&b])
+    r=dict(t=(header&((1<<60)-1))*4,g=g,causes=causes,payload=[lo,hi])
+    if 'GAP' in causes:
+        assert 0<lo<=hi<=g,'GAP range must refer to this prefix'
+        r['covers']=[lo,hi]
+    else:r.update(word=lo&((1<<32)-1),origin='write32' if lo>>32 else 'control')
+    return r
 
 class Adapter:
     def __init__(self,spec,config,words=524288,weights=None,our_cfg=None):
@@ -43,6 +55,13 @@ class Adapter:
         self.peak_records=self.peak_inflight=self.peak_batch=self.peak_policy_queue=0
         self.updates=0;self.expiries=0;self.forecast_attempts=0;self.forecasts=0;self.unknown_forecasts=0
         self.dropped=0;self.false=0;self.losses=0;self.restores=0;self.coalesced=0;self.known_ERR=0
+        # Two restored-prefix watermarks; logs below are audit data, not policy state.
+        self.resolved_G=0;self.source_resolved_G=0
+        self.source_losses=0;self.source_recoveries=0
+        self.source_before=(True,0,0,0)
+        self.gap_notices=0;self.restore_notices=0
+        self.inferred_gaps=0;self.gap_confirmations=0;self.restore_confirmations=0
+        self.source_state_checks=0;self.prefix_checks=0;self.loss_state_checks=0
         self.processed_jobs=0;self.local_ready_max_delay=0;self.ready_time=0
         self.core=None
         self.cfg=our_cfg or dict(NW=4500045002,NH=9000090002,NR=9015504896,
@@ -92,6 +111,8 @@ class Adapter:
             r['causes'].append(kind);r.update(extra);self.coalesced+=1
         else:
             assert self.generation<2**64-1,'G64 must not wrap or reset'
+            self.source_before=(self.source_health,self.source_resolved_G,
+                                self.source_losses,self.source_recoveries)
             self.generation+=1
             r=dict(g=self.generation,t=t,causes=[kind],**extra)
             self.records.append(r);self.source_by_time[t]=r;self.last_source=t
@@ -103,9 +124,23 @@ class Adapter:
                 r['arrival']=t+delay
                 self.pending_records[r['g']]=r;self.inflight.add(r['g'])
                 self.push(r['arrival'],2,'adapter_ingress',r)
+        r['causes']=canonical_causes(r['causes'])
         if kind=='FALSE':self.false+=1
-        if kind=='GAP':self.losses+=1;self.source_health=False
-        if kind=='RESTORE':self.restores+=1;self.source_health=True
+        if kind=='GAP':self.gap_notices+=1
+        if kind=='RESTORE':self.restore_notices+=1
+        # Re-evaluate the whole edge from its BEFORE state, including counters.
+        # Sources have priority over ingress/timers/freeze, so no consumer sees
+        # a partially assembled edge. RESTORE ends a simultaneous GAP episode.
+        health,closed,losses,restores=self.source_before
+        if 'GAP' in r['causes'] and r.get('covers',[r['g'],r['g']])[1]>closed:
+            if health:losses+=1
+            health=False
+        if 'RESTORE' in r['causes']:
+            if not health:restores+=1
+            health=True;closed=r['g']
+        self.source_health=health;self.source_resolved_G=closed
+        self.source_losses=losses;self.source_recoveries=restores
+        self.source_state_checks+=1
         if self.family=='our':self.set_mode(t,1)
         self.peak_records=max(self.peak_records,len(self.pending_records))
         self.peak_inflight=max(self.peak_inflight,len(self.inflight))
@@ -131,15 +166,30 @@ class Adapter:
         expiry=4*((end+4)//4)
         self.timer=expiry if expiry>t else None
 
-    def _gap(self,t,r):
-        self.unknown=True
-        self.unknown_ranges.append(dict(source_t=r['t'],processed_at=t,range=r.get('covers','UNKNOWN'),g=r['g']))
+    def _gap(self,t,r,inferred=False):
+        self.loss_state_checks+=1
+        if inferred:self.inferred_gaps+=1
+        interval=r.get('covers',[r['g'],r['g']])
+        confirmation=interval[1]<=self.resolved_G or self.unknown
+        self.unknown_ranges.append(dict(source_t=r['t'],processed_at=t,range=interval,g=r['g'],
+                                        inferred=inferred,confirmation=confirmation))
+        if confirmation:
+            self.gap_confirmations+=1
+            return
+        self.unknown=True;self.losses+=1
+        if self.family=='our':self.set_mode(t,1)
         if self.core is not None:
             self.core.updates+=1
             if self.family=='krasnikov':self.core.count=0;self.core.timer=None
             if self.family=='patent':self.core.sources.clear();self.core.timer=None;self.fresh_after=None
 
-    def _restore(self,t):
+    def _restore(self,t,r):
+        self.loss_state_checks+=1
+        self.resolved_G=max(self.resolved_G,r['g'])
+        if not self.unknown:
+            self.restore_confirmations+=1
+            return
+        self.restores+=1
         self.unknown=False
         if self.family=='our':self.recovery=max(self.recovery,t+self.cfg['NR']*self.cfg['timer_tick_ns'])
         else:
@@ -147,6 +197,17 @@ class Adapter:
             if self.family=='krasnikov':self.core.count=0;self.core.anchor=t;self.core.timer=t+self.core.period
             elif self.family=='patent':self.core.sources.clear();self.fresh_after=t+self.core.window;self.core.timer=self.fresh_after
             elif self.family=='chen_analog':self.known_hour=t//HOUR+1
+
+    def apply_record(self,t,r):
+        """Atomic semantics of one decoded record, after any inferred hole.
+
+        GAP first, one observation, RESTORE last. No call-order information
+        or simulation-only payload is consulted by the receiving policy.
+        """
+        causes=canonical_causes(r['causes'])
+        if 'GAP' in causes:self._gap(t,r)
+        if 'ERR' in causes or 'FALSE' in causes:self._ERR(t,r['t'])
+        if 'RESTORE' in causes:self._restore(t,r)
 
     def _ERR(self,t,source):
         self.known_ERR+=1;self.delivered.append(dict(t=t,source=source))
@@ -202,19 +263,13 @@ class Adapter:
             job=self.jobs.pop(x);self.ready_time=t;self.processed_jobs+=1
             batch=job['records']
             assert all(r['arrival']<x for r in batch),'cut equality belongs to next packet'
-            covers=[r['covers'] for r in batch if 'GAP' in r['causes'] and isinstance(r.get('covers'),list)]
             expected=self.processed+1
             for r in batch:
+                self.prefix_checks+=1
                 assert r['g']>=expected,'reorder, duplicate or stale record'
                 if r['g']>expected:
-                    assert any(a<=expected and b>=r['g']-1 for a,b in covers),'unclosed UNKNOWN prefix'
-                    self._gap(t,dict(t=r['t'],g=r['g'],covers=[expected,r['g']-1]))
-                flag_processed=False
-                for cause in r['causes']:
-                    if cause=='GAP':self._gap(t,r)
-                    elif cause=='RESTORE':self._restore(t)
-                    elif cause in ('ERR','FALSE') and not flag_processed:
-                        self._ERR(t,r['t']);flag_processed=True
+                    self._gap(t,dict(t=r['t'],g=r['g'],covers=[expected,r['g']-1]),inferred=True)
+                self.apply_record(t,decode_record(encode_record(r)))
                 expected=r['g']+1
                 self.pending_records.pop(r['g']);self.captured.remove(r['g'])
                 self.local_ready_max_delay=max(self.local_ready_max_delay,t-r['t'])
@@ -237,6 +292,13 @@ class Adapter:
     def costs(self,H):
         return dict(source_records=len(self.records),source_ERR=sum('ERR' in r['causes'] for r in self.records),
                     source_false=self.false,loss_rises=self.losses,restores=self.restores,
+                    raw_GAP_notifications=self.gap_notices,raw_RESTORE_notifications=self.restore_notices,
+                    source_health_loss_rises=self.source_losses,source_health_recoveries=self.source_recoveries,
+                    inferred_missing_ranges=self.inferred_gaps,GAP_confirmations=self.gap_confirmations,
+                    RESTORE_confirmations=self.restore_confirmations,restored_prefix_G=self.resolved_G,
+                    source_state_checks=self.source_state_checks,prefix_checks=self.prefix_checks,
+                    loss_state_checks=self.loss_state_checks,
+                    loss_state_reserved_bytes=64,
                     source_cause_coalescences=self.coalesced,delivered_ERR=self.known_ERR,dropped_records=self.dropped,
                     processed_G=self.processed,current_G=self.generation,UNKNOWN_ranges=len(self.unknown_ranges),
                     pending_records=len(self.pending_records),pending_inflight=len(self.inflight),

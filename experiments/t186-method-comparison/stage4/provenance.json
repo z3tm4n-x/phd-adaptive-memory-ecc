@@ -134,7 +134,7 @@
     },
     {
       "path": "experiments/t186-method-comparison/stage4/adapter.py",
-      "sha256": "5b0a1accb33b97db4fb73b3d6706cc18bab67f783c5f78e13031c4494c366809"
+      "sha256": "cb50faad9ddc0b3754c53cea0ae67b0a0a509c11f0015aed24f0a6f0b82b07cd"
     },
     {
       "path": "experiments/t186-method-comparison/stage4/application.py",
@@ -146,11 +146,11 @@
     },
     {
       "path": "experiments/t186-method-comparison/stage4/checks.py",
-      "sha256": "faf7a1e153ac1f791b1d566aaa859ffc0b32ce9ca03d94f30392a6950e47a5e5"
+      "sha256": "6023c53e2236312f0aa86501b88ae27511557a9d184041601ab0f391cbd6b0ad"
     },
     {
       "path": "experiments/t186-method-comparison/stage4/cost.py",
-      "sha256": "0bf93b75fe7e5358c628d3991ad2c4715daaa779c1f820373112f8285131cba3"
+      "sha256": "b918be02e9ddc886414a2cbdaf15dbc1f298fb244bdb8db0febfffe7f22e0c88"
     },
     {
       "path": "experiments/t186-method-comparison/stage4/engine.py",
@@ -179,6 +179,10 @@
     {
       "path": "experiments/t186-method-comparison/stage4/theory-report.json",
       "sha256": "d98924971eb4604db9284a6adc8c6151256cb2e41baf03912695b8c6cf6fcbc4"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage4/loss_checks.py",
+      "sha256": "88bc24c9daf13219358b433fcfb762c22f048564ce1813641616182a998b7908"
     }
   ],
   "documentary_snapshots": [
@@ -445,6 +449,12 @@
       "commit": "e49314a9a0fbf97699f9c8b0c62d25bae5e3097d",
       "sha256": "d98924971eb4604db9284a6adc8c6151256cb2e41baf03912695b8c6cf6fcbc4",
       "use": "frozen documentary/theory input; current mutable files not compared"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage4/PLAN-LOSS-FIX.md",
+      "commit": "39f08c3caf79fea45c23a998e77fe64ea1d24e6b",
+      "sha256": "a654707ed82b68cf880faf1f34603c725f8e260b5a9c0f4a1788a5be228f413d",
+      "use": "acceptance-directed repair plan before code; scientific inputs unchanged"
     }
   ],
   "external_source_basis": [
@@ -474,5 +484,7 @@
   ],
   "text_eol": "CRLF normalized to LF",
   "stage4_theory": "e49314a9a0fbf97699f9c8b0c62d25bae5e3097d",
-  "stage4_plan": "e4ed618d5425114938bf1ef52f3dcef0665ea9a8"
+  "stage4_plan": "e4ed618d5425114938bf1ef52f3dcef0665ea9a8",
+  "loss_fix_plan": "39f08c3caf79fea45c23a998e77fe64ea1d24e6b",
+  "previous_stage4_result": "3c684acefbe0376f7e22ec712d0c862e61f1bc51"
 }

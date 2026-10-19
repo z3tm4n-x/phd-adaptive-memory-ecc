@@ -32,7 +32,9 @@ def exercise(spec,cfg,events,H,our_cfg=None,weights=None,initial_G=0):
             if a.timer!=x:continue
             a.wake(t)
         else:a.handle(t,kind,x)
-        timer();trace.append(dict(t=t,event=kind,k=a.k,G=a.generation,processed_G=a.processed))
+        timer();trace.append(dict(t=t,event=kind,k=a.k,G=a.generation,processed_G=a.processed,
+                                 unknown=a.unknown,health=a.source_health,losses=a.losses,
+                                 restores=a.restores,recovery=a.recovery))
     a.finish(H);return a,trace
 
 def validate(cfg):
@@ -101,9 +103,8 @@ def validate(cfg):
     events=[dict(t=0,kind='ERR',drop=True),dict(t=4,kind='GAP',covers=[1,1]),dict(t=8,kind='RESTORE'),dict(t=12,kind='ERR')]
     a,tr=exercise(ours,cfg['delivery'],events,30000,small)
     ok('dropped record is explicit UNKNOWN; restore preserves G and loads NR',a.dropped==1 and len(a.delivered)==1 and a.processed==4 and a.recovery==7900+small['NR']*20 and bool(a.unknown_ranges))
-    try:exercise(ours,cfg['delivery'],[dict(t=0,kind='ERR',drop=True),dict(t=4,kind='ERR')],20000,small)
-    except AssertionError as exc:ok('unclosed missing prefix is rejected, not zero-filled','UNKNOWN' in str(exc))
-    else:raise AssertionError('unclosed gap accepted')
+    a,tr=exercise(ours,cfg['delivery'],[dict(t=0,kind='ERR',drop=True),dict(t=4,kind='ERR')],20000,small)
+    ok('unconfirmed missing prefix persists as UNKNOWN, not zero-filled',a.unknown and a.k==1 and a.losses==1 and a.restores==0)
     # A long old hold cannot be shortened by GAP/RESTORE/another short hold.
     slow=dict(small,NH=10000)
     a,tr=exercise(ours,cfg['delivery'],[dict(t=0,kind='ERR'),dict(t=4,kind='ERR'),dict(t=20000,kind='GAP'),dict(t=24000,kind='RESTORE')],250000,slow)
@@ -153,6 +154,9 @@ def validate(cfg):
     g=Grid(cfg['memory']['words'],cfg['fixed']['period_ns'])
     frames=[g.phase(r+1)-g.phase(r) for r in range(g.groups-1)]+[g.period-g.phase(g.groups-1)]
     ok('full fixed phases/startup: 1696/1700 frames and 552 gap',set(frames)=={1696,1700} and g.max_gap==552 and all(g.start(g.words+j)-g.start(j)<=g.period for j in range(g.words)))
+    from loss_checks import validate_loss
+    details['loss_repair']=validate_loss(cfg,exercise)
+    names+=details['loss_repair']['checks']
     return dict(status='OWN RESULT / checks passed, pending review',count=len(names),checks=names,details=details,
                 scope='addressed changed-interface verification; no physical/WCET/MC qualification')
 
