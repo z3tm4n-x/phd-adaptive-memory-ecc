@@ -2,260 +2,272 @@
   "budget_seconds": 180.0,
   "complete": true,
   "completed_rows": 60,
-  "elapsed_s": 124.68526239999483,
+  "elapsed_s": 138.38291149999895,
   "expected_rows": 60,
-  "new_rows": 58,
+  "new_rows": 60,
   "reason": null,
-  "reused_rows": 2,
-  "signature": "5ecda2db6eda17ae4cd79eaf72c66f17122cefa0380f6acf13db976582269228",
+  "reused_rows": 0,
+  "signature": "7661310b78b9dbd6b7716d1c755f1f85166a9fbffcaa7d4e07f0fd2db73985cf",
   "timings": [
     {
       "episode": "s4_quiet",
-      "generation_s": 0.002037500002188608
+      "generation_s": 0.0020755000005010515
     },
     {
       "row": "s4_quiet__uniform__constant_1",
-      "solver_s": 0.0007734000027994625
+      "solver_s": 0.0008605000002717134
     },
     {
       "row": "s4_quiet__uniform__constant_sufficient",
-      "solver_s": 0.0007158000007621013
+      "solver_s": 0.0009563999992678873
     },
     {
       "row": "s4_quiet__uniform__our_r4",
-      "solver_s": 0.0010037000029115006
+      "solver_s": 0.0011062000012316275
     },
     {
       "row": "s4_quiet__uniform__krasnikov_0.001_longest",
-      "solver_s": 0.0020838000054936856
+      "solver_s": 0.0019499000009091105
     },
     {
       "row": "s4_quiet__uniform__patent_60",
-      "solver_s": 0.00197679999837419
+      "solver_s": 0.002062800000203424
     },
     {
       "row": "s4_quiet__uniform__chen_0.1",
-      "solver_s": 0.00184090000402648
+      "solver_s": 0.0019978999989689328
     },
     {
       "row": "s4_quiet__bursty__constant_1",
-      "solver_s": 0.0007506999972974882
+      "solver_s": 0.0010812000000441913
     },
     {
       "row": "s4_quiet__bursty__constant_sufficient",
-      "solver_s": 0.0009403000003658235
+      "solver_s": 0.0008781999986240407
     },
     {
       "row": "s4_quiet__bursty__our_r4",
-      "solver_s": 0.0011212999961571768
+      "solver_s": 0.0017852000000857515
     },
     {
       "row": "s4_quiet__bursty__krasnikov_0.001_longest",
-      "solver_s": 0.0026343999998061918
+      "solver_s": 0.002135200000338955
     },
     {
       "row": "s4_quiet__bursty__patent_60",
-      "solver_s": 0.0017245999988517724
+      "solver_s": 0.002057499999864376
     },
     {
       "row": "s4_quiet__bursty__chen_0.1",
-      "solver_s": 0.0017549999975017272
+      "solver_s": 0.0019517000000632834
     },
     {
       "episode": "s4_initial_peak",
-      "generation_s": 0.04286639999918407
+      "generation_s": 0.042879500000708504
     },
     {
       "row": "s4_initial_peak__uniform__constant_1",
-      "solver_s": 0.0253348999976879
+      "solver_s": 0.0306401999987429
     },
     {
       "row": "s4_initial_peak__uniform__constant_sufficient",
-      "solver_s": 0.028756599996995647
+      "solver_s": 0.0365561999988131
     },
     {
       "row": "s4_initial_peak__uniform__our_r4",
-      "solver_s": 0.027849600002809893
+      "solver_s": 0.0343670000002021
     },
     {
       "row": "s4_initial_peak__uniform__krasnikov_0.001_longest",
-      "solver_s": 0.09606749999511521
+      "solver_s": 0.10968479999974079
     },
     {
       "row": "s4_initial_peak__uniform__patent_60",
-      "solver_s": 0.03462949999811826
+      "solver_s": 0.04280590000053053
     },
     {
       "row": "s4_initial_peak__uniform__chen_0.1",
-      "solver_s": 0.027139700003317557
+      "solver_s": 0.03741069999887259
     },
     {
       "row": "s4_initial_peak__bursty__constant_1",
-      "solver_s": 0.025531200000841636
+      "solver_s": 0.03230540000004112
     },
     {
       "row": "s4_initial_peak__bursty__constant_sufficient",
-      "solver_s": 0.029136299999663606
+      "solver_s": 0.03788830000121379
     },
     {
       "row": "s4_initial_peak__bursty__our_r4",
-      "solver_s": 0.028989099999307655
+      "solver_s": 0.03623969999898691
     },
     {
       "row": "s4_initial_peak__bursty__krasnikov_0.001_longest",
-      "solver_s": 0.09825969999656081
+      "solver_s": 0.11411260000022594
     },
     {
       "row": "s4_initial_peak__bursty__patent_60",
-      "solver_s": 0.0359392000027583
+      "solver_s": 0.04809430000022985
     },
     {
       "row": "s4_initial_peak__bursty__chen_0.1",
-      "solver_s": 0.028284200001507998
+      "solver_s": 0.03380589999869699
+    },
+    {
+      "episode": "s4_rise_fall",
+      "generation_s": 0.0616967999994813
     },
     {
       "row": "s4_rise_fall__uniform__constant_1",
-      "solver_s": 0.03481859999737935
+      "solver_s": 0.045978500000273925
+    },
+    {
+      "row": "s4_rise_fall__uniform__constant_sufficient",
+      "solver_s": 0.04975650000051246
+    },
+    {
+      "row": "s4_rise_fall__uniform__our_r4",
+      "solver_s": 0.05153939999945578
     },
     {
       "row": "s4_rise_fall__uniform__krasnikov_0.001_longest",
-      "solver_s": 0.13982930000202032
+      "solver_s": 0.15256480000061856
     },
     {
       "row": "s4_rise_fall__uniform__patent_60",
-      "solver_s": 0.04945330000191461
+      "solver_s": 0.06009289999929024
     },
     {
       "row": "s4_rise_fall__uniform__chen_0.1",
-      "solver_s": 0.10558499999751803
+      "solver_s": 0.12013819999992847
     },
     {
       "row": "s4_rise_fall__bursty__constant_1",
-      "solver_s": 0.03605799999786541
+      "solver_s": 0.045680999999603955
     },
     {
       "row": "s4_rise_fall__bursty__constant_sufficient",
-      "solver_s": 0.04294759999902453
+      "solver_s": 0.054431800001111696
     },
     {
       "row": "s4_rise_fall__bursty__our_r4",
-      "solver_s": 0.04021210000064457
+      "solver_s": 0.050694300000031944
     },
     {
       "row": "s4_rise_fall__bursty__krasnikov_0.001_longest",
-      "solver_s": 0.14015610000205925
+      "solver_s": 0.1541821999999229
     },
     {
       "row": "s4_rise_fall__bursty__patent_60",
-      "solver_s": 0.052423900000576396
+      "solver_s": 0.06254730000000563
     },
     {
       "row": "s4_rise_fall__bursty__chen_0.1",
-      "solver_s": 0.11088749999908032
+      "solver_s": 0.12468090000038501
     },
     {
       "episode": "s4_repeat_rise",
-      "generation_s": 0.12012910000339616
+      "generation_s": 0.1350282999992487
     },
     {
       "row": "s4_repeat_rise__uniform__constant_1",
-      "solver_s": 0.07289360000140732
+      "solver_s": 0.09139609999874665
     },
     {
       "row": "s4_repeat_rise__uniform__constant_sufficient",
-      "solver_s": 0.08571310000115773
+      "solver_s": 0.10613670000020647
     },
     {
       "row": "s4_repeat_rise__uniform__our_r4",
-      "solver_s": 0.09555729999556206
+      "solver_s": 0.10245589999976801
     },
     {
       "row": "s4_repeat_rise__uniform__krasnikov_0.001_longest",
-      "solver_s": 0.2849086999995052
+      "solver_s": 0.32233500000074855
     },
     {
       "row": "s4_repeat_rise__uniform__patent_60",
-      "solver_s": 0.10398659999918891
+      "solver_s": 0.12652779999916675
     },
     {
       "row": "s4_repeat_rise__uniform__chen_0.1",
-      "solver_s": 0.1943701999989571
+      "solver_s": 0.2209887000008166
     },
     {
       "row": "s4_repeat_rise__bursty__constant_1",
-      "solver_s": 0.07635860000300454
+      "solver_s": 0.10836740000013378
     },
     {
       "row": "s4_repeat_rise__bursty__constant_sufficient",
-      "solver_s": 0.0864142000064021
+      "solver_s": 0.10713829999986046
     },
     {
       "row": "s4_repeat_rise__bursty__our_r4",
-      "solver_s": 0.09357409999938682
+      "solver_s": 0.106444900000497
     },
     {
       "row": "s4_repeat_rise__bursty__krasnikov_0.001_longest",
-      "solver_s": 0.29338149999966845
+      "solver_s": 0.33039710000048217
     },
     {
       "row": "s4_repeat_rise__bursty__patent_60",
-      "solver_s": 0.10566660000040429
+      "solver_s": 0.12857160000021395
     },
     {
       "row": "s4_repeat_rise__bursty__chen_0.1",
-      "solver_s": 0.1994976999994833
+      "solver_s": 0.2262849999988248
     },
     {
       "episode": "s4_mission",
-      "generation_s": 3.7765411000000313
+      "generation_s": 3.9001060999999027
     },
     {
       "row": "s4_mission__uniform__constant_1",
-      "solver_s": 2.76501979999739
+      "solver_s": 3.453738700000031
     },
     {
       "row": "s4_mission__uniform__constant_sufficient",
-      "solver_s": 3.242590100002417
+      "solver_s": 4.045314599999983
     },
     {
       "row": "s4_mission__uniform__our_r4",
-      "solver_s": 4.389797999996517
+      "solver_s": 5.092950800000835
     },
     {
       "row": "s4_mission__uniform__krasnikov_0.001_longest",
-      "solver_s": 11.077719600005366
+      "solver_s": 12.468421000001399
     },
     {
       "row": "s4_mission__uniform__patent_60",
-      "solver_s": 8.15207350000128
+      "solver_s": 8.970871199999237
     },
     {
       "row": "s4_mission__uniform__chen_0.1",
-      "solver_s": 9.204003400001966
+      "solver_s": 10.501093299999411
     },
     {
       "row": "s4_mission__bursty__constant_1",
-      "solver_s": 3.2195776000007754
+      "solver_s": 3.839295799998581
     },
     {
       "row": "s4_mission__bursty__constant_sufficient",
-      "solver_s": 3.4923756000061985
+      "solver_s": 4.257079700000759
     },
     {
       "row": "s4_mission__bursty__our_r4",
-      "solver_s": 4.540032299999439
+      "solver_s": 5.24468589999924
     },
     {
       "row": "s4_mission__bursty__krasnikov_0.001_longest",
-      "solver_s": 11.391457400000945
+      "solver_s": 12.465914200000043
     },
     {
       "row": "s4_mission__bursty__patent_60",
-      "solver_s": 8.33888940000179
+      "solver_s": 9.310118800000055
     },
     {
       "row": "s4_mission__bursty__chen_0.1",
-      "solver_s": 9.431872599998314
+      "solver_s": 10.534388400001262
     }
   ]
 }

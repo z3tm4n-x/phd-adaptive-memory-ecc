@@ -4,17 +4,20 @@ OWN RESULT / pending review. Продолжение принятого этап�
 [draft PR #204](https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/204).
 Прежние stage1–3 не изменены. Общий вход закреплён до расчёта
 коммитом `e4ed618d5425114938bf1ef52f3dcef0665ea9a8`; вычислительная
-реализация — `3b3f5aa801797b7fb1be334bcc9b0cbcade2aab5`.
+исправленная реализация — `8c90809259304485748dc274ffa0ebeea0e5563d`.
+Дополнение к плану R1/R2 закреплено до правки коммитом `39f08c3`.
+Предыдущая поставка `3c684ac` сохранена в Git; научный вход не менялся.
 
 - [Отчёт и конкретный остаток](REPORT.md).
 - [Таблица расчётов](outputs/table.md), все 60 строк и цена действий —
   [results.json](outputs/results.json).
 - [Условия применимости](CONDITIONS.md), [план до чисел](PLAN.md),
-  [общий вход](common-input.json).
+  [план исправления потерь](PLAN-LOSS-FIX.md), [общий вход](common-input.json).
 - [Точные границы](outputs/bounds.json) отдельно от численных историй.
 - [Проверки](outputs/validation.json), [паспорт](provenance.json),
   [среда и хеши](outputs/environment.json).
 - [Чистый повтор, возобновление и отрицательные проверки](outputs/replay-evidence.json).
+- [Сравнение всех прежних полей после исправления R1/R2](outputs/loss-repair-comparison.json).
 
 В корне checkout, Python 3.12, только стандартная библиотека:
 

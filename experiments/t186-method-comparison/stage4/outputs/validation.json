@@ -96,7 +96,7 @@
     "same-edge expiry/source veto and full G64 freshness",
     "no prefix token before complete processing",
     "dropped record is explicit UNKNOWN; restore preserves G and loads NR",
-    "unclosed missing prefix is rejected, not zero-filled",
+    "unconfirmed missing prefix persists as UNKNOWN, not zero-filled",
     "restore preserves previous long hold and equality FAST",
     "source after freeze does not cancel a committed skip",
     "source before/on freeze vetoes LOW; equality is FAST",
@@ -109,9 +109,41 @@
     "Chen UNKNOWN bins suspend forecasts until six complete known bins",
     "write boundaries, late births and packet/reply pending preserved",
     "GAP/RESTORE during pending write do not cancel either commit",
-    "full fixed phases/startup: 1696/1700 frames and 552 gap"
+    "full fixed phases/startup: 1696/1700 frames and 552 gap",
+    "loss repair: constant_1: both accepted inter-packet counterexamples, one episode/recovery",
+    "loss repair: our_r4: both accepted inter-packet counterexamples, one episode/recovery",
+    "loss repair: krasnikov_0.001_longest: both accepted inter-packet counterexamples, one episode/recovery",
+    "loss repair: patent_60: both accepted inter-packet counterexamples, one episode/recovery",
+    "loss repair: chen_0.1: both accepted inter-packet counterexamples, one episode/recovery",
+    "loss repair: GAP arrival 3999: strict cut, timely recognition, no additional wait",
+    "loss repair: GAP arrival 4000: strict cut, timely recognition, no additional wait",
+    "loss repair: GAP arrival 4001: strict cut, timely recognition, no additional wait",
+    "loss repair: constant_1: repeated confirmation before/after restore is charged, no second NR",
+    "loss repair: our_r4: repeated confirmation before/after restore is charged, no second NR",
+    "loss repair: krasnikov_0.001_longest: repeated confirmation before/after restore is charged, no second NR",
+    "loss repair: patent_60: repeated confirmation before/after restore is charged, no second NR",
+    "loss repair: chen_0.1: repeated confirmation before/after restore is charged, no second NR",
+    "loss repair: two separate loss episodes preserve generation and pay two recoveries",
+    "loss repair: inferred range and restored watermark retain high G64 bits",
+    "loss repair: no new holes is not RESTORE",
+    "loss repair: unreported tail loss is not silently detected from private source log",
+    "loss repair: timely explicit signal closes the otherwise unobservable tail-loss case",
+    "loss repair: constant_1: all cause permutations and decoded source replay have one meaning",
+    "loss repair: our_r4: all cause permutations and decoded source replay have one meaning",
+    "loss repair: krasnikov_0.001_longest: all cause permutations and decoded source replay have one meaning",
+    "loss repair: patent_60: all cause permutations and decoded source replay have one meaning",
+    "loss repair: chen_0.1: all cause permutations and decoded source replay have one meaning",
+    "loss repair: our_r4: actual 200-second counterexample resolved",
+    "loss repair: patent_60: actual 200-second counterexample resolved",
+    "loss repair: direct/decoded receive is independent of list order for every combined cause",
+    "loss repair: combined restore preserves max old hold and strict equality",
+    "loss repair: None: combined loss during pending write, first-hit and full price match literal",
+    "loss repair: 3396: combined loss during pending write, first-hit and full price match literal",
+    "loss repair: combined source at freeze-4: veto/frozen skip retained",
+    "loss repair: combined source at freeze0: veto/frozen skip retained",
+    "loss repair: combined source at freeze4: veto/frozen skip retained"
   ],
-  "count": 44,
+  "count": 76,
   "details": {
     "delivery_boundaries": [
       {
@@ -132,6 +164,8 @@
     ],
     "dense_transport": {
       "CPU_time_ns": null,
+      "GAP_confirmations": 0,
+      "RESTORE_confirmations": 0,
       "UNKNOWN_forecasts": 0,
       "UNKNOWN_ranges": 0,
       "current_G": 6000,
@@ -140,9 +174,12 @@
       "energy_J": null,
       "forecast_attempts": 0,
       "full_hourly_forecasts": 0,
+      "inferred_missing_ranges": 0,
       "local_ready_max_delay_ns": 7900,
       "logical_updates": 0,
       "loss_rises": 0,
+      "loss_state_checks": 0,
+      "loss_state_reserved_bytes": 64,
       "materialized_packets": 6,
       "nominal_cut_services": 10,
       "nominal_ready_services": 9,
@@ -154,21 +191,1511 @@
       "pending_inflight": 0,
       "pending_records": 0,
       "precomputed_expiry_evaluations": 0,
+      "prefix_checks": 6000,
       "processed_G": 6000,
+      "raw_GAP_notifications": 0,
+      "raw_RESTORE_notifications": 0,
+      "restored_prefix_G": 0,
       "restores": 0,
       "six_feature_multiply_adds": 0,
       "source_ERR": 6000,
       "source_cause_coalescences": 0,
       "source_false": 0,
+      "source_health_loss_rises": 0,
+      "source_health_recoveries": 0,
       "source_records": 6000,
+      "source_state_checks": 6000,
       "transport_capacity_records": 4096,
       "transport_reserved_bytes": 131072
+    },
+    "loss_repair": {
+      "checks": [
+        "loss repair: constant_1: both accepted inter-packet counterexamples, one episode/recovery",
+        "loss repair: our_r4: both accepted inter-packet counterexamples, one episode/recovery",
+        "loss repair: krasnikov_0.001_longest: both accepted inter-packet counterexamples, one episode/recovery",
+        "loss repair: patent_60: both accepted inter-packet counterexamples, one episode/recovery",
+        "loss repair: chen_0.1: both accepted inter-packet counterexamples, one episode/recovery",
+        "loss repair: GAP arrival 3999: strict cut, timely recognition, no additional wait",
+        "loss repair: GAP arrival 4000: strict cut, timely recognition, no additional wait",
+        "loss repair: GAP arrival 4001: strict cut, timely recognition, no additional wait",
+        "loss repair: constant_1: repeated confirmation before/after restore is charged, no second NR",
+        "loss repair: our_r4: repeated confirmation before/after restore is charged, no second NR",
+        "loss repair: krasnikov_0.001_longest: repeated confirmation before/after restore is charged, no second NR",
+        "loss repair: patent_60: repeated confirmation before/after restore is charged, no second NR",
+        "loss repair: chen_0.1: repeated confirmation before/after restore is charged, no second NR",
+        "loss repair: two separate loss episodes preserve generation and pay two recoveries",
+        "loss repair: inferred range and restored watermark retain high G64 bits",
+        "loss repair: no new holes is not RESTORE",
+        "loss repair: unreported tail loss is not silently detected from private source log",
+        "loss repair: timely explicit signal closes the otherwise unobservable tail-loss case",
+        "loss repair: constant_1: all cause permutations and decoded source replay have one meaning",
+        "loss repair: our_r4: all cause permutations and decoded source replay have one meaning",
+        "loss repair: krasnikov_0.001_longest: all cause permutations and decoded source replay have one meaning",
+        "loss repair: patent_60: all cause permutations and decoded source replay have one meaning",
+        "loss repair: chen_0.1: all cause permutations and decoded source replay have one meaning",
+        "loss repair: our_r4: actual 200-second counterexample resolved",
+        "loss repair: patent_60: actual 200-second counterexample resolved",
+        "loss repair: direct/decoded receive is independent of list order for every combined cause",
+        "loss repair: combined restore preserves max old hold and strict equality",
+        "loss repair: None: combined loss during pending write, first-hit and full price match literal",
+        "loss repair: 3396: combined loss during pending write, first-hit and full price match literal",
+        "loss repair: combined source at freeze-4: veto/frozen skip retained",
+        "loss repair: combined source at freeze0: veto/frozen skip retained",
+        "loss repair: combined source at freeze4: veto/frozen skip retained"
+      ],
+      "count": 32,
+      "evidence": {
+        "R1": [
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": 1,
+                "observations": 1,
+                "sources": null,
+                "timer": null,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8900,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 3,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 2996,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 2996
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3000
+                }
+              ],
+              "timer": null,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "constant_1",
+            "variant": 0
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": 1,
+                "observations": 1,
+                "sources": null,
+                "timer": null,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8892,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 2,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 3004,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3004
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3008
+                }
+              ],
+              "timer": null,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "constant_1",
+            "variant": 1
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": null,
+                "observations": null,
+                "sources": null,
+                "timer": null,
+                "updates": null
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8900,
+                "logical_updates": 1,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 3,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 2996,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                90000907940,
+                0,
+                180310109820
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 2996
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3000
+                }
+              ],
+              "timer": 180310109824,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "our_r4",
+            "variant": 0
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": null,
+                "observations": null,
+                "sources": null,
+                "timer": null,
+                "updates": null
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8892,
+                "logical_updates": 1,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 2,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 3004,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                90000907940,
+                0,
+                180310109820
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3004
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3008
+                }
+              ],
+              "timer": 180310109824,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "our_r4",
+            "variant": 1
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": 11900,
+                "bins": null,
+                "count": 0,
+                "hour": null,
+                "k": 1,
+                "observations": 1,
+                "sources": null,
+                "timer": 13468,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8900,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 3,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 2996,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 2996
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3000
+                }
+              ],
+              "timer": null,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "krasnikov_0.001_longest",
+            "variant": 0
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": 11900,
+                "bins": null,
+                "count": 0,
+                "hour": null,
+                "k": 1,
+                "observations": 1,
+                "sources": null,
+                "timer": 13468,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8892,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 2,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 3004,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3004
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3008
+                }
+              ],
+              "timer": null,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "krasnikov_0.001_longest",
+            "variant": 1
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": 1,
+                "observations": 1,
+                "sources": [],
+                "timer": 60000011900,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8900,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 3,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 2996,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 2996
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3000
+                }
+              ],
+              "timer": 60000011900,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "patent_60",
+            "variant": 0
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": 1,
+                "observations": 1,
+                "sources": [],
+                "timer": 60000011900,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8892,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 2,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 3004,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3004
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3008
+                }
+              ],
+              "timer": 60000011900,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "patent_60",
+            "variant": 1
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": {
+                  "0": 1
+                },
+                "count": null,
+                "hour": 1,
+                "k": 1,
+                "observations": 1,
+                "sources": null,
+                "timer": 3600000000000,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8900,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 3,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 2996,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 2996
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3000
+                }
+              ],
+              "timer": 3600000000000,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "chen_0.1",
+            "variant": 0
+          },
+          {
+            "final": {
+              "core": {
+                "anchor": null,
+                "bins": {
+                  "0": 1
+                },
+                "count": null,
+                "hour": 1,
+                "k": 1,
+                "observations": 1,
+                "sources": null,
+                "timer": 3600000000000,
+                "updates": 2
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 1,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 2,
+                "current_G": 4,
+                "delivered_ERR": 1,
+                "dropped_records": 1,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 1,
+                "local_ready_max_delay_ns": 8892,
+                "logical_updates": 2,
+                "loss_rises": 1,
+                "loss_state_checks": 3,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 2,
+                "nominal_cut_services": 4,
+                "nominal_ready_services": 3,
+                "peak_batch_records": 2,
+                "peak_inflight_records": 2,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 3,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 3,
+                "processed_G": 4,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 4,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 2,
+                "source_cause_coalescences": 0,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 4,
+                "source_state_checks": 4,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 3004,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 1,
+              "modes": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 2,
+                  "inferred": true,
+                  "processed_at": 7900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3004
+                },
+                {
+                  "confirmation": true,
+                  "g": 3,
+                  "inferred": false,
+                  "processed_at": 11900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 3008
+                }
+              ],
+              "timer": 3600000000000,
+              "unknown": false
+            },
+            "first_ready": {
+              "G": 4,
+              "event": "adapter_ready",
+              "health": true,
+              "k": 1,
+              "losses": 1,
+              "processed_G": 2,
+              "recovery": 180310097920,
+              "restores": 0,
+              "t": 7900,
+              "unknown": true
+            },
+            "method": "chen_0.1",
+            "variant": 1
+          }
+        ],
+        "R2": [
+          {
+            "method": "our_r4",
+            "state": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": null,
+                "observations": null,
+                "sources": null,
+                "timer": null,
+                "updates": null
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 0,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 1,
+                "current_G": 1,
+                "delivered_ERR": 0,
+                "dropped_records": 0,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 0,
+                "local_ready_max_delay_ns": 5900,
+                "logical_updates": 1,
+                "loss_rises": 1,
+                "loss_state_checks": 2,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 1,
+                "nominal_cut_services": 50000000,
+                "nominal_ready_services": 49999999,
+                "peak_batch_records": 1,
+                "peak_inflight_records": 1,
+                "peak_policy_timestamp_records": 0,
+                "peak_transport_records": 1,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 1,
+                "prefix_checks": 1,
+                "processed_G": 1,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 1,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 0,
+                "source_cause_coalescences": 1,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 1,
+                "source_state_checks": 2,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310113820
+              ],
+              "k": 3,
+              "modes": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  180310113824,
+                  3
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 1,
+                  "inferred": false,
+                  "processed_at": 15900,
+                  "range": [
+                    1,
+                    1
+                  ],
+                  "source_t": 10000
+                }
+              ],
+              "timer": null,
+              "unknown": false
+            },
+            "wire": "c0000000000009c4000000000000000100000000000000010000000000000001"
+          },
+          {
+            "method": "patent_60",
+            "state": {
+              "core": {
+                "anchor": null,
+                "bins": null,
+                "count": null,
+                "hour": null,
+                "k": 27,
+                "observations": 10,
+                "sources": [],
+                "timer": null,
+                "updates": 13
+              },
+              "cost": {
+                "CPU_time_ns": null,
+                "GAP_confirmations": 0,
+                "RESTORE_confirmations": 0,
+                "UNKNOWN_forecasts": 0,
+                "UNKNOWN_ranges": 1,
+                "current_G": 11,
+                "delivered_ERR": 10,
+                "dropped_records": 0,
+                "energy_J": null,
+                "forecast_attempts": 0,
+                "full_hourly_forecasts": 0,
+                "inferred_missing_ranges": 0,
+                "local_ready_max_delay_ns": 7900,
+                "logical_updates": 13,
+                "loss_rises": 1,
+                "loss_state_checks": 2,
+                "loss_state_reserved_bytes": 64,
+                "materialized_packets": 3,
+                "nominal_cut_services": 50000000,
+                "nominal_ready_services": 49999999,
+                "peak_batch_records": 10,
+                "peak_inflight_records": 10,
+                "peak_policy_timestamp_records": 10,
+                "peak_transport_records": 10,
+                "pending_captured": 0,
+                "pending_inflight": 0,
+                "pending_records": 0,
+                "precomputed_expiry_evaluations": 0,
+                "prefix_checks": 11,
+                "processed_G": 11,
+                "raw_GAP_notifications": 1,
+                "raw_RESTORE_notifications": 1,
+                "restored_prefix_G": 11,
+                "restores": 1,
+                "six_feature_multiply_adds": 0,
+                "source_ERR": 10,
+                "source_cause_coalescences": 1,
+                "source_false": 0,
+                "source_health_loss_rises": 1,
+                "source_health_recoveries": 1,
+                "source_records": 11,
+                "source_state_checks": 12,
+                "transport_capacity_records": 4096,
+                "transport_reserved_bytes": 131072
+              },
+              "delivered": [
+                {
+                  "source": 0,
+                  "t": 7900
+                },
+                {
+                  "source": 4,
+                  "t": 7900
+                },
+                {
+                  "source": 8,
+                  "t": 7900
+                },
+                {
+                  "source": 12,
+                  "t": 7900
+                },
+                {
+                  "source": 16,
+                  "t": 7900
+                },
+                {
+                  "source": 20,
+                  "t": 7900
+                },
+                {
+                  "source": 24,
+                  "t": 7900
+                },
+                {
+                  "source": 28,
+                  "t": 7900
+                },
+                {
+                  "source": 32,
+                  "t": 7900
+                },
+                {
+                  "source": 36,
+                  "t": 7900
+                }
+              ],
+              "health": true,
+              "holds": [
+                0,
+                0,
+                180310097920
+              ],
+              "k": 27,
+              "modes": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  60000019900,
+                  27
+                ]
+              ],
+              "ranges": [
+                {
+                  "confirmation": false,
+                  "g": 11,
+                  "inferred": false,
+                  "processed_at": 15900,
+                  "range": [
+                    11,
+                    11
+                  ],
+                  "source_t": 10000
+                }
+              ],
+              "timer": null,
+              "unknown": false
+            },
+            "wire": "c0000000000009c4000000000000000b000000000000000b000000000000000b"
+          }
+        ],
+        "loss_state_allocation_bytes": 64,
+        "permutation_runs": 320,
+        "scope": "addressed implementation checks; no new matrix seed, MC, physical timing or accepted theorem"
+      }
     }
   },
   "provenance": {
-    "documentary_snapshots": 44,
-    "signature": "5ecda2db6eda17ae4cd79eaf72c66f17122cefa0380f6acf13db976582269228",
-    "working_dependencies": 45
+    "documentary_snapshots": 45,
+    "signature": "7661310b78b9dbd6b7716d1c755f1f85166a9fbffcaa7d4e07f0fd2db73985cf",
+    "working_dependencies": 46
   },
   "scope": "addressed changed-interface verification; no physical/WCET/MC qualification",
   "status": "OWN RESULT / checks passed, pending review"
