@@ -1,0 +1,8 @@
+*.c text eol=lf
+*.h text eol=lf
+*.gz binary
+*.ctz binary
+*.ct3 binary
+outputs/empty-calendar-*.txt text eol=lf
+outputs/burst-time-format.txt text eol=lf
+outputs/portable-replay-evidence.txt text eol=lf

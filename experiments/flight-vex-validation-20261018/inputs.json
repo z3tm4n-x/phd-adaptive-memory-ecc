@@ -1,0 +1,38 @@
+{
+  "task": 197,
+  "plan_commit": "679961236dbd7eb47aa6bcc196059b253d9dd077",
+  "accepted_input_commit": "e8d0e44b549e7760ce7a72de7b2cdfbe26d09eae",
+  "window": [
+    "2006-12-01T00:00:00",
+    "2006-12-20T00:00:00"
+  ],
+  "reference": [
+    "2006-12-05T00:00:00",
+    "2006-12-08T00:00:00"
+  ],
+  "bin_seconds": 3600,
+  "bin_closure": "(left,right]; left endpoint of full window included for samples",
+  "edac_gap_threshold_s": 96,
+  "ima_gap_threshold_s": 288,
+  "alignment": "A0: naive EDAC calendar overlays IMA UTC without offset; not a UTC determination",
+  "edac_member": "EDAC/VEX/VEX_NDMW0D0A_2006.txt",
+  "inputs": [
+    {
+      "local_name": "EDAC.zip",
+      "url": "https://ndownloader.figshare.com/files/40379297",
+      "sha256": "bc377daddbb58a0ef44fc258b93ba808267d13783df6579f0e1da778350810f0",
+      "bytes": 3067650,
+      "download_completed_utc": "2026-10-18T16:59:19.991262+00:00",
+      "required_for_audit": true,
+      "md5": "0c011bfa14936c688b6e1beebdbd68bb"
+    },
+    {
+      "local_name": "vex-ima-bg-20061201-20061220.csv",
+      "url": "https://amda.irap.omp.eu/service/hapi/data?id=vex-ima-bg&time.min=2006-12-01T00:00:00Z&time.max=2006-12-20T00:00:00Z&format=csv&include=header",
+      "sha256": "883eae44bd8db85560dfc8a5a27e5a9b968f9839f0c5b6697987253f4ad3b631",
+      "bytes": 51696,
+      "download_completed_utc": "2026-10-18T17:04:39.955707+00:00",
+      "required_for_audit": true
+    }
+  ]
+}

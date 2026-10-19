@@ -1,0 +1,535 @@
+{
+  "archive_members": [
+    {
+      "bytes": 0,
+      "name": "EDAC/"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/BepiColombo/"
+    },
+    {
+      "bytes": 78289,
+      "name": "EDAC/BepiColombo/BEPICRUISE_NCDT2490_2017.txt"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/GAIA/"
+    },
+    {
+      "bytes": 5051973,
+      "name": "EDAC/GAIA/TABLE_0.NDW62014_20150611T000000GMT_20150711T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 5253165,
+      "name": "EDAC/GAIA/TABLE_0.NDW62014_20170831T000000GMT_20170930T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 1256763,
+      "name": "EDAC/GAIA/TABLE_0.NST82031_20150611T000000GMT_20150711T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 1253196,
+      "name": "EDAC/GAIA/TABLE_0.NST82031_20170831T000000GMT_20170930T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 7446333,
+      "name": "EDAC/GAIA/TABLE_0.NV102604_20150611T000000GMT_20150711T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 9136432,
+      "name": "EDAC/GAIA/TABLE_0.NV102604_20170831T000000GMT_20170930T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 7426061,
+      "name": "EDAC/GAIA/TABLE_0.NV302604_20150611T000000GMT_20150711T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 7621460,
+      "name": "EDAC/GAIA/TABLE_0.NV302604_20170831T000000GMT_20170930T000000GMT_eng.sgl"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/MEX/"
+    },
+    {
+      "bytes": 89859,
+      "name": "EDAC/MEX/MEX_NDMW0D0G_2006event.txt"
+    },
+    {
+      "bytes": 107148,
+      "name": "EDAC/MEX/MEX_NDMW0D0G_2012event.txt"
+    },
+    {
+      "bytes": 78786,
+      "name": "EDAC/MEX/MEX_NDMW0D0G_2017event.txt"
+    },
+    {
+      "bytes": 15186,
+      "name": "EDAC/MEX/MEX_NDMW0D0G_2021event.txt"
+    },
+    {
+      "bytes": 24959,
+      "name": "EDAC/MEX/MEX_NDMW0D0G_2022event.txt"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/Rosetta/"
+    },
+    {
+      "bytes": 57193,
+      "name": "EDAC/Rosetta/ROS_NACW0D0A_2005event.txt"
+    },
+    {
+      "bytes": 93469,
+      "name": "EDAC/Rosetta/ROS_NACW0D0A_2006event.txt"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/Solar Orbiter/"
+    },
+    {
+      "bytes": 69012,
+      "name": "EDAC/Solar Orbiter/SOHIS_EDAC_MESSAGES_20220904_to_20220911.txt"
+    },
+    {
+      "bytes": 813251,
+      "name": "EDAC/Solar Orbiter/SOL_NSM00798_SOL_NSM00799_SOL_NSM00800_event2021.txt"
+    },
+    {
+      "bytes": 1749446,
+      "name": "EDAC/Solar Orbiter/SOL_NSM00798_SOL_NSM00799_SOL_NSM00800_event2022.txt"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/TGO/"
+    },
+    {
+      "bytes": 1169625,
+      "name": "EDAC/TGO/EXM2016_ASA11F0L_event2017.txt"
+    },
+    {
+      "bytes": 0,
+      "name": "EDAC/VEX/"
+    },
+    {
+      "bytes": 711675,
+      "name": "EDAC/VEX/VEX_NDMW0D0A_2006.txt"
+    },
+    {
+      "bytes": 861458,
+      "name": "EDAC/VEX/VEX_NDMW0D0A_2012.txt"
+    }
+  ],
+  "files": {
+    "EDAC/Solar Orbiter/SOHIS_EDAC_MESSAGES_20220904_to_20220911.txt": {
+      "all_coarse_fields_equal_naive_seconds_since_2000": true,
+      "backward_steps": 0,
+      "bytes": 69012,
+      "duplicate_timestamps": 118,
+      "exact_duplicate_extra_lines": 118,
+      "first": "2022-09-04T07:00:15",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2022-09-11T09:26:21",
+          "seconds": 44664.0,
+          "to": "2022-09-11T21:50:45"
+        },
+        {
+          "from": "2022-09-08T15:52:03",
+          "seconds": 32330.0,
+          "to": "2022-09-09T00:50:53"
+        },
+        {
+          "from": "2022-09-10T04:52:55",
+          "seconds": 27506.0,
+          "to": "2022-09-10T12:31:21"
+        }
+      ],
+      "last": "2022-09-11T23:25:33",
+      "positive_delta_max_s": 44664.0,
+      "positive_delta_median_s": 203.0,
+      "positive_delta_min_s": 1.0,
+      "printed_count_not_one_lines": [
+        143,
+        159
+      ],
+      "raw_families": {
+        "43904_OTHER": 85,
+        "43904_SRAM": 296,
+        "43915_CDH_FPGA_SRAM_BRAM_FPGA": 8,
+        "43915_CDH_FPGA_SRAM_BRAM_FSW": 85
+      },
+      "rows": 474,
+      "sha256": "47d92ed9802dfffac47798812c047cf57c8ad573339c7bdffffbd16c2ef4d4d1",
+      "steps_gt_1_5_median": 146,
+      "time_scale": "UNKNOWN; printed seconds are not established UTC",
+      "unique_exact_lines": 356,
+      "unique_line_families": {
+        "43904_OTHER": 65,
+        "43904_SRAM": 221,
+        "43915_CDH_FPGA_SRAM_BRAM_FPGA": 5,
+        "43915_CDH_FPGA_SRAM_BRAM_FSW": 65
+      },
+      "warning": "Line identity is not physical event identity. No deduplication or summation performed; OTHER and CDH may overlap. Coarse-field equality does not establish UTC, fine-time divisor or clock accuracy."
+    },
+    "EDAC/Solar Orbiter/SOL_NSM00798_SOL_NSM00799_SOL_NSM00800_event2021.txt": {
+      "backward_steps": 0,
+      "bytes": 813251,
+      "columns": {
+        "NCDT07B0": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": null,
+          "last": null,
+          "maximum": 43.0,
+          "minimum": 42.0,
+          "missing": 17724
+        },
+        "NSM00798": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 28128.0,
+          "last": 28983.0,
+          "maximum": 28983.0,
+          "minimum": 28128.0,
+          "missing": 432
+        },
+        "NSM00799": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 55980.0,
+          "last": 64291.0,
+          "maximum": 64291.0,
+          "minimum": 55980.0,
+          "missing": 432
+        },
+        "NSM00800": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 61562.0,
+          "last": 63392.0,
+          "maximum": 63392.0,
+          "minimum": 61562.0,
+          "missing": 432
+        }
+      },
+      "declared_sample_counts": [
+        18155,
+        18155,
+        18155,
+        18155
+      ],
+      "duplicate_timestamps": 4,
+      "first": "2021-10-28T00:00:00.165000",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2021-10-28T00:06:30.166000",
+          "seconds": 15.006,
+          "to": "2021-10-28T00:06:45.172000"
+        },
+        {
+          "from": "2021-10-28T00:14:30.168000",
+          "seconds": 15.006,
+          "to": "2021-10-28T00:14:45.174000"
+        },
+        {
+          "from": "2021-10-28T00:46:30.176000",
+          "seconds": 15.006,
+          "to": "2021-10-28T00:46:45.182000"
+        }
+      ],
+      "last": "2021-10-31T00:00:01.228000",
+      "positive_delta_max_s": 15.006,
+      "positive_delta_median_s": 15.0,
+      "positive_delta_min_s": 0.006,
+      "rows": 18156,
+      "sha256": "14c036e4ebe0a40d981dcda1b1ab3b32bdfd9f70a02ea522ac5558e9e2ee3f3d",
+      "steps_gt_1_5_median": 0,
+      "time_scale": "UNKNOWN: DATE TIME without timezone; retain verbatim"
+    },
+    "EDAC/Solar Orbiter/SOL_NSM00798_SOL_NSM00799_SOL_NSM00800_event2022.txt": {
+      "backward_steps": 0,
+      "bytes": 1749446,
+      "columns": {
+        "NSM00798": {
+          "decreases_between_successive_observed_values": [
+            {
+              "after": 2211.0,
+              "before": 64011.0,
+              "from": "2022-09-06T04:01:31.629000",
+              "intervening_missing_rows": 0,
+              "to": "2022-09-06T04:01:46.629000"
+            }
+          ],
+          "decreasing_transitions": 1,
+          "first": 63249.0,
+          "last": 4160.0,
+          "maximum": 64011.0,
+          "minimum": 2211.0,
+          "missing": 0
+        },
+        "NSM00799": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 22084.0,
+          "last": 33687.0,
+          "maximum": 33687.0,
+          "minimum": 22084.0,
+          "missing": 0
+        },
+        "NSM00800": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 22771.0,
+          "last": 41578.0,
+          "maximum": 41578.0,
+          "minimum": 22771.0,
+          "missing": 0
+        }
+      },
+      "declared_sample_counts": [
+        41328,
+        41328,
+        41328
+      ],
+      "duplicate_timestamps": 0,
+      "first": "2022-09-04T00:00:00.821000",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2022-09-04T00:11:45.819000",
+          "seconds": 15.006,
+          "to": "2022-09-04T00:12:00.825000"
+        },
+        {
+          "from": "2022-09-04T00:49:45.829000",
+          "seconds": 15.006,
+          "to": "2022-09-04T00:50:00.835000"
+        },
+        {
+          "from": "2022-09-04T01:29:45.839000",
+          "seconds": 15.006,
+          "to": "2022-09-04T01:30:00.845000"
+        }
+      ],
+      "last": "2022-09-11T00:00:03.525000",
+      "positive_delta_max_s": 15.006,
+      "positive_delta_median_s": 15.0,
+      "positive_delta_min_s": 0.586,
+      "rows": 41329,
+      "sha256": "da438b09e26867979d29704163493c627ba1c32688bf3dcbcf095fff88ce4872",
+      "steps_gt_1_5_median": 0,
+      "time_scale": "UNKNOWN: DATE TIME without timezone; retain verbatim"
+    },
+    "EDAC/VEX/VEX_NDMW0D0A_2006.txt": {
+      "backward_steps": 0,
+      "bytes": 711675,
+      "columns": {
+        "NDMW0D0A": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 76.0,
+          "last": 165.0,
+          "maximum": 165.0,
+          "minimum": 76.0,
+          "missing": 0
+        }
+      },
+      "declared_sample_counts": [
+        25686,
+        25686
+      ],
+      "duplicate_timestamps": 0,
+      "first": "2006-12-01T00:00:46.121000",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2006-12-17T06:47:10.310000",
+          "seconds": 64.034,
+          "to": "2006-12-17T06:48:14.344000"
+        },
+        {
+          "from": "2006-12-10T06:30:06.235000",
+          "seconds": 64.033,
+          "to": "2006-12-10T06:31:10.268000"
+        },
+        {
+          "from": "2006-12-02T10:09:50.137000",
+          "seconds": 64.031,
+          "to": "2006-12-02T10:10:54.168000"
+        }
+      ],
+      "last": "2006-12-19T23:59:42.341000",
+      "positive_delta_max_s": 64.034,
+      "positive_delta_median_s": 64.0,
+      "positive_delta_min_s": 0.001,
+      "rows": 25686,
+      "sha256": "06e5d3714f9fb5829e9cff2885d37aa69fc03bc4e05b6da9c60b1215bcbca14c",
+      "steps_gt_1_5_median": 0,
+      "time_scale": "UNKNOWN: DATE TIME without timezone; retain verbatim"
+    },
+    "EDAC/VEX/VEX_NDMW0D0A_2012.txt": {
+      "backward_steps": 0,
+      "bytes": 861458,
+      "columns": {
+        "NDMW0D0A": {
+          "decreases_between_successive_observed_values": [],
+          "decreasing_transitions": 0,
+          "first": 2024.0,
+          "last": 2380.0,
+          "maximum": 2380.0,
+          "minimum": 2024.0,
+          "missing": 0
+        }
+      },
+      "declared_sample_counts": [
+        29689,
+        29689
+      ],
+      "duplicate_timestamps": 0,
+      "first": "2012-03-01T00:00:31.811000",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2012-03-12T09:02:23.887000",
+          "seconds": 320.0,
+          "to": "2012-03-12T09:07:43.887000"
+        },
+        {
+          "from": "2012-03-20T09:16:15.945000",
+          "seconds": 320.0,
+          "to": "2012-03-20T09:21:35.945000"
+        },
+        {
+          "from": "2012-03-20T09:11:59.945000",
+          "seconds": 128.002,
+          "to": "2012-03-20T09:14:07.947000"
+        }
+      ],
+      "last": "2012-03-22T23:59:27.966000",
+      "positive_delta_max_s": 320.0,
+      "positive_delta_median_s": 64.0,
+      "positive_delta_min_s": 63.963,
+      "rows": 29689,
+      "sha256": "ec305a1a86e2135f6af7e03b902f41778ee8b7cb6c99fdbc075ae60db33f121f",
+      "steps_gt_1_5_median": 5,
+      "time_scale": "UNKNOWN: DATE TIME without timezone; retain verbatim"
+    },
+    "solo_L2_epd-het-sun-rates_20220904_V01.cdf": {
+      "accumulation_s_counts": {
+        "5": 17280
+      },
+      "cadence_max_s": 5.000008704,
+      "cadence_median_s": 5.000008704,
+      "cadence_min_s": 5.000008576,
+      "fill_rate_cells": 0,
+      "quality_bitmask_counts": {
+        "2": 17280
+      },
+      "quality_flag_counts": {
+        "3": 17280
+      },
+      "read_versions": {
+        "cdflib": "1.3.6",
+        "numpy": "2.3.5"
+      },
+      "rows": 17280,
+      "scope": "One pre-event day only; not evidence of quality during the SEP or HIS exposure.",
+      "time_scale": "CDF_TIME_TT2000 converted to UTC using cdflib leap seconds; start of acquisition interval",
+      "utc_first": "2022-09-04T00:00:01.250911104Z",
+      "utc_last": "2022-09-04T23:59:56.401251328Z"
+    },
+    "vex-ima-bg-20061201-20061220.csv": {
+      "backward_steps": 0,
+      "bytes": 51696,
+      "columns": {
+        "vex_ima_bg": {
+          "fill": "-1e31",
+          "fill_rows": 0,
+          "units": "cnts"
+        },
+        "vex_ima_totct": {
+          "fill": "-1e31",
+          "fill_rows": 0,
+          "units": "cnts"
+        }
+      },
+      "duplicate_timestamps": 0,
+      "first": "2006-12-01T05:11:23.004000+00:00",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2006-12-14T10:09:51.008000+00:00",
+          "seconds": 162057.995,
+          "to": "2006-12-16T07:10:49.003000+00:00"
+        },
+        {
+          "from": "2006-12-07T09:26:33.005000+00:00",
+          "seconds": 72150.0,
+          "to": "2006-12-08T05:29:03.005000+00:00"
+        },
+        {
+          "from": "2006-12-09T09:41:13.006000+00:00",
+          "seconds": 71573.999,
+          "to": "2006-12-10T05:34:07.005000+00:00"
+        }
+      ],
+      "last": "2006-12-19T10:30:40.003000+00:00",
+      "positive_delta_max_s": 162057.995,
+      "positive_delta_median_s": 192.0,
+      "positive_delta_min_s": 191.009,
+      "rows": 1382,
+      "sha256": "883eae44bd8db85560dfc8a5a27e5a9b968f9839f0c5b6697987253f4ad3b631",
+      "steps_gt_1_5_median": 59,
+      "time_scale": "UTC (HAPI); interval timestamp phase UNKNOWN"
+    },
+    "vex-ima-bg-20120301-20120323.csv": {
+      "backward_steps": 0,
+      "bytes": 62004,
+      "columns": {
+        "vex_ima_bg": {
+          "fill": "-1e31",
+          "fill_rows": 0,
+          "units": "cnts"
+        },
+        "vex_ima_totct": {
+          "fill": "-1e31",
+          "fill_rows": 0,
+          "units": "cnts"
+        }
+      },
+      "duplicate_timestamps": 0,
+      "first": "2012-03-01T03:03:56.009000+00:00",
+      "gap_rule_caveat": "Descriptive cadence discontinuities only; not a live-time/exposure estimate.",
+      "largest_steps": [
+        {
+          "from": "2012-03-06T15:19:05.008000+00:00",
+          "seconds": 560143.992,
+          "to": "2012-03-13T02:54:49+00:00"
+        },
+        {
+          "from": "2012-03-05T09:02:32.001000+00:00",
+          "seconds": 102848.999,
+          "to": "2012-03-06T13:36:41+00:00"
+        },
+        {
+          "from": "2012-03-04T00:31:33.009000+00:00",
+          "seconds": 95359.0,
+          "to": "2012-03-05T03:00:52.009000+00:00"
+        }
+      ],
+      "last": "2012-03-22T00:39:46+00:00",
+      "positive_delta_max_s": 560143.992,
+      "positive_delta_median_s": 192.0,
+      "positive_delta_min_s": 191.009,
+      "rows": 1699,
+      "sha256": "a13d502ff3e8b395032a13d64434cc8654c63ba685377f8707a1a465cdada95c",
+      "steps_gt_1_5_median": 21,
+      "time_scale": "UTC (HAPI); interval timestamp phase UNKNOWN"
+    }
+  },
+  "scope": "Availability and format only; no performance / event detection metrics"
+}

@@ -1,0 +1,256 @@
+T106 portable replay evidence; digital checks, not Scientific Review.
+Source/data commit: 48fe86da06085d620e1badc4af8c64dd1d59389c
+Fresh git archive: 245176320 bytes
+Archive SHA256: 6a2614d45177257b400f7d00b6d90f00a4771fae7826bfd0bcdb88f9a9f589a0
+Command: python3 experiments/t106-system-emulation/reproduce.py
+No --allow-incomplete, no --execute, no inherited .build/.tools/.git.
+Started: 2026-10-16T02:47:38Z
+Finished: 2026-10-16T03:40:43Z
+Exit code: 0
+Environment: Ubuntu26.04 LTS/WSL2, Python3.14.4, GCC15.2.0
+Kernel: 6.6.114.1-microsoft-standard-WSL2
+Separate compileall of task *.py: exit0.
+Post-run SHA256 audit: all186 tracked task files identical to the
+re-extracted original pre-run archive; archive SHA256 reverified.
+GNU time max RSS is its reported statistic, not summed parallel-process RAM.
+Historical nested scope messages below are preserved; the final message
+and complete five-scenarios table state the scope of this replay.
+
+--- GNU time verbatim ---
+	Command being timed: "python3 experiments/t106-system-emulation/reproduce.py"
+	User time (seconds): 5381.29
+	System time (seconds): 20.42
+	Percent of CPU this job got: 169%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 53:05.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 346532
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 310
+	Minor (reclaiming a frame) page faults: 16348796
+	Voluntary context switches: 71469
+	Involuntary context switches: 9675
+	Swaps: 0
+	File system inputs: 56912
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+--- Captured stdout/stderr verbatim ---
+accepted inputs unchanged: 244
+...........................................Old boundary rejected; new boundary and unchanged short trace checked; integer time exact in XSim
+..........................
+----------------------------------------------------------------------
+Ran 69 tests in 26.850s
+
+OK
+{
+  "scenario": 4,
+  "mode": "adaptive",
+  "t0_ns": 670,
+  "horizon_ns": 1200000,
+  "records_checked": 180438,
+  "pin_edges_checked": 149428,
+  "full_word_observations": 6195,
+  "injections": 8,
+  "ERR_events": 3,
+  "raw_history_matches": 3,
+  "ARM_packets_checked": 7,
+  "calendar_slots": 6123,
+  "completed_operations": 6171,
+  "unfinished_operations_at_horizon": 0,
+  "application_completed": 48,
+  "max_credits": 1,
+  "physical_alias_writes": 50,
+  "bus_work_ns": {
+    "control": 563428,
+    "app_read": 4416,
+    "app_write": 5184
+  },
+  "corrective_extra_within_control_ns": 112,
+  "mean_bus_fraction": 0.47752333333333336,
+  "peak_any_1ms_fraction": 0.479224,
+  "peak_window_start_relative_ns": 0,
+  "observed_model_max_application_ns": 2050,
+  "model_max_cut_to_cut_ns": 161940,
+  "first_exceedance_relative_ns": null,
+  "first_cut_relative_ns": 80160,
+  "remaining_error_positions": 3,
+  "whole_mission_Q_inferred": false
+}
+{
+  "scenario": 4,
+  "mode": "fixed",
+  "t0_ns": 670,
+  "horizon_ns": 1200000,
+  "records_checked": 180424,
+  "pin_edges_checked": 149428,
+  "full_word_observations": 6195,
+  "injections": 8,
+  "ERR_events": 3,
+  "raw_history_matches": 3,
+  "ARM_packets_checked": 0,
+  "calendar_slots": 6123,
+  "completed_operations": 6171,
+  "unfinished_operations_at_horizon": 0,
+  "application_completed": 48,
+  "max_credits": 1,
+  "physical_alias_writes": 50,
+  "bus_work_ns": {
+    "control": 563428,
+    "app_read": 4416,
+    "app_write": 5184
+  },
+  "corrective_extra_within_control_ns": 112,
+  "mean_bus_fraction": 0.47752333333333336,
+  "peak_any_1ms_fraction": 0.479224,
+  "peak_window_start_relative_ns": 0,
+  "observed_model_max_application_ns": 2050,
+  "model_max_cut_to_cut_ns": null,
+  "first_exceedance_relative_ns": null,
+  "first_cut_relative_ns": null,
+  "remaining_error_positions": 3,
+  "whole_mission_Q_inferred": false
+}
+{
+  "drop_ERR": {
+    "rejected": true,
+    "first_difference": "mutant.trace:73:EVENT t=898ns: "
+  },
+  "duplicate_reply": {
+    "rejected": true,
+    "first_difference": "mutant.trace:1760:REPLY t=11770ns: list index out of range"
+  },
+  "erase_post_start_error": {
+    "rejected": true,
+    "first_difference": "mutant.trace:46:WRITE t=802ns: "
+  },
+  "corrupt_partial_write": {
+    "rejected": true,
+    "first_difference": "mutant.trace:1724:WRITE t=11590ns: "
+  },
+  "premature_LOW": {
+    "rejected": true,
+    "first_difference": "mutant.trace:8:FREEZE t=678ns: premature LOW in cold scenario"
+  }
+}
+Empty-time replay: 527384 archived RTL slots, 631209 represented C packets, 41 ELF vectors; no fresh hardware/ISA execution
+Next: historical1/3 replay (its scope messages retain the original delivery wording).
+accel-short-adaptive-literal : checked 146952 E edges; 6123 completed/represented operations
+accel-short-adaptive-skip : checked 54792 E edges; 6123 completed/represented operations
+accel-lowprobe-adaptive-no-low : checked 140088 E edges; 919952717 completed/represented operations
+accel-lowprobe-adaptive-skip : checked 78648 E edges; 919952717 completed/represented operations
+accel-quiet-adaptive-skip : checked 106598 E edges; 1382010201 completed/represented operations
+accel-quiet-fixed-skip : checked 51455 E edges; 1387755103 completed/represented operations
+accel-loss-adaptive-skip : checked 204720 E edges; 1842252370 completed/represented operations
+accel-loss-fixed-skip : checked 58944 E edges; 1846938776 completed/represented operations
+Full clean-case replay PASS; scenario2 normalization/execution and scenario5 remain open
+sparse-short-adaptive-literal : 245022 literal E edges; 2 responses; 10207 completed/represented operations
+sparse-short-adaptive-skip : 60702 literal E edges; 2 responses; 10207 completed/represented operations
+sparse-lowprobe-adaptive-no-low : 205926 literal E edges; 2 responses; 919961218 completed/represented operations
+sparse-lowprobe-adaptive-skip : 175206 literal E edges; 2 responses; 919961218 completed/represented operations
+sparse-memory-adaptive-skip : 1292936 literal E edges; 40 responses; 1845821506 completed/represented operations
+sparse-memory-fixed-skip : 1305176 literal E edges; 40 responses; 1846938816 completed/represented operations
+{
+  "scope": "declared digital R0-A envelope subcase; NOT physical response calibration",
+  "source_sha256": {
+    "experiments/t106-system-emulation/outputs/t67-profile.json.gz": "bdc6a396abf9a5c4d3b5d987be99f6acf77797d92ee2a46a570c5727c90ffe52",
+    "experiments/t106-system-emulation/outputs/t67-profile.json": "406832783d377f933628727b54eb050169a7cca96d17ede9654e8080a4dc9e4d",
+    "experiments/t106-system-emulation/burst_inputs.py": "61ec2cc1218d717d7d2dd3a070fad23e6523d607858f674f4ae0e50fae8143cc",
+    "experiments/t106-system-emulation/BURST.md": "cb777218119d1765cea25bf7d80baa280efcc4f8eb19808db72e117b6ef66548",
+    "theory/t135-demo-operating-point.md": "9cb52e441d4b832f96e6dc7bd283337e521e40744107a95dc4c75335b05ed22d"
+  },
+  "horizon_s": 363900,
+  "peak_rate_per_s": 0.244682704,
+  "solar_expected_parents": 5265.819621309562,
+  "expected_parents": 5322.116406909561,
+  "integral_rate_squared_per_s": 636.0154217622338,
+  "max_H_l_relative_growth_per_s": 0.01884359660840893,
+  "seed": 10620261014,
+  "proposals": 88907,
+  "generated_parents": 5237,
+  "policy_execution": false,
+  "unknowns": [
+    "physical calibration of this normalized temporal shape",
+    "mission Q(T)",
+    "hardware ARM time"
+  ],
+  "burst-rate_sha256": "8cca54f23552215bbf6f592ea93128057d46a882361b2b83d7a23dc1ed00402e",
+  "burst-stimulus_sha256": "5a822364a42dfbd12cc8f3b17b9215357f23369e77ded96160ae1d6c07e78d0a"
+}
+Historical cold/component summary verified; current scope is in accel-summary.json
+burst-pilot20-adaptive-skip : read-only replay matched; injections 20
+burst-pilot20-fixed-skip : read-only replay matched; injections 20
+burst-cold-envelope-adaptive-skip : read-only replay matched; injections 8
+burst-cold-envelope-fixed-skip : read-only replay matched; injections 8
+Old boundary rejected; new boundary and unchanged short trace checked; integer time exact in XSim
+Both original/new pilot20 streams, raw traces and scientific results are identical
+V3: short and both pilot20 raw traces match V2; CT3 bytes and scientific results match
+burst3-burst-fixed-skip independent scientific replay with streaming integrity check
+burst3-burst-adaptive-skip independent scientific replay with streaming integrity check
+burst3-burst-fixed-skip checked; seconds 2226.948
+{"horizon_ns": 363900000000000, "injections": 5237, "err_events": 5237, "mean_bus_fraction": 0.4693877559082605, "peak_any_1ms_fraction": 0.469568, "completed_operations": 1856632653062, "unfinished_operations": 1, "first_exceedance_relative_ns": null}
+burst3-burst-adaptive-skip checked; seconds 3014.318
+{"horizon_ns": 363900000000000, "injections": 5237, "err_events": 5237, "mean_bus_fraction": 0.23852568371952734, "peak_any_1ms_fraction": 0.469568, "completed_operations": 943472782742, "unfinished_operations": 0, "first_exceedance_relative_ns": null}
+# Сравнение пяти сценариев — цифровая модель
+
+**Статус: complete_digital_evidence_pending_review**. Q(T) за срок эмуляцией не доказывается.
+
+| Сценарий / режим | Горизонт, с | Средняя шина, % | Max любого1мс, % | Ответы приложения / max, нс | Полные / неполные операции |
+|---|---:|---:|---:|---:|---:|
+| 1 / adaptive | 272 | 46.744463 | 46.951200 | 0 / не применимо | 1382010201 / 0 |
+| 1 / fixed | 272 | 46.938776 | 46.956800 | 0 / не применимо | 1387755103 / 1 |
+| 2 / adaptive | 363900 | 23.852568 | 46.956800 | 0 / не применимо | 943472782742 / 0 |
+| 2 / fixed | 363900 | 46.938776 | 46.956800 | 0 / не применимо | 1856632653062 / 1 |
+| 3 / adaptive | 362 | 46.819673 | 46.951200 | 0 / не применимо | 1842252370 / 0 |
+| 3 / fixed | 362 | 46.938776 | 46.951200 | 0 / не применимо | 1846938776 / 0 |
+| 4 / adaptive | 0.048 | 46.959250 | 46.984000 | 48 / 2070 | 244946 / 1 |
+| 4 / fixed | 0.048 | 46.959250 | 46.984000 | 48 / 2070 | 244946 / 1 |
+| 5 / adaptive | 362 | 46.910382 | 46.978400 | 40 / 1930 | 1845821506 / 0 |
+| 5 / fixed | 362 | 46.938778 | 46.978400 | 40 / 1930 | 1846938816 / 0 |
+
+Полные CPU/MMIO/шина по видам — five-scenarios.json. CPU и шина не складываются.
+Числа операций включают точно свёрнутые пустые интервалы; не все операции исполнялись буквально.
+ПЛИС — один и тот же принятый образ; аппаратные ARM-время/WCET не измерены.
+
+{
+  "scope": "independent FAST arithmetic; digital table only",
+  "checked": [
+    {
+      "scenario": 1,
+      "base_work_ns": 127673469512,
+      "completed_controls": 1387755103,
+      "partial_controls": 1
+    },
+    {
+      "scenario": 2,
+      "base_work_ns": 170810204081744,
+      "completed_controls": 1856632653062,
+      "partial_controls": 1
+    },
+    {
+      "scenario": 3,
+      "base_work_ns": 169918367392,
+      "completed_controls": 1846938776,
+      "partial_controls": 0
+    },
+    {
+      "scenario": 4,
+      "base_work_ns": 22530672,
+      "completed_controls": 244898,
+      "partial_controls": 1
+    },
+    {
+      "scenario": 5,
+      "base_work_ns": 169918367392,
+      "completed_controls": 1846938776,
+      "partial_controls": 0
+    }
+  ]
+}
+All five digital scenario checks completed; scientific acceptance is separate

@@ -1,0 +1,14 @@
+{
+  "inputs_json_sha256": "67794e2091a4d6d163ae32df5c831eeb05eb7f70a07ea03635c57ae9851cc00e",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "reproduce_py_sha256": "6ecfe9dccff287e06b86a5eb82a65197a4ffd74cdc6b433018c61be0f83ef1df",
+  "utc_run": "2026-10-18T17:17:23.723875+00:00",
+  "verified_inputs": [
+    "EDAC.zip",
+    "solo_L2_epd-het-sun-rates_20220904_V01.cdf",
+    "vex-ima-bg-20061201-20061220.csv",
+    "vex-ima-bg-20120301-20120323.csv"
+  ],
+  "with_epd": true
+}

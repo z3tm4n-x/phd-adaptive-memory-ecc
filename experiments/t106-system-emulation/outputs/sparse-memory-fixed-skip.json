@@ -1,0 +1,934 @@
+{
+  "mode": "fixed",
+  "scenario": "memory",
+  "accelerated": true,
+  "macros": [
+    {
+      "begin_ns": 80070,
+      "end_ns": 832710,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 1072810,
+      "end_ns": 1825450,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 2065650,
+      "end_ns": 2818290,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 3058390,
+      "end_ns": 3811030,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 4051230,
+      "end_ns": 4803870,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 5043970,
+      "end_ns": 5796610,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 6036610,
+      "end_ns": 6789250,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 7029250,
+      "end_ns": 7781890,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 8021990,
+      "end_ns": 8774630,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 9014730,
+      "end_ns": 88418250,
+      "empty_services": 422,
+      "low": false,
+      "price": {
+        "occupied_ns": 37271040,
+        "started": 405120,
+        "completed": 405120,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 88498350,
+      "end_ns": 180499693230,
+      "empty_services": 958818,
+      "low": false,
+      "price": {
+        "occupied_ns": 84682805760,
+        "started": 920465280,
+        "completed": 920465280,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180500013430,
+      "end_ns": 180500766070,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180501006170,
+      "end_ns": 180501758810,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180502079010,
+      "end_ns": 180502831650,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180503071650,
+      "end_ns": 180503824290,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180504064290,
+      "end_ns": 180504816930,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180505057030,
+      "end_ns": 180505809670,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180506049770,
+      "end_ns": 180506802410,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180507042610,
+      "end_ns": 180507795250,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180508035350,
+      "end_ns": 180508787990,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180509028190,
+      "end_ns": 180599721310,
+      "empty_services": 482,
+      "low": false,
+      "price": {
+        "occupied_ns": 42570240,
+        "started": 462720,
+        "completed": 462720,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180600041410,
+      "end_ns": 180638426050,
+      "empty_services": 204,
+      "low": false,
+      "price": {
+        "occupied_ns": 18017280,
+        "started": 195840,
+        "completed": 195840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 180638666050,
+      "end_ns": 180999933250,
+      "empty_services": 1920,
+      "low": false,
+      "price": {
+        "occupied_ns": 169574400,
+        "started": 1843200,
+        "completed": 1843200,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 181000013250,
+      "end_ns": 181102748610,
+      "empty_services": 546,
+      "low": false,
+      "price": {
+        "occupied_ns": 48222720,
+        "started": 524160,
+        "completed": 524160,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 181102828610,
+      "end_ns": 270999655490,
+      "empty_services": 477768,
+      "low": false,
+      "price": {
+        "occupied_ns": 42196469760,
+        "started": 458657280,
+        "completed": 458657280,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271000055690,
+      "end_ns": 271000808330,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271001048430,
+      "end_ns": 271001801070,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271002041270,
+      "end_ns": 271002793910,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271003034010,
+      "end_ns": 271003786650,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271004026850,
+      "end_ns": 271004779490,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271005019490,
+      "end_ns": 271005772130,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271006012130,
+      "end_ns": 271006764770,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271007004770,
+      "end_ns": 271007757410,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271008077610,
+      "end_ns": 271008830250,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 271009070450,
+      "end_ns": 360999977330,
+      "empty_services": 478268,
+      "low": false,
+      "price": {
+        "occupied_ns": 42240629760,
+        "started": 459137280,
+        "completed": 459137280,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361000057330,
+      "end_ns": 361000809970,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361001050170,
+      "end_ns": 361001802810,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361002042910,
+      "end_ns": 361002795550,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361003035650,
+      "end_ns": 361003788290,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361004028290,
+      "end_ns": 361004780930,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361005020930,
+      "end_ns": 361005773570,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361006013670,
+      "end_ns": 361006766310,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361007006510,
+      "end_ns": 361007759150,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361008079350,
+      "end_ns": 361008831990,
+      "empty_services": 4,
+      "low": false,
+      "price": {
+        "occupied_ns": 353280,
+        "started": 3840,
+        "completed": 3840,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    },
+    {
+      "begin_ns": 361009072090,
+      "end_ns": 361999922650,
+      "empty_services": 5266,
+      "low": false,
+      "price": {
+        "occupied_ns": 465093120,
+        "started": 5055360,
+        "completed": 5055360,
+        "partial_begin": 0,
+        "partial_end": 0
+      }
+    }
+  ],
+  "host_elapsed_s": 45.964188895000035,
+  "stimulus": {
+    "scenario": "memory",
+    "horizon_ns": 362000000000,
+    "initial_data": "0xa5a50000 XOR word",
+    "initial_errors": 0,
+    "injections": [
+      {
+        "at_ns": 2002,
+        "word": 400000,
+        "bit": 37,
+        "parent": 1
+      },
+      {
+        "at_ns": 3002,
+        "word": 500000,
+        "bit": 7,
+        "parent": 2
+      },
+      {
+        "at_ns": 3502,
+        "word": 500001,
+        "bit": 12,
+        "parent": 3
+      },
+      {
+        "at_ns": 3506,
+        "word": 500001,
+        "bit": 12,
+        "parent": 4
+      },
+      {
+        "at_ns": 180600000002,
+        "word": 500002,
+        "bit": 2,
+        "parent": 5
+      },
+      {
+        "at_ns": 180600000006,
+        "word": 500002,
+        "bit": 33,
+        "parent": 6
+      },
+      {
+        "at_ns": 181000000246,
+        "word": 66074,
+        "bit": 37,
+        "parent": 7
+      },
+      {
+        "at_ns": 181000000310,
+        "word": 66074,
+        "bit": 37,
+        "parent": 8
+      },
+      {
+        "at_ns": 181000000314,
+        "word": 66074,
+        "bit": 37,
+        "parent": 9
+      },
+      {
+        "at_ns": 270999999002,
+        "word": 400002,
+        "bit": 18,
+        "parent": 10
+      }
+    ],
+    "applications": [
+      {
+        "at_ns": 10000,
+        "owner": 0,
+        "packet": "1e2468000186a02"
+      },
+      {
+        "at_ns": 1010000,
+        "owner": 1,
+        "packet": "3e2468000386a01"
+      },
+      {
+        "at_ns": 2010000,
+        "owner": 0,
+        "packet": "422468000586a06"
+      },
+      {
+        "at_ns": 3010000,
+        "owner": 1,
+        "packet": "622468000786a05"
+      },
+      {
+        "at_ns": 4010000,
+        "owner": 0,
+        "packet": "842468000986a0a"
+      },
+      {
+        "at_ns": 5010000,
+        "owner": 1,
+        "packet": "a42468000b86a09"
+      },
+      {
+        "at_ns": 6010000,
+        "owner": 0,
+        "packet": "c82468000d86a0e"
+      },
+      {
+        "at_ns": 7010000,
+        "owner": 1,
+        "packet": "e82468000f86a0d"
+      },
+      {
+        "at_ns": 8010000,
+        "owner": 0,
+        "packet": "1102468001186a12"
+      },
+      {
+        "at_ns": 9010000,
+        "owner": 1,
+        "packet": "130246800120c0e5"
+      },
+      {
+        "at_ns": 180500000000,
+        "owner": 0,
+        "packet": "15e2468001586a01"
+      },
+      {
+        "at_ns": 180501000000,
+        "owner": 1,
+        "packet": "17e2468001786a01"
+      },
+      {
+        "at_ns": 180502000000,
+        "owner": 0,
+        "packet": "1822468001986a06"
+      },
+      {
+        "at_ns": 180503000000,
+        "owner": 1,
+        "packet": "1a22468001b86a05"
+      },
+      {
+        "at_ns": 180504000000,
+        "owner": 0,
+        "packet": "1c42468001d86a0a"
+      },
+      {
+        "at_ns": 180505000000,
+        "owner": 1,
+        "packet": "1e42468001f86a09"
+      },
+      {
+        "at_ns": 180506000000,
+        "owner": 0,
+        "packet": "2082468002186a0e"
+      },
+      {
+        "at_ns": 180507000000,
+        "owner": 1,
+        "packet": "2282468002386a0d"
+      },
+      {
+        "at_ns": 180508000000,
+        "owner": 0,
+        "packet": "2502468002586a12"
+      },
+      {
+        "at_ns": 180509000000,
+        "owner": 1,
+        "packet": "270246800260c0e5"
+      },
+      {
+        "at_ns": 271000000000,
+        "owner": 0,
+        "packet": "29e2468002986a01"
+      },
+      {
+        "at_ns": 271001000000,
+        "owner": 1,
+        "packet": "2be2468002b86a01"
+      },
+      {
+        "at_ns": 271002000000,
+        "owner": 0,
+        "packet": "2c22468002d86a06"
+      },
+      {
+        "at_ns": 271003000000,
+        "owner": 1,
+        "packet": "2e22468002f86a05"
+      },
+      {
+        "at_ns": 271004000000,
+        "owner": 0,
+        "packet": "3042468003186a0a"
+      },
+      {
+        "at_ns": 271005000000,
+        "owner": 1,
+        "packet": "3242468003386a09"
+      },
+      {
+        "at_ns": 271006000000,
+        "owner": 0,
+        "packet": "3482468003586a0e"
+      },
+      {
+        "at_ns": 271007000000,
+        "owner": 1,
+        "packet": "3682468003786a0d"
+      },
+      {
+        "at_ns": 271008000000,
+        "owner": 0,
+        "packet": "3902468003986a12"
+      },
+      {
+        "at_ns": 271009000000,
+        "owner": 1,
+        "packet": "3b02468003a0c0e5"
+      },
+      {
+        "at_ns": 361000000000,
+        "owner": 0,
+        "packet": "3de2468003d86a01"
+      },
+      {
+        "at_ns": 361001000000,
+        "owner": 1,
+        "packet": "3fe2468003f86a01"
+      },
+      {
+        "at_ns": 361002000000,
+        "owner": 0,
+        "packet": "4022468004186a06"
+      },
+      {
+        "at_ns": 361003000000,
+        "owner": 1,
+        "packet": "4222468004386a05"
+      },
+      {
+        "at_ns": 361004000000,
+        "owner": 0,
+        "packet": "4442468004586a0a"
+      },
+      {
+        "at_ns": 361005000000,
+        "owner": 1,
+        "packet": "4642468004786a09"
+      },
+      {
+        "at_ns": 361006000000,
+        "owner": 0,
+        "packet": "4882468004986a0e"
+      },
+      {
+        "at_ns": 361007000000,
+        "owner": 1,
+        "packet": "4a82468004b86a0d"
+      },
+      {
+        "at_ns": 361008000000,
+        "owner": 0,
+        "packet": "4d02468004d86a12"
+      },
+      {
+        "at_ns": 361009000000,
+        "owner": 1,
+        "packet": "4f02468004e0c0e5"
+      }
+    ],
+    "false_ERR_interval_ns": [
+      0,
+      0
+    ],
+    "loss_slow_interval_ns": [
+      0,
+      0
+    ],
+    "ready_low_ns": 80,
+    "ready_period_ns": 340
+  },
+  "startup_instructions": 13943,
+  "ARM_instructions_including_boot": 14226,
+  "ARM_instructions_runtime": 0,
+  "driver_calls": 4,
+  "completed_driver_visits": 3,
+  "max_observed_instructions_per_driver_visit": 21,
+  "MMIO": {
+    "boot_read": 4
+  },
+  "startup_report": "0x43305244",
+  "boot_uses_corrected_ELF": true,
+  "page_mappings_checked": 15,
+  "gic_accesses": [
+    [
+      17,
+      4176482304,
+      0
+    ],
+    [
+      17,
+      4176478464,
+      0
+    ],
+    [
+      16,
+      4176482304,
+      0
+    ],
+    [
+      16,
+      4176478464,
+      0
+    ]
+  ],
+  "model_full_service_target_slow_ticks": 9408,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "CPU_utilization_measured": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/run_sparse.py": "f80086c5ab428da48aea4521258497baae723a5ecd20e28bcb2ddbd4f3594135",
+    "experiments/t106-system-emulation/bridge.c": "6a193b8a32a8011d8f43aad600f5bf90d903b946ae3816ec39a32a1d07996000",
+    "experiments/t106-system-emulation/tb_sparse.sv": "0fd44ef6db03b06c3a3b856ccaa1637c229aade2d00b8e73003f5c17fa2845ae",
+    "experiments/t106-system-emulation/sparse.tcl": "36a0085249ad9f761f3262b352eefce7568bb86c511b44429592e6017a0735a9",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t105-arm-rule/outputs/startup.elf": "49609a65c98ff1578633d74c43c83e4eda064aa82ead521a22f8af51c9419d47",
+    "experiments/t105-arm-rule/outputs/firmware.elf": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09"
+  },
+  "input_sha256": {
+    "accel.txt": "33b2ca39198462abe141ccc33d116f8ee767e855c8e5a10a78cb81911f3c1f2e",
+    "injections.txt": "b18fb22e8e44d8c3a4c3490e2ef5af6e40504489ddf61e07a67a505901e5b7dc",
+    "application.txt": "ed8ad261d1130d1534c6fbfeb91ac5722005e7ae140a1dccc8fbe14b939c9765"
+  },
+  "build": "/mnt/c/Users/\u0418\u0432\u0430\u043d/.codex/.chatgpt-projects/g-p-6a8f0744f95081919477f597a4962b6b/t106-system-emulation/experiments/t106-system-emulation/.build/sparse-memory-fixed-1-1792071714119616161",
+  "scope": "actual ARM ISA + functional CP15/GIC + vendor-XPM/production RTL; not physical PS7 or WCET",
+  "represented_full_services": 0,
+  "represented_driver_visits": 0,
+  "represented_MMIO_reads": 0,
+  "represented_MMIO_writes": 0,
+  "represented_ISA_count": null,
+  "trace_sha256": "5ce452697076b2196e94e36b2d1dc8ae973148017736c277e1dc9a22597295fe"
+}

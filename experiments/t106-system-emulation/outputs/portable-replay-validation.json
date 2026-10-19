@@ -1,0 +1,78 @@
+{
+  "schema": "t106-portable-replay-validation-v1",
+  "status": "complete_digital_evidence_pending_review",
+  "source_data_commit": "48fe86da06085d620e1badc4af8c64dd1d59389c",
+  "actual_full_execution_source_commit": "518fd5a94f2b75a865cca87edda6378273c45b96",
+  "command": "python3 experiments/t106-system-emulation/reproduce.py",
+  "allow_incomplete": false,
+  "new_simulation": false,
+  "started_utc": "2026-10-16T02:47:38Z",
+  "finished_utc": "2026-10-16T03:40:43Z",
+  "exit_code": 0,
+  "environment": {
+    "os": "Ubuntu26.04 LTS / WSL2",
+    "kernel": "6.6.114.1-microsoft-standard-WSL2",
+    "python": "3.14.4",
+    "gcc": "15.2.0"
+  },
+  "fresh_snapshot": {
+    "method": "git archive, extracted without inherited .git, .build or .tools",
+    "commit": "48fe86da06085d620e1badc4af8c64dd1d59389c",
+    "path": "experiments/t106-system-emulation/.build/portable-48fe86d",
+    "bytes": 245176320,
+    "sha256": "6a2614d45177257b400f7d00b6d90f00a4771fae7826bfd0bcdb88f9a9f589a0"
+  },
+  "checks": {
+    "unit_tests": 69,
+    "unit_tests_skipped": 0,
+    "unit_suite_host_seconds": 26.85,
+    "accepted_input_hashes": 244,
+    "compileall_exit_code": 0,
+    "scenario_mode_rows": 10,
+    "complete_original_trace_records_checked": 893712351,
+    "full_trace_EOF_and_original_SHA256": true,
+    "all_five_scenarios_and_table": true,
+    "independent_FAST_arithmetic": true,
+    "tracked_task_files_byte_audit": {
+      "files": 186,
+      "all_sha256_unchanged": true,
+      "reference": "SHA256-verified original pre-run Git archive, re-extracted after replay",
+      "source_commit": "48fe86da06085d620e1badc4af8c64dd1d59389c"
+    }
+  },
+  "host_only_timing": {
+    "elapsed_wall_seconds": 3185.12,
+    "user_cpu_seconds": 5381.29,
+    "system_cpu_seconds": 20.42,
+    "max_rss_kbytes_as_reported_by_GNU_time": 346532,
+    "max_rss_is_not_summed_parallel_process_memory": true,
+    "swaps_reported": 0,
+    "full_trace_checker_seconds": {
+      "adaptive": 3014.318,
+      "fixed": 2226.948
+    }
+  },
+  "evidence": {
+    "path": "outputs/portable-replay-evidence.txt",
+    "sha256": "12f30fa17183c4c1de688d3efafc4f407fb7055c26ca9ad205833bcf35b6a193",
+    "original_log_sha256": "297a8ef41c710faf305f133dd184e651393314287aeb9060d9a5735df257d347",
+    "original_log_bytes": 9906,
+    "verbatim_log_preservation_verified": true,
+    "windows_checkout_with_core_autocrlf_true_preserves_sha256": true
+  },
+  "scientific_output_sha256": {
+    "burst3-burst-adaptive-skip.json": "345acf6abe5d7764161a13ccf87d7d843d9cf815e140eec1cfc2e01b7f74cd08",
+    "burst3-burst-adaptive-skip.trace.ct3": "6e05eee7c8cc0f36986b2dd29293cf16c0b2f92f9485b245a21062ecd13ac5c0",
+    "burst3-burst-adaptive-skip-checked.json": "340e860b09b472bd79ea2c48954cbbaca1a2bef1a655f731b322133279fa804c",
+    "burst3-burst-fixed-skip.json": "20bc3e5f15f4deff662a4ccb6d7493d2d3605d6e450bff53b119ad7bcbedfd1f",
+    "burst3-burst-fixed-skip.trace.ct3": "6d9c520740a3e0f52be89452fe422c3a4859d4ba9736d2f95495091a841cfa9b",
+    "burst3-burst-fixed-skip-checked.json": "d544085086553b9cce09adcad68f6e7331ee23db918302f2dbcb9ea3cf32db98",
+    "five-scenarios.json": "481818edbd203b3de23c40be57d6384cf00e0df70372138ebc665948b15d6d0e",
+    "five-scenarios.md": "10092b4c6ce530a75bcf51d137d1f11748572049136d1728a66a35824ce4be14"
+  },
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "Q_T_proven_by_emulation": false,
+  "scientific_acceptance_claimed": false,
+  "CI_status_not_evaluated": true
+}

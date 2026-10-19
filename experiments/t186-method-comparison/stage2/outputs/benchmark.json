@@ -1,0 +1,1467 @@
+{
+  "budget_s": 120,
+  "logical_CPUs": 8,
+  "matrix_elapsed_s": 14.327361099996779,
+  "pilot_only_old_solver": [
+    {
+      "active_event_count": 41,
+      "active_queue_s": 0.0001412999990861863,
+      "method": "constant_fast",
+      "watch_all_event_count": 35065,
+      "watch_all_s": 0.03194950000033714
+    },
+    {
+      "active_event_count": 50,
+      "active_queue_s": 0.00020880000374745578,
+      "method": "our_err_r4",
+      "watch_all_event_count": 33907,
+      "watch_all_s": 0.0336237000010442
+    }
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "rows": [
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        7.159999950090423e-05,
+        3.930000093532726e-05,
+        2.9499999072868377e-05
+      ],
+      "horizon_s": 86400,
+      "marks": 0,
+      "median_s": 3.930000093532726e-05,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {},
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 0
+      },
+      "status": "completed",
+      "virtual_controls": 440816326532
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 1,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        5.609999789157882e-05,
+        4.6799999836366624e-05,
+        3.989999822806567e-05
+      ],
+      "horizon_s": 86400,
+      "marks": 0,
+      "median_s": 4.6799999836366624e-05,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 1
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 147552075352
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 31141,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        7.339999865507707e-05,
+        5.619999865302816e-05,
+        4.980000085197389e-05
+      ],
+      "horizon_s": 86400,
+      "marks": 0,
+      "median_s": 5.619999865302816e-05,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 1
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 16327035484
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 1,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        4.400000034365803e-05,
+        3.9699996705166996e-05,
+        3.740000101970509e-05
+      ],
+      "horizon_s": 86400,
+      "marks": 0,
+      "median_s": 3.9699996705166996e-05,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 1
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 16621315196
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 23,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.00018790000467561185,
+        0.0001320000010309741,
+        0.00010379999730503187
+      ],
+      "horizon_s": 86400,
+      "marks": 0,
+      "median_s": 0.0001320000010309741,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 23
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 122448980179
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        0.0011664999983622693,
+        0.0012346999938017689,
+        0.001124599999457132
+      ],
+      "horizon_s": 86400,
+      "marks": 100,
+      "median_s": 0.0011664999983622693,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 100,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 440816326532
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 193,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.002528999997593928,
+        0.002490799997758586,
+        0.002678099997865502
+      ],
+      "horizon_s": 86400,
+      "marks": 100,
+      "median_s": 0.002528999997593928,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 189,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 101
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 179039818169
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 31142,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.007150500001444016,
+        0.007595200004288927,
+        0.00712020000355551
+      ],
+      "horizon_s": 86400,
+      "marks": 100,
+      "median_s": 0.007150500001444016,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 1526,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 101
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 16327385010
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 201,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.005086299999675248,
+        0.005339499999536201,
+        0.005103099996631499
+      ],
+      "horizon_s": 86400,
+      "marks": 100,
+      "median_s": 0.005103099996631499,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 1526,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 101
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 16621315196
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 23,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.004732199995487463,
+        0.00507340000331169,
+        0.004730900000140537
+      ],
+      "horizon_s": 86400,
+      "marks": 100,
+      "median_s": 0.004732199995487463,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 1212,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 23
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 103
+      },
+      "status": "completed",
+      "virtual_controls": 122448980179
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        0.01257389999955194,
+        0.012547999998787418,
+        0.012117199999920558
+      ],
+      "horizon_s": 86400,
+      "marks": 1000,
+      "median_s": 0.012547999998787418,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 1000,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 440816326532
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 1211,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.0173066999996081,
+        0.017400199998519383,
+        0.017725900004734285
+      ],
+      "horizon_s": 86400,
+      "marks": 1000,
+      "median_s": 0.017400199998519383,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 1218,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 999
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 1003
+      },
+      "status": "completed",
+      "virtual_controls": 381416176116
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 31157,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.07352199999877485,
+        0.07381510000413982,
+        0.07761200000095414
+      ],
+      "horizon_s": 86400,
+      "marks": 1000,
+      "median_s": 0.07381510000413982,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 14416,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 1001
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 16335424092
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 1999,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.05344630000035977,
+        0.05285110000113491,
+        0.05430239999986952
+      ],
+      "horizon_s": 86400,
+      "marks": 1000,
+      "median_s": 0.05344630000035977,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 13447,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 999
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 56054927301
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 23,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.04301529999793274,
+        0.04287100000510691,
+        0.04236990000208607
+      ],
+      "horizon_s": 86400,
+      "marks": 1000,
+      "median_s": 0.04287100000510691,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 11098,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 23
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 1003
+      },
+      "status": "completed",
+      "virtual_controls": 122448980179
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        0.13437659999908647,
+        0.1373089999979129,
+        0.1336866000056034
+      ],
+      "horizon_s": 86400,
+      "marks": 10000,
+      "median_s": 0.13437659999908647,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 10000,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 10002
+      },
+      "status": "completed",
+      "virtual_controls": 440816326532
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 10000,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.1553905999971903,
+        0.1609480999977677,
+        0.15686730000015814
+      ],
+      "horizon_s": 86400,
+      "marks": 10000,
+      "median_s": 0.15686730000015814,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 10000,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 9986
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 10003
+      },
+      "status": "completed",
+      "virtual_controls": 440816326532
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 32116,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.7614544000025489,
+        0.7680870000040159,
+        0.7686971000002814
+      ],
+      "horizon_s": 86400,
+      "marks": 10000,
+      "median_s": 0.7680870000040159,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 138952,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 9819
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 4,
+        "max_heap": 10002
+      },
+      "status": "completed",
+      "virtual_controls": 16838041522
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 19995,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.1639997999955085,
+        0.16611990000092192,
+        0.16734639999776846
+      ],
+      "horizon_s": 86400,
+      "marks": 10000,
+      "median_s": 0.16611990000092192,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 10481,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 9995
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 2,
+        "max_heap": 10003
+      },
+      "status": "completed",
+      "virtual_controls": 439680432386
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 23,
+        "nominal_cut_services": 459183673
+      },
+      "elapsed_s": [
+        0.2342588999963482,
+        0.24157130000094185,
+        0.2362487999998848
+      ],
+      "horizon_s": 86400,
+      "marks": 10000,
+      "median_s": 0.2362487999998848,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 40292,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 23
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 4,
+        "max_heap": 10003
+      },
+      "status": "completed",
+      "virtual_controls": 146938776052
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        7.349999941652641e-05,
+        2.540000423323363e-05,
+        1.900000643217936e-05
+      ],
+      "horizon_s": 315576000,
+      "marks": 0,
+      "median_s": 2.540000423323363e-05,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {},
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 0
+      },
+      "status": "completed",
+      "virtual_controls": 1610081632653063
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 1,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        4.079999780515209e-05,
+        2.8299997211433947e-05,
+        2.5699999241624027e-05
+      ],
+      "horizon_s": 315576000,
+      "marks": 0,
+      "median_s": 2.8299997211433947e-05,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 1
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 536694490850862
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 113740260,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        5.459999374579638e-05,
+        3.51999988197349e-05,
+        3.2000003557186574e-05
+      ],
+      "horizon_s": 315576000,
+      "marks": 0,
+      "median_s": 3.51999988197349e-05,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 1
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 59632653566096
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 1,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        2.9499999072868377e-05,
+        2.460000541759655e-05,
+        2.5200002710334957e-05
+      ],
+      "horizon_s": 315576000,
+      "marks": 0,
+      "median_s": 2.5200002710334957e-05,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 1
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 59632947845808
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 0,
+        "energy": null,
+        "logical_updates": 87659,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.14233470000181114,
+        0.1467655000014929,
+        0.14894279999862192
+      ],
+      "horizon_s": 315576000,
+      "marks": 0,
+      "median_s": 0.1467655000014929,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "timer": 87659
+        },
+        "explicit_transactions": 0,
+        "max_active_transactions": 0,
+        "max_dirty_words": 0,
+        "max_heap": 1
+      },
+      "status": "completed",
+      "virtual_controls": 59738775510791
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        0.0012512999965110794,
+        0.0012060000008204952,
+        0.0011880000020028092
+      ],
+      "horizon_s": 315576000,
+      "marks": 100,
+      "median_s": 0.0012060000008204952,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 100,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 1610081632653063
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 201,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.002926000001025386,
+        0.0028305000014370307,
+        0.0027985999986412935
+      ],
+      "horizon_s": 315576000,
+      "marks": 100,
+      "median_s": 0.0028305000014370307,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 197,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 101
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 536725103491084
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 113740260,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.00521120000485098,
+        0.005089199999929406,
+        0.005062500000349246
+      ],
+      "horizon_s": 315576000,
+      "marks": 100,
+      "median_s": 0.005089199999929406,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 1373,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 101
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 59632653566096
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 201,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.0050759000005200505,
+        0.005077000001620036,
+        0.005011699999158736
+      ],
+      "horizon_s": 315576000,
+      "marks": 100,
+      "median_s": 0.0050759000005200505,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 1373,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 101
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 102
+      },
+      "status": "completed",
+      "virtual_controls": 59632947845808
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 100,
+        "energy": null,
+        "logical_updates": 87659,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.17360619999817573,
+        0.17659809999895515,
+        0.18236919999617385
+      ],
+      "horizon_s": 315576000,
+      "marks": 100,
+      "median_s": 0.17659809999895515,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 100,
+          "control": 1373,
+          "deliver": 100,
+          "injection": 100,
+          "publish": 100,
+          "release": 100,
+          "snapshot": 100,
+          "timer": 87659
+        },
+        "explicit_transactions": 100,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 103
+      },
+      "status": "completed",
+      "virtual_controls": 59738775510791
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        0.012388999995891936,
+        0.012466699998185504,
+        0.012249199993675575
+      ],
+      "horizon_s": 315576000,
+      "marks": 1000,
+      "median_s": 0.012388999995891936,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 1000,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 1610081632653063
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 2001,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.030117199996311683,
+        0.02875289999792585,
+        0.02829349999956321
+      ],
+      "horizon_s": 315576000,
+      "marks": 1000,
+      "median_s": 0.02875289999792585,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 1988,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 1001
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 537000617247402
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 113740260,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.055121800003689714,
+        0.05736759999854257,
+        0.05804560000251513
+      ],
+      "horizon_s": 315576000,
+      "marks": 1000,
+      "median_s": 0.05736759999854257,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 14237,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 1001
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 59632653566096
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 2001,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.05527770000480814,
+        0.05423020000307588,
+        0.053721600001154
+      ],
+      "horizon_s": 315576000,
+      "marks": 1000,
+      "median_s": 0.05423020000307588,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 14237,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 1001
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 1002
+      },
+      "status": "completed",
+      "virtual_controls": 59632947845808
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 1000,
+        "energy": null,
+        "logical_updates": 87659,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.2388554999997723,
+        0.2383070000068983,
+        0.23962999999639578
+      ],
+      "horizon_s": 315576000,
+      "marks": 1000,
+      "median_s": 0.2388554999997723,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 1000,
+          "control": 14237,
+          "deliver": 1000,
+          "injection": 1000,
+          "publish": 1000,
+          "release": 1000,
+          "snapshot": 1000,
+          "timer": 87659
+        },
+        "explicit_transactions": 1000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 1003
+      },
+      "status": "completed",
+      "virtual_controls": 59738775510791
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 0,
+        "nominal_cut_services": 0
+      },
+      "elapsed_s": [
+        0.1362038000006578,
+        0.13764989999617683,
+        0.13429809999797726
+      ],
+      "horizon_s": 315576000,
+      "marks": 10000,
+      "median_s": 0.1362038000006578,
+      "method": "constant_1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 10000,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 10002
+      },
+      "status": "completed",
+      "virtual_controls": 1610081632653063
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 19975,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.29884750000201166,
+        0.30338100000517443,
+        0.30705049999960465
+      ],
+      "horizon_s": 315576000,
+      "marks": 10000,
+      "median_s": 0.30338100000517443,
+      "method": "our_r4",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 20024,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 10001
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 10002
+      },
+      "status": "completed",
+      "virtual_controls": 539760557010157
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 113740260,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.5830941999956849,
+        0.5869501999986824,
+        0.5904528000028222
+      ],
+      "horizon_s": 315576000,
+      "marks": 10000,
+      "median_s": 0.5869501999986824,
+      "method": "krasnikov_0.001_longest",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 141063,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 10001
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 10002
+      },
+      "status": "completed",
+      "virtual_controls": 59632653566096
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 20001,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.5594580999968457,
+        0.561744999999064,
+        0.5617146999938996
+      ],
+      "horizon_s": 315576000,
+      "marks": 10000,
+      "median_s": 0.5617146999938996,
+      "method": "patent_60",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 141063,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 10001
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 10002
+      },
+      "status": "completed",
+      "virtual_controls": 59632947845808
+    },
+    {
+      "algorithm_cost": {
+        "CPU_time_ns": null,
+        "CPU_use_percent": null,
+        "delivered_ERR": 10000,
+        "energy": null,
+        "logical_updates": 87659,
+        "nominal_cut_services": 1677168367346
+      },
+      "elapsed_s": [
+        0.75821050000377,
+        0.7622448000038275,
+        0.7667371999996249
+      ],
+      "horizon_s": 315576000,
+      "marks": 10000,
+      "median_s": 0.7622448000038275,
+      "method": "chen_0.1",
+      "repeats_completed": 3,
+      "simulator_work": {
+        "event_counts": {
+          "commit": 10000,
+          "control": 141045,
+          "deliver": 10000,
+          "injection": 10000,
+          "publish": 10000,
+          "release": 10000,
+          "snapshot": 10000,
+          "timer": 87659
+        },
+        "explicit_transactions": 10000,
+        "max_active_transactions": 1,
+        "max_dirty_words": 1,
+        "max_heap": 10003
+      },
+      "status": "completed",
+      "virtual_controls": 59738775510791
+    }
+  ],
+  "scope": "fixed-count engineering load; Python wall time, not radiation samples/ARM/WCET"
+}

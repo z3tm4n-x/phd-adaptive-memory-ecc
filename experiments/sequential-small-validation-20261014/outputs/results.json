@@ -1,0 +1,4434 @@
+{
+  "task": 166,
+  "preregistration_commit": "1627981320243d5537f50b89a17f268bfd05fa46",
+  "base": "d135c665039a30014f12e2946a676da7ee64e2aa",
+  "process": "NHPP on array; each event uniformly picks one word and one of all39 bits, XOR inversion; independent marks",
+  "failure_event": "exists t in [0,T],word: Hamming weight>1; absorbing even after correction",
+  "service": "U: unconditional atomic full-word write of correctly decoded latched image at fence; arrivals in gap remain live and may cause absorbing Q",
+  "initial_state": "all words clean, no pending write; synthetic specified state, no physical preparation claim",
+  "source_sha256": {
+    "inputs.json": "bf27d65f0393058fdad58d3852bfa375fd695102b57f78fff7e5be1ce9a6319a",
+    "sources.json": "45d65876ecd6f7ea71ea93e6c2ac50188d128b0340a29a9d5e6ae722c6bd81a7",
+    "PLAN.md": "3c18787605e1c3dde6e8d358c0f2e42c47ffb3d51058bb270eda890b7a783e59",
+    "exact.py": "2cf666f738fc3922a89b38fb7969f6de7dfd7a0d686d498dc108eb9e9354c9a0",
+    "enumerated.py": "10eb4b97f601157dcc16cbd99dea44570e51defaf6468e2bfd5550a6cc5c0044",
+    "mc.py": "b6221ad2628e511cf2bf3c61e9a42e28719da9bcdba8d30de5c2f3666b5a1cbf",
+    "checks.py": "25e810ba021a75d673df47076935ec30f91fd5bb406d098b5996d5a26441dc75",
+    "reproduce.py": "5043caabab8101a5c096f2173da5f36bed1df7c0a29120235a97f1d11afda571",
+    "requirements.txt": "508b82d2fe4efe28965be42608c3d3ec0551642f959d687cf1e4b38761e2e822",
+    "METHOD.md": "68c4b54194b90e015a6af26009e42353e0606100b1f1d063be8ff8905e7bc01e"
+  },
+  "software": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "cases": [
+    {
+      "id": "W4_constant_D0",
+      "case_index": 0,
+      "W": 4,
+      "n": 39,
+      "profile": "constant",
+      "D_s": "0",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.191872325704171641532398489508094093",
+          "upper": "0.191872325704171641532398489508094094",
+          "midpoint": "0.1918723257041716415323984895080940935",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.181045387256749732696897516372482981",
+          "upper": "0.181045387256749732696897516372482982",
+          "midpoint": "0.1810453872567497326968975163724829815",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.239497435897435897435897435897435897",
+          "upper": "0.239497435897435897435897435897435898",
+          "midpoint": "0.2394974358974358974358974358974358975",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.245800000000000000000000000000000000",
+          "upper": "0.245800000000000000000000000000000000",
+          "midpoint": "0.2458000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.924800000000000000000000000000000000",
+          "upper": "0.924800000000000000000000000000000000",
+          "midpoint": "0.9248000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "23351/97500",
+        "F_array": "68/25",
+        "full_state_count": 17,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "1/1004924913854070348653185546875000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "0",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "1",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "2",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "3",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "1",
+                "end": "2",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "word_exposure": "2/25"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1",
+                "end": "2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "1/4",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "5/4",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "9/4",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "13/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "word_exposure": "1/20"
+              },
+              {
+                "start": "1/4",
+                "end": "5/4",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "5/4",
+                "end": "9/4",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "word_exposure": "3/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1/4",
+                "end": "5/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "5/4",
+                "end": "9/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "1/2",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "3/2",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "5/2",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "1/2",
+                "end": "3/2",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "word_exposure": "9/50"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1/2",
+                "end": "3/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "3/4",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "7/4",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "11/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "3/4",
+                "end": "7/4",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "word_exposure": "13/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/4",
+                "end": "7/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.19187232570417143,
+        "states": 17,
+        "max_mass_drift": 8.881784197001252e-16,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 2.220446049250313e-16
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 38351,
+        "Q_MC": 0.191755,
+        "CI_95_pointwise": [
+          0.1900316233947936,
+          0.19348731523839288
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          0
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 545270,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.010826938447421908835500973135611111",
+          "upper": "0.010826938447421908835500973135611113",
+          "midpoint": "0.0108269384474219088355009731356111120",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.047625110193264255903498946389341803",
+          "upper": "0.047625110193264255903498946389341805",
+          "midpoint": "0.0476251101932642559034989463893418040",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.058452048640686164738999919524952915",
+          "upper": "0.058452048640686164738999919524952917",
+          "midpoint": "0.0584520486406861647389999195249529160",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.05642782724234479,
+        "U_relative_excess": 0.24821250286345387,
+        "width_relative_to_exact": 0.30464033010579866,
+        "MC_absolute_difference": "0.00011732570417164153",
+        "MC_relative_difference": 0.0006114779905911709,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W4_constant_D1-20",
+      "case_index": 1,
+      "W": 4,
+      "n": 39,
+      "profile": "constant",
+      "D_s": "1/20",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.191337811378291427829744995868167183",
+          "upper": "0.191337811378291427829744995868167184",
+          "midpoint": "0.1913378113782914278297449958681671835",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.166543447909836689642043163473485588",
+          "upper": "0.166543447909836689642043163473485589",
+          "midpoint": "0.1665434479098366896420431634734855885",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.238717948717948717948717948717948717",
+          "upper": "0.238717948717948717948717948717948718",
+          "midpoint": "0.2387179487179487179487179487179487175",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.245000000000000000000000000000000000",
+          "upper": "0.245000000000000000000000000000000000",
+          "midpoint": "0.2450000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.924800000000000000000000000000000000",
+          "upper": "0.924800000000000000000000000000000000",
+          "midpoint": "0.9248000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "931/3900",
+        "F_array": "68/25",
+        "full_state_count": 17,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "1/1004924913854070348653185546875000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "1/20",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "21/20",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "41/20",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "61/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/20",
+                "word_exposure": "1/100"
+              },
+              {
+                "start": "1/20",
+                "end": "21/20",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "21/20",
+                "end": "41/20",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "41/20",
+                "end": "61/20",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "word_exposure": "7/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "1/20",
+                "end": "1",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "21/20",
+                "end": "2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "41/20",
+                "end": "3",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "3/10",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "13/10",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "23/10",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "33/10",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/10",
+                "word_exposure": "3/50"
+              },
+              {
+                "start": "3/10",
+                "end": "13/10",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "13/10",
+                "end": "23/10",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "23/10",
+                "end": "33/10",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "word_exposure": "1/50"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/10",
+                "end": "5/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "13/10",
+                "end": "9/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "23/10",
+                "end": "13/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "11/20",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "31/20",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "51/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "11/20",
+                "word_exposure": "11/100"
+              },
+              {
+                "start": "11/20",
+                "end": "31/20",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "31/20",
+                "end": "51/20",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "word_exposure": "17/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "11/20",
+                "end": "3/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "31/20",
+                "end": "5/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "4/5",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "9/5",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "14/5",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "4/5",
+                "word_exposure": "4/25"
+              },
+              {
+                "start": "4/5",
+                "end": "9/5",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "9/5",
+                "end": "14/5",
+                "word_exposure": "1/5"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "word_exposure": "3/25"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "4/5",
+                "end": "7/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "9/5",
+                "end": "11/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.19133781137829117,
+        "states": 17,
+        "max_mass_drift": 5.551115123125783e-16,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 2.498001805406602e-16
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 38547,
+        "Q_MC": 0.192735,
+        "CI_95_pointwise": [
+          0.19100825495189722,
+          0.19447065522965704
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          1
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 545456,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.024794363468454738187701832394681594",
+          "upper": "0.024794363468454738187701832394681596",
+          "midpoint": "0.0247943634684547381877018323946815950",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.047380137339657290118972952849781533",
+          "upper": "0.047380137339657290118972952849781535",
+          "midpoint": "0.0473801373396572901189729528497815340",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.072174500808112028306674785244463128",
+          "upper": "0.072174500808112028306674785244463130",
+          "midpoint": "0.0721745008081120283066747852444631290",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.12958423267126293,
+        "U_relative_excess": 0.24762558429176684,
+        "width_relative_to_exact": 0.3772098169630298,
+        "MC_absolute_difference": "0.0013971886217085722",
+        "MC_relative_difference": 0.007302208652037988,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W4_piecewise_D0",
+      "case_index": 2,
+      "W": 4,
+      "n": 39,
+      "profile": "piecewise",
+      "D_s": "0",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.218640190415486694840840431556575070",
+          "upper": "0.218640190415486694840840431556575071",
+          "midpoint": "0.2186401904154866948408404315565750705",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.166569419200378583099684089000144263",
+          "upper": "0.166569419200378583099684089000144264",
+          "midpoint": "0.1665694192003785830996840890001442635",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.287009615384615384615384615384615384",
+          "upper": "0.287009615384615384615384615384615385",
+          "midpoint": "0.2870096153846153846153846153846153845",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.294562500000000000000000000000000000",
+          "upper": "0.294562500000000000000000000000000000",
+          "midpoint": "0.2945625000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.924800000000000000000000000000000000",
+          "upper": "0.924800000000000000000000000000000000",
+          "midpoint": "0.9248000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "29849/104000",
+        "F_array": "68/25",
+        "full_state_count": 17,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "14570462500742538146104600105464615110307426845405769/223717297750853151199963882140467200000000000000000000000000000000000000000000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "0",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "1",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "2",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "3",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1",
+                "word_exposure": "11/50"
+              },
+              {
+                "start": "1",
+                "end": "2",
+                "word_exposure": "1/4"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "word_exposure": "3/50"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "1",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "1",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "1/4",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "5/4",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "9/4",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "13/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "word_exposure": "1/40"
+              },
+              {
+                "start": "1/4",
+                "end": "5/4",
+                "word_exposure": "59/200"
+              },
+              {
+                "start": "5/4",
+                "end": "9/4",
+                "word_exposure": "3/16"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "word_exposure": "9/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "1/4",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "5/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "5/4",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "9/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "1/2",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "3/2",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "5/2",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "word_exposure": "1/20"
+              },
+              {
+                "start": "1/2",
+                "end": "3/2",
+                "word_exposure": "69/200"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "word_exposure": "27/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "1/2",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "3/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "3/4",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "7/4",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "11/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "word_exposure": "3/25"
+              },
+              {
+                "start": "3/4",
+                "end": "7/4",
+                "word_exposure": "5/16"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "word_exposure": "39/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "3/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "3/4",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "7/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.21864019041548674,
+        "states": 17,
+        "max_mass_drift": 8.881784197001252e-16,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 5.551115123125783e-17
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 43805,
+        "Q_MC": 0.219025,
+        "CI_95_pointwise": [
+          0.21721399632866947,
+          0.22084415076476338
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          2
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 543188,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.052070771215108111741156342556430806",
+          "upper": "0.052070771215108111741156342556430808",
+          "midpoint": "0.0520707712151081117411563425564308070",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.068369424969128689774544183828040313",
+          "upper": "0.068369424969128689774544183828040315",
+          "midpoint": "0.0683694249691286897745441838280403140",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.120440196184236801515700526384471120",
+          "upper": "0.120440196184236801515700526384471122",
+          "midpoint": "0.1204401961842368015157005263844711210",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.2381573630911906,
+        "U_relative_excess": 0.3127029154118682,
+        "width_relative_to_exact": 0.5508602785030587,
+        "MC_absolute_difference": "0.00038480958451330517",
+        "MC_relative_difference": 0.0017600130322885429,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W4_piecewise_D1-20",
+      "case_index": 3,
+      "W": 4,
+      "n": 39,
+      "profile": "piecewise",
+      "D_s": "1/20",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.218833242632303961022717536861923557",
+          "upper": "0.218833242632303961022717536861923558",
+          "midpoint": "0.2188332426323039610227175368619235575",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.156127518749844109708204735162888855",
+          "upper": "0.156127518749844109708204735162888856",
+          "midpoint": "0.1561275187498441097082047351628888555",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.287435897435897435897435897435897435",
+          "upper": "0.287435897435897435897435897435897436",
+          "midpoint": "0.2874358974358974358974358974358974355",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.295000000000000000000000000000000000",
+          "upper": "0.295000000000000000000000000000000000",
+          "midpoint": "0.2950000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.924800000000000000000000000000000000",
+          "upper": "0.924800000000000000000000000000000000",
+          "midpoint": "0.9248000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "1121/3900",
+        "F_array": "68/25",
+        "full_state_count": 17,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "52418960984482827331135389891062235699359676002821250780049354692119819/634167259429921001289598624876427828540743393424179200000000000000000000000000000000000000000000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "1/20",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "21/20",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "41/20",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "61/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/20",
+                "word_exposure": "1/200"
+              },
+              {
+                "start": "1/20",
+                "end": "21/20",
+                "word_exposure": "47/200"
+              },
+              {
+                "start": "21/20",
+                "end": "41/20",
+                "word_exposure": "19/80"
+              },
+              {
+                "start": "41/20",
+                "end": "61/20",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "word_exposure": "21/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "1/20",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "1",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "21/20",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "41/20",
+                "end": "3",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "3/10",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "13/10",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "23/10",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "33/10",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/10",
+                "word_exposure": "3/100"
+              },
+              {
+                "start": "3/10",
+                "end": "13/10",
+                "word_exposure": "31/100"
+              },
+              {
+                "start": "13/10",
+                "end": "23/10",
+                "word_exposure": "7/40"
+              },
+              {
+                "start": "23/10",
+                "end": "33/10",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "word_exposure": "3/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/10",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "5/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "13/10",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "9/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "23/10",
+                "end": "13/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "11/20",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "31/20",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "51/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "11/20",
+                "word_exposure": "11/200"
+              },
+              {
+                "start": "11/20",
+                "end": "31/20",
+                "word_exposure": "139/400"
+              },
+              {
+                "start": "31/20",
+                "end": "51/20",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "word_exposure": "51/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "11/20",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "3/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "31/20",
+                "end": "5/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "4/5",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "9/5",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "14/5",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "4/5",
+                "word_exposure": "7/50"
+              },
+              {
+                "start": "4/5",
+                "end": "9/5",
+                "word_exposure": "3/10"
+              },
+              {
+                "start": "9/5",
+                "end": "14/5",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "word_exposure": "9/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "3/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "4/5",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "7/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "9/5",
+                "end": "11/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.2188332426323039,
+        "states": 17,
+        "max_mass_drift": 3.3306690738754696e-16,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 8.326672684688674e-17
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 43828,
+        "Q_MC": 0.21914,
+        "CI_95_pointwise": [
+          0.21732865236764076,
+          0.22095949138847032
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          3
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 545007,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.062705723882459851314512801699034701",
+          "upper": "0.062705723882459851314512801699034703",
+          "midpoint": "0.0627057238824598513145128016990347020",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.068602654803593474874718360573973877",
+          "upper": "0.068602654803593474874718360573973879",
+          "midpoint": "0.0686026548035934748747183605739738780",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.131308378686053326189231162273008579",
+          "upper": "0.131308378686053326189231162273008581",
+          "midpoint": "0.1313083786860533261892311622730085800",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.28654569629451393,
+        "U_relative_excess": 0.3134928403856061,
+        "width_relative_to_exact": 0.6000385366801201,
+        "MC_absolute_difference": "0.000306757367696039",
+        "MC_relative_difference": 0.0014017859627089204,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W8_constant_D0",
+      "case_index": 4,
+      "W": 8,
+      "n": 39,
+      "profile": "constant",
+      "D_s": "0",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.106477975487663706529797915876262098",
+          "upper": "0.106477975487663706529797915876262099",
+          "midpoint": "0.1064779754876637065297979158762620985",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.103320925611238487723606454591425701",
+          "upper": "0.103320925611238487723606454591425702",
+          "midpoint": "0.1033209256112384877236064545914257015",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.119626923076923076923076923076923076",
+          "upper": "0.119626923076923076923076923076923077",
+          "midpoint": "0.1196269230769230769230769230769230765",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.122775000000000000000000000000000000",
+          "upper": "0.122775000000000000000000000000000000",
+          "midpoint": "0.1227750000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.462400000000000000000000000000000000",
+          "upper": "0.462400000000000000000000000000000000",
+          "midpoint": "0.4624000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "31103/260000",
+        "F_array": "68/25",
+        "full_state_count": 257,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "1/8657778449344792711707846770688000000000000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "0",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "1",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "2",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "3",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "1",
+                "end": "2",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "word_exposure": "1/25"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1",
+                "end": "2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/8",
+                "fence": "1/8",
+                "executed": true
+              },
+              {
+                "read": "9/8",
+                "fence": "9/8",
+                "executed": true
+              },
+              {
+                "read": "17/8",
+                "fence": "17/8",
+                "executed": true
+              },
+              {
+                "read": "25/8",
+                "fence": "25/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/8",
+                "word_exposure": "1/80"
+              },
+              {
+                "start": "1/8",
+                "end": "9/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "9/8",
+                "end": "17/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "17/8",
+                "end": "25/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "25/8",
+                "end": "17/5",
+                "word_exposure": "11/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1/8",
+                "end": "9/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "9/8",
+                "end": "17/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "17/8",
+                "end": "25/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "25/8",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "1/4",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "5/4",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "9/4",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "13/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "word_exposure": "1/40"
+              },
+              {
+                "start": "1/4",
+                "end": "5/4",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "5/4",
+                "end": "9/4",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "word_exposure": "3/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1/4",
+                "end": "5/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "5/4",
+                "end": "9/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/8",
+                "fence": "3/8",
+                "executed": true
+              },
+              {
+                "read": "11/8",
+                "fence": "11/8",
+                "executed": true
+              },
+              {
+                "read": "19/8",
+                "fence": "19/8",
+                "executed": true
+              },
+              {
+                "read": "27/8",
+                "fence": "27/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/8",
+                "word_exposure": "3/80"
+              },
+              {
+                "start": "3/8",
+                "end": "11/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "11/8",
+                "end": "19/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "19/8",
+                "end": "27/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "27/8",
+                "end": "17/5",
+                "word_exposure": "1/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/8",
+                "end": "11/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "11/8",
+                "end": "19/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "19/8",
+                "end": "27/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "27/8",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 4,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "1/2",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "3/2",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "5/2",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "word_exposure": "1/20"
+              },
+              {
+                "start": "1/2",
+                "end": "3/2",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "word_exposure": "9/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "1/2",
+                "end": "3/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 5,
+            "read_fence": [
+              {
+                "read": "5/8",
+                "fence": "5/8",
+                "executed": true
+              },
+              {
+                "read": "13/8",
+                "fence": "13/8",
+                "executed": true
+              },
+              {
+                "read": "21/8",
+                "fence": "21/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "5/8",
+                "word_exposure": "1/16"
+              },
+              {
+                "start": "5/8",
+                "end": "13/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "13/8",
+                "end": "21/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "21/8",
+                "end": "17/5",
+                "word_exposure": "31/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "5/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "5/8",
+                "end": "13/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "13/8",
+                "end": "21/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "21/8",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 6,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "3/4",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "7/4",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "11/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "3/4",
+                "end": "7/4",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "word_exposure": "13/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/4",
+                "end": "7/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 7,
+            "read_fence": [
+              {
+                "read": "7/8",
+                "fence": "7/8",
+                "executed": true
+              },
+              {
+                "read": "15/8",
+                "fence": "15/8",
+                "executed": true
+              },
+              {
+                "read": "23/8",
+                "fence": "23/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "7/8",
+                "word_exposure": "7/80"
+              },
+              {
+                "start": "7/8",
+                "end": "15/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "15/8",
+                "end": "23/8",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "23/8",
+                "end": "17/5",
+                "word_exposure": "21/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "7/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "7/8",
+                "end": "15/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "15/8",
+                "end": "23/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "23/8",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.10647797548766388,
+        "states": 257,
+        "max_mass_drift": 1.1102230246251565e-15,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 1.8041124150158794e-16
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 21246,
+        "Q_MC": 0.10623,
+        "CI_95_pointwise": [
+          0.10488279124730711,
+          0.10758863355415406
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          4
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 543606,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.003157049876425218806191461284836396",
+          "upper": "0.003157049876425218806191461284836398",
+          "midpoint": "0.0031570498764252188061914612848363970",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.013148947589259370393279007200660977",
+          "upper": "0.013148947589259370393279007200660979",
+          "midpoint": "0.0131489475892593703932790072006609780",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.016305997465684589199470468485497374",
+          "upper": "0.016305997465684589199470468485497376",
+          "midpoint": "0.0163059974656845891994704684854973750",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.02964979247554333,
+        "U_relative_excess": 0.12348983467273734,
+        "width_relative_to_exact": 0.15313962714828067,
+        "MC_absolute_difference": "0.0002479754876637065",
+        "MC_relative_difference": 0.0023288899561434316,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W8_constant_D1-20",
+      "case_index": 5,
+      "W": 8,
+      "n": 39,
+      "profile": "constant",
+      "D_s": "1/20",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.106359542791067900969934604241868363",
+          "upper": "0.106359542791067900969934604241868364",
+          "midpoint": "0.1063595427910679009699346042418683635",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.094499149204478952526300397652189683",
+          "upper": "0.094499149204478952526300397652189684",
+          "midpoint": "0.0944991492044789525263003976521896835",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.119480769230769230769230769230769230",
+          "upper": "0.119480769230769230769230769230769231",
+          "midpoint": "0.1194807692307692307692307692307692305",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.122625000000000000000000000000000000",
+          "upper": "0.122625000000000000000000000000000000",
+          "midpoint": "0.1226250000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.462400000000000000000000000000000000",
+          "upper": "0.462400000000000000000000000000000000",
+          "midpoint": "0.4624000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "6213/52000",
+        "F_array": "68/25",
+        "full_state_count": 257,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "1/8657778449344792711707846770688000000000000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "1/20",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "21/20",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "41/20",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "61/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/20",
+                "word_exposure": "1/200"
+              },
+              {
+                "start": "1/20",
+                "end": "21/20",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "21/20",
+                "end": "41/20",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "41/20",
+                "end": "61/20",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "word_exposure": "7/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "1/20",
+                "end": "1",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "21/20",
+                "end": "2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "41/20",
+                "end": "3",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/8",
+                "fence": "7/40",
+                "executed": true
+              },
+              {
+                "read": "9/8",
+                "fence": "47/40",
+                "executed": true
+              },
+              {
+                "read": "17/8",
+                "fence": "87/40",
+                "executed": true
+              },
+              {
+                "read": "25/8",
+                "fence": "127/40",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "7/40",
+                "word_exposure": "7/400"
+              },
+              {
+                "start": "7/40",
+                "end": "47/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "47/40",
+                "end": "87/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "87/40",
+                "end": "127/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "127/40",
+                "end": "17/5",
+                "word_exposure": "9/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "7/40",
+                "end": "9/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "47/40",
+                "end": "17/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "87/40",
+                "end": "25/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "127/40",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "3/10",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "13/10",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "23/10",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "33/10",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/10",
+                "word_exposure": "3/100"
+              },
+              {
+                "start": "3/10",
+                "end": "13/10",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "13/10",
+                "end": "23/10",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "23/10",
+                "end": "33/10",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "word_exposure": "1/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "3/10",
+                "end": "5/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "13/10",
+                "end": "9/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "23/10",
+                "end": "13/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/8",
+                "fence": "17/40",
+                "executed": true
+              },
+              {
+                "read": "11/8",
+                "fence": "57/40",
+                "executed": true
+              },
+              {
+                "read": "19/8",
+                "fence": "97/40",
+                "executed": true
+              },
+              {
+                "read": "27/8",
+                "fence": "137/40",
+                "executed": false
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "17/40",
+                "word_exposure": "17/400"
+              },
+              {
+                "start": "17/40",
+                "end": "57/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "57/40",
+                "end": "97/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "97/40",
+                "end": "17/5",
+                "word_exposure": "39/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "17/40",
+                "end": "11/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "57/40",
+                "end": "19/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "97/40",
+                "end": "27/8",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 4,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "11/20",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "31/20",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "51/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "11/20",
+                "word_exposure": "11/200"
+              },
+              {
+                "start": "11/20",
+                "end": "31/20",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "31/20",
+                "end": "51/20",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "word_exposure": "17/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "11/20",
+                "end": "3/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "31/20",
+                "end": "5/2",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 5,
+            "read_fence": [
+              {
+                "read": "5/8",
+                "fence": "27/40",
+                "executed": true
+              },
+              {
+                "read": "13/8",
+                "fence": "67/40",
+                "executed": true
+              },
+              {
+                "read": "21/8",
+                "fence": "107/40",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "27/40",
+                "word_exposure": "27/400"
+              },
+              {
+                "start": "27/40",
+                "end": "67/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "67/40",
+                "end": "107/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "107/40",
+                "end": "17/5",
+                "word_exposure": "29/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "5/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "27/40",
+                "end": "13/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "67/40",
+                "end": "21/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "107/40",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 6,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "4/5",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "9/5",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "14/5",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "4/5",
+                "word_exposure": "2/25"
+              },
+              {
+                "start": "4/5",
+                "end": "9/5",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "9/5",
+                "end": "14/5",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "word_exposure": "3/50"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "4/5",
+                "end": "7/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "9/5",
+                "end": "11/4",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          },
+          {
+            "word": 7,
+            "read_fence": [
+              {
+                "read": "7/8",
+                "fence": "37/40",
+                "executed": true
+              },
+              {
+                "read": "15/8",
+                "fence": "77/40",
+                "executed": true
+              },
+              {
+                "read": "23/8",
+                "fence": "117/40",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "37/40",
+                "word_exposure": "37/400"
+              },
+              {
+                "start": "37/40",
+                "end": "77/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "77/40",
+                "end": "117/40",
+                "word_exposure": "1/10"
+              },
+              {
+                "start": "117/40",
+                "end": "17/5",
+                "word_exposure": "19/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "7/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "37/40",
+                "end": "15/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "77/40",
+                "end": "23/8",
+                "array_rate": "4/5"
+              },
+              {
+                "start": "117/40",
+                "end": "17/5",
+                "array_rate": "4/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.10635954279106809,
+        "states": 257,
+        "max_mass_drift": 8.881784197001252e-16,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 1.8041124150158794e-16
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 21470,
+        "Q_MC": 0.10735,
+        "CI_95_pointwise": [
+          0.10599652568780281,
+          0.10871486648973198
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          5
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 544778,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.011860393586588948443634206589678679",
+          "upper": "0.011860393586588948443634206589678681",
+          "midpoint": "0.0118603935865889484436342065896786800",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.013121226439701329799296164988900866",
+          "upper": "0.013121226439701329799296164988900868",
+          "midpoint": "0.0131212264397013297992961649889008670",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.024981620026290278242930371578579546",
+          "upper": "0.024981620026290278242930371578579548",
+          "midpoint": "0.0249816200262902782429303715785795470",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.11151226561670578,
+        "U_relative_excess": 0.12336670594265899,
+        "width_relative_to_exact": 0.23487897155936477,
+        "MC_absolute_difference": "0.000990457208932099",
+        "MC_relative_difference": 0.009312349253679547,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W8_piecewise_D0",
+      "case_index": 6,
+      "W": 8,
+      "n": 39,
+      "profile": "piecewise",
+      "D_s": "0",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.124462728094639108843245994642931088",
+          "upper": "0.124462728094639108843245994642931089",
+          "midpoint": "0.1244627280946391088432459946429310885",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.096445625680072468541375027204514673",
+          "upper": "0.096445625680072468541375027204514674",
+          "midpoint": "0.0964456256800724685413750272045146735",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.143999599358974358974358974358974358",
+          "upper": "0.143999599358974358974358974358974359",
+          "midpoint": "0.1439995993589743589743589743589743585",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.147789062500000000000000000000000000",
+          "upper": "0.147789062500000000000000000000000000",
+          "midpoint": "0.1477890625000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.462400000000000000000000000000000000",
+          "upper": "0.462400000000000000000000000000000000",
+          "midpoint": "0.4624000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "359423/2496000",
+        "F_array": "68/25",
+        "full_state_count": 257,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "14570462500742538146104600105464615110307426845405769/1931566789118420489472264512894254722528051200000000000000000000000000000000000000000000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "0",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "1",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "2",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "3",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1",
+                "word_exposure": "11/100"
+              },
+              {
+                "start": "1",
+                "end": "2",
+                "word_exposure": "1/8"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "word_exposure": "3/100"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "1",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "1",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "2",
+                "end": "3",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "3",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/8",
+                "fence": "1/8",
+                "executed": true
+              },
+              {
+                "read": "9/8",
+                "fence": "9/8",
+                "executed": true
+              },
+              {
+                "read": "17/8",
+                "fence": "17/8",
+                "executed": true
+              },
+              {
+                "read": "25/8",
+                "fence": "25/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/8",
+                "word_exposure": "1/160"
+              },
+              {
+                "start": "1/8",
+                "end": "9/8",
+                "word_exposure": "103/800"
+              },
+              {
+                "start": "9/8",
+                "end": "17/8",
+                "word_exposure": "7/64"
+              },
+              {
+                "start": "17/8",
+                "end": "25/8",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "25/8",
+                "end": "17/5",
+                "word_exposure": "33/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/8",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "1/8",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "9/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "9/8",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "17/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "17/8",
+                "end": "25/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "25/8",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "1/4",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "5/4",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "9/4",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "13/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "word_exposure": "1/80"
+              },
+              {
+                "start": "1/4",
+                "end": "5/4",
+                "word_exposure": "59/400"
+              },
+              {
+                "start": "5/4",
+                "end": "9/4",
+                "word_exposure": "3/32"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "word_exposure": "9/800"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "1/4",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "5/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "5/4",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "9/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "9/4",
+                "end": "13/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "13/4",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/8",
+                "fence": "3/8",
+                "executed": true
+              },
+              {
+                "read": "11/8",
+                "fence": "11/8",
+                "executed": true
+              },
+              {
+                "read": "19/8",
+                "fence": "19/8",
+                "executed": true
+              },
+              {
+                "read": "27/8",
+                "fence": "27/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/8",
+                "word_exposure": "3/160"
+              },
+              {
+                "start": "3/8",
+                "end": "11/8",
+                "word_exposure": "133/800"
+              },
+              {
+                "start": "11/8",
+                "end": "19/8",
+                "word_exposure": "5/64"
+              },
+              {
+                "start": "19/8",
+                "end": "27/8",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "27/8",
+                "end": "17/5",
+                "word_exposure": "3/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/8",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/8",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "11/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "11/8",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "19/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "19/8",
+                "end": "27/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "27/8",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 4,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "1/2",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "3/2",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "5/2",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "word_exposure": "1/40"
+              },
+              {
+                "start": "1/2",
+                "end": "3/2",
+                "word_exposure": "69/400"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "word_exposure": "27/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "1/2",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "3/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "3/2",
+                "end": "5/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "5/2",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 5,
+            "read_fence": [
+              {
+                "read": "5/8",
+                "fence": "5/8",
+                "executed": true
+              },
+              {
+                "read": "13/8",
+                "fence": "13/8",
+                "executed": true
+              },
+              {
+                "read": "21/8",
+                "fence": "21/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "5/8",
+                "word_exposure": "7/200"
+              },
+              {
+                "start": "5/8",
+                "end": "13/8",
+                "word_exposure": "11/64"
+              },
+              {
+                "start": "13/8",
+                "end": "21/8",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "21/8",
+                "end": "17/5",
+                "word_exposure": "93/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "5/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "5/8",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "13/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "13/8",
+                "end": "21/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "21/8",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 6,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "3/4",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "7/4",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "11/4",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/4",
+                "word_exposure": "3/50"
+              },
+              {
+                "start": "3/4",
+                "end": "7/4",
+                "word_exposure": "5/32"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "word_exposure": "39/800"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "3/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "3/4",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "7/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "7/4",
+                "end": "11/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "11/4",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 7,
+            "read_fence": [
+              {
+                "read": "7/8",
+                "fence": "7/8",
+                "executed": true
+              },
+              {
+                "read": "15/8",
+                "fence": "15/8",
+                "executed": true
+              },
+              {
+                "read": "23/8",
+                "fence": "23/8",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "7/8",
+                "word_exposure": "17/200"
+              },
+              {
+                "start": "7/8",
+                "end": "15/8",
+                "word_exposure": "9/64"
+              },
+              {
+                "start": "15/8",
+                "end": "23/8",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "23/8",
+                "end": "17/5",
+                "word_exposure": "63/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "7/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/8",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "15/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "15/8",
+                "end": "23/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "23/8",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.12446272809463883,
+        "states": 257,
+        "max_mass_drift": 9.992007221626409e-16,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 2.7755575615628914e-16
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 24814,
+        "Q_MC": 0.12407,
+        "CI_95_pointwise": [
+          0.12262817719245397,
+          0.12552272825859317
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          6
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 543559,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.028017102414566640301870967438416414",
+          "upper": "0.028017102414566640301870967438416416",
+          "midpoint": "0.0280171024145666403018709674384164150",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.019536871264335250131112979716043269",
+          "upper": "0.019536871264335250131112979716043271",
+          "midpoint": "0.0195368712643352501311129797160432700",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.047553973678901890432983947154459684",
+          "upper": "0.047553973678901890432983947154459686",
+          "midpoint": "0.0475539736789018904329839471544596850",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.2251043572921121,
+        "U_relative_excess": 0.15696965319191608,
+        "width_relative_to_exact": 0.38207401048402817,
+        "MC_absolute_difference": "0.00039272809463910884",
+        "MC_relative_difference": 0.0031553871641033437,
+        "exact_in_pointwise_CI": true
+      }
+    },
+    {
+      "id": "W8_piecewise_D1-20",
+      "case_index": 7,
+      "W": 8,
+      "n": 39,
+      "profile": "piecewise",
+      "D_s": "1/20",
+      "T_s": "17/5",
+      "status": "OWN_RESULT; pending independent review",
+      "exact": {
+        "Q_exact": {
+          "lower": "0.124337149147862033903167171714686790",
+          "upper": "0.124337149147862033903167171714686791",
+          "midpoint": "0.1243371491478620339031671717146867905",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "L": {
+          "lower": "0.089635329513172189510291484831868811",
+          "upper": "0.089635329513172189510291484831868812",
+          "midpoint": "0.0896353295131721895102914848318688115",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U": {
+          "lower": "0.143832892628205128205128205128205128",
+          "upper": "0.143832892628205128205128205128205129",
+          "midpoint": "0.1438328926282051282051282051282051285",
+          "absolute_error": "0.0000000000000000000000000000000000005"
+        },
+        "U_token": {
+          "lower": "0.147617968750000000000000000000000000",
+          "upper": "0.147617968750000000000000000000000000",
+          "midpoint": "0.1476179687500000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_coarse": {
+          "lower": "0.462400000000000000000000000000000000",
+          "upper": "0.462400000000000000000000000000000000",
+          "midpoint": "0.4624000000000000000000000000000000000",
+          "absolute_error": "0.0000000000000000000000000000000000000"
+        },
+        "U_rational": "3590069/24960000",
+        "F_array": "68/25",
+        "full_state_count": 257,
+        "uniformization_terms": 32,
+        "max_local_unscaled_tail_rational": "52418960984482827331135389891062235699359676002821250780049354692119819/5475580837310270200983087750014104364861553940915829418963763200000000000000000000000000000000000000000000000000000000000000000000000",
+        "mass_check": "all exact stochastic kernel sums=1; component intervals contain1",
+        "comparison": "L.upper <= Q.lower <= Q.upper <= U.exact",
+        "phase_audit": [
+          {
+            "word": 0,
+            "read_fence": [
+              {
+                "read": "0",
+                "fence": "1/20",
+                "executed": true
+              },
+              {
+                "read": "1",
+                "fence": "21/20",
+                "executed": true
+              },
+              {
+                "read": "2",
+                "fence": "41/20",
+                "executed": true
+              },
+              {
+                "read": "3",
+                "fence": "61/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "1/20",
+                "word_exposure": "1/400"
+              },
+              {
+                "start": "1/20",
+                "end": "21/20",
+                "word_exposure": "47/400"
+              },
+              {
+                "start": "21/20",
+                "end": "41/20",
+                "word_exposure": "19/160"
+              },
+              {
+                "start": "41/20",
+                "end": "61/20",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "word_exposure": "21/800"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "1/20",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "1",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "21/20",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "41/20",
+                "end": "3",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "61/20",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 1,
+            "read_fence": [
+              {
+                "read": "1/8",
+                "fence": "7/40",
+                "executed": true
+              },
+              {
+                "read": "9/8",
+                "fence": "47/40",
+                "executed": true
+              },
+              {
+                "read": "17/8",
+                "fence": "87/40",
+                "executed": true
+              },
+              {
+                "read": "25/8",
+                "fence": "127/40",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "7/40",
+                "word_exposure": "7/800"
+              },
+              {
+                "start": "7/40",
+                "end": "47/40",
+                "word_exposure": "109/800"
+              },
+              {
+                "start": "47/40",
+                "end": "87/40",
+                "word_exposure": "33/320"
+              },
+              {
+                "start": "87/40",
+                "end": "127/40",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "127/40",
+                "end": "17/5",
+                "word_exposure": "27/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/8",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "7/40",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "9/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "47/40",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "17/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "87/40",
+                "end": "25/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "127/40",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 2,
+            "read_fence": [
+              {
+                "read": "1/4",
+                "fence": "3/10",
+                "executed": true
+              },
+              {
+                "read": "5/4",
+                "fence": "13/10",
+                "executed": true
+              },
+              {
+                "read": "9/4",
+                "fence": "23/10",
+                "executed": true
+              },
+              {
+                "read": "13/4",
+                "fence": "33/10",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "3/10",
+                "word_exposure": "3/200"
+              },
+              {
+                "start": "3/10",
+                "end": "13/10",
+                "word_exposure": "31/200"
+              },
+              {
+                "start": "13/10",
+                "end": "23/10",
+                "word_exposure": "7/80"
+              },
+              {
+                "start": "23/10",
+                "end": "33/10",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "word_exposure": "3/400"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/4",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/10",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "5/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "13/10",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "9/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "23/10",
+                "end": "13/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "33/10",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 3,
+            "read_fence": [
+              {
+                "read": "3/8",
+                "fence": "17/40",
+                "executed": true
+              },
+              {
+                "read": "11/8",
+                "fence": "57/40",
+                "executed": true
+              },
+              {
+                "read": "19/8",
+                "fence": "97/40",
+                "executed": true
+              },
+              {
+                "read": "27/8",
+                "fence": "137/40",
+                "executed": false
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "17/40",
+                "word_exposure": "17/800"
+              },
+              {
+                "start": "17/40",
+                "end": "57/40",
+                "word_exposure": "273/1600"
+              },
+              {
+                "start": "57/40",
+                "end": "97/40",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "97/40",
+                "end": "17/5",
+                "word_exposure": "117/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/8",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "17/40",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "11/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "57/40",
+                "end": "19/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "97/40",
+                "end": "27/8",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 4,
+            "read_fence": [
+              {
+                "read": "1/2",
+                "fence": "11/20",
+                "executed": true
+              },
+              {
+                "read": "3/2",
+                "fence": "31/20",
+                "executed": true
+              },
+              {
+                "read": "5/2",
+                "fence": "51/20",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "11/20",
+                "word_exposure": "11/400"
+              },
+              {
+                "start": "11/20",
+                "end": "31/20",
+                "word_exposure": "139/800"
+              },
+              {
+                "start": "31/20",
+                "end": "51/20",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "word_exposure": "51/800"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "1/2",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "11/20",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "3/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "31/20",
+                "end": "5/2",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "51/20",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 5,
+            "read_fence": [
+              {
+                "read": "5/8",
+                "fence": "27/40",
+                "executed": true
+              },
+              {
+                "read": "13/8",
+                "fence": "67/40",
+                "executed": true
+              },
+              {
+                "read": "21/8",
+                "fence": "107/40",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "27/40",
+                "word_exposure": "9/200"
+              },
+              {
+                "start": "27/40",
+                "end": "67/40",
+                "word_exposure": "53/320"
+              },
+              {
+                "start": "67/40",
+                "end": "107/40",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "107/40",
+                "end": "17/5",
+                "word_exposure": "87/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "5/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "27/40",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "13/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "67/40",
+                "end": "21/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "107/40",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 6,
+            "read_fence": [
+              {
+                "read": "3/4",
+                "fence": "4/5",
+                "executed": true
+              },
+              {
+                "read": "7/4",
+                "fence": "9/5",
+                "executed": true
+              },
+              {
+                "read": "11/4",
+                "fence": "14/5",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "4/5",
+                "word_exposure": "7/100"
+              },
+              {
+                "start": "4/5",
+                "end": "9/5",
+                "word_exposure": "3/20"
+              },
+              {
+                "start": "9/5",
+                "end": "14/5",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "word_exposure": "9/200"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "3/4",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "4/5",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "7/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "9/5",
+                "end": "11/4",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "14/5",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          },
+          {
+            "word": 7,
+            "read_fence": [
+              {
+                "read": "7/8",
+                "fence": "37/40",
+                "executed": true
+              },
+              {
+                "read": "15/8",
+                "fence": "77/40",
+                "executed": true
+              },
+              {
+                "read": "23/8",
+                "fence": "117/40",
+                "executed": true
+              }
+            ],
+            "upper_intervals": [
+              {
+                "start": "0",
+                "end": "37/40",
+                "word_exposure": "19/200"
+              },
+              {
+                "start": "37/40",
+                "end": "77/40",
+                "word_exposure": "43/320"
+              },
+              {
+                "start": "77/40",
+                "end": "117/40",
+                "word_exposure": "3/40"
+              },
+              {
+                "start": "117/40",
+                "end": "17/5",
+                "word_exposure": "57/1600"
+              }
+            ],
+            "lower_cells": [
+              {
+                "start": "0",
+                "end": "3/5",
+                "array_rate": "2/5"
+              },
+              {
+                "start": "3/5",
+                "end": "7/8",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "37/40",
+                "end": "7/5",
+                "array_rate": "8/5"
+              },
+              {
+                "start": "7/5",
+                "end": "15/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "77/40",
+                "end": "23/8",
+                "array_rate": "3/5"
+              },
+              {
+                "start": "117/40",
+                "end": "17/5",
+                "array_rate": "3/5"
+              }
+            ]
+          }
+        ]
+      },
+      "enumerated_reference": {
+        "Q": 0.12433714914786183,
+        "states": 257,
+        "max_mass_drift": 1.3322676295501878e-15,
+        "min_probability": 0.0,
+        "precision": "float64 cross-check, not the certificate",
+        "difference_from_certified_midpoint": 2.0816681711721685e-16
+      },
+      "MC": {
+        "trials": 200000,
+        "events_Q": 24729,
+        "Q_MC": 0.123645,
+        "CI_95_pointwise": [
+          0.12220531013699815,
+          0.12509560767979425
+        ],
+        "confidence_procedure": "two-sided equal-tailed Clopper-Pearson",
+        "seed_entropy": [
+          2026101501,
+          7
+        ],
+        "bit_generator": "PCG64",
+        "generated_arrivals": 544037,
+        "absorbing_event": "ever Hamming weight>1, retained after writes"
+      },
+      "differences": {
+        "exact_minus_L": {
+          "lower": "0.034701819634689844392875686882817978",
+          "upper": "0.034701819634689844392875686882817980",
+          "midpoint": "0.0347018196346898443928756868828179790",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_exact": {
+          "lower": "0.019495743480343094301961033413518337",
+          "upper": "0.019495743480343094301961033413518339",
+          "midpoint": "0.0194957434803430943019610334135183380",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "U_minus_L": {
+          "lower": "0.054197563115032938694836720296336316",
+          "upper": "0.054197563115032938694836720296336318",
+          "midpoint": "0.0541975631150329386948367202963363170",
+          "absolute_error": "0.0000000000000000000000000000000000010"
+        },
+        "L_relative_shortfall": 0.2790945415148803,
+        "U_relative_excess": 0.15679741423988022,
+        "width_relative_to_exact": 0.43589195575476053,
+        "MC_absolute_difference": "0.0006921491478620339",
+        "MC_relative_difference": 0.005566712383271137,
+        "exact_in_pointwise_CI": true
+      }
+    }
+  ]
+}

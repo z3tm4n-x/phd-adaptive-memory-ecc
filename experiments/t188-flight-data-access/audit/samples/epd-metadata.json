@@ -1,0 +1,280 @@
+{
+  "H_Bins_Text": [
+    "7.0450 - 7.3540 MeV",
+    "7.3540 - 7.8900 MeV",
+    "7.8900 - 8.4840 MeV",
+    "8.4840 - 9.1840 MeV",
+    "9.1840 - 9.6410 MeV",
+    "10.6000 - 10.7400 MeV",
+    "10.7400 - 10.9800 MeV",
+    "10.9800 - 11.3500 MeV",
+    "11.3500 - 11.8000 MeV",
+    "11.8000 - 12.4300 MeV",
+    "12.4300 - 13.6800 MeV",
+    "13.6800 - 14.6100 MeV",
+    "14.6100 - 15.6500 MeV",
+    "15.6500 - 16.8200 MeV",
+    "16.8200 - 18.2000 MeV",
+    "18.2000 - 19.6500 MeV",
+    "19.6500 - 21.2400 MeV",
+    "21.2400 - 23.1200 MeV",
+    "23.1200 - 25.0900 MeV",
+    "25.0900 - 27.2000 MeV",
+    "27.2000 - 29.4400 MeV",
+    "29.4400 - 31.9700 MeV",
+    "31.9700 - 34.8800 MeV",
+    "34.8800 - 37.9000 MeV",
+    "37.9000 - 41.1800 MeV",
+    "41.1800 - 44.9900 MeV",
+    "44.9900 - 49.0700 MeV",
+    "49.0700 - 53.3800 MeV",
+    "53.3800 - 58.0300 MeV",
+    "58.0300 - 63.1000 MeV",
+    "63.1000 - 68.9700 MeV",
+    "68.9700 - 75.1100 MeV",
+    "75.1100 - 81.6400 MeV",
+    "81.6400 - 89.4600 MeV",
+    "89.4600 - 97.6300 MeV",
+    "97.6300 - 104.9000 MeV"
+  ],
+  "global": {
+    "Acknowledgement": [
+      "See http://espada.uah.es/epd/EPD_data.php"
+    ],
+    "Data_product": [
+      "RATES>Rates"
+    ],
+    "Data_type": [
+      "L2>Level 2 Data"
+    ],
+    "Data_version": [
+      "01"
+    ],
+    "Descriptor": [
+      "EPD-HET-SUN-RATES>Energetic Particle Detector, High Energy Telescope, Sun direction, Rates"
+    ],
+    "Discipline": [
+      "Space Physics>Interplanetary Studies"
+    ],
+    "Generated_by": [
+      "Space Research Group, Universidad de Alcala"
+    ],
+    "Generation_date": [
+      "2022-11-20T02:36:12"
+    ],
+    "HTTP_LINK": [
+      "http://espada.uah.es/epd/EPD_data.php"
+    ],
+    "Instrument_type": [
+      "Particles (space)"
+    ],
+    "LEVEL": [
+      "L2>Level 2 Data"
+    ],
+    "Logical_file_id": [
+      "solo_L2_epd-het-sun-rates_20220904_V01"
+    ],
+    "Logical_source": [
+      "solo_L2_epd-het-sun-rates"
+    ],
+    "Logical_source_description": [
+      "Solar Orbiter, Level 2 Data, Energetic Particle Detector, High Energy Telescope, Sun direction, Rates"
+    ],
+    "MODS": [
+      " "
+    ],
+    "Mission_group": [
+      "Solar Orbiter"
+    ],
+    "OBS_ID": [
+      "SEPD_080A_000_000_ZwhL_111"
+    ],
+    "PI_affiliation": [
+      "Space Research Group, Universidad de Alcala"
+    ],
+    "PI_name": [
+      "J. Rodriguez-Pacheco"
+    ],
+    "Parents": [
+      "solo_L1_epd-epthet1-nom-close_20220904_V01.cdf",
+      "solo_CAL_epd-epthet1-nom_20210324_V01.cdf"
+    ],
+    "Project": [
+      "SOLO>Solar Orbiter"
+    ],
+    "Rules_of_use": [
+      "See http://espada.uah.es/epd/EPD_data.php"
+    ],
+    "SOOP_TYPE": [
+      " "
+    ],
+    "Software_version": [
+      "01.07.00"
+    ],
+    "Source_name": [
+      "SOLO>Solar Orbiter"
+    ],
+    "TARGET_CLASS": [
+      "interplanetary_medium"
+    ],
+    "TARGET_NAME": [
+      "Sun"
+    ],
+    "TARGET_REGION": [
+      "heliosphere"
+    ],
+    "TEXT": [
+      "Energetic Particle Detector (EPD). Instrument suite, part of the scientific payload aboard the Solar Orbiter mission, dedicated to the study of solar energetic particles. EPD measures electrons, protons and heavy ions with high temporal resolution over a wide energy range, from suprathermal energies to several hundreds of MeV/nucleon. It is composed of four units: SupraThermal Electrons and Protons (STEP), Electron Proton Telescope (EPT), Suprathermal Ion Spectrograph (SIS) and High Energy Telescope (HET).",
+      "https://doi.org/10.1051/0004-6361/201935287"
+    ],
+    "TIME_MAX": [
+      "2459827.500801"
+    ],
+    "TIME_MIN": [
+      "2459826.500801"
+    ]
+  },
+  "variables": {
+    "DELTA_EPOCH": {
+      "CATDESC": "Accumulation period in seconds",
+      "DEPEND_0": "EPOCH",
+      "FIELDNAM": "Delta epoch",
+      "FILLVAL": 4294967295,
+      "FORMAT": "I",
+      "LABLAXIS": "Delta epoch",
+      "SCALEMAX": 3600,
+      "SCALEMIN": 0,
+      "SCALETYP": "linear",
+      "UNITS": "seconds",
+      "VALIDMAX": 3600,
+      "VALIDMIN": 0,
+      "VAR_NOTES": " ",
+      "VAR_TYPE": "support_data"
+    },
+    "EPOCH": {
+      "CADENCE": "5 seconds, 30 seconds",
+      "CATDESC": "Nanoseconds since J2000",
+      "DELTA_PLUS_VAR": "DELTA_EPOCH",
+      "FIELDNAM": "Epoch",
+      "FILLVAL": -9223372036854775808,
+      "LABLAXIS": "Time",
+      "SCALEMAX": 715608069184000000,
+      "SCALEMIN": 715521669184000000,
+      "SCALETYP": "linear",
+      "UNITS": "nanoseconds",
+      "VALIDMAX": 1577880069184000000,
+      "VALIDMIN": -43135816000000,
+      "VAR_NOTES": "Start of acquisition interval. Variable cadence: 30 s in far mode, 5 s in close mode\n",
+      "VAR_TYPE": "support_data"
+    },
+    "H_Bins_Low_Energy": {
+      "CATDESC": "Lowest energy of each bin for hydrogen flux",
+      "DELTA_PLUS_VAR": "H_Bins_Width",
+      "FIELDNAM": "H Bins Low Energy",
+      "FORMAT": "G10.4",
+      "LABLAXIS": "Energy",
+      "LABL_PTR_1": "H_Bins_Text",
+      "SCALEMAX": 97.62999725341797,
+      "SCALEMIN": 7.045000076293945,
+      "SCALETYP": "log",
+      "SI_CONVERSION": "1.602e-13>J",
+      "UNITS": "MeV",
+      "VALIDMAX": 1000000000.0,
+      "VALIDMIN": 9.999999974752427e-07,
+      "VAR_NOTES": " ",
+      "VAR_TYPE": "support_data"
+    },
+    "H_Bins_Text": {
+      "CATDESC": "Text description of each energy bin for hydrogen flux",
+      "FIELDNAM": "H Bins Text",
+      "FORMAT": "A25",
+      "VAR_NOTES": " ",
+      "VAR_TYPE": "metadata"
+    },
+    "H_Bins_Width": {
+      "CATDESC": "Width of each energy bin for hydrogen flux",
+      "FIELDNAM": "H Bins Width",
+      "FORMAT": "G10.4",
+      "LABLAXIS": "Bin width",
+      "SI_CONVERSION": "1.602e-13>J",
+      "UNITS": "MeV",
+      "VALIDMAX": 1000000000.0,
+      "VALIDMIN": 0.0,
+      "VAR_NOTES": " ",
+      "VAR_TYPE": "support_data"
+    },
+    "H_Flux": {
+      "CATDESC": "Hydrogen flux",
+      "DELTA_MINUS_VAR": "H_Uncertainty",
+      "DELTA_PLUS_VAR": "H_Uncertainty",
+      "DEPEND_0": "EPOCH",
+      "DEPEND_1": "H_Bins_Low_Energy",
+      "DISPLAY_TYPE": "spectrogram",
+      "FIELDNAM": "H Flux",
+      "FILLVAL": -9.999999848243207e+30,
+      "FORMAT": "G10.4",
+      "LABLAXIS": "H Flux",
+      "LABL_PTR_1": "H_Bins_Text",
+      "SCALEMAX": 23.41920280456543,
+      "SCALEMIN": 0.04689617455005646,
+      "SCALETYP": "log",
+      "SI_CONVERSION": "6.2415e16>particles/(s m^2 sr J)",
+      "UNITS": "particles / (s cm^2 sr MeV)",
+      "VALIDMAX": 1.0000000200408773e+20,
+      "VALIDMIN": 0.0,
+      "VAR_NOTES": "Bins 1 to 5 correspond to particles stopping in B detector. Bins 6 to 36 correspond to particles stopping in C detector.\n",
+      "VAR_TYPE": "data"
+    },
+    "H_Rate": {
+      "CATDESC": "Hydrogen count rate",
+      "DEPEND_0": "EPOCH",
+      "DEPEND_1": "H_Bins_Low_Energy",
+      "DISPLAY_TYPE": "spectrogram",
+      "FIELDNAM": "H Count Rate",
+      "FILLVAL": -9.999999848243207e+30,
+      "FORMAT": "G10.4",
+      "LABLAXIS": "H Count Rate",
+      "LABL_PTR_1": "H_Bins_Text",
+      "SCALEMAX": 0.6000000238418579,
+      "SCALEMIN": 0.10000000149011612,
+      "SCALETYP": "log",
+      "UNITS": "counts / s",
+      "VALIDMAX": 1.0000000200408773e+20,
+      "VALIDMIN": 0.0,
+      "VAR_NOTES": " ",
+      "VAR_TYPE": "support_data"
+    },
+    "QUALITY_BITMASK": {
+      "CATDESC": "Computer readable quality parameter",
+      "DEPEND_0": "EPOCH",
+      "FIELDNAM": "Quality bitmask",
+      "FILLVAL": 65535,
+      "FORMAT": "Z4",
+      "LABLAXIS": "Quality bitmask",
+      "SCALEMAX": 32767,
+      "SCALEMIN": 0,
+      "SCALETYP": "linear",
+      "UNITS": " ",
+      "VALIDMAX": 32767,
+      "VALIDMIN": 0,
+      "VAR_NOTES": "0x1: Bad value, 0x2: Close mode, 0x4: High flux mode\n",
+      "VAR_TYPE": "support_data"
+    },
+    "QUALITY_FLAG": {
+      "CATDESC": "Data quality flag",
+      "DEPEND_0": "EPOCH",
+      "FIELDNAM": "Quality flag",
+      "FILLVAL": 255,
+      "FORMAT": "I",
+      "LABLAXIS": "Quality flag",
+      "SCALEMAX": 4,
+      "SCALEMIN": 0,
+      "SCALETYP": "linear",
+      "UNITS": " ",
+      "VALIDMAX": 4,
+      "VALIDMIN": 0,
+      "VAR_NOTES": "0:Bad, 1:Known problems, 2:Survey data, 3:Good, 4:Excellent",
+      "VAR_TYPE": "support_data"
+    }
+  }
+}

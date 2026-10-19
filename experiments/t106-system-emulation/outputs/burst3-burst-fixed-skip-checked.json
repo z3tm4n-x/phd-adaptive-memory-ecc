@@ -1,0 +1,93 @@
+{
+  "scope": "complete frozen scenario2, digital model ONLY",
+  "original_frozen_input_commit": "f68b335",
+  "runner_protocol": "POSTPROCESSING.md",
+  "results": {
+    "mode": "fixed",
+    "scenario": "burst",
+    "horizon_ns": 363900000000000,
+    "pin_edges_checked": 307678976,
+    "explicit_operations": 12816902,
+    "represented_operations": 1856619836160,
+    "unfinished_operations": 1,
+    "completed_operations": 1856632653062,
+    "calendar_slots": 1856632653063,
+    "empty_blocks": 10458,
+    "represented_services": 0,
+    "programs_checked": 0,
+    "err_events": 5237,
+    "history_events": 5237,
+    "loss_publication_relative_ns": [],
+    "physical_alias_writes": 5237,
+    "bus_work_ns": 170810204375016,
+    "mean_bus_fraction": 0.4693877559082605,
+    "peak_any_1ms_fraction": 0.469568,
+    "peak_window_start_relative_ns": 1852174973152,
+    "permissions": [],
+    "model_full_service_ns": null,
+    "hardware_ARM_time_ns": null,
+    "whole_mission_Q_inferred": false,
+    "injections": 5237,
+    "memory_samples_checked": 12816902,
+    "full_domain_state_checked": true,
+    "first_exceedance_relative_ns": null,
+    "remaining_error_positions": 0,
+    "application_completed": 0,
+    "max_credits": 0,
+    "application_work_ns": {
+      "read": 0,
+      "write": 0
+    },
+    "control_corrective_extra_ns": 293272,
+    "max_application_delay_ns": null,
+    "read_results": [],
+    "logical_data_words_changed": 0,
+    "never_written_words": 524288,
+    "CPU": {
+      "ARM_instructions_including_boot": 14226,
+      "ARM_instructions_runtime": 0,
+      "completed_driver_visits": 3,
+      "represented_full_services": 0,
+      "represented_driver_visits": 0,
+      "represented_MMIO_reads": 0,
+      "represented_MMIO_writes": 0,
+      "represented_ISA_count": null,
+      "MMIO": {
+        "boot_read": 4
+      },
+      "actual_ARM_time_ns": null
+    }
+  },
+  "raw_trace_sha256": "8a3f2d580442caa3e80d8c488be0e47e574d02ffc1b162896361e4e58e189010",
+  "sha256": {
+    "experiments/t106-system-emulation/outputs/burst3-burst-fixed-skip.json": "20bc3e5f15f4deff662a4ccb6d7493d2d3605d6e450bff53b119ad7bcbedfd1f",
+    "experiments/t106-system-emulation/outputs/burst3-burst-fixed-skip.trace.ct3": "6d9c520740a3e0f52be89452fe422c3a4859d4ba9736d2f95495091a841cfa9b",
+    "experiments/t106-system-emulation/check_burst.py": "24c205824c0a067824224520ad05f5826474a4e107024816c0148b8cad94c332",
+    "experiments/t106-system-emulation/burst_codec.py": "116073d847e6e19c62a321f4174228c0169c6915ef173e535d8a9f617ff4cec2",
+    "experiments/t106-system-emulation/trace_codec.py": "1cddbbdd5e86dc915bbc91e1bd84bb26b925f7d9550121f8632d6a4346ba7dc3",
+    "experiments/t106-system-emulation/burst_price.py": "a6b92c13699801b066ea50ed8719123b176005ef1ef5327c0f1fb599d31c9d9c",
+    "experiments/t106-system-emulation/trace_pipeline_v3.py": "585171a72af0cdf5461a1b33339265f7cfcd6265843fe7c0d2741397176c6457",
+    "experiments/t106-system-emulation/verify_burst_v3.py": "d81d2b4f5754f86b6fde51f43d7399c1fb773a7e0c91f57b6e5c43868ad33dd4",
+    "experiments/t106-system-emulation/BURST_SCALE.md": "59805e1b1c0874f4ced65c0fa44fb614cb582b81fd18c9b493ee44e25424a03d",
+    "experiments/t106-system-emulation/BURST_REPAIR.md": "423fa16bd79282027281fe1e1e257a84aece3381168b7fe8b1bd0e869fe3fa6a",
+    "experiments/t106-system-emulation/POSTPROCESSING.md": "287ce72c166a21865596f4cc58d9e34bc13f600b261e9ab36f9299e1db52122f",
+    "experiments/t106-system-emulation/report_guard.py": "5ac294b3452b9b271056bfec2c3e10ed158f7ff24ec32a8ec7981af4d9091ddf"
+  },
+  "shared_dependencies": [
+    "birth-labelled Memory and ETransaction",
+    "absolute raw rule Oracle",
+    "unchanged generic CT2/CT3 token coding and decoder",
+    "row audit wrapper changes neither order nor fields; no model row reconstruction"
+  ],
+  "integrity": {
+    "original_records": 371794900,
+    "original_stream_hash_checked_during_scientific_replay": true,
+    "complete_EOF_checked": true
+  },
+  "not_claimed": [
+    "hardware ARM time/WCET",
+    "mission Q(T)",
+    "physical response calibration",
+    "scientific acceptance"
+  ]
+}

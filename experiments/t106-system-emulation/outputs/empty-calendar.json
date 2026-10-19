@@ -1,0 +1,60 @@
+{
+  "scope": "component; full-W RTL clocked literally; not integrated mission",
+  "rows": [
+    {
+      "word_bits": 3,
+      "slots_compared": 1032,
+      "freeze_transitions": 1030,
+      "executed_FAST": 1032,
+      "executed_LOW": 349,
+      "end_ns": 201944,
+      "hash_fast": "a46f88f1",
+      "hash_low": "f3852724",
+      "RTL_log_sha256": "a96e3057f251e754cdda4a5d68a125fd56ea2d15f6844224fd7ee3579f9cd6b1"
+    },
+    {
+      "word_bits": 4,
+      "slots_compared": 1040,
+      "freeze_transitions": 1038,
+      "executed_FAST": 1040,
+      "executed_LOW": 357,
+      "end_ns": 203512,
+      "hash_fast": "258f45bb",
+      "hash_low": "8f3010c5",
+      "RTL_log_sha256": "d43cb462c65c36012ec52b273400656ba257bf229de068b09506a773b01df6b3"
+    },
+    {
+      "word_bits": 19,
+      "slots_compared": 525312,
+      "freeze_transitions": 525310,
+      "executed_FAST": 525312,
+      "executed_LOW": 524629,
+      "end_ns": 102960824,
+      "hash_fast": "a2c0bfc7",
+      "hash_low": "f52a1012",
+      "RTL_log_sha256": "51cc8fb70329064102422bccc4b89a30f52f8f54aeed3b296c2458a97c91b4a4"
+    }
+  ],
+  "steady_clean_peak_1ms": {
+    "FAST": {
+      "occupied_ns": 469512,
+      "window_start_ns": 1000001408,
+      "window_ns": 1000000,
+      "fraction": 0.469512
+    },
+    "LOW": {
+      "occupied_ns": 156528,
+      "window_start_ns": 1000004544,
+      "window_ns": 1000000,
+      "fraction": 0.156528
+    }
+  },
+  "source_sha256": {
+    "experiments/t104-rtl-resume/physical/frame_engine.sv": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+    "experiments/t106-system-emulation/tb_empty_calendar.sv": "49424d81c9e363593637d05e79d86544c3821ef97665ce07b925025fa6bc97bc",
+    "experiments/t106-system-emulation/empty_time.py": "51c0fa81638ec86695ebf447d59334a84f9cbe61bd5898bc6453e63a063ee5d9",
+    "experiments/t106-system-emulation/verify_empty_calendar.py": "cf1957755ad02ce8ba19c154c6d0849fffad502d66aeee40086e28fd4de3934d"
+  },
+  "physical_ARM_time_ns": null,
+  "new_STA": false
+}

@@ -1,0 +1,217 @@
+{
+  "scope": "empty rule transition only; no claim of complete accelerated arm_executor",
+  "full_timers": {
+    "NW": 4500045002,
+    "NH": 9000090002,
+    "NR": 9015504896
+  },
+  "literal_packets": 631209,
+  "cases": [
+    {
+      "case": "full_initial_NR",
+      "literal_packets": 180316,
+      "last_rule": [
+        9015619685,
+        0,
+        0,
+        0,
+        0,
+        0,
+        35,
+        0
+      ],
+      "last_decision": [
+        180317,
+        0,
+        9015619685,
+        1,
+        695513333
+      ],
+      "macro": {
+        "before": "01000000000000000000000000000000000000000000000000000000000000000000000000000000ffaf5d1902000000230000000000000001000000000000000000000000000000",
+        "after": "65705f19020000000000000000000000000000000000000000000000000000000000000000000000000000000000000023000000000000005dc00200000000000000000000000000",
+        "decision": "5dc0020000000000000000000000000065705f190200000001000000f5b07429",
+        "packets": 180316,
+        "step_slow_ticks": 49999,
+        "represented_elapsed_ns": 180312393680
+      }
+    },
+    {
+      "case": "single_ERR_NW",
+      "literal_packets": 90005,
+      "last_rule": [
+        4500160095,
+        1,
+        50,
+        0,
+        0,
+        4515344801,
+        39,
+        0
+      ],
+      "last_decision": [
+        90006,
+        1,
+        9015504896,
+        1,
+        3272395811
+      ],
+      "macro": {
+        "before": "640000000000000001000000000000003200000000000000703c390c0100000000000000000000009caf5d1902000000270000000000000001000000000000000000000000000000",
+        "after": "5ffe3a0c010000000100000000000000320000000000000000000000000000000000000000000000a1b1220d010000002700000000000000965f0100000000000000000000000000",
+        "decision": "965f010000000000010000000000000000b05d19020000000100000023cc0cc3",
+        "packets": 90005,
+        "step_slow_ticks": 49999,
+        "represented_elapsed_ns": 90003199900
+      }
+    },
+    {
+      "case": "paired_ERR_NH",
+      "literal_packets": 180008,
+      "last_rule": [
+        9000220092,
+        2,
+        55,
+        0,
+        0,
+        15284804,
+        39,
+        0
+      ],
+      "last_decision": [
+        180009,
+        2,
+        9015504896,
+        1,
+        3761645198
+      ],
+      "macro": {
+        "before": "640000000000000002000000000000003700000000000000713c390c0100000039797218020000009caf5d1902000000270000000000000001000000000000000000000000000000",
+        "after": "bc757418020000000200000000000000370000000000000000000000000000000000000000000000443ae90000000000270000000000000029bf0200000000000000000000000000",
+        "decision": "29bf020000000000020000000000000000b05d1902000000010000008e2636e0",
+        "packets": 180008,
+        "step_slow_ticks": 49999,
+        "represented_elapsed_ns": 180004399840
+      }
+    },
+    {
+      "case": "loss_still_present",
+      "literal_packets": 500,
+      "last_rule": [
+        24999600,
+        1,
+        0,
+        0,
+        0,
+        8990505296,
+        34,
+        0
+      ],
+      "last_decision": [
+        501,
+        1,
+        0,
+        0,
+        379118903
+      ],
+      "macro": {
+        "before": "640000000000000001000000000000000000000000000000000000000000000000000000000000009caf5d1902000000220000000000000001000000000000000000000000000000",
+        "after": "b0767d010000000001000000000000000000000000000000000000000000000000000000000000005039e017020000002200000000000000f5010000000000000000000000000000",
+        "decision": "f501000000000000010000000000000000000000000000000000000037e59816",
+        "packets": 500,
+        "step_slow_ticks": 49999,
+        "represented_elapsed_ns": 499990000
+      }
+    },
+    {
+      "case": "recovery_NR",
+      "literal_packets": 180316,
+      "last_rule": [
+        9015619784,
+        2,
+        0,
+        0,
+        0,
+        0,
+        35,
+        0
+      ],
+      "last_decision": [
+        180317,
+        2,
+        9015619784,
+        1,
+        98792335
+      ],
+      "macro": {
+        "before": "64000000000000000200000000000000000000000000000000000000000000000000000000000000a7af5d1902000000230000000000000001000000000000000000000000000000",
+        "after": "c8705f19020000000200000000000000000000000000000000000000000000000000000000000000000000000000000023000000000000005dc00200000000000000000000000000",
+        "decision": "5dc00200000000000200000000000000c8705f1902000000010000008f73e305",
+        "packets": 180316,
+        "step_slow_ticks": 49999,
+        "represented_elapsed_ns": 180312393680
+      }
+    },
+    {
+      "case": "ERR_on_cut",
+      "literal_packets": 64,
+      "last_rule": [
+        3200036,
+        1,
+        500,
+        4496845066,
+        0,
+        9012304860,
+        39,
+        0
+      ],
+      "last_decision": [
+        65,
+        1,
+        9015504896,
+        1,
+        1615204795
+      ],
+      "macro": {
+        "before": "64000000000000000100000000000000f401000000000000ca3c390c0100000000000000000000009caf5d1902000000370000000000000001000000000000000000000000000000",
+        "after": "24d43000000000000100000000000000f4010000000000000a69080c010000000000000000000000dcdb2c1902000000270000000000000041000000000000000000000000000000",
+        "decision": "4100000000000000010000000000000000b05d190200000001000000bb114660",
+        "packets": 64,
+        "step_slow_ticks": 49999,
+        "represented_elapsed_ns": 63998720
+      }
+    }
+  ],
+  "literal_prefixes_checked_against_raw_oracle": 631209,
+  "compressed_endpoint_comparisons": 6,
+  "mutants_rejected": [
+    "full_initial_NR/lost-sequence",
+    "single_ERR_NW/lost-sequence",
+    "paired_ERR_NH/lost-sequence",
+    "loss_still_present/lost-sequence",
+    "recovery_NR/lost-sequence",
+    "ERR_on_cut/lost-sequence",
+    "cleared-startup-hold"
+  ],
+  "ARM_time_ns": null,
+  "full_service_upper_ns": null,
+  "source_sha256": {
+    "experiments/t106-system-emulation/empty_rule.py": "b62d2b3858accb97f94bec16c3ed956576a90217d2cd0be330e7239dfeb47b44",
+    "experiments/t106-system-emulation/verify_empty_rule.py": "fcacde1ee0f2f5c14f1e68b17362654fb89d0b1ac60fe55d692e1bccb675d688",
+    "experiments/t105-arm-rule/rule.c": "bf27728f7735a94bd1e9ef7586d4ff78323c6c93faa4c874ea788135fa27a933",
+    "experiments/t105-arm-rule/batch.c": "2d1e7253b9ede2f8133492c117e77edbfb4a4da82be73729fc87275025ec4186",
+    "experiments/t105-arm-rule/crc32.c": "a2a3e38c714bcc3f883936eb363abf164d182f0ebe9b5923302836b1af204e06",
+    "experiments/t105-arm-rule/rule.h": "f281f370332de201af89b314b5cf9dca68dd39ae3bb626176a755d6bec1a4b8b",
+    "experiments/t105-arm-rule/batch.h": "c266e71b2f1a8f9596e4205282737a97f7bcd83170e3e8edc2facba2dc2cc709",
+    "experiments/t105-arm-rule/batch_model.py": "8502fb047c729cfc1bf52548d64c8bb324571e046f7837166a468729f54ccfc8",
+    "experiments/t105-arm-rule/oracle.py": "b47a848ad6d9bde7145a4d03b928646ea591573b377f4fdd2099bb974008253e"
+  },
+  "vector_sha256": "a99fa7f86e6b4dcc1f650c38d11c64ae361d5709960f1264f9498c170b6d19c4",
+  "ELF": {
+    "vectors": 41,
+    "executed_ISA": 19192,
+    "max_function_pair_ISA": 536,
+    "firmware_sha256": "2daf3308d167b71f2c65f21dfd5b9acde00e93fe5f1cc3ada8581d50d254fb09",
+    "scope": "actual accepted ELF functions; not driver, cold startup, MMIO or ARM time"
+  }
+}

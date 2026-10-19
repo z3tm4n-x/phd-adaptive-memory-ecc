@@ -1,0 +1,74 @@
+{
+  "status": "clean-snapshot replay verified; OWN RESULT / pending independent review",
+  "commit": "06509cf85c9559ce3ae1881354d493a2c45e3ded",
+  "command": "python -B experiments/t186-method-comparison/stage3/reproduce.py --skip-benchmark",
+  "checks": 32,
+  "rows": 75,
+  "deterministic_outputs": [
+    {
+      "file": "validation.json",
+      "byte_identical": true,
+      "sha256": "e4654665881d9a20eaa7b8b8443f471202c06bcfd316d1f8ece345c55fc9cba4"
+    },
+    {
+      "file": "results.json",
+      "byte_identical": true,
+      "sha256": "70777f115de6d3ca649b1f57f1fe8250c679f295881c06a0f6e2227dbac59c5e"
+    },
+    {
+      "file": "inputs.json",
+      "byte_identical": true,
+      "sha256": "437e5b37c3abdb278b3d4ac8b297197977501192d6b99081511095610acf3e18"
+    },
+    {
+      "file": "resources.json",
+      "byte_identical": true,
+      "sha256": "c76bc77c8b0360da5b2e8e63898037bb05cbfadee4040eee227e36bd09bb8d27"
+    },
+    {
+      "file": "table.md",
+      "byte_identical": true,
+      "sha256": "ec6330da2c59a80b2bbb3da23d11ba33c7dd7df88f36d20cbb80b9b093491254"
+    }
+  ],
+  "provenance": {
+    "working_dependencies": 17,
+    "documentary_snapshots": 28,
+    "plan_commit": "42f839b827b91019c335a40e3ab1dcea8990de15"
+  },
+  "negative_and_documentary_checks": {
+    "live_STATUS_change_does_not_replace_documentary_snapshot": true,
+    "changed_computational_source_rejected": true
+  },
+  "working_tree_before": "",
+  "working_tree_after": "",
+  "timing": 83.40977379999822,
+  "environment": {
+    "command": [
+      "experiments/t186-method-comparison/stage3/reproduce.py",
+      "--skip-benchmark"
+    ],
+    "git_head": "06509cf85c9559ce3ae1881354d493a2c45e3ded",
+    "logical_CPUs": 8,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "result_manifest": {
+      "inputs.json": "437e5b37c3abdb278b3d4ac8b297197977501192d6b99081511095610acf3e18",
+      "resources.json": "c76bc77c8b0360da5b2e8e63898037bb05cbfadee4040eee227e36bd09bb8d27",
+      "results.json": "70777f115de6d3ca649b1f57f1fe8250c679f295881c06a0f6e2227dbac59c5e",
+      "table.md": "ec6330da2c59a80b2bbb3da23d11ba33c7dd7df88f36d20cbb80b9b093491254",
+      "validation.json": "e4654665881d9a20eaa7b8b8443f471202c06bcfd316d1f8ece345c55fc9cba4"
+    },
+    "source_sha256": {
+      "application.py": "adffc500151f4955c777369147702902736947e64e9ad6aa6a312aa3497aac7e",
+      "checks.py": "19812a568d82345d9c4dd57f505390e05498c86e61c68a2123448067e17c3572",
+      "cost.py": "69fa214982b1f7a6a79b0b7a67074e6705e0700e131eba03cf644c631bfb3884",
+      "engine.py": "f75fc1444e1213ee12665e36e8408af7e89c7e1444ee52a39c1324a2c26431fb",
+      "generator.py": "ad5b639c8e4293fc53f84563f01e9fe6308c4c19af557cc1a5c858d002965ce7",
+      "reproduce.py": "2ccb6287c0dfbd53d7561d8aa52089079953c629e523f7c9a2a73778c0f94361",
+      "reuse.py": "145e524b04549643cb6cb1241423893710c63a9333e41cc0724ece701cf7f9f7"
+    }
+  },
+  "benchmark": "not repeated in clean checkout; original three-repeat timing remains separately recorded"
+}

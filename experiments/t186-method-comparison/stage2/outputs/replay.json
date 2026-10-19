@@ -1,0 +1,24 @@
+{
+  "status": "clean snapshot replay verified",
+  "checkpoint_commit": "39a2a28b497fd46ee2de29f1ca546a26470ed726",
+  "checked_utc": "2026-10-18T18:16:11.656956+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "checkout": "local shared clone; pinned committed objects, clean tracked files; no independent reviewer",
+  "command": "python -B experiments/t186-method-comparison/stage2/reproduce.py --skip-benchmark",
+  "deterministic_output_sha256": {
+    "validation.json": "baf110c33f4646a02ef2ab7e17ff5a84f01bdb0a95ff095ed15e661ce43c49f7",
+    "results.json": "4ea33a9dcee8182e21bdec040dbfa6b6fc71847e9046656b7ba8795b37068ea1",
+    "bounds.json": "b62ca1390d09c925eb0e15e6863b078994b2879a6909de5e4b37d8c74b27e4f9",
+    "resources.json": "4451dc5b5f4f7d1f06df03ed0131d688602bb6ad46c269ebdfb0f053fbec1112",
+    "table.md": "89031cc9d6f8096881bd38be2cf5ab55590ce52ab389312c4e014054ab042ee3"
+  },
+  "live_MAP_STATUS_RESEARCH_PLAN_changes_ignored": true,
+  "modified_executable_dependency_rejected": true,
+  "tracked_worktree_clean_before_and_after": true,
+  "provenance": {
+    "working_dependencies": 22,
+    "documentary_snapshots": 25,
+    "live_organization_files_read": false
+  },
+  "benchmark": "original 120 measured runs retained; timing not compared as deterministic"
+}

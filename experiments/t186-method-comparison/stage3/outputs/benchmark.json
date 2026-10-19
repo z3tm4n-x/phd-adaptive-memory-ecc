@@ -1,0 +1,69 @@
+{
+  "budget_s": 120,
+  "elapsed_s": 10.662913399995887,
+  "old_mission": "not run: expected candidates reported, no wall-time extrapolation asserted",
+  "rows": [
+    {
+      "algorithm": "inverse50",
+      "candidate_count": null,
+      "elapsed_s": [
+        0.05220330000156537,
+        0.05158050000318326,
+        0.05247869999584509
+      ],
+      "episode": "s3_rise_fall",
+      "generation": {
+        "event_count": 971,
+        "exponential_draws": 972,
+        "global_thinning_expected_candidates": "21140.585625600",
+        "integrated_intensity": "1012.6156437382749368897601472687673365331225103507",
+        "maximum_inverse_hazard_residual": "1.3E-47",
+        "segments": 5,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "mark_count": 971,
+      "median_s": 0.05220330000156537,
+      "repeat_sha256": "890a164a43534551522b5c79dc9ce56953b95e3a38543668c3107fa0c0cae3f5",
+      "status": "complete"
+    },
+    {
+      "algorithm": "accepted_global_thinning",
+      "candidate_count": 20916,
+      "elapsed_s": [
+        0.01687590000074124,
+        0.016489699999510776,
+        0.016945299998042174
+      ],
+      "episode": "s3_rise_fall",
+      "generation": null,
+      "mark_count": 951,
+      "median_s": 0.01687590000074124,
+      "repeat_sha256": "29c87d35dde4b1c7bc03fc9bbcb47eed047ac99e168797060d854eaf38ff6f85",
+      "status": "complete"
+    },
+    {
+      "algorithm": "inverse50",
+      "candidate_count": null,
+      "elapsed_s": [
+        3.299700399998983,
+        3.3041393000021344,
+        3.292033599995193
+      ],
+      "episode": "s3_mission",
+      "generation": {
+        "event_count": 68764,
+        "exponential_draws": 68765,
+        "global_thinning_expected_candidates": "77215988.997504000",
+        "integrated_intensity": "68805.853866765498737795202945375346730662450207002",
+        "maximum_inverse_hazard_residual": "1E-46",
+        "segments": 81,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "mark_count": 68764,
+      "median_s": 3.299700399998983,
+      "repeat_sha256": "293e036e9abd66a07e53e57d67c644fc001ae8ac67fbaffa09fe844e79dc77f5",
+      "status": "complete"
+    }
+  ],
+  "scope": "Python generation wall time; repeated same seeds check determinism, not fresh MC; different algorithms have different paths"
+}

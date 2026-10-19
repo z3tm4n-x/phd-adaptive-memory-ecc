@@ -1,0 +1,120 @@
+{
+  "inputs": [
+    {
+      "envelope": {
+        "maximum_abs_log_slope_per_s": "0",
+        "rho": "0.048",
+        "scope": "these profiles only; no maximization over full Theta or physical calibration",
+        "solar_budget": "28310.473728",
+        "solar_integral": "0E-9",
+        "total_integrated_intensity": "13.366425600",
+        "within_registered_envelope": true
+      },
+      "episode": "s3_quiet",
+      "generation": {
+        "event_count": 15,
+        "exponential_draws": 16,
+        "global_thinning_expected_candidates": "21140.585625600",
+        "integrated_intensity": "13.366425600",
+        "maximum_inverse_hazard_residual": "1E-49",
+        "segments": 1,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "input_sha256": "b3c054e4b15182c59dc9e13fefd8b96ff72edf6566a5a3b774681cadafefcf4c",
+      "seed": 2026102300
+    },
+    {
+      "envelope": {
+        "maximum_abs_log_slope_per_s": "0.0040923355281795107539405481202643498496777586307227",
+        "rho": "0.048",
+        "scope": "these profiles only; no maximization over full Theta or physical calibration",
+        "solar_budget": "28310.473728",
+        "solar_integral": "646.34140906913746844488007363438366826656125517537",
+        "total_integrated_intensity": "659.70783466913746844488007363438366826656125517537",
+        "within_registered_envelope": true
+      },
+      "episode": "s3_initial_peak",
+      "generation": {
+        "event_count": 640,
+        "exponential_draws": 641,
+        "global_thinning_expected_candidates": "21140.585625600",
+        "integrated_intensity": "659.70783466913746844488007363438366826656125517537",
+        "maximum_inverse_hazard_residual": "1E-47",
+        "segments": 3,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "input_sha256": "c64e409e708c8406d1e226c18bbf6b0fe319f10e0eb73adbc0f91467b4821134",
+      "seed": 2026102301
+    },
+    {
+      "envelope": {
+        "maximum_abs_log_slope_per_s": "0.0040923355281795107539405481202643498496777586307227",
+        "rho": "0.048",
+        "scope": "these profiles only; no maximization over full Theta or physical calibration",
+        "solar_budget": "28310.473728",
+        "solar_integral": "999.2492181382749368897601472687673365331225103507",
+        "total_integrated_intensity": "1012.6156437382749368897601472687673365331225103507",
+        "within_registered_envelope": true
+      },
+      "episode": "s3_rise_fall",
+      "generation": {
+        "event_count": 971,
+        "exponential_draws": 972,
+        "global_thinning_expected_candidates": "21140.585625600",
+        "integrated_intensity": "1012.6156437382749368897601472687673365331225103507",
+        "maximum_inverse_hazard_residual": "1.3E-47",
+        "segments": 5,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "input_sha256": "890a164a43534551522b5c79dc9ce56953b95e3a38543668c3107fa0c0cae3f5",
+      "seed": 2026102302
+    },
+    {
+      "envelope": {
+        "maximum_abs_log_slope_per_s": "0.0040923355281795107539405481202643498496777586307227",
+        "rho": "0.048",
+        "scope": "these profiles only; no maximization over full Theta or physical calibration",
+        "solar_budget": "28310.473728",
+        "solar_integral": "1998.4984362765498737795202945375346730662450207015",
+        "total_integrated_intensity": "2011.8648618765498737795202945375346730662450207015",
+        "within_registered_envelope": true
+      },
+      "episode": "s3_repeat_rise",
+      "generation": {
+        "event_count": 2040,
+        "exponential_draws": 2041,
+        "global_thinning_expected_candidates": "21140.585625600",
+        "integrated_intensity": "2011.8648618765498737795202945375346730662450207015",
+        "maximum_inverse_hazard_residual": "1.2E-47",
+        "segments": 9,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "input_sha256": "23d643675605c131f0a6b2c34fcfb39919e6ea115bf85a500ea213c59b17b922",
+      "seed": 2026102303
+    },
+    {
+      "envelope": {
+        "maximum_abs_log_slope_per_s": "0.0040923355281795107539405481202643498496777586307227",
+        "rho": "0.048",
+        "scope": "these profiles only; no maximization over full Theta or physical calibration",
+        "solar_budget": "28310.473728",
+        "solar_integral": "19984.984362765498737795202945375346730662450207002",
+        "total_integrated_intensity": "68805.853866765498737795202945375346730662450207002",
+        "within_registered_envelope": true
+      },
+      "episode": "s3_mission",
+      "generation": {
+        "event_count": 68764,
+        "exponential_draws": 68765,
+        "global_thinning_expected_candidates": "77215988.997504000",
+        "integrated_intensity": "68805.853866765498737795202945375346730662450207002",
+        "maximum_inverse_hazard_residual": "1E-46",
+        "segments": 81,
+        "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+      },
+      "input_sha256": "293e036e9abd66a07e53e57d67c644fc001ae8ac67fbaffa09fe844e79dc77f5",
+      "seed": 2026102304
+    }
+  ],
+  "scope": "regenerate from frozen seeds and hash; no large generated input copy required"
+}

@@ -1,0 +1,514 @@
+{
+  "status": "complete_digital_evidence_pending_review",
+  "missing": [],
+  "rows": [
+    {
+      "scenario": 1,
+      "mode": "adaptive",
+      "horizon_ns": 272000000000,
+      "mean_bus_fraction": 0.4674446270147059,
+      "peak_any_1ms_fraction": 0.469512,
+      "max_application_delay_ns": null,
+      "completed_operations": 1382010201,
+      "unfinished_operations": 0,
+      "application_completed": 0,
+      "ERR_events": 1,
+      "physical_alias_writes": 1,
+      "bus_work_ns": {
+        "control_base_including_partial": 127144938492,
+        "control_correction_extra": 56,
+        "application_reads": 0,
+        "application_writes": 0,
+        "total": 127144938548
+      },
+      "model_full_service_ns": 188160,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 3918,
+        "ARM_instructions_including_boot": 18144,
+        "completed_driver_visits": 16,
+        "represented_full_services": 1445572,
+        "represented_driver_visits": 2891144,
+        "represented_MMIO_reads": 14455720,
+        "represented_MMIO_writes": 14455720,
+        "MMIO_observed": {
+          "boot_read": 4,
+          "runtime_read": 71,
+          "runtime_write": 60
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 1
+      }
+    },
+    {
+      "scenario": 1,
+      "mode": "fixed",
+      "horizon_ns": 272000000000,
+      "mean_bus_fraction": 0.46938775576470587,
+      "peak_any_1ms_fraction": 0.469568,
+      "max_application_delay_ns": null,
+      "completed_operations": 1387755103,
+      "unfinished_operations": 1,
+      "application_completed": 0,
+      "ERR_events": 1,
+      "physical_alias_writes": 1,
+      "bus_work_ns": {
+        "control_base_including_partial": 127673469512,
+        "control_correction_extra": 56,
+        "application_reads": 0,
+        "application_writes": 0,
+        "total": 127673469568
+      },
+      "model_full_service_ns": null,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 0
+      }
+    },
+    {
+      "scenario": 2,
+      "mode": "adaptive",
+      "horizon_ns": 363900000000000,
+      "mean_bus_fraction": 0.23852568371952734,
+      "peak_any_1ms_fraction": 0.469568,
+      "max_application_delay_ns": null,
+      "completed_operations": 943472782742,
+      "unfinished_operations": 0,
+      "application_completed": 0,
+      "ERR_events": 5237,
+      "physical_alias_writes": 5237,
+      "bus_work_ns": {
+        "control_base_including_partial": 86799496012264,
+        "control_correction_extra": 293272,
+        "application_reads": 0,
+        "application_writes": 0,
+        "total": 86799496305536
+      },
+      "model_full_service_ns": 188160,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 13183031,
+        "ARM_instructions_including_boot": 13197257,
+        "completed_driver_visits": 39138,
+        "represented_full_services": 1933972780,
+        "represented_driver_visits": 3867945560,
+        "represented_MMIO_reads": 19339727800,
+        "represented_MMIO_writes": 19339727800,
+        "MMIO_observed": {
+          "boot_read": 4,
+          "runtime_read": 237569,
+          "runtime_write": 195670
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 1
+      }
+    },
+    {
+      "scenario": 2,
+      "mode": "fixed",
+      "horizon_ns": 363900000000000,
+      "mean_bus_fraction": 0.4693877559082605,
+      "peak_any_1ms_fraction": 0.469568,
+      "max_application_delay_ns": null,
+      "completed_operations": 1856632653062,
+      "unfinished_operations": 1,
+      "application_completed": 0,
+      "ERR_events": 5237,
+      "physical_alias_writes": 5237,
+      "bus_work_ns": {
+        "control_base_including_partial": 170810204081744,
+        "control_correction_extra": 293272,
+        "application_reads": 0,
+        "application_writes": 0,
+        "total": 170810204375016
+      },
+      "model_full_service_ns": null,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 0
+      }
+    },
+    {
+      "scenario": 3,
+      "mode": "adaptive",
+      "horizon_ns": 362000000000,
+      "mean_bus_fraction": 0.46819673491712704,
+      "peak_any_1ms_fraction": 0.469512,
+      "max_application_delay_ns": null,
+      "completed_operations": 1842252370,
+      "unfinished_operations": 0,
+      "application_completed": 0,
+      "ERR_events": 0,
+      "physical_alias_writes": 0,
+      "bus_work_ns": {
+        "control_base_including_partial": 169487218040,
+        "control_correction_extra": 0,
+        "application_reads": 0,
+        "application_writes": 0,
+        "total": 169487218040
+      },
+      "model_full_service_ns": 188160,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 6424,
+        "ARM_instructions_including_boot": 20650,
+        "completed_driver_visits": 25,
+        "represented_full_services": 1923884,
+        "represented_driver_visits": 3847768,
+        "represented_MMIO_reads": 19238840,
+        "represented_MMIO_writes": 19238840,
+        "MMIO_observed": {
+          "boot_read": 4,
+          "runtime_read": 106,
+          "runtime_write": 101
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 1
+      }
+    },
+    {
+      "scenario": 3,
+      "mode": "fixed",
+      "horizon_ns": 362000000000,
+      "mean_bus_fraction": 0.4693877552265193,
+      "peak_any_1ms_fraction": 0.469512,
+      "max_application_delay_ns": null,
+      "completed_operations": 1846938776,
+      "unfinished_operations": 0,
+      "application_completed": 0,
+      "ERR_events": 0,
+      "physical_alias_writes": 0,
+      "bus_work_ns": {
+        "control_base_including_partial": 169918367392,
+        "control_correction_extra": 0,
+        "application_reads": 0,
+        "application_writes": 0,
+        "total": 169918367392
+      },
+      "model_full_service_ns": null,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 0
+      }
+    },
+    {
+      "scenario": 4,
+      "mode": "adaptive",
+      "horizon_ns": 48000000,
+      "mean_bus_fraction": 0.4695925,
+      "peak_any_1ms_fraction": 0.46984,
+      "max_application_delay_ns": 2070,
+      "completed_operations": 244946,
+      "unfinished_operations": 1,
+      "application_completed": 48,
+      "ERR_events": 4,
+      "physical_alias_writes": 51,
+      "bus_work_ns": {
+        "control_base_including_partial": 22530672,
+        "control_correction_extra": 168,
+        "application_reads": 4416,
+        "application_writes": 5184,
+        "total": 22540440
+      },
+      "model_full_service_ns": 188160,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 42763,
+        "ARM_instructions_including_boot": 56989,
+        "completed_driver_visits": 134,
+        "represented_full_services": 190,
+        "represented_driver_visits": 380,
+        "represented_MMIO_reads": 1900,
+        "represented_MMIO_writes": 1900,
+        "MMIO_observed": {
+          "boot_read": 4,
+          "runtime_read": 677,
+          "runtime_write": 650
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 1
+      }
+    },
+    {
+      "scenario": 4,
+      "mode": "fixed",
+      "horizon_ns": 48000000,
+      "mean_bus_fraction": 0.4695925,
+      "peak_any_1ms_fraction": 0.46984,
+      "max_application_delay_ns": 2070,
+      "completed_operations": 244946,
+      "unfinished_operations": 1,
+      "application_completed": 48,
+      "ERR_events": 4,
+      "physical_alias_writes": 51,
+      "bus_work_ns": {
+        "control_base_including_partial": 22530672,
+        "control_correction_extra": 168,
+        "application_reads": 4416,
+        "application_writes": 5184,
+        "total": 22540440
+      },
+      "model_full_service_ns": null,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 0
+      }
+    },
+    {
+      "scenario": 5,
+      "mode": "adaptive",
+      "horizon_ns": 362000000000,
+      "mean_bus_fraction": 0.46910382044198895,
+      "peak_any_1ms_fraction": 0.469784,
+      "max_application_delay_ns": 1930,
+      "completed_operations": 1845821506,
+      "unfinished_operations": 0,
+      "application_completed": 40,
+      "ERR_events": 6,
+      "physical_alias_writes": 38,
+      "bus_work_ns": {
+        "control_base_including_partial": 169815574872,
+        "control_correction_extra": 224,
+        "application_reads": 4232,
+        "application_writes": 3672,
+        "total": 169815583000
+      },
+      "model_full_service_ns": 188160,
+      "first_exceedance_relative_ns": 180600000006,
+      "CPU": {
+        "ARM_instructions_runtime": 42991,
+        "ARM_instructions_including_boot": 57217,
+        "completed_driver_visits": 137,
+        "represented_full_services": 1923828,
+        "represented_driver_visits": 3847656,
+        "represented_MMIO_reads": 19238280,
+        "represented_MMIO_writes": 19238280,
+        "MMIO_observed": {
+          "boot_read": 4,
+          "runtime_read": 712,
+          "runtime_write": 661
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 1
+      }
+    },
+    {
+      "scenario": 5,
+      "mode": "fixed",
+      "horizon_ns": 362000000000,
+      "mean_bus_fraction": 0.469387777679558,
+      "peak_any_1ms_fraction": 0.469784,
+      "max_application_delay_ns": 1930,
+      "completed_operations": 1846938816,
+      "unfinished_operations": 0,
+      "application_completed": 40,
+      "ERR_events": 6,
+      "physical_alias_writes": 38,
+      "bus_work_ns": {
+        "control_base_including_partial": 169918367392,
+        "control_correction_extra": 224,
+        "application_reads": 4232,
+        "application_writes": 3672,
+        "total": 169918375520
+      },
+      "model_full_service_ns": null,
+      "first_exceedance_relative_ns": 180600000006,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 0
+      }
+    }
+  ],
+  "historical_cold_stress": [
+    {
+      "scenario": 4,
+      "mode": "adaptive",
+      "horizon_ns": 1200000,
+      "mean_bus_fraction": 0.47752333333333336,
+      "peak_any_1ms_fraction": 0.479224,
+      "max_application_delay_ns": 2050,
+      "completed_operations": 6171,
+      "unfinished_operations": 0,
+      "application_completed": 48,
+      "ERR_events": 3,
+      "physical_alias_writes": 50,
+      "bus_work_ns": {
+        "control_base_including_partial": 563316,
+        "control_correction_extra": 112,
+        "application_reads": 4416,
+        "application_writes": 5184,
+        "total": 573028
+      },
+      "model_full_service_ns": 161940,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 4669,
+        "ARM_instructions_including_boot": 18895,
+        "completed_driver_visits": 18,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4,
+          "runtime_read": 81,
+          "runtime_write": 70
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 1
+      }
+    },
+    {
+      "scenario": 4,
+      "mode": "fixed",
+      "horizon_ns": 1200000,
+      "mean_bus_fraction": 0.47752333333333336,
+      "peak_any_1ms_fraction": 0.479224,
+      "max_application_delay_ns": 2050,
+      "completed_operations": 6171,
+      "unfinished_operations": 0,
+      "application_completed": 48,
+      "ERR_events": 3,
+      "physical_alias_writes": 50,
+      "bus_work_ns": {
+        "control_base_including_partial": 563316,
+        "control_correction_extra": 112,
+        "application_reads": 4416,
+        "application_writes": 5184,
+        "total": 573028
+      },
+      "model_full_service_ns": null,
+      "first_exceedance_relative_ns": null,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "MMIO_observed": {
+          "boot_read": 4
+        },
+        "represented_ISA_count": null,
+        "actual_ARM_time_ns": null,
+        "CPU_use_fraction_measured": null,
+        "allocated_cores": 0
+      }
+    }
+  ],
+  "common_resources": {
+    "resources_reused_not_resynthesized": {
+      "LUT": 2476.0,
+      "slice_FF": 5442.0,
+      "IOB_FF": 74.0,
+      "ILOGIC": 17.0,
+      "OLOGIC": 41.0,
+      "BRAM36_equiv": 4.5,
+      "BUFG": 3.0,
+      "MMCM": 1.0,
+      "DSP": 0.0
+    },
+    "STA_reused_not_rerun": {
+      "setup_ns": 0.225,
+      "hold_ns": 0.044,
+      "pulse_width_ns": 1.02,
+      "setup_failing_endpoints": 0,
+      "hold_failing_endpoints": 0,
+      "pulse_failing_endpoints": 0
+    },
+    "startup_bytes": 1268,
+    "firmware_bytes": 4244,
+    "OCM_reserved_bytes": 57344
+  },
+  "physical_board_available": null,
+  "actual_ARM_time_ns": null,
+  "ARM_WCET_ns": null,
+  "Q_T_certified_by_emulation": false,
+  "constant": "same PL image, all-slot FAST; no claim of best constant class",
+  "important_scope": [
+    "all numbers calculated in nominal digital model",
+    "main comparison uses model service188160ns; historical cold stress kept separately",
+    "historical cold20us application spacing is outside joint r4; NOT an in-envelope cost",
+    "no application in1/2/3; app delay not applicable, not zero",
+    "different scenarios are not combined into a mission-average gain",
+    "lossless traces independently replayed; source/ABI/tool dependencies declared",
+    "injections continue after first exceedance; no free end drain"
+  ]
+}

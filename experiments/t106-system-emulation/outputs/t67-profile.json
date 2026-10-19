@@ -1,0 +1,1733 @@
+{
+  "event": {
+    "id": "sep_20240608_0255",
+    "kind": "NOAA_catalogue",
+    "onset_utc": "2024-06-08T02:55:00+00:00",
+    "peak_utc": "2024-06-08T08:00:00+00:00",
+    "peak_gt10mev_pfu": 1030.0,
+    "source_row": [
+      "2024 06/08 0255",
+      "2024 06/08 0800",
+      "1030",
+      "13696",
+      "S17W58",
+      "M9.7 06/08 0149",
+      "Yes",
+      "Yes",
+      "N/A",
+      "N/Aa> Flux Plot"
+    ],
+    "catalogue_date_warning": false,
+    "author_dates": [
+      "2024-06-08"
+    ],
+    "analysis_start": "2024-06-06T02:55:00+00:00",
+    "analysis_end_exclusive": "2024-06-10T08:00:00+00:00",
+    "background_start": "2024-06-05T02:55:00+00:00",
+    "holdout": false
+  },
+  "direction": "E",
+  "model": "main_loglog",
+  "mask": "screened",
+  "bins": 6065,
+  "usable_bins": 6065,
+  "missing_intervals_unix_s": [],
+  "source_model": {
+    "bits": 16777216,
+    "Al_mm": 10,
+    "is_R0A_full38_3g_calibration": false
+  },
+  "R0A_normalization": "NOT_APPLIED; no policy comparison on this extraction",
+  "peak_model_per_s": 0.025723463318181403,
+  "integral_valid_model_inversions": 553.9442304099605,
+  "profile_sha256": "bdc6a396abf9a5c4d3b5d987be99f6acf77797d92ee2a46a570c5727c90ffe52",
+  "source_manifest_sha256": "c11b6ec26610c26f16b79d578ae96e0e6a98d6cf1fcd56196f670ed5fc381ce6",
+  "files": [
+    {
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240606_v3-0-2.nc",
+      "name": "sci_sgps-l2-avg1m_g16_d20240606_v3-0-2.nc",
+      "satellite": 16,
+      "cadence_s": 60,
+      "date": "20240606",
+      "version": "3-0-2",
+      "product_prefix": "sci",
+      "selected_version": true,
+      "event_ids": [
+        "sep_20240608_0255"
+      ],
+      "sha256": "34fa220d64c260b7b93fa08ab6db37cc2cba235cb2316cc07fa4425f69e57098",
+      "bytes": 2336833
+    },
+    {
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240607_v3-0-2.nc",
+      "name": "sci_sgps-l2-avg1m_g16_d20240607_v3-0-2.nc",
+      "satellite": 16,
+      "cadence_s": 60,
+      "date": "20240607",
+      "version": "3-0-2",
+      "product_prefix": "sci",
+      "selected_version": true,
+      "event_ids": [
+        "sep_20240608_0255"
+      ],
+      "sha256": "583d86bcc6ef00a295d72c92f6806f829e85f4675bb80dcc726a98746e9d871c",
+      "bytes": 2324848
+    },
+    {
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240608_v3-0-2.nc",
+      "name": "sci_sgps-l2-avg1m_g16_d20240608_v3-0-2.nc",
+      "satellite": 16,
+      "cadence_s": 60,
+      "date": "20240608",
+      "version": "3-0-2",
+      "product_prefix": "sci",
+      "selected_version": true,
+      "event_ids": [
+        "sep_20240608_0255"
+      ],
+      "sha256": "eaa46c00686c3c62c15f7a5096df9dbe08fcac942a237e17c7e5dedd17062263",
+      "bytes": 2685066
+    },
+    {
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240609_v3-0-2.nc",
+      "name": "sci_sgps-l2-avg1m_g16_d20240609_v3-0-2.nc",
+      "satellite": 16,
+      "cadence_s": 60,
+      "date": "20240609",
+      "version": "3-0-2",
+      "product_prefix": "sci",
+      "selected_version": true,
+      "event_ids": [
+        "sep_20240608_0255"
+      ],
+      "sha256": "476db64e1bb672267d3c41e3b72d019c366ca5cfc1d89698163c99a09cffa5f3",
+      "bytes": 2681348
+    },
+    {
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240610_v3-0-2.nc",
+      "name": "sci_sgps-l2-avg1m_g16_d20240610_v3-0-2.nc",
+      "satellite": 16,
+      "cadence_s": 60,
+      "date": "20240610",
+      "version": "3-0-2",
+      "product_prefix": "sci",
+      "selected_version": true,
+      "event_ids": [
+        "sep_20240608_0255"
+      ],
+      "sha256": "cbe77d19963ee94f0d2324d57f4f649f0f63a869527fa16ec2dde86edca0fb88",
+      "bytes": 2617683
+    }
+  ],
+  "adapter_audits": [
+    {
+      "name": "sci_sgps-l2-avg1m_g16_d20240606_v3-0-2.nc",
+      "sha256": "34fa220d64c260b7b93fa08ab6db37cc2cba235cb2316cc07fa4425f69e57098",
+      "bytes": 2336833,
+      "satellite": 16,
+      "cadence_s": 60,
+      "records": 1440,
+      "first_start_utc": "2024-06-06T00:00:00+00:00",
+      "last_end_utc": "2024-06-07T00:00:00+00:00",
+      "date_created": "2024-06-13T05:45:42.338Z",
+      "algorithm_date": "2023-10-19",
+      "signature": "fd6dd17249fa2d7d35d3bfba7e2175b5864a15de846873409b1502ad9c7f1bc1",
+      "processing": {
+        "platform": "g16",
+        "algorithm_version": [
+          3,
+          2
+        ],
+        "L1b_LUT_Filenames": "SeissSgpsCalInrParameters(FM1A_C79RD-C79RC-AlphaR-_DO_09_05_01)-681811285.0.h5",
+        "processing_parameters_file": [
+          "g16_sgps_mx_t1_protons_temp-dep-lut_v3.h5",
+          "g16_sgps_mx_t3_protons_temp-dep-lut_v0.h5"
+        ],
+        "sgps_mx_instrument_id": "FM1",
+        "sgps_px_instrument_id": "FM1",
+        "product_version": "3-0-2",
+        "lower": [
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            24.9,
+            40.3,
+            83.7,
+            99.9,
+            115.0,
+            160.0,
+            276.0
+          ],
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            25.9,
+            41.2,
+            82.9,
+            96.4,
+            114.0,
+            160.0,
+            276.0
+          ]
+        ],
+        "upper": [
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            38.1,
+            73.4,
+            98.5,
+            118.0,
+            143.0,
+            242.0,
+            404.0
+          ],
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            39.1,
+            74.3,
+            99.8,
+            121.0,
+            148.0,
+            242.0,
+            404.0
+          ]
+        ],
+        "energy": [
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            30.800810546875,
+            54.38768359375,
+            90.798953125,
+            108.5734765625,
+            128.2380625,
+            196.773984375,
+            333.92215625
+          ],
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            31.822791015625,
+            55.32775,
+            90.95834375,
+            108.0018515625,
+            129.8922578125,
+            196.773984375,
+            333.92215625
+          ]
+        ],
+        "correction": "published_2024_P1_P5_correction_once",
+        "cadence_s": 60
+      },
+      "effective_energy_geometric_mean_substitution": false,
+      "yaw_ambiguous_rows": 0,
+      "noncadence_steps": 0,
+      "valid_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "strict_values_by_direction_channel": [
+        [
+          0,
+          710,
+          912,
+          1103,
+          1067,
+          680,
+          1248,
+          696,
+          808,
+          220,
+          844,
+          334,
+          640,
+          0
+        ],
+        [
+          81,
+          849,
+          802,
+          1115,
+          992,
+          978,
+          1277,
+          770,
+          875,
+          287,
+          858,
+          547,
+          921,
+          0
+        ]
+      ],
+      "screened_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "quality": {
+        "DiffDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "DiffDQFerrSum": {
+          "flagged": 17826,
+          "missing": 0,
+          "sum": 51952.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "DiffDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "DiffProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b differential protons that were ignored for the purpose of averaging."
+        },
+        "IntDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "IntDQFerrSum": {
+          "flagged": 2880,
+          "missing": 0,
+          "sum": 57275.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "IntDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "IntProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b integral protons that were ignored for the purpose of averaging."
+        }
+      },
+      "expected_lut_not_found": 1.0,
+      "lut_flag_metadata": {
+        "long_name": "A boolean indicator: 1 if all input files' specified lookup tables matched the tables that were used, 0 otherwise.",
+        "_FillValue": 255,
+        "valid_min": 0,
+        "valid_max": 1
+      },
+      "lut_match": true,
+      "g19_P7_P8C_test_period": false,
+      "g18_temperature_dependence_caveat": false,
+      "flux_units": [
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s)"
+      ],
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240606_v3-0-2.nc",
+      "gap_diagnostics": {
+        "direction_median_gamma": {
+          "E": 1.2672598218696283,
+          "W": 1.3383780494428987
+        },
+        "fallback_rows": {
+          "E": 640,
+          "W": 921
+        }
+      }
+    },
+    {
+      "name": "sci_sgps-l2-avg1m_g16_d20240607_v3-0-2.nc",
+      "sha256": "583d86bcc6ef00a295d72c92f6806f829e85f4675bb80dcc726a98746e9d871c",
+      "bytes": 2324848,
+      "satellite": 16,
+      "cadence_s": 60,
+      "records": 1440,
+      "first_start_utc": "2024-06-07T00:00:00+00:00",
+      "last_end_utc": "2024-06-08T00:00:00+00:00",
+      "date_created": "2024-06-14T05:29:07.829Z",
+      "algorithm_date": "2023-10-19",
+      "signature": "fd6dd17249fa2d7d35d3bfba7e2175b5864a15de846873409b1502ad9c7f1bc1",
+      "processing": {
+        "platform": "g16",
+        "algorithm_version": [
+          3,
+          2
+        ],
+        "L1b_LUT_Filenames": "SeissSgpsCalInrParameters(FM1A_C79RD-C79RC-AlphaR-_DO_09_05_01)-681811285.0.h5",
+        "processing_parameters_file": [
+          "g16_sgps_mx_t1_protons_temp-dep-lut_v3.h5",
+          "g16_sgps_mx_t3_protons_temp-dep-lut_v0.h5"
+        ],
+        "sgps_mx_instrument_id": "FM1",
+        "sgps_px_instrument_id": "FM1",
+        "product_version": "3-0-2",
+        "lower": [
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            24.9,
+            40.3,
+            83.7,
+            99.9,
+            115.0,
+            160.0,
+            276.0
+          ],
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            25.9,
+            41.2,
+            82.9,
+            96.4,
+            114.0,
+            160.0,
+            276.0
+          ]
+        ],
+        "upper": [
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            38.1,
+            73.4,
+            98.5,
+            118.0,
+            143.0,
+            242.0,
+            404.0
+          ],
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            39.1,
+            74.3,
+            99.8,
+            121.0,
+            148.0,
+            242.0,
+            404.0
+          ]
+        ],
+        "energy": [
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            30.800810546875,
+            54.38768359375,
+            90.798953125,
+            108.5734765625,
+            128.2380625,
+            196.773984375,
+            333.92215625
+          ],
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            31.822791015625,
+            55.32775,
+            90.95834375,
+            108.0018515625,
+            129.8922578125,
+            196.773984375,
+            333.92215625
+          ]
+        ],
+        "correction": "published_2024_P1_P5_correction_once",
+        "cadence_s": 60
+      },
+      "effective_energy_geometric_mean_substitution": false,
+      "yaw_ambiguous_rows": 0,
+      "noncadence_steps": 0,
+      "valid_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "strict_values_by_direction_channel": [
+        [
+          52,
+          844,
+          1021,
+          1081,
+          1060,
+          660,
+          1243,
+          641,
+          731,
+          236,
+          886,
+          331,
+          680,
+          0
+        ],
+        [
+          81,
+          1084,
+          1035,
+          1164,
+          1001,
+          984,
+          1283,
+          747,
+          849,
+          305,
+          898,
+          574,
+          907,
+          0
+        ]
+      ],
+      "screened_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "quality": {
+        "DiffDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "DiffDQFerrSum": {
+          "flagged": 17062,
+          "missing": 0,
+          "sum": 44172.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "DiffDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "DiffProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b differential protons that were ignored for the purpose of averaging."
+        },
+        "IntDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "IntDQFerrSum": {
+          "flagged": 2880,
+          "missing": 0,
+          "sum": 56927.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "IntDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "IntProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b integral protons that were ignored for the purpose of averaging."
+        }
+      },
+      "expected_lut_not_found": 1.0,
+      "lut_flag_metadata": {
+        "long_name": "A boolean indicator: 1 if all input files' specified lookup tables matched the tables that were used, 0 otherwise.",
+        "_FillValue": 255,
+        "valid_min": 0,
+        "valid_max": 1
+      },
+      "lut_match": true,
+      "g19_P7_P8C_test_period": false,
+      "g18_temperature_dependence_caveat": false,
+      "flux_units": [
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s)"
+      ],
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240607_v3-0-2.nc",
+      "gap_diagnostics": {
+        "direction_median_gamma": {
+          "E": 1.279752004311523,
+          "W": 1.3383763201371184
+        },
+        "fallback_rows": {
+          "E": 680,
+          "W": 907
+        }
+      }
+    },
+    {
+      "name": "sci_sgps-l2-avg1m_g16_d20240608_v3-0-2.nc",
+      "sha256": "eaa46c00686c3c62c15f7a5096df9dbe08fcac942a237e17c7e5dedd17062263",
+      "bytes": 2685066,
+      "satellite": 16,
+      "cadence_s": 60,
+      "records": 1440,
+      "first_start_utc": "2024-06-08T00:00:00+00:00",
+      "last_end_utc": "2024-06-09T00:00:00+00:00",
+      "date_created": "2024-06-15T05:31:57.907Z",
+      "algorithm_date": "2023-10-19",
+      "signature": "fd6dd17249fa2d7d35d3bfba7e2175b5864a15de846873409b1502ad9c7f1bc1",
+      "processing": {
+        "platform": "g16",
+        "algorithm_version": [
+          3,
+          2
+        ],
+        "L1b_LUT_Filenames": "SeissSgpsCalInrParameters(FM1A_C79RD-C79RC-AlphaR-_DO_09_05_01)-681811285.0.h5",
+        "processing_parameters_file": [
+          "g16_sgps_mx_t1_protons_temp-dep-lut_v3.h5",
+          "g16_sgps_mx_t3_protons_temp-dep-lut_v0.h5"
+        ],
+        "sgps_mx_instrument_id": "FM1",
+        "sgps_px_instrument_id": "FM1",
+        "product_version": "3-0-2",
+        "lower": [
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            24.9,
+            40.3,
+            83.7,
+            99.9,
+            115.0,
+            160.0,
+            276.0
+          ],
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            25.9,
+            41.2,
+            82.9,
+            96.4,
+            114.0,
+            160.0,
+            276.0
+          ]
+        ],
+        "upper": [
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            38.1,
+            73.4,
+            98.5,
+            118.0,
+            143.0,
+            242.0,
+            404.0
+          ],
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            39.1,
+            74.3,
+            99.8,
+            121.0,
+            148.0,
+            242.0,
+            404.0
+          ]
+        ],
+        "energy": [
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            30.800810546875,
+            54.38768359375,
+            90.798953125,
+            108.5734765625,
+            128.2380625,
+            196.773984375,
+            333.92215625
+          ],
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            31.822791015625,
+            55.32775,
+            90.95834375,
+            108.0018515625,
+            129.8922578125,
+            196.773984375,
+            333.92215625
+          ]
+        ],
+        "correction": "published_2024_P1_P5_correction_once",
+        "cadence_s": 60
+      },
+      "effective_energy_geometric_mean_substitution": false,
+      "yaw_ambiguous_rows": 0,
+      "noncadence_steps": 0,
+      "valid_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "strict_values_by_direction_channel": [
+        [
+          0,
+          93,
+          162,
+          109,
+          118,
+          63,
+          382,
+          69,
+          73,
+          20,
+          79,
+          32,
+          310,
+          0
+        ],
+        [
+          25,
+          181,
+          189,
+          158,
+          103,
+          112,
+          433,
+          206,
+          75,
+          25,
+          68,
+          42,
+          424,
+          0
+        ]
+      ],
+      "screened_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "quality": {
+        "DiffDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "DiffDQFerrSum": {
+          "flagged": 33889,
+          "missing": 0,
+          "sum": 1344388.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "DiffDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "DiffProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b differential protons that were ignored for the purpose of averaging."
+        },
+        "IntDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "IntDQFerrSum": {
+          "flagged": 2880,
+          "missing": 0,
+          "sum": 60579.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "IntDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "IntProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b integral protons that were ignored for the purpose of averaging."
+        }
+      },
+      "expected_lut_not_found": 1.0,
+      "lut_flag_metadata": {
+        "long_name": "A boolean indicator: 1 if all input files' specified lookup tables matched the tables that were used, 0 otherwise.",
+        "_FillValue": 255,
+        "valid_min": 0,
+        "valid_max": 1
+      },
+      "lut_match": true,
+      "g19_P7_P8C_test_period": false,
+      "g18_temperature_dependence_caveat": false,
+      "flux_units": [
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s)"
+      ],
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240608_v3-0-2.nc",
+      "gap_diagnostics": {
+        "direction_median_gamma": {
+          "E": 1.483532607195174,
+          "W": 1.580207455326689
+        },
+        "fallback_rows": {
+          "E": 310,
+          "W": 424
+        }
+      }
+    },
+    {
+      "name": "sci_sgps-l2-avg1m_g16_d20240609_v3-0-2.nc",
+      "sha256": "476db64e1bb672267d3c41e3b72d019c366ca5cfc1d89698163c99a09cffa5f3",
+      "bytes": 2681348,
+      "satellite": 16,
+      "cadence_s": 60,
+      "records": 1440,
+      "first_start_utc": "2024-06-09T00:00:00+00:00",
+      "last_end_utc": "2024-06-10T00:00:00+00:00",
+      "date_created": "2024-06-16T05:23:34.934Z",
+      "algorithm_date": "2023-10-19",
+      "signature": "fd6dd17249fa2d7d35d3bfba7e2175b5864a15de846873409b1502ad9c7f1bc1",
+      "processing": {
+        "platform": "g16",
+        "algorithm_version": [
+          3,
+          2
+        ],
+        "L1b_LUT_Filenames": "SeissSgpsCalInrParameters(FM1A_C79RD-C79RC-AlphaR-_DO_09_05_01)-681811285.0.h5",
+        "processing_parameters_file": [
+          "g16_sgps_mx_t1_protons_temp-dep-lut_v3.h5",
+          "g16_sgps_mx_t3_protons_temp-dep-lut_v0.h5"
+        ],
+        "sgps_mx_instrument_id": "FM1",
+        "sgps_px_instrument_id": "FM1",
+        "product_version": "3-0-2",
+        "lower": [
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            24.9,
+            40.3,
+            83.7,
+            99.9,
+            115.0,
+            160.0,
+            276.0
+          ],
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            25.9,
+            41.2,
+            82.9,
+            96.4,
+            114.0,
+            160.0,
+            276.0
+          ]
+        ],
+        "upper": [
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            38.1,
+            73.4,
+            98.5,
+            118.0,
+            143.0,
+            242.0,
+            404.0
+          ],
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            39.1,
+            74.3,
+            99.8,
+            121.0,
+            148.0,
+            242.0,
+            404.0
+          ]
+        ],
+        "energy": [
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            30.800810546875,
+            54.38768359375,
+            90.798953125,
+            108.5734765625,
+            128.2380625,
+            196.773984375,
+            333.92215625
+          ],
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            31.822791015625,
+            55.32775,
+            90.95834375,
+            108.0018515625,
+            129.8922578125,
+            196.773984375,
+            333.92215625
+          ]
+        ],
+        "correction": "published_2024_P1_P5_correction_once",
+        "cadence_s": 60
+      },
+      "effective_energy_geometric_mean_substitution": false,
+      "yaw_ambiguous_rows": 0,
+      "noncadence_steps": 0,
+      "valid_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "strict_values_by_direction_channel": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          21,
+          224,
+          129,
+          602,
+          0
+        ],
+        [
+          407,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          21,
+          355,
+          234,
+          849,
+          0
+        ]
+      ],
+      "screened_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "quality": {
+        "DiffDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "DiffDQFerrSum": {
+          "flagged": 34568,
+          "missing": 0,
+          "sum": 1095041.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "DiffDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "DiffProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b differential protons that were ignored for the purpose of averaging."
+        },
+        "IntDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "IntDQFerrSum": {
+          "flagged": 2880,
+          "missing": 0,
+          "sum": 59332.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "IntDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "IntProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b integral protons that were ignored for the purpose of averaging."
+        }
+      },
+      "expected_lut_not_found": 1.0,
+      "lut_flag_metadata": {
+        "long_name": "A boolean indicator: 1 if all input files' specified lookup tables matched the tables that were used, 0 otherwise.",
+        "_FillValue": 255,
+        "valid_min": 0,
+        "valid_max": 1
+      },
+      "lut_match": true,
+      "g19_P7_P8C_test_period": false,
+      "g18_temperature_dependence_caveat": false,
+      "flux_units": [
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s)"
+      ],
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240609_v3-0-2.nc",
+      "gap_diagnostics": {
+        "direction_median_gamma": {
+          "E": 1.2558379031668614,
+          "W": 1.3254122520805498
+        },
+        "fallback_rows": {
+          "E": 602,
+          "W": 849
+        }
+      }
+    },
+    {
+      "name": "sci_sgps-l2-avg1m_g16_d20240610_v3-0-2.nc",
+      "sha256": "cbe77d19963ee94f0d2324d57f4f649f0f63a869527fa16ec2dde86edca0fb88",
+      "bytes": 2617683,
+      "satellite": 16,
+      "cadence_s": 60,
+      "records": 1440,
+      "first_start_utc": "2024-06-10T00:00:00+00:00",
+      "last_end_utc": "2024-06-11T00:00:00+00:00",
+      "date_created": "2024-06-17T05:13:56.373Z",
+      "algorithm_date": "2023-10-19",
+      "signature": "fd6dd17249fa2d7d35d3bfba7e2175b5864a15de846873409b1502ad9c7f1bc1",
+      "processing": {
+        "platform": "g16",
+        "algorithm_version": [
+          3,
+          2
+        ],
+        "L1b_LUT_Filenames": "SeissSgpsCalInrParameters(FM1A_C79RD-C79RC-AlphaR-_DO_09_05_01)-681811285.0.h5",
+        "processing_parameters_file": [
+          "g16_sgps_mx_t1_protons_temp-dep-lut_v3.h5",
+          "g16_sgps_mx_t3_protons_temp-dep-lut_v0.h5"
+        ],
+        "sgps_mx_instrument_id": "FM1",
+        "sgps_px_instrument_id": "FM1",
+        "product_version": "3-0-2",
+        "lower": [
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            24.9,
+            40.3,
+            83.7,
+            99.9,
+            115.0,
+            160.0,
+            276.0
+          ],
+          [
+            0.92,
+            1.8,
+            2.2,
+            3.3,
+            6.3,
+            12.4,
+            25.9,
+            41.2,
+            82.9,
+            96.4,
+            114.0,
+            160.0,
+            276.0
+          ]
+        ],
+        "upper": [
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            38.1,
+            73.4,
+            98.5,
+            118.0,
+            143.0,
+            242.0,
+            404.0
+          ],
+          [
+            1.8,
+            2.2,
+            3.2,
+            6.2,
+            11.7,
+            23.3,
+            39.1,
+            74.3,
+            99.8,
+            121.0,
+            148.0,
+            242.0,
+            404.0
+          ]
+        ],
+        "energy": [
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            30.800810546875,
+            54.38768359375,
+            90.798953125,
+            108.5734765625,
+            128.2380625,
+            196.773984375,
+            333.92215625
+          ],
+          [
+            1.286856635371633,
+            1.98997487421324,
+            2.65329983228432,
+            4.523273151159457,
+            8.58545281275251,
+            16.99764689596769,
+            31.822791015625,
+            55.32775,
+            90.95834375,
+            108.0018515625,
+            129.8922578125,
+            196.773984375,
+            333.92215625
+          ]
+        ],
+        "correction": "published_2024_P1_P5_correction_once",
+        "cadence_s": 60
+      },
+      "effective_energy_geometric_mean_substitution": false,
+      "yaw_ambiguous_rows": 0,
+      "noncadence_steps": 0,
+      "valid_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "strict_values_by_direction_channel": [
+        [
+          57,
+          0,
+          0,
+          4,
+          27,
+          8,
+          6,
+          62,
+          295,
+          125,
+          628,
+          258,
+          648,
+          0
+        ],
+        [
+          32,
+          1,
+          0,
+          0,
+          0,
+          35,
+          2,
+          13,
+          234,
+          136,
+          690,
+          433,
+          867,
+          0
+        ]
+      ],
+      "screened_values_by_direction_channel": [
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ],
+        [
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440,
+          1440
+        ]
+      ],
+      "quality": {
+        "DiffDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "DiffDQFerrSum": {
+          "flagged": 32879,
+          "missing": 0,
+          "sum": 708404.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "DiffDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "DiffProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b differential protons that were ignored for the purpose of averaging."
+        },
+        "IntDQFdtcSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+        },
+        "IntDQFerrSum": {
+          "flagged": 2880,
+          "missing": 0,
+          "sum": 59592.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dynamic error threshold exceeded' flag thrown"
+        },
+        "IntDQFoobSum": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+        },
+        "IntProtonIgnoredL1bDQFs": {
+          "flagged": 0,
+          "missing": 0,
+          "sum": 0.0,
+          "meaning": "Bit mask indicating presence of invalid DQFs in L1b integral protons that were ignored for the purpose of averaging."
+        }
+      },
+      "expected_lut_not_found": 1.0,
+      "lut_flag_metadata": {
+        "long_name": "A boolean indicator: 1 if all input files' specified lookup tables matched the tables that were used, 0 otherwise.",
+        "_FillValue": 255,
+        "valid_min": 0,
+        "valid_max": 1
+      },
+      "lut_match": true,
+      "g19_P7_P8C_test_period": false,
+      "g18_temperature_dependence_caveat": false,
+      "flux_units": [
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s MeV)",
+        "protons/(cm2 sr s)"
+      ],
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/2024/06/sci_sgps-l2-avg1m_g16_d20240610_v3-0-2.nc",
+      "gap_diagnostics": {
+        "direction_median_gamma": {
+          "E": 1.2558378526630465,
+          "W": 1.3271999444597045
+        },
+        "fallback_rows": {
+          "E": 648,
+          "W": 867
+        }
+      }
+    }
+  ],
+  "source_sha256": {
+    "experiments/t106-system-emulation/extract_profile.py": "2a07f068940e748541ed1d2a686cc602311ca7501e2c73a5ff436369db1b8c0c",
+    "experiments/t67-goes-growth/analyze.py": "770ae024ad25d3ae19ef048f3c1217c271a2331d5d582b87da9327d433e11397",
+    "experiments/t67-goes-growth/sgps.py": "fa22bf336275d3482aa76a83154c975fdc7fd9ea34eda5a8a5d48f0d431a9466",
+    "experiments/t67-goes-growth/nc_reader.py": "f88ec452055bdc51470431870e322d1221ea27f00deed457008dd661745bbac4",
+    "experiments/t67-goes-growth/response.py": "c9c97d0a45695168fd372f6957c08d39bbbd54ea1305614c8f74a46065da7201",
+    "experiments/RE-GOES19-PROTON-RATE-01/goes19_adapter.py": "042eedfb3cee28e567c433850fbbc832c7c1704b953ab4b7d709d049398f0abb",
+    "experiments/RE-GOES19-PROTON-RATE-01/rate_pipeline.py": "d3a1a577922a02d1d498146f2c6a6fa3888478b36a823d8d0a89f921d4ad1b52",
+    "experiments/RE-GOES19-PROTON-RATE-01/sigma_model.py": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+    "experiments/RE-CY62167-COVERAGE-THRESHOLD-01/recovery/outputs/radar_transport.npz": "7f006d49c4e469b624db62b84925571c40f0602cfbd0f3b333211521dad60f9e",
+    "experiments/RE-CY62167-PROTON-01/sigma_bit_experimental.csv": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.3.5",
+    "netCDF4": "1.7.4",
+    "netcdf_c": "4.9.3 of Nov 17 2025 14:20:07 $"
+  },
+  "scope": "recovered exact selected T67 event; not new response/transport, not physical calibration or completed scenario2"
+}

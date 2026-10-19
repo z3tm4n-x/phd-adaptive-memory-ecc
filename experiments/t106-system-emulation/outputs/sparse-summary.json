@@ -1,0 +1,813 @@
+{
+  "preregistered_commit": "9d340bb",
+  "scope": "scenario5; prior1/3/4 retained; scenario2 not executed",
+  "results": {
+    "sparse-short-adaptive-literal": {
+      "mode": "adaptive",
+      "scenario": "short",
+      "horizon_ns": 2000000,
+      "pin_edges_checked": 245022,
+      "explicit_operations": 10207,
+      "represented_operations": 0,
+      "unfinished_operations": 0,
+      "completed_operations": 10207,
+      "calendar_slots": 10205,
+      "empty_blocks": 0,
+      "represented_services": 0,
+      "programs_checked": 10,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 2,
+      "bus_work_ns": 939260,
+      "mean_bus_fraction": 0.46963,
+      "peak_any_1ms_fraction": 0.469728,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 4,
+      "memory_samples_checked": 10208,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": null,
+      "remaining_error_positions": 1,
+      "application_completed": 2,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 184,
+        "write": 216
+      },
+      "control_corrective_extra_ns": 0,
+      "max_application_delay_ns": 1450,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 1011460,
+          "data": "12340000"
+        }
+      ],
+      "logical_data_words_changed": 1,
+      "never_written_words": 524287,
+      "CPU": {
+        "ARM_instructions_runtime": 6586,
+        "ARM_instructions_including_boot": 20812,
+        "completed_driver_visits": 25,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 112,
+          "runtime_write": 101
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "sparse-short-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "short",
+      "horizon_ns": 2000000,
+      "pin_edges_checked": 60702,
+      "explicit_operations": 2527,
+      "represented_operations": 7680,
+      "unfinished_operations": 0,
+      "completed_operations": 10207,
+      "calendar_slots": 10205,
+      "empty_blocks": 2,
+      "represented_services": 8,
+      "programs_checked": 4,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 2,
+      "bus_work_ns": 939260,
+      "mean_bus_fraction": 0.46963,
+      "peak_any_1ms_fraction": 0.469728,
+      "peak_window_start_relative_ns": 0,
+      "permissions": [],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 4,
+      "memory_samples_checked": 2528,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": null,
+      "remaining_error_positions": 1,
+      "application_completed": 2,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 184,
+        "write": 216
+      },
+      "control_corrective_extra_ns": 0,
+      "max_application_delay_ns": 1450,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 1011460,
+          "data": "12340000"
+        }
+      ],
+      "logical_data_words_changed": 1,
+      "never_written_words": 524287,
+      "literal_equivalence": {
+        "compared_rows": 73358,
+        "represented_intervals": 2
+      },
+      "CPU": {
+        "ARM_instructions_runtime": 1418,
+        "ARM_instructions_including_boot": 15644,
+        "completed_driver_visits": 9,
+        "represented_full_services": 8,
+        "represented_driver_visits": 16,
+        "represented_MMIO_reads": 80,
+        "represented_MMIO_writes": 80,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 32,
+          "runtime_write": 21
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "sparse-lowprobe-adaptive-no-low": {
+      "mode": "adaptive",
+      "scenario": "lowprobe",
+      "horizon_ns": 180313000000,
+      "pin_edges_checked": 205926,
+      "explicit_operations": 8578,
+      "represented_operations": 919952640,
+      "unfinished_operations": 0,
+      "completed_operations": 919961218,
+      "calendar_slots": 919964287,
+      "empty_blocks": 3,
+      "represented_services": 958284,
+      "programs_checked": 15,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 2,
+      "bus_work_ns": 84636432272,
+      "mean_bus_fraction": 0.4693861910788462,
+      "peak_any_1ms_fraction": 0.469696,
+      "peak_window_start_relative_ns": 180311002816,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180311001056,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015539912
+        ],
+        [
+          180311255624,
+          0,
+          0,
+          0,
+          1,
+          1,
+          13515595096
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 4,
+      "memory_samples_checked": 8579,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": null,
+      "remaining_error_positions": 1,
+      "application_completed": 2,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 184,
+        "write": 216
+      },
+      "control_corrective_extra_ns": 0,
+      "max_application_delay_ns": 1710,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 180312001720,
+          "data": "12340000"
+        }
+      ],
+      "logical_data_words_changed": 1,
+      "never_written_words": 524287,
+      "CPU": {
+        "ARM_instructions_runtime": 7731,
+        "ARM_instructions_including_boot": 21957,
+        "completed_driver_visits": 28,
+        "represented_full_services": 958284,
+        "represented_driver_visits": 1916568,
+        "represented_MMIO_reads": 9582840,
+        "represented_MMIO_writes": 9582840,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 131,
+          "runtime_write": 120
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "sparse-lowprobe-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "lowprobe",
+      "horizon_ns": 180313000000,
+      "pin_edges_checked": 175206,
+      "explicit_operations": 7298,
+      "represented_operations": 919953920,
+      "unfinished_operations": 0,
+      "completed_operations": 919961218,
+      "calendar_slots": 919964287,
+      "empty_blocks": 4,
+      "represented_services": 958288,
+      "programs_checked": 12,
+      "err_events": 1,
+      "history_events": 1,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 2,
+      "bus_work_ns": 84636432272,
+      "mean_bus_fraction": 0.4693861910788462,
+      "peak_any_1ms_fraction": 0.469696,
+      "peak_window_start_relative_ns": 180311002816,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          0,
+          0,
+          9015504933
+        ],
+        [
+          180311001056,
+          0,
+          1,
+          0,
+          0,
+          0,
+          9015539912
+        ],
+        [
+          180311255624,
+          0,
+          0,
+          0,
+          1,
+          1,
+          13515595096
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 4,
+      "memory_samples_checked": 7299,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": null,
+      "remaining_error_positions": 1,
+      "application_completed": 2,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 184,
+        "write": 216
+      },
+      "control_corrective_extra_ns": 0,
+      "max_application_delay_ns": 1710,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 180312001720,
+          "data": "12340000"
+        }
+      ],
+      "logical_data_words_changed": 1,
+      "never_written_words": 524287,
+      "literal_equivalence": {
+        "compared_rows": 212753,
+        "represented_intervals": 4
+      },
+      "CPU": {
+        "ARM_instructions_runtime": 5203,
+        "ARM_instructions_including_boot": 19429,
+        "completed_driver_visits": 20,
+        "represented_full_services": 958288,
+        "represented_driver_visits": 1916576,
+        "represented_MMIO_reads": 9582880,
+        "represented_MMIO_writes": 9582880,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 91,
+          "runtime_write": 80
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "sparse-memory-adaptive-skip": {
+      "mode": "adaptive",
+      "scenario": "memory",
+      "horizon_ns": 362000000000,
+      "pin_edges_checked": 1292936,
+      "explicit_operations": 53826,
+      "represented_operations": 1845767680,
+      "unfinished_operations": 0,
+      "completed_operations": 1845821506,
+      "calendar_slots": 1846938776,
+      "empty_blocks": 46,
+      "represented_services": 1923828,
+      "programs_checked": 112,
+      "err_events": 6,
+      "history_events": 6,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 38,
+      "bus_work_ns": 169815583000,
+      "mean_bus_fraction": 0.46910382044198895,
+      "peak_any_1ms_fraction": 0.469784,
+      "peak_window_start_relative_ns": 2010488,
+      "permissions": [
+        [
+          180310097984,
+          0,
+          1,
+          0,
+          2,
+          2,
+          9015504933
+        ],
+        [
+          180310098092,
+          1,
+          1,
+          0,
+          2,
+          2,
+          9015504933
+        ],
+        [
+          180638587288,
+          0,
+          1,
+          0,
+          2,
+          2,
+          9031919240
+        ],
+        [
+          180638842184,
+          0,
+          0,
+          0,
+          3,
+          3,
+          13531974408
+        ]
+      ],
+      "model_full_service_ns": 188160,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 10,
+      "memory_samples_checked": 53849,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": 180600000006,
+      "remaining_error_positions": 0,
+      "application_completed": 40,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 4232,
+        "write": 3672
+      },
+      "control_corrective_extra_ns": 224,
+      "max_application_delay_ns": 1930,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 1011460,
+          "data": "12340000"
+        },
+        {
+          "id": 3,
+          "word": 400001,
+          "at_ns": 3010660,
+          "data": "a5a31a02"
+        },
+        {
+          "id": 5,
+          "word": 400002,
+          "at_ns": 5011420,
+          "data": "a5a30082"
+        },
+        {
+          "id": 7,
+          "word": 400003,
+          "at_ns": 7010620,
+          "data": "a5341a83"
+        },
+        {
+          "id": 9,
+          "word": 12345,
+          "at_ns": 9011460,
+          "data": "a5a53039"
+        },
+        {
+          "id": 10,
+          "word": 400000,
+          "at_ns": 180500001820,
+          "data": "12340000"
+        },
+        {
+          "id": 11,
+          "word": 400000,
+          "at_ns": 180501000600,
+          "data": "12340000"
+        },
+        {
+          "id": 13,
+          "word": 400001,
+          "at_ns": 180503001380,
+          "data": "a5a31a0c"
+        },
+        {
+          "id": 15,
+          "word": 400002,
+          "at_ns": 180505000580,
+          "data": "a5a30082"
+        },
+        {
+          "id": 17,
+          "word": 400003,
+          "at_ns": 180507001400,
+          "data": "a5341a83"
+        },
+        {
+          "id": 19,
+          "word": 12345,
+          "at_ns": 180509000600,
+          "data": "a5a53039"
+        },
+        {
+          "id": 20,
+          "word": 400000,
+          "at_ns": 271000000640,
+          "data": "12340000"
+        },
+        {
+          "id": 21,
+          "word": 400000,
+          "at_ns": 271001001020,
+          "data": "12340000"
+        },
+        {
+          "id": 23,
+          "word": 400001,
+          "at_ns": 271003001780,
+          "data": "a5a31a16"
+        },
+        {
+          "id": 25,
+          "word": 400002,
+          "at_ns": 271005000980,
+          "data": "a5a30082"
+        },
+        {
+          "id": 27,
+          "word": 400003,
+          "at_ns": 271007001760,
+          "data": "a5341a83"
+        },
+        {
+          "id": 29,
+          "word": 12345,
+          "at_ns": 271009000960,
+          "data": "a5a53039"
+        },
+        {
+          "id": 30,
+          "word": 400000,
+          "at_ns": 361000001920,
+          "data": "12340000"
+        },
+        {
+          "id": 31,
+          "word": 400000,
+          "at_ns": 361001000760,
+          "data": "12340000"
+        },
+        {
+          "id": 33,
+          "word": 400001,
+          "at_ns": 361003001500,
+          "data": "a5a31a20"
+        },
+        {
+          "id": 35,
+          "word": 400002,
+          "at_ns": 361005000700,
+          "data": "a5a30082"
+        },
+        {
+          "id": 37,
+          "word": 400003,
+          "at_ns": 361007001460,
+          "data": "a5341a83"
+        },
+        {
+          "id": 39,
+          "word": 12345,
+          "at_ns": 361009000660,
+          "data": "a5a53039"
+        }
+      ],
+      "logical_data_words_changed": 5,
+      "never_written_words": 524283,
+      "CPU": {
+        "ARM_instructions_runtime": 42991,
+        "ARM_instructions_including_boot": 57217,
+        "completed_driver_visits": 137,
+        "represented_full_services": 1923828,
+        "represented_driver_visits": 3847656,
+        "represented_MMIO_reads": 19238280,
+        "represented_MMIO_writes": 19238280,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4,
+          "runtime_read": 712,
+          "runtime_write": 661
+        },
+        "actual_ARM_time_ns": null
+      }
+    },
+    "sparse-memory-fixed-skip": {
+      "mode": "fixed",
+      "scenario": "memory",
+      "horizon_ns": 362000000000,
+      "pin_edges_checked": 1305176,
+      "explicit_operations": 54336,
+      "represented_operations": 1846884480,
+      "unfinished_operations": 0,
+      "completed_operations": 1846938816,
+      "calendar_slots": 1846938776,
+      "empty_blocks": 45,
+      "represented_services": 0,
+      "programs_checked": 0,
+      "err_events": 6,
+      "history_events": 6,
+      "loss_publication_relative_ns": [],
+      "physical_alias_writes": 38,
+      "bus_work_ns": 169918375520,
+      "mean_bus_fraction": 0.469387777679558,
+      "peak_any_1ms_fraction": 0.469784,
+      "peak_window_start_relative_ns": 2010488,
+      "permissions": [],
+      "model_full_service_ns": null,
+      "hardware_ARM_time_ns": null,
+      "whole_mission_Q_inferred": false,
+      "injections": 10,
+      "memory_samples_checked": 54359,
+      "full_domain_state_checked": true,
+      "first_exceedance_relative_ns": 180600000006,
+      "remaining_error_positions": 0,
+      "application_completed": 40,
+      "max_credits": 1,
+      "application_work_ns": {
+        "read": 4232,
+        "write": 3672
+      },
+      "control_corrective_extra_ns": 224,
+      "max_application_delay_ns": 1930,
+      "read_results": [
+        {
+          "id": 1,
+          "word": 400000,
+          "at_ns": 1011460,
+          "data": "12340000"
+        },
+        {
+          "id": 3,
+          "word": 400001,
+          "at_ns": 3010660,
+          "data": "a5a31a02"
+        },
+        {
+          "id": 5,
+          "word": 400002,
+          "at_ns": 5011420,
+          "data": "a5a30082"
+        },
+        {
+          "id": 7,
+          "word": 400003,
+          "at_ns": 7010620,
+          "data": "a5341a83"
+        },
+        {
+          "id": 9,
+          "word": 12345,
+          "at_ns": 9011460,
+          "data": "a5a53039"
+        },
+        {
+          "id": 10,
+          "word": 400000,
+          "at_ns": 180500001820,
+          "data": "12340000"
+        },
+        {
+          "id": 11,
+          "word": 400000,
+          "at_ns": 180501000600,
+          "data": "12340000"
+        },
+        {
+          "id": 13,
+          "word": 400001,
+          "at_ns": 180503001380,
+          "data": "a5a31a0c"
+        },
+        {
+          "id": 15,
+          "word": 400002,
+          "at_ns": 180505000580,
+          "data": "a5a30082"
+        },
+        {
+          "id": 17,
+          "word": 400003,
+          "at_ns": 180507001400,
+          "data": "a5341a83"
+        },
+        {
+          "id": 19,
+          "word": 12345,
+          "at_ns": 180509000600,
+          "data": "a5a53039"
+        },
+        {
+          "id": 20,
+          "word": 400000,
+          "at_ns": 271000000640,
+          "data": "12340000"
+        },
+        {
+          "id": 21,
+          "word": 400000,
+          "at_ns": 271001001020,
+          "data": "12340000"
+        },
+        {
+          "id": 23,
+          "word": 400001,
+          "at_ns": 271003001780,
+          "data": "a5a31a16"
+        },
+        {
+          "id": 25,
+          "word": 400002,
+          "at_ns": 271005000980,
+          "data": "a5a30082"
+        },
+        {
+          "id": 27,
+          "word": 400003,
+          "at_ns": 271007001760,
+          "data": "a5341a83"
+        },
+        {
+          "id": 29,
+          "word": 12345,
+          "at_ns": 271009000960,
+          "data": "a5a53039"
+        },
+        {
+          "id": 30,
+          "word": 400000,
+          "at_ns": 361000001920,
+          "data": "12340000"
+        },
+        {
+          "id": 31,
+          "word": 400000,
+          "at_ns": 361001000760,
+          "data": "12340000"
+        },
+        {
+          "id": 33,
+          "word": 400001,
+          "at_ns": 361003001500,
+          "data": "a5a31a20"
+        },
+        {
+          "id": 35,
+          "word": 400002,
+          "at_ns": 361005000700,
+          "data": "a5a30082"
+        },
+        {
+          "id": 37,
+          "word": 400003,
+          "at_ns": 361007001460,
+          "data": "a5341a83"
+        },
+        {
+          "id": 39,
+          "word": 12345,
+          "at_ns": 361009000660,
+          "data": "a5a53039"
+        }
+      ],
+      "logical_data_words_changed": 5,
+      "never_written_words": 524283,
+      "CPU": {
+        "ARM_instructions_runtime": 0,
+        "ARM_instructions_including_boot": 14226,
+        "completed_driver_visits": 3,
+        "represented_full_services": 0,
+        "represented_driver_visits": 0,
+        "represented_MMIO_reads": 0,
+        "represented_MMIO_writes": 0,
+        "represented_ISA_count": null,
+        "MMIO": {
+          "boot_read": 4
+        },
+        "actual_ARM_time_ns": null
+      }
+    }
+  },
+  "sha256": {
+    "experiments/t106-system-emulation/outputs/sparse-short-adaptive-literal.json": "bcac16fbb6825e361d1625cfaad330fb6de9969a4020192819cfff4abb965fdd",
+    "experiments/t106-system-emulation/outputs/sparse-short-adaptive-literal.trace.ctz": "0f315ee3aa428ff8e61014583829a934f460b2fc0cd3129860ab073cbaed705a",
+    "experiments/t106-system-emulation/outputs/sparse-short-adaptive-skip.json": "82dda4798f55487609b1191f0bea800fe8b1cca2ba3990868fbc70da6f012de0",
+    "experiments/t106-system-emulation/outputs/sparse-short-adaptive-skip.trace.ctz": "a9c4477324060772e18c0d564fa7a4f8fb7614bc2e5d798a148eb453566ea7ed",
+    "experiments/t106-system-emulation/outputs/sparse-lowprobe-adaptive-no-low.json": "b9447cae7d01adc4c047c23ee666ceeb55fde81baac08c6eb378e2f35c87b2dd",
+    "experiments/t106-system-emulation/outputs/sparse-lowprobe-adaptive-no-low.trace.ctz": "a5c2d1b4e12a8ea0bbd0a910a3548016d6ee8ad16782afb0b25ac40fb07b15fc",
+    "experiments/t106-system-emulation/outputs/sparse-lowprobe-adaptive-skip.json": "bd0dd501df2186b9e495fe6e5c5d3a59f5caa7e713a0b02f9a8aa615286d96af",
+    "experiments/t106-system-emulation/outputs/sparse-lowprobe-adaptive-skip.trace.ctz": "cf8b1e8eae4e0ccf2f331115234277d51d2ae90ae8a5f746190421fac6d32632",
+    "experiments/t106-system-emulation/outputs/sparse-memory-adaptive-skip.json": "30f9591fe229399355138bda7f1605e92ad6153be700e761564b5011a6207ff3",
+    "experiments/t106-system-emulation/outputs/sparse-memory-adaptive-skip.trace.ctz": "886a64dbecb448e18ff723ceb58c79098fa050217c3163581ca827b87c02e8a2",
+    "experiments/t106-system-emulation/outputs/sparse-memory-fixed-skip.json": "161d061cd1f618e0d007612d22870e3bb32a58851d9f1e6a817ccd27461b1ed0",
+    "experiments/t106-system-emulation/outputs/sparse-memory-fixed-skip.trace.ctz": "6654871fd1b1c65c8c48903024ce21fd4ae4ae3e6197413d9b77b50433ee136a",
+    "experiments/t106-system-emulation/SPARSE.md": "57437b6181c84454bc87798ee78c5f5fe231312a2474dabb7fa1dd59599e3622",
+    "experiments/t106-system-emulation/sparse_inputs.py": "a304c1ec28139849cc6005013be102a89e621227d5b776ea31e9f9da889988ed",
+    "experiments/t106-system-emulation/run_sparse.py": "f80086c5ab428da48aea4521258497baae723a5ecd20e28bcb2ddbd4f3594135",
+    "experiments/t106-system-emulation/tb_sparse.sv": "0fd44ef6db03b06c3a3b856ccaa1637c229aade2d00b8e73003f5c17fa2845ae",
+    "experiments/t106-system-emulation/sparse.tcl": "36a0085249ad9f761f3262b352eefce7568bb86c511b44429592e6017a0735a9",
+    "experiments/t106-system-emulation/check_sparse.py": "170a1d4eda1a0a1ba115c45488e1825c903523b179f3c34517459c9544324357",
+    "experiments/t106-system-emulation/trace_codec.py": "1cddbbdd5e86dc915bbc91e1bd84bb26b925f7d9550121f8632d6a4346ba7dc3",
+    "experiments/t106-system-emulation/test_sparse.py": "1aae730283543b0d1c3cb8087ebd8c3d3a54c353a93b53f338dcbabdbc75511f",
+    "experiments/t106-system-emulation/verify_sparse.py": "944bfee9557e67f6bfdc2c855eb370e837200c5b9a73321f9860c69f1fb55b9c"
+  },
+  "shared_dependencies": [
+    "birth-labelled Memory oracle",
+    "ETransaction/ServiceConfig/raw Oracle",
+    "previous exact price integral",
+    "CP15/GIC harness",
+    "ABI/vendor XPM/Unicorn/XSim"
+  ],
+  "not_claimed": [
+    "physical memory qualification",
+    "hardware ARM WCET",
+    "mission Q(T)",
+    "five-scenario completion"
+  ]
+}
