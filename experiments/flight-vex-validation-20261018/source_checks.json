@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-18",
+  "sources": [
+    {
+      "source": "sanchez-cano-2023.pdf",
+      "url": "https://pure.tudelft.nl/ws/portalfiles/portal/157356686/Space_Weather_2023_S_nchez_Cano.pdf",
+      "sha256": "1495b9b71b5604ea9b379c130ae6e8c903be2cd5f7667376077e2f1d9f4b5604",
+      "locator": "S1 sections 2.1, 3 and 3.1; article pp. 4,5,8,9",
+      "action": "Reread existing primary source or metadata; original bytes verified against accepted T188 manifest"
+    },
+    {
+      "source": "futaana-2022.pdf",
+      "url": "https://arxiv.org/pdf/2204.01377",
+      "sha256": "e83ac9ef993d130024a7c023411eda58f0c3fa116f084bcd75e23be89ed79059",
+      "locator": "S7 sections 3-4; pp.4-7",
+      "action": "Reread existing primary source or metadata; original bytes verified against accepted T188 manifest"
+    },
+    {
+      "source": "spider-d5.2.pdf",
+      "url": "https://spider-europlanet.irap.omp.eu/static/img/about/Deliverable_D5.2.pdf",
+      "sha256": "71147fce3202cc0fca4844e572b0221318737ff94456e928eec9f899d3c18b86",
+      "locator": "S6 sections 3,4,6; pp.5-7",
+      "action": "Reread existing primary source or metadata; original bytes verified against accepted T188 manifest"
+    },
+    {
+      "source": "amda-vex-info.json",
+      "url": "https://amda.irap.omp.eu/service/hapi/info?id=vex-ima-bg",
+      "sha256": "fdc1010f54e4ddb43439689c8f51b73860333f06b2bf66f0c2a6524b61eb02b1",
+      "locator": "Time units=UTC, cadence=PT192S; no phase/live-time field",
+      "action": "Reread existing primary source or metadata; original bytes verified against accepted T188 manifest"
+    },
+    {
+      "source": "amda-vex-spase.xml",
+      "url": "https://spase-metadata.org/CNES/NumericalData/CDPP-AMDA/VEX/IMA/vex-ima-bg.xml",
+      "sha256": "474e9af59acf86fe89a2a97b3d23feda54092bb86bf4a8bfa5c26a8f90aa1c22",
+      "locator": "TemporalDescription/Cadence and empty Caveats; no row-wise exposure",
+      "action": "Reread existing primary source or metadata; original bytes verified against accepted T188 manifest"
+    }
+  ],
+  "targeted_official_searches": [
+    {
+      "query": "\"GRAINS\" \"NDMW0D0A\" UTC",
+      "domains": [
+        "cosmos.esa.int",
+        "sci.esa.int",
+        "archives.esac.esa.int"
+      ],
+      "returned_results": 0
+    },
+    {
+      "query": "\"vex-ima-bg\" timestamp integration",
+      "domains": [
+        "amda.irap.omp.eu",
+        "spase-metadata.org",
+        "spider-europlanet.irap.omp.eu"
+      ],
+      "returned_results": 0
+    }
+  ],
+  "conclusion": "EDAC UTC correlation, IMA timestamp phase and row-wise live exposure remain UNKNOWN; no proof that documentation does not exist. S6/S7 normalization mismatch remains unresolved. No time offset fitted, no external correspondence."
+}

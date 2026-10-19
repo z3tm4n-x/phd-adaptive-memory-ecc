@@ -1,0 +1,5 @@
+window,left,right,edac_rows,edac_increment_lower,edac_increment_upper,edac_increment_at_right_endpoint,hour_bins,hours_both_series_present_A0,hours_without_valid_ima,positive_edac_hours_without_ima_A0,joint_live_exposure_s,negative_intervals,ima_valid_rows,ima_min_cnts,ima_median_cnts,ima_max_cnts
+whole,2006-12-01T00:00:00,2006-12-20T00:00:00,25686,89,89,89,456,96,360,46,,UNKNOWN; none established,1382,4.73,6.7,1819.5
+before_reference,2006-12-01T00:00:00,2006-12-05T00:00:00,5400,5,5,5,96,20,76,4,,UNKNOWN; none established,322,4.73,6.13,7.21
+reference_complex,2006-12-05T00:00:00,2006-12-08T00:00:00,4050,62,62,62,72,15,57,26,,UNKNOWN; none established,165,4.88,49.13,1819.5
+after_reference,2006-12-08T00:00:00,2006-12-20T00:00:00,16236,22,22,22,288,61,227,16,,UNKNOWN; none established,895,4.74,7.05,207.48
