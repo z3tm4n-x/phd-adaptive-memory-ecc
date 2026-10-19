@@ -157,6 +157,7 @@ def validate(cfg):
     from loss_checks import validate_loss
     details['loss_repair']=validate_loss(cfg,exercise)
     names+=details['loss_repair']['checks']
+    ok('validation evidence has canonical JSON roundtrip',json.loads(formats.dumps(details))==details)
     return dict(status='OWN RESULT / checks passed, pending review',count=len(names),checks=names,details=details,
                 scope='addressed changed-interface verification; no physical/WCET/MC qualification')
 

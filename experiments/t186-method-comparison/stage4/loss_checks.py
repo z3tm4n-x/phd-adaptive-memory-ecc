@@ -12,9 +12,10 @@ def state(a,H):
     core={k:getattr(a.core,k,None) for k in
           ('k','timer','anchor','count','hour','bins','sources','observations','updates')}
     if core['sources'] is not None:core['sources']=list(core['sources'])
+    if core['bins'] is not None:core['bins']={str(k):v for k,v in core['bins'].items()}
     return dict(k=a.k,health=a.source_health,unknown=a.unknown,
                 holds=[a.short,a.long,a.recovery],timer=a.timer,
-                modes=list(zip(a.times,a.modes)),delivered=a.delivered,
+                modes=[list(x) for x in zip(a.times,a.modes)],delivered=a.delivered,
                 ranges=a.unknown_ranges,core=core,cost=a.costs(H))
 
 
