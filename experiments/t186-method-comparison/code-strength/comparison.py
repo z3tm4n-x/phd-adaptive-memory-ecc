@@ -210,9 +210,10 @@ def cost_result(cfg,n,t,k,U,adaptive=False,information_calendar=None):
     ad=adaptive_reads(cfg,k,U,Fparents,information_calendar) if adaptive else None
     N=ad['reads_zero_extra_veto_upper'] if adaptive else support['upper']
     Hard=ad['reads_hard_upper'] if adaptive else support['upper']
-    # Before the global bad event, every correction can be charged to a
-    # distinct old parent. After it, all mandatory/potential reads can write.
-    repairs=min(N,Fparents+U*Hard)
+    # A birth observed inside weak E may survive that release and require
+    # a second repair at the next E. At most two repairs per parent before
+    # the global bad event; after it, all mandatory/potential reads can write.
+    repairs=min(N,2*Fparents+U*Hard)
     R,E,ar,aw,ini=(s['upper'][x] for x in ('R','E','app_read','app_write','initial'))
     common=ar*Nar+aw*Naw+ini*W
     core=(R*N+(E-R)*repairs+common)/H
@@ -277,9 +278,10 @@ def cost_result(cfg,n,t,k,U,adaptive=False,information_calendar=None):
                 scientific_status='conditional affine resource account; hardware coefficients remain parameters')
 
 
-def calculate(cfg):
+def calculate(cfg,information=None):
     from informational import candidates as information_candidates
-    information=information_candidates(cfg)
+    if information is None:
+        information=information_candidates(cfg)
     if information['selected'] is None:
         raise ValueError('no informational adaptive point at the target; mandatory diagnostic cannot replace it')
     chosen=[('t1_constant',39,1,select_fixed(cfg,39,1),False)]

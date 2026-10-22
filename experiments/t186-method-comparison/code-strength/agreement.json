@@ -1,15 +1,19 @@
 {
-  "status": "engineering_input_aligned_information_certificate_in_progress",
+  "status": "three_Q_coauthor_applicability_confirmed_R1_price_corrected_acceptance_pending",
   "common_input_file": "common-input.json",
   "common_input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
   "theorist": {
     "issue": 196,
-    "status": "structural_basis_received_specific_rows_pending",
+    "status": "three_Q_applicable_R1_price_correction_prescribed",
     "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6334393174",
     "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6334545894",
     "structural_certificate_sha": "7259964f17e1aea01937df0c0e3134be69a70d7f",
-    "certificate_sha": null,
-    "confirmed_scope": "structural T196(5)/(7); concrete new W/ell/service/price certificate signature pending"
+    "certificate_sha": "64132c369832175d332624a267b149fe11eb68f3",
+    "review_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6337124557",
+    "reviewed_head": "0111d42490269b984e0f60bf0831cb897e9e10cd",
+    "confirmed_scope": "all three conditional Q, new W/ell/service/informational certificate; candidate price comparisons conditional on R1 repair formula; not independent acceptance",
+    "R1_formula": "min(S_upper,2*F_parent+U_Q*N_hard)",
+    "R1_implementation_status": "implemented_with_directed_replay; corrected head not claimed independently reviewed"
   },
   "map_engineer": {
     "issue": 206,
@@ -22,7 +26,8 @@
   "orchestrator": {
     "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334315499",
     "instruction": "compute conditional table without waiting for physical inputs or old PR204 acceptance",
-    "ERR_and_information_decision": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334727215"
+    "ERR_and_information_decision": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334727215",
+    "current_scope_and_dates": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6336467758"
   },
   "not_equivalent_to_scientific_acceptance": true
 }

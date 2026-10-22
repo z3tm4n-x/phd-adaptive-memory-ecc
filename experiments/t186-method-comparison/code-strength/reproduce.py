@@ -12,6 +12,7 @@ from checks import run as codec_checks
 from comparison import calculate
 from comparison_checks import run as comparison_checks
 from informational_checks import run as information_checks
+from repair_checks import frozen_snapshot, run as repair_checks
 
 HERE=Path(__file__).resolve().parent
 REL=HERE.relative_to(ROOT).as_posix()
@@ -46,8 +47,9 @@ def pct(x,places=6,upper=True):return fmt(100*F(x),places,upper)+'%'
 def render(cfg,result,resources):
     rows=list(result['rows'].values());a=rows[1]['cost'];T=cfg['mission_s']
     lines=['# Единая таблица трёх вариантов — #186 / #196 / #206','',
-     'OWN RESULT, условный p1=1. Вход/геометрия согласованы; конкретная подпись',
-     'теоретика к численным строкам ещё ожидается. Это достаточные кандидаты,',
+     'OWN RESULT, условный p1=1. Соавторская применимость трёх Q подтверждена #196',
+     'на v4/0111d424; локальная правка цены R1 выполнена по64132c36. Приёмка впереди.',
+     'Это достаточные кандидаты,',
      'без физической квалификации и без вывода об оптимуме постоянного класса.',
      'Общая среда: один per-bit r(t) на48 выделенных позиций; W=131072, полезные',
      '0,5МиБ; T=315576000с, epsilon=0,001; clean с оплаченной инициализацией.',
@@ -110,6 +112,9 @@ def render(cfg,result,resources):
      'окна. В условной serial-модели весь decode/encode уже включён в SRAM.',
      'Поэтому кодек дополнительно оплачивается площадью/энергией, а не второй',
      'такой же bus-статьёй. Коэффициенты полного вектора — [results.json](results.json).','',
+     'R1: repair-upper=min(S_upper,2F_parent+U_Q N_hard). Позднее рождение',
+     'внутри E может потребовать две исправляющие записи; read/hold уже покрывал',
+     'два ERR и не увеличен повторно. [Свидетели и точные поправки](repair-validation.json).','',
      'По одной SRAM-координате upper t2 ниже lower предъявленной адаптивной',
      'опоры. Допустимая разность прочих bus-затрат t2−adaptive меньше '+
      pct(cmp['allowance_for_t2_extra_bus_fraction'],6,False)+' от полного времени.',
@@ -138,15 +143,21 @@ def render(cfg,result,resources):
     return '\n'.join(lines).encode('utf-8')
 
 
-def build():
+def build(repair_only=False):
     sources=verify();raw=(HERE/'common-input.json').read_bytes();cfg=json.loads(raw)
     agreement=json.loads((HERE/'agreement.json').read_text(encoding='utf-8'))
     if agreement['common_input_sha256']!=digest(raw):raise ValueError('agreement input binding mismatch')
-    result=calculate(cfg);resources={str(t):Code(t).resources() for t in (1,2)}
-    old=codec_checks();new=comparison_checks(cfg,result);info_check=information_checks(cfg,result['informational_certificate'])
-    validation=dict(count=old['count']+new['count']+info_check['count'],functional_codec_and_cost=old,
-                    new_comparison=new,informational_transfer=info_check,previous_stage1_4_changed=False,
-                    independent_scientific_acceptance=False)
+    frozen=frozen_snapshot()
+    result=calculate(cfg,frozen['information'] if repair_only else None)
+    if repair_only:
+        resources=frozen['result']['resources'];validation=frozen['validation']
+    else:
+        resources={str(t):Code(t).resources() for t in (1,2)}
+        old=codec_checks();new=comparison_checks(cfg,result);info_check=information_checks(cfg,result['informational_certificate'])
+        validation=dict(count=old['count']+new['count']+info_check['count'],functional_codec_and_cost=old,
+                        new_comparison=new,informational_transfer=info_check,previous_stage1_4_changed=False,
+                        independent_scientific_acceptance=False)
+    repair_validation=repair_checks(cfg,result,frozen)
     sensitivity=result.pop('sensitivity');information=result.pop('informational_certificate')
     result.update(status='CONDITIONAL_NUMERICAL_TABLE_READY_FOR_REVIEW',
         common_input_sha256=digest(raw),agreement=agreement,source_manifest=sources,
@@ -155,15 +166,20 @@ def build():
         scientific_inputs_in_previous_stages_changed=False,transport_changed=False)
     # render needs sensitivity only as a link, not as a second comparison table.
     files={'results.json':encode(result),'sensitivity.json':encode(sensitivity),'informational.json':encode(information),
-           'validation.json':encode(validation),'table.md':render(cfg,result,resources)}
+           'validation.json':encode(validation),'table.md':render(cfg,result,resources),
+           'repair-validation.json':encode(repair_validation)}
+    for name in ('sensitivity.json','informational.json','validation.json'):
+        if digest(files[name])!=frozen['output_sha256'][name]:
+            raise ValueError('R1 changed frozen scientific/validation output: '+name)
     return files,result
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--record',action='store_true')
+    p.add_argument('--repair-only',action='store_true',help='R1 price replay with pinned v4 information/203-check evidence; does not rerun them')
     p.add_argument('--require-agreement',action='store_true',help='require a specific theorist service/row signature, not just engineering alignment')
-    args=p.parse_args();files,result=build()
+    args=p.parse_args();files,result=build(repair_only=args.repair_only)
     signed=bool(result['agreement']['theorist'].get('certificate_sha'))
     if args.require_agreement and not signed:
         print(json.dumps(dict(numerical_table_ready=True,specific_theory_signature=False,
@@ -174,7 +190,9 @@ def main():
         if args.record:(out/name).write_bytes(raw)
         elif (out/name).read_bytes().replace(b'\r\n',b'\n')!=raw:raise ValueError('replay mismatch: '+name)
     print(json.dumps(dict(numerical_table_reproduced=True,
-          checks=json.loads(files['validation.json'])['count'],specific_theory_signature=signed,
+          executed_checks=json.loads(files['repair-validation.json'])['count']+(0 if args.repair_only else json.loads(files['validation.json'])['count']),
+          historical_checks_reused=json.loads(files['validation.json'])['count'] if args.repair_only else 0,
+          informational_search_repeated=not args.repair_only,specific_theory_signature=signed,
           output_sha256={k:digest(v) for k,v in files.items()}),indent=2))
     return 0
 
