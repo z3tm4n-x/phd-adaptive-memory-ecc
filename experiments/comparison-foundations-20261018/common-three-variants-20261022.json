@@ -1,0 +1,123 @@
+{
+  "schema": "T196 shared-input proposal v1",
+  "date": "2026-10-22",
+  "status": "theorist proposal; engineer186/map206 acknowledgement not yet received; no new numerical rating",
+  "rows": [
+    {
+      "id": "SEC_fixed",
+      "n": 39,
+      "k": 32,
+      "t": 1
+    },
+    {
+      "id": "SEC_adaptive",
+      "n": 39,
+      "k": 32,
+      "t": 1
+    },
+    {
+      "id": "DEC_fixed",
+      "n": 44,
+      "k": 32,
+      "t": 2
+    }
+  ],
+  "useful_bytes": 524288,
+  "words": 131072,
+  "horizon_s": 315576000,
+  "epsilon": "0.001",
+  "packing": {
+    "bus_atom_bits": 16,
+    "atoms_per_codeword": 3,
+    "reserved_bits_per_word": 48,
+    "shared_atoms_between_codewords": false,
+    "systematic_form": "equivalent column permutation/information set of accepted T187 code; emit exact mapping",
+    "device": "conditional raw-memory reference; not reconfigurable CY62167"
+  },
+  "law": {
+    "scope": "one conditional marked NHPP law on reserved 48-position words; no physical qualification",
+    "between_words": "independent in the proposed reference family; physical multiword parents require a new supplied law",
+    "reference_words": 524288,
+    "reference_bits": 38,
+    "per_reserved_bit_rate": "r(u)=nu_ref(u)/(38*524288)",
+    "reference_envelope": {
+      "b_upper": "0.000154704",
+      "B": "0.244682704",
+      "solar_fluence": "28310.473728",
+      "growth_per_s": "0.048",
+      "growth_threshold": "0.001"
+    },
+    "parent_rates": "mu_s,w(u)=48*r(u)*p_s/s, s=1..48; independent parents, uniform size-s subset of 48",
+    "p_s": "nonnegative, time-constant, sum=1; numerical vector or parameter slice to be fixed by #186/#206 before numbers; unknown physical multiplicities are not zero",
+    "projection": "lambda_j,n,w=sum_s mu_s,w*C(n,j)*C(48-n,s-j)/C(48,s)",
+    "direct": "D_t upper from W*integral(sum_{j>t}lambda_j,n,w), not inherited old D*"
+  },
+  "initial": {
+    "K0_upper": 1,
+    "error_weight_per_dirty_word_upper": 1,
+    "pending": false,
+    "future_independence_required": true
+  },
+  "application": {
+    "profile_source": "PR204 common-input.json at 76413140a8ce4c3884a44df5dbeb619580339faa",
+    "first_ns": 100000,
+    "address_rule": "5*q mod W",
+    "profiles": [
+      {
+        "id": "uniform",
+        "pairs": 1,
+        "epoch_ns": 1000020,
+        "read_offsets_ns": [
+          0
+        ],
+        "write_offset_ns": 500000
+      },
+      {
+        "id": "bursty",
+        "pairs": 5,
+        "epoch_ns": 5000020,
+        "read_offsets_ns": [
+          0,
+          200000,
+          400000,
+          600000,
+          800000
+        ],
+        "write_offset_ns": 100000
+      }
+    ],
+    "semantics": "read full external codeword, no read repair; observed write reads/decode before modification and encodes/writes full word; partial writes pay RMW",
+    "same_arrivals_and_payloads": true
+  },
+  "service": {
+    "type": "birth-preserving E through complete corrected codeword; lock covers all three atoms and all pending writes",
+    "timings": "R_i,E_i,Aread_i,Awrite_i,decode_i,encode_i,calendar,freeze,phase,apertures: parameters supplied by #186; CY full38 times not copied",
+    "startup": "one complete fast pass; all costs after first exceedance remain charged"
+  },
+  "risk_accounting": {
+    "conditional_class": true,
+    "shared_lifetime_quota_sum": "0.000006 proposed common conservative allowance; allocation and satisfaction to be evidenced; not measurement",
+    "environment_escape": "unknown parameter for unconditional statement; not silently zero",
+    "direct_and_initial": "separate; no per-epoch reset",
+    "adaptation": "recompute T119 functional and time inequalities, no old 1.761/2.805 transfer"
+  },
+  "price": {
+    "metric": "vector: full SRAM busy, CPU work/reservation, controller+codec memory, LUT/FF/BRAM, energy",
+    "extra_source_veto": "parameter upper on count/union duration outside already paid ERR/false/loss/recovery bands",
+    "unmeasured_coefficients": null,
+    "scalar_weights": null
+  },
+  "constraints": {
+    "peak_bus_fraction": "0.8",
+    "peak_window_ns": 1000000,
+    "application_response_ns": 3000,
+    "risk_selection_target": "Q_upper<=0.5*epsilon (map target, distinct from hard epsilon)",
+    "time_resource_selection_margin": "0.20 (map target; actual margin reported)"
+  },
+  "owners": {
+    "numerics": "#186",
+    "theory": "#196",
+    "physical_law_and_map": "#206",
+    "acceptance": "orchestrator/author"
+  }
+}
