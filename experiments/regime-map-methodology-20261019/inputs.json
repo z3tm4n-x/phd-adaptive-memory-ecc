@@ -148,7 +148,7 @@
   },
   "publication_state": {
     "pr200": {
-      "head": "6c350002241d6bd8f48e813227cb6924e68ee5bb",
+      "head": "7259964f17e1aea01937df0c0e3134be69a70d7f",
       "state": "open",
       "draft": true,
       "accepted": false
@@ -160,5 +160,16 @@
       "accepted": false
     }
   },
-  "current_decision_main": "b08793c"
+  "current_decision_main": "b08793c",
+  "theory_foundations_received": {
+    "sha": "7259964f17e1aea01937df0c0e3134be69a70d7f",
+    "path": "theory/t196-three-variant-foundations-20261022.md",
+    "git_blob": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98",
+    "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7259964f17e1aea01937df0c0e3134be69a70d7f/theory/t196-three-variant-foundations-20261022.md",
+    "status": "author foundations received, concrete common input/service signature pending, not accepted",
+    "scope": "fixed t1/t2 E plus writes; structural t1 transfer; parameterized cost/lower, no new numerical comparison",
+    "service_alignment_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334554044",
+    "remaining_semantics": "theory app-read without repair vs optional H_i in numerical COST; map recommends common no-writeback app-read and explicit ERR accounting",
+    "used_for_new_numeric_Q": false
+  }
 }
