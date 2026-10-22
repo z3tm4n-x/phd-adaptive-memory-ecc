@@ -1,0 +1,71 @@
+{
+  "task": 196,
+  "request": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6341679256",
+  "base_main": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+  "accepted_theory_pr219": "77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+  "accepted_engineering_pr220": "6d0d569c798dee54027753a49a79d5524de7330b",
+  "accepted_ev30_slice_pr221": "7cc1da7f4ecb7ef544f1ad349558f5d2775f8ae1",
+  "v4_input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+  "historical_policy_stage2": "d7369a2ab307b063a11c36f258d09b31bad06aad",
+  "incoming_complete_ev30_service_sha": null,
+  "common_lower_input_and_adapter_sha": null,
+  "status": "intake and preregistered handoff only; no new service signoff, Q, lower or full price",
+  "sources": [
+    {
+      "path": "theory/t196-write-only-apertures-20261022.md",
+      "git_blob": "42a6d93f08bd4f715edb9d60fed8b93123ac2ea8"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/SERVICE.md",
+      "git_blob": "17f48c8160043db4e15e63170606e94ba5cce350"
+    },
+    {
+      "path": "experiments/t186-method-comparison/app-only/ORCHESTRATOR_REVIEW_20261022.md",
+      "git_blob": "d519eac6f78d4873291b20d545e709a6b6e9a320"
+    },
+    {
+      "path": "experiments/regime-map-methodology-20261019/source-example-20261022/REPORT.md",
+      "git_blob": "35138f5c06d515570bc02f9d9cf52f438a6af9e9"
+    },
+    {
+      "path": "experiments/regime-map-methodology-20261019/source-example-20261022/inputs.json",
+      "git_blob": "cdbcf4be291ff748c3b1938fcc90d6f52cb2fc4e"
+    },
+    {
+      "path": "experiments/regime-map-methodology-20261019/source-example-20261022/sources.json",
+      "git_blob": "d0b11e06b14fcfc04d5597ed4007ba0de9ddb478"
+    },
+    {
+      "path": "experiments/t186-method-comparison/SOURCES.md",
+      "git_blob": "4dc02300c365f9bc5b681f150cf38ce10b5dd31d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/PLAN.md",
+      "git_blob": "3b10ee6c6c8caa0cc613a986cf83d1beef351630"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/METHODS.md",
+      "git_blob": "5c811d14bdcdcbeffd0127431eff58e8900f0dd0"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/IMPLEMENTATION.md",
+      "git_blob": "dc5da6c6d1d0c3d89f8b07bd37d53a3ec5d2de50"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/policies.py",
+      "git_blob": "2f0f94c39c9200337c267085b6262493e62ae800"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/inputs.json",
+      "git_blob": "9a9f6040ee5a4d2727d4966eae7ce232198b9c2e"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/training.json",
+      "git_blob": "b6182c39d4fc778eec7f50752b7fe393b3ba8bd7"
+    }
+  ]
+}
