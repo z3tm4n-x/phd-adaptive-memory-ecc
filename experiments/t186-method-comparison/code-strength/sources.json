@@ -41,15 +41,57 @@
       "commit": "7fafb695acbf17d56dc079756508e5b4041f7993",
       "path": "experiments/t186-method-comparison/code-strength/common-input.json",
       "sha256": "24e3b6aa39e86c4834fc3a7d2aea053a4b1b168c4e683cab6fb30b16c6895c33",
-      "mode": "working_tree_and_git"
+      "mode": "git_object_only"
     },
     {
       "commit": "7259964f17e1aea01937df0c0e3134be69a70d7f",
       "path": "theory/t196-three-variant-foundations-20261022.md",
       "sha256": "e629c6aa739c8da9b8561c74aafe5f02229c18936bb1d4520b94820f975ce6c3",
       "mode": "git_object_only"
+    },
+    {
+      "commit": "7e42ffb79216556a263eff8273e36ab6c438c1e4",
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "7e42ffb79216556a263eff8273e36ab6c438c1e4",
+      "path": "experiments/t186-method-comparison/code-strength/common-input.v3.diagnostic.json",
+      "sha256": "24e3b6aa39e86c4834fc3a7d2aea053a4b1b168c4e683cab6fb30b16c6895c33",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "experiments/t114-two-stage-err/intervals.py",
+      "sha256": "817cdad503f8432fe9d57c0b9340921b1af683b8db4b72aa9314ccf0f53b3be2",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "experiments/t119-err-joint-bound/joint.py",
+      "sha256": "8c859b4650b311f2c8947a436c7de00be75f463d9a389ab893ae947c0bb4e908",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "theory/t119-err-joint-bound.md",
+      "sha256": "712a9331da8252ab8714efa74505edb9b6006f7ab70581a1ab26cb13c215817d",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "theory/t119-err-joint-bound-appendix.md",
+      "sha256": "08526f5b2e4d7de04b9f859fa2106ed13c29b8657e9b9f1e9a3525831c9cd9a2",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "experiments/t119-err-joint-bound/report.json",
+      "sha256": "eedf2c803ec9cad8e95a93c3a0eb2adcf7c1ebe8b2c94e152aec354bc9103a62"
     }
   ],
   "v2_plan_sha": "17708d036ca074e72a215c14421ffea7413938cf",
-  "v3_plan_sha": "7fafb695acbf17d56dc079756508e5b4041f7993"
+  "v3_plan_sha": "7fafb695acbf17d56dc079756508e5b4041f7993",
+  "v4_plan_sha": "7e42ffb79216556a263eff8273e36ab6c438c1e4"
 }

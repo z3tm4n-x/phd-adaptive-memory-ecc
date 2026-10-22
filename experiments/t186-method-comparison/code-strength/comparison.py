@@ -147,21 +147,28 @@ def timers(cfg,k):
                 informational_q_majorant=None)
 
 
-def adaptive_reads(cfg,k,U,Fparents):
+def adaptive_reads(cfg,k,U,Fparents,information_calendar=None):
     """Conservative price without informational T119 improvement.
 
     On good histories each parent causes <=2 logical ERR publications:
-    at most one app read of its word and one subsequent E operation. All
+    a weak-E aperture observation and the following correcting E. All
     ordinary hold windows are covered by charging each publication a full
     long hold. Bad histories pay all potential starts. Union bounds only.
     Extra source veto is kept as a separate rate parameter v.
     """
     T=F(cfg['mission_s']);s=service(cfg,39);tm=timers(cfg,k)
+    if information_calendar is not None:
+        c=information_calendar
+        convert=lambda t:dict(count=t['count'],lower_s=t['lower'],upper_s=t['upper'])
+        tm=dict(short=convert(c['short_timer']),long=convert(c['long_timer']),recovery=convert(c['recovery']),
+                tau_birth_to_fresh_s=c['tau'],guard_holds_cover_tau=c['w']>c['tau'],
+                NR_covers_h_plus_tau=c['recovery']['lower']>=c['long_timer']['upper']+c['tau'],
+                counts_fit_34_bits=max(c[x]['count'] for x in ('short_timer','long_timer','recovery'))<2**34)
     a=cfg['adaptive'];ob=cfg['observation'];cal=cfg['calendar']
     revisit=F(cfg['words']*cfg['application']['epoch_ns'],NS)
     age=(period(cfg,k)['upper_ns']+s['upper']['E'])/NS
-    if revisit-F(cfg['constraints']['application_deadline_ns'],NS)<=age:
-        raise ValueError('two-publications parent bound not applicable')
+    if cfg['application'].get('ordinary_read_publishes_ERR_G',True):
+        raise ValueError('current informational price requires no app-read ERR publication')
     # Covers endpoint jitter of start timestamps as well as timer execution.
     min_gap=cal['c_ticks']*s['xminus'];J=s['J']
     def slots(seconds):return F(2+ceil((F(seconds)*NS+J)/min_gap))
@@ -191,15 +198,16 @@ def adaptive_reads(cfg,k,U,Fparents):
                 source_rate_formula='min(source_edge_rate,ordinary_record_rate+v)',
                 read_rate_formula='min(hard,zero_v_upper+reads_extra_per_veto*v)',
                 hold_length_s=hold_length,ordinary_publications_upper=ordinary_flags,
+                publication_bound_basis='weak-E aperture repeat then next correcting E; no app-read ERR',
                 app_same_word_revisit_s=revisit,mandatory_age_s=age,timers=tm)
 
 
-def cost_result(cfg,n,t,k,U,adaptive=False):
+def cost_result(cfg,n,t,k,U,adaptive=False,information_calendar=None):
     W=cfg['words'];T=F(cfg['mission_s']);H=T*NS;s=service(cfg,n)
     groups=projected_groups(n,{1:F(1)})
     Fparents=W*sum(groups[1:])*per_bit_moment_caps(cfg)['M1']
     apps=count_apps(cfg);Nar,Naw=apps['read'],apps['write'];support=read_bounds(cfg,k)
-    ad=adaptive_reads(cfg,k,U,Fparents) if adaptive else None
+    ad=adaptive_reads(cfg,k,U,Fparents,information_calendar) if adaptive else None
     N=ad['reads_zero_extra_veto_upper'] if adaptive else support['upper']
     Hard=ad['reads_hard_upper'] if adaptive else support['upper']
     # Before the global bad event, every correction can be charged to a
@@ -270,19 +278,25 @@ def cost_result(cfg,n,t,k,U,adaptive=False):
 
 
 def calculate(cfg):
+    from informational import candidates as information_candidates
+    information=information_candidates(cfg)
+    if information['selected'] is None:
+        raise ValueError('no informational adaptive point at the target; mandatory diagnostic cannot replace it')
     chosen=[('t1_constant',39,1,select_fixed(cfg,39,1),False)]
     candidates=[k for k in cfg['adaptive']['candidate_ka'] if
         risk(cfg,39,1,period(cfg,k)['upper_ns'],service(cfg,39)['upper']['E'])['upper']<=F(cfg['epsilon'])/2]
     if not candidates:raise ValueError('no adaptive mandatory candidate')
-    chosen.append(('t1_adaptive',39,1,max(candidates),True))
+    chosen.append(('t1_adaptive',39,1,information['selected']['k'],True))
     chosen.append(('t2_constant',44,2,select_fixed(cfg,44,2),False))
     rows={}
     for name,n,t,k,ad in chosen:
-        P=period(cfg,k);r=risk(cfg,n,t,P['upper_ns'],service(cfg,n)['upper']['E'])
+        P=period(cfg,k);mandatory=risk(cfg,n,t,P['upper_ns'],service(cfg,n)['upper']['E'])
+        r=information['selected']['risk'] if ad else mandatory
         tm=timing(cfg,n,k)
         rows[name]=dict(n=n,k_data=32,t=t,k_passes=k,period=P,risk=r,timing=tm,
-                       cost=cost_result(cfg,n,t,k,r['upper'],ad),
-                       class_optimum_lower=None,informational_adaptive_bound=None,
+                       mandatory_risk_diagnostic=mandatory if ad else None,
+                       cost=cost_result(cfg,n,t,k,r['upper'],ad,information['selected']['calendar'] if ad else None),
+                       class_optimum_lower=None,informational_adaptive_bound=bool(ad),
                        physical_acceptance=False)
     sensitivity=[]
     for p2s in cfg['environment']['conditional_sensitivity']['p2']:
@@ -292,7 +306,7 @@ def calculate(cfg):
             for name,row in rows.items():
                 point['risk'][name]=risk(cfg,row['n'],row['t'],row['period']['upper_ns'],
                     service(cfg,row['n'])['upper']['E'],p)
-            point['scope']='same fixed periods and service, no refitting, physical p_s unknown; upper>epsilon is not exclusion'
+            point['scope']='same periods, no refitting; adaptive mixture uses mandatory-only upper, not singleton informational certificate; physical p_s unknown; upper>epsilon is not exclusion'
             sensitivity.append(point)
     a=rows['t1_adaptive']['cost'];b=rows['t2_constant']['cost']
     # Compare a sufficient upper for t2 with a lower for this chosen adaptive
@@ -305,9 +319,12 @@ def calculate(cfg):
     perturbed['service']['decode44_ns']+=extra
     perturbed_risk=risk(perturbed,44,2,rows['t2_constant']['period']['upper_ns'],service(perturbed,44)['upper']['E'])
     perturbed_cost=cost_result(perturbed,44,2,rows['t2_constant']['k_passes'],perturbed_risk['upper'])
-    return dict(rows=rows,sensitivity=sensitivity,
+    return dict(rows=rows,sensitivity=sensitivity,informational_certificate=information,
+        diagnostic_mandatory_only=dict(k=max(candidates),status='diagnostic support slice, not main information row'),
         conditional_bus_comparison=dict(t2_upper_below_selected_adaptive_lower=b['core_SRAM_fraction_upper']<a['core_SRAM_fraction_lower'],
             t1_fixed_upper_below_selected_adaptive_lower=rows['t1_constant']['cost']['core_SRAM_fraction_upper']<a['core_SRAM_fraction_lower'],
+            adaptive_upper_below_selected_t1_fixed_lower=a['core_SRAM_fraction_upper']<rows['t1_constant']['cost']['core_SRAM_fraction_lower'],
+            extra_veto_rate_before_losing_selected_fixed_lower_comparison=(rows['t1_constant']['cost']['core_SRAM_fraction_lower']-a['core_SRAM_fraction_upper'])/a['veto_core_fraction_slope_per_notification_per_s'],
             allowance_for_t2_extra_bus_fraction=a['core_SRAM_fraction_lower']-b['core_SRAM_fraction_upper'],
             extra_t2_decode_bus_ns_cost_threshold=threshold,
             algebraic_threshold_scope='fixed action-count coefficients only; service/risk must be rechecked when latency changes',

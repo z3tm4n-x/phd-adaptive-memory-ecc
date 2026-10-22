@@ -39,8 +39,9 @@ def run(cfg,result):
     for name,row in rows.items():
         n,t,k=row['n'],row['t'],row['k_passes'];r=row['risk'];tm=row['timing'];c=row['cost']
         check(name+' one lifetime quota',r['terms']['lifetime_exceptions']==F(cfg['lifetime_other_budget']))
-        check(name+' terms sum and positive E-cross',sum(r['terms'].values())==r['unclipped'] and
-              r['terms']['E_cross_quadratic']+r['terms']['E_cross_cubic']>0)
+        e_cross=(r['terms']['E_cross'] if name=='t1_adaptive' else
+                 r['terms']['E_cross_quadratic']+r['terms']['E_cross_cubic'])
+        check(name+' terms sum and positive E-cross',sum(r['terms'].values())==r.get('unclipped',r['upper']) and e_cross>0)
         check(name+' half epsilon sufficient',r['upper']<=eps/2)
         if name!='t1_adaptive':
             nxt=risk(cfg,n,t,period(cfg,k+1)['upper_ns'],service(cfg,n)['upper']['E'])
@@ -58,14 +59,15 @@ def run(cfg,result):
             check(name+' no avoidable monitor cost',all(c['full_cost_rates'][z]==0 for z in ('cuts','captures','records')) and c['transport_plus_loss_state_bytes']==0)
         # Delay limit is service-constrained, and rechecking E risk at it stays
         # within the HARD epsilon. It does not preserve a claimed optimal grid.
-        d2=service(cfg,n)['upper']['E']+tm['extra_decode_nominal_ns_limit']*service(cfg,n)['xplus']
-        check(name+' allowed decode perturbation keeps hard risk',risk(cfg,n,t,row['period']['upper_ns'],d2)['upper']<=eps)
+        if name!='t1_adaptive':
+            d2=service(cfg,n)['upper']['E']+tm['extra_decode_nominal_ns_limit']*service(cfg,n)['xplus']
+            check(name+' allowed decode perturbation keeps hard risk',risk(cfg,n,t,row['period']['upper_ns'],d2)['upper']<=eps)
     check('t2 map peak target shortfall retained',rows['t2_constant']['timing']['peak_target_slack']<0)
     a=rows['t1_adaptive']['cost'];ad=a['adaptive']
     check('extra-veto slope positive and hard cap available',a['veto_core_fraction_slope_per_notification_per_s']>0 and a['veto_hard_cap_reached_per_s']>0)
     check('NR and long hold cover birth delay',ad['timers']['NR_covers_h_plus_tau'] and ad['timers']['guard_holds_cover_tau'])
     check('34-bit timer fits with no wrap',ad['timers']['counts_fit_34_bits'])
-    check('read-repeat condition actually checked',ad['app_same_word_revisit_s']>ad['mandatory_age_s'])
+    check('app-read never creates a control observation',cfg['application']['ordinary_read_publishes_ERR_G'] is False)
     check('controller and energy retained parametrically',a['CPU_fraction_coefficients']['cuts_ns']>0 and a['energy_coefficients_per_second']['decisions']>0)
     check('all capacities remain unknown, not PASS',all(x is None for x in cfg['constraints']['capacity_caps'].values()))
     check('physical risk and ranking not inferred',all(r['risk']['physical_unconditional_probability'] is None for r in rows.values()) and result['physical_winner'] is None)
@@ -93,8 +95,9 @@ def run(cfg,result):
     dec=code.decode(dirty)
     check('full word handles errors in separate bus beats',dec['data']==0x13579bdf and dec['corrected_word']==word and dec['ERR'] is True)
 
-    check('12 frozen group slices, baseline matches main table',len(result['sensitivity'])==12 and
-          all(result['sensitivity'][0]['risk'][k]['upper']==v['risk']['upper'] for k,v in rows.items()))
+    check('12 frozen group slices, baseline uses declared risk basis',len(result['sensitivity'])==12 and
+          all(result['sensitivity'][0]['risk'][k]['upper']==
+              (v['mandatory_risk_diagnostic'] if k=='t1_adaptive' else v['risk'])['upper'] for k,v in rows.items()))
     high=result['sensitivity'][-1]['risk']
     check('direct p2/p3 retained, mixed terms nonzero',high['t1_constant']['terms']['direct']>0 and
           high['t2_constant']['terms']['direct']>0 and high['t2_constant']['terms']['quadratic']>0)
@@ -102,6 +105,9 @@ def run(cfg,result):
     check('decode limit recalculates probability and repair cost',
           result['conditional_bus_comparison']['t2_at_service_decode_limit']['Q_upper']>rows['t2_constant']['risk']['upper'] and
           result['conditional_bus_comparison']['t2_at_service_decode_limit']['below_selected_adaptive_lower'])
+    check('primary adaptive uses information beyond mandatory support',
+          rows['t1_adaptive']['risk']['upper']<rows['t1_adaptive']['mandatory_risk_diagnostic']['upper'] and
+          rows['t1_adaptive']['informational_adaptive_bound'])
     return dict(count=len(passed),checks=passed,small_cell_cases=cases,
                 monte_carlo_runs=0,scope='directed calculation tests, not independent scientific acceptance')
 

@@ -11,6 +11,7 @@ from codec import Code,ROOT,t187
 from checks import run as codec_checks
 from comparison import calculate
 from comparison_checks import run as comparison_checks
+from informational_checks import run as information_checks
 
 HERE=Path(__file__).resolve().parent
 REL=HERE.relative_to(ROOT).as_posix()
@@ -51,7 +52,7 @@ def render(cfg,result,resources):
      'Общая среда: один per-bit r(t) на48 выделенных позиций; W=131072, полезные',
      '0,5МиБ; T=315576000с, epsilon=0,001; clean с оплаченной инициализацией.',
      'Общий lifetime-резерв6e-6 — предпосылка условной модели. Strict-uniform,',
-     'read без ремонта, полный32 write с pre-read/decode/encode/write. Все цены',
+     'app-read без ремонта/ERR, полный32 write с pre-read/decode/encode/write. Все цены',
      'учитывают весь срок, плохие истории и незавершённую работу. [Сервис](../SERVICE.md).','',
      '| Показатель | Одна ошибка, постоянный | Одна ошибка, адаптация | Две ошибки, постоянный |',
      '|---|---|---|---|']
@@ -62,11 +63,11 @@ def render(cfg,result,resources):
     add('Упаковка; read / write / RMW',('3 отдельных x16; 3 / 3 / 6 beat',)*3)
     add('Период обязательной опоры, с; k',
         (f"{fmt(F(r['period']['nominal_ns'],10**9),9)}; {r['k_passes']}" for r in rows))
-    add('Правило',('постоянный заданный календарь','own ERR90/180с; FAST или опора9; целые NR/таймеры в results.json','постоянный заданный календарь'))
+    add('Правило',('постоянный заданный календарь',f"own ERR90/180с; FAST или опора{rows[1]['k_passes']}; inverse-address T119",'постоянный заданный календарь'))
     add('Q_T, верх за весь срок',('≤'+up(r['risk']['upper'],15) for r in rows))
     add('Запас epsilon−U_Q, нижний; доля epsilon',
         (fmt(r['risk']['slack'],12)+'; '+pct(r['risk']['relative_slack'],5,False) for r in rows))
-    add('Основание вероятности',('T196(5), moment+E-cross','та же mandatory-оценка; информационный выигрыш не заявлен','T196(5),(6), cubic/mixed/direct+E-cross'))
+    add('Основание вероятности',('T196(5), moment+E-cross','новый T196(7)/T119: joint J, W/ell/phase и coupling E-cross','T196(5),(6), cubic/mixed/direct+E-cross'))
     add('SRAM: интервал для выбранного кандидата; +B_ctl',
         (pct(r['cost']['core_SRAM_fraction_lower'],6,False)+' … '+pct(r['cost']['core_SRAM_fraction_upper'],6)+(' при v=0' if i==1 else '') for i,r in enumerate(rows)))
     add('SRAM: безопасный верх при любых history/veto; +B_ctl',
@@ -99,7 +100,7 @@ def render(cfg,result,resources):
         ('CPU=Σq_a c_a/1e9; J=TΣq_a e_a+idle·T; hardware resources UNKNOWN',)*3)
     add('Неизвестные caps',('RAM/LUT/BRAM/CPU/energy: UNKNOWN; допустимость не установлена',)*3)
     add('Добавочная задержка decode при сохранении прочих полей, нс',
-        ('≤'+fmt(r['timing']['extra_decode_nominal_ns_limit'],6)+'; доп. controller work отдельно' for r in rows))
+        ('≤'+fmt(r['timing']['extra_decode_nominal_ns_limit'],6)+('; ресурсный предел, новый Q требует пересчёта' if i==1 else '; доп. controller work отдельно') for i,r in enumerate(rows)))
     add('Оптимум класса / физический победитель',('не установлен',)*3)
     lines += ['| '+' | '.join(v)+' |' for v in table]
     cmp=result['conditional_bus_comparison']
@@ -122,8 +123,16 @@ def render(cfg,result,resources):
      'Это сравнение выбранных кандидатов; общий победитель по энергии/площади/',
      'CPU и оптимум класса из него не следуют. При неизвестном v для адаптации',
      'используется hard upper, а не значение среза v=0.','',
+     'Новая информационная строка и все q-клетки: [informational.json](informational.json),',
+     '[обоснование переноса](../INFORMATIONAL.md). Верх цены адаптации при v=0',
+     ('ниже' if cmp['adaptive_upper_below_selected_t1_fixed_lower'] else 'не ниже')+' lower выбранного t1-fixed; это не lower всего fixed-класса.',
+     'При прочих равных такой запас сохраняется для v<'+
+     fmt(cmp['extra_veto_rate_before_losing_selected_fixed_lower_comparison'],3)+' дополнительных уведомлений/с.',
+     'Неизвестную разность controller-цены также нужно вычесть из этого запаса.','',
      '12 заранее объявленных p2/p3-срезов: [sensitivity.json](sensitivity.json).',
      'Периоды в них не подгоняются; direct, 1+2, 2+2 и E-cross сохранены.',
+     'Для адаптации в смеси это **только mandatory-диагностика**: перенос',
+     'информационного singleton-сертификата на новый нижний канал не заявлен.',
      'Физические p_s, interword-группы, delta_env и delta_init остаются UNKNOWN.',
      'Остаток и условия применения: [REPORT](../REPORT.md), [CONDITIONS](../CONDITIONS.md).','']
     return '\n'.join(lines).encode('utf-8')
@@ -134,18 +143,18 @@ def build():
     agreement=json.loads((HERE/'agreement.json').read_text(encoding='utf-8'))
     if agreement['common_input_sha256']!=digest(raw):raise ValueError('agreement input binding mismatch')
     result=calculate(cfg);resources={str(t):Code(t).resources() for t in (1,2)}
-    old=codec_checks();new=comparison_checks(cfg,result)
-    validation=dict(count=old['count']+new['count'],functional_codec_and_cost=old,
-                    new_comparison=new,previous_stage1_4_changed=False,
+    old=codec_checks();new=comparison_checks(cfg,result);info_check=information_checks(cfg,result['informational_certificate'])
+    validation=dict(count=old['count']+new['count']+info_check['count'],functional_codec_and_cost=old,
+                    new_comparison=new,informational_transfer=info_check,previous_stage1_4_changed=False,
                     independent_scientific_acceptance=False)
-    sensitivity=result.pop('sensitivity')
+    sensitivity=result.pop('sensitivity');information=result.pop('informational_certificate')
     result.update(status='CONDITIONAL_NUMERICAL_TABLE_READY_FOR_REVIEW',
         common_input_sha256=digest(raw),agreement=agreement,source_manifest=sources,
         resources=resources,implementation_sha256={p.name:digest(p.read_bytes()) for p in sorted(HERE.glob('*.py'))},
         service_contract_sha256=digest((HERE/'SERVICE.md').read_bytes()),
         scientific_inputs_in_previous_stages_changed=False,transport_changed=False)
     # render needs sensitivity only as a link, not as a second comparison table.
-    files={'results.json':encode(result),'sensitivity.json':encode(sensitivity),
+    files={'results.json':encode(result),'sensitivity.json':encode(sensitivity),'informational.json':encode(information),
            'validation.json':encode(validation),'table.md':render(cfg,result,resources)}
     return files,result
 
