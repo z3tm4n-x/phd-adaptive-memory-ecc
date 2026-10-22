@@ -1,0 +1,68 @@
+{
+  "base_commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+  "local_sources": {
+    "experiments/t186-method-comparison/code-strength/common-input.json": {
+      "sha256_LF": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    "experiments/t186-method-comparison/app-only/outputs/result.json": {
+      "sha256_LF": "b587c0a54a9f0c04ef083de904ab635272a4c6c7f0a22b36bcee315cb331010f",
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "git_blob": "0ea731ec1b64c43bf363c3f1c242ca81595cdfd5"
+    },
+    "experiments/t186-method-comparison/app-only/ORCHESTRATOR_REVIEW_20261022.md": {
+      "sha256_LF": "e7f52b94d81d6cfaa0821ce80ee7b82239a596171a3496dfa0cc7a9fe842b83d",
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "git_blob": "d519eac6f78d4873291b20d545e709a6b6e9a320"
+    },
+    "experiments/regime-map-methodology-20261019/source-example-20261022/inputs.json": {
+      "sha256_LF": "fed594abd93995fba8e7eecb8079483920da53de1c1c876ac0851be3599090c0",
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "git_blob": "cdbcf4be291ff748c3b1938fcc90d6f52cb2fc4e"
+    },
+    "experiments/regime-map-methodology-20261019/source-example-20261022/sources.json": {
+      "sha256_LF": "9c737f9f779772aaaef49f87ebc2461d02244c4973573f02eb0e63c983595f28",
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "git_blob": "d0b11e06b14fcfc04d5597ed4007ba0de9ddb478"
+    },
+    "theory/t196-write-only-apertures-20261022.md": {
+      "sha256_LF": "42d2ea316c9a9195df45a616dbb2ab07b9ca3fc091584893539cc3126e4e0bc9",
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "git_blob": "42a6d93f08bd4f715edb9d60fed8b93123ac2ea8"
+    }
+  },
+  "input_sha256_LF": "7c225013bde6c6afaca38029c20f31e3aec01acf14ec420e3469b4660684cec6",
+  "datasheet": {
+    "url": "https://www.infineon.com/assets/row/public/documents/10/49/infineon-cy62167ev30-mobl-16-mbit-1m-x-16-2m-x-8-static-ram-datasheet-en.pdf",
+    "sha256": "3af6dadb2fa2ca75edfc92532f0dbab6a39e6d6dc7d9fac1c05648c5e49b8f8d",
+    "document": "38-05446",
+    "revision": "Q",
+    "document_date": "2018-08-02",
+    "read_on": "2026-10-22",
+    "visually_checked_pages": [
+      3,
+      7,
+      13
+    ],
+    "notes_checked": [
+      3,
+      4,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "part": "CY62167EV30LL-45ZXA",
+    "facts_status": "SOURCE: manually transcribed and visually checked; not specimen/revision equivalence"
+  },
+  "visually_checked_here_pages": [
+    5,
+    7,
+    9
+  ],
+  "current_assignment": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6341678738",
+  "physical_transfer": false
+}
