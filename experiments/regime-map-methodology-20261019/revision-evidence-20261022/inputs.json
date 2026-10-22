@@ -1,0 +1,61 @@
+{
+  "part": "CY62167EV30LL-45ZXA",
+  "selected_date_code": "1843",
+  "code": [
+    44,
+    32
+  ],
+  "word_addresses": "3*w+beat, beat=0,1,2",
+  "date_code_evidence": {
+    "AN13842_fixed_from": "0826",
+    "AN66311_fixed_from": "1301",
+    "REDW2020_selected": "1843",
+    "Cecchetto_Table6_3_default": "1731",
+    "Cecchetto_Table6_3_alternate": "1525",
+    "HEP_Fig5_exact_date_code": null,
+    "conflict_resolved": false
+  },
+  "physical_admission": {
+    "joint_B_M1_M2_M3_scale_upper": null,
+    "NHPP_singleton_law_certified": false,
+    "full_word_mark_law_certified": false,
+    "actual_lifetime_exception_upper": null,
+    "E_and_deadline_for_EV30_certified": false,
+    "physical_Q_upper": null,
+    "physical_Q_lower": null,
+    "current_status": "UNKNOWN"
+  },
+  "inversion": {
+    "alpha_targets": [
+      "1",
+      "1/2"
+    ],
+    "extra_beta_over_epsilon": [
+      "0",
+      "1/10",
+      "1/4"
+    ],
+    "root_decimal_places": 9,
+    "c_means": "simultaneous Mj<=c^j*Mj_ref (j=1,2,3) and B<=c*B_ref on all 44 positions; no single reference waveform is asserted",
+    "base_exception_budget": "accepted conditional Delta only; not a physical measurement",
+    "beta_means": "additional full-horizon exception probability; must include ALL departures from singleton/E/init/environment assumptions not already paid",
+    "outside_threshold_status": "UNKNOWN; a sufficient bound fails, not a lower exclusion"
+  },
+  "cost": {
+    "resource_target_fraction": "4/5",
+    "codec_architecture": "published dense syndrome ROM only",
+    "other_memory_bytes": null,
+    "energy_budget_J": null,
+    "idle_power_W": null,
+    "nonoverlapping_action_energy_J": null,
+    "EV30_bus_and_latency": "owned by #186; not computed here"
+  },
+  "status": {
+    "PR219_220": "accepted conditional result",
+    "PR221": "accepted limited engineering slice",
+    "main_class_OFF_admission": "RECOMMENDED_TO_IVAN_DECISION_PENDING",
+    "A1_A5": "unchanged",
+    "historical_files": "unchanged",
+    "new_EV30_Q_or_comparison_table": false
+  }
+}
