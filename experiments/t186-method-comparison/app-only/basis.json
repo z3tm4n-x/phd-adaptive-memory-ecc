@@ -1,0 +1,20 @@
+{
+  "status": "applicable",
+  "common_input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+  "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6339497587",
+  "assignment_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6339058563",
+  "theorist_commit": "77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+  "theorist_reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6339574116",
+  "candidate": "t2 with zero dedicated scrub including startup; same paid initialization and application",
+  "application_arrival_period_ns": 131074621440,
+  "arrival_to_deadline_aperture_ns": 3000,
+  "class_membership": {
+    "original_k_ge_1_grid_contains_OFF": false,
+    "proposed_class": "F0 = F_positive union {OFF}",
+    "status": "theorist proposal; orchestrator class-admission decision pending",
+    "implication_if_admitted": "minimum necessary additional scrub work is zero; full price is nonzero"
+  },
+  "scientific_acceptance": false,
+  "expected_Q_upper": "3566282108835327460062512348098637248601244111/287687311360000000000000000000000000000000000000000",
+  "confirmed_scope": "singleton strict_uniform v4, fixed physical-time arrival apertures, causal E, clean first and clipped terminal cells, one lifetime Delta; not physical or independent acceptance"
+}
