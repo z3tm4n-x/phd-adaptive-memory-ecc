@@ -1,0 +1,81 @@
+{
+  "base_main": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+  "sources": {
+    "common": {
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    "app_result": {
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "path": "experiments/t186-method-comparison/app-only/outputs/result.json",
+      "sha256": "b587c0a54a9f0c04ef083de904ab635272a4c6c7f0a22b36bcee315cb331010f",
+      "git_blob": "0ea731ec1b64c43bf363c3f1c242ca81595cdfd5"
+    },
+    "theory_result": {
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "path": "experiments/comparison-foundations-20261018/write-only-20261022/result.json",
+      "sha256": "2fd4436da138dbf26ff25c6516dc4ff4961127875a4b7f2ea8b7155a6a5627f9",
+      "git_blob": "101dfdb8ba69ce3195d5312c195c77b38b43d7f3"
+    },
+    "theory": {
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "path": "theory/t196-write-only-apertures-20261022.md",
+      "sha256": "42d2ea316c9a9195df45a616dbb2ab07b9ca3fc091584893539cc3126e4e0bc9",
+      "git_blob": "42a6d93f08bd4f715edb9d60fed8b93123ac2ea8"
+    },
+    "acceptance": {
+      "commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+      "path": "experiments/t186-method-comparison/app-only/ORCHESTRATOR_REVIEW_20261022.md",
+      "sha256": "e7f52b94d81d6cfaa0821ce80ee7b82239a596171a3496dfa0cc7a9fe842b83d",
+      "git_blob": "d519eac6f78d4873291b20d545e709a6b6e9a320"
+    }
+  },
+  "pdfs": {
+    "datasheet-RevQ.pdf": {
+      "url": "https://www.infineon.com/assets/row/public/documents/10/49/infineon-cy62167ev30-mobl-16-mbit-1m-x-16-2m-x-8-static-ram-datasheet-en.pdf",
+      "locator": "38-05446 Rev.*Q, pp.5,7-9,13, note19; read in previous accepted slice and AC handoff",
+      "sha256": "3af6dadb2fa2ca75edfc92532f0dbab6a39e6d6dc7d9fac1c05648c5e49b8f8d",
+      "bytes": 355113
+    },
+    "AN13842.pdf": {
+      "url": "https://www.infineon.com/assets/row/public/documents/10/42/infineon-an13842-001-13842-0h-applicationnotes-en.pdf",
+      "locator": "PDF pp.2-3; date-code table visually checked",
+      "sha256": "4c1522b10d65e72d839f9dd6bf05eb8e83002aef08e50e73d2e9bd60e11eb701",
+      "bytes": 395439
+    },
+    "AN66311.pdf": {
+      "url": "https://www.infineon.com/assets/row/public/documents/10/42/infineon-an66311-001-66311-0e-applicationnotes-en.pdf",
+      "locator": "PDF pp.2-3; date-code table visually checked",
+      "sha256": "42b00ba4dc73aaa8ae57579aef36f58cbdf20a5817ff4a99c052269b8124ca02",
+      "bytes": 297066
+    },
+    "REDW2020.pdf": {
+      "url": "https://jyx.jyu.fi/bitstreams/e328580f-8d6c-478d-b815-f1b59fa07728/download",
+      "doi": "10.1109/REDW51883.2020.9325822",
+      "locator": "PDF3 TableI; PDF5 methods; PDF6 Fig8/9; PDF9 TableIII; cached original SHA matches accepted T126",
+      "sha256": "4021f72436e457ed025c1dc3eddb4b309fad01c2dd35f7c8b2527ea0180baabf",
+      "bytes": 1567585
+    },
+    "Cecchetto-2021-330.pdf": {
+      "url": "https://repository.cern/records/4n62z-tnj42/files/CERN-THESIS-2021-330.pdf?download=1",
+      "locator": "PDF126-128 (printed124-126),133-134 (131-132); Tables6.3,6.5,6.6; PDF127/134 visually checked",
+      "sha256": "d2ce557ca43c9071af7a1f5ad4ee27a88c43b0f1e911482f83a8195c35970293",
+      "bytes": 38297238
+    },
+    "Coronetti-2021-255.pdf": {
+      "url": "https://repository.cern/records/v8kv0-f5407/files/CERN-THESIS-2021-255.pdf?download=1",
+      "locator": "PDF61 (printed44) Table4.3; PDF169-170 (article1608-1609) TableII/Fig5; latter pages visually checked",
+      "embedded_article_doi": "10.1109/TNS.2020.2978228",
+      "sha256": "e7c824d73a6d683d7e9396c0cf599002853408e4fb33ce3908ec27d41d3e23ba",
+      "bytes": 29782639
+    }
+  },
+  "decision": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6341679851",
+  "AC_handoffs": [
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6342136613",
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6342146125"
+  ],
+  "retrieval_scope": "Only listed pages/links were used; no exhaustive literature absence claim. Old CDS article returned HTML; article read in public author thesis instead. Vendor forum did not establish exact -ZXA die equivalence and was not used as evidence."
+}

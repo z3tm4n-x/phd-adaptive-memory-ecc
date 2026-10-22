@@ -1,0 +1,141 @@
+{
+  "status": {
+    "PR219_220": "accepted conditional result",
+    "PR221": "accepted limited engineering slice",
+    "main_class_OFF_admission": "RECOMMENDED_TO_IVAN_DECISION_PENDING",
+    "A1_A5": "unchanged",
+    "historical_files": "unchanged",
+    "new_EV30_Q_or_comparison_table": false
+  },
+  "physical_admission": {
+    "joint_B_M1_M2_M3_scale_upper": null,
+    "NHPP_singleton_law_certified": false,
+    "full_word_mark_law_certified": false,
+    "actual_lifetime_exception_upper": null,
+    "E_and_deadline_for_EV30_certified": false,
+    "physical_Q_upper": null,
+    "physical_Q_lower": null,
+    "current_status": "UNKNOWN"
+  },
+  "source_identity": {
+    "input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "accepted_bound": "app_result#/Q_upper",
+    "source_formula": "theory equation(1), fixed P/D and singleton/clean causal E",
+    "reference_Delta": "3/500000",
+    "reference_singleton_component": "1840158240675327460062512348098637248601244111/287687311360000000000000000000000000000000000000000"
+  },
+  "thresholds": [
+    {
+      "target_over_epsilon": "1",
+      "extra_beta": "0",
+      "c_limit_cubed": "40851598213120000000000000000000000000000000000/262879748667903922866073192585519606943034873",
+      "c_limit_lower": "5.376305931",
+      "c_limit_upper": "5.376305932",
+      "status": "SUFFICIENT_INPUT_THRESHOLD_ONLY_IF_ALL_PREMISES_CERTIFIED"
+    },
+    {
+      "target_over_epsilon": "1",
+      "extra_beta": "1/10000",
+      "c_limit_cubed": "85730818785280000000000000000000000000000000000/613386080225109153354170782699545749533748037",
+      "c_limit_lower": "5.189605578",
+      "c_limit_upper": "5.189605579",
+      "status": "SUFFICIENT_INPUT_THRESHOLD_ONLY_IF_ALL_PREMISES_CERTIFIED"
+    },
+    {
+      "target_over_epsilon": "1",
+      "extra_beta": "1/4000",
+      "c_limit_cubed": "71346453217280000000000000000000000000000000000/613386080225109153354170782699545749533748037",
+      "c_limit_lower": "4.881419788",
+      "c_limit_upper": "4.881419789",
+      "status": "SUFFICIENT_INPUT_THRESHOLD_ONLY_IF_ALL_PREMISES_CERTIFIED"
+    },
+    {
+      "target_over_epsilon": "1/2",
+      "extra_beta": "0",
+      "c_limit_cubed": "142117531811840000000000000000000000000000000000/1840158240675327460062512348098637248601244111",
+      "c_limit_lower": "4.258573642",
+      "c_limit_upper": "4.258573643",
+      "status": "SUFFICIENT_INPUT_THRESHOLD_ONLY_IF_ALL_PREMISES_CERTIFIED"
+    },
+    {
+      "target_over_epsilon": "1/2",
+      "extra_beta": "1/10000",
+      "c_limit_cubed": "113348800675840000000000000000000000000000000000/1840158240675327460062512348098637248601244111",
+      "c_limit_lower": "3.949304191",
+      "c_limit_upper": "3.949304192",
+      "status": "SUFFICIENT_INPUT_THRESHOLD_ONLY_IF_ALL_PREMISES_CERTIFIED"
+    },
+    {
+      "target_over_epsilon": "1/2",
+      "extra_beta": "1/4000",
+      "c_limit_cubed": "70195703971840000000000000000000000000000000000/1840158240675327460062512348098637248601244111",
+      "c_limit_lower": "3.366292020",
+      "c_limit_upper": "3.366292021",
+      "status": "SUFFICIENT_INPUT_THRESHOLD_ONLY_IF_ALL_PREMISES_CERTIFIED"
+    }
+  ],
+  "formula": "c^3 <= (alpha*epsilon - Delta_ref - beta)/(U_ref - Delta_ref)",
+  "required_certificate": {
+    "alpha_targets": [
+      "1",
+      "1/2"
+    ],
+    "extra_beta_over_epsilon": [
+      "0",
+      "1/10",
+      "1/4"
+    ],
+    "root_decimal_places": 9,
+    "c_means": "simultaneous Mj<=c^j*Mj_ref (j=1,2,3) and B<=c*B_ref on all 44 positions; no single reference waveform is asserted",
+    "base_exception_budget": "accepted conditional Delta only; not a physical measurement",
+    "beta_means": "additional full-horizon exception probability; must include ALL departures from singleton/E/init/environment assumptions not already paid",
+    "outside_threshold_status": "UNKNOWN; a sufficient bound fails, not a lower exclusion"
+  },
+  "AC_date_code_only": {
+    "published_fix_thresholds_met": {
+      "AN13842_fixed_from": true,
+      "AN66311_fixed_from": true
+    },
+    "full_die_or_radiation_equivalence_proved": false
+  },
+  "source_conflict": {
+    "AN13842_fixed_from": "0826",
+    "AN66311_fixed_from": "1301",
+    "REDW2020_selected": "1843",
+    "Cecchetto_Table6_3_default": "1731",
+    "Cecchetto_Table6_3_alternate": "1525",
+    "HEP_Fig5_exact_date_code": null,
+    "conflict_resolved": false
+  },
+  "cost_boundaries": {
+    "published_ROM_bytes": 23040,
+    "ROM_only_capacity_for_20_percent_reserve_bytes": "28800",
+    "full_memory_condition": "ROM + M_other <= 0.8 * M_cap; M_other unknown, specific architecture only",
+    "mission_s": "315576000",
+    "imported_core_action_counts_including_prefix": {
+      "application_reads": "315569688607",
+      "application_writes": "315569688606",
+      "decodes": "631139377213",
+      "encodes": "315569819678",
+      "read_beats": "1893418131639",
+      "write_beats": "946709459034",
+      "initialization": "131072"
+    },
+    "energy_condition": "T*P_idle + sum(N_i*e_i) + E_other <= alpha_E*E_cap; alpha_E=1 or declared reserve target; all terms disjoint",
+    "action_energy_threshold": "e_j <= (alpha_E*E_cap - T*P_idle - E_other - sum(i!=j,N_i*e_i))/N_j",
+    "EV30_numeric_energy_or_bus": null,
+    "note": "counts imported from #186 for unchanged offered workload/full RMW; controller/grant/frame changes remain with #186"
+  },
+  "checks": [
+    "five exact Git sources and six PDF hashes",
+    "accepted input, bound and moment caps agree",
+    "both directed sides of six scalar certificate thresholds",
+    "published date-code limits only",
+    "no asserted physical certificate or date-code reconciliation",
+    "source price covers prefix/post-A/pending"
+  ],
+  "provenance": {
+    "inputs_sha256": "4abd06b80f5cfffff6ff0a232b691f268dc082e233a457a1590efa84f8f2edda",
+    "manifest_sha256": "1b4cbc983d98803489296d83586dfb7e8baa3cad2610621f05563a50441535aa"
+  }
+}
