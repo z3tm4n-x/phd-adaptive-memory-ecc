@@ -1,8 +1,8 @@
 {
   "task": 186,
-  "revision": 3,
+  "revision": 4,
   "date": "2026-10-22",
-  "status": "ENGINEERING_INPUT_ALIGNED_SERVICE_POINT_SUBMITTED_FOR_THEORY",
+  "status": "ENGINEERING_INPUT_ALIGNED_INFORMATIONAL_ADAPTIVE_CERTIFICATE_IN_PROGRESS",
   "useful_bytes": 524288,
   "words": 131072,
   "data_bits": 32,
@@ -112,7 +112,9 @@
     "inbound_ns": 320,
     "ready_ns": 80,
     "outbound_ns": 320,
-    "backpressure_ns": 100
+    "backpressure_ns": 100,
+    "ordinary_read_publishes_ERR_G": false,
+    "prewrite_publishes_ERR_G": true
   },
   "service": {
     "preferred": "E",
@@ -174,7 +176,12 @@
     ],
     "veto_scope": "raw confirmations with new G after restoration are not bounded by episode/recovery count",
     "extra_source_veto_parameter": "v=E[N_v]/T per second; range[0,250002500.1], no physical selected rate",
-    "veto_zero_slice": "explicit conditional slice only; also report unconstrained hard upper"
+    "veto_zero_slice": "explicit conditional slice only; also report unconstrained hard upper",
+    "logical_ERR_sources": [
+      "full scrub read",
+      "full premodification read of useful write"
+    ],
+    "ordinary_app_read": "decode data only, no repair and no ERR/G publication"
   },
   "adaptive": {
     "family": "two-stage own ERR, equality FAST; same-edge veto, preserved holds/phase/pending",
@@ -182,14 +189,14 @@
     "short_hold_s": "90",
     "long_hold_s": "180",
     "new_n39_risk_certificate": null,
-    "selection": "largest k in [3,5,9,27] with same mandatory-support risk target",
+    "selection": "largest k in [3,5,9,27] with NEW T196(7)/T119 interval upper<=epsilon/2",
     "candidate_ka": [
       3,
       5,
       9,
       27
     ],
-    "risk_basis": "T196(5) mandatory support, ignoring extra correct E actions; informational refinement remains open",
+    "risk_basis": "T196(7), new W/ell/phase/cross directed certificate; mandatory-only row kept diagnostic",
     "ordinary_false_expected_per_s": "0.000001",
     "ordinary_outage_fraction": "0.0001",
     "ordinary_loss_episodes_upper": 1001,
@@ -197,7 +204,23 @@
     "source_to_fresh_rule_upper_ns": 10000,
     "timer_quantum_ticks": 20,
     "source_pair_window_s": "90",
-    "all_history": "controller and accounting continue after first exceedance"
+    "all_history": "controller and accounting continue after first exceedance",
+    "information_numeric": {
+      "phase_cells": 8,
+      "q_cells": 192,
+      "refinements": 5,
+      "u_multipliers": [
+        1,
+        2,
+        4,
+        16
+      ],
+      "decimal_digits": 48
+    },
+    "lower_parent_fraction": "1",
+    "multiword_parent_fraction": "0 only in declared independent-word conditional model",
+    "array_growth_threshold": "(39/152)*reference_growth_threshold_per_s",
+    "phase_discrepancy": "4/W, not old 4/524288"
   },
   "fixed": {
     "period39_s": null,
@@ -224,7 +247,7 @@
     "fixed_observation": "omitted because unused; timer/controller costs stay explicit",
     "source_veto_count_coefficient": "T196(11), full started work; no handler changes",
     "repair_count_bound": "parent count before global bad event + Q_upper*hard reads afterwards; also always-E upper",
-    "adaptive_good_source_bound": "<=2 publications per parent if app revisit exceeds mandatory age; otherwise use hard upper"
+    "adaptive_good_source_bound": "<=2 publications/parent including weak-E aperture repeat; app-read emits none; after bad history pay hard"
   },
   "sources": {
     "T187": "13e618a24831fecb8e36b9c7c1350ac108edf31c",
@@ -254,12 +277,18 @@
     "word_at_control_index": "(3*index) mod W",
     "mandatory": "startup full fast pass; then every kth full pass; fixed predetermined support",
     "additional_adaptive_reads": "only at unchanged potential starts; cannot suppress mandatory support",
-    "initialization_outside_horizon": true
+    "initialization_outside_horizon": true,
+    "adaptive_override": {
+      "word_at_control_index": "inverse(k_a modulo W)*index mod W",
+      "mandatory": "first W indices and index mod k_a=0",
+      "reason": "T119 phase-exposure calendar; fixed diagnostic calendar unchanged"
+    }
   },
   "coordination": {
     "map_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334240420",
     "orchestrator": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334315499",
     "theory_parent_law": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334139214",
-    "numerical_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334225337"
+    "numerical_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334225337",
+    "orchestrator_ERR_and_information": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334727215"
   }
 }
