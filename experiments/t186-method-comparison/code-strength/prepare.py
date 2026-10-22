@@ -28,7 +28,10 @@ def encode(value):
 def verify():
     sources = json.loads((HERE / "sources.json").read_text(encoding="utf-8"))
     for source in sources["files"]:
-        old = subprocess.check_output(["git","show",f'{source["commit"]}:{source["path"]}'],cwd=ROOT)
+        # cat-file reads the object directly. git-show also probes a literal
+        # ref:path as a filesystem path, which can hit MAX_PATH in a deep
+        # Windows clean checkout before it resolves the revision.
+        old = subprocess.check_output(["git","cat-file","blob",f'{source["commit"]}:{source["path"]}'],cwd=ROOT)
         actual = (ROOT / source["path"]).read_bytes()
         if digest(old) != source["sha256"] or digest(actual) != source["sha256"]:
             raise ValueError("source mismatch: " + source["path"])
