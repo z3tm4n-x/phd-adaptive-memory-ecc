@@ -1,0 +1,687 @@
+{
+  "task": 206,
+  "status": "AUTHOR_DELIVERY_FOR_REVIEW_NOT_ACCEPTED",
+  "plan_commit": "e1e56cb2b42d0db6046b1894eb5a7b5c49778a0f",
+  "groups": [
+    {
+      "group": "A1",
+      "name": "Малая память: постоянный U",
+      "status": "SUFFICIENT_IN_SOURCE_SCOPE",
+      "scope": "T58/diagnostic/independent-uniform-singleton-full39/U/fixed-calendar",
+      "physical_status": "conditional_model_not_future_physical_bound",
+      "source_id": "R0B_W262144_R64000000_e0.01_c0.01",
+      "source": {
+        "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t126-regime-map/outputs/map.json",
+        "sha256": "71c37309121b87a70c47382b1a6c415d00fec3faa2f6c1e720a0b0ab7e941ccf",
+        "git_blob": "420185e63f2eb7b6eb05057532738d2d4d49c8e4"
+      },
+      "T_s": "157766400",
+      "epsilon": "1/100",
+      "Q_upper": "2177810307178391257789888592058932459/217781030769252777099609375000000000000",
+      "Q_lower": "1286826730458576545573693376418856630104562997322757/1532495540865888858358347027150309183618739122183602176",
+      "Q_lower_scope": "entire deterministic T58 fixed class at this budget",
+      "period_s": "31531831/1562500",
+      "probability_slack": "514136513206205157941067541/217781030769252777099609375000000000000",
+      "probability_margin": "514136513206205157941067541/2177810307692527770996093750000000000",
+      "time_margin": "21787871723/29987688000",
+      "resource_margin": {
+        "protection_peak": "67117/80000",
+        "whole_bus": null,
+        "hardware": null
+      },
+      "resources": {
+        "useful_bytes": 1048576,
+        "active_code_bytes": "1277952",
+        "allocated_bus_bytes": null,
+        "installed_device_bytes": null,
+        "full_bus_average_upper": "404273635932678653216341/795946153964544000000000",
+        "full_bus_peak_upper": "815443/1600000",
+        "application_delay_upper_s": "8199816277/9995896000000000",
+        "codec_latency_s": null,
+        "codec_memory_bytes": null,
+        "controller_memory_bytes": null,
+        "CPU_fraction": null,
+        "LUT": null,
+        "BRAM": null,
+        "energy_J": null
+      },
+      "application": {
+        "sigma_s": "0.0000001",
+        "g_s": "0.0000001",
+        "u": "0.5",
+        "status": "declared_research_envelope_not_observed_product_load"
+      },
+      "cost_scope": "full quiet horizon T, continue after first exceedance; returning quiet not established",
+      "missing": [
+        "future physical Lambda/Theta",
+        "preparation and joint WCET qualification",
+        "adaptive lifetime certificate in this full39 class"
+      ],
+      "exclusion_witness": {
+        "source_id": "R0B_W262144_R64000000_e0.0001_c0.01",
+        "status": "PROVED_EXCLUSION_IN_SOURCE_FIXED_CLASS",
+        "Q_lower": "1286826730458576545573693376418856630104562997322757/1532495540865888858358347027150309183618739122183602176",
+        "epsilon": "1/10000",
+        "scope": "entire deterministic T58 fixed class at this budget",
+        "quiet_budget": "1/100",
+        "is_new_206_exclusion": false
+      },
+      "hardware_choice_complete": false,
+      "scope_of_status": "original declared model; not physical qualification or new hardware acceptance"
+    },
+    {
+      "group": "A2",
+      "name": "Большая диагностическая память",
+      "status": "SUFFICIENT_FIXED_IN_SOURCE_SCOPE",
+      "scope": "deterministic constant full-U in the diagnostic A2 class",
+      "physical_status": "conditional_diagnostic",
+      "source": {
+        "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/8902245e330bb992619db2172eb2fc837386bc03/experiments/map-basis-20261014/examples.json",
+        "sha256": "7b33942b12c57d152cd5d21f400719845617bf7649546ed5574259a1922bc748",
+        "git_blob": "75d2b4684b692f3fde38aaaf73cb4bd712531a66"
+      },
+      "source_id": "A2_T140_pointwise",
+      "T_s": "157766400",
+      "epsilon": "1/100",
+      "Q_upper": "1258290797222269831261798052764543833/125829080000000000000000000000000000000",
+      "Q_lower": null,
+      "probability_slack": "2777730168738201947235456167/125829080000000000000000000000000000000",
+      "probability_margin": "2777730168738201947235456167/1258290800000000000000000000000000000",
+      "time_margin": null,
+      "resource_margin": {
+        "protection_peak": "863349/1600000",
+        "whole_bus": null,
+        "hardware": null
+      },
+      "resources": {
+        "useful_bytes": 7743328,
+        "active_code_bytes": "9437181",
+        "allocated_bus_bytes": null,
+        "installed_device_bytes": null,
+        "full_bus_average_upper": "372758766792193572854941/613173527138304000000000",
+        "full_bus_peak_upper": null,
+        "application_delay_upper_s": "4387666795021/11391519353600000000",
+        "codec_latency_s": null,
+        "codec_memory_bytes": null,
+        "controller_memory_bytes": null,
+        "CPU_fraction": null,
+        "LUT": null,
+        "BRAM": null,
+        "energy_J": null
+      },
+      "fixed_price_interval": {
+        "lower": {
+          "value": "12407250169726870965767/116245210822963200000000",
+          "unit": "bus fraction",
+          "kind": "lower",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/fixed/optimal_fixed_price_lower"
+          }
+        },
+        "upper": {
+          "value": "4411466881536078946387/40878235142553600000000",
+          "unit": "bus fraction",
+          "kind": "upper",
+          "evidence": "OWN_RESULT",
+          "source": {
+            "source": "140",
+            "pointer": "/fixed/optimal_fixed_price_upper"
+          }
+        }
+      },
+      "adaptive_status": "UNKNOWN_COMPLETE_CONTROLLER",
+      "layer_gain_upper": {
+        "value": "12208815093210026757055568060387567361336004420983362811215421275/3001878794169773278518749420629091693121262313987695818654815229",
+        "unit": "1",
+        "kind": "upper",
+        "evidence": "OWN_RESULT",
+        "source": {
+          "source": "140",
+          "pointer": "/layers/T57_even_free_information/gain_ceiling_with_presented_fixed_upper"
+        }
+      },
+      "layer_scope": "T57 pointwise layer only; excludes 5x within that layer, not all adaptive methods",
+      "application": "Same arbitrary nonzero read-only flow within sigma+0.5t, sigma/atomic=0.1us. Writes/foreign corrections excluded",
+      "missing": [
+        "A2_COMPLETE_CONTROLLER",
+        "A2_PHYSICAL_TRANSFER"
+      ],
+      "hardware_choice_complete": false,
+      "scope_of_status": "original declared model; not physical qualification or new hardware acceptance"
+    },
+    {
+      "group": "A3",
+      "name": "CY: новый полный отклик",
+      "status": "UNKNOWN",
+      "scope": "new physical candidate; old R0-A contracts separate",
+      "physical_status": "UNKNOWN",
+      "Q_upper": null,
+      "Q_lower": null,
+      "probability_slack": null,
+      "time_margin": null,
+      "resource_margin": null,
+      "resources": {
+        "useful_bytes": 524288,
+        "active_code_bytes": 622592,
+        "allocated_bus_bytes": 524288,
+        "installed_device_bytes": 2097152,
+        "full_bus_average_upper": null,
+        "full_bus_peak_upper": null,
+        "application_delay_upper_s": null,
+        "codec_latency_s": null,
+        "codec_memory_bytes": null,
+        "controller_memory_bytes": null,
+        "CPU_fraction": null,
+        "LUT": null,
+        "BRAM": null,
+        "energy_J": null
+      },
+      "missing": [
+        "revision_and_angle_package_full_response_upper",
+        "selected_full38_aliases_parent_marks_direct",
+        "joint_future_environment_and_delta_env",
+        "init_execution_service_budgets",
+        "E_ERR_latency_load_and_hardware_coefficients"
+      ],
+      "source": {
+        "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/ea789fc4b4d69699696d66a41b2738099d4154bb/experiments/t141-radiation-chain/DATA_PASSPORT.md",
+        "sha256": "5de807386ff439ceed9d163d3cf1ee85c7cfa6a0ca95b73bbe440e311a88ab09",
+        "git_blob": "0b5598a6f6a2517ab1b5bd0f238dc32887c7db87"
+      },
+      "hardware_choice_complete": false,
+      "scope_of_status": "original declared model; not physical qualification or new hardware acceptance",
+      "T_s": 315576000,
+      "epsilon": "1/1000",
+      "requirement_status": "proposed search candidate, not a device property"
+    },
+    {
+      "group": "A4",
+      "name": "Другая SRAM: EV30LL-45ZXA/1843",
+      "status": "UNKNOWN",
+      "scope": "source candidate; 1525 is not pooled",
+      "physical_status": "UNKNOWN",
+      "Q_upper": null,
+      "Q_lower": null,
+      "probability_slack": null,
+      "time_margin": null,
+      "resource_margin": null,
+      "resources": {
+        "useful_bytes": 524288,
+        "active_code_bytes": null,
+        "allocated_bus_bytes": 786432,
+        "installed_device_bytes": null,
+        "full_bus_average_upper": null,
+        "full_bus_peak_upper": null,
+        "application_delay_upper_s": null,
+        "codec_latency_s": null,
+        "codec_memory_bytes": null,
+        "controller_memory_bytes": null,
+        "CPU_fraction": null,
+        "LUT": null,
+        "BRAM": null,
+        "energy_J": null
+      },
+      "missing": [
+        "same-datecode numerical HEP/PDI upper with counts/fluence",
+        "package-angle transfer",
+        "external full-word marks and service"
+      ],
+      "source": {
+        "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t126-regime-map/SOURCES.md",
+        "sha256": "709f46ca0e837794be10779c173bbe1bd5ecd1793074f132ff6db1d2da0cf825",
+        "git_blob": "4c36cfb7da875467e68671653b4f6b517d79852d"
+      },
+      "hardware_choice_complete": false,
+      "scope_of_status": "original declared model; not physical qualification or new hardware acceptance",
+      "T_s": 315576000,
+      "epsilon": "1/1000",
+      "requirement_status": "proposed search candidate, not a device property"
+    },
+    {
+      "group": "A5",
+      "name": "LEO/положение: SAC-C",
+      "status": "UNKNOWN",
+      "scope": "position/time online; ICARE offline validation only",
+      "physical_status": "UNKNOWN",
+      "Q_upper": null,
+      "Q_lower": null,
+      "probability_slack": null,
+      "time_margin": null,
+      "resource_margin": null,
+      "resources": {
+        "useful_bytes": null,
+        "active_code_bytes": null,
+        "allocated_bus_bytes": null,
+        "installed_device_bytes": null,
+        "full_bus_average_upper": null,
+        "full_bus_peak_upper": null,
+        "application_delay_upper_s": null,
+        "codec_latency_s": null,
+        "codec_memory_bytes": null,
+        "controller_memory_bytes": null,
+        "CPU_fraction": null,
+        "LUT": null,
+        "BRAM": null,
+        "energy_J": null
+      },
+      "missing": [
+        "ephemeris_time_error_and_online_availability",
+        "joint_environment_memory_response",
+        "raw_ICARE_archive",
+        "particle_sensor_is_online_input"
+      ],
+      "source": {
+        "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t126-regime-map/SOURCES.md",
+        "sha256": "709f46ca0e837794be10779c173bbe1bd5ecd1793074f132ff6db1d2da0cf825",
+        "git_blob": "4c36cfb7da875467e68671653b4f6b517d79852d"
+      },
+      "hardware_choice_complete": false,
+      "scope_of_status": "original declared model; not physical qualification or new hardware acceptance"
+    }
+  ],
+  "source_grid_summary": {
+    "r0b_constant_sufficient": 8,
+    "r0b_fixed_excluded_T58": 14,
+    "r0b_fixed_excluded_candidate_extra": 3,
+    "r0b_unknown_without_fixed_exclusion": 11,
+    "r0b_adaptive_certified": 0
+  },
+  "preserved_accepted_anchors": [
+    {
+      "id": "R0A_ERR_T119_ka5",
+      "status": "accepted_conditional",
+      "environment": "Old R0-A GEO, 3 g/cm2; not T150 radiation input",
+      "service": "E with read/repair aperture and residuals, g196/c164/freeze320, one-stage 60/120s; not clean full-U",
+      "price_metric": "Expected common-bus occupation through T, including after failure. G lower uses mandatory-read lower for whole constant-E cost and full adaptive bus upper with stated application",
+      "gaps": [
+        "CY_PHYSICS",
+        "ACTUAL_WORKLOAD",
+        "E_POTENTIAL"
+      ]
+    },
+    {
+      "id": "R0A_r4_B_V",
+      "status": "accepted_conditional_implementation",
+      "environment": "Same old R0-A radiation; original selected_r3_original, not reduced demo caps",
+      "service": "r4 E/g196/c164/ka3/freeze320. B processed-history bound and V not_before preparation are separate timing contracts",
+      "price_metric": "Full common-bus mission upper under r4 workload; V preserves price only with bounded full ARM cut-to-cut service. CPU allocation is separate",
+      "gaps": [
+        "CY_PHYSICS",
+        "ACTUAL_WORKLOAD",
+        "R4_MATCHED_FIXED",
+        "ARM_TIME_PRICE",
+        "E_POTENTIAL"
+      ]
+    },
+    {
+      "id": "R0A_fullU_T146",
+      "status": "accepted_conditional_theorem",
+      "environment": "Old R0-A GEO,3g/cm2; exogenous full38 marked-parent contract",
+      "service": "full-U100, occupied whole100-tick block, g176/ka101; distinct from E/r4; physical U-WCET unqualified",
+      "price_metric": "G_cert uses protection+observation+control mission bus cost, not whole bus including useful work. Whole-bus comparison at app cap exported separately",
+      "gaps": [
+        "CY_PHYSICS",
+        "CHANNEL_JOINT",
+        "FULL_U_SERVICE"
+      ]
+    },
+    {
+      "id": "A2_T140_pointwise",
+      "status": "accepted_scoped_bound",
+      "environment": "Diagnostic A2/T126 class, five-year source horizon; not CY62167 response",
+      "service": "256 Mbit/s full-U, c=39/R; 25% protection peak per1ms; calendar period differs from Wc",
+      "price_metric": "Mission protection bus fraction plus extra observation/control/recovery. Useful work reported separately",
+      "gaps": [
+        "A2_COMPLETE_CONTROLLER",
+        "A2_PHYSICAL_TRANSFER"
+      ]
+    },
+    {
+      "id": "CY_T150_shape_input",
+      "status": "accepted_parameterized_input_only",
+      "environment": "One T141 chain: fixed COSRAD b,p,F; nominal complete H response and exclusive LET, all terms before square; shape transfer is an assumption",
+      "service": "Only hypothetical full-U100 comparator from T150; physical service and new controller contract not qualified",
+      "price_metric": "No new guaranteed mission price; oracle is a pair-functional diagnostic",
+      "gaps": [
+        "T150_JOINT",
+        "T150_CONTROLLER",
+        "CY_PHYSICS"
+      ]
+    }
+  ],
+  "physical_candidate": {
+    "status": "SEARCH_CANDIDATE_NOT_QUALIFIED",
+    "part": "CY62167GE30-45ZXI",
+    "technology_nm": 65,
+    "source_datecode": "1731",
+    "actual_device_revision": null,
+    "datasheet": "002-20054 Rev.*F 2020-03-18; linkage to measured die not established",
+    "useful_bytes": 524288,
+    "data_bits": 32,
+    "code_bits": 38,
+    "t": 1,
+    "selected_words": 131072,
+    "source_words": 524288,
+    "installed_data_bytes": 2097152,
+    "external_bus_bits": 16,
+    "selected_aliases_per_word": 2,
+    "selected_alias_map": null,
+    "layout_scope": "select whole internal32+6 groups only; two x16 aliases; physical raw-to-pin group map unknown",
+    "orbit": "GEO 36000 km, inclination 0 as source COSRAD scenario",
+    "mission_s": 315576000,
+    "epsilon": "1/1000",
+    "shield_g_cm2": "4.0",
+    "shield_geometry": "source spherical Al model; package/die angular transfer unknown",
+    "response": "full_H_plus_exclusive_LET; no second Al/BEOL/HEP",
+    "capacity_scaling_assumption": "unchanged per-bit response and homogeneous selected whole words; lambda_new=1/4 lambda_source; F_new=1/4 F; S2_new=1/16 S2",
+    "service": "internal E; explicit observed writes; neither reconfigurable t2 nor measured external-code service",
+    "application": "proposed same useful strict-uniform workload as common comparison; physical timing not established",
+    "observation": "own ERR; physical parity-only observability, losses and latency unknown",
+    "initial_state": "clean proposed, physical initialization/error budget unestablished",
+    "resource_limits": {
+      "app_deadline_ns": 3000,
+      "peak_bus_fraction": "4/5",
+      "peak_window_ns": 1000000,
+      "CPU": null,
+      "LUT": null,
+      "BRAM": null,
+      "controller_bytes": null,
+      "energy_J": null
+    },
+    "design_margin": {
+      "Q_upper_fraction_of_epsilon": "1/2",
+      "minimum_time_resource_fraction": "1/5"
+    },
+    "Q_upper": null,
+    "Q_lower": null,
+    "probability_slack": null,
+    "time_slack": null,
+    "resource_slack": null,
+    "blockers": [
+      "revision_and_angle_package_full_response_upper",
+      "selected_full38_aliases_parent_marks_direct",
+      "joint_future_environment_and_delta_env",
+      "init_execution_service_budgets",
+      "E_ERR_latency_load_and_hardware_coefficients"
+    ],
+    "alternative": {
+      "part": "CY62167EV30LL-45ZXA",
+      "technology_nm": 90,
+      "selected_candidate_datecode": "1843 CNA",
+      "other_datecode_not_pooled": "1525 RADEF",
+      "code": "external (44,32), raw SRAM use requires its own device/service contract",
+      "useful_bytes": 524288,
+      "allocated_bytes": 786432,
+      "source": "Coronetti REDW2020 DOI10.1109/REDW51883.2020.9325822, Fig8/PDF6, via accepted T126 SOURCES",
+      "response_upper": null,
+      "marks": null,
+      "qualification": "SOURCE_CANDIDATE_ONLY"
+    }
+  },
+  "conditional_capacity_scaling": {
+    "factor_lambda_F": "1/4",
+    "factor_S2": "1/16",
+    "selected_active_code_bytes": 622592,
+    "installed_active_code_bytes_if_full38": 2490368,
+    "assumption": "unchanged per-bit response and homogeneous selected whole words; lambda_new=1/4 lambda_source; F_new=1/4 F; S2_new=1/16 S2",
+    "source": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/shape-transfer.csv",
+      "sha256": "c077e83ceb6977a01dd0fff3028b88341e78fd1d02980bbfac44c3cfce3557cd",
+      "git_blob": "bf941dec4e7ba2f7dc8eb8aa2fd33e9d5a3b9122"
+    },
+    "rows": [
+      {
+        "shield_g_cm2": "2.5",
+        "choice": "rectangle",
+        "source_words": 524288,
+        "source_F": "211588.54868081037",
+        "source_S2_s_inv": "215430.3150560002",
+        "conditional_selected_F": "21158854868081037/400000000000",
+        "conditional_selected_S2_s_inv": "1077151575280001/80000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "conditional common scalar envelope; not a physical Pi=.1 quantile",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "2.5",
+        "choice": "model_r_q90",
+        "source_words": 524288,
+        "source_F": "211588.54868081037",
+        "source_S2_s_inv": "68309.73815960967",
+        "conditional_selected_F": "21158854868081037/400000000000",
+        "conditional_selected_S2_s_inv": "6830973815960967/1600000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "fixed COSRAD b/p/F; transfer of empirical shape is ASSUMPTION",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "3.0",
+        "choice": "rectangle",
+        "source_words": 524288,
+        "source_F": "163642.48032753536",
+        "source_S2_s_inv": "111494.59126391285",
+        "conditional_selected_F": "127845687755887/3125000000",
+        "conditional_selected_S2_s_inv": "2229891825278257/320000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "conditional common scalar envelope; not a physical Pi=.1 quantile",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "3.0",
+        "choice": "model_r_q90",
+        "source_words": 524288,
+        "source_F": "163642.48032753536",
+        "source_S2_s_inv": "35865.11529071494",
+        "conditional_selected_F": "127845687755887/3125000000",
+        "conditional_selected_S2_s_inv": "1793255764535747/800000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "fixed COSRAD b/p/F; transfer of empirical shape is ASSUMPTION",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "3.5",
+        "choice": "rectangle",
+        "source_words": 524288,
+        "source_F": "133278.2981123508",
+        "source_S2_s_inv": "64322.699862533365",
+        "conditional_selected_F": "333195745280877/10000000000",
+        "conditional_selected_S2_s_inv": "12864539972506673/3200000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "conditional common scalar envelope; not a physical Pi=.1 quantile",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "3.5",
+        "choice": "model_r_q90",
+        "source_words": 524288,
+        "source_F": "133278.2981123508",
+        "source_S2_s_inv": "21024.22472071343",
+        "conditional_selected_F": "333195745280877/10000000000",
+        "conditional_selected_S2_s_inv": "2102422472071343/1600000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "fixed COSRAD b/p/F; transfer of empirical shape is ASSUMPTION",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "4.0",
+        "choice": "rectangle",
+        "source_words": 524288,
+        "source_F": "112394.74749636035",
+        "source_S2_s_inv": "39917.98170273496",
+        "conditional_selected_F": "2247894949927207/80000000000",
+        "conditional_selected_S2_s_inv": "498974771284187/200000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "conditional common scalar envelope; not a physical Pi=.1 quantile",
+        "Q_upper": null,
+        "physical_sufficient": false
+      },
+      {
+        "shield_g_cm2": "4.0",
+        "choice": "model_r_q90",
+        "source_words": 524288,
+        "source_F": "112394.74749636035",
+        "source_S2_s_inv": "12737.145489725086",
+        "conditional_selected_F": "2247894949927207/80000000000",
+        "conditional_selected_S2_s_inv": "6368572744862543/8000000000000",
+        "evidence": "OWN_RESULT_ALGEBRA_ON_SAVED_DECIMALS_UNDER_ASSUMPTION",
+        "basis": "fixed COSRAD b/p/F; transfer of empirical shape is ASSUMPTION",
+        "Q_upper": null,
+        "physical_sufficient": false
+      }
+    ]
+  },
+  "coverage_diagnostic": {
+    "formula": "delta+(1-delta)*q",
+    "delta": "1/10",
+    "q": "1/1000",
+    "upper": "1009/10000",
+    "physical_bound_claimed": false
+  },
+  "common_comparison": {
+    "master_pr": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211",
+    "head": "81b5dc4301c80953b5d7f4d862cbfbe03b25c432",
+    "table_path": "experiments/t186-method-comparison/code-strength/outputs/table.md",
+    "input_path": "experiments/t186-method-comparison/code-strength/common-input.v2.proposed.json",
+    "local_frozen_input": "upstream-common-input.snapshot.json",
+    "map_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334240420",
+    "agreement": "map engineering scope confirmed by orchestrator; v2 still awaits clean/write/budget/service concretization and theory signature",
+    "baseline": "conditional p1=1; not an estimate of physical multiplicity",
+    "theory_signature": null,
+    "code_row_ids": [
+      "t1_constant",
+      "t1_adaptive",
+      "t2_constant"
+    ],
+    "numerical_owner": 186,
+    "theory_owner": 196,
+    "required_output_fields": [
+      "matching_input_sha256",
+      "event_and_initial_state",
+      "Q_upper_and_applicability",
+      "Q_lower_and_scope_if_available",
+      "fixed_class_definition",
+      "period_or_timers",
+      "whole_horizon_cost_bounds",
+      "average_and_sliding_peak_bus",
+      "app_and_codec_latencies",
+      "resource_caps_and_slack",
+      "post_A_pending_and_GAP_cost",
+      "parameters_and_choice_thresholds"
+    ],
+    "required_input_concretization": [
+      "clean_or_K0_and_init_cost",
+      "lifetime_other_budget",
+      "full32_observed_write_main_profile",
+      "E_app_snapshot_lock_timing",
+      "common_versus_avoidable_observation",
+      "physical_unknowns_remain_null"
+    ],
+    "initial_review_head": "b8a8d2e319c27fd33e4724ac32bf1276eb7178ce",
+    "orchestrator_confirmation": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334315499",
+    "v2_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334406188",
+    "input_sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc",
+    "status": "UNKNOWN_PENDING_NUMERICAL_TABLE_AND_MATCHING_THEORY_SIGNATURE",
+    "table_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/81b5dc4301c80953b5d7f4d862cbfbe03b25c432/experiments/t186-method-comparison/code-strength/outputs/table.md",
+    "blocking_nulls_in_snapshot": [
+      "initial.K0",
+      "lifetime_other_budget",
+      "service.decode39_ns",
+      "service.decode44_ns",
+      "adaptive.new_n39_risk_certificate",
+      "fixed.period39_s",
+      "fixed.period44_s",
+      "fixed.class_lower39",
+      "fixed.class_lower44"
+    ],
+    "null_semantics": "unknown coefficients may remain parameters with proved thresholds; absent certificate is not sufficiency"
+  },
+  "known_schemes": {
+    "source_issues": [
+      186,
+      196
+    ],
+    "due": "2026-11-03",
+    "status": "PENDING_EXACT_SCOPED_DELIVERY",
+    "no_new_witness_search": true
+  },
+  "checks": {
+    "pinned_sources": 13,
+    "decision_guards": 10,
+    "unique_full_response_rows": 8
+  },
+  "sources": {
+    "map126": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t126-regime-map/outputs/map.json",
+      "sha256": "71c37309121b87a70c47382b1a6c415d00fec3faa2f6c1e720a0b0ab7e941ccf",
+      "git_blob": "420185e63f2eb7b6eb05057532738d2d4d49c8e4"
+    },
+    "sources126": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t126-regime-map/SOURCES.md",
+      "sha256": "709f46ca0e837794be10779c173bbe1bd5ecd1793074f132ff6db1d2da0cf825",
+      "git_blob": "4c36cfb7da875467e68671653b4f6b517d79852d"
+    },
+    "basis": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/8902245e330bb992619db2172eb2fc837386bc03/experiments/map-basis-20261014/examples.json",
+      "sha256": "7b33942b12c57d152cd5d21f400719845617bf7649546ed5574259a1922bc748",
+      "git_blob": "75d2b4684b692f3fde38aaaf73cb4bd712531a66"
+    },
+    "basis_report": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/8902245e330bb992619db2172eb2fc837386bc03/experiments/map-basis-20261014/REPORT.md",
+      "sha256": "dd2c813fa7407c9a2e1892d599540564a901960601e3f9cff60d24a8373731db",
+      "git_blob": "d0abb8be4f09cdd078d1f66f5c5fe751055a0296"
+    },
+    "shape": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/shape-transfer.csv",
+      "sha256": "c077e83ceb6977a01dd0fff3028b88341e78fd1d02980bbfac44c3cfce3557cd",
+      "git_blob": "bf941dec4e7ba2f7dc8eb8aa2fd33e9d5a3b9122"
+    },
+    "potentials": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/outputs/potentials.csv",
+      "sha256": "25c0fbe8a2d6a58501e70e08833f476bb654c43d0ca5f83fd51fd1dfeda0c36a",
+      "git_blob": "e51b05cfc9fad5b31c089cd92b0999cb666141cd"
+    },
+    "conditions150": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/960d9200a1be9d087135ca2d5e4b59129bdd5174/experiments/t150-event-shape/CONDITIONS.md",
+      "sha256": "20cffa7985de3af78f230ffe5770e5e4b8f7c3a11bf1462d5aad191275bd4bed",
+      "git_blob": "426cd27a50df924f8f902dc92c5f110c2e53b106"
+    },
+    "passport141": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/ea789fc4b4d69699696d66a41b2738099d4154bb/experiments/t141-radiation-chain/DATA_PASSPORT.md",
+      "sha256": "5de807386ff439ceed9d163d3cf1ee85c7cfa6a0ca95b73bbe440e311a88ab09",
+      "git_blob": "0b5598a6f6a2517ab1b5bd0f238dc32887c7db87"
+    },
+    "passport127": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t127-cy62167-pdi/DATA_PASSPORT.md",
+      "sha256": "4ca329d4cf7c88e14919fca775fd411355e4508f733e87436d9ae958faead174",
+      "git_blob": "b93e7063922d070212b6d6a693964fdb752096a6"
+    },
+    "contracts68": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t68-v21-inputs/contracts.md",
+      "sha256": "adee2d76848518f2cafc275d46d3473ce05ce5adf6012de9f33330d3b35fdbb2",
+      "git_blob": "71ca00be060cc1967f89cff1e4dc01a6e18f8b3f"
+    },
+    "a2": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t140-a2-signal/report.json",
+      "sha256": "b9266fe2308bd669676d2ffe445b9a295de439dbf221f7d63984292756176557",
+      "git_blob": "1bdff904213b5f496f506733222f4e169b6c767a"
+    },
+    "a1_config": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/4131b908259130bad269c2116b5b0b7811b40502/experiments/t58-fixed-baseline-r0b/config.json",
+      "sha256": "9847584f230fd5f8e9215375fa6ec37c8eb6c5a97797e24a337494d161ac1c58",
+      "git_blob": "7c3c7e1153ddae097331c152deebc417817a2189"
+    },
+    "common": {
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/81b5dc4301c80953b5d7f4d862cbfbe03b25c432/experiments/t186-method-comparison/code-strength/common-input.v2.proposed.json",
+      "sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc",
+      "git_blob": "74602a4e405f21d455e8702fe2488a1097d1d1e9"
+    }
+  }
+}

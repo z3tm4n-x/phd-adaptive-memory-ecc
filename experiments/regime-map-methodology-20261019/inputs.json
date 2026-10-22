@@ -1,0 +1,175 @@
+{
+  "task": 206,
+  "date": "2026-10-22",
+  "status": "AUTHOR_DELIVERY_FOR_REVIEW_NOT_ACCEPTED",
+  "plan_commit": "e1e56cb2b42d0db6046b1894eb5a7b5c49778a0f",
+  "event": "exists word w and time u in [0,T] with erroneous active code positions > t",
+  "common_comparison": {
+    "master_pr": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211",
+    "head": "81b5dc4301c80953b5d7f4d862cbfbe03b25c432",
+    "table_path": "experiments/t186-method-comparison/code-strength/outputs/table.md",
+    "input_path": "experiments/t186-method-comparison/code-strength/common-input.v2.proposed.json",
+    "local_frozen_input": "upstream-common-input.snapshot.json",
+    "map_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334240420",
+    "agreement": "map engineering scope confirmed by orchestrator; v2 still awaits clean/write/budget/service concretization and theory signature",
+    "baseline": "conditional p1=1; not an estimate of physical multiplicity",
+    "theory_signature": null,
+    "code_row_ids": [
+      "t1_constant",
+      "t1_adaptive",
+      "t2_constant"
+    ],
+    "numerical_owner": 186,
+    "theory_owner": 196,
+    "required_output_fields": [
+      "matching_input_sha256",
+      "event_and_initial_state",
+      "Q_upper_and_applicability",
+      "Q_lower_and_scope_if_available",
+      "fixed_class_definition",
+      "period_or_timers",
+      "whole_horizon_cost_bounds",
+      "average_and_sliding_peak_bus",
+      "app_and_codec_latencies",
+      "resource_caps_and_slack",
+      "post_A_pending_and_GAP_cost",
+      "parameters_and_choice_thresholds"
+    ],
+    "required_input_concretization": [
+      "clean_or_K0_and_init_cost",
+      "lifetime_other_budget",
+      "full32_observed_write_main_profile",
+      "E_app_snapshot_lock_timing",
+      "common_versus_avoidable_observation",
+      "physical_unknowns_remain_null"
+    ],
+    "initial_review_head": "b8a8d2e319c27fd33e4724ac32bf1276eb7178ce",
+    "orchestrator_confirmation": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334315499",
+    "v2_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334406188"
+  },
+  "selectors": {
+    "A1": "R0B_W262144_R64000000_e0.01_c0.01",
+    "A1_exclusion": "R0B_W262144_R64000000_e0.0001_c0.01",
+    "A2": "A2_T140_pointwise",
+    "shields": [
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0"
+    ],
+    "response_case": "full",
+    "shape_choice": "model_r_q90",
+    "shape_mean_events": "100.56812028745298"
+  },
+  "physical_candidate": {
+    "status": "SEARCH_CANDIDATE_NOT_QUALIFIED",
+    "part": "CY62167GE30-45ZXI",
+    "technology_nm": 65,
+    "source_datecode": "1731",
+    "actual_device_revision": null,
+    "datasheet": "002-20054 Rev.*F 2020-03-18; linkage to measured die not established",
+    "useful_bytes": 524288,
+    "data_bits": 32,
+    "code_bits": 38,
+    "t": 1,
+    "selected_words": 131072,
+    "source_words": 524288,
+    "installed_data_bytes": 2097152,
+    "external_bus_bits": 16,
+    "selected_aliases_per_word": 2,
+    "selected_alias_map": null,
+    "layout_scope": "select whole internal32+6 groups only; two x16 aliases; physical raw-to-pin group map unknown",
+    "orbit": "GEO 36000 km, inclination 0 as source COSRAD scenario",
+    "mission_s": 315576000,
+    "epsilon": "1/1000",
+    "shield_g_cm2": "4.0",
+    "shield_geometry": "source spherical Al model; package/die angular transfer unknown",
+    "response": "full_H_plus_exclusive_LET; no second Al/BEOL/HEP",
+    "capacity_scaling_assumption": "unchanged per-bit response and homogeneous selected whole words; lambda_new=1/4 lambda_source; F_new=1/4 F; S2_new=1/16 S2",
+    "service": "internal E; explicit observed writes; neither reconfigurable t2 nor measured external-code service",
+    "application": "proposed same useful strict-uniform workload as common comparison; physical timing not established",
+    "observation": "own ERR; physical parity-only observability, losses and latency unknown",
+    "initial_state": "clean proposed, physical initialization/error budget unestablished",
+    "resource_limits": {
+      "app_deadline_ns": 3000,
+      "peak_bus_fraction": "4/5",
+      "peak_window_ns": 1000000,
+      "CPU": null,
+      "LUT": null,
+      "BRAM": null,
+      "controller_bytes": null,
+      "energy_J": null
+    },
+    "design_margin": {
+      "Q_upper_fraction_of_epsilon": "1/2",
+      "minimum_time_resource_fraction": "1/5"
+    },
+    "Q_upper": null,
+    "Q_lower": null,
+    "probability_slack": null,
+    "time_slack": null,
+    "resource_slack": null,
+    "blockers": [
+      "revision_and_angle_package_full_response_upper",
+      "selected_full38_aliases_parent_marks_direct",
+      "joint_future_environment_and_delta_env",
+      "init_execution_service_budgets",
+      "E_ERR_latency_load_and_hardware_coefficients"
+    ],
+    "alternative": {
+      "part": "CY62167EV30LL-45ZXA",
+      "technology_nm": 90,
+      "selected_candidate_datecode": "1843 CNA",
+      "other_datecode_not_pooled": "1525 RADEF",
+      "code": "external (44,32), raw SRAM use requires its own device/service contract",
+      "useful_bytes": 524288,
+      "allocated_bytes": 786432,
+      "source": "Coronetti REDW2020 DOI10.1109/REDW51883.2020.9325822, Fig8/PDF6, via accepted T126 SOURCES",
+      "response_upper": null,
+      "marks": null,
+      "qualification": "SOURCE_CANDIDATE_ONLY"
+    }
+  },
+  "groups": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5"
+  ],
+  "known_schemes": {
+    "source_issues": [
+      186,
+      196
+    ],
+    "due": "2026-11-03",
+    "status": "PENDING_EXACT_SCOPED_DELIVERY",
+    "no_new_witness_search": true
+  },
+  "publication_state": {
+    "pr200": {
+      "head": "7259964f17e1aea01937df0c0e3134be69a70d7f",
+      "state": "open",
+      "draft": true,
+      "accepted": false
+    },
+    "pr204": {
+      "head": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "state": "open",
+      "draft": true,
+      "accepted": false
+    }
+  },
+  "current_decision_main": "b08793c",
+  "theory_foundations_received": {
+    "sha": "7259964f17e1aea01937df0c0e3134be69a70d7f",
+    "path": "theory/t196-three-variant-foundations-20261022.md",
+    "git_blob": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98",
+    "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7259964f17e1aea01937df0c0e3134be69a70d7f/theory/t196-three-variant-foundations-20261022.md",
+    "status": "author foundations received, concrete common input/service signature pending, not accepted",
+    "scope": "fixed t1/t2 E plus writes; structural t1 transfer; parameterized cost/lower, no new numerical comparison",
+    "service_alignment_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334554044",
+    "remaining_semantics": "theory app-read without repair vs optional H_i in numerical COST; map recommends common no-writeback app-read and explicit ERR accounting",
+    "used_for_new_numeric_Q": false
+  }
+}
