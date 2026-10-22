@@ -1,0 +1,32 @@
+{
+  "exact_commit": "86cd38f37af0063cc96005806ff80dd282f77611",
+  "base_preserved": "76413140a8ce4c3884a44df5dbeb619580339faa",
+  "normal_replay": {
+    "evidence_kind": "observed exec session completion",
+    "tool_session_id": 47091,
+    "exit_code": 0,
+    "command": "python -B experiments/t186-method-comparison/code-strength/reproduce.py",
+    "checks": 203,
+    "output_sha256": {
+      "results.json": "de82e20d2d46195acf20b1c0e569485a6ad21f21e31bd6384025989ba0d1789d",
+      "sensitivity.json": "74652e17375b93c25cef5a6a58cb9bdb5940bcb20cb954b450d5fd5214093720",
+      "informational.json": "5ad0c8c8c84ddf39566375413404fcd452e45fa23e956480042aa2ceaa23d3ff",
+      "validation.json": "018c87bef9e44c64e316e60eef95a811a47cdb2fb8e5bfe138f2a72fc74bb2dc",
+      "table.md": "01c32c94549e27aed2e859ae5f5da86927df56c94db58a05dc468cf53ec87a41"
+    }
+  },
+  "clean_checkout": true,
+  "clean_status_after_negative_test": true,
+  "changed_epsilon_rejected": true,
+  "changed_input_restored": true,
+  "old_comparison_blob_count": 108,
+  "all_previous_comparison_blobs_preserved": true,
+  "changes_outside_new_package": false,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "elapsed_s": null,
+  "performance_scope": "no hardware WCET inferred; actual directed calculation takes minutes",
+  "specific_theory_signature": false,
+  "signature_gate_note": "--require-agreement gate was tested at v3/fa1350a; unchanged gate logic not separately rerun for v4",
+  "scope": "full informational v4 replay; v3 diagnostic proof preserved separately"
+}

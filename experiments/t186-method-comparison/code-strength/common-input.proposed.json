@@ -1,0 +1,43 @@
+{
+  "task": 186,
+  "revision": 1,
+  "date": "2026-10-22",
+  "status": "PROPOSED_INPUT_NOT_AGREED_NO_COMPARATIVE_RESULTS",
+  "useful_bytes": 524288,
+  "words": 131072,
+  "data_bits": 32,
+  "codes": [
+    {"id": "t1_constant", "n": 39, "k": 32, "t": 1, "policy": "constant"},
+    {"id": "t1_adaptive", "n": 39, "k": 32, "t": 1, "policy": "own_ERR_two_stage"},
+    {"id": "t2_constant", "n": 44, "k": 32, "t": 2, "policy": "constant"}
+  ],
+  "bus": {"width_bits": 16, "layout": "word_aligned_no_cross_word_packing", "address": "3*word + beat", "unused_bits": "ignored by codec and controller; physical assumption to check"},
+  "mission_s": 315576000,
+  "epsilon": "1/1000",
+  "environment": {
+    "kind": "conditional_independent_singleton_per_code_bit",
+    "reference_words": 524288,
+    "reference_bits": 38,
+    "reference_background_per_s": "0.000154704",
+    "reference_peak_per_s": "0.244682704",
+    "reference_solar_mass": "28310.473728",
+    "reference_growth_per_s": "0.048",
+    "reference_growth_threshold_per_s": "0.001",
+    "per_bit_law": "r(t)=nu_ref(t)/(reference_words*reference_bits)",
+    "group2_reference": "0 by proposed singleton class only; not a physical estimate",
+    "direct_reference": "0 by proposed singleton class only; not a physical estimate",
+    "physical_group2_rate": null,
+    "physical_direct_lifetime_upper": null,
+    "physical_environment_exceedance_upper": null
+  },
+  "initial": {"state": "pending theorist agreement: common clean or common K0", "K0": null},
+  "lifetime_other_budget": null,
+  "application": {"profile": "strict_uniform_stage4", "epoch_ns": 1000020, "read_offset_ns": 0, "write_offset_ns": 500000, "first_ns": 100000, "address_multiplier": 5, "data_bits": 32, "write": "observed full-word or partial-write RMW with decode/encode", "payload_request_metadata_bytes": null, "payload_reply_metadata_bytes": null},
+  "service": {"preferred": "E", "snapshot": "coherent all code bits", "alias_lock": "all three x16 addresses", "application_rule": "correctable old snapshot observed before modification; no service-created errors", "read_beat_ns": null, "write_beat_ns": null, "turnaround_ns": null, "decode39_ns": null, "decode44_ns": null, "encode39_ns": null, "encode44_ns": null, "controller_ns": null, "service_validated": false},
+  "constraints": {"application_deadline_ns": 3000, "peak_window_ns": 1000000, "peak_bus_fraction": "4/5", "clock_and_reserve": "pending common external-code service agreement"},
+  "observation": {"frozen_reference": "stage4 at 65dcceb57810b5ebf4ed393639c927a573ea6ecf", "cut_ns": 4000, "ingress_ns": 1000, "batch_ready_ns": 3900, "record_bytes": 32, "transport_reserved_bytes": 131072, "loss_state_reserved_bytes": 64, "new_transport_development": false, "external_codec_to_source_delay_ns": null, "fixed_monitor_price_policy": "pending agreement; distinguish common transport from avoidable policy work"},
+  "adaptive": {"family": "two-stage own ERR, equality FAST; same-edge veto, preserved holds/phase/pending", "ka": null, "short_hold_s": null, "long_hold_s": null, "new_n39_risk_certificate": null},
+  "fixed": {"period39_s": null, "period44_s": null, "class_lower39": null, "class_lower44": null},
+  "cost": {"scope": "whole horizon, never stop accounting at first exceedance", "coordinates": ["SRAM occupied time", "payload/transport bytes", "codec operations", "CPU time", "controller/codec memory", "LUT", "BRAM", "energy"], "scalar_weights": null, "hardware_measurements": false},
+  "sources": {"T187": "13e618a24831fecb8e36b9c7c1350ac108edf31c", "T196_old_full38": "e49314a9a0fbf97699f9c8b0c62d25bae5e3097d", "stage4_preserved": "76413140a8ce4c3884a44df5dbeb619580339faa"}
+}

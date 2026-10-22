@@ -1,0 +1,124 @@
+{
+  "checks": [
+    "fixed weak-E two-repair witness before application",
+    "adaptive weak-E two-repair witness before application",
+    "t1_constant complete Q/period/timing/selection unchanged",
+    "t1_constant two-repair expected bound incl bad histories",
+    "t1_constant exact bus delta and invariant hard/lower",
+    "t1_constant exact full_cost_rates propagation; other actions unchanged",
+    "t1_constant exact energy_coefficients_per_second propagation; other actions unchanged",
+    "t1_constant read/hold/veto/controller/init/pending unchanged",
+    "t1_constant repair bound endpoint U=0",
+    "t1_constant repair bound endpoint U=1",
+    "t1_adaptive complete Q/period/timing/selection unchanged",
+    "t1_adaptive two-repair expected bound incl bad histories",
+    "t1_adaptive exact bus delta and invariant hard/lower",
+    "t1_adaptive exact full_cost_rates propagation; other actions unchanged",
+    "t1_adaptive exact energy_coefficients_per_second propagation; other actions unchanged",
+    "t1_adaptive read/hold/veto/controller/init/pending unchanged",
+    "t1_adaptive repair bound endpoint U=0",
+    "t1_adaptive repair bound endpoint U=1",
+    "t2_constant complete Q/period/timing/selection unchanged",
+    "t2_constant two-repair expected bound incl bad histories",
+    "t2_constant exact bus delta and invariant hard/lower",
+    "t2_constant exact full_cost_rates propagation; other actions unchanged",
+    "t2_constant exact energy_coefficients_per_second propagation; other actions unchanged",
+    "t2_constant read/hold/veto/controller/init/pending unchanged",
+    "t2_constant repair bound endpoint U=0",
+    "t2_constant repair bound endpoint U=1",
+    "exact revised veto threshold and sufficient 1057.380/s",
+    "exact revised veto hard-cap boundary",
+    "t2 hard upper below selected adaptive lower, independent of repair and v",
+    "service-limit Q unchanged; repair cost increases"
+  ],
+  "count": 30,
+  "frozen_output_sha256": {
+    "informational.json": "5ad0c8c8c84ddf39566375413404fcd452e45fa23e956480042aa2ceaa23d3ff",
+    "results.json": "de82e20d2d46195acf20b1c0e569485a6ad21f21e31bd6384025989ba0d1789d",
+    "sensitivity.json": "74652e17375b93c25cef5a6a58cb9bdb5940bcb20cb954b450d5fd5214093720",
+    "validation.json": "018c87bef9e44c64e316e60eef95a811a47cdb2fb8e5bfe138f2a72fc74bb2dc"
+  },
+  "price_changes": {
+    "t1_adaptive": {
+      "SRAM_fraction_addition": "203096713646827/57831250000000000000000000",
+      "SRAM_fraction_upper": "218773857769346902330990894418703192376438216851078792684544240540889075540612524417652463621456822306143791696203568229632776272804587/9419880095819509540336859502282353723609516156250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "old_repair_upper": "374405721029568332186644772350366302010741174430653613998312108589404565985066229631200834255992377927642757/604587214667849962023593750000000000000000000000000000000000000000000000000000000000000000000000",
+      "repair_rate_addition": "290135261/4626500000000",
+      "repair_upper": "374405732994517902981165901011412471233241174430653613998312108589404565985066229631200834255992377927642757/604587214667849962023593750000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "t1_constant": {
+      "SRAM_fraction_addition": "203096713646827/57831250000000000000000000",
+      "SRAM_fraction_upper": "827285642391389318165954402672930576854378023448626140602769/25854251937149297636718750000000000000000000000000000000000000",
+      "old_repair_upper": "466077037040804079361555655761102399694607980528967/6554174446003320312500000000000000000000",
+      "repair_rate_addition": "290135261/4626500000000",
+      "repair_upper": "466077166749744033876926943707977399694607980528967/6554174446003320312500000000000000000000"
+    },
+    "t2_constant": {
+      "SRAM_fraction_addition": "171851065393469/43373437500000000000000000",
+      "SRAM_fraction_upper": "454335394159565799301917014966914157028620542055882475327842387930517810408544365218960063/1947838751243699652974943000000000000000000000000000000000000000000000000000000000000000000000",
+      "old_repair_upper": "8876706300894884167581781323805894038519694635161259590815421156946157030380009/493786283175830773690000000000000000000000000000000000000000000000000000",
+      "repair_rate_addition": "245499067/3469875000000",
+      "repair_upper": "8887731311215930853227427285827654038519694635161259590815421156946157030380009/493786283175830773690000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "reviewed_snapshot": "0111d42490269b984e0f60bf0831cb897e9e10cd",
+  "scientific_acceptance": false,
+  "scope": "R1 exact price correction; historical 203 checks and q-cell search are separate evidence",
+  "theory_review": "64132c369832175d332624a267b149fe11eb68f3",
+  "witnesses": [
+    {
+      "bad_history": false,
+      "first_app_write_ns": 26216124300,
+      "max_error_weight": 1,
+      "mode": "fixed",
+      "parent_ns": 165,
+      "parents": 1,
+      "publications": 2,
+      "repairs": 2,
+      "trace": [
+        {
+          "ERR": true,
+          "release_ns": 288,
+          "snapshot_ns": 212,
+          "start_ns": 164,
+          "survivors": 1
+        },
+        {
+          "ERR": true,
+          "release_ns": 282591520,
+          "snapshot_ns": 282591444,
+          "start_ns": 282591396,
+          "survivors": 0
+        }
+      ],
+      "word": 3
+    },
+    {
+      "bad_history": false,
+      "first_app_write_ns": 50488609740,
+      "max_error_weight": 1,
+      "mode": "adaptive",
+      "parent_ns": 165,
+      "parents": 1,
+      "publications": 2,
+      "repairs": 2,
+      "trace": [
+        {
+          "ERR": true,
+          "release_ns": 288,
+          "snapshot_ns": 212,
+          "start_ns": 164,
+          "survivors": 1
+        },
+        {
+          "ERR": true,
+          "release_ns": 25690400,
+          "snapshot_ns": 25690324,
+          "start_ns": 25690276,
+          "survivors": 0
+        }
+      ],
+      "word": 121363
+    }
+  ]
+}
