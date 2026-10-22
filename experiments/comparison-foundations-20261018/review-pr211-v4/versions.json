@@ -1,0 +1,174 @@
+{
+  "reviewed_head": "0111d42490269b984e0f60bf0831cb897e9e10cd",
+  "computational_head": "86cd38f37af0063cc96005806ff80dd282f77611",
+  "input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+  "theory_base": "7259964f17e1aea01937df0c0e3134be69a70d7f",
+  "main_seen": "b8aea05184ee0198d0dbde163d7d079f7ea09799",
+  "request_comment": 6336467758,
+  "files": [
+    {
+      "path": "experiments/t114-two-stage-err/intervals.py",
+      "git_blob": "fe57d6075e5ed5e807fd8f52e29387ccd4eda036"
+    },
+    {
+      "path": "experiments/t119-err-joint-bound/joint.py",
+      "git_blob": "58d7ea93b960c8542ab0339a35f0a794015be432"
+    },
+    {
+      "path": "experiments/t119-err-joint-bound/report.json",
+      "git_blob": "2ad7185662bb01cc9a99e4c2bcbd77af17f4bc41"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/CONDITIONS.md",
+      "git_blob": "33d8ce1534e665451a7b32014b724008560c18c3"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/COST.md",
+      "git_blob": "562e210bfb9bdb5eed77b8d9b867e9cd521719fc"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/INFORMATIONAL.md",
+      "git_blob": "ae98ec64bcd5b785d4bd4f3de619c5e6a0939498"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/PLAN-v2.md",
+      "git_blob": "63d6cca79cfc162070f1d8be1f35d1d313ba2ef7"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/PLAN-v3.md",
+      "git_blob": "4536d4efb0b1761b72c30e12d5d349c532367aa8"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/PLAN-v4.md",
+      "git_blob": "eff05e0ff91b2a45943ff660555948efa290c4d7"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/PLAN.md",
+      "git_blob": "1a563c0825503e28f63b1bb208cb5dc3ae1992d1"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/README.md",
+      "git_blob": "aedd66ee03627b7461fc5d2f8576fe435ca7a996"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/REPORT.md",
+      "git_blob": "dae232283d2faf03b5c23cf84d9df6a2afe32aba"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/SERVICE.md",
+      "git_blob": "599867c84ccd89a7daddc2ff3553d8a926aff2c6"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/agreement.json",
+      "git_blob": "eb2a0c0a4f0430f0a5bbd1514c801887d0ba846b"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/checks.py",
+      "git_blob": "8e19cdf311ab2d69b43b28687a84260fe1213a2e"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/codec.py",
+      "git_blob": "cefe568c22a6de6522d0422eaeafb25ffb4a1245"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.proposed.json",
+      "git_blob": "3ccffc8236915dbd6a2d38e83642cd59420582f7"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.v2.proposed.json",
+      "git_blob": "74602a4e405f21d455e8702fe2488a1097d1d1e9"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.v3.diagnostic.json",
+      "git_blob": "96ebd3e1c2607437381a71318a2cfb3fd4151e82"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/comparison.py",
+      "git_blob": "f5e64a870ecfa3a2af1a729ead7e5afdc186c310"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/comparison_checks.py",
+      "git_blob": "6cc84a18debc5f085196821799eab2b43c2a9164"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/cost.py",
+      "git_blob": "335343fda81cbcff0f774b78ed5970b8511509c8"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/freeze_input.py",
+      "git_blob": "e5c4bfaeded8934ba1ea9ad2fe177a10a2296ea5"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/informational.py",
+      "git_blob": "d76e41379965758d201931b42b5664a97d53f64a"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/informational_checks.py",
+      "git_blob": "283a457cac8e93a41893b582a88ac0acff6d5761"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/informational.json",
+      "git_blob": "00714b8c333732ed8c014879638b76520fba63ff"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/preparation.json",
+      "git_blob": "9390300da1b6855bcf15aab4d186d47dc79aff8a"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/replay-evidence.json",
+      "git_blob": "09cd8edaf850dfc2e8d918730215cae9812c4534"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/replay-v3.json",
+      "git_blob": "77b0383a12b1e7e6f35f88ac4831a3623d98553a"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/replay-v4.json",
+      "git_blob": "e3a423bd6210aeff3cbbfe2aa8845039d55086ba"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/results.json",
+      "git_blob": "3e0e927e522f6213c39367f20cfa7a1aa48ca4e5"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/sensitivity.json",
+      "git_blob": "53677a45c7383285e2b069f8bea3e9fe2119f982"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/table.md",
+      "git_blob": "950daa42ff10cdac3f107695e20c3ca70c68f7a0"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/validation.json",
+      "git_blob": "bb8b7e5f8e4979f117520c71a873e57fffbfd5e4"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/parents.py",
+      "git_blob": "6f926bbb1683270bda057ce8c19813fc1685aaea"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/prepare.py",
+      "git_blob": "175c54dbb10e82722541af61d36612c46e1356ec"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/reproduce.py",
+      "git_blob": "041c3052f205e6562f94fc2d8a1f182a87affd11"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/sources.json",
+      "git_blob": "9b0d91a59d25f4613f1ec156339309cf2f957e56"
+    },
+    {
+      "path": "experiments/t187-code-strength/inputs.json",
+      "git_blob": "2ce4b3c577875be6d20658fe6769cfa4573895ba"
+    },
+    {
+      "path": "experiments/t187-code-strength/model.py",
+      "git_blob": "37d4c980c3e8711009292fc7b387250e178d38f8"
+    }
+  ]
+}
