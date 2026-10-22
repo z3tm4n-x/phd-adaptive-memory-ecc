@@ -1,0 +1,36 @@
+{
+  "plan_sha": "97f325c16a0abd18956abc50f42c7eb7dd5a66d6",
+  "organisational_main": "4131b908259130bad269c2116b5b0b7811b40502",
+  "files": [
+    {
+      "commit": "13e618a24831fecb8e36b9c7c1350ac108edf31c",
+      "path": "experiments/t187-code-strength/model.py",
+      "sha256": "72c503a3cde45a60b16ab715a367cc2000cc87ca09170b4b0407599460a70667"
+    },
+    {
+      "commit": "13e618a24831fecb8e36b9c7c1350ac108edf31c",
+      "path": "theory/t187-code-strength.md",
+      "sha256": "fdbf0a24d52b7aa6d566d1fe786c5a81a0a5cf52e6b4a93559171174587efcbe"
+    },
+    {
+      "commit": "13e618a24831fecb8e36b9c7c1350ac108edf31c",
+      "path": "theory/t187-code-strength-appendix.md",
+      "sha256": "cc004373e3eb1df217d811ced96054fad1549b3a8200783ed47b79cb6c05eed6"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "experiments/t186-method-comparison/stage4/common-input.json",
+      "sha256": "4faa7508ac3889b660def124ba984a108db168e75ff2466e443533a82593b61c"
+    },
+    {
+      "commit": "76413140a8ce4c3884a44df5dbeb619580339faa",
+      "path": "experiments/t186-method-comparison/stage4/theory-input.json",
+      "sha256": "b4d80e1f95570bd657052c500f6cb40f749f6ce31f97c5b0f27bc90930f21c1a"
+    },
+    {
+      "commit": "97f325c16a0abd18956abc50f42c7eb7dd5a66d6",
+      "path": "experiments/t186-method-comparison/code-strength/common-input.proposed.json",
+      "sha256": "786c5f1ea83bf5e15f3b14256e9a279af33d911ec1bef9befae76cbc3a579b1c"
+    }
+  ]
+}
