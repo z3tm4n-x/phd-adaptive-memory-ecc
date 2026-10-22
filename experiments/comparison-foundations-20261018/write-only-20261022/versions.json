@@ -1,0 +1,54 @@
+{
+  "task": 196,
+  "request": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6339058909",
+  "base_main": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+  "accepted_table": "ffb5d29a615e0594ca84350f3c539b45a90f2d42",
+  "input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+  "scope": "theory of deterministic arrival-to-deadline apertures, not a second comparison table",
+  "sources": [
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/comparison.py",
+      "git_blob": "6141f0c20104a3b20deee23c3f944422f8a20a18"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/cost.py",
+      "git_blob": "335343fda81cbcff0f774b78ed5970b8511509c8"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/parents.py",
+      "git_blob": "6f926bbb1683270bda057ce8c19813fc1685aaea"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/codec.py",
+      "git_blob": "cefe568c22a6de6522d0422eaeafb25ffb4a1245"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/SERVICE.md",
+      "git_blob": "17f48c8160043db4e15e63170606e94ba5cce350"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/ORCHESTRATOR_REVIEW_20261022.md",
+      "git_blob": "4806bd60caa0b32720a5201270b86074cf9664f8"
+    },
+    {
+      "path": "experiments/t187-code-strength/model.py",
+      "git_blob": "37d4c980c3e8711009292fc7b387250e178d38f8"
+    },
+    {
+      "path": "theory/t196-three-variant-foundations-20261022.md",
+      "git_blob": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98"
+    },
+    {
+      "path": "theory/t187-code-strength.md",
+      "git_blob": "8104aab2dc6b8e11bd336d46544e1f1b5c6b6f98"
+    },
+    {
+      "path": "theory/t187-code-strength-appendix.md",
+      "git_blob": "12bac8b8500029cb08dff8c483ee6a19863324ae"
+    }
+  ]
+}
