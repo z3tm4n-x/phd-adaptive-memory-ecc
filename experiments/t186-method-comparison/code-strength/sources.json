@@ -36,7 +36,20 @@
       "commit": "17708d036ca074e72a215c14421ffea7413938cf",
       "path": "experiments/t186-method-comparison/code-strength/common-input.v2.proposed.json",
       "sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc"
+    },
+    {
+      "commit": "7fafb695acbf17d56dc079756508e5b4041f7993",
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "sha256": "24e3b6aa39e86c4834fc3a7d2aea053a4b1b168c4e683cab6fb30b16c6895c33",
+      "mode": "working_tree_and_git"
+    },
+    {
+      "commit": "7259964f17e1aea01937df0c0e3134be69a70d7f",
+      "path": "theory/t196-three-variant-foundations-20261022.md",
+      "sha256": "e629c6aa739c8da9b8561c74aafe5f02229c18936bb1d4520b94820f975ce6c3",
+      "mode": "git_object_only"
     }
   ],
-  "v2_plan_sha": "17708d036ca074e72a215c14421ffea7413938cf"
+  "v2_plan_sha": "17708d036ca074e72a215c14421ffea7413938cf",
+  "v3_plan_sha": "7fafb695acbf17d56dc079756508e5b4041f7993"
 }

@@ -1,21 +1,27 @@
 {
-  "status": "partial_geometry_parent_law_alignment_final_input_pending",
-  "common_input_sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc",
+  "status": "engineering_input_aligned_specific_service_signature_pending",
+  "common_input_file": "common-input.json",
+  "common_input_sha256": "24e3b6aa39e86c4834fc3a7d2aea053a4b1b168c4e683cab6fb30b16c6895c33",
   "theorist": {
     "issue": 196,
-    "status": "proposal_received_final_signature_pending",
-    "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334139214",
+    "status": "structural_basis_received_specific_rows_pending",
+    "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6334393174",
+    "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6334545894",
+    "structural_certificate_sha": "7259964f17e1aea01937df0c0e3134be69a70d7f",
     "certificate_sha": null,
-    "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6333959647",
-    "engineer_confirmation_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334225337",
-    "confirmed_scope": "geometry, horizon, proposed common parent law; not service/parameters/certificate"
+    "confirmed_scope": "common geometry/parent law and structural T196(5) fallback; not signature of calculated service/price rows"
   },
   "map_engineer": {
     "issue": 206,
-    "status": "requested_not_received",
-    "reply_url": null,
-    "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6333960335"
+    "status": "engineering_geometry_law_application_agreed",
+    "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334240420",
+    "followup_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334554044",
+    "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6334546780",
+    "confirmed_scope": "clean with paid initialization, p1 conditional baseline, full32 RMW, read without repair, budgets/caps/avoidable monitor; physical data remain UNKNOWN"
   },
-  "not_equivalent_to_scientific_acceptance": true,
-  "common_input_file": "common-input.v2.proposed.json"
+  "orchestrator": {
+    "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6334315499",
+    "instruction": "compute conditional table without waiting for physical inputs or old PR204 acceptance"
+  },
+  "not_equivalent_to_scientific_acceptance": true
 }
