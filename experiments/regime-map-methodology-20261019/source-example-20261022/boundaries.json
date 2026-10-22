@@ -1,0 +1,114 @@
+{
+  "scope": {
+    "accepted_table": "conditional Q and corrected candidate price accepted via PR218",
+    "PR204": "not accepted",
+    "old_PR200": "not accepted",
+    "A1_A5": "preserved",
+    "new_probability_or_transport_computation": false
+  },
+  "physical_candidate": {
+    "part": "CY62167EV30LL-45ZXA",
+    "radiation_dataset": "CNA1843, REDW2020 Fig.8 / PDF page6; not RADEF1525",
+    "datasheet_die_revision_match": null,
+    "chip_x16_addresses": 1048576,
+    "installed_data_bytes": 2097152,
+    "useful_bytes": 524288,
+    "words": 131072,
+    "data_bits": 32,
+    "code_n": 44,
+    "t": 2,
+    "word_addresses": "3*w + beat, beat in [0,2]",
+    "selected_word_range": [
+      0,
+      131071
+    ],
+    "BYTE_pin": "VCC",
+    "nominal_VCC_V": "3.0",
+    "case_temperature_C": "25 (proposed; not a matched irradiation condition)",
+    "planned_environment": "GEO 36000km/0deg, Al sphere4g/cm2, full H+exclusive LET; EV response not supplied",
+    "full_word_parent_marks": null,
+    "transferable_response_upper": null,
+    "physical_Q_upper": null
+  },
+  "geometry": {
+    "allocated_bytes": 786432,
+    "installed_data_bytes": 2097152,
+    "last_x16_address": 393215,
+    "unused_chip_addresses": 655360,
+    "selected_fraction_of_installed_capacity": "3/8",
+    "active_code_bytes": 720896,
+    "chip_idle_cost_scales_with_selected_fraction": false
+  },
+  "direct_import": {
+    "status": "OUTSIDE_DATASHEET_TIMING_FOR_THIS_SERIAL_CONTRACT",
+    "reference_input": "common#/service",
+    "old_read_beat_upper_ns": "51563/3125",
+    "six_complete_cycles_min_reserved_ns": "270",
+    "old_application_aperture_lower_ns": "1596859/6250",
+    "old_control_aperture_lower_ns": "4087459/25000",
+    "application_deficit_ns": "90641/6250",
+    "code_family_excluded": false,
+    "note": "complete serial cycles with full RMW; not proof that every physical implementation fails"
+  },
+  "local_alternative": {
+    "status": "PARAMETRIC_WINDOW_ONLY_NOT_FULL_SERVICE_OR_Q",
+    "slot_lower_ns": "3196843/6250",
+    "cycle_lower_ns": "148436/3125",
+    "read_board_capture_allowance_ns": "7811/3125",
+    "bus_release_extra_allowance_ns": "7499/5000",
+    "hard_decode_plus_encode_plus_controller_nominal_ns": "1845380/9091",
+    "target_decode_plus_encode_plus_controller_nominal_ns": "50346412/500005",
+    "illustrative_controller_target_allowance_nominal_ns": "26346172/500005",
+    "fixed_nominal_cycle_and_turn_price_ns": "308",
+    "formula": "(6*cycle + turn + decode + encode + controller)*clock_upper + J <= alpha*(slot*clock_lower-J); alpha=1 or 0.8",
+    "end_to_end_response_upper_ns": null,
+    "peak_1ms_bus_upper": null,
+    "average_bus_upper": null,
+    "physical_Q_upper": null,
+    "coherent_E_hardware_proved": false
+  },
+  "risk_budget_reference_only": {
+    "Q_locator": "accepted_results#/rows/t2_constant/risk/upper",
+    "hard_eta_allowance": "8990554993950631775374131854064115175626624262729309216101/17980456960000000000000000000000000000000000000000000000000000",
+    "half_epsilon_eta_allowance": "326513950631775374131854064115175626624262729309216101/17980456960000000000000000000000000000000000000000000000000000",
+    "physical_eta_upper": null,
+    "applicable_to_EV_with_changed_service": false,
+    "condition": "certified full-horizon coupling to the same accepted model; pay all distinct divergences, not only direct uncorrectable events",
+    "warning": "no upper on an unknown response multiplier or on group rate follows from this arithmetic"
+  },
+  "application_first": {
+    "status": "AUTHOR_DELIVERIES_RECEIVED_ACCEPTANCE_PENDING",
+    "own_Q_computation": false,
+    "new_comparison_row": false,
+    "required": [
+      "deterministic write-arrival to deadline windows",
+      "each full codeword covered",
+      "clean/startup and final horizon edges",
+      "E/no created errors and paid full RMW",
+      "post-A, bad histories and pending prices",
+      "constant-class membership"
+    ],
+    "numerical_delivery": "app_result @ 6d0d569c798dee54027753a49a79d5524de7330b",
+    "theory_delivery": "app_theory @ 77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+    "proposed_class": "F0 = F_positive union {OFF}; no retroactive change to k>=1 plus startup",
+    "class_admission": "ORCHESTRATOR_DECISION_PENDING",
+    "conditional_Q_locator": "app_result#/Q_upper; no copied comparison row",
+    "full_price_locator": "app_result#/full_price",
+    "physical_transfer": false
+  },
+  "application_revisit_arithmetic_ns": "131074621440",
+  "next_risk_source": "app_result#/Q_upper (author delivery only, pending acceptance)",
+  "checks": [
+    "nine pinned Git sources and exact datasheet SHA",
+    "useful volume and complete address range",
+    "old serial service outside datasheet timing",
+    "proposed cycle/turn rounding with clock and endpoint",
+    "both sides of the local 20-percent boundary",
+    "risk headroom is reference only, no physical transfer",
+    "same v4 and exact Q identity in received author deliveries, without re-derivation"
+  ],
+  "provenance": {
+    "inputs_sha256": "fed594abd93995fba8e7eecb8079483920da53de1c1c876ac0851be3599090c0",
+    "sources_manifest_sha256": "9c737f9f779772aaaef49f87ebc2461d02244c4973573f02eb0e63c983595f28"
+  }
+}

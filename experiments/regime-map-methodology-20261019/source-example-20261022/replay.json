@@ -1,0 +1,53 @@
+{
+  "status": "AUTHOR_REPLAY_COMPLETE_NOT_INDEPENDENT_REVIEW",
+  "computational_commit": "36f6a0183273735b2afcd7d1674baebeb6c0741e",
+  "base_main": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+  "python": "3.12.14",
+  "archive_without_git": true,
+  "replay_source_mode": "explicit nine pinned Git blobs plus exact vendor PDF; no network calls in replay",
+  "Q_recomputed": false,
+  "full_calendar_or_physical_response_recomputed": false,
+  "output_sha256": "fd4e159df50b8ad962fedcb889bffebacd4843d468a67963c325868c393b562c",
+  "check_categories": [
+    "nine pinned Git sources and exact datasheet SHA",
+    "useful volume and complete address range",
+    "old serial service outside datasheet timing",
+    "proposed cycle/turn rounding with clock and endpoint",
+    "both sides of the local 20-percent boundary",
+    "risk headroom is reference only, no physical transfer",
+    "same v4 and exact Q identity in received author deliveries, without re-derivation"
+  ],
+  "negative_checks": [
+    {
+      "mutation": "common.source",
+      "expected_rejection": "source drift: common",
+      "rejected": true
+    },
+    {
+      "mutation": "datasheet.source",
+      "expected_rejection": "datasheet drift",
+      "rejected": true
+    },
+    {
+      "mutation": "boundaries.json",
+      "expected_rejection": "output drift: boundaries.json",
+      "rejected": true
+    },
+    {
+      "mutation": "inputs.json",
+      "expected_rejection": "physical evidence cannot be supplied by engineering arithmetic",
+      "rejected": true
+    }
+  ],
+  "restored_replay_matches": true,
+  "diff_paths": [
+    "experiments/regime-map-methodology-20261019/source-example-20261022/PLAN.md",
+    "experiments/regime-map-methodology-20261019/source-example-20261022/REPORT.md",
+    "experiments/regime-map-methodology-20261019/source-example-20261022/boundaries.json",
+    "experiments/regime-map-methodology-20261019/source-example-20261022/boundaries.py",
+    "experiments/regime-map-methodology-20261019/source-example-20261022/inputs.json",
+    "experiments/regime-map-methodology-20261019/source-example-20261022/sources.json"
+  ],
+  "accepted_files_changed": false,
+  "command": "python -B <archive>/experiments/regime-map-methodology-20261019/source-example-20261022/boundaries.py --source-dir <source-dir> --datasheet <source-dir>/datasheet.source --check"
+}
