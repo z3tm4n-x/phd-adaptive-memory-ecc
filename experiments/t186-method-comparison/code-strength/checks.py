@@ -10,6 +10,8 @@ import random
 from codec import Code, t187
 from cost import (Work, packing, work_vector, affine_prices, evaluate, threshold,
                   allowable_delay, periodic_starts, clipped_busy, per_bit_moment_caps)
+from cost import fast_fraction_cap
+from parents import projected_groups, witness_coefficients, fixed_u_moment_terms
 
 
 def run():
@@ -82,7 +84,7 @@ def run():
     check("full observed RMW six beats", a["observed_RMW_beats"] == b["observed_RMW_beats"] == 6)
     rejects("noninteger geometry rejected", lambda: packing(F(3,2),39))
 
-    work = Work(*map(F, (11,7,5,3,2,19,13,100,12,31,17)))
+    work = Work(*map(F, (11,7,5,3,2,19,13,100,12,31,17,2)))
     res = Code(2).resources()
     v = work_vector(work,44,res)
     check("all reads decoded including RMW", v["decodes"] == 23 and v["sram_read_beats"] == 69)
@@ -128,6 +130,36 @@ def run():
     check("per-bit moment normalization", m == {"M1":F(6),"M2":F(12),"M3":F(30),"peak_per_bit":F(3)})
     check("n-dependent exposure", (44*3)**2* m["M2"] / ((39*3)**2*m["M2"]) == F(44,39)**2)
     rejects("compound law cannot use singleton moment shortcut", lambda: per_bit_moment_caps({**cfg,"environment":{**cfg["environment"],"kind":"compound"}}))
+    for N in range(2,8):
+        for n in range(1,N+1):
+            for size in range(1,N+1):
+                actual=projected_groups(n,{size:F(1)},N)
+                masks=list(combinations(range(N),size))
+                oracle=[F(N,size)*F(sum(sum(x<n for x in mask)==j for mask in masks),len(masks)) for j in range(n+1)]
+                if actual!=oracle:
+                    raise AssertionError(("hypergeometric subset oracle",N,n,size))
+    check("parent projection versus complete small subset enumeration",True)
+    for n,t in ((39,1),(44,2)):
+        single=projected_groups(n,{1:F(1)})
+        check(f"n{n}: singleton active rate equals n*r",single[1]==n and sum(single[2:])==0)
+        mixed=projected_groups(n,{1:F(1,2),2:F(1,3),3:F(1,6)})
+        check(f"n{n}: conservation of bit hits",sum(j*v for j,v in enumerate(mixed))==n)
+        coeff=witness_coefficients(n,t,mixed)
+        exposure=F(7,11)
+        if t==1:
+            oracle=t187.phi(n,1,mixed[1]*exposure)
+        else:
+            oracle=t187.phi(n,2,mixed[1]*exposure,mixed[2]*exposure)
+        check(f"n{n}: mixed polynomial equals T187 phi",coeff['quadratic']*exposure**2+coeff['cubic']*exposure**3==oracle)
+        check(f"n{n}: projected direct retained",coeff['linear_direct']>0)
+    rejects("parent bit shares must sum to one",lambda:projected_groups(39,{1:F(1,2)}))
+    rejects("parent size above physical word rejected",lambda:projected_groups(39,{49:F(1)}))
+    coeff=witness_coefficients(4,2,projected_groups(4,{1:F(1)},4))
+    pieces=fixed_u_moment_terms(2,F(1,2),m,coeff)
+    check("U algebra remains explicitly incomplete for E",pieces['cubic']==60 and pieces['E_window_term'] is None and pieces['initial_other_budget'] is None)
+    check("extra confirmations can consume all FAST time",fast_fraction_cap(F(1,10),F(1))==1)
+    check("additional veto not treated as another episode",v['extra_source_veto']==2 and p['CPU_fraction']['CPU_ns_per_extra_veto']==F(2,10000))
+    rejects("veto count needs real records",lambda:work_vector(replace(work,extra_source_veto=F(14)),44,res))
     return {"status":"preparatory_implementation_checks_only", "count":len(checks), "checks":checks,
             "correction_cases":correction_cases, "payload_count_per_code":len(payloads),
             "beyond_radius_t2_miscorrection_example":list(miscorr),

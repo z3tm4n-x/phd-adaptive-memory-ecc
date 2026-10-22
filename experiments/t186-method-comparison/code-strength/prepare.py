@@ -50,7 +50,7 @@ def agreement_gaps(agreement, input_digest):
     for role in ("theorist","map_engineer"):
         record = agreement[role]
         if record.get("status") != "agreed" or not record.get("reply_url"):
-            gaps.append(role + ": no explicit answer to the proposed input")
+            gaps.append(role + ": final common input not signed (proposal is not a signature)")
         if record.get("input_sha256") != input_digest:
             gaps.append(role + ": no matching input hash in agreement record")
     if not agreement["theorist"].get("certificate_sha"):
@@ -66,7 +66,7 @@ def render(cfg, resources, gaps):
     op = lambda r: f'{r["syndrome_two_input_xors"]} XOR + ROM + {r["correction_two_input_xors"]} XOR; encoder {r["encoder_two_input_xors"]} XOR'
     mem = lambda r: f'{r["lookup_entries"]}×{r["lookup_width_bits"]} бит = {r["lookup_bytes"]} байт ROM + регистры'
     lines = ["# Одна таблица трёх вариантов — подготовка #186/#196/#206", "",
-             "Статус: предложение общего входа от 22.10.2026; согласование не получено.",
+             "Статус: геометрия и parent-law согласованы предварительно с #196; ответ #206 и подпись окончательного входа/сервиса ещё не получены.",
              "Числа геометрии и функционального кодека вычислены. Сравнительные Q, периоды,",
              "полные численные цены и победитель пока не установлены. Таблица не является",
              "готовым сравнением. После ответов меняется эта же таблица, а не создаётся вторая.", "",
@@ -77,7 +77,8 @@ def render(cfg, resources, gaps):
         ("Полезная / кодовая / занятая ёмкость", geometry(g1), geometry(g1), geometry(g2)),
         ("Проверочные / добавочные разряды на слово", "7 / 9", "7 / 9", "12 / 4"),
         ("Физическая упаковка / полный read / RMW", "3 x16 адреса; 3 / 6 тактов обмена", "то же", "то же"),
-        ("Общий закон воздействия", "на бит r(t), массив 39Wr(t)", "тот же 39Wr(t)", "тот же r(t), массив 44Wr(t)"),
+        ("Общий закон воздействия", "r(t) на выделенную позицию; 39Wr битовых касаний, lambda_j гипергеометрические", "тот же закон", "тот же r(t); 44Wr битовых касаний, новые lambda_j"),
+        ("Кратность до чисел", "p1=1 — условная база; зарегистрированы 12 срезов p2/p3", "те же p_s; direct не обнуляется физически", "те же p_s; группы 1+2/2+2 остаются в накоплении"),
         ("Общий срок / допуск / приложение", "315576000 с / 0.001 / strict-uniform", "то же", "то же"),
         ("Период / таймеры", "P1: после согласования сервиса и Q", "ka, w, h, NR: новый расчёт #196", "P2: после согласования сервиса и Q"),
         ("Q-upper за T и запас epsilon−Q", "fixed-E T187 (3); приложение/начало ещё не подписаны", "новый n39 upper отсутствует; старый full38 не перенесён", "fixed-E T187 (3); S3 и mixed/direct отдельно"),
@@ -87,7 +88,7 @@ def render(cfg, resources, gaps):
         ("Средняя полная SRAM / пик", "B1/T; пик на каждом 1 мс <=80% проверяется", "Ba/T; skip не отменяет цену решения", "B2/T; задержка кодека входит в ресурс"),
         ("Кодек: логические операции на слово", op(r1), op(r1), op(r2)),
         ("Кодек: предложенная плотная таблица", mem(r1), mem(r1), mem(r2)),
-        ("Контроллер/наблюдение/полезный канал", "полный вектор C1; долю ненужного monitor согласовать", "полный Ca: cuts, records, timer, decisions, payload", "полный C2; та же политика common transport"),
+        ("Контроллер/наблюдение/полезный канал", "полный вектор C1; долю ненужного monitor согласовать", "полный Ca: cuts, records, timer, decisions, payload; N_veto_extra и theta_veto_extra", "полный C2; та же политика common transport"),
         ("Память, LUT/BRAM, энергия", "131136 байт frozen transport/state, если сохранён; + policy/buffers; LUT/BRAM/J параметры", "то же + адаптивные таймеры/состояние", "то же + цена кодека t2"),
         ("После A / незавершённая операция", "счёт до T; полное started-work даёт верх pending-хвоста", "то же, без остановки на первом превышении", "то же"),
         ("Происхождение цены", "геометрия/операции вычислены; времён/FPGA измерений нет", "то же; n39 перенос не подписан", "то же; 10/20 мкс T187 не использованы"),
@@ -105,7 +106,7 @@ def render(cfg, resources, gaps):
 
 def build():
     sources = verify()
-    raw = (HERE/"common-input.proposed.json").read_bytes()
+    raw = (HERE/"common-input.v2.proposed.json").read_bytes()
     cfg = json.loads(raw)
     agreement = json.loads((HERE/"agreement.json").read_text(encoding="utf-8"))
     gaps = agreement_gaps(agreement,digest(raw))

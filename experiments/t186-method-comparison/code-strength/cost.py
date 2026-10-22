@@ -38,6 +38,7 @@ class Work:
     processed_records: F
     decisions: F
     timer_updates: F
+    extra_source_veto: F
     scope: str = "whole_horizon_full_started_work"
 
     def validate(self):
@@ -50,6 +51,8 @@ class Work:
             raise ValueError("a repair requires a corresponding coherent read")
         if self.processed_records > self.source_records:
             raise ValueError("processed records exceed all captured source records")
+        if self.extra_source_veto > self.source_records:
+            raise ValueError("additional source veto exceeds all source records")
 
 
 def work_vector(work, n, resources):
@@ -73,6 +76,7 @@ def work_vector(work, n, resources):
                 bus_turnarounds=work.bus_turnarounds, cuts=work.cuts,
                 source_records=work.source_records, processed_records=work.processed_records,
                 decisions=work.decisions, timer_updates=work.timer_updates,
+                extra_source_veto=work.extra_source_veto,
                 codec_ROM_bits=resources["lookup_bits"],
                 transport_plus_loss_state_bytes=131072+64,
                 charge_kind="upper: full started work, including pending and post-A")
@@ -96,6 +100,7 @@ def affine_prices(vector, horizon_ns):
                       "CPU_ns_per_record": v["processed_records"]/H,
                       "CPU_ns_per_decision": v["decisions"]/H,
                       "CPU_ns_per_timer": v["timer_updates"]/H,
+                      "CPU_ns_per_extra_veto": v["extra_source_veto"]/H,
                       "CPU_ns_per_app_dispatch": v["requests"]/H},
         # Decoding/encoding here is hardware. A software implementation instead
         # moves its work into CPU, and removes the separate hardware charge.
@@ -109,6 +114,7 @@ def affine_prices(vector, horizon_ns):
                           "control_J_per_cut": v["cuts"], "control_J_per_capture": v["source_records"],
                           "control_J_per_record": v["processed_records"], "control_J_per_decision": v["decisions"],
                           "control_J_per_timer": v["timer_updates"], "control_J_per_app": v["requests"],
+                          "control_J_per_extra_veto": v["extra_source_veto"],
                           "transport_J_per_request": v["requests"], "transport_J_per_reply": v["replies_upper"],
                           "transport_J_per_record": v["source_records"], "transport_J_per_cut": v["cuts"],
                           "idle_W": H/F(10**9)},
@@ -160,6 +166,14 @@ def allowable_delay(used_ns, operations, limit_ns):
     return dict(feasible=True, maximum=(limit_ns-used_ns)/operations if operations else None)
 
 
+def fast_fraction_cap(ordinary, extra_veto):
+    """Union upper for expected FAST time; does not estimate either input."""
+    ordinary,extra_veto=map(exact,(ordinary,extra_veto))
+    if not 0 <= ordinary <= 1 or not 0 <= extra_veto <= 1:
+        raise ValueError("fractions must be in [0,1]")
+    return min(F(1),ordinary+extra_veto)
+
+
 def periodic_starts(first_ns, step_ns, horizon_ns):
     first, step, H = map(exact, (first_ns, step_ns, horizon_ns))
     if first < 0 or step <= 0 or H < 0:
@@ -189,7 +203,7 @@ def per_bit_moment_caps(config):
     hidden in r(t); array-rate cannot be held constant across the codes.
     """
     env = config["environment"]
-    if env["kind"] != "conditional_independent_singleton_per_code_bit":
+    if env["kind"] not in ("conditional_independent_singleton_per_code_bit", "conditional_word_parent_48_positions"):
         raise ValueError("a compound parent law needs separate moments")
     den = env["reference_words"]*env["reference_bits"]
     T = exact(config["mission_s"])

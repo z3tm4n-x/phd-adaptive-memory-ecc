@@ -1,9 +1,9 @@
 {
   "agreement_gaps": [
     "common input has not been agreed",
-    "theorist: no explicit answer to the proposed input",
+    "theorist: final common input not signed (proposal is not a signature)",
     "theorist: no matching input hash in agreement record",
-    "map_engineer: no explicit answer to the proposed input",
+    "map_engineer: final common input not signed (proposal is not a signature)",
     "map_engineer: no matching input hash in agreement record",
     "no new n39 adaptation / t2 with application certificate"
   ],
@@ -301,7 +301,7 @@
       "t": 2
     }
   },
-  "common_input_sha256": "786c5f1ea83bf5e15f3b14256e9a279af33d911ec1bef9befae76cbc3a579b1c",
+  "common_input_sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc",
   "comparative_price_results": null,
   "comparative_probability_results": null,
   "geometries": {
@@ -335,10 +335,11 @@
     }
   },
   "implementation_sha256": {
-    "checks.py": "180339e26e4530c7a873b420bcdbd465aeb227f5337af0b4313b5dac664d3a07",
+    "checks.py": "fe8515a22f571156f481cbcfb4ed8ea0c1c74a8dd48a1a73b3cb59e5de79db07",
     "codec.py": "d258c3f1a6bdcbc779415151c089e45e6839e01b683ad388c682db778b9cd698",
-    "cost.py": "e68a95be368b4071dc68ce3c49b3865115cf9a941aee2e0c7c29105e88a9ca46",
-    "prepare.py": "e86ee571de5b985783f1a91e77d0b2069b95317dac50da405739239d9f3c6c2c"
+    "cost.py": "4e4fd0f633fe0cbb6a3ba30a51e5bd55d3549e28f4556a90f55762ced515639a",
+    "parents.py": "31d1971ef51a4f540a8a61938bddccfd047899bccfcd033b549e838a8d7a02a0",
+    "prepare.py": "c0ebabd0abe98e6df6e3cb032e77b6e9abfa27133c6f5a5c8cf2c6b275655bc0"
   },
   "recommendation": null,
   "science_inputs_changed_in_old_stages": false,
@@ -373,10 +374,16 @@
         "commit": "97f325c16a0abd18956abc50f42c7eb7dd5a66d6",
         "path": "experiments/t186-method-comparison/code-strength/common-input.proposed.json",
         "sha256": "786c5f1ea83bf5e15f3b14256e9a279af33d911ec1bef9befae76cbc3a579b1c"
+      },
+      {
+        "commit": "17708d036ca074e72a215c14421ffea7413938cf",
+        "path": "experiments/t186-method-comparison/code-strength/common-input.v2.proposed.json",
+        "sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc"
       }
     ],
     "organisational_main": "4131b908259130bad269c2116b5b0b7811b40502",
-    "plan_sha": "97f325c16a0abd18956abc50f42c7eb7dd5a66d6"
+    "plan_sha": "97f325c16a0abd18956abc50f42c7eb7dd5a66d6",
+    "v2_plan_sha": "17708d036ca074e72a215c14421ffea7413938cf"
   },
   "status": "PREPARATION_ONLY_NOT_COMPLETED_COMPARISON"
 }

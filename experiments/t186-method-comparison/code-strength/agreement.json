@@ -1,12 +1,14 @@
 {
-  "status": "pending",
-  "common_input_sha256": "786c5f1ea83bf5e15f3b14256e9a279af33d911ec1bef9befae76cbc3a579b1c",
+  "status": "partial_geometry_parent_law_alignment_final_input_pending",
+  "common_input_sha256": "68fb3ef8040bf33982a2bc48315632b484329cf29145139f39c5a78caaf0f2bc",
   "theorist": {
     "issue": 196,
-    "status": "requested_not_received",
-    "reply_url": null,
+    "status": "proposal_received_final_signature_pending",
+    "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334139214",
     "certificate_sha": null,
-    "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6333959647"
+    "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6333959647",
+    "engineer_confirmation_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6334225337",
+    "confirmed_scope": "geometry, horizon, proposed common parent law; not service/parameters/certificate"
   },
   "map_engineer": {
     "issue": 206,
@@ -14,5 +16,6 @@
     "reply_url": null,
     "request_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6333960335"
   },
-  "not_equivalent_to_scientific_acceptance": true
+  "not_equivalent_to_scientific_acceptance": true,
+  "common_input_file": "common-input.v2.proposed.json"
 }
