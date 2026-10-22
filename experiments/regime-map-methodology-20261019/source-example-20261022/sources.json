@@ -1,0 +1,99 @@
+{
+  "sources": {
+    "common": {
+      "commit": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7cb89113309741b50de1ce13987d5e904ffc11f7/experiments/t186-method-comparison/code-strength/common-input.json"
+    },
+    "accepted_results": {
+      "commit": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+      "path": "experiments/t186-method-comparison/code-strength/outputs/results.json",
+      "sha256": "f1bf58cf020e0e006e87ac6da9e04ab4487d3b94d2e61ae756d37fd7dcfee022",
+      "git_blob": "7345176db26fcd6e1305ae40a8bf27f8c202a713",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7cb89113309741b50de1ce13987d5e904ffc11f7/experiments/t186-method-comparison/code-strength/outputs/results.json"
+    },
+    "acceptance": {
+      "commit": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+      "path": "experiments/t186-method-comparison/code-strength/ORCHESTRATOR_REVIEW_20261022.md",
+      "sha256": "988bc43cc3c30e71614a859fa942bc32bcf4ff69f06fdd543a046b4a265b5bac",
+      "git_blob": "4806bd60caa0b32720a5201270b86074cf9664f8",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7cb89113309741b50de1ce13987d5e904ffc11f7/experiments/t186-method-comparison/code-strength/ORCHESTRATOR_REVIEW_20261022.md"
+    },
+    "radiation_inventory": {
+      "commit": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+      "path": "experiments/t126-regime-map/SOURCES.md",
+      "sha256": "709f46ca0e837794be10779c173bbe1bd5ecd1793074f132ff6db1d2da0cf825",
+      "git_blob": "4c36cfb7da875467e68671653b4f6b517d79852d",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7cb89113309741b50de1ce13987d5e904ffc11f7/experiments/t126-regime-map/SOURCES.md"
+    },
+    "initial_example": {
+      "commit": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+      "path": "experiments/regime-map-methodology-20261019/REPORT.md",
+      "sha256": "2e9a48626babd9d84f24f5c45a6eef27af78feebae303f4ed5608fc51617cb03",
+      "git_blob": "7938d83a3d04a09b0f74676b5481eadd5a3460da",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7cb89113309741b50de1ce13987d5e904ffc11f7/experiments/regime-map-methodology-20261019/REPORT.md"
+    },
+    "app_theory": {
+      "commit": "77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+      "path": "theory/t196-write-only-apertures-20261022.md",
+      "sha256": "42d2ea316c9a9195df45a616dbb2ab07b9ca3fc091584893539cc3126e4e0bc9",
+      "git_blob": "42a6d93f08bd4f715edb9d60fed8b93123ac2ea8",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/77ca3822f4c0c8d5382aa28af5eab776563d3d71/theory/t196-write-only-apertures-20261022.md"
+    },
+    "app_theory_result": {
+      "commit": "77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+      "path": "experiments/comparison-foundations-20261018/write-only-20261022/result.json",
+      "sha256": "2fd4436da138dbf26ff25c6516dc4ff4961127875a4b7f2ea8b7155a6a5627f9",
+      "git_blob": "101dfdb8ba69ce3195d5312c195c77b38b43d7f3",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/77ca3822f4c0c8d5382aa28af5eab776563d3d71/experiments/comparison-foundations-20261018/write-only-20261022/result.json"
+    },
+    "app_report": {
+      "commit": "6d0d569c798dee54027753a49a79d5524de7330b",
+      "path": "experiments/t186-method-comparison/app-only/REPORT.md",
+      "sha256": "5bd2283e05774306a9a39cdc6030aeecd61b6306fe3fe7c355ac0115c647ba59",
+      "git_blob": "893608c9ed876ea06f6dc4123732cdfeedb3c518",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6d0d569c798dee54027753a49a79d5524de7330b/experiments/t186-method-comparison/app-only/REPORT.md"
+    },
+    "app_result": {
+      "commit": "6d0d569c798dee54027753a49a79d5524de7330b",
+      "path": "experiments/t186-method-comparison/app-only/outputs/result.json",
+      "sha256": "b587c0a54a9f0c04ef083de904ab635272a4c6c7f0a22b36bcee315cb331010f",
+      "git_blob": "0ea731ec1b64c43bf363c3f1c242ca81595cdfd5",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/6d0d569c798dee54027753a49a79d5524de7330b/experiments/t186-method-comparison/app-only/outputs/result.json"
+    }
+  },
+  "datasheet": {
+    "url": "https://www.infineon.com/assets/row/public/documents/10/49/infineon-cy62167ev30-mobl-16-mbit-1m-x-16-2m-x-8-static-ram-datasheet-en.pdf",
+    "sha256": "3af6dadb2fa2ca75edfc92532f0dbab6a39e6d6dc7d9fac1c05648c5e49b8f8d",
+    "document": "38-05446",
+    "revision": "Q",
+    "document_date": "2018-08-02",
+    "read_on": "2026-10-22",
+    "visually_checked_pages": [
+      3,
+      7,
+      13
+    ],
+    "notes_checked": [
+      3,
+      4,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "part": "CY62167EV30LL-45ZXA",
+    "facts_status": "SOURCE: manually transcribed and visually checked; not specimen/revision equivalence"
+  },
+  "decisions": [
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6339059402",
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/211#issuecomment-6339040854",
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6339589724",
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6339824050"
+  ],
+  "status_as_of": "2026-10-22: PR219/220 draft/open, scientific acceptance and F0 admission pending"
+}
