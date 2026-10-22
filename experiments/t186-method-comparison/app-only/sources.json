@@ -1,0 +1,42 @@
+{
+  "base_commit": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+  "newline_rule": "CRLF to LF only",
+  "files": [
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/comparison.py",
+      "sha256": "bc5a3dfbf8ed00a66a8407c50e525461aeedacc2a2aa72b598762048e5c7a2bd"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/cost.py",
+      "sha256": "4e4fd0f633fe0cbb6a3ba30a51e5bd55d3549e28f4556a90f55762ced515639a"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/parents.py",
+      "sha256": "31d1971ef51a4f540a8a61938bddccfd047899bccfcd033b549e838a8d7a02a0"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/SERVICE.md",
+      "sha256": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/outputs/results.json",
+      "sha256": "f1bf58cf020e0e006e87ac6da9e04ab4487d3b94d2e61ae756d37fd7dcfee022"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/ORCHESTRATOR_REVIEW_20261022.md",
+      "sha256": "988bc43cc3c30e71614a859fa942bc32bcf4ff69f06fdd543a046b4a265b5bac"
+    },
+    {
+      "path": "theory/t196-three-variant-foundations-20261022.md",
+      "sha256": "e629c6aa739c8da9b8561c74aafe5f02229c18936bb1d4520b94820f975ce6c3"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage3/application.py",
+      "sha256": "adffc500151f4955c777369147702902736947e64e9ad6aa6a312aa3497aac7e"
+    }
+  ]
+}
