@@ -1,0 +1,216 @@
+{
+  "task": 206,
+  "scope": "A3 conditional code/mode overlay; A1-A5 and physical candidate unchanged",
+  "publication": {
+    "as_of": "2026-10-22",
+    "numerical_result": "author result",
+    "Q_applicability": "coauthor confirmed at review commit",
+    "ordinary_exact_cost": "R1 corrected by author; corrected repair/SRAM coefficients matched to coauthor result; acceptance pending",
+    "rounded_SRAM_order": "confirmed by coauthor with safe repair bound",
+    "scientific_acceptance": false,
+    "independent_review": false,
+    "physical_acceptance": false
+  },
+  "upstream_table": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/ffb5d29a615e0594ca84350f3c539b45a90f2d42/experiments/t186-method-comparison/code-strength/outputs/table.md",
+  "numerical_commit": "ffb5d29a615e0594ca84350f3c539b45a90f2d42",
+  "coauthor_review_commit": "64132c369832175d332624a267b149fe11eb68f3",
+  "input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+  "source_pointer_syntax": "source key in sources.json, then RFC6901 JSON pointer after #",
+  "field_routes": {
+    "useful_volume_layout_lifetime_application": "input#/",
+    "codeword_and_period": "results#/rows/{candidate}",
+    "risk_bounds_terms": "results#/rows/{candidate}/risk",
+    "average_bus_and_all_history": "results#/rows/{candidate}/cost",
+    "peak_bus_response_and_decode_limits": "results#/rows/{candidate}/timing",
+    "codec_architecture_ROM_XOR_unknown_LUT_BRAM": "results#/resources/{t}",
+    "CPU_energy_traffic_control_memory": "results#/rows/{candidate}/cost",
+    "ordinary_repair_correction": "review_result#/minimal_safe_repair and repair_note",
+    "capacity_units_and_packing": "table (the sole comparison table)"
+  },
+  "candidate_gates": {
+    "t1_constant": {
+      "source": "results#/rows/t1_constant",
+      "Q_signature": "review_result#/risk/t1_constant",
+      "conditional_Q_status": "SUFFICIENT_CONDITIONAL_Q",
+      "risk_margin_lower": "500189249882475589803528610571/972800000000000000000000000000000",
+      "risk_margin_fraction_lower": "500189249882475589803528610571/972800000000000000000000000000",
+      "risk_target_met": true,
+      "risk_target_remaining_lower": "13789249882475589803528610571/972800000000000000000000000000000",
+      "response_margin_fraction_lower": "972881/6250000",
+      "peak_margin_fraction_lower": "4047866121/20000000000",
+      "response_target_met": false,
+      "peak_target_met": true,
+      "core_hard_timing_constraints_met": true,
+      "whole_implementation_status": "UNKNOWN",
+      "physical_status": "UNKNOWN",
+      "class_optimum_lower": null,
+      "ordinary_cost_status": "author R1 matches coauthor repair/SRAM coefficients; acceptance pending",
+      "candidate_cost_lower_scope": "chosen candidate only, not lower for every admissible fixed policy"
+    },
+    "t1_adaptive": {
+      "source": "results#/rows/t1_adaptive",
+      "Q_signature": "review_result#/risk/t1_adaptive",
+      "conditional_Q_status": "SUFFICIENT_CONDITIONAL_Q",
+      "risk_margin_lower": "11541295882738761204498916807345067867230680476454173976203913472571148612045359273278019/18754730081607680000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "risk_margin_fraction_lower": "11541295882738761204498916807345067867230680476454173976203913472571148612045359273278019/18754730081607680000000000000000000000000000000000000000000000000000000000000000000000000",
+      "risk_target_met": true,
+      "risk_target_remaining_lower": "2163930841934921204498916807345067867230680476454173976203913472571148612045359273278019/18754730081607680000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "response_margin_fraction_lower": "972881/6250000",
+      "peak_margin_fraction_lower": "4047866121/20000000000",
+      "response_target_met": false,
+      "peak_target_met": true,
+      "core_hard_timing_constraints_met": true,
+      "whole_implementation_status": "UNKNOWN",
+      "physical_status": "UNKNOWN",
+      "class_optimum_lower": null,
+      "ordinary_cost_status": "author R1 matches coauthor repair/SRAM coefficients; acceptance pending",
+      "candidate_cost_lower_scope": "chosen candidate only, not lower for every admissible fixed policy"
+    },
+    "t2_constant": {
+      "source": "results#/rows/t2_constant",
+      "Q_signature": "review_result#/risk/t2_constant",
+      "conditional_Q_status": "SUFFICIENT_CONDITIONAL_Q",
+      "risk_margin_lower": "8990554993950631775374131854064115175626624262729309216101/17980456960000000000000000000000000000000000000000000000000000",
+      "risk_margin_fraction_lower": "8990554993950631775374131854064115175626624262729309216101/17980456960000000000000000000000000000000000000000000000000",
+      "risk_target_met": true,
+      "risk_target_remaining_lower": "326513950631775374131854064115175626624262729309216101/17980456960000000000000000000000000000000000000000000000000000",
+      "response_margin_fraction_lower": "1147457/7500000",
+      "peak_margin_fraction_lower": "110467531/625000000",
+      "response_target_met": false,
+      "peak_target_met": false,
+      "core_hard_timing_constraints_met": true,
+      "whole_implementation_status": "UNKNOWN",
+      "physical_status": "UNKNOWN",
+      "class_optimum_lower": null,
+      "ordinary_cost_status": "author R1 matches coauthor repair/SRAM coefficients; acceptance pending",
+      "candidate_cost_lower_scope": "chosen candidate only, not lower for every admissible fixed policy"
+    }
+  },
+  "decision_boundaries": {
+    "t2_vs_selected_adaptive_SRAM": {
+      "condition": "B_controller_average(t2)-B_controller_average(adaptive) < gap",
+      "gap_fraction_lower": "783385861480144868016543468415939230437990091101/61556841153789884748784559675617650000000000000000",
+      "basis": "hard t2 upper versus selected adaptive mandatory lower; independent of R1 and v",
+      "global_winner": null
+    },
+    "adaptive_vs_selected_t1_fixed_SRAM": {
+      "condition": "slope*v + B_controller_average(adaptive)-B_controller_average(t1_fixed) < gap",
+      "gap_fraction_lower": "137985649682154544838201382043471673012341146600195500234096793624583906908064870576788421272679230702017691248712014173309641567624065036582291801/16637513412719181235511299921234528190795522908312032900281250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "slope_per_veto_per_second": "196089453/25000000000000",
+      "sufficient_veto_rate_if_equal_other_bus_costs": "v < 1057.380 /s",
+      "unknown_v_uses": "results#/rows/t1_adaptive/cost/all_history_SRAM_core_upper",
+      "basis": "review_result#/minimal_safe_repair/t1_adaptive/safe_SRAM_upper",
+      "fixed_class_lower": null
+    }
+  },
+  "selected_group_slices": [
+    {
+      "source": "sensitivity#/0",
+      "p2": "0",
+      "p3": "0",
+      "Q_review_scope": "author numerical sensitivity; coauthor signed formula applicability, no claim of checking all 12 numbers",
+      "fixed_Q_gates": {
+        "t1_constant": {
+          "status": "SUFFICIENT_CONDITIONAL_Q",
+          "risk_target_met": true
+        },
+        "t2_constant": {
+          "status": "SUFFICIENT_CONDITIONAL_Q",
+          "risk_target_met": true
+        }
+      },
+      "adaptive_mandatory_gate": "UNKNOWN",
+      "adaptive_information_gate": "SEE_BASELINE",
+      "price_transfer_from_singleton": false,
+      "physical_status": "UNKNOWN",
+      "class_exclusion": false
+    },
+    {
+      "source": "sensitivity#/9",
+      "p2": "1/10000000",
+      "p3": "0",
+      "Q_review_scope": "author numerical sensitivity; coauthor signed formula applicability, no claim of checking all 12 numbers",
+      "fixed_Q_gates": {
+        "t1_constant": {
+          "status": "UNKNOWN",
+          "risk_target_met": false
+        },
+        "t2_constant": {
+          "status": "SUFFICIENT_CONDITIONAL_Q",
+          "risk_target_met": false
+        }
+      },
+      "adaptive_mandatory_gate": "UNKNOWN",
+      "adaptive_information_gate": "UNKNOWN",
+      "price_transfer_from_singleton": false,
+      "physical_status": "UNKNOWN",
+      "class_exclusion": false
+    },
+    {
+      "source": "sensitivity#/2",
+      "p2": "0",
+      "p3": "1/100000000",
+      "Q_review_scope": "author numerical sensitivity; coauthor signed formula applicability, no claim of checking all 12 numbers",
+      "fixed_Q_gates": {
+        "t1_constant": {
+          "status": "SUFFICIENT_CONDITIONAL_Q",
+          "risk_target_met": false
+        },
+        "t2_constant": {
+          "status": "SUFFICIENT_CONDITIONAL_Q",
+          "risk_target_met": false
+        }
+      },
+      "adaptive_mandatory_gate": "UNKNOWN",
+      "adaptive_information_gate": "UNKNOWN",
+      "price_transfer_from_singleton": false,
+      "physical_status": "UNKNOWN",
+      "class_exclusion": false
+    },
+    {
+      "source": "sensitivity#/11",
+      "p2": "1/10000000",
+      "p3": "1/100000000",
+      "Q_review_scope": "author numerical sensitivity; coauthor signed formula applicability, no claim of checking all 12 numbers",
+      "fixed_Q_gates": {
+        "t1_constant": {
+          "status": "UNKNOWN",
+          "risk_target_met": false
+        },
+        "t2_constant": {
+          "status": "SUFFICIENT_CONDITIONAL_Q",
+          "risk_target_met": false
+        }
+      },
+      "adaptive_mandatory_gate": "UNKNOWN",
+      "adaptive_information_gate": "UNKNOWN",
+      "price_transfer_from_singleton": false,
+      "physical_status": "UNKNOWN",
+      "class_exclusion": false
+    }
+  ],
+  "unknown_caps": {
+    "raw_SRAM_bytes": null,
+    "controller_RAM_bytes": null,
+    "LUT": null,
+    "BRAM": null,
+    "CPU_fraction": null,
+    "energy_J": null
+  },
+  "physical_unpaid_probabilities": {
+    "delta_env": null,
+    "delta_init": null
+  },
+  "new_group_information_theory_requested": false,
+  "checks": [
+    "fourteen exact source hashes and blobs",
+    "input/service/review identity",
+    "three Q signatures without recomputation",
+    "whole-horizon candidate scope",
+    "mandatory versus informational singleton",
+    "two signed SRAM gap identities",
+    "four preselected group locators including joint corner",
+    "unknown caps/physical bounds preserved",
+    "R1 matches coauthor repair/SRAM coefficients; Q/timers/groups unchanged"
+  ]
+}
