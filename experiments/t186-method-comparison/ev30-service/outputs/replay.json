@@ -1,0 +1,56 @@
+{
+  "computational_commit": "88b467c3eb12f46cccd17a4ddb0e2462f71a6b82",
+  "base_commit": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+  "runtime_python": "3.12.14",
+  "runtime_seconds": 3.5106690999818966,
+  "standalone_git_archive": true,
+  "git_metadata_present": false,
+  "network_used_during_replay": false,
+  "exit_code": 0,
+  "replay": {
+    "checks": 36,
+    "source_pins": 6,
+    "physical_Q_computed": false,
+    "hashes": {
+      "result.json": "20c1a4991b6976b2a9039a40d961b94f1d4592b731ed2c695c459011dd5b7ef7",
+      "checks.json": "5a260a108d6de00f6ca621e655c95c2787d6bdab0eaf36fa7c600ccbe34d9f7a"
+    }
+  },
+  "negative_checks": [
+    {
+      "name": "service_input_tamper",
+      "returncode": 1,
+      "last_error_line": "ValueError: pinned service input mismatch"
+    },
+    {
+      "name": "accepted_source_tamper",
+      "returncode": 1,
+      "last_error_line": "ValueError: pinned source mismatch: experiments/t186-method-comparison/code-strength/common-input.json"
+    },
+    {
+      "name": "output_tamper",
+      "returncode": 1,
+      "last_error_line": "ValueError: output differs: result.json"
+    },
+    {
+      "name": "PDF_bytes_tamper",
+      "returncode": 1,
+      "last_error_line": "ValueError: datasheet bytes differ from source pin"
+    }
+  ],
+  "changed_paths": [
+    "experiments/t186-method-comparison/ev30-service/PLAN.md",
+    "experiments/t186-method-comparison/ev30-service/SERVICE.md",
+    "experiments/t186-method-comparison/ev30-service/checks.py",
+    "experiments/t186-method-comparison/ev30-service/outputs/checks.json",
+    "experiments/t186-method-comparison/ev30-service/outputs/result.json",
+    "experiments/t186-method-comparison/ev30-service/reproduce.py",
+    "experiments/t186-method-comparison/ev30-service/service-input.json",
+    "experiments/t186-method-comparison/ev30-service/service.py",
+    "experiments/t186-method-comparison/ev30-service/sources.json"
+  ],
+  "all_changed_paths_in_new_package": true,
+  "accepted_source_paths_checked": 6,
+  "after_tamper_restore_replay_equal": true,
+  "scope": "author replay, not independent review, device timing measurement or physical Q"
+}
