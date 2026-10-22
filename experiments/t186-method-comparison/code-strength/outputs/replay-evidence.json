@@ -1,0 +1,30 @@
+{
+  "snapshot": "b7d2fff913db664c79ba50e9b4a9401466eae38c",
+  "kind": "clean local clone, shared git object store, sparse checkout",
+  "replay_exit": 0,
+  "replay": {
+    "preparation_reproduced": true,
+    "comparison_ready": false,
+    "checks": 53,
+    "files": {
+      "preparation.json": "86b705861480ce506e6f961f45af1452b2838162a79a6a94a02c63cd4619fd1c",
+      "validation.json": "2957d2bc440c2819951a705d08fe7da752924ec2bdb58eb25deef18a572e5670",
+      "table.md": "b7802c6f68c0b666f6efcfe151eab05bfc8d19e967dcf4c7db639428f7dcce0a"
+    },
+    "pending_common_input": true
+  },
+  "elapsed_s": 2.309137300006114,
+  "unagreed_comparison_exit": 2,
+  "unagreed_comparison_ready": false,
+  "altered_proposal_rejected": true,
+  "clean_worktree_after": true,
+  "old_stage1_to_stage4_changed": false,
+  "scientific_comparison_performed": false,
+  "prior_attempt": {
+    "snapshot": "01e5ee1",
+    "exit": 1,
+    "cause": "git show ref:path MAX_PATH probe in deep Windows checkout",
+    "fix": "git cat-file blob reads the pinned object directly; no scientific input or codec/cost logic changed"
+  },
+  "protocol_capture_repair": "The first negative-test recorder decoded a Windows traceback as UTF-8 and failed; byte capture was used for this verified record. This was not a comparative calculation."
+}
