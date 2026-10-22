@@ -1,0 +1,54 @@
+{
+  "commit": "ed4c83c7ea4de7f2598dc0776365ebd00958f45b",
+  "source_count": 14,
+  "clean_archive_no_git": true,
+  "initial": {
+    "verified_sources": 14,
+    "integration_checks": [
+      "fourteen exact source hashes and blobs",
+      "input/service/review identity",
+      "three Q signatures without recomputation",
+      "whole-horizon candidate scope",
+      "mandatory versus informational singleton",
+      "two signed SRAM gap identities",
+      "four preselected group locators including joint corner",
+      "unknown caps/physical bounds preserved",
+      "R1 matches coauthor repair/SRAM coefficients; Q/timers/groups unchanged"
+    ],
+    "outputs": {
+      "integration.json": "79fa23909ac22e91377189b5c8eec2b11986ac9d4bd6cd026c80b9c27cae088a",
+      "DECISIONS.md": "f4bf850d7987be1a09a748567b450239226a178b73bdedbfb38da3569b53a29d"
+    }
+  },
+  "negative_checks": [
+    {
+      "case": "input.source",
+      "exit_code": 1,
+      "diagnostic": "source SHA256 mismatch: input"
+    },
+    {
+      "case": "integration.json",
+      "exit_code": 1,
+      "diagnostic": "output differs: integration.json"
+    }
+  ],
+  "restored": {
+    "verified_sources": 14,
+    "integration_checks": [
+      "fourteen exact source hashes and blobs",
+      "input/service/review identity",
+      "three Q signatures without recomputation",
+      "whole-horizon candidate scope",
+      "mandatory versus informational singleton",
+      "two signed SRAM gap identities",
+      "four preselected group locators including joint corner",
+      "unknown caps/physical bounds preserved",
+      "R1 matches coauthor repair/SRAM coefficients; Q/timers/groups unchanged"
+    ],
+    "outputs": {
+      "integration.json": "79fa23909ac22e91377189b5c8eec2b11986ac9d4bd6cd026c80b9c27cae088a",
+      "DECISIONS.md": "f4bf850d7987be1a09a748567b450239226a178b73bdedbfb38da3569b53a29d"
+    }
+  },
+  "python_version": "3.12.14"
+}
