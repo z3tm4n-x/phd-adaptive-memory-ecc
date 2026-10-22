@@ -1,0 +1,32 @@
+{
+  "checks": [
+    "all word phases and finite-horizon edges covered",
+    "no fictitious terminal E or realized-start substitution",
+    "same grants, no dedicated or startup scrub",
+    "conditional response/slot/spacing and any-window peak fit hard caps",
+    "response reserve target shortfall remains explicit",
+    "no new claim before specific theorist basis",
+    "direct finite oracle including strict endpoint T=0",
+    "direct finite oracle including strict endpoint T=5999",
+    "direct finite oracle including strict endpoint T=6000",
+    "direct finite oracle including strict endpoint T=6001",
+    "direct finite oracle including strict endpoint T=80016",
+    "direct finite oracle including strict endpoint T=88033",
+    "a skipped write invalidates the proposed P aperture cover",
+    "unmet arrival deadline is exposed, not silently used",
+    "non-permutation workload rejected",
+    "causal start-E leaves no survivor older than arrival",
+    "toy workload count oracle for full pre-read/encode/write",
+    "no repair double write; initialization paid once",
+    "all-history price retains useful work after A and pending",
+    "CPU/controller and energy not replaced by zero",
+    "unknown caps and scalar price stay unknown",
+    "expanded-window endpoint count stream 100000",
+    "expanded-window endpoint count stream 600000"
+  ],
+  "count": 23,
+  "monte_carlo_runs": 0,
+  "old_campaigns_repeated": false,
+  "risk_evaluated": false,
+  "scientific_acceptance": false
+}
