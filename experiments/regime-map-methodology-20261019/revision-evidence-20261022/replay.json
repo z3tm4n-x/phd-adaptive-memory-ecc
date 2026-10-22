@@ -1,0 +1,62 @@
+{
+  "status": "AUTHOR_REPLAY_NOT_INDEPENDENT_SCIENTIFIC_ACCEPTANCE",
+  "computational_commit": "7a2fe7d6e2a5bb9b2fec9558ec967ad9227c6c6c",
+  "base_main": "f5cc22211d33cec4ddd4f2144c9a77c5314fb5f2",
+  "python": "3.12.14",
+  "utc": "2026-10-22T14:09:00.429071+00:00",
+  "elapsed_seconds": 1.224798,
+  "archive_has_git": false,
+  "network_calls_during_replay": false,
+  "probability_or_service_model_recomputed": false,
+  "git_source_count": 5,
+  "pdf_count": 6,
+  "threshold_count": 6,
+  "output_sha256": "1b9b2183123a45211ac3d2d02004bb6252a4db1b38c9e0b387df17e0b9dddca5",
+  "positive_checks": [
+    "five exact Git sources and six PDF hashes",
+    "accepted input, bound and moment caps agree",
+    "both directed sides of six scalar certificate thresholds",
+    "published date-code limits only",
+    "no asserted physical certificate or date-code reconciliation",
+    "source price covers prefix/post-A/pending"
+  ],
+  "negative_checks": [
+    {
+      "case": "accepted Git source drift",
+      "expected_rejection": "source drift: app_result",
+      "rejected": true
+    },
+    {
+      "case": "PDF bytes drift",
+      "expected_rejection": "PDF drift: datasheet-RevQ.pdf",
+      "rejected": true
+    },
+    {
+      "case": "unsupported reconciliation of date codes",
+      "expected_rejection": "date-code conflict cannot be silently resolved",
+      "rejected": true
+    },
+    {
+      "case": "unsupported physical certificate",
+      "expected_rejection": "no physical certificate is supplied by this inversion",
+      "rejected": true
+    },
+    {
+      "case": "output drift",
+      "expected_rejection": "output drift",
+      "rejected": true
+    }
+  ],
+  "final_output_matches_initial": true,
+  "changed_paths_against_base": [
+    "experiments/regime-map-methodology-20261019/revision-evidence-20261022/PLAN.md",
+    "experiments/regime-map-methodology-20261019/revision-evidence-20261022/REPORT.md",
+    "experiments/regime-map-methodology-20261019/revision-evidence-20261022/inputs.json",
+    "experiments/regime-map-methodology-20261019/revision-evidence-20261022/sources.json",
+    "experiments/regime-map-methodology-20261019/revision-evidence-20261022/thresholds.json",
+    "experiments/regime-map-methodology-20261019/revision-evidence-20261022/thresholds.py"
+  ],
+  "accepted_files_modified": false,
+  "harness_note": "First harness attempt stopped decoding Windows traceback paths; UTF-8 subprocess mode fixed the harness. Scientific files unchanged; mutated source restored in finally.",
+  "source_command": "python -B experiments/regime-map-methodology-20261019/revision-evidence-20261022/thresholds.py --source-dir /path/to/exported-sources --pdf-dir /path/to/pdfs --check"
+}
