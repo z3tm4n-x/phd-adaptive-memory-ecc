@@ -1,0 +1,49 @@
+{
+  "accepted_code_strength_blobs_preserved": 41,
+  "base_main": "7cb89113309741b50de1ce13987d5e904ffc11f7",
+  "captured_stdout": {
+    "checks": 27,
+    "output_sha256": {
+      "result.json": "b587c0a54a9f0c04ef083de904ab635272a4c6c7f0a22b36bcee315cb331010f",
+      "validation.json": "3e976dd1b36386e347b9eb787bc740253786d1ab0e8b8e1d951bef0ddfbf153e"
+    },
+    "risk_evaluated": true,
+    "status": "CONDITIONAL_APP_ONLY_T2_READY_FOR_REVIEW"
+  },
+  "command": [
+    "python",
+    "-B",
+    "experiments/t186-method-comparison/app-only/reproduce.py",
+    "--require-basis"
+  ],
+  "computational_commit": "81f7f1a60f71d10ad61146bbbe8809c997b5d909",
+  "elapsed_seconds": 0.3629409999703057,
+  "exit_code": 0,
+  "negative_checks": [
+    {
+      "case": "changed accepted input",
+      "diagnostic": "source changed",
+      "exit_code": 1,
+      "restored": true
+    },
+    {
+      "case": "specific basis absent",
+      "diagnostic": "no new Q or full price evaluated",
+      "exit_code": 2,
+      "restored": true
+    },
+    {
+      "case": "theorist numerical binding changed",
+      "diagnostic": "specific theorist upper does not match",
+      "exit_code": 1,
+      "restored": true
+    }
+  ],
+  "old_campaigns_or_theorist_checker_repeated": false,
+  "only_new_app_only_paths_changed": true,
+  "output_and_sources_restored": true,
+  "protected_local_source_count": 9,
+  "python_version": "3.12.14",
+  "source": "clean selective Git archive, no .git or network during replay",
+  "stderr": ""
+}
