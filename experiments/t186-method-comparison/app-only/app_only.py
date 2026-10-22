@@ -111,6 +111,8 @@ def evaluate(cfg,basis,accepted):
     if not svc['hard_service_conditions_hold']:
         raise ValueError('declared arrival-to-deadline service is not established at this point')
     r=risk(cfg,44,2,cal['period_ns'],cal['aperture_ns'])
+    if r['upper']!=F(basis['expected_Q_upper']):
+        raise ValueError('specific theorist upper does not match the new substitution')
     r['basis']='T196 deterministic application-arrival apertures; specific basis in basis.json'
     result.update(status='CONDITIONAL_APP_ONLY_T2_READY_FOR_REVIEW',Q_upper=r['upper'],risk=r,
                   full_price=full_cost(cfg,accepted),meets_epsilon=r['upper']<=F(cfg['epsilon']),

@@ -84,6 +84,7 @@ def run(cfg,basis,accepted,result):
         p=F(cal['period_ns'],NS);d=F(D,NS)
         direct=F(cfg['lifetime_other_budget'])+cfg['words']*comb(44,3)*(p*p*M3+3*B*d*p*M2+3*B*B*d*d*M1)
         check('independent singleton cubic and every E-cross term',result['Q_upper']==min(F(1),direct))
+        check('specific theorist rational result reproduced',result['Q_upper']==F(basis['expected_Q_upper']))
         check('clean/direct/lifetime terms explicit',result['risk']['terms']['initial']==result['risk']['terms']['direct']==0
               and result['risk']['terms']['lifetime_exceptions']==F(cfg['lifetime_other_budget']))
         check('complete main cost has zero dedicated observation',all(result['full_price']['full_cost_rates'][k]==0 for k in

@@ -38,5 +38,21 @@
       "path": "experiments/t186-method-comparison/stage3/application.py",
       "sha256": "adffc500151f4955c777369147702902736947e64e9ad6aa6a312aa3497aac7e"
     }
+  ],
+  "external_evidence": [
+    {
+      "commit": "77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+      "path": "theory/t196-write-only-apertures-20261022.md",
+      "sha256": "42d2ea316c9a9195df45a616dbb2ab07b9ca3fc091584893539cc3126e4e0bc9",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/77ca3822f4c0c8d5382aa28af5eab776563d3d71/theory/t196-write-only-apertures-20261022.md",
+      "verification": "read in full and hashed from exact Git object before calculation; reference only, no network dependency during replay"
+    },
+    {
+      "commit": "77ca3822f4c0c8d5382aa28af5eab776563d3d71",
+      "path": "experiments/comparison-foundations-20261018/write-only-20261022/result.json",
+      "sha256": "2fd4436da138dbf26ff25c6516dc4ff4961127875a4b7f2ea8b7155a6a5627f9",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/77ca3822f4c0c8d5382aa28af5eab776563d3d71/experiments/comparison-foundations-20261018/write-only-20261022/result.json",
+      "verification": "read in full and hashed from exact Git object before calculation; reference only, no network dependency during replay"
+    }
   ]
 }
