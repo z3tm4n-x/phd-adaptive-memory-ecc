@@ -1,0 +1,34 @@
+{
+  "exact_commit": "fa1350a2419da5225429a04d489674149ed26dc7",
+  "base_preserved": "76413140a8ce4c3884a44df5dbeb619580339faa",
+  "clean_checkout": true,
+  "clean_status_after_negative_test": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": "python -B experiments/t186-method-comparison/code-strength/reproduce.py",
+  "replay_exit_code": 0,
+  "replay_elapsed_s": 1.2602768000215292,
+  "performance_scope": "local software run only, not hardware WCET",
+  "result": {
+    "numerical_table_reproduced": true,
+    "checks": 139,
+    "specific_theory_signature": false,
+    "output_sha256": {
+      "results.json": "5319e7669fbb3f419706a4979dd8a387c3c7f6d412510fb77b2584356c50a1b5",
+      "sensitivity.json": "192afa847d30a2f2a7daabbc44e1f95f91c3b73875c161f9109cfd11bdd4788e",
+      "validation.json": "aa36c27a3d940772ee2b89c0844229015a1c0b242e15aefcbf10c8f7062b4f49",
+      "table.md": "87238fdd5ad96cc1f7188007083b06c48b28d7b0774fbf4aca6afeacf35458bb"
+    }
+  },
+  "changed_epsilon_rejected": true,
+  "changed_input_restored": true,
+  "specific_signature_gate_exit": 2,
+  "signature_gate": {
+    "numerical_table_ready": true,
+    "specific_theory_signature": false,
+    "reason": "new service and calculated rows submitted; this is not independent acceptance"
+  },
+  "old_comparison_blob_count": 108,
+  "all_old_comparison_blobs_preserved": true,
+  "scope": "v3 full table replay; historical v1 proof is separately preserved"
+}
