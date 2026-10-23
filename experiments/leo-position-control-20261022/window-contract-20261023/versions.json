@@ -1,0 +1,37 @@
+{
+  "base_commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+  "plan_commit": "79f2b60e792b1b856f6a0b31462ed37a21a4ca96",
+  "input_hash_convention": "UTF8 file bytes with CRLF normalized to LF; git_blob from base commit",
+  "inputs": [
+    {
+      "path": "experiments/leo-position-control-20261022/ASSIGNMENT.md",
+      "git_blob": "6fd00d8a20add58ad06d6e9b422848e501a4d852",
+      "canonical_lf_sha256": "3b50bb93318bf6ecebfd5abbcbca0c65c7a086213fe3857d8be402fd36d738f7"
+    },
+    {
+      "path": "experiments/leo-position-control-20261022/RULE.md",
+      "git_blob": "a3d99d17d34a432d6fbae274f07e0ddba29dc467",
+      "canonical_lf_sha256": "14441fb89e61fdbeacbd9776bed997116bec253d362d76de5df1a0292e001c21"
+    },
+    {
+      "path": "experiments/leo-position-control-20261022/candidate.json",
+      "git_blob": "b5555c8bc94d9bc7173cd140604ee7d7b4905d62",
+      "canonical_lf_sha256": "59a6046b9a7536df132f1501f33acbf7bf0e989f35499c233f2c59e144c817e1"
+    },
+    {
+      "path": "theory/t196-priority-methods-20261023.md",
+      "git_blob": "c63a88d7b88760973492a485c165812ef8588c3b",
+      "canonical_lf_sha256": "128d2d5d6679f9bb0d32c863db49577d941b468edf75c14b2de0c9745cd88b04"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276",
+      "canonical_lf_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e"
+    },
+    {
+      "path": "experiments/t186-method-comparison/app-only/app_only.py",
+      "git_blob": "85583eef9d7ed38cd47ec6c253a11ad72f2e1a04",
+      "canonical_lf_sha256": "014d96981afadc78c77d7e575bd9d554bc77ef6c784a831cfa46458e86a203b0"
+    }
+  ]
+}

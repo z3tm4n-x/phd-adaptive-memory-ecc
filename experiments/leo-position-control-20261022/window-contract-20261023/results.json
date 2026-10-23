@@ -1,0 +1,144 @@
+{
+  "status": "PARAMETRIC_CONSTRUCTION_READY_FOR_REVIEW_PHYSICAL_INPUT_OPEN",
+  "frozen_inputs_checked": 6,
+  "synthetic_example": {
+    "time_unit": "ns",
+    "status": "SYNTHETIC_TEST_OF_CONSTRUCTION_ONLY",
+    "H_fast": 8400,
+    "lookahead": 10000,
+    "potential_slots": 30,
+    "J_FAST_ranges": [
+      [
+        7,
+        17
+      ]
+    ],
+    "startup_and_FAST_ranges": [
+      [
+        0,
+        17
+      ]
+    ],
+    "LOW_progression": {
+      "first": 0,
+      "step": 3,
+      "end_exclusive": 30
+    },
+    "mandatory_count": 22,
+    "count_by_word": [
+      4,
+      3,
+      3,
+      3,
+      2,
+      3,
+      2,
+      2
+    ],
+    "completed_count": 22,
+    "sample_windows": [
+      {
+        "j": 0,
+        "word": 0,
+        "left": 100,
+        "right": 400,
+        "completed_by_T": true
+      },
+      {
+        "j": 7,
+        "word": 7,
+        "left": 7100,
+        "right": 7400,
+        "completed_by_T": true
+      },
+      {
+        "j": 8,
+        "word": 0,
+        "left": 8100,
+        "right": 8400,
+        "completed_by_T": true
+      },
+      {
+        "j": 17,
+        "word": 1,
+        "left": 17100,
+        "right": 17400,
+        "completed_by_T": true
+      },
+      {
+        "j": 18,
+        "word": 2,
+        "left": 18100,
+        "right": 18400,
+        "completed_by_T": true
+      },
+      {
+        "j": 27,
+        "word": 3,
+        "left": 27100,
+        "right": 27400,
+        "completed_by_T": true
+      }
+    ],
+    "all_loss_actual_scrub_count": 30,
+    "guaranteed_subset_count_is_cost_upper": false
+  },
+  "application": {
+    "status": "DETERMINISTIC_RESEARCH_APPLICATION_ONLY",
+    "period_ns": 131074621440,
+    "aperture_requirement_ns": 3000,
+    "first_write_ns": 600000,
+    "reads_offered_before_T": 315569688607,
+    "writes_offered_before_T": 315569688606,
+    "min_writes_per_word": 2407605,
+    "max_writes_per_word": 2407606,
+    "sample_words": [
+      {
+        "word": 0,
+        "first_arrival_ns": 600000,
+        "count": 2407606,
+        "last_arrival_ns": 315575913952651200
+      },
+      {
+        "word": 131071,
+        "first_arrival_ns": 78645172860,
+        "count": 2407606,
+        "last_arrival_ns": 315575992597224060
+      }
+    ],
+    "largest_first_cell_ns": 131074221420,
+    "largest_last_cell_ns": 131074249320,
+    "pending_write_words": [],
+    "operations": {
+      "read_beats": 1893418131639,
+      "write_beats": 946709459034,
+      "decodes": 631139377213,
+      "encodes": 315569819678,
+      "turnarounds": 315569819678,
+      "initial_encodes": 131072,
+      "initial_write_beats": 393216,
+      "app_dispatches": 631139377213,
+      "app_requests": 631139377213,
+      "app_replies": 631139377213
+    },
+    "counts_include_full_pending_work": true,
+    "all_pre_T_offers_paid_even_if_execution_starts_after_T": true,
+    "KM_service_deadline_established": false,
+    "Q_upper": null,
+    "scalar_price": null
+  },
+  "physical_result": {
+    "numeric_SAC_C_package": null,
+    "numeric_PROBA_file": null,
+    "Q_position": null,
+    "Q_OFF39": null,
+    "Q_OFF44": null,
+    "physical_service_guarantee": null,
+    "hardware_cost": null,
+    "risk_margin": null,
+    "timing_margin": null,
+    "resource_margin": null,
+    "additional_channel_numeric_requirement": null,
+    "physical_point_confirmed": false
+  }
+}

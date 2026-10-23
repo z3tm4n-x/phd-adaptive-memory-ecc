@@ -1,0 +1,30 @@
+{
+  "schema": "T206-window-regression-1",
+  "status": "SYNTHETIC_TEST_OF_CONSTRUCTION_ONLY",
+  "time_unit": "ns",
+  "not_a_memory_service_measurement_or_orbit": true,
+  "contract": {
+    "words": 8,
+    "low_stride": 3,
+    "T": 30000,
+    "g": 1000,
+    "freeze": 100,
+    "e": 100,
+    "c": 400,
+    "check_gap": 1000,
+    "command_delay": 500
+  },
+  "danger_intervals": [[15000, 17000]],
+  "mission_parameters": {
+    "g": null,
+    "freeze": null,
+    "e": null,
+    "c": null,
+    "check_gap": null,
+    "command_delay": null,
+    "low_stride": null,
+    "danger_intervals": null,
+    "joint_service_guarantee": null,
+    "tube_and_lifetime_failure_bound": null
+  }
+}
