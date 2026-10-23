@@ -1,0 +1,1306 @@
+{
+  "all_passed": true,
+  "checks": {
+    "l1b_86400_records": true,
+    "l1b_t1_degraded_not_silently_good": true,
+    "l1b_unit_spacing": true,
+    "l2_1440_records": true,
+    "l2_60s_spacing": true,
+    "l2_energy_units_preserved": true,
+    "l2_full_record_counts": true
+  },
+  "code_sha256": "0585a82d069a3ac1fe53e118c36244523c6bb7e41c16f60d62270e74dfb5dfab",
+  "input_sha256": "5cbc01b027a209cb6195c0d4197d3dff453c68db4902969f957c15a8f39e6e2f",
+  "samples": [
+    {
+      "audit": {
+        "global_attributes": {
+          "L1b_processing_parm_version": "OR_SEISS-L1b-PARM-SGPS_G19_v01r00.zip",
+          "aggregation_software_version": "1.0.0",
+          "algorithm_version": "OR_SEIS-L1b-ALG-SGPS_v01r00.zip",
+          "date_created": "2026-10-23T02:17:14.745Z",
+          "git_commit_date": "2026-10-10T00:07:50.000Z",
+          "git_commit_hash": "60917e4ba49d73b79512f5484bf2208be45df781",
+          "product_version": "v01r00",
+          "time_coverage_end": "2026-10-23T00:00:00.000Z",
+          "time_coverage_start": "2026-10-22T00:00:00.000Z"
+        },
+        "variables": {
+          "L1a_SciData_TimeStamp": {
+            "adjacent_differences": [
+              {
+                "count": 172798,
+                "value": 1.0
+              }
+            ],
+            "attributes": {
+              "_FillValue": [
+                -1e+31
+              ],
+              "long_name": "End time of one-second observation by sensor, accurate to within 0.5 seconds of onboard data acquisition start time, for each report, neglecting leap seconds",
+              "units": "seconds since 2000-01-01 12:00:00"
+            },
+            "first": [
+              845899200.0,
+              845899200.0
+            ],
+            "last": [
+              845985599.0,
+              845985599.0
+            ],
+            "shape": [
+              86400,
+              2
+            ]
+          },
+          "T1_DifferentialAlphaFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                63,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf degraded_due_to_lack_of_opposite_sensor_unit_data_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "long_name": "differential alpha flux data quality flag at specific energy bands for telescope 1's primary alpha data channels on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                63
+              ]
+            },
+            "shape": [
+              86400,
+              2,
+              6
+            ],
+            "value_counts": [
+              {
+                "count": 143,
+                "value": 8
+              },
+              {
+                "count": 1036657,
+                "value": 16
+              }
+            ]
+          },
+          "T1_DifferentialAlphaFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of differential alpha flux at specific energy bands for telescope 1's primary alpha data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              6
+            ]
+          },
+          "T1_DifferentialAlphaFluxes": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "differential alpha flux at specific energy bands for telescope 1's primary alpha data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 143,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              6
+            ]
+          },
+          "T1_DifferentialProtonFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                63,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf degraded_due_to_lack_of_opposite_sensor_unit_data_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "long_name": "differential proton flux data quality flag at specific energy bands for telescope 1's primary proton data channels on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                63
+              ]
+            },
+            "shape": [
+              86400,
+              2,
+              6
+            ],
+            "value_counts": [
+              {
+                "count": 1036800,
+                "value": 16
+              }
+            ]
+          },
+          "T1_DifferentialProtonFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of differential proton flux at specific energy bands for telescope 1's primary proton data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              6
+            ]
+          },
+          "T1_DifferentialProtonFluxes": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "differential proton flux at specific energy bands for telescope 1's primary proton data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              6
+            ]
+          },
+          "T2_DifferentialAlphaFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                63,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf degraded_due_to_lack_of_opposite_sensor_unit_data_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "long_name": "differential alpha flux data quality flag at specific energy bands for telescope 2's primary alpha data channels on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                63
+              ]
+            },
+            "shape": [
+              86400,
+              2,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 20,
+                "value": 8
+              },
+              {
+                "count": 345580,
+                "value": 16
+              }
+            ]
+          },
+          "T2_DifferentialAlphaFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of differential alpha flux at specific energy bands for telescope 2's primary alpha data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              2
+            ]
+          },
+          "T2_DifferentialAlphaFluxes": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "differential alpha flux at specific energy bands for telescope 2's primary alpha data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 20,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              2
+            ]
+          },
+          "T2_DifferentialProtonFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                63,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf degraded_due_to_lack_of_opposite_sensor_unit_data_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "long_name": "differential proton flux data quality flag at specific energy bands for telescope 2's primary proton data channels on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                63
+              ]
+            },
+            "shape": [
+              86400,
+              2,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 345600,
+                "value": 16
+              }
+            ]
+          },
+          "T2_DifferentialProtonFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of differential proton flux at specific energy bands for telescope 2's primary proton data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              2
+            ]
+          },
+          "T2_DifferentialProtonFluxes": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "differential proton flux at specific energy bands for telescope 2's primary proton data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              2
+            ]
+          },
+          "T3P11_IntegralProtonFlux": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "integral proton flux at energy band > 500 MeV for telescope 3's primary integral data channel P11 on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2
+            ]
+          },
+          "T3P11_IntegralProtonFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                31,
+                1,
+                2,
+                4,
+                8,
+                16
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16
+              ],
+              "long_name": "integral proton flux data quality flag at energy band > 500 MeV for telescope 3's primary integral data channel P11 on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                28
+              ]
+            },
+            "shape": [
+              86400,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 172800,
+                "value": 16
+              }
+            ]
+          },
+          "T3P11_IntegralProtonFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of integral proton flux at energy band > 500 MeV for telescope 3's primary integral data channel P11 on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2
+            ]
+          },
+          "T3_DifferentialAlphaFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                63,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf degraded_due_to_lack_of_opposite_sensor_unit_data_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "long_name": "differential alpha flux data quality flag at specific energy bands for telescope 3's primary alpha data channels on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                63
+              ]
+            },
+            "shape": [
+              86400,
+              2,
+              3
+            ],
+            "value_counts": [
+              {
+                "count": 518400,
+                "value": 16
+              }
+            ]
+          },
+          "T3_DifferentialAlphaFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of differential alpha flux at specific energy bands for telescope 3's primary alpha data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              3
+            ]
+          },
+          "T3_DifferentialAlphaFluxes": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "differential alpha flux at specific energy bands for telescope 3's primary alpha data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              3
+            ]
+          },
+          "T3_DifferentialProtonFluxDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_masks": [
+                63,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "flag_meanings": "good_quality_qf invalid_due_to_missing_L0_data_or_not_operational_mode_qf invalid_due_to_calibration_failed_qf degraded_due_to_deadtime_correction_threshold_exceeded_qf degraded_due_to_out_of_band_contamination_level_threshold_exceeded_qf degraded_due_to_dynamic_error_threshold_exceeded_qf degraded_due_to_lack_of_opposite_sensor_unit_data_qf",
+              "flag_values": [
+                0,
+                1,
+                2,
+                4,
+                8,
+                16,
+                32
+              ],
+              "long_name": "differential proton flux data quality flag at specific energy bands for telescope 3's primary proton data channels on each of the two sensor units",
+              "units": "1",
+              "valid_range": [
+                0,
+                63
+              ]
+            },
+            "shape": [
+              86400,
+              2,
+              5
+            ],
+            "value_counts": [
+              {
+                "count": 864000,
+                "value": 16
+              }
+            ]
+          },
+          "T3_DifferentialProtonFluxUncertainties": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "dynamic error estimate of differential proton flux at specific energy bands for telescope 3's primary proton data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              5
+            ]
+          },
+          "T3_DifferentialProtonFluxes": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "differential proton flux at specific energy bands for telescope 3's primary proton data channels on each of the two sensor units",
+              "units": "cm-2 sr-1 s-1 keV-1",
+              "valid_range": [
+                -9999999.0,
+                9999999.0
+              ]
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              86400,
+              2,
+              5
+            ]
+          },
+          "product_time": {
+            "attributes": {
+              "_FillValue": [
+                -999.0
+              ],
+              "long_name": "start and end time of observations associated with product, neglecting leap seconds",
+              "units": "seconds since 2000-01-01 12:00:00"
+            },
+            "shape": [
+              1440,
+              2
+            ]
+          },
+          "yaw_flip_flag": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "flag_meanings": "upright neither inverted",
+              "flag_values": [
+                0,
+                1,
+                2
+              ],
+              "long_name": "flags indicating whether spacecraft is operating in yaw flip configuration",
+              "units": "1",
+              "valid_range": [
+                0,
+                2
+              ]
+            },
+            "shape": [
+              86400
+            ],
+            "value_counts": [
+              {
+                "count": 86400,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "source": {
+        "bytes": 2620509,
+        "name": "ops_seis-l1b-sgps_g19_d20261022_v0-0-0.nc",
+        "retrieved_utc": "2026-10-23T05:51:43.881238+00:00",
+        "selected_by": "latest complete date in frozen October directory, before slope inspection",
+        "sha256": "853bd3aedc5b57270a59fc96964de36747da4362ad4b1ea8fe510c23dfca6c7d",
+        "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/seis-l1b-sgps/2026/10/ops_seis-l1b-sgps_g19_d20261022_v0-0-0.nc"
+      }
+    },
+    {
+      "audit": {
+        "global_attributes": {
+          "algorithm_date": "2025-09-04",
+          "algorithm_version": [
+            3,
+            3
+          ],
+          "date_created": "2026-10-23T02:17:51.991Z",
+          "git_commit_date": "2026-10-20T20:23:06",
+          "git_commit_hash": "ebcf4a27968ba997cec21c63fbbaa3504c127b06",
+          "time_coverage_end": "2026-10-23T00:00:00.000Z",
+          "time_coverage_resolution": "PT1M",
+          "time_coverage_start": "2026-10-22T00:00:00.000Z"
+        },
+        "variables": {
+          "AvgDiffAlphaFlux": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Time-averaged alpha fluxes in several differential channels between 1 and 500 MeV.",
+              "units": "alphas/(cm^2 sr keV s)"
+            },
+            "fill_count": 0,
+            "negative_count": 140,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2,
+              11
+            ]
+          },
+          "AvgDiffAlphaFluxObserved": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Time-averaged alpha fluxes in several differential channels between 1 and 500 MeV, without SGPS sensor temperature dependence corrections applied.",
+              "units": "alphas/(cm^2 sr keV s)"
+            },
+            "empty": true,
+            "shape": [
+              0,
+              2,
+              11
+            ]
+          },
+          "AvgDiffAlphaFluxUncert": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Quadrature sum of random and systematic errors for the differential alpha flux averages.",
+              "units": "alphas/(cm^2 sr keV s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2,
+              11
+            ]
+          },
+          "AvgDiffProtonFlux": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Time-averaged proton fluxes in several differential channels between 1 and 500 MeV.",
+              "units": "protons/(cm^2 sr keV s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2,
+              13
+            ]
+          },
+          "AvgDiffProtonFluxObserved": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Time-averaged proton fluxes in several differential channels between 1 and 500 MeV, without SGPS sensor temperature dependence corrections applied.",
+              "units": "protons/(cm^2 sr keV s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2,
+              13
+            ]
+          },
+          "AvgDiffProtonFluxUncert": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Quadrature sum of random and systematic errors for the differential proton flux averages.",
+              "units": "protons/(cm^2 sr keV s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2,
+              13
+            ]
+          },
+          "AvgIntProtonFlux": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Time-averaged proton fluxes in the P11 >500 MeV integral channel",
+              "units": "protons/(cm^2 sr s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2
+            ]
+          },
+          "AvgIntProtonFluxObserved": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Time-averaged proton fluxes in the P11 >500 MeV integral channel, without SGPS sensor temperature dependence corrections applied",
+              "units": "protons/(cm^2 sr s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2
+            ]
+          },
+          "AvgIntProtonFluxUncert": {
+            "attributes": {
+              "_FillValue": [
+                -9.999999848243207e+30
+              ],
+              "long_name": "Quadrature sum of random and systematic errors for the >500 MeV integral flux averages",
+              "units": "protons/(cm^2 sr s)"
+            },
+            "fill_count": 0,
+            "negative_count": 0,
+            "nonfinite": 0,
+            "note": "counts only, no event/rise extraction; raw numeric units preserved",
+            "shape": [
+              1440,
+              2
+            ]
+          },
+          "DiffAlphaIgnoredL1bDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "long_name": "Bit mask indicating presence of invalid DQFs in L1b differential alphas that were ignored for the purpose of averaging."
+            },
+            "empty": true,
+            "shape": [
+              0,
+              2,
+              11
+            ]
+          },
+          "DiffDQFdtcSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+            },
+            "shape": [
+              1440,
+              2,
+              13
+            ],
+            "value_counts": [
+              {
+                "count": 37440,
+                "value": 0
+              }
+            ]
+          },
+          "DiffDQFerrSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'dynamic error threshold exceeded' flag thrown"
+            },
+            "shape": [
+              1440,
+              2,
+              13
+            ],
+            "value_counts": [
+              {
+                "count": 37440,
+                "value": 60
+              }
+            ]
+          },
+          "DiffDQFlosSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'lacking opposite sensor unit data' flag thrown"
+            },
+            "shape": [
+              1440,
+              2,
+              13
+            ],
+            "value_counts": [
+              {
+                "count": 37440,
+                "value": 0
+              }
+            ]
+          },
+          "DiffDQFoobSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the differential flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+            },
+            "shape": [
+              1440,
+              2,
+              13
+            ],
+            "value_counts": [
+              {
+                "count": 37440,
+                "value": 0
+              }
+            ]
+          },
+          "DiffProtonIgnoredL1bDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "long_name": "Bit mask indicating presence of invalid DQFs in L1b differential protons that were ignored for the purpose of averaging."
+            },
+            "shape": [
+              1440,
+              2,
+              13
+            ],
+            "value_counts": [
+              {
+                "count": 37440,
+                "value": 0
+              }
+            ]
+          },
+          "DiffProtonLowerEnergy": {
+            "attributes": {
+              "_FillValue": [
+                -9999.0
+              ],
+              "long_name": "Lower band energies for the thirteen SGPS proton differential channels (P1, P2A, P2B, P3, P4, P5, P6, P7, P8A, P8B, P8C, P9, P10).  First unit (-X) looks Westward when spacecraft is upright.  Second unit (+X) looks Eastward when spacecraft is upright.",
+              "units": "keV"
+            },
+            "shape": [
+              2,
+              13
+            ],
+            "values": [
+              [
+                1020.0,
+                1900.0,
+                2310.0,
+                3400.0,
+                5840.0,
+                11640.0,
+                25900.0,
+                41000.0,
+                83000.0,
+                98600.0,
+                113400.0,
+                155200.0,
+                267000.0
+              ],
+              [
+                1020.0,
+                1900.0,
+                2310.0,
+                3400.0,
+                5840.0,
+                11640.0,
+                25900.0,
+                41000.0,
+                78000.0,
+                97900.0,
+                114600.0,
+                150700.0,
+                267000.0
+              ]
+            ]
+          },
+          "DiffProtonUpperEnergy": {
+            "attributes": {
+              "_FillValue": [
+                -9999.0
+              ],
+              "long_name": "Upper band energies for the thirteen SGPS proton differential channels (P1, P2A, P2B, P3, P4, P5, P6, P7, P8A, P8B, P8C, P9, P10).  First unit (-X) looks Westward when spacecraft is upright.  Second unit (+X) looks Eastward when spacecraft is upright.",
+              "units": "keV"
+            },
+            "shape": [
+              2,
+              13
+            ],
+            "values": [
+              [
+                1860.0,
+                2300.0,
+                3340.0,
+                6480.0,
+                11000.0,
+                23270.0,
+                35200.0,
+                74000.0,
+                100700.0,
+                120600.0,
+                142400.0,
+                231500.0,
+                390000.0
+              ],
+              [
+                1860.0,
+                2300.0,
+                3340.0,
+                6480.0,
+                11000.0,
+                23270.0,
+                35200.0,
+                74000.0,
+                99700.0,
+                120300.0,
+                136100.0,
+                225100.0,
+                390000.0
+              ]
+            ]
+          },
+          "DiffValidL1bSamplesInAvg": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Number of valid L1b 1-s samples in each differential flux average."
+            },
+            "shape": [
+              1440,
+              2,
+              13
+            ],
+            "value_counts": [
+              {
+                "count": 37440,
+                "value": 60
+              }
+            ]
+          },
+          "ExpectedLUTNotFound": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "long_name": "A boolean indicator: 1 if all input files' specified lookup tables matched the tables that were used, 0 otherwise."
+            },
+            "shape": [],
+            "values": 1
+          },
+          "IntDQFdtcSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dead-time-correction threshold exceeded' flag thrown"
+            },
+            "shape": [
+              1440,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 2880,
+                "value": 0
+              }
+            ]
+          },
+          "IntDQFerrSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'dynamic error threshold exceeded' flag thrown"
+            },
+            "shape": [
+              1440,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 2880,
+                "value": 60
+              }
+            ]
+          },
+          "IntDQFlosSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'lacking opposite sensor unit data' flag thrown"
+            },
+            "shape": [
+              1440,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 2880,
+                "value": 0
+              }
+            ]
+          },
+          "IntDQFoobSum": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Sum of valid L1b 1-s samples contributing to the integral flux average that had the 'out-of-band contamination level threshold exceeded' flag thrown"
+            },
+            "shape": [
+              1440,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 2880,
+                "value": 0
+              }
+            ]
+          },
+          "IntProtonIgnoredL1bDQFs": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "long_name": "Bit mask indicating presence of invalid DQFs in L1b integral protons that were ignored for the purpose of averaging."
+            },
+            "shape": [
+              1440,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 2880,
+                "value": 0
+              }
+            ]
+          },
+          "IntValidL1bSamplesInAvg": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Number of valid L1b 1-s samples in each integral flux average."
+            },
+            "shape": [
+              1440,
+              2
+            ],
+            "value_counts": [
+              {
+                "count": 2880,
+                "value": 60
+              }
+            ]
+          },
+          "L1bRecordsInAvg": {
+            "attributes": {
+              "_FillValue": [
+                4294967295
+              ],
+              "long_name": "Number of L1b 1-second records in average"
+            },
+            "shape": [
+              1440
+            ],
+            "value_counts": [
+              {
+                "count": 1440,
+                "value": 60
+              }
+            ]
+          },
+          "time": {
+            "adjacent_differences": [
+              {
+                "count": 1439,
+                "value": 60.0
+              }
+            ],
+            "attributes": {
+              "_FillValue": [
+                -1e+31
+              ],
+              "long_name": "Time stamp at the start of the averaging period, in seconds since 2000-01-01 12:00:00 UTC",
+              "units": "seconds since 2000-01-01 12:00:00 UTC"
+            },
+            "first": 845899200.0,
+            "last": 845985540.0,
+            "shape": [
+              1440
+            ]
+          },
+          "yaw_flip_flag": {
+            "attributes": {
+              "_FillValue": [
+                255
+              ],
+              "comments": "While spacecraft is flipping, flag will be set to 1 or _FillValue.",
+              "flag_meanings": "upright neither inverted",
+              "flag_values": [
+                0,
+                1,
+                2
+              ],
+              "long_name": "Yaw flip flag, indicating if spacecraft is inverted"
+            },
+            "shape": [
+              1440
+            ],
+            "value_counts": [
+              {
+                "count": 1440,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "source": {
+        "bytes": 399384,
+        "name": "sci_sgps-l2-avg1m_g19_d20261022_v3-0-3.nc",
+        "retrieved_utc": "2026-10-23T05:51:45.043994+00:00",
+        "selected_by": "latest complete date in frozen October directory, before slope inspection",
+        "sha256": "905f7287cdd0f4cc484aa97efb0308e740a884ee449c950c67667c1772b91e57",
+        "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/2026/10/sci_sgps-l2-avg1m_g19_d20261022_v3-0-3.nc"
+      }
+    }
+  ],
+  "scientific_scope": "latest complete day metadata/quality only; no mission coverage, slope quantile or physical Q",
+  "software": {
+    "h5py": "3.16.0",
+    "numpy": "2.3.5"
+  }
+}
