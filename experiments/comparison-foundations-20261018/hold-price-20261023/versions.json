@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-23",
+  "task": 196,
+  "base_commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+  "plan_commit": "01a9dbb06357ddd659d35724da819d7e9ec4b08e",
+  "branch": "t196-hold-price-20261023",
+  "pr": 234,
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "f82e3bf0845823047baf25a955249c1061a0e38e"
+    },
+    {
+      "path": "agents/00_RULES.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "b601b2f43ce885e26d537b7b8a678616d1ee8af4"
+    },
+    {
+      "path": "agents/03_THEORIST.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "79729a434cd7cd260b3001bf18cf71e7a9a7c7da"
+    },
+    {
+      "path": "STATUS.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "386892ee7f01239a9de2a2157c949c37e5e2e340"
+    },
+    {
+      "path": "MAP.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "740e8ba318546f55ebbafff4f0c170f6a4dcf857"
+    },
+    {
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "6fb36da61a732e1fcbd4fc20228d374ce7d8b4b7"
+    },
+    {
+      "path": "theory/assignments/20261022-priority-methods.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "a3a4d7098ecab74860e6921c2318bcdebbbd2fb3"
+    },
+    {
+      "path": "theory/t114-two-stage-err.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "b7642fea2bc945df1785eeb60da24ca7fb4c5552"
+    },
+    {
+      "path": "theory/t114-two-stage-err-appendix.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "1117eca2d37d4022a82e53a2bf8543dcf1a56d46"
+    },
+    {
+      "path": "theory/t196-three-variant-foundations-20261022.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98"
+    },
+    {
+      "path": "theory/t196-write-only-apertures-20261022.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "42a6d93f08bd4f715edb9d60fed8b93123ac2ea8"
+    },
+    {
+      "path": "theory/t196-priority-methods-20261023.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "c63a88d7b88760973492a485c165812ef8588c3b"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/comparison.py",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "6141f0c20104a3b20deee23c3f944422f8a20a18"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/informational.py",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "d76e41379965758d201931b42b5664a97d53f64a"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/cost.py",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "335343fda81cbcff0f774b78ed5970b8511509c8"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/policies.py",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "2f0f94c39c9200337c267085b6262493e62ae800"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/METHODS.md",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "5c811d14bdcdcbeffd0127431eff58e8900f0dd0"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/training.json",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "b6182c39d4fc778eec7f50752b7fe393b3ba8bd7"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/inputs.json",
+      "commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+      "blob": "9a9f6040ee5a4d2727d4966eae7ce232198b9c2e"
+    }
+  ],
+  "frozen_semantics": [
+    {
+      "path": "experiments/t186-method-comparison/stage4/adapter.py",
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "blob": "c8c3c2b154ebb664f76f2fd8c8afea5b6789d05c"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage4/engine.py",
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "blob": "fbaf14aebd6b52698e2e6731e90a5baf5f0761b5"
+    }
+  ],
+  "new_handoffs": [
+    {
+      "path": "experiments/mission-rise-rate-20261022/write-retention/PLAN.md",
+      "blob": "3836c59bfffe28073bb90cfef5e757a0d4409273",
+      "commit": "ea5e0825c52def5874ce3c55b290f86da178df33"
+    },
+    {
+      "path": "experiments/mission-rise-rate-20261022/write-retention/input.json",
+      "blob": "64b5596f140c4d52b21480de5a28ee4f373f47da",
+      "commit": "ea5e0825c52def5874ce3c55b290f86da178df33"
+    },
+    {
+      "path": "experiments/leo-position-control-20261022/window-contract-20261023/PLAN.md",
+      "blob": "d9aca5a34a0549f92a36988fc50fee3e0453854d",
+      "commit": "79f2b60e792b1b856f6a0b31462ed37a21a4ca96"
+    }
+  ],
+  "scope": "author-foundation agreement, not independent peer review; no new physical Q or winner",
+  "historical_results_modified": false
+}
