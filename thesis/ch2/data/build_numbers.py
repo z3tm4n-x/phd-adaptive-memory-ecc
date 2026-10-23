@@ -310,6 +310,53 @@ add("N2.3-p1", "2.3", "RES-001: интенсивность частиц λ", "1/
 add("N2.3-p2", "2.3", "RES-001: срок T", "ед. модельного времени", "ЗАДАНО (параметр примера)", "none", 1,
     "четыре слова, мгновенная синхронная очистка", ARES1, M=([RES1], ["`T=4`"]), val="4")
 
+# 2.4 (прежняя нумерация 2.6) — проверка оценок на малых моделях; принятые версии закреплены отдельно
+PIN166 = "6597dfb108f884a3b5a34f6fa03300d417162d16"   # безусловная запись, принятая версия
+PIN177 = "ecf5bb40e502f56a655df3aaa4b29554121e365e"   # запись по сигналу, принятая версия
+R166 = "experiments/sequential-small-validation-20261014/outputs/results.json"
+I166 = "experiments/sequential-small-validation-20261014/inputs.json"
+R177 = "experiments/sequential-err-small-validation-20261015/outputs/results.json"
+I177 = "experiments/sequential-err-small-validation-20261015/inputs.json"
+for _r in (R166, I166):
+    PINS[_r] = PIN166
+for _r in (R177, I177):
+    PINS[_r] = PIN177
+A166 = "MAP 15.10: малая модель, безусловная запись — принята (слияние 88e7010)"
+A177 = "MAP 18.10: малая модель, запись по сигналу — принята (слияние 94d15d8)"
+C24 = "синтетическая модель: W = 4/8, T = 3,4 с, P = 1 с, одиночные равновероятные XOR-попадания, чистое начало"
+CASES24 = [("W4_constant_D0", "4c0"), ("W4_constant_D1-20", "4c5"), ("W4_piecewise_D0", "4p0"),
+           ("W4_piecewise_D1-20", "4p5"), ("W8_constant_D0", "8c0"), ("W8_constant_D1-20", "8c5"),
+           ("W8_piecewise_D0", "8p0"), ("W8_piecewise_D1-20", "8p5")]
+for _svc, _rel, _uk, _area in (("Б", R166, "U", A166), ("С", R177, "U_E", A177)):
+    for _cid, _tag in CASES24:
+        add(f"N2.4-{_svc}{_tag}-L", "2.6", f"{_svc}, {_cid}: нижняя оценка L", "—", "НИЗ (середина интервала шириной ≤10⁻³⁶)",
+            "down", 4, C24, _area, J=(_rel, f"cases[id={_cid}]/exact/L/midpoint"), dec=4)
+        add(f"N2.4-{_svc}{_tag}-Q", "2.6", f"{_svc}, {_cid}: точное Q(T)", "—", "ТОЧН (середина интервала шириной ≤10⁻³⁶)",
+            "none", 4, C24, _area, J=(_rel, f"cases[id={_cid}]/exact/Q_exact/midpoint"), dec=4)
+        add(f"N2.4-{_svc}{_tag}-U", "2.6", f"{_svc}, {_cid}: верхняя оценка U", "—", "ВЕРХ (точная рациональная граница)",
+            "up", 4, C24, _area, J=(_rel, f"cases[id={_cid}]/exact/{_uk}/midpoint"), dec=4)
+add("N2.4-T", "2.6", "Срок малых моделей T", "с", "ЗАДАНО", "none", 2, C24, A166, J=(I166, "T_s"))
+add("N2.4-P", "2.6", "Период малых моделей P", "с", "ЗАДАНО", "none", 1, C24, A166, J=(I166, "period_s"))
+add("N2.4-D", "2.6", "Ненулевая задержка записи Δ", "с", "ЗАДАНО", "none", 1, C24, A166, M=([I166], ['"1/20"']), val="1/20")
+add("N2.4-l0", "2.6", "Постоянная интенсивность частиц", "с⁻¹", "ЗАДАНО", "none", 1, C24, A166,
+    J=(I166, "profiles/constant[start=0]/lambda_array_s_inv"))
+add("N2.4-l1", "2.6", "Кусочно-постоянная интенсивность, первый участок", "с⁻¹", "ЗАДАНО", "none", 1, C24, A166,
+    J=(I166, "profiles/piecewise[start=0]/lambda_array_s_inv"))
+add("N2.4-l2", "2.6", "Кусочно-постоянная интенсивность, второй участок", "с⁻¹", "ЗАДАНО", "none", 2, C24, A166,
+    M=([I166], ['"lambda_array_s_inv": "8/5"']), val="8/5")
+add("N2.4-l3", "2.6", "Кусочно-постоянная интенсивность, третий участок", "с⁻¹", "ЗАДАНО", "none", 1, C24, A166,
+    M=([I166], ['"lambda_array_s_inv": "3/5"']), val="3/5")
+add("N2.4-t1", "2.6", "Конец первого участка", "с", "ЗАДАНО", "none", 1, C24, A166, J=(I166, "profiles/piecewise[start=0]/end"))
+add("N2.4-t2", "2.6", "Конец второго участка", "с", "ЗАДАНО", "none", 2, C24, A166, M=([I166], ['"end": "7/5"']), val="7/5")
+add("N2.4-F", "2.6", "Среднее число частиц за срок (оба профиля)", "частиц", "ТОЧН", "none", 3, C24, A166,
+    J=(R166, "cases[id=W4_constant_D0]/exact/F_array"))
+add("N2.4-nБ", "2.6", "Длина слова при безусловной записи", "разрядов", "ЗАДАНО", "none", 2, C24, A166,
+    J=(R166, "cases[id=W4_constant_D0]/n"))
+add("N2.4-nС", "2.6", "Длина слова при записи по сигналу", "разрядов", "ЗАДАНО", "none", 2, C24, A177,
+    J=(R177, "cases[id=W4_constant_D0]/n"))
+add("N2.4-N", "2.6", "Число реализаций Монте-Карло на случай", "реализаций", "ЗАДАНО", "none", 6, C24, A166,
+    J=(R166, "cases[id=W4_constant_D0]/MC/trials"))
+
 # 2.5 — последовательный контроль (сквозной пример: запись по сигналу исправления)
 add("N2.5-R", "2.5", "Чтение слова без сигнала исправления", "нс", "ВЕРХ (проектный, условный)", "up", 4, CY, A110,
     M=([T110], ["R^+=92,500920"]), val="92.500920")
@@ -447,6 +494,24 @@ def main() -> int:
                 "АРИФМ (пуассоновский счёт)", "down", 3,
                 "правило (В.3) РД 134-0139-2005 (копия вне репозитория); для сравнения с −ln α/E метода требований",
                 "РД 134-0139-2005 с изм. 3, прил. В", Decimal(1) - Decimal(math.exp(-1)), ["вычислено"])
+        for _svc, _rel in (("Б", R166), ("С", R177)):
+            _cases = json.loads(show(_rel))["cases"]
+            _w = [100 * (dec(c["exact"][("U" if _svc == "Б" else "U_E")]["midpoint"]) - dec(c["exact"]["L"]["midpoint"]))
+                  / dec(c["exact"]["Q_exact"]["midpoint"]) for c in _cases]
+            derived(f"N2.4-{_svc}-wmin", "2.6", f"{_svc}: наименьшая относительная ширина (U − L)/Q", "%", "АРИФМ", "none", 3,
+                    C24, A166 if _svc == "Б" else A177, min(_w), [_rel])
+            derived(f"N2.4-{_svc}-wmax", "2.6", f"{_svc}: наибольшая относительная ширина (U − L)/Q", "%", "АРИФМ", "none", 3,
+                    C24, A166 if _svc == "Б" else A177, max(_w), [_rel])
+            _mc = [abs(dec(c["MC"]["Q_MC"]) - dec(c["exact"]["Q_exact"]["midpoint"])) for c in _cases]
+            derived(f"N2.4-{_svc}-mc", "2.6", f"{_svc}: наибольшее |Q_MC − Q|", "—", "ВЕРХ (по восьми случаям)", "up", 2,
+                    C24, A166 if _svc == "Б" else A177, max(_mc), [_rel])
+            _inside = sum(1 for c in _cases if dec(c["MC"]["CI_95_pointwise"][0]) <= dec(c["exact"]["Q_exact"]["lower"])
+                          and dec(c["exact"]["Q_exact"]["upper"]) <= dec(c["MC"]["CI_95_pointwise"][1]))
+            if _inside != len(_cases):
+                FAIL.append(f"N2.4-{_svc}: точное Q вне поточечного интервала в {len(_cases) - _inside} случаях")
+            _err = max(dec(c["exact"]["Q_exact"]["absolute_error"]) for c in _cases)
+            derived(f"N2.4-{_svc}-num", "2.6", f"{_svc}: наибольшая ширина интервала точного Q", "—", "ВЕРХ", "up", 1,
+                    C24, A166 if _svc == "Б" else A177, 2 * _err, [_rel])
         derived("N2.2-ratio", "2.2", "Рост ∫λ²dt при учёте протонов низких энергий (те же входы)", "раз", "АРИФМ",
                 "none", 2, CY + "; 3 г/см²; геометрия 1/2", A141, vals["N2.2-d03"] / vals["N2.2-d01"],
                 ["N2.2-d03", "N2.2-d01"])
@@ -507,7 +572,12 @@ def main() -> int:
                     "область_принятия", "статус"])
         for r in rows:
             v = r["value"]
-            text = r.get("text") or ("" if v is None else fmt(v, r["rnd"], r["sig"]))
+            if r.get("dec") is not None and v is not None:
+                from decimal import ROUND_HALF_EVEN
+                mode = {"up": ROUND_CEILING, "down": ROUND_FLOOR}.get(r["rnd"], ROUND_HALF_EVEN)
+                text = str(v.quantize(Decimal(1).scaleb(-r["dec"]), rounding=mode)).replace(".", ",")
+            else:
+                text = r.get("text") or ("" if v is None else fmt(v, r["rnd"], r["sig"]))
             src = r["rel"]
             sha = blob(src) if src and "N2." not in src and src != "вычислено" else ""
             w.writerow([r["id"], SECMAP.get(r["sec"], r["sec"]), r["name"], "" if v is None else str(v), text, r["rnd"], r["unit"],
