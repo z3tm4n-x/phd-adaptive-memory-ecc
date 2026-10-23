@@ -1,0 +1,156 @@
+{
+  "task": 196,
+  "date": "2026-10-23",
+  "base_main": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+  "plan_commit": "a7303e44d74526137175ae2e245f20170c5bf779",
+  "status": "AUTHOR_METHODOLOGICAL_GATE_NOT_PHYSICAL_CERTIFICATION",
+  "branch": "t196-priority-methods-20261023",
+  "pr": 232,
+  "closed_addressed_pr224": "0103a85f6203b78c559723535e1cb069a119149c",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "f82e3bf0845823047baf25a955249c1061a0e38e"
+    },
+    {
+      "path": "agents/00_RULES.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "b601b2f43ce885e26d537b7b8a678616d1ee8af4"
+    },
+    {
+      "path": "agents/03_THEORIST.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "79729a434cd7cd260b3001bf18cf71e7a9a7c7da"
+    },
+    {
+      "path": "STATUS.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "c8bdf7fb1cf34481bc2789d5fecdeb2cae654ae1"
+    },
+    {
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "223afbf7d5baa1751656ed8074457b358fd2df25"
+    },
+    {
+      "path": "experiments/mission-rise-rate-20261022/ASSIGNMENT.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "efa1d1e05334b643f3ef6527f18962a07937c40b"
+    },
+    {
+      "path": "experiments/leo-position-control-20261022/ASSIGNMENT.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "9eb870348f6fc7754931165487d94206a6255d60"
+    },
+    {
+      "path": "theory/t119-err-joint-bound.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "6889ca34989f0f88f190857fb5da375b889f5368"
+    },
+    {
+      "path": "theory/t119-err-joint-bound-appendix.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "7e6f38b4170e813f782bd21b7ecd8ab97520b634"
+    },
+    {
+      "path": "theory/t126-regime-map.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "cc5166525ac2125f19162eb798f6f5fd89c2da2c"
+    },
+    {
+      "path": "theory/t126-regime-map-appendix.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "7197d36d13bdf161652ce640a8e8ea0c732c3549"
+    },
+    {
+      "path": "theory/t187-code-strength.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "8104aab2dc6b8e11bd336d46544e1f1b5c6b6f98"
+    },
+    {
+      "path": "theory/t196-three-variant-foundations-20261022.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98"
+    },
+    {
+      "path": "theory/t196-write-only-apertures-20261022.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "42a6d93f08bd4f715edb9d60fed8b93123ac2ea8"
+    },
+    {
+      "path": "experiments/t113-onset-growth/METHOD.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "2a2dfd54fcc1f8f7e966032d496fe3c9089e01e5"
+    },
+    {
+      "path": "experiments/t150-event-shape/METHOD.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "c4e6a349b74fb1276315857ab736c2d1bd8f26d7"
+    },
+    {
+      "path": "experiments/t150-event-shape/SOURCES.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "b402b9a1b9bbbde8a19ecb8c90b3acf3a15034fa"
+    },
+    {
+      "path": "experiments/tNN-sepem-profiles/DATA_PASSPORT.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "36bc7419626fb3089618b3cc467b9e6fe6111e16"
+    },
+    {
+      "path": "docs/dissertation_concept.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "8bfb314b91c040329fc459e75c25cee5084f14d7"
+    },
+    {
+      "path": "MAP.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "d662c07c14bf421238e6bdd2de1de890e7860bfe"
+    },
+    {
+      "path": "theory/assignments/20261022-priority-methods.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "git_blob": "e07576b1d5a24d40a0ca0d78f146e25be18d4c0f"
+    },
+    {
+      "path": "experiments/mission-rise-rate-20261022/PLAN.md",
+      "commit": "065519e2eaaa49f6a6187533c223d65c7477896b",
+      "git_blob": "03ec1c4d215865771642067d0ac7222922e3c104"
+    },
+    {
+      "path": "experiments/mission-rise-rate-20261022/pilot-input.json",
+      "commit": "065519e2eaaa49f6a6187533c223d65c7477896b",
+      "git_blob": "e8c3933ce5ef280807f78181b18b7504ce13c208"
+    },
+    {
+      "path": "experiments/leo-position-control-20261022/PLAN.md",
+      "commit": "3e6a0644683d8215c3c5f5a621eb1cc9932ed06b",
+      "git_blob": "dedd3274fcedb2182f7eeba99099cd1f53def867"
+    }
+  ],
+  "received_questions": [
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6358290175",
+    "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6358456218"
+  ],
+  "external_sources": [
+    {
+      "name": "ГОСТ Р25645.165-2025",
+      "official_record": "https://protect.gost.ru/gost/details/d609bcd7-4d77-45db-97d2-ed3cdf232257",
+      "full_text_read": "https://files.stroyinf.ru/Data/873/87375.pdf",
+      "scope": "Printed pages2–3:3.8/3.9,5.1,5.6,5.9; official record applicability",
+      "accessed": "2026-10-23",
+      "download_sha256": null,
+      "note": "Text read via web. Original lepton URL inaccessible. No new PDF byte-hash claim or full normative numerical audit."
+    },
+    {
+      "name": "ОСТ134-1044-2007 Изм.2",
+      "primary_text_verified": false,
+      "scope": "T150/SOURCES locates Г.1 for average cycle; no verified clause for joint mission H-growth. Not claimed normative qualification."
+    }
+  ],
+  "new_calculated_physical_Q": null,
+  "new_gain": null,
+  "accepted_results_modified": false,
+  "independent_review": false
+}
