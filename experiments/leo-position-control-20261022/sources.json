@@ -1,0 +1,165 @@
+{
+  "schema": "T206-LEO-sources-1",
+  "accessed_date": "2026-10-23",
+  "repo_files": [
+    {
+      "path": "experiments/leo-position-control-20261022/ASSIGNMENT.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "blob": "9eb870348f6fc7754931165487d94206a6255d60",
+      "sha256": "8aa584db3630dc0eed56d2ff59c51ecf654b0128727d2cd4d00e0691db708a8f",
+      "bytes": 9402
+    },
+    {
+      "path": "thesis/RESEARCH_PLAN.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "blob": "223afbf7d5baa1751656ed8074457b358fd2df25",
+      "sha256": "9b13e27318ca7c6c522810670733fe20eb22b10c5fde32b1b67ce09a9c68b296",
+      "bytes": 28768
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276",
+      "sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+      "bytes": 10654
+    },
+    {
+      "path": "experiments/map-basis-20261014/REPORT.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "blob": "d0abb8be4f09cdd078d1f66f5c5fe751055a0296",
+      "sha256": "dd2c813fa7407c9a2e1892d599540564a901960601e3f9cff60d24a8373731db",
+      "bytes": 23706
+    },
+    {
+      "path": "experiments/t126-regime-map/SOURCES.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "blob": "4c36cfb7da875467e68671653b4f6b517d79852d",
+      "sha256": "709f46ca0e837794be10779c173bbe1bd5ecd1793074f132ff6db1d2da0cf825",
+      "bytes": 12632
+    },
+    {
+      "path": "experiments/regime-map-methodology-20261019/source-example-20261022/REPORT.md",
+      "commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+      "blob": "35138f5c06d515570bc02f9d9cf52f438a6af9e9",
+      "sha256": "99ec76c0e2554bbff8e83db50f3536623ef5dcb796064260cb495c379c649755",
+      "bytes": 19030
+    }
+  ],
+  "pdfs": [
+    {
+      "name": "Reichert-IONGPS2002.pdf",
+      "url": "https://gdgps.jpl.nasa.gov/system-desc/papers/Reichert_IONGPS2002.pdf",
+      "sha256": "533238f7740f4c35ceaeb454cacfcf9da103ab1664dc7839ef216c700c07098b",
+      "bytes": 1150247,
+      "id": "Reichert2002",
+      "title": "Reichert, Meehan, Munson: Toward Decimeter-Level Real-Time Orbit Determination: A Demonstration Using the SAC-C and CHAMP Spacecraft",
+      "pdf_pages_used": [
+        1,
+        4,
+        5,
+        6
+      ],
+      "pdf_pages_visually_checked": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "Ecoffet-SAC-C-2001.pdf",
+      "url": "https://swe.ssa.esa.int/TECEES/spweather/workshops/SPW_W3/PROCEEDINGS_W3/SWWorkshop_Ecoffet2.PDF",
+      "sha256": "0ff7d0fea813713b390b429ccb794026ae0ec1e0a05d6fa034caa0243f8ac603",
+      "bytes": 1328854,
+      "id": "Ecoffet2001",
+      "title": "Ecoffet et al.: Observations of the dynamics of the radiative environment in polar orbit in the period 11/2000-11/2001",
+      "pdf_pages_used": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "pdf_pages_visually_checked": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "Duzellier-MUSCA-2011.pdf",
+      "url": "https://escies.org/download/webDocumentFile?id=49249",
+      "sha256": "f3062c14938d38ecf56ab5ef218c6d490a8e4cb2c5e0d37c681c8d048d273693",
+      "bytes": 859349,
+      "id": "Duzellier2011",
+      "title": "Duzellier et al.: MUSCA SEP3 to investigate the Single Event Effects for Space Missions",
+      "pdf_pages_used": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pdf_pages_visually_checked": [
+        5,
+        6,
+        9
+      ]
+    }
+  ],
+  "web_routes": [
+    {
+      "title": "WMO SAC-C",
+      "url": "https://space.oscar.wmo.int/satellites/view/sac_c"
+    },
+    {
+      "title": "ESA ICARE 2017",
+      "url": "https://indico.esa.int/event/213/contributions/1899/"
+    },
+    {
+      "title": "ONERA ICARE",
+      "url": "https://craterre.onera.fr/radiation_monitors/ICARE.html"
+    },
+    {
+      "title": "CEOS-COVE policy",
+      "url": "https://ceos-cove.org/en/data_policy/"
+    },
+    {
+      "title": "ESA PROBA-1 overview",
+      "url": "https://www.esa.int/Applications/Observing_the_Earth/Proba-1_overview"
+    },
+    {
+      "title": "ESA PROBA-1 payloads",
+      "url": "https://www.esa.int/Applications/Observing_the_Earth/Proba-1/Payloads"
+    },
+    {
+      "title": "PSI SREM Data",
+      "url": "https://srem.psi.ch/cgibin/srem_data_sec.pl"
+    },
+    {
+      "title": "PSI PROBA-1 coverage",
+      "url": "https://srem.psi.ch/static/proba1_datacoverage.shtml"
+    },
+    {
+      "title": "PSI PROBA-1 format",
+      "url": "https://srem.psi.ch/static/proba1_dataformat.shtml"
+    }
+  ],
+  "web_snapshot_status": "read through web tool; not archived or byte-replayed",
+  "numeric_flight_files_obtained": [],
+  "external_repo_references": [
+    {
+      "commit": "58a5242ca56c7f35f5f15e2071de109906aef1f5",
+      "path": "theory/t196-priority-methods-20261023.md",
+      "blob": "c63a88d7b88760973492a485c165812ef8588c3b",
+      "read_via": "GitHub fetch_file; sections 1, 5, 6 used",
+      "byte_replayed_by_verify_py": false
+    },
+    {
+      "commit": "58a5242ca56c7f35f5f15e2071de109906aef1f5",
+      "path": "experiments/comparison-foundations-20261018/priority-methods-20261023/HANDOFF.md",
+      "blob": "98857c5e101f6985ab18db0b45c4ee5d6d860fd7",
+      "read_via": "GitHub fetch_file; full handoff read",
+      "byte_replayed_by_verify_py": false
+    }
+  ]
+}
