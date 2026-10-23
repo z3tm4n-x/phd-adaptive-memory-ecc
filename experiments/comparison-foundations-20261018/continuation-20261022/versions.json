@@ -7,9 +7,9 @@
   "accepted_ev30_slice_pr221": "7cc1da7f4ecb7ef544f1ad349558f5d2775f8ae1",
   "v4_input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
   "historical_policy_stage2": "d7369a2ab307b063a11c36f258d09b31bad06aad",
-  "incoming_complete_ev30_service_sha": null,
+  "incoming_complete_ev30_service_sha": "3af399bf04f11028cc57113e17510a595a4016a8",
   "common_lower_input_and_adapter_sha": null,
-  "status": "intake and preregistered handoff only; no new service signoff, Q, lower or full price",
+  "status": "conditional temporal/E applicability signed; physical E/clean/environment unknown; patent empty-history correction closed; no new Q/lower",
   "sources": [
     {
       "path": "theory/t196-write-only-apertures-20261022.md",
@@ -66,8 +66,26 @@
     {
       "path": "experiments/t186-method-comparison/stage2/training.json",
       "git_blob": "b6182c39d4fc778eec7f50752b7fe393b3ba8bd7"
+    },
+    {
+      "path": "experiments/t186-method-comparison/ev30-service/SERVICE.md",
+      "git_blob": "de3f8ac7e4b60cccfeb7bcd9b4afccef6f180494"
+    },
+    {
+      "path": "experiments/t186-method-comparison/ev30-service/service-input.json",
+      "git_blob": "d82bd52716f91ed1b0fd429d56e819373bf61010"
+    },
+    {
+      "path": "experiments/regime-map-methodology-20261019/revision-evidence-20261022/AC_REVIEW.md",
+      "git_blob": "e56edaab57258756d5a71a7155167a928d7c7a66"
     }
   ],
   "received_service_proposal": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6342134745",
-  "received_ac_handoff": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6342136613"
+  "received_ac_handoff": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/186#issuecomment-6342136613",
+  "latest_assignment": {
+    "base": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+    "path": "theory/assignments/20261022-priority-methods.md",
+    "git_blob": "e07576b1d5a24d40a0ca0d78f146e25be18d4c0f"
+  },
+  "ac_review_pr225": "d6268ffed7106e1a56b0e553c7e8abce42f99915"
 }
