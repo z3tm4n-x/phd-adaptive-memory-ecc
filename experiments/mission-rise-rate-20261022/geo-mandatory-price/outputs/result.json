@@ -1,0 +1,130 @@
+{
+  "competitors": {
+    "OFF39": {
+      "Q_upper": "1",
+      "core_upper": "113350283567239/98617500000000000000",
+      "k": null,
+      "note": "Accepted result reused on byte-frozen common input; failed OFF upper is not exclusion",
+      "sufficient": false
+    },
+    "OFF44": {
+      "Q_upper": "1",
+      "core_upper": "299901084120197/246543750000000000000",
+      "k": null,
+      "note": "Accepted result reused on byte-frozen common input; failed OFF upper is not exclusion",
+      "sufficient": false
+    },
+    "fixed44": {
+      "Q_upper": "8989901966049368224625868145935884824373375737270690783899/17980456960000000000000000000000000000000000000000000000000000",
+      "core_upper": "227721045639466548947787952865423005908895580936820683059782567043429758130177348382223/24047391990662958678703000000000000000000000000000000000000000000000000000000000000000000000",
+      "k": 44837,
+      "note": "Accepted result reused on byte-frozen common input; failed OFF upper is not exclusion",
+      "sufficient": true
+    }
+  },
+  "computations": {
+    "archive_rows_processed": 0,
+    "new_ERR_Q_calls": 0,
+    "new_hold_price_calls": 0
+  },
+  "constants": {
+    "W_read_lower_s": "53999456/6103515625",
+    "app39_lower": "315891555494287/292200000000000000000",
+    "endpoint_span_s": "1/2000000000",
+    "fast_pass_upper_s": "160564808757/6250000000000",
+    "fixed44_upper": "227721045639466548947787952865423005908895580936820683059782567043429758130177348382223/24047391990662958678703000000000000000000000000000000000000000000000000000000000000000000000",
+    "read39_lower_s": "1687483/25000000000000"
+  },
+  "gate": {
+    "available_control_budget": "293205844233010491668566224633996442726686742810462049179347701130289274390532045146669/360710879859944380180545000000000000000000000000000000000000000000000000000000000000000000000",
+    "fixed_over_startup_at_period_min": "1116569094873223107419934553930271898620105869753334763914514909972103114078319147241010489310066087249861923545585369350565869610371096961474594576836072837173845440296245791156545175073/1527861229743070750193983525850791793299187091483565369786642357592542117221942078844801415639768572228230256937887702223129308508374015000000000000000000000000000000000000000000000000000",
+    "interpretation": "Necessary core-price gate only; not a Q certificate or physical qualification",
+    "passes_necessary_price": false,
+    "relaxed_period_max_s": "181601181415194211389562905761196790716773229049920751126111985071685318890044291447469278002238813/243786886141776586306917601280000000000000000000000000000000000000000000000000000000000000000000",
+    "startup_at_period_min": "6188350230858962705189899991566165260827164108018549039143285607958684893698974159789685366380254590434115470357387/477574786885677737112272529570795320226970237755481591311449298341518051617038477648554707290287630427400000000000000000",
+    "startup_at_period_min_over_target": "7639306148715353750969917629253958966495935457417826848933211787962710586109710394224007078198842861141151284689438511115646542541870075000000000000000000000000000000000000000000000000000/1116569094873223107419934553930271898620105869753334763914514909972103114078319147241010489310066087249861923545585369350565869610371096961474594576836072837173845440296245791156545175073",
+    "startup_duration_max_min": "60533727138398070463187635253732263572257743016640250375370661690561772963348097149156426000746271/4875737722835531726138352025600000000000000000000000000000000000000000000000000000000000000000000",
+    "startup_duration_max_s": "181601181415194211389562905761196790716773229049920751126111985071685318890044291447469278002238813/243786886141776586306917601280000000000000000000000000000000000000000000000000000000000000000000",
+    "startup_full_mission_excluded": true,
+    "status": "excluded_by_startup_and_support",
+    "support_at_period_min": "227721045639466548947787952865423005908895580936820683059782567043429758130177348382223/120236959953314793393515000000000000000000000000000000000000000000000000000000000000000000000",
+    "support_period_min_h": "3419257350270101688906303508512768000000000000000000000000000000000000000000000000000000/1131014839559462979229230794363538736231506007983210761120341132931115772649195031280009",
+    "support_period_min_s": "12309326460972366080062692630645964800000000000000000000000000000000000000000000000000000000/1131014839559462979229230794363538736231506007983210761120341132931115772649195031280009",
+    "target": "227721045639466548947787952865423005908895580936820683059782567043429758130177348382223/120236959953314793393515000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "geometry": {
+    "basis": "T119 section2 and T196 priority-methods section3",
+    "charged_duration_relaxation": "min(P_plus,T), less than the actual initial FAST",
+    "combination": "max(support_floor,startup_floor); never their sum",
+    "initial_FAST": "H0 >= h_plus + tau >= h_minus >= w_minus > P_plus",
+    "lower_count": "W*max(duration/Ps_plus-2,0)",
+    "minimum_h_minus_over_P_margin_s": "160564808757/6250000000000",
+    "permitted_relaxation": "All positive P,w,h and arbitrary timer representation, while retaining T119 geometry",
+    "unchanged_rule_required": true
+  },
+  "information_basis": {
+    "candidate": "uniform m0/mj replacing rho, with T119 geometry retained",
+    "common_fixed_moments": "same b/B/FS and parent law; independent of rho",
+    "numerical_masses_supplied": false,
+    "reference_rho_used_by_price": false
+  },
+  "provenance": {
+    "accepted_result_sha256": "18dafed9187ed947a208d1b0f8b1dd43381e462f57b4fe9ffb50e2e7c2dda5d6",
+    "base": "e2dc01c6d8560ccf6106951b5e1dde70ebb2c8f1",
+    "frozen_files": 11,
+    "plan_commit": "af315ba4da25c5d76b696df76f171a1a250b1d52"
+  },
+  "schema": 1,
+  "scope": "Conditional common-input core occupancy, including serialized codec/bus",
+  "unchanged": {
+    "T_s": "315576000",
+    "W": 131072,
+    "application": "accepted cFE PR239",
+    "baseline_environment_snapshot": {
+      "baseline_p_s": {
+        "1": "1"
+      },
+      "conditional_sensitivity": {
+        "other_sizes": "0 only in this declared sensitivity slice",
+        "p1": "1-p2-p3",
+        "p2": [
+          "0",
+          "1/1000000000",
+          "1/100000000",
+          "1/10000000"
+        ],
+        "p3": [
+          "0",
+          "1/1000000000",
+          "1/100000000"
+        ],
+        "physical_bounds_claimed": false
+      },
+      "kind": "conditional_word_parent_48_positions",
+      "p_s_meaning": "fraction of bit-hit exposure attributed to parent size s, not frequency among parents",
+      "p_s_sum": "1",
+      "parent_law": "rate_s_per_word=48*r(t)*p_s/s; uniform size-s subset of 48 positions; words independent in conditional model",
+      "per_bit_law": "r(t)=nu_ref(t)/(reference_words*reference_bits)",
+      "physical_direct_lifetime_upper": null,
+      "physical_environment_exceedance_upper": null,
+      "physical_group2_rate": null,
+      "physical_multiple_word_groups": null,
+      "physical_positions_per_word": 48,
+      "projection": "hypergeometric active j out of n39/n44; lambda_j=r*sum_s48*p_s/s*Pr(j|s)",
+      "reference_background_per_s": "0.000154704",
+      "reference_bits": 38,
+      "reference_growth_per_s": "0.048",
+      "reference_growth_threshold_per_s": "0.001",
+      "reference_peak_per_s": "0.244682704",
+      "reference_solar_mass": "28310.473728",
+      "reference_words": 524288
+    },
+    "epsilon": "1/1000"
+  },
+  "unknown": {
+    "physical_Q": null,
+    "shorter_startup_Q": null,
+    "weights": "Nonnegative unknown CPU/energy/veto terms remain in accepted cFE cost vectors",
+    "whole_hardware_gain": null
+  }
+}
