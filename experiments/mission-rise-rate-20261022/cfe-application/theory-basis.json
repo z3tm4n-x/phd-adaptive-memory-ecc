@@ -1,0 +1,36 @@
+{
+  "status": "AUTHOR_THEORIST_INPUT_APPLICABILITY_AGREED_NOT_NUMERICAL_REVIEW",
+  "reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/239#issuecomment-6361808763",
+  "reviewed_input_commit": "ca311cc53dc0bf9f53e714fc1c4a99ae3dd4bc98",
+  "reviewed_blobs": {
+    "PLAN.md": "8f8781f706d3c0c6cbc4b192953efc0b87eab181",
+    "profile.json": "f8e4c0d8da7c4e58246f2a259910f1fdd7fdc5d9"
+  },
+  "numerical_code_or_results_reviewed": false,
+  "physical_applicability": false,
+  "approved_scope": [
+    "registered gate",
+    "one old informational k27/rho=.048",
+    "accepted PR234/235 hold-price counts with new app/startup vector",
+    "OFF P=T with optional correct E ignored",
+    "same fixed39 k11/fixed44 k44837 as sufficient witnesses"
+  ],
+  "conditions": [
+    "all W includes both images",
+    "unchanged scrub addresses/phases/support/freeze/source/processed/expiry/NR/quotas",
+    "ordinary reads neither repair nor publish ERR",
+    "full correct decode/merge/E with prewrite ERR before deletion for each partial store",
+    "causal application addresses/admission; future uniform word marks independent of history",
+    "serial E-apertures m=1; unchanged full E bound",
+    "same F/b/FS, tau, w+/h+, source p and expiry<=fresh10us",
+    "no hidden new false sources above old aggregate quota",
+    "pending, post-A, bad histories, startup and veto paid",
+    "additional service and hardware resource costs remain explicit parameters"
+  ],
+  "not_approved": [
+    "compiled cFE or hardware/WCET",
+    "physical Q or joint environment coverage",
+    "optimality of fixed witnesses or gain against the full constant class",
+    "numeric implementation/results of this PR"
+  ]
+}

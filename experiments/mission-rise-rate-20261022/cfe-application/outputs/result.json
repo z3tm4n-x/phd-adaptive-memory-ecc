@@ -1967,6 +1967,7 @@
   "new_ERR_risk_calls": 1,
   "new_archive_profiles": 0,
   "new_hold_refinements": 0,
+  "numerical_code_independently_reviewed": false,
   "physical_Q": null,
   "price_uses_conservative_accepted_coarse_certificate": true,
   "profile_accepted": false,
@@ -2579,6 +2580,8 @@
     "whole_hardware_price_ceiling": null
   },
   "status": "CONDITIONAL_CFE_DESIGN_PROFILE_READY_FOR_REVIEW",
-  "theory_applicability_status": "REQUESTED_FOR_THIS_PROFILE_NOT_YET_SIGNED",
-  "theory_handoff": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6361394200"
+  "theory_applicability_reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/239#issuecomment-6361808763",
+  "theory_applicability_status": "AUTHOR_THEORIST_INPUT_APPLICABILITY_AGREED_NOT_NUMERICAL_REVIEW",
+  "theory_handoff": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6361394200",
+  "theory_reviewed_input_commit": "ca311cc53dc0bf9f53e714fc1c4a99ae3dd4bc98"
 }

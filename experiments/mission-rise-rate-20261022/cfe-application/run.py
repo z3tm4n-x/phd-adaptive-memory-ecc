@@ -253,6 +253,7 @@ def extras(cfg,p,c):
 
 def evaluate(run_ERR):
     cfg,p,accepted,manifest=load(); unchanged=deepcopy(cfg)
+    theory=json.loads((HERE/'theory-basis.json').read_text('utf-8'))
     c=profile_counts(cfg,p); screen=gate(cfg,p,c,accepted)
     result=dict(status='CONDITIONAL_CFE_DESIGN_PROFILE_READY_FOR_REVIEW',
         profile_counts=c,screen=screen,full_cost_additional_parameters=extras(cfg,p,c),
@@ -260,7 +261,10 @@ def evaluate(run_ERR):
         common_input_unchanged=True,physical_Q=None,profile_accepted=False,
         new_archive_profiles=0,new_hold_refinements=0,new_ERR_risk_calls=0,
         theory_handoff='https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6361394200',
-        theory_applicability_status='REQUESTED_FOR_THIS_PROFILE_NOT_YET_SIGNED')
+        theory_applicability_status=theory['status'],
+        theory_applicability_reply=theory['reply_url'],
+        theory_reviewed_input_commit=theory['reviewed_input_commit'],
+        numerical_code_independently_reviewed=False)
     if run_ERR and screen['opens_5x_core_search']:
         # Exactly one accepted point, all numerical settings unchanged.
         info=informational.compute(cfg,p['numerical']['adaptive_k'])
