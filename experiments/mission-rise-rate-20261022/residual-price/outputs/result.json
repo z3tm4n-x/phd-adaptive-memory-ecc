@@ -1,0 +1,404 @@
+{
+  "competitors": {
+    "OFF39": {
+      "Q_upper": "1",
+      "core_upper": "113350283567239/98617500000000000000",
+      "sufficient": false
+    },
+    "OFF44": {
+      "Q_upper": "1",
+      "core_upper": "299901084120197/246543750000000000000",
+      "sufficient": false
+    },
+    "fixed44": {
+      "Q_upper": "8989901966049368224625868145935884824373375737270690783899/17980456960000000000000000000000000000000000000000000000000000",
+      "core_upper": "227721045639466548947787952865423005908895580936820683059782567043429758130177348382223/24047391990662958678703000000000000000000000000000000000000000000000000000000000000000000000",
+      "sufficient": true
+    }
+  },
+  "computations": {
+    "archive_rows": 0,
+    "controller_executions": 0,
+    "new_Q_calls": 0,
+    "new_hold_simulations": 0,
+    "old_k27_replays": 0
+  },
+  "conditional_epsilon_zero_v_slice": {
+    "CPU_extra_veto_ns_coefficient": "0",
+    "CPU_fraction_coefficients": {
+      "app_dispatch_ns": "326465543/19723500000000000",
+      "captures_ns": "346987500184272365246809/1387936120500000000000000000",
+      "cuts_ns": "438300000000011111/1753182468000000000000",
+      "decisions_ns": "7889400001284492729944/1546306906680327392578125",
+      "initialization_ns": "4/9630615234375",
+      "records_ns": "346987500184272365246809/1387936120500000000000000000",
+      "timer_events_ns": "1040962500566024602552927/2081904180750000000000000000"
+    },
+    "added_control_core_upper": "131539845612425264502346114207950060841/376061839704655621875000000000000000000",
+    "all_history_core_upper": "16763594416308213004490197575019/26390304540677587500000000000000",
+    "core_upper": "43846759285115109260030478766592936947/125353946568218540625000000000000000000",
+    "energy_coefficients_per_second": {
+      "app_dispatch": "326465543/19723500",
+      "application_reads": "322435079/19723500",
+      "application_writes": "335872/1643625",
+      "captures": "346987500184272365246809/1387936120500000000",
+      "cuts": "438300000000011111/1753182468000",
+      "decisions": "4039372800657660277731328/791709136220327625",
+      "decodes": "5385847873485903733655087/1055612181627103500",
+      "encodes": "1009664/4930875",
+      "extra_veto": "0",
+      "initialization": "2048/4930875",
+      "read_beats": "5385847873485903733655087/351870727209034500",
+      "records": "346987500184272365246809/1387936120500000000",
+      "scrub_corrections": "153496170198342004284703137263/30084947176372449750000000",
+      "scrub_reads": "4039372800657660277731328/791709136220327625",
+      "timer_events": "1040962500566024602552927/2081904180750000000",
+      "transport_cuts": "438300000000011111/1753182468000",
+      "transport_records": "346987500184272365246809/1387936120500000000",
+      "transport_replies": "326465543/19723500",
+      "transport_requests": "326465543/19723500",
+      "turnarounds": "17055814500240390403786570807/3342771908485827750000000",
+      "write_beats": "17055814500240390403786570807/1114257302828609250000000"
+    },
+    "energy_formula": "T*sum(rate_action*incremental_nonoverlapping_J_per_action)+T*idle_W",
+    "full_cost_rates": {
+      "app_dispatch": "326465543/19723500",
+      "application_reads": "322435079/19723500",
+      "application_writes": "335872/1643625",
+      "captures": "346987500184272365246809/1387936120500000000",
+      "cuts": "438300000000011111/1753182468000",
+      "decisions": "4039372800657660277731328/791709136220327625",
+      "decodes": "5385847873485903733655087/1055612181627103500",
+      "encodes": "1009664/4930875",
+      "initialization": "2048/4930875",
+      "read_beats": "5385847873485903733655087/351870727209034500",
+      "records": "346987500184272365246809/1387936120500000000",
+      "scrub_corrections": "153496170198342004284703137263/30084947176372449750000000",
+      "scrub_reads": "4039372800657660277731328/791709136220327625",
+      "timer_events": "1040962500566024602552927/2081904180750000000",
+      "turnarounds": "17055814500240390403786570807/3342771908485827750000000",
+      "write_beats": "17055814500240390403786570807/1114257302828609250000000"
+    },
+    "hard_read_upper": "258519859242090257774804992/160561591243",
+    "includes_long_cold_start": false,
+    "new_Q_certificate": false,
+    "numeric_scope": "conditional expression slice, not measured/qualified price or gain",
+    "old_publication_uncapped_read_upper": "21058985352543986326844561991729581022242811566611105552/1954296723119632316064136836894488078125",
+    "p_bad": "1/1000",
+    "physical_memory_copies": "accepted two cFE images inside W; external buffers remain parameters",
+    "reads_upper": "258519859242090257774804992/160561591243",
+    "refined_uncapped_read_upper": "972678397257493757898214654065470074226998915694008291163140116251528817908167/92829094348182535013046499752488183710937500000000000000000000",
+    "repairs_upper": "153496170198342004284703137263/95333444800531250",
+    "terms_read_count_upper": {
+      "background_first": "261246105335616611067/118750",
+      "background_pairs": "53203133911020213272485863238268247856781613/14101562500000000000000000000",
+      "bad_histories": "32314982405261282221850624/20070198905375",
+      "extra_veto": "0",
+      "false": "17320089319164198/125",
+      "initial_long_FAST": "0",
+      "loss_duration": "87660000000000000/455551",
+      "loss_edges": "2002",
+      "recovery": "263451327379000",
+      "solar_and_cross": "7229621520181880466824431991868591185748477/1762695312500000000000000000",
+      "support": "258543451926378921016950784/89999108806308811",
+      "weak_E_repeat": "5159310713715623088897/77824000000"
+    },
+    "transport_formula": "accepted cFE payload/requests/replies +32*source_records + cuts*cut_header",
+    "transport_plus_loss_state_bytes": 131136,
+    "unconditional_price_certificate": false,
+    "unknown_price": "controller bus work, CPU, energy, memory and veto retain common unknown coefficients",
+    "upper_below_fivefold_witness_target": false,
+    "veto_domain_per_s": [
+      "0",
+      "438300000000000011111/1753182468000"
+    ],
+    "veto_per_s": "0"
+  },
+  "diagnostic_calendar": {
+    "Q": null,
+    "calendar": {
+      "J": "1/2000000000",
+      "Pl": "87891512506336/6103515625",
+      "Ps": "156801568/6103515625",
+      "Ps_min": "156798432/6103515625",
+      "TM": "99999/100000000000000",
+      "TP": "100001/100000000000000",
+      "W": 131072,
+      "c": 164,
+      "d": "1373436070473/12500000000000",
+      "g": 196,
+      "gate": 320,
+      "h": "1440200000055953/50000000000",
+      "h_upper": "1440228804544049/50000000000",
+      "inverse_address": 127343,
+      "ka": 560527,
+      "long_timer": {
+        "count": 7201072012,
+        "lower": "1440200000055953/50000000000",
+        "ticks": 28804288048000,
+        "upper": "1440228804544049/50000000000"
+      },
+      "mandatory": "j<W or j%ka==0",
+      "observed_app_read": false,
+      "phase_edge": "2746615365879/25000000000000",
+      "phi": "131071/131072",
+      "protected_window": "360050000000057139/25000000000000",
+      "recovery": {
+        "count": 10801288392,
+        "lower": "2160236075623193/50000000000",
+        "ticks": 43205153568000,
+        "upper": "2160279280976809/50000000000"
+      },
+      "short_timer": {
+        "count": 3600536007,
+        "lower": "720100000127963/50000000000",
+        "ticks": 14402144028000,
+        "upper": "720114402472039/50000000000"
+      },
+      "source_PAIR": {
+        "count": 3600536005362,
+        "lower": "360050000000082139/25000000000000",
+        "ticks": 14402144021448,
+        "upper": "180028600536108931/12500000000000"
+      },
+      "tau": "360003635482702323/25000000000000",
+      "w": "360050000000082139/25000000000000",
+      "w_upper": "720114402472039/50000000000",
+      "zero_union_slack": "42975642741409/25000000000000"
+    },
+    "implementation_approved": false,
+    "k": 560527,
+    "long_hold_s": "28804",
+    "period_s": "90000908806491189/6250000000000",
+    "price_times": {
+      "H": "1080118038254726823/25000000000000",
+      "L": "225022359382459001/3125000000000",
+      "V": "720060837218721823/25000000000000",
+      "d": "144012167360989037/5000000000000",
+      "h_upper": "1440228805044049/50000000000",
+      "pair_upper": "180028600536121431/12500000000000",
+      "tau": "360003635732702323/25000000000000",
+      "w_upper": "720114402972039/50000000000"
+    },
+    "short_hold_s": "14402",
+    "timer_quantum_ticks": 4000
+  },
+  "full_cost_preserved_parameters": {
+    "additional_CPU_fraction_formula": "sum(action_rate*disjoint_CPU_ns)/1e9 + OS_background_fraction",
+    "additional_energy_formula": "T*sum(action_rate*incremental_J) + T*background_W",
+    "application_software_actions_per_s": {
+      "ADC_samples": "12635423/788940",
+      "CRC_bytes": "335872/1643625",
+      "control_lookups": "12635423/788940",
+      "copy_bytes": "167936/1643625",
+      "file_bytes": "167936/1643625",
+      "full_load_attempts": "41/105192000",
+      "thermal_cycles": "12635423/12623040",
+      "validation_words": "41984/1643625"
+    },
+    "bus_formula": "target SRAM: known_core + B_controller_on_target + B_aux_on_target; each nonnegative unknown",
+    "external_file_payload_bytes_per_attempt": 262144,
+    "file_source_integrity_probability": null,
+    "hardware_CPU_energy_RAM_LUT_BRAM_feasibility": null,
+    "hidden_full_copy_allowed": false,
+    "initialization_reference_encodes": 131072,
+    "memory_formula": "6W encoded +100 scratch + M_cFE_registry + M_stacks + M_OS_IO + M_codec + M_policy; adaptive adds 131136 transport/loss bytes",
+    "no_scalar_weights_or_global_winner": true,
+    "optional_extra_full_loads_before_t0": 2,
+    "other_bus_occupancy": "separate unknown coordinate, not added across different bus capacities",
+    "raw_encoded_bytes": 786432,
+    "scratch_minimum_bytes": 100
+  },
+  "mandatory_lower": {
+    "application": "315891555494287/292200000000000000000",
+    "application_plus_support": "44586380946983866115079097716379/26298265553256725425800000000000000000",
+    "fivefold_not_excluded": true,
+    "optional_additional_lower": {
+      "bad_histories": "0",
+      "extra_veto": "0",
+      "false": "0",
+      "loss": "0",
+      "physical_holds": "0",
+      "recovery": "0",
+      "weak_E_repeat": "0"
+    },
+    "scope": "additional lower not proved; zeros are not expected-event estimates"
+  },
+  "optimistic_zero_pbad_v_slice": {
+    "CPU_extra_veto_ns_coefficient": "0",
+    "CPU_fraction_coefficients": {
+      "app_dispatch_ns": "326465543/19723500000000000",
+      "captures_ns": "24877016891/187373250000000000000000",
+      "cuts_ns": "438300000000011111/1753182468000000000000",
+      "decisions_ns": "7889400001284492729944/1546306906680327392578125",
+      "initialization_ns": "4/9630615234375",
+      "records_ns": "24877016891/187373250000000000000000",
+      "timer_events_ns": "8490453547/31228875000000000000000"
+    },
+    "added_control_core_upper": "43810799073818201921340275668872270947/125353946568218540625000000000000000000",
+    "all_history_core_upper": "16763594416308213004490197575019/26390304540677587500000000000000",
+    "core_upper": "131432829464374669041766149098445562841/376061839704655621875000000000000000000",
+    "energy_coefficients_per_second": {
+      "app_dispatch": "326465543/19723500",
+      "application_reads": "322435079/19723500",
+      "application_writes": "335872/1643625",
+      "captures": "24877016891/187373250000000",
+      "cuts": "438300000000011111/1753182468000",
+      "decisions": "4039372800657660277731328/791709136220327625",
+      "decodes": "5385847873485903733655087/1055612181627103500",
+      "encodes": "1009664/4930875",
+      "extra_veto": "0",
+      "initialization": "2048/4930875",
+      "read_beats": "5385847873485903733655087/351870727209034500",
+      "records": "24877016891/187373250000000",
+      "scrub_corrections": "290135261/2313250000000",
+      "scrub_reads": "4039372800657660277731328/791709136220327625",
+      "timer_events": "8490453547/31228875000000",
+      "transport_cuts": "438300000000011111/1753182468000",
+      "transport_records": "24877016891/187373250000000",
+      "transport_replies": "326465543/19723500",
+      "transport_requests": "326465543/19723500",
+      "turnarounds": "38390732956141/187373250000000",
+      "write_beats": "38390732956141/62457750000000"
+    },
+    "energy_formula": "T*sum(rate_action*incremental_nonoverlapping_J_per_action)+T*idle_W",
+    "full_cost_rates": {
+      "app_dispatch": "326465543/19723500",
+      "application_reads": "322435079/19723500",
+      "application_writes": "335872/1643625",
+      "captures": "24877016891/187373250000000",
+      "cuts": "438300000000011111/1753182468000",
+      "decisions": "4039372800657660277731328/791709136220327625",
+      "decodes": "5385847873485903733655087/1055612181627103500",
+      "encodes": "1009664/4930875",
+      "initialization": "2048/4930875",
+      "read_beats": "5385847873485903733655087/351870727209034500",
+      "records": "24877016891/187373250000000",
+      "scrub_corrections": "290135261/2313250000000",
+      "scrub_reads": "4039372800657660277731328/791709136220327625",
+      "timer_events": "8490453547/31228875000000",
+      "turnarounds": "38390732956141/187373250000000",
+      "write_beats": "38390732956141/62457750000000"
+    },
+    "hard_read_upper": "258519859242090257774804992/160561591243",
+    "includes_long_cold_start": false,
+    "new_Q_certificate": false,
+    "numeric_scope": "conditional expression slice, not measured/qualified price or gain",
+    "old_publication_uncapped_read_upper": "131138702480164081332331840295171504082998064/12171632754697389344333734375",
+    "p_bad": "0",
+    "physical_memory_copies": "accepted two cFE images inside W; external buffers remain parameters",
+    "reads_upper": "258519859242090257774804992/160561591243",
+    "refined_uncapped_read_upper": "6057045933658400804963367443673453966663288018442708273123439626869/578152555848125993855852382812500000000000000000000",
+    "repairs_upper": "23500956141/593750",
+    "terms_read_count_upper": {
+      "background_first": "261246105335616611067/118750",
+      "background_pairs": "53203133911020213272485863238268247856781613/14101562500000000000000000000",
+      "bad_histories": "0",
+      "extra_veto": "0",
+      "false": "17320089319164198/125",
+      "initial_long_FAST": "0",
+      "loss_duration": "87660000000000000/455551",
+      "loss_edges": "2002",
+      "recovery": "263451327379000",
+      "solar_and_cross": "7229621520181880466824431991868591185748477/1762695312500000000000000000",
+      "support": "258543451926378921016950784/89999108806308811",
+      "weak_E_repeat": "5159310713715623088897/77824000000"
+    },
+    "transport_formula": "accepted cFE payload/requests/replies +32*source_records + cuts*cut_header",
+    "transport_plus_loss_state_bytes": 131136,
+    "unconditional_price_certificate": false,
+    "unknown_price": "controller bus work, CPU, energy, memory and veto retain common unknown coefficients",
+    "upper_below_fivefold_witness_target": false,
+    "veto_domain_per_s": [
+      "0",
+      "438300000000000011111/1753182468000"
+    ],
+    "veto_per_s": "0"
+  },
+  "price_contract": {
+    "baseline_app_support_normal_repairs_upper": "373729704351948089808337007911412458457/210792818926771280258821875000000000000000000",
+    "cold_start_Q": "must be supplied separately; recovery never becomes clean-state",
+    "condition": "B0+BR+BO+BERR+pbad*NH+Sv*v*T must fit extra-count budget before cap; also pay repairs and hardware",
+    "extra_read_count_budget": "106027023236251367379920229183386431725458905393852276780716715665999922538674772969461718073247054015093/190262031946480751010228016064351863707697575000000000000000000000000000000000000000000000000000",
+    "fivefold_witness_target": "227721045639466548947787952865423005908895580936820683059782567043429758130177348382223/120236959953314793393515000000000000000000000000000000000000000000000000000000000000000000000",
+    "meaning": "budget for adaptive upper below Cf_upper/5; neither gain certificate nor fixed-class comparison",
+    "residual_for_all_other_core_terms": "106027023236251367379920229183386431725458905393852276780716715665999922538674772969461718073247054015093/876518758551632034613433273910914515613865000000000000000000000000000000000000000000000000000000000000000000000",
+    "single_additive_band_budget_s": "144902148606033351280165177747143220494774787225960947157271841615085792137247494503033765389957306110888893729/1585516932887339591751900133869598864230813125000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "provenance": {
+    "base": "438c4abe1949aa13ec47cf3dd6d1719241be7050",
+    "frozen_files": 16,
+    "plan": "38c2e1a3c1d9abbadc5d5721c9e9ed3a4deb42dc"
+  },
+  "schema": 1,
+  "startup_only_removal": {
+    "no_other_component_removed": true,
+    "removed_raw_core_addend": "150388292269700981/2629800000000000000000",
+    "removed_raw_read_addend": "263451327379",
+    "same_capped_upper_with_start": true
+  },
+  "status": "price diagnosis only; new initial Q remains with T196",
+  "sufficient_upper_components_before_cap": {
+    "background_first": "11341506238016430956337/23750000000000000000000",
+    "background_pairs": "2309713572030790746387752504758522194715747143/2820312500000000000000000000000000000000000000",
+    "false": "375959482350839289/12500000000000000000",
+    "loss_duration": "570839/13666530000",
+    "loss_edges": "571409839/1314900000000000000000",
+    "recovery": "150388292269700981/2629800000000000000",
+    "solar_and_cross": "152849996998485350511170071622454619403017587489/171686523437500000000000000000000000000000000000",
+    "support": "562998525826271884515362429/902861237864802975341033935546875",
+    "weak_E_repeat": "109079102537285650683069429/7580057600000000000000000000000"
+  },
+  "unchanged": {
+    "T": "315576000",
+    "W": 131072,
+    "cFE_profile": "PR239",
+    "environment": {
+      "baseline_p_s": {
+        "1": "1"
+      },
+      "conditional_sensitivity": {
+        "other_sizes": "0 only in this declared sensitivity slice",
+        "p1": "1-p2-p3",
+        "p2": [
+          "0",
+          "1/1000000000",
+          "1/100000000",
+          "1/10000000"
+        ],
+        "p3": [
+          "0",
+          "1/1000000000",
+          "1/100000000"
+        ],
+        "physical_bounds_claimed": false
+      },
+      "kind": "conditional_word_parent_48_positions",
+      "p_s_meaning": "fraction of bit-hit exposure attributed to parent size s, not frequency among parents",
+      "p_s_sum": "1",
+      "parent_law": "rate_s_per_word=48*r(t)*p_s/s; uniform size-s subset of 48 positions; words independent in conditional model",
+      "per_bit_law": "r(t)=nu_ref(t)/(reference_words*reference_bits)",
+      "physical_direct_lifetime_upper": null,
+      "physical_environment_exceedance_upper": null,
+      "physical_group2_rate": null,
+      "physical_multiple_word_groups": null,
+      "physical_positions_per_word": 48,
+      "projection": "hypergeometric active j out of n39/n44; lambda_j=r*sum_s48*p_s/s*Pr(j|s)",
+      "reference_background_per_s": "0.000154704",
+      "reference_bits": 38,
+      "reference_growth_per_s": "0.048",
+      "reference_growth_threshold_per_s": "0.001",
+      "reference_peak_per_s": "0.244682704",
+      "reference_solar_mass": "28310.473728",
+      "reference_words": 524288
+    },
+    "epsilon": "1/1000",
+    "quotas": {
+      "ordinary_false_expected_per_s": "0.000001",
+      "ordinary_loss_episodes_upper": 1001,
+      "ordinary_outage_fraction": "0.0001",
+      "recoveries_upper": 1000,
+      "source_to_fresh_rule_upper_ns": 10000
+    }
+  }
+}
