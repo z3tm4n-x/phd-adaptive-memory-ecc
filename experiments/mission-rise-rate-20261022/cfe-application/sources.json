@@ -1,0 +1,71 @@
+{
+  "status": "PRIMARY_FULLTEXT_BLOBS_VERIFIED",
+  "sources": [
+    {
+      "repository": "nasa/cFE",
+      "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+      "path": "docs/cFE Application Developers Guide.md",
+      "git_blob_sha": "e529d8151f91bcc71fcb7754826049d707e378f3",
+      "sha256": "4be819eca9e23e406106b82cb2e59a4a7286397d34edac88453ada49bd591fb5",
+      "bytes": 174185,
+      "url": "https://github.com/nasa/cFE/blob/b45b34765adeb23f929aaa570a3a402ea5e9939c/docs/cFE%20Application%20Developers%20Guide.md",
+      "extract": "8.1; 8.3.1; 8.4.1-8.4.2: table types, pin/release, validation, update",
+      "evidence": "SOURCE for cFE semantics only; thermal cadence and size are project requirements"
+    },
+    {
+      "repository": "nasa/cFE",
+      "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+      "path": "modules/tbl/fsw/src/cfe_tbl_load.c",
+      "git_blob_sha": "f6f72cf597efda1e40c27b69a4dd7a3e74903e76",
+      "sha256": "4b829a62e84a3b34596d5360c7892cf32b134baacd30ed52a6e1027052413535",
+      "bytes": 35615,
+      "url": "https://github.com/nasa/cFE/blob/b45b34765adeb23f929aaa570a3a402ea5e9939c/modules/tbl/fsw/src/cfe_tbl_load.c",
+      "extract": "235-281 file read; 325-345 CRC",
+      "evidence": "SOURCE for cFE semantics only; thermal cadence and size are project requirements"
+    },
+    {
+      "repository": "nasa/cFE",
+      "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+      "path": "modules/tbl/fsw/src/cfe_tbl_loadbuff.c",
+      "git_blob_sha": "e24546d6487e47c6c6412feb66ff2c50877e73bd",
+      "sha256": "24e9e93b05b15125566040f5b2c77f0f6ccd307bb149a5222acba1301fed26f5",
+      "bytes": 20355,
+      "url": "https://github.com/nasa/cFE/blob/b45b34765adeb23f929aaa570a3a402ea5e9939c/modules/tbl/fsw/src/cfe_tbl_loadbuff.c",
+      "extract": "302-323 copy/CRC; 432-472 preparatory active copy",
+      "evidence": "SOURCE for cFE semantics only; thermal cadence and size are project requirements"
+    },
+    {
+      "repository": "nasa/cFE",
+      "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+      "path": "modules/tbl/fsw/src/cfe_tbl_internal.c",
+      "git_blob_sha": "aa69d0621846b94179622ca99d2d6aa5e75ba21c",
+      "sha256": "15002b92f731cb32f28e079e27e956f782cf13d475b9ce0e7041bac777d2c839",
+      "bytes": 44343,
+      "url": "https://github.com/nasa/cFE/blob/b45b34765adeb23f929aaa570a3a402ea5e9939c/modules/tbl/fsw/src/cfe_tbl_internal.c",
+      "extract": "467-548 double-buffer activation without final copy; CDS if critical",
+      "evidence": "SOURCE for cFE semantics only; thermal cadence and size are project requirements"
+    },
+    {
+      "repository": "nasa/cFE",
+      "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+      "path": "modules/tbl/fsw/src/cfe_tbl_passthru_codec.c",
+      "git_blob_sha": "caf9728ae98080b5c99f051f7686b3f0a1381721",
+      "sha256": "a7af8d3d68c4697a61aa418e8cebb0c5ffc8d882d388e7ea75af4acfda02068b",
+      "bytes": 9812,
+      "url": "https://github.com/nasa/cFE/blob/b45b34765adeb23f929aaa570a3a402ea5e9939c/modules/tbl/fsw/src/cfe_tbl_passthru_codec.c",
+      "extract": "224-240 no separate codec buffer",
+      "evidence": "SOURCE for cFE semantics only; thermal cadence and size are project requirements"
+    },
+    {
+      "repository": "nasa/cFE",
+      "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+      "path": "modules/tbl/fsw/src/cfe_tbl_api.c",
+      "git_blob_sha": "5bc854e27ec13dc36010032638c441439a1b36a0",
+      "sha256": "926c4d8858657e5b624d135a038f229c9b984c3fac17850fdb295d6acf032fdd",
+      "bytes": 39072,
+      "url": "https://github.com/nasa/cFE/blob/b45b34765adeb23f929aaa570a3a402ea5e9939c/modules/tbl/fsw/src/cfe_tbl_api.c",
+      "extract": "603-697 validation callback; no measured timing",
+      "evidence": "SOURCE for cFE semantics only; thermal cadence and size are project requirements"
+    }
+  ]
+}

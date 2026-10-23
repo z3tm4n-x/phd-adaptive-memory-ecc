@@ -1,0 +1,88 @@
+{
+  "task": 186,
+  "date": "2026-10-23",
+  "status": "PREREGISTERED_DESIGN_PROFILE_NOT_FLIGHT_TRACE",
+  "base_commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d",
+  "common_input": "experiments/t186-method-comparison/code-strength/common-input.json",
+  "application": "Thermal engineering-unit conversion for four modules with four sensor channels each",
+  "requirements": {
+    "modules": 4,
+    "channels_per_module": 4,
+    "adc_bits": 12,
+    "output_bits": 32,
+    "representation": "one delivered exact calibration output per ADC code per channel; no certified compressed representation",
+    "copies": 2,
+    "temperature_slew_C_per_s": "0.05",
+    "staleness_budget_C": "0.05",
+    "acquisition_deadline_ns": 3000,
+    "selection": "largest integer number of existing epochs satisfying cycle+deadline <= freshness bound, before price screen",
+    "lookup_per_channel_per_cycle": 1,
+    "maintenance_admission_interval_s": 2592000,
+    "maintenance_minimum_updates": 0,
+    "first_update_not_before_s": 2592000,
+    "attempts_consume_admission_even_on_failure": true,
+    "allowed_update_finish_s": 1800,
+    "retention": "T; there is no minimum refresh rate, CRC/read is not E",
+    "scratch_algorithm_bytes": 100,
+    "scratch_note": "16 raw uint16 +16 calibrated uint32 +4-byte transfer accumulator; OS/cFE metadata and stacks additional unknown"
+  },
+  "cfe": {
+    "commit": "b45b34765adeb23f929aaa570a3a402ea5e9939c",
+    "double_buffered": true,
+    "critical_CDS": false,
+    "codec": "native passthrough",
+    "load_source": "file/NVM, no third full protected-SRAM table image",
+    "update": "pin active image for the complete 16-channel cycle; validate inactive; release active; swap only at cycle boundary",
+    "workers": "control task and bounded lower-priority maintenance worker in same owning application; port scheduling is a condition, not a measured fact",
+    "transfer_granularity_operations_per_word": {
+      "lower": 1,
+      "upper": 4
+    },
+    "transfer_condition": "byte accesses may require four full-word ECC transactions; partial write is correct decode/merge/full32 E; no extra retries or opaque full-table copies",
+    "maintenance_passes": {
+      "copy_reads": 1,
+      "copy_writes": 1,
+      "file_writes": 1,
+      "crc_reads": 2,
+      "range_validation_reads": 1
+    },
+    "validation": "CRC after load plus independent validation CRC and one range/monotonicity pass; explicit application wrapper supplies any missing pass",
+    "startup_extra_full_loads_upper": 2,
+    "startup": "accepted W initial encodes/writes paid separately; conservatively add two complete load/validation attempts before t=0"
+  },
+  "schedule": {
+    "reuse_original_read_and_write_phases": true,
+    "runtime_read_slots": "first channels epochs of every cycle; sample channel immediately before its lookup",
+    "maintenance": "one transaction at a time; use only unoccupied read slots and original write slots; finish current transaction before offering next",
+    "offer_deadline_scope": "3000ns from each admitted transaction; 1800s full image workflow bound is separate",
+    "addresses": "runtime active_base+channel*4096+adc_code; maintenance ascending index in chosen active/inactive bank; addresses need not match old 5*j permutation",
+    "optional_update_schedule": "at most one attempt in each 30-day bucket, released at bucket start if a command is queued; no guaranteed update",
+    "activation": "after validation, between complete cycles; invalid or incomplete candidate never active"
+  },
+  "numerical": {
+    "target_gain": [
+      5,
+      10
+    ],
+    "off_support_ns": "T*1e9, optional E ignored",
+    "fixed_k39": 11,
+    "fixed_k44": 44837,
+    "adaptive_k": 27,
+    "rho_per_s": "0.048",
+    "risk_calls_if_gate_open": 1,
+    "no_new_ERR_parameters": true,
+    "no_hold_refinement": true,
+    "reuse_accepted_hold_price": true,
+    "extra_veto_rate_per_s": null,
+    "analysis": "interval/count calculation, no Monte Carlo, no mission-epoch enumeration"
+  },
+  "unknowns": {
+    "physical_Q": null,
+    "CPU_ns": null,
+    "energy_J": null,
+    "controller_memory_bytes": null,
+    "NVM_io_and_OS_buffers": null,
+    "extra_bus_fraction": null,
+    "measured_application_WCET": null
+  }
+}
