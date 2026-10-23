@@ -1,7 +1,7 @@
 """Bounded, exact write-retention screen; accepted computations are read-only.
 
-The app-only substitutions await the specific #196 applicability check.
-The fixed witness and the application floor do not depend on that check.
+The app-only schedule has the specific #196 author applicability agreement;
+that agreement did not review the numerical implementation or its results.
 No new ERR risk integration is performed when the price screen closes 5x.
 """
 import argparse
@@ -155,8 +155,9 @@ def price(cfg, n, t, nr, nw, fixed=None):
 def off_risk(cfg, n, N):
     r = cmp.risk(cfg, n, 1 if n == 39 else 2,
                  N*cfg['application']['epoch_ns'], cfg['constraints']['application_deadline_ns'])
-    r['basis'] = 'T196 deterministic arrival apertures; new write schedule submitted to #196'
-    r['specific_new_schedule_applicability'] = 'PENDING_THEORIST_REVIEW'
+    r['basis'] = 'T196/PR234 deterministic arrival apertures; theory-basis.json'
+    r['specific_new_schedule_applicability'] = ('AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY'
+        if N >= cfg['words'] else 'ALGEBRAIC_THRESHOLD_OUTSIDE_DECLARED_SCHEDULE')
     return r
 
 
@@ -255,6 +256,57 @@ def union_duration(intervals):
     return sum((b-a for a, b in result), F(0)), result
 
 
+def hold_price_followup(cfg, cal, cost, remaining):
+    """One preregistered substitution of PR234 (3)/(4), no new Q call.
+
+    All bounds are conditional on the same singleton/serial service, uniform
+    word marks, and expiry <= fresh. Keep old repair and controller counts.
+    """
+    T = F(cfg['mission_s']); W = cfg['words']; s = cmp.service(cfg, 39)
+    fresh = F(cfg['adaptive']['source_to_fresh_rule_upper_ns'], NS)
+    tau = cal['tau']+fresh
+    wp, hp = cal['w_upper']+fresh, cal['h_upper']+fresh
+    pair = cal['source_PAIR']['upper']+2*cal['J']
+    d, V, H, L = pair+tau, wp+tau, hp+tau, hp+pair+2*tau
+    S = lambda length: F(2+cmp.ceil((length*NS+s['J'])/(cfg['calendar']['c_ticks']*s['xminus'])))
+    e = cfg['environment']; factor = F(W*39, e['reference_words']*e['reference_bits'])
+    b = factor*F(e['reference_background_per_s']); Fs = factor*F(e['reference_solar_mass'])
+    parents = b*T+Fs; m = F(1)
+    if parents != cost['expected_parent_count_upper']:
+        raise ValueError('physical-parent normalization changed')
+    terms = dict(background_first=S(V)*b*T,
+        background_pairs=S(H)*b*b*d*T,
+        solar_and_solar_background=S(H)*(1+b*d)*Fs,
+        false=S(L)*F(cfg['adaptive']['ordinary_false_expected_per_s'])*T,
+        weak_E_repeat=S(L)*m*parents/W)
+    Berr = sum(terms.values(), F(0)); ad = cost['adaptive']
+    support = cmp.read_bounds(cfg, 27)['upper']
+    new_N = min(ad['reads_hard_upper'], cost['read_count_upper'],
+                support+Berr+remaining+ad['bad_history_reads_upper'])
+    saved = cost['read_count_upper']-new_N
+    refined = deepcopy(cost)
+    refined['read_count_upper'] = new_N
+    refined['core_SRAM_fraction_upper'] -= s['upper']['R']*saved/(T*NS)
+    refined['codec_busy_fraction'] -= s['decode']*saved/(T*NS)
+    for key in ('full_cost_rates', 'energy_coefficients_per_second'):
+        for name, mult in (('scrub_reads', 1), ('decodes', 1), ('read_beats', 3)):
+            refined[key][name] -= mult*saved/T
+    refined['adaptive']['reads_zero_extra_veto_upper'] = new_N
+    refined['adaptive']['ordinary_added_reads_upper'] = min(ad['ordinary_added_reads_upper'], Berr+remaining)
+    refined['adaptive']['ordinary_hold_price_basis'] = 'PR234 (3), parent bands; old publication count retained for source costs'
+    refined['veto_hard_cap_reached_per_s'] = (refined['all_history_SRAM_core_upper']-refined['core_SRAM_fraction_upper'])/refined['veto_core_fraction_slope_per_notification_per_s']
+    return dict(status='CONDITIONAL_SUFFICIENT_PRICE_UPPER_AUTHOR_THEORY_NOT_INDEPENDENT_REVIEW',
+        basis='theory-basis.json', tau_upper_s=tau, w_upper_s=wp, h_upper_s=hp,
+        pair_upper_s=pair, d_s=d, V_s=V, H_s=H, L_s=L, m_active_words=m,
+        b_per_s=b, solar_parent_mass=Fs, parent_mass=parents, terms_reads_upper=terms,
+        B_ERR_reads_upper=Berr, old_ordinary_hold_reads=ad['ordinary_added_reads_upper']-remaining,
+        expiry_delay_limit_ns=cfg['adaptive']['source_to_fresh_rule_upper_ns'],
+        physical_expiry_verified=False, extra_expiry_beyond_fresh_not_certified=True,
+        retained_repair_count=cost['repair_count_upper'], new_Q_integrations=0,
+        fractional_reduction_of_core_upper=1-refined['core_SRAM_fraction_upper']/cost['core_SRAM_fraction_upper'],
+        cost=refined)
+
+
 def holds(cfg, plan):
     fixtures = []
     short = F(cfg['adaptive']['short_hold_s']); long = F(cfg['adaptive']['long_hold_s'])
@@ -280,7 +332,9 @@ def holds(cfg, plan):
     repairs = min(N, 2*cost['expected_parent_count_upper']+U*ad['reads_hard_upper'])
     apps = cmp.count_apps(cfg)
     best_possible = app_cost(cfg, 39, apps['read'], apps['write'], 'upper') + (s['upper']['R']*N+(s['upper']['E']-s['upper']['R'])*repairs)/(T*NS)
-    return dict(fixtures=fixtures, accepted_k27_ordinary_hold_probe=dict(
+    return dict(fixtures=fixtures,
+        theorist_approved_price_followup=hold_price_followup(cfg, cal, cost, remaining),
+        accepted_k27_ordinary_hold_probe=dict(
         rho_per_s=F('.048'), risk_reused_without_reintegration=U,
         accepted_core_upper=cost['core_SRAM_fraction_upper'],
         optimistic_zero_ordinary_hold_expression=best_possible,
@@ -320,6 +374,11 @@ def validate(cfg, plan, fixed, rows, bounds, family, hold):
     baseline = rows[0]; nr = baseline['calendar']['reads']; nw = baseline['calendar']['writes']
     apps = cmp.count_apps(cfg)
     check('baseline equals old arrivals', nr == apps['read'] and nw == apps['write'])
+    W = cfg['words']; mult = cfg['application']['address_multiplier']
+    check('bank address permutation separate from times', len({mult*j % W for j in range(W)}) == W)
+    check('sparse bank address need not match old global address', 5*0 % 8 != 5*(9+0) % 8)
+    check('terminal second-bank offer excluded at T', write_count(4, 10, 6, 90, 96) == 4)
+    check('terminal second-bank offer counted after T edge', write_count(4, 10, 6, 90, 97) == 5)
     oldoff = json.loads((ACCEPTED.parent/'app-only/outputs/result.json').read_text('utf-8'))
     check('baseline OFF44 exact accepted upper', baseline['competitors']['OFF44']['risk']['upper'] == F(oldoff['Q_upper']))
     for n, t in ((39, 1), (44, 2)):
@@ -346,6 +405,13 @@ def validate(cfg, plan, fixed, rows, bounds, family, hold):
         check('typed union '+f['name'], f['union_s'] == expected_union[f['name']] and f['union_s'] <= f['typed_sum_s'] <= f['all_long_sum_s'])
     check('union duplicates/endpoints', union_duration([(F(0), F(2)), (F(0), F(2)), (F(2), F(3))])[0] == 3)
     check('hold probe retains other terms', hold['accepted_k27_ordinary_hold_probe']['remaining_recovery_outage_startup_addend'] > 0)
+    new = hold['theorist_approved_price_followup']; old = hold['accepted_k27_ordinary_hold_probe']
+    check('new count bounded by old and hard cap', new['cost']['read_count_upper'] <= new['cost']['adaptive']['reads_hard_upper'] and new['cost']['core_SRAM_fraction_upper'] <= old['accepted_core_upper'])
+    check('hold refinement above optimistic term removal', new['cost']['core_SRAM_fraction_upper'] >= old['optimistic_zero_ordinary_hold_expression'])
+    check('weak E repeat retained independently', new['terms_reads_upper']['weak_E_repeat'] > 0)
+    check('full repair count kept', new['cost']['repair_count_upper'] == new['retained_repair_count'])
+    check('veto remains parameter', new['cost']['extra_veto_action_rates_per_unit_v']['scrub_reads'] > 0)
+    check('expiry is conditional not measured', not new['physical_expiry_verified'])
     check('full family price closes 5x without OFF', family['core_gain_ceiling'] < 5)
     return dict(status='PASS_NUMERICAL_CHECKS_ONLY', checks=checks,
         independent_small_calendar_cases=tested, physical_acceptance=False)

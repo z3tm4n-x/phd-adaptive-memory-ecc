@@ -598,7 +598,178 @@
         ],
         "union_s": "189"
       }
-    ]
+    ],
+    "theorist_approved_price_followup": {
+      "B_ERR_reads_upper": "1095122010793204312494567332335934568820407/70507812500000000000000000000",
+      "H_s": "4517431757220833/25000000000000",
+      "L_s": "339240913182083/1250000000000",
+      "V_s": "2267386756995833/25000000000000",
+      "b_per_s": "377091/9500000000",
+      "basis": "theory-basis.json",
+      "cost": {
+        "CPU_extra_veto_formula": "v*(capture_ns+record_ns+2*timer_event_ns+extra_veto_ns)/1e9; capped source rate, unchanged decision/cut schedule",
+        "CPU_fraction_coefficients": {
+          "app_dispatch_ns": "631139377213/315576000000000000",
+          "captures_ns": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "cuts_ns": "438300000000011111/1753182468000000000000",
+          "decisions_ns": "7889400001284492729944/1546306906680327392578125",
+          "initialization_ns": "4/9630615234375",
+          "records_ns": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "timer_events_ns": "36458573272878105239371556820115575952814800512434862448146148794189705281632753683638897988086529438642731/178809395603239969228800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "adaptive": {
+          "app_same_word_revisit_s": "51201024/390625",
+          "bad_history_reads_upper": "38857163574291699974983511607638345044027678713287061912939816396872064328514719692574431261396726637953933/59181212944660685027441406250000000000000000000000000000000000000000000000000000000000000000000",
+          "hold_length_s": "4517431507220833/25000000000000",
+          "mandatory_age_s": "17341002133287/25000000000000",
+          "ordinary_added_reads_upper": "540491209302523722769415767812967328760705229257/32119904492187500000000000000000000",
+          "ordinary_hold_price_basis": "PR234 (3), parent bands; old publication count retained for source costs",
+          "ordinary_publications_upper": "23688329391/593750",
+          "publication_bound_basis": "weak-E aperture repeat then next correcting E; no app-read ERR",
+          "read_rate_formula": "min(hard,zero_v_upper+reads_extra_per_veto*v)",
+          "reads_extra_per_veto": "63",
+          "reads_hard_upper": "258519859242090257774804992/160561591243",
+          "reads_lower": "258519858063540288175734784/4335249755189",
+          "reads_zero_extra_veto_upper": "171250065338980791033762896473282748008201955948040734239834987221232670336505914939557395945851955263566008206045793660275654947/2220648920960126119366347988782376501120996093750000000000000000000000000000000000000000000000000000000000000000000",
+          "source_edge_rate_upper": "438300000000000011111/1753182468000",
+          "source_rate_formula": "min(source_edge_rate,ordinary_record_rate+v)",
+          "source_records_zero_extra_veto_per_s_upper": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "timers": {
+            "NR_covers_h_plus_tau": true,
+            "counts_fit_34_bits": true,
+            "guard_holds_cover_tau": true,
+            "long": {
+              "count": 9000090002,
+              "lower_s": "900000000007499/5000000000000",
+              "upper_s": "450009000146251/2500000000000"
+            },
+            "recovery": {
+              "count": 9034952865,
+              "lower_s": "225871562861159/1250000000000",
+              "upper_s": "180700864291073/1000000000000"
+            },
+            "short": {
+              "count": 4500045002,
+              "lower_s": "450000000052499/5000000000000",
+              "upper_s": "225004500123751/2500000000000"
+            },
+            "tau_birth_to_fresh_s": "17341255758323/25000000000000"
+          },
+          "v_domain": "0<=v<=source_edge_rate; raw notifications, not loss episode count"
+        },
+        "after_A_paid": true,
+        "all_history_SRAM_core_upper": "89435654201084193500156007070609/140748290883613800000000000000000",
+        "bad_history_paid": true,
+        "codec_busy_fraction": "173352374095519817768862284179554544742552604721172744884366237221232670336505914939557395945851955263566008206045793660275654947/35039175194045638012257731645399362335887973164062500000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "core_SRAM_fraction_lower": "73910730245804202730419645538687/5700419903098016100000000000000000",
+        "core_SRAM_fraction_upper": "299041549083931142959000543117230599374252684901414549212887645813774160253545232005024521160738532168462371087571920187211444567840857/17519587597022819006128865822699681167943986582031250000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "energy_coefficients_per_second": {
+          "app_dispatch": "631139377213/315576000",
+          "application_reads": "315569688607/315576000",
+          "application_writes": "17531649367/17532000",
+          "captures": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "cuts": "438300000000011111/1753182468000",
+          "decisions": "4039372800657660277731328/791709136220327625",
+          "decodes": "172651604315964285494745707841113092223309547419008315001553737221232670336505914939557395945851955263566008206045793660275654947/700783503880912760245154632907987246717759463281250000000000000000000000000000000000000000000000000000000000000000000000000",
+          "encodes": "157784909839/157788000",
+          "initialization": "2048/4930875",
+          "read_beats": "172651604315964285494745707841113092223309547419008315001553737221232670336505914939557395945851955263566008206045793660275654947/233594501293637586748384877635995748905919821093750000000000000000000000000000000000000000000000000000000000000000000000000",
+          "records": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "scrub_corrections": "12952388638905704782483468897656778721967559571095687304313272132290688109504906564191477087132242212651311/6225390152074746779406616406250000000000000000000000000000000000000000000000000000000000000000000000000",
+          "scrub_reads": "171250065338980791033762896473282748008201955948040734239834987221232670336505914939557395945851955263566008206045793660275654947/700783503880912760245154632907987246717759463281250000000000000000000000000000000000000000000000000000000000000000000000000",
+          "timer_events": "36458573272878105239371556820115575952814800512434862448146148794189705281632753683638897988086529438642731/178809395603239969228800000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "transport_cuts": "438300000000011111/1753182468000",
+          "transport_records": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "transport_replies": "631139377213/315576000",
+          "transport_requests": "631139377213/315576000",
+          "turnarounds": "57532970613989006114456045744993578353402678713287061912939816396872064328514719692574431261396726637953933/18676170456224240338219849218750000000000000000000000000000000000000000000000000000000000000000000000000",
+          "write_beats": "57532970613989006114456045744993578353402678713287061912939816396872064328514719692574431261396726637953933/6225390152074746779406616406250000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "energy_formula": "T*sum(rate_a*incremental_nonoverlapping_energy_J_per_action_a)+T*idle_W; transport and controller included",
+        "expected_parent_count_upper": "23500956141/1187500",
+        "extra_veto_action_rates_per_unit_v": {
+          "captures": "1",
+          "decodes": "63",
+          "extra_veto": "1",
+          "read_beats": "189",
+          "records": "1",
+          "scrub_corrections": "63",
+          "scrub_reads": "63",
+          "timer_events": "2",
+          "transport_records": "1",
+          "turnarounds": "63",
+          "write_beats": "189"
+        },
+        "full_SRAM_formula": "core_upper + B_controller_average; extra bus work is not assumed free",
+        "full_cost_rates": {
+          "app_dispatch": "631139377213/315576000",
+          "application_reads": "315569688607/315576000",
+          "application_writes": "17531649367/17532000",
+          "captures": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "cuts": "438300000000011111/1753182468000",
+          "decisions": "4039372800657660277731328/791709136220327625",
+          "decodes": "172651604315964285494745707841113092223309547419008315001553737221232670336505914939557395945851955263566008206045793660275654947/700783503880912760245154632907987246717759463281250000000000000000000000000000000000000000000000000000000000000000000000000",
+          "encodes": "157784909839/157788000",
+          "initialization": "2048/4930875",
+          "read_beats": "172651604315964285494745707841113092223309547419008315001553737221232670336505914939557395945851955263566008206045793660275654947/233594501293637586748384877635995748905919821093750000000000000000000000000000000000000000000000000000000000000000000000000",
+          "records": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/3218569120858319446118400000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "scrub_corrections": "12952388638905704782483468897656778721967559571095687304313272132290688109504906564191477087132242212651311/6225390152074746779406616406250000000000000000000000000000000000000000000000000000000000000000000000000",
+          "scrub_reads": "171250065338980791033762896473282748008201955948040734239834987221232670336505914939557395945851955263566008206045793660275654947/700783503880912760245154632907987246717759463281250000000000000000000000000000000000000000000000000000000000000000000000000",
+          "timer_events": "36458573272878105239371556820115575952814800512434862448146148794189705281632753683638897988086529438642731/178809395603239969228800000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "turnarounds": "57532970613989006114456045744993578353402678713287061912939816396872064328514719692574431261396726637953933/18676170456224240338219849218750000000000000000000000000000000000000000000000000000000000000000000000000",
+          "write_beats": "57532970613989006114456045744993578353402678713287061912939816396872064328514719692574431261396726637953933/6225390152074746779406616406250000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "initialization": {
+          "amortized_fraction": "1912519/60191345214843750",
+          "encodes": 131072,
+          "full_prefix_bus_ns": "31334711296/3125",
+          "outside_mission_risk": true,
+          "turnarounds": 131072,
+          "write_beats": 393216
+        },
+        "lower_scope": "chosen candidate only, not lower for every admissible fixed policy",
+        "payload_data_bytes": "2524557508852",
+        "payload_rate_Bps": "631139377213/78894000",
+        "pending_paid": true,
+        "read_count_upper": "171250065338980791033762896473282748008201955948040734239834987221232670336505914939557395945851955263566008206045793660275654947/2220648920960126119366347988782376501120996093750000000000000000000000000000000000000000000000000000000000000000000",
+        "repair_count_upper": "38857165916717114347450406692970336165902678713287061912939816396872064328514719692574431261396726637953933/59181212944660685027441406250000000000000000000000000000000000000000000000000000000000000000000",
+        "scientific_status": "conditional affine resource account; hardware coefficients remain parameters",
+        "source_record_rate_Bps": "328127159445693718030522244942640183575333204611913762033315339147707347534694783152750081892778764947784579/100580285026822482691200000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "traffic_formula": "payload + requests*request_header + replies*reply_header +32*source_records + cuts*cut_header",
+        "transport_plus_loss_state_bytes": 131136,
+        "unknown_memory_addends": [
+          "policy_state_bytes",
+          "payload_buffer_bytes",
+          "codec_register_bytes"
+        ],
+        "veto_core_fraction_slope_per_notification_per_s": "196089453/25000000000000",
+        "veto_hard_cap_reached_per_s": "1547632282894743822776688752058987393700716356179889680418048598031067977106636395427853639834180209690219661273204011401826936490308449/19630893421061651471027502552477574077123071220056271093750000000000000000000000000000000000000000000000000000000000000000000000000",
+        "zero_extra_veto_slice": true
+      },
+      "d_s": "2267386506420827/25000000000000",
+      "expiry_delay_limit_ns": 10000,
+      "extra_expiry_beyond_fresh_not_certified": true,
+      "fractional_reduction_of_core_upper": "108103400640101980843393180713418003982589411407169251307462804213019682601715859631529500000000000000000000000000000000000000000000000/407144949724033123802393723830648603356842096308583800520350450026793842855261091636554021160738532168462371087571920187211444567840857",
+      "h_upper_s": "450009025146251/2500000000000",
+      "m_active_words": "1",
+      "new_Q_integrations": 0,
+      "old_ordinary_hold_reads": "26100359964875827953/593750",
+      "pair_upper_s": "281255625082813/3125000000000",
+      "parent_mass": "23500956141/1187500",
+      "physical_expiry_verified": false,
+      "retained_repair_count": "38857165916717114347450406692970336165902678713287061912939816396872064328514719692574431261396726637953933/59181212944660685027441406250000000000000000000000000000000000000000000000000000000000000000000",
+      "solar_parent_mass": "2156461866/296875",
+      "status": "CONDITIONAL_SUFFICIENT_PRICE_UPPER_AUTHOR_THEORY_NOT_INDEPENDENT_REVIEW",
+      "tau_upper_s": "17341505758323/25000000000000",
+      "terms_reads_upper": {
+        "background_first": "8226332159656915161/1187500",
+        "background_pairs": "3503353559696577020138603178903422492979/70507812500000000000000000000",
+        "false": "65278878758478/125",
+        "solar_and_solar_background": "70792650057698548864531782758779894267491/8813476562500000000000000000",
+        "weak_E_repeat": "19445281854597916317/77824000000"
+      },
+      "w_upper_s": "225004525123751/2500000000000"
+    }
   },
   "new_ERR_risk_calls": [],
   "new_ERR_risk_calls_count": 0,
@@ -761,7 +932,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -777,7 +948,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-43106937273470730377262167/194560000000000000000000",
             "slack": "-43106937273470730377262167/194560000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -879,7 +1050,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -895,7 +1066,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "284121029251164672539937487651901362751398755889/287687311360000000000000000000000000000000000000",
             "slack": "284121029251164672539937487651901362751398755889/287687311360000000000000000000000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "1011909203086703893160916503775430971/2301498490880000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -1269,7 +1440,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -1285,7 +1456,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -1387,7 +1558,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -1403,7 +1574,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "199204504369157315776796665831574732296899086329/287687311360000000000000000000000000000000000000",
             "slack": "199204504369157315776796665831574732296899086329/287687311360000000000000000000000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "3474044876013758969868792620150967513/1150749245440000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -1777,7 +1948,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -1793,7 +1964,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -1895,7 +2066,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -1911,7 +2082,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "131727084548631328007137400220407252724752645821/287687311360000000000000000000000000000000000000",
             "slack": "131727084548631328007137400220407252724752645821/287687311360000000000000000000000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "487585244651206827171775481769893877/121131499520000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -2285,7 +2456,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -2301,7 +2472,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -2403,7 +2574,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -2419,7 +2590,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-61065543261868291012023525469412448196446258809/287687311360000000000000000000000000000000000000",
             "slack": "-61065543261868291012023525469412448196446258809/287687311360000000000000000000000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "13896179441063753269316031980280080937/2301498490880000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -2793,7 +2964,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -2809,7 +2980,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -2911,7 +3082,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -2927,7 +3098,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-1102145732048948295908245458278749485175291161611/287687311360000000000000000000000000000000000000",
             "slack": "-1102145732048948295908245458278749485175291161611/287687311360000000000000000000000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "27792358819136223928472925460236372759/2301498490880000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -3301,7 +3472,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -3317,7 +3488,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -3419,7 +3590,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -3435,7 +3606,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-49685887811755193041566445134912049427721715774871/287687311360000000000000000000000000000000000000",
             "slack": "-49685887811755193041566445134912049427721715774871/287687311360000000000000000000000000000000000000000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "166754152599860930520041860259799290979/2301498490880000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -3809,7 +3980,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -3825,7 +3996,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -3927,7 +4098,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -3943,7 +4114,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "667016610210469874249690025538225796571/2301498490880000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -4317,7 +4488,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -4333,7 +4504,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -4435,7 +4606,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -4451,7 +4622,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "4669116271095341424086875347765637841307/2301498490880000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
@@ -4825,7 +4996,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "0",
               "linear_direct": "0",
@@ -4841,7 +5012,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "0",
               "E_cross_quadratic": "1078177030343490987/38912000000000000000000000",
@@ -4943,7 +5114,7 @@
             }
           },
           "risk": {
-            "basis": "T196 deterministic arrival apertures; new write schedule submitted to #196",
+            "basis": "T196/PR234 deterministic arrival apertures; theory-basis.json",
             "coefficients": {
               "cubic": "13244",
               "linear_direct": "0",
@@ -4959,7 +5130,7 @@
             "physical_unconditional_probability": null,
             "relative_slack": "-999",
             "slack": "-999/1000",
-            "specific_new_schedule_applicability": "PENDING_THEORIST_REVIEW",
+            "specific_new_schedule_applicability": "AUTHOR_THEORIST_AGREED_SCHEDULE_ONLY",
             "terms": {
               "E_cross_cubic": "1218139084768240279375649888123231995075389/1150749245440000000000000000000000000000000000000",
               "E_cross_quadratic": "0",
