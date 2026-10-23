@@ -1,0 +1,91 @@
+{
+  "retrieved_on": "2026-10-23",
+  "pdfs": [
+    {
+      "id": "RT-P",
+      "file": "rtg4-proton-v3.pdf",
+      "title": "RTG4 FPGA Radiation Test Report - Flip-flops, SRAM and PLL in Proton",
+      "version": "Revision 3.0, May 2020",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/reports/RTG4_Proton_Test_Report_30.pdf",
+      "bytes": 2915179,
+      "sha256": "2d216a9076a000f7b1e985b17a7d26674daecaf4a1ac908af70048fc6e3c8f86",
+      "pdf_pages": 12,
+      "used_pages_one_based": [7, 8, 9],
+      "locator": "3.1/Table 1; 3.2.1; 3.3.1/Table 2. Printed pages 3-5."
+    },
+    {
+      "id": "RT-UG",
+      "file": "rtg4-fabric-ug.pdf",
+      "title": "RTG4 FPGA Fabric User Guide",
+      "version": "DS50003574B, downloaded 147-page edition with copyright 2025",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/RTG4_FPGA_Fabric_User_Guide_UG0574_V6.pdf",
+      "bytes": 7066485,
+      "sha256": "740adda79fc4af88e6ca9b6c2660f1482fd6d9547df842af5d8d7dcf21be1849",
+      "pdf_pages": 147,
+      "used_pages_one_based": [11, 12, 22, 23, 24, 73],
+      "locator": "Tables 2.1-2.2; 2.1.7; 2.2.5. Native x18 ECC, not Appendix C file-format codes."
+    },
+    {
+      "id": "RT-AN",
+      "file": "rtg4-an4891.pdf",
+      "title": "Error Detection and Correction on RTG4 LSRAM Memory",
+      "version": "AN4891 / DS00004891A, copyright 2025",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ApplicationNotes/ApplicationNotes/Error_Detection_and_Correction_on_RTG4_LSRAM_Memory_AN4891.pdf",
+      "bytes": 1484124,
+      "sha256": "3ff164474692aca5a9864f2818b101cd6d13cffc83fcd2a3b14aac441d471f9a",
+      "pdf_pages": 22,
+      "used_pages_one_based": [4, 5],
+      "locator": "Demo design description; user-logic scrubbing, 256 locations. Not a whole-bank timing certificate."
+    },
+    {
+      "id": "RT-HI",
+      "file": "rtg4-revc-heavy-ion-nasa.pdf",
+      "title": "Microsemi RTG4 Rev C Field Programmable Gate Array Single Event Effects (SEE) Heavy-ion Test Report",
+      "version": "NTRS 20190001593, GSFC-E-DAA-TN44754; publication 2019-03-15; report rev2 entries 06/2017 and 09/2017",
+      "url": "https://ntrs.nasa.gov/api/citations/20190001593/downloads/20190001593.pdf",
+      "bytes": 2845116,
+      "sha256": "ac2a61beebbc3cfa80e54e6df56c72595df58d55557fec298b31540d6d0ed758",
+      "pdf_pages": 85,
+      "used_pages_one_based": [8, 14, 48, 53, 55, 56, 57, 78, 79, 80],
+      "locator": "2.1; 3.5; 6.8; equations (8)-(9); 9.7.1-9.7.2/Figures 51-52. LSRAM is 65536 x 8 with EDAC disabled."
+    },
+    {
+      "id": "KU-DS",
+      "file": "xqrku060-ds882.pdf",
+      "title": "Radiation Tolerant Kintex UltraScale XQRKU060 FPGA Data Sheet",
+      "version": "DS882 v1.5, 2026-04-24",
+      "url": "https://docs.amd.com/api/khub/documents/Jqgzy5jBqq95uRdHWFZE_w/content",
+      "bytes": 2447105,
+      "sha256": "b009245c3cb54f703de63923ee3a4ebf87b71af8afcc793fba699d3223a9a565",
+      "pdf_pages": 101,
+      "used_pages_one_based": [1, 2, 3, 99],
+      "locator": "Tables 1, 3, 4; Figure 23. Table 1 rates are typical, with notes 2-3."
+    }
+  ],
+  "web_sources": [
+    {
+      "id": "KU-ECC",
+      "title": "UG573: Built-in Error Correction / Overview",
+      "version": "1.14 English, 2025-11-18",
+      "url": "https://docs.amd.com/r/en-US/ug573-ultrascale-memory-resources/Overview",
+      "verified": "Full official section read, including 512 x 64, 8 parity bits, SECDED and output-only correction.",
+      "local_pdf": null
+    },
+    {
+      "id": "KU-PORT",
+      "title": "UG573: Block RAM and FIFO ECC Port Descriptions",
+      "version": "1.14 English, 2025-11-18",
+      "url": "https://docs.amd.com/r/en-US/ug573-ultrascale-memory-resources/Block-RAM-and-FIFO-ECC-Port-Descriptions",
+      "verified": "Official port table read; RDADDRECC[8:0] accompanies output data, flags identify correction/detection.",
+      "local_pdf": null
+    },
+    {
+      "id": "KU-PRODUCT",
+      "title": "Space-Grade AMD Kintex UltraScale XQR FPGA Family",
+      "version": "Unversioned product page, read 2026-10-23",
+      "url": "https://www.amd.com/en/products/adaptive-socs-and-fpgas/fpga/kintex-ultrascale-xqr.html",
+      "verified": "Product table lists BRAM 8.5e-9 upset/bit/day, differing from pinned DS882 v1.5. Not used as a numerical input.",
+      "local_pdf": null
+    }
+  ]
+}
