@@ -1,0 +1,25 @@
+{
+  "author_methodological_response": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/244#issuecomment-6365262561",
+  "review_source_commit": "a91989413bc1c928de5652a87c7c79f314bed651",
+  "review_source_path": "experiments/comparison-foundations-20261018/sequential-guarantee-20261023/NEW_INPUT_REVIEW.md",
+  "review_source_blob": "cbcbe36a05397b0994b32761ec3159787c976827",
+  "reviewed_plan_commit": "af315ba4da25c5d76b696df76f171a1a250b1d52",
+  "reviewed_accepted_base": "e2dc01c6d8560ccf6106951b5e1dde70ebb2c8f1",
+  "initial_frozen_commit": "a0aee1fbfec2b53a758bc216aaafb822e0f04fe7",
+  "published_numerical_snapshot": "1b22e19ff2b63674fef690bc0a842b3e1c94aabb",
+  "published_frozen_manifest_blob": "c13e453d50459ea06888eebe8c4bad34453afd44",
+  "published_result_blob": "a0a38d770cdeedca5efe603354e8ae3d7b899178",
+  "scope": [
+    "H0 >= P in retained T119 geometry, including period endpoint difference",
+    "all-history startup and support lower counts with two-pass edge margin",
+    "separate lower constraints or maximum, never double-counted sum",
+    "exact small arithmetic on accepted cFE input",
+    "sufficient fixed44 witness; OFF not excluded by failed upper",
+    "core exclusion only, fixed FAST period and retained startup"
+  ],
+  "reviewed_new_code_or_output": false,
+  "initial_short_sha_resolved_at_review": false,
+  "physical_qualification": false,
+  "independent_acceptance": false,
+  "shorter_startup_authorized_or_certified": false
+}
