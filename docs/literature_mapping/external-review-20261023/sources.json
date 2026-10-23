@@ -1,0 +1,207 @@
+{
+  "audit_date": "2026-10-23",
+  "status": "targeted review complete including mandatory Aven-Castro and Flage full-text comparison; final scientific novelty not established",
+  "repository_snapshot": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+  "assignment": "docs/literature_mapping/EXTERNAL-ASSIGNMENT-20261022.md",
+  "report_sha256": "aafbe3b8f302a4f67444dadccb16d4f050207ce675ae7bbe575cf99361c31a89",
+  "sources": [
+    {
+      "label": "Hansen 2025",
+      "doi": "10.1109/TNS.2024.3486540",
+      "local_file": "tmp/external-literature-20261023/hansen-2025.pdf",
+      "retrieval": {
+        "requested_url": "C:\\Users\\Иван\\Downloads\\ст\\Analysis of System Radiation Effects Using Markov Chains.pdf",
+        "resolved_url": "C:\\Users\\Иван\\Downloads\\ст\\Analysis of System Radiation Effects Using Markov Chains.pdf",
+        "file": "hansen-2025.pdf",
+        "bytes": 2385604,
+        "sha256": "f995b2ae2caf0cd3dc4c2bc894085e1b800c80c412931edba720c857ea75263c",
+        "pages": 8
+      },
+      "full_document_received": true,
+      "read_scope": "Targeted rereading of III-IV, printed pp.1111-1114, and references [7], [21]."
+    },
+    {
+      "label": "US 8452403 B2",
+      "doi": null,
+      "local_file": "tmp/external-literature-20261023/us8452403.pdf",
+      "retrieval": {
+        "requested_url": "https://patentimages.storage.googleapis.com/59/d3/5d/277ecf0bce6b41/US8452403.pdf",
+        "resolved_url": "https://patentimages.storage.googleapis.com/59/d3/5d/277ecf0bce6b41/US8452403.pdf",
+        "file": "us8452403.pdf",
+        "bytes": 1118685,
+        "sha256": "526b63e25a9035b6a90b10f6116cc1e21f35720fece067141ca91e029ad2cef9",
+        "pages": 12
+      },
+      "full_document_received": true,
+      "read_scope": "Relevant description and claims 1-20; HTML read before PDF retrieval."
+    },
+    {
+      "label": "RU 2438163 C1",
+      "doi": null,
+      "local_file": "tmp/external-literature-20261023/ru2438163.pdf",
+      "retrieval": {
+        "requested_url": "https://patentimages.storage.googleapis.com/70/85/66/a95372a0630da1/RU2438163C1.pdf",
+        "resolved_url": "https://patentimages.storage.googleapis.com/70/85/66/a95372a0630da1/RU2438163C1.pdf",
+        "file": "ru2438163.pdf",
+        "bytes": 385659,
+        "sha256": "c379390be4fa3808cbcaa63390ee4ef0253ec11274f2e9589254892ffa0f004f",
+        "pages": 12
+      },
+      "full_document_received": true,
+      "read_scope": "Description, example and claims, PDF pp.4-11. Images of pp.5-7 checked."
+    },
+    {
+      "label": "Jacobs et al. 2009",
+      "doi": null,
+      "local_file": "tmp/external-literature-20261023/jacobs-2009.pdf",
+      "retrieval": {
+        "requested_url": "https://www.nsf-shrec.org/sites/default/files/2024-03/FPL09_F6.pdf",
+        "resolved_url": "https://www.nsf-shrec.org/sites/default/files/2024-03/FPL09_F6.pdf",
+        "file": "jacobs-2009.pdf",
+        "bytes": 290707,
+        "sha256": "5b3b511a103f07882a22f062eb4404bf6eb4e95ea01e60a18a5247cc751b5b45",
+        "pages": 6
+      },
+      "full_document_received": true,
+      "read_scope": "Substantive sections 1-6, PDF pp.1-6; not the expanded 2012 article."
+    },
+    {
+      "label": "Santos et al. 2015",
+      "doi": "10.1145/2744769.2744827",
+      "local_file": "tmp/external-literature-20261023/santos-2015.pdf",
+      "retrieval": {
+        "requested_url": "https://cfaed.tu-dresden.de/files/user/akumar/pdf/dac15.pdf",
+        "resolved_url": "https://cfaed.tu-dresden.de/files/user/akumar/pdf/dac15.pdf",
+        "file": "santos-2015.pdf",
+        "bytes": 285211,
+        "sha256": "17bad0870dd5cfb3e2e74d4fdb5a8166f0e941f4407c2852452e09a44410eea6",
+        "pages": 6
+      },
+      "full_document_received": true,
+      "read_scope": "Model, algorithms, evaluation and conclusions, PDF pp.1-6."
+    },
+    {
+      "label": "Lu et al. 2022",
+      "doi": "10.1109/JSYST.2022.3144019",
+      "local_file": "tmp/external-literature-20261023/lu-2022.pdf",
+      "retrieval": {
+        "requested_url": "https://repository.essex.ac.uk/32023/7/A_Self-Adaptive_SEU_Mitigation_Scheme_for_Embedded_Systems_in_Extreme_Radiation_Environments.pdf",
+        "resolved_url": "https://repository.essex.ac.uk/32023/7/A_Self-Adaptive_SEU_Mitigation_Scheme_for_Embedded_Systems_in_Extreme_Radiation_Environments.pdf",
+        "file": "lu-2022.pdf",
+        "bytes": 2921310,
+        "sha256": "655d5ffed17f7966ba24867c9f310f9394dfe2bb9373d970db0bb0ab22b8da83",
+        "pages": 12
+      },
+      "full_document_received": true,
+      "read_scope": "IV-VII closely; I-III selectively. Accepted early-access pagination 1-12."
+    },
+    {
+      "label": "Andjelkovic et al. 2020",
+      "doi": "10.1109/EWDTS50664.2020.9225138",
+      "local_file": "tmp/external-literature-20261023/andjelkovic-review.pdf",
+      "retrieval": {
+        "requested_url": "https://arxiv.org/pdf/2104.01206",
+        "resolved_url": "https://arxiv.org/pdf/2104.01206",
+        "file": "andjelkovic-review.pdf",
+        "bytes": 1239305,
+        "sha256": "fa686e6dfcde008d0e2ac62d1ddb562d50002b8600a71a150e792d7159ba3c90",
+        "pages": 9
+      },
+      "full_document_received": true,
+      "read_scope": "Targeted II-III, VI and references. One cover page precedes the article."
+    },
+    {
+      "label": "Aven and Castro 2009",
+      "doi": "10.1016/j.ress.2008.03.004",
+      "local_file": "tmp/external-literature-20261023/aven-2009.pdf",
+      "retrieval": {
+        "requested_url": "C:/Users/Иван/.codex/codex-remote-attachments/01a16748-dc96-7a81-b9bc-4e45840ca545/B00CFD91-C884-4784-B816-056E6170050F/1-aven2009.pdf",
+        "resolved_url": "C:/Users/Иван/.codex/codex-remote-attachments/01a16748-dc96-7a81-b9bc-4e45840ca545/B00CFD91-C884-4784-B816-056E6170050F/1-aven2009.pdf",
+        "file": "aven-2009.pdf",
+        "bytes": 358709,
+        "sha256": "a06563e2b2f17d47345258b091d27b26b1932a762a6273f7e80416e090d44751",
+        "pages": 7
+      },
+      "full_document_received": true,
+      "read_scope": "Full user-provided publisher layout (ARTICLE IN PRESS), all 7 pages, printed pp.261-267: sections 1-5, appendix and references. Equations on pp.262-263 and 267 also checked as page images."
+    },
+    {
+      "label": "Flage et al. 2012",
+      "doi": "10.1016/j.ress.2012.01.006",
+      "local_file": "tmp/external-literature-20261023/flage-2012.pdf",
+      "retrieval": {
+        "requested_url": "C:/Users/Иван/.codex/codex-remote-attachments/01a16748-dc96-7a81-b9bc-4e45840ca545/B00CFD91-C884-4784-B816-056E6170050F/2-flage2012.pdf",
+        "resolved_url": "C:/Users/Иван/.codex/codex-remote-attachments/01a16748-dc96-7a81-b9bc-4e45840ca545/B00CFD91-C884-4784-B816-056E6170050F/2-flage2012.pdf",
+        "file": "flage-2012.pdf",
+        "bytes": 454834,
+        "sha256": "8ada5370f863271b200c69e168aa8172919164f90bb34986de03957804f46593",
+        "pages": 11
+      },
+      "full_document_received": true,
+      "read_scope": "Full user-provided publisher PDF, all 11 pages, printed pp.16-26: sections 1-6, appendices A-D and references. Printed pp.17-20 and 23-25 also checked as page images."
+    },
+    {
+      "label": "Jiggens et al. 2018",
+      "doi": "10.1051/swsc/2018010",
+      "local_file": "tmp/external-literature-20261023/sapphire-2018-v1.pdf",
+      "retrieval": {
+        "requested_url": "https://arxiv.org/pdf/1801.05422v1",
+        "resolved_url": "https://arxiv.org/pdf/1801.05422v1",
+        "file": "sapphire-2018-v1.pdf",
+        "bytes": 2308125,
+        "sha256": "c19a3278d95fbb24cd1de4c555b0c9dfac41384d0033680ee3dbdecdf25800b2",
+        "pages": 37
+      },
+      "full_document_received": true,
+      "read_scope": "arXiv v1 1801.05422; targeted outputs in 3.1 and 3.5, introductory context. Journal version not compared line by line."
+    },
+    {
+      "label": "Ameri et al. 2024",
+      "doi": "10.1007/s11207-024-02378-9",
+      "local_file": "tmp/external-literature-20261023/ameri-2024.html",
+      "retrieval": {
+        "requested_url": "https://link.springer.com/article/10.1007/s11207-024-02378-9",
+        "resolved_url": "https://link.springer.com/article/10.1007/s11207-024-02378-9?error=cookies_not_supported&code=f480121e-dfa2-46c3-9a02-37abb3571063",
+        "file": "ameri-2024.html",
+        "bytes": 537176,
+        "sha256": "dfbad9f9b31e934e3bf301766de285c1cef4ee605c4c4869b704a7c6af0d1f35"
+      },
+      "full_document_received": true,
+      "read_scope": "Publisher HTML sections 2-3.1; event selection and definition of rise metric."
+    },
+    {
+      "label": "Aminalragia-Giamini et al. 2018",
+      "doi": "10.1051/swsc/2017040",
+      "local_file": "tmp/external-literature-20261023/vesper-2018.pdf",
+      "retrieval": {
+        "requested_url": "https://pdfs.semanticscholar.org/b6c0/81ff446ea5ae6c4b1449a47bc212adb8cdad.pdf",
+        "resolved_url": "https://pdfs.semanticscholar.org/b6c0/81ff446ea5ae6c4b1449a47bc212adb8cdad.pdf",
+        "file": "vesper-2018.pdf",
+        "bytes": 5335199,
+        "sha256": "6e3f9088e5bc9d3ad70d146f8ea65c234415bc7c556ccda0caa9af809db406b4",
+        "pages": 10
+      },
+      "full_document_received": true,
+      "read_scope": "Substantive sections 1-5, PDF pp.1-10. Open CC BY publisher PDF retrieved from Semantic Scholar mirror after publisher access error."
+    },
+    {
+      "label": "Chen et al. 2019",
+      "doi": "10.1109/DSD.2019.00080",
+      "url": "https://www.researchgate.net/publication/336728093_Design_of_SRAM-Based_Low-Cost_SEU_Monitor_for_Self-Adaptive_Multiprocessing_Systems",
+      "full_document_received": false,
+      "access": "Public author-uploaded text exposed through web tool, author upload dated 2022-09-27. No complete local PDF obtained.",
+      "read_scope": "Targeted IV architecture/counters, V-C costs, VI application; selected conclusion text. Primary text, not review-only evidence.",
+      "unsuccessful_route": "IHP author PDF: TLS EOF / web 404; ResearchGate PDF retrieval: cache miss."
+    }
+  ],
+  "open_citation_routes": [
+    "Hansen reference [7], Walter et al., TNS 61(5),2547-2554,2014: full text not obtained; no substantive conclusions attributed.",
+    "Hansen reference [21], Edmonds JPL-PUBL-09-6,2009: bibliographic route identified, substantive reading not done."
+  ],
+  "limitations": [
+    "This is a bounded targeted search, not an exhaustive novelty determination.",
+    "Zotero Desktop API did not respond. Filename search is not a complete library search.",
+    "No statistical processing of SEPEM/GOES, experiments, accepted-entity registration or repository edits performed.",
+    "Published numerical examples were not replicated. Two printed cost-expression inconsistencies were checked algebraically and kept separate from novelty conclusions."
+  ]
+}
