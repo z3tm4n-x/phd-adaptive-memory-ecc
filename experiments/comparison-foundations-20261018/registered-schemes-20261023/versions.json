@@ -1,0 +1,167 @@
+{
+  "status": "AUTHOR_CALCULATION_NOT_INDEPENDENT_ACCEPTANCE",
+  "base_commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d",
+  "base_tree": "f4040a46d291507c03287cc35de50c660cdba67a",
+  "preregistered_plan_commit": "09fcb98fab0d9896d487683703c644b6008f5d39",
+  "branch": "t196-registered-schemes-20261023",
+  "delivery_pr": 238,
+  "sources": [
+    {
+      "path": "theory/assignments/20261022-priority-methods.md",
+      "git_blob_sha": "a3a4d7098ecab74860e6921c2318bcdebbbd2fb3",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "docs/reviews/ORCHESTRATOR_FOLLOWUP_20261023.md",
+      "git_blob_sha": "32b95927793fcc03d001b07d3f13574e16ca9946",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/policies.py",
+      "git_blob_sha": "2f0f94c39c9200337c267085b6262493e62ae800",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/training.json",
+      "git_blob_sha": "b6182c39d4fc778eec7f50752b7fe393b3ba8bd7",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/METHODS.md",
+      "git_blob_sha": "5c811d14bdcdcbeffd0127431eff58e8900f0dd0",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/stage2/IMPLEMENTATION.md",
+      "git_blob_sha": "dc5da6c6d1d0c3d89f8b07bd37d53a3ec5d2de50",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/common-input.json",
+      "git_blob_sha": "31fe2d05282a283f2fa8da67147a8ad1baac1276",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/comparison.py",
+      "git_blob_sha": "6141f0c20104a3b20deee23c3f944422f8a20a18",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/cost.py",
+      "git_blob_sha": "335343fda81cbcff0f774b78ed5970b8511509c8",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t186-method-comparison/code-strength/INFORMATIONAL.md",
+      "git_blob_sha": "44ddd88b9809d7e9fce8e0e588d608b728f436a7",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/t114-two-stage-err/intervals.py",
+      "git_blob_sha": "fe57d6075e5ed5e807fd8f52e29387ccd4eda036",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "theory/t196-three-variant-foundations-20261022.md",
+      "git_blob_sha": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "theory/t196-hold-price-20261023.md",
+      "git_blob_sha": "970d7c25341af85ce741c93f76bbd82798cd866f",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "theory/t196-krasnikov-hold-20261023.md",
+      "git_blob_sha": "441382ef9212f5b6dae3ede6a8900a0ec6a1fbe6",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    },
+    {
+      "path": "experiments/comparison-foundations-20261018/hold-price-20261023/INPUT_REVIEW.md",
+      "git_blob_sha": "7e1f60f57317714d86aee5071b35371de4fcdcb4",
+      "commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d"
+    }
+  ],
+  "accepted_no_reaudit": [
+    {
+      "pr": 233,
+      "final_sha": "ee6a8aaa356caacb2c905ed0c233332b2e2af8ad",
+      "scope": "finite windows; accepted by orchestrator"
+    },
+    {
+      "pr": 234,
+      "final_sha": "f7270a352fbf21d6d84a1f1888dac4bbee3d4fc2",
+      "scope": "hold-price and registered zero=hold"
+    },
+    {
+      "pr": 235,
+      "final_sha": "1f64c5a2ae949f2027f79cf9e5a80bd3c6fdafed",
+      "scope": "write-retention map and narrow hold-price substitution"
+    }
+  ],
+  "priority_new_inputs": [
+    {
+      "pr": 239,
+      "reviewed_sha": "ca311cc53dc0bf9f53e714fc1c4a99ae3dd4bc98",
+      "files": [
+        {
+          "path": "experiments/mission-rise-rate-20261022/cfe-application/PLAN.md",
+          "git_blob_sha": "8f8781f706d3c0c6cbc4b192953efc0b87eab181"
+        },
+        {
+          "path": "experiments/mission-rise-rate-20261022/cfe-application/profile.json",
+          "git_blob_sha": "f8e4c0d8da7c4e58246f2a259910f1fdd7fdc5d9"
+        }
+      ],
+      "reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/239#issuecomment-6361808763",
+      "scope": "formula applicability to PLAN/profile; not code/results/physical qualification",
+      "numerical_handoff": {
+        "reviewed_sha": "dfd4d66a1b2ea5a166b9f417534c52c241a5e438",
+        "numerical_snapshot": "56c3daba4a294fe3c3cd54436f2238448265ad28",
+        "reply": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/239#issuecomment-6362085833",
+        "files": [
+          {
+            "path": "experiments/mission-rise-rate-20261022/cfe-application/run.py",
+            "git_blob_sha": "8ee93baa06bd87488e69bb11d94502b702baafdd"
+          },
+          {
+            "path": "experiments/mission-rise-rate-20261022/cfe-application/REPORT.md",
+            "git_blob_sha": "21ea03ec6ff5663439fe52e4b183929f5b702b15"
+          },
+          {
+            "path": "experiments/mission-rise-rate-20261022/cfe-application/outputs/result.json",
+            "git_blob_sha": "ac00bbc9384242735f1a5a0a5c390b912d312473"
+          }
+        ],
+        "scope": "formula applicability and exact rational directions; no full code/integration replay or independent acceptance"
+      }
+    },
+    {
+      "pr": 237,
+      "reported_sha": "7c1f6e4454eec91b0321ac990af66e6ee1991994",
+      "handoff": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/206#issuecomment-6361531433",
+      "scope": "reported physical input remains open; no new numerical Q to sign, no rereview of accepted windows"
+    }
+  ],
+  "reproduction": {
+    "runtime": "Python 3 standard library",
+    "intervals": "accepted 48-digit directed Decimal; rational independent bracket",
+    "MC": false,
+    "transport": false,
+    "independent_review": false
+  },
+  "boundaries": [
+    "Only eight named remaining settings under explicit full39/v4 specialization",
+    "No publication-wide family exclusion",
+    "No new full-price winner or constant-class optimum",
+    "No physical qualification",
+    "No accepted results changed"
+  ],
+  "clean_replay": {
+    "tested_commit": "4d24bc543102de26c09a3da7e2aa1d3d6ebd37dc",
+    "python": "3.12.14",
+    "fetched_files": 13,
+    "tests": "run.py --check; check.py",
+    "status": "PASS"
+  }
+}
