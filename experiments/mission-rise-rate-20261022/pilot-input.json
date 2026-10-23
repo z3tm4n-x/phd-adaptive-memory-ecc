@@ -1,0 +1,15 @@
+{
+  "status": "EXPLORATORY_NOT_PHYSICAL",
+  "base_commit": "52fbda1b955a57dd68e5c3fc19caa33020dd5c9b",
+  "common_input": "experiments/t186-method-comparison/code-strength/common-input.json",
+  "rho_per_s": ["0.048", "0.024", "0.012", "0.006", "0.003", "0.001", "0.0001", "0.000001", "0"],
+  "ka": [3, 5, 9, 27],
+  "information_numeric": {"phase_cells": 2, "q_cells": 16, "refinements": 2, "u_multipliers": [1, 2, 4, 16], "decimal_digits": 48},
+  "targets": [5, 10],
+  "admission": "U <= epsilon/2; unchanged conditional v4 target",
+  "physical_Q": null,
+  "class_lower": null,
+  "extra_veto_rate_per_s": null,
+  "numerical_price_slice": "v=0 is a declared conditional slice; retain hard cap and affine veto price",
+  "permitted_changes": ["environment.reference_growth_per_s", "adaptive.information_numeric"]
+}

@@ -1,0 +1,609 @@
+{
+  "continuous_homogeneous_1974_to_snapshot": false,
+  "mission_quantile_estimated": false,
+  "remote": [
+    {
+      "error": "Remote end closed connection without response",
+      "id": "legacy_products",
+      "retrieved_utc": "2026-10-23T05:48:50.268487+00:00",
+      "status": "UNAVAILABLE",
+      "url": "https://www.ncei.noaa.gov/products/goes-1-15/space-weather-instruments",
+      "valid_coverage": null
+    },
+    {
+      "bytes": 7740,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "1974/",
+        "1975/",
+        "1976/",
+        "1977/",
+        "1978/",
+        "1979/",
+        "1980/",
+        "1981/",
+        "1982/",
+        "1983/",
+        "1984/",
+        "1985/",
+        "1986/",
+        "1987/",
+        "1988/",
+        "1989/",
+        "1990/",
+        "1991/",
+        "1992/",
+        "1993/",
+        "1994/",
+        "1995/",
+        "1996/",
+        "2001/",
+        "2002/",
+        "2003/",
+        "2004/",
+        "2005/",
+        "2006/",
+        "2007/",
+        "2008/",
+        "2009/",
+        "2010/",
+        "2011/",
+        "2012/",
+        "2013/",
+        "2014/",
+        "2015/",
+        "2016/",
+        "2017/",
+        "2018/",
+        "2019/",
+        "2020/"
+      ],
+      "final_url": "https://www.ncei.noaa.gov/data/goes-space-environment-monitor/access/full/",
+      "id": "legacy_full",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:48:50.269002+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "731f516a545259409a0876ca78daae5ef5f303f1951cea08375147ba82b6f481",
+      "status": 200,
+      "url": "https://www.ncei.noaa.gov/data/goes-space-environment-monitor/access/full/"
+    },
+    {
+      "bytes": 8075,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "1974/",
+        "1975/",
+        "1976/",
+        "1977/",
+        "1978/",
+        "1979/",
+        "1980/",
+        "1981/",
+        "1982/",
+        "1983/",
+        "1984/",
+        "1985/",
+        "1986/",
+        "1987/",
+        "1988/",
+        "1989/",
+        "1990/",
+        "1991/",
+        "1992/",
+        "1993/",
+        "1994/",
+        "1995/",
+        "1996/",
+        "1997/",
+        "1998/",
+        "1999/",
+        "2000/",
+        "2001/",
+        "2002/",
+        "2003/",
+        "2004/",
+        "2005/",
+        "2006/",
+        "2007/",
+        "2008/",
+        "2009/",
+        "2010/",
+        "2011/",
+        "2012/",
+        "2013/",
+        "2014/",
+        "2015/",
+        "2016/",
+        "2017/",
+        "2018/",
+        "2019/",
+        "2020/"
+      ],
+      "final_url": "https://www.ncei.noaa.gov/data/goes-space-environment-monitor/access/avg/",
+      "id": "legacy_avg",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:48:50.269002+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "69c078af4febddadfbe1b8dbe58b5a0540e11a4bbfbb03a9454e514657ffc4c0",
+      "status": 200,
+      "url": "https://www.ncei.noaa.gov/data/goes-space-environment-monitor/access/avg/"
+    },
+    {
+      "bytes": 1226,
+      "content_type": "text/plain",
+      "final_url": "https://archive.data.noaa.gov/satellite-spaceweather/GOES1-15/docs/goes_operational_data/SMS-1_GOES-7_Full_Resolution_Data_Readme.txt",
+      "id": "legacy_fits_readme",
+      "last_modified": "Wed, 08 Jul 2026 22:30:38 GMT",
+      "retrieved_utc": "2026-10-23T05:48:50.269002+00:00",
+      "sha256": "7db01f781ea4ba5329b9e4dad3d5b03649b5eb39fafc08ed9531c7c80d5b7cb4",
+      "status": 200,
+      "url": "https://archive.data.noaa.gov/satellite-spaceweather/GOES1-15/docs/goes_operational_data/SMS-1_GOES-7_Full_Resolution_Data_Readme.txt"
+    },
+    {
+      "bytes": 12324,
+      "content_type": "text/plain",
+      "final_url": "https://archive.data.noaa.gov/satellite-spaceweather/GOES1-15/docs/goes_operational_data/SMS-1_GOES_12_Averaged_Data_Readme.txt",
+      "id": "legacy_avg_readme",
+      "last_modified": "Wed, 08 Jul 2026 22:30:38 GMT",
+      "retrieved_utc": "2026-10-23T05:48:51.002519+00:00",
+      "sha256": "dedb4aaf88148e8e4dbc4401b35164fb71eb69df10f853fec5b41038263e1727",
+      "status": 200,
+      "url": "https://archive.data.noaa.gov/satellite-spaceweather/GOES1-15/docs/goes_operational_data/SMS-1_GOES_12_Averaged_Data_Readme.txt"
+    },
+    {
+      "bytes": 71974,
+      "content_type": "text/html; charset=UTF-8",
+      "entries": [],
+      "final_url": "https://www.ncei.noaa.gov/products/goes-r-space-environment-in-situ",
+      "id": "seiss_products",
+      "last_modified": "Thu, 22 Oct 2026 17:21:05 GMT",
+      "retrieved_utc": "2026-10-23T05:48:52.451373+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "b15c57f379a55b644638cc3745d8258c8e74d747cf906afdaa2b29dc6a505fd5",
+      "status": 200,
+      "url": "https://www.ncei.noaa.gov/products/goes-r-space-environment-in-situ"
+    },
+    {
+      "bytes": 128331,
+      "content_type": "application/pdf",
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/docs/GOES-19_SEISS_SGPS_L1b_Provisional_Maturity_ReadMe.pdf",
+      "id": "g19_readme",
+      "last_modified": "Wed, 14 May 2025 22:48:27 GMT",
+      "retrieved_utc": "2026-10-23T05:48:53.694104+00:00",
+      "sha256": "5c5e4b503e5a0eb909935f1ec669fe79bf023e857dd1036863679af9ad392b72",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/docs/GOES-19_SEISS_SGPS_L1b_Provisional_Maturity_ReadMe.pdf"
+    },
+    {
+      "bytes": 3317,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2020/",
+        "2021/",
+        "2022/",
+        "2023/",
+        "2024/",
+        "2025/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l1b/seis-l1b-sgps/",
+      "id": "g16_l1b",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:05.216588+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "b96ed92674ab1940abe7bcf124394812eec14606ca247a02688ef45c9526a9b8",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l1b/seis-l1b-sgps/"
+    },
+    {
+      "bytes": 3093,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2020/",
+        "2021/",
+        "2022/",
+        "2023/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes17/l1b/seis-l1b-sgps/",
+      "id": "g17_l1b",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:05.796205+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "9fc79757e0a16a7d549e5ee6c98fbd44fa6d7c9355129b51aeeef13b80e800e8",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes17/l1b/seis-l1b-sgps/"
+    },
+    {
+      "bytes": 3205,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2022/",
+        "2023/",
+        "2024/",
+        "2025/",
+        "2026/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes18/l1b/seis-l1b-sgps/",
+      "id": "g18_l1b",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:12.042099+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "03b76464e8ac087ce01eb8214e591a49dadef72443fdb89ec6e9a12e71b00c3b",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes18/l1b/seis-l1b-sgps/"
+    },
+    {
+      "bytes": 2981,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2024/",
+        "2025/",
+        "2026/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/seis-l1b-sgps/",
+      "id": "g19_l1b",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:12.643818+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "1ed6d300da00098b7b4cc95e0196cb965145d3d2b6a414f95beef575041b2cf0",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/seis-l1b-sgps/"
+    },
+    {
+      "bytes": 3325,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2020/",
+        "2021/",
+        "2022/",
+        "2023/",
+        "2024/",
+        "2025/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/",
+      "id": "g16_1m",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:12.664261+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "50f137222727f1bd6a1f3f31fd61ff276f2355c3d68e4cafdbe656b13a7507c8",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes16/l2/data/sgps-l2-avg1m/"
+    },
+    {
+      "bytes": 3101,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2020/",
+        "2021/",
+        "2022/",
+        "2023/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes17/l2/data/sgps-l2-avg1m/",
+      "id": "g17_1m",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:13.264907+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "e91f11adaee083d1422b3f1208341e0861efadeffa7dcbbab23307308fa31212",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes17/l2/data/sgps-l2-avg1m/"
+    },
+    {
+      "bytes": 3213,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2022/",
+        "2023/",
+        "2024/",
+        "2025/",
+        "2026/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes18/l2/data/sgps-l2-avg1m/",
+      "id": "g18_1m",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:13.265476+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "fdb12fd7f276a0b60d0deca07f01bd83094402f629d0ac583d5722cc8913726e",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes18/l2/data/sgps-l2-avg1m/"
+    },
+    {
+      "bytes": 2989,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "2024/",
+        "2025/",
+        "2026/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/",
+      "id": "g19_1m",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:13.867410+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "944981b61b379d0dee38c01bbcf8004993674ed20e70664d7d4e9334610ecb2c",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/"
+    },
+    {
+      "bytes": 3752,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "01/",
+        "02/",
+        "03/",
+        "04/",
+        "05/",
+        "06/",
+        "07/",
+        "08/",
+        "09/",
+        "10/"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/2026/",
+      "id": "g19_1m_2026",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:13.868656+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "f3ba6f80920172247b9eae63e54bf47df5022ef57ffc256851368ccf6d180395",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/2026/"
+    },
+    {
+      "bytes": 6728,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "sci_sgps-l2-avg1m_g19_d20261001_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261002_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261003_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261004_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261005_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261006_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261007_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261008_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261009_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261010_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261011_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261012_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261013_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261014_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261015_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261016_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261017_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261018_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261019_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261020_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261021_v3-0-3.nc",
+        "sci_sgps-l2-avg1m_g19_d20261022_v3-0-3.nc"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/2026/10/",
+      "id": "g19_1m_202610",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:14.463249+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "c697f27f96eed7a799c1333117cf7d3806339b7b0ca3758e0fdea0a869054e71",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l2/data/sgps-l2-avg1m/2026/10/"
+    },
+    {
+      "bytes": 6720,
+      "content_type": "text/html;charset=ISO-8859-1",
+      "entries": [
+        "ops_seis-l1b-sgps_g19_d20261001_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261002_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261003_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261004_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261005_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261006_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261007_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261008_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261009_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261010_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261011_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261012_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261013_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261014_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261015_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261016_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261017_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261018_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261019_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261020_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261021_v0-0-0.nc",
+        "ops_seis-l1b-sgps_g19_d20261022_v0-0-0.nc"
+      ],
+      "final_url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/seis-l1b-sgps/2026/10/",
+      "id": "g19_l1b_202610",
+      "last_modified": null,
+      "retrieved_utc": "2026-10-23T05:49:14.463770+00:00",
+      "scope": "directory entries only; not valid time coverage",
+      "sha256": "31cf2562facc59b0b1719ddceceae7ed95a4a6ff5b2720f849e0fe9e22c10101",
+      "status": 200,
+      "url": "https://data.ngdc.noaa.gov/platforms/solar-space-observing-satellites/goes/goes19/l1b/seis-l1b-sgps/2026/10/"
+    }
+  ],
+  "script_sha256": "b1e96d0c07a3e9de0d207619ec60204acec7fc2c92fc98202a137552be2baf45",
+  "sepem": {
+    "downloaded_now": false,
+    "files": [
+      {
+        "bytes": 9594,
+        "exists": true,
+        "matches_accepted_passport": true,
+        "name": "data_readme_ftp.txt",
+        "sha256": "9c8a8b606b69228dad6a80acbd3adfb3a64e0d9be7f5ef930c3a9a67ab0e3e7b"
+      },
+      {
+        "bytes": 43868225,
+        "exists": true,
+        "first_timestamp": "1977-04-01 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "1983-05-19 23:55:00",
+        "name": "SEPEM_H_GOES01-02.txt"
+      },
+      {
+        "bytes": 27515588,
+        "exists": true,
+        "first_timestamp": "1983-05-20 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "1987-03-24 23:55:00",
+        "name": "SEPEM_H_GOES05.txt"
+      },
+      {
+        "bytes": 67525700,
+        "exists": true,
+        "first_timestamp": "1987-03-06 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "1996-08-12 23:55:00",
+        "name": "SEPEM_H_GOES07.txt"
+      },
+      {
+        "bytes": 60495044,
+        "exists": true,
+        "first_timestamp": "1995-01-01 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "2003-06-16 23:55:00",
+        "name": "SEPEM_H_GOES08.txt"
+      },
+      {
+        "bytes": 63760880,
+        "exists": true,
+        "first_timestamp": "2000-07-01 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "2011-02-27 23:55:00",
+        "name": "SEPEM_H_GOES11.txt"
+      },
+      {
+        "bytes": 40558532,
+        "exists": true,
+        "first_timestamp": "2010-05-01 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "2015-12-31 23:55:00",
+        "name": "SEPEM_H_GOES13.txt"
+      },
+      {
+        "bytes": 471505642,
+        "exists": true,
+        "first_timestamp": "1974-07-01 00:00:00",
+        "header": "Date      Time     F1      F2      F3      F4      F5      F6      F7      F8      F9      F10     F11",
+        "last_timestamp": "2015-12-31 23:55:00",
+        "matches_accepted_passport": true,
+        "name": "SEPEM_H_reference.txt",
+        "sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50"
+      },
+      {
+        "bytes": 23833796,
+        "exists": true,
+        "first_timestamp": "1974-07-01 00:00:00",
+        "header": "Date      Time     P2      P3      P4      P5      P6      P7",
+        "last_timestamp": "1978-03-31 23:55:00",
+        "name": "SEPEM_H_SMS01-02.txt"
+      },
+      {
+        "bytes": 43868228,
+        "exists": true,
+        "first_timestamp": "1977-04-01 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "1983-05-19 23:55:00",
+        "name": "SEPEM_He_GOES01-02.txt"
+      },
+      {
+        "bytes": 27515588,
+        "exists": true,
+        "first_timestamp": "1983-05-20 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "1987-03-24 23:55:00",
+        "name": "SEPEM_He_GOES05.txt"
+      },
+      {
+        "bytes": 67525224,
+        "exists": true,
+        "first_timestamp": "1987-03-06 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "1996-08-12 23:55:00",
+        "name": "SEPEM_He_GOES07.txt"
+      },
+      {
+        "bytes": 60495044,
+        "exists": true,
+        "first_timestamp": "1995-01-01 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "2003-06-16 23:55:00",
+        "name": "SEPEM_He_GOES08.txt"
+      },
+      {
+        "bytes": 64960196,
+        "exists": true,
+        "first_timestamp": "2000-07-01 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "2011-02-27 23:55:00",
+        "name": "SEPEM_He_GOES11.txt"
+      },
+      {
+        "bytes": 40558532,
+        "exists": true,
+        "first_timestamp": "2010-05-01 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "2015-12-31 23:55:00",
+        "name": "SEPEM_He_GOES13.txt"
+      },
+      {
+        "bytes": 366726609,
+        "exists": true,
+        "first_timestamp": "1974-07-01 00:00:00",
+        "header": "Date      Time     F1      F2      F3      F4      F5      F6      F7      F8",
+        "last_timestamp": "2015-12-31 23:55:00",
+        "matches_accepted_passport": true,
+        "name": "SEPEM_He_reference.txt",
+        "sha256": "232d068905d6fcc3dd79bd9b0ad69181f1d49496a523c6042a5455599d4a0f22"
+      },
+      {
+        "bytes": 26830148,
+        "exists": true,
+        "first_timestamp": "1974-07-01 00:00:00",
+        "header": "Date      Time     A1      A2      A3      A4      A5      A6",
+        "last_timestamp": "1978-03-31 23:55:00",
+        "name": "SEPEM_He_SMS01-02.txt"
+      }
+    ],
+    "observed_gap_mask": null,
+    "raw_location_parameter": "--sepem",
+    "scope": "local presence, file edges and accepted reference hashes; no new event calculation"
+  },
+  "snapshot_started_utc": "2026-10-23T05:48:50.267967+00:00",
+  "t113_selected_windows": {
+    "event_windows": 47,
+    "files": 1097,
+    "groups": {
+      "g16_300s": {
+        "files": 220,
+        "first_date": "20170901",
+        "last_date": "20250403"
+      },
+      "g16_60s": {
+        "files": 219,
+        "first_date": "20210526",
+        "last_date": "20250403"
+      },
+      "g18_300s": {
+        "files": 220,
+        "first_date": "20230222",
+        "last_date": "20260801"
+      },
+      "g18_60s": {
+        "files": 220,
+        "first_date": "20230222",
+        "last_date": "20260801"
+      },
+      "g19_300s": {
+        "files": 109,
+        "first_date": "20240906",
+        "last_date": "20260801"
+      },
+      "g19_60s": {
+        "files": 109,
+        "first_date": "20240906",
+        "last_date": "20260801"
+      }
+    },
+    "manifest_sha256": "c11b6ec26610c26f16b79d578ae96e0e6a98d6cf1fcd56196f670ed5fc381ce6",
+    "scope": "accepted selected-window ledger, not newly fetched full archive; local raw availability not inferred"
+  }
+}

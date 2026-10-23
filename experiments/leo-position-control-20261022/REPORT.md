@@ -102,16 +102,22 @@
 3/5/6 Ecoffet, 5/6/9 Duzellier просмотрены также как изображения. Пакет проверок
 сохранён в [verification.json](verification.json).
 
-Из корня checkout, Python 3.10+, только стандартная библиотека:
+Из корня checkout, Python 3.10+, только стандартная библиотека.
+`<source-base>` — распакованный снимок main
+`52fbda1b955a57dd68e5c3fc19caa33020dd5c9b` с шестью файлами из
+`sources.json/repo_files`; это основание поставки, а не текущий рабочий план.
 
 ```text
-python -B experiments/leo-position-control-20261022/verify.py --pdf-dir <cache> --fetch-pdfs
+python -B experiments/leo-position-control-20261022/verify.py --source-root <source-base> --pdf-dir <cache> --fetch-pdfs
 ```
 
 Без `--fetch-pdfs` проверяются уже имеющиеся PDF. Имена/URL/хэши —
 [sources.json](sources.json). В git PDF не включены. Веб-страницы прочитаны
 23.10; они указаны как маршруты к данным, не как побайтово замороженный архив.
-Повтор в чистом `git archive HEAD` должен дать тот же `verification.json`.
+Повтор из чистого архива текущей поставки с этим отдельным исходным снимком
+должен дать тот же `verification.json`. После приёмки оркестратор уточнил
+формулировку E в RULE и обновил рабочие задания/план; исходные source pins
+не переписаны. `verification.json` пересоздан для текущего REPORT/RULE.
 
 На [адресные вопросы][theory] получен [ответ #196][reply] / [PR232@58a5242][gate]:
 достаточное основание — прежний moment/E-верх на фиксированных при каждом z
