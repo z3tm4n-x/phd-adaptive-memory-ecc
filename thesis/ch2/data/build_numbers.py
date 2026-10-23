@@ -31,6 +31,8 @@ from fractions import Fraction
 from pathlib import Path
 
 PIN = "140f8d36751f117cfc96969d7732f85456476a5d"  # база принятых входов пакета плана
+T187PIN = "918ee6bc58ea3e596161d39af670f09873c67565"  # слияние принятого T187/PR192
+PINS: dict[str, str] = {}  # источники, отсутствующие в PIN, читаются из своей закреплённой версии
 ROOT = Path(__file__).resolve().parents[3]
 OUT = Path(__file__).resolve().parent
 FAIL: list[str] = []
@@ -39,18 +41,20 @@ _CACHE: dict[str, str] = {}
 
 def show(rel: str) -> str:
     if rel not in _CACHE:
-        r = subprocess.run(["git", "-C", str(ROOT), "show", f"{PIN}:{rel}"], capture_output=True)
+        pin = PINS.get(rel, PIN)
+        r = subprocess.run(["git", "-C", str(ROOT), "show", f"{pin}:{rel}"], capture_output=True)
         if r.returncode != 0:
-            raise FileNotFoundError(f"{rel} отсутствует в {PIN[:12]}")
+            raise FileNotFoundError(f"{rel} отсутствует в {pin[:12]}")
         _CACHE[rel] = r.stdout.decode("utf-8")
     return _CACHE[rel]
 
 
 def blob(rel: str) -> str:
-    r = subprocess.run(["git", "-C", str(ROOT), "rev-parse", f"{PIN}:{rel}"], capture_output=True, text=True)
+    pin = PINS.get(rel, PIN)
+    r = subprocess.run(["git", "-C", str(ROOT), "rev-parse", f"{pin}:{rel}"], capture_output=True, text=True)
     sha = r.stdout.strip()
     if r.returncode != 0 or re.fullmatch(r"[0-9a-f]{40}", sha) is None:
-        raise FileNotFoundError(f"Объект источника {rel} отсутствует в {PIN[:12]}")
+        raise FileNotFoundError(f"Объект источника {rel} отсутствует в {pin[:12]}")
     return sha
 
 
@@ -285,6 +289,27 @@ add("N2.3-mc1", "2.3", "RES-001: заранее заданный предел а
 add("N2.3-mc2", "2.3", "RES-001: пройдено заранее объявленных проверок", "проверок", "ДАННЫЕ ПРОВЕРКИ", "none", 1,
     "RES-001", ARES1, J=(EXP1, "analytical_statistical_check/checks_passed"))
 
+# 2.2 (прежняя нумерация 2.3) — дополнения для раздела «Организация памяти и корректирующего кода»
+add("N2.3-a6", "2.3", "Отображение адресов: записей неоднозначного статуса (AMBIGUOUS), исключённых по признакам записи до подбора; служебный смысл не установлен",
+    "записей", "ДАННЫЕ", "none", 2, ac, AADDR, R=(ADDR, r"\| AMBIGUOUS \| (\d+) \|", 1))
+add("N2.3-a7", "2.3", "Отображение адресов: строго служебных записей (STRICT_SERVICE), исключённых по признакам записи до подбора",
+    "записей", "ДАННЫЕ", "none", 2, ac, AADDR, R=(ADDR, r"\| STRICT_SERVICE \| (\d+) \|", 1))
+T187 = "theory/t187-code-strength.md"
+PINS[T187] = T187PIN
+A187 = "MAP: T187/PR192 принят — фиксированные U/E-границы t2, конструкция кодов, пример цены; нового адаптивного покрытия нет"
+add("N2.3-c39d", "2.3", "Кодовое расстояние внешнего кода (39, 32)", "—", "ДАННЫЕ (свойство кода)", "none", 1,
+    "внешний двоичный линейный код (39, 32)", A187, M=([T187], [r"(39,32,\(d_{\min}=4\))"]), val="4")
+add("N2.3-c44d", "2.3", "Нижняя граница кодового расстояния внешнего кода (44, 32)", "—", "НИЗ (свойство кода)", "none", 1,
+    "внешний двоичный линейный код (44, 32)", A187, M=([T187], [r"(44,32,\(d_{\min}\ge5\))"]), val="5")
+add("N2.3-c39r", "2.3", "Число проверочных разрядов кода (39, 32)", "разрядов", "ДАННЫЕ (ранг проверочной матрицы)", "none", 1,
+    "внешний код (39, 32)", A187, R=(T187, r"Ранги (\d+)/(\d+)", 1))
+add("N2.3-c44r", "2.3", "Число проверочных разрядов кода (44, 32)", "разрядов", "ДАННЫЕ (ранг проверочной матрицы)", "none", 2,
+    "внешний код (44, 32)", A187, R=(T187, r"Ранги (\d+)/(\d+)", 2))
+add("N2.3-p1", "2.3", "RES-001: интенсивность частиц λ", "1/ед. модельного времени", "ЗАДАНО (параметр примера)", "none", 1,
+    "четыре слова, мгновенная синхронная очистка", ARES1, M=([RES1], ["`lambda=0.5`"]), val="0.5")
+add("N2.3-p2", "2.3", "RES-001: срок T", "ед. модельного времени", "ЗАДАНО (параметр примера)", "none", 1,
+    "четыре слова, мгновенная синхронная очистка", ARES1, M=([RES1], ["`T=4`"]), val="4")
+
 # 2.5 — последовательный контроль (сквозной пример: запись по сигналу исправления)
 add("N2.5-R", "2.5", "Чтение слова без сигнала исправления", "нс", "ВЕРХ (проектный, условный)", "up", 4, CY, A110,
     M=([T110], ["R^+=92,500920"]), val="92.500920")
@@ -486,7 +511,7 @@ def main() -> int:
             src = r["rel"]
             sha = blob(src) if src and "N2." not in src and src != "вычислено" else ""
             w.writerow([r["id"], SECMAP.get(r["sec"], r["sec"]), r["name"], "" if v is None else str(v), text, r["rnd"], r["unit"],
-                        r["typ"], r["cond"], src, r["loc"], sha, PIN, r["area"], r["status"]])
+                        r["typ"], r["cond"], src, r["loc"], sha, PINS.get(src, PIN), r["area"], r["status"]])
     print(f"чисел: {len(rows)}; ошибок: {len(FAIL)}; закреплено на {PIN[:12]}")
     for f in FAIL:
         print("  FAIL", f)
