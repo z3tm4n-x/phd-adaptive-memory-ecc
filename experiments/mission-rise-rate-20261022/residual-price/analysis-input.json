@@ -1,0 +1,17 @@
+{
+  "target_gain": "5",
+  "diagnostic_period_at_least_s": "14400",
+  "short_hold_s": "14402",
+  "long_hold_s": "28804",
+  "source_pair_window_s": "14402",
+  "timer_quantum_ticks": 4000,
+  "cold_start_extra_fast_s": "0",
+  "cold_start_status": "optimistic removal of long initial FAST only; no Q certificate or controller implementation",
+  "p_bad_slices": ["0", "1/1000"],
+  "p_bad_status": "0 is a diagnostic expression slice; epsilon requires a future joint certificate",
+  "veto_slice_per_s": "0",
+  "veto_status": "conditional slice only; full parameter and hard cap retained",
+  "active_words_m": 1,
+  "changed_hypothetical_calendar_only": true,
+  "physical_input_or_application_changed": false
+}
