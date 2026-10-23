@@ -1,0 +1,95 @@
+{
+  "schema": "T206-physical-input-status-1",
+  "date": "2026-10-23",
+  "status": "NUMERIC_PHYSICAL_INPUT_NOT_OBTAINED",
+  "base_commit": "3e7a04e74bad4ab51a4e25e21a031ac63054f94d",
+  "plan_commit": "4a83ac36f00c1837c3b137e7ce779c802ee29b53",
+  "accepted_references": {
+    "candidate": "experiments/leo-position-control-20261022/candidate.json",
+    "window_and_work_result": "experiments/leo-position-control-20261022/window-contract-20261023/results.json",
+    "window_acceptance": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/233#pullrequestreview-5625699135",
+    "retested_in_this_delivery": false
+  },
+  "unchanged_requirements": {
+    "useful_bytes": 524288,
+    "words": 131072,
+    "data_bits": 32,
+    "codes": [[39, 32, 1], [44, 32, 2]],
+    "duration_s": 315576000,
+    "epsilon": "1/1000",
+    "shield_g_cm2_Al": 4,
+    "shield_geometry": "research spherical candidate, not ICARE flight shielding",
+    "application": "accepted candidate inherited v4 research profile; no new cadence",
+    "main_candidate": "SAC-C-like / KM684000, conditional",
+    "only_reserve": "PROBA-1/SREM"
+  },
+  "proba_request": {
+    "date_utc": "2002-09-26",
+    "preferred_level": "L1",
+    "form_url": "https://srem.psi.ch/cgibin/srem_data_sec.pl",
+    "form_selection": {"mission": "PROBA1", "version": "L1", "from": "20020926", "to": "20020926"},
+    "selection_submitted_successfully": false,
+    "coverage_source": "https://srem.psi.ch/static/proba1_datacoverage.shtml",
+    "catalogue_rows": [
+      {"day": "2002-09-26", "observation_minutes": 1440, "V0_filename": "SREMPROBA1_PACC_20020926.cdf"},
+      {"day": "2002-09-27", "observation_minutes": 1399, "V0_filename": "SREMPROBA1_PACC_20020927.cdf"},
+      {"day": "2002-09-28", "observation_minutes": 1, "V0_filename": "SREMPROBA1_PACC_20020928.cdf"}
+    ],
+    "catalogue_scope": "source webpage annotation; neither L1 availability nor actual quality/exposure verified",
+    "L1_filename": null,
+    "download_url": null,
+    "size_bytes": null,
+    "sha256": null,
+    "file_received": false,
+    "user_reply_2026_10_23": "No saved PROBA-1 L1 file or Petit PDF available; reply in current task",
+    "actual_file_time_position_channels_units_quality_checked": false,
+    "format_source": "https://srem.psi.ch/static/proba1_dataformat.shtml",
+    "documented_V0_schema_only": {
+      "EPOCH": "ms since 0 AD; actual CDF type/time convention requires file inspection",
+      "COUNTRATE": "16 counters, counts/sec",
+      "ORBIT": "x/y/z ECI, km",
+      "MAGFIELD": "x/y/z, nT",
+      "LSHELL": "McIlwain L, RE"
+    },
+    "documented_L1_fields_to_check": ["ephemeris", "FPDO", "FPDO_Energy", "FPDO_Quality", "FEDO", "FEDO_Energy", "FEDO_Quality"],
+    "actual_flux_units_and_angular_normalization": null,
+    "actual_CDF_variable_names_types_fill_cadence": null,
+    "L2_if_L1_absent": "same day only, explicit cross-calibration provenance; not an independent SEPEM verification"
+  },
+  "physical_links": {
+    "SAC_C_numeric_spectra_ephemeris_exposure_quality": null,
+    "KM_exact_part_datecode_voltage_test_conditions": null,
+    "KM_numeric_spectral_angular_event_response": null,
+    "joint_event_marks_or_proven_full_word_bounds": null,
+    "existing_4g_cm2_transmitted_spectrum_or_effective_kernel": null,
+    "joint_ten_year_class_and_outside_class_contribution": null,
+    "conditional_parent_law_and_word_moments": null
+  },
+  "new_source_lead": {
+    "author": "Sophie Petit",
+    "year_in_repository_path": 2006,
+    "url": "https://depozit.isae.fr/theses/2006/2006_Petit_Sophie.pdf",
+    "locator_from_search_preview": "Tableau 5, printed page 44, SAC-C components",
+    "status": "SEARCH_LEAD_FULL_PRIMARY_PDF_NOT_OBTAINED",
+    "suffix_datecode_values_adopted": false,
+    "sha256": null
+  },
+  "new_access_observations": [
+    {"target": "PSI form", "channel": "web reader", "outcome": "form and linked format/coverage text readable; no numeric download"},
+    {"target": "PSI form", "channel": "in-app browser", "outcome": "net::ERR_CONNECTION_CLOSED"},
+    {"target": "PSI form", "channel": "curl default Schannel HTTPS, certificate verification enabled", "outcome": "curl 35 SSL/TLS handshake failed", "http_code": "000", "received_bytes": 0},
+    {"target": "ISAE Petit PDF", "channel": "web reader", "outcome": "502 Bad Gateway"},
+    {"target": "ISAE Petit PDF", "channel": "urllib default verified HTTPS", "outcome": "SSL UNEXPECTED_EOF_WHILE_READING"},
+    {"target": "https://essr.esa.int/project/odi-open-data-interface-server/link/78", "channel": "urllib default verified HTTPS", "outcome": "HTML returned, not a dataset archive or numeric SREM file", "http_code": 200, "received_bytes": 31204}
+  ],
+  "decision": {
+    "physical_Q_evaluation_performed": false,
+    "OFF44_sufficiency": "UNKNOWN",
+    "position_adaptation_sufficiency_or_gain": "UNKNOWN",
+    "unknown_components_set_to_zero": false,
+    "source_requests_sent_to_holders": false,
+    "authentication_or_TLS_bypassed": false,
+    "required_next_input": "one original PROBA-1 L1 file or a compatible SAC-C numeric package; separate same-device response/word marks remain required",
+    "recommendation": "obtain the specified file through an existing working session; keep both physical candidates conditional; use OFF44 and application price first only after response/class is established"
+  }
+}
