@@ -1,0 +1,26 @@
+{
+  "status": "EXPLORATORY_WRITE_RETENTION_NOT_PHYSICAL",
+  "base_commit": "cdc30ac055740ee66ebee545622afd1388ba8c1e",
+  "common_input": "experiments/t186-method-comparison/code-strength/common-input.json",
+  "retention_targets_s": ["baseline", "900", "1200", "1800", "3600", "21600", "86400", "604800", "mission"],
+  "rounding": "floor R to integer read epochs; R >= W*epoch",
+  "write_schedule": "bank starts at m*R; write word(5*j mod W) at m*R+600000+j*1000020 ns, 0<=j<W",
+  "read_schedule": "unchanged strict_uniform v4",
+  "thresholds": ["epsilon/2", "epsilon"],
+  "targets": [5,10],
+  "preferred_fixed_target": "epsilon/2",
+  "admissible_competitor_target": "epsilon",
+  "conditional_ERR_if_core_ceiling_ge5": {"ka": [27,57,117], "rho_per_s": ["0.048","0.006","0"], "holds_s": [90,180]},
+  "hold_examples": {
+    "single": [[0,"FIRST"]],
+    "separated": [[0,"FIRST"],[400,"FIRST"]],
+    "pair": [[0,"FIRST"],[10,"PAIR"]],
+    "cluster": [[0,"FIRST"],[1,"PAIR"],[2,"PAIR"],[3,"PAIR"],[4,"PAIR"],[5,"PAIR"],[6,"PAIR"],[7,"PAIR"],[8,"PAIR"],[9,"PAIR"]]
+  },
+  "profile_candidate": "single 0.5 MiB bank of flight calibration/configuration parameters, proposed daily maintenance",
+  "profile_acceptance": null,
+  "physical_Q": null,
+  "fixed_class_lower": null,
+  "extra_veto_rate_per_s": null,
+  "controller_CPU_energy_costs": null
+}

@@ -1,0 +1,34 @@
+{
+  "status": "AUTHOR_THEORIST_APPLICABILITY_AGREED_NOT_INDEPENDENT_ACCEPTANCE",
+  "theorist_commit": "f7270a352fbf21d6d84a1f1888dac4bbee3d4fc2",
+  "theorist_reply_url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/235#issuecomment-6360109033",
+  "reviewed_input_commit": "ea5e0825c52def5874ce3c55b290f86da178df33",
+  "numerical_code_or_results_reviewed": false,
+  "sources": [
+    {
+      "path": "theory/t196-hold-price-20261023.md",
+      "git_blob_sha": "970d7c25341af85ce741c93f76bbd82798cd866f",
+      "sha256": "256a40a724c7312870543cb404dee56001b22778c789903008ff4088b13b83de",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/f7270a352fbf21d6d84a1f1888dac4bbee3d4fc2/theory/t196-hold-price-20261023.md"
+    },
+    {
+      "path": "experiments/comparison-foundations-20261018/hold-price-20261023/INPUT_REVIEW.md",
+      "git_blob_sha": "7e1f60f57317714d86aee5071b35371de4fcdcb4",
+      "sha256": "e2605dae16cbeab6efa806c97cd0ce81f14070389e01760b80861cb961c0884d",
+      "url": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/f7270a352fbf21d6d84a1f1888dac4bbee3d4fc2/experiments/comparison-foundations-20261018/hold-price-20261023/INPUT_REVIEW.md"
+    }
+  ],
+  "preregistered_followup": {
+    "accepted_row_k": 27,
+    "accepted_rho_per_s": "0.048",
+    "new_Q_integrations": 0,
+    "equations": "T196 hold-price (1)-(4), minimum with old bound and hard cap",
+    "retain_old_repair_source_cut_timer_controller_counts": true,
+    "upper_times": "tau=calendar.tau+fresh; w_plus=w_upper+fresh; h_plus=h_upper+fresh; p=source_PAIR.upper+2J",
+    "m_active_words": 1,
+    "expiry_condition": "expiry delay <= existing fresh=10000 ns; conditional model premise, physical verification UNKNOWN",
+    "uniform_word_marks": true,
+    "new_scientific_input": false,
+    "verify": "exact old bT+Fs=Fparents; new count <= old and hard; full vector only scrub/read/decode rates change; address permutation and terminal bank tests separate"
+  }
+}
