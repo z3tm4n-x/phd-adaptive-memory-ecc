@@ -1,0 +1,97 @@
+{
+  "schema": "T206-input-evidence-1",
+  "checked_date": "2026-10-23",
+  "base_commit": "e2dc01c6d8560ccf6106951b5e1dde70ebb2c8f1",
+  "plan_commit": "0ab788c89ac935089ea2dce4861121d0c35b9d4e",
+  "status": {
+    "measurement_file_received": false,
+    "numeric_compatible_word_response_received": false,
+    "word_bound": "CONDITIONAL_COUNTING_BOUND_PENDING_REVIEW_AND_NUMERIC_INPUT",
+    "Q_computed": false,
+    "physical_point_confirmed": false
+  },
+  "requested_measurement": {
+    "mission": "PROBA-1",
+    "instrument": "SREM",
+    "level": "L1",
+    "requested_start_utc": "2002-09-26T00:00:00Z",
+    "requested_end_utc_exclusive": "2002-09-27T00:00:00Z",
+    "filename_inferred_from_2017_processing_pattern": "SREMPROBA1_PACC_20020926_ESA_L1.cdf",
+    "actual_filename_verified": false,
+    "actual_units_coordinates_time_quality_verified": false,
+    "documented_variables_pdf8": ["EPOCH", "Position", "B_Calc", "L", "FPDO", "FEDO", "FPDO_Energy", "FEDO_Energy", "FPDO_Quality", "FEDO_Quality"],
+    "numeric_rows": null
+  },
+  "access_observation": {
+    "provider_page": "https://swe.ssa.esa.int/pb-srem-federated",
+    "iframe_url_observed_on_provider_page": "https://srem-buehler-paschen-at.content.swe.s2p.esa.int/",
+    "verified_https_get_status": 401,
+    "tls_verification_disabled": false,
+    "user_has_esa_access": false,
+    "user_answer_date": "2026-10-23",
+    "next_available_step": "normal ESA SWE registration and login, then test the specific export",
+    "registration_page": "https://swe.ssa.esa.int/registration",
+    "archive_after_login_verified": false,
+    "provider_contact_started": false,
+    "account_created": false
+  },
+  "external_files": [
+    {
+      "file": "sremdc_final_report.pdf",
+      "url": "https://pds-smallbodies.astro.umd.edu/holdings/ro-x-srem-5-ast1-v1.0/document/sremdc_final_report_v1.0.pdf",
+      "bytes": 6446381,
+      "sha256": "835ab8ce60e17d78c4c3d50c43086224d16e0b94f6309bef7173d74980e6ab4a",
+      "kind": "PRIMARY_INSTRUMENT_DOCUMENT_NOT_MEASUREMENTS",
+      "total_pdf_pages": 80,
+      "pages_visually_checked": [7, 8, 78, 79]
+    },
+    {
+      "file": "zebrev2017_partition.pdf",
+      "url": "https://arxiv.org/pdf/1704.07271",
+      "version": "v2; identical SHA256 to accepted PAPER-005 official comparator",
+      "bytes": 332044,
+      "sha256": "03fc5bc397c68bfb613174f2fd7b5123a27cca0831530000ba3870206f7782ac",
+      "kind": "EXISTING_ACCEPTED_PAPER_NOT_NEW_PHYSICAL_RESPONSE",
+      "total_pdf_pages": 5,
+      "pages_visually_checked": [3, 4]
+    },
+    {
+      "file": "cdaweb-catalog.json",
+      "url": "https://cdaweb.gsfc.nasa.gov/hapi/catalog",
+      "bytes": 108155,
+      "sha256": "e8b0407b059461392fbdab6a02ab5fd91356991231524dd53a447d94a80af2fe",
+      "kind": "CATALOG_NOT_MEASUREMENTS",
+      "hapi_status": 1200,
+      "records": 3636,
+      "case_insensitive_substrings_over_each_record": ["proba", "srem", "sac-c", "icare"],
+      "matching_records": 0,
+      "scope": "this catalog snapshot only; not a proof of global absence"
+    }
+  ],
+  "unchanged_repo_inputs": [
+    {
+      "path": "experiments/leo-position-control-20261022/candidate.json",
+      "sha256": "59a6046b9a7536df132f1501f33acbf7bf0e989f35499c233f2c59e144c817e1"
+    },
+    {
+      "path": "experiments/leo-position-control-20261022/physical-input-20261023/CHAIN.md",
+      "sha256": "8b7e4f0de63fdcae6cd96fb0f342ae8816ca77fa7e8756dd7df70a8d22d646d3"
+    },
+    {
+      "path": "docs/paper_cards/PAPER-005-zebrev-2017-arxiv-v2.md",
+      "sha256": "b63be5c8d441826c03d253ce16078f763a4cf5176445344e22caf5f1767e6c64"
+    }
+  ],
+  "numeric_response_gap": {
+    "quantity": "U_B(s,E,Omega): justified upper count-weighted cross section for all upset bits in the two installed chips, cm^2",
+    "part_suffix_revision_datecode": null,
+    "numeric_table": null,
+    "coverage_uncertainty_basis": null,
+    "matching_existing_shield_spectrum_or_effective_response": null,
+    "srem_angular_reconstruction_upper": null,
+    "separate_non_bit_direct_failure_bound": null,
+    "next_primary_source": "https://doi.org/10.1109/TNS.2010.2051682",
+    "next_primary_source_full_text_obtained": false,
+    "next_primary_source_sufficiency_verified": false
+  }
+}
