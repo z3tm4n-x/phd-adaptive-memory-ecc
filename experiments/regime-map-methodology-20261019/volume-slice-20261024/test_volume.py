@@ -94,6 +94,7 @@ class VolumeTests(unittest.TestCase):
             self.assertTrue(selected['price']['after_A_paid'])
             self.assertTrue(selected['price']['tail_paid'])
             self.assertIsNone(row['comparison']['fixed_extra_control_upper'])
+            self.assertEqual(row['price_gate']['activated'],row['kib'] in (64,128))
         self.assertIsNone(result['interpolated_boundary'])
 
     def test_displayed_bounds_are_directed_including_negative_gaps(self):

@@ -261,8 +261,9 @@
       "mission_s": 315576000,
       "price_gate": {
         "NOT_a_lower_bound_on_real_cost": true,
+        "activated": false,
         "certificate_bus_floor": "27142258653492676240528721888462308614347/10707209196205973325048632812500000000000000",
-        "proves_no_positive_gap_with_this_price_and_class_bound_only": true,
+        "scope_if_activated": "no positive gap with this price upper and class lower; not actual policy exclusion",
         "terms": {
           "background": "4081625531581865553/593750",
           "bad": "24236236803945961666387968/2508774863171875",
@@ -671,8 +672,9 @@
       "mission_s": 315576000,
       "price_gate": {
         "NOT_a_lower_bound_on_real_cost": true,
+        "activated": false,
         "certificate_bus_floor": "14926364018829960937624745417189460760111/10707208987812244294897265625000000000000000",
-        "proves_no_positive_gap_with_this_price_and_class_bound_only": true,
+        "scope_if_activated": "no positive gap with this price upper and class lower; not actual policy exclusion",
         "terms": {
           "background": "4081625531581865553/1187500",
           "bad": "12118118400986490397396992/1254387407171875",
@@ -1013,8 +1015,9 @@
       "mission_s": 315576000,
       "price_gate": {
         "NOT_a_lower_bound_on_real_cost": true,
+        "activated": true,
         "certificate_bus_floor": "464127190675376739297593303316637917197/563537293211830854452343750000000000000000",
-        "proves_no_positive_gap_with_this_price_and_class_bound_only": true,
+        "scope_if_activated": "no positive gap with this price upper and class lower; not actual policy exclusion",
         "terms": {
           "background": "4081625531581865553/2375000",
           "bad": "6059059200246622589749248/627193679171875",
@@ -1355,8 +1358,9 @@
       "mission_s": 315576000,
       "price_gate": {
         "NOT_a_lower_bound_on_real_cost": true,
+        "activated": true,
         "certificate_bus_floor": "5764442767500366122132067598855617447559/10707207737449870113989062500000000000000000",
-        "proves_no_positive_gap_with_this_price_and_class_bound_only": true,
+        "scope_if_activated": "no positive gap with this price upper and class lower; not actual policy exclusion",
         "terms": {
           "background": "4081625531581865553/4750000",
           "bad": "3029529600061655642637312/313596815171875",

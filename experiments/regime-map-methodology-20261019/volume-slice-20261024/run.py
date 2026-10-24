@@ -78,7 +78,7 @@ def price_gate(cfg):
     return dict(certificate_bus_floor=floor,terms=terms,
                 terms_bus_fraction={k:Rbus*v/(T*base.NS) for k,v in terms.items()},
                 NOT_a_lower_bound_on_real_cost=True,
-                proves_no_positive_gap_with_this_price_and_class_bound_only=True)
+                scope_if_activated='no positive gap with this price upper and class lower; not actual policy exclusion')
 
 
 def mandatory_row(cfg,kib,kf):
@@ -144,13 +144,15 @@ def summarize(cfg, kib, fixed, lower, rows):
                           all_adaptive_policies_optimality_claim=False)
     svc=base.cmp.service(cfg,39)
     app_rate=base.cmp.count_apps(cfg)['read']/F(cfg['mission_s'])
+    gate=price_gate(cfg)
+    gate['activated']=F_lower<=gate['certificate_bus_floor']
     return dict(kib=kib, words=cfg['words'], fraction_of_reference=F(kib,512),
                 mission_s=cfg['mission_s'], epsilon=F(cfg['epsilon']),
                 delta_common=F(cfg['lifetime_other_budget']),
                 separate_bank=True, whole_reference_memory_Q=None,
                 fixed=fixed, fixed_price=fixed_price, fixed_class=lower,
                 adaptive_rows=rows, selected_k=selected['k'] if selected else None,
-                comparison=comparison,price_gate=price_gate(cfg), timing=base.cmp.timing(cfg,39,selected['k'] if selected else 1),
+                comparison=comparison,price_gate=gate, timing=base.cmp.timing(cfg,39,selected['k'] if selected else 1),
                 common_code=dict(active_bits=39*cfg['words'], check_bits=7*cfg['words'],
                                  padding_bits=9*cfg['words'], physical_bytes=6*cfg['words'],
                                  initialization_encodes=cfg['words']),
