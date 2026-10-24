@@ -1,0 +1,90 @@
+{
+  "status": "candidate_selection_for_independent_review",
+  "base_main": "63afe38d43fdce43d120b83c17e866c5476f5451",
+  "requirements": {
+    "kind": "AUTHOR_REQUIREMENT",
+    "useful_words_32": 131072,
+    "useful_bits_per_word": 32,
+    "useful_bytes": 524288,
+    "mission_s": 315576000,
+    "epsilon": "0.001",
+    "comparison": "adaptive versus best fixed policy of the SAME native code, packing and service; full epsilon for fixed",
+    "long_lived_fraction_of_selected_bank": "1",
+    "application_writes_during_mission": 0,
+    "application_read_schedule": null,
+    "application_reads_repair_array": false,
+    "application_flags_feed_adaptive_counter": false,
+    "physical_Q": null
+  },
+  "rtg4": {
+    "proposal_kind": "ASSUMPTION",
+    "device": "RT4G150-CG1657M Rev C architecture candidate; mapping to individual radiation runs remains UNKNOWN",
+    "chips": 2,
+    "native_code": {"n": 24, "k": 18, "t": 1, "mode": "LSRAM x18, native SECDED, ECC_EN=1"},
+    "payload_bits_per_codeword": 16,
+    "mapping": "useful word w, half h in {0,1}: chip=h, block=w//1024, address=w%1024; data[15:0]=half, data[17:16]=0",
+    "source_resources": {
+      "kind": "SOURCE: RT-UG pages 11-12,73",
+      "lsram_blocks_per_chip": 209,
+      "lsram_codewords_per_block": 1024,
+      "usram_blocks_per_chip": 210,
+      "usram_codewords_per_block": 64
+    },
+    "source_proton_test": {
+      "kind": "SOURCE: RT-P pages 7-9; NOT a full-spectrum or word-level upper bound",
+      "energy_MeV": "200.5",
+      "lsram_blocks": 20,
+      "tested_positions_per_address": 18,
+      "ecc_enabled": false,
+      "errors": 1599,
+      "fluence_protons_cm2": "5.10158e11",
+      "reported_sigma_cm2_per_bit": "8.5024e-15",
+      "reported_model_environment": "JPSS-1",
+      "reported_model_error_per_bit_day": "7.21e-8",
+      "shielding": null,
+      "device_revision": null
+    },
+    "source_heavy_ion": {
+      "kind": "SOURCE: RT-HI pages 48,57,78-80",
+      "tested_addresses": 65536,
+      "tested_data_bits": 8,
+      "ecc_enabled": false,
+      "group_errors_present_in_plot": true,
+      "digitized_cross_sections": null,
+      "full_24_bit_upper_bound": null
+    }
+  },
+  "xqrku060": {
+    "proposal_kind": "ASSUMPTION",
+    "device": "XQRKU060-1CNA1509Y; lot/revision linkage to radiation fit UNKNOWN",
+    "chips": 1,
+    "native_code": {"n": 72, "k": 64, "t": 1, "mode": "RAMB36E2 simple dual port, standard Hamming SECDED ECC"},
+    "payload_bits_per_codeword": 64,
+    "mapping": "useful word w: codeword=w//2, block=codeword//512, address=codeword%512, data half=w%2; two useful 32-bit words per 64-bit data field",
+    "source_resources": {
+      "kind": "SOURCE: KU-DS page 3; KU-ECC",
+      "bram36_blocks_per_chip": 1080,
+      "codewords_per_block": 512
+    },
+    "source_environment_rate": {
+      "kind": "SOURCE: KU-DS pages 1-2; typical model estimate, NOT a time-dependent upper bound",
+      "environment": "CREME96 GEO, solar minimum",
+      "shield_Al_mil": 100,
+      "bram_upsets_per_bit_day_typical": "2.3e-8",
+      "cram_sefi_per_device_day_typical": "4.5e-4",
+      "quoted_confidence": "90%",
+      "quoted_error_bar": "+/-40%",
+      "full_72_bit_upper_bound": null,
+      "time_profile": null
+    }
+  },
+  "service_assumptions": {
+    "kind": "ASSUMPTION, common to fixed and adaptive within each candidate",
+    "repair": "dedicated read; write corrected complete native data field only for correctable flag; wait for array write completion; regenerate ECC",
+    "uncorrectable": "record failure; do not write untrusted output as repaired data",
+    "initial_state": "all native data, padding and ECC initialized and verified before T=0; initialization priced separately",
+    "observation": "count completed dedicated service outcomes with matching address, once per serviced word; no independent-parent interpretation assumed",
+    "price_unknowns": ["read and repair WCET", "arbitration and application calendar", "controller resources and fault coverage", "CPU", "energy", "peak service demand", "direct non-cell errors"],
+    "price_horizon": "entire T, including work after the first risk event and unfinished operations"
+  }
+}

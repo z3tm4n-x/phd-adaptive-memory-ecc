@@ -1,0 +1,30 @@
+{
+  "kind": "OWN_RESULT: storage arithmetic and beam normalization only",
+  "physical_Q": null,
+  "rtg4": {
+    "allocated_ECC_bytes": 196608,
+    "allocated_padding_bytes": 65536,
+    "allocated_physical_bytes_including_ECC": 786432,
+    "beam_sigma_cm2_per_tested_bit_decimal": "8.50239554053188750674628E-15",
+    "beam_sigma_cm2_per_tested_bit_exact": "533/62688215040000000",
+    "beam_tested_bits": 368640,
+    "installed_LSRAM_bytes_including_ECC": 1284096,
+    "lsram_blocks_each_chip": 128,
+    "native_codewords": 262144,
+    "one_chip_all_SRAM_max_native_ECC_data_bytes": 511776,
+    "one_chip_payload_deficit_bytes_even_without_padding": 12512,
+    "unused_LSRAM_fraction_per_chip": "81/209"
+  },
+  "time_and_controller_resource_margins": null,
+  "useful_bytes_each_candidate": 524288,
+  "xqrku060": {
+    "allocated_ECC_bytes": 65536,
+    "allocated_padding_bytes": 0,
+    "allocated_physical_bytes_including_ECC": 589824,
+    "bram36_blocks_allocated": 128,
+    "installed_BRAM_bytes_including_ECC": 4976640,
+    "native_codewords": 65536,
+    "source_shield_Al_mm": "127/50",
+    "unused_BRAM_fraction": "119/135"
+  }
+}
