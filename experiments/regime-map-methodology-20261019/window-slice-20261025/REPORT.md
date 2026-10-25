@@ -107,7 +107,13 @@ python -B experiments/regime-map-methodology-20261019/window-slice-20261025/tabl
 ```
 
 Без `--check` run.py заново создаёт точный итог; около 10 секунд на
-использованной машине. Рисунок: requirements-plot.txt и plot.py.
+использованной машине. Для рисунка установить зависимости из
+requirements-plot.txt и выполнить:
+
+```text
+python -B experiments/regime-map-methodology-20261019/window-slice-20261025/plot.py
+```
+
 Старые кампании и интегралы не повторяются. Проверки автора и чистый
 Git-replay записаны в [VALIDATION.md](VALIDATION.md); они не заменяют
 независимую рецензию. Поставка — PR261 к #206, срез к 30.10 подготовлен;
