@@ -1,0 +1,259 @@
+{
+  "acceptance": false,
+  "environment": {
+    "array_background": "377091/9500000000",
+    "array_peak": "596414091/9500000000",
+    "array_solar_mass": "2156461866/296875",
+    "known_amplitude": "119803437/578312500000",
+    "known_extra_mass": "1078230933/296875",
+    "lambda_cap_and_mass_preserved": true,
+    "physical_SAA": false,
+    "residual_F_r": "1078230933/296875",
+    "residual_R": "18081974469/289156250000",
+    "residual_g": "672303021/57831250000000",
+    "total_growth_upper": "117/9500000",
+    "translated_r_witness": {
+      "fall": "instantaneous down is permitted",
+      "latest_onset_s": "165003598553346191300/522965557643",
+      "mass": "1078230933/296875",
+      "plateau_s": "28967173814171300/522965557643",
+      "rise_s": "92728074200/17238539",
+      "scope": "admissible shifted profiles; no schedule-class lower lemma claimed"
+    }
+  },
+  "horizon_cost": {
+    "CPU_formula": "sum(rate_i * unknown_CPU_ns_i)/1e9 + app/init CPU; no unit costs measured",
+    "all_potential_slots_reads_upper": 1610097765253120,
+    "application_core_upper": "180139485474731273/2629800000000000000000",
+    "application_payload_nominal": "315569688607/9861750000000000",
+    "application_read_count": 315569688607,
+    "application_write_count": 0,
+    "common_ECC_nominal": "315569688607/8766000000000000",
+    "continued_after_hidden_A": true,
+    "control_pure_bus_upper": "3224600598397321/6019134521484375",
+    "control_serial_core_upper": "7646910411653227/12038269042968750",
+    "energy_formula": "T*sum(rate_i*incremental_nonoverlapping_J_i)+T*idle_W+app/init energy",
+    "extra_veto": "unknown; all-E cap for SRAM does not make source/CPU work free",
+    "fast_cycle_lower_s": "160561591243/6250000000000",
+    "full_hardware_winner": null,
+    "full_passes_upper": 12278825003,
+    "full_started_terminal_pass_paid": true,
+    "horizon_s": "315576000",
+    "initial_core_upper": "1912519/60191345214843750",
+    "initial_encodes": 131072,
+    "initial_turnarounds": 131072,
+    "initial_write_beats": 393216,
+    "ordinary_loss_recovery_and_false": "retained quotas; any resulting FAST is inside universal all-E service cap, not assigned zero",
+    "physical_or_hybrid_Q": null,
+    "rates_per_s": {
+      "action_decisions_hard": "12278825003/315576000",
+      "cuts": "438300000000011111/1753182468000",
+      "decodes": "5031555516416/986175",
+      "future_bound_inversions_hard": "12278825003/315576000",
+      "logical_counter_increments_hard": "25147033606144/4930875",
+      "pass_finalizations_hard": "12278825003/315576000",
+      "raw_source_records_hard": "438300000000000011111/1753182468000",
+      "read_beats": "5031555516416/328725",
+      "retained_slot_gates_hard": "13696875002230022144/2684560654125",
+      "scrub_reads": "5031555516416/986175",
+      "scrub_repair_hard": "5031555516416/986175",
+      "turnarounds_hard": "5031555516416/986175",
+      "write_beats_hard": "5031555516416/328725"
+    },
+    "reads_upper": 1610097765253120,
+    "repairs_upper": 1610097765253120,
+    "retained_quotas": {
+      "ordinary_false_expected_per_s": "0.000001",
+      "ordinary_loss_episodes_upper": 1001,
+      "ordinary_outage_fraction": "0.0001",
+      "recoveries_upper": 1000
+    },
+    "scan_drain_only_pure_bus_upper": "16116117441162539/30095672607421875",
+    "scan_drain_only_reads_upper": 1609410150793216,
+    "scan_drain_only_serial_core_upper": "38218223465412593/60191345214843750",
+    "scope": "hard full-horizon all-potential-slots account including guard/loss/recovery, not a certified hybrid or expected saving",
+    "transport_loss_state_bytes": 131136,
+    "unknown_costs": {
+      "controller_bus_average": null,
+      "controller_bus_peak": null,
+      "counter_increment_ns": null,
+      "decision_CPU_ns": null,
+      "energy_incremental_per_action": null,
+      "idle_protection_W": null,
+      "inversion_CPU_ns": null,
+      "pass_finalize_ns": null,
+      "policy_state_bytes": null
+    }
+  },
+  "input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "input_status": "AGREED_ENVIRONMENT_ONLY",
+  "interface_witness": {
+    "T36_defined_second_hit_break": false,
+    "history": [
+      {
+        "literal_T36_aux_C": 1,
+        "pass_index": 1,
+        "real_pass_C": 1,
+        "release_ns": 288,
+        "residual_aux_marks": 0,
+        "residual_real_errors": 1,
+        "snapshot_ns": 212,
+        "start_ns": 164,
+        "word": 3
+      },
+      {
+        "literal_T36_aux_C": 0,
+        "pass_index": 2,
+        "real_pass_C": 1,
+        "release_ns": 25701376,
+        "residual_aux_marks": 0,
+        "residual_real_errors": 0,
+        "snapshot_ns": 25701300,
+        "start_ns": 25701252,
+        "word": 3
+      }
+    ],
+    "maximum_error_weight": 1,
+    "parent_ns": 165,
+    "parents": 1,
+    "physical_A": false,
+    "result": "literal auxiliary counters disagree on pass 2",
+    "scope": "permitted weak-E interface witness, not every physical implementation",
+    "second_parent": false
+  },
+  "old_Q_recomputed": false,
+  "service": {
+    "W": 131072,
+    "code": [
+      39,
+      32
+    ],
+    "control_E_slack_ns": "121866/3125",
+    "control_gap_lower_ns": "4087459/25000",
+    "drain_after_last_release_lower_ns": "7044303/625",
+    "fast_cycle_ticks": 25690112,
+    "frame_ticks": 1568,
+    "lower_ns": {
+      "E": "3087469/25000",
+      "initial": "1887481/25000",
+      "read": "1687483/25000"
+    },
+    "nominal_ns": {
+      "E": "124",
+      "initial": "76",
+      "read": "68"
+    },
+    "pass_counter_bits": 18,
+    "pass_index_bits": 34,
+    "pending_at_decision": "candidate must wait for operation release AND closed delivery frontier; not yet signed",
+    "phase_contract": "bounded physical phases, nominal examples only; new T36 transfer required",
+    "phase_examples": [
+      {
+        "control_index": 0,
+        "start_ticks": 0,
+        "word": 0
+      },
+      {
+        "control_index": 1,
+        "start_ticks": 164,
+        "word": 3
+      },
+      {
+        "control_index": 7,
+        "start_ticks": 1148,
+        "word": 21
+      },
+      {
+        "control_index": 8,
+        "start_ticks": 1568,
+        "word": 24
+      },
+      {
+        "control_index": 131071,
+        "start_ticks": 25689692,
+        "word": 131069
+      }
+    ],
+    "proposed_P_lower_s": "160630190557/6250000000000",
+    "proposed_P_nominal_s": "803159/31250000",
+    "proposed_P_upper_s": "160633409443/6250000000000",
+    "proposed_block_ticks": 25701088,
+    "proposed_counter_drain_frames": 7,
+    "raw_bytes": 786432,
+    "source_to_fresh_upper_ns": "10000",
+    "time_ns_bits": 59,
+    "upper_ns": {
+      "E": "3112531/25000",
+      "initial": "1912519/25000",
+      "read": "1712517/25000"
+    }
+  },
+  "source_count": 21,
+  "status": "INITIAL_SERVICE_AND_T36_GATE_READY_NOT_HYBRID_ACCEPTANCE",
+  "t36_gate": {
+    "K_star": 4,
+    "N_full_mission": 12278701975,
+    "V_pair_term": "11269672660128798689394861513/92416000000000000000000000000",
+    "V_residual_term": "23526746647677/38912000000",
+    "V_total": "55887292960893003798689394861513/92416000000000000000000000000",
+    "actions": [
+      {
+        "actual_admission": "NOT_EVALUATED: original reserve invariant fails",
+        "k_block": 1,
+        "optimistic_K0_first_bill": "229455700662569671371097613961/23104000000000000000000000000000000000000",
+        "period_nominal_s": "803159/31250000",
+        "zero_count_can_lower_B": false,
+        "zero_count_lower_exposure_at_B": "0"
+      },
+      {
+        "actual_admission": "NOT_EVALUATED: original reserve invariant fails",
+        "k_block": 22,
+        "optimistic_K0_first_bill": "27764139780170930235902811289281/5776000000000000000000000000000000000000",
+        "period_nominal_s": "8834749/15625000",
+        "zero_count_can_lower_B": false,
+        "zero_count_lower_exposure_at_B": "628671186965790513909/18554687500000000000000"
+      },
+      {
+        "actual_admission": "NOT_EVALUATED: original reserve invariant fails",
+        "k_block": 53,
+        "optimistic_K0_first_bill": "644541063161158206881413197616449/23104000000000000000000000000000000000000",
+        "period_nominal_s": "42567427/31250000",
+        "zero_count_can_lower_B": false,
+        "zero_count_lower_exposure_at_B": "194573493012232848423/2319335937500000000000"
+      },
+      {
+        "actual_admission": "NOT_EVALUATED: original reserve invariant fails",
+        "k_block": 107,
+        "optimistic_K0_first_bill": "2627038316885760167527696582239489/23104000000000000000000000000000000000000",
+        "period_nominal_s": "85938013/31250000",
+        "zero_count_can_lower_B": false,
+        "zero_count_lower_exposure_at_B": "198288290656318317819/1159667968750000000000"
+      }
+    ],
+    "admissible_relaxation": null,
+    "any_period_pair_floor": "520701732464828994713069163/17626953125000000000000000000",
+    "any_period_pair_floor_over_absolute_gamma_max": "520701732464828994713069163/8813476562500000000000000",
+    "budget_scope": "optimistic transfer of the old 6e-6 only; new aggregation correctness/exception coverage not established",
+    "delta": "603/1000000",
+    "e0": "103/500000",
+    "gamma": "397/1000000",
+    "interpretation": "failure of this sufficient construction, not impossibility of A or failure of accepted PR250",
+    "log_threshold_lower": "64882944847386276914004319043784441885453241559/2000000000000000000000000000000000000000000000",
+    "log_threshold_upper": "324414724236931384570021595218922209427266207797/10000000000000000000000000000000000000000000000",
+    "new_counter_exception_budget": null,
+    "optimistic_K0_reserve_passes": false,
+    "original_peak_reserve_fails_even_without_observation_and_residue": true,
+    "pair_only_V_over_absolute_gamma_max": "11269672660128798689394861513/46208000000000000000000000",
+    "precise_blocker": "T36(11) with B for all remaining T fails before first action; requires a proved different reserve, not a smaller numerical tolerance",
+    "reachable_informative_history": null,
+    "reserve_passes": false,
+    "residual_poisson_mean": "479015344913469/296875000000000000",
+    "residual_quantile": {
+      "Q": 4,
+      "tail_upper": "45507587217475518236251464007297/500000000000000000000000000000000000000000000000"
+    },
+    "residue_zeta_per_step": "1/122787019750000",
+    "scan_raw_bus_lower_s": "37999616/6103515625",
+    "statistical_alpha_per_step": "1/122787019750000"
+  }
+}
