@@ -1,0 +1,52 @@
+{
+  "checks": [
+    "whole_58440_cycles",
+    "all_triangles_inside_horizon",
+    "known_mass_half",
+    "peak_partition",
+    "residual_mass_half",
+    "total_growth_partition",
+    "strictly_positive_components",
+    "full39_singleton",
+    "positive_plateau_and_shift_range",
+    "witness_exact_mass",
+    "old_B_plateau_not_in_new_class",
+    "agreed_T36_budget",
+    "risk_square_root_below_10_21",
+    "log_30000_above_10_3",
+    "statistic_barrier_margin",
+    "background_K1_reserve_floor",
+    "free_gap_lower_OFF",
+    "free_gap_equality_OFF",
+    "free_gap_lower_equal_gaps",
+    "free_gap_equality_equal_gaps",
+    "free_gap_lower_both_edges",
+    "free_gap_lower_unequal_with_overlap",
+    "translated_aperture_0",
+    "translated_aperture_500",
+    "translated_aperture_999",
+    "interior_fubini_equality"
+  ],
+  "checks_passed": 26,
+  "display_only": {
+    "background_K1_reserve_floor": "0.0955689034038342927631578947368421052631578947",
+    "plateau_time_s": "55390.2133531049977234991911021589900256314001",
+    "ramp_time_s": "5379.11444815596031659063450794757026683061714",
+    "witness_duration_s": "60769.3278012609580400898256101065602924620172"
+  },
+  "exact": {
+    "T36_e0": "103/500000",
+    "T36_gamma_max": "397/1000000",
+    "background_K1_reserve_floor": "14875108677/155648000000",
+    "known_extra_mass": "1078230933/296875",
+    "plateau_time_s": "28967173814171300/522965557643",
+    "ramp_mass": "8383533351219687999/49846312927187500",
+    "ramp_time_s": "92728074200/17238539",
+    "residual_mass": "1078230933/296875",
+    "twice_W_gamma": "1626112/15625",
+    "witness_duration_s": "31780265401176700/522965557643"
+  },
+  "input_commit": "a8c27f891ecfcfb568e4b6d62c9f35478fa877b6",
+  "input_sha256": "550fd820bf1d53161da01ab7924eddb71e1ef4152a0c05e133f0303fbc5acf04",
+  "scope": "author semantic checks only; no hybrid Q, resource result or independent acceptance"
+}
