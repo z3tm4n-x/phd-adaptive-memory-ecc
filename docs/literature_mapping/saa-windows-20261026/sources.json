@@ -1,0 +1,120 @@
+{
+  "task": "206",
+  "prepared_on": "2026-10-26",
+  "base_commit": "b3004494719dbfd70d97ef5b04f3c307f3b75db9",
+  "scope": "Primary-source reading only; no orbital propagation, data-series processing, Q or cost calculation.",
+  "status": "Submitted for review, not independently accepted",
+  "pdf_page_convention": "One-based pages of the identified downloaded PDF; printed pagination noted separately.",
+  "sources": [
+    {
+      "id": "S1",
+      "authors": "Evan Smith, Michael Stark, Barry Giles, Sandy Antunes, Bill Gawne",
+      "title": "South Atlantic Anomaly Entry and Exit As Measured by the X-Ray Timing Explorer",
+      "publication": "1996; printed pp. 249-256; NASA NTRS 19960035769",
+      "url": "https://ntrs.nasa.gov/api/citations/19960035769/downloads/19960035769.pdf",
+      "metadata_url": "https://ntrs.nasa.gov/citations/19960035769",
+      "local_download_name": "smith1996.pdf",
+      "format": "PDF",
+      "pages": 8,
+      "bytes": 518766,
+      "sha256": "6a885b8001a611885f1d235c19ea7f8a793d0a3031d056cf50982d2a0ae32049",
+      "read_on": "2026-10-26",
+      "locators": [
+        "PDF 1 / printed 249, section 1: nominal early orbit",
+        "PDF 2 / printed 250, section 2: prediction, HEXTE monitor, PCA HRM exit limitation",
+        "PDF 3-4 / printed 251-252, sections 3-5: contour, planning, extended passages, daily variability",
+        "PDF 6-7 / printed 254-255, figures 3-4: maximum and minimum contours",
+        "PDF 8 / printed 256, section 6: planning limitations"
+      ]
+    },
+    {
+      "id": "S2",
+      "authors": "F. Fuerst et al.",
+      "title": "Temporal Variations of Strength and Location of the South Atlantic Anomaly as Measured by RXTE",
+      "publication": "Earth and Planetary Science Letters 281 (2009), 125-133",
+      "doi": "10.1016/j.epsl.2009.02.004",
+      "version": "Author manuscript dated 10 February 2009; NASA NTRS 20090012457",
+      "url": "https://ntrs.nasa.gov/api/citations/20090012457/downloads/20090012457.pdf",
+      "local_download_name": "fuerst2009.pdf",
+      "format": "PDF",
+      "pages": 21,
+      "bytes": 616522,
+      "sha256": "7714071286473a1ae326a5a750e3805cab30ad52f381875865844e19e5d9f805",
+      "read_on": "2026-10-26",
+      "locators": [
+        "PDF 5, section 2.1: author orbit description, mean crossing count, altitude evolution, monitor thresholds",
+        "PDF 6-7, sections 2.1-2.2: 16-second recording and three-month averaging",
+        "PDF 11-15, sections 4.1-4.2: strength and location changes",
+        "PDF 15, section 5: measurements did not determine particle spectrum"
+      ],
+      "caution": "592 km / 90 min differ from the nominal 580 km / 96 min in S1/S3. Not reconciled or used to fit the previous 5400-second model."
+    },
+    {
+      "id": "S3",
+      "authors": "NASA/GSFC",
+      "title": "RXTE GO Program, Cycle 10, Appendix A",
+      "version": "Cycle 10 programme starting approximately 1 March 2005; describes original orbit",
+      "url": "https://heasarc.gsfc.nasa.gov/docs/xte/xteappa_cycle10.html",
+      "format": "HTML",
+      "read_on": "2026-10-26",
+      "sha256": null,
+      "capture": "Full HTML text read through web tool; original byte stream not archived.",
+      "locators": [
+        "A.3 Operation: original altitude 580 km, inclination 23 degrees, period 96 minutes, command/telemetry and ground planning",
+        "A.4 Proposal Policy Summary: programme epoch"
+      ]
+    },
+    {
+      "id": "S4",
+      "authors": "R. E. Rothschild et al.",
+      "title": "In-flight Performance of the High Energy X-Ray Timing Experiment on the Rossi X-ray Timing Explorer",
+      "publication": "Astrophysical Journal 496 (1998), 538-549",
+      "version": "astro-ph/9710328v1, 28 October 1997; author preprint",
+      "url": "https://arxiv.org/pdf/astro-ph/9710328",
+      "local_download_name": "rothschild1998.pdf",
+      "format": "PDF",
+      "pages": 30,
+      "bytes": 679698,
+      "sha256": "6c897a42fa51ca40e4dd6811649a00959d542c908bb0f2c50d96bf8d9405bd19",
+      "read_on": "2026-10-26",
+      "locators": [
+        "PDF 4, section 2.2: particle monitor and autonomous HV operation",
+        "PDF 7-8, section 3.2: orbit, half of daily orbits through SAA, non-SAA background, detector activation",
+        "PDF 23, figure 7: detector and particle-monitor rates for 11 January 1997"
+      ],
+      "caution": "Detector activation and its decay constant are not SRAM error-rate parameters."
+    },
+    {
+      "id": "S5",
+      "authors": "NASA/GSFC, Live from RXTE! Team",
+      "title": "Sample RXTE Observation Schedule",
+      "url": "https://heasarc.gsfc.nasa.gov/docs/RXTE_Live/rxte_live_log.html",
+      "format": "HTML",
+      "read_on": "2026-10-26",
+      "sha256": null,
+      "capture": "Full HTML text read through web tool; original byte stream not archived.",
+      "locators": [
+        "Observation 30103-01-06-00, day 1998:264, EVENTS: in_saa 16:10:00, out_saa 16:28:00",
+        "Notes 1 and 7: UT, mission elapsed time, meanings of SAA markers"
+      ],
+      "caution": "Published sample schedule, not observed boundary residuals or a duration distribution."
+    },
+    {
+      "id": "S6",
+      "authors": "C. B. Markwardt, J. Swank, P. Boyd, G. Rohrbach, M. Tripicco",
+      "title": "PCA SAA History and Background Problems",
+      "version": "Last updated 11 February 2008",
+      "url": "https://heasarc.gsfc.nasa.gov/docs/xte/pca/doc/bkg/bkg-2007-saa/",
+      "format": "HTML",
+      "read_on": "2026-10-26",
+      "sha256": null,
+      "capture": "Full HTML text read through web tool; original byte stream not archived.",
+      "locators": [
+        "Introduction: accumulated particle-monitor counts and peak time in SAA history",
+        "Data Gaps and Table 1: missing measurements, prediction-filled records",
+        "Daily Missing SAA Passes and Repeated Data: ground-processing quality problems"
+      ],
+      "caution": "Archive processing failures are not a measured rate of onboard forecast violations."
+    }
+  ]
+}
