@@ -1,0 +1,117 @@
+{
+  "base_main": "1c126cb7246ed096ab4cd110309accb727af81a0",
+  "diagnostic": {
+    "action_block_multipliers": [
+      1,
+      22,
+      53,
+      107
+    ],
+    "alpha_star": "1/10000",
+    "counter_drain_source_ns": 10000,
+    "old_Q_recompute": false,
+    "only_published_T36_formula": true,
+    "physical_or_hybrid_Q": null,
+    "reserve": "original T36 peak-B reserve; no new quota-aware theorem presumed",
+    "zeta_star": "1/10000"
+  },
+  "extra_veto_rate": null,
+  "fixed": {
+    "clean_state_is_conditional": true,
+    "code": [
+      39,
+      32,
+      1
+    ],
+    "data_bits": 32,
+    "epsilon": "1/1000",
+    "initial_K0": 0,
+    "lifetime_other_budget": "3/500000",
+    "mission_s": 315576000,
+    "ordinary_reads_publish_ERR": false,
+    "ordinary_reads_repair": false,
+    "scope_override_source": "experiments/fixed-code-long-lived-20261023/REPORT.md",
+    "source": "experiments/t186-method-comparison/code-strength/common-input.json",
+    "useful_writes": 0,
+    "words": 131072
+  },
+  "proposed_environment": {
+    "active_array_scale": "39/152",
+    "background": "377091/9500000000",
+    "old_growth_rho_per_s": "6/125",
+    "old_growth_threshold": "39/152000",
+    "p": {
+      "amplitude_above_background": "119803437/578312500000",
+      "cycle_s": "5400",
+      "extra_mass_fraction": "1/2",
+      "known_exactly_to_both": true,
+      "left_s": 1800,
+      "shape": "background + periodic triangular pulse",
+      "temporal_source": "PR260 check.py; shape/amplitude are a new proposed modelling choice, not physical data",
+      "width_s": "600"
+    },
+    "residual": {
+      "cap_R": "18081974469/289156250000",
+      "distribution_over_paths": null,
+      "growth_g": "672303021/57831250000000",
+      "law": "unknown deterministic nonnegative r<=R; r(t)-r(s)<=g*(t-s); integral r<=F_r; same inside/outside known windows",
+      "mass_F_r": "1078230933/296875"
+    },
+    "spatial": {
+      "bits": "uniform active39 projection of common48 singleton law",
+      "chi": "1/131072",
+      "d": 0,
+      "m": 1,
+      "q": "1/131072"
+    },
+    "total_peak": "596414091/9500000000",
+    "total_solar_mass": "2156461866/296875",
+    "unit": "active39 singleton parent events per second on W=131072; growth events/s^2; masses events"
+  },
+  "retained_quotas": {
+    "ordinary_false_expected_per_s": "0.000001",
+    "ordinary_loss_episodes_upper": 1001,
+    "ordinary_outage_fraction": "0.0001",
+    "recoveries_upper": 1000
+  },
+  "source_sha256": {
+    "experiments/comparison-foundations-20261018/predictable-windows-20261025/check.py": "9a6b8e7398dd80ef784922f806c528576558a32dc3fa8474a79fdbc0e93a5056",
+    "experiments/fixed-code-long-lived-20261023/REPORT.md": "59a58c7c415f3683bffe6c71d80b369f595ba51442b499166fe277f0a56ef4dc",
+    "experiments/fixed-code-long-lived-20261023/REVIEW_20261023.md": "1a95fb116dc06c018c18ed70a2810d5b39bc5e3b6635b86ba743fd2e9febf038",
+    "experiments/fixed-code-long-lived-20261023/outputs/result.json": "6852d467c10abe3132f892e92de45ee232c688f8735a146f62a3c39f861db326",
+    "experiments/mission-rise-rate-20261022/cfe-application/outputs/result.json": "18dafed9187ed947a208d1b0f8b1dd43381e462f57b4fe9ffb50e2e7c2dda5d6",
+    "experiments/t114-two-stage-err/intervals.py": "817cdad503f8432fe9d57c0b9340921b1af683b8db4b72aa9314ccf0f53b3be2",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/codec.py": "d258c3f1a6bdcbc779415151c089e45e6839e01b683ad388c682db778b9cd698",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "experiments/t186-method-comparison/code-strength/comparison.py": "bc5a3dfbf8ed00a66a8407c50e525461aeedacc2a2aa72b598762048e5c7a2bd",
+    "experiments/t186-method-comparison/code-strength/cost.py": "4e4fd0f633fe0cbb6a3ba30a51e5bd55d3549e28f4556a90f55762ced515639a",
+    "experiments/t186-method-comparison/code-strength/informational.py": "b637080c3913a4dfa92fc6dabc796384cf2e3c7f1e2a39625855a3113a67e09f",
+    "experiments/t186-method-comparison/code-strength/parents.py": "31d1971ef51a4f540a8a61938bddccfd047899bccfcd033b549e838a8d7a02a0",
+    "experiments/t186-method-comparison/code-strength/repair_checks.py": "2dafbe2c439101b7a2fff7ac6447a774a49032ec339e18911f0ca98a83d44c65",
+    "experiments/t187-code-strength/model.py": "72c503a3cde45a60b16ab715a367cc2000cc87ca09170b4b0407599460a70667",
+    "theory/t119-err-joint-bound-appendix.md": "08526f5b2e4d7de04b9f859fa2106ed13c29b8657e9b9f1e9a3525831c9cd9a2",
+    "theory/t196-hold-price-20261023.md": "256a40a724c7312870543cb404dee56001b22778c789903008ff4088b13b83de",
+    "theory/t196-three-variant-foundations-20261022.md": "e629c6aa739c8da9b8561c74aafe5f02229c18936bb1d4520b94820f975ce6c3",
+    "theory/t36-robust-count-appendices.md": "3cd4414fa86f0a8d81131e1ac409059c04ebd3bcf2ffb2524962d145e1a6ce7d",
+    "theory/t36-robust-count.md": "0f05803d1efa42a313964288453b918997a90ca0aac45ad7cd8c2d591bbe2dc9",
+    "thesis/CENTRAL_CLAIM_20261026.md": "510db2fe10d8fac941f327cae3bdb88a4e3ed59e37f9d2557fa3612fbf6dd16a"
+  },
+  "status": "PROPOSED_FOR_196_NOT_AGREED",
+  "theory_agreement": {
+    "comment_url": null,
+    "commit": null,
+    "path": "theory/hybrid-p-r-20261026.md"
+  },
+  "unknown_costs": {
+    "controller_bus_average": null,
+    "controller_bus_peak": null,
+    "counter_increment_ns": null,
+    "decision_CPU_ns": null,
+    "energy_incremental_per_action": null,
+    "idle_protection_W": null,
+    "inversion_CPU_ns": null,
+    "pass_finalize_ns": null,
+    "policy_state_bytes": null
+  }
+}
