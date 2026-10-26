@@ -97,7 +97,20 @@ class TargetedChecks(unittest.TestCase):
         n=cost['full_passes_upper']; T=cost['horizon_s']
         self.assertGreaterEqual(n*P,T)
         self.assertLess((n-1)*P,T)
-        self.assertEqual(cost['reads_upper'],n*self.inp['fixed']['words'])
+        self.assertEqual(cost['scan_drain_only_reads_upper'],n*self.inp['fixed']['words'])
+
+    def test_guard_fast_in_drain_or_wait_is_paid_by_all_slot_cap(self):
+        cost=self.result['horizon_cost']; W=self.inp['fixed']['words']
+        self.assertGreater(cost['all_potential_slots_reads_upper'],cost['scan_drain_only_reads_upper'])
+        self.assertEqual(cost['reads_upper'],cost['all_potential_slots_reads_upper'])
+        self.assertGreater(cost['control_pure_bus_upper'],cost['scan_drain_only_pure_bus_upper'])
+        self.assertGreater(cost['control_serial_core_upper'],cost['scan_drain_only_serial_core_upper'])
+        # Independent frame-rate lower count: even every potential slot is covered.
+        cal=self.cfg['calendar']; xm=F(self.cfg['service']['clock_lower'])
+        saturated=cal['batch_size']*F(cost['horizon_s']*a.NS)/(cal['frame_ticks']*xm)
+        self.assertGreaterEqual(cost['all_potential_slots_reads_upper'],saturated+2*W)
+        self.assertEqual(cost['retained_quotas'],self.inp['retained_quotas'])
+        self.assertGreater(cost['retained_quotas']['recoveries_upper'],0)
 
 
 if __name__=='__main__': unittest.main()

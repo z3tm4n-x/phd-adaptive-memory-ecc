@@ -163,15 +163,20 @@ def calculate():
     # Whole-horizon hard service cap. No early stopping at hidden A.
     passes=ceil(T/Pminus)
     reads=W*passes
+    # Guard/loss/recovery may use slots in a proposed drain/wait interval.
+    # Do not call the smaller scan+drain count a universal legacy FAST cap.
+    # Two extra full cycles conservatively pay arbitrary phase/edge work.
+    fast_cycle_lower=(fast_ticks*xm-J)/NS
+    all_slots_reads=W*(ceil(T/fast_cycle_lower)+2)
     app=cfg['application']
     appreads=ceil((T*NS-app['first_ns']-app['read_offset_ns'])/app['epoch_ns'])
     read_bus=3*s['read_beat_ns']*xp+J
     write_bus=(3*s['write_beat_ns']+s['turnaround_ns'])*xp+J
     source_edge=F(NS)/(4*xm)+2/T
     cuts=F(NS)/(obs['cut_ns']*xm)+2/T
-    rates=dict(scrub_reads=F(reads)/T,scrub_repair_hard=F(reads)/T,
-        read_beats=F(3*reads)/T,write_beats_hard=F(3*reads)/T,
-        decodes=F(reads)/T,turnarounds_hard=F(reads)/T,
+    rates=dict(scrub_reads=F(all_slots_reads)/T,scrub_repair_hard=F(all_slots_reads)/T,
+        read_beats=F(3*all_slots_reads)/T,write_beats_hard=F(3*all_slots_reads)/T,
+        decodes=F(all_slots_reads)/T,turnarounds_hard=F(all_slots_reads)/T,
         cuts=cuts,raw_source_records_hard=source_edge,
         logical_counter_increments_hard=F(reads)/T,
         pass_finalizations_hard=F(passes)/T,
@@ -218,10 +223,16 @@ def calculate():
         precise_blocker='T36(11) with B for all remaining T fails before first action; requires a proved different reserve, not a smaller numerical tolerance',
         interpretation='failure of this sufficient construction, not impossibility of A or failure of accepted PR250'),
       interface_witness=weak_e_trace(W,block_ticks),
-      horizon_cost=dict(scope='hard full-horizon candidate always-scan service account, not a certified hybrid or expected saving',
-        horizon_s=T,full_passes_upper=passes,reads_upper=reads,repairs_upper=reads,
-        control_pure_bus_upper=F(reads)*(read_bus+write_bus)/(T*NS),
-        control_serial_core_upper=F(reads)*upper['E']/(T*NS),
+      horizon_cost=dict(scope='hard full-horizon all-potential-slots account including guard/loss/recovery, not a certified hybrid or expected saving',
+        horizon_s=T,full_passes_upper=passes,
+        scan_drain_only_reads_upper=reads,
+        reads_upper=all_slots_reads,repairs_upper=all_slots_reads,
+        scan_drain_only_pure_bus_upper=F(reads)*(read_bus+write_bus)/(T*NS),
+        scan_drain_only_serial_core_upper=F(reads)*upper['E']/(T*NS),
+        fast_cycle_lower_s=fast_cycle_lower,
+        all_potential_slots_reads_upper=all_slots_reads,
+        control_pure_bus_upper=F(all_slots_reads)*(read_bus+write_bus)/(T*NS),
+        control_serial_core_upper=F(all_slots_reads)*upper['E']/(T*NS),
         initial_core_upper=F(W)*upper['initial']/(T*NS),
         initial_encodes=W,initial_write_beats=3*W,initial_turnarounds=W,
         application_read_count=appreads,application_write_count=0,
