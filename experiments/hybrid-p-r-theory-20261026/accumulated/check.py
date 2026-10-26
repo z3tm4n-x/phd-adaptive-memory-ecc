@@ -15,7 +15,7 @@ COMMON = ROOT / "experiments/t186-method-comparison/code-strength/common-input.j
 raw = INPUT.read_bytes()
 assert sha256(raw).hexdigest() == EXPECTED
 data = json.loads(raw)
-assert sha256(COMMON.read_bytes()).hexdigest() == data["source_sha256"][str(COMMON.relative_to(ROOT))]
+assert sha256(COMMON.read_bytes()).hexdigest() == data["source_sha256"][COMMON.relative_to(ROOT).as_posix()]
 common = json.loads(COMMON.read_bytes())
 env, fixed = data["proposed_environment"], data["fixed"]
 W, T, eps = fixed["words"], F(fixed["mission_s"]), F(fixed["epsilon"])
@@ -152,7 +152,7 @@ result = {
     "status": "CONDITIONAL_THEORY_CANDIDATE_NOT_SERVICE_SIGNOFF",
     "base_main": "f82de4749dd248dee793dbb9a2b3981fb3ad7378",
     "candidate_commit_before_arithmetic": "f352faff399b29a0f06b94cd16b0a5b8f248e063",
-    "input_path": str(INPUT.relative_to(ROOT)),
+    "input_path": INPUT.relative_to(ROOT).as_posix(),
     "input_sha256": EXPECTED,
     "common_input_sha256": sha256(COMMON.read_bytes()).hexdigest(),
     "checker_sha256": sha256(Path(__file__).read_bytes()).hexdigest(),
@@ -214,7 +214,7 @@ result = {
 }
 rendered = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
 if len(sys.argv) == 2 and sys.argv[1] == "--write":
-    (HERE / "result.json").write_text(rendered, encoding="utf-8")
+    (HERE / "result.json").write_text(rendered, encoding="utf-8", newline="\n")
     print("PASS: result.json; one candidate, exact arithmetic, conditional service applicability.")
 elif len(sys.argv) == 1:
     print(rendered, end="")
