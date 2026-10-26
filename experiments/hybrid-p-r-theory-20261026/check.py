@@ -1,6 +1,6 @@
 """Small author checks for T196 stage A; no policy/MC/old-campaign replay.
 
-Usage: python check.py --input /path/to/PR268-a8c27f8-inputs.json
+Usage: python check.py --input /path/to/PR268-inputs.json
 The engineer's file is the only input; its exact bytes are pinned.
 """
 import argparse
@@ -10,8 +10,8 @@ import hashlib
 import json
 from pathlib import Path
 
-INPUT_COMMIT = "a8c27f891ecfcfb568e4b6d62c9f35478fa877b6"
-INPUT_SHA256 = "550fd820bf1d53161da01ab7924eddb71e1ef4152a0c05e133f0303fbc5acf04"
+INPUT_COMMIT = "2cc92407863317385f2c840242675f6c59aec5e8"
+INPUT_SHA256 = "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6"
 
 
 def decimal(x):
@@ -50,7 +50,7 @@ def free_lengths(length, windows):
 def run(path):
     raw = path.read_bytes()
     if hashlib.sha256(raw).hexdigest() != INPUT_SHA256:
-        raise ValueError("Input differs from agreed PR268 a8c27f8; no silent rebase")
+        raise ValueError("Input differs from agreed PR268 2cc9240 (R1 metadata); no silent rebase")
     cfg = json.loads(raw)
     env = cfg["proposed_environment"]
     p, r, fixed = env["p"], env["residual"], cfg["fixed"]
