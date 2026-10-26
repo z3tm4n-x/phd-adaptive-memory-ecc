@@ -5,7 +5,7 @@ from common import NS,ceil,wire_functions
 def slot_start(j,calendar):
     return j//calendar['batch_size']*calendar['frame_ticks']+j%calendar['batch_size']*calendar['c_ticks']
 
-def close_counter(records, *, W, calendar, service, scan_start, previous_decision,
+def close_counter(records, *, W, calendar, service, scan_start, previous_decision, decision_tick,
                   entry_G, current_G, processed_G, prefix_certificate,
                   source_healthy=True, unknown_at_entry=False, epoch_known=True,
                   guard_outside_scan=False, main_pass_complete=True, pending=False,
@@ -26,7 +26,7 @@ def close_counter(records, *, W, calendar, service, scan_start, previous_decisio
     if not main_pass_complete: invalid.append('mandatory scan incomplete')
     if pending: invalid.append('pending at decision boundary')
     if not decision_computation_ready: invalid.append('decision deadline not established')
-    expected=entry_G+1; count=0; last_j=-1
+    expected=entry_G+1; count=0; last_j=-1; last_source=previous_decision
     xm=F(service['clock_lower']);J=F(service['operation_endpoint_span_ns'])
     # Conservative mapping envelope in shared source-clock ticks:
     # 4 ticks quantization + both endpoint errors. Adjacent slots cannot alias.
@@ -39,6 +39,9 @@ def close_counter(records, *, W, calendar, service, scan_start, previous_decisio
         expected=max(expected,g+1)
         if t<previous_decision:
             invalid.append('record predates the closed entry prefix')
+        if t>decision_tick or t<last_source:
+            invalid.append('source-time outside decision fence or out of order')
+        last_source=max(last_source,t)
         if 'GAP' in causes:
             invalid.append('GAP in observation interval; RESTORE does not erase it')
         if 'FALSE' in causes:
@@ -83,7 +86,7 @@ def calculate(inp,cfg,history):
     encode,decode=wire_functions(history['adapter.py'])
     raw=lambda t,g,word=0,causes=('ERR',),**extra: encode(dict(t=t,g=g,word=word,origin='control',causes=list(causes),**extra))
     kwargs=dict(W=W,calendar=cal,service=s,scan_start=0,previous_decision=0,
-                entry_G=0,current_G=2,processed_G=2,prefix_certificate=True)
+                decision_tick=ticks,entry_G=0,current_G=2,processed_G=2,prefix_certificate=True)
     records=[decode(raw(68,1,0)),decode(raw(232,2,3))]
     complete=close_counter(records,**kwargs)
     empty_args=dict(kwargs,current_G=0,processed_G=0)

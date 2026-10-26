@@ -20,6 +20,7 @@ class TargetedChecks(unittest.TestCase):
                   scan_start=0,previous_decision=0,entry_G=0,current_G=len(records),
                   processed_G=len(records),prefix_certificate=True)
         args.update(kwargs)
+        args.setdefault('decision_tick',args['scan_start']+self.v['timing']['block_ticks'])
         return ic.close_counter(records,**args)
 
     def record(self,t,g,word=0,causes=('ERR',),**extra):
@@ -145,6 +146,12 @@ class TargetedChecks(unittest.TestCase):
         self.assertEqual(delivered(cut),11900)
         self.assertEqual(delivered(cut+4),11900)
         self.assertGreater(delivered(cut),delivered(cut-4))
+
+    def test_records_after_decision_or_reversed_source_time_are_invalid(self):
+        end=self.v['timing']['block_ticks']
+        self.assertTrue(self.binding([self.record(end+4,1,causes=('RESTORE',))])['invalid'])
+        r=[self.record(232,1,3),self.record(68,2,0)]
+        self.assertTrue(self.binding(r)['invalid'])
 
     def test_invalid_reasons_do_not_authorize_missing_service(self):
         r=[self.record(68,1)]
