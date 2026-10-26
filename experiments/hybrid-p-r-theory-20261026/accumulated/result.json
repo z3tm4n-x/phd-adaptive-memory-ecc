@@ -1,0 +1,162 @@
+{
+  "base_main": "f82de4749dd248dee793dbb9a2b3981fb3ad7378",
+  "candidate": {
+    "K": 1,
+    "alpha": "1/10000",
+    "base_blocks": 2,
+    "eta": 1,
+    "new_queries_after_invalid": 0,
+    "rare_actions_at_most": 1,
+    "rare_blocks": 12000,
+    "rare_risk_allowance": "11/20000",
+    "startup_blocks": 1,
+    "sum_C_at_most": 3,
+    "training_actions": 120000,
+    "u": "R/2",
+    "uncounted_tail_actions": 11,
+    "used_actions": 119989,
+    "zeta": "1/10000"
+  },
+  "candidate_commit_before_arithmetic": "f352faff399b29a0f06b94cd16b0a5b8f248e063",
+  "checker_sha256": "2e829f66f6fe6ca9f34077f8066798577822a28db8b3d626b57b7c1da0328242",
+  "common_input_sha256": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+  "directed_summary": {
+    "Q_upper_excluding_deltaC": "0.000892989284",
+    "Q_upper_if_deltaC_at_most_5e-5": "0.000942989284",
+    "Qbase_upper": "0.000136989284",
+    "excursion_risk_upper": "0.000480903280",
+    "exposure_lower": "21.127472550",
+    "log_test_lower_C3": "10.310307706",
+    "margin_lower_if_deltaC_at_most_5e-5": "0.000057010716",
+    "no_information_certificate_lower_value_NOT_Q_lower": "0.001577915944",
+    "residual_tail_upper": "0.000001301825",
+    "sufficient_deltaC_bound": "0.000107010716"
+  },
+  "exact_checks": {
+    "Q_upper_excluding_deltaC": {
+      "decimal": "0.00089298928352289895873835270619912745226299294112294",
+      "exact": "64304646950219897749059/72010547200000000000000000"
+    },
+    "Q_upper_if_example_requirement_met": {
+      "decimal": "0.00094298928352289895873835270619912745226299294112294",
+      "exact": "67905174310219897749059/72010547200000000000000000"
+    },
+    "Qbase_upper": {
+      "decimal": "0.00013698928352289895873835270619912745226299294112294",
+      "exact": "9864673267019897749059/72010547200000000000000000"
+    },
+    "S2_upper": {
+      "decimal": "230.19819705017195281735084496066709516685911254956",
+      "exact": "252940340179997378181/1098793750000000000"
+    },
+    "clock_interval_s": {
+      "decimal": "0.480002",
+      "exact": "240001/500000"
+    },
+    "deltaC_allowable_upper": {
+      "decimal": "0.00010701071647710104126164729380087254773700705887706",
+      "exact": "7705900249780102250941/72010547200000000000000000"
+    },
+    "deltaC_example_requirement": {
+      "decimal": "0.00005",
+      "exact": "1/20000"
+    },
+    "excursion_mass_upper": {
+      "decimal": "10.272351546658791954177023667999567707770452826110",
+      "exact": "2970314651913556311/289156250000000000"
+    },
+    "excursion_risk_upper": {
+      "decimal": "0.00048090327984413474701978101593855063327163155592651",
+      "exact": "10540539223507109726093397555367928721/21918210304000000000000000000000000000000"
+    },
+    "exposure_lower": {
+      "decimal": "21.127472550690846773894955063222738571274181346590",
+      "exact": "61091407347357001624640631/2891562500000000000000000"
+    },
+    "idle_prefix_s": {
+      "decimal": "0.025698",
+      "exact": "12849/500000"
+    },
+    "integral_p_squared": {
+      "decimal": "1.2871466248640838637824432474247328035857502829808",
+      "exact": "1414308666734249949/1098793750000000000"
+    },
+    "last_prefix_end_upper_s": {
+      "decimal": "6167.914552",
+      "exact": "770989319/125000"
+    },
+    "log_test_lower_C3": {
+      "decimal": "10.310307706935233467553821689830325299902734248352",
+      "exact": "2981289912883491102352359753/289156250000000000000000000"
+    },
+    "log_threshold_upper": {
+      "decimal": "9.22",
+      "exact": "461/50"
+    },
+    "margin_if_example_requirement_met": {
+      "decimal": "0.000057010716477101041261647293800872547737007058877064",
+      "exact": "4105372889780102250941/72010547200000000000000000"
+    },
+    "no_information_mass_upper": {
+      "decimal": "19.362740415391578947368421052631578947368421052632",
+      "exact": "9197301697311/475000000000"
+    },
+    "no_information_same_certificate_upper": {
+      "decimal": "0.0015779159440026154065690519126828687673130193905817",
+      "exact": "93327795123805251464630721/59146240000000000000000000000"
+    },
+    "nominal_last_partial_interval_s": {
+      "decimal": "0.0147512",
+      "exact": "18439/1250000"
+    },
+    "positive_residual_terms": {
+      "decimal": "52305",
+      "exact": "52305"
+    },
+    "quiet_history_mass_upper": {
+      "decimal": "0.33148461723842275746244461255808926834540149140819",
+      "exact": "7668067908267814437/23132500000000000000"
+    },
+    "quiet_no_parent_probability_lower": {
+      "decimal": "0.66851538276157724253755538744191073165459850859181",
+      "exact": "15464432091732185563/23132500000000000000"
+    },
+    "quiet_r_mass": {
+      "decimal": "1252.6407306947368421052631578947368421052631578947",
+      "exact": "14875108677/11875000"
+    },
+    "relative_margin_if_requirement_met": {
+      "decimal": "0.057010716477101041261647293800872547737007058877064",
+      "exact": "4105372889780102250941/72010547200000000000000"
+    },
+    "residual_tail_upper": {
+      "decimal": "0.0000013018244488415016002038887756232686980609418282548",
+      "exact": "58744828253972759709200481/45125000000000000000000000000000"
+    },
+    "tau_lower_s": {
+      "decimal": "6168.0257",
+      "exact": "61680257/10000"
+    },
+    "tau_upper_s": {
+      "decimal": "6168.505702",
+      "exact": "3084252851/500000"
+    }
+  },
+  "input_path": "experiments/hybrid-p-r-20261026/inputs.json",
+  "input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "price": {
+    "full_cost_gain_claimed": false,
+    "processing_WCET_cost_energy_and_extra_veto": null,
+    "saved_scheduled_main_passes_on_success": 5999,
+    "strong_schedule_comparison_claimed": false
+  },
+  "remaining_conditions": [
+    "Existing full source prefix, pass attribution/deduplication, invalid and current health",
+    "Predictable physical timing, preserved main passes and pending completion",
+    "Receiver/decision WCET and evidence for delta_C within allowed budget",
+    "Actual positive-probability valid history on existing wire; no new heartbeat presumed",
+    "Learning-time/success law and costs on all histories for any mean-gain claim"
+  ],
+  "status": "CONDITIONAL_THEORY_CANDIDATE_NOT_SERVICE_SIGNOFF",
+  "verification": "Exact rational gates and one direct exposure sum passed; no MC or old period grid"
+}
