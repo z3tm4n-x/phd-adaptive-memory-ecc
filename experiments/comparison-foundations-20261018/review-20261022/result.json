@@ -1,0 +1,68 @@
+{
+  "R1_first_ready_ns": 7900,
+  "R1_restore_ready_ns": 11900,
+  "R2_methods": [
+    "our_r4",
+    "patent_60"
+  ],
+  "cause_permutations": 320,
+  "checked_blobs": 9,
+  "delivery_upper_ns": {
+    "420": {
+      "exact": "48207737/5000",
+      "value": 9641.5474
+    },
+    "552": {
+      "exact": "122169359/12500",
+      "value": 9773.54872
+    }
+  },
+  "engineer_loss_checks": 32,
+  "executable": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+  "full_price_scope": {
+    "hard_envelope": {
+      "exact": "407070774209716935466849619/536912130825000000000000000",
+      "value": 0.7581701936669349
+    },
+    "limitation": "unbounded extra source notifications are not bounded by episode counts",
+    "nominal_FAST_base": "23/49",
+    "old_OUR_upper": {
+      "exact": "135180631755963838127446805309431199563294735675294032762223498902505875428641718648049500263/773153468388000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "value": 0.17484320679283905
+    }
+  },
+  "price_witness": {
+    "counts": {
+      "GAP_confirmations": 10000,
+      "current_G": 10002,
+      "loss_rises": 1,
+      "processed_G": 10002,
+      "raw_GAP_notifications": 10001,
+      "raw_RESTORE_notifications": 1,
+      "restores": 1,
+      "source_false": 0,
+      "source_health_loss_rises": 1,
+      "source_health_recoveries": 1
+    },
+    "extra_bus_ns": 12518256,
+    "extra_control_operations": 136068,
+    "final_UNKNOWN": false,
+    "final_k": 3,
+    "interval_ns": [
+      200000000000,
+      200040000000
+    ],
+    "no_new_NR": true,
+    "production_timers": true,
+    "spacing_ns": 4000
+  },
+  "queue": {
+    "allocated_records": 4096,
+    "inflight_upper": 253,
+    "packet_upper": 1253,
+    "processing_before_next_cut": true,
+    "simultaneous_safe_upper": 2759
+  },
+  "reviewed_head": "76413140a8ce4c3884a44df5dbeb619580339faa",
+  "scope": "author applicability check, not independent review or full matrix repeat"
+}
