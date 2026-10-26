@@ -1,0 +1,275 @@
+{
+  "acceptance": false,
+  "base_main": "f82de4749dd248dee793dbb9a2b3981fb3ad7378",
+  "current_source_hashes": 11,
+  "historical_source_hashes": 3,
+  "input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "interface": {
+    "counts": {
+      "full_decisions_upper": 12278825002,
+      "old_nominal_floor_for_comparison_only": 12278701975,
+      "source_G_upper": 78894788947889481,
+      "source_ticks_upper": 78894788947889481,
+      "started_blocks_upper": 12278825003
+    },
+    "no_hardware_measurement": true,
+    "no_hybrid_admission_claim": true,
+    "no_new_transport": true,
+    "obligations": {
+      "counter_errors": "prove coverage by joint old execution bound or provide delta_C inside epsilon",
+      "epoch": "single mission epoch, no source time/G reset or wrap; keep pass identifier locally",
+      "full_prefix": "atomic processed/current generation and source-health fence, including empty ready and lost-tail alarm contract",
+      "guard": "log own extra E; invalidate observation without changing mandatory scan/phases/pending",
+      "interval_invalid": "sticky over whole observation interval; RESTORE never repairs missing historical C",
+      "new_delta_C": null,
+      "transaction": "bind decoded word/origin and shared source-time to own fixed scan; reject ambiguity/repeated visit"
+    },
+    "production_full_counter_implemented": false,
+    "source_to_counter_binding_verified_in_hardware": false,
+    "state": {
+      "CPU_ns": null,
+      "code_bytes": null,
+      "counter_bits": 18,
+      "energy_J": null,
+      "pass_id_bits": 34,
+      "persistent_counter_bytes": 64,
+      "persistent_layout_bytes": {
+        "C": 4,
+        "closing_current_G": 8,
+        "decision_tick": 8,
+        "entry_processed_G": 8,
+        "flags": 4,
+        "invalid_causes": 4,
+        "last_transaction_index": 4,
+        "pass_id": 8,
+        "previous_decision_tick": 8,
+        "scan_start_tick": 8
+      },
+      "raw_ns_time_bits": 59,
+      "retained_transport_and_loss_bytes": 131136,
+      "reuse_of_existing_64_loss_bytes": false,
+      "solver_workspace_bytes": null,
+      "source_G_bits": 57,
+      "total_retained_plus_example_counter_bytes": 131200,
+      "wire_source_ticks_bits": 57
+    },
+    "status": "CONDITIONAL_LOCAL_BINDING_SPECIFIED_EXISTING_WIRE_UNCHANGED",
+    "timing": {
+      "P_lower_s": "160630190557/6250000000000",
+      "P_upper_s": "160633409443/6250000000000",
+      "block_ticks": 25701088,
+      "condition": "new per-packet work inside existing 3900 ns; finalization/inversion/install before boundary within residual window, else pre-certified fallback",
+      "drain_after_last_release_lower_ns": "7044303/625",
+      "minimum_control_start_gap_ticks": 164,
+      "nominal_k1_free_time_after_decision_ns": 0,
+      "physical_time_rule": "clip xi_minus*tick-J and xi_plus*tick+J to mission; do not integrate p on nominal times without clock binding",
+      "post_fresh_finalize_invert_install_budget_lower_ns": "794303/625",
+      "source_epoch_max_drift_from_nominal_s": "6311520000001/2000000000",
+      "source_to_fresh_upper_ns": "10000",
+      "timestamp_aperture_ticks": "7799924/99999",
+      "timestamp_mapping_guard_ticks": "499996/99999"
+    },
+    "wire_only_completeness": false,
+    "witnesses": {
+      "complete_two_ERR": {
+        "C": 2,
+        "full_service_boundary": true,
+        "invalid": false,
+        "no_action_authorized": true,
+        "reasons": []
+      },
+      "duplicate_delivery": {
+        "C": null,
+        "full_service_boundary": true,
+        "invalid": true,
+        "no_action_authorized": true,
+        "reasons": [
+          "G hole, duplicate, stale or reordered delivery",
+          "repeated visit identifier or reordered transaction"
+        ]
+      },
+      "guard_outside_main_pass": {
+        "C": null,
+        "full_service_boundary": true,
+        "invalid": true,
+        "no_action_authorized": true,
+        "reasons": [
+          "extra E outside mandatory scan"
+        ]
+      },
+      "healthy_closed_empty": {
+        "C": 0,
+        "full_service_boundary": true,
+        "invalid": false,
+        "no_action_authorized": true,
+        "reasons": []
+      },
+      "identical_wire_empty_vs_dropped_tail": {
+        "hidden_record_for_proof_only": {
+          "causes": [
+            "ERR"
+          ],
+          "g": 1,
+          "origin": "control",
+          "payload": [
+            0,
+            0
+          ],
+          "t": 68,
+          "word": 0
+        },
+        "receiver_must_not_read_hidden_record": true,
+        "true_C": [
+          0,
+          1
+        ],
+        "wire_records_both": [],
+        "with_existing_generation_gate": {
+          "C": null,
+          "full_service_boundary": true,
+          "invalid": true,
+          "no_action_authorized": true,
+          "reasons": [
+            "unprocessed source generation, including possible lost tail"
+          ]
+        },
+        "without_prefix_binding": {
+          "C": null,
+          "full_service_boundary": true,
+          "invalid": true,
+          "no_action_authorized": true,
+          "reasons": [
+            "no coherent closed-prefix certificate"
+          ]
+        }
+      },
+      "simultaneous_GAP_ERR_RESTORE": {
+        "decoded": {
+          "causes": [
+            "GAP",
+            "ERR",
+            "RESTORE"
+          ],
+          "covers": [
+            1,
+            1
+          ],
+          "g": 1,
+          "payload": [
+            1,
+            1
+          ],
+          "t": 68
+        },
+        "interval_invalid_must_stay_true": true,
+        "receiver_unknown_after_restore_can_be_false": true,
+        "result": {
+          "C": null,
+          "full_service_boundary": true,
+          "invalid": true,
+          "no_action_authorized": true,
+          "reasons": [
+            "ERR has no unambiguous control transaction payload",
+            "GAP in observation interval; RESTORE does not erase it"
+          ]
+        }
+      }
+    }
+  },
+  "lower_price": {
+    "common_price": {
+      "ECC_included_in_full_read": true,
+      "application_reads": 315569688607,
+      "expected_shared_bus_lower_if_same_good_contract": "1951735165795378840181/41090625000000000000000000",
+      "expected_shared_core_lower_if_same_good_contract": "88752589520520399984187/1314900000000000000000000000",
+      "good_application_bus_fraction_lower": "11710475574517163/246543750000000000000",
+      "good_application_core_fraction_lower": "532518484839606181/7889400000000000000000",
+      "good_initial_bus_fraction_lower": "693743/30095672607421875",
+      "good_initial_core_fraction_lower": "1887481/60191345214843750",
+      "useful_writes": 0
+    },
+    "expected_price": {
+      "completed_reads_lower": "3225289464871599653/100000",
+      "conditions": [
+        "deterministic ex-ante calendar and fixed admissible clock",
+        "fixed envelopes contain every good-execution repair",
+        "on good execution all planned visits occur; at most one pending and one future boundary aperture",
+        "joint coupling failure probability at most delta_exec for each allowed r; no independence assumed",
+        "cost nonnegative on failure histories; all accounting continues after memory A"
+      ],
+      "counter_error_budget_charged": false,
+      "delta_exec": "3/500000",
+      "factor": "499997/500000",
+      "implementation_verified": false,
+      "protection_read_bus_fraction_lower": "119687266751920191523177/24654375000000000000000000",
+      "protection_read_core_fraction_lower": "5442621142049921597243399/788940000000000000000000000",
+      "uniform_for_every_fixed_r": true
+    },
+    "geometric_good_execution": {
+      "completed_reads_lower": 32253088167245,
+      "read_bus_fraction_lower": "239375969759658941/49308750000000000000",
+      "read_core_fraction_lower": "10885307595945418867/1577880000000000000000"
+    },
+    "inversion": {
+      "H_epsilon": {
+        "lower": "0.00100650635762566579499711827723109531452317371965",
+        "upper": "0.00100650635762566579499711827723109531452317371967"
+      },
+      "OFF_excluded_by_necessary_count": true,
+      "kappa": {
+        "lower": "1.08124657655262911694481384869894927279413270801E-13",
+        "upper": "1.08124657655262911694481384869894927279413270803E-13"
+      },
+      "necessary_integer_visits_lower": 32253088167247,
+      "target": {
+        "lower": "71020.1934236028385193947337579375001383993589033",
+        "upper": "71020.1934236028385193947337579375001383993589063"
+      },
+      "visits_enclosure": {
+        "lower": "32253088167246.8602323390785221127929022379042576",
+        "upper": "32253088167246.8602323390785260792498149906882572"
+      },
+      "x_star": {
+        "lower": "43199.0391269441462864179166964390235122600995570",
+        "upper": "43199.0391269441462864179167017516040155853374697"
+      }
+    },
+    "no_gain_claim": true,
+    "no_new_hybrid_Q": true,
+    "old_Q_recomputed": false,
+    "scope": "all deterministic robustly admissible local per-word calendars; not random mixtures or adaptive calendars",
+    "service": {
+      "E_nominal_ns": 124,
+      "E_upper_ns": "3112531/25000",
+      "J_ns": "1/2",
+      "R_bus_lower_ns": "148436/3125",
+      "R_core_lower_ns": "1687483/25000",
+      "aperture": "[xi*tick-J, xi*tick+E_plus+J]; fixed xi, envelopes independent of future errors",
+      "clock_lower": "99999/100000",
+      "clock_upper": "100001/100000",
+      "fixed_aperture_upper_ns": "3137531/25000",
+      "future_boundary_strip_ns": "1",
+      "initial_pending": false,
+      "nominal_anchor_spacing_lower_ns": "1662483/25000",
+      "terminal_edge_deductions": 2
+    },
+    "status": "OWN_RESULT_CONDITIONAL_SERVICE_PRICE_TRANSFER_NOT_HYBRID_ACCEPTANCE",
+    "units": "physical seconds, counts, resource fractions of full T",
+    "unpriced": {
+      "controller_CPU_ns_per_action": null,
+      "controller_bus_average": null,
+      "controller_bus_peak": null,
+      "energy_J_per_action": null,
+      "idle_protection_W": null,
+      "physical_execution_failure_evidence": null,
+      "repairs": "omitted from a lower bound, not physically zero"
+    },
+    "witness": {
+      "duration_s": "31780265401176700/522965557643",
+      "plateau_s": "28967173814171300/522965557643",
+      "rise_s": "92728074200/17238539",
+      "shift_domain_s": "165003598553346191300/522965557643"
+    }
+  },
+  "old_Q_recomputed": false
+}
