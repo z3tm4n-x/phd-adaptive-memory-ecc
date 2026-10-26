@@ -1,0 +1,38 @@
+{
+  "base_main": "f82de4749dd248dee793dbb9a2b3981fb3ad7378",
+  "canonical_input": "../inputs.json",
+  "canonical_input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "delta_exec": "3/500000",
+  "hardware_measurements": false,
+  "historical_sources": {
+    "experiments/t186-method-comparison/stage4/CONDITIONS.md": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "sha256": "7a258e91f40b0250a22053b29f612db7ff5bbe2a4581f2ce22724f8278675743"
+    },
+    "experiments/t186-method-comparison/stage4/PLAN-LOSS-FIX.md": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "sha256": "a654707ed82b68cf880faf1f34603c725f8e260b5a9c0f4a1788a5be228f413d"
+    },
+    "experiments/t186-method-comparison/stage4/adapter.py": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "sha256": "cb50faad9ddc0b3754c53cea0ae67b0a0a509c11f0015aed24f0a6f0b82b07cd"
+    }
+  },
+  "new_delta_C": null,
+  "new_transport": false,
+  "old_Q_recompute": false,
+  "price_scope": "all deterministic robustly admissible per-word schedules; conditional service, no random mixtures",
+  "source_sha256": {
+    "MAP.md": "2d95fc38bc11510ed80b679a4fe6a00d47a5c8f3696a415713eb5515d585d705",
+    "STATUS.md": "d21e3c44ed37d1f020062af98daf59a383ceeaa1f1de89f7c5fac091f4e56ef5",
+    "docs/scientific_reviews/HYBRID_P_R_STAGE1_20261106.md": "89dc0f65fbf4afca210d18542c04d8f768338c6549dc4e6d8b54dade06cfc10d",
+    "experiments/fixed-code-long-lived-20261023/REPORT.md": "59a58c7c415f3683bffe6c71d80b369f595ba51442b499166fe277f0a56ef4dc",
+    "experiments/hybrid-p-r-20261026/SERVICE.md": "0995e2fbe523969d8fd94cf300dec0cea54e80970ddd9d7c4189a224bb837550",
+    "experiments/hybrid-p-r-20261026/inputs.json": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+    "experiments/hybrid-p-r-20261026/outputs/result.json": "643788d68d59b5282b56aab382281a72a53d91bd3f5bc18afa5a689a282166a6",
+    "experiments/t114-two-stage-err/intervals.py": "817cdad503f8432fe9d57c0b9340921b1af683b8db4b72aa9314ccf0f53b3be2",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "theory/hybrid-p-r-20261026.md": "b40fea37e02e2650d6aaff3a0c91bd211112324909e1f8783b2a938dd33633fb"
+  }
+}
