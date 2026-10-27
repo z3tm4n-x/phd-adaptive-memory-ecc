@@ -1,0 +1,44 @@
+{
+  "base_main": "c0864fff17eb1bdd28d66e81e4d9f7fc2acf4b22",
+  "external_references": {
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/count-price/result.json": {
+      "commit": "469527882ea3a8f326286b34fd8aa14aea1bf71b",
+      "local_snapshot": "reference-C3.json",
+      "sha256": "4550a4686c15e5f852bfc7e20a0ee7614b8ffcbd160c9617be47c8af49c7bc4b"
+    },
+    "experiments/t186-method-comparison/stage4/CONDITIONS.md": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "sha256": "7a258e91f40b0250a22053b29f612db7ff5bbe2a4581f2ce22724f8278675743",
+      "use": "read-only documentary reference; not needed to execute replay"
+    },
+    "experiments/t186-method-comparison/stage4/adapter.py": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "sha256": "cb50faad9ddc0b3754c53cea0ae67b0a0a509c11f0015aed24f0a6f0b82b07cd",
+      "use": "read-only documentary reference; not needed to execute replay"
+    },
+    "theory/t196-count-error-price-20261027.md": {
+      "commit": "469527882ea3a8f326286b34fd8aa14aea1bf71b",
+      "sha256": "b056e3eb2ff16be2897a4b20eba46e97d3778c50e87bcc24ccc4c03a01c10233",
+      "use": "read-only documentary reference; not needed to execute replay"
+    }
+  },
+  "input_and_all_PR281_settings_unchanged": true,
+  "old_A11_not_recomputed": true,
+  "plan_commit": "899de7a7428788aded969295ce37c3077cdd9d7e",
+  "source_sha256": {
+    "experiments/hybrid-p-r-20261026/SERVICE.md": "0995e2fbe523969d8fd94cf300dec0cea54e80970ddd9d7c4189a224bb837550",
+    "experiments/hybrid-p-r-20261026/inputs.json": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+    "experiments/hybrid-p-r-20261026/interface-price/INTERFACE.md": "d8c1b57ccd182af284023ccae64362e77f1979b5cf6a43b929ae0387aa7a62da",
+    "experiments/hybrid-p-r-20261026/interface-price/interface.py": "2d275d13cbcbc81d285467af2d350b78c176a06e67fbe3f2180aeadce145fda7",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/REVIEW_20261027.md": "973979d6807997489ff8aca43c5941c67503dbd0d1a9782800600493ea627a87",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/cell-service/PLAN.md": "01a88f1e4ee499fd8f3cab83e6a228fb821f0c8999fb440696586f41eb491ee0",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/theory/HANDOFF.md": "e27eac1edcfe359c47e627e374e7aaa4defebc89a4c5af5bcca3c9523bd2c4be",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/theory/check.py": "c1050e1f26aa39a0ed34ce3c67471a18e93be97446d8f2266de1064ced15e71e",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/theory/result.json": "ed9e06357483e2d69944a66ff670c39ddc36799f58b74b4bdee93e8333d27f04",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "experiments/t186-method-comparison/code-strength/comparison.py": "bc5a3dfbf8ed00a66a8407c50e525461aeedacc2a2aa72b598762048e5c7a2bd",
+    "theory/hybrid-epsilon-repeat-20261027.md": "3f3bab6c340f90d5fbf0a43c25370769f88a83dea5fe42a8a93892d6810fc291"
+  },
+  "status": "PR281 accepted; PR283 published conditional C1-C5, no self acceptance"
+}
