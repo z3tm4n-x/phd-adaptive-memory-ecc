@@ -1,0 +1,45 @@
+{
+  "base_main": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+  "plan_commit": "06f9aa9bf3d0d8042c891f30e05dba546a30e2ae",
+  "canonical_input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "sources": {
+    "experiments/hybrid-p-r-20261026/inputs.json": {
+      "ref": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+      "git_blob": "e2c2389e4f7e51de3d49025be1dcdc11a369c723"
+    },
+    "experiments/t186-method-comparison/code-strength/common-input.json": {
+      "ref": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+      "git_blob": "31fe2d05282a283f2fa8da67147a8ad1baac1276"
+    },
+    "experiments/t114-two-stage-err/intervals.py": {
+      "ref": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+      "git_blob": "fe57d6075e5ed5e807fd8f52e29387ccd4eda036"
+    },
+    "theory/hybrid-p-r-20261026.md": {
+      "ref": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+      "git_blob": "5ee4552163db673c3556b7ca3188f3a080d08a44"
+    },
+    "theory/hybrid-p-r-accumulated-reserve-20261026.md": {
+      "ref": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+      "git_blob": "0ecdcfd3a9975f81f3895d3a47982eea69da04f6"
+    },
+    "experiments/hybrid-p-r-20261026/interface-price/PRICE.md": {
+      "ref": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+      "git_blob": "c0475897f16e67f7b00ed2a0d42a1d60acb00156"
+    }
+  },
+  "candidate_price_contract": {
+    "pr": 275,
+    "sha": "407fab40d3d7448fa59f203b156f650cb971a79a",
+    "status": "candidate, not scientific acceptance",
+    "path": "experiments/hybrid-p-r-20261026/single-pilot/COST.md"
+  },
+  "engineering_handoff": {
+    "pr": 280,
+    "sha": "b9114e9454151f338987223ad335a40f33870666",
+    "path": "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/numerical/SERVICE_HANDOFF.md",
+    "git_blob": "24fecc58cc84e7d774fbe92e0d05cb9c26b9fc9c",
+    "comment": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6434682752",
+    "scope": "addressed author-basis agreement; no independent acceptance"
+  }
+}
