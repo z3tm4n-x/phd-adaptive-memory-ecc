@@ -1,0 +1,827 @@
+{
+  "coefficients": {
+    "B": "596414091/9500000000",
+    "Drepair_bus_plus": "706257/12500",
+    "Drepair_core_plus": "700007/12500",
+    "Ecore_plus": "3112531/25000",
+    "Fp": "23500956141/1187500",
+    "Fr": "1078230933/296875",
+    "Fs": "2156461866/296875",
+    "J": "1/2",
+    "Nhard": 1610097765253120,
+    "Pobs": "160633409443/6250000000000",
+    "R": "18081974469/289156250000",
+    "Rbus_minus": "148436/3125",
+    "Rbus_plus": "151564/3125",
+    "Rcore_minus": "1687483/25000",
+    "Rcore_plus": "1712517/25000",
+    "S2": "252940340179997378181/1098793750000000000",
+    "T": "315576000",
+    "W": 131072,
+    "b": "377091/9500000000",
+    "block": 25701088,
+    "cal": {
+      "adaptive_override": {
+        "mandatory": "first W indices and index mod k_a=0",
+        "reason": "T119 phase-exposure calendar; fixed diagnostic calendar unchanged",
+        "word_at_control_index": "inverse(k_a modulo W)*index mod W"
+      },
+      "additional_adaptive_reads": "only at unchanged potential starts; cannot suppress mandatory support",
+      "application_grant_phase_ticks": 1312,
+      "batch_size": 8,
+      "c_ticks": 164,
+      "frame_ticks": 1568,
+      "freeze_ticks": 320,
+      "g_ticks": 196,
+      "initialization_outside_horizon": true,
+      "mandatory": "startup full fast pass; then every kth full pass; fixed predetermined support",
+      "word_at_control_index": "(3*index) mod W"
+    },
+    "dE": "3137531/25000000000000",
+    "delta0": "3/500000",
+    "deltaC_requirement": "1/20000",
+    "fast": 25690112,
+    "g": "672303021/57831250000000",
+    "pmax": "1142070813/4626500000000",
+    "xm": "99999/100000",
+    "xp": "100001/100000"
+  },
+  "direction_A_closed": false,
+  "implementation_sha256": {
+    "model.py": "06f80e39096e168e491e2f3b91cd3c3df5fdb375cb30bf749420b419a535b0ce",
+    "plot.py": "0fec232c252e3ff9e14d2cc67aa3f8e48f82aa76feddcc3c33576b1f94f32716",
+    "run.py": "2c155f5900dc0274fdf7688afba7f1d4cda636818dea7bb3b9e1032760400507",
+    "test_slice.py": "6f5a46d584110df9cfd746bf2ff36f7285583789bbf8cd6f1ff973760ed4e6a6"
+  },
+  "manifest_sha256": "312c6369b11c0d0c7b9e9ec58517a641e3a11bb4add59e3f16ecbb8a513af126",
+  "no_MC_no_hardware_no_other_physical_axes": true,
+  "observation_cost": {
+    "CPU": "sum E[N_i]*c_i_ns/(T*1e9)+idle_CPU; c_i unknown",
+    "cuts_upper": 78894788947892,
+    "energy": "sum E[N_i]*e_i_J+T*idle_W; all nonoverlapping unit prices unknown",
+    "extra_veto_expected": null,
+    "false_expected_upper": "39447/125",
+    "loss_episodes_upper": 1001,
+    "main_counter_and_group_state_bytes": null,
+    "outage_seconds_upper": "157788/5",
+    "raw_records_expected": null,
+    "raw_records_upper": 78894788947889481,
+    "record_bytes": 32,
+    "restores_upper": 1000,
+    "retained_transport_loss_bytes": 131136,
+    "scope": "full T, including unsuccessful/invalid attempts and post-A; competitors have no unused observation chain",
+    "stack_code_LUT_BRAM": null
+  },
+  "old_results_changed": false,
+  "only_scientific_change": "fixed.epsilon",
+  "rows": [
+    {
+      "adaptive": {
+        "C_max": 14,
+        "K": 1,
+        "N": 608,
+        "N_design_cap": 1139,
+        "Q_upper": "1184341390188824077143937571068131/11843840000000000000000000000000000",
+        "accounted_observation_work": {
+          "group_adds": 114304,
+          "no_new_transport": true,
+          "no_reset_on_invalid": true,
+          "online_exp_log_inversions": 0,
+          "prepaid_attempts": 608,
+          "tail_base_passes": 1216,
+          "used_pass_closes": 114304
+        },
+        "admission_law": null,
+        "all_attempts_invalid_loss_witness": {
+          "episodes": 608,
+          "meaning": "one recognized 100 us outage per group; same retained quotas, no environment prior",
+          "one_outage_seconds": "1/10000",
+          "outage_seconds": "38/625",
+          "possible": true,
+          "restores": 608
+        },
+        "alpha": "12493/760000000",
+        "base_period_upper_s": "177660547390833/6250000000000",
+        "beta": "37479/760000000",
+        "budget": {
+          "alpha_total": "12493/1250000",
+          "base_allowance": "12493/250000",
+          "base_pairs": "591817762668824077143937571068131/11843840000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC_requirement": "1/20000",
+          "extension_total": "37479/1250000",
+          "zeta_total": "12493/1250000"
+        },
+        "comparison_lower_is_family_specific": true,
+        "control_CPU_energy_WCET": null,
+        "deltaC_proved": false,
+        "expected_saved_passes": null,
+        "extra_guard_expected": null,
+        "feasible_N": 1139,
+        "finite_budget_never_refilled": true,
+        "full_cost_formulas": {
+          "H": "min(S,2*F_parent+U_joint*Nhard)",
+          "S": "min(Nhard,Nbase_plus-W*(multiplier-1)*E[good successful attempts]+G_good+delta_exec*Nhard)",
+          "bus": "(Rbus_plus*S+Drepair_bus_plus*H)/(T*1e9)+u_A",
+          "core": "(Rcore_plus*S+Drepair_core_plus*H)/(T*1e9)+v_A",
+          "scope": "fixed admissible r and channel; all attempts including invalid paid; no distribution over environments"
+        },
+        "group": {
+          "M": 190,
+          "a0": "177656994209167/6250000000000",
+          "a1": "177660547390833/6250000000000",
+          "mu": "11302762555273874718221672087540686411233/282379150390625000000000000000000000000",
+          "q": 2,
+          "span": "33755225827/312500000000",
+          "used": 188,
+          "w": "44374090199931/1562500000000"
+        },
+        "hard_bus_upper": "3224600598397321/6019134521484375",
+        "hard_core_upper": "7646910411653227/12038269042968750",
+        "k_base": 1106,
+        "k_rare": 3318,
+        "learning_and_reserved_epochs_upper_s": "4169479886659323399/1250000000000",
+        "mandatory_expected_bus_lower": "1124783806923303860377/5136328125000000000000000",
+        "mandatory_expected_core_lower": "51148065236421287779799/164362500000000000000000000",
+        "mandatory_work_after_A": true,
+        "multiplier": 3,
+        "no_guard_no_credit_bus_upper_component": "690644012483293207429747771566252052215109665913/23763222070312500000000000000000000000000000000000",
+        "no_guard_no_credit_core_upper_component": "686909445425044681765957467233000735305904609663/23763222070312500000000000000000000000000000000000",
+        "nominal_main_reads_all_success": 1454988984320,
+        "rare_bill": "730023475763514820291079177601455249295001739277302715465223659461743378885281/14823062500000000000000000000000000000000000000000000000000000000000000000000000000",
+        "rare_period_upper_s": "532981642166249/6250000000000",
+        "reads_base": {
+          "lower": 1455133818880,
+          "nominal": 1455148367872,
+          "upper": 1455162916864
+        },
+        "relative_group_clock_transfer": "proposed conditional application of A1-A5; #196 confirmation pending",
+        "residue_tail": "9178411949099091220250987034544136883969/7050781250000000000000000000000000000000000000",
+        "saved_passes_all_success": 1216,
+        "saved_reads_all_success": 159383552,
+        "score_lower": "14.2859223813071479954516249645296577525808044166",
+        "score_upper": "14.2859223813071479954516249645296577525808044170",
+        "status": "CONDITIONAL_REPEATED_FAMILY_PENDING_THEORY_COORDINATION",
+        "zeta": "12493/760000000"
+      },
+      "comparisons": {
+        "constant": {
+          "condition": "same frozen p+r; lower/upper service contracts; if competitor overhead<=reported positive margin, even mandatory family cost exceeds feasible competitor",
+          "evidence": "interval comparisons of expected protection SRAM bus; unknown controller additions separate",
+          "guaranteed_saving_from_sufficient_A_upper_and_class_lower": "-66034117489198061396743151/5702765979072683256849",
+          "max_extra_competitor_bus_fraction_for_family_nonadvantage": "9974161239780604469275363384359913307686554521/105820598281860351562500000000000000000000000000000",
+          "necessary_competitor_extra_bus_fraction_for_20percent": "15767467882664352958961864526938038307686554521/105820598281860351562500000000000000000000000000000",
+          "needed_adaptive_bus_upper_for_20percent": "633640664341409250761/17121093750000000000000000",
+          "needed_adaptive_bus_upper_for_30percent": "4435484650389864755327/136968750000000000000000000",
+          "positive_20percent_gain_established": false,
+          "proved_optimum": false,
+          "saving_ceiling_for_this_family_vs_optimum_using_feasible_member": "-9974161239780604469275363384359913307686554521/13199065331754389489470641185952586692313445479"
+        },
+        "schedule": {
+          "condition": "same frozen p+r; lower/upper service contracts; if competitor overhead<=reported positive margin, even mandatory family cost exceeds feasible competitor",
+          "evidence": "interval comparisons of expected protection SRAM bus; unknown controller additions separate",
+          "guaranteed_saving_from_sufficient_A_upper_and_class_lower": "-66034117489198061396743151/5702765979072683256849",
+          "max_extra_competitor_bus_fraction_for_family_nonadvantage": "9974161239780604469275363384359913307686554521/105820598281860351562500000000000000000000000000000",
+          "necessary_competitor_extra_bus_fraction_for_20percent": "15767467882664352958961864526938038307686554521/105820598281860351562500000000000000000000000000000",
+          "needed_adaptive_bus_upper_for_20percent": "633640664341409250761/17121093750000000000000000",
+          "needed_adaptive_bus_upper_for_30percent": "4435484650389864755327/136968750000000000000000000",
+          "positive_20percent_gain_established": false,
+          "proved_optimum": false,
+          "saving_ceiling_for_this_family_vs_optimum_using_feasible_member": "-9974161239780604469275363384359913307686554521/13199065331754389489470641185952586692313445479"
+        }
+      },
+      "epsilon": "1/10",
+      "fixed": {
+        "Q_upper": "45002255142012947288529755695469961/450065920000000000000000000000000000",
+        "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+        "budget": {
+          "alpha": 0,
+          "base_pairs": "44999554746492947288529755695469961/450065920000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC": 0,
+          "zeta": 0
+        },
+        "bus_upper": "13199065331754389489470641185952586692313445479/105820598281860351562500000000000000000000000000000",
+        "core_upper": "6020643091555045530820968912947700507853967243/35273532760620117187500000000000000000000000000000",
+        "fixed_counter_observation_cost": 0,
+        "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+        "k": 2215,
+        "optimal_nonconstant_schedule_identified": false,
+        "period_upper_s": "71130208895601/1250000000000",
+        "reads": {
+          "lower": 726891888640,
+          "nominal": 726899228672,
+          "upper": 726906437632
+        },
+        "repair_expected_upper": "1949813770326799521237511537517627000247/26826019287109375000000000000",
+        "schedule_class_upper_is_this_member": true,
+        "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+        "unknown_CPU_energy": null,
+        "unknown_bus_controller": null
+      },
+      "input": "input-1e-1.json",
+      "lower_bounds": {
+        "H_exact_enclosure": {
+          "lower": "0.105367182346715288882315798287887101087491296407",
+          "upper": "0.105367182346715288882315798287887101087491296409"
+        },
+        "OFF_excluded": true,
+        "constant_bus_lower": "633640664341409250761/13696875000000000000000000",
+        "constant_core_lower": "28813976371899924727207/438300000000000000000000000",
+        "constant_period_cap_s": "460843756980897489777526693863762779029112515408691200/3408374124478487678190478746790987163056184574407411",
+        "constant_transfer_status": "local consequence proposed to #196; not an optimality theorem",
+        "delta_exec": "3/500000",
+        "linear_H_not_used": "50003/500000",
+        "necessary_scheduled_visits": 307354021715,
+        "schedule_bus_lower": "633640664341409250761/13696875000000000000000000",
+        "schedule_core_lower": "28813976371899924727207/438300000000000000000000000",
+        "source": "hybrid-p-r (9)-(14), PR272 G and edge deductions",
+        "statistical_budget_charged_to_competitor": 0,
+        "status": "CONDITIONAL_NECESSARY_CLASS_BOUNDS",
+        "witness": {
+          "duration_s": "31780265401176700/522965557643",
+          "plateau_s": "28967173814171300/522965557643",
+          "rise_s": "92728074200/17238539"
+        },
+        "x_root_lower": "3425014022723438708576521162224067445613250732421875/8319949122475515193021207716540141278533079007232",
+        "x_root_upper": "856253505680859677144130301606116735583648681640625/2079987280618878798255301929135035319633269751808"
+      },
+      "mandatory": true,
+      "strong_schedule": {
+        "best_known_feasible_upper": {
+          "Q_upper": "45002255142012947288529755695469961/450065920000000000000000000000000000",
+          "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+          "budget": {
+            "alpha": 0,
+            "base_pairs": "44999554746492947288529755695469961/450065920000000000000000000000000000",
+            "delta0": "3/500000",
+            "deltaC": 0,
+            "zeta": 0
+          },
+          "bus_upper": "13199065331754389489470641185952586692313445479/105820598281860351562500000000000000000000000000000",
+          "core_upper": "6020643091555045530820968912947700507853967243/35273532760620117187500000000000000000000000000000",
+          "fixed_counter_observation_cost": 0,
+          "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+          "k": 2215,
+          "optimal_nonconstant_schedule_identified": false,
+          "period_upper_s": "71130208895601/1250000000000",
+          "reads": {
+            "lower": 726891888640,
+            "nominal": 726899228672,
+            "upper": 726906437632
+          },
+          "repair_expected_upper": "1949813770326799521237511537517627000247/26826019287109375000000000000",
+          "schedule_class_upper_is_this_member": true,
+          "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+          "unknown_CPU_energy": null,
+          "unknown_bus_controller": null
+        },
+        "class_lower_bus": "633640664341409250761/13696875000000000000000000",
+        "class_lower_core": "28813976371899924727207/438300000000000000000000000",
+        "learning_price": 0,
+        "nonconstant_optimum_status": "UNKNOWN; upper is constant member, not restriction of comparison class",
+        "p_known_exactly": true
+      }
+    },
+    {
+      "adaptive": {
+        "C_max": 13,
+        "K": 1,
+        "N": 581,
+        "N_design_cap": 1059,
+        "Q_upper": "899523642131900973773254449586263/90013184000000000000000000000000000",
+        "accounted_observation_work": {
+          "group_adds": 1114939,
+          "no_new_transport": true,
+          "no_reset_on_invalid": true,
+          "online_exp_log_inversions": 0,
+          "prepaid_attempts": 581,
+          "tail_base_passes": 1162,
+          "used_pass_closes": 1114939
+        },
+        "admission_law": null,
+        "all_attempts_invalid_loss_witness": {
+          "episodes": 581,
+          "meaning": "one recognized 100 us outage per group; same retained quotas, no environment prior",
+          "one_outage_seconds": "1/10000",
+          "outage_seconds": "581/10000",
+          "possible": true,
+          "restores": 581
+        },
+        "alpha": "1243/726250000",
+        "base_period_upper_s": "17509041291787/6250000000000",
+        "beta": "3729/726250000",
+        "budget": {
+          "alpha_total": "1243/1250000",
+          "base_allowance": "1243/250000",
+          "base_pairs": "446937352979900973773254449586263/90013184000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC_requirement": "1/20000",
+          "extension_total": "3729/1250000",
+          "zeta_total": "1243/1250000"
+        },
+        "comparison_lower_is_family_specific": true,
+        "control_CPU_energy_WCET": null,
+        "deltaC_proved": false,
+        "expected_saved_passes": null,
+        "extra_guard_expected": null,
+        "feasible_N": 1059,
+        "finite_budget_never_refilled": true,
+        "full_cost_formulas": {
+          "H": "min(S,2*F_parent+U_joint*Nhard)",
+          "S": "min(Nhard,Nbase_plus-W*(multiplier-1)*E[good successful attempts]+G_good+delta_exec*Nhard)",
+          "bus": "(Rbus_plus*S+Drepair_bus_plus*H)/(T*1e9)+u_A",
+          "core": "(Rcore_plus*S+Drepair_core_plus*H)/(T*1e9)+v_A",
+          "scope": "fixed admissible r and channel; all attempts including invalid paid; no distribution over environments"
+        },
+        "group": {
+          "M": 1921,
+          "a0": "17508691108213/6250000000000",
+          "a1": "17509041291787/6250000000000",
+          "mu": "9409451561598096596466900623374245575739/225903320312500000000000000000000000000",
+          "q": 2,
+          "span": "336351322827/3125000000000",
+          "used": 1919,
+          "w": "1734805769877/625000000000"
+        },
+        "hard_bus_upper": "3224600598397321/6019134521484375",
+        "hard_core_upper": "7646910411653227/12038269042968750",
+        "k_base": 109,
+        "k_rare": 654,
+        "learning_and_reserved_epochs_upper_s": "19602895169882632037/6250000000000",
+        "mandatory_expected_bus_lower": "6848339611454236670863/3081796875000000000000000",
+        "mandatory_expected_core_lower": "311419242570687155678081/98617500000000000000000000",
+        "mandatory_work_after_A": true,
+        "multiplier": 6,
+        "no_guard_no_credit_bus_upper_component": "2797792289183763615219189087139228963110075501247/541801463203125000000000000000000000000000000000000",
+        "no_guard_no_credit_core_upper_component": "366008820361025025076401625330676800966188200833/60200162578125000000000000000000000000000000000000",
+        "nominal_main_reads_all_success": 14764702040064,
+        "rare_bill": "27455738439922201022528132223081085333222929771096109232451207540468423749838921/5351125562500000000000000000000000000000000000000000000000000000000000000000000000000",
+        "rare_period_upper_s": "105054247735097/6250000000000",
+        "reads_base": {
+          "lower": 14764935217152,
+          "nominal": 14765082804224,
+          "upper": 14765230522368
+        },
+        "relative_group_clock_transfer": "proposed conditional application of A1-A5; #196 confirmation pending",
+        "residue_tail": "9178411949099091220250987034544136883969/7050781250000000000000000000000000000000000000",
+        "saved_passes_all_success": 2905,
+        "saved_reads_all_success": 380764160,
+        "score_lower": "13.0513176119271083641058247821735432764158150808",
+        "score_upper": "13.0513176119271083641058247821735432764158150812",
+        "status": "CONDITIONAL_REPEATED_FAMILY_PENDING_THEORY_COORDINATION",
+        "zeta": "1243/726250000"
+      },
+      "comparisons": {
+        "constant": {
+          "condition": "same frozen p+r; lower/upper service contracts; if competitor overhead<=reported positive margin, even mandatory family cost exceeds feasible competitor",
+          "evidence": "interval comparisons of expected protection SRAM bus; unknown controller additions separate",
+          "guaranteed_saving_from_sufficient_A_upper_and_class_lower": "-65979937501562358754216839/59882753614775325783161",
+          "max_extra_competitor_bus_fraction_for_family_nonadvantage": "7343620416729683255530353647633925804587280315409/6772518290039062500000000000000000000000000000000000",
+          "necessary_competitor_extra_bus_fraction_for_20percent": "3702025599400451696004296466919641934862426771803/2257506096679687500000000000000000000000000000000000",
+          "needed_adaptive_bus_upper_for_20percent": "59882753614775325783161/154089843750000000000000000",
+          "needed_adaptive_bus_upper_for_30percent": "419179275303427280482127/1232718750000000000000000000",
+          "positive_20percent_gain_established": false,
+          "proved_optimum": false,
+          "saving_ceiling_for_this_family_vs_optimum_using_feasible_member": "-7343620416729683255530353647633925804587280315409/7706205109157004074399789364866074195412719684591"
+        },
+        "schedule": {
+          "condition": "same frozen p+r; lower/upper service contracts; if competitor overhead<=reported positive margin, even mandatory family cost exceeds feasible competitor",
+          "evidence": "interval comparisons of expected protection SRAM bus; unknown controller additions separate",
+          "guaranteed_saving_from_sufficient_A_upper_and_class_lower": "-65979937501562358754216839/59882753614775325783161",
+          "max_extra_competitor_bus_fraction_for_family_nonadvantage": "7343620416729683255530353647633925804587280315409/6772518290039062500000000000000000000000000000000000",
+          "necessary_competitor_extra_bus_fraction_for_20percent": "3702025599400451696004296466919641934862426771803/2257506096679687500000000000000000000000000000000000",
+          "needed_adaptive_bus_upper_for_20percent": "59882753614775325783161/154089843750000000000000000",
+          "needed_adaptive_bus_upper_for_30percent": "419179275303427280482127/1232718750000000000000000000",
+          "positive_20percent_gain_established": false,
+          "proved_optimum": false,
+          "saving_ceiling_for_this_family_vs_optimum_using_feasible_member": "-7343620416729683255530353647633925804587280315409/7706205109157004074399789364866074195412719684591"
+        }
+      },
+      "epsilon": "1/100",
+      "fixed": {
+        "Q_upper": "4490471875913441463932647636866441/450065920000000000000000000000000000",
+        "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+        "budget": {
+          "alpha": 0,
+          "base_pairs": "4487771480393441463932647636866441/450065920000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC": 0,
+          "zeta": 0
+        },
+        "bus_upper": "7706205109157004074399789364866074195412719684591/6772518290039062500000000000000000000000000000000000",
+        "core_upper": "3615575554141282982790428108526974363585433096947/2257506096679687500000000000000000000000000000000000",
+        "fixed_counter_observation_cost": 0,
+        "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+        "k": 220,
+        "optimal_nonconstant_schedule_identified": false,
+        "period_upper_s": "7064851448433/1250000000000",
+        "reads": {
+          "lower": 7318479699968,
+          "nominal": 7318552969216,
+          "upper": 7318626107392
+        },
+        "repair_expected_upper": "125366602018088388560806285624176745027263/1716865234375000000000000000000",
+        "schedule_class_upper_is_this_member": true,
+        "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+        "unknown_CPU_energy": null,
+        "unknown_bus_controller": null
+      },
+      "input": "input-1e-2.json",
+      "lower_bounds": {
+        "H_exact_enclosure": {
+          "lower": "0.0100563964779275943593506200194567669451407224235",
+          "upper": "0.0100563964779275943593506200194567669451407224237"
+        },
+        "OFF_excluded": true,
+        "constant_bus_lower": "59882753614775325783161/123271875000000000000000000",
+        "constant_core_lower": "2723089512466569055446007/3944700000000000000000000000",
+        "constant_period_cap_s": "460843756980897489777526693863762779029112515408691200/35948236023653511487742275839564021182233125492376161",
+        "constant_transfer_status": "local consequence proposed to #196; not an optimality theorem",
+        "delta_exec": "3/500000",
+        "linear_H_not_used": "5003/500000",
+        "necessary_scheduled_visits": 3227417225659,
+        "schedule_bus_lower": "59882753614775325783161/123271875000000000000000000",
+        "schedule_core_lower": "2723089512466569055446007/3944700000000000000000000000",
+        "source": "hybrid-p-r (9)-(14), PR272 G and edge deductions",
+        "statistical_budget_charged_to_competitor": 0,
+        "status": "CONDITIONAL_NECESSARY_CLASS_BOUNDS",
+        "witness": {
+          "duration_s": "31780265401176700/522965557643",
+          "plateau_s": "28967173814171300/522965557643",
+          "rise_s": "92728074200/17238539"
+        },
+        "x_root_lower": "35964875921898462518128318254997101464790191650390625/8319949122475515193021207716540141278533079007232",
+        "x_root_upper": "17982437960949231259064159149598750480755767822265625/4159974561237757596510603858270070639266539503616"
+      },
+      "mandatory": true,
+      "strong_schedule": {
+        "best_known_feasible_upper": {
+          "Q_upper": "4490471875913441463932647636866441/450065920000000000000000000000000000",
+          "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+          "budget": {
+            "alpha": 0,
+            "base_pairs": "4487771480393441463932647636866441/450065920000000000000000000000000000",
+            "delta0": "3/500000",
+            "deltaC": 0,
+            "zeta": 0
+          },
+          "bus_upper": "7706205109157004074399789364866074195412719684591/6772518290039062500000000000000000000000000000000000",
+          "core_upper": "3615575554141282982790428108526974363585433096947/2257506096679687500000000000000000000000000000000000",
+          "fixed_counter_observation_cost": 0,
+          "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+          "k": 220,
+          "optimal_nonconstant_schedule_identified": false,
+          "period_upper_s": "7064851448433/1250000000000",
+          "reads": {
+            "lower": 7318479699968,
+            "nominal": 7318552969216,
+            "upper": 7318626107392
+          },
+          "repair_expected_upper": "125366602018088388560806285624176745027263/1716865234375000000000000000000",
+          "schedule_class_upper_is_this_member": true,
+          "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+          "unknown_CPU_energy": null,
+          "unknown_bus_controller": null
+        },
+        "class_lower_bus": "59882753614775325783161/123271875000000000000000000",
+        "class_lower_core": "2723089512466569055446007/3944700000000000000000000000",
+        "learning_price": 0,
+        "nonconstant_optimum_status": "UNKNOWN; upper is constant member, not restriction of comparison class",
+        "p_known_exactly": true
+      }
+    },
+    {
+      "adaptive": {
+        "C_max": 10,
+        "K": 1,
+        "N": 72,
+        "N_design_cap": 1268,
+        "Q_upper": "88157629748434372718021642110683/90013184000000000000000000000000000",
+        "accounted_observation_work": {
+          "group_adds": 1674288,
+          "no_new_transport": true,
+          "no_reset_on_invalid": true,
+          "online_exp_log_inversions": 0,
+          "prepaid_attempts": 72,
+          "tail_base_passes": 144,
+          "used_pass_closes": 1674288
+        },
+        "admission_law": null,
+        "all_attempts_invalid_loss_witness": {
+          "episodes": 72,
+          "meaning": "one recognized 100 us outage per group; same retained quotas, no environment prior",
+          "one_outage_seconds": "1/10000",
+          "outage_seconds": "9/1250",
+          "possible": true,
+          "restores": 72
+        },
+        "alpha": "59/45000000",
+        "base_period_upper_s": "1445700659987/6250000000000",
+        "beta": "59/15000000",
+        "budget": {
+          "alpha_total": "59/625000",
+          "base_allowance": "59/125000",
+          "base_pairs": "40630668596434372718021642110683/90013184000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC_requirement": "1/20000",
+          "extension_total": "177/625000",
+          "zeta_total": "59/625000"
+        },
+        "comparison_lower_is_family_specific": true,
+        "control_CPU_energy_WCET": null,
+        "deltaC_proved": false,
+        "expected_saved_passes": null,
+        "extra_guard_expected": null,
+        "feasible_N": 1268,
+        "finite_budget_never_refilled": true,
+        "full_cost_formulas": {
+          "H": "min(S,2*F_parent+U_joint*Nhard)",
+          "S": "min(Nhard,Nbase_plus-W*(multiplier-1)*E[good successful attempts]+G_good+delta_exec*Nhard)",
+          "bus": "(Rbus_plus*S+Drepair_bus_plus*H)/(T*1e9)+u_A",
+          "core": "(Rcore_plus*S+Drepair_core_plus*H)/(T*1e9)+v_A",
+          "scope": "fixed admissible r and channel; all attempts including invalid paid; no distribution over environments"
+        },
+        "group": {
+          "M": 23256,
+          "a0": "1445671740013/6250000000000",
+          "a1": "1445700659987/6250000000000",
+          "mu": "67853511251329189786879542581727751581/1807226562500000000000000000000000000",
+          "q": 2,
+          "span": "42035182209/390625000000",
+          "used": 23254,
+          "w": "128503833057/625000000000"
+        },
+        "hard_bus_upper": "3224600598397321/6019134521484375",
+        "hard_core_upper": "7646910411653227/12038269042968750",
+        "k_base": 9,
+        "k_rare": 522,
+        "learning_and_reserved_epochs_upper_s": "2426764848847217539/6250000000000",
+        "mandatory_expected_bus_lower": "46079383934013132892211/1712109375000000000000000",
+        "mandatory_expected_core_lower": "2095399418985159490483357/54787500000000000000000000",
+        "mandatory_work_after_A": true,
+        "multiplier": 58,
+        "no_guard_no_credit_bus_upper_component": "5016959111901122708374386360889561850043899293409/180600487734375000000000000000000000000000000000000",
+        "no_guard_no_credit_core_upper_component": "7064330960029961203582397297759455158623107187159/180600487734375000000000000000000000000000000000000",
+        "nominal_main_reads_all_success": 178821020516352,
+        "rare_bill": "20970406942760926834130398648434418336920311086883671707255642054636721300876521/5351125562500000000000000000000000000000000000000000000000000000000000000000000000000",
+        "rare_period_upper_s": "83850638101121/6250000000000",
+        "reads_base": {
+          "lower": 178819770220544,
+          "nominal": 178821558435840,
+          "upper": 178823346651136
+        },
+        "relative_group_clock_transfer": "proposed conditional application of A1-A5; #196 confirmation pending",
+        "residue_tail": "9178411949099091220250987034544136883969/7050781250000000000000000000000000000000000000",
+        "saved_passes_all_success": 4104,
+        "saved_reads_all_success": 537919488,
+        "score_lower": "10.1887469950504697188120005901140685725214245900",
+        "score_upper": "10.1887469950504697188120005901140685725214245905",
+        "status": "CONDITIONAL_REPEATED_FAMILY_PENDING_THEORY_COORDINATION",
+        "zeta": "59/45000000"
+      },
+      "comparisons": {
+        "constant": {
+          "condition": "same frozen p+r; lower/upper service contracts; if competitor overhead<=reported positive margin, even mandatory family cost exceeds feasible competitor",
+          "evidence": "interval comparisons of expected protection SRAM bus; unknown controller additions separate",
+          "guaranteed_saving_from_sufficient_A_upper_and_class_lower": "-1250483176845397571429070922516507559654764557858279419134537944250151537029426542/11436876744724527432980177211938844257594894901483436002502887628668647041589083",
+          "max_extra_competitor_bus_fraction_for_family_nonadvantage": "2155312030888553740427247007767163445867655689939/142579332421875000000000000000000000000000000000000",
+          "necessary_competitor_extra_bus_fraction_for_20percent": "3114650244856756657393410869517163445867655689939/142579332421875000000000000000000000000000000000000",
+          "needed_adaptive_bus_upper_for_20percent": "45747506978898109731920708847755377030379579605933744010011550514674588166356332/11777685834476502899189833650827864012140276412813108766495879922091960906982421875",
+          "needed_adaptive_bus_upper_for_30percent": "80058137213071692030861240483571909803164264310384052017520213400680529291123581/23555371668953005798379667301655728024280552825626217532991759844183921813964843750",
+          "positive_20percent_gain_established": false,
+          "proved_optimum": false,
+          "saving_ceiling_for_this_family_vs_optimum_using_feasible_member": "-2155312030888553740427247007767163445867655689939/1682040824984257927437408439232836554132344310061"
+        },
+        "schedule": {
+          "condition": "same frozen p+r; lower/upper service contracts; if competitor overhead<=reported positive margin, even mandatory family cost exceeds feasible competitor",
+          "evidence": "interval comparisons of expected protection SRAM bus; unknown controller additions separate",
+          "guaranteed_saving_from_sufficient_A_upper_and_class_lower": "-1189843344025773329497893/10880660613810926502107",
+          "max_extra_competitor_bus_fraction_for_family_nonadvantage": "2155312030888553740427247007767163445867655689939/142579332421875000000000000000000000000000000000000",
+          "necessary_competitor_extra_bus_fraction_for_20percent": "3114650244856756657393410869517163445867655689939/142579332421875000000000000000000000000000000000000",
+          "needed_adaptive_bus_upper_for_20percent": "119687266751920191523177/30817968750000000000000000",
+          "needed_adaptive_bus_upper_for_30percent": "837810867263441340662239/246543750000000000000000000",
+          "positive_20percent_gain_established": false,
+          "proved_optimum": false,
+          "saving_ceiling_for_this_family_vs_optimum_using_feasible_member": "-2155312030888553740427247007767163445867655689939/1682040824984257927437408439232836554132344310061"
+        }
+      },
+      "epsilon": "1/1000",
+      "fixed": {
+        "Q_upper": "449446878442864191203412296684937/450065920000000000000000000000000000",
+        "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+        "budget": {
+          "alpha": 0,
+          "base_pairs": "446746482922864191203412296684937/450065920000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC": 0,
+          "zeta": 0
+        },
+        "bus_upper": "1682040824984257927437408439232836554132344310061/142579332421875000000000000000000000000000000000000",
+        "core_upper": "791614231181611774979349995503081842137975242937/47526444140625000000000000000000000000000000000000",
+        "fixed_counter_observation_cost": 0,
+        "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+        "k": 21,
+        "optimal_nonconstant_schedule_identified": false,
+        "period_upper_s": "3371860921397/6250000000000",
+        "reads": {
+          "lower": 76669787308032,
+          "nominal": 76670553948160,
+          "upper": 76671320719360
+        },
+        "repair_expected_upper": "2767438673904271897352435774564434946973/36144531250000000000000000000",
+        "schedule_class_upper_is_this_member": true,
+        "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+        "unknown_CPU_energy": null,
+        "unknown_bus_controller": null
+      },
+      "input": "input-1e-3.json",
+      "lower_bounds": {
+        "H_exact_enclosure": {
+          "lower": "0.00100650635762566579499711827723109531452317371965",
+          "upper": "0.00100650635762566579499711827723109531452317371967"
+        },
+        "OFF_excluded": true,
+        "constant_bus_lower": "11436876744724527432980177211938844257594894901483436002502887628668647041589083/2355537166895300579837966730165572802428055282562621753299175984418392181396484375",
+        "constant_core_lower": "520076937665201965188705930694284317128971571129374896542929756239420477934783221/75377189340649618554814935365298329677697769042003896105573631501388549804687500000",
+        "constant_period_cap_s": "57605469622612186222190836732970347378639064426086400/44924645972219930604639476790798858309888344025170067",
+        "constant_transfer_status": "local consequence proposed to #196; not an optimality theorem",
+        "delta_exec": "3/500000",
+        "linear_H_not_used": "503/500000",
+        "necessary_scheduled_visits": 32253088167247,
+        "schedule_bus_lower": "119687266751920191523177/24654375000000000000000000",
+        "schedule_core_lower": "5442621142049921597243399/788940000000000000000000000",
+        "source": "hybrid-p-r (9)-(14), PR272 G and edge deductions",
+        "statistical_budget_charged_to_competitor": 0,
+        "status": "CONDITIONAL_NECESSARY_CLASS_BOUNDS",
+        "witness": {
+          "duration_s": "31780265401176700/522965557643",
+          "plateau_s": "28967173814171300/522965557643",
+          "rise_s": "92728074200/17238539"
+        },
+        "x_root_lower": "44926725959500549483437732092727993345207977294921875/1039993640309439399127650964567517659816634875904",
+        "x_root_upper": "359413807676004395867501856786024346258385162353515625/8319949122475515193021207716540141278533079007232"
+      },
+      "mandatory": true,
+      "strong_schedule": {
+        "best_known_feasible_upper": {
+          "Q_upper": "449446878442864191203412296684937/450065920000000000000000000000000000",
+          "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+          "budget": {
+            "alpha": 0,
+            "base_pairs": "446746482922864191203412296684937/450065920000000000000000000000000000",
+            "delta0": "3/500000",
+            "deltaC": 0,
+            "zeta": 0
+          },
+          "bus_upper": "1682040824984257927437408439232836554132344310061/142579332421875000000000000000000000000000000000000",
+          "core_upper": "791614231181611774979349995503081842137975242937/47526444140625000000000000000000000000000000000000",
+          "fixed_counter_observation_cost": 0,
+          "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+          "k": 21,
+          "optimal_nonconstant_schedule_identified": false,
+          "period_upper_s": "3371860921397/6250000000000",
+          "reads": {
+            "lower": 76669787308032,
+            "nominal": 76670553948160,
+            "upper": 76671320719360
+          },
+          "repair_expected_upper": "2767438673904271897352435774564434946973/36144531250000000000000000000",
+          "schedule_class_upper_is_this_member": true,
+          "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+          "unknown_CPU_energy": null,
+          "unknown_bus_controller": null
+        },
+        "class_lower_bus": "119687266751920191523177/24654375000000000000000000",
+        "class_lower_core": "5442621142049921597243399/788940000000000000000000000",
+        "learning_price": 0,
+        "nonconstant_optimum_status": "UNKNOWN; upper is constant member, not restriction of comparison class",
+        "p_known_exactly": true
+      }
+    },
+    {
+      "adaptive": {
+        "deltaC_requirement": "1/20000",
+        "eps": "1/10000",
+        "k_base": 0,
+        "minimum_k2_Q_excluding_deltaC": "31823199483979276610388363968481/225032960000000000000000000000000000",
+        "reason": "A5 needs a positive scrub-free prefix; k>=2 does not fit allocated base risk",
+        "status": "NOT_CERTIFIED_BY_THIS_FAMILY"
+      },
+      "comparisons": {},
+      "epsilon": "1/10000",
+      "fixed": {
+        "Q_upper": "43313712867931801984393669531017/450065920000000000000000000000000000",
+        "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+        "budget": {
+          "alpha": 0,
+          "base_pairs": "40613317347931801984393669531017/450065920000000000000000000000000000",
+          "delta0": "3/500000",
+          "deltaC": 0,
+          "zeta": 0
+        },
+        "bus_upper": "439372735691672945993009992999130528373980229205721344231/1775375034624000000000000000000000000000000000000000000000",
+        "core_upper": "206845546963410964317055671731691987371681403184020066827/591791678208000000000000000000000000000000000000000000000",
+        "fixed_counter_observation_cost": 0,
+        "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+        "k": 1,
+        "optimal_nonconstant_schedule_identified": false,
+        "period_upper_s": "160564808757/6250000000000",
+        "reads": {
+          "lower": 1610065531997743,
+          "nominal": 1610081632653063,
+          "upper": 1610097733630399
+        },
+        "repair_expected_upper": "69739328737634964437280648730601429763144585783/450065920000000000000000000000000000",
+        "schedule_class_upper_is_this_member": true,
+        "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+        "unknown_CPU_energy": null,
+        "unknown_bus_controller": null
+      },
+      "input": "input-1e-4.json",
+      "lower_bounds": {
+        "H_exact_enclosure": {
+          "lower": "0.000106005618397036897934020929867800769136100945633",
+          "upper": "0.000106005618397036897934020929867800769136100945635"
+        },
+        "OFF_excluded": true,
+        "constant_bus_lower": "9991004890524293276217370897158163822977194190985693530745240939579161188226586261/216709420072250005970047189895451339866430570260515931713073856203806400299072265625",
+        "constant_core_lower": "454327815507736829088121956766529676425908124309119380105704045283997457743193415707/6934701442312000191041510076654442875725778248336509814818363398521804809570312500000",
+        "constant_period_cap_s": "230421878490448744888763346931881389514556257704345600/1706312431909898361916018262169016217608249512575289643",
+        "constant_transfer_status": "local consequence proposed to #196; not an optimality theorem",
+        "delta_exec": "3/500000",
+        "linear_H_not_used": "53/500000",
+        "necessary_scheduled_visits": 306243736194592,
+        "schedule_bus_lower": "568216531002610081987907/12327187500000000000000000",
+        "schedule_core_lower": "25838899899913160391904909/394470000000000000000000000",
+        "source": "hybrid-p-r (9)-(14), PR272 G and edge deductions",
+        "statistical_budget_charged_to_competitor": 0,
+        "status": "CONDITIONAL_NECESSARY_CLASS_BOUNDS",
+        "witness": {
+          "duration_s": "31780265401176700/522965557643",
+          "plateau_s": "28967173814171300/522965557643",
+          "rise_s": "92728074200/17238539"
+        },
+        "x_root_lower": "1706320751859020837431211283376732757749528045654296875/4159974561237757596510603858270070639266539503616",
+        "x_root_upper": "3412641503718041674862422566797665914995777435302734375/8319949122475515193021207716540141278533079007232"
+      },
+      "mandatory": false,
+      "strong_schedule": {
+        "best_known_feasible_upper": {
+          "Q_upper": "43313712867931801984393669531017/450065920000000000000000000000000000",
+          "all_history_count_cap_condition": "configured deterministic starts only; missed starts lower cost; service duration bounded even after A",
+          "budget": {
+            "alpha": 0,
+            "base_pairs": "40613317347931801984393669531017/450065920000000000000000000000000000",
+            "delta0": "3/500000",
+            "deltaC": 0,
+            "zeta": 0
+          },
+          "bus_upper": "439372735691672945993009992999130528373980229205721344231/1775375034624000000000000000000000000000000000000000000000",
+          "core_upper": "206845546963410964317055671731691987371681403184020066827/591791678208000000000000000000000000000000000000000000000",
+          "fixed_counter_observation_cost": 0,
+          "if_bad_execution_can_start_off_calendar_extra_reads_upper": "30189333098496/3125",
+          "k": 1,
+          "optimal_nonconstant_schedule_identified": false,
+          "period_upper_s": "160564808757/6250000000000",
+          "reads": {
+            "lower": 1610065531997743,
+            "nominal": 1610081632653063,
+            "upper": 1610097733630399
+          },
+          "repair_expected_upper": "69739328737634964437280648730601429763144585783/450065920000000000000000000000000000",
+          "schedule_class_upper_is_this_member": true,
+          "status": "SUFFICIENT_CONSTANT_CANDIDATE_NOT_CLASS_OPTIMUM",
+          "unknown_CPU_energy": null,
+          "unknown_bus_controller": null
+        },
+        "class_lower_bus": "568216531002610081987907/12327187500000000000000000",
+        "class_lower_core": "25838899899913160391904909/394470000000000000000000000",
+        "learning_price": 0,
+        "nonconstant_optimum_status": "UNKNOWN; upper is constant member, not restriction of comparison class",
+        "p_known_exactly": true
+      }
+    }
+  ],
+  "scientific_acceptance": false,
+  "scientific_input": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "shared_app_init": {
+    "ECC_included_once": true,
+    "app_bus_upper_fraction": "11957251071007837/246543750000000000000",
+    "app_core_upper_fraction": "180139485474731273/2629800000000000000000",
+    "application_reads": 315569688607,
+    "init_bus_upper_fraction": "78473/3343963623046875",
+    "init_core_upper_fraction": "1912519/60191345214843750",
+    "init_encodes": 131072,
+    "init_write_beats": 393216,
+    "physical_initialization_and_environment_escape_probabilities": null,
+    "useful_writes": 0
+  },
+  "status": "ENGINEERING_EPSILON_SLICE_WITH_EXPLICIT_UNRESOLVED_TRANSFERS",
+  "unresolved": [
+    "#196 confirmation of epsilon transfer and proposed relative-time repeated family",
+    "optimal/stronger nonconstant feasible schedule under known p; current upper is a constant member",
+    "actual full-prefix/WCET/delta_C and all-history service obligations",
+    "nonzero CPU/energy/controller coefficients and admissible-channel guard/success law"
+  ]
+}
