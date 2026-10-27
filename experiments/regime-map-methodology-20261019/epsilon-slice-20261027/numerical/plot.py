@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 HERE=Path(__file__).resolve().parent
 def make():
     r=json.loads((HERE/'result.json').read_bytes()); plt.rcParams['svg.hashsalt']='epsilon-slice-20261027'
+    plt.rcParams['svg.fonttype']='none'
     plt.rcParams.update({'font.size':10,'axes.titlesize':12})
     fig,axes=plt.subplots(1,2,figsize=(12,5.8),sharex=True,layout='constrained')
     for ax,coordinate in zip(axes,('bus','core')):
@@ -43,6 +44,8 @@ def make():
     fig.suptitle('Fixed p+r input; discrete epsilon slice — conditional operation-cost bounds\n'
         'Unknown controller / CPU / energy costs remain additive; no optimum or continuous-boundary claim',fontsize=11)
     fig.savefig(HERE/'cost-epsilon.svg',metadata={'Date':None})
+    svg=HERE/'cost-epsilon.svg'
+    svg.write_bytes(('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n').encode('utf-8'))
     fig.savefig(HERE/'cost-epsilon.png',dpi=170,metadata={'Software':'epsilon-slice-20261027'})
     plt.close(fig)
 
