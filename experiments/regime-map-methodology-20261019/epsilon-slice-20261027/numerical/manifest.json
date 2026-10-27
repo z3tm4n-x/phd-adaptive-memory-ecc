@@ -1,0 +1,29 @@
+{
+  "base_main": "430ebe46c4be584e402bf64bcd98836d62bcfb08",
+  "canonical_input": "experiments/hybrid-p-r-20261026/inputs.json",
+  "canonical_raw_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "inputs_sha256": {
+    "input-1e-1.json": "0462835ff7d6199b87a2a5a7b534e5c66aae23ca10c52b747afa95afe9076510",
+    "input-1e-2.json": "873b5ea9b15108f1ef8897276ec641467ebc6b67c8aef089fc16ed2dc99f2131",
+    "input-1e-3.json": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+    "input-1e-4.json": "d1ff412e2f46c3f05f44695fdb4bbcf0d1b4136943083a519424aa38d3400051"
+  },
+  "only_scientific_change": "fixed.epsilon",
+  "plan_commit": "d7f1a9a71b6c6ddc921a56b0549a2eedd6c4a502",
+  "settings_commit": "a6f55d0",
+  "source_sha256": {
+    "experiments/hybrid-p-r-20261026/inputs.json": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+    "experiments/hybrid-p-r-20261026/interface-price/PRICE.md": "ac6e08e6645f1f25731edceeaff436752648c27dcc343323bcbd8080b55492ab",
+    "experiments/hybrid-p-r-20261026/interface-price/price.py": "1bc20c8e017393059298aee07d439fbed66fa33c20045529db01c1cab3102647",
+    "experiments/hybrid-p-r-20261026/interface-price/result.json": "8021de9c96c93545eda8f3e1b95482ed143add15ead3395106dccbfea20d07df",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/PLAN.md": "fdaab2d2dea8bc3fad01cd96acfe36c2528520112796b85898c240cba9a70098",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/numerical/PLAN.md": "32bd4f42824864323a31434864c41abc4b753d294986a35cebb83b75b5263d08",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/numerical/SETTINGS.md": "ed1894e93a6c5a7466f1431fe84892c1633a80998472b33b13e76e2fe6d2913f",
+    "experiments/t114-two-stage-err/intervals.py": "817cdad503f8432fe9d57c0b9340921b1af683b8db4b72aa9314ccf0f53b3be2",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "theory/hybrid-p-r-20261026.md": "c457f1d8593552c0d52be6a4302d9b4a590166c32b7ea1d0889ddce29f0c47fb",
+    "theory/hybrid-p-r-accumulated-reserve-20261026.md": "b3c886c732231bd9db53df9a4f5dd552a5c99ad68eeb8a46998a6713e3e4c6ea"
+  },
+  "theory_coordination": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/196#issuecomment-6434316712"
+}
