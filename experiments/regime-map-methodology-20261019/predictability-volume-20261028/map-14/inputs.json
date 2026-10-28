@@ -1,0 +1,141 @@
+{
+  "acceptance_PR": 297,
+  "accepted_result_reuse": "c00",
+  "base_main": "c58fbccc2ec9180ffbcb7653c12e81194902d35f",
+  "cells": [
+    {
+      "alpha": "1/10",
+      "epsilon": "1/1000",
+      "id": "c00",
+      "stage": "accepted_reuse",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "0",
+      "epsilon": "1/1000",
+      "id": "c01",
+      "stage": "first",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "0",
+      "epsilon": "1/10000",
+      "id": "c02",
+      "stage": "first",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "1/100",
+      "epsilon": "1/1000",
+      "id": "c03",
+      "stage": "first",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "1/100",
+      "epsilon": "1/10000",
+      "id": "c04",
+      "stage": "first",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "1/100",
+      "epsilon": "1/10",
+      "id": "c05",
+      "stage": "epsilon",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "1/100",
+      "epsilon": "1/100",
+      "id": "c06",
+      "stage": "epsilon",
+      "useful_bytes": 4194304,
+      "words": 1048576
+    },
+    {
+      "alpha": "0",
+      "epsilon": "1/1000",
+      "id": "c07",
+      "stage": "predictability",
+      "useful_bytes": 524288,
+      "words": 131072
+    },
+    {
+      "alpha": "1/100",
+      "epsilon": "1/1000",
+      "id": "c08",
+      "stage": "predictability",
+      "useful_bytes": 524288,
+      "words": 131072
+    },
+    {
+      "alpha": "1/10",
+      "epsilon": "1/1000",
+      "id": "c09",
+      "stage": "predictability",
+      "useful_bytes": 524288,
+      "words": 131072
+    },
+    {
+      "alpha": "1/2",
+      "epsilon": "1/1000",
+      "id": "c10",
+      "stage": "predictability",
+      "useful_bytes": 524288,
+      "words": 131072
+    },
+    {
+      "alpha": "1",
+      "epsilon": "1/1000",
+      "id": "c11",
+      "stage": "predictability",
+      "useful_bytes": 524288,
+      "words": 131072
+    },
+    {
+      "alpha": "1/10",
+      "epsilon": "1/1000",
+      "id": "c12",
+      "stage": "volume",
+      "useful_bytes": 1048576,
+      "words": 262144
+    },
+    {
+      "alpha": "1/10",
+      "epsilon": "1/1000",
+      "id": "c13",
+      "stage": "volume",
+      "useful_bytes": 2097152,
+      "words": 524288
+    }
+  ],
+  "deadlines": {
+    "control": "2026-10-30",
+    "review": "2026-11-04",
+    "table": "2026-11-03"
+  },
+  "extra_fixed_comparison": "cheapest certified constant pair already in the common menu; no extra search",
+  "guard_diagnostics": "reuse accepted PR296, no new guard campaign",
+  "new_cells": 13,
+  "rule": "inherited THEORY and period menu; no input substitutions",
+  "schema": 1,
+  "source_sha256_LF": {
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/RESOURCE.md": "8d55e3732ba88ae0ee18d0c8c312226a0311e14712d4d9c3a2332b2feb51665a",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/REVIEW_FIRST_POINT_20261028.md": "bf71fdd94d794a8c71c208df42c839051212f254c7f3cb080275a98835191b23",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/REVIEW_THEORY_20261028.md": "eebcb47707ab13fcf8ed2fd2bd0c71d06803b1136c3dec48ff62f75ca8b69714",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/THEORY.md": "a2d4da37e9cc685e638bd620bae3d3622bee3dabe445e90c90abcdfb5c95eaf1",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/first-point-result.json": "0f727a6bd458c15baf7e46e48ba78d88e161afa8b77e5941a1ea78db12aa4952",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/first_point.py": "2ee8678bc484cb1ca1b02a3542efec52090683baf15b89e61790539f9c790947",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/inputs.json": "5f62171e4706854f6419345d7eaed1f2103c06bc4989976fde03942db091c6cd",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/resource-result.json": "27e7f955e10a3167e3e97e9ea588f018f4d75aa16f240be3bcfa988538dbb84a",
+    "experiments/t114-two-stage-err/intervals.py": "817cdad503f8432fe9d57c0b9340921b1af683b8db4b72aa9314ccf0f53b3be2"
+  },
+  "total_cells": 14
+}
