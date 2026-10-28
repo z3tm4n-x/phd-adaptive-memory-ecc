@@ -92,6 +92,7 @@ def calculate():
                        packet_max_records=packet_max,
                        serial_unit_ceiling_before_overhead_ns=F(packet_budget, packet_max),
                        serial_unit_ceiling_before_overhead_ns_down=decimal(F(packet_budget, packet_max)),
+                       serial_ceiling_scope='All packet record work starts at cut; streaming pre-cut work is a different paid placement',
                        serial_model_not_required_for_parallel_logic=True,
                        final_gate_install_ns=F(saved['timing']['final_gate_install_after_fresh_lower_ns']),
                        hardware_verified=False),

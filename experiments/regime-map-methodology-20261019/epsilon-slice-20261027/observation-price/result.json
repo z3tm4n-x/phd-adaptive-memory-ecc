@@ -88,11 +88,12 @@
     "hardware_verified": false,
     "packet_max_records": 1253,
     "packet_total_ns": "3900",
+    "serial_ceiling_scope": "All packet record work starts at cut; streaming pre-cut work is a different paid placement",
     "serial_model_not_required_for_parallel_logic": true,
     "serial_unit_ceiling_before_overhead_ns": "3900/1253",
     "serial_unit_ceiling_before_overhead_ns_down": "3.112529928172"
   },
-  "implementation_sha256": "9d153e6c3bf040405a5128554fbbfad81cb272ec5eaf74f599fa0cdea572f452",
+  "implementation_sha256": "226c5cc1578acb1baf8cd2a01d5865f919088954f853839040c27f809a298cee",
   "input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
   "manifest_sha256": "4ed88dce3c4d4a00148a37f38c2dde55955d6d9e4d522dfeb5964de264c05ad7",
   "placement_example": {
