@@ -8,7 +8,7 @@ d03ed86a77c30e9b39819a7bdca95cddbbe3056f.
 **Совместный вывод #186/#196: имеющихся оснований недостаточно для одной
 полностью обоснованной точки внутри области 20%.** Адресно согласован
 [инженерный отчёт PR287][engineering] на точном SHA
-f9d2c028605e38c9e31f0064f33bbed7ce29a1f7; [заключение #196][signature].
+7e27555b2136695a1413911f6a29718672d57f21; [заключение #196][signature].
 Принятая область сохраняется. Конкретный остаток — связь полного доступного
 префикса с C/invalid, размещение и полная цена нового агрегатора,
 его завершение в прежние сроки и длительность непригодности данных.
@@ -92,8 +92,12 @@ V_x+добавки+d_x≤0.8(L_J^x+d_x), то есть прежний остат
 [CONTRACT PR284][contract] предоставляет совместимые фиксированные якоря,
 однократный выбор календаря, прежние окна приложения и условие готовности
 до fence. После прежних 10 мкс fresh остаётся ≥1270.8848 нс для окончательной
-обработки/установки; пакет целиком должен укладываться в прежние 3900 нс.
-Это требования к исполнению, не измеренные времена нового счётчика.
+обработки/установки; оставшаяся после cut обработка, доставка и install
+должны укладываться в прежние 3900 нс. Предварительная потоковая обработка
+допустима и также оплачивается. Потолок 3900/1253 применим лишь к схеме,
+которая начинает всю последовательную обработку записей после cut;
+это не общая нижняя граница скорости CPU. Названные сроки — требования
+к исполнению, не измеренные времена нового счётчика.
 Средний ресурсный остаток из §1 не заменяет этих сроков.
 
 [INTERFACE][interface] и его [offline-предикат][counter] явно не являются
@@ -144,8 +148,10 @@ production_full_counter_implemented=False. Поэтому ни пустой па
 SHA256 из [SOURCES][sources], тождество четырёх C5 по сохранённым точным
 дробям (bus/core × F/S), размерности, направления округления, арифметика
 16 нс/cut, 3900/1253 и final=1270.8848 нс. Инженерный result имеет SHA256
-13018a83ba12334edd4d0222179a12a26fed13b9511dfdce5d56104720f248ea.
-Проверка не присваивает нулевые затраты и не является проверкой аппаратуры.
+055ea7e097670148a442e64bc6ee26adbeb3d03029e6d0532eaa7d368aef7b30.
+Дельта f9d2c028→7e27555b проверена: добавлена область последовательного
+потолка; все числа C3/C5 и хеши источников сохранены. Проверка не присваивает
+нулевые затраты и не является проверкой аппаратуры.
 
 **Как повторить:** на инженерном SHA выполнить локальную команду из
 [REPORT][engineering], затем сопоставить C3–C5 в [принятой записке][c3],
@@ -162,6 +168,6 @@ COST, условия [приёмки][accept] и таблицу §2. Собст�
 [counter]: ../experiments/hybrid-p-r-20261026/interface-price/interface.py
 [arm-report]: ../experiments/t105-arm-rule/REPORT.md
 [arm-bound]: ../experiments/t105-arm-rule/SERVICE_BOUND.md
-[engineering]: https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/f9d2c028605e38c9e31f0064f33bbed7ce29a1f7/experiments/regime-map-methodology-20261019/epsilon-slice-20261027/observation-price/REPORT.md
-[sources]: https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/f9d2c028605e38c9e31f0064f33bbed7ce29a1f7/experiments/regime-map-methodology-20261019/epsilon-slice-20261027/observation-price/SOURCES.json
-[signature]: https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/287#issuecomment-6461715693
+[engineering]: https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7e27555b2136695a1413911f6a29718672d57f21/experiments/regime-map-methodology-20261019/epsilon-slice-20261027/observation-price/REPORT.md
+[sources]: https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/blob/7e27555b2136695a1413911f6a29718672d57f21/experiments/regime-map-methodology-20261019/epsilon-slice-20261027/observation-price/SOURCES.json
+[signature]: https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/287#issuecomment-6461774024
