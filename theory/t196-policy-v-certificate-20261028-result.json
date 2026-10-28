@@ -1,0 +1,86 @@
+{
+  "task": 196,
+  "base_main": "29a37708145fbabfb51ce5dda6d5001962973ec2",
+  "policy": "later_iff_complete_valid_zero_healthy_and_installed_in_time_else_nearest",
+  "status": "PROCEDURE_CHECKED_COMPRESSED_TEST_INSUFFICIENT_FULL_V_UNINSTANTIATED",
+  "source": "experiments/regime-map-methodology-20261019/predictability-volume-20261028/inputs.json",
+  "source_sha256_lf": "5f62171e4706854f6419345d7eaed1f2103c06bc4989976fde03942db091c6cd",
+  "script_sha256_lf": "8b2bcd79ca3caecaf5e3e06ab8e0dd0b5cbe1d1623d6a174554a8c75b14b8834",
+  "fixed_probe": {
+    "words": 1048576,
+    "alpha": "1/10",
+    "epsilon": "1/1000",
+    "mission_s": "315576000"
+  },
+  "environment": {
+    "pmax": {
+      "exact": "244719591/152187500000",
+      "decimal_up": "0.001608013739630391"
+    },
+    "R": {
+      "exact": "2312058089/9511718750",
+      "decimal_up": "0.243074690260369610"
+    },
+    "Fr": {
+      "exact": "221175576/78125",
+      "decimal_up": "2831.047372800000000000"
+    },
+    "g": {
+      "exact": "82096851/1902343750000",
+      "decimal_up": "0.000043155634201233"
+    },
+    "Ip": {
+      "exact": "238522127995532313/5944824218750000",
+      "decimal_up": "40.122654466928145957"
+    },
+    "Ur": {
+      "exact": "518136529142272941/743103027343750",
+      "decimal_up": "697.260689401806970460"
+    }
+  },
+  "squared_rate_integral_upper": {
+    "exact": "4383614361133715841/5944824218750000",
+    "decimal_up": "737.383343868735116417"
+  },
+  "mass_only_risk_coefficient_per_s": {
+    "exact": "6667477443284381794161/2250329600000000000000000",
+    "decimal_up": "0.002962889277768191"
+  },
+  "residual_cap_all_T_exposure_over_quota": {
+    "exact": "1815396/67",
+    "decimal_up": "27095.462686567164179105"
+  },
+  "compressed_test_diagnostic": {
+    "witness": "r=R on [0,Fr/R), then 0; nonincreasing, same original class",
+    "witness_duration_s": {
+      "exact": "1761966000/151283",
+      "decimal_up": "11646.820858920037281123"
+    },
+    "test_value_lower_bound_not_Q": {
+      "exact": "6461275366943491191036016077/5365203857421875000000000000000",
+      "decimal_down": "0.001204292611921051"
+    },
+    "strictly_above_epsilon": true,
+    "holds_for_every_valid_environment_dual_and_regular_timing_binding": true,
+    "implication": "Only the compressed test fails; not a lower bound on Q or on the sharper V."
+  },
+  "missing_bindings": [
+    "certified decision offset for own count at 4 MiB",
+    "certified installation guard for these templates",
+    "nonoverlapping lifetime exceptions and delta_C"
+  ],
+  "numeric_Q_upper": null,
+  "checks": [
+    "growth_dual_matches_independent_primal_witness_13_over_6",
+    "invalid_dual_and_negative_multiplier_rejected",
+    "zero_total_residual_mass_gives_zero_even_with_positive_cap",
+    "backward_recursion_equals_exhaustive_finite_path_maximum",
+    "every_finite_path_obeys_window_multiplicity_and_halo_bound",
+    "compressed_energy_bound_dominates_exact_finite_recursion",
+    "zero_observation_does_not_remove_hidden_residual_term",
+    "partial_startup_terminal_interval_is_charged_without_fake_count",
+    "canonical_profile_integral_matches_independent_linear_segment_identity",
+    "cell_maximum_uses_actual_profile_and_peak_locations",
+    "admissible_mass_witness_forces_compressed_test_above_fixed_epsilon"
+  ]
+}
