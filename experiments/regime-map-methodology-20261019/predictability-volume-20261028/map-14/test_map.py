@@ -1,5 +1,6 @@
 """Tests of the new parameter adapter and map bookkeeping, not accepted reruns."""
 from fractions import Fraction as F
+from decimal import Decimal, localcontext
 import json
 from pathlib import Path
 import unittest
@@ -76,6 +77,43 @@ class MapTests(unittest.TestCase):
         self.assertIn('trivial',x['basis'])
         self.assertFalse(x['class_excluded_by_resource'])
         self.assertIsNone(x['P0_s'])
+
+    def test_new_thresholds_with_independent_80_digit_arithmetic(self):
+        def dec(x):
+            x=F(x)
+            return Decimal(x.numerator)/Decimal(x.denominator)
+        for cell in self.cfg['cells'][1:]:
+            if cell['id'] not in self.records:
+                continue
+            r=self.records[cell['id']];f=r['fixed_class']
+            with localcontext() as ctx:
+                ctx.prec=80
+                W=cell['words'];a=F(r['environment']['a']);b=F(r['environment']['b'])
+                B=F(r['environment']['B']);R=F(r['environment']['R']);Fr=F(r['environment']['Fr'])
+                D=19922944;dE=F('0.00000012550124');delta=F('0.000006')
+                prefix=F(r['resource']['calendar']['cycle_upper_ns'],10**9)
+                witnesses=[('zero_residual_central_bands',F(300),58440,F(39,D)*(b+a/2),F(39,D)*(b+a))]
+                if Fr>0:
+                    witnesses.append(('initial_residual_plateau',max(F(0),Fr/R-prefix),1,F(39,D)*(b+R),F(39,D)*B))
+                def check_bound(bound,P0=None):
+                    name,L,n,lamlo,lamhi=next(w for w in witnesses if w[0]==bound['name'])
+                    M=F(2) if P0 is None else L/P0+2
+                    free=max(F(0),L-M*dE)
+                    Z=dec(n*W*F(38,78)*lamlo**2*free**2/(M+1))*(-dec(lamhi*L)).exp()
+                    q=max(Decimal(0),1-(-Z).exp()-dec(delta))
+                    self.assertLessEqual(dec(bound['Q_lower']),q)
+                    self.assertGreaterEqual(dec(bound['Q_lower_expression_enclosure_upper']),q)
+                    return q
+                if f['excluded_from'] is None:
+                    vals=[check_bound(x) for x in f['registered_witness_limit_at_P_infinity']]
+                    self.assertLessEqual(max(vals),dec(F(cell['epsilon'])))
+                    self.assertEqual(r['fixed_class_lower_for_price']['cost']['serial']['lower_s'],0)
+                else:
+                    hi=f['excluded_from'];lo=f['last_not_excluded']
+                    hiq=max(check_bound(x,F(hi['P0_s'])) for x in hi['witnesses'])
+                    loq=max(check_bound(x,F(lo['P0_s'])) for x in lo['witnesses'])
+                    self.assertGreater(hiq,dec(F(cell['epsilon'])))
+                    self.assertLessEqual(loq,dec(F(cell['epsilon'])))
 
     def test_deduplication_full_price_and_guard_resource(self):
         for r in self.records.values():
