@@ -213,9 +213,9 @@ class Point:
             risks = {f:self.risk(kH,kL,f) for f in ('N0_design','N0_actual','Nplus_box','M','F')}
             constant = kH==kL
             prices = {}
+            shared = self.price(kH,kL,risks['F']['upper'],False) if constant else None
             for label,f,guard in (('N0','N0_actual',False),('Nplus_box','Nplus_box',True),('M','M',True)):
-                U = risks['F' if constant else f]['upper']
-                prices[label] = self.price(kH,kL,U,guard)
+                prices[label] = shared if constant else self.price(kH,kL,risks[f]['upper'],guard)
             eligible = {label:(risks['F' if constant else f]['upper']<=self.eps)
                         for label,f in (('N0','N0_design'),('Nplus_box','Nplus_box'),('M','M'))}
             rows.append(dict(pair=[kH,kL],period_high_s=dict(lower=self.P(kH,False),upper=self.P(kH)),
@@ -365,7 +365,10 @@ class Point:
         # Each endpoint expansion is at most H+ plus two poll intervals and
         # two freeze intervals. Count on kH support; no cost-bound subtraction.
         extension=hold['upper_s']+2*self.hp+2*self.freeze
-        edge_count=2*self.N+ch['loss_episodes_upper']+nf+2
+        # Charge both ends of each loss/false component too; this avoids relying
+        # on an optimistic one-sided recovery decomposition under overlaps.
+        assert self.hp >= self.delay+2*self.et+self.freeze
+        edge_count=2*(self.N+ch['loss_episodes_upper']+nf)+2
         additional_upper=min(self.Nmax,edge_count*self.W*(extension/self.P(kH,False)+2)+self.delta*self.Nmax)
         coords={}
         for c in ('bus','serial'):
@@ -385,6 +388,7 @@ class Point:
             one_loss_interval_s=loss,one_loss_N0_reads=n0loss,one_loss_guarded_reads=nploss,
             one_loss_additional_reads=nploss-n0loss,
             additional_recovery_reads_due_to_one_loss=(nploss-np)-(n0loss-n0),
+            recovery_complete_high_cycle_cover_lower=hold['lower_s']/(self.P(kH)+self.dE),
             recovery_extra_time_upper_s=hold['upper_s'],price_band_extension_each_side_s=hold['upper_s'],
             terminal_extra_reads=self.support_interval(self.T-cp['C_s'],self.T-c0['C_s'],kH)-self.support_interval(self.T-cp['C_s'],self.T-c0['C_s'],kL),
             expected_additional_reads_upper=additional_upper,endpoint_envelope_s=extension,
@@ -423,6 +427,8 @@ class Point:
             peak_including_reserved_management=self.resource['resource']['peak_including_full_reserved_management_slot'],
             burst='ceil((b_check+3*b_command+5*b_timer+b_extra_bundle)/progress)+20 frames, plus local CPU <= .01s; <=10 sequential phases',
             conditional_local_processing_budget_s=tau,conditional_burst_work_upper_s=B,
+            window_action_mean_sufficient_for_any_composition=(P/self.T)*B/5,
+            window_action_mean_budget_scope='only declared check/command/timer/extra-bundle work, not unbounded per-slot or ERR traffic',
             atomic_upper_s=F(32,NS),frame_upper_s=frame,guaranteed_progress_s=progress,
             gain_conditions=gains,CPU=None,energy=None,controller_state_bytes=None,
             unused_ERR='zero only if actually disabled; otherwise separate unknown rate/burst/cost',
@@ -443,6 +449,10 @@ def calculate():
         if pair:
             key='M' if label=='Nplus_refined' else label
             management[label]=p.management(lookup[tuple(pair)]['prices'][key],lower['excluded_from'],fixedprice)
+    strict_management={}
+    for label,pair in cand['best_strict_window'].items():
+        if pair:
+            strict_management[label]=p.management(lookup[tuple(pair)]['prices'][label],lower['excluded_from'],fixedprice)
     guardpairs={tuple(x) for x in [selected['N0'],selected['M'],cand['best_strict_window']['N0'],cand['best_strict_window']['M']] if x}
     lowerpairs={tuple(x) for x in [selected['N0'],cand['best_strict_window']['N0']] if x}
     return dict(status='ONE_CONDITIONAL_POINT_NOT_SCIENTIFIC_ACCEPTANCE',base_main='8201d41c9c50e34d5a088f91d34c14b4fee88aee',
@@ -450,8 +460,14 @@ def calculate():
         implementation_sha256=sha(Path(__file__)),words=p.W,useful_bytes=4*p.W,alpha=p.alpha,epsilon=p.eps,mission_s=p.T,
         environment=dict(b=p.b,B=p.B,a=p.a,R=p.R,Fr=p.Fr,g=p.g,Ip=p.Ip,IH=p.IH,IL=p.IL,box=p.box,K=p.K,XE=p.XE),
         candidates=cand,fixed_class=lower,fixed_next_Q=p.risk(cand['fixed_k']+1,cand['fixed_k']+1,'F'),
+        diagnostic=dict(residual_only_sufficient_low_period_upper_s=(p.eps-p.delta-p.K*p.XE)/(p.K*p.Fr*(2*p.b+p.R))-p.dE,
+            residual_fraction_of_fixed_physical_Q=fixedrow['risks']['F']['terms']['residual']/(fixedrow['risks']['F']['upper']-p.delta0),
+            initial_residual_plateau_s=p.Fr/p.R,
+            fixed_Q_slack=p.eps-fixedrow['risks']['F']['upper'],
+            fixed_next_nominal_period_s=196*(cand['fixed_k']+1)*p.W/F(NS),
+            source_of_dominance='concentrated residual allowed outside windows; this is a certificate/menu result, not impossibility of every schedule'),
         N0_Q_brackets=[dict(pair=list(pair),**p.n0_lower(*pair)) for pair in sorted(lowerpairs)],
-        guard_diagnostics=[p.guards(list(pair)) for pair in sorted(guardpairs)],management=management,
+        guard_diagnostics=[p.guards(list(pair)) for pair in sorted(guardpairs)],management=management,strict_window_management=strict_management,
         per_operation_seconds=p.unit,resource_reused=p.resource,
         Nplus_refined_equals_M=True,remaining_grid_executed=False,physical_Q=None,
         unknowns=['CPU','energy','controller state/code/buffers','local selector WCET','full 6MiB physical capacity','control coefficients','enabled unused ERR stream'])

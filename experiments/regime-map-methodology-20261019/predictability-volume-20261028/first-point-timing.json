@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-28",
+  "python": "3.12.14",
+  "host": "Windows, one local Python process",
+  "first_complete_point_s": 7.621568499947898,
+  "first_implementation_commit": "4edebd0",
+  "final_generation_s": 7.568297200021334,
+  "final_implementation_SHA256_LF": "2ee8678bc484cb1ca1b02a3542efec52090683baf15b89e61790539f9c790947",
+  "result_SHA256_LF": "0f727a6bd458c15baf7e46e48ba78d88e161afa8b77e5941a1ea78db12aa4952",
+  "directed_tests": 6,
+  "final_replay_s": 7.811491500004195,
+  "test_elapsed_s": 0.292,
+  "remaining_grid_executed": false,
+  "scope": "Observed host compute time, not hardware WCET, MC uncertainty or a whole-grid timing claim"
+}
