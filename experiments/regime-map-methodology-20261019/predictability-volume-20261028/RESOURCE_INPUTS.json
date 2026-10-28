@@ -1,0 +1,29 @@
+{
+  "actual_useful_writes": 0,
+  "base_main": "90c9552097192c5d1e4c031bfd5e11b382e75bb5",
+  "control_useful_bytes": 524288,
+  "mandatory_and_control_useful_bytes": [
+    524288,
+    1048576,
+    2097152,
+    4194304
+  ],
+  "plan_commit": "ebf651a8ae94b712825e00f01f6f1fd3492cdd68",
+  "scope": "service-only preflight, no transfer of old environmental witnesses",
+  "source_sha256_LF": {
+    "docs/literature_mapping/saa-windows-20261026/PARAMETER_CHECK_20261028.md": "55ae72c85e77f0fc9af13e1ce75f41150d10fef982cbc4cc8f8a145a99502190",
+    "experiments/fixed-code-long-lived-20261023/REPORT.md": "59a58c7c415f3683bffe6c71d80b369f595ba51442b499166fe277f0a56ef4dc",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/PLAN.md": "66f5f7cad1210311925988e08f5dd89ba4739392420625afa03d4341c89f2e55",
+    "experiments/regime-map-methodology-20261019/volume-slice-20261024/METHOD.md": "43c95d09cc623b10cde8d80472f6ab3819a72ec1e6dca01a5ddb2067fe7fcee3",
+    "experiments/regime-map-methodology-20261019/volume-slice-20261024/outputs/result.json": "9a92e0bea6148f7bba74c81f7d209fedae76bcdbcc3389fc35846bc7872cd5df",
+    "experiments/regime-map-methodology-20261019/volume-slice-20261024/run.py": "4591fcdf8452d5b51ceefa5e0ff99fa8fda4ce1a93d6e0d3f4da4de68bfe067d",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/ENGINEERING.md": "9af729a5c79727657a3c0a79666d978e277dcde1721208283a9beccacef86e55",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/REVIEW_20261025.md": "8edee09196a68d511f52eb68a1f402bb84060ac8b6bd7f4ca2b0faffa670f94f",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/model.py": "514470895f36e672aa011fddfd560a7d34feef607631b515057bdfcaf1fedcf2",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "experiments/t186-method-comparison/code-strength/comparison.py": "bc5a3dfbf8ed00a66a8407c50e525461aeedacc2a2aa72b598762048e5c7a2bd",
+    "experiments/t186-method-comparison/code-strength/cost.py": "4e4fd0f633fe0cbb6a3ba30a51e5bd55d3549e28f4556a90f55762ced515639a",
+    "experiments/t186-method-comparison/code-strength/parents.py": "31d1971ef51a4f540a8a61938bddccfd047899bccfcd033b549e838a8d7a02a0"
+  },
+  "theory_status": "new family and N0/Nplus/M definitions pending publication"
+}
