@@ -1,0 +1,161 @@
+{
+  "status": "conditional_proton_composition_only_not_physical_alpha",
+  "orbits": {
+    "LEO_51_6": {
+      "rows": [
+        {
+          "theta_MeV": 10,
+          "trapped_per_year_cm2": 2154975000.0,
+          "f_SEP_interval": [
+            0.14923163473780832,
+            0.14923163473780832
+          ]
+        },
+        {
+          "theta_MeV": 30,
+          "trapped_per_year_cm2": 1534050000.0,
+          "f_SEP_interval": [
+            0.06690794075605973,
+            0.09337785526432434
+          ]
+        },
+        {
+          "theta_MeV": 100,
+          "trapped_per_year_cm2": 712237500.0,
+          "f_SEP_interval": [
+            0.030623181748583677,
+            0.030623181748583677
+          ]
+        }
+      ],
+      "f_SEP_threshold_family_hull": [
+        0.030623181748583677,
+        0.14923163473780832
+      ],
+      "alpha_scenario_hull_beta_tr_unknown": [
+        0.030623181748583677,
+        1.0
+      ],
+      "physical_bank_alpha": "UNKNOWN",
+      "grid_upper_scenario_only": 1
+    },
+    "SSO": {
+      "rows": [
+        {
+          "theta_MeV": 10,
+          "trapped_10y_cm2_interval": [
+            114815362149.6884,
+            165958690743.75632
+          ],
+          "total_10y_cm2_interval": [
+            151356124843.62073,
+            239883291901.9495
+          ],
+          "f_SEP_interval": [
+            0.0,
+            0.521369907677362
+          ]
+        },
+        {
+          "theta_MeV": 30,
+          "trapped_10y_cm2_interval": [
+            79432823472.42822,
+            114815362149.6884
+          ],
+          "total_10y_cm2_interval": [
+            95499258602.14369,
+            138038426460.28867
+          ],
+          "f_SEP_interval": [
+            0.0,
+            0.4245600626628433
+          ]
+        },
+        {
+          "theta_MeV": 100,
+          "trapped_10y_cm2_interval": [
+            34673685045.2531,
+            50118723362.72715
+          ],
+          "total_10y_cm2_interval": [
+            34673685045.2531,
+            50118723362.72715
+          ],
+          "f_SEP_interval": [
+            0.0,
+            0.3081690290810638
+          ]
+        }
+      ],
+      "f_SEP_threshold_family_hull": [
+        0.0,
+        0.521369907677362
+      ],
+      "alpha_scenario_hull_beta_tr_unknown": [
+        0.0,
+        1.0
+      ],
+      "physical_bank_alpha": "UNKNOWN",
+      "grid_upper_scenario_only": 1
+    },
+    "GEO": {
+      "rows": [
+        {
+          "theta_MeV": 10,
+          "trapped_10y_cm2_interval": [
+            0,
+            10000
+          ],
+          "total_10y_cm2_interval": [
+            151356124843.62073,
+            263026799189.53815
+          ],
+          "f_SEP_interval": [
+            0.9999999339306552,
+            1.0
+          ]
+        },
+        {
+          "theta_MeV": 30,
+          "trapped_10y_cm2_interval": [
+            0,
+            10000
+          ],
+          "total_10y_cm2_interval": [
+            41686938347.03346,
+            66069344800.75964
+          ],
+          "f_SEP_interval": [
+            0.9999997601167081,
+            1.0
+          ]
+        },
+        {
+          "theta_MeV": 100,
+          "trapped_10y_cm2_interval": [
+            0,
+            10000
+          ],
+          "total_10y_cm2_interval": [
+            4570881896.148752,
+            6606934480.075964
+          ],
+          "f_SEP_interval": [
+            0.999997812238376,
+            1.0
+          ]
+        }
+      ],
+      "f_SEP_threshold_family_hull": [
+        0.999997812238376,
+        1.0
+      ],
+      "alpha_scenario_hull_beta_tr_unknown": [
+        0.999997812238376,
+        1.0
+      ],
+      "physical_bank_alpha": "UNKNOWN",
+      "grid_upper_scenario_only": 1
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "status": "conditional_proton_composition_only_not_physical_alpha",
+  "date": "2026-10-28",
+  "base_main": "30dd56ca97a0553fb8c9900325eaebfcc84ba4c8",
+  "plan_before_arithmetic": "a2069f0",
+  "response": {
+    "formula": "K_theta(E) = K0 * indicator(E >= theta)",
+    "thresholds_MeV": [10, 30, 100],
+    "material_shield_mm": 0,
+    "status": "ASSUMPTION: diagnostic external proton response, not a measured SRAM response",
+    "background": "Only trapped and SEP protons are included in this diagnostic subsystem; other components and the bank background subtraction remain UNKNOWN, not zero."
+  },
+  "predictability": {
+    "beta_tr_interval": [0, 1],
+    "beta_tr_status": "UNKNOWN: no forecast-residual bound in the sources used",
+    "alpha_scenario_formula": "f_SEP + beta_tr * (1 - f_SEP)",
+    "assumption": "All SEP excess is assigned to the unknown component; remaining excess in this diagnostic subsystem is trapped protons. For this subsystem all response-weighted trapped and SEP exposure is treated as an addition to a separately specified background. Physical bank background separation is not established."
+  },
+  "sources": [
+    {
+      "id": "NASA-DSNE-I",
+      "title": "SLS-SPEC-159, Cross-Program Design Specification for Natural Environments, Revision I",
+      "date": "2021-10-27",
+      "url": "https://ntrs.nasa.gov/api/citations/20210024522/downloads/SLS-SPEC-159%20Cross-Program%20Design%20Specification%20for%20Natural%20Environments%20%28DSNE%29%20REVISION%20I.pdf",
+      "local_filename": "sls-dsne-revi2021.pdf",
+      "sha256": "60f46c95ce4981ee48d58e516fe5c1150d184d3d88d3396ca87f94f094b031d4",
+      "pdf_pages": 384,
+      "locators": "section 3.3.1.1, pp.87-97; Table 3.3.1.1-1 pp.88-89; Table 3.3.1.1-3 pp.92-93; Technical Notes p.97; PDF page numbers equal printed numbers"
+    },
+    {
+      "id": "GUILD-2021",
+      "title": "Guild et al., Best Practices for Generating Space Environment Specifications with Modern Tools, TOR-2022-00016",
+      "date": "2021-12-31",
+      "url": "https://aerospace.org/sites/default/files/2023-08/Best%20Practices%20for%20Generating%20Space%20Environment%20Specifications%20TOR-2022-00016.pdf",
+      "official_model_mirror": "https://www.vdl.afrl.af.mil/programs/ae9ap9/files/techreports/20211231_Aerospace_Guild_TOR-2022-00016_bestpractices.pdf",
+      "local_filename": "guild2021.pdf",
+      "sha256": "2cfaeb6ae02bdf3be42065c93be5ca60939d47d8a436431450f825dbc86df5a9",
+      "pdf_pages": 98,
+      "locators": "Table 7 printed p.27/PDF35; section 3.1.2 pp.31-35/PDF39-43; Figure 10 p.33/PDF41; Figure 12 p.35/PDF43; Table 18 p.81/PDF89 excluded from arithmetic"
+    },
+    {
+      "id": "VOGL-2019",
+      "title": "Vogl et al., Radiation tolerance of two-dimensional material-based devices for space applications",
+      "doi": "10.1038/s41467-019-09219-5",
+      "url": "https://www.nature.com/articles/s41467-019-09219-5",
+      "full_text_copy": "https://arxiv.org/pdf/1811.10138",
+      "local_filename": "vogl2019-arxiv.pdf",
+      "sha256": "5d7fdaa47fb3e8c938c758b8958ec0961c6a1410c051c6e525418b02b83e8247",
+      "pdf_pages": 14,
+      "locators": "published Figure 1 p.3, Proton and electron irradiation p.7, Computational methods p.9; author PDF Figure 1 p.11; used only as shielded-spectrum cross-check, not in arithmetic"
+    }
+  ],
+  "LEO_51_6": {
+    "source": "NASA-DSNE-I",
+    "altitude_km": 500,
+    "inclination_deg": 51.6,
+    "eccentricity": 0,
+    "models": "AP8MIN with factor 2 already included; ESP/PSYCHIC, solar maximum, stormy magnetosphere, annual 95% design specification",
+    "days_per_year_assumption": 365.25,
+    "ten_year_projection": "Ten identical annual design blocks; both components scale by ten, ratio unchanged. Not a ten-year 95% quantile or a solar-cycle prediction.",
+    "rows": [
+      {"theta_MeV": 10, "trapped_per_day_cm2": 5900000, "sep_per_year_cm2_interval": [378000000, 378000000]},
+      {"theta_MeV": 30, "trapped_per_day_cm2": 4200000, "sep_per_year_cm2_interval": [110000000, 158000000], "interval_basis": "Monotonic integral spectrum: SEP(>35 MeV) <= SEP(>30 MeV) <= SEP(>25 MeV). No interpolation."},
+      {"theta_MeV": 100, "trapped_per_day_cm2": 1950000, "sep_per_year_cm2_interval": [22500000, 22500000]}
+    ]
+  },
+  "GUILD_graph_reading": {
+    "source": "GUILD-2021",
+    "models": "AP9 v1.5 perturbed mean, 40 scenarios, 95th percentile; published one-week scaling to 10 years. ESP 10 years including 7 solar-maximum years; geomagnetic attenuation for LEO. Sum of percentiles is not a joint 95th percentile.",
+    "method": "Manual marker centres in the original embedded PNG, checked against full PDF pages. Interval includes centre reading uncertainty; not a statistical confidence interval. The near-overlapping SSO curves limit subtraction precision.",
+    "figure10": {"pdf_page": 41, "image_size_px": [526, 428], "x_at_10_MeV": 288, "x_at_100_MeV": 388, "y_at_1e11": 195.5, "pixels_per_decade_y": 25},
+    "figure12": {"pdf_page": 43, "image_size_px": [527, 406], "x_at_10_MeV": 288, "x_at_100_MeV": 388, "y_at_1e11": 173.5, "pixels_per_decade_y": 25},
+    "SSO": {
+      "altitude_km": 800, "inclination_deg": 98, "eccentricity": 0,
+      "rows": [
+        {"theta_MeV": 10, "x_px": 288, "trapped_y_interval_px": [190, 194], "total_y_interval_px": [164, 169], "note": "Total marker partly occluded; wider reading interval."},
+        {"theta_MeV": 30, "x_px": 336, "trapped_y_interval_px": [194, 198], "total_y_interval_px": [170, 174]},
+        {"theta_MeV": 100, "x_px": 388, "trapped_y_interval_px": [203, 207], "total_y_interval_px": [181, 185]}
+      ]
+    },
+    "GEO": {
+      "altitude_km": 35793, "inclination_deg": 0, "eccentricity": 0,
+      "trapped_upper_cm2": 10000,
+      "trapped_upper_basis": "INFERENCE limited to the published AP9 plot: the GEO integral curve exits below the plotted lower boundary before 10 MeV; integral fluence is nonincreasing. Conservative readout ceiling 1e4 cm^-2. This is not a bound on a physical unmodelled tail.",
+      "rows": [
+        {"theta_MeV": 10, "x_px": 288, "total_y_interval_px": [163, 169]},
+        {"theta_MeV": 30, "x_px": 336, "total_y_interval_px": [178, 183]},
+        {"theta_MeV": 100, "x_px": 388, "total_y_interval_px": [203, 207]}
+      ]
+    }
+  },
+  "not_imported": ["14-point cost tables", "mission Q", "memory part response", "time forecast residual", "GCR/ions/albedo contribution", "physical shielding transfer", "C_alpha membership"]
+}
