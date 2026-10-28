@@ -1,0 +1,131 @@
+{
+  "accepted_result_sha256": "6c5b7dafbf3d71ec89946b006797811a0c125861fbcd53de818196fca73e83c5",
+  "common_cost": {
+    "directed_bounds_formula": "R_total_x = R_protection_x - C_common_upper_x + 4*C_common_lower_x/5",
+    "exact_shared_cost_formula": "R_total_x = R_protection_x - C_common_x/5",
+    "no_common_observation_cost_with_fixed": true,
+    "whole_system_CPU_energy_20_percent_not_claimed": true
+  },
+  "conclusion": "Existing sources do not establish one complete implemented cost/timing/availability point; retain conditional region",
+  "coordinates": {
+    "bus": {
+      "V": "70033513175972771780808125362867338183267294085120541575889311558686097408807/182976112944968299381434917449951171875000000000000000000000000000000000000000000",
+      "comparisons": {
+        "constant": {
+          "allowance_fraction": "9675806273978731820724690462573067116051506554227625816996195971825123320737/1646785016504714694432914257049560546875000000000000000000000000000000000000000000",
+          "allowance_us_per_second_down": "5.875573",
+          "unit_axis_ns_not_simultaneous": {
+            "cell_close_and_choice": "3624168.731511517498",
+            "cut_ready": "0.023502058663",
+            "main_command_dispatch": "0.452214189977",
+            "pass_close_and_prefix": "59412.600252207231",
+            "potential_slot_gate": "0.001151600851",
+            "prefix_check_at_cell": "3624168.731511517498",
+            "raw_record_bundle": "3.605891969650",
+            "rolling_ring_update": "3624168.731511517498"
+          },
+          "zero_other_additions_are_not_a_physical_assignment": true
+        },
+        "schedule": {
+          "allowance_fraction": "9675806273978731820724690462573067116051506554227625816996195971825123320737/1646785016504714694432914257049560546875000000000000000000000000000000000000000000",
+          "allowance_us_per_second_down": "5.875573",
+          "unit_axis_ns_not_simultaneous": {
+            "cell_close_and_choice": "3624168.731511517498",
+            "cut_ready": "0.023502058663",
+            "main_command_dispatch": "0.452214189977",
+            "pass_close_and_prefix": "59412.600252207231",
+            "potential_slot_gate": "0.001151600851",
+            "prefix_check_at_cell": "3624168.731511517498",
+            "raw_record_bundle": "3.605891969650",
+            "rolling_ring_update": "3624168.731511517498"
+          },
+          "zero_other_additions_are_not_a_physical_assignment": true
+        }
+      },
+      "escape_coefficient": "198543718133778/371551513671875",
+      "extra_invalid_coefficient": "8064458537408/30095672607421875"
+    },
+    "core": {
+      "V": "198004294119269304318069964899570918067134306121382707649054465647553271405537167/368879843697056091552972793579101562500000000000000000000000000000000000000000000000",
+      "comparisons": {
+        "constant": {
+          "allowance_fraction": "1903543824467167761033280287175369589133764211166701616981844784148909531487611/122959947899018697184324264526367187500000000000000000000000000000000000000000000000",
+          "allowance_us_per_second_down": "15.481007",
+          "unit_axis_ns_not_simultaneous": {
+            "cell_close_and_choice": "9548988.291118507450",
+            "cut_ready": "0.061923409095",
+            "main_command_dispatch": "1.191497506069",
+            "pass_close_and_prefix": "156540.786641745897",
+            "potential_slot_gate": "0.003034246986",
+            "prefix_check_at_cell": "9548988.291118507450",
+            "raw_record_bundle": "9.500832535153",
+            "rolling_ring_update": "9548988.291118507450"
+          },
+          "zero_other_additions_are_not_a_physical_assignment": true
+        },
+        "schedule": {
+          "allowance_fraction": "1903543824467167761033280287175369589133764211166701616981844784148909531487611/122959947899018697184324264526367187500000000000000000000000000000000000000000000000",
+          "allowance_us_per_second_down": "15.481007",
+          "unit_axis_ns_not_simultaneous": {
+            "cell_close_and_choice": "9548988.291118507450",
+            "cut_ready": "0.061923409095",
+            "main_command_dispatch": "1.191497506069",
+            "pass_close_and_prefix": "156540.786641745897",
+            "potential_slot_gate": "0.003034246986",
+            "prefix_check_at_cell": "9548988.291118507450",
+            "raw_record_bundle": "9.500832535153",
+            "rolling_ring_update": "9548988.291118507450"
+          },
+          "zero_other_additions_are_not_a_physical_assignment": true
+        }
+      },
+      "escape_coefficient": "235416135896043/371551513671875",
+      "extra_invalid_coefficient": "3796669597526/10031890869140625"
+    }
+  },
+  "deadlines": {
+    "final_gate_install_ns": "794303/625",
+    "hardware_verified": false,
+    "packet_max_records": 1253,
+    "packet_total_ns": "3900",
+    "serial_model_not_required_for_parallel_logic": true,
+    "serial_unit_ceiling_before_overhead_ns": "3900/1253",
+    "serial_unit_ceiling_before_overhead_ns_down": "3.112529928172"
+  },
+  "implementation_sha256": "9d153e6c3bf040405a5128554fbbfad81cb272ec5eaf74f599fa0cdea572f452",
+  "input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "manifest_sha256": "4ed88dce3c4d4a00148a37f38c2dde55955d6d9e4d522dfeb5964de264c05ad7",
+  "placement_example": {
+    "assumed_ns_per_cut_access": 16,
+    "not_a_lower_bound_on_all_architectures": true,
+    "us_per_second_down": "4000.040000400105",
+    "us_per_second_exact": "438300000000011111/109573904250000"
+  },
+  "rates_per_second_down": {
+    "cell_close_and_choice": "0.001621219611",
+    "cut_ready": "250002.500025006587",
+    "main_command_dispatch": "12992.899275989044",
+    "pass_close_and_prefix": "0.098894399447",
+    "potential_slot_gate": "5102091.937451263720",
+    "prefix_check_at_cell": "0.001621219611",
+    "raw_record_bundle": "1629.436896890079",
+    "rolling_ring_update": "0.001621219611"
+  },
+  "rates_per_second_exact": {
+    "cell_close_and_choice": "255809/157788000",
+    "cut_ready": "438300000000011111/1753182468000",
+    "main_command_dispatch": "200207381929664/15408984375",
+    "pass_close_and_prefix": "31208699/315576000",
+    "potential_slot_gate": "5031555516416/986175",
+    "prefix_check_at_cell": "255809/157788000",
+    "raw_record_bundle": "392365540719669001699834871548012222316588401619/240798242305996875000000000000000000000000000",
+    "rolling_ring_update": "255809/157788000"
+  },
+  "scope": "Only application of accepted epsilon=.01 coefficients; no new risk or grid",
+  "storage": {
+    "deployed_total_unknown": true,
+    "proposed_extra_policy_bytes": 144,
+    "sum_reserved_and_proposed_bytes": 131280,
+    "transport_loss_reserved_bytes": 131136
+  }
+}
