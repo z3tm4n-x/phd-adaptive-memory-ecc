@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-28",
+  "task": 196,
+  "status": "THEORIST_DEFINED_BEFORE_COMPARISON_CELLS",
+  "base_main": "5b26c2a64826930a0ec196893678e71aa2d49dcc",
+  "scope": "One conditional family and N0/Nplus/M definitions; accepted resource only; no new hardware or resumed hybrid A",
+  "first_probe": {
+    "useful_bytes": 4194304,
+    "words": 1048576,
+    "alpha": "1/10",
+    "epsilon": "1/1000",
+    "requested_outputs": [
+      "constant_class_necessary_lower",
+      "constant_sufficient_candidate",
+      "N0_design_and_actual_Q_bracket",
+      "Nplus_peak_and_best_allowed_refinement",
+      "M_Q_cost_and_applicability",
+      "guard_read_count_and_full_cost_interval",
+      "resource_and_computation_time"
+    ]
+  },
+  "bank": {
+    "code": [
+      39,
+      32,
+      1
+    ],
+    "physical_word_bits": 48,
+    "x16_atoms_per_word": 3,
+    "useful_bits_per_word": 32,
+    "mission_s": 315576000,
+    "words_axis": [
+      131072,
+      262144,
+      524288,
+      1048576
+    ],
+    "useful_bytes_axis": [
+      524288,
+      1048576,
+      2097152,
+      4194304
+    ],
+    "clean_initial_conditional": true,
+    "initial_K0": 0,
+    "pending_initial": false,
+    "useful_writes": 0,
+    "ordinary_app_read_repairs": false,
+    "ordinary_app_read_emits_ERR": false,
+    "init_before_t0": "W encodes + 3W writes, separately amortized; not subtracted from in-mission resource"
+  },
+  "environment": {
+    "units": "reference singleton parent rate /s; exposure parent count; growth /s^2",
+    "reference_words": 524288,
+    "reference_bits": 38,
+    "reference_positions": 19922944,
+    "b": "0.000154704",
+    "B": "0.244682704",
+    "Fs": "28310.473728",
+    "rho": "0.048",
+    "ell": "0.001",
+    "alpha_axis": [
+      "0",
+      "1/100",
+      "1/10",
+      "1/2",
+      "1"
+    ],
+    "alpha_meaning": "allowed unpredictable fraction of the reference excess exposure; not the realized fraction",
+    "template": {
+      "kind": "disjoint identical triangular pulses",
+      "cycle_s": 5400,
+      "left_s": 1800,
+      "width_s": 600,
+      "rise_s": 300,
+      "count": 58440,
+      "amplitude_unit": 1,
+      "physical_calibration": false
+    },
+    "formulas": {
+      "a0": "2*Fs/(count*width_s)",
+      "a": "(1-alpha)*a0",
+      "p": "b+a*h(t)",
+      "R": "B-b-a",
+      "Fr": "alpha*Fs",
+      "g": "rho*ell-a/rise_s",
+      "reference_rate": "nu=p+r",
+      "bit_rate": "nu/reference_positions",
+      "word_rate": "39*nu/reference_positions",
+      "bank_rate": "39*W*nu/reference_positions",
+      "Ip2": "b*b*T+2*b*(1-alpha)*Fs+count*width_s*a*a/3"
+    },
+    "residual": {
+      "nonnegative": true,
+      "cap": "R",
+      "one_sided_growth": "r(t)-r(s)<=g*(t-s) for s<t",
+      "exposure_upper": "Fr",
+      "initial_zero_required": false,
+      "downward_jumps_allowed": true,
+      "allowed_inside_and_outside_windows": true,
+      "distribution_over_paths": null
+    },
+    "spatial": {
+      "independent_word_NHPP": true,
+      "uniform_singleton_over_all_39_bits": true,
+      "padding_not_observed": true
+    },
+    "relation_to_previous": {
+      "alpha_half": "exact environment PR268 after W-specific active scaling; not its hybrid rule",
+      "alpha_zero": "one known smooth periodic profile, not the whole old window class",
+      "alpha_one": "b+r with linear growth bound; subset of old global H_ell class",
+      "nested": true,
+      "old_window_lower_automatically_portable": false,
+      "old_gain_automatically_portable": false
+    },
+    "concentration_interpretation": "B and Fs are common caps; the realized peak and squared integral change with the declared profile; do not interpret exact Ip2 / old broad upper as Q or gain"
+  },
+  "service": {
+    "kind": "weak E, same full39 code-strength contract",
+    "calendar": {
+      "c_ticks": 164,
+      "g_ticks": 196,
+      "batch_size": 8,
+      "frame_ticks": 1568,
+      "app_grant": [
+        1312,
+        1568
+      ],
+      "freeze_ticks": 320,
+      "word": "3*j modulo W",
+      "pass": "floor(j/W), never reset",
+      "startup": "first W slots mandatory",
+      "nested_support": "pass mod kL=0 always; pass mod kH=0 additionally in FAST; kL=m*kH"
+    },
+    "xi_minus": "0.99999",
+    "xi_plus": "1.00001",
+    "J_ns": "0.5",
+    "timer_quantum_ticks": 20,
+    "formulas": {
+      "P_minus_s": "196*k*W*xi_minus/1e9-J_ns/1e9",
+      "P_plus_s": "196*k*W*xi_plus/1e9+J_ns/1e9",
+      "dE_s": "(124*xi_plus+3*J_ns)/1e9",
+      "hold_ticks": "20*ceil((PH_plus_s+dE_s+J_ns/1e9)/(20*xi_minus/1e9))",
+      "Hminus_s": "hold_ticks*xi_minus/1e9-J_ns/1e9",
+      "Hplus_s": "hold_ticks*xi_plus/1e9+J_ns/1e9"
+    },
+    "N0_hold_override": {
+      "hold_ticks": 0,
+      "Hminus_s": 0,
+      "Hplus_s": 0
+    },
+    "read_bus_ticks": 48,
+    "read_serial_ticks": 68,
+    "repair_extra_bus_ticks": 56,
+    "repair_extra_serial_ticks": 56,
+    "reserve_management_slot": [
+      1472,
+      1536
+    ],
+    "atomic_management_upper_ns": 32,
+    "app_deadline_ns": 3000,
+    "serial_cap": "4/5",
+    "cap_window_ns": 1000000,
+    "resource_file": "resource-result.json",
+    "resource_SHA256_LF": "27e7f955e10a3167e3e97e9ea588f018f4d75aa16f240be3bcfa988538dbb84a",
+    "necessary_resource_direction": "serial cap minus lower completed app price; or required reads versus all-slot upper; use RESOURCE row",
+    "hardware_measured": false,
+    "raw_storage_capacity_confirmed": false
+  },
+  "information": {
+    "p_known_exactly_to_all": true,
+    "residual_observed_by_N0_Nplus_M": false,
+    "own_ERR_used_for_selection": false,
+    "lost_channel": "fresh mission-time binding and calendar-command delivery/acknowledgement; not an uncertain p forecast",
+    "healthy_poll_nominal_s": 1,
+    "command_delay_upper_s": "0.01",
+    "mission_time_error_upper_s": "0.001",
+    "lifetime_delta_exec": "0.000006",
+    "lifetime_delta_calendar": "0.000001",
+    "calendar_delta_source": "accepted predictable-windows command/time contract; design premise, not a measured quota",
+    "constant_unused_calendar_delta_charged": false,
+    "loss_time_upper_s": "31557.6",
+    "loss_episodes_upper": 1001,
+    "restores_upper": 1000,
+    "false_expected_per_s": "0.000001",
+    "lost_or_stale_mode": "local FAST on the thinned kH support; low commands never cancel frozen visits",
+    "return_rule_N0": "fresh ordinary calendar; no clean-state assignment",
+    "return_rule_Nplus_M": "fresh command plus hold with Hminus>=PHplus+dE; retain phase, pending and old births",
+    "startup_and_tail": "mandatory first pass; FAST through fresh/hold and final C_H band",
+    "endpoints_jitter_and_phase_preserved": true,
+    "unused_ERR_stream_cost": "If the implementation keeps this stream enabled its cost remains explicit; no new transport is prescribed"
+  },
+  "comparison": {
+    "formulas_in": "THEORY.md",
+    "N0": {
+      "design": "equation7 V0: one lifetime budget, window peak plus global residual mass",
+      "execution": "H=0; continuous memory",
+      "actual_Q": "equation8 or applicable exact cell functional; V0 is not a certified Q upper"
+    },
+    "Nplus": {
+      "basic_certificate": "equation9 peak-window bound with weak E and guard",
+      "allowed_refinement": "equation10 using the same exact p available to all; candidates of M are allowed",
+      "execution": "same guard and supports as M",
+      "report_basic_guard_price_separately": true
+    },
+    "M": {
+      "certificate": "equation10, derived from accepted T196(5)",
+      "execution": "two-level guarded predictable-window rule, not new own-counter hybrid",
+      "same_pair_equals_refined_Nplus": true
+    },
+    "constant": {
+      "sufficient": "equation11",
+      "necessary": "equations13-15 with separately admissible witnesses",
+      "all_phases_and_unbounded_periods": true,
+      "candidate_grid_not_a_class_restriction": true
+    },
+    "epsilon_axis": [
+      "1/10",
+      "1/100",
+      "1/1000"
+    ],
+    "optional_epsilon": "1/10000",
+    "single_lifetime_budget": true,
+    "reset_epsilon_per_window": false,
+    "period_menu": {
+      "ratios": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "max_kL": 4294967296,
+      "generate": "for each ratio largest kH satisfying V0, Uplus_box or UM, also kH=1 if admitted; union all pairs; add sufficient constant candidate",
+      "search": "monotone scalar binary search only",
+      "cross_evaluate_all_pairs": true,
+      "select": "smallest certified known serial cost upper, then bus upper, then lexicographic kH,kL; unknown control coefficients retained parametrically",
+      "global_optimum_claimed": false
+    },
+    "violations": "directed Q_lower>epsilon or verified exact Q>epsilon only; upper failure is not violation",
+    "N0_registered_lower_tests": {
+      "residuals": [
+        "r=0",
+        "initial R plateau for Fr/R, then zero"
+      ],
+      "channel": "deterministic healthy admissible law",
+      "clock": "xi_plus, zero jitter",
+      "if_inconclusive": "report exact gap; no search expansion to manufacture failure"
+    },
+    "guard_price": "same periods and same channel/phase first; report extra mandatory reads, Hminus/Hplus and recovery/tail work; repair/full difference requires Lplus-U0 <= deltaC <= Uplus-L0 or a separately valid coupled bound",
+    "constant_witnesses": [
+      "initial residual R plateau, remove first full pass, actual p retained",
+      "r=0 with central 300s bands of each known triangle"
+    ],
+    "different_environment_witness_bounds_sum": false
+  },
+  "cost": {
+    "horizon": "all work to T including fully priced started tail and after first failure",
+    "known_operation_counts": "THEORY equation12, inherited window count with H-dependent price bands",
+    "N0_repair_risk_source": "real Q upper equation8, never design V0",
+    "common_app_init": "reported separately with directed bounds, not algebraically cancelled from relative ratios",
+    "coordinates": [
+      "pure_SRAM_bus",
+      "serial_memory_service",
+      "CPU",
+      "energy",
+      "memory_and_logic"
+    ],
+    "cpu_equal_to_serial": false,
+    "control_average": null,
+    "control_peak_additional": null,
+    "CPU_per_action": null,
+    "energy_per_action": null,
+    "controller_state_bytes": null,
+    "hardware_WCET": null
+  },
+  "run_order": {
+    "first_probe_required": true,
+    "first_probe_before_remaining_grid": true,
+    "remaining_core_cells": "512KiB,epsilon=.001,alpha=0/.01/.1/.5/1; 1/2/4MiB,alpha=.1,epsilon=.001; deduplicate first probe",
+    "later_contrasts": "after first probe and main-point proposal, smaller W and larger alpha plus mandatory epsilon axis in selected point; reuse cells",
+    "max_new_cells": 15,
+    "main_point_priority": "necessary exclusion of constant plus safe affordable M, else expensive admissible point with honest boundary",
+    "profile_change_after_probe": false,
+    "notify_before_expansion_over_days": 7,
+    "deadlines": {
+      "definitions": "2026-10-29",
+      "table": "2026-11-03",
+      "review": "2026-11-04",
+      "synthesis": "2026-11-06"
+    }
+  },
+  "source_git_blobs": {
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/PLAN.md": "1426d5f976b3ddefd821c5d13415df047d4ea678",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/RESOURCE.md": "bfde18220795786147d7b1a874d31b7c292d0a09",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/RESOURCE_INPUTS.json": "59e53e58b267e24a1369d81440ab5c7f5f32ceaa",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/resource-result.json": "7922f5282e6bc075fb621f2c5618757784131dcf",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/REVIEW_RESOURCE_20261028.md": "f5180ad03000226deaf85d2b9ba810a9b5523f8f",
+    "experiments/hybrid-p-r-20261026/inputs.json": "e2c2389e4f7e51de3d49025be1dcdc11a369c723",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "31fe2d05282a283f2fa8da67147a8ad1baac1276",
+    "theory/t196-three-variant-foundations-20261022.md": "d1759b6b6baa59a90f1aa321d0af8c7fe7c25f98",
+    "theory/t196-predictable-windows-20261025.md": "86fe9338eef61914e56a78d09a932c1a84daf21f",
+    "experiments/fixed-code-long-lived-20261023/THEORY.md": "c280f4370cd736a7fb7ba9813ca427e7b985bbce",
+    "theory/hybrid-p-r-20261026.md": "5ee4552163db673c3556b7ca3188f3a080d08a44",
+    "experiments/regime-map-methodology-20261019/volume-slice-20261024/METHOD.md": "3d3d4700883e9e9d2f2c094b409f21675bd765d7",
+    "docs/literature_mapping/saa-windows-20261026/PARAMETER_CHECK_20261028.md": "6083dfffc19fb40f685dfe3fa4837e6f7431adbd"
+  }
+}
