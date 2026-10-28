@@ -1,0 +1,43 @@
+{
+  "base_main": "d03ed86a77c30e9b39819a7bdca95cddbbe3056f",
+  "current_sha256_LF": {
+    "AGENTS.md": "1de0115dddec1178cc6f69582173009247c33bff71447ef6354ce2ac7ae51375",
+    "STATUS.md": "a184e0274e89dc0319f6115ad5d2cf530f6a94175080ed21ac3188c46e11e339",
+    "agents/00_RULES.md": "ecf3699fda9adf7717ab9101ad647c11c162d72e3c056b366c382216e795880c",
+    "agents/02_ENGINEER.md": "044a285ac05a8b9e9f66cc587c045696a5c52c7c48b94fe33f4036c9a5f7d98d",
+    "experiments/hybrid-p-r-20261026/inputs.json": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+    "experiments/hybrid-p-r-20261026/interface-price/INTERFACE.md": "d8c1b57ccd182af284023ccae64362e77f1979b5cf6a43b929ae0387aa7a62da",
+    "experiments/hybrid-p-r-20261026/interface-price/interface.py": "2d275d13cbcbc81d285467af2d350b78c176a06e67fbe3f2180aeadce145fda7",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/REVIEW_CELL_20261027.md": "173919dd7cba164b25055a121f009ee63c9fd750f3249a90da9ef47e73f45fa2",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/cell-service/CONTRACT.md": "3cef4956ad74f02f14ec1a1122e8d7a5a7d453e3f3464e383c6eb3efd5d88ffc",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/cell-service/COST.md": "b18535c740147ab8dcb9964ac455aa3321ca8f76ae48a42a6f6fe32aefb2bd39",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/cell-service/cell_model.py": "d64ef730d3fa6c14791ae94069f26cd76a51d450211be2829fcd93c3947242ff",
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/cell-service/result.json": "6c5b7dafbf3d71ec89946b006797811a0c125861fbcd53de818196fca73e83c5",
+    "experiments/t104-rtl-resume/integrated/event_fifo.sv": "f0eeca3f32aeb544ae8dded00642549640648c99884e9bb025df67da7f4270c6",
+    "experiments/t104-rtl-resume/physical/frame_engine.sv": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+    "experiments/t105-arm-rule/REPORT.md": "62a538f00351cee24e2daa5f47376d8d6d8af83c97e4a7e167fef9d628a1efc8",
+    "experiments/t105-arm-rule/SERVICE_BOUND.md": "32bb61f5f1a96024e3e2592a6b044ea97701db65ed8163d2b9afb6c97e17e3ec",
+    "experiments/t105-arm-rule/driver.c": "40135fb0643e5115d2470f13bfef40a7899b8d41ccf6acf99610c2dd9ed82514",
+    "experiments/t105-arm-rule/history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "experiments/t105-arm-rule/link.ld": "32da00a2743d5752a92c01207f9e4c3c10569284de9d94d639c378eebdd0968c",
+    "experiments/t106-system-emulation/REPORT.md": "0f34040c1295656b9a6fbafb288cd2ab0b4f2e911989dea7401c0668d14c5c25",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "experiments/t186-method-comparison/code-strength/comparison.py": "bc5a3dfbf8ed00a66a8407c50e525461aeedacc2a2aa72b598762048e5c7a2bd",
+    "theory/t196-count-error-price-20261027.md": "b056e3eb2ff16be2897a4b20eba46e97d3778c50e87bcc24ccc4c03a01c10233"
+  },
+  "historical_references": [
+    {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "path": "experiments/t186-method-comparison/stage4/adapter.py",
+      "sha256_LF": "cb50faad9ddc0b3754c53cea0ae67b0a0a509c11f0015aed24f0a6f0b82b07cd"
+    },
+    {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "path": "experiments/t186-method-comparison/stage4/CONDITIONS.md",
+      "sha256_LF": "7a258e91f40b0250a22053b29f612db7ff5bbe2a4581f2ce22724f8278675743"
+    }
+  ],
+  "plan_commit": "99dd37a47c36fbcd7499d26b2c2f35caaa4d9b7b",
+  "scope": "read-only existing evidence, no imported hardware claim"
+}
