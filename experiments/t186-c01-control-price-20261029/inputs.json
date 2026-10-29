@@ -1,0 +1,48 @@
+{
+  "M_pair": [
+    26,
+    208
+  ],
+  "alpha": "0",
+  "base_main": "db35c1ec64a99487e28106b326f3d21fc42a4f54",
+  "cell": "c01",
+  "epsilon": "1/1000",
+  "mission_s": 315576000,
+  "new_hardware_or_policy": false,
+  "scope": "one price ledger; accepted map/lower-bound data loaded, no Q/RTL rerun",
+  "source_sha256_LF": {
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/observation-price/REPORT.md": "856ebe91f62f1cd78f20c0a936c87f6fb0b462993bb8f10caeb9c96d57a78d13",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/RESOURCE.md": "8d55e3732ba88ae0ee18d0c8c312226a0311e14712d4d9c3a2332b2feb51665a",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/THEORY.md": "a2d4da37e9cc685e638bd620bae3d3622bee3dabe445e90c90abcdfb5c95eaf1",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/first_point.py": "2ee8678bc484cb1ca1b02a3542efec52090683baf15b89e61790539f9c790947",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/inputs.json": "5f62171e4706854f6419345d7eaed1f2103c06bc4989976fde03942db091c6cd",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/map-14/result.json": "ef8b56daf67fbc3b48804129ba7ddde27dab33346aee9c24254f8c20584274e0",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/resource-result.json": "27e7f955e10a3167e3e97e9ea588f018f4d75aa16f240be3bcfa988538dbb84a",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/ENGINEERING.md": "9af729a5c79727657a3c0a79666d978e277dcde1721208283a9beccacef86e55",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/calendar_math.py": "1a7d76d080fcf03c1cbd0ce424fc8cd5199e755d983450f81cd9737a07b76df1",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/model.py": "514470895f36e672aa011fddfd560a7d34feef607631b515057bdfcaf1fedcf2",
+    "experiments/t104-rtl-resume/integrated/event_fifo.sv": "f0eeca3f32aeb544ae8dded00642549640648c99884e9bb025df67da7f4270c6",
+    "experiments/t104-rtl-resume/physical/frame_engine.sv": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+    "experiments/t104-rtl-resume/split/operation_lane.sv": "215db0cf6a0b951a2c2b93d63fa6d11c630078d65d8a10c0c550ff22910f9e23",
+    "experiments/t104-rtl-resume/split/predecision_guard.sv": "bbf23aafc47bffe3037c815c639157016f336584f5a59bdf6e1d8891c126e158",
+    "experiments/t104-rtl-resume/split/relative_calendar.sv": "4795a9c09d5b7d899545ace5306e8c7005fd1a4fb95de5c2491be228e7d962c9",
+    "experiments/t105-arm-rule/REPORT.md": "62a538f00351cee24e2daa5f47376d8d6d8af83c97e4a7e167fef9d628a1efc8",
+    "experiments/t105-arm-rule/SERVICE_BOUND.md": "32bb61f5f1a96024e3e2592a6b044ea97701db65ed8163d2b9afb6c97e17e3ec",
+    "experiments/t105-arm-rule/driver.c": "40135fb0643e5115d2470f13bfef40a7899b8d41ccf6acf99610c2dd9ed82514",
+    "experiments/t105-arm-rule/history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "experiments/t105-arm-rule/link.ld": "32da00a2743d5752a92c01207f9e4c3c10569284de9d94d639c378eebdd0968c",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "theory/REVIEW_T196_WINDOW_APPLICATION_20261029.md": "b3970589dcb5bee62e0b7d62ed6d8b97f8cd90c6198da71df41a88cbdedb0399",
+    "theory/t196-window-application-20261029.md": "bd07cdd340185cb14f9105f810dfa4725cc571f4851a2e9e0e71e99d17e1d453",
+    "theory/t196-window-application-20261029/reproduce.py": "d166cbfd41d5fcc4aa146c9d462d477df31589f966bead46906faf71f18e4891",
+    "theory/t196-window-application-20261029/result.json": "7f21484747515a99a5ece38451e53373ae20621462256a8dcf904907d351e125"
+  },
+  "strict_sufficient_budget_us_per_s": {
+    "bus": "979.760017",
+    "serial": "1532.533481"
+  },
+  "task": 186,
+  "unknown_unit_costs_are_zero": false,
+  "words": 1048576
+}
