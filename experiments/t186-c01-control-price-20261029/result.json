@@ -1,0 +1,320 @@
+{
+  "CPU_energy": "Separate sums of counts times own unit costs, data read/repair/app/init costs and background over T; all UNKNOWN.",
+  "ERR_scope": {
+    "actual_export_disabled": null,
+    "duplicates_and_empty_polling": "bounded bundle or separately paid state work; no unlimited retries",
+    "expected_count_not_burst": true,
+    "if_export_exactly_matches_charged_repair_upper": "115402070745731996487715111114455397968627900970394153/72542794388313031005859375000000000000000",
+    "logical_source_upper": "2670731371523472293555532013926655609791533340732811804672/179081896466560243664471434041412803289796875",
+    "matched_export_path": false
+  },
+  "M_pair": [
+    26,
+    208
+  ],
+  "accepted_Q_loaded_only": "117019847010060864108341529316187/118438400000000000000000000000000000",
+  "accepted_calculations_rerun": false,
+  "accounting_rules": [
+    "Exactly one row owns each incremental operation; combined gate/dispatch must not be charged twice.",
+    "All unit costs are full nonnegative upper bounds including interconnect/queue/arbitration overhead.",
+    "Control state is isolated from corrupted application data and all work is bounded after A and on exceptional histories.",
+    "Calendar lost/false/restore count terms already included; do not add them a second time.",
+    "Zero bus requires proved locality; zero serial additionally requires no service interference.",
+    "Zero ERR only with a verified disable path compatible with M; no supplied disable is assumed.",
+    "A mission-mean bound cannot establish peak, deadline, buffer capacity or CPU/energy."
+  ],
+  "already_paid": {
+    "bus": {
+      "all_known_lower_s": "624027849329628469184810154467522191/1630736307219073486328125000000",
+      "all_known_upper_s": "6703404419000128948789982793089217059154333743665044605830722347541940336962301833476273/8091039003931064133922627828052698578322707443237304687500000000000000000000000000",
+      "app_s": {
+        "lower": "5855237787240027/390625000000",
+        "upper": "11957251071007837/781250000000"
+      },
+      "checks_upper_s": "790599081237467880274317683903866466489148357919585719459584/1093029153238282737209908655037919941954326629638671875",
+      "init_s": {
+        "lower": "355196416/6103515625",
+        "upper": "361603584/6103515625"
+      },
+      "protection_lower_fraction": "48794269318021763976849221011732/41879983796139838421344757080078125",
+      "protection_lower_s": "9368499709060178683555050434252544/25480254800298023223876953125",
+      "protection_upper_fraction": "6579568311107450844762029582089735645049635107521582953766728304573190336962301833476273/2553337724704549495126767199465558406552766724107055664062500000000000000000000000000000000",
+      "protection_upper_s": "6579568311107450844762029582089735645049635107521582953766728304573190336962301833476273/8091039003931064133922627828052698578322707443237304687500000000000000000000000000",
+      "repairs_upper_s": "81503520278668442643424211230361926003129235455647663315321/906784929853912887573242187500000000000000000000000000"
+    },
+    "serial": {
+      "all_known_lower_s": "28376846059733283493048804765310271617/52183561831010351562500000000000",
+      "all_known_upper_s": "9167803303563113403998767070204708010199232242413286897224946708519479399462301833476273/8091039003931064133922627828052698578322707443237304687500000000000000000000000000",
+      "app_s": {
+        "lower": "266259242418959349/12500000000000",
+        "upper": "540418456424193819/25000000000000"
+      },
+      "checks_upper_s": "1116619354533022998472372807102938106668302563982356609692744/1093029153238282737209908655037919941954326629638671875",
+      "init_s": {
+        "lower": "483195136/6103515625",
+        "upper": "489604864/6103515625"
+      },
+      "protection_lower_fraction": "554713815863963730772490864888171/335039870369118707370758056640625000",
+      "protection_lower_s": "13313131580735129538539780757316104/25480254800298023223876953125",
+      "protection_upper_fraction": "2997633594050156017237104275352847851437268734160212730542890629524396778987433944492091/851112574901516498375589066488519468850922241369018554687500000000000000000000000000000000",
+      "protection_upper_s": "8992900782150468051711312826058543554311806202480638191628671888573190336962301833476273/8091039003931064133922627828052698578322707443237304687500000000000000000000000000",
+      "repairs_upper_s": "81503520278668442643424211230361926003129235455647663315321/906784929853912887573242187500000000000000000000000000"
+    }
+  },
+  "audit_scope": "Pinned mathematical model and candidate T104/T105 modules; no matched M executable identified.",
+  "base_main": "db35c1ec64a99487e28106b326f3d21fc42a4f54",
+  "calendar_recoveries_upper": "3526594837581071993/999989999500000",
+  "cell": "c01",
+  "coordinates": {
+    "bus": {
+      "accepted_M_known_upper_s": "6703404419000128948789982793089217059154333743665044605830722347541940336962301833476273/8091039003931064133922627828052698578322707443237304687500000000000000000000000000",
+      "accepted_margin_s": "654639532446508933727988121120381793559392775764432856247816392556757955339029049772916394079661/2117281234749166679941725638499048486178397261579133071899414062500000000000000000000000000",
+      "actual_control_upper_s": null,
+      "conditional_calendar_allocation_us_per_s": "355184421584032502644348493/9861651377569125000000000",
+      "conditional_remaining_after_calendar_us_per_s": "9306867299751166826030776507/9861651377569125000000000",
+      "conditional_slot_ceiling_after_calendar_ns": "11954603588671642210324416156661806716233/64629318552216692735949893408555008000000",
+      "conservative_strict_budget_s": "38648593390599/125000000",
+      "conservative_strict_budget_us_per_s": "979760017/1000000",
+      "fixed_class_known_lower_s": "194428777345224216281939833385011/170898437506103515625000000",
+      "sole_term_coefficient_ceilings": {
+        "ERR": "6921263400153434645310949629491786244478220026738244578125/333841421440434036694441501740831951223941667591601475584",
+        "check": "77296413770681594629401/78894000499994999750",
+        "command": "309185655082726378517604000/315579529594807579571993",
+        "dispatch": "18456702400409159054162532345311429985275253404635318875000/909081459202518130852336456557716469692169702719630502599",
+        "extra_bundle": "77296413770681594629401/78894000499994999750",
+        "slot": "49643838078224125034749581/258519859536722067932839936",
+        "state_edges": "38648593390599/125000000",
+        "state_rate": "979760017/1000000",
+        "timer": "154592827541363189258802000/157791528594817580071993"
+      },
+      "verdict": {
+        "status": "not_established",
+        "upper_us_per_s": null
+      }
+    },
+    "serial": {
+      "accepted_M_known_upper_s": "9167803303563113403998767070204708010199232242413286897224946708519479399462301833476273/8091039003931064133922627828052698578322707443237304687500000000000000000000000000",
+      "accepted_margin_s": "1023982387780554846737186576058904218510563619583672695717559321036550081884927487272916394079661/2117281234749166679941725638499048486178397261579133071899414062500000000000000000000000000",
+      "actual_control_upper_s": null,
+      "conditional_calendar_allocation_us_per_s": "355184421584032502644348493/9861651377569125000000000",
+      "conditional_remaining_after_calendar_us_per_s": "14758126492490423951729776507/9861651377569125000000000",
+      "conditional_slot_ceiling_after_calendar_ns": "18956706510031911100263329050558287716233/64629318552216692735949893408555008000000",
+      "conservative_strict_budget_s": "60453848225007/125000000",
+      "conservative_strict_budget_us_per_s": "1532533481/1000000",
+      "fixed_class_known_lower_s": "8841393078877504973640281006156957/5468750000195312500000000000",
+      "sole_term_coefficient_ceilings": {
+        "ERR": "10826189788835850331586239820093319274691450861952325453125/333841421440434036694441501740831951223941667591601475584",
+        "check": "120906487312595651634993/78894000499994999750",
+        "command": "483625949250382606539972000/315579529594807579571993",
+        "dispatch": "28869839436895600884229972853582184732510535631872867875000/909081459202518130852336456557716469692169702719630502599",
+        "extra_bundle": "120906487312595651634993/78894000499994999750",
+        "slot": "77652529864587410120537733/258519859536722067932839936",
+        "state_edges": "60453848225007/125000000",
+        "state_rate": "1532533481/1000000",
+        "timer": "241812974625191303269986000/157791528594817580071993"
+      },
+      "verdict": {
+        "status": "not_established",
+        "upper_us_per_s": null
+      }
+    }
+  },
+  "costs_uniform_after_first_failure": true,
+  "counts": {
+    "ERR": "2670731371523472293555532013926655609791533340732811804672/179081896466560243664471434041412803289796875",
+    "check": "631152003999959998/1999979999",
+    "command": "315579529594807579571993/999989999500000",
+    "dispatch": "2727244377607554392557009369673149409076509108158891507797/179081896466560243664471434041412803289796875",
+    "extra_bundle": "631152003999959998/1999979999",
+    "slot": "2068158876293776543462719488/1284492751819",
+    "state_edges": "1",
+    "state_rate": "315576000",
+    "timer": "157791528594817580071993/499994999750000"
+  },
+  "diagnostic_one_beat_per_slot": {
+    "budgeted_upper_us_per_s": "208282179957687499825328525312/2474091092822465478515625",
+    "conditional_model_only": true,
+    "not_real_cost_lower": true,
+    "unit_upper_ns": "51563/3125",
+    "verdict": {
+      "bus": "not_met_by_this_upper",
+      "serial": "not_met_by_this_upper"
+    }
+  },
+  "implementation_sha256_LF": "773ef81b7ed542e3f9afd9d55a2eecfb728385a43506e5bd97a694d40571f88e",
+  "input_sha256_LF": "ea61c4dcf18b9cedb600a7e1bdf16dd062418c893f36c33c31e1f57f1667f9ee",
+  "ledger": [
+    {
+      "CPU_coefficient": null,
+      "basis": "PR320 §4 / ENGINEERING §4; не включает частый gate",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "мкс/действие",
+      "count_upper": "631152003999959998/1999979999",
+      "energy_coefficient": null,
+      "id": "check",
+      "label": "Календарная проверка времени/здоровья",
+      "mean_multiplier": "315576001999979999/315572844082212000"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "Обычные/возвратные/ложные/плохие истории и краевой +1 уже в числе",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "мкс/действие",
+      "count_upper": "315579529594807579571993/999989999500000",
+      "energy_coefficient": null,
+      "id": "command",
+      "label": "Установка/подтверждение календарной команды",
+      "mean_multiplier": "315579529594807579571993/315572844082212000000000"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "Один активный hold; события recovery и краевые +2 уже в числе",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "мкс/действие",
+      "count_upper": "157791528594817580071993/499994999750000",
+      "energy_coefficient": null,
+      "id": "timer",
+      "label": "Периодическое событие, постановка/истечение hold",
+      "mean_multiplier": "157791528594817580071993/157786422041106000000000"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "Ровно прежний bounded bundle, не безразмерный резерв на все работы",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "мкс/пакет",
+      "count_upper": "631152003999959998/1999979999",
+      "energy_coefficient": null,
+      "id": "extra_bundle",
+      "label": "Ограниченный дополнительный пакет на poll",
+      "mean_multiplier": "315576001999979999/315572844082212000"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "До Nmax, включая пропуски; старый local RTL не реализует M(26,208)",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "нс/проверку",
+      "count_upper": "2068158876293776543462719488/1284492751819",
+      "energy_coefficient": null,
+      "id": "slot",
+      "label": "Локальный селектор и его фиксированная адресная/фазовая работа",
+      "mean_multiplier": "4039372805261282311450624/791709149703188953125"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "NR + app offered + W init; без уже оплаченных beats/ECC/repair и без gate",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "нс/транзакцию",
+      "count_upper": "2727244377607554392557009369673149409076509108158891507797/179081896466560243664471434041412803289796875",
+      "energy_coefficient": null,
+      "id": "dispatch",
+      "label": "Добавочная подготовка/завершение транзакции",
+      "mean_multiplier": "909081459202518130852336456557716469692169702719630502599/18837982853110405151553079089684295603660312875000000000"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "Консервативно ≤NR при ≤1 публикации/scrub; повторы внутри bundle; статус включения UNKNOWN",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "нс/запись",
+      "count_upper": "2670731371523472293555532013926655609791533340732811804672/179081896466560243664471434041412803289796875",
+      "energy_coefficient": null,
+      "id": "ERR",
+      "label": "Включённый логический ERR: сбор и ограниченная обработка/очередь",
+      "mean_multiplier": "5216272210006781823350648464700499237874088556118773056/110378805779943780184881322791118919552697145751953125"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "Сверх строк выше; размещение/защита/фон/дополнительные события, включая post-A",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1/1000000",
+      "coefficient_serial": null,
+      "coefficient_unit": "мкс/с",
+      "count_upper": "315576000",
+      "energy_coefficient": null,
+      "id": "state_rate",
+      "label": "Остальная фоновая работа, сохранность состояния, пустой polling",
+      "mean_multiplier": "1"
+    },
+    {
+      "CPU_coefficient": null,
+      "basis": "Один совокупный полный край; не повторяет init данных, хвост E и +1/+2 календаря",
+      "coefficient_bus": null,
+      "coefficient_seconds_scale": "1",
+      "coefficient_serial": null,
+      "coefficient_unit": "с за миссию",
+      "count_upper": "1",
+      "energy_coefficient": null,
+      "id": "state_edges",
+      "label": "Остаток запуска, завершения и drain после T",
+      "mean_multiplier": "125/39447"
+    }
+  ],
+  "mission_s": "315576000",
+  "no_new_Q": true,
+  "no_new_RTL": true,
+  "no_new_policy": true,
+  "reads_upper": "2670731371523472293555532013926655609791533340732811804672/179081896466560243664471434041412803289796875",
+  "repairs_upper": "115402070745731996487715111114455397968627900970394153/72542794388313031005859375000000000000000",
+  "resource_conditions": {
+    "actual_CPU_upper": null,
+    "actual_M_WCET": null,
+    "actual_M_state_bytes": null,
+    "actual_energy_upper": null,
+    "actual_shared_resource_mapping": false,
+    "app_deadline_ns": 3000,
+    "app_response_ns": "15831357/6250",
+    "atomic_upper_s": "1/31250000",
+    "calendar_bundle_conditional_upper_s": "1125511507/6250000000000",
+    "calendar_mean_sufficient_for_any_composition": "355184421584032502644348493/9861651377569125000000000000000",
+    "frame_upper_s": "9803223/6250000000000",
+    "hold_20tick_quanta": 267182515,
+    "local_processing_conditional_budget_s": "1/1000",
+    "management_progress_s": "196871/6250000000000",
+    "peak_cap": "4/5",
+    "peak_including_full_reserved_slot": "16984144119/25000000000",
+    "raw_data_bytes": 6291456
+  },
+  "source_sha256_LF": {
+    "experiments/regime-map-methodology-20261019/epsilon-slice-20261027/observation-price/REPORT.md": "856ebe91f62f1cd78f20c0a936c87f6fb0b462993bb8f10caeb9c96d57a78d13",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/RESOURCE.md": "8d55e3732ba88ae0ee18d0c8c312226a0311e14712d4d9c3a2332b2feb51665a",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/THEORY.md": "a2d4da37e9cc685e638bd620bae3d3622bee3dabe445e90c90abcdfb5c95eaf1",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/first_point.py": "2ee8678bc484cb1ca1b02a3542efec52090683baf15b89e61790539f9c790947",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/inputs.json": "5f62171e4706854f6419345d7eaed1f2103c06bc4989976fde03942db091c6cd",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/map-14/result.json": "ef8b56daf67fbc3b48804129ba7ddde27dab33346aee9c24254f8c20584274e0",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/resource-result.json": "27e7f955e10a3167e3e97e9ea588f018f4d75aa16f240be3bcfa988538dbb84a",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/ENGINEERING.md": "9af729a5c79727657a3c0a79666d978e277dcde1721208283a9beccacef86e55",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/calendar_math.py": "1a7d76d080fcf03c1cbd0ce424fc8cd5199e755d983450f81cd9737a07b76df1",
+    "experiments/regime-map-methodology-20261019/window-slice-20261025/model.py": "514470895f36e672aa011fddfd560a7d34feef607631b515057bdfcaf1fedcf2",
+    "experiments/t104-rtl-resume/integrated/event_fifo.sv": "f0eeca3f32aeb544ae8dded00642549640648c99884e9bb025df67da7f4270c6",
+    "experiments/t104-rtl-resume/physical/frame_engine.sv": "8d5bfc751941cf4b9d44a70bb209fd03f5919594d299700c7485e566e6b33fd5",
+    "experiments/t104-rtl-resume/split/operation_lane.sv": "215db0cf6a0b951a2c2b93d63fa6d11c630078d65d8a10c0c550ff22910f9e23",
+    "experiments/t104-rtl-resume/split/predecision_guard.sv": "bbf23aafc47bffe3037c815c639157016f336584f5a59bdf6e1d8891c126e158",
+    "experiments/t104-rtl-resume/split/relative_calendar.sv": "4795a9c09d5b7d899545ace5306e8c7005fd1a4fb95de5c2491be228e7d962c9",
+    "experiments/t105-arm-rule/REPORT.md": "62a538f00351cee24e2daa5f47376d8d6d8af83c97e4a7e167fef9d628a1efc8",
+    "experiments/t105-arm-rule/SERVICE_BOUND.md": "32bb61f5f1a96024e3e2592a6b044ea97701db65ed8163d2b9afb6c97e17e3ec",
+    "experiments/t105-arm-rule/driver.c": "40135fb0643e5115d2470f13bfef40a7899b8d41ccf6acf99610c2dd9ed82514",
+    "experiments/t105-arm-rule/history_batch.sv": "8618aa0abc61f790bf3fc33edece1e72d4134daa62783e3c5b53a950322347eb",
+    "experiments/t105-arm-rule/link.ld": "32da00a2743d5752a92c01207f9e4c3c10569284de9d94d639c378eebdd0968c",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "theory/REVIEW_T196_WINDOW_APPLICATION_20261029.md": "b3970589dcb5bee62e0b7d62ed6d8b97f8cd90c6198da71df41a88cbdedb0399",
+    "theory/t196-window-application-20261029.md": "bd07cdd340185cb14f9105f810dfa4725cc571f4851a2e9e0e71e99d17e1d453",
+    "theory/t196-window-application-20261029/reproduce.py": "d166cbfd41d5fcc4aa146c9d462d477df31589f966bead46906faf71f18e4891",
+    "theory/t196-window-application-20261029/result.json": "7f21484747515a99a5ece38451e53373ae20621462256a8dcf904907d351e125"
+  },
+  "status": "OWN RESULT; conditional cost ledger, not accepted hardware qualification",
+  "words": 1048576
+}
