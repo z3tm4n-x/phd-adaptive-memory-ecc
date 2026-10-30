@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "task": 331,
+  "rule_id": "L_cut_c01_m8_H0",
+  "base_main": "70418ea83f04782e8ea606ad9f4845d3c05667cd",
+  "registration_sha256_LF": "62404ba492ed78d5b5d3b12cc2841ed08915eb2acebea5c459bcec8426f06e78",
+  "reproduce_sha256_LF": "60446beb8fdba251218ba7f49a95cbf96a7b4f5678f363812bd4565576d9b9cb",
+  "source_sha256_LF": {
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/inputs.json": "5f62171e4706854f6419345d7eaed1f2103c06bc4989976fde03942db091c6cd",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/map-14/inputs.json": "bbd6e84d1ab646e16577b01519d21d339100ced74cda34f6c503a77a590bafd4",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/THEORY.md": "a2d4da37e9cc685e638bd620bae3d3622bee3dabe445e90c90abcdfb5c95eaf1",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/PLAN.md": "66f5f7cad1210311925988e08f5dd89ba4739392420625afa03d4341c89f2e55",
+    "theory/t196-n0-map-diagnosis-20261028.md": "75cba47ec7f7a0eee91e4070fa4f02ffe5acc02beb76fea76bc60d97619e5a10",
+    "thesis/REVIEW_N0_ALPHA_20261028.md": "cc3cb83d6e65398804485cb3355eba27e0ee38200b22f927de3c9e7fa091e7ce",
+    "theory/t196-three-variant-foundations-20261022.md": "e629c6aa739c8da9b8561c74aafe5f02229c18936bb1d4520b94820f975ce6c3",
+    "theory/t196-predictable-windows-20261025.md": "ef644d2f430c1c5f584a9c94811a104f0cfeaf93530899980d6be0f61dd31528",
+    "theory/t45-lambda-rarity.md": "cecf9539ebb236855dffe8f394c30cbd7eaafcfba360974efca271f39631e50b",
+    "theory/fixed-period-resource-contract.md": "f2a1aa261dea522bfdde9e15a00080b7eb1dfe0babeda51ab33d2583646a58ad",
+    "theory/t196-theorem31-assembly-20261029.md": "a48a526f0e67c28983bcd503c65c038544ff5a9eac294dc07aa159ab6eab0142"
+  },
+  "arithmetic": "exact fractions; outward decimal display with 20 places",
+  "numerical_cases": 1,
+  "cell_id": "c01",
+  "kH": 26,
+  "kL": 208,
+  "hold": 0,
+  "quantifier": "fixed p at alpha=0; every execution/channel law under the accepted contract",
+  "geometric_domain": true,
+  "boundary_covered_by_rounding": true,
+  "status": "sufficient_admissibility",
+  "values": {
+    "epsilon": {
+      "exact": "1/1000",
+      "lower": "0.00100000000000000000",
+      "upper": "0.00100000000000000000"
+    },
+    "Delta": {
+      "exact": "7/1000000",
+      "lower": "0.00000700000000000000",
+      "upper": "0.00000700000000000000"
+    },
+    "a_reference_per_s": {
+      "exact": "3071883/1902343750",
+      "lower": "0.00161478859958932238",
+      "upper": "0.00161478859958932239"
+    },
+    "IH_reference_squared_integral": {
+      "exact": "9529705110075489/237792968750000",
+      "lower": "40.07563873805872992197",
+      "upper": "40.07563873805872992198"
+    },
+    "IL_reference_squared_integral": {
+      "exact": "409764745863/61035156250",
+      "lower": "6.71358559621939200000",
+      "upper": "6.71358559621939200000"
+    },
+    "K": {
+      "exact": "39/19922944",
+      "lower": "0.00000195754201788651",
+      "upper": "0.00000195754201788652"
+    },
+    "dE_s": {
+      "exact": "3137531/25000000000000",
+      "lower": "0.00000012550124000000",
+      "upper": "0.00000012550124000000"
+    },
+    "C0_s": {
+      "exact": "632506450627/625000000000",
+      "lower": "1.01201032100320000000",
+      "upper": "1.01201032100320000000"
+    },
+    "PH_plus_s": {
+      "exact": "33397479574581/6250000000000",
+      "lower": "5.34359673193296000000",
+      "upper": "5.34359673193296000000"
+    },
+    "PL_plus_s": {
+      "exact": "267179836574773/6250000000000",
+      "lower": "42.74877385196368000000",
+      "upper": "42.74877385196368000000"
+    },
+    "sigma_s": {
+      "exact": "36838087497203/5000000000000",
+      "lower": "7.36761749944060000000",
+      "upper": "7.36761749944060000000"
+    },
+    "XE": {
+      "exact": "28912938941800372819941/6103515625000000000000000",
+      "lower": "0.00473709591622457308",
+      "upper": "0.00473709591622457309"
+    },
+    "L_cut_fictitious_upper": {
+      "exact": "117019847010060864108341529316187/118438400000000000000000000000000000",
+      "lower": "0.00098802286260250783",
+      "upper": "0.00098802286260250784"
+    },
+    "rounding_slack": {
+      "exact": "1418552989939135891658470683813/118438400000000000000000000000000000",
+      "lower": "0.00001197713739749216",
+      "upper": "0.00001197713739749217"
+    },
+    "Jsigma_reference_squared_integral": {
+      "exact": "3058819233470256557752179573051703192524112485375969467/116109848022460937500000000000000000000000000000000000000",
+      "lower": "0.02634418428382182948",
+      "upper": "0.02634418428382182949"
+    },
+    "D_boundary_upper_correction": {
+      "exact": "53193704283694628276051827655106356952550451667621965994542980767/27576088905334472656250000000000000000000000000000000000000000000000000",
+      "lower": "0.00000192897928586981",
+      "upper": "0.00000192897928586982"
+    },
+    "physical_Q_upper_unclipped": {
+      "exact": "27299000003913517026891477586693761444304349462898090715994542980767/27576088905334472656250000000000000000000000000000000000000000000000000",
+      "lower": "0.00098995184188837765",
+      "upper": "0.00098995184188837766"
+    },
+    "physical_Q_upper": {
+      "exact": "27299000003913517026891477586693761444304349462898090715994542980767/27576088905334472656250000000000000000000000000000000000000000000000000",
+      "lower": "0.00098995184188837765",
+      "upper": "0.00098995184188837766"
+    },
+    "physical_margin": {
+      "exact": "277088901420955629358522413306238555695650537101909284005457019233/27576088905334472656250000000000000000000000000000000000000000000000000",
+      "lower": "0.00001004815811162234",
+      "upper": "0.00001004815811162235"
+    }
+  }
+}
