@@ -1,0 +1,24 @@
+{
+  "task": 346,
+  "issue": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/346",
+  "accepted_base": "610811084f4f8b8adcc9d04f4294aaf97832c82f",
+  "branch_base": "07e431f18d63db5d5657dde0be71d11b97227cee",
+  "accepted_inputs": "experiments/t340-article-significance-20261030/inputs.json",
+  "accepted_results": "experiments/t340-article-significance-20261030/outputs/results.json",
+  "accepted_lower_code": "experiments/t340-article-significance-20261030/reproduce.py",
+  "expected_rows": 34,
+  "event_information_scope": "known_excess_budget_E_of_subclass; not_global_F_s",
+  "lower_at_average": "main rows only; exact selected binary64 period; no interpolation",
+  "period_rounding": "greatest finite binary64 not exceeding positive exact rational root",
+  "figure_curve_samples": 241,
+  "source_sha256_lf": {
+    "papers/sequential-memory-control/PLAN.md": "f34ca65d4798c3549d1ccf07029ed2d8769a4ada69eafdc3a8398710bea5819e",
+    "theory/t340-article-significance-20261030.md": "31a819a632e2a84e5fdc37a191e365851158745c4e904582ee34252eacdf538a",
+    "experiments/t340-article-significance-20261030/PLAN.md": "7148a5e5d4778fce21623fde7e4848aa2ea3a9f7fd25deb22db2f26648c6b6bf",
+    "experiments/t340-article-significance-20261030/inputs.json": "fe32297b4c8401f4c99c2d9f97f5d095fdda56dbffe2b6ce14bb32b1875bf653",
+    "experiments/t340-article-significance-20261030/reproduce.py": "b63e4dfa517f1e421681aa13ad05d62faac69a7bd1398e4d57c5186806a8116c",
+    "experiments/t340-article-significance-20261030/outputs/results.json": "118ec5d906fc2e08dd3781f254afc7be18d618d5d4793e3049659a931ae81153",
+    "experiments/t340-article-significance-20261030/outputs/TABLE.md": "513c151f6d173e310890bf0d5cc726d3493c634490ab929748e7394742479267",
+    "docs/scientific_reviews/T340_ARTICLE_SIGNIFICANCE_20261030.md": "94b31483ff3d1e32517f49bf08cfbb32c933f764320d471ba9dea0c1cb9ebbdf"
+  }
+}
