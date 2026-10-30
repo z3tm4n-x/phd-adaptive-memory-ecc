@@ -1,0 +1,49 @@
+{
+  "task": 340,
+  "base": "c68e0d90f9a4632e51588667f3fae00ec8412925",
+  "status": "preregistered_conditional_sensitivity",
+  "n": 39,
+  "useful_bytes_per_word": 4,
+  "allocated_bytes_per_word": 6,
+  "W": [131072, 262144, 524288, 1048576],
+  "T_s": "315576000",
+  "epsilon": "0.001",
+  "environment": {
+    "reference_bits": 19922944,
+    "background_reference_s_inv": "0.0001586",
+    "peak_reference_s_inv": "0.9814",
+    "equivalent_peak_s": "115776",
+    "fluence_excess": "equivalent_peak_s*(peak_reference_s_inv-background_reference_s_inv)",
+    "normalization": "word_rate=n*reference_rate/reference_bits; array_rate=W*word_rate",
+    "profile": "rectangular event centered at T/2, constant background elsewhere",
+    "duration_domain_s": ["10800", "864000"],
+    "duration_slices_s": ["10800", "86400", "864000"],
+    "ratio_domain": "1<=r<=peak/background and background*(r-1)*d<=fluence_excess",
+    "ratio_slices": ["1", "10", "100", "1000", "cap"]
+  },
+  "service": {
+    "rules": ["B", "I", "C"],
+    "reserved_block_s": "0.0000002",
+    "slow_block_s": "0.000001",
+    "delta_fractions": ["0", "1/2", "1"],
+    "rho": "1",
+    "resource": "P>=W*c/rho, Delta<=c; same c for reference and corrected tests",
+    "initial": "clean with no pending operation, conditional model assumption",
+    "other_failure_budget": "0",
+    "correct_service_under_hits": "assumed contract, not physical qualification"
+  },
+  "slices": {
+    "main": {"W": 1048576, "d_s": "86400", "ratios": "all ratio_slices"},
+    "volume": {"W": "all", "d_s": "86400", "r": "1000"},
+    "duration": {"W": 1048576, "d_s": "all duration_slices_s", "r": "100"},
+    "operation": {"W": 1048576, "d_s": "86400", "r": "1000"},
+    "lower_keypoints": "all main rows, at source-passing reference endpoint and corrected endpoint"
+  },
+  "thresholds_percent": [10, 20],
+  "arithmetic": {
+    "rational_exp_terms": 40,
+    "output_places": 24,
+    "root_relative_tolerance": "1e-10",
+    "decimal_source_precisions": [80, 110]
+  }
+}
