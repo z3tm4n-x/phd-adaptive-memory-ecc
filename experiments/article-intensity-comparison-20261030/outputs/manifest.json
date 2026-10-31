@@ -1,0 +1,46 @@
+{
+  "preregistration_commit": "e9adc21b2b57cc985f54cf6810713b32a4e1fb3a",
+  "source_sha256_lf": {
+    "papers/sequential-memory-control/PLAN.md": "f34ca65d4798c3549d1ccf07029ed2d8769a4ada69eafdc3a8398710bea5819e",
+    "theory/t340-article-significance-20261030.md": "31a819a632e2a84e5fdc37a191e365851158745c4e904582ee34252eacdf538a",
+    "experiments/t340-article-significance-20261030/PLAN.md": "7148a5e5d4778fce21623fde7e4848aa2ea3a9f7fd25deb22db2f26648c6b6bf",
+    "experiments/t340-article-significance-20261030/inputs.json": "fe32297b4c8401f4c99c2d9f97f5d095fdda56dbffe2b6ce14bb32b1875bf653",
+    "experiments/t340-article-significance-20261030/reproduce.py": "b63e4dfa517f1e421681aa13ad05d62faac69a7bd1398e4d57c5186806a8116c",
+    "experiments/t340-article-significance-20261030/outputs/results.json": "118ec5d906fc2e08dd3781f254afc7be18d618d5d4793e3049659a931ae81153",
+    "experiments/t340-article-significance-20261030/outputs/TABLE.md": "513c151f6d173e310890bf0d5cc726d3493c634490ab929748e7394742479267",
+    "docs/scientific_reviews/T340_ARTICLE_SIGNIFICANCE_20261030.md": "94b31483ff3d1e32517f49bf08cfbb32c933f764320d471ba9dea0c1cb9ebbdf"
+  },
+  "code_sha256_lf": {
+    "PLAN.md": "8f5fcb73efb234d749f62d22f414a0a791109aa8a61dac9a82292134b792a029",
+    "inputs.json": "8a032e42bef8aaebc9b165a66bbebbeb0548e33fbcd660b3e94d77c15c01122c",
+    "README.md": "ab2b5f000549f26a7e3870e7682b986c81301bac5fc870cc328dba93d0c52225",
+    "RESULT.md": "f690ddc54d8851b59bf5d41ca02c4ab498f6b932f62eb66fbf624cf21095fde4",
+    "calculation.py": "addefa661b8195fa8ee17239e71b6c2730bff9c7069684ef973092b8d00937f1",
+    "checks.py": "160e585d4ebd8718d1e2cd1304a12921a00d6a5d06e2ef954351cb8b6ce77763",
+    "figures.py": "afee7db6f39227e902b55e2a4b91a75e59b1765854a95cb267946be705da7b35",
+    "reproduce.py": "b981b4e8545c0daeb66cb8398da7df5a02471fb1bc31f38c9ebe826c4520c240",
+    "requirements.txt": "9662fec629db2d745cb96a26f1c0f5f2c36bf6d20282ca09153cbec9a338fd6a"
+  },
+  "output_hash_policy": "JSON/Markdown/SVG canonical LF; PDF/PNG exact binary bytes",
+  "output_sha256": {
+    "outputs/results.json": "2b00f139e61cbe13d4ca94120ba34a031b41346cd0a55670e6a6fff208f95a72",
+    "outputs/TABLE.md": "e83e8638baf87b026e9f94c79ab3c5182f9622ec592d2677cf64e0fcffb6c511",
+    "outputs/figure1_data.json": "4f10fbac25eba84febe9d2b27566fde23e04cd82c2b4da784f52e4d8adc719cc",
+    "outputs/figure2_data.json": "54ae5440560c8fae593ab392aa1896f185c68d86ee34199cbc4c3b61655d9ef5",
+    "outputs/figure3_data.json": "e3bc505e25460da41d91ccbb6be67f44c835bf190229d8cc65f2dcc68231ea58",
+    "figures/figure1.svg": "609c3928affc25d244414261f4dcb1e4c287585d4939ed129fe478808fa289ed",
+    "figures/figure1.pdf": "efaff189d034de7b38a0e004465027247578d37ec3a54c2282d34a3a9175a112",
+    "figures/figure1.png": "296894e38ba3d6dc775687a457720f7365a45407e5767bdfc4562199521313a0",
+    "figures/figure2.svg": "011f4f26c1bc0da0035858ca6c0f0ef9a2de40fa9393d127ffaaa2d891a738e1",
+    "figures/figure2.pdf": "198454d7b4e21e40a8b677d0bf15eba315fd3050a5f1eb2ff5f0b95fc051d81f",
+    "figures/figure2.png": "ecb119313c57b5d6baf80e4c6a1e5eeced987305cec09caf9ec844ea48cbd163",
+    "figures/figure3.svg": "3bc9ca487d29ffda3e5992b88f3e52cf9b6fbdd8fd508cfa1b301008b2165495",
+    "figures/figure3.pdf": "6db827f9dda204f1c831fc69f9554d79d59ee8bcb40b233d2737180675fa3224",
+    "figures/figure3.png": "b4baa86090c564196eccae214f67bb1cd3fdea85c60c396841ddac4bc26bdee2"
+  },
+  "rendering_versions": {
+    "python": "3.12.14",
+    "matplotlib": "3.11.2",
+    "numpy": "2.3.5"
+  }
+}
