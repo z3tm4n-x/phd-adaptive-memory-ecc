@@ -142,7 +142,7 @@ def figure2(data):
         ax.axvline(edge,color='0.55',linewidth=.8)
     m=data['same_confirmed_marker']
     ax.plot(24,m['P_avg_s'],'x',color='black',markersize=7,markeredgewidth=1.5)
-    ax.annotate('Нижний свидетель\nтолько для 24 ч',xy=(24,m['P_avg_s']),xytext=(44,85),fontsize=10,
+    ax.annotate('Доказано Q(T) > ε\nпри d = 24 ч',xy=(24,m['P_avg_s']),xytext=(44,85),fontsize=10,
                 arrowprops=dict(arrowstyle='-',color='0.4',linewidth=.7))
     ax.text(4,.04,'Пиковое предписание вне ресурса\nна всём показанном диапазоне',fontsize=10)
     ax.text(4,1.0,'3 ч ≤ d ≤ 240 ч; квота E ≤ F_s выполнена',fontsize=10)
@@ -185,7 +185,7 @@ def figure3(data):
     bx.text(1.4,.60,'Корень ниже минимума:\nдостаточное предписание\nнеосуществимо',ha='center',fontsize=9)
     bx.set_xticks(range(4),labels=['200 / 0','200 / 100','200 / 200','1000 / 1000'],rotation=25,ha='right')
     bx.set_xlabel('c / Δ, нс'); bx.set_ylabel('P_event / P_min')
-    bx.set_xlim(-.6,3.6); bx.set_ylim(0,1.42); bx.set_title('(б) Зарегистрированный срез r = 1000',fontsize=11)
+    bx.set_xlim(-.6,3.6); bx.set_ylim(0,1.42); bx.set_title('(б) При r = 1000',fontsize=11)
     bx.grid(axis='y',color='0.86',linewidth=.6)
     fig.text(.51,.025,'В пустой ресурсной области процент между допустимыми периодами не определён.\n'
              'Малая поправка не разрешает отбросить её при полностью исчерпанном ε.',ha='center',fontsize=10)
