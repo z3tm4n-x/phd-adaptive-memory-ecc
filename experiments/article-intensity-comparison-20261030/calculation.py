@@ -21,7 +21,11 @@ def lf_hash(path):
 
 def verify_sources():
     for rel, expected in CFG['source_sha256_lf'].items():
-        actual = lf_hash(ROOT / rel)
+        # The article plan changes with acceptance status; verify its registered
+        # bytes while leaving all scientific inputs at their canonical paths.
+        source = (HERE / 'paper_plan_at_registration.md'
+                  if rel == 'papers/sequential-memory-control/PLAN.md' else ROOT / rel)
+        actual = lf_hash(source)
         if actual != expected:
             raise ValueError(f'Accepted source changed: {rel}: {actual}')
 
