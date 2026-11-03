@@ -1,0 +1,696 @@
+{
+  "branches": [
+    {
+      "C_saturated_at_4": 0,
+      "admit": true,
+      "alpha_reserved": "1/10000",
+      "attempted_used_pass_counts": 119989,
+      "branch": "admit",
+      "certificate_applicable": true,
+      "certified_used_pass_counts": 119989,
+      "checkpoints": [
+        {
+          "action": 1,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 2,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 4,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 119989,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 120000,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        }
+      ],
+      "deadline_tick": 6168286821088,
+      "fixture_cost_scope": "directed path; unlisted parents/guards absent on this path only, not zero class costs",
+      "fixture_counts": {
+        "extra_guard_reads": 0,
+        "false_records": 0,
+        "loss_episodes": 0,
+        "raw_records": 0,
+        "repairs": 0,
+        "restores": 0
+      },
+      "hidden_generation_or_birth_log_used_by_decision": false,
+      "intermediate_C_provisional_until_whole_group_prefix_closed": true,
+      "invalid": false,
+      "name": "admit",
+      "next_period_blocks": 12000,
+      "no_state_phase_or_risk_reset": true,
+      "nominal_fixture_continues_to_T": true,
+      "observed_prefix_contract": "ASSUMPTION: coherent existing source/processed/health, usable on empty batches",
+      "pending": false,
+      "prefix_mechanism_verified": false,
+      "queries_after_extension": 0,
+      "queries_after_restore": 0,
+      "query_epoch_known": true,
+      "query_source_healthy": true,
+      "ready_tick": 6168286821088,
+      "reasons": [],
+      "scheduled_queries": 1,
+      "service_preserved": true,
+      "startup_main_passes": 1,
+      "statistical_comparisons": 1,
+      "sum_C_valid": true,
+      "timely": true,
+      "trace_sha256": "0cbaa292c80e5b4598fb4df811f315a94d60b12129f56a51ee3312f02a5bc80c",
+      "training_main_passes": 120000,
+      "uncounted_tail": 11
+    },
+    {
+      "C_saturated_at_4": 4,
+      "admit": false,
+      "alpha_reserved": "1/10000",
+      "attempted_used_pass_counts": 119989,
+      "branch": "count_reject",
+      "certificate_applicable": true,
+      "certified_used_pass_counts": 119989,
+      "checkpoints": [
+        {
+          "action": 1,
+          "invalid": false,
+          "processed_G": 1,
+          "saturated_sum": 1
+        },
+        {
+          "action": 2,
+          "invalid": false,
+          "processed_G": 2,
+          "saturated_sum": 2
+        },
+        {
+          "action": 4,
+          "invalid": false,
+          "processed_G": 4,
+          "saturated_sum": 4
+        },
+        {
+          "action": 119989,
+          "invalid": false,
+          "processed_G": 4,
+          "saturated_sum": 4
+        },
+        {
+          "action": 120000,
+          "invalid": false,
+          "processed_G": 4,
+          "saturated_sum": 4
+        }
+      ],
+      "deadline_tick": 6168286821088,
+      "fixture_cost_scope": "directed path; unlisted parents/guards absent on this path only, not zero class costs",
+      "fixture_counts": {
+        "extra_guard_reads": 0,
+        "false_records": 0,
+        "loss_episodes": 0,
+        "raw_records": 4,
+        "repairs": 4,
+        "restores": 0
+      },
+      "hidden_generation_or_birth_log_used_by_decision": false,
+      "intermediate_C_provisional_until_whole_group_prefix_closed": true,
+      "invalid": false,
+      "name": "count_reject",
+      "next_period_blocks": 2,
+      "no_state_phase_or_risk_reset": true,
+      "nominal_fixture_continues_to_T": true,
+      "observed_prefix_contract": "ASSUMPTION: coherent existing source/processed/health, usable on empty batches",
+      "pending": false,
+      "prefix_mechanism_verified": false,
+      "queries_after_extension": 0,
+      "queries_after_restore": 0,
+      "query_epoch_known": true,
+      "query_source_healthy": true,
+      "ready_tick": 6168286821088,
+      "reasons": [],
+      "scheduled_queries": 1,
+      "service_preserved": true,
+      "startup_main_passes": 1,
+      "statistical_comparisons": 1,
+      "sum_C_valid": true,
+      "timely": true,
+      "trace_sha256": "199855f82646a33b9d16aff7bc6fd3da9390d6335b7ae65d56bd5e0cf854ce46",
+      "training_main_passes": 120000,
+      "uncounted_tail": 11
+    },
+    {
+      "C_saturated_at_4": 0,
+      "admit": false,
+      "alpha_reserved": "1/10000",
+      "attempted_used_pass_counts": 119989,
+      "branch": "invalid",
+      "certificate_applicable": true,
+      "certified_used_pass_counts": 0,
+      "checkpoints": [
+        {
+          "action": 1,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 2,
+          "invalid": true,
+          "processed_G": 1,
+          "saturated_sum": 0
+        },
+        {
+          "action": 4,
+          "invalid": true,
+          "processed_G": 1,
+          "saturated_sum": 0
+        },
+        {
+          "action": 119989,
+          "invalid": true,
+          "processed_G": 1,
+          "saturated_sum": 0
+        },
+        {
+          "action": 120000,
+          "invalid": true,
+          "processed_G": 1,
+          "saturated_sum": 0
+        }
+      ],
+      "deadline_tick": 6168286821088,
+      "fixture_cost_scope": "directed path; unlisted parents/guards absent on this path only, not zero class costs",
+      "fixture_counts": {
+        "extra_guard_reads": 0,
+        "false_records": 0,
+        "loss_episodes": 1,
+        "raw_records": 1,
+        "repairs": 1,
+        "restores": 1
+      },
+      "hidden_generation_or_birth_log_used_by_decision": false,
+      "intermediate_C_provisional_until_whole_group_prefix_closed": true,
+      "invalid": true,
+      "name": "invalid",
+      "next_period_blocks": 2,
+      "no_state_phase_or_risk_reset": true,
+      "nominal_fixture_continues_to_T": true,
+      "observed_prefix_contract": "ASSUMPTION: coherent existing source/processed/health, usable on empty batches",
+      "pending": false,
+      "prefix_mechanism_verified": false,
+      "queries_after_extension": 0,
+      "queries_after_restore": 0,
+      "query_epoch_known": true,
+      "query_source_healthy": true,
+      "ready_tick": 6168286821088,
+      "reasons": [
+        "ERR has no unambiguous control transaction payload",
+        "GAP in observation interval; RESTORE does not erase it",
+        "loss in whole learning group; restore does not reset it"
+      ],
+      "scheduled_queries": 1,
+      "service_preserved": true,
+      "startup_main_passes": 1,
+      "statistical_comparisons": 0,
+      "sum_C_valid": false,
+      "timely": true,
+      "trace_sha256": "17768b46ea3645b4815aa2ed8cbf1df67dc48e58ef928d89a002fc4213c9d370",
+      "training_main_passes": 120000,
+      "uncounted_tail": 11
+    },
+    {
+      "C_saturated_at_4": 0,
+      "admit": false,
+      "alpha_reserved": "1/10000",
+      "attempted_used_pass_counts": 119989,
+      "branch": "late",
+      "certificate_applicable": true,
+      "certified_used_pass_counts": 119989,
+      "checkpoints": [
+        {
+          "action": 1,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 2,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 4,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 119989,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        },
+        {
+          "action": 120000,
+          "invalid": false,
+          "processed_G": 0,
+          "saturated_sum": 0
+        }
+      ],
+      "deadline_tick": 6168286821088,
+      "fixture_cost_scope": "directed path; unlisted parents/guards absent on this path only, not zero class costs",
+      "fixture_counts": {
+        "extra_guard_reads": 0,
+        "false_records": 0,
+        "loss_episodes": 0,
+        "raw_records": 0,
+        "repairs": 0,
+        "restores": 0
+      },
+      "hidden_generation_or_birth_log_used_by_decision": false,
+      "intermediate_C_provisional_until_whole_group_prefix_closed": true,
+      "invalid": false,
+      "name": "late",
+      "next_period_blocks": 2,
+      "no_state_phase_or_risk_reset": true,
+      "nominal_fixture_continues_to_T": true,
+      "observed_prefix_contract": "ASSUMPTION: coherent existing source/processed/health, usable on empty batches",
+      "pending": false,
+      "prefix_mechanism_verified": false,
+      "queries_after_extension": 0,
+      "queries_after_restore": 0,
+      "query_epoch_known": true,
+      "query_source_healthy": true,
+      "ready_tick": 6168338223264,
+      "reasons": [],
+      "scheduled_queries": 1,
+      "service_preserved": true,
+      "startup_main_passes": 1,
+      "statistical_comparisons": 0,
+      "sum_C_valid": true,
+      "timely": false,
+      "trace_sha256": "0cbaa292c80e5b4598fb4df811f315a94d60b12129f56a51ee3312f02a5bc80c",
+      "training_main_passes": 120000,
+      "uncounted_tail": 11
+    }
+  ],
+  "cost": {
+    "branch_paths": [
+      {
+        "branch": "admit",
+        "full_decodes": 805011796086815,
+        "full_read_beats": 2415035388260445,
+        "full_write_beats": 393216,
+        "initial_encodes": 131072,
+        "learning_reads": 15728640000,
+        "main_reads_nominal": 804696226398208,
+        "main_reads_physical_lower": 804688179494912,
+        "main_reads_physical_upper": 804704273432576,
+        "path_fixture_extra_guards": 0,
+        "path_fixture_repairs": 0,
+        "path_nominal_full_bus_s": "2415035388719197/62500000",
+        "path_nominal_full_core_s": "13685200535966223/250000000",
+        "path_nominal_protection_bus_s": "75440271224832/1953125",
+        "path_nominal_protection_core_s": "106873717568512/1953125",
+        "path_unknown_cost": "add cuts/raw handling/counter/timers/controller/CPU/energy; not zero",
+        "price_continues_after_A": true,
+        "remaining_reads": 804680497627136,
+        "removed_passes": 5999,
+        "removed_reads": 786300928,
+        "startup_reads": 131072
+      },
+      {
+        "branch": "count_reject",
+        "full_decodes": 805012582387743,
+        "full_read_beats": 2415037747163229,
+        "full_write_beats": 393228,
+        "initial_encodes": 131072,
+        "learning_reads": 15728640000,
+        "main_reads_nominal": 804697012699136,
+        "main_reads_physical_lower": 804688965795840,
+        "main_reads_physical_upper": 804705059733504,
+        "path_fixture_extra_guards": 0,
+        "path_fixture_repairs": 4,
+        "path_nominal_full_bus_s": "483007549524399/12500000",
+        "path_nominal_full_core_s": "2737042780616411/50000000",
+        "path_nominal_protection_bus_s": "1207045519048711/31250000",
+        "path_nominal_protection_core_s": "1709981151985671/31250000",
+        "path_unknown_cost": "add cuts/raw handling/counter/timers/controller/CPU/energy; not zero",
+        "price_continues_after_A": true,
+        "remaining_reads": 804681283928064,
+        "removed_passes": 0,
+        "removed_reads": 0,
+        "startup_reads": 131072
+      },
+      {
+        "branch": "invalid",
+        "full_decodes": 805012582387743,
+        "full_read_beats": 2415037747163229,
+        "full_write_beats": 393219,
+        "initial_encodes": 131072,
+        "learning_reads": 15728640000,
+        "main_reads_nominal": 804697012699136,
+        "main_reads_physical_lower": 804688965795840,
+        "main_reads_physical_upper": 804705059733504,
+        "path_fixture_extra_guards": 0,
+        "path_fixture_repairs": 1,
+        "path_nominal_full_bus_s": "4830075495243969/125000000",
+        "path_nominal_full_core_s": "13685213903082013/250000000",
+        "path_nominal_protection_bus_s": "4828182076194823/125000000",
+        "path_nominal_protection_core_s": "6839924607942663/125000000",
+        "path_unknown_cost": "add cuts/raw handling/counter/timers/controller/CPU/energy; not zero",
+        "price_continues_after_A": true,
+        "remaining_reads": 804681283928064,
+        "removed_passes": 0,
+        "removed_reads": 0,
+        "startup_reads": 131072
+      },
+      {
+        "branch": "late",
+        "full_decodes": 805012582387743,
+        "full_read_beats": 2415037747163229,
+        "full_write_beats": 393216,
+        "initial_encodes": 131072,
+        "learning_reads": 15728640000,
+        "main_reads_nominal": 804697012699136,
+        "main_reads_physical_lower": 804688965795840,
+        "main_reads_physical_upper": 804705059733504,
+        "path_fixture_extra_guards": 0,
+        "path_fixture_repairs": 0,
+        "path_nominal_full_bus_s": "2415037747621981/62500000",
+        "path_nominal_full_core_s": "13685213903081999/250000000",
+        "path_nominal_protection_bus_s": "75440344940544/1953125",
+        "path_nominal_protection_core_s": "106873821999104/1953125",
+        "path_unknown_cost": "add cuts/raw handling/counter/timers/controller/CPU/energy; not zero",
+        "price_continues_after_A": true,
+        "remaining_reads": 804681283928064,
+        "removed_passes": 0,
+        "removed_reads": 0,
+        "startup_reads": 131072
+      }
+    ],
+    "calendar": {
+      "all_history_resource_release_required": true,
+      "all_history_slot_cap": 1610097765253120,
+      "nominal_base_full_scans": 6139350988,
+      "nominal_base_started_reads": 804697012699136,
+      "physical_base_started_reads_lower": 804688965795840,
+      "physical_base_started_reads_upper": 804705059733504,
+      "retained_base_phase_after_rare": true,
+      "saved_fraction_of_base_reads": "5999/6139350988",
+      "saved_main_passes_if_admitted": 5999,
+      "saved_main_reads_if_admitted": 786300928,
+      "saved_nominal_bus_seconds": "73715712/1953125",
+      "saved_nominal_core_seconds": "104430592/1953125",
+      "saving_is_main_read_component_only": true,
+      "terminal_partial_scan_reads": 0,
+      "terminal_started_work_paid_in_full": true
+    },
+    "expected_upper": {
+      "coefficients": {
+        "D": 786300928,
+        "Drepair_bus_plus_ns": "706257/12500",
+        "Drepair_core_plus_ns": "700007/12500",
+        "Fparent": "23500956141/1187500",
+        "Nbase_plus": 804705059733504,
+        "Nhard": 1610097765253120,
+        "Rbus_plus_ns": "151564/3125",
+        "Rcore_plus_ns": "1712517/25000",
+        "U_joint_if_deltaC_requirement": "67905174310219897749059/72010547200000000000000000",
+        "delta_exec_if_deltaC_requirement": "7/125000",
+        "repair_upper_before_min_if_deltaC_requirement": "166830402002298356639634449571803/109879375000000000000"
+      },
+      "guard_cause_partition": "G_g=G_ERR+G_false+G_loss+G_restore+G_hold+G_veto after disjoint attribution; overlapping causes counted once",
+      "loss_restore_false_not_mandatory_lower_cost": true,
+      "no_guard_no_credit_component_upper_if_deltaC_requirement": {
+        "condition": "G_g=0 only as a labelled algebraic component, p_g=0; not physical full mean",
+        "pure_bus_fraction": "53729283508112706617275804553851232871371/433441170562500000000000000000000000000000",
+        "reads": "2514985078776119296/3125",
+        "serial_core_fraction": "75836060981310724702742942774541409102621/433441170562500000000000000000000000000000"
+      },
+      "no_stop_after_A": true,
+      "old_hold_coefficients_reused": false,
+      "protection_pure_bus_fraction": "(Rbus_plus*S+Drepair_bus_plus*H)/(T*1e9)+B_controller",
+      "protection_serial_core_fraction": "(Rcore_plus*S+Drepair_core_plus*H)/(T*1e9)+C_controller",
+      "read_formula": "S=min(Nhard,Nbase_plus-D*p_g+G_g+delta_exec*Nhard)",
+      "repair_factor_two_preserves_weak_E": true,
+      "repair_formula": "H=min(S,2*Fparent+U_joint*Nhard)",
+      "scope": "each fixed admissible r and allowed channel; no distribution over r",
+      "variables": {
+        "G_g": "E[extra guard reads on good execution], unknown in [0,Nhard]",
+        "delta_C": null,
+        "delta_exec": "<=delta0+delta_C, only if stated service and counter coverage hold",
+        "p_g": "P(good execution and the single admission), unknown in [0,1]"
+      }
+    },
+    "full_mean_gain_claimed": false,
+    "full_scalar_price_available": false,
+    "hard_upper": {
+      "including_app_init_bus_fraction": "132091597767210933341/246543750000000000000",
+      "including_app_init_core_fraction": "556891069565351192323/876600000000000000000",
+      "meaning": "all potential slots always-E, including all causes and post-A; not predicted mean",
+      "protection_bus_fraction": "3224600598397321/6019134521484375",
+      "protection_core_fraction": "7646910411653227/12038269042968750",
+      "unknown_controller_CPU_energy_not_included_as_zero": true
+    },
+    "lower_price_reference": {
+      "equality_or_gain_inferred": false,
+      "interpretation": "conditional lower read price of declared deterministic schedule class, not optimum",
+      "published_conservative_bus_percent_lower": "0.4854605",
+      "published_conservative_core_percent_lower": "0.6898650",
+      "source": "PR272@ed85, PRICE.md and result.json; not recomputed"
+    },
+    "observation": {
+      "bytes_are_moved_not_resident": true,
+      "cuts_upper": 78894788947892,
+      "episode_count_is_not_raw_confirmation_count": true,
+      "extra_raw_veto_expected": null,
+      "false_notifications_expected_upper": "39447/125",
+      "full_T_slot_gates_upper": 1610097765253120,
+      "group_decisions": 1,
+      "logical_ERR_expected_upper_if_deltaC_requirement": "166830402002298356639634449571803/109879375000000000000",
+      "online_bound_inversions": 0,
+      "ordinary_loss_episodes_upper": 1001,
+      "ordinary_outage_s_upper": "157788/5",
+      "raw_records_expected": null,
+      "raw_records_upper": 78894788947889481,
+      "restores_upper": 1000,
+      "source_generation_bits_required": 57,
+      "transported_record_bytes_upper": 2524633246332463392,
+      "valid_used_pass_finalizations": 119989
+    },
+    "resource_vector": {
+      "BRAM": null,
+      "CPU_formula": "sum_i E[N_i]*c_i_ns/(T*1e9), plus idle CPU; all c_i unknown",
+      "CPU_ns_per_operation": null,
+      "LUT": null,
+      "WCET_measured": null,
+      "code_stack_heap_bytes": null,
+      "controller_bus_average": null,
+      "controller_bus_peak": null,
+      "controller_core_fraction": null,
+      "disjoint_unit_cost_operations": [
+        "init encode/write",
+        "app read/decode",
+        "control read/decode",
+        "repair increment",
+        "cut/ready",
+        "raw decode",
+        "ERR handler",
+        "FALSE handler",
+        "GAP handler",
+        "RESTORE handler",
+        "extra veto handler",
+        "used pass close",
+        "saturating group add",
+        "one decision/install",
+        "calendar gate/timer"
+      ],
+      "energy_J_per_operation": null,
+      "energy_formula": "sum_i E[N_i]*e_i_J+T*idle_W; nonoverlapping increments; all e_i and idle_W unknown",
+      "example_extra_group_state_bytes": 32,
+      "example_full_counter_bytes": 64,
+      "example_metadata_total_bytes": 131232,
+      "group_sum_bits": 3,
+      "idle_W": null,
+      "packed_layout_is_not_compiler_or_hardware_resource_measurement": true,
+      "raw_data_SRAM_bytes": 786432,
+      "retained_transport_and_loss_bytes": 131136
+    },
+    "shared_price": {
+      "ECC_already_in_full_core_read": true,
+      "app_ECC_increment_nominal_ns_each": 36,
+      "app_ERR": 0,
+      "app_bus_upper_fraction": "11957251071007837/246543750000000000000",
+      "app_core_upper_fraction": "180139485474731273/2629800000000000000000",
+      "app_payload_nominal_ns_each": 32,
+      "app_read_repairs": 0,
+      "application_read_count": 315569688607,
+      "initial_bus_upper_fraction": "78473/3343963623046875",
+      "initial_core_upper_fraction": "1912519/60191345214843750",
+      "initial_encodes": 131072,
+      "initial_outside_0_paid_amortized_over_T": true,
+      "initial_read_counter_or_channel_does_not_reset_memory": true,
+      "initial_write_beats": 393216,
+      "useful_writes": 0
+    },
+    "units": "counts; physical seconds; resource fractions of entire T"
+  },
+  "implementation_sha256": {
+    "cost.py": "4a329e6fcde02036aafcd29a5172929d41b58300c613703bf44b07d55892d061",
+    "pilot.py": "ca00f9aa4af8c5d1b6089e7b0b57cfdce14956d3d4974b6b777707a6016027fb",
+    "risk.py": "1b53bd16c968130cb3fc1c8a53f7c2b4712d9998777687485a22a4b7bde8ac70",
+    "run.py": "03444a43ea8906a0b98572a920b602e1b68ed471b2e20c76273de308d3b8f411",
+    "sources.py": "db48d1fe5939e1eb52189904b77d69e5b72b8c5e52dd73b8235f8bbc380449f1",
+    "test_pilot.py": "2b0f35a9976c33bc2619c31f13f686637a00f3a2f9c65cb59d12ce9aa9b92606"
+  },
+  "input_sha256": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "new_rule_search_or_parameter_sweep": false,
+  "no_hardware_work": true,
+  "no_new_transport": true,
+  "plan_commit": "858ae5f0260560c70badc6dd20d6ed04ab560e26",
+  "preserved_W_T_epsilon_and_input": true,
+  "remaining": [
+    "usable closed source/processed/health prefix including empty and lost tail",
+    "mandatory service and pending=false; all-history bounded resource release",
+    "per-packet WCET and finalization/install deadline",
+    "lifetime delta_C coverage, not inferred from deterministic tests",
+    "guard work and all CPU/energy/controller unit costs",
+    "independent review of PR271/272; repeated economy is outside this pilot"
+  ],
+  "risk": {
+    "budgets": {
+      "alpha_once": "1/10000",
+      "base_full_T": "9864673267019897749059/72010547200000000000000000",
+      "delta0": "3/500000",
+      "delta_C": null,
+      "delta_C_example_requirement": "1/20000",
+      "delta_C_proved_in_delta0": false,
+      "hardware_probability_established": false,
+      "no_reset_after_loss_restore_or_A": true,
+      "rare_allowance": "11/20000",
+      "zeta_once": "1/10000"
+    },
+    "conditional_Q_not_branch_conditioned": true,
+    "exact": {
+      "Q_upper_excluding_deltaC": "64304646950219897749059/72010547200000000000000000",
+      "Q_upper_if_example_requirement_met": "67905174310219897749059/72010547200000000000000000",
+      "Qbase_upper": "9864673267019897749059/72010547200000000000000000",
+      "deltaC_allowable_upper": "7705900249780102250941/72010547200000000000000000",
+      "excursion_mass_upper": "2970314651913556311/289156250000000000",
+      "excursion_risk_upper": "10540539223507109726093397555367928721/21918210304000000000000000000000000000000",
+      "exposure_lower": "61091407347357001624640631/2891562500000000000000000",
+      "log_test_lower_C3": "2981289912883491102352359753/289156250000000000000000000",
+      "residual_tail_upper": "58744828253972759709200481/45125000000000000000000000000000"
+    },
+    "reachability": {
+      "allowed_outage_can_cover_whole_training": true,
+      "condition": "fixed admissible quiet path; healthy channel with usable closed-prefix certificate",
+      "fixed_path_r": "377091/95000000000",
+      "mass_to_query_upper": "7668067908267814437/23132500000000000000",
+      "no_parent_probability_lower": "15464432091732185563/23132500000000000000",
+      "physical_channel_positive_probability_established": false,
+      "universal_admission_probability_lower": null
+    },
+    "status": "CONDITIONAL_CANDIDATE_SHARED_ALL_BRANCHES_NOT_ACCEPTED",
+    "timing": {
+      "block_ticks": 25701088,
+      "final_gate_condition": "no later relevant guard E; final health/pending/ready gate and install must still fit, otherwise base",
+      "fresh_tail_final_gate_budget_lower_ns": "794303/625",
+      "group_prepare_window_does_not_replace_final_health_fence": true,
+      "group_prepare_window_s": "10679/125000",
+      "last_tail_main_release_to_query_lower_ns": "7044303/625",
+      "last_used_close_upper_s": "3083970129/500000",
+      "measured_WCET_ns": null,
+      "per_batch_processing_limit_ns": 3900,
+      "runtime_deadline": "decision boundary, earlier than cancellation of next base scan",
+      "tau_lower_s": "61680257/10000",
+      "tau_upper_s": "3084252851/500000"
+    }
+  },
+  "source_dependencies": {
+    "adapter.py": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "path": "experiments/t186-method-comparison/stage4/adapter.py",
+      "sha256": "cb50faad9ddc0b3754c53cea0ae67b0a0a509c11f0015aed24f0a6f0b82b07cd"
+    },
+    "binding_PRICE.md": {
+      "commit": "ed85cdecfcd6599691b7fb8e4c5424120fa7fadf",
+      "path": "experiments/hybrid-p-r-20261026/interface-price/PRICE.md",
+      "sha256": "ac6e08e6645f1f25731edceeaff436752648c27dcc343323bcbd8080b55492ab"
+    },
+    "binding_interface.py": {
+      "commit": "ed85cdecfcd6599691b7fb8e4c5424120fa7fadf",
+      "path": "experiments/hybrid-p-r-20261026/interface-price/interface.py",
+      "sha256": "2d275d13cbcbc81d285467af2d350b78c176a06e67fbe3f2180aeadce145fda7"
+    },
+    "binding_result.json": {
+      "commit": "ed85cdecfcd6599691b7fb8e4c5424120fa7fadf",
+      "path": "experiments/hybrid-p-r-20261026/interface-price/result.json",
+      "sha256": "8021de9c96c93545eda8f3e1b95482ed143add15ead3395106dccbfea20d07df"
+    },
+    "theory.md": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "theory/hybrid-p-r-accumulated-reserve-20261026.md",
+      "sha256": "b3c886c732231bd9db53df9a4f5dd552a5c99ad68eeb8a46998a6713e3e4c6ea"
+    },
+    "theory_CANDIDATE.md": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/CANDIDATE.md",
+      "sha256": "f0db49e854f2f125521e34599d6264c24c369ef56b565694a2091b433098c38f"
+    },
+    "theory_PR272_APPLICABILITY.md": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/PR272_APPLICABILITY.md",
+      "sha256": "3f49d27ac0db1af79ee315b473871cb2726f4d8c5034d793ef1ccacb08b57d96"
+    },
+    "theory_check.py": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/check.py",
+      "sha256": "a40da0a82b3aa07e3b6077352863f94b1d027e184fa9cc2d092b515e87ba58c1"
+    },
+    "theory_result.json": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/result.json",
+      "sha256": "62ad6417753c2a82168cf2118028ad76577785696491416d55ea813bda822da3"
+    }
+  },
+  "status": "OWN_RESULT_CONDITIONAL_PILOT_NOT_SCIENTIFIC_OR_HARDWARE_ACCEPTANCE",
+  "weak_E_witness": {
+    "controller_reads_physical_residual": false,
+    "extra_path_cost_over_zero_parent_fixture_ns": {
+      "bus": 112,
+      "serial_core": 112
+    },
+    "first_ERR": true,
+    "first_release_tick": 6168261120124,
+    "first_snapshot_tick": 6168261120068,
+    "late_parent_tick": 6168261120020,
+    "next_main_visit_tick": 6476674176000,
+    "parent_count": 1,
+    "query_does_not_clean_memory": true,
+    "query_tick": 6168286821088,
+    "rare_K_paid_separately": true,
+    "repair_transactions": 2,
+    "residual_after_next_E": 0,
+    "residual_at_query": 1,
+    "second_ERR": true,
+    "tail_C_not_used": true,
+    "these_exact_times_are_directed_witness_not_stochastic_samples": true
+  }
+}
