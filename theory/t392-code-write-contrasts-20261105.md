@@ -132,10 +132,8 @@ q(j)=1568⌊j/8⌋+164(j mod 8) номинальных нс, word=3j mod W,
 Фазы, нумерация и хвост не сбрасываются. При прежних ξ₋,ξ₊ и J=0,5 нс
 
 $$
- P_k^\pm=(196kW\xi_\pm\pm J)10^{-9}\ {
-m s},\qquad
- d_{E,n}=(E_{n,nom}\xi_++3J)10^{-9}\ {
-m s},\quad
+ P_k^\pm=(196kW\xi_\pm\pm J)10^{-9}\,\mathrm{s},\qquad
+ d_{E,n}=(E_{n,nom}\xi_++3J)10^{-9}\,\mathrm{s},\quad
  L_n=P_k^++d_{E,n}.                                      \tag{3}
 $$
 
@@ -226,8 +224,7 @@ read-arrival 100000+q·1000020 нс, write-arrival 600000+q·1000020 нс;
 $$
  q_w=5^{-1}w\pmod W,\qquad
  a_{wj}=600000+q_wh+jWh\quad({\rm ns}),\qquad
- h=1000020\ {
-m ns},\quad P_{app}=Wh.                    \tag{8}
+ h=1000020\,\mathrm{ns},\quad P_{app}=Wh.                    \tag{8}
 $$
 
 Получаются периоды обновления 262,14924288 / 524,29848576 /
