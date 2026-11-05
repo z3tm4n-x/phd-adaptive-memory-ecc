@@ -1,0 +1,144 @@
+{
+  "issue": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/386",
+  "base_main": "6a8f5680e65aea31138761898f66aeea9187cd1b",
+  "preregistered_plan_commit": "211d72af350ad465a4f32bb7cd0c57d95fcbb68f",
+  "theory_head": "c8df693fc9896046fd6e5bca73a1deb22e44e4b0",
+  "theory_merge": "a3c383e9eea62525f129d0ae2b0c8b1b025dcc9a",
+  "independent_review": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/383#issuecomment-6653577294",
+  "status": "conditional_calculation_not_CY62167_physical_qualification",
+  "object": {
+    "W": 1048576,
+    "n_code_bits": 39,
+    "data_bits_per_word": 32,
+    "allocated_bits_per_word": 48,
+    "T_s": "315576000",
+    "epsilon": "0.001"
+  },
+  "service": {
+    "rule": "C",
+    "c_s": "0.0000002",
+    "Delta_s": "0.0000002",
+    "rho_bus": "1",
+    "delta_execution": "0",
+    "initial": "clean, no pending",
+    "application": "long-lived data, no useful overwrites",
+    "execution": "correct local service under hits and reserved nonoverlapping blocks: assumption of model A; delta_execution is not a measured failure probability",
+    "calendar": "e_kw=k*P+w*P/W; completion=e_kw+Delta; starts/ends restricted to [0,T] as in A"
+  },
+  "environment": {
+    "D_ref_bits": 19922944,
+    "D_ref_definition": "38*524288",
+    "background_reference_per_s": "0.0001586",
+    "B_over_b": "100",
+    "excess_equivalent_s": "86400",
+    "b_formula": "background_reference_per_s*n_code_bits*W/D_ref_bits",
+    "B_formula": "100*b",
+    "E_formula": "(B-b)*86400",
+    "units": {
+      "b": "s^-1, total bit-marginal majorant for full code array",
+      "B": "s^-1, upper bound on same majorant",
+      "E": "expected excess count of majorant over T",
+      "S_A": "s^-1, upper bound on integral(lambda_A^2 dt)"
+    },
+    "interpretation": "ASSUMPTION: jointly admissible b,B,E for lambda_A; not a physical transfer from CY62167 and not original B_max/F_s"
+  },
+  "probabilistic_assumptions": {
+    "D": "Atomic parent mark affects at least two distinct code bits in at least one full word; count the parent once, not cells/words/clusters.",
+    "C": "Remaining parents; each touches at most one code bit of each word; dependence across words inside a mark is allowed.",
+    "pair_law": "ASSUMPTION: pair-moment domination (6) of PR383; independently marked Poisson parents are one sufficient conditional model.",
+    "spatial": "ASSUMPTION: r_wi^C(t) <= lambda_A(t)/(n*W), first sufficient condition in section 4.1 of PR383.",
+    "p_D": "P(N_D(T)>=1) for the full array and horizon; UNKNOWN physical value",
+    "Lambda_D": "E[N_D(T)] for physical parents D; UNKNOWN physical value",
+    "poisson_branch": "Only when N_D(T) has a justified Poisson law with deterministic total mean; not an unconditional mixed-Poisson claim."
+  },
+  "calendars": {
+    "published_period_s": "17.2",
+    "published_period_representation": "Exact decimal Fraction(86,5), explicitly required by Issue; no binary64 replacement",
+    "resource_minimum_representation": "Least finite binary64 P >= W*c/rho_bus and P > Delta; exact rational of selected value retained. Numeric representation, no hardware timer qualification."
+  },
+  "accepted_A_check": {
+    "U_upper": "0.00099894238549",
+    "last_printed_unit": "0.00000000000001",
+    "test": "U_upper-last_printed_unit < U_C(86/5) <= U_upper; fail before second row if violated"
+  },
+  "arithmetic": {
+    "machine_decimal_places": 24,
+    "table_decimal_places": 18,
+    "log_series_terms": 12,
+    "log_enclosure_places": 90,
+    "verification_decimal_precision": 120,
+    "directions": "U and interface reservation upward; allowed p_D and Lambda_D downward; P_min upward on binary64; log lower/upper rational series enclosure"
+  },
+  "sources": [
+    {
+      "path": "theory/single-and-multiple-upsets-20261105.md",
+      "locator": "sections 1, 2, 4-6; equations (1), (11), (14)",
+      "sha256_lf": "2cc05cd13485b76e038515ac9258dc4044d87a88c4c5a42160129d8a0e77d56e"
+    },
+    {
+      "path": "papers/sequential-memory-control/PROOFS.md",
+      "locator": "sections 1-3, 5, 7",
+      "sha256_lf": "0b812b1f38b4a6c3f80d069108b7bc758e03c7f61e319f9e592862004a72e5cb"
+    },
+    {
+      "path": "papers/sequential-memory-control/V8_REVIEW_PLAN.md",
+      "locator": "Итоговое принятие 04.11: U at exact P=17.2 s",
+      "sha256_lf": "d47bdff2d555480fbfb15413ab7dd0b58cc76d3b0ca0cabcba3b22e4a1cf91fd"
+    },
+    {
+      "path": "experiments/t340-article-significance-20261030/inputs.json",
+      "locator": "n, W, T, epsilon, c, Delta and reference normalization",
+      "sha256_lf": "fe32297b4c8401f4c99c2d9f97f5d095fdda56dbffe2b6ce14bb32b1875bf653"
+    },
+    {
+      "path": "experiments/t340-article-significance-20261030/README.md",
+      "locator": "rational physical seconds; no qualified hardware timer",
+      "sha256_lf": "86ea821756fbc6998d5de838513057f3499e0a1ce754df824bbf269c30b04ab8"
+    },
+    {
+      "path": "experiments/article-intensity-comparison-20261030/inputs.json",
+      "locator": "period_rounding: binary64",
+      "sha256_lf": "8a032e42bef8aaebc9b165a66bbebbeb0548e33fbcd660b3e94d77c15c01122c"
+    },
+    {
+      "path": "experiments/article-intensity-comparison-20261030/calculation.py",
+      "locator": "binary64 endpoint selection; no rerun/import",
+      "sha256_lf": "53d1fe95827e5bbcdccf37aa48553481f214535b7bf8c52b64d034254ba9a4a2"
+    },
+    {
+      "path": "experiments/RE-CY62167-SEMANTICS-REPAIR-01/REPORT.md",
+      "locator": "section 2; direction of absorbing surrogate; section 5 resource semantics",
+      "sha256_lf": "62e985995d712426b90457d3aa21ba1d5d45ab8a55a2a47a6f76da1e70748646"
+    },
+    {
+      "path": "docs/scientific_reviews/CY62167_SEMANTICS_REPAIR_REVIEW_02.md",
+      "locator": "section 3 accepted semantic scope",
+      "sha256_lf": "8eb7722ada8bba28d43f6476713f028a19de5446774eafd84765102feb401889"
+    },
+    {
+      "path": "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/REPORT.md",
+      "locator": "sections 1-6; parent censoring, full-word mapping and parity gaps",
+      "sha256_lf": "9a9e024d094997cf6d825dcf00ab60973b419fcbe9af46ae664c541969081443"
+    },
+    {
+      "path": "experiments/RE-CY62167-PROTON-01/REPORT.md",
+      "locator": "sections 4-6; measured support, missing aligned fluence, internal 32+6 ECC",
+      "sha256_lf": "4a1fd1fbab21b332d3b9767c9f4459235a0db1e3ee7b32bd94a00d70d3926035"
+    },
+    {
+      "path": "experiments/RE-CY62167-PAPER-COMPLETION-01/REPORT.md",
+      "locator": "controlling semantic qualification, sections 2, 4-6",
+      "sha256_lf": "904bb2160cec1ed7d89c30acac0ee476c6f7a519b961507a17c4d9dc9ee995b9"
+    },
+    {
+      "path": "experiments/t127-cy62167-pdi/HANDOFF.md",
+      "locator": "conditional full38; PDI is not a multiple-bit mark; missing physical transfers",
+      "sha256_lf": "860a9b4f6ec750a4175ff8770feb89c7ee911cbeeb37bdb4be749113564ec710"
+    },
+    {
+      "path": "experiments/t141-radiation-chain/HANDOFF.md",
+      "locator": "conditional operator, mixed moments and joint environmental coverage",
+      "sha256_lf": "cbd4092bcf1ab1a3338584e3cdd1933a6a3ec1a9f13cb8b7ae51064b63dde051"
+    }
+  ]
+}
