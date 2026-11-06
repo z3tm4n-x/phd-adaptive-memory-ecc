@@ -1,0 +1,412 @@
+{
+  "status": "OWN RESULT; conditional cost; joint independent acceptance with PR394 pending",
+  "base_main": "8c7cfa28d854f2e52977e571f2dce9dc9993786d",
+  "theory394_head": "8f9b3c30ed755803c82f4c9129c5e8716d6b08a4",
+  "inputs_sha256_lf": "17b06a325400b0593f5672a5bfc89a030dbffed94cf976d65fd0204a89688b53",
+  "code_sha256_lf": {
+    "reproduce.py": "98b9aaae3a5569659bf4b08d1cda146c22bd191be4cd01cf2b711858c926b701",
+    "verify.py": "2cce8a619dc897607043b4fcc6c7c7b1291e6202fb88a0bfcf9acd14471b5f46"
+  },
+  "common": {
+    "W": 1048576,
+    "T_s": "315576000",
+    "epsilon": "1/1000",
+    "alpha": "0",
+    "useful_bytes": 4194304,
+    "allocated_bytes": 6291456,
+    "Nmax": "2068158876293776543462719488/1284492751819",
+    "delta0": "3/500000",
+    "xp": "100001/100000",
+    "xm": "99999/100000",
+    "J_ns": "1/2",
+    "S1": "1205177238/15625",
+    "S2": "11126148559957737/237792968750000",
+    "S3": "392697051989880000380499/7237823486328125000000000",
+    "reference_positions": 19922944,
+    "app_reads": 315569688607,
+    "off_app_writes": 315569688606
+  },
+  "off_update": {
+    "P_app_s": "409608192/390625",
+    "H_app1_s": "2354551594790874303564187/216959896919175871500000",
+    "P_minus_H_s": "5628723481398708069139812317/5423997422979396787500000",
+    "P_over_H": "812512467324068560961273856/8409112838538836798443525",
+    "Q_lower_replayed": "5713708176858458556084355019928139414722487351539658018558299437649/374409956300596262133657156962869916634222292685295769793177058500000",
+    "counts_m": 300949,
+    "actual_stream_changed": false
+  },
+  "rows": [
+    {
+      "id": "F39",
+      "n": 39,
+      "k": 52,
+      "Q": "116646349656693456846539162815323/118438400000000000000000000000000000",
+      "Q_type": "accepted_sufficient_upper",
+      "Q_slack_or_exclusion_gap": "1792050343306543153460837184677/118438400000000000000000000000000000",
+      "P_nominal_s": "20873216/1953125",
+      "period_lower_s": "66793623253963/6250000000000",
+      "read_terms_upper": {
+        "steady": "2068158873600000000000000000/66793623253963",
+        "startup_padding": "1048576",
+        "end_padding": "1048576",
+        "bad_execution": "193889894652541550949629952/20070199247171875"
+      },
+      "repair_terms_upper": {
+        "after_failure": "115033714022521060465803203206743974756206719569322537/72542794388313031005859375000000000000000",
+        "parent": "94003824564/296875"
+      },
+      "counts_upper": {
+        "scrub_read": "41521314087895593771442426154401800263499776/1340561327147570046362635890625",
+        "scrub_repair": "115033736992795138988083147930608037256206719569322537/72542794388313031005859375000000000000000",
+        "app_read": 315569688607,
+        "app_write": 0,
+        "init": 1048576,
+        "decode": "41944354608462139106509803715406053624109151/1340561327147570046362635890625",
+        "encode": 1048576,
+        "read16": "125833063825386417319529411146218160872327453/1340561327147570046362635890625",
+        "write16": "345101439178284922523423843791824111768620158707967611/72542794388313031005859375000000000000000",
+        "turnaround": "115033813059428307507807947930608037256206719569322537/72542794388313031005859375000000000000000",
+        "payload_read_bytes": 1262278754428,
+        "payload_write_bytes": 0
+      },
+      "costs": {
+        "bus": {
+          "control_reads_s": "12291282125816030809325976323565926670189609472/8182137006515930458756322574615478515625",
+          "repairs_s": "81243381987320516476306639808027440568456789142871027014009/906784929853912887573242187500000000000000000000000000",
+          "dedicated_protection_s": "96411526656479476840284201595170855987962046510419212057087487498165767667/60567450977033523627897802226333618164062500000000000000000000000000",
+          "app_reads_s": "11957251071007837/781250000000",
+          "app_writes_s": "0",
+          "app_total_s": "11957251071007837/781250000000",
+          "payload_action_time_s": "31557284430388607/3125000000000",
+          "app_protection_overhead_s": "16271719853642741/3125000000000",
+          "init_s": "361603584/6103515625",
+          "known_added_protection_excluding_init_s": "96726898366734686381874933997459310066484367498724876119587487498165767667/60567450977033523627897802226333618164062500000000000000000000000000",
+          "all_known_upper_s": "97338532123927142997068511749960728030515357433173118307087487498165767667/60567450977033523627897802226333618164062500000000000000000000000000",
+          "average_fraction_upper": "32446177374642380999022837249986909343505119144391039435695829166055255889/6371211303176110417465825611792485961914062500000000000000000000000000000000",
+          "unknown_additional_cost": "K_F39_bus >= 0, not set to zero"
+        },
+        "serial": {
+          "control_reads_s": "17359852597133959609054997390297291938927696752/8182137006515930458756322574615478515625",
+          "repairs_s": "81243381987320516476306639808027440568456789142871027014009/906784929853912887573242187500000000000000000000000000",
+          "dedicated_protection_s": "133931112713363312987398307139543114253268863791891212057087487498165767667/60567450977033523627897802226333618164062500000000000000000000000000",
+          "app_reads_s": "540418456424193819/25000000000000",
+          "app_writes_s": "0",
+          "app_total_s": "540418456424193819/25000000000000",
+          "payload_action_time_s": "31557284430388607/3125000000000",
+          "app_protection_overhead_s": "287960180981084963/25000000000000",
+          "init_s": "489604864/6103515625",
+          "known_added_protection_excluding_init_s": "134628753279159695576627545240700521072932005489227027486774987498165767667/60567450977033523627897802226333618164062500000000000000000000000000",
+          "all_known_upper_s": "135240388306556363620794343206947585695736451423675269674274987498165767667/60567450977033523627897802226333618164062500000000000000000000000000",
+          "average_fraction_upper": "135240388306556363620794343206947585695736451423675269674274987498165767667/19113633909528331252397476835377457885742187500000000000000000000000000000000",
+          "unknown_additional_cost": "K_F39_serial >= 0, not set to zero"
+        }
+      },
+      "local": {
+        "frames_per_ms_upper": 640,
+        "app_each_per_ms_upper": 3,
+        "control_slots_per_ms_upper": 5120,
+        "control_E_margin_ns": "121866/3125",
+        "app_grant_margin_ns": "27749/250",
+        "app_to_management_margin_ns": "93731/6250",
+        "response_upper_ns": "15831357/6250",
+        "deadline_margin_ns": "2918643/6250",
+        "serial_peak_upper": "16984144119/25000000000",
+        "pure_bus_peak_upper": "7241827987/12500000000",
+        "serial_peak_extra_budget_ns_per_ms": "3015855881/25000",
+        "management_chunk_lower_ns": "396871/6250",
+        "atomic_management_upper_ns": "32",
+        "management_progress_lower_ns": "196871/6250",
+        "management_to_next_control_margin_ns": "19374/625",
+        "full_reserved_management_already_in_peak": true,
+        "both_app_streams_retained_in_peak": true
+      },
+      "nominal_calendar_audit": {
+        "started": 30963109199872,
+        "startup": 1048576,
+        "periodic_after_startup": 30963108151296,
+        "partial_final_pass_words": 0,
+        "last_start_ns": 315575998483529308,
+        "last_completion_ns": 315575998483529432,
+        "completion_tail_after_T_ns": 0,
+        "scope": "nominal witness only; not a replacement for (13)"
+      },
+      "application_tail": {
+        "read_last_arrival_ns": 315575999999872120,
+        "read_completion_upper_ns": "315575999999875120",
+        "write_last_arrival_ns": null,
+        "write_completion_upper_ns": null,
+        "all_offered_operations_fully_priced": true
+      },
+      "after_first_exceedance_accounted": true,
+      "hardware_qualified": false
+    },
+    {
+      "id": "F44",
+      "n": 44,
+      "k": 5102,
+      "Q": "3254149492134542463050667203817426740924236783299144475050243/533050874593280000000000000000000000000000000000000000000000000000",
+      "Q_type": "preliminary_PR394_sufficient_upper",
+      "Q_slack_or_exclusion_gap": "529796725101145457536949332796182573259075763216700855524949757/533050874593280000000000000000000000000000000000000000000000000000",
+      "P_nominal_s": "2047983616/1953125",
+      "period_lower_s": "6553482035721163/6250000000000",
+      "read_terms_upper": {
+        "steady": "2068158873600000000000000000/6553482035721163",
+        "startup_padding": "1048576",
+        "end_padding": "1048576",
+        "bad_execution": "193889894652541550949629952/20070199247171875"
+      },
+      "repair_terms_upper": {
+        "all_started_reads_including_bad_histories": "42779290447224756418387220802888246001074176/131529690219685292469453835890625"
+      },
+      "counts_upper": {
+        "scrub_read": "42779290447224756418387220802888246001074176/131529690219685292469453835890625",
+        "scrub_repair": "42779290447224756418387220802888246001074176/131529690219685292469453835890625",
+        "app_read": 315569688607,
+        "app_write": 0,
+        "init": 1048576,
+        "decode": "84286073832426017584510489854254457761683551/131529690219685292469453835890625",
+        "encode": 1048576,
+        "read16": "252858221497278052753531469562763373285050653/131529690219685292469453835890625",
+        "write16": "128338285098303624645337371758741006547222528/131529690219685292469453835890625",
+        "turnaround": "42779428366101208215112457252913668849074176/131529690219685292469453835890625",
+        "payload_read_bytes": 1262278754428,
+        "payload_write_bytes": 0
+      },
+      "costs": {
+        "bus": {
+          "control_reads_s": "12663672611998384730071173308142488509583606272/802793519407258865170006322574615478515625",
+          "repairs_s": "14752526041692194723525831739543673806631173984/802793519407258865170006322574615478515625",
+          "dedicated_protection_s": "27416198653690579453597005047686162316214780256/802793519407258865170006322574615478515625",
+          "app_reads_s": "11957251071007837/781250000000",
+          "app_writes_s": "0",
+          "app_total_s": "11957251071007837/781250000000",
+          "payload_action_time_s": "31557284430388607/3125000000000",
+          "app_protection_overhead_s": "16271719853642741/3125000000000",
+          "init_s": "361603584/6103515625",
+          "known_added_protection_excluding_init_s": "16177307982380709309750480706510911082914268694197/411030281936516538967043237158203125000000000",
+          "all_known_upper_s": "5082013044806800545443479391196996222819237700893/102757570484129134741760809289550781250000000",
+          "average_fraction_upper": "1694004348268933515147826463732332074273079233631/10809274354366511941755303050786425781250000000000000",
+          "unknown_additional_cost": "K_F44_bus >= 0, not set to zero"
+        },
+        "serial": {
+          "control_reads_s": "18930232901079814710435148602346044400726309408/802793519407258865170006322574615478515625",
+          "repairs_s": "14621974007856669954182609019808297079332973984/802793519407258865170006322574615478515625",
+          "dedicated_protection_s": "33552206908936484664617757622154341480059283392/802793519407258865170006322574615478515625",
+          "app_reads_s": "285987870427291213/12500000000000",
+          "app_writes_s": "0",
+          "app_total_s": "285987870427291213/12500000000000",
+          "payload_action_time_s": "31557284430388607/3125000000000",
+          "app_protection_overhead_s": "31951746541147357/2500000000000",
+          "init_s": "103041024/1220703125",
+          "known_added_protection_excluding_init_s": "89727936372176985064792903183771492886028711527441/1644121127746066155868172948632812500000000000",
+          "all_known_upper_s": "106330954535639648721259611727596765050147983964941/1644121127746066155868172948632812500000000000",
+          "average_fraction_upper": "106330954535639648721259611727596765050147983964941/518845169009592573204254546437748437500000000000000000",
+          "unknown_additional_cost": "K_F44_serial >= 0, not set to zero"
+        }
+      },
+      "local": {
+        "frames_per_ms_upper": 640,
+        "app_each_per_ms_upper": 3,
+        "control_slots_per_ms_upper": 5120,
+        "control_E_margin_ns": "874927/25000",
+        "app_grant_margin_ns": "1287449/12500",
+        "app_to_management_margin_ns": "87461/12500",
+        "response_upper_ns": "6352543/2500",
+        "deadline_margin_ns": "1147457/2500",
+        "serial_peak_upper": "546782789/781250000",
+        "pure_bus_peak_upper": "7241827987/12500000000",
+        "serial_peak_extra_budget_ns_per_ms": "312868844/3125",
+        "management_chunk_lower_ns": "396871/6250",
+        "atomic_management_upper_ns": "32",
+        "management_progress_lower_ns": "196871/6250",
+        "management_to_next_control_margin_ns": "19374/625",
+        "full_reserved_management_already_in_peak": true,
+        "both_app_streams_retained_in_peak": true
+      },
+      "nominal_calendar_audit": {
+        "started": 315579432960,
+        "startup": 1048576,
+        "periodic_after_startup": 315578384384,
+        "partial_final_pass_words": 0,
+        "last_start_ns": 315575859962445404,
+        "last_completion_ns": 315575859962445532,
+        "completion_tail_after_T_ns": 0,
+        "scope": "nominal witness only; not a replacement for (13)"
+      },
+      "application_tail": {
+        "read_last_arrival_ns": 315575999999872120,
+        "read_completion_upper_ns": "315575999999875120",
+        "write_last_arrival_ns": null,
+        "write_completion_upper_ns": null,
+        "all_offered_operations_fully_priced": true
+      },
+      "after_first_exceedance_accounted": true,
+      "hardware_qualified": false
+    },
+    {
+      "id": "OFF39",
+      "n": 39,
+      "k": null,
+      "Q": "5713708176858458556084355019928139414722487351539658018558299437649/374409956300596262133657156962869916634222292685295769793177058500000",
+      "Q_type": "strict_lower_excludes",
+      "Q_slack_or_exclusion_gap": "5339298220557862293950697862965269498088265058854362248765122379149/374409956300596262133657156962869916634222292685295769793177058500000",
+      "P_nominal_s": "409608192/390625",
+      "period_lower_s": "409608192/390625",
+      "read_terms_upper": {
+        "steady": "0",
+        "startup_padding": "0",
+        "end_padding": "0",
+        "bad_execution": "0"
+      },
+      "repair_terms_upper": {
+        "none_by_OFF_contract": "0"
+      },
+      "counts_upper": {
+        "scrub_read": "0",
+        "scrub_repair": "0",
+        "app_read": 315569688607,
+        "app_write": 315569688606,
+        "init": 1048576,
+        "decode": "631139377213",
+        "encode": 315570737182,
+        "read16": "1893418131639",
+        "write16": "946712211546",
+        "turnaround": "315570737182",
+        "payload_read_bytes": 1262278754428,
+        "payload_write_bytes": 1262278754424
+      },
+      "costs": {
+        "bus": {
+          "control_reads_s": "0",
+          "repairs_s": "0",
+          "dedicated_protection_s": "0",
+          "app_reads_s": "11957251071007837/781250000000",
+          "app_writes_s": "207094659350663439/6250000000000",
+          "app_total_s": "60550533583745227/1250000000000",
+          "payload_action_time_s": "63114568860677213/3125000000000",
+          "app_protection_overhead_s": "176523530197371709/6250000000000",
+          "init_s": "361603584/6103515625",
+          "known_added_protection_excluding_init_s": "176523530197371709/6250000000000",
+          "all_known_upper_s": "302753038200796151/6250000000000",
+          "average_fraction_upper": "302753038200796151/1972350000000000000000",
+          "unknown_additional_cost": "K_OFF39_bus >= 0, not set to zero"
+        },
+        "serial": {
+          "control_reads_s": "0",
+          "repairs_s": "0",
+          "dedicated_protection_s": "0",
+          "app_reads_s": "540418456424193819/25000000000000",
+          "app_writes_s": "71250428787372801/1562500000000",
+          "app_total_s": "336085063404431727/5000000000000",
+          "payload_action_time_s": "63114568860677213/3125000000000",
+          "app_protection_overhead_s": "1175508766136740931/25000000000000",
+          "init_s": "489604864/6103515625",
+          "known_added_protection_excluding_init_s": "1175508766136740931/25000000000000",
+          "all_known_upper_s": "1680427322443681579/25000000000000",
+          "average_fraction_upper": "1680427322443681579/7889400000000000000000",
+          "unknown_additional_cost": "K_OFF39_serial >= 0, not set to zero"
+        }
+      },
+      "local": {
+        "frames_per_ms_upper": 640,
+        "app_each_per_ms_upper": 3,
+        "control_slots_per_ms_upper": 0,
+        "control_E_margin_ns": "121866/3125",
+        "app_grant_margin_ns": "27749/250",
+        "app_to_management_margin_ns": "93731/6250",
+        "response_upper_ns": "15831357/6250",
+        "deadline_margin_ns": "2918643/6250",
+        "serial_peak_upper": "1047985399/25000000000",
+        "pure_bus_peak_upper": "521761427/12500000000",
+        "serial_peak_extra_budget_ns_per_ms": "18952014601/25000",
+        "management_chunk_lower_ns": "396871/6250",
+        "atomic_management_upper_ns": "32",
+        "management_progress_lower_ns": "196871/6250",
+        "management_to_next_control_margin_ns": "19374/625",
+        "full_reserved_management_already_in_peak": true,
+        "both_app_streams_retained_in_peak": true
+      },
+      "nominal_calendar_audit": {
+        "started": 0,
+        "startup": 0,
+        "periodic_after_startup": 0,
+        "partial_final_pass_words": 0,
+        "scope": "OFF on all histories"
+      },
+      "application_tail": {
+        "read_last_arrival_ns": 315575999999872120,
+        "read_completion_upper_ns": "315575999999875120",
+        "write_last_arrival_ns": 315575999999372100,
+        "write_completion_upper_ns": "315575999999375100",
+        "all_offered_operations_fully_priced": true
+      },
+      "after_first_exceedance_accounted": true,
+      "hardware_qualified": false
+    }
+  ],
+  "F44_vs_all_F39": {
+    "bus": {
+      "F39_class_protection_lower_s": "2997923451058055750372152999424/2670288086032867431640625",
+      "F39_class_full_lower_s": "194428777345224216281939833385011/170898437506103515625000000",
+      "F44_known_upper_s": "5082013044806800545443479391196996222819237700893/102757570484129134741760809289550781250000000",
+      "strict_extra_price_budget_s": "3131067712053544463026187101351090058910524009741822787990041/2877211973658373343253431794849182684289550781250000000",
+      "strict_extra_price_budget_us_per_s": "3131067712053544463026187101351090058910524009741822787990041/907979045799214826170544992091325674777359277343750000000",
+      "selector_only_intercept_ns": "3131067712053544463026187101351090058910524009741822787990041/4632592495266022062883104312341660995431553164723200000000000",
+      "issued_strict_cap_seconds_down": "1088229.765731",
+      "issued_strict_cap_us_per_s_down": "3448.392037",
+      "unknown_F39_lower_used": "0",
+      "condition": "all extra F44 price < budget; unknown F39 lower 0 by nonnegativity"
+    },
+    "serial": {
+      "F39_class_protection_lower_s": "4260207142271585979652216999184/2670288086032867431640625",
+      "F39_class_full_lower_s": "8841393078877504973640281006156957/5468750000195312500000000000",
+      "F44_known_upper_s": "106330954535639648721259611727596765050147983964941/1644121127746066155868172948632812500000000000",
+      "strict_extra_price_budget_s": "8931087201313792272374427923776837849540585199234328775513461/5754423947316746686506863589698365368579101562500000000",
+      "strict_extra_price_budget_us_per_s": "2977029067104597424124809307925612616513528399744776258504487/605319363866143217447029994727550449851572851562500000000",
+      "selector_only_intercept_ns": "8931087201313792272374427923776837849540585199234328775513461/9265184990532044125766208624683321990863106329446400000000000",
+      "issued_strict_cap_seconds_down": "1552038.446086",
+      "issued_strict_cap_us_per_s_down": "4918.113057",
+      "unknown_F39_lower_used": "0",
+      "condition": "all extra F44 price < budget; unknown F39 lower 0 by nonnegativity"
+    }
+  },
+  "joint_F44_region": {
+    "units": "d,e,r true additional ns per decode/encode/repair; ell external non-SRAM response delay ns; K_x additional seconds not already charged",
+    "nonnegative": [
+      "d",
+      "e",
+      "r",
+      "ell",
+      "K_bus",
+      "K_serial"
+    ],
+    "d_plus_r_control_max_ns": "874927/25000",
+    "d_plus_e_app_management_max_ns": "87461/12500",
+    "d_plus_e_plus_ell_response_max_ns": "1147457/2500",
+    "peak_coefficients": {
+      "d": "5126",
+      "e": "3",
+      "r": "5120"
+    },
+    "peak_rhs_ns_per_ms": "312868844/3125",
+    "codec_price_seconds_per_extra_ns": {
+      "decode": "84286073832426017584510489854254457761683551/131529690219685292469453835890625000000000",
+      "encode": "2048/1953125",
+      "repair": "83553301654735852379662540630641105470848/256893926210322836854402023223876953125"
+    },
+    "issued_codec_coefficients_up_s_per_ns": {
+      "decode": "640814052643/1000000000",
+      "encode": "2048/1953125",
+      "repair": "81311091009/250000000"
+    },
+    "Q_upper_at_max_control_extension": "2740336414439412747212194430855265001803201296100299784303549/448884947025920000000000000000000000000000000000000000000000000000",
+    "management_requirement": "actual work obeys the inherited slot/atomic/progress and dispatch contract; its price is in K, its full slot is already in peak",
+    "CPU_energy_logic_memory_idle": "separate unknown coordinates; no numerical advantage established",
+    "all_conditions_required_together": true
+  },
+  "verification": {
+    "status": "PASS",
+    "method": "separate 100-digit Decimal totals, counts, lower-minus-upper and H_app",
+    "independent_scientific_review": false
+  }
+}
