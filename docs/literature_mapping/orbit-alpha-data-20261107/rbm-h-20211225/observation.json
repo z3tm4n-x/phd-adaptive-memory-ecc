@@ -1,0 +1,19 @@
+{
+  "file": "mx_rbm_20211225.txt",
+  "url": "https://darts.isas.jaxa.jp/pub/maxi/rbm/2021/mx_rbm_20211225.txt",
+  "resolved_https_url": "https://data.darts.isas.jaxa.jp/pub/maxi/rbm/2021/mx_rbm_20211225.txt",
+  "sha256": "e98971978cfccdee5f469a7779f1f65ca2f7b94db3893367182d3b034486716d",
+  "bytes": 4181816,
+  "HTTP_Last_Modified": "Mon, 13 May 2024 05:32:12 GMT",
+  "forecast_commit": "198477488cdb3ddd7bb5dcbba6d5b628c3d1a9f9",
+  "preregistration_commit": "1dc8307addb13d013e2737dc3bcd44636e391a6c",
+  "freeze_record": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/pull/405#issuecomment-6704756586",
+  "forecast_meta_sha256_lf": "20e33ffec0355951dbe4742f07e938aaab08ccc5e419e33cba0468bf3c0f5910",
+  "forecast_rle_sha256_lf": "633c9a3898d40ac380d301d41f4656c9b1927fda4888c38728c8a89a985d5b67",
+  "cdf_crosscheck": {
+    "file": "mx_rbm_20211225.cdf",
+    "url": "https://darts.isas.jaxa.jp/pub/maxi/rbm/2021/mx_rbm_20211225.cdf",
+    "sha256": "4d12c092bd2926c59e488aae670a0fd36d29f2b11989203614fd0c3c868f3e27",
+    "role": "Post-observation check of RATE_H units, actual Epoch records and arithmetic for the same channel and UTC day."
+  }
+}

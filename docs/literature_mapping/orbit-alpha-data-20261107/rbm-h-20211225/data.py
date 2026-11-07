@@ -3,6 +3,9 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import ssl
+from tempfile import NamedTemporaryFile
+from urllib.error import HTTPError, URLError
 from urllib.request import urlopen
 
 HERE = Path(__file__).resolve().parent
@@ -33,6 +36,35 @@ def json_text(value):
     return json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
 
 
+def download(spec, path):
+    url = spec["url"]
+    # Equivalent public routes to the same NASA S3 key or JAXA archive.
+    alternate = url.replace("s3.us-east-1.amazonaws.com","s3.amazonaws.com")
+    alternate = alternate.replace("https://darts.isas.jaxa.jp/pub/", "https://data.darts.isas.jaxa.jp/pub/")
+    for attempt,route in enumerate((url,alternate,url)):
+        try:
+            with urlopen(route,timeout=30) as response:
+                if not response.geturl().startswith("https://"):
+                    raise ValueError("Expected an HTTPS archive response")
+                data = response.read()
+            break
+        except HTTPError as error:
+            if attempt == 2 or (error.code != 429 and error.code < 500):
+                raise
+        except (URLError,TimeoutError) as error:
+            if attempt == 2 or isinstance(getattr(error,"reason",None),ssl.SSLCertVerificationError):
+                raise
+    if sha(data) != spec["sha256"]:
+        raise ValueError(f"Downloaded bytes differ from pinned source: {path.name}")
+    with NamedTemporaryFile(dir=path.parent,delete=False) as stream:
+        temporary = Path(stream.name)
+        stream.write(data)
+    try:
+        temporary.replace(path)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path)
@@ -42,17 +74,14 @@ def main():
     if args.stage == "predictors":
         specs = PROTOCOL["sources"].values()
     else:
-        specs = [json.loads((HERE / "observation.json").read_text(encoding="utf-8"))]
+        observation = json.loads((HERE / "observation.json").read_text(encoding="utf-8"))
+        specs = [observation, observation["cdf_crosscheck"]]
     for spec in specs:
         path = args.directory / spec["file"]
         if not path.exists():
-            with urlopen(spec["url"], timeout=60) as response:
-                data = response.read()
-            if sha(data) != spec["sha256"]:
-                raise ValueError(f"Downloaded bytes differ from pinned source: {path.name}")
-            path.write_bytes(data)
+            download(spec,path)
         verified(args.directory, spec)
-        print(f"{path.name} {spec['sha256']}")
+        print(f"{path.name} {spec['sha256']}",flush=True)
 
 
 if __name__ == "__main__":
