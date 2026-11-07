@@ -1,0 +1,33 @@
+{
+  "issue": 206,
+  "base_main": "4fece1f4cf7c79d44389c910c14a40cad4fde5b5",
+  "utc_day": "2021-12-25",
+  "selection": "first full UTC day after the inspected 2021-12-24 pair",
+  "day_seconds": 86400,
+  "mjd_start": 59573,
+  "mission_epoch": "2000-01-01T00:00:00Z",
+  "leap_seconds_since_epoch": 5,
+  "tai_minus_utc_s": 37,
+  "channel": "COUNT_H",
+  "discriminator": 1,
+  "deposited_energy_threshold_keV": 50,
+  "rate_threshold_Hz": 1,
+  "minimum_seconds_per_UTC_minute": 54,
+  "coordinate_latitude": "geocentric",
+  "max_oem_bracket_s": 240,
+  "axis_pdf_points": {"x_west": 318.0266202269, "x_east": 513.1625110110, "y_south": 614.0691046897, "y_north": 735.2714728247},
+  "longitude_axis_degrees": [-180, 180],
+  "latitude_axis_degrees": [-90, 90],
+  "colour_log10_axis": [-2, 2],
+  "legend_steps": 99,
+  "legend_edge_tolerance_pt": 0.10,
+  "axis_tolerance_degrees": {"longitude": 0.18, "latitude": 0.13},
+  "sources": {
+    "map": {"file": "Sugizaki2011.pdf", "url": "https://maxi.riken.jp/FirstYear/proceedings/pdf/Sugizaki_Mutsumi-bin-20110404184221.pdf", "sha256": "75af02296980eacb487cce26e252f00cb8032dd3e37020301822127e0e6d03af", "locator": "sections 2.1, 2.2 and Fig. 1, upper panel, PDF page 2"},
+    "oem": {"file": "ISS.OEM_J2K_EPH.txt", "url": "https://nasa-public-data.s3.us-east-1.amazonaws.com/iss-coords/2021-12-23/ISS_OEM/ISS.OEM_J2K_EPH.txt", "sha256": "4c8e276de6c5128bbb71abbdc7a8c3729a4fa2cccf0a5206ea2a7ec3fd340ab1", "archive_day": "2021-12-23", "creation_utc": "2021-12-22T18:59:48.276"},
+    "iers": {"file": "bulletina-xxxiv-051.txt", "url": "https://datacenter.iers.org/data/6/bulletina-xxxiv-051.txt", "sha256": "04679be91980942f2c9c3d71573dca5b78a4b638f8f67e90b816f4df79191b1a", "edition": "23 December 2021, XXXIV 051, PREDICTIONS"},
+    "prior": {"file": "mx_rbm_20211224.txt", "url": "https://darts.isas.jaxa.jp/pub/maxi/rbm/2021/mx_rbm_20211224.txt", "sha256": "9bd3f903aabeee9fbe6bcc060e69419aff7bc16ee82869a2e81c3758c18fc6e0", "use": "previous format and time check only"}
+  },
+  "held_out": {"file": "mx_rbm_20211225.txt", "url": "https://darts.isas.jaxa.jp/pub/maxi/rbm/2021/mx_rbm_20211225.txt", "data_read_before_forecast": false},
+  "source_status": "Retrospective application of pre-observation inputs. Actual 2021 operational delivery unverified."
+}
