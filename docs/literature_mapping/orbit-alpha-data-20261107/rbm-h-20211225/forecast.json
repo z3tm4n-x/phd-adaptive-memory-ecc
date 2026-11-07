@@ -1,0 +1,1181 @@
+{
+  "day_UTC": "2021-12-25",
+  "forecast_only": true,
+  "protocol_sha256_lf": "611db5f9bf00fe6fabf92e847f628000246b74af70d4a1eb33a453c021263bbb",
+  "forecast_source_sha256_lf": "2a5932e185a4cc6314c5000330dd13708ae9400bf9549a9346eef1245cec4d96",
+  "source_sha256": {
+    "map": "75af02296980eacb487cce26e252f00cb8032dd3e37020301822127e0e6d03af",
+    "oem": "4c8e276de6c5128bbb71abbdc7a8c3729a4fa2cccf0a5206ea2a7ec3fd340ab1",
+    "iers": "04679be91980942f2c9c3d71573dca5b78a4b638f8f67e90b816f4df79191b1a",
+    "prior": "9bd3f903aabeee9fbe6bcc060e69419aff7bc16ee82869a2e81c3758c18fc6e0"
+  },
+  "units": "counts per nominal second (Hz)",
+  "lead_from_creation_hours_start_end": [
+    53.003256667,
+    77.003256667
+  ],
+  "orbit": {
+    "bracketing_nodes": 365,
+    "largest_node_spacing_s": 240.0,
+    "supported_seconds": 86400,
+    "geodetic_height_km": [
+      415.075,
+      433.662
+    ],
+    "leave_one_node_out_max_km": 1.528195,
+    "coordinate_hash_lon_lat_radius_times_1e6_i64le": "776973078c2f4f12967b8b4f8d892b2998a1921ac115f789cef115dd5e3f1b6c",
+    "IERS_prediction_x_y_arcsec_UT1minusUTC_s": [
+      [
+        0.0663,
+        0.267,
+        -0.10732
+      ],
+      [
+        0.0642,
+        0.2679,
+        -0.10763
+      ]
+    ]
+  },
+  "map": {
+    "panel": "Fig. 1 upper, PDF page 2",
+    "legend_steps": 99,
+    "distinct_colours": 95,
+    "degree_cell_count": 37434,
+    "latitude_edges_deg": [
+      -52,
+      52
+    ],
+    "absent_cell_west_south_deg": [
+      [
+        178,
+        -12
+      ],
+      [
+        77,
+        -1
+      ],
+      [
+        161,
+        0
+      ],
+      [
+        48,
+        1
+      ],
+      [
+        80,
+        12
+      ],
+      [
+        102,
+        12
+      ]
+    ],
+    "max_plot_edge_error_deg": [
+      0.176113,
+      0.123458
+    ],
+    "max_legend_edge_error_pt": 0.090429,
+    "single_step_high_over_low": 1.097498765,
+    "interior_high_over_proxy_with_scale_tolerance": 1.055607059
+  },
+  "bands": {
+    "0": {
+      "last_step": 3,
+      "proxy_Hz": 0.012045035403,
+      "reading_low_Hz": 0.0,
+      "reading_high_Hz": 0.014618958296,
+      "edge_colour": true
+    },
+    "4": {
+      "last_step": 4,
+      "proxy_Hz": 0.01519911083,
+      "reading_low_Hz": 0.014398455087,
+      "reading_high_Hz": 0.016044288683,
+      "edge_colour": false
+    },
+    "5": {
+      "last_step": 5,
+      "proxy_Hz": 0.016681005372,
+      "reading_low_Hz": 0.015802286683,
+      "reading_high_Hz": 0.017608587022,
+      "edge_colour": false
+    },
+    "6": {
+      "last_step": 6,
+      "proxy_Hz": 0.018307382803,
+      "reading_low_Hz": 0.017342990127,
+      "reading_high_Hz": 0.019325402519,
+      "edge_colour": false
+    },
+    "7": {
+      "last_step": 7,
+      "proxy_Hz": 0.020092330026,
+      "reading_low_Hz": 0.019033910255,
+      "reading_high_Hz": 0.021209605407,
+      "edge_colour": false
+    },
+    "8": {
+      "last_step": 8,
+      "proxy_Hz": 0.022051307399,
+      "reading_low_Hz": 0.020889693007,
+      "reading_high_Hz": 0.023277515751,
+      "edge_colour": false
+    },
+    "9": {
+      "last_step": 9,
+      "proxy_Hz": 0.024201282648,
+      "reading_low_Hz": 0.022926412287,
+      "reading_high_Hz": 0.025547044801,
+      "edge_colour": false
+    },
+    "10": {
+      "last_step": 10,
+      "proxy_Hz": 0.026560877829,
+      "reading_low_Hz": 0.025161709182,
+      "reading_high_Hz": 0.028037850131,
+      "edge_colour": false
+    },
+    "11": {
+      "last_step": 11,
+      "proxy_Hz": 0.029150530628,
+      "reading_low_Hz": 0.027614944765,
+      "reading_high_Hz": 0.030771505905,
+      "edge_colour": false
+    },
+    "12": {
+      "last_step": 12,
+      "proxy_Hz": 0.031992671378,
+      "reading_low_Hz": 0.030307367789,
+      "reading_high_Hz": 0.033771689744,
+      "edge_colour": false
+    },
+    "13": {
+      "last_step": 13,
+      "proxy_Hz": 0.035111917342,
+      "reading_low_Hz": 0.033262298733,
+      "reading_high_Hz": 0.037064387802,
+      "edge_colour": false
+    },
+    "14": {
+      "last_step": 14,
+      "proxy_Hz": 0.038535285937,
+      "reading_low_Hz": 0.036505331797,
+      "reading_high_Hz": 0.040678119856,
+      "edge_colour": false
+    },
+    "15": {
+      "last_step": 15,
+      "proxy_Hz": 0.042292428744,
+      "reading_low_Hz": 0.040064556582,
+      "reading_high_Hz": 0.044644186325,
+      "edge_colour": false
+    },
+    "16": {
+      "last_step": 16,
+      "proxy_Hz": 0.046415888336,
+      "reading_low_Hz": 0.043970801388,
+      "reading_high_Hz": 0.048996939378,
+      "edge_colour": false
+    },
+    "17": {
+      "last_step": 17,
+      "proxy_Hz": 0.050941380148,
+      "reading_low_Hz": 0.048257900241,
+      "reading_high_Hz": 0.05377408048,
+      "edge_colour": false
+    },
+    "18": {
+      "last_step": 18,
+      "proxy_Hz": 0.055908101825,
+      "reading_low_Hz": 0.05296298594,
+      "reading_high_Hz": 0.059016986943,
+      "edge_colour": false
+    },
+    "19": {
+      "last_step": 19,
+      "proxy_Hz": 0.061359072734,
+      "reading_low_Hz": 0.058126811686,
+      "reading_high_Hz": 0.064771070313,
+      "edge_colour": false
+    },
+    "20": {
+      "last_step": 20,
+      "proxy_Hz": 0.067341506578,
+      "reading_low_Hz": 0.063794104068,
+      "reading_high_Hz": 0.071086169708,
+      "edge_colour": false
+    },
+    "21": {
+      "last_step": 21,
+      "proxy_Hz": 0.073907220335,
+      "reading_low_Hz": 0.07001395046,
+      "reading_high_Hz": 0.078016983498,
+      "edge_colour": false
+    },
+    "22": {
+      "last_step": 22,
+      "proxy_Hz": 0.081113083079,
+      "reading_low_Hz": 0.076840224198,
+      "reading_high_Hz": 0.085623543076,
+      "edge_colour": false
+    },
+    "23": {
+      "last_step": 23,
+      "proxy_Hz": 0.089021508545,
+      "reading_low_Hz": 0.084332051197,
+      "reading_high_Hz": 0.093971732823,
+      "edge_colour": false
+    },
+    "24": {
+      "last_step": 24,
+      "proxy_Hz": 0.09770099573,
+      "reading_low_Hz": 0.09255432208,
+      "reading_high_Hz": 0.103133860765,
+      "edge_colour": false
+    },
+    "25": {
+      "last_step": 25,
+      "proxy_Hz": 0.107226722201,
+      "reading_low_Hz": 0.101578254224,
+      "reading_high_Hz": 0.11318928487,
+      "edge_colour": false
+    },
+    "26": {
+      "last_step": 26,
+      "proxy_Hz": 0.117681195243,
+      "reading_low_Hz": 0.111482008612,
+      "reading_high_Hz": 0.124225100412,
+      "edge_colour": false
+    },
+    "27": {
+      "last_step": 27,
+      "proxy_Hz": 0.129154966501,
+      "reading_low_Hz": 0.122351366827,
+      "reading_high_Hz": 0.136336894345,
+      "edge_colour": false
+    },
+    "28": {
+      "last_step": 28,
+      "proxy_Hz": 0.141747416293,
+      "reading_low_Hz": 0.134280474049,
+      "reading_high_Hz": 0.149629573235,
+      "edge_colour": false
+    },
+    "29": {
+      "last_step": 29,
+      "proxy_Hz": 0.155567614393,
+      "reading_low_Hz": 0.147372654498,
+      "reading_high_Hz": 0.164218271906,
+      "edge_colour": false
+    },
+    "30": {
+      "last_step": 30,
+      "proxy_Hz": 0.170735264747,
+      "reading_low_Hz": 0.161741306379,
+      "reading_high_Hz": 0.180229350689,
+      "edge_colour": false
+    },
+    "31": {
+      "last_step": 31,
+      "proxy_Hz": 0.187381742286,
+      "reading_low_Hz": 0.17751088408,
+      "reading_high_Hz": 0.197801489886,
+      "edge_colour": false
+    },
+    "32": {
+      "last_step": 32,
+      "proxy_Hz": 0.205651230835,
+      "reading_low_Hz": 0.19481797614,
+      "reading_high_Hz": 0.217086890963,
+      "edge_colour": false
+    },
+    "33": {
+      "last_step": 33,
+      "proxy_Hz": 0.225701971963,
+      "reading_low_Hz": 0.213812488309,
+      "reading_high_Hz": 0.238252594836,
+      "edge_colour": false
+    },
+    "34": {
+      "last_step": 34,
+      "proxy_Hz": 0.247707635599,
+      "reading_low_Hz": 0.234658941967,
+      "reading_high_Hz": 0.261481928708,
+      "edge_colour": false
+    },
+    "35": {
+      "last_step": 35,
+      "proxy_Hz": 0.271858824273,
+      "reading_low_Hz": 0.25753789912,
+      "reading_high_Hz": 0.286976093956,
+      "edge_colour": false
+    },
+    "36": {
+      "last_step": 36,
+      "proxy_Hz": 0.298364724028,
+      "reading_low_Hz": 0.282647526352,
+      "reading_high_Hz": 0.314955908843,
+      "edge_colour": false
+    },
+    "37": {
+      "last_step": 37,
+      "proxy_Hz": 0.327454916288,
+      "reading_low_Hz": 0.310205311241,
+      "reading_high_Hz": 0.34566372114,
+      "edge_colour": false
+    },
+    "38": {
+      "last_step": 38,
+      "proxy_Hz": 0.35938136638,
+      "reading_low_Hz": 0.340449946137,
+      "reading_high_Hz": 0.379365507227,
+      "edge_colour": false
+    },
+    "39": {
+      "last_step": 39,
+      "proxy_Hz": 0.394420605944,
+      "reading_low_Hz": 0.373643395597,
+      "reading_high_Hz": 0.416353175852,
+      "edge_colour": false
+    },
+    "40": {
+      "last_step": 40,
+      "proxy_Hz": 0.432876128108,
+      "reading_low_Hz": 0.410073165403,
+      "reading_high_Hz": 0.456947096506,
+      "edge_colour": false
+    },
+    "41": {
+      "last_step": 41,
+      "proxy_Hz": 0.47508101621,
+      "reading_low_Hz": 0.450054792792,
+      "reading_high_Hz": 0.501498874311,
+      "edge_colour": false
+    },
+    "42": {
+      "last_step": 42,
+      "proxy_Hz": 0.5214008288,
+      "reading_low_Hz": 0.493934579493,
+      "reading_high_Hz": 0.550394395453,
+      "edge_colour": false
+    },
+    "43": {
+      "last_step": 43,
+      "proxy_Hz": 0.572236765935,
+      "reading_low_Hz": 0.542092591228,
+      "reading_high_Hz": 0.604057169544,
+      "edge_colour": false
+    },
+    "44": {
+      "last_step": 44,
+      "proxy_Hz": 0.628029144183,
+      "reading_low_Hz": 0.594945949656,
+      "reading_high_Hz": 0.662951997861,
+      "edge_colour": false
+    },
+    "45": {
+      "last_step": 45,
+      "proxy_Hz": 0.689261210435,
+      "reading_low_Hz": 0.652952445282,
+      "reading_high_Hz": 0.727588999234,
+      "edge_colour": false
+    },
+    "46": {
+      "last_step": 46,
+      "proxy_Hz": 0.756463327555,
+      "reading_low_Hz": 0.716614502623,
+      "reading_high_Hz": 0.798528028445,
+      "edge_colour": false
+    },
+    "47": {
+      "last_step": 47,
+      "proxy_Hz": 0.830217568132,
+      "reading_low_Hz": 0.786483531963,
+      "reading_high_Hz": 0.87638352543,
+      "edge_colour": false
+    },
+    "48": {
+      "last_step": 48,
+      "proxy_Hz": 0.911162756115,
+      "reading_low_Hz": 0.86316470541,
+      "reading_high_Hz": 0.961829837258,
+      "edge_colour": false
+    },
+    "49": {
+      "last_step": 49,
+      "proxy_Hz": 1.0,
+      "reading_low_Hz": 0.947322198605,
+      "reading_high_Hz": 1.055607059005,
+      "edge_colour": false
+    },
+    "50": {
+      "last_step": 50,
+      "proxy_Hz": 1.097498765493,
+      "reading_low_Hz": 1.039684943493,
+      "reading_high_Hz": 1.158527444104,
+      "edge_colour": false
+    },
+    "51": {
+      "last_step": 51,
+      "proxy_Hz": 1.204503540259,
+      "reading_low_Hz": 1.141052941986,
+      "reading_high_Hz": 1.271482439694,
+      "edge_colour": false
+    },
+    "52": {
+      "last_step": 52,
+      "proxy_Hz": 1.321941148466,
+      "reading_low_Hz": 1.252304195192,
+      "reading_high_Hz": 1.39545040791,
+      "edge_colour": false
+    },
+    "53": {
+      "last_step": 53,
+      "proxy_Hz": 1.450828778496,
+      "reading_low_Hz": 1.374402308245,
+      "reading_high_Hz": 1.531505099988,
+      "edge_colour": false
+    },
+    "54": {
+      "last_step": 54,
+      "proxy_Hz": 1.592282793341,
+      "reading_low_Hz": 1.508404836589,
+      "reading_high_Hz": 1.680824956583,
+      "edge_colour": false
+    },
+    "55": {
+      "last_step": 55,
+      "proxy_Hz": 1.747528400008,
+      "reading_low_Hz": 1.65547244602,
+      "reading_high_Hz": 1.84470331486,
+      "edge_colour": false
+    },
+    "56": {
+      "last_step": 56,
+      "proxy_Hz": 1.917910261672,
+      "reading_low_Hz": 1.816878965815,
+      "reading_high_Hz": 2.02455961076,
+      "edge_colour": false
+    },
+    "57": {
+      "last_step": 57,
+      "proxy_Hz": 2.104904144512,
+      "reading_low_Hz": 1.994022422033,
+      "reading_high_Hz": 2.221951673476,
+      "edge_colour": false
+    },
+    "58": {
+      "last_step": 58,
+      "proxy_Hz": 2.310129700083,
+      "reading_low_Hz": 2.188437146546,
+      "reading_high_Hz": 2.438589218625,
+      "edge_colour": false
+    },
+    "59": {
+      "last_step": 59,
+      "proxy_Hz": 2.53536449397,
+      "reading_low_Hz": 2.401807066694,
+      "reading_high_Hz": 2.676348656985,
+      "edge_colour": false
+    },
+    "60": {
+      "last_step": 60,
+      "proxy_Hz": 2.782559402207,
+      "reading_low_Hz": 2.635980290649,
+      "reading_high_Hz": 2.937289347071,
+      "edge_colour": false
+    },
+    "61": {
+      "last_step": 61,
+      "proxy_Hz": 3.053855508833,
+      "reading_low_Hz": 2.892985114851,
+      "reading_high_Hz": 3.223671432306,
+      "edge_colour": false
+    },
+    "62": {
+      "last_step": 62,
+      "proxy_Hz": 3.351602650939,
+      "reading_low_Hz": 3.175047592139,
+      "reading_high_Hz": 3.537975417311,
+      "edge_colour": false
+    },
+    "63": {
+      "last_step": 63,
+      "proxy_Hz": 3.678379771829,
+      "reading_low_Hz": 3.484610812755,
+      "reading_high_Hz": 3.882923652843,
+      "edge_colour": false
+    },
+    "64": {
+      "last_step": 64,
+      "proxy_Hz": 4.037017258597,
+      "reading_low_Hz": 3.824356065222,
+      "reading_high_Hz": 4.261503915499,
+      "edge_colour": false
+    },
+    "65": {
+      "last_step": 65,
+      "proxy_Hz": 4.430621457584,
+      "reading_low_Hz": 4.197226060387,
+      "reading_high_Hz": 4.676995286404,
+      "edge_colour": false
+    },
+    "66": {
+      "last_step": 66,
+      "proxy_Hz": 4.862601580065,
+      "reading_low_Hz": 4.60645041977,
+      "reading_high_Hz": 5.132996553045,
+      "edge_colour": false
+    },
+    "67": {
+      "last_step": 67,
+      "proxy_Hz": 5.336699231206,
+      "reading_low_Hz": 5.055573649003,
+      "reading_high_Hz": 5.633457380247,
+      "edge_colour": false
+    },
+    "68": {
+      "last_step": 68,
+      "proxy_Hz": 5.857020818057,
+      "reading_low_Hz": 5.54848583864,
+      "reading_high_Hz": 6.182712520279,
+      "edge_colour": false
+    },
+    "69": {
+      "last_step": 69,
+      "proxy_Hz": 6.428073117284,
+      "reading_low_Hz": 6.089456358263,
+      "reading_high_Hz": 6.785519358405,
+      "edge_colour": false
+    },
+    "70": {
+      "last_step": 70,
+      "proxy_Hz": 7.054802310719,
+      "reading_low_Hz": 6.683170835717,
+      "reading_high_Hz": 7.447099119078,
+      "edge_colour": false
+    },
+    "71": {
+      "last_step": 71,
+      "proxy_Hz": 7.742636826811,
+      "reading_low_Hz": 7.334771741779,
+      "reading_high_Hz": 8.173182089693,
+      "edge_colour": false
+    },
+    "72": {
+      "last_step": 72,
+      "proxy_Hz": 8.497534359086,
+      "reading_low_Hz": 8.049902931776,
+      "reading_high_Hz": 8.970057253588,
+      "edge_colour": false
+    },
+    "73": {
+      "last_step": 73,
+      "proxy_Hz": 9.326033468832,
+      "reading_low_Hz": 8.834758529963,
+      "reading_high_Hz": 9.844626762215,
+      "edge_colour": false
+    },
+    "74": {
+      "last_step": 74,
+      "proxy_Hz": 10.23531021899,
+      "reading_low_Hz": 9.696136580064,
+      "reading_high_Hz": 10.804465718271,
+      "edge_colour": false
+    },
+    "75": {
+      "last_step": 75,
+      "proxy_Hz": 11.23324032978,
+      "reading_low_Hz": 10.641497926672,
+      "reading_high_Hz": 11.857887787614,
+      "edge_colour": false
+    },
+    "76": {
+      "last_step": 76,
+      "proxy_Hz": 12.328467394421,
+      "reading_low_Hz": 11.679030837519,
+      "reading_high_Hz": 13.014017208261,
+      "edge_colour": false
+    },
+    "77": {
+      "last_step": 77,
+      "proxy_Hz": 13.530477745798,
+      "reading_low_Hz": 12.817721926333,
+      "reading_high_Hz": 14.282867820172,
+      "edge_colour": false
+    },
+    "78": {
+      "last_step": 78,
+      "proxy_Hz": 14.849682622545,
+      "reading_low_Hz": 14.067433990584,
+      "reading_high_Hz": 15.67542980034,
+      "edge_colour": false
+    },
+    "79": {
+      "last_step": 79,
+      "proxy_Hz": 16.297508346206,
+      "reading_low_Hz": 15.438991438321,
+      "reading_high_Hz": 17.203764854446,
+      "edge_colour": false
+    },
+    "80": {
+      "last_step": 80,
+      "proxy_Hz": 17.886495290574,
+      "reading_low_Hz": 16.944274044015,
+      "reading_high_Hz": 18.881110689587,
+      "edge_colour": false
+    },
+    "81": {
+      "last_step": 81,
+      "proxy_Hz": 19.630406500403,
+      "reading_low_Hz": 18.596319845482,
+      "reading_high_Hz": 20.721995672959,
+      "edge_colour": false
+    },
+    "82": {
+      "last_step": 82,
+      "proxy_Hz": 21.544346900319,
+      "reading_low_Hz": 20.409438073131,
+      "reading_high_Hz": 22.742364669625,
+      "edge_colour": false
+    },
+    "83": {
+      "last_step": 83,
+      "proxy_Hz": 23.644894126454,
+      "reading_low_Hz": 22.399333089668,
+      "reading_high_Hz": 24.959717149306,
+      "edge_colour": false
+    },
+    "84": {
+      "last_step": 84,
+      "proxy_Hz": 25.950242113997,
+      "reading_low_Hz": 24.583240413779,
+      "reading_high_Hz": 27.39325875842,
+      "edge_colour": false
+    },
+    "85": {
+      "last_step": 85,
+      "proxy_Hz": 28.480358684358,
+      "reading_low_Hz": 26.980076005941,
+      "reading_high_Hz": 30.064067670197,
+      "edge_colour": false
+    },
+    "86": {
+      "last_step": 86,
+      "proxy_Hz": 31.257158496882,
+      "reading_low_Hz": 29.610600109429,
+      "reading_high_Hz": 32.995277153741,
+      "edge_colour": false
+    },
+    "87": {
+      "last_step": 87,
+      "proxy_Hz": 34.304692863149,
+      "reading_low_Hz": 32.497597065607,
+      "reading_high_Hz": 36.212275943332,
+      "edge_colour": false
+    },
+    "88": {
+      "last_step": 88,
+      "proxy_Hz": 37.649358067925,
+      "reading_low_Hz": 35.666072660995,
+      "reading_high_Hz": 39.742928143501,
+      "edge_colour": false
+    },
+    "89": {
+      "last_step": 89,
+      "proxy_Hz": 41.320124001153,
+      "reading_low_Hz": 39.143470715428,
+      "reading_high_Hz": 43.617814574572,
+      "edge_colour": false
+    },
+    "90": {
+      "last_step": 90,
+      "proxy_Hz": 45.348785081286,
+      "reading_low_Hz": 42.959910787295,
+      "reading_high_Hz": 47.870497649097,
+      "edge_colour": false
+    },
+    "91": {
+      "last_step": 91,
+      "proxy_Hz": 49.770235643321,
+      "reading_low_Hz": 47.148449054749,
+      "reading_high_Hz": 52.537812073422,
+      "edge_colour": false
+    },
+    "92": {
+      "last_step": 92,
+      "proxy_Hz": 54.622772176843,
+      "reading_low_Hz": 51.745364632499,
+      "reading_high_Hz": 57.660183892287,
+      "edge_colour": false
+    },
+    "93": {
+      "last_step": 93,
+      "proxy_Hz": 59.948425031894,
+      "reading_low_Hz": 56.790473804156,
+      "reading_high_Hz": 63.281980639888,
+      "edge_colour": false
+    },
+    "94": {
+      "last_step": 94,
+      "proxy_Hz": 65.793322465757,
+      "reading_low_Hz": 62.327474891826,
+      "reading_high_Hz": 69.451895630232,
+      "edge_colour": false
+    },
+    "95": {
+      "last_step": 95,
+      "proxy_Hz": 72.208090183855,
+      "reading_low_Hz": 68.404326750079,
+      "reading_high_Hz": 76.223369715332,
+      "edge_colour": false
+    },
+    "96": {
+      "last_step": 96,
+      "proxy_Hz": 79.248289835392,
+      "reading_low_Hz": 75.073664162595,
+      "reading_high_Hz": 83.655054164298,
+      "edge_colour": false
+    },
+    "97": {
+      "last_step": 98,
+      "proxy_Hz": 91.116275611549,
+      "reading_low_Hz": 82.393253739489,
+      "reading_high_Hz": null,
+      "edge_colour": true
+    }
+  },
+  "seconds": {
+    "missing_primary": 0,
+    "edge_colour": 3137,
+    "missing_reading_neighbour": 0,
+    "geodetic_lat_common": 86400,
+    "geodetic_changes_elevated": 414,
+    "coordinate_rounding_can_change_elevated": 1025
+  },
+  "frozen_elevated_second_intervals": [
+    [
+      0,
+      541
+    ],
+    [
+      5240,
+      6178
+    ],
+    [
+      10639,
+      10649
+    ],
+    [
+      10671,
+      10725
+    ],
+    [
+      10765,
+      10798
+    ],
+    [
+      11041,
+      11106
+    ],
+    [
+      11386,
+      11854
+    ],
+    [
+      16123,
+      16126
+    ],
+    [
+      16147,
+      16570
+    ],
+    [
+      21761,
+      21795
+    ],
+    [
+      21835,
+      22268
+    ],
+    [
+      26982,
+      26999
+    ],
+    [
+      27004,
+      27031
+    ],
+    [
+      27110,
+      27123
+    ],
+    [
+      27169,
+      27178
+    ],
+    [
+      27200,
+      27218
+    ],
+    [
+      27234,
+      27256
+    ],
+    [
+      27268,
+      27280
+    ],
+    [
+      27304,
+      27852
+    ],
+    [
+      27875,
+      27884
+    ],
+    [
+      32479,
+      32493
+    ],
+    [
+      32502,
+      32511
+    ],
+    [
+      32526,
+      32546
+    ],
+    [
+      32551,
+      32674
+    ],
+    [
+      32682,
+      33353
+    ],
+    [
+      33358,
+      33397
+    ],
+    [
+      33408,
+      33419
+    ],
+    [
+      33431,
+      33442
+    ],
+    [
+      33456,
+      33477
+    ],
+    [
+      35526,
+      35554
+    ],
+    [
+      35557,
+      35580
+    ],
+    [
+      35630,
+      35642
+    ],
+    [
+      35666,
+      35677
+    ],
+    [
+      35763,
+      35766
+    ],
+    [
+      38122,
+      38145
+    ],
+    [
+      38161,
+      38239
+    ],
+    [
+      38253,
+      39044
+    ],
+    [
+      40958,
+      40960
+    ],
+    [
+      40984,
+      41022
+    ],
+    [
+      41037,
+      41159
+    ],
+    [
+      41162,
+      41578
+    ],
+    [
+      43726,
+      43743
+    ],
+    [
+      43774,
+      43797
+    ],
+    [
+      43853,
+      43943
+    ],
+    [
+      43948,
+      44724
+    ],
+    [
+      44751,
+      44769
+    ],
+    [
+      46610,
+      47335
+    ],
+    [
+      49102,
+      49128
+    ],
+    [
+      49147,
+      49167
+    ],
+    [
+      49217,
+      49240
+    ],
+    [
+      49308,
+      49324
+    ],
+    [
+      49341,
+      49370
+    ],
+    [
+      49396,
+      49456
+    ],
+    [
+      49483,
+      49547
+    ],
+    [
+      49556,
+      50435
+    ],
+    [
+      50450,
+      50451
+    ],
+    [
+      50500,
+      50518
+    ],
+    [
+      52272,
+      52292
+    ],
+    [
+      52305,
+      52330
+    ],
+    [
+      52341,
+      53007
+    ],
+    [
+      53032,
+      53063
+    ],
+    [
+      54651,
+      56049
+    ],
+    [
+      56072,
+      56096
+    ],
+    [
+      57952,
+      58720
+    ],
+    [
+      58724,
+      58750
+    ],
+    [
+      60115,
+      60127
+    ],
+    [
+      60137,
+      61598
+    ],
+    [
+      63602,
+      63613
+    ],
+    [
+      63621,
+      64362
+    ],
+    [
+      65583,
+      67071
+    ],
+    [
+      67084,
+      67101
+    ],
+    [
+      67111,
+      67147
+    ],
+    [
+      69325,
+      69335
+    ],
+    [
+      69345,
+      69838
+    ],
+    [
+      69867,
+      69895
+    ],
+    [
+      71479,
+      72728
+    ],
+    [
+      72736,
+      72810
+    ],
+    [
+      77344,
+      78520
+    ],
+    [
+      83069,
+      84114
+    ]
+  ],
+  "frozen_elevated_minute_intervals": [
+    [
+      0,
+      9
+    ],
+    [
+      87,
+      103
+    ],
+    [
+      178,
+      179
+    ],
+    [
+      184,
+      185
+    ],
+    [
+      190,
+      198
+    ],
+    [
+      269,
+      276
+    ],
+    [
+      364,
+      371
+    ],
+    [
+      453,
+      464
+    ],
+    [
+      542,
+      557
+    ],
+    [
+      592,
+      593
+    ],
+    [
+      636,
+      651
+    ],
+    [
+      683,
+      693
+    ],
+    [
+      731,
+      746
+    ],
+    [
+      777,
+      789
+    ],
+    [
+      822,
+      841
+    ],
+    [
+      871,
+      884
+    ],
+    [
+      911,
+      935
+    ],
+    [
+      966,
+      979
+    ],
+    [
+      1002,
+      1027
+    ],
+    [
+      1060,
+      1073
+    ],
+    [
+      1093,
+      1119
+    ],
+    [
+      1156,
+      1165
+    ],
+    [
+      1191,
+      1213
+    ],
+    [
+      1289,
+      1309
+    ],
+    [
+      1384,
+      1402
+    ]
+  ],
+  "frozen_unknown_minute_intervals": [],
+  "runs": 18169,
+  "rle_sha256_lf": "633c9a3898d40ac380d301d41f4656c9b1927fda4888c38728c8a89a985d5b67"
+}
