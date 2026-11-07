@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source": {
+    "file": "mx_rbm_20211225.cdf",
+    "url": "https://darts.isas.jaxa.jp/pub/maxi/rbm/2021/mx_rbm_20211225.cdf",
+    "sha256": "4d12c092bd2926c59e488aae670a0fd36d29f2b11989203614fd0c3c868f3e27",
+    "role": "Post-observation check of RATE_H units, actual Epoch records and arithmetic for the same channel and UTC day."
+  },
+  "channel": "RATE_H",
+  "cdf_data_version": "1.0.0",
+  "cdf_generation_date": "2024-05-13T14:32:15Z",
+  "cdf_variable_units": "counts",
+  "cdf_variable_description": "count rate of Horizontal direction",
+  "cdf_time_resolution": "1 sec",
+  "records": 86232,
+  "counter_mismatches": 0,
+  "fill_count": 0,
+  "max_Epoch_vs_TXT_difference_s": 0.0005001,
+  "replicated_common_exposure_s": 86179,
+  "replicated_observed_counts": 20274056,
+  "decimal_predicted_counts": "449408.289853107279",
+  "decimal_positive_residual_counts": "19838592.093192132720",
+  "decimal_overprediction_counts": "13944.383045239999",
+  "classification_minutes": {
+    "TP": 330,
+    "FP": 0,
+    "FN": 279,
+    "TN": 830
+  },
+  "same_detector_observations": true,
+  "independent_scientific_review": false
+}

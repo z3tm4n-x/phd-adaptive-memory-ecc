@@ -1,0 +1,460 @@
+{
+  "day_UTC": "2021-12-25",
+  "channel": "RBM-H",
+  "units": "counts per nominal second",
+  "forecast_commit": "198477488cdb3ddd7bb5dcbba6d5b628c3d1a9f9",
+  "observation_sha256": "e98971978cfccdee5f469a7779f1f65ca2f7b94db3893367182d3b034486716d",
+  "minutes_sha256_lf": "56967d481e605ae0e8dbfc8bbf81da32fd2d039e56f91c87565d9c4fc686fcef",
+  "quality": {
+    "source_rows": 86232,
+    "rows_outside_or_bad_time": 0,
+    "seconds_without_time_record": 168,
+    "duplicate_seconds_discarded": 0,
+    "unique_seconds_other_LVL": 0,
+    "unique_LVL1_seconds_invalid_H": 0,
+    "valid_observation_seconds": 86232,
+    "valid_zero_counts": 36164,
+    "max_abs_rounding_s": 0.3356,
+    "LVL_counts": {
+      "1.0": 86232
+    },
+    "gaps_in_observed_seconds": [
+      [
+        1573,
+        1576
+      ],
+      [
+        1857,
+        1859
+      ],
+      [
+        2037,
+        2039
+      ],
+      [
+        2040,
+        2042
+      ],
+      [
+        2316,
+        2318
+      ],
+      [
+        2338,
+        2340
+      ],
+      [
+        2417,
+        2419
+      ],
+      [
+        2590,
+        2592
+      ],
+      [
+        4166,
+        4168
+      ],
+      [
+        5083,
+        5085
+      ],
+      [
+        7865,
+        7867
+      ],
+      [
+        7973,
+        7975
+      ],
+      [
+        8064,
+        8066
+      ],
+      [
+        11266,
+        11268
+      ],
+      [
+        11287,
+        11289
+      ],
+      [
+        13341,
+        13343
+      ],
+      [
+        16760,
+        16762
+      ],
+      [
+        17211,
+        17213
+      ],
+      [
+        19136,
+        19138
+      ],
+      [
+        27447,
+        27449
+      ],
+      [
+        27515,
+        27517
+      ],
+      [
+        28031,
+        28033
+      ],
+      [
+        28641,
+        28643
+      ],
+      [
+        28753,
+        28755
+      ],
+      [
+        30621,
+        30623
+      ],
+      [
+        31017,
+        31023
+      ],
+      [
+        31560,
+        31562
+      ],
+      [
+        31880,
+        31882
+      ],
+      [
+        31910,
+        31912
+      ],
+      [
+        32224,
+        32226
+      ],
+      [
+        35151,
+        35154
+      ],
+      [
+        35591,
+        35593
+      ],
+      [
+        35860,
+        35862
+      ],
+      [
+        36215,
+        36217
+      ],
+      [
+        36505,
+        36507
+      ],
+      [
+        36640,
+        36642
+      ],
+      [
+        36693,
+        36695
+      ],
+      [
+        37786,
+        37788
+      ],
+      [
+        38407,
+        38409
+      ],
+      [
+        38667,
+        38669
+      ],
+      [
+        39021,
+        39023
+      ],
+      [
+        41310,
+        41312
+      ],
+      [
+        41428,
+        41430
+      ],
+      [
+        41457,
+        41459
+      ],
+      [
+        41684,
+        41686
+      ],
+      [
+        43374,
+        43376
+      ],
+      [
+        44605,
+        44607
+      ],
+      [
+        48965,
+        48967
+      ],
+      [
+        49247,
+        49249
+      ],
+      [
+        49347,
+        49349
+      ],
+      [
+        49510,
+        49512
+      ],
+      [
+        53013,
+        53015
+      ],
+      [
+        53569,
+        53571
+      ],
+      [
+        56881,
+        56883
+      ],
+      [
+        58787,
+        58789
+      ],
+      [
+        60147,
+        60149
+      ],
+      [
+        60985,
+        60987
+      ],
+      [
+        61759,
+        61761
+      ],
+      [
+        64037,
+        64039
+      ],
+      [
+        64540,
+        64542
+      ],
+      [
+        66864,
+        66866
+      ],
+      [
+        66895,
+        66897
+      ],
+      [
+        67821,
+        67823
+      ],
+      [
+        69483,
+        69485
+      ],
+      [
+        72960,
+        72962
+      ],
+      [
+        72964,
+        72966
+      ],
+      [
+        73088,
+        73090
+      ],
+      [
+        73091,
+        73093
+      ],
+      [
+        73166,
+        73168
+      ],
+      [
+        77603,
+        77605
+      ],
+      [
+        79935,
+        79937
+      ],
+      [
+        84993,
+        84996
+      ],
+      [
+        85386,
+        85388
+      ],
+      [
+        85463,
+        85468
+      ],
+      [
+        85469,
+        85471
+      ],
+      [
+        85511,
+        85513
+      ],
+      [
+        85602,
+        85604
+      ],
+      [
+        85702,
+        85704
+      ],
+      [
+        85974,
+        85976
+      ]
+    ],
+    "valid_measurements_without_map": 0,
+    "eligible_minutes": 1439,
+    "excluded_minutes": 1,
+    "edge_colour_seconds_scored": 3135,
+    "valid_joint_seconds_in_excluded_minutes": 53
+  },
+  "groups": {
+    "all": {
+      "minutes": 1439,
+      "exposure_s": 86179,
+      "observed_counts": 20274056,
+      "predicted_counts": 449408.289853,
+      "predicted_Hz": 5.214824,
+      "observed_Hz": 235.255178,
+      "bias_obs_minus_pred_Hz": 230.040354,
+      "weighted_MAE_Hz": 230.363969,
+      "positive_residual_counts": 19838592.093192,
+      "overprediction_counts": 13944.383045,
+      "minutes_obs_above_point": 1386,
+      "minutes_obs_below_point": 53,
+      "minutes_above_reading_envelope": 1335,
+      "minutes_below_reading_envelope": 43,
+      "minutes_open_or_unknown_upper": 42,
+      "conditional_Poisson_scale_Hz": 0.0522479
+    },
+    "forecast_below_1_Hz": {
+      "minutes": 1109,
+      "exposure_s": 66417,
+      "observed_counts": 181013,
+      "predicted_counts": 6092.31566,
+      "predicted_Hz": 0.091728,
+      "observed_Hz": 2.725402,
+      "bias_obs_minus_pred_Hz": 2.633673,
+      "weighted_MAE_Hz": 2.634152,
+      "positive_residual_counts": 174936.566608,
+      "overprediction_counts": 15.882268,
+      "minutes_obs_above_point": 1107,
+      "minutes_obs_below_point": 2,
+      "minutes_above_reading_envelope": 1105,
+      "minutes_below_reading_envelope": 0,
+      "minutes_open_or_unknown_upper": 0,
+      "conditional_Poisson_scale_Hz": 0.00640583
+    },
+    "forecast_at_least_1_Hz": {
+      "minutes": 330,
+      "exposure_s": 19762,
+      "observed_counts": 20093043,
+      "predicted_counts": 443315.974193,
+      "predicted_Hz": 22.432748,
+      "observed_Hz": 1016.751493,
+      "bias_obs_minus_pred_Hz": 994.318744,
+      "weighted_MAE_Hz": 995.728369,
+      "positive_residual_counts": 19663655.526584,
+      "overprediction_counts": 13928.500777,
+      "minutes_obs_above_point": 279,
+      "minutes_obs_below_point": 51,
+      "minutes_above_reading_envelope": 230,
+      "minutes_below_reading_envelope": 43,
+      "minutes_open_or_unknown_upper": 42,
+      "conditional_Poisson_scale_Hz": 0.22682554
+    }
+  },
+  "classification_minutes": {
+    "TP": 330,
+    "FP": 0,
+    "FN": 279,
+    "TN": 830,
+    "precision": 1.0,
+    "recall": 0.541872
+  },
+  "largest_underprediction": {
+    "UTC": "01:38",
+    "exposure_s": 60,
+    "observed_counts": 670033,
+    "observed_Hz": 11167.216667,
+    "predicted_Hz": 29.547687,
+    "reading_low_Hz": 27.155264,
+    "reading_high_Hz": 32.180747,
+    "obs_minus_pred_Hz": 11137.66898
+  },
+  "largest_overprediction": {
+    "UTC": "13:57",
+    "exposure_s": 60,
+    "observed_counts": 416,
+    "observed_Hz": 6.933333,
+    "predicted_Hz": 22.539047,
+    "reading_low_Hz": 18.771331,
+    "reading_high_Hz": 27.087418,
+    "obs_minus_pred_Hz": -15.605713
+  },
+  "interior_colours_only": {
+    "minutes": 1336,
+    "exposure_s": 79948,
+    "observed_counts": 10226140,
+    "predicted_counts": 246981.352879,
+    "predicted_Hz": 3.089275,
+    "observed_Hz": 127.909891,
+    "bias_obs_minus_pred_Hz": 124.820616,
+    "weighted_MAE_Hz": 125.169453,
+    "positive_residual_counts": 9993103.030166,
+    "overprediction_counts": 13944.383045,
+    "minutes_obs_above_point": 1283,
+    "minutes_obs_below_point": 53,
+    "minutes_above_reading_envelope": 1271,
+    "minutes_below_reading_envelope": 43,
+    "minutes_open_or_unknown_upper": 3,
+    "conditional_Poisson_scale_Hz": 0.03999892
+  },
+  "position_diagnostic_only": {
+    "paired_at_record_TIME": 86232,
+    "angular_separation_deg": {
+      "median": 0.143077,
+      "p95": 0.172212,
+      "max": 0.194021
+    },
+    "absolute_radius_difference_km": {
+      "median": 0.069997,
+      "p95": 0.146699,
+      "max": 0.175741
+    }
+  }
+}
