@@ -1,0 +1,200 @@
+{
+  "strict_native": {
+    "files_1min": 548,
+    "strict_pairs": {
+      "1min": 0,
+      "5min": 787
+    },
+    "breakdown": {
+      "G16_East": {
+        "1min": 0,
+        "5min": 378
+      },
+      "G16_West": {
+        "1min": 0,
+        "5min": 409
+      },
+      "G18_East": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G18_West": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G19_East": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G19_West": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G17_East": {
+        "5min": 0
+      },
+      "G17_West": {
+        "5min": 0
+      }
+    },
+    "maxima": {
+      "5min": {
+        "pairs": 409,
+        "from_utc": "2017-09-10T22:10:00Z",
+        "to_utc": "2017-09-10T22:15:00Z",
+        "from_s_inv": 0.03607986297318408,
+        "to_s_inv": 0.04148801760206986,
+        "slope": 1.802718209628594e-05,
+        "both_strict": true,
+        "instrument_direction": "G16_West"
+      }
+    }
+  },
+  "SEPEM": {
+    "nominal": {
+      "g_s_inv2": 0.004392116,
+      "adjacent_pairs_total": 4365791,
+      "adjacent_violations": 0,
+      "bad_bin_pairs_latest": 0,
+      "window_count": 3313873,
+      "windows_with_adjacent_violation": 0,
+      "windows_failing_exact": 0,
+      "windows_passing_exact": 3313873,
+      "windows_failing_only_exact": 0,
+      "ranges_valid_starts_inclusive": [
+        [
+          "1974-07-01T00:00:00Z",
+          "2005-12-31T12:00:00Z",
+          3313873
+        ]
+      ],
+      "ranges_invalid_starts_inclusive": []
+    },
+    "strict5": {
+      "g_s_inv2": 3.6055e-05,
+      "adjacent_pairs_total": 4365791,
+      "adjacent_violations": 174,
+      "bad_bin_pairs_latest": 256,
+      "window_count": 3313873,
+      "windows_with_adjacent_violation": 2656315,
+      "windows_failing_exact": 2656315,
+      "windows_passing_exact": 657558,
+      "windows_failing_only_exact": 0,
+      "ranges_valid_starts_inclusive": [
+        [
+          "1974-07-01T00:00:00Z",
+          "1979-10-21T00:30:00Z",
+          558151
+        ],
+        [
+          "2005-01-20T08:10:00Z",
+          "2005-12-31T12:00:00Z",
+          99407
+        ]
+      ],
+      "ranges_invalid_starts_inclusive": [
+        [
+          "1979-10-21T00:35:00Z",
+          "2005-01-20T08:05:00Z",
+          2656315
+        ]
+      ]
+    }
+  },
+  "GOES": {
+    "nominal": {
+      "East_screened": {
+        "covered_bins": 401446,
+        "covered_s": 120433800,
+        "unobserved_to_T_s": 195142200,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "East_strict_selected": {
+        "covered_bins": 410,
+        "covered_s": 123000,
+        "unobserved_to_T_s": 315453000,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "West_screened": {
+        "covered_bins": 528256,
+        "covered_s": 158476800,
+        "unobserved_to_T_s": 157099200,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "West_strict_selected": {
+        "covered_bins": 439,
+        "covered_s": 131700,
+        "unobserved_to_T_s": 315444300,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      }
+    },
+    "strict5": {
+      "East_screened": {
+        "covered_bins": 401446,
+        "covered_s": 120433800,
+        "unobserved_to_T_s": 195142200,
+        "adjacent_violations": 6,
+        "latest_conflict_pairs": 9,
+        "compatible_bins": false,
+        "smallest_reported_conflict_margin_s_inv": 0.0009889956038586917,
+        "first_conflict_utc": [
+          [
+            285620700,
+            285621000
+          ]
+        ]
+      },
+      "East_strict_selected": {
+        "covered_bins": 410,
+        "covered_s": 123000,
+        "unobserved_to_T_s": 315453000,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "West_screened": {
+        "covered_bins": 528256,
+        "covered_s": 158476800,
+        "unobserved_to_T_s": 157099200,
+        "adjacent_violations": 14,
+        "latest_conflict_pairs": 20,
+        "compatible_bins": false,
+        "smallest_reported_conflict_margin_s_inv": 6.682712208078145e-05,
+        "first_conflict_utc": [
+          [
+            285592800,
+            285593100
+          ]
+        ]
+      },
+      "West_strict_selected": {
+        "covered_bins": 439,
+        "covered_s": 131700,
+        "unobserved_to_T_s": 315444300,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      }
+    }
+  }
+}
