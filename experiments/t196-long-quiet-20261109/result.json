@@ -1,0 +1,84 @@
+{
+  "frozen_rule": "8472a0a2f3fc0c5521f49c62fd40dd4e736e8bf9",
+  "review": {
+    "high_start": {
+      "PR428": {
+        "reads_lower": 208495727348,
+        "bus_s_lower": "9903.446971",
+        "bus_percent_lower": "0.003138212972",
+        "fraction_of_fixed_lower": "0.000616345817"
+      },
+      "sharper_empty": {
+        "reads_lower": 211510711438,
+        "bus_s_lower": "10046.657268",
+        "bus_percent_lower": "0.003183593577",
+        "fraction_of_fixed_lower": "0.000625258579"
+      }
+    },
+    "unknown_start_PR428": {
+      "reads_lower": 14616328792,
+      "bus_s_lower": "694.268601",
+      "bus_percent_lower": "0.000220000444",
+      "fraction_of_fixed_lower": "0.000043208142"
+    },
+    "unknown_start_quiet_prefix": {
+      "reads_lower": 20392571943,
+      "bus_s_lower": "968.637378",
+      "bus_percent_lower": "0.000306942663",
+      "fraction_of_fixed_lower": "0.000060283616"
+    }
+  },
+  "first_probe": {
+    "five_minutes": {
+      "time_s": 300,
+      "bank_mean": 3.520827653863199,
+      "empty_probability_lower": "0.02957494721619",
+      "empty_probability_upper": "0.02957494721621"
+    },
+    "first_gate_earliest_envelope": {
+      "time_s": 300.06050816,
+      "bank_mean": 3.5208288849904905,
+      "empty_probability_lower": "0.02957491080569",
+      "empty_probability_upper": "0.02957491080570"
+    },
+    "first_gate_latest_nominal": {
+      "time_s": 300.073353216,
+      "bank_mean": 3.5208291463420007,
+      "empty_probability_lower": "0.02957490307624",
+      "empty_probability_upper": "0.02957490307626"
+    },
+    "probe_single_edge_pair_upper": "0.000000000151229229"
+  },
+  "certificate": {
+    "fast": "0.000222332599",
+    "variation": "0.000439149335",
+    "visibility_over_gamma": "0.000092519858",
+    "cases_d0": {
+      "1": "0.000760002",
+      "1/2": "0.000852522",
+      "1/3": "0.000945042",
+      "1/4": "0.001037562"
+    },
+    "min_gamma_rounded_up": {
+      "0": "0.278240094",
+      "1/100000": "0.286867210",
+      "1/10000": "0.397903954"
+    },
+    "history_lower_s": 300.04466262636896,
+    "age_overlap_upper_s": 300.48749222186274
+  },
+  "price": {
+    "case": "gamma=1/2, d=0, delta=6e-6, hard caps as in PR423; intercept at I=0",
+    "expected_word_hits_upper": "24049.657895",
+    "before_stop_fast_s_upper": "14452921.015",
+    "bus_read_repair_s_upper": "6049126.074",
+    "bus_percent_upper": "1.916853",
+    "margin_to_twice_s_lower": "1984875.853",
+    "extra_bus_s_per_invalid_upper": "72.03006",
+    "total_fast_s_upper": "14721956.497",
+    "expected_switches_upper": 750728,
+    "bus_peak_one_ms_if_reserved_slots_hold": "57.9346239",
+    "serial_peak_one_ms_if_reserved_slots_hold": "67.9365765",
+    "full_invalid_nominal_read_percent_before_boundary_terms": "24.489795918"
+  }
+}
