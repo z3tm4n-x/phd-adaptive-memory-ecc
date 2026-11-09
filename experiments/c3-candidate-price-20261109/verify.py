@@ -31,8 +31,11 @@ def check():
         assert 'slow' not in modes
     H=src['history_certificate']
     total=F('0.000006')+F('0.000222332599')+F('0.000439149335')+2*F('0.000092519858')
-    assert total==F('0.000852521650')==F(H['priced_q'])
+    assert total==F('0.000852521650') and F(ceil(total*10**9),10**9)==F(H['priced_q'])
     assert total+F(1,10000)<F(1,1000)<F(src['anchored_Q_upper'])
+    broad=src['without_a_visibility_floor'];cert=H['numeric_replay']
+    assert F(broad['joint_stops_upper_eq3'])==F('0.000006')+F(cert['fast_exact'])+F(cert['unweighted_slow_pairs'])
+    assert F(broad['joint_stops_upper_eq3'])>F(broad['physical_Q_upper_from_core'])
     # Different thresholds use different ends of the same optimum enclosure.
     best_lower=F(r['necessary']['bus_lower_s'])
     best_upper=F(r['candidate']['price']['bus']['upper_s'])
@@ -57,6 +60,14 @@ def check():
     reserved=frames*(64*xp*ns+j)
     assert F(slot['full_bus_upper_s'])==cap*rd+min(cap,mu2+q*cap)*wr+reserved
     assert floor_reads>(best_upper+reserved)/2
+    # Independent outward comparison with the published C2 numerical replay.
+    source=src['C2_general_hard_caps']
+    assert F(source['eta0_primary_total_bus_s_upper'])<=F('6049126.074')
+    assert F('1984875.853')<=F(source['eta0_full_extra_s_budget'])<F('1984875.854')
+    assert F(source['extra_bus_s_per_invalid'])<=F('72.03006')
+    assert F(source['eta0_E_Tfast_upper_s'])<=F('14721956.497')
+    assert ceil(F(source['eta0_E_switch_upper_given_cell_command_cap']))==750728
+    assert F(source['post_stop_word_visits_upper'])==q*cap and F(source['eta0_repairs_upper'])==mu2+q*cap
     N=T//P
     witness=src['prefix_witness'];count=witness['first_invalid_resets_proving_exclusion']
     def lower(i):return (N+31*min(N,(i+1)*730))*W*48*ns
