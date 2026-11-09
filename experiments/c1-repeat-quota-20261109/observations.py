@@ -1,5 +1,6 @@
 """Inputs from the frozen C1 archive and common-class packages."""
 from pathlib import Path
+from datetime import datetime,timedelta,timezone
 import hashlib
 import json
 import subprocess
@@ -11,6 +12,13 @@ COMMON_SUB='experiments/c1-common-geo-20261109'
 DT=300
 T=315576000
 WIDTH=T//DT
+G_MAIN=0.004392116
+G_STRICT=0.000036055
+START=datetime(1974,7,1,tzinfo=timezone.utc)
+
+
+def dates(i,start=START):
+    return (start+timedelta(seconds=int(i)*DT)).isoformat().replace('+00:00','Z')
 
 
 def setup(common,previous):

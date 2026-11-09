@@ -6,8 +6,7 @@ import json
 import math
 from pathlib import Path
 import numpy as np
-from observations import DT,T,WIDTH,HERE,save,setup
-from strict import dates,G_MAIN
+from observations import DT,T,WIDTH,G_MAIN,dates,save,setup
 
 
 def maxima(rows,values,j,label):

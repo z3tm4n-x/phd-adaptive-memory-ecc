@@ -1,0 +1,23 @@
+{
+  "max_S1_arbitrary_phase": 187463.23326897633,
+  "max_S1_start_bin": 2362840,
+  "max_S1_phase_s": 123.9228584302905,
+  "variation_quota": 28.855,
+  "plateau_charge": 0.9811422515960433,
+  "gap_counterexample": {
+    "0.004392116": {
+      "pulses": 2886,
+      "amplitude_s_inv": 0.01,
+      "duration_s": 6570.864703937692,
+      "added_exposure": 32.85432351968846,
+      "added_variation_s_inv": 28.86
+    },
+    "3.6055e-05": {
+      "pulses": 2886,
+      "amplitude_s_inv": 0.01,
+      "duration_s": 800443.7664678963,
+      "added_exposure": 4002.218832339481,
+      "added_variation_s_inv": 28.86
+    }
+  }
+}
