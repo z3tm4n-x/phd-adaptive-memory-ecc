@@ -87,14 +87,52 @@ def verify_goes(cache):
     print('PASS: GOES source coverage, independent selection and sums, event edges and missing decades')
 
 
+def verify_response(path):
+    """Direct quadrature on one measured spectrum, independent of the basis kernel."""
+    from scipy.integrate import quad
+    import goes_profile as g
+    src=g.sgps.read(path)
+    _,values,_=g.fold(path)
+    i,d=np.unravel_index(np.nanargmax(values[:,:,0]+values[:,:,1]),values.shape[:2])
+    sensor=1-d if src.yaw[i]==0 else d
+    spec=src.corrected[i,d]
+    energy=src.energy[sensor]; left,right=src.lower[sensor,0],src.upper[sensor,-1]
+    tab=g.transport.RangeTable(); rho=3
+    threshold=tab.inverse(rho+tab.range(5.))
+    # Split at all response/transport branches before adaptive integration.
+    knots=np.unique(np.r_[5.,10.,30.,energy,tab.energy,tab.inverse(rho),
+        tab.inverse(rho+tab.range(np.r_[.001,5.,g.transport.sigma_module.zero_crossing_low(g.transport.POINTS),
+                                         g.transport.SIGMA_E,tab.energy])),right])
+    points=knots[(knots>5.)&(knots<right)]
+    def flux(e):
+        return np.interp(np.log(e),np.log(energy),spec[:13])
+    def folded(e):
+        residual=tab.residual(np.array([e]),rho)
+        return 4*np.pi*g.transport.BITS*flux(e)*g.transport.sigma(residual)[0]
+    def integrate(fun,lo,hi):
+        return quad(fun,lo,hi,points=points[(points>lo)&(points<hi)],limit=400,epsabs=2e-15,epsrel=1e-9)[0]
+    valid=np.all(np.isfinite(src.corrected),axis=2)
+    gap,_,_=g.response.gap_bridge(src.corrected,valid)
+    tail=gap[i,d]+spec[13]
+    high_tail=4*np.pi*g.transport.BITS*tail*g.transport.sigma(tab.residual(np.array([500.]),rho))[0]
+    expected=[integrate(folded,max(5.,left),threshold),integrate(folded,threshold,right)+high_tail,
+              integrate(flux,10.,right)+tail,4*np.pi*(integrate(flux,30.,right)+tail)]
+    for j,expected_value in enumerate(expected):
+        measured=values[i,d,j]
+        if j<2 or np.isfinite(measured):
+            assert isclose(measured,expected_value,abs_tol=2e-14,rel_tol=2e-9),(measured,expected_value)
+    print('PASS: direct CSDA/proton spectral integrals',path.name)
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sepem-cache',type=Path);parser.add_argument('--windows',type=Path)
-    parser.add_argument('--goes-cache',type=Path);args=parser.parse_args()
+    parser.add_argument('--goes-cache',type=Path);parser.add_argument('--response-file',type=Path);args=parser.parse_args()
     if bool(args.sepem_cache)!=bool(args.windows):parser.error('SEPEM requires the cache and window file together')
-    if not args.sepem_cache and not args.goes_cache:parser.error('Select an archive')
+    if not (args.sepem_cache or args.goes_cache or args.response_file):parser.error('Select an archive')
     if args.sepem_cache:verify_sepem(args.sepem_cache,args.windows)
     if args.goes_cache:verify_goes(args.goes_cache)
+    if args.response_file:verify_response(args.response_file)
 
 
 if __name__=='__main__':main()

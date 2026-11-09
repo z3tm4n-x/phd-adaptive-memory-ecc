@@ -116,7 +116,7 @@ def download_one(job):
     except (ValueError,OSError) as e: return url,None,str(e)
 
 
-def process(index,cache,local_root,limit=None):
+def process(index,cache,local_root,limit=None,retry_missing=False,frozen=None):
     raw=cache/'raw'; raw.mkdir(parents=True,exist_ok=True)
     derived=cache/'derived'; derived.mkdir(exist_ok=True)
     local={p.name:p for p in local_root.rglob('*sgps*.nc')} if local_root else {}
@@ -125,6 +125,17 @@ def process(index,cache,local_root,limit=None):
     historic={r['name']:r['sha256'] for v in pinned.values() if isinstance(v,list) for r in v
               if isinstance(r,dict) and 'name' in r and 'sha256' in r}
     errors={}; manifest=[]; start=monotonic()
+    if frozen:
+        historic.update({r['name']:r['sha256'] for r in frozen['folded']})
+        errors=frozen['errors'].copy()
+        urls=[u for u in urls if u not in errors]
+    if retry_missing:
+        previous=json.loads((cache/'receipt.json').read_text(encoding='utf-8'))
+        allowed=set(urls)
+        manifest=[r for r in previous['folded'] if r['url'] in allowed]
+        done={r['url'] for r in manifest}
+        urls=[u for u in urls if u not in done]
+        errors={u:e for u,e in previous['errors'].items() if u in allowed}
     # Keep downloads bounded while folding in the main thread (HDF libraries need not be thread-safe).
     for batch in range(0,len(urls),48):
         with ThreadPoolExecutor(max_workers=8) as pool:
@@ -134,17 +145,20 @@ def process(index,cache,local_root,limit=None):
                 name=path.name; compact=derived/(name+'.npz'); passport=derived/(name+'.json')
                 try:
                     with path.open('rb') as stream: sha=hashlib.file_digest(stream,'sha256').hexdigest()
-                    if name in historic and sha!=historic[name]: raise ValueError('Source differs from pinned T67 file')
+                    if name in historic and sha!=historic[name]: raise ValueError('Source differs from pinned checksum')
                     saved=json.loads(passport.read_text(encoding='utf-8')) if passport.exists() else {}
-                    if not (compact.exists() and saved.get('sha256')==sha and saved.get('fold_version')==1):
+                    if frozen or not (compact.exists() and saved.get('sha256')==sha and saved.get('fold_version')==1):
                         ids,values,audit=fold(path)
                         np.savez_compressed(compact,index=ids,values=values)
                         saved={k:audit[k] for k in ('name','sha256','bytes','signature','satellite','records','first_start_utc','last_end_utc','quality','processing','lut_match','g19_P7_P8C_test_period')}
                         saved['fold_version']=1;passport.write_text(json.dumps(saved,ensure_ascii=False,default=str),encoding='utf-8')
                     manifest.append({'url':url,'name':name,'sha256':sha,'signature':saved['signature'],'satellite':saved['satellite']})
+                    errors.pop(url,None)
                 except (OSError,ValueError,KeyError,AssertionError,TypeError) as e: errors[url]=str(e)
         print(f'GOES {min(batch+48,len(urls))}/{len(urls)}; folded {len(manifest)}, incomplete {len(errors)}; {monotonic()-start:.0f}s',flush=True)
-        (cache/'receipt.json').write_text(json.dumps({'folded':manifest,'errors':errors},ensure_ascii=False),encoding='utf-8')
+        checkpoint=cache/'receipt.partial.json'
+        checkpoint.write_text(json.dumps({'folded':sorted(manifest,key=lambda r:r['url']),'errors':errors},ensure_ascii=False),encoding='utf-8')
+        checkpoint.replace(cache/'receipt.json')
     return manifest,errors
 
 
@@ -192,6 +206,9 @@ def catalog(cache):
     current={(e['onset'],e['peak_catalog']) for e in events}
     if not old<=current:
         raise ValueError('NOAA catalogue no longer reproduces pinned T67 rows; audit changed dates.')
+    warnings={e['onset_utc'] for e in pinned['events'] if e.get('catalogue_date_warning')}
+    for e in events:
+        e['T67_catalog_date_warning']=e['onset'] in warnings
     return sorted(events,key=lambda e:e['onset']),hashlib.sha256(path.read_bytes()).hexdigest()
 
 
@@ -280,15 +297,80 @@ def summarize(cache,index,receipt):
     return summary,all_events
 
 
+def report(s,events,sources):
+    out=['# GOES. Что покрывают измерения ГСО','',
+         "Интегралы полной частоты и её квадрата собраны раздельно для East и West за 01.01.2017–09.11.2026 UTC. "
+         f"Календарь содержит {s['calendar_duration_s']} с при требуемых {T} с. "
+         "Полных десятилетий — **0**. Максимумы по десятилетиям, k класса и квантили R здесь не определены. "
+         "[Условия реконструкции](GOES-CONFIG.md) · [Паспорт T67](../t67-goes-growth/SOURCES.md).",'',
+         f"Обработано {s['folded_files']} из {s['selected_daily_files']+1} выбранных файлов. "
+         f"Файлов с открытой ошибкой получения или обработки — {s['file_failures']}. "
+         f"Число различных паспортов прибора и алгоритма — {len(sources['signatures'])}. "
+         "URL, даты, продукт, версия, исходный SHA-256, паспорт алгоритма, таблицы энергий, ошибки чтения и флаги качества "
+         "сохранены в [манифесте](goes-sources.json.gz). День с файлом всё ещё может содержать пропуски после проверки качества.",'',
+         '| Направление | Первое измерение UTC | Конец последнего бина UTC | Покрыто, с | Пропуски, с | S₁ на покрытии | S₂ на покрытии, с⁻¹ | k на покрытии |',
+         '|---|---|---|---:|---:|---:|---:|---:|']
+    for name,r in s['directions'].items():
+        out.append(f"|{name}|{r['first_valid_utc']}|{r['last_valid_stop_utc']}|{r['covered_s']}|{r['missing_s']}|"
+                   f"{r['S1_observed']:.6f}|{r['S2_observed_s_inv']:.6f}|{r['k_observed_exposure']:.6f}|")
+    out.extend(['','Показатель k на покрытии равен T_obs S₂,obs/S₁,obs². Длительность T_obs есть сумма пригодных бинов, в том числе разнесённых во времени.',
+                '', '| Направление | Пик ν, с⁻¹ и время UTC | Максимальный рост соседних средних, с⁻² и начало пары | Перекрытия, бины | Строгое качество, бины | Модель хвоста с подстановкой, бины |',
+                '|---|---|---|---:|---:|---:|'])
+    for name,r in s['directions'].items():
+        out.append(f"|{name}|{r['peak_rate_s_inv']:.9g} · {r['peak_rate_utc']}|"
+                   f"{r['max_upward_bin_slope_s_inv2']:.9g} · {r['upward_from_utc']}|{r['overlap_bins']}|"
+                   f"{r['strict_bins_within_screened']}|{r['fallback_tail_bins']}|")
+    out.extend(['','Перекрытие означает присутствие как минимум двух пригодных спутников в том же направлении. В интеграл вошёл один спутник по заранее принятому порядку. Поправка за межприборную калибровку принята равной единице, а сферическое 4π продолжение направленного потока условно. Для G18 сохраняется температурная оговорка T67. Для тестового периода G19 исключены затронутые каналы.',
+                '', '| Спутник и направление | Пригодные бины до выбора | Бины в сумме | Первое пригодное начало | Последний пригодный конец |','|---|---:|---:|---|---|'])
+    for key,r in sorted(s['availability_per_sat_direction'].items()):
+        sat,d=key.split('_')
+        out.append(f"|{key}|{r['valid_bins_before_selection']}|{s['directions'][d]['selected_bins_by_satellite'][sat[1:]]}|"
+                   f"{r['first_valid_utc'] or '—'}|{r['last_valid_stop_utc'] or '—'}|")
+    out.extend(['','## Каталог событий','',
+        f"В версии каталога NOAA перечислено {s['official_events']} начал от 2017 года до отсечения. "
+        f"Последнее доступное каталожное начало — {events['East'][-1]['onset']}. "
+        "Версия воспроизводит все 46 исторических пар начала и пика T67. Длинный интервал между 04 и 25 января 2025 года помечен предупреждением источника. "
+        "Завершение, пиковая частота, флюенс >30 МэВ и положительные подъёмы имеют раздельные признаки покрытия. "
+        "Первый наблюдаемый подъём после пропуска может начинаться позже физического. "
+        "[Каталог с повторными подъёмами](goes-events.json.gz) · [Исходный каталог NOAA](https://www.ngdc.noaa.gov/stp/space-weather/interplanetary-data/solar-proton-events/SEP%20page%20code.html).",
+        '', '| Направление | События с данными | Конец по шести бинам, без внутренних дыр | Медиана наблюдаемого пика, с⁻¹ | Медиана наблюдаемого флюенса, см⁻² |',
+        '|---|---:|---:|---:|---:|'])
+    for name,r in s['directions'].items():
+        stats=r['event_support_statistics']
+        out.append(f"|{name}|{r['catalogued_events_with_a_valid_rate']}|{r['event_end_status_counts'].get('six_bins_below_10_pfu',0)}|"
+                   f"{stats['peak_rate']['quantiles']['0.5']:.8g}|{stats['fluence30_observed_cm2']['quantiles']['0.5']:.8g}|")
+    out.extend(['','Распределения и диапазоны доступны в [численных результатах](goes.json). Секунды покрытия каждого флюенса указаны в каталоге событий.',
+        '', '## Что требуется для календарной оценки', '',
+        'Пусть G — суммарная длительность пропусков, Y₁ и Y₂ — интегралы ν и ν² по ним. Тогда S₁=S₁,obs+Y₁, S₂=S₂,obs+Y₂ и Y₂≥Y₁²/G при G>0. В модели с постоянным фоном b≥0 также Y₁≥bG. Если независимо установлен физический верх B≥ν, добавляются условия Y₁≤BG и Y₂≤(b+B)Y₁−bBG. Без такого верха пики в пропусках и внутри пятиминутного бина не имеют конечной оценки из этих измерений. При переходе к десятилетию вообще возможен лишь тривиальный физический диапазон k класса от 1 без установленного конечного верха. Для расчёта показателей за весь календарный срок нужны границы Y₁,Y₂ даже при известном общем времени наблюдения.',
+        '', 'Для расширения на GOES-13/15 нужны датированный интервал до 2017 года, согласованные энергетические каналы, отклик и проверка межприборной калибровки на перекрытии. Для периода до регулярных SGPS остаются многолетние разрывы. [Контраст LEO и вход SEPEM](ARCHIVES.md).',''])
+    return '\n'.join(out)
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--index',required=True,type=Path);p.add_argument('--cache',required=True,type=Path)
-    p.add_argument('--local',type=Path);p.add_argument('--limit',type=int);p.add_argument('--fold',action='store_true');p.add_argument('--check',action='store_true');args=p.parse_args()
+    p.add_argument('--local',type=Path);p.add_argument('--limit',type=int);p.add_argument('--fold',action='store_true')
+    p.add_argument('--retry-missing',action='store_true');p.add_argument('--check',action='store_true');args=p.parse_args()
     index=json.loads(args.index.read_text(encoding='utf-8'))
-    if args.fold:process(index,args.cache,args.local,args.limit)
+    frozen=None
+    if args.fold and args.check:
+        with gzip.open(HERE/'goes-sources.json.gz','rt',encoding='utf-8') as stream:
+            known=json.load(stream)
+        if known['index']!=index:raise SystemExit('GOES inventory differs from issued input')
+        frozen=known['receipt']
+    if args.fold or args.retry_missing:process(index,args.cache,args.local,args.limit,args.retry_missing,frozen)
     if args.limit:return
     receipt=json.loads((args.cache/'receipt.json').read_text(encoding='utf-8'))
+    receipt['folded'].sort(key=lambda r:r['url'])
+    folded={r['url'] for r in receipt['folded']}
+    assert folded|set(receipt['errors'])==set(index['selected_daily']+[index['special']])
     summary,events=summarize(args.cache,index,receipt)
     sources={'index':index,'receipt':receipt,'signatures':passport_by_signature(args.cache,receipt['folded'])}
+    report_text=report(summary,events,sources)
+    report_file=HERE/'GOES.md'
+    if args.check:
+        if report_file.read_text(encoding='utf-8')!=report_text:raise SystemExit('Mismatch: GOES.md')
+    else:
+        report_file.write_text(report_text,encoding='utf-8',newline='\n')
     for name,data in [('goes.json',summary),('goes-events.json.gz',events),('goes-sources.json.gz',sources)]:
         pretty=not name.endswith('.gz')
         content=(json.dumps(data,ensure_ascii=False,sort_keys=True,indent=2 if pretty else None,

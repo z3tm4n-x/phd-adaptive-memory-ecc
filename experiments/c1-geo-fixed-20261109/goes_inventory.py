@@ -75,8 +75,15 @@ def inventory(cache):
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__); p.add_argument('--out',required=True,type=Path); args=p.parse_args()
-    out=inventory(args.out.parent/'indexes');args.out.parent.mkdir(exist_ok=True,parents=True)
+    p=argparse.ArgumentParser(description=__doc__); p.add_argument('--out',required=True,type=Path)
+    p.add_argument('--from-passport',type=Path,help='Replay the published inventory without refreshing NOAA indexes')
+    args=p.parse_args()
+    if args.from_passport:
+        with gzip.open(args.from_passport,'rt',encoding='utf-8') as stream:
+            out=json.load(stream)['index']
+    else:
+        out=inventory(args.out.parent/'indexes')
+    args.out.parent.mkdir(exist_ok=True,parents=True)
     args.out.write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
     print('selected daily files',len(out['selected_daily']),flush=True)
 
