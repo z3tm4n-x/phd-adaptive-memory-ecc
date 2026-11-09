@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import numpy as np
 from prior import activate, EXPERIMENTS
 
@@ -32,6 +33,8 @@ def execute(previous,cache,local,limit):
             except (ValueError,OSError) as error:return row,None,str(error)
         with path.open('rb') as f:sha=hashlib.file_digest(f,'sha256').hexdigest()
         if sha!=row['sha256']:return row,None,'Different source SHA-256'
+        if path!=raw/row['name'] and not (raw/row['name']).exists():
+            shutil.copyfile(path,raw/row['name'])
         return row,path,None
     result={'ok':[],'errors':{}}
     for a in range(0,len(rows),32):
