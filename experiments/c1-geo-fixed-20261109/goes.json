@@ -1,0 +1,256 @@
+{
+  "HI_to_H": 0.29104439620862665,
+  "R": null,
+  "archive_k_complete_calendar": null,
+  "availability_per_sat_direction": {
+    "G16_East": {
+      "first_valid_utc": "2017-09-01T00:00:00Z",
+      "last_valid_stop_utc": "2025-04-07T19:50:00Z",
+      "valid_bins_before_selection": 186018
+    },
+    "G16_West": {
+      "first_valid_utc": "2017-09-01T00:00:00Z",
+      "last_valid_stop_utc": "2025-04-07T19:50:00Z",
+      "valid_bins_before_selection": 257037
+    },
+    "G17_East": {
+      "first_valid_utc": null,
+      "last_valid_stop_utc": null,
+      "valid_bins_before_selection": 0
+    },
+    "G17_West": {
+      "first_valid_utc": "2021-08-20T00:00:00Z",
+      "last_valid_stop_utc": "2022-04-25T00:00:00Z",
+      "valid_bins_before_selection": 10915
+    },
+    "G18_East": {
+      "first_valid_utc": "2022-12-14T00:00:00Z",
+      "last_valid_stop_utc": "2026-11-09T00:00:00Z",
+      "valid_bins_before_selection": 362708
+    },
+    "G18_West": {
+      "first_valid_utc": "2022-09-13T00:00:00Z",
+      "last_valid_stop_utc": "2026-11-09T00:00:00Z",
+      "valid_bins_before_selection": 418481
+    },
+    "G19_East": {
+      "first_valid_utc": "2025-04-03T00:00:00Z",
+      "last_valid_stop_utc": "2026-11-09T00:00:00Z",
+      "valid_bins_before_selection": 166366
+    },
+    "G19_West": {
+      "first_valid_utc": "2025-04-03T00:00:00Z",
+      "last_valid_stop_utc": "2026-11-09T00:00:00Z",
+      "valid_bins_before_selection": 166372
+    }
+  },
+  "background_s_inv": 0.00015859810317245875,
+  "calendar_duration_s": 310953600,
+  "config": "GOES SGPS, conditional directional primary CSDA Al 3 g/cm2, T141 full38 and synchronous HI proxy",
+  "directions": {
+    "East": {
+      "S1_observed": 28048.86882165737,
+      "S2_observed_s_inv": 197.45863579296537,
+      "catalogued_events_with_a_valid_rate": 31,
+      "covered_bins": 401446,
+      "covered_s": 120433800,
+      "event_end_status_counts": {
+        "missing_after_catalog_peak": 6,
+        "missing_after_catalog_peak; internal holes": 15,
+        "next_event_or_archive_end": 1,
+        "six_bins_below_10_pfu": 21,
+        "six_bins_below_10_pfu; internal holes": 3
+      },
+      "event_support_statistics": {
+        "calendar_span_s": {
+          "count": 31,
+          "quantiles": {
+            "0.1": 23400.0,
+            "0.25": 34500.0,
+            "0.5": 91500.0,
+            "0.75": 164400.0,
+            "0.9": 192000.0
+          },
+          "range": [
+            1800,
+            1736400
+          ]
+        },
+        "fluence30_observed_cm2": {
+          "count": 31,
+          "quantiles": {
+            "0.1": 388965.2535172469,
+            "0.25": 674124.6905771244,
+            "0.5": 4991883.592501545,
+            "0.75": 19689663.45318284,
+            "0.9": 69823927.72097118
+          },
+          "range": [
+            11512.749778996946,
+            249690989.38070023
+          ]
+        },
+        "max_observed_upward_slope_s_inv2": {
+          "count": 31,
+          "quantiles": {
+            "0.1": 9.911919052957912e-08,
+            "0.25": 1.5727765772115886e-07,
+            "0.5": 3.5033654652886944e-07,
+            "0.75": 2.496986275271846e-06,
+            "0.9": 9.131164678455339e-06
+          },
+          "range": [
+            1.382573642970558e-08,
+            0.0002751870856550933
+          ]
+        },
+        "peak_rate": {
+          "count": 31,
+          "quantiles": {
+            "0.1": 0.0002925380951169854,
+            "0.25": 0.0003779613128684677,
+            "0.5": 0.00075325880204577,
+            "0.75": 0.004123982403856452,
+            "0.9": 0.02397266665420612
+          },
+          "range": [
+            0.00019041526191014961,
+            0.18454287033707165
+          ]
+        }
+      },
+      "fallback_tail_bins": 17683,
+      "first_valid_utc": "2017-09-01T00:00:00Z",
+      "k_observed_exposure": 30.226914614067088,
+      "last_valid_stop_utc": "2026-11-09T00:00:00Z",
+      "max_upward_bin_slope_s_inv2": 0.0002751870856550933,
+      "missing_s": 190519800,
+      "overlap_bins": 312260,
+      "peak_rate_s_inv": 0.18454287033707165,
+      "peak_rate_utc": "2026-01-19T19:20:00Z",
+      "proton_p10_per_s": 5.877330055705514e-06,
+      "selected_bins_by_satellite": {
+        "16": 186018,
+        "17": 0,
+        "18": 215026,
+        "19": 402
+      },
+      "strict_bins_within_screened": 410,
+      "upward_from_utc": "2026-01-19T19:10:00Z",
+      "upward_to_utc": "2026-01-19T19:15:00Z"
+    },
+    "West": {
+      "S1_observed": 39863.62261100438,
+      "S2_observed_s_inv": 584.8093066784961,
+      "catalogued_events_with_a_valid_rate": 40,
+      "covered_bins": 528256,
+      "covered_s": 158476800,
+      "event_end_status_counts": {
+        "missing_after_catalog_peak": 8,
+        "missing_after_catalog_peak; internal holes": 7,
+        "next_event_or_archive_end": 1,
+        "six_bins_below_10_pfu": 27,
+        "six_bins_below_10_pfu; internal holes": 3
+      },
+      "event_support_statistics": {
+        "calendar_span_s": {
+          "count": 40,
+          "quantiles": {
+            "0.1": 4500.0,
+            "0.25": 44700.0,
+            "0.5": 91500.0,
+            "0.75": 171900.0,
+            "0.9": 212100.0
+          },
+          "range": [
+            2700,
+            1736400
+          ]
+        },
+        "fluence30_observed_cm2": {
+          "count": 40,
+          "quantiles": {
+            "0.1": 221438.9554339196,
+            "0.25": 1207938.6534835172,
+            "0.5": 4259076.967505484,
+            "0.75": 19330254.13915717,
+            "0.9": 76022285.54327834
+          },
+          "range": [
+            27438.267680648445,
+            358855337.5831835
+          ]
+        },
+        "max_observed_upward_slope_s_inv2": {
+          "count": 40,
+          "quantiles": {
+            "0.1": 1.337457732948835e-07,
+            "0.25": 2.1307652690491203e-07,
+            "0.5": 5.050311576678901e-07,
+            "0.75": 1.7736771539334992e-06,
+            "0.9": 7.405224875055771e-06
+          },
+          "range": [
+            3.3271226860733586e-08,
+            0.0001552811859536238
+          ]
+        },
+        "peak_rate": {
+          "count": 40,
+          "quantiles": {
+            "0.1": 0.00031737267802510054,
+            "0.25": 0.0005036555744393669,
+            "0.5": 0.001225659320599998,
+            "0.75": 0.003851453299470134,
+            "0.9": 0.0087397073825968
+          },
+          "range": [
+            0.00018901667836463743,
+            0.29914292631233147
+          ]
+        }
+      },
+      "fallback_tail_bins": 21138,
+      "first_valid_utc": "2017-09-01T00:00:00Z",
+      "k_observed_exposure": 58.321198909497085,
+      "last_valid_stop_utc": "2026-11-09T00:00:00Z",
+      "max_upward_bin_slope_s_inv2": 0.0001552811859536238,
+      "missing_s": 152476800,
+      "overlap_bins": 323163,
+      "peak_rate_s_inv": 0.29914292631233147,
+      "peak_rate_utc": "2026-01-19T19:10:00Z",
+      "proton_p10_per_s": 6.439697546836414e-06,
+      "selected_bins_by_satellite": {
+        "16": 257037,
+        "17": 22,
+        "18": 270808,
+        "19": 389
+      },
+      "strict_bins_within_screened": 439,
+      "upward_from_utc": "2026-01-19T19:00:00Z",
+      "upward_to_utc": "2026-01-19T19:05:00Z"
+    }
+  },
+  "file_failures": 0,
+  "folded_files": 4761,
+  "full_decades": 0,
+  "interval": [
+    "2017-01-01T00:00:00Z",
+    "2026-11-09T00:00:00Z"
+  ],
+  "k_class": null,
+  "official_catalog_sha256": "b3022589d1e3616035d157d0d9a1d1c73bfb3a8f4183e54ccd22d21a8125f01a",
+  "official_events": 46,
+  "required_T_s": 315576000,
+  "rise_fields": [
+    "first_bin",
+    "last_bin",
+    "first_rate_s_inv",
+    "last_rate_s_inv",
+    "steepest_left_bin",
+    "steepest_slope_s_inv2"
+  ],
+  "selected_daily_files": 4760,
+  "unverified_indexes": {},
+  "window_maxima": null
+}

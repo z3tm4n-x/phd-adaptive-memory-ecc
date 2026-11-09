@@ -1,0 +1,175 @@
+{
+  "configuration": "SEPEM RDS v2.00; T141 primary CSDA, Al 3 g/cm2, full38 reference; HI proxy synchronous with solar H",
+  "covered_interval": [
+    "1974-07-01T00:00:00Z",
+    "2016-01-01T00:00:00Z"
+  ],
+  "dt_s": 300,
+  "T_s": 315576000,
+  "whole_archive": {
+    "duration_s": 1309737600,
+    "S1": 463254.99071374675,
+    "S2_s_inv": 28798.026539166993,
+    "profile_k": 175.75464411245937,
+    "peak_s_inv": 0.5444160302406303,
+    "peak_utc": "1991-03-24T03:50:00Z",
+    "max_upward_bin_slope_s_inv2": 0.000332479918021422,
+    "upward_from_utc": "2000-07-15T09:30:00Z",
+    "upward_to_utc": "2000-07-15T09:35:00Z"
+  },
+  "window_count": 3313873,
+  "window_step_s": 300,
+  "maxima": {
+    "S1": {
+      "start_bin": 2362840,
+      "start_utc": "1996-12-16T07:20:00Z",
+      "stop_utc_exclusive": "2006-12-16T19:20:00Z",
+      "exact_ties": 1,
+      "S1": 187463.23248858593,
+      "S2_s_inv": 22701.741592279177,
+      "profile_k": 203.85949316204935,
+      "R": 203.85949316204935
+    },
+    "S2": {
+      "start_bin": 2362840,
+      "start_utc": "1996-12-16T07:20:00Z",
+      "stop_utc_exclusive": "2006-12-16T19:20:00Z",
+      "exact_ties": 1,
+      "S1": 187463.23248858593,
+      "S2_s_inv": 22701.741592279177,
+      "profile_k": 203.85949316204935,
+      "R": 203.85949316204935
+    },
+    "k": {
+      "start_bin": 1790520,
+      "start_utc": "1991-07-09T02:00:00Z",
+      "stop_utc_exclusive": "2001-07-08T14:00:00Z",
+      "exact_ties": 1,
+      "S1": 121669.89230665844,
+      "S2_s_inv": 12738.826171438477,
+      "profile_k": 271.56083241574174,
+      "R": 483.94599008726834
+    }
+  },
+  "k_class": 203.85949316204935,
+  "R_quantiles": {
+    "0.1": 210.6774961043713,
+    "0.25": 302.3150107004545,
+    "0.5": 544.7126022809927,
+    "0.75": 806.8662862758001,
+    "0.9": 1506.9691400613237
+  },
+  "R_range": [
+    203.85949316204935,
+    1776.4896894840665
+  ],
+  "event_start_counts_per_window": {
+    "quantiles": {
+      "0.1": 24.0,
+      "0.25": 27.0,
+      "0.5": 30.0,
+      "0.75": 36.0,
+      "0.9": 40.0
+    },
+    "range": [
+      20,
+      46
+    ]
+  },
+  "number_of_events": 131,
+  "event_quantiles": {
+    "duration_s": {
+      "0.1": 19800.0,
+      "0.25": 33300.0,
+      "0.5": 84300.0,
+      "0.75": 204900.0,
+      "0.9": 324900.0
+    },
+    "peak_per_s": {
+      "0.1": 0.0007930812960879662,
+      "0.25": 0.0012318654039883943,
+      "0.5": 0.003270875611912094,
+      "0.75": 0.013873646457763497,
+      "0.9": 0.048856005423267714
+    },
+    "proton_fluence_above30_cm2": {
+      "0.1": 1428637.8538660668,
+      "0.25": 2979272.3943284783,
+      "0.5": 13039057.738912532,
+      "0.75": 71211214.95600753,
+      "0.9": 409585149.7470821
+    },
+    "excess_inversions": {
+      "0.1": 10.635392549350824,
+      "0.25": 24.173304961317314,
+      "0.5": 99.72405182695401,
+      "0.75": 560.6188291759792,
+      "0.9": 3300.2517780396397
+    },
+    "max_upward_bin_slope_per_s2": {
+      "0.1": 3.658773695487953e-07,
+      "0.25": 5.747066612506873e-07,
+      "0.5": 1.6274162165896068e-06,
+      "0.75": 5.747787015346928e-06,
+      "0.9": 1.8901020090851655e-05
+    }
+  },
+  "event_ranges": {
+    "duration_s": [
+      8100,
+      775800
+    ],
+    "peak_per_s": [
+      0.0006341717296529496,
+      0.5444160302406303
+    ],
+    "proton_fluence_above30_cm2": [
+      666879.8454197749,
+      2689942262.5795426
+    ],
+    "excess_inversions": [
+      4.190641434116588,
+      25696.489322565958
+    ],
+    "max_upward_bin_slope_per_s2": [
+      9.111630789228266e-08,
+      0.000332479918021422
+    ]
+  },
+  "repeat_count_range": [
+    1,
+    742
+  ],
+  "rise_fields": [
+    "first_bin",
+    "last_bin",
+    "first_rate_s_inv",
+    "last_rate_s_inv",
+    "steepest_left_bin",
+    "steepest_slope_s_inv2"
+  ],
+  "H_p10": 3.570665632337812e-05,
+  "background_per_s": 0.00015859810317245875,
+  "HI_to_H": 0.29104439620862665,
+  "checked_T141_Jan1_windows": 31,
+  "source_cache": {
+    "fingerprint": {
+      "raw_sha256": "012b8a375ded951fef9bd9268e20a97556a8a7ebc171dd8b7d0763141a41fa50",
+      "kernel_code_sha256": "d6f19199718a385149b755d62d6cac139ad1275223fdd733e2f776daae43d3bb",
+      "transport_sha256": "38337a9eeb9759e8ccc0dc1b1d025b06a3a9ec6ceb62c43f12815f2a922b6d45",
+      "sigma_sha256": "841c0b4c708816a5e75867d1c49b7734c1b596b3ff793ccd1726357104e69972",
+      "sigma_module_sha256": "a43de56e3939c868cbe4ed8ab43cbbc4e9b1262cd437e82da7ecce85e5497a12",
+      "config_sha256": "b4ad9359ba050c8215ea4f8da2906d6888b0d3258289ca4892a9524bf0caf59b",
+      "pstar_sha256": "26a4814eb37b9ed1eab74140eaa5540b6989c308338dd7beeafdde4938cca8e9"
+    },
+    "n": 4365792,
+    "dt_s": 300,
+    "arrays_sha256": {
+      "bands.npy": "8f90fa5773d75cc0aa5ce836bd3478fddb5d6fd96cd1c9e0d4752e0e65529189",
+      "flux30.npy": "7a4efdd5dc91a7b06507955af2db34ba61e296ad7f339a44dbd34280586a33f9"
+    },
+    "lookup_relative_upper": 1.811954557643872e-05,
+    "lookup_scope": "positive discrete quadrature only; not response/transport/physical uncertainty"
+  },
+  "physical_class_ceiling": null
+}
