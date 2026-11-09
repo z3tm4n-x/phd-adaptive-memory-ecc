@@ -1,0 +1,325 @@
+{
+  "strict_native": {
+    "files_1min": 548,
+    "strict_pairs": {
+      "1min": 0,
+      "5min": 787
+    },
+    "breakdown": {
+      "G16_East": {
+        "1min": 0,
+        "5min": 378
+      },
+      "G16_West": {
+        "1min": 0,
+        "5min": 409
+      },
+      "G18_East": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G18_West": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G19_East": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G19_West": {
+        "1min": 0,
+        "5min": 0
+      },
+      "G17_East": {
+        "5min": 0
+      },
+      "G17_West": {
+        "5min": 0
+      }
+    },
+    "maxima": {
+      "5min": {
+        "pairs": 409,
+        "from_utc": "2017-09-10T22:10:00Z",
+        "to_utc": "2017-09-10T22:15:00Z",
+        "from_s_inv": 0.03607986297318408,
+        "to_s_inv": 0.04148801760206986,
+        "slope": 1.802718209628594e-05,
+        "both_strict": true,
+        "instrument_direction": "G16_West"
+      }
+    }
+  },
+  "SEPEM": {
+    "nominal": {
+      "g_s_inv2": 0.004392116,
+      "adjacent_pairs_total": 4365791,
+      "adjacent_violations": 0,
+      "bad_bin_pairs_latest": 0,
+      "window_count": 3313873,
+      "windows_with_adjacent_violation": 0,
+      "windows_failing_exact": 0,
+      "windows_passing_exact": 3313873,
+      "windows_failing_only_exact": 0,
+      "ranges_valid_starts_inclusive": [
+        [
+          "1974-07-01T00:00:00Z",
+          "2005-12-31T12:00:00Z",
+          3313873
+        ]
+      ],
+      "ranges_invalid_starts_inclusive": []
+    },
+    "strict5": {
+      "g_s_inv2": 3.6055e-05,
+      "adjacent_pairs_total": 4365791,
+      "adjacent_violations": 174,
+      "bad_bin_pairs_latest": 256,
+      "window_count": 3313873,
+      "windows_with_adjacent_violation": 2656315,
+      "windows_failing_exact": 2656315,
+      "windows_passing_exact": 657558,
+      "windows_failing_only_exact": 0,
+      "ranges_valid_starts_inclusive": [
+        [
+          "1974-07-01T00:00:00Z",
+          "1979-10-21T00:30:00Z",
+          558151
+        ],
+        [
+          "2005-01-20T08:10:00Z",
+          "2005-12-31T12:00:00Z",
+          99407
+        ]
+      ],
+      "ranges_invalid_starts_inclusive": [
+        [
+          "1979-10-21T00:35:00Z",
+          "2005-01-20T08:05:00Z",
+          2656315
+        ]
+      ]
+    }
+  },
+  "GOES": {
+    "nominal": {
+      "East_screened": {
+        "covered_bins": 401446,
+        "covered_s": 120433800,
+        "unobserved_to_T_s": 195142200,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "East_strict_selected": {
+        "covered_bins": 410,
+        "covered_s": 123000,
+        "unobserved_to_T_s": 315453000,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "West_screened": {
+        "covered_bins": 528256,
+        "covered_s": 158476800,
+        "unobserved_to_T_s": 157099200,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "West_strict_selected": {
+        "covered_bins": 439,
+        "covered_s": 131700,
+        "unobserved_to_T_s": 315444300,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      }
+    },
+    "strict5": {
+      "East_screened": {
+        "covered_bins": 401446,
+        "covered_s": 120433800,
+        "unobserved_to_T_s": 195142200,
+        "adjacent_violations": 6,
+        "latest_conflict_pairs": 9,
+        "compatible_bins": false,
+        "smallest_reported_conflict_margin_s_inv": 0.0009889956038586917,
+        "first_conflict_utc": [
+          "2026-01-19T19:05:00+00:00",
+          "2026-01-19T19:10:00+00:00"
+        ]
+      },
+      "East_strict_selected": {
+        "covered_bins": 410,
+        "covered_s": 123000,
+        "unobserved_to_T_s": 315453000,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      },
+      "West_screened": {
+        "covered_bins": 528256,
+        "covered_s": 158476800,
+        "unobserved_to_T_s": 157099200,
+        "adjacent_violations": 14,
+        "latest_conflict_pairs": 20,
+        "compatible_bins": false,
+        "smallest_reported_conflict_margin_s_inv": 6.682712208078145e-05,
+        "first_conflict_utc": [
+          "2026-01-19T11:20:00+00:00",
+          "2026-01-19T11:25:00+00:00"
+        ]
+      },
+      "West_strict_selected": {
+        "covered_bins": 439,
+        "covered_s": 131700,
+        "unobserved_to_T_s": 315444300,
+        "adjacent_violations": 0,
+        "latest_conflict_pairs": 0,
+        "compatible_bins": true,
+        "smallest_reported_conflict_margin_s_inv": null,
+        "first_conflict_utc": []
+      }
+    }
+  },
+  "strict_joint_witnesses": [
+    {
+      "start": "1974-07-01T00:00:00Z",
+      "end_exclusive": "1989-10-20T12:30:00Z",
+      "windows": 558151,
+      "variation_whole_segment_s_inv": 24.024394623389977,
+      "exact": "1384912059823370891248577/57646075230342348800000"
+    },
+    {
+      "start": "2005-01-20T08:10:00Z",
+      "end_exclusive": "2016-01-01T00:00:00Z",
+      "windows": 99407,
+      "variation_whole_segment_s_inv": 16.963098861713352,
+      "exact": "312913943399060034087/18446744073709551616"
+    }
+  ],
+  "native_replay": {
+    "G16_East_1min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 1
+    },
+    "G16_West_1min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 17
+    },
+    "G18_East_1min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 111
+    },
+    "G18_West_1min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 191
+    },
+    "G19_East_1min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 140
+    },
+    "G19_West_1min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 162
+    },
+    "G16_East_5min": {
+      "strict_bins": 410,
+      "strict_adjacent_pairs": 378,
+      "maximum_s_inv2": 8.871050971495052e-06,
+      "first_strict_utc": "2017-09-06T16:25:00Z",
+      "last_strict_end_utc": "2017-09-12T14:35:00Z",
+      "strict_completion": {
+        "reconstruction_J_s_inv": 0.5363781070009723,
+        "max_slope": 1.7742101942990105e-05,
+        "peak_excess": 0.04328713931148278,
+        "leading_gap_s": 21486300,
+        "terminal_gap_s": 293577900,
+        "reconstruction_excess_integral_on_holes": 35.2171007656034,
+        "total_S1": 52776.91908614834
+      },
+      "from_utc": "2017-09-11T04:40:00Z",
+      "to_utc": "2017-09-11T04:45:00Z",
+      "screened_conflict_pairs": 0,
+      "strict_conflict_pairs": 0
+    },
+    "G16_West_5min": {
+      "strict_bins": 439,
+      "strict_adjacent_pairs": 409,
+      "maximum_s_inv2": 1.802718209628594e-05,
+      "first_strict_utc": "2017-09-06T14:15:00Z",
+      "last_strict_end_utc": "2017-09-12T22:20:00Z",
+      "strict_completion": {
+        "reconstruction_J_s_inv": 0.5051422746090993,
+        "max_slope": 3.605436419257188e-05,
+        "peak_excess": 0.050821755172186116,
+        "leading_gap_s": 21478500,
+        "terminal_gap_s": 293550000,
+        "reconstruction_excess_integral_on_holes": 53.63295573117512,
+        "total_S1": 53946.301195632645
+      },
+      "from_utc": "2017-09-10T22:10:00Z",
+      "to_utc": "2017-09-10T22:15:00Z",
+      "screened_conflict_pairs": 0,
+      "strict_conflict_pairs": 0
+    },
+    "G17_East_5min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null
+    },
+    "G17_West_5min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 0
+    },
+    "G18_East_5min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 8
+    },
+    "G18_West_5min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 20
+    },
+    "G19_East_5min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 13
+    },
+    "G19_West_5min": {
+      "strict_bins": 0,
+      "strict_adjacent_pairs": 0,
+      "maximum_s_inv2": null,
+      "screened_conflict_pairs": 15
+    }
+  }
+}

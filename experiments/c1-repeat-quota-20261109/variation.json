@@ -1,0 +1,359 @@
+{
+  "g_nominal_s_inv2": 0.004392116,
+  "winner": "left_limit_reconstruction",
+  "largest_reconstructed_J_s_inv": 28.854776284015777,
+  "quota_exact": "5771/200",
+  "quota_s_inv": 28.855,
+  "SEPEM": {
+    "bins": 4365792,
+    "windows": 3313873,
+    "maxima": {
+      "bin_lower": {
+        "value_s_inv": 14.427411655331236,
+        "exact_fraction": "532277540903899195111/36893488147419103232",
+        "index": 2362801,
+        "start_or_limit_utc": "1996-12-16T04:05:00Z",
+        "stop_or_limit_utc": "2006-12-16T16:05:00Z",
+        "ties": 1
+      },
+      "aligned_reconstruction": {
+        "value_s_inv": 28.854748504757275,
+        "exact_fraction": "1064552321957021604323/36893488147419103232",
+        "index": 2362801,
+        "start_or_limit_utc": "1996-12-16T04:05:00Z",
+        "stop_or_limit_utc": "2006-12-16T16:05:00Z",
+        "ties": 1,
+        "pieces_at_maximum": {
+          "first_rise_within_event": 1.2782826995116516,
+          "repeated_rises_within_event": 12.906824312515324,
+          "outside_catalogue": 14.648515356812933,
+          "cross_catalogue_boundary": 0.02105133001216705,
+          "left_charge": 7.480590519817697e-05,
+          "sum": 28.854748504757275
+        }
+      },
+      "left_limit_reconstruction": {
+        "value_s_inv": 28.854776284015777,
+        "exact_fraction": "1064553346830765963201/36893488147419103232",
+        "index": 2362783,
+        "start_or_limit_utc": "1996-12-16T02:35:00Z",
+        "stop_or_limit_utc": "2006-12-16T14:35:00Z",
+        "ties": 1,
+        "pieces_at_maximum": {
+          "first_rise_within_event": 1.2782826995116516,
+          "repeated_rises_within_event": 12.906824312515324,
+          "outside_catalogue": 14.648496363654655,
+          "cross_catalogue_boundary": 0.02105133001216705,
+          "left_charge": 0.00012157832198056123,
+          "sum": 28.854776284015777
+        }
+      }
+    },
+    "quantiles": {
+      "bin_lower": {
+        "0.1": 6.783892002915084,
+        "0.25": 7.101707272955143,
+        "0.5": 8.246682288734679,
+        "0.75": 12.159803448829255,
+        "0.9": 14.305730359712971
+      },
+      "aligned": {
+        "0.1": 13.567749083614082,
+        "0.25": 14.203314338844976,
+        "0.5": 16.492997361335913,
+        "0.75": 24.319591634567427,
+        "0.9": 28.6113824188264
+      },
+      "left_limit": {
+        "0.1": 13.567762071742491,
+        "0.25": 14.203328869796506,
+        "0.5": 16.493004481501618,
+        "0.75": 24.319600331066873,
+        "0.9": 28.61139833521892
+      }
+    },
+    "catalogued_starts_range": [
+      20,
+      46
+    ],
+    "catalogued_starts_median": 30.0,
+    "windows_with_active_event_at_left": 53178,
+    "windows_with_active_event_at_right": 47642,
+    "total_events": 131,
+    "events_with_repeated_rises": 131
+  },
+  "GOES": {
+    "composite_5min_East": {
+      "valid_bins": 401446,
+      "covered_s": 120433800,
+      "unobserved_s": 195142200,
+      "leading_gap_s": 20995200,
+      "terminal_gap_s": 4622400,
+      "interior_gaps": 232,
+      "interior_gap_s": 169524600,
+      "bin_lower_s_inv": 1.4381848077546466,
+      "lower_initial_mean": 8.355747767515399e-06,
+      "lower_adjacent_increments": 1.4372612214173508,
+      "lower_increments_across_holes": 0.0009152305895281989,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 0.7291933737248197,
+        "outside_catalogue": 0.7077036040433521,
+        "catalogue_boundaries": 0.0012794742387072246
+      },
+      "reconstruction_J_s_inv": 2.9005796082015385,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.026057165366836683,
+      "reconstruction_rises_in_measured_bins": 2.8745224428347016,
+      "reconstruction_excess_integral_on_holes": 0.029192510311306163,
+      "peak_excess": 0.23647555464554912,
+      "max_slope": 0.0005503741713101866,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 15,
+        "six_bins_below_10_pfu": 21,
+        "missing_after_catalog_peak": 6,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 27.416815192245355,
+      "headroom_after_reconstruction": 25.95442039179846
+    },
+    "composite_5min_West": {
+      "valid_bins": 528256,
+      "covered_s": 158476800,
+      "unobserved_s": 157099200,
+      "leading_gap_s": 20995200,
+      "terminal_gap_s": 4622400,
+      "interior_gaps": 535,
+      "interior_gap_s": 131481600,
+      "bin_lower_s_inv": 2.00486744422211,
+      "lower_initial_mean": 9.523890357934133e-06,
+      "lower_adjacent_increments": 2.003489529523636,
+      "lower_increments_across_holes": 0.0013683908081158032,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 0.998545514780006,
+        "outside_catalogue": 1.001993544048581,
+        "catalogue_boundaries": 0.004318861503165229
+      },
+      "reconstruction_J_s_inv": 4.049895523827231,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.04291646477995835,
+      "reconstruction_rises_in_measured_bins": 4.006979059047272,
+      "reconstruction_excess_integral_on_holes": 0.07228710726058832,
+      "peak_excess": 0.3298966978550788,
+      "max_slope": 0.00031056237190724736,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 7,
+        "six_bins_below_10_pfu": 27,
+        "missing_after_catalog_peak": 8,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 26.85013255577789,
+      "headroom_after_reconstruction": 24.80510447617277
+    },
+    "G16_1min_East": {
+      "valid_bins": 176829,
+      "covered_s": 10609740,
+      "unobserved_s": 304966260,
+      "leading_gap_s": 219110400,
+      "terminal_gap_s": 55080000,
+      "interior_gaps": 103,
+      "interior_gap_s": 30775860,
+      "bin_lower_s_inv": 1.7984358050794236,
+      "lower_initial_mean": 4.056651457731567e-07,
+      "lower_adjacent_increments": 1.798012300042782,
+      "lower_increments_across_holes": 0.00042309937149604196,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 1.1004828359125847,
+        "outside_catalogue": 0.6974147404291482,
+        "catalogue_boundaries": 0.0005378230725450748
+      },
+      "reconstruction_J_s_inv": 3.601304338223926,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.005279738138362325,
+      "reconstruction_rises_in_measured_bins": 3.596024600085564,
+      "reconstruction_excess_integral_on_holes": 0.00036470598562944443,
+      "peak_excess": 0.030678127104077555,
+      "max_slope": 0.00014352431908777133,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 15,
+        "six_bins_below_10_pfu": 21,
+        "missing_after_catalog_peak": 6,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 27.056564194920576,
+      "headroom_after_reconstruction": 25.253695661776074
+    },
+    "G16_1min_West": {
+      "valid_bins": 212580,
+      "covered_s": 12754800,
+      "unobserved_s": 302821200,
+      "leading_gap_s": 151891200,
+      "terminal_gap_s": 55080000,
+      "interior_gaps": 128,
+      "interior_gap_s": 95850000,
+      "bin_lower_s_inv": 2.474246793029576,
+      "lower_initial_mean": 2.3186819935338394e-05,
+      "lower_adjacent_increments": 2.4732275149183276,
+      "lower_increments_across_holes": 0.0009960912913132597,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 1.5791967005439758,
+        "outside_catalogue": 0.8942233291025077,
+        "catalogue_boundaries": 0.0008035765631576478
+      },
+      "reconstruction_J_s_inv": 4.955325704281415,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.008870674444759141,
+      "reconstruction_rises_in_measured_bins": 4.946455029836655,
+      "reconstruction_excess_integral_on_holes": 0.0011696706027390024,
+      "peak_excess": 0.0462480963623431,
+      "max_slope": 0.00012321589525703217,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 7,
+        "six_bins_below_10_pfu": 27,
+        "missing_after_catalog_peak": 8,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 26.380753206970425,
+      "headroom_after_reconstruction": 23.899674295718587
+    },
+    "G18_1min_East": {
+      "valid_bins": 271940,
+      "covered_s": 16316400,
+      "unobserved_s": 299259600,
+      "leading_gap_s": 195264000,
+      "terminal_gap_s": 13176000,
+      "interior_gaps": 94,
+      "interior_gap_s": 90819600,
+      "bin_lower_s_inv": 3.205016447099534,
+      "lower_initial_mean": 3.208758231457401e-05,
+      "lower_adjacent_increments": 3.2043340078658247,
+      "lower_increments_across_holes": 0.000650351651394424,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 2.2379146611694742,
+        "outside_catalogue": 0.9659410880891212,
+        "catalogue_boundaries": 0.0011286102586237155
+      },
+      "reconstruction_J_s_inv": 6.437155122022694,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.028487106291044527,
+      "reconstruction_rises_in_measured_bins": 6.408668015731649,
+      "reconstruction_excess_integral_on_holes": 0.033640545950938947,
+      "peak_excess": 0.2555489981481404,
+      "max_slope": 0.0023552805489959554,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 15,
+        "six_bins_below_10_pfu": 21,
+        "missing_after_catalog_peak": 6,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 25.649983552900466,
+      "headroom_after_reconstruction": 22.417844877977306
+    },
+    "G18_1min_West": {
+      "valid_bins": 296320,
+      "covered_s": 17779200,
+      "unobserved_s": 297796800,
+      "leading_gap_s": 193795200,
+      "terminal_gap_s": 13176000,
+      "interior_gaps": 115,
+      "interior_gap_s": 90825600,
+      "bin_lower_s_inv": 5.162844954485382,
+      "lower_initial_mean": 3.2051901252624785e-06,
+      "lower_adjacent_increments": 5.161881994417407,
+      "lower_increments_across_holes": 0.0009597548778498847,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 3.776724303881727,
+        "outside_catalogue": 1.3791351198806698,
+        "catalogue_boundaries": 0.006982325532860774
+      },
+      "reconstruction_J_s_inv": 10.370079784183796,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.04631579534898128,
+      "reconstruction_rises_in_measured_bins": 10.323763988834814,
+      "reconstruction_excess_integral_on_holes": 0.050137313349077936,
+      "peak_excess": 0.448113472561555,
+      "max_slope": 0.0020326658754697504,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 7,
+        "six_bins_below_10_pfu": 27,
+        "missing_after_catalog_peak": 8,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 23.692155045514617,
+      "headroom_after_reconstruction": 18.484920215816203
+    },
+    "G19_1min_East": {
+      "valid_bins": 56128,
+      "covered_s": 3367680,
+      "unobserved_s": 312208320,
+      "leading_gap_s": 260409600,
+      "terminal_gap_s": 13176000,
+      "interior_gaps": 13,
+      "interior_gap_s": 38622720,
+      "bin_lower_s_inv": 1.8726355246376114,
+      "lower_initial_mean": 9.372622928724151e-06,
+      "lower_adjacent_increments": 1.8724400782526143,
+      "lower_increments_across_holes": 0.00018607376206838133,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 1.6120910796552619,
+        "outside_catalogue": 0.260424886007916,
+        "catalogue_boundaries": 0.00011018635150485362
+      },
+      "reconstruction_J_s_inv": 3.748093518364329,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.003213361859100415,
+      "reconstruction_rises_in_measured_bins": 3.7448801565052285,
+      "reconstruction_excess_integral_on_holes": 0.0008917789107202854,
+      "peak_excess": 0.503796368860975,
+      "max_slope": 0.0043921153881044265,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 15,
+        "six_bins_below_10_pfu": 21,
+        "missing_after_catalog_peak": 6,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 26.982364475362388,
+      "headroom_after_reconstruction": 25.106906481635672
+    },
+    "G19_1min_West": {
+      "valid_bins": 56129,
+      "covered_s": 3367740,
+      "unobserved_s": 312208260,
+      "leading_gap_s": 260409600,
+      "terminal_gap_s": 13176000,
+      "interior_gaps": 13,
+      "interior_gap_s": 38622660,
+      "bin_lower_s_inv": 1.939252703886878,
+      "lower_initial_mean": 0.0,
+      "lower_adjacent_increments": 1.9391281796419273,
+      "lower_increments_across_holes": 0.00012452424495082285,
+      "lower_increment_event_parts": {
+        "within_catalogued_event": 1.5292588732942638,
+        "outside_catalogue": 0.38334959835296684,
+        "catalogue_boundaries": 0.02664423223964756
+      },
+      "reconstruction_J_s_inv": 3.884026816720901,
+      "reconstruction_initial_level": 0.0,
+      "reconstruction_rises_on_holes": 0.0057704574370466685,
+      "reconstruction_rises_in_measured_bins": 3.8782563592838546,
+      "reconstruction_excess_integral_on_holes": 0.0030674594909976417,
+      "peak_excess": 0.3607727078138921,
+      "max_slope": 0.0016210982431905496,
+      "catalogue_end_status": {
+        "missing_after_catalog_peak; internal holes": 7,
+        "six_bins_below_10_pfu": 27,
+        "missing_after_catalog_peak": 8,
+        "six_bins_below_10_pfu; internal holes": 3,
+        "next_event_or_archive_end": 1
+      },
+      "allowance_beyond_bin_lower": 26.91574729611312,
+      "headroom_after_reconstruction": 24.9709731832791
+    }
+  }
+}
