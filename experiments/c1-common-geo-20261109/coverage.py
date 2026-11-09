@@ -1,6 +1,5 @@
 """Exposure and peak tests on the common reference array; no zero filling of GOES."""
 import argparse
-import csv
 from fractions import Fraction as F
 import gzip
 import json
@@ -39,6 +38,8 @@ def sepem_check(cache,windows,previous):
     direct=300*math.fsum(nu[i:i+width])
     assert math.isclose(direct,float(s1[i]),rel_tol=2e-15)
     assert math.isclose(300*math.fsum(float(v)**2 for v in nu[i:i+width]),s2[i],rel_tol=2e-15)
+    upper2=env['b']**2*T+(env['B']+env['b'])*quota
+    common_R=float(T*upper2)/s1**2
     high=np.flatnonzero(nu[:len(s1)]>float((env['B']+env['b'])/2))
     # The reconstruction subtracts one H floor, not individual channel floors.
     # Allocate surviving H excess in proportion to the two simultaneous raw bands.
@@ -59,7 +60,9 @@ def sepem_check(cache,windows,previous):
             'max_S1_by_fsum':direct,'max_S1_start':sepem.stamp(i),'max_S2':float(np.max(s2)),
             'peak_s_inv':float(np.max(nu)),'above_B_bins':int(np.count_nonzero(nu>float(env['B']))),
             'high_starts':[sepem.stamp(j) for j in high],'max_r0_zero_g_necessary_s_inv2':2*(float(np.max(nu))-float(env['b']))/300,
-            'component_diagnostics':components,'positive_exposure_quota':str(quota)}
+            'component_diagnostics':components,'positive_exposure_quota':str(quota),
+            'class_ratio':float(T*upper2/CAP**2),'R_on_window_S1':{'range':[float(common_R.min()),float(common_R.max())],
+                'quantiles':sepem.empirical(common_R)}}
 
 
 def goes_observed(cache,previous):

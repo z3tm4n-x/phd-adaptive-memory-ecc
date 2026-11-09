@@ -14,7 +14,7 @@ def selected():
     return [f for f in data['files'] if f['cadence_s']==60]
 
 
-def execute(previous,cache,local,limit):
+def execute(previous,cache,local,limit,refold):
     activate(previous)
     import goes_profile as goes
     goes.DT=60  # fold() checks cadence and returns integer indices since 2017 on this grid.
@@ -44,7 +44,7 @@ def execute(previous,cache,local,limit):
                     result['errors'][row['name']]=error
                     continue
                 target=out/(row['name']+'.npz')
-                if not target.exists():
+                if refold or not target.exists():
                     ids,values,audit=goes.fold(path)
                     assert audit['sha256']==row['sha256'] and audit['satellite']==row['satellite']
                     tmp=target.with_suffix('.partial.npz')
@@ -60,5 +60,5 @@ def execute(previous,cache,local,limit):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--previous',type=Path,required=True);p.add_argument('--cache',type=Path,required=True)
-    p.add_argument('--local',type=Path);p.add_argument('--limit',type=int)
-    args=p.parse_args();execute(args.previous,args.cache,args.local,args.limit)
+    p.add_argument('--local',type=Path);p.add_argument('--limit',type=int);p.add_argument('--refold',action='store_true')
+    args=p.parse_args();execute(args.previous,args.cache,args.local,args.limit,args.refold)

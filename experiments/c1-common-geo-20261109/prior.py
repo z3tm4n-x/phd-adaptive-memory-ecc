@@ -9,7 +9,7 @@ EXPERIMENTS = HERE.parent
 PIN = 'c944c91a2c20a207516824333e02711aaf34898f'
 SUBDIR = 'experiments/c1-geo-fixed-20261109'
 FILES = ('fixed.py','goes_profile.py','goes_inventory.py','sepem.py',
-         'sepem.json','goes.json','goes-sources.json.gz','fixed.json')
+         'sepem.json','goes.json','goes-sources.json.gz','goes-events.json.gz','fixed.json')
 
 
 def activate(checkout):
