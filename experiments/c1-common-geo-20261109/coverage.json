@@ -1,0 +1,87 @@
+{
+  "D": 19922944,
+  "T_s": 315576000,
+  "b_s_inv": "7929905158622937241/50000000000000000000000",
+  "B_s_inv": "49065042484960786937241/50000000000000000000000",
+  "old_S1": "1022765502047095922753727/6250000000000000000",
+  "S1_cap": "187464",
+  "bT": "312810968792199005345727/6250000000000000000",
+  "F_r": "858839031207800994654273/6250000000000000000",
+  "S2_upper": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+  "SEPEM": {
+    "windows": 3313873,
+    "above_T141": 706163,
+    "above_187463": 167,
+    "above_cap": 0,
+    "max_S1_by_fsum": 187463.23248858593,
+    "max_S1_start": "1996-12-16T07:20:00Z",
+    "max_S2": 22701.741592279177,
+    "peak_s_inv": 0.5444160302406303,
+    "above_B_bins": 0,
+    "high_starts": [
+      "1989-10-20T15:25:00Z",
+      "1991-03-24T03:50:00Z",
+      "2001-11-06T02:20:00Z",
+      "2001-11-06T02:25:00Z"
+    ],
+    "max_r0_zero_g_necessary_s_inv2": 0.003628382880916386,
+    "component_diagnostics": {
+      "H_low": {
+        "old_peak": "6059709428499477/10000000000000000",
+        "old_exposure": "10962014356155553893/156250000000000",
+        "diagnostic_excess_peak": 0.4036357442956767,
+        "diagnostic_largest_window_exposure": 98116.80959534085,
+        "approximately_maximizing_start": "1996-12-16T09:25:00Z"
+      },
+      "H_high": {
+        "old_peak": "3079783501608323/20000000000000000",
+        "old_exposure": "5571328354409456307/312500000000000",
+        "diagnostic_excess_peak": 0.026980913365605617,
+        "diagnostic_largest_window_exposure": 8649.968708657112,
+        "approximately_maximizing_start": "2000-07-14T10:35:00Z"
+      },
+      "LET_exclusive": {
+        "old_peak": "22118213366567943/100000000000000000",
+        "old_exposure": "40011847980121408887/1562500000000000",
+        "diagnostic_excess_peak": 0.12269374793282233,
+        "diagnostic_largest_window_exposure": 30977.5734297563,
+        "approximately_maximizing_start": "1996-12-16T07:20:00Z"
+      }
+    },
+    "positive_exposure_quota": "858839031207800994654273/6250000000000000000"
+  },
+  "GOES": {
+    "East": {
+      "covered_bins": 401446,
+      "covered_s": 120433800,
+      "S1_obs": 28048.86882165737,
+      "S2_obs": 197.45863579296537,
+      "observed_excess": 8948.296583806106,
+      "calendar_holes_s": 190519800,
+      "unobserved_terminal_s": 4622400,
+      "unobserved_over_T_s": 195142200,
+      "allowed_unobserved_total": 159415.13117834262,
+      "allowed_unobserved_excess": 128465.94840944205,
+      "allowed_mean_excess_s_inv": 0.0006583196684747946,
+      "peak_only_excess_ceiling": 191462257.4894054,
+      "above_B_bins": 0,
+      "peak_obs": 0.18454287033707165
+    },
+    "West": {
+      "covered_bins": 528256,
+      "covered_s": 158476800,
+      "S1_obs": 39863.62261100437,
+      "S2_obs": 584.8093066784961,
+      "observed_excess": 14729.502734163261,
+      "calendar_holes_s": 152476800,
+      "unobserved_terminal_s": 4622400,
+      "unobserved_over_T_s": 157099200,
+      "allowed_unobserved_total": 147600.37738899564,
+      "allowed_unobserved_excess": 122684.7422590849,
+      "allowed_mean_excess_s_inv": 0.0007809380458912897,
+      "peak_only_excess_ceiling": 154136662.81193712,
+      "above_B_bins": 0,
+      "peak_obs": 0.29914292631233147
+    }
+  }
+}
