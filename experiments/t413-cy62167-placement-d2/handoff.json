@@ -1,0 +1,587 @@
+{
+  "task": "413 D2",
+  "base": "3a4f0e1044218d0501c17ce24e14342cfc871a3b",
+  "D1_source": "46ac00ea5d39c4ba2157f6bc9be3f9cf13c4e763",
+  "archive_DOI": "10.5281/zenodo.8314389",
+  "packing": [
+    {
+      "n": 39,
+      "check_indices": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "beats": [
+        {
+          "beat": 0,
+          "lanes": {
+            "data": [
+              3,
+              5,
+              6,
+              7,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "check": [
+              0,
+              1,
+              2,
+              4,
+              8
+            ],
+            "unused": []
+          }
+        },
+        {
+          "beat": 1,
+          "lanes": {
+            "data": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "check": [
+              0
+            ],
+            "unused": []
+          }
+        },
+        {
+          "beat": 2,
+          "lanes": {
+            "data": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "check": [
+              0
+            ],
+            "unused": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 44,
+      "check_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "beats": [
+        {
+          "beat": 0,
+          "lanes": {
+            "data": [
+              12,
+              13,
+              14,
+              15
+            ],
+            "check": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "unused": []
+          }
+        },
+        {
+          "beat": 1,
+          "lanes": {
+            "data": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "check": [],
+            "unused": []
+          }
+        },
+        {
+          "beat": 2,
+          "lanes": {
+            "data": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "check": [],
+            "unused": [
+              12,
+              13,
+              14,
+              15
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "observed_proton_records_by_file": [
+    {
+      "file": "clust_p0.9MeV.txt",
+      "sha256": "9cfed21c6bc67300df17305079ef89e82eb8a6c2fb5c9e5148d53e292ddda12f",
+      "registered_clusters": 7455,
+      "recorded_cell_rows": 7507,
+      "K2_clusters": 52,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 0,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p1MeV.txt",
+      "sha256": "5d9ab054838c49b04694bd8c24982a19c558d006d52492651ff7551ab2180a1d",
+      "registered_clusters": 4690,
+      "recorded_cell_rows": 4710,
+      "K2_clusters": 20,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 0,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p1.1MeV.txt",
+      "sha256": "e03cecb9312a0706a9a4f846a9b81b6e97132ecc554cea63f402ab5733f1422b",
+      "registered_clusters": 14012,
+      "recorded_cell_rows": 14090,
+      "K2_clusters": 78,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 0,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p1.5MeV.txt",
+      "sha256": "3a2c323e2e56dd04d28a6f4b534da7159641c174cc2a25397dc9df8fb84b9b98",
+      "registered_clusters": 3214,
+      "recorded_cell_rows": 3224,
+      "K2_clusters": 10,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 0,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p2.5MeV.txt",
+      "sha256": "fa6fcbf7a58883724261a3f377ee215257aa5ebc4c5fa442b1ee20f3b1bb2335",
+      "registered_clusters": 28782,
+      "recorded_cell_rows": 29008,
+      "K2_clusters": 212,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 6,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p3MeV.txt",
+      "sha256": "764fcf662742093daf3dcecc883716905c5f6e4cb21f45e6e133606b94e6e0bd",
+      "registered_clusters": 24703,
+      "recorded_cell_rows": 25040,
+      "K2_clusters": 309,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 11,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p4MeV.txt",
+      "sha256": "b69d9a23d8932bf443effcbd89050fc9d440ad66e941e6bbc80478fbee7584f7",
+      "registered_clusters": 4336,
+      "recorded_cell_rows": 4406,
+      "K2_clusters": 64,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 3,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p5MeV.txt",
+      "sha256": "b0edae065840e5b9c3f592ed846d15f87c1ce85eae8cdbe45044544cafd53940",
+      "registered_clusters": 1994,
+      "recorded_cell_rows": 2053,
+      "K2_clusters": 57,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 1,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p29MeV.txt",
+      "sha256": "f26f4c6936ef0f31fec0bb386985c894d0e4ab444bdb3eee15ac2b134a31c404",
+      "registered_clusters": 1165,
+      "recorded_cell_rows": 1183,
+      "K2_clusters": 18,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 0,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p40MeV.txt",
+      "sha256": "1fa3869916c436c64ae14fd827a0fa9b507355aa50f19f8e5ae5d05ead794848",
+      "registered_clusters": 12442,
+      "recorded_cell_rows": 16402,
+      "K2_clusters": 1588,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 882,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p80MeV.txt",
+      "sha256": "684ee1f5793284a723ff944848f59ae6b3796cb88940accf42f1c6e6aedbd070",
+      "registered_clusters": 10890,
+      "recorded_cell_rows": 15325,
+      "K2_clusters": 1360,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 1041,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p124MeV.txt",
+      "sha256": "346afe836a1e09cb3ea72eb7658e40f4220992257839afd4961120da7f34a9a7",
+      "registered_clusters": 9404,
+      "recorded_cell_rows": 13632,
+      "K2_clusters": 1250,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 977,
+      "w16_exact_candidate_event_count": 0
+    },
+    {
+      "file": "clust_p164MeV.txt",
+      "sha256": "6149c703532a3c6d03cfb03573a76c1a1a2311be07209a78b7073c693ceb816e",
+      "registered_clusters": 8668,
+      "recorded_cell_rows": 13358,
+      "K2_clusters": 1176,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 1046,
+      "w16_exact_candidate_event_count": 1
+    },
+    {
+      "file": "clust_p186MeV.txt",
+      "sha256": "285a4935be01761ad2158d95267cc8f621120e7ca8b07d2be71aebb71ee866b3",
+      "registered_clusters": 8356,
+      "recorded_cell_rows": 12972,
+      "K2_clusters": 1169,
+      "K2_dinf_gt3": 0,
+      "Kge3_clusters": 1037,
+      "w16_exact_candidate_event_count": 0
+    }
+  ],
+  "totals": {
+    "registered_clusters": 140111,
+    "recorded_cell_rows": 162910,
+    "K2_clusters": 7363,
+    "K2_dinf_gt3": 0,
+    "Kge3_clusters": 5004,
+    "w16_exact_candidate_event_count": 1
+  },
+  "raw_distant_records": [
+    {
+      "cluster_id": 985,
+      "segment": 1,
+      "line": 6927,
+      "clock": "21:00:01",
+      "cells_A_x_y": [
+        [
+          455004,
+          6,
+          1738
+        ],
+        [
+          455132,
+          6,
+          1739
+        ]
+      ]
+    },
+    {
+      "cluster_id": 986,
+      "segment": 1,
+      "line": 6935,
+      "clock": "21:00:01",
+      "cells_A_x_y": [
+        [
+          455005,
+          6,
+          1754
+        ]
+      ]
+    }
+  ],
+  "published_same_bin_exact16_4MeV": {
+    "observed_w16_exact_cell_pairs": "2",
+    "expected_independent_w16_exact_cell_pairs": "0.08445284832732966",
+    "exact16_obs_over_expected": "23.681853716149714"
+  },
+  "conditional_projections_of_same_records": {
+    "contiguous_die_addresses": {
+      "two_parents": [
+        {
+          "positions_w_i": [
+            [
+              151668,
+              0
+            ],
+            [
+              151710,
+              32
+            ]
+          ],
+          "m_bits": 2,
+          "K_words": 2,
+          "B1_once": 0,
+          "B2_once": 0
+        },
+        {
+          "positions_w_i": [
+            [
+              151668,
+              16
+            ]
+          ],
+          "m_bits": 1,
+          "K_words": 1,
+          "B1_once": 0,
+          "B2_once": 0
+        }
+      ],
+      "one_parent": {
+        "positions_w_i": [
+          [
+            151668,
+            0
+          ],
+          [
+            151668,
+            16
+          ],
+          [
+            151710,
+            32
+          ]
+        ],
+        "m_bits": 3,
+        "K_words": 2,
+        "B1_once": 1,
+        "B2_once": 0
+      }
+    },
+    "interleaved_dies_per_beat": {
+      "two_parents": [
+        {
+          "positions_w_i": [
+            [
+              455004,
+              0
+            ],
+            [
+              455132,
+              0
+            ]
+          ],
+          "m_bits": 2,
+          "K_words": 2,
+          "B1_once": 0,
+          "B2_once": 0
+        },
+        {
+          "positions_w_i": [
+            [
+              455005,
+              0
+            ]
+          ],
+          "m_bits": 1,
+          "K_words": 1,
+          "B1_once": 0,
+          "B2_once": 0
+        }
+      ],
+      "one_parent": {
+        "positions_w_i": [
+          [
+            455004,
+            0
+          ],
+          [
+            455005,
+            0
+          ],
+          [
+            455132,
+            0
+          ]
+        ],
+        "m_bits": 3,
+        "K_words": 3,
+        "B1_once": 0,
+        "B2_once": 0
+      }
+    }
+  },
+  "synthetic_slots_39_40_41": {
+    "n39": {
+      "positions_w_i": [],
+      "m_bits": 0,
+      "K_words": 0,
+      "B1_once": 0,
+      "B2_once": 0
+    },
+    "n44": {
+      "positions_w_i": [
+        [
+          0,
+          39
+        ],
+        [
+          0,
+          40
+        ],
+        [
+          0,
+          41
+        ]
+      ],
+      "m_bits": 3,
+      "K_words": 1,
+      "B1_once": 1,
+      "B2_once": 1
+    }
+  },
+  "D3_input": {
+    "W": 1048576,
+    "T_s": 315576000,
+    "epsilon": "1/1000",
+    "S1_reference": "1205177238/15625",
+    "anchor_semantics": "upper limits on E[N_B1(T)] over the admitted class, not exact measured intensities",
+    "normalization": "per active position per second: (p+r)/(38*524288) for both code projections",
+    "to_determine_for_t2": [
+      "bank-level D2 for n=44",
+      "residual size-1 and size-2 group rates and position unions"
+    ],
+    "reference_bit_count": 19922944,
+    "F_b39_inversions": "47001912282/296875",
+    "trivial_upper_E_N_B1_from_F_b_only": "23500956141/296875",
+    "particle_fraction_denominator": "expected nonempty parents in bank over T",
+    "anchors": [
+      {
+        "D1_upper_parents_per_bank_T": "0",
+        "share_of_epsilon_first_moment": "0",
+        "sufficient_f1_at_unknown_mbar_exact": "0",
+        "origin": "singleton embedding or structural exclusion of same-word pairs",
+        "status": "CONDITIONAL",
+        "is_test_derived": false
+      },
+      {
+        "D1_upper_parents_per_bank_T": "1/100000",
+        "share_of_epsilon_first_moment": "1/100",
+        "sufficient_f1_at_unknown_mbar_exact": "95/1504061193024",
+        "origin": "issue 413 sensitivity near the existing c01 M and L_cut margins",
+        "status": "CONDITIONAL",
+        "is_test_derived": false
+      },
+      {
+        "D1_upper_parents_per_bank_T": "1/10000",
+        "share_of_epsilon_first_moment": "1/10",
+        "sufficient_f1_at_unknown_mbar_exact": "475/752030596512",
+        "origin": "issue 413 sensitivity at ten percent of epsilon",
+        "status": "CONDITIONAL",
+        "is_test_derived": false
+      }
+    ],
+    "old_headroom_for_scale_only": {
+      "c01_M": "1418552989939135891658470683813/118438400000000000000000000000000000",
+      "c01_L_cut": "277088901420955629358522413306238555695650537101909284005457019233/27576088905334472656250000000000000000000000000000000000000000000000000",
+      "separate_PR388_17_2s": "709753085113848106837/671088640000000000000000000"
+    }
+  },
+  "test_derived_lifetime_upper": null,
+  "physical_parent_K_distribution": null,
+  "identified_K_given_m": "ceil(m/n)..min(m,W) including empty at m=0",
+  "source_sha256_LF": {
+    "experiments/t186-method-comparison/code-strength/codec.py": "d258c3f1a6bdcbc779415151c089e45e6839e01b683ad388c682db778b9cd698",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "experiments/t187-code-strength/model.py": "72c503a3cde45a60b16ab715a367cc2000cc87ca09170b4b0407599460a70667",
+    "experiments/regime-map-methodology-20261019/predictability-volume-20261028/inputs.json": "5f62171e4706854f6419345d7eaed1f2103c06bc4989976fde03942db091c6cd",
+    "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/input_manifest.json": "39689c433b2ae41dcab8c811883d5e8fe3a83ae4e58b30cab8d1ae743178b63e",
+    "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/cluster_span_by_energy.csv": "03034b3b0972ffb6904b97eeb52b74a6aafebd4e38b54d961b3ec2ba0f3fbeae",
+    "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/cross_cluster_diagnostics.csv": "2155f95d34406a553365979747951203eac57222e318667d4aaff55db977c715",
+    "experiments/RE-CY62167-DISTANT-MCU-OBSERVABILITY-01/observation_contract.json": "7d3762eb84f651209da9fd27828fce46d620dea91997d48100e429fb2ebfe839",
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/address_mapping_coefficients.json": "0b52ee0648f23a5cd8fa1f431e6e38e20f21cd271cf0662bf03f602b0fbd5918",
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/address_mapping_gf2.py": "323ecbf25846105693a532374ff702c4927c3113e9819d490038addaa0bbedc3",
+    "experiments/RE-CY62167-ADDRESS-MAPPING-01/address_mapping_data.py": "f9a3a5b2ae2339865287d08bed805eecb3715ebb17521e9c466dcdb2509c77fc",
+    "experiments/RE-CY62167-PROTON-01/parse_zenodo_protons.py": "bcd6111d40fe635e1cfc2d50d9cc78ebc5db36492981785996ba3f1d14cb6c77",
+    "theory/t196-c01-direct-certificate-20261029/result.json": "0435fbc83eeb7dae954c93cfb272360e6963d98a288941f68ba5a26b3b842a80",
+    "experiments/t331-window-reset-20261030/result.json": "8fb151d318249e817418471a5f003c76c7d4909818f1afde68a19f24b08f2b1e",
+    "experiments/article-v-mcu-budget-20261105/results.json": "b3f859b0081805212aad8bd2e807e9080a8b58a21026d330dd8c2ef8f6ee9e0d"
+  }
+}
