@@ -111,22 +111,22 @@ def price(w,k,env,q,res):
     return result
 
 
-def class_floor(w,eps,env,res):
+def class_floor(w,eps,env,res,lower_bound=tail_lower):
     lo,hi = F(0),F(1)
-    while tail_lower(w,hi,env)<=eps:
+    while lower_bound(w,hi,env)<=eps:
         hi *= 2
         if hi>T: raise ValueError('No tail witness at the mission horizon')
     while hi-lo > F(1,10**11):
         mid = (lo+hi)/2
-        if tail_lower(w,mid,env)>eps: hi=mid
+        if lower_bound(w,mid,env)>eps: hi=mid
         else: lo=mid
-    assert tail_lower(w,hi,env)>eps
+    assert lower_bound(w,hi,env)>eps
     need=(1-DELTA)*w*max(F(0),T/(hi+J)-2)
     nmax=F(res['calendar']['necessary_class_maximum_reads_upper'])
     available=F(res['resource']['available_serial_upper_for_necessary_exclusion'])*T
     bus,serial=(need*(ticks*XM/NS-J) for ticks in (48,68))
     return {'witness_threshold_bracket_s':[lo,hi], 'all_P_ge_excluded_s':hi,
-            'Q_lower_on_tail':tail_lower(w,hi,env),'required_reads_lower':need,'maximum_reads_upper':nmax,
+            'Q_lower_on_tail':lower_bound(w,hi,env),'required_reads_lower':need,'maximum_reads_upper':nmax,
             'bus_lower_s':bus,'bus_lower_percent':100*bus/T,'serial_lower_s':serial,
             'serial_lower_percent':100*serial/T,'available_serial_upper_s':available,
             'excluded_by_count':need>nmax,'excluded_by_serial':serial>available}
@@ -148,10 +148,10 @@ def peak(res):
             'deadline_ns':res['application']['response_deadline_ns']}
 
 
-def row(res,eps,env):
+def row(res,eps,env,lower_bound=tail_lower):
     w=res['words']; nominal,pm,pp=period(w,1)
     assert pm*NS==F(res['calendar']['cycle_lower_ns']) and pp*NS==F(res['calendar']['cycle_upper_ns'])
-    u=risk_upper(w,1,env,F(0)); lower=tail_lower(w,nominal*XP,env)
+    u=risk_upper(w,1,env,F(0)); lower=lower_bound(w,nominal*XP,env)
     cap=INPUT['comparison']['period_menu']['max_kL']
     scale=F(w*N*(N-1),2*DREF**2)
     maximum_k=(eps-u['execution']-u['aperture']-scale*(J+DE)*env['S2'])/(scale*nominal*XP*env['S2'])
@@ -162,7 +162,7 @@ def row(res,eps,env):
         assert k==cap or risk_upper(w,k+1,env,F(0))['total']>eps
         candidate={'k':k,'period_s':period(w,k),'risk':risk,'direct_plus_other_headroom':eps-risk['total'],
                    'price':price(w,k,env,risk['total'],res)}
-    required=class_floor(w,eps,env,res)
+    required=class_floor(w,eps,env,res,lower_bound)
     excluded=required['excluded_by_count'] or required['excluded_by_serial']
     assert not (candidate and excluded) and lower<=u['total']
     return {'W':w,'MiB':F(w,262144),'epsilon':eps,'continuous':{'k':1,'period_s':[nominal,pm,pp],
