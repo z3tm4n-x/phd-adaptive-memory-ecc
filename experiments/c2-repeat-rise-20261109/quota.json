@@ -1,0 +1,137 @@
+{
+  "PR423": "c0176b4837b5310378fb4218f2d549aeb4c991e9",
+  "sepem_windows": 3313873,
+  "SEPEM": {
+    "registered_lower": {
+      "J_per_s": 14.427411655331236,
+      "units": "532277540903899195111",
+      "scale_bits": 65,
+      "start_bin": 2362801,
+      "start_or_left_limit_utc": "1996-12-16T04:05:00+00:00"
+    },
+    "registered_fit": {
+      "J_per_s": 28.854748504757275,
+      "units": "1064552321957021604323",
+      "scale_bits": 65,
+      "start_bin": 2362801,
+      "start_or_left_limit_utc": "1996-12-16T04:05:00+00:00"
+    },
+    "all_phases_fit": {
+      "J_per_s": 28.854776284015777,
+      "units": "1064553346830765963201",
+      "scale_bits": 65,
+      "start_bin": 2362783,
+      "start_or_left_limit_utc": "1996-12-16T02:35:00+00:00"
+    },
+    "max_excess_all_phases": 137413.47826222447
+  },
+  "event_example": {
+    "id": "E0056",
+    "start": "1991-03-23T09:20:00+00:00",
+    "end_exclusive": "1991-03-27T23:10:00+00:00",
+    "runs": 324,
+    "sum_positive_per_s": 0.7315104275495813,
+    "first_run_per_s": 0.0013879529379735344,
+    "repeat_runs_per_s": 0.7301224746116077
+  },
+  "GOES": {
+    "GOES5_East": {
+      "bins": 401446,
+      "covered_s": 120433800,
+      "gaps_including_tail_s": 195142200,
+      "terminal_gap_s": 4622400,
+      "bin_lower_per_s": 1.4381848077546466,
+      "positive_adjacent_per_s": 1.4372612214173508,
+      "positive_across_gaps_per_s": 0.0009152305895281989,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.026057165366836683,
+      "fit_per_s": 2.9005796082015385
+    },
+    "GOES5_West": {
+      "bins": 528256,
+      "covered_s": 158476800,
+      "gaps_including_tail_s": 157099200,
+      "terminal_gap_s": 4622400,
+      "bin_lower_per_s": 2.00486744422211,
+      "positive_adjacent_per_s": 2.003489529523636,
+      "positive_across_gaps_per_s": 0.0013683908081158032,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.04291646477995835,
+      "fit_per_s": 4.049895523827231
+    },
+    "G16_1_East": {
+      "bins": 176829,
+      "covered_s": 10609740,
+      "gaps_including_tail_s": 304966260,
+      "terminal_gap_s": 55080000,
+      "bin_lower_per_s": 1.7984358050794236,
+      "positive_adjacent_per_s": 1.798012300042782,
+      "positive_across_gaps_per_s": 0.00042309937149604196,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.005279738138362325,
+      "fit_per_s": 3.601304338223926
+    },
+    "G16_1_West": {
+      "bins": 212580,
+      "covered_s": 12754800,
+      "gaps_including_tail_s": 302821200,
+      "terminal_gap_s": 55080000,
+      "bin_lower_per_s": 2.474246793029576,
+      "positive_adjacent_per_s": 2.4732275149183276,
+      "positive_across_gaps_per_s": 0.0009960912913132597,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.008870674444759141,
+      "fit_per_s": 4.955325704281415
+    },
+    "G18_1_East": {
+      "bins": 271940,
+      "covered_s": 16316400,
+      "gaps_including_tail_s": 299259600,
+      "terminal_gap_s": 13176000,
+      "bin_lower_per_s": 3.205016447099534,
+      "positive_adjacent_per_s": 3.2043340078658247,
+      "positive_across_gaps_per_s": 0.000650351651394424,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.028487106291044527,
+      "fit_per_s": 6.437155122022694
+    },
+    "G18_1_West": {
+      "bins": 296320,
+      "covered_s": 17779200,
+      "gaps_including_tail_s": 297796800,
+      "terminal_gap_s": 13176000,
+      "bin_lower_per_s": 5.162844954485382,
+      "positive_adjacent_per_s": 5.161881994417407,
+      "positive_across_gaps_per_s": 0.0009597548778498847,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.04631579534898128,
+      "fit_per_s": 10.370079784183796
+    },
+    "G19_1_East": {
+      "bins": 56128,
+      "covered_s": 3367680,
+      "gaps_including_tail_s": 312208320,
+      "terminal_gap_s": 13176000,
+      "bin_lower_per_s": 1.8726355246376114,
+      "positive_adjacent_per_s": 1.8724400782526143,
+      "positive_across_gaps_per_s": 0.00018607376206838133,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.003213361859100415,
+      "fit_per_s": 3.748093518364329
+    },
+    "G19_1_West": {
+      "bins": 56129,
+      "covered_s": 3367740,
+      "gaps_including_tail_s": 312208260,
+      "terminal_gap_s": 13176000,
+      "bin_lower_per_s": 1.939252703886878,
+      "positive_adjacent_per_s": 1.9391281796419273,
+      "positive_across_gaps_per_s": 0.00012452424495082285,
+      "start_per_s": 0,
+      "rise_on_gaps_per_s": 0.0057704574370466685,
+      "fit_per_s": 3.884026816720901
+    }
+  },
+  "quota_per_s": "5771/200",
+  "quota_decimal": "28.855"
+}
