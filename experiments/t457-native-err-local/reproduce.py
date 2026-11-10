@@ -9,6 +9,7 @@ from cases import CASES, capture
 from oracle import audit
 from gates import verify, sentinels
 from bounds import calculate
+from window_audit import check as window_check
 
 def extract(work):
     chunks=[]
@@ -44,10 +45,11 @@ def evaluate(work):
                 input_hash_convention="LF canonical for upstream text=auto replay.c; bytes for other inputs",
                 execution_sources=json.loads((work/"source.json").read_text()),
                 checker_sources={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest()
-                                 for n in ("oracle.py","gates.py","bounds.py","reproduce.py")},
+                                 for n in ("oracle.py","gates.py","bounds.py","reproduce.py","window_audit.py")},
                 scenarios=rows,price=calculate(rows),detected_actual_DUT_mutations=rejected)
     return {"results.json":json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False)+"\n",
-            "witnesses.txt":extract(work)}
+            "witnesses.txt":extract(work),
+            "port-windows.json":json.dumps(window_check(work,rows,result["price"]),indent=2)+"\n"}
 
 def main():
     if not __debug__: raise SystemExit("verification requires enabled assertions")
