@@ -1,0 +1,65 @@
+{
+  "base": "124401794f5e2d27e134870c35f779281a09d523",
+  "part": "CY62167GE30-45ZXI, TSOP I, dual CE, BYTE=VCC",
+  "interface": "x16",
+  "inner_data_bits": 32,
+  "inner_check_bits": 6,
+  "die_x16_addresses": 1048576,
+  "sources": {
+    "datasheet": {
+      "id": "002-20054 Rev. *F, 2020-03-18, pp. 1, 6, 8, 10-16",
+      "url": "https://www.infineon.com/assets/row/public/documents/10/49/infineon-cy62167g30-cy62167ge30-16-mbit-1m-words-x-16-bit-2m-words-x-8-bit-static-ram-with-error-correcting-code-ecc-datasheet-en.pdf",
+      "sha256": "a7d9faf23208b6c0f3b2be402feb8653ff0c6f649306fc246605189018a9ed1f"
+    },
+    "application_note": {
+      "id": "001-88889 Rev. *C, sections 4.1-4.4, pp. 5-8, Figure 5",
+      "url": "https://community.infineon.com/gfawx74859/attachments/gfawx74859/NonVolatileRAM/1914/1/Infineon-AN88889_Mitigating_Single-Event_Upsets_Using_Infineon_65-nm_Asynchronous_SRAM-ApplicationNotes-v04_00-EN%201.pdf",
+      "sha256": "4fd1504873cd89fe73a2a68646cc159ff3b7804a1ee129261252d31eb60f17bc"
+    },
+    "previous_port": "../t186-advisor-ge30-20261110/calendar.json"
+  },
+  "protected_payload_bytes": [
+    131072,
+    262144
+  ],
+  "first_x16_address": 0,
+  "coverage": {
+    "base_scan": "each x16 address of the payload exactly once in ascending order",
+    "representative_scan": "one member of every target pair, conditional on a verified transversal and a pair-closed payload for the quoted word counts",
+    "partner_function": null
+  },
+  "tick_ns": 10,
+  "xi_min": "0.99999",
+  "xi_max": "1.00001",
+  "edge_jitter_ns": "0.5",
+  "operation_ns": {
+    "address_select_oe_low": 0,
+    "sample_dq_and_err": 60,
+    "oe_high": 70,
+    "read_release_or_drive_write": 100,
+    "we_low": 110,
+    "we_high": 160,
+    "fpga_dq_off": 180,
+    "write_release": 200
+  },
+  "frame_ns": 1400,
+  "visit_offsets_ns": [
+    0,
+    240,
+    520,
+    760
+  ],
+  "application_ns": [
+    1020,
+    1260
+  ],
+  "management_ns": [
+    1260,
+    1300
+  ],
+  "report_cut_ns_before_next_pass": 300,
+  "command_install_ns": 200,
+  "publication": "one qualified sample per scheduled address, published once at release after an indicated write",
+  "lock": "entire single port from visit start through release, including all other masters and unknown aliases",
+  "inflight_model": "conditional weak service, incoming hits in the whole aperture may survive; internal commit time unknown"
+}
