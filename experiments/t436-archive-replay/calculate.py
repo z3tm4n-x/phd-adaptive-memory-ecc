@@ -8,7 +8,7 @@ from statistics import mean, stdev
 
 import numpy as np
 
-from histories import HERE, NAMES, T, load_profiles
+from histories import GROUPS, HERE, NAMES, T, load_profiles
 from replay import Calendar, NS, simulate
 from risk import pair_upper
 
@@ -41,6 +41,48 @@ def spread(values):
     return dict(n=len(values),mean=mean(values),sd=stdev(values),minimum=min(values),maximum=max(values))
 
 
+def calendar_parts(profile, marks, cal, switches, repair_starts, adaptive, row):
+    """Evaluator only. Count exact word-start prefixes at each change of support."""
+    changes = np.r_[0,np.flatnonzero(np.diff(profile.group) != 0)+1]
+    labels = profile.group[changes]
+    cuts = np.r_[profile.edges[changes],T]
+    assert (cuts == np.floor(cuts)).all()
+    cuts = cuts.astype(np.int64)*NS
+    starts = np.array([0]+[j*cal.P for j,_,_ in switches],dtype=np.int64)
+    step = np.array([1 if adaptive else 4]+[1 if fast else 32 for _,fast,_ in switches])
+    period = step*cal.L
+    length = np.diff(starts)
+    assert np.all(length % period[:-1] == 0)
+    prior_reads = np.r_[0,np.cumsum(length//period[:-1]*cal.words)]
+    prior_fast = np.r_[0,np.cumsum(length*(step[:-1] == 1))]
+    run = np.searchsorted(starts,cuts,side="right")-1
+    elapsed = cuts-starts[run]
+    whole,rest = np.divmod(elapsed,period[run])
+    frames,offset = np.divmod(rest,1568)
+    last_reads = np.minimum(cal.words,8*frames+np.minimum(8,(offset+163)//164))
+    nreads = np.diff(prior_reads[run]+whole*cal.words+last_reads)
+    nfast = np.diff(prior_fast[run]+elapsed*(step[run] == 1))
+    def histogram(times):
+        indices = np.searchsorted(cuts,np.array(times,dtype=np.int64),side="right")-1
+        return np.bincount(labels[indices],minlength=len(GROUPS))
+    repairs = histogram(repair_starts)
+    parents = histogram(marks[:,0])
+    resets = histogram([j*cal.P+cal.drain for j,f,_ in switches if f])
+    result = {}
+    for i,name in enumerate(GROUPS):
+        reads = int(np.sum(nreads[labels == i]))
+        writes = int(repairs[i])
+        result[name] = dict(parents=int(parents[i]),word_reads=reads,repair_writes=writes,
+            fast_ns=int(np.sum(nfast[labels == i])) if adaptive else None,
+            to_fast=int(resets[i]),bus_ns=48*reads+56*writes)
+    assert sum(q["bus_ns"] for q in result.values()) == row["protection_bus_ns"]
+    assert sum(q["parents"] for q in result.values()) == len(marks)
+    assert sum(q["to_fast"] for q in result.values()) == row["to_fast"]
+    if adaptive:
+        assert sum(q["fast_ns"] for q in result.values()) == row["fast_ns"]
+    return result
+
+
 def calculate(profile):
     cal = Calendar()
     rows = []
@@ -48,8 +90,11 @@ def calculate(profile):
         marks,digest = profile.draw(r)
         row = dict(rep=r,seed=[436,20261110,NAMES.index(profile.name),r],parents=len(marks),marks_sha256=digest)
         for adaptive,name in ((True,"L/32L"),(False,"4L")):
-            result, switches, returns, masks = simulate(marks,adaptive,T*NS,cal)
+            repair_log = [] if r == 0 else None
+            result, switches, returns, _ = simulate(marks,adaptive,T*NS,cal,repair_log)
             row[name] = result
+            if r == 0:
+                result["by_calendar"] = calendar_parts(profile,marks,cal,switches,repair_log,adaptive,result)
             if r == 0 and adaptive:
                 row["first_rare_decision_ns"] = next((j*cal.P+cal.drain for j,fast,_ in switches if not fast),None)
                 row["example"] = illustrative_return(profile,marks,returns,cal)

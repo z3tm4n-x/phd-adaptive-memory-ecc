@@ -16,6 +16,7 @@ def stepped(marks, adaptive, end, cal):
     started = full = issued = reads = writes = partial = fast_time = 0
     sticky = invalid = invalid_cells = zeros = 0
     fast = True
+    command_start = command_fast = 0
     switches, returns, records = [], [], []
     def births_before(limit):
         nonlocal i,failure
@@ -70,6 +71,9 @@ def stepped(marks, adaptive, end, cal):
                 zeros = 0 if invalid or sticky else min(zeros+1,cal.quiet)
                 new_fast = zeros < cal.quiet
                 if adaptive and new_fast != fast:
+                    if fast:
+                        command_fast += decision-command_start
+                    command_start = decision
                     fast = new_fast
                     switches.append((m//32,fast,"invalid" if invalid else "correction" if sticky else "quiet"))
                     if fast:
@@ -80,9 +84,12 @@ def stepped(marks, adaptive, end, cal):
             fast_time += min(cal.L,end-m*cal.L)
     births_before(end)
     assert i == len(marks)
+    if adaptive and fast:
+        command_fast += end-command_start
     return (dict(started_passes=started,complete_passes=full,public_passes=issued,
                  word_reads=reads,repair_writes=writes,protection_bus_ns=48*reads+56*writes,
-                 fast_ns=fast_time if adaptive else None,terminal_pending=pending,
+                 fast_ns=fast_time if adaptive else None,fast_command_ns=command_fast if adaptive else None,
+                 terminal_pending=pending,
                  terminal_partial_reads=partial,first_weight_above_one_ns=failure,
                  invalid_cells=invalid_cells),
             switches,returns,{w:mask for w,mask in enumerate(memory) if mask})
@@ -156,6 +163,14 @@ class ReplayChecks(unittest.TestCase):
         self.assertAlmostEqual(q["4L"]["different_groups"]/(factor*h*h/2),1,places=7)
         self.assertEqual(q["4L"]["earlier_by_later"][1][0],0)
         self.assertLess(q["L/32L"]["total"],factor*(32*c.L+124)/1e9*T)
+        # One missing piece shorter than h. Pairs can cross both boundaries.
+        mid = WIDTH//2
+        ends = np.insert(edges,mid+1,edges[mid]+h/3)
+        groups = np.insert(group,mid,2)
+        rates = np.full(len(groups),rate[0])
+        pieces = pair_upper(Profile("test","",ends,rates,rates,groups,{}))["4L"]
+        width = ends[mid+1]-ends[mid]
+        self.assertAlmostEqual(pieces["earlier_by_later"][0][1]/(factor*(h-width)**2/2),1,places=7)
 
 
 if __name__ == "__main__":

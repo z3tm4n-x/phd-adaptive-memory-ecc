@@ -85,7 +85,7 @@ class Controller:
 
 
 class Memory:
-    def __init__(self, calendar, end):
+    def __init__(self, calendar, end, repair_log):
         self.cal = calendar
         self.end = end
         self.masks = {}
@@ -93,6 +93,7 @@ class Memory:
         self.first_failure = None
         self.terminal_pending_dirty = {}
         self.repaired_last = None
+        self.repair_log = repair_log
 
     def inspect(self, mask, t):
         if mask.bit_count() > 1 and (self.first_failure is None or t < self.first_failure):
@@ -129,6 +130,8 @@ class Memory:
             release = start + (124 if repair else 68)
             if repair:
                 self.repairs += 1
+                if self.repair_log is not None:
+                    self.repair_log.append(start)
                 if word == last_word and (self.repaired_last is None or r > self.repaired_last):
                     self.repaired_last = r
             arrivals_until(min(self.end,release))
@@ -181,10 +184,14 @@ def counts(cal, end, controller, mem):
                     pending = [last_word,t,until]
         if step == 1:
             fast_ns += length
+    # Cell commands change after the common scan. Shifting every transition
+    # by the same drain time cancels in pairs; only the terminal state matters.
+    command_fast = fast_ns + (cal.drain if switches and not switches[-1][1] else 0)
     return dict(started_passes=starts,complete_passes=full,public_passes=issued,
                 terminal_partial_reads=partial,terminal_pending=pending,word_reads=reads,
                 repair_writes=mem.repairs,read_bus_ns=48*reads,write_bus_ns=56*mem.repairs,
                 protection_bus_ns=48*reads+56*mem.repairs,fast_ns=fast_ns if controller.adaptive else None,
+                fast_command_ns=command_fast if controller.adaptive else None,
                 switches=len(switches),to_fast=sum(fast for _,fast,_ in switches),
                 to_rare=sum(not fast for _,fast,_ in switches),
                 closed_common_cells=max(0,(end-cal.drain)//cal.P),
@@ -192,9 +199,9 @@ def counts(cal, end, controller, mem):
                 terminal_words_with_residual=len(mem.masks))
 
 
-def simulate(marks, adaptive, end, cal=Calendar()):
+def simulate(marks, adaptive, end, cal=Calendar(), repair_log=None):
     ctrl = Controller(cal,adaptive)
-    mem = Memory(cal,end)
+    mem = Memory(cal,end,repair_log)
     groups = defaultdict(lambda: defaultdict(list))
     last = max(0,(end-1-cal.drain)//cal.P+1)
     for t,w1,b1,w2,b2 in marks:

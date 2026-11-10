@@ -77,6 +77,7 @@ class Profile:
         bits = rng.integers(0, 39, size=(size, 2))
         marks = np.column_stack((ns, u, bits[:,0], v, bits[:,1])).astype("<i8")
         assert np.all(u != v) and np.all(np.diff(ns) >= 0) and np.all(ns < T*10**9)
+        marks.setflags(write=False)
         return marks, sha256(marks.tobytes()).hexdigest()
 
 
@@ -156,12 +157,14 @@ def load_profiles(cache, names):
         gc = cache/"c1-goes"
         manifest = catalogue_file(old/"goes-sources.json.gz")["receipt"]["folded"]
         receipt = json.loads((gc/"receipt.json").read_text(encoding="utf-8"))["folded"]
-        by_name = lambda rows: {row["name"]:row for row in rows}
-        assert len(receipt) == len(manifest) == 4761 and by_name(receipt) == by_name(manifest)
+        expected = {row["name"]:row for row in manifest}
+        assert len(receipt) == len(manifest) == len(expected) == 4761
+        assert {row["name"]:row for row in receipt} == expected
         rates, _, _, info = goes_observed(gc,old)
         events = catalogue_file(old/"goes-events.json.gz")
         origin = "2017-01-01T00:00:00Z"
         epoch = timestamp(origin)
+        published = json.loads((common/"growth.json").read_text(encoding="utf-8"))["profiles"]
         for k,name in enumerate(("East","West")):
             if name not in names:
                 continue
@@ -172,4 +175,7 @@ def load_profiles(cache, names):
                             dict(folded_files=len(manifest), cutoff_utc="2026-11-09T00:00:00Z",
                                  stop_utc=datetime.fromtimestamp(epoch+T, timezone.utc).isoformat()))
             assert np.isclose(profile.summary["S1_measured"], info["directions"][name]["S1_observed"],rtol=3e-15)
+            ref = published["GOES_composite_5min_"+name]
+            assert np.isclose(profile.mass,ref["constructed_full_S1"],rtol=3e-15)
+            assert np.isclose(profile.summary["gap_excess"],ref["witness_excess_on_gaps"],rtol=3e-15)
             yield profile
