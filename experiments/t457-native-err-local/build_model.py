@@ -13,7 +13,7 @@ CAL = EXP / "t186-native-ge30-x16/calendar.json"
 CERT = EXP / "t196-native-err-20261110/result.json"
 BANK = EXP / "t104-rtl-resume/memory_oracle.py"
 PINS = {
-    RULE: "86c954381d84d7f19afc18ee9b4c502c91486344b2942b974876c5cb358ff6db",
+    RULE: "db2f7e053593bec0908459ce0142ed3871a81f5752798ba75ba03eb3a50ea146",
     BANK: "9465ea3bcc57e2856b29edefd64ce470d54fef9223718258547a0efd7d75ad8f",
     CAL: "315fc36b793b232576f0075272cd6eda755700519c0dea04d7d2a9a5ab671849",
     CERT: "4c494cfbd0602a9e4256c46b0481fb0975466a322ee3cad5d5c9eed3f5438276",
@@ -21,7 +21,11 @@ PINS = {
 
 def verify_inputs():
     for path, pin in PINS.items():
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == pin, path
+        # C is text=auto upstream (CRLF on some Windows checkouts).
+        # Hash the canonical LF source used by the compiler; no other rewriting.
+        data=path.read_bytes()
+        if path==RULE: data=data.replace(b"\r\n",b"\n")
+        assert hashlib.sha256(data).hexdigest() == pin, path
     cal = json.loads(CAL.read_text())
     assert cal["tick_ns"] == 10 and cal["frame_ns"] == 1400
     assert cal["visit_offsets_ns"] == [0,240,520,760]

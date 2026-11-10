@@ -20,6 +20,7 @@ CASES={
  "lost_report_after_write":(18,2*L,0,1), "before_cut":(19,1283*L,0,0),
  "conflicting_report":(20,1282*L,0,0), "outside_partner":(1,L,1,1),
  "duplicate_at_threshold":(21,1281*L,0,0), "late_at_threshold":(22,1282*L,0,0),
+ "post_stop_accounting":(23,3*L,0,1),
 }
 def capture(work):
     work.mkdir(parents=True,exist_ok=False)

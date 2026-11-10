@@ -75,6 +75,8 @@ module tb;
                 if(scenario==2 && r==0 && rt==185) begin inject(2,2,21);inject(2,3,37);end
                 if(scenario==3 && r==0 && rt==2) inject(1,0,35);
                 if(scenario==4 && r==0 && rt==L-57) inject(1,word_of(7),32);
+                if(scenario==23 && r==0 && rt==2) inject(1,0,12);
+                if(scenario==23 && r==0 && rt==12) inject(2,0,12);
                 #1;
                 rx_valid=0;rx_complete=d.sealed;rx_epoch=d.active_round;rx_count=d.count;
                 if(d.active && d.sealed) begin
@@ -90,6 +92,7 @@ module tb;
                     if(scenario==20 && r==1280 && rt==CUT) begin rx_valid=1;rx_count=1;end
                     if(scenario==21 && (r==1024 || r==1280)) rx_valid=(rt==CUT-10 || rt==CUT);
                     if(scenario==22 && r==1280) rx_valid=(rt==CUT+1);
+                    if(scenario==23 && r>=1) rx_valid=0;
                 end
                 #1;
                 was_launch=d.launch;was_release=d.release_event;was_cut=d.cutting;

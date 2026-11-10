@@ -33,6 +33,7 @@ def prescribed(case,mixed):
     if case==2: return [(22,1,1,0),(22,1,2,33),(185,2,2,21),(185,2,3,37)]
     if case==3: return [(2,1,0,35)]
     if case==4: return [(223,1,last,32)]
+    if case==23: return [(2,1,0,12),(12,2,0,12)]
     return []
 
 def audit(lines,case,end,mixed=0):
@@ -42,12 +43,12 @@ def audit(lines,case,end,mixed=0):
     def dq(a): return (mem.words[word(a)].data >> (16*(a>=4 and not(mixed and a==7)))) & 65535
     r=-1; next_start=0; step=1; z=0; cell_dirty=False; last_bad=0
     op=None; inj=[]; starts=reads=writes=repairs=passes=active_ticks=0
-    useful_ticks=app_start=None
     useful_ticks=0; switches=[]; changes=0; late=stale=dupes=0
     counts=Counter(); digest=hashlib.sha256(); last_t=-1; end_row=None
-    invalid_cells=set(); true_cells=set(); exception_kinds=set(); highlights=[]
-    episodes=[]; prefix_ok=True; cut=None; install_count=0; skipped=0; max_pause=0
-    last_pass_start=None; first_end=None; terminal_locked=False
+    invalid_cells=set(); true_cells=set(); pre_invalid=set(); pre_true=set()
+    exception_kinds=set(); highlights=[]; tau=None
+    cut=None; install_count=0; skipped=0; max_pause=0; install_work=0
+    last_pass_start=None; last_release=None; release_gap=0; terminal_locked=False
     # Each tuple describes the actually observed wire interval; at T clip instead
     # of draining or charging a nonexistent release.
     needed_read=needed_write=0; physical_writes=0; seals=0
@@ -66,17 +67,24 @@ def audit(lines,case,end,mixed=0):
                 assert t==nr*L and nr==next_start and op is None, ("actual grant epoch",nr,next_start)
                 if r>=0: assert cut is not None and installed
                 if last_pass_start is not None: max_pause=max(max_pause,t-last_pass_start-L)
+                if last_release is not None: release_gap=max(release_gap,t-last_release)
                 last_pass_start=t;passes+=1;active_ticks+=min(L,end-t)
                 r=nr; started=[]; completions=[]; coverage=[]; deliveries=[]; poisoned=False
                 seal=None;cut=None;installed=False;this_app=[];pass_repairs=0
             elif k=="J":
-                _,parent,w,b=v;inj.append(tuple(v));mem.words[w].toggle(b,t*10)
+                _,parent,w,b=v;inj.append(tuple(v))
+                # Test-only auxiliary stop, NEVER fed to the decision or port.
+                pending=(op and word(op["a"])==w and op["sample"] and op["sample"][0])
+                if tau is None and (mem.words[w].errors or pending): tau=t
+                mem.words[w].toggle(b,t*10)
             elif k=="G":
                 _,rr,req,a=v
                 idx=len(started)
                 assert rr==r and t==r*L+140*(idx//4)+(0,24,52,76)[idx%4] and req==idx
                 assert a==(6 if case==6 and r==0 and idx==7 else idx)
-                if a!=req: exception_kinds.add("substituted_mandatory_address")
+                if a!=req:
+                    exception_kinds.add("substituted_mandatory_address")
+                    if tau is None: tau=t
                 assert op is None and 0<=idx<A
                 mem.begin(starts,word(a),10*t,"control");starts+=1;started.append(a)
                 op=dict(start=t,a=a,sample=None,wrote=False)
@@ -98,7 +106,9 @@ def audit(lines,case,end,mixed=0):
                     w=mem.words[word(a)]
                     w.errors={b:birth for b,birth in w.errors.items() if birth>=10*op["start"]}
                     op["wrote"]=True;physical_writes+=1
-                else: exception_kinds.add("missing_mandatory_write")
+                else:
+                    exception_kinds.add("missing_mandatory_write")
+                    if tau is None: tau=t
             elif k=="R":
                 _,a,hit,we,drop=v
                 assert op and op["a"]==a and op["sample"] is not None
@@ -106,7 +116,10 @@ def audit(lines,case,end,mixed=0):
                 assert bool(we)==op["wrote"] and (not hit or we or case==8)
                 assert drop==int(case==5 and r==0 and a==7)
                 completions.append((a,hit,we,t))
-                if we: repairs+=1;pass_repairs+=1
+                last_release=t
+                if we:
+                    repairs+=1;pass_repairs+=1
+                    if tau is None: pre_true.add((r+255)//256)
                 if not drop: coverage.append((a,hit,we))
                 mem.lock=None;mem.trace.clear();mem.flags.clear();op=None
             elif k=="D":
@@ -128,7 +141,7 @@ def audit(lines,case,end,mixed=0):
                     deliveries.append(cnt)
             elif k=="A":
                 assert op is None and t%140==102
-                this_app.append(t);app_start=t; useful_ticks+=min(10,end-t)
+                this_app.append(t); useful_ticks+=min(10,end-t)
             elif k=="C":
                 _,rr,seen,local_count,sealed,bad,observed,choice=v
                 assert rr==r and t==r*L+CUT and cut is None and op is None
@@ -146,6 +159,7 @@ def audit(lines,case,end,mixed=0):
                          local_count=seal[1] if sealed else None,valid=bool(valid),
                          last_release_ns=10*completions[-1][3],proposed=choice)
                 if valid: counts[str(observed)]+=1
+                if not valid and tau is None: pre_invalid.add((r+255)//256)
             elif k=="K":
                 _,rr,actual,anchor,nxt,lost,cost,appcost=v
                 assert rr==r and t==r*L+INSTALL and cut and not installed
@@ -157,8 +171,10 @@ def audit(lines,case,end,mixed=0):
                 if bad and r: last_bad=common
                 assert (actual,anchor,nxt)==(step,last_bad,r+step), ("installation",v,step,last_bad)
                 assert cost==0 and appcost==sum(max(0,min(t,a+10)-max(r*L+CUT,a)) for a in this_app)
+                install_work+=cost
                 if pass_repairs: true_cells.add(common)
                 if not cut["valid"] or lost: invalid_cells.add(common)
+                if lost and tau is None: pre_invalid.add(common)
                 next_start=nxt;installed=True;install_count+=1
                 if step!=old: changes+=1;switches.append([r,old,step,10*t,cost*10])
                 if r in (0,1,1280,1282,1283,1284,1536,2560,2816,152576,152832,152833) or (case==17 and r==37):
@@ -188,13 +204,15 @@ def audit(lines,case,end,mixed=0):
                 starts=starts,completed_samples=reads,write_edges=writes,committed_writes=physical_writes,
                 corrections_released=repairs,injections=len(inj),counts_at_valid_cuts=dict(sorted(counts.items())),
                 invalid_common_cells=sorted(invalid_cells),true_repair_cells=sorted(true_cells),
-                extra_invalid_cells_not_already_true=len(invalid_cells-true_cells),
+                additional_cells_before_stop_not_already_true=sorted(pre_invalid-pre_true),
+                diagnostic_first_proof_stop_ns=None if tau is None else 10*tau,
                 exceptions=sorted(exception_kinds),late=late,stale=stale,identical_packet_duplicates=dupes,
                 terminal_locked=terminal_locked,terminal_remaining_positions=sum(len(w.errors) for w in mem.words),
                 first_physical_exceedance_ns=min((w.first_exceedance for w in mem.words if w.first_exceedance is not None),default=None),
                 read_ns=10*rd,repair_add_ns=10*wr,protected_port_ns=10*held,extra_port_ns=10*(held-rd-wr),
                 application_ns=10*ap,between_scans_ns=10*iticks,between_scans_protected_ns=10*iheld,
                 management_strip_protected_ns=10*mheld,cut_install_windows=install_count,
-                cut_install_protected_ns=0,maximum_completed_between_scan_pause_ns=10*max_pause,
+                cut_install_protected_ns=10*install_work,maximum_completed_between_scan_pause_ns=10*max_pause,
+                max_last_release_to_next_start_ns=10*release_gap,
                 folded_idle_ns=10*jump,transitions=switches,witness=highlights,
                 event_sha256=digest.hexdigest())
