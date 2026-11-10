@@ -1,0 +1,33 @@
+{
+  "scope": "fresh execution, not scientific acceptance or hardware qualification",
+  "source_commit": "2e8a1c0b395e341f21d819548ed779458f3070b4",
+  "command": "python3 experiments/t457-native-err-local/reproduce.py --check",
+  "modes": 26,
+  "actual_DUT_mutations_rejected": 4,
+  "legacy_104_tests_passed": 44,
+  "legacy_104_tests_skipped": 0,
+  "legacy_456_and_457_checks_passed": true,
+  "compileall_exit": 0,
+  "standard_checkout": {
+    "source_archive_sha256": "d32bede8ca07560816c1d6cc2d1c2703484565a94fc01f99b57c50a6933c9b0c",
+    "exit": 0,
+    "host_wall_seconds": 40.36,
+    "gnu_time_max_rss_kbytes": 36048,
+    "archived_files_verified_unchanged": 21
+  },
+  "canonical_lf_checkout": {
+    "source_archive_sha256": "a126f7a749ad522a8c28d56ae99c1df58f22416a788cea960eeea0bf2bf2c88f",
+    "exit": 0,
+    "host_wall_seconds": 40.38,
+    "gnu_time_max_rss_kbytes": 35700,
+    "git_blobs_verified_unchanged": 21
+  },
+  "sha256": {
+    "results.json": "4bc020e03f38109ede7b4bfeb77aa3dfa130cf9d2a901aeb8be4e88447974b48",
+    "port-windows.json": "b0d8bf872b8becac7a8c7c5f9e1d822177dc266c5c77a55afa6559557db649fb",
+    "witnesses.txt": "a6b41fb2fd773c93c81f5030914047f5aaea508179279af14113d28c50daef98"
+  },
+  "field_loss_rate": null,
+  "physical_X_upper_s": null,
+  "mission_Q_estimated_by_injections": false
+}

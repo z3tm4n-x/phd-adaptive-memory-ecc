@@ -1,0 +1,66 @@
+{
+  "last_ERR_cut_to_install": {
+    "start_ns": 2500,
+    "end_ns": 2700,
+    "wall_ns": 200,
+    "scheduled_native_port_ns": 0,
+    "application_port_ns": 20,
+    "occupied_visits": 0
+  },
+  "enter_rare": {
+    "start_ns": 3586500,
+    "end_ns": 3586700,
+    "wall_ns": 200,
+    "scheduled_native_port_ns": 0,
+    "application_port_ns": 0,
+    "occupied_visits": 0
+  },
+  "fall_back_to_fast": {
+    "start_ns": 3592100,
+    "end_ns": 3592300,
+    "wall_ns": 200,
+    "scheduled_native_port_ns": 0,
+    "application_port_ns": 0,
+    "occupied_visits": 0
+  },
+  "first_fast_base_interval_after_fallback": {
+    "start_ns": 3592400,
+    "end_ns": 3595200,
+    "wall_ns": 2800,
+    "scheduled_native_port_ns": 800,
+    "application_port_ns": 0,
+    "occupied_visits": 8
+  },
+  "last_invalid_install_through_fresh_promotion": {
+    "start_ns": 3595100,
+    "end_ns": 7887500,
+    "wall_ns": 4292400,
+    "scheduled_native_port_ns": 1226400,
+    "application_port_ns": 0,
+    "occupied_visits": 12264
+  },
+  "rare_256L_slots_outside_active_base_interval": {
+    "start_ns": 427215600,
+    "end_ns": 427929600,
+    "wall_ns": 714000,
+    "scheduled_native_port_ns": 0,
+    "application_port_ns": 100,
+    "occupied_visits": 0
+  },
+  "rare_256L_last_release_to_next_grant": {
+    "start_ns": 427215060,
+    "end_ns": 427929600,
+    "wall_ns": 714540,
+    "scheduled_native_port_ns": 0,
+    "application_port_ns": 100,
+    "occupied_visits": 0
+  },
+  "maximum_step_fallback": {
+    "start_ns": 427932100,
+    "end_ns": 427932300,
+    "wall_ns": 200,
+    "scheduled_native_port_ns": 0,
+    "application_port_ns": 0,
+    "occupied_visits": 0
+  }
+}
