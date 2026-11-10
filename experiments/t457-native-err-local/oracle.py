@@ -66,6 +66,8 @@ def audit(lines,case,end,mixed=0):
                 _,nr=v
                 assert t==nr*L and nr==next_start and op is None, ("actual grant epoch",nr,next_start)
                 if r>=0: assert cut is not None and installed
+                if highlights and highlights[-1]["round"]==r:
+                    highlights[-1]["next_actual_start_ns"]=10*t
                 if last_pass_start is not None: max_pause=max(max_pause,t-last_pass_start-L)
                 if last_release is not None: release_gap=max(release_gap,t-last_release)
                 last_pass_start=t;passes+=1;active_ticks+=min(L,end-t)
@@ -177,7 +179,7 @@ def audit(lines,case,end,mixed=0):
                 if lost and tau is None: pre_invalid.add(common)
                 next_start=nxt;installed=True;install_count+=1
                 if step!=old: changes+=1;switches.append([r,old,step,10*t,cost*10])
-                if r in (0,1,1280,1282,1283,1284,1536,2560,2816,152576,152832,152833) or (case==17 and r==37):
+                if r in (0,1,1024,1280,1282,1283,1284,1536,2560,2816,152576,152832,152833) or (case==17 and r==37):
                     highlights.append(dict(**cut,pass_port_ns=100*len(started)+100*sum(h for _,h,_,_ in completions),
                        installed_ns=10*t,step=step,next_round=nxt,cut_install_port_ns=cost*10,
                        cut_install_application_ns=appcost*10,closed_clean_cells=z))
