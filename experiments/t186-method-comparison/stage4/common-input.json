@@ -1,0 +1,179 @@
+{
+  "stage": 4,
+  "base": "1509c77ccb676811585f704c7b911a5caba360fd",
+  "accepted_stage2": "d7369a2ab307b063a11c36f258d09b31bad06aad",
+  "memory": {
+    "words": 524288,
+    "bits": 38
+  },
+  "environment": {
+    "background_per_s": "0.000154704",
+    "peak_per_s": "0.244682704",
+    "solar_fluence_budget": "28310.473728",
+    "rho_per_s": "0.048",
+    "mission_s": 315576000,
+    "epsilon": "0.001"
+  },
+  "delivery": {
+    "cut_ns": 4000,
+    "ingress_ns": 1000,
+    "batch_ready_ns": 3900,
+    "bank_records": 2048,
+    "banks": 2,
+    "record_bytes": 32,
+    "counter_bits": 64,
+    "expiry": "precomputed strict future freeze, no additional cut",
+    "hardware_WCET_ns": null
+  },
+  "application": {
+    "first_ns": 100000,
+    "address_multiplier": 5,
+    "inbound_ns": 320,
+    "outbound_ns": 320,
+    "ready_ns": 80,
+    "profiles": [
+      {
+        "id": "uniform",
+        "pairs_per_epoch": 1,
+        "epoch_ns": 1000020,
+        "read_offsets_ns": [
+          0
+        ],
+        "write_offset_ns": 500000
+      },
+      {
+        "id": "bursty",
+        "pairs_per_epoch": 5,
+        "epoch_ns": 5000020,
+        "read_offsets_ns": [
+          0,
+          200000,
+          400000,
+          600000,
+          800000
+        ],
+        "write_offset_ns": 100000
+      }
+    ]
+  },
+  "episodes": [
+    {
+      "id": "s4_quiet",
+      "shape": "quiet",
+      "seed": 2026102400,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s4_initial_peak",
+      "shape": "initial_peak",
+      "seed": 2026102401,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s4_rise_fall",
+      "shape": "rise_fall",
+      "seed": 2026102402,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s4_repeat_rise",
+      "shape": "repeat_rise",
+      "seed": 2026102403,
+      "horizon_s": 86400,
+      "peak_start_s": 34200,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800,
+      "repeat_start_s": 61200,
+      "initial_hold_s": 2400
+    },
+    {
+      "id": "s4_mission",
+      "shape": "mission",
+      "seed": 2026102404,
+      "horizon_s": 315576000,
+      "first_peak_s": 86400,
+      "peak_interval_s": 15778800,
+      "peaks": 20,
+      "rise_s": 1800,
+      "hold_s": 3600,
+      "fall_s": 1800
+    }
+  ],
+  "method_ids": [
+    "constant_1",
+    "constant_sufficient",
+    "our_r4",
+    "krasnikov_0.001_longest",
+    "patent_60",
+    "chen_0.1"
+  ],
+  "training": {
+    "additional_tuning_budget": 0,
+    "weights_source": "../stage2/training.json",
+    "use_test_for_fit": false
+  },
+  "generator": {
+    "algorithm": "inverse integrated intensity, piecewise constant/exponential",
+    "rng": "random.Random 53-bit open uniforms",
+    "time_rounding": "ceil ns",
+    "counter_check_runs": 512,
+    "counter_check_seed": 2026102399
+  },
+  "budgets": {
+    "default_invocation_s": 180,
+    "resume_preserves_science_inputs": true,
+    "pilot": "registered rise_fall, uniform, constant_sufficient and our_r4"
+  },
+  "benchmark": {
+    "repeats": 3,
+    "generator_day": 86400,
+    "generator_mission": 315576000
+  },
+  "theory_sha": "e49314a9a0fbf97699f9c8b0c62d25bae5e3097d",
+  "accepted_stage3": "e5348ba07db1b6b3cfe81de2f6e3fe8521756620",
+  "fixed": {
+    "period_ns": 111229536,
+    "group_size": 8,
+    "phase_rule": "startup W*196; then 4*floor(r*M/(4*(W/8))) +164*l",
+    "maximum_frame_ns": 1700,
+    "minimum_frame_ns": 1696,
+    "maximum_gap_ns": 552
+  },
+  "faults": {
+    "matrix": "no injected faults; full-contract terms retained separately",
+    "directed": [
+      "false",
+      "gap",
+      "restore",
+      "dropped_then_gap",
+      "source_boundary",
+      "expiry_boundary",
+      "frozen_skip",
+      "pending_write",
+      "generation_high_bits"
+    ],
+    "krasnikov_gap": "hold mode and suspend invalid cycle; restart known cycle at processed restore, retain target",
+    "patent_gap": "hold mode until a complete known window after processed restore",
+    "chen_gap": "mark affected hourly bins UNKNOWN; hold until six complete known bins; still count hourly attempts",
+    "our_gap": "same-edge FAST, explicit UNKNOWN, preserve holds; restore loads NR, no budget or generation reset"
+  }
+}

@@ -1,0 +1,1560 @@
+{
+  "task": 196,
+  "scope": "conditional full R0-A/r4 mathematical comparison; not physical qualification, hardware WCET or final method ranking",
+  "sources": {
+    "experiments/t135-demo-operating-point/report-r4.json": "70eacaf0e9778a6773a181e7f154d137a0970c65",
+    "experiments/t135-demo-operating-point/common-contract.json": "8516fec2ba82bab6ee31bcac95cb7440ba5778f6",
+    "experiments/t126-regime-map/bounds.py": "5a71c8b0674c0b5c6a9e0446bae2e3a63440395f"
+  },
+  "addressed_tests": {
+    "passed": 806,
+    "names": [
+      "same full R0-A exposure",
+      "initial plateau allowed and exposure exact",
+      "positive nonzero timing budgets",
+      "legacy cut violates literal10us",
+      "extra expiry cut rejected",
+      "pending corrections need crossing cost",
+      "support3 general upper not proof of failure",
+      "full fixed k1 sufficient",
+      "cut equality belongs to next packet",
+      "record just before cut included",
+      "deadline equality is FAST",
+      "mature precomputed permission accepted",
+      "unprocessed generation cannot permit",
+      "pending history veto",
+      "loss veto",
+      "PAIR uses source, not delivery gap",
+      "last-only packet loses long HOLD",
+      "cell lower any correctable state/n3/initial0",
+      "cell lower any correctable state/n3/initial1",
+      "cell lower any correctable state/n4/initial0",
+      "cell lower any correctable state/n4/initial1",
+      "cell lower any correctable state/n5/initial0",
+      "cell lower any correctable state/n5/initial1",
+      "none lower all-period coverage",
+      "uniform lower all-period coverage",
+      "uniform useful writes weaken lower",
+      "uniform finite quiet-edge price positive",
+      "uniform strict cap on proposed20ns profile",
+      "uniform aggregate count slack positive",
+      "uniform quiet edge separates expansion",
+      "bursty lower all-period coverage",
+      "bursty useful writes weaken lower",
+      "bursty finite quiet-edge price positive",
+      "bursty strict cap on proposed20ns profile",
+      "bursty aggregate count slack positive",
+      "bursty quiet edge separates expansion",
+      "individual quiet component cap not implied",
+      "no-app reduction equals accepted T126 lower",
+      "erased-cell-count/P10/a0",
+      "erased-cell-count/P10/a1",
+      "erased-cell-count/P10/a2",
+      "erased-cell-count/P10/a3",
+      "erased-cell-count/P10/a4",
+      "erased-cell-count/P10/a5",
+      "erased-cell-count/P10/a6",
+      "erased-cell-count/P10/a7",
+      "erased-cell-count/P10/a8",
+      "erased-cell-count/P10/a9",
+      "erased-cell-count/P10/a10",
+      "erased-cell-count/P10/a11",
+      "erased-cell-count/P10/a12",
+      "erased-cell-count/P10/a13",
+      "erased-cell-count/P10/a14",
+      "erased-cell-count/P10/a15",
+      "erased-cell-count/P10/a16",
+      "erased-cell-count/P10/a17",
+      "erased-cell-count/P10/a18",
+      "erased-cell-count/P10/a19",
+      "erased-cell-count/P10/a20",
+      "erased-cell-count/P10/a21",
+      "erased-cell-count/P10/a22",
+      "erased-cell-count/P10/a23",
+      "erased-cell-count/P10/a24",
+      "erased-cell-count/P10/a25",
+      "erased-cell-count/P10/a26",
+      "erased-cell-count/P10/a27",
+      "erased-cell-count/P10/a28",
+      "erased-cell-count/P10/a29",
+      "erased-cell-count/P10/a30",
+      "erased-cell-count/P10/a31",
+      "erased-cell-count/P10/a32",
+      "erased-cell-count/P10/a33",
+      "erased-cell-count/P10/a34",
+      "erased-cell-count/P10/a35",
+      "erased-cell-count/P10/a36",
+      "erased-cell-count/P10/a37",
+      "erased-cell-count/P10/a38",
+      "erased-cell-count/P10/a39",
+      "erased-cell-count/P10/a40",
+      "erased-cell-count/P10/a41",
+      "erased-cell-count/P10/a42",
+      "erased-cell-count/P10/a43",
+      "erased-cell-count/P10/a44",
+      "erased-cell-count/P10/a45",
+      "erased-cell-count/P10/a46",
+      "erased-cell-count/P10/a47",
+      "erased-cell-count/P10/a48",
+      "erased-cell-count/P10/a49",
+      "erased-cell-count/P10/a50",
+      "erased-cell-count/P10/a51",
+      "erased-cell-count/P10/a52",
+      "erased-cell-count/P10/a53",
+      "erased-cell-count/P10/a54",
+      "erased-cell-count/P10/a55",
+      "erased-cell-count/P10/a56",
+      "erased-cell-count/P10/a57",
+      "erased-cell-count/P10/a58",
+      "erased-cell-count/P10/a59",
+      "erased-cell-count/P10/a60",
+      "erased-cell-count/P10/a61",
+      "erased-cell-count/P10/a62",
+      "erased-cell-count/P10/a63",
+      "erased-cell-count/P10/a64",
+      "erased-cell-count/P10/a65",
+      "erased-cell-count/P10/a66",
+      "erased-cell-count/P10/a67",
+      "erased-cell-count/P10/a68",
+      "erased-cell-count/P10/a69",
+      "erased-cell-count/P10/a70",
+      "erased-cell-count/P10/a71",
+      "erased-cell-count/P10/a72",
+      "erased-cell-count/P10/a73",
+      "erased-cell-count/P10/a74",
+      "erased-cell-count/P10/a75",
+      "erased-cell-count/P10/a76",
+      "erased-cell-count/P10/a77",
+      "erased-cell-count/P10/a78",
+      "erased-cell-count/P10/a79",
+      "erased-cell-count/P10/a80",
+      "erased-cell-count/P10/a81",
+      "erased-cell-count/P10/a82",
+      "erased-cell-count/P10/a83",
+      "erased-cell-count/P10/a84",
+      "erased-cell-count/P10/a85",
+      "erased-cell-count/P10/a86",
+      "erased-cell-count/P10/a87",
+      "erased-cell-count/P10/a88",
+      "erased-cell-count/P10/a89",
+      "erased-cell-count/P10/a90",
+      "erased-cell-count/P10/a91",
+      "erased-cell-count/P10/a92",
+      "erased-cell-count/P10/a93",
+      "erased-cell-count/P10/a94",
+      "erased-cell-count/P10/a95",
+      "erased-cell-count/P10/a96",
+      "erased-cell-count/P10/a97",
+      "erased-cell-count/P10/a98",
+      "erased-cell-count/P10/a99",
+      "erased-cell-count/P10/a100",
+      "erased-cell-count/P10/a101",
+      "erased-cell-count/P10/a102",
+      "erased-cell-count/P10/a103",
+      "erased-cell-count/P10/a104",
+      "erased-cell-count/P10/a105",
+      "erased-cell-count/P10/a106",
+      "erased-cell-count/P10/a107",
+      "erased-cell-count/P10/a108",
+      "erased-cell-count/P10/a109",
+      "erased-cell-count/P10/a110",
+      "erased-cell-count/P10/a111",
+      "erased-cell-count/P10/a112",
+      "erased-cell-count/P10/a113",
+      "erased-cell-count/P10/a114",
+      "erased-cell-count/P10/a115",
+      "erased-cell-count/P10/a116",
+      "erased-cell-count/P10/a117",
+      "erased-cell-count/P10/a118",
+      "erased-cell-count/P10/a119",
+      "erased-cell-count/P10/a120",
+      "erased-cell-count/P10/a121",
+      "erased-cell-count/P10/a122",
+      "erased-cell-count/P10/a123",
+      "erased-cell-count/P10/a124",
+      "erased-cell-count/P10/a125",
+      "erased-cell-count/P10/a126",
+      "erased-cell-count/P10/a127",
+      "erased-cell-count/P10/a128",
+      "erased-cell-count/P10/a129",
+      "erased-cell-count/P10/a130",
+      "erased-cell-count/P10/a131",
+      "erased-cell-count/P10/a132",
+      "erased-cell-count/P10/a133",
+      "erased-cell-count/P10/a134",
+      "erased-cell-count/P10/a135",
+      "erased-cell-count/P10/a136",
+      "erased-cell-count/P10/a137",
+      "erased-cell-count/P10/a138",
+      "erased-cell-count/P10/a139",
+      "erased-cell-count/P10/a140",
+      "erased-cell-count/P10/a141",
+      "erased-cell-count/P10/a142",
+      "erased-cell-count/P10/a143",
+      "erased-cell-count/P10/a144",
+      "erased-cell-count/P10/a145",
+      "erased-cell-count/P10/a146",
+      "erased-cell-count/P10/a147",
+      "erased-cell-count/P10/a148",
+      "erased-cell-count/P10/a149",
+      "erased-cell-count/P10/a150",
+      "erased-cell-count/P10/a151",
+      "erased-cell-count/P10/a152",
+      "erased-cell-count/P10/a153",
+      "erased-cell-count/P10/a154",
+      "erased-cell-count/P10/a155",
+      "erased-cell-count/P10/a156",
+      "erased-cell-count/P10/a157",
+      "erased-cell-count/P10/a158",
+      "erased-cell-count/P10/a159",
+      "erased-cell-count/P10/a160",
+      "erased-cell-count/P10/a161",
+      "erased-cell-count/P10/a162",
+      "erased-cell-count/P10/a163",
+      "erased-cell-count/P10/a164",
+      "erased-cell-count/P10/a165",
+      "erased-cell-count/P10/a166",
+      "erased-cell-count/P10/a167",
+      "erased-cell-count/P10/a168",
+      "erased-cell-count/P10/a169",
+      "erased-cell-count/P10/a170",
+      "erased-cell-count/P10/a171",
+      "erased-cell-count/P10/a172",
+      "erased-cell-count/P10/a173",
+      "erased-cell-count/P10/a174",
+      "erased-cell-count/P10/a175",
+      "erased-cell-count/P10/a176",
+      "erased-cell-count/P10/a177",
+      "erased-cell-count/P10/a178",
+      "erased-cell-count/P10/a179",
+      "erased-cell-count/P10/a180",
+      "erased-cell-count/P10/a181",
+      "erased-cell-count/P10/a182",
+      "erased-cell-count/P10/a183",
+      "erased-cell-count/P10/a184",
+      "erased-cell-count/P10/a185",
+      "erased-cell-count/P10/a186",
+      "erased-cell-count/P10/a187",
+      "erased-cell-count/P10/a188",
+      "erased-cell-count/P10/a189",
+      "erased-cell-count/P10/a190",
+      "erased-cell-count/P10/a191",
+      "erased-cell-count/P10/a192",
+      "erased-cell-count/P10/a193",
+      "erased-cell-count/P10/a194",
+      "erased-cell-count/P10/a195",
+      "erased-cell-count/P10/a196",
+      "erased-cell-count/P10/a197",
+      "erased-cell-count/P10/a198",
+      "erased-cell-count/P10/a199",
+      "erased-cell-count/P11/a0",
+      "erased-cell-count/P11/a1",
+      "erased-cell-count/P11/a2",
+      "erased-cell-count/P11/a3",
+      "erased-cell-count/P11/a4",
+      "erased-cell-count/P11/a5",
+      "erased-cell-count/P11/a6",
+      "erased-cell-count/P11/a7",
+      "erased-cell-count/P11/a8",
+      "erased-cell-count/P11/a9",
+      "erased-cell-count/P11/a10",
+      "erased-cell-count/P11/a11",
+      "erased-cell-count/P11/a12",
+      "erased-cell-count/P11/a13",
+      "erased-cell-count/P11/a14",
+      "erased-cell-count/P11/a15",
+      "erased-cell-count/P11/a16",
+      "erased-cell-count/P11/a17",
+      "erased-cell-count/P11/a18",
+      "erased-cell-count/P11/a19",
+      "erased-cell-count/P11/a20",
+      "erased-cell-count/P11/a21",
+      "erased-cell-count/P11/a22",
+      "erased-cell-count/P11/a23",
+      "erased-cell-count/P11/a24",
+      "erased-cell-count/P11/a25",
+      "erased-cell-count/P11/a26",
+      "erased-cell-count/P11/a27",
+      "erased-cell-count/P11/a28",
+      "erased-cell-count/P11/a29",
+      "erased-cell-count/P11/a30",
+      "erased-cell-count/P11/a31",
+      "erased-cell-count/P11/a32",
+      "erased-cell-count/P11/a33",
+      "erased-cell-count/P11/a34",
+      "erased-cell-count/P11/a35",
+      "erased-cell-count/P11/a36",
+      "erased-cell-count/P11/a37",
+      "erased-cell-count/P11/a38",
+      "erased-cell-count/P11/a39",
+      "erased-cell-count/P11/a40",
+      "erased-cell-count/P11/a41",
+      "erased-cell-count/P11/a42",
+      "erased-cell-count/P11/a43",
+      "erased-cell-count/P11/a44",
+      "erased-cell-count/P11/a45",
+      "erased-cell-count/P11/a46",
+      "erased-cell-count/P11/a47",
+      "erased-cell-count/P11/a48",
+      "erased-cell-count/P11/a49",
+      "erased-cell-count/P11/a50",
+      "erased-cell-count/P11/a51",
+      "erased-cell-count/P11/a52",
+      "erased-cell-count/P11/a53",
+      "erased-cell-count/P11/a54",
+      "erased-cell-count/P11/a55",
+      "erased-cell-count/P11/a56",
+      "erased-cell-count/P11/a57",
+      "erased-cell-count/P11/a58",
+      "erased-cell-count/P11/a59",
+      "erased-cell-count/P11/a60",
+      "erased-cell-count/P11/a61",
+      "erased-cell-count/P11/a62",
+      "erased-cell-count/P11/a63",
+      "erased-cell-count/P11/a64",
+      "erased-cell-count/P11/a65",
+      "erased-cell-count/P11/a66",
+      "erased-cell-count/P11/a67",
+      "erased-cell-count/P11/a68",
+      "erased-cell-count/P11/a69",
+      "erased-cell-count/P11/a70",
+      "erased-cell-count/P11/a71",
+      "erased-cell-count/P11/a72",
+      "erased-cell-count/P11/a73",
+      "erased-cell-count/P11/a74",
+      "erased-cell-count/P11/a75",
+      "erased-cell-count/P11/a76",
+      "erased-cell-count/P11/a77",
+      "erased-cell-count/P11/a78",
+      "erased-cell-count/P11/a79",
+      "erased-cell-count/P11/a80",
+      "erased-cell-count/P11/a81",
+      "erased-cell-count/P11/a82",
+      "erased-cell-count/P11/a83",
+      "erased-cell-count/P11/a84",
+      "erased-cell-count/P11/a85",
+      "erased-cell-count/P11/a86",
+      "erased-cell-count/P11/a87",
+      "erased-cell-count/P11/a88",
+      "erased-cell-count/P11/a89",
+      "erased-cell-count/P11/a90",
+      "erased-cell-count/P11/a91",
+      "erased-cell-count/P11/a92",
+      "erased-cell-count/P11/a93",
+      "erased-cell-count/P11/a94",
+      "erased-cell-count/P11/a95",
+      "erased-cell-count/P11/a96",
+      "erased-cell-count/P11/a97",
+      "erased-cell-count/P11/a98",
+      "erased-cell-count/P11/a99",
+      "erased-cell-count/P11/a100",
+      "erased-cell-count/P11/a101",
+      "erased-cell-count/P11/a102",
+      "erased-cell-count/P11/a103",
+      "erased-cell-count/P11/a104",
+      "erased-cell-count/P11/a105",
+      "erased-cell-count/P11/a106",
+      "erased-cell-count/P11/a107",
+      "erased-cell-count/P11/a108",
+      "erased-cell-count/P11/a109",
+      "erased-cell-count/P11/a110",
+      "erased-cell-count/P11/a111",
+      "erased-cell-count/P11/a112",
+      "erased-cell-count/P11/a113",
+      "erased-cell-count/P11/a114",
+      "erased-cell-count/P11/a115",
+      "erased-cell-count/P11/a116",
+      "erased-cell-count/P11/a117",
+      "erased-cell-count/P11/a118",
+      "erased-cell-count/P11/a119",
+      "erased-cell-count/P11/a120",
+      "erased-cell-count/P11/a121",
+      "erased-cell-count/P11/a122",
+      "erased-cell-count/P11/a123",
+      "erased-cell-count/P11/a124",
+      "erased-cell-count/P11/a125",
+      "erased-cell-count/P11/a126",
+      "erased-cell-count/P11/a127",
+      "erased-cell-count/P11/a128",
+      "erased-cell-count/P11/a129",
+      "erased-cell-count/P11/a130",
+      "erased-cell-count/P11/a131",
+      "erased-cell-count/P11/a132",
+      "erased-cell-count/P11/a133",
+      "erased-cell-count/P11/a134",
+      "erased-cell-count/P11/a135",
+      "erased-cell-count/P11/a136",
+      "erased-cell-count/P11/a137",
+      "erased-cell-count/P11/a138",
+      "erased-cell-count/P11/a139",
+      "erased-cell-count/P11/a140",
+      "erased-cell-count/P11/a141",
+      "erased-cell-count/P11/a142",
+      "erased-cell-count/P11/a143",
+      "erased-cell-count/P11/a144",
+      "erased-cell-count/P11/a145",
+      "erased-cell-count/P11/a146",
+      "erased-cell-count/P11/a147",
+      "erased-cell-count/P11/a148",
+      "erased-cell-count/P11/a149",
+      "erased-cell-count/P11/a150",
+      "erased-cell-count/P11/a151",
+      "erased-cell-count/P11/a152",
+      "erased-cell-count/P11/a153",
+      "erased-cell-count/P11/a154",
+      "erased-cell-count/P11/a155",
+      "erased-cell-count/P11/a156",
+      "erased-cell-count/P11/a157",
+      "erased-cell-count/P11/a158",
+      "erased-cell-count/P11/a159",
+      "erased-cell-count/P11/a160",
+      "erased-cell-count/P11/a161",
+      "erased-cell-count/P11/a162",
+      "erased-cell-count/P11/a163",
+      "erased-cell-count/P11/a164",
+      "erased-cell-count/P11/a165",
+      "erased-cell-count/P11/a166",
+      "erased-cell-count/P11/a167",
+      "erased-cell-count/P11/a168",
+      "erased-cell-count/P11/a169",
+      "erased-cell-count/P11/a170",
+      "erased-cell-count/P11/a171",
+      "erased-cell-count/P11/a172",
+      "erased-cell-count/P11/a173",
+      "erased-cell-count/P11/a174",
+      "erased-cell-count/P11/a175",
+      "erased-cell-count/P11/a176",
+      "erased-cell-count/P11/a177",
+      "erased-cell-count/P11/a178",
+      "erased-cell-count/P11/a179",
+      "erased-cell-count/P11/a180",
+      "erased-cell-count/P11/a181",
+      "erased-cell-count/P11/a182",
+      "erased-cell-count/P11/a183",
+      "erased-cell-count/P11/a184",
+      "erased-cell-count/P11/a185",
+      "erased-cell-count/P11/a186",
+      "erased-cell-count/P11/a187",
+      "erased-cell-count/P11/a188",
+      "erased-cell-count/P11/a189",
+      "erased-cell-count/P11/a190",
+      "erased-cell-count/P11/a191",
+      "erased-cell-count/P11/a192",
+      "erased-cell-count/P11/a193",
+      "erased-cell-count/P11/a194",
+      "erased-cell-count/P11/a195",
+      "erased-cell-count/P11/a196",
+      "erased-cell-count/P11/a197",
+      "erased-cell-count/P11/a198",
+      "erased-cell-count/P11/a199",
+      "erased-cell-count/P11/a200",
+      "erased-cell-count/P11/a201",
+      "erased-cell-count/P11/a202",
+      "erased-cell-count/P11/a203",
+      "erased-cell-count/P11/a204",
+      "erased-cell-count/P11/a205",
+      "erased-cell-count/P11/a206",
+      "erased-cell-count/P11/a207",
+      "erased-cell-count/P11/a208",
+      "erased-cell-count/P11/a209",
+      "erased-cell-count/P11/a210",
+      "erased-cell-count/P11/a211",
+      "erased-cell-count/P11/a212",
+      "erased-cell-count/P11/a213",
+      "erased-cell-count/P11/a214",
+      "erased-cell-count/P11/a215",
+      "erased-cell-count/P11/a216",
+      "erased-cell-count/P11/a217",
+      "erased-cell-count/P11/a218",
+      "erased-cell-count/P11/a219",
+      "erased-cell-count/P17/a0",
+      "erased-cell-count/P17/a1",
+      "erased-cell-count/P17/a2",
+      "erased-cell-count/P17/a3",
+      "erased-cell-count/P17/a4",
+      "erased-cell-count/P17/a5",
+      "erased-cell-count/P17/a6",
+      "erased-cell-count/P17/a7",
+      "erased-cell-count/P17/a8",
+      "erased-cell-count/P17/a9",
+      "erased-cell-count/P17/a10",
+      "erased-cell-count/P17/a11",
+      "erased-cell-count/P17/a12",
+      "erased-cell-count/P17/a13",
+      "erased-cell-count/P17/a14",
+      "erased-cell-count/P17/a15",
+      "erased-cell-count/P17/a16",
+      "erased-cell-count/P17/a17",
+      "erased-cell-count/P17/a18",
+      "erased-cell-count/P17/a19",
+      "erased-cell-count/P17/a20",
+      "erased-cell-count/P17/a21",
+      "erased-cell-count/P17/a22",
+      "erased-cell-count/P17/a23",
+      "erased-cell-count/P17/a24",
+      "erased-cell-count/P17/a25",
+      "erased-cell-count/P17/a26",
+      "erased-cell-count/P17/a27",
+      "erased-cell-count/P17/a28",
+      "erased-cell-count/P17/a29",
+      "erased-cell-count/P17/a30",
+      "erased-cell-count/P17/a31",
+      "erased-cell-count/P17/a32",
+      "erased-cell-count/P17/a33",
+      "erased-cell-count/P17/a34",
+      "erased-cell-count/P17/a35",
+      "erased-cell-count/P17/a36",
+      "erased-cell-count/P17/a37",
+      "erased-cell-count/P17/a38",
+      "erased-cell-count/P17/a39",
+      "erased-cell-count/P17/a40",
+      "erased-cell-count/P17/a41",
+      "erased-cell-count/P17/a42",
+      "erased-cell-count/P17/a43",
+      "erased-cell-count/P17/a44",
+      "erased-cell-count/P17/a45",
+      "erased-cell-count/P17/a46",
+      "erased-cell-count/P17/a47",
+      "erased-cell-count/P17/a48",
+      "erased-cell-count/P17/a49",
+      "erased-cell-count/P17/a50",
+      "erased-cell-count/P17/a51",
+      "erased-cell-count/P17/a52",
+      "erased-cell-count/P17/a53",
+      "erased-cell-count/P17/a54",
+      "erased-cell-count/P17/a55",
+      "erased-cell-count/P17/a56",
+      "erased-cell-count/P17/a57",
+      "erased-cell-count/P17/a58",
+      "erased-cell-count/P17/a59",
+      "erased-cell-count/P17/a60",
+      "erased-cell-count/P17/a61",
+      "erased-cell-count/P17/a62",
+      "erased-cell-count/P17/a63",
+      "erased-cell-count/P17/a64",
+      "erased-cell-count/P17/a65",
+      "erased-cell-count/P17/a66",
+      "erased-cell-count/P17/a67",
+      "erased-cell-count/P17/a68",
+      "erased-cell-count/P17/a69",
+      "erased-cell-count/P17/a70",
+      "erased-cell-count/P17/a71",
+      "erased-cell-count/P17/a72",
+      "erased-cell-count/P17/a73",
+      "erased-cell-count/P17/a74",
+      "erased-cell-count/P17/a75",
+      "erased-cell-count/P17/a76",
+      "erased-cell-count/P17/a77",
+      "erased-cell-count/P17/a78",
+      "erased-cell-count/P17/a79",
+      "erased-cell-count/P17/a80",
+      "erased-cell-count/P17/a81",
+      "erased-cell-count/P17/a82",
+      "erased-cell-count/P17/a83",
+      "erased-cell-count/P17/a84",
+      "erased-cell-count/P17/a85",
+      "erased-cell-count/P17/a86",
+      "erased-cell-count/P17/a87",
+      "erased-cell-count/P17/a88",
+      "erased-cell-count/P17/a89",
+      "erased-cell-count/P17/a90",
+      "erased-cell-count/P17/a91",
+      "erased-cell-count/P17/a92",
+      "erased-cell-count/P17/a93",
+      "erased-cell-count/P17/a94",
+      "erased-cell-count/P17/a95",
+      "erased-cell-count/P17/a96",
+      "erased-cell-count/P17/a97",
+      "erased-cell-count/P17/a98",
+      "erased-cell-count/P17/a99",
+      "erased-cell-count/P17/a100",
+      "erased-cell-count/P17/a101",
+      "erased-cell-count/P17/a102",
+      "erased-cell-count/P17/a103",
+      "erased-cell-count/P17/a104",
+      "erased-cell-count/P17/a105",
+      "erased-cell-count/P17/a106",
+      "erased-cell-count/P17/a107",
+      "erased-cell-count/P17/a108",
+      "erased-cell-count/P17/a109",
+      "erased-cell-count/P17/a110",
+      "erased-cell-count/P17/a111",
+      "erased-cell-count/P17/a112",
+      "erased-cell-count/P17/a113",
+      "erased-cell-count/P17/a114",
+      "erased-cell-count/P17/a115",
+      "erased-cell-count/P17/a116",
+      "erased-cell-count/P17/a117",
+      "erased-cell-count/P17/a118",
+      "erased-cell-count/P17/a119",
+      "erased-cell-count/P17/a120",
+      "erased-cell-count/P17/a121",
+      "erased-cell-count/P17/a122",
+      "erased-cell-count/P17/a123",
+      "erased-cell-count/P17/a124",
+      "erased-cell-count/P17/a125",
+      "erased-cell-count/P17/a126",
+      "erased-cell-count/P17/a127",
+      "erased-cell-count/P17/a128",
+      "erased-cell-count/P17/a129",
+      "erased-cell-count/P17/a130",
+      "erased-cell-count/P17/a131",
+      "erased-cell-count/P17/a132",
+      "erased-cell-count/P17/a133",
+      "erased-cell-count/P17/a134",
+      "erased-cell-count/P17/a135",
+      "erased-cell-count/P17/a136",
+      "erased-cell-count/P17/a137",
+      "erased-cell-count/P17/a138",
+      "erased-cell-count/P17/a139",
+      "erased-cell-count/P17/a140",
+      "erased-cell-count/P17/a141",
+      "erased-cell-count/P17/a142",
+      "erased-cell-count/P17/a143",
+      "erased-cell-count/P17/a144",
+      "erased-cell-count/P17/a145",
+      "erased-cell-count/P17/a146",
+      "erased-cell-count/P17/a147",
+      "erased-cell-count/P17/a148",
+      "erased-cell-count/P17/a149",
+      "erased-cell-count/P17/a150",
+      "erased-cell-count/P17/a151",
+      "erased-cell-count/P17/a152",
+      "erased-cell-count/P17/a153",
+      "erased-cell-count/P17/a154",
+      "erased-cell-count/P17/a155",
+      "erased-cell-count/P17/a156",
+      "erased-cell-count/P17/a157",
+      "erased-cell-count/P17/a158",
+      "erased-cell-count/P17/a159",
+      "erased-cell-count/P17/a160",
+      "erased-cell-count/P17/a161",
+      "erased-cell-count/P17/a162",
+      "erased-cell-count/P17/a163",
+      "erased-cell-count/P17/a164",
+      "erased-cell-count/P17/a165",
+      "erased-cell-count/P17/a166",
+      "erased-cell-count/P17/a167",
+      "erased-cell-count/P17/a168",
+      "erased-cell-count/P17/a169",
+      "erased-cell-count/P17/a170",
+      "erased-cell-count/P17/a171",
+      "erased-cell-count/P17/a172",
+      "erased-cell-count/P17/a173",
+      "erased-cell-count/P17/a174",
+      "erased-cell-count/P17/a175",
+      "erased-cell-count/P17/a176",
+      "erased-cell-count/P17/a177",
+      "erased-cell-count/P17/a178",
+      "erased-cell-count/P17/a179",
+      "erased-cell-count/P17/a180",
+      "erased-cell-count/P17/a181",
+      "erased-cell-count/P17/a182",
+      "erased-cell-count/P17/a183",
+      "erased-cell-count/P17/a184",
+      "erased-cell-count/P17/a185",
+      "erased-cell-count/P17/a186",
+      "erased-cell-count/P17/a187",
+      "erased-cell-count/P17/a188",
+      "erased-cell-count/P17/a189",
+      "erased-cell-count/P17/a190",
+      "erased-cell-count/P17/a191",
+      "erased-cell-count/P17/a192",
+      "erased-cell-count/P17/a193",
+      "erased-cell-count/P17/a194",
+      "erased-cell-count/P17/a195",
+      "erased-cell-count/P17/a196",
+      "erased-cell-count/P17/a197",
+      "erased-cell-count/P17/a198",
+      "erased-cell-count/P17/a199",
+      "erased-cell-count/P17/a200",
+      "erased-cell-count/P17/a201",
+      "erased-cell-count/P17/a202",
+      "erased-cell-count/P17/a203",
+      "erased-cell-count/P17/a204",
+      "erased-cell-count/P17/a205",
+      "erased-cell-count/P17/a206",
+      "erased-cell-count/P17/a207",
+      "erased-cell-count/P17/a208",
+      "erased-cell-count/P17/a209",
+      "erased-cell-count/P17/a210",
+      "erased-cell-count/P17/a211",
+      "erased-cell-count/P17/a212",
+      "erased-cell-count/P17/a213",
+      "erased-cell-count/P17/a214",
+      "erased-cell-count/P17/a215",
+      "erased-cell-count/P17/a216",
+      "erased-cell-count/P17/a217",
+      "erased-cell-count/P17/a218",
+      "erased-cell-count/P17/a219",
+      "erased-cell-count/P17/a220",
+      "erased-cell-count/P17/a221",
+      "erased-cell-count/P17/a222",
+      "erased-cell-count/P17/a223",
+      "erased-cell-count/P17/a224",
+      "erased-cell-count/P17/a225",
+      "erased-cell-count/P17/a226",
+      "erased-cell-count/P17/a227",
+      "erased-cell-count/P17/a228",
+      "erased-cell-count/P17/a229",
+      "erased-cell-count/P17/a230",
+      "erased-cell-count/P17/a231",
+      "erased-cell-count/P17/a232",
+      "erased-cell-count/P17/a233",
+      "erased-cell-count/P17/a234",
+      "erased-cell-count/P17/a235",
+      "erased-cell-count/P17/a236",
+      "erased-cell-count/P17/a237",
+      "erased-cell-count/P17/a238",
+      "erased-cell-count/P17/a239",
+      "erased-cell-count/P17/a240",
+      "erased-cell-count/P17/a241",
+      "erased-cell-count/P17/a242",
+      "erased-cell-count/P17/a243",
+      "erased-cell-count/P17/a244",
+      "erased-cell-count/P17/a245",
+      "erased-cell-count/P17/a246",
+      "erased-cell-count/P17/a247",
+      "erased-cell-count/P17/a248",
+      "erased-cell-count/P17/a249",
+      "erased-cell-count/P17/a250",
+      "erased-cell-count/P17/a251",
+      "erased-cell-count/P17/a252",
+      "erased-cell-count/P17/a253",
+      "erased-cell-count/P17/a254",
+      "erased-cell-count/P17/a255",
+      "erased-cell-count/P17/a256",
+      "erased-cell-count/P17/a257",
+      "erased-cell-count/P17/a258",
+      "erased-cell-count/P17/a259",
+      "erased-cell-count/P17/a260",
+      "erased-cell-count/P17/a261",
+      "erased-cell-count/P17/a262",
+      "erased-cell-count/P17/a263",
+      "erased-cell-count/P17/a264",
+      "erased-cell-count/P17/a265",
+      "erased-cell-count/P17/a266",
+      "erased-cell-count/P17/a267",
+      "erased-cell-count/P17/a268",
+      "erased-cell-count/P17/a269",
+      "erased-cell-count/P17/a270",
+      "erased-cell-count/P17/a271",
+      "erased-cell-count/P17/a272",
+      "erased-cell-count/P17/a273",
+      "erased-cell-count/P17/a274",
+      "erased-cell-count/P17/a275",
+      "erased-cell-count/P17/a276",
+      "erased-cell-count/P17/a277",
+      "erased-cell-count/P17/a278",
+      "erased-cell-count/P17/a279",
+      "erased-cell-count/P17/a280",
+      "erased-cell-count/P17/a281",
+      "erased-cell-count/P17/a282",
+      "erased-cell-count/P17/a283",
+      "erased-cell-count/P17/a284",
+      "erased-cell-count/P17/a285",
+      "erased-cell-count/P17/a286",
+      "erased-cell-count/P17/a287",
+      "erased-cell-count/P17/a288",
+      "erased-cell-count/P17/a289",
+      "erased-cell-count/P17/a290",
+      "erased-cell-count/P17/a291",
+      "erased-cell-count/P17/a292",
+      "erased-cell-count/P17/a293",
+      "erased-cell-count/P17/a294",
+      "erased-cell-count/P17/a295",
+      "erased-cell-count/P17/a296",
+      "erased-cell-count/P17/a297",
+      "erased-cell-count/P17/a298",
+      "erased-cell-count/P17/a299",
+      "erased-cell-count/P17/a300",
+      "erased-cell-count/P17/a301",
+      "erased-cell-count/P17/a302",
+      "erased-cell-count/P17/a303",
+      "erased-cell-count/P17/a304",
+      "erased-cell-count/P17/a305",
+      "erased-cell-count/P17/a306",
+      "erased-cell-count/P17/a307",
+      "erased-cell-count/P17/a308",
+      "erased-cell-count/P17/a309",
+      "erased-cell-count/P17/a310",
+      "erased-cell-count/P17/a311",
+      "erased-cell-count/P17/a312",
+      "erased-cell-count/P17/a313",
+      "erased-cell-count/P17/a314",
+      "erased-cell-count/P17/a315",
+      "erased-cell-count/P17/a316",
+      "erased-cell-count/P17/a317",
+      "erased-cell-count/P17/a318",
+      "erased-cell-count/P17/a319",
+      "erased-cell-count/P17/a320",
+      "erased-cell-count/P17/a321",
+      "erased-cell-count/P17/a322",
+      "erased-cell-count/P17/a323",
+      "erased-cell-count/P17/a324",
+      "erased-cell-count/P17/a325",
+      "erased-cell-count/P17/a326",
+      "erased-cell-count/P17/a327",
+      "erased-cell-count/P17/a328",
+      "erased-cell-count/P17/a329",
+      "erased-cell-count/P17/a330",
+      "erased-cell-count/P17/a331",
+      "erased-cell-count/P17/a332",
+      "erased-cell-count/P17/a333",
+      "erased-cell-count/P17/a334",
+      "erased-cell-count/P17/a335",
+      "erased-cell-count/P17/a336",
+      "erased-cell-count/P17/a337",
+      "erased-cell-count/P17/a338",
+      "erased-cell-count/P17/a339",
+      "directed display 1/3",
+      "directed display -1/3",
+      "directed display 0",
+      "directed display 1/10000000000000000000000000",
+      "fixed all-grid sufficient root neighbor",
+      "constant candidate resource admitted",
+      "stronger fixed changed phase still admits10us",
+      "constant startup peak not discarded"
+    ]
+  },
+  "delivery": {
+    "cut_lower_s": {
+      "exact": "199973/50000000000",
+      "lower": "0.000003999460000000",
+      "upper": "0.000003999460000000"
+    },
+    "cut_upper_s": {
+      "exact": "200027/50000000000",
+      "lower": "0.000004000540000000",
+      "upper": "0.000004000540000000"
+    },
+    "ingress_s": {
+      "exact": "1/1000000",
+      "lower": "0.000001000000000000",
+      "upper": "0.000001000000000000"
+    },
+    "batch_and_install_s": {
+      "exact": "39/10000000",
+      "lower": "0.000003900000000000",
+      "upper": "0.000003900000000000"
+    },
+    "gate_s": {
+      "exact": "400629/1250000000000",
+      "lower": "0.000000320503200000",
+      "upper": "0.000000320503200000"
+    },
+    "phase_s": {
+      "exact": "2102521/5000000000000",
+      "lower": "0.000000420504200000",
+      "upper": "0.000000420504200000"
+    },
+    "source_to_applicable_fresh_rule_s": {
+      "exact": "48207737/5000000000000",
+      "lower": "0.000009641547400000",
+      "upper": "0.000009641547400000"
+    },
+    "remaining_to_10us_s": {
+      "exact": "1792263/5000000000000",
+      "lower": "0.000000358452600000",
+      "upper": "0.000000358452600000"
+    },
+    "extra_cut_after_expiry_s": {
+      "exact": "68210437/5000000000000",
+      "lower": "0.000013642087400000",
+      "upper": "0.000013642087400000"
+    },
+    "extra_cut_after_expiry_admitted": false,
+    "records_per_packet_upper": 1253,
+    "records_in_ingress_upper": 253,
+    "allocated_records": 4096,
+    "allocated_bytes": 131072,
+    "old_cut_lower_s": {
+      "exact": "235197023/1250000000000",
+      "lower": "0.000188157618400000",
+      "upper": "0.000188157618400000"
+    },
+    "nominal_cut_count": 78894000000000,
+    "nominal_old_cut_count": 1677168367346,
+    "cut_service_ratio": {
+      "exact": "1176/25",
+      "lower": "47.040000000000000000",
+      "upper": "47.040000000000000000"
+    },
+    "mean_shared_bus_seconds_per_cut_if_all_X": {
+      "exact": "99999/250000000000000",
+      "lower": "0.000000000399996000",
+      "upper": "0.000000000399996000"
+    },
+    "hardware_WCET": null
+  },
+  "environment": {
+    "T": {
+      "exact": "315576000",
+      "lower": "315576000.000000000000000000",
+      "upper": "315576000.000000000000000000"
+    },
+    "eps": {
+      "exact": "1/1000",
+      "lower": "0.001000000000000000",
+      "upper": "0.001000000000000000"
+    },
+    "B": {
+      "exact": "15292669/62500000",
+      "lower": "0.244682704000000000",
+      "upper": "0.244682704000000000"
+    },
+    "b": {
+      "exact": "9669/62500000",
+      "lower": "0.000154704000000000",
+      "upper": "0.000154704000000000"
+    },
+    "FS": {
+      "exact": "442351152/15625",
+      "lower": "28310.473728000000000000",
+      "upper": "28310.473728000000000000"
+    },
+    "S2exact": {
+      "exact": "677638260801891/97656250000",
+      "lower": "6939.015790611363840000",
+      "upper": "6939.015790611363840000"
+    },
+    "D": {
+      "exact": "560489/2000000000",
+      "lower": "0.000280244500000000",
+      "upper": "0.000280244500000000"
+    },
+    "W": 524288,
+    "n": 38,
+    "K0": 1
+  },
+  "general_mandatory_support": {
+    "1": {
+      "k": 1,
+      "period_upper_s": {
+        "exact": "627206272/6103515625",
+        "lower": "0.102761475604480000",
+        "upper": "0.102761475604480000"
+      },
+      "initial": {
+        "exact": "39287487583871680181/819200000000000000000000000",
+        "lower": "0.000000047958358867",
+        "upper": "0.000000047958358868"
+      },
+      "pair": {
+        "exact": "122857045241549672128383/185546875000000000000000000",
+        "lower": "0.000662134812249194",
+        "upper": "0.000662134812249195"
+      },
+      "cross": {
+        "exact": "5682633119150749010649/2560000000000000000000000000000",
+        "lower": "0.000000002219778562",
+        "upper": "0.000000002219778563"
+      },
+      "risk_upper": {
+        "exact": "23065805206202676747832391179/24320000000000000000000000000000",
+        "lower": "0.000948429490386623",
+        "upper": "0.000948429490386624"
+      }
+    },
+    "3": {
+      "k": 3,
+      "period_upper_s": {
+        "exact": "1881618816/6103515625",
+        "lower": "0.308284426813440000",
+        "upper": "0.308284426813440000"
+      },
+      "initial": {
+        "exact": "39287487583871680181/819200000000000000000000000",
+        "lower": "0.000000047958358867",
+        "upper": "0.000000047958358868"
+      },
+      "pair": {
+        "exact": "368571135724649016385149/185546875000000000000000000",
+        "lower": "0.001986404436747582",
+        "upper": "0.001986404436747583"
+      },
+      "cross": {
+        "exact": "115413537252706951665357/24320000000000000000000000000000",
+        "lower": "0.000000004745622419",
+        "upper": "0.000000004745622420"
+      },
+      "risk_upper": {
+        "exact": "22108841561010437909236515409/9728000000000000000000000000000",
+        "lower": "0.002272701640728869",
+        "upper": "0.002272701640728870"
+      }
+    },
+    "9": {
+      "k": 9,
+      "period_upper_s": {
+        "exact": "5644856448/6103515625",
+        "lower": "0.924853280440320000",
+        "upper": "0.924853280440320000"
+      },
+      "initial": {
+        "exact": "39287487583871680181/819200000000000000000000000",
+        "lower": "0.000000047958358867",
+        "upper": "0.000000047958358868"
+      },
+      "pair": {
+        "exact": "1105713407173947049155447/185546875000000000000000000",
+        "lower": "0.005959213310242746",
+        "upper": "0.005959213310242747"
+      },
+      "cross": {
+        "exact": "599398210230062919715863/48640000000000000000000000000000",
+        "lower": "0.000000012323153993",
+        "upper": "0.000000012323153994"
+      },
+      "risk_upper": {
+        "exact": "151890999991496348848867980553/24320000000000000000000000000000",
+        "lower": "0.006245518091755606",
+        "upper": "0.006245518091755607"
+      }
+    },
+    "27": {
+      "k": 27,
+      "period_upper_s": {
+        "exact": "16934569344/6103515625",
+        "lower": "2.774559841320960000",
+        "upper": "2.774559841320960000"
+      },
+      "initial": {
+        "exact": "39287487583871680181/819200000000000000000000000",
+        "lower": "0.000000047958358867",
+        "upper": "0.000000047958358868"
+      },
+      "pair": {
+        "exact": "3317140221521841147466341/185546875000000000000000000",
+        "lower": "0.017877639930728238",
+        "upper": "0.017877639930728239"
+      },
+      "cross": {
+        "exact": "170511161740400996887131/4864000000000000000000000000000",
+        "lower": "0.000000035055748713",
+        "upper": "0.000000035055748714"
+      },
+      "risk_upper": {
+        "exact": "883495376516814222152396113289/48640000000000000000000000000000",
+        "lower": "0.018163967444835818",
+        "upper": "0.018163967444835819"
+      }
+    }
+  },
+  "our_r4": {
+    "risk_upper": {
+      "exact": "3932202121973052236588694319683188052625303136939984331024278554459021098515417/4000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lower": "0.000983050530493263",
+      "upper": "0.000983050530493264"
+    },
+    "full_bus_mission": {
+      "exact": "135180631755963838127446805309431199563294735675294032762223498902505875428641718648049500263/773153468388000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lower": "0.174843206792839056",
+      "upper": "0.174843206792839057"
+    },
+    "full_bus_quiet": {
+      "exact": "129570488381927826825222951126084912163096740997106133436373498902505875428641718648049500263/773153468388000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "lower": "0.167587023378525493",
+      "upper": "0.167587023378525494"
+    },
+    "peak": {
+      "exact": "4671778941136877831/6124938750000000000",
+      "lower": "0.762747046431587227",
+      "upper": "0.762747046431587228"
+    },
+    "response_s": {
+      "exact": "347258703/125000000000000",
+      "lower": "0.000002778069624000",
+      "upper": "0.000002778069624000"
+    },
+    "applicability": "conditional on common full contract, not the unmodified stage2 simulator"
+  },
+  "fixed_candidate": {
+    "status": "sufficient candidate",
+    "M_ticks": 111229536,
+    "period_upper_s": {
+      "exact": "347595775923/3125000000000",
+      "lower": "0.111230648295360000",
+      "upper": "0.111230648295360000"
+    },
+    "frame_min_ticks": 1696,
+    "frame_max_ticks": 1700,
+    "risk_upper": {
+      "exact": "6375341997680519370573447598616893/6375342080000000000000000000000000000",
+      "lower": "0.000999999987087833",
+      "upper": "0.000999999987087834"
+    },
+    "next_grid_risk_upper": {
+      "exact": "51002737295986958896155663452563607/51002736640000000000000000000000000000",
+      "lower": "0.001000000012861799",
+      "upper": "0.001000000012861800"
+    },
+    "risk_upper_paying_all_six": {
+      "exact": "6394468023920519370573447598616893/6375342080000000000000000000000000000",
+      "lower": "0.001002999987087833",
+      "upper": "0.001002999987087834"
+    },
+    "placement_margin_s": {
+      "exact": "893547/6250000000000",
+      "lower": "0.000000142967520000",
+      "upper": "0.000000142967520000"
+    },
+    "response_upper_s": {
+      "exact": "730817769/250000000000000",
+      "lower": "0.000002923271076000",
+      "upper": "0.000002923271076000"
+    },
+    "peak_upper": {
+      "exact": "4671778941136877831/6124938750000000000",
+      "lower": "0.762747046431587227",
+      "upper": "0.762747046431587228"
+    },
+    "maximum_control_gap_ticks": 552,
+    "common_transport_fresh_install_upper_s": {
+      "exact": "122169359/12500000000000",
+      "lower": "0.000009773548720000",
+      "upper": "0.000009773548720000"
+    },
+    "periodic_only_peak_upper": {
+      "exact": "4674318344494990307/6624933750000000000",
+      "lower": "0.705564541606924040",
+      "upper": "0.705564541606924041"
+    },
+    "resource_admitted": true,
+    "read_price_lower": {
+      "exact": "18046821025062207084977733763/41844514687605532836914062500",
+      "lower": "0.431282837423078730",
+      "upper": "0.431282837423078731"
+    },
+    "full_mission_price_upper": {
+      "exact": "89906441267335276506468530804399942421859685914697238496815901/205839320907806784000000000000000000000000000000000000000000000",
+      "lower": "0.436779721536311343",
+      "upper": "0.436779721536311344"
+    },
+    "full_app_term": {
+      "exact": "100501/250000000",
+      "lower": "0.000402004000000000",
+      "upper": "0.000402004000000000"
+    },
+    "common_X_term": {
+      "exact": "315576000002093/3155760000000000000",
+      "lower": "0.000100000000000663",
+      "upper": "0.000100000000000664"
+    },
+    "true_optimal_period": null
+  },
+  "necessary_classes": {
+    "none": {
+      "status": "necessary P<P0 for full declared class",
+      "P0_s": {
+        "exact": "38919611/250000000",
+        "lower": "0.155678444000000000",
+        "upper": "0.155678444000000000"
+      },
+      "neighbor_lower": {
+        "exact": "62093613448445542226660134240723140298572448680588534567220117663298379839379727/62093613744986030528257188391429114569413141861822450357017577135240433620273000000",
+        "lower": "0.000999999995224299",
+        "upper": "0.000999999995224300"
+      },
+      "exclusion_lower": {
+        "exact": "62093614246561035549584014561934763284386908619347922923961672782290308920829727/62093614144243425278974862989424924188208575117194465117389079061861352170273000000",
+        "lower": "0.001000000001647796",
+        "upper": "0.001000000001647797"
+      },
+      "middle_lower": {
+        "exact": "10250201573178847816690449472472848386658930069252967424115506921916369157029727/7979435781008959856776547226019698868085527015596268563692679199601115970273000000",
+        "lower": "0.001284577237600471",
+        "upper": "0.001284577237600472"
+      },
+      "tail": {
+        "lower": {
+          "exact": "13742279718799569952564367996858128844612573547264429160310493652285641149635659958931319583/8559607000560875202827767195764053892898505472052736481896792390444676085825721485680417000000",
+          "lower": "0.001605480218647783",
+          "upper": "0.001605480218647784"
+        },
+        "windows_per_word_upper": 57889,
+        "writes_per_word_upper": 0,
+        "cell_s": {
+          "exact": "2894393089284397351/5788900000000000000",
+          "lower": "0.499990168993141590",
+          "upper": "0.499990168993141591"
+        }
+      },
+      "mission_read_price_floor": {
+        "exact": "18046821019922879591663673427/58565593533210754394531250000",
+        "lower": "0.308147154859603362",
+        "upper": "0.308147154859603363"
+      },
+      "ignored_positive_application_cost": true,
+      "gain_over_our_r4_bus_lower": {
+        "exact": "9272404339944811006845466262613742269235200000000000000000000000000000000000000000000000000000000000/5261177602676359509987198085835796918266800990830266065726994072344455596897193948153532458980357693",
+        "lower": "1.762419944772049061",
+        "upper": "1.762419944772049062"
+      }
+    },
+    "uniform": {
+      "status": "necessary P<P0 for full declared class",
+      "P0_s": {
+        "exact": "38949327/250000000",
+        "lower": "0.155797308000000000",
+        "upper": "0.155797308000000000"
+      },
+      "neighbor_lower": {
+        "exact": "994256372515420614080777967366980885553076446523083206633137079674106737434328757/994256377896671877285958063925430906316459392905915989122622259701933808671243000000",
+        "lower": "0.000999999994587662",
+        "upper": "0.000999999994587663"
+      },
+      "exclusion_lower": {
+        "exact": "110472931698363165531587307935712738112576075601671032513664358085699383134030973/110472931587198910364441951749887462625575201650803321835835500193585892969027000000",
+        "lower": "0.001000000001006257",
+        "upper": "0.001000000001006258"
+      },
+      "middle_lower": {
+        "exact": "81375481883376976544709118540699972861401724437083188283251071371006154672253441/63834860116743493720038429156969856942718344442781525969809220880591886746559000000",
+        "lower": "0.001274781236060587",
+        "upper": "0.001274781236060588"
+      },
+      "tail": {
+        "lower": {
+          "exact": "13794710051519596645578170387074041500175507475054634707901740005838333245792178993006319583/8625034240565747362392940563327637369137544645019699654407556147561985895231687410680417000000",
+          "lower": "0.001599380323226954",
+          "upper": "0.001599380323226955"
+        },
+        "windows_per_word_upper": 58110,
+        "writes_per_word_upper": 221,
+        "cell_s": {
+          "exact": "2894393072709397351/5811000000000000000",
+          "lower": "0.498088637533883557",
+          "upper": "0.498088637533883558"
+        }
+      },
+      "mission_read_price_floor": {
+        "exact": "18046821019909135804970073427/58610309683570861816406250000",
+        "lower": "0.307912057065411915",
+        "upper": "0.307912057065411916"
+      },
+      "ignored_positive_application_cost": true,
+      "gain_over_our_r4_bus_lower": {
+        "exact": "1030267148881972165452455142387608767692800000000000000000000000000000000000000000000000000000000000/585021625592184232510138140116147330643669317466177011467172922870871384610159051718319766436685889",
+        "lower": "1.761075324077278555",
+        "upper": "1.761075324077278556"
+      }
+    },
+    "bursty": {
+      "status": "necessary P<P0 for full declared class",
+      "P0_s": {
+        "exact": "38949327/250000000",
+        "lower": "0.155797308000000000",
+        "upper": "0.155797308000000000"
+      },
+      "neighbor_lower": {
+        "exact": "1988512744899570797853301927357989662545169656486787467595930354867385978530766889/1988512755793212484010337312264670254332799502455989243456839387194254580233111000000",
+        "lower": "0.000999999994521713",
+        "upper": "0.000999999994521714"
+      },
+      "exclusion_lower": {
+        "exact": "9606341886180031630797933130657156488740384358481787654911938992342269463675927/9606341877147097178727976661107318263807004191362673150328062267054609324073000000",
+        "lower": "0.001000000000940309",
+        "upper": "0.001000000000940310"
+      },
+      "middle_lower": {
+        "exact": "162750963658591424954667224337905446594260421893643466886585837246138987811303757/127669720233378824803779471003808909255503515925409568876455462292708431696243000000",
+        "lower": "0.001274781235214461",
+        "upper": "0.001274781235214462"
+      },
+      "tail": {
+        "lower": {
+          "exact": "13794710051519596645578170387074041500175507475054634707901740005838333245792178993006319583/8625034240565747362392940563327637369137544645019699654407556147561985895231687410680417000000",
+          "lower": "0.001599380323226954",
+          "upper": "0.001599380323226955"
+        },
+        "windows_per_word_upper": 58110,
+        "writes_per_word_upper": 221,
+        "cell_s": {
+          "exact": "2894393072709397351/5811000000000000000",
+          "lower": "0.498088637533883557",
+          "upper": "0.498088637533883558"
+        }
+      },
+      "mission_read_price_floor": {
+        "exact": "18046821019909135804970073427/58610309683570861816406250000",
+        "lower": "0.307912057065411915",
+        "upper": "0.307912057065411916"
+      },
+      "ignored_positive_application_cost": true,
+      "gain_over_our_r4_bus_lower": {
+        "exact": "1030267148881972165452455142387608767692800000000000000000000000000000000000000000000000000000000000/585021625592201281928027013868571330643669317466177011467172922870871384610159051718319766436685889",
+        "lower": "1.761075324077227232",
+        "upper": "1.761075324077227233"
+      }
+    }
+  },
+  "application_edges": {
+    "none": {
+      "mission_extra_price": {
+        "exact": "0",
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000"
+      },
+      "quiet_extra_price": {
+        "exact": "0",
+        "lower": "0.000000000000000000",
+        "upper": "0.000000000000000000"
+      }
+    },
+    "uniform": {
+      "edge_rate_excess_per_s": {
+        "exact": "1003/284018400",
+        "lower": "0.000003531461341941",
+        "upper": "0.000003531461341942"
+      },
+      "quiet_extra_price": {
+        "exact": "100802503/71004600000000000000",
+        "lower": "0.000000000001419661",
+        "upper": "0.000000000001419662"
+      },
+      "quiet_m_only_edge_price": {
+        "exact": "100501/71004600000000000",
+        "lower": "0.000000000001415415",
+        "upper": "0.000000000001415416"
+      },
+      "quiet_left_expansion_price": {
+        "exact": "100501/23668200000000000000",
+        "lower": "0.000000000000004246",
+        "upper": "0.000000000000004247"
+      },
+      "protection_quiet_extra_price": {
+        "exact": "85905947/262980000000000000000",
+        "lower": "0.000000000000326663",
+        "upper": "0.000000000000326664"
+      },
+      "mission_extra_price": {
+        "exact": "100501/78894000000000000000",
+        "lower": "0.000000000000001273",
+        "upper": "0.000000000000001274"
+      },
+      "strict_20ns_nominal_rate_per_s": {
+        "exact": "50000000/50001",
+        "lower": "999.980000399992000159",
+        "upper": "999.980000399992000160"
+      },
+      "strict_20ns_expanded_quiet_rate_upper": {
+        "exact": "23668200083585/23668673364",
+        "lower": "999.980003931453130851",
+        "upper": "999.980003931453130852"
+      },
+      "strict_20ns_aggregate_count_margin": {
+        "exact": "94656083000/16667",
+        "lower": "5679251.394972100557988840",
+        "upper": "5679251.394972100557988841"
+      },
+      "individual_unexpanded_component_sufficient_length_s": {
+        "exact": "50001/1000",
+        "lower": "50.001000000000000000",
+        "upper": "50.001000000000000000"
+      },
+      "individual_component_mean_cap_proved": false,
+      "original_arbitrary_quiet_mean_1000_proved": false
+    },
+    "bursty": {
+      "edge_rate_excess_per_s": {
+        "exact": "5003/284018400",
+        "lower": "0.000017615055925954",
+        "upper": "0.000017615055925955"
+      },
+      "quiet_extra_price": {
+        "exact": "502806503/71004600000000000000",
+        "lower": "0.000000000007081322",
+        "upper": "0.000000000007081323"
+      },
+      "quiet_m_only_edge_price": {
+        "exact": "100501/14200920000000000",
+        "lower": "0.000000000007077076",
+        "upper": "0.000000000007077077"
+      },
+      "quiet_left_expansion_price": {
+        "exact": "100501/23668200000000000000",
+        "lower": "0.000000000000004246",
+        "upper": "0.000000000000004247"
+      },
+      "protection_quiet_extra_price": {
+        "exact": "428501947/262980000000000000000",
+        "lower": "0.000000000001629408",
+        "upper": "0.000000000001629409"
+      },
+      "mission_extra_price": {
+        "exact": "100501/15778800000000000000",
+        "lower": "0.000000000000006369",
+        "upper": "0.000000000000006370"
+      },
+      "strict_20ns_nominal_rate_per_s": {
+        "exact": "250000000/250001",
+        "lower": "999.996000015999936000",
+        "upper": "999.996000015999936001"
+      },
+      "strict_20ns_expanded_quiet_rate_upper": {
+        "exact": "355023006253775/355024420092",
+        "lower": "999.996017631055819703",
+        "upper": "999.996017631055819704"
+      },
+      "strict_20ns_aggregate_count_margin": {
+        "exact": "282767645000/250001",
+        "lower": "1131066.055735777056891772",
+        "upper": "1131066.055735777056891773"
+      },
+      "individual_unexpanded_component_sufficient_length_s": {
+        "exact": "250001/200",
+        "lower": "1250.005000000000000000",
+        "upper": "1250.005000000000000000"
+      },
+      "individual_component_mean_cap_proved": false,
+      "original_arbitrary_quiet_mean_1000_proved": false
+    }
+  },
+  "epsilon_sensitivity": {
+    "1/100": {
+      "necessary": {
+        "status": "tail lower does not exclude every large period",
+        "tail": {
+          "lower": {
+            "exact": "13794710051519596645578170387074041500175507475054634707901740005838333245792178993006319583/8625034240565747362392940563327637369137544645019699654407556147561985895231687410680417000000",
+            "lower": "0.001599380323226954",
+            "upper": "0.001599380323226955"
+          },
+          "windows_per_word_upper": 58110,
+          "writes_per_word_upper": 221,
+          "cell_s": {
+            "exact": "2894393072709397351/5811000000000000000",
+            "lower": "0.498088637533883557",
+            "upper": "0.498088637533883558"
+          }
+        }
+      },
+      "candidate": {
+        "status": "risk candidate rejected by resources",
+        "M_ticks": 1507987796,
+        "period_upper_s": {
+          "exact": "37700071896949/25000000000000",
+          "lower": "1.508002875877960000",
+          "upper": "1.508002875877960000"
+        },
+        "frame_min_ticks": 23008,
+        "frame_max_ticks": 23012,
+        "risk_upper": {
+          "exact": "510027365860188703517784045105523739/51002736640000000000000000000000000000",
+          "lower": "0.009999999989416032",
+          "upper": "0.009999999989416033"
+        },
+        "next_grid_risk_upper": {
+          "exact": "255013683587365753724676063884576101/25501368320000000000000000000000000000",
+          "lower": "0.010000000015189998",
+          "upper": "0.010000000015189999"
+        },
+        "risk_upper_paying_all_six": {
+          "exact": "510180374070108703517784045105523739/51002736640000000000000000000000000000",
+          "lower": "0.010002999989416032",
+          "upper": "0.010002999989416033"
+        },
+        "placement_margin_s": {
+          "exact": "26818443/1250000000000",
+          "lower": "0.000021454754400000",
+          "upper": "0.000021454754400000"
+        },
+        "response_upper_s": {
+          "exact": "6591676377/250000000000000",
+          "lower": "0.000026366705508000",
+          "upper": "0.000026366705508000"
+        },
+        "peak_upper": {
+          "exact": "4671778941136877831/6124938750000000000",
+          "lower": "0.762747046431587227",
+          "upper": "0.762747046431587228"
+        },
+        "maximum_control_gap_ticks": 21864,
+        "common_transport_fresh_install_upper_s": {
+          "exact": "388572023/12500000000000",
+          "lower": "0.000031085761840000",
+          "upper": "0.000031085761840000"
+        },
+        "periodic_only_peak_upper": {
+          "exact": "5097129003620717561/89874101250000000000",
+          "lower": "0.056714102647237516",
+          "upper": "0.056714102647237517"
+        },
+        "resource_admitted": false,
+        "read_price_lower": {
+          "exact": "36093641727117623965355777546/1134609021086843264007568359375",
+          "lower": "0.031811523667019220",
+          "upper": "0.031811523667019221"
+        },
+        "full_mission_price_upper": {
+          "exact": "17605063590020140231055585675423579114292471969465048437938832647/535805627223445867008000000000000000000000000000000000000000000000",
+          "lower": "0.032857183081950609",
+          "upper": "0.032857183081950610"
+        },
+        "full_app_term": {
+          "exact": "100501/250000000",
+          "lower": "0.000402004000000000",
+          "upper": "0.000402004000000000"
+        },
+        "common_X_term": {
+          "exact": "315576000002093/3155760000000000000",
+          "lower": "0.000100000000000663",
+          "upper": "0.000100000000000664"
+        },
+        "true_optimal_period": null
+      }
+    },
+    "1/10000": {
+      "necessary": {
+        "status": "necessary P<P0 for full declared class",
+        "P0_s": {
+          "exact": "15705927/1000000000",
+          "lower": "0.015705927000000000",
+          "upper": "0.015705927000000000"
+        },
+        "neighbor_lower": {
+          "exact": "20028152914687791581215515625503595520778314180082907828780725748765982123616889/200281530300777148568729784245409749005269783583963666871495652221400987383111000000",
+          "lower": "0.000099999999423861",
+          "upper": "0.000099999999423862"
+        },
+        "exclusion_lower": {
+          "exact": "741783536216937797505325004372556242723942190730623798622544557081618752732107/7417834927927304865102370427374799931042654984845715469514092058649140267893000000",
+          "lower": "0.000100000005854027",
+          "upper": "0.000100000005854028"
+        },
+        "middle_lower": {
+          "exact": "162750963658591424954667224337905446594260421893643466886585837246138987811303757/127669720233378824803779471003808909255503515925409568876455462292708431696243000000",
+          "lower": "0.001274781235214461",
+          "upper": "0.001274781235214462"
+        },
+        "tail": {
+          "lower": {
+            "exact": "13794710051519596645578170387074041500175507475054634707901740005838333245792178993006319583/8625034240565747362392940563327637369137544645019699654407556147561985895231687410680417000000",
+            "lower": "0.001599380323226954",
+            "upper": "0.001599380323226955"
+          },
+          "windows_per_word_upper": 58110,
+          "writes_per_word_upper": 221,
+          "cell_s": {
+            "exact": "2894393072709397351/5811000000000000000",
+            "lower": "0.498088637533883557",
+            "upper": "0.498088637533883558"
+          }
+        },
+        "mission_read_price_floor": {
+          "exact": "18046821036107362838183223427/5908505462350845336914062500",
+          "lower": "3.054380020650262343",
+          "upper": "3.054380020650262344"
+        },
+        "ignored_positive_application_cost": true
+      },
+      "candidate": {
+        "status": "no sufficient candidate: direct plus quotas exceeds epsilon"
+      }
+    }
+  },
+  "CPU_cost": null,
+  "energy_cost": null,
+  "global_optimum": null
+}

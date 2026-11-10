@@ -1,0 +1,97 @@
+{
+  "s4_initial_peak": {
+    "envelope": {
+      "integrated_intensity": "659.70783466913746844488007363438366826656125517537",
+      "max_abs_log_slope": "0.0040923355281795107539405481202643498496777586307227",
+      "solar_integral": "646.34140906913746844488007363438366826656125517537",
+      "within_envelope": true
+    },
+    "generation": {
+      "event_count": 711,
+      "exponential_draws": 712,
+      "global_thinning_expected_candidates": "21140.585625600",
+      "integrated_intensity": "659.70783466913746844488007363438366826656125517537",
+      "maximum_inverse_hazard_residual": "1E-47",
+      "segments": 3,
+      "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+    },
+    "seed": 2026102401,
+    "sha256": "fbe6b93ee9ff09b4d0df4c968022f742f3a6e1728f3e7e80454487428458ad37"
+  },
+  "s4_mission": {
+    "envelope": {
+      "integrated_intensity": "68805.853866765498737795202945375346730662450207002",
+      "max_abs_log_slope": "0.0040923355281795107539405481202643498496777586307227",
+      "solar_integral": "19984.984362765498737795202945375346730662450207002",
+      "within_envelope": true
+    },
+    "generation": {
+      "event_count": 69364,
+      "exponential_draws": 69365,
+      "global_thinning_expected_candidates": "77215988.997504000",
+      "integrated_intensity": "68805.853866765498737795202945375346730662450207002",
+      "maximum_inverse_hazard_residual": "1E-46",
+      "segments": 81,
+      "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+    },
+    "seed": 2026102404,
+    "sha256": "f22d6c96deda206853fa6173015d51f2b1fddbff1b5418a7819731ba33f349b4"
+  },
+  "s4_quiet": {
+    "envelope": {
+      "integrated_intensity": "13.366425600",
+      "max_abs_log_slope": "0",
+      "solar_integral": "0E-9",
+      "within_envelope": true
+    },
+    "generation": {
+      "event_count": 14,
+      "exponential_draws": 15,
+      "global_thinning_expected_candidates": "21140.585625600",
+      "integrated_intensity": "13.366425600",
+      "maximum_inverse_hazard_residual": "1E-49",
+      "segments": 1,
+      "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+    },
+    "seed": 2026102400,
+    "sha256": "9c6768e7b5d2f8ad7838eaab8a1cb47ba6aa3fd8d9af3314a0a93285ec693555"
+  },
+  "s4_repeat_rise": {
+    "envelope": {
+      "integrated_intensity": "2011.8648618765498737795202945375346730662450207015",
+      "max_abs_log_slope": "0.0040923355281795107539405481202643498496777586307227",
+      "solar_integral": "1998.4984362765498737795202945375346730662450207015",
+      "within_envelope": true
+    },
+    "generation": {
+      "event_count": 2041,
+      "exponential_draws": 2042,
+      "global_thinning_expected_candidates": "21140.585625600",
+      "integrated_intensity": "2011.8648618765498737795202945375346730662450207015",
+      "maximum_inverse_hazard_residual": "1.2E-47",
+      "segments": 9,
+      "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+    },
+    "seed": 2026102403,
+    "sha256": "d879404a189d85eb3b8e0e5952ab259a1007a885aaa4cbeb61f414a1df3dfe1a"
+  },
+  "s4_rise_fall": {
+    "envelope": {
+      "integrated_intensity": "1012.6156437382749368897601472687673365331225103507",
+      "max_abs_log_slope": "0.0040923355281795107539405481202643498496777586307227",
+      "solar_integral": "999.2492181382749368897601472687673365331225103507",
+      "within_envelope": true
+    },
+    "generation": {
+      "event_count": 985,
+      "exponential_draws": 986,
+      "global_thinning_expected_candidates": "21140.585625600",
+      "integrated_intensity": "1012.6156437382749368897601472687673365331225103507",
+      "maximum_inverse_hazard_residual": "1.2E-47",
+      "segments": 5,
+      "time_rounding": "50-digit Decimal inverse then ceil to integer ns"
+    },
+    "seed": 2026102402,
+    "sha256": "7c28ae6fcea1c584db9b8b966fd7c2830029ddef9b35b97237e557332fc36099"
+  }
+}
