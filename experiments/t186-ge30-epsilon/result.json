@@ -1,0 +1,102 @@
+{
+  "source_pr448": "873465fcc24e151cccd5c735863250c4bbd70cda",
+  "T_seconds": 315576000,
+  "min_physical_period_lower_s": "0.045874740248",
+  "witness_Q_lower_at_min_physical_period": "0.000734523081",
+  "witness_Q_lower_at_nominal_L_on_witness_clock": "0.000734537806",
+  "witness_Q_limit_at_infinity_upper": "0.052119686545",
+  "adaptive": {
+    "history_cells": 205,
+    "Q_upper": "0.000880198",
+    "mandatory_read_price_lower": {
+      "seconds": "3364052.058",
+      "percent_of_T": "1.066003"
+    },
+    "known_price_upper_at_I0": {
+      "seconds": "8446152.412",
+      "percent_of_T": "2.676425"
+    },
+    "seconds_per_invalid_upper": "100.864632"
+  },
+  "rows": {
+    "0.1": {
+      "fixed_candidate": {
+        "k": 132,
+        "period_s": "6.055526400",
+        "Q_upper": "0.099931693",
+        "known_price_upper": {
+          "seconds": "1715885.181",
+          "percent_of_T": "0.543732"
+        }
+      },
+      "class_price_lower": {
+        "seconds": "0.015662852735",
+        "percent_of_T": "0.0000000049632585"
+      },
+      "cutoff_bracket_s": null,
+      "adaptive_risk_certified": true,
+      "sufficient_X_plus_cI_budget_s_floor": "-8446152.404",
+      "half_candidate_known_price_upper_s": "857942.591",
+      "comparison": "excluded_for_known_work",
+      "fixed_extra_price_strictly_below_s_excludes_full_2x": "5012218.936"
+    },
+    "0.01": {
+      "fixed_candidate": {
+        "k": 13,
+        "period_s": "0.596377600",
+        "Q_upper": "0.009847195",
+        "known_price_upper": {
+          "seconds": "9517071.927",
+          "percent_of_T": "3.015779"
+        }
+      },
+      "class_price_lower": {
+        "seconds": "6581842.606",
+        "percent_of_T": "2.085660"
+      },
+      "cutoff_bracket_s": [
+        "0.750978210838",
+        "0.750978210840"
+      ],
+      "adaptive_risk_certified": true,
+      "first_excluded_grid_k": 17,
+      "sufficient_X_plus_cI_budget_s_floor": "-5155231.108",
+      "half_candidate_known_price_upper_s": "4758535.964",
+      "comparison": "open_from_current_bounds"
+    },
+    "0.001": {
+      "fixed_candidate": {
+        "k": 1,
+        "period_s": "0.045875200",
+        "Q_upper": "0.000763044",
+        "known_price_upper": {
+          "seconds": "108740262.185",
+          "percent_of_T": "34.457710"
+        }
+      },
+      "class_price_lower": {
+        "seconds": "79058943.463",
+        "percent_of_T": "25.052267"
+      },
+      "cutoff_bracket_s": [
+        "0.062520698068",
+        "0.062520698070"
+      ],
+      "adaptive_risk_certified": true,
+      "first_excluded_grid_k": 2,
+      "sufficient_X_plus_cI_budget_s_floor": "31083319.320",
+      "half_candidate_known_price_upper_s": "54370131.093",
+      "comparison": "sufficient_with_overhead_budget"
+    },
+    "0.0001": {
+      "fixed_candidate": null,
+      "class_price_lower": null,
+      "cutoff_bracket_s": [
+        "0.006777158304",
+        "0.006777158306"
+      ],
+      "adaptive_risk_certified": false,
+      "comparison": "fixed_class_empty"
+    }
+  }
+}
