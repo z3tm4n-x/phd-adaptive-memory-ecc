@@ -1,0 +1,1490 @@
+{
+  "A": {
+    "sha256_trial_table": "e96c6065f10ba99a444e1364ab137832d454e4bbdb41a311b52176ae4e9e8b7b",
+    "mean_inversions": 24043.136,
+    "rows": {
+      "fixed4": {
+        "failures": 121,
+        "Q_MC": 0.08066666666666666,
+        "wilson95": [
+          0.06793265072083973,
+          0.09554299850981915
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24042.848,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 121,
+          "wilson95": [
+            0.06793265072083973,
+            0.09554299850981915
+          ],
+          "printed_q": "0.0807",
+          "printed_se": "0.0070",
+          "stopped_scan_pct": 22.9838
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 28,
+        "Q_MC": 0.018666666666666668,
+        "wilson95": [
+          0.01294606406020905,
+          0.02684633457975234
+        ],
+        "mean_passes": 850818517.9133333,
+        "mean_word_reads": 558136947731.4027,
+        "mean_repairs": 24043.069333333333,
+        "mean_fast_s": 1101482.8406962256,
+        "mean_switches": 6397.336666666667,
+        "full_scan_pct": 3.463131387699586,
+        "trials_with_partial": 48,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 28,
+          "wilson95": [
+            0.01294606406020905,
+            0.02684633457975234
+          ],
+          "printed_q": "0.0187",
+          "printed_se": "0.0035",
+          "stopped_scan_pct": 3.399
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 28,
+        "Q_MC": 0.018666666666666668,
+        "wilson95": [
+          0.01294606406020905,
+          0.02684633457975234
+        ],
+        "mean_passes": 468284844.16933334,
+        "mean_word_reads": 307194857764.7993,
+        "mean_repairs": 24043.069333333333,
+        "mean_fast_s": 1101480.6765440642,
+        "mean_switches": 6397.332666666666,
+        "full_scan_pct": 1.9060844446677938,
+        "trials_with_partial": 25,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 28,
+          "wilson95": [
+            0.01294606406020905,
+            0.02684633457975234
+          ],
+          "printed_q": "0.0187",
+          "printed_se": "0.0035",
+          "stopped_scan_pct": 1.871
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 96,
+        "Q_MC": 0.064,
+        "wilson95": [
+          0.0526935459511578,
+          0.07753391763684048
+        ],
+        "mean_passes": 62831031.69933333,
+        "mean_word_reads": 41217156793.52866,
+        "mean_repairs": 24042.905333333332,
+        "mean_fast_s": 78102.44369973248,
+        "mean_switches": 47652.619333333336,
+        "full_scan_pct": 0.25574445480376484,
+        "trials_with_partial": 3,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 96,
+          "wilson95": [
+            0.0526935459511578,
+            0.07753391763684048
+          ],
+          "printed_q": "0.0640",
+          "printed_se": "0.0063",
+          "stopped_scan_pct": 0.2403
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 57,
+        "Q_MC": 0.038,
+        "wilson95": [
+          0.029445029308207155,
+          0.04891526467724054
+        ],
+        "mean_passes": 73479969.656,
+        "mean_word_reads": 48202860093.513336,
+        "mean_repairs": 24043,
+        "mean_fast_s": 135676.3144594828,
+        "mean_switches": 40028.08866666667,
+        "full_scan_pct": 0.2990893873721382,
+        "trials_with_partial": 2,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 57,
+          "wilson95": [
+            0.029445029308207155,
+            0.04891526467724054
+          ],
+          "printed_q": "0.0380",
+          "printed_se": "0.0049",
+          "stopped_scan_pct": 0.2886
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_128": {
+        "failures": 54,
+        "Q_MC": 0.036,
+        "wilson95": [
+          0.027695588043697456,
+          0.04667492366463097
+        ],
+        "mean_passes": 213603977.75133333,
+        "mean_word_reads": 140124209401.584,
+        "mean_repairs": 24043.005333333334,
+        "mean_fast_s": 135677.48243473476,
+        "mean_switches": 33800.74133333333,
+        "full_scan_pct": 0.8694435115389457,
+        "trials_with_partial": 8,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 54,
+          "wilson95": [
+            0.027695588043697456,
+            0.04667492366463097
+          ],
+          "printed_q": "0.0360",
+          "printed_se": "0.0048",
+          "stopped_scan_pct": 0.8388
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "B": {
+    "sha256_trial_table": "5623988ca5272217ecf84d424d27d2905b80d3352194ee705c6ea9cd02afeb9f",
+    "mean_inversions": 24047.270666666667,
+    "rows": {
+      "fixed4": {
+        "failures": 0,
+        "Q_MC": 0.0,
+        "wilson95": [
+          0,
+          0.002554430720181488
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24047.270666666667,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 0,
+          "wilson95": [
+            0,
+            0.002554430720181488
+          ],
+          "printed_q": "0.0000",
+          "printed_se": "0.0000",
+          "stopped_scan_pct": 25.0
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 1,
+        "Q_MC": 0.0006666666666666666,
+        "wilson95": [
+          0.00011769273167436408,
+          0.0037666654142135486
+        ],
+        "mean_passes": 1038324045.6986667,
+        "mean_word_reads": 681140573945.0073,
+        "mean_repairs": 24047.269333333334,
+        "mean_fast_s": 3587696.0067650843,
+        "mean_switches": 23774.748,
+        "full_scan_pct": 4.226345004846058,
+        "trials_with_partial": 81,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 1,
+          "wilson95": [
+            0.00011769273167436408,
+            0.0037666654142135486
+          ],
+          "printed_q": "0.0007",
+          "printed_se": "0.0007",
+          "stopped_scan_pct": 4.226
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 4,
+        "Q_MC": 0.0026666666666666666,
+        "wilson95": [
+          0.0010374882451031462,
+          0.006836652177904041
+        ],
+        "mean_passes": 658812639.9766667,
+        "mean_word_reads": 432181091806.18335,
+        "mean_repairs": 24047.26,
+        "mean_fast_s": 3587667.55315061,
+        "mean_switches": 23774.58,
+        "full_scan_pct": 2.6815997584243987,
+        "trials_with_partial": 45,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 4,
+          "wilson95": [
+            0.0010374882451031462,
+            0.006836652177904041
+          ],
+          "printed_q": "0.0027",
+          "printed_se": "0.0013",
+          "stopped_scan_pct": 2.6787
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 13,
+        "Q_MC": 0.008666666666666666,
+        "wilson95": [
+          0.005071820780159603,
+          0.014771666474205405
+        ],
+        "mean_passes": 79972725.256,
+        "mean_word_reads": 52462107765.468,
+        "mean_repairs": 24047.24,
+        "mean_fast_s": 92096.68535036586,
+        "mean_switches": 118476.322,
+        "full_scan_pct": 0.3255171921621317,
+        "trials_with_partial": 6,
+        "trials_with_idle_tail_hits": 2,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 14,
+          "wilson95": [
+            0.005567765171535828,
+            0.015605649508535607
+          ],
+          "printed_q": "0.0093",
+          "printed_se": "0.0025",
+          "stopped_scan_pct": 0.3242
+        },
+        "new_minus_original_failures": -1
+      },
+      "age1680_512": {
+        "failures": 14,
+        "Q_MC": 0.009333333333333334,
+        "wilson95": [
+          0.005567765171535828,
+          0.015605649508535607
+        ],
+        "mean_passes": 111397849.888,
+        "mean_word_reads": 73076989522.826,
+        "mean_repairs": 24047.242666666665,
+        "mean_fast_s": 183995.43213802564,
+        "mean_switches": 116810.458,
+        "full_scan_pct": 0.45342853069257655,
+        "trials_with_partial": 9,
+        "trials_with_idle_tail_hits": 1,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 14,
+          "wilson95": [
+            0.005567765171535828,
+            0.015605649508535607
+          ],
+          "printed_q": "0.0093",
+          "printed_se": "0.0025",
+          "stopped_scan_pct": 0.4517
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_128": {
+        "failures": 6,
+        "Q_MC": 0.004,
+        "wilson95": [
+          0.0018344861657217117,
+          0.008699509108698324
+        ],
+        "mean_passes": 241804704.068,
+        "mean_word_reads": 158623885859.97,
+        "mean_repairs": 24047.256,
+        "mean_fast_s": 184010.87309471198,
+        "mean_switches": 95305.87933333333,
+        "full_scan_pct": 0.9842304118968516,
+        "trials_with_partial": 21,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 6,
+          "wilson95": [
+            0.0018344861657217117,
+            0.008699509108698324
+          ],
+          "printed_q": "0.0040",
+          "printed_se": "0.0016",
+          "stopped_scan_pct": 0.9828
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "C": {
+    "sha256_trial_table": "c5109df8a8aa33b3f7912333fc139cbce9732d9952d9a664ea1d1c09cb2ade4d",
+    "mean_inversions": 24047.597333333335,
+    "rows": {
+      "fixed4": {
+        "failures": 11,
+        "Q_MC": 0.007333333333333333,
+        "wilson95": [
+          0.004099723207137282,
+          0.01308390919581488
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24047.574666666667,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 11,
+          "wilson95": [
+            0.004099723207137282,
+            0.01308390919581488
+          ],
+          "printed_q": "0.0073",
+          "printed_se": "0.0022",
+          "stopped_scan_pct": 24.8172
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 22,
+        "Q_MC": 0.014666666666666666,
+        "wilson95": [
+          0.0097054107970336,
+          0.02210742328868923
+        ],
+        "mean_passes": 943334675.06,
+        "mean_word_reads": 618827546814.68,
+        "mean_repairs": 24047.546666666665,
+        "mean_fast_s": 2328192.744631064,
+        "mean_switches": 10300.426,
+        "full_scan_pct": 3.839704770769592,
+        "trials_with_partial": 60,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 22,
+          "wilson95": [
+            0.0097054107970336,
+            0.02210742328868923
+          ],
+          "printed_q": "0.0147",
+          "printed_se": "0.0031",
+          "stopped_scan_pct": 3.7871
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 39,
+        "Q_MC": 0.026,
+        "wilson95": [
+          0.019077262149612466,
+          0.035344338173119584
+        ],
+        "mean_passes": 562269095.7846667,
+        "mean_word_reads": 368848526822.4013,
+        "mean_repairs": 24047.489333333335,
+        "mean_fast_s": 2327876.079695801,
+        "mean_switches": 10299.535333333333,
+        "full_scan_pct": 2.2886334899300262,
+        "trials_with_partial": 30,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 39,
+          "wilson95": [
+            0.019077262149612466,
+            0.035344338173119584
+          ],
+          "printed_q": "0.0260",
+          "printed_se": "0.0041",
+          "stopped_scan_pct": 2.2344
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 82,
+        "Q_MC": 0.05466666666666667,
+        "wilson95": [
+          0.0442585691503609,
+          0.06734991047774742
+        ],
+        "mean_passes": 71608101.22666667,
+        "mean_word_reads": 46974914403.048,
+        "mean_repairs": 24047.396,
+        "mean_fast_s": 90763.35698457395,
+        "mean_switches": 79202.91266666667,
+        "full_scan_pct": 0.29147022279196083,
+        "trials_with_partial": 4,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 82,
+          "wilson95": [
+            0.0442585691503609,
+            0.06734991047774742
+          ],
+          "printed_q": "0.0547",
+          "printed_se": "0.0059",
+          "stopped_scan_pct": 0.2772
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 38,
+        "Q_MC": 0.025333333333333333,
+        "wilson95": [
+          0.01851196864747831,
+          0.034579704249547316
+        ],
+        "mean_passes": 90283254.69333333,
+        "mean_word_reads": 59225815077.59267,
+        "mean_repairs": 24047.514666666666,
+        "mean_fast_s": 178942.87252686985,
+        "mean_switches": 70301.42733333334,
+        "full_scan_pct": 0.367484682730609,
+        "trials_with_partial": 3,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 38,
+          "wilson95": [
+            0.01851196864747831,
+            0.034579704249547316
+          ],
+          "printed_q": "0.0253",
+          "printed_se": "0.0041",
+          "stopped_scan_pct": 0.3596
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_128": {
+        "failures": 36,
+        "Q_MC": 0.024,
+        "wilson95": [
+          0.017385620398415003,
+          0.03304619764719778
+        ],
+        "mean_passes": 229685540.57866666,
+        "mean_word_reads": 150673714615.08066,
+        "mean_repairs": 24047.517333333333,
+        "mean_fast_s": 178944.0920964301,
+        "mean_switches": 64106.52133333333,
+        "full_scan_pct": 0.9349011430002837,
+        "trials_with_partial": 11,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 36,
+          "wilson95": [
+            0.017385620398415003,
+            0.03304619764719778
+          ],
+          "printed_q": "0.0240",
+          "printed_se": "0.0040",
+          "stopped_scan_pct": 0.9137
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "D": {
+    "sha256_trial_table": "e4924632ba4f9ffdd459d0005cb39a9f4e0c98b38d35d2bc3af755694afa67a5",
+    "mean_inversions": 24039.685333333335,
+    "rows": {
+      "fixed4": {
+        "failures": 124,
+        "Q_MC": 0.08266666666666667,
+        "wilson95": [
+          0.06977397936285945,
+          0.0976914521449187
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24039.388,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 124,
+          "wilson95": [
+            0.06977397936285945,
+            0.0976914521449187
+          ],
+          "printed_q": "0.0827",
+          "printed_se": "0.0071",
+          "stopped_scan_pct": 22.9338
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 31,
+        "Q_MC": 0.020666666666666667,
+        "wilson95": [
+          0.014597274166911008,
+          0.029184906750169652
+        ],
+        "mean_passes": 852094194.8533334,
+        "mean_word_reads": 558973791808.156,
+        "mean_repairs": 24039.610666666667,
+        "mean_fast_s": 1118397.5676907792,
+        "mean_switches": 6515.76,
+        "full_scan_pct": 3.468323842706563,
+        "trials_with_partial": 38,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 31,
+          "wilson95": [
+            0.014597274166911008,
+            0.029184906750169652
+          ],
+          "printed_q": "0.0207",
+          "printed_se": "0.0037",
+          "stopped_scan_pct": 3.3992
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 35,
+        "Q_MC": 0.023333333333333334,
+        "wilson95": [
+          0.016824677337497887,
+          0.03227721328240847
+        ],
+        "mean_passes": 469580739.26533335,
+        "mean_word_reads": 308044964949.42065,
+        "mean_repairs": 24039.604,
+        "mean_fast_s": 1118390.7412028948,
+        "mean_switches": 6515.749333333333,
+        "full_scan_pct": 1.9113591946837927,
+        "trials_with_partial": 21,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 35,
+          "wilson95": [
+            0.016824677337497887,
+            0.03227721328240847
+          ],
+          "printed_q": "0.0233",
+          "printed_se": "0.0039",
+          "stopped_scan_pct": 1.8705
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 114,
+        "Q_MC": 0.076,
+        "wilson95": [
+          0.06364598808451702,
+          0.09052016916619687
+        ],
+        "mean_passes": 62947159.718666665,
+        "mean_word_reads": 41293336773.8,
+        "mean_repairs": 24039.434666666668,
+        "mean_fast_s": 78186.31117694566,
+        "mean_switches": 48138.70133333333,
+        "full_scan_pct": 0.25621713678954483,
+        "trials_with_partial": 4,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 114,
+          "wilson95": [
+            0.06364598808451702,
+            0.09052016916619687
+          ],
+          "printed_q": "0.0760",
+          "printed_se": "0.0068",
+          "stopped_scan_pct": 0.2397
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 75,
+        "Q_MC": 0.05,
+        "wilson95": [
+          0.040074440990789065,
+          0.062224546657374286
+        ],
+        "mean_passes": 73739555.34333333,
+        "mean_word_reads": 48373148304.404,
+        "mean_repairs": 24039.526,
+        "mean_fast_s": 135997.99731587208,
+        "mean_switches": 40560.19066666667,
+        "full_scan_pct": 0.30014599265599856,
+        "trials_with_partial": 2,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 74,
+          "wilson95": [
+            0.03947876255528736,
+            0.061490297667169555
+          ],
+          "printed_q": "0.0493",
+          "printed_se": "0.0056",
+          "stopped_scan_pct": 0.2885
+        },
+        "new_minus_original_failures": 1
+      },
+      "age1680_128": {
+        "failures": 57,
+        "Q_MC": 0.038,
+        "wilson95": [
+          0.029445029308207155,
+          0.04891526467724054
+        ],
+        "mean_passes": 213797562.91533333,
+        "mean_word_reads": 140251201265.87732,
+        "mean_repairs": 24039.552666666666,
+        "mean_fast_s": 136023.04953382775,
+        "mean_switches": 34223.592666666664,
+        "full_scan_pct": 0.8702314713989673,
+        "trials_with_partial": 16,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 57,
+          "wilson95": [
+            0.029445029308207155,
+            0.04891526467724054
+          ],
+          "printed_q": "0.0380",
+          "printed_se": "0.0049",
+          "stopped_scan_pct": 0.8396
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "E": {
+    "sha256_trial_table": "9db7ec7dcd9b1c5fc254fb1900b3734cc4312d592c8e6e4b19b4d8a834f606aa",
+    "mean_inversions": 24056.005333333334,
+    "rows": {
+      "fixed4": {
+        "failures": 25,
+        "Q_MC": 0.016666666666666666,
+        "wilson95": [
+          0.011314304240525479,
+          0.024488312122316627
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24055.961333333333,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 25,
+          "wilson95": [
+            0.011314304240525479,
+            0.024488312122316627
+          ],
+          "printed_q": "0.0167",
+          "printed_se": "0.0033",
+          "stopped_scan_pct": 24.767
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 135,
+        "Q_MC": 0.09,
+        "wilson95": [
+          0.0765454288549283,
+          0.10554920433562054
+        ],
+        "mean_passes": 993488419.942,
+        "mean_word_reads": 651728403463.0306,
+        "mean_repairs": 24055.714666666667,
+        "mean_fast_s": 2993201.9437280516,
+        "mean_switches": 19678.68,
+        "full_scan_pct": 4.043848197941448,
+        "trials_with_partial": 46,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 135,
+          "wilson95": [
+            0.0765454288549283,
+            0.10554920433562054
+          ],
+          "printed_q": "0.0900",
+          "printed_se": "0.0074",
+          "stopped_scan_pct": 3.8653
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 245,
+        "Q_MC": 0.16333333333333333,
+        "wilson95": [
+          0.1454899366830245,
+          0.182896713335231
+        ],
+        "mean_passes": 613227989.3953333,
+        "mean_word_reads": 402277561030.58734,
+        "mean_repairs": 24055.396666666667,
+        "mean_fast_s": 2992835.919335872,
+        "mean_switches": 19678.622666666666,
+        "full_scan_pct": 2.4960541563048437,
+        "trials_with_partial": 31,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 245,
+          "wilson95": [
+            0.1454899366830245,
+            0.182896713335231
+          ],
+          "printed_q": "0.1633",
+          "printed_se": "0.0095",
+          "stopped_scan_pct": 2.2882
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 1133,
+        "Q_MC": 0.7553333333333333,
+        "wilson95": [
+          0.7329441130155611,
+          0.7764180910299995
+        ],
+        "mean_passes": 75782955.23533334,
+        "mean_word_reads": 49713618633.556,
+        "mean_repairs": 24051.417333333335,
+        "mean_fast_s": 87661.11067895671,
+        "mean_switches": 101702.47666666667,
+        "full_scan_pct": 0.30846335077040965,
+        "trials_with_partial": 2,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 1133,
+          "wilson95": [
+            0.7329441130155611,
+            0.7764180910299995
+          ],
+          "printed_q": "0.7553",
+          "printed_se": "0.0111",
+          "stopped_scan_pct": 0.1661
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 1140,
+        "Q_MC": 0.76,
+        "wilson95": [
+          0.7377402637135664,
+          0.7809314323119392
+        ],
+        "mean_passes": 102424533.84533334,
+        "mean_word_reads": 67190494201.716,
+        "mean_repairs": 24051.341333333334,
+        "mean_fast_s": 170863.84174635418,
+        "mean_switches": 99350.79733333334,
+        "full_scan_pct": 0.41690397020086456,
+        "trials_with_partial": 2,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 1139,
+          "wilson95": [
+            0.7370548855313149,
+            0.7802868830684843
+          ],
+          "printed_q": "0.7593",
+          "printed_se": "0.0110",
+          "stopped_scan_pct": 0.222
+        },
+        "new_minus_original_failures": 1
+      },
+      "age1680_128": {
+        "failures": 456,
+        "Q_MC": 0.304,
+        "wilson95": [
+          0.28124712378024497,
+          0.3277542130620662
+        ],
+        "mean_passes": 235096358.668,
+        "mean_word_reads": 154223211282.09467,
+        "mean_repairs": 24054.765333333333,
+        "mean_fast_s": 173008.3611133433,
+        "mean_switches": 80801.104,
+        "full_scan_pct": 0.9569250806163764,
+        "trials_with_partial": 10,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 456,
+          "wilson95": [
+            0.28124712378024497,
+            0.3277542130620662
+          ],
+          "printed_q": "0.3040",
+          "printed_se": "0.0119",
+          "stopped_scan_pct": 0.805
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "F": {
+    "sha256_trial_table": "c8b76e868c829fe61b22b2122d74718f9e2ddd6410e1610aaeca1647201f68b5",
+    "mean_inversions": 24040.928,
+    "rows": {
+      "fixed4": {
+        "failures": 3,
+        "Q_MC": 0.002,
+        "wilson95": [
+          0.0006804084719908739,
+          0.005863804525309888
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24040.922666666665,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 3,
+          "wilson95": [
+            0.0006804084719908739,
+            0.005863804525309888
+          ],
+          "printed_q": "0.0020",
+          "printed_se": "0.0012",
+          "stopped_scan_pct": 24.9645
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 20,
+        "Q_MC": 0.013333333333333334,
+        "wilson95": [
+          0.008647712947540034,
+          0.02050526628676995
+        ],
+        "mean_passes": 971566264.838,
+        "mean_word_reads": 637347469709.4594,
+        "mean_repairs": 24040.890666666666,
+        "mean_fast_s": 2702527.042914659,
+        "mean_switches": 14492.573333333334,
+        "full_scan_pct": 3.9546172963341153,
+        "trials_with_partial": 59,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 20,
+          "wilson95": [
+            0.008647712947540034,
+            0.02050526628676995
+          ],
+          "printed_q": "0.0133",
+          "printed_se": "0.0030",
+          "stopped_scan_pct": 3.9276
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 34,
+        "Q_MC": 0.02266666666666667,
+        "wilson95": [
+          0.016265302571047073,
+          0.03150666062315286
+        ],
+        "mean_passes": 590957670.0373334,
+        "mean_word_reads": 387668231528.44867,
+        "mean_repairs": 24040.858666666667,
+        "mean_fast_s": 2702231.729305507,
+        "mean_switches": 14491.242666666667,
+        "full_scan_pct": 2.4054061034250678,
+        "trials_with_partial": 39,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 34,
+          "wilson95": [
+            0.016265302571047073,
+            0.03150666062315286
+          ],
+          "printed_q": "0.0227",
+          "printed_se": "0.0038",
+          "stopped_scan_pct": 2.3763
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 84,
+        "Q_MC": 0.056,
+        "wilson95": [
+          0.04545839056668995,
+          0.06880994391283121
+        ],
+        "mean_passes": 73749814.85933334,
+        "mean_word_reads": 48379878546.07733,
+        "mean_repairs": 24040.773333333334,
+        "mean_fast_s": 90982.8336999465,
+        "mean_switches": 88372.40933333333,
+        "full_scan_pct": 0.3001877524987721,
+        "trials_with_partial": 4,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 84,
+          "wilson95": [
+            0.04545839056668995,
+            0.06880994391283121
+          ],
+          "printed_q": "0.0560",
+          "printed_se": "0.0059",
+          "stopped_scan_pct": 0.2901
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 57,
+        "Q_MC": 0.038,
+        "wilson95": [
+          0.029445029308207155,
+          0.04891526467724054
+        ],
+        "mean_passes": 95209803.208,
+        "mean_word_reads": 62457630902.391335,
+        "mean_repairs": 24040.823333333334,
+        "mean_fast_s": 179882.2499690305,
+        "mean_switches": 79926.37333333334,
+        "full_scan_pct": 0.3875374724045666,
+        "trials_with_partial": 5,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 57,
+          "wilson95": [
+            0.029445029308207155,
+            0.04891526467724054
+          ],
+          "printed_q": "0.0380",
+          "printed_se": "0.0049",
+          "stopped_scan_pct": 0.3791
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_128": {
+        "failures": 45,
+        "Q_MC": 0.03,
+        "wilson95": [
+          0.02249567967344073,
+          0.03990548520352987
+        ],
+        "mean_passes": 233014449.84933335,
+        "mean_word_reads": 152857479096.638,
+        "mean_repairs": 24040.846666666668,
+        "mean_fast_s": 179896.99581929063,
+        "mean_switches": 72313.682,
+        "full_scan_pct": 0.9484509775886657,
+        "trials_with_partial": 11,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 45,
+          "wilson95": [
+            0.02249567967344073,
+            0.03990548520352987
+          ],
+          "printed_q": "0.0300",
+          "printed_se": "0.0044",
+          "stopped_scan_pct": 0.9318
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "G": {
+    "sha256_trial_table": "2457cf34e86bfb8be770d632a232389c03eb6ffeb778ae16e3f421e6a0f1cb36",
+    "mean_inversions": 24042.402666666665,
+    "rows": {
+      "fixed4": {
+        "failures": 117,
+        "Q_MC": 0.078,
+        "wilson95": [
+          0.06548140922514466,
+          0.09267453030268853
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24042.138,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 116,
+          "wilson95": [
+            0.06486930993335295,
+            0.09195670216877382
+          ],
+          "printed_q": "0.0773",
+          "printed_se": "0.0069",
+          "stopped_scan_pct": 24.02
+        },
+        "new_minus_original_failures": 1
+      },
+      "age32": {
+        "failures": 30,
+        "Q_MC": 0.02,
+        "wilson95": [
+          0.014044885285323426,
+          0.02840736820605081
+        ],
+        "mean_passes": 851532566.7786666,
+        "mean_word_reads": 558605363788.2953,
+        "mean_repairs": 24042.346,
+        "mean_fast_s": 1110950.709116338,
+        "mean_switches": 6456.038,
+        "full_scan_pct": 3.4660378183806664,
+        "trials_with_partial": 45,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 30,
+          "wilson95": [
+            0.014044885285323426,
+            0.02840736820605081
+          ],
+          "printed_q": "0.0200",
+          "printed_se": "0.0036",
+          "stopped_scan_pct": 3.429
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 33,
+        "Q_MC": 0.022,
+        "wilson95": [
+          0.01570756221797206,
+          0.030734473550521446
+        ],
+        "mean_passes": 469009953.4766667,
+        "mean_word_reads": 307670529469.58734,
+        "mean_repairs": 24042.340666666667,
+        "mean_fast_s": 1110942.5882921042,
+        "mean_switches": 6456.03,
+        "full_scan_pct": 1.909035895235231,
+        "trials_with_partial": 27,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 33,
+          "wilson95": [
+            0.01570756221797206,
+            0.030734473550521446
+          ],
+          "printed_q": "0.0220",
+          "printed_se": "0.0038",
+          "stopped_scan_pct": 1.8865
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 107,
+        "Q_MC": 0.07133333333333333,
+        "wilson95": [
+          0.05937394629575595,
+          0.08548271897501297
+        ],
+        "mean_passes": 62907125.12533333,
+        "mean_word_reads": 41267074080.984665,
+        "mean_repairs": 24042.185333333335,
+        "mean_fast_s": 78198.48870107545,
+        "mean_switches": 47961.212,
+        "full_scan_pct": 0.25605418188003237,
+        "trials_with_partial": 3,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 107,
+          "wilson95": [
+            0.05937394629575595,
+            0.08548271897501297
+          ],
+          "printed_q": "0.0713",
+          "printed_se": "0.0066",
+          "stopped_scan_pct": 0.2466
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 71,
+        "Q_MC": 0.04733333333333333,
+        "wilson95": [
+          0.03769502441859292,
+          0.059284253526744726
+        ],
+        "mean_passes": 73641709.712,
+        "mean_word_reads": 48308961570.24934,
+        "mean_repairs": 24042.257333333335,
+        "mean_fast_s": 136000.419970504,
+        "mean_switches": 40353.060666666664,
+        "full_scan_pct": 0.29974772643365216,
+        "trials_with_partial": 2,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 71,
+          "wilson95": [
+            0.03769502441859292,
+            0.059284253526744726
+          ],
+          "printed_q": "0.0473",
+          "printed_se": "0.0055",
+          "stopped_scan_pct": 0.2923
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_128": {
+        "failures": 63,
+        "Q_MC": 0.042,
+        "wilson95": [
+          0.03296459689144124,
+          0.05337526164824502
+        ],
+        "mean_passes": 213733759.30666667,
+        "mean_word_reads": 140209346099.826,
+        "mean_repairs": 24042.272,
+        "mean_fast_s": 136022.44782858787,
+        "mean_switches": 34073.24,
+        "full_scan_pct": 0.8699717682206068,
+        "trials_with_partial": 13,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 63,
+          "wilson95": [
+            0.03296459689144124,
+            0.05337526164824502
+          ],
+          "printed_q": "0.0420",
+          "printed_se": "0.0052",
+          "stopped_scan_pct": 0.8511
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  },
+  "H": {
+    "sha256_trial_table": "2a396137cda792476982fdda12893d38070436e98f8ff9ab5c1e880a35128fd8",
+    "mean_inversions": 24043.217333333334,
+    "rows": {
+      "fixed4": {
+        "failures": 3,
+        "Q_MC": 0.002,
+        "wilson95": [
+          0.0006804084719908739,
+          0.005863804525309888
+        ],
+        "mean_passes": 6141974002,
+        "mean_word_reads": 4029134945312,
+        "mean_repairs": 24043.210666666666,
+        "mean_fast_s": null,
+        "mean_switches": 0,
+        "full_scan_pct": 25.000000001975472,
+        "trials_with_partial": 0,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "fixed_4L",
+          "failures": 3,
+          "wilson95": [
+            0.0006804084719908739,
+            0.005863804525309888
+          ],
+          "printed_q": "0.0020",
+          "printed_se": "0.0012",
+          "stopped_scan_pct": 24.9506
+        },
+        "new_minus_original_failures": 0
+      },
+      "age32": {
+        "failures": 7,
+        "Q_MC": 0.004666666666666667,
+        "wilson95": [
+          0.0022623540815072275,
+          0.009601568618619234
+        ],
+        "mean_passes": 996906626.1293334,
+        "mean_word_reads": 653970746720.276,
+        "mean_repairs": 24043.198666666667,
+        "mean_fast_s": 3038525.3499024613,
+        "mean_switches": 17042.165333333334,
+        "full_scan_pct": 4.057761502458775,
+        "trials_with_partial": 50,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "project_300s_slow32L",
+          "failures": 7,
+          "wilson95": [
+            0.0022623540815072275,
+            0.009601568618619234
+          ],
+          "printed_q": "0.0047",
+          "printed_se": "0.0018",
+          "stopped_scan_pct": 4.0407
+        },
+        "new_minus_original_failures": 0
+      },
+      "age64": {
+        "failures": 25,
+        "Q_MC": 0.016666666666666666,
+        "wilson95": [
+          0.011314304240525479,
+          0.024488312122316627
+        ],
+        "mean_passes": 616695867.516,
+        "mean_word_reads": 404552489078.5673,
+        "mean_repairs": 24043.156,
+        "mean_fast_s": 3038088.0728885387,
+        "mean_switches": 17039.988,
+        "full_scan_pct": 2.5101696431217313,
+        "trials_with_partial": 29,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "same_but_slow64L",
+          "failures": 25,
+          "wilson95": [
+            0.011314304240525479,
+            0.024488312122316627
+          ],
+          "printed_q": "0.0167",
+          "printed_se": "0.0033",
+          "stopped_scan_pct": 2.473
+        },
+        "new_minus_original_failures": 0
+      },
+      "age3360_512": {
+        "failures": 88,
+        "Q_MC": 0.058666666666666666,
+        "wilson95": [
+          0.04786342768227863,
+          0.07172461650006824
+        ],
+        "mean_passes": 75181586.12666667,
+        "mean_word_reads": 49319120497.448,
+        "mean_repairs": 24042.994666666666,
+        "mean_fast_s": 91591.46492552807,
+        "mean_switches": 93051.43533333333,
+        "full_scan_pct": 0.30601556643522093,
+        "trials_with_partial": 4,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k3.36e-3_cap512L",
+          "failures": 88,
+          "wilson95": [
+            0.04786342768227863,
+            0.07172461650006824
+          ],
+          "printed_q": "0.0587",
+          "printed_se": "0.0061",
+          "stopped_scan_pct": 0.2904
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_512": {
+        "failures": 52,
+        "Q_MC": 0.034666666666666665,
+        "wilson95": [
+          0.026533490787242278,
+          0.0451771660696733
+        ],
+        "mean_passes": 97882645.04333334,
+        "mean_word_reads": 64211015146.781334,
+        "mean_repairs": 24043.101333333332,
+        "mean_fast_s": 182237.11343066045,
+        "mean_switches": 84129.68733333334,
+        "full_scan_pct": 0.3984168811878899,
+        "trials_with_partial": 4,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap512L",
+          "failures": 52,
+          "wilson95": [
+            0.026533490787242278,
+            0.0451771660696733
+          ],
+          "printed_q": "0.0347",
+          "printed_se": "0.0047",
+          "stopped_scan_pct": 0.3871
+        },
+        "new_minus_original_failures": 0
+      },
+      "age1680_128": {
+        "failures": 47,
+        "Q_MC": 0.03133333333333333,
+        "wilson95": [
+          0.023644330844925662,
+          0.041416688883457786
+        ],
+        "mean_passes": 235769887.33333334,
+        "mean_word_reads": 154665046086.96466,
+        "mean_repairs": 24043.11466666667,
+        "mean_fast_s": 182245.76744460562,
+        "mean_switches": 77653.78266666667,
+        "full_scan_pct": 0.9596665797899109,
+        "trials_with_partial": 9,
+        "trials_with_idle_tail_hits": 0,
+        "first_in_idle_tail": 0,
+        "total_hits_in_visited_apertures": 0,
+        "source": {
+          "label": "ladder_k1.68e-3_cap128L",
+          "failures": 47,
+          "wilson95": [
+            0.023644330844925662,
+            0.041416688883457786
+          ],
+          "printed_q": "0.0313",
+          "printed_se": "0.0045",
+          "stopped_scan_pct": 0.9318
+        },
+        "new_minus_original_failures": 0
+      }
+    }
+  }
+}

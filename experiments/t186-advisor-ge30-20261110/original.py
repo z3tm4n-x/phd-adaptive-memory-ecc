@@ -3,7 +3,6 @@ from argparse import ArgumentParser
 from concurrent.futures import ThreadPoolExecutor
 from hashlib import sha256
 from pathlib import Path
-import json
 import os
 import subprocess
 import sys
@@ -16,6 +15,8 @@ FILES = {"advisor_sanity_model.c":"57321dff441c71e6e65ff51298c3466454ab5ec5acb1a
 
 
 def prepare(archive, work):
+    if work.resolve().is_relative_to(HERE.parents[1]):
+        raise ValueError("Use a private directory outside the repository")
     work.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(archive) as z:
         for name,digest in FILES.items():
@@ -46,8 +47,6 @@ def main():
     p.add_argument("--prepare-only",action="store_true")
     args = p.parse_args()
     work = args.work.resolve()
-    if work.is_relative_to(HERE.parents[1]):
-        raise ValueError("Use a private directory outside the repository")
     prepare(args.zip,work)
     if args.prepare_only:
         return
