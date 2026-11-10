@@ -1,0 +1,37 @@
+{
+  "W": 65536,
+  "n": 39,
+  "mission_s": 315576000,
+  "tick_ns": 10,
+  "read_beat_ns": 70,
+  "read_capture_offset_ns": 60,
+  "read_turn_ns": 30,
+  "read_port_ns": 240,
+  "write_beats_ns": 240,
+  "write_turn_ns": 20,
+  "repair_extra_ns": 260,
+  "E_max_ns": 500,
+  "frame_ns": 1400,
+  "word_slots_ns": [
+    0,
+    520
+  ],
+  "word_stride": 3,
+  "app_grant_ns": [
+    1020,
+    1260
+  ],
+  "management_ns": [
+    1260,
+    1300
+  ],
+  "L_ns": 45875200,
+  "D_o_ns": 45874900,
+  "I_o_ns": 200,
+  "xi_minus": "0.99999",
+  "xi_plus": "1.00001",
+  "J_ns": "0.5",
+  "aperture_upper_ns": "501.505",
+  "fixed_first_pass": 0,
+  "counter": "local external39 completion; full coverage or invalid"
+}
