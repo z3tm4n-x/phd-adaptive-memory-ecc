@@ -1,0 +1,87 @@
+{
+  "archive": {
+    "start": "1996-12-16T07:20:00Z",
+    "stop": "2006-12-16T19:20:00Z",
+    "start_bin": 2362840,
+    "number_bins": 1051920,
+    "archive_rows": [
+      "SEPEM_archive",
+      "GOES_composite_5min_East",
+      "GOES_composite_5min_West",
+      "G16_1min_East",
+      "G16_1min_West",
+      "G18_1min_East",
+      "G18_1min_West",
+      "G19_1min_East",
+      "G19_1min_West"
+    ],
+    "affine_excess_multiplier": "0.8293738379679954",
+    "S1_witness_approx": 164214.59636458993,
+    "S2_from_bin_means_approx": 15624.493284768581,
+    "S2_reconstruction_approx": 15631.395183047987,
+    "S2_witness_lower_used": 15624,
+    "S2_upper_used": 134875,
+    "S1_all_upper_used": 164372,
+    "B_witness_upper": "0.525",
+    "U_witness_upper": 24
+  },
+  "witness": {
+    "CAP_word_seconds": 37200,
+    "rate_mass_upper": "0.000002273592",
+    "relative_dead_upper": "0.010102751860",
+    "finite_edge_and_variation_loss_upper": "16.993840702",
+    "Z_lower": "0.001007421420",
+    "physical_Q_lower": "0.001000407544"
+  },
+  "archive_price": {
+    "S1_cap": 164372,
+    "endpoints": [
+      {
+        "words": 32768,
+        "excluded_period_from_s_upper": "1.135253906250",
+        "fixed_bus_s_lower": "1803512.227",
+        "ladder_bus_s_upper_at_I0": "844173.413",
+        "half_floor_minus_ladder_s_lower": "57582.701"
+      },
+      {
+        "words": 44529,
+        "excluded_period_from_s_upper": "0.835410631275",
+        "fixed_bus_s_lower": "2450823.856",
+        "ladder_bus_s_upper_at_I0": "1019074.286",
+        "half_floor_minus_ladder_s_lower": "206337.642"
+      }
+    ],
+    "uniform_margin_s_lower": "57582.701",
+    "s_per_invalid_upper": "34.016758",
+    "sufficient_mean_resets_lower": "1692.774524",
+    "sufficient_whole_resets": 1692,
+    "remaining_s_at_whole_limit_lower": "26.346"
+  },
+  "unchanged_exposure_control": {
+    "S1_cap": 187464,
+    "endpoints": [
+      {
+        "words": 32768,
+        "excluded_period_from_s_upper": "1.135253906250",
+        "fixed_bus_s_lower": "1803512.227",
+        "ladder_bus_s_upper_at_I0": "893269.597",
+        "half_floor_minus_ladder_s_lower": "8486.517"
+      },
+      {
+        "words": 44529,
+        "excluded_period_from_s_upper": "0.835410631275",
+        "fixed_bus_s_lower": "2450823.856",
+        "ladder_bus_s_upper_at_I0": "1085791.399",
+        "half_floor_minus_ladder_s_lower": "139620.529"
+      }
+    ],
+    "uniform_margin_s_lower": "8486.517",
+    "s_per_invalid_upper": "34.016758",
+    "sufficient_mean_resets_lower": "249.480491",
+    "sufficient_whole_resets": 249,
+    "remaining_s_at_whole_limit_lower": "16.344"
+  },
+  "direct_gap_using_global_ladder_upper_s": "160023.565",
+  "accepted_global_Q_upper": "0.000902581",
+  "register_port_X_s": 0
+}
