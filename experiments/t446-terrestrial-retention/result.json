@@ -1,0 +1,44 @@
+{
+  "probability": {
+    "mission_hours": 87660,
+    "full_die_internal_words": 524288,
+    "table1_die_fit_data": 33408,
+    "model_fit_including_checks_upper": "39672.000",
+    "mean_single_hits_whole_die_upper": "3.477647520000",
+    "two_parents_same_inner_word_upper": "0.000011533767961",
+    "two_hits_one_inner_word_model_probability_check_approx": "0.000011533650445105",
+    "first_external_weight_above_one_upper": "0.000017533767961",
+    "direct_parent_budget_sufficient_floor_per_die_per_T": "0.000982466232039",
+    "direct_parent_budget_sufficient_floor_fit_per_die": "11.207691444"
+  },
+  "off_after_common_start": {
+    "protective_reads": 65536,
+    "additional_passes_after_start": 0,
+    "nominal_start_calendar_s": "0.045875200000",
+    "physical_start_duration_upper_s": "0.045876161257",
+    "expected_repairs_upper": "0.393216000001",
+    "maximum_repairs": 65536,
+    "nominal_known_port_lower_s": "0.015728640000",
+    "nominal_expected_known_port_upper_s": "0.015728742237",
+    "physical_known_port_lower_s": "0.015662946713",
+    "physical_expected_known_port_upper_s": "0.015794435917",
+    "physical_expected_known_port_upper_pct_of_T": "0.0000000050049548",
+    "physical_known_port_any_path_upper_s": "0.032899399680",
+    "startup_peak_any_1ms_known_protection_upper_pct": "71.987517",
+    "extra_expected_port_if_bad_path_saturates_port_to_T_upper_s": "5533.236359"
+  },
+  "adaptive_read_comparison": {
+    "window_nominal_s": "1.468006400000",
+    "complete_passes_at_least_on_good_event": 214966941,
+    "expected_additional_known_read_port_lower_s": "3366956.689933",
+    "expected_additional_known_read_port_lower_pct_of_T": "1.06692419"
+  },
+  "common_application": {
+    "reads_started_lower_under_service": 315569688605,
+    "reads_started_upper_under_service": 315569688607,
+    "nominal_useful_port_lower_s": "75736.725265200",
+    "nominal_useful_port_upper_s": "75736.725265680",
+    "physical_useful_port_upper_s": "76053.052322",
+    "response_under_service_upper_us": "1.661017"
+  }
+}

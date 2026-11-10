@@ -1,0 +1,31 @@
+{
+  "registration": "https://github.com/z3tm4n-x/phd-adaptive-memory-ecc/issues/446#issuecomment-6765561736",
+  "base": "ad711032275c0081c8a1de954a9697ec379e0be0",
+  "source": {
+    "document": "Cypress AN88889, 001-88889 Rev. *C, 2015-09-29, section 4.3, Table 1 (page 7)",
+    "url": "https://community.infineon.com/gfawx74859/attachments/gfawx74859/NonVolatileRAM/1914/1/Infineon-AN88889_Mitigating_Single-Event_Upsets_Using_Infineon_65-nm_Asynchronous_SRAM-ApplicationNotes-v04_00-EN%201.pdf",
+    "sha256": "4fd1504873cd89fe73a2a68646cc159ff3b7804a1ee129261252d31eb60f17bc",
+    "neutron_nyc_fit_per_mbit": 838,
+    "alpha_ula_fit_per_mbit": 1250,
+    "die_density_mbit": 16,
+    "table1_errors_per_billion_device_hours": 33408,
+    "inner_data_bits": 32,
+    "inner_check_bits": 6
+  },
+  "model": {
+    "site": "NYC, ULA package; terrestrial long-lived data",
+    "parent_law": "stationary Poisson single-cell upsets, independent uniform inner-word labels",
+    "hidden_cell_rate_over_data_cell_rate_upper": "1",
+    "direct_inner_parent_mean_upper": "0",
+    "epsilon": "0.001",
+    "execution_exception_probability_upper": "0.000006"
+  },
+  "service": {
+    "calendar": "../t186-advisor-ge30-20261110/calendar.json",
+    "calendar_sha256_lf": "9ea758fbeb8a6940327d72e89eae70fb96d51ced804c17e2cf0d4f9c61061f97",
+    "fixed_menu": "one common initial pass, then k*L for integral k>=1 or OFF",
+    "adaptive": "L/32L, 205 complete zero cells, FAST at invalid; continue to T",
+    "longest_adaptive_period_in_passes": 32,
+    "app_interarrival_si_ns": 1000020
+  }
+}
