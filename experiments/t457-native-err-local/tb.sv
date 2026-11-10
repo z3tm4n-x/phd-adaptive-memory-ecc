@@ -64,7 +64,7 @@ module tb;
                 if(!other_ready || d.read_owner || d.repair_owner) $fatal(1,"nonempty gap");
                 $display("Z %0d %0d",tick,finish);
                 jumped=jumped+finish-tick;idle_ticks=idle_ticks+finish-tick;
-                tick=finish; #1;
+                #(10*(finish-tick)); tick=finish; #0;
             end
             if(tick<end_tick) begin
                 if((scenario==1 || scenario==5 || scenario==6 || scenario==8 || scenario==16 ||
@@ -88,6 +88,8 @@ module tb;
                     if(scenario==14 && r==152832) rx_valid=0;
                     if(scenario==19 && r==1280) rx_valid=(rt==CUT-1);
                     if(scenario==20 && r==1280 && rt==CUT) begin rx_valid=1;rx_count=1;end
+                    if(scenario==21 && (r==1024 || r==1280)) rx_valid=(rt==CUT-10 || rt==CUT);
+                    if(scenario==22 && r==1280) rx_valid=(rt==CUT+1);
                 end
                 #1;
                 was_launch=d.launch;was_release=d.release_event;was_cut=d.cutting;
@@ -115,6 +117,7 @@ module tb;
                 if(!in_pass) begin idle_ticks=idle_ticks+1;
                     if(!other_ready) idle_excluded=idle_excluded+1;end
                 if(tick%140>=126 && tick%140<130 && !other_ready) control_excluded=control_excluded+1;
+                if($time!=tick*10+3) $fatal(1,"10ns model clock phase drift");
                 clk=1;#1;
                 if(!was_sealed && d.sealed) $display("F %0d %0d %0d %0d",tick,r,d.seen,d.count);
                 if(was_cut) $display("C %0d %0d %0d %0d %0d %0d %0d %0d",
@@ -123,7 +126,7 @@ module tb;
                     if(oldstep!=d.step) nswitch=nswitch+1;
                     $display("K %0d %0d %0d %0d %0d %0d %0d %0d",tick,r,d.step,d.last_bad,d.next_round,install_lost,cut_lock,cut_app);
                 end
-                clk=0;tick=tick+1;#1;
+                clk=0;tick=tick+1;#7;
             end
         end
         $display("END %0d %0d %0d %0d %0d %0d %0d %0d %0d %0d %0d %0d %0d",

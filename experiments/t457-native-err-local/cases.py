@@ -19,9 +19,14 @@ CASES={
  "terminal_inside_write":(16,233,0,1), "all_38_positions":(17,38*L,0,1),
  "lost_report_after_write":(18,2*L,0,1), "before_cut":(19,1283*L,0,0),
  "conflicting_report":(20,1282*L,0,0), "outside_partner":(1,L,1,1),
+ "duplicate_at_threshold":(21,1281*L,0,0), "late_at_threshold":(22,1282*L,0,0),
 }
 def capture(work):
     work.mkdir(parents=True,exist_ok=False)
+    import hashlib
+    files=["native.sv","tb.sv","policy_vpi.c","build_model.py","cases.py"]
+    def source(): return {n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in files}
+    frozen=source()
     build(work)
     def one(item):
         name, args=item
@@ -31,9 +36,7 @@ def capture(work):
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
         for n in pool.map(one,CASES.items()): print("captured",n,flush=True)
     # Do not trust old traces if any part of the test/execution boundary changed.
-    import hashlib
-    files=["native.sv","tb.sv","policy_vpi.c","build_model.py","cases.py"]
-    (work/"source.json").write_text(json.dumps({n:hashlib.sha256((HERE/n).read_bytes()).hexdigest()
-                                                 for n in files},indent=2)+"\n")
+    assert source()==frozen, "execution sources changed during capture"
+    (work/"source.json").write_text(json.dumps(frozen,indent=2)+"\n")
 if __name__=="__main__":
     capture(Path(sys.argv[1]).resolve())
