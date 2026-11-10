@@ -1,0 +1,89 @@
+% Первая библиография глав 2–3. До W1 файла thesis/refs.bib в базе не было.
+% Записи перенесены из проверенных локальных паспортов и литературной сверки.
+% Поля, не установленные в этих источниках, намеренно не дополняются.
+% Внутренние научные результаты цитируются относительными ссылками;
+% их версии и области принятия находятся в CHAPTERS_2_3_SOURCE_MAP.md.
+
+@article{Hansen2025,
+  author  = {Hansen, D. L. and Manich, T. and Zavatkay, I.},
+  title   = {Analysis of System Radiation Effects Using Markov Chains},
+  journal = {IEEE Transactions on Nuclear Science},
+  year    = {2025},
+  volume  = {72},
+  number  = {4},
+  pages   = {1108--1115},
+  doi     = {10.1109/TNS.2024.3486540},
+  note    = {Полный текст: адресный разбор docs/literature_mapping/HANSEN-2025-REVIEW.md}
+}
+
+@inproceedings{Coronetti2020,
+  author    = {Coronetti, A. and others},
+  title     = {{SEU} Characterization of Commercial and Custom-Designed {SRAMs} Based on 90 nm Technology and Below},
+  booktitle = {2020 IEEE Radiation Effects Data Workshop (REDW)},
+  year      = {2020},
+  doi       = {10.1109/REDW51883.2020.9325822},
+  note      = {Использованные локаторы и идентичность образца: experiments/t127-cy62167-pdi/DATA_PASSPORT.md}
+}
+
+@article{Coronetti2021,
+  author  = {Coronetti, A. and others},
+  title   = {Assessment of Proton Direct Ionization for the Radiation Hardness Assurance of Deep Submicron {SRAMs} Used in Space Applications},
+  journal = {IEEE Transactions on Nuclear Science},
+  year    = {2021},
+  doi     = {10.1109/TNS.2021.3061209},
+  note    = {Название и DOI: RE-CY62167-PROTON-01/source_manifest.json; область переноса: паспорт T127}
+}
+
+@manual{CY62167RevF,
+  title        = {{CY62167G30/CY62167GE30}: 16-Mbit (1M Words x 16 Bit/2M Words x 8 Bit) Static RAM with Error-Correcting Code (ECC)},
+  organization = {Infineon Technologies},
+  number       = {002-20054 Rev. *F},
+  year         = {2020},
+  url          = {https://www.infineon.com/assets/row/public/documents/10/49/infineon-cy62167g30-cy62167ge30-16-mbit-1m-words-x-16-bit-2m-words-x-8-bit-static-ram-with-error-correcting-code-ecc-datasheet-en.pdf},
+  note         = {Проверенная редакция от 18.03.2020; паспорт T127; окна ERR/DQ: с. 10--12}
+}
+
+@manual{InfineonAN88889,
+  title        = {{AN88889}: Mitigating Single-Event Upsets Using Infineon's 65-nm Asynchronous SRAM},
+  organization = {Infineon Technologies},
+  url          = {https://community.infineon.com/gfawx74859/attachments/gfawx74859/NonVolatileRAM/1914/1/Infineon-AN88889_Mitigating_Single-Event_Upsets_Using_Infineon_65-nm_Asynchronous_SRAM-ApplicationNotes-v04_00-EN%201.pdf},
+  note         = {Использованный локатор: section 4.4, pp. 7--8; версия v04_00 по источнику протокола CY62167-ECC-ALIAS-TEST.md; не устанавливает конкретную A0-пару}
+}
+
+@misc{SEPEM2016,
+  author = {{European Space Agency}},
+  title  = {{SEPEM Reference Data Set}, version 2.00},
+  year   = {2016},
+  note   = {Идентичность архива, обработка и границы использования: experiments/tNN-sepem-profiles/DATA_PASSPORT.md; не подменяется поздними версиями RDS}
+}
+
+@manual{GOST25645165_2025,
+  title        = {{ГОСТ Р 25645.165-2025}},
+  organization = {Росстандарт},
+  year         = {2025},
+  url          = {https://protect.gost.ru/gost/details/d609bcd7-4d77-45db-97d2-ed3cdf232257},
+  note         = {Проверенное издание: https://lepton.ru/GOST/Data/873/87375.pdf; использованы раздел 5 и таблицы 1--8 по паспорту SEPEM. Полное название здесь не восстанавливается по догадке}
+}
+
+@article{AvenCastro2009,
+  author  = {Aven, T. and Castro, I. T.},
+  title   = {A delay-time model with safety constraint},
+  journal = {Reliability Engineering and System Safety},
+  year    = {2009},
+  volume  = {94},
+  number  = {2},
+  pages   = {261--267},
+  doi     = {10.1016/j.ress.2008.03.004},
+  note    = {Библиография проверена в ASSEMBLY-NOVELTY-20261009.md; полный текст для окончательного сравнения пока не прочитан}
+}
+
+@article{Flage2012,
+  author  = {Flage, R. and Coit, D. W. and Luxhøj, J. T. and Aven, T.},
+  title   = {Safety constraints applied to an adaptive Bayesian condition-based maintenance optimization model},
+  journal = {Reliability Engineering and System Safety},
+  year    = {2012},
+  volume  = {102},
+  pages   = {16--26},
+  doi     = {10.1016/j.ress.2012.01.006},
+  note    = {Проверены библиография и аннотация; полный текст для окончательного сравнения пока не прочитан}
+}
