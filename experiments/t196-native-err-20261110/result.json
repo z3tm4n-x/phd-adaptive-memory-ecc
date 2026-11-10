@@ -1,0 +1,625 @@
+{
+  "131072": {
+    "continuous": {
+      "addresses": 65536,
+      "L_s": "0.022937600",
+      "pairs_closed_W": 32768,
+      "max_touched_W": 65536,
+      "largest_W_for_quarter": 44529,
+      "largest_W_for_quarter_with_stop_bound_only": 43358,
+      "closed": {
+        "Q_upper": "0.000185553745",
+        "stop_only_upper": "0.000190403742",
+        "epsilon_shares": {
+          "1/10": "0.001855538",
+          "1/100": "0.018555375",
+          "1/1000": "0.185553745",
+          "1/10000": "1.855537447"
+        }
+      },
+      "no_partner_inside": {
+        "Q_upper": "0.000365107490",
+        "stop_only_upper": "0.000374807484",
+        "epsilon_shares": {
+          "1/10": "0.003651075",
+          "1/100": "0.036510749",
+          "1/1000": "0.365107490",
+          "1/10000": "3.651074893"
+        }
+      }
+    },
+    "closed": {
+      "W_interval": [
+        32768,
+        32768
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.261452804286",
+        "continuous_Q_lower": "0.000080691094",
+        "class_excluded_on_witness": false,
+        "necessary_bus_s_if_nonempty": "7831028.291",
+        "k_certified": 5,
+        "candidate_period_s": "0.114688000000",
+        "candidate_Q_upper": "0.000903746",
+        "candidate_stop_upper": "0.000928006",
+        "candidate_bus_read_repair_s": "18298664.131",
+        "frame_candidate": {
+          "frames": 90703,
+          "period_s": "0.126984200000",
+          "Q_upper": "0.000999995712",
+          "stop_upper": "0.001026857654",
+          "read_repair_s": "16543997.005",
+          "with_active_management_s": "18213476.483",
+          "with_all_management_s": "25786048.161"
+        }
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 32768,
+        "excluded_from_s": "0.130726644385",
+        "bus_lower_s_if_nonempty": "15662027.514",
+        "Q_lower_fast_grid": "0.000170122084",
+        "all_fixed_and_binary_excluded": false,
+        "first_integer_stride_excluded": 6
+      },
+      "L32": {
+        "profile_upper": "0.000257642983",
+        "overlap_upper": "0.000000005671",
+        "variation_upper": "0.000044973684",
+        "stop_and_Q_upper": "0.000308623",
+        "visible_history_lower_s": [
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285"
+        ],
+        "full_cells": 409,
+        "nominal_history_s": "300.207308800",
+        "price": {
+          "reads_upper_at_I0": 38215714254525,
+          "repairs_upper_at_I0": 278271399711,
+          "bus_read_repair_s_at_I0": "3887931.046",
+          "bus_percent_at_I0": "1.232012",
+          "fast_s_upper_at_I0": "3623816.732",
+          "switch_upper_at_I0": 288815,
+          "s_per_invalid_upper": "84.131739",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "13129982.202",
+          "bus_including_active_management_at_I0_s": "4279645.938",
+          "s_per_invalid_including_active_management_upper": "92.669859",
+          "budget_X_for_twice_s": "27583.100",
+          "budget_after_full_management_s": "-9214468.056",
+          "budget_after_active_management_s": "-364131.792"
+        },
+        "shared_map_twice_margin_s": "3943082.711",
+        "shared_map_margin_after_full_management_s": "-5298968.445"
+      },
+      "staircase": {
+        "profile_upper": "0.000356623825",
+        "overlap_upper": "0.000000008108",
+        "variation_upper": "0.000400157918",
+        "stop_and_Q_upper": "0.000762790",
+        "visible_history_lower_s": [
+          "29.336897327093",
+          "58.696731725813",
+          "111.544433643509",
+          "223.111804358645",
+          "440.374578909173",
+          "874.900128010229",
+          "1749.823193092085",
+          "3499.669323255797"
+        ],
+        "word_ranges_certified": [
+          {
+            "low": 32768,
+            "high": 32768,
+            "q": "0.000762790"
+          }
+        ],
+        "registration": {
+          "top_level": 8,
+          "top_rounds": 256,
+          "period_local_s": "5.872025600",
+          "period_physical_upper_s": "5.872084321256",
+          "following_physical_s": "11.744168641512",
+          "quiet_frames": [
+            5,
+            10,
+            19,
+            38,
+            75,
+            149,
+            298,
+            596
+          ]
+        },
+        "price": {
+          "reads_upper_at_I0": 8156392638953,
+          "repairs_upper_at_I0": 687773223849,
+          "bus_read_repair_s_at_I0": "893269.597",
+          "bus_percent_at_I0": "0.283061",
+          "fast_s_upper_at_I0": "653567.726",
+          "switch_upper_at_I0": 187449,
+          "s_per_invalid_upper": "34.016758",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "10135320.753",
+          "bus_including_active_management_at_I0_s": "976873.437",
+          "s_per_invalid_including_active_management_upper": "37.468953",
+          "budget_X_for_twice_s": "3022244.549",
+          "budget_after_full_management_s": "-6219806.607",
+          "budget_after_active_management_s": "2938640.709"
+        },
+        "shared_map_twice_margin_s": "6937744.160",
+        "shared_map_margin_after_full_management_s": "-2304306.996"
+      }
+    },
+    "partners_outside": {
+      "W_interval": [
+        65536,
+        65536
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.065080870616",
+        "continuous_Q_lower": "0.000346954375",
+        "class_excluded_on_witness": false,
+        "necessary_bus_s_if_nonempty": "31460001.485",
+        "k_certified": 2,
+        "candidate_period_s": "0.045875200000",
+        "candidate_Q_upper": "0.000724204",
+        "candidate_stop_upper": "0.000743609",
+        "candidate_bus_read_repair_s": "45602281.111",
+        "frame_candidate": {
+          "frames": 45351,
+          "period_s": "0.063491400000",
+          "Q_upper": "0.000999990641",
+          "stop_upper": "0.001026849639",
+          "read_repair_s": "32994295.939",
+          "with_active_management_s": "36333236.280",
+          "with_all_management_s": "42236347.095"
+        }
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 65536,
+        "excluded_from_s": "0.065080870616",
+        "bus_lower_s_if_nonempty": "31460001.485",
+        "Q_lower_fast_grid": "0.000346954375",
+        "all_fixed_and_binary_excluded": false,
+        "first_integer_stride_excluded": 3
+      },
+      "L32": {
+        "profile_upper": "0.000369476353",
+        "overlap_upper": "0.000000011342",
+        "variation_upper": "0.000045517746",
+        "stop_and_Q_upper": "0.000421006",
+        "visible_history_lower_s": [
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285"
+        ],
+        "full_cells": 409,
+        "nominal_history_s": "300.207308800",
+        "price": {
+          "reads_upper_at_I0": 48076646394530,
+          "repairs_upper_at_I0": 379602075043,
+          "bus_read_repair_s_at_I0": "4894129.552",
+          "bus_percent_at_I0": "1.550857",
+          "fast_s_upper_at_I0": "7185296.256",
+          "switch_upper_at_I0": 408885,
+          "s_per_invalid_upper": "84.131739",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "14136180.709",
+          "bus_including_active_management_at_I0_s": "5386919.985",
+          "s_per_invalid_including_active_management_upper": "92.669859",
+          "budget_X_for_twice_s": "10835871.191",
+          "budget_after_full_management_s": "1593820.034",
+          "budget_after_active_management_s": "10343080.757"
+        },
+        "shared_map_twice_margin_s": "10835871.191",
+        "shared_map_margin_after_full_management_s": "1593820.034"
+      }
+    },
+    "all_pairings": {
+      "W_interval": [
+        32768,
+        65536
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.262028849141",
+        "continuous_Q_lower": "0.000078495027",
+        "class_excluded_on_witness": false,
+        "necessary_bus_s_if_nonempty": "7813812.540",
+        "k_certified": 2,
+        "candidate_period_s": "0.045875200000",
+        "candidate_Q_upper": "0.000724204",
+        "candidate_stop_upper": "0.000743609",
+        "candidate_bus_read_repair_s": "45602281.111",
+        "frame_candidate": {
+          "frames": 45351,
+          "period_s": "0.063491400000",
+          "Q_upper": "0.000999990641",
+          "stop_upper": "0.001026849639",
+          "read_repair_s": "32994295.939",
+          "with_active_management_s": "36333236.280",
+          "with_all_management_s": "42236347.095"
+        }
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 65536,
+        "excluded_from_s": "0.065080870616",
+        "bus_lower_s_if_nonempty": "31460001.485",
+        "Q_lower_fast_grid": "0.000346954375",
+        "all_fixed_and_binary_excluded": false,
+        "first_integer_stride_excluded": 3
+      },
+      "L32": {
+        "profile_upper": "0.000515285965",
+        "overlap_upper": "0.000000011342",
+        "variation_upper": "0.000089947368",
+        "stop_and_Q_upper": "0.000611245",
+        "visible_history_lower_s": [
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285"
+        ],
+        "full_cells": 409,
+        "nominal_history_s": "300.207308800",
+        "price": {
+          "reads_upper_at_I0": 48248176288869,
+          "repairs_upper_at_I0": 551131969382,
+          "bus_read_repair_s_at_I0": "4928778.934",
+          "bus_percent_at_I0": "1.561836",
+          "fast_s_upper_at_I0": "7245331.119",
+          "switch_upper_at_I0": 572469,
+          "s_per_invalid_upper": "84.131739",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "14170830.090",
+          "bus_including_active_management_at_I0_s": "5423327.566",
+          "s_per_invalid_including_active_management_upper": "92.669859",
+          "budget_X_for_twice_s": "-1021872.664",
+          "budget_after_full_management_s": "-10263923.820",
+          "budget_after_active_management_s": "-1516421.296"
+        },
+        "shared_map_twice_margin_s": "10801221.809",
+        "shared_map_margin_after_full_management_s": "1559170.652"
+      }
+    },
+    "quarter_eligible": {
+      "W_interval": [
+        32768,
+        44529
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.261645633424",
+        "continuous_Q_lower": "0.000079955955",
+        "class_excluded_on_witness": false,
+        "necessary_bus_s_if_nonempty": "7825256.934",
+        "k_certified": 4,
+        "candidate_period_s": "0.091750400000",
+        "candidate_Q_upper": "0.000981971",
+        "candidate_stop_upper": "0.001008345",
+        "candidate_bus_read_repair_s": "22859381.984",
+        "frame_candidate": {
+          "frames": 66746,
+          "period_s": "0.093444400000",
+          "Q_upper": "0.000999990043",
+          "stop_upper": "0.001026850824",
+          "read_repair_s": "22448337.276",
+          "with_active_management_s": "24717019.580",
+          "with_all_management_s": "31690388.433"
+        }
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 44529,
+        "excluded_from_s": "0.095938733219",
+        "bus_lower_s_if_nonempty": "21341164.587",
+        "Q_lower_fast_grid": "0.000233647802",
+        "all_fixed_and_binary_excluded": false,
+        "first_integer_stride_excluded": 5
+      },
+      "L32": {
+        "profile_upper": "0.000350115490",
+        "overlap_upper": "0.000000007707",
+        "variation_upper": "0.000061115514",
+        "stop_and_Q_upper": "0.000417239",
+        "visible_history_lower_s": [
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285",
+          "300.181369655285"
+        ],
+        "full_cells": 409,
+        "nominal_history_s": "300.207308800",
+        "price": {
+          "reads_upper_at_I0": 41816537574339,
+          "repairs_upper_at_I0": 376205534161,
+          "bus_read_repair_s_at_I0": "4261509.247",
+          "bus_percent_at_I0": "1.350391",
+          "fast_s_upper_at_I0": "4923640.587",
+          "switch_upper_at_I0": 390623,
+          "s_per_invalid_upper": "84.131739",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "13503560.404",
+          "bus_including_active_management_at_I0_s": "4690132.939",
+          "s_per_invalid_including_active_management_upper": "92.669859",
+          "budget_X_for_twice_s": "-348880.780",
+          "budget_after_full_management_s": "-9590931.936",
+          "budget_after_active_management_s": "-777504.472"
+        },
+        "shared_map_twice_margin_s": "6409073.047",
+        "shared_map_margin_after_full_management_s": "-2832978.110"
+      },
+      "staircase": {
+        "profile_upper": "0.000428126829",
+        "overlap_upper": "0.000000011018",
+        "variation_upper": "0.000468442596",
+        "stop_and_Q_upper": "0.000902581",
+        "visible_history_lower_s": [
+          "29.336897327093",
+          "58.696731725813",
+          "111.544433643509",
+          "223.111804358645",
+          "440.374578909173",
+          "874.900128010229",
+          "1749.823193092085",
+          "3499.669323255797"
+        ],
+        "word_ranges_certified": [
+          {
+            "low": 32768,
+            "high": 38648,
+            "q": "0.000898591"
+          },
+          {
+            "low": 38649,
+            "high": 44529,
+            "q": "0.000902581"
+          }
+        ],
+        "registration": {
+          "top_level": 8,
+          "top_rounds": 256,
+          "period_local_s": "5.872025600",
+          "period_physical_upper_s": "5.872084321256",
+          "following_physical_s": "11.744168641512",
+          "quiet_frames": [
+            5,
+            10,
+            19,
+            38,
+            75,
+            149,
+            298,
+            596
+          ]
+        },
+        "price": {
+          "reads_upper_at_I0": 9698749548720,
+          "repairs_upper_at_I0": 813816444533,
+          "bus_read_repair_s_at_I0": "1061779.678",
+          "bus_percent_at_I0": "0.336458",
+          "fast_s_upper_at_I0": "845844.040",
+          "switch_upper_at_I0": 240322,
+          "s_per_invalid_upper": "34.016758",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "10303830.835",
+          "bus_including_active_management_at_I0_s": "1161192.831",
+          "s_per_invalid_including_active_management_upper": "37.468953",
+          "budget_X_for_twice_s": "2850848.789",
+          "budget_after_full_management_s": "-6391202.368",
+          "budget_after_active_management_s": "2751435.636"
+        },
+        "shared_map_twice_margin_s": "9608802.615",
+        "shared_map_margin_after_full_management_s": "366751.459"
+      }
+    }
+  },
+  "262144": {
+    "continuous": {
+      "addresses": 131072,
+      "L_s": "0.045875200",
+      "pairs_closed_W": 65536,
+      "max_touched_W": 131072,
+      "largest_W_for_quarter": 22264,
+      "largest_W_for_quarter_with_stop_bound_only": 21679,
+      "closed": {
+        "Q_upper": "0.000724203204",
+        "stop_only_upper": "0.000743608487",
+        "epsilon_shares": {
+          "1/10": "0.007242033",
+          "1/100": "0.072420321",
+          "1/1000": "0.724203204",
+          "1/10000": "7.242032032"
+        }
+      },
+      "no_partner_inside": {
+        "Q_upper": "0.001442406407",
+        "stop_only_upper": "0.001481216974",
+        "epsilon_shares": {
+          "1/10": "0.014424065",
+          "1/100": "0.144240641",
+          "1/1000": "1.442406407",
+          "1/10000": "14.424064063"
+        }
+      }
+    },
+    "closed": {
+      "W_interval": [
+        65536,
+        65536
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.130161862199",
+        "continuous_Q_lower": "0.000346954258",
+        "class_excluded_on_witness": false,
+        "necessary_bus_s_if_nonempty": "31459972.476",
+        "k_certified": 1,
+        "candidate_period_s": "0.045875200000",
+        "candidate_Q_upper": "0.000724204",
+        "candidate_stop_upper": "0.000743609",
+        "candidate_bus_read_repair_s": "91135748.431",
+        "frame_candidate": {
+          "frames": 45351,
+          "period_s": "0.063491400000",
+          "Q_upper": "0.000999990641",
+          "stop_upper": "0.001026849639",
+          "read_repair_s": "65894532.293",
+          "with_active_management_s": "72572357.523",
+          "with_all_management_s": "75136583.450"
+        }
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 65536,
+        "excluded_from_s": "0.065081353743",
+        "bus_lower_s_if_nonempty": "62919535.888",
+        "Q_lower_fast_grid": "0.000703175371",
+        "all_fixed_and_binary_excluded": false,
+        "first_integer_stride_excluded": 2
+      },
+      "L32": {
+        "profile_upper": "0.000738949373",
+        "overlap_upper": "0.000000011344",
+        "variation_upper": "0.000093236926",
+        "stop_and_Q_upper": "0.000838198",
+        "visible_history_lower_s": [
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629"
+        ],
+        "full_cells": 205,
+        "nominal_history_s": "300.941312000",
+        "price": {
+          "reads_upper_at_I0": 48548030396398,
+          "repairs_upper_at_I0": 755765215509,
+          "bus_read_repair_s_at_I0": "4979732.661",
+          "bus_percent_at_I0": "1.577983",
+          "fast_s_upper_at_I0": "7351354.188",
+          "switch_upper_at_I0": 407245,
+          "s_per_invalid_upper": "84.542135",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "14221783.818",
+          "bus_including_active_management_at_I0_s": "5477354.827",
+          "s_per_invalid_including_active_management_upper": "93.121905",
+          "budget_X_for_twice_s": "10750253.577",
+          "budget_after_full_management_s": "1508202.421",
+          "budget_after_active_management_s": "10252631.411"
+        },
+        "shared_map_twice_margin_s": "26480035.283",
+        "shared_map_margin_after_full_management_s": "17237984.126"
+      }
+    },
+    "partners_outside": {
+      "W_interval": [
+        131072,
+        131072
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.032620793707",
+        "continuous_Q_lower": "0.001410743562",
+        "class_excluded_on_witness": true,
+        "necessary_bus_s_if_nonempty": "125530008.480",
+        "k_certified": 0
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 131072,
+        "excluded_from_s": "0.032620793707",
+        "bus_lower_s_if_nonempty": "125530008.480",
+        "Q_lower_fast_grid": "0.001410743562",
+        "all_fixed_and_binary_excluded": true,
+        "first_integer_stride_excluded": 1
+      },
+      "L32": {
+        "profile_upper": "0.001477885924",
+        "overlap_upper": "0.000000022688",
+        "variation_upper": "0.000097728808",
+        "stop_and_Q_upper": "0.001581638",
+        "visible_history_lower_s": [
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629"
+        ],
+        "full_cells": 205,
+        "nominal_history_s": "300.941312000",
+        "price": {
+          "reads_upper_at_I0": 68832774712143,
+          "repairs_upper_at_I0": 1426091432032,
+          "bus_read_repair_s_at_I0": "7096215.740",
+          "bus_percent_at_I0": "2.248656",
+          "fast_s_upper_at_I0": "14672394.435",
+          "switch_upper_at_I0": 773748,
+          "s_per_invalid_upper": "84.542135",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "16338266.896",
+          "bus_including_active_management_at_I0_s": "7801758.564",
+          "s_per_invalid_including_active_management_upper": "93.121905"
+        }
+      }
+    },
+    "all_pairings": {
+      "W_interval": [
+        65536,
+        131072
+      ],
+      "fixed": {
+        "constant_cutoff_physical_s_upper": "0.130909609517",
+        "continuous_Q_lower": "0.000341181421",
+        "class_excluded_on_witness": false,
+        "necessary_bus_s_if_nonempty": "31280275.126",
+        "k_certified": 0
+      },
+      "shared_unknown_map_rival": {
+        "clustered_witness_W": 131072,
+        "excluded_from_s": "0.032620793707",
+        "bus_lower_s_if_nonempty": "125530008.480",
+        "Q_lower_fast_grid": "0.001410743562",
+        "all_fixed_and_binary_excluded": true,
+        "first_integer_stride_excluded": 1
+      },
+      "L32": {
+        "profile_upper": "0.001477898745",
+        "overlap_upper": "0.000000022688",
+        "variation_upper": "0.000186473851",
+        "stop_and_Q_upper": "0.001670396",
+        "visible_history_lower_s": [
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629",
+          "300.892428144629"
+        ],
+        "full_cells": 205,
+        "nominal_history_s": "300.941312000",
+        "price": {
+          "reads_upper_at_I0": 68912803782742,
+          "repairs_upper_at_I0": 1506120502631,
+          "bus_read_repair_s_at_I0": "7112381.772",
+          "bus_percent_at_I0": "2.253778",
+          "fast_s_upper_at_I0": "14700404.330",
+          "switch_upper_at_I0": 811908,
+          "s_per_invalid_upper": "84.542135",
+          "full_management_reserve_s": "9242051.157",
+          "bus_including_full_management_at_I0_s": "16354432.929",
+          "bus_including_active_management_at_I0_s": "7818744.902",
+          "s_per_invalid_including_active_management_upper": "93.121905"
+        }
+      }
+    }
+  },
+  "calendar_git_blob": "6d937af0f819a4ffab579194f7e34217cd60a12c",
+  "resources": {
+    "window_s": "0.001",
+    "frame_count_upper": 717,
+    "protected_word_operations_peak_pct": "57.934174",
+    "with_all_app_and_control_slots_peak_pct": "78.153775",
+    "nominal_min_gap_ns": 240,
+    "additional_true_reports_due_to_inflight_births_upper": "0.357559205"
+  }
+}
