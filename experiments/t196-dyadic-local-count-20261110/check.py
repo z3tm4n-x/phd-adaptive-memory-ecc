@@ -186,6 +186,7 @@ def dyadic_pairs(cal, gamma=F(1,2), binary64=False):
             "scalar_intervals":pieces, "scalar_slope_upper":up(slope,12),
             "profile_term":up(PAIR_FACTOR*ideal,12), "overlaps":up(PAIR_FACTOR*phase,12),
             "variation":up(PAIR_FACTOR*variation,12), "kernel_upper":up(kernel,9),
+            "top_split_variation":up(PAIR_FACTOR*variation*a[-1]/sum(a),12),
             "joint_stop_upper_d0":up(q), "joint_stop_upper_d1e4":up(q+F("0.0001"))}
 
 
