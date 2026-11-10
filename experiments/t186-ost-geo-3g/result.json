@@ -1,0 +1,307 @@
+{
+  "base": "34a6875ee0803e46a47e520d6f4bd5e2008ecb80",
+  "reference_bits": 19922944,
+  "shield_g_cm2": 3,
+  "table_rows": {
+    "Л.3.1.2": {
+      "export": "sp_x.txt",
+      "variable": "E_MeV",
+      "common_range": [
+        1.0,
+        10000.0
+      ],
+      "ost": {
+        "nodes": 41,
+        "native_range": [
+          1.0,
+          10000.0
+        ],
+        "native_s_inv": 0.7603177527745365,
+        "common_s_inv": 0.7603177527745365,
+        "native_below_common_s_inv": null,
+        "native_above_common_s_inv": null,
+        "H_1_to_5_MeV_s_inv": 0.6061011280287067,
+        "H_5_to_max_MeV_s_inv": 0.1542166247458297
+      },
+      "cosrad": {
+        "nodes": 50,
+        "native_range": [
+          0.126,
+          10000.0
+        ],
+        "native_s_inv": 0.7599601179303638,
+        "common_s_inv": 0.7585110798148776,
+        "native_below_common_s_inv": 0.0014490381154861828,
+        "native_above_common_s_inv": null,
+        "H_1_to_5_MeV_s_inv": 0.6045219047344615,
+        "H_5_to_max_MeV_s_inv": 0.15398917508041615
+      }
+    },
+    "Л.3.1.4": {
+      "export": "sl_x.txt",
+      "variable": "LET_MeV_cm2_mg",
+      "common_range": [
+        0.00158,
+        39.8
+      ],
+      "ost": {
+        "nodes": 45,
+        "native_range": [
+          0.00158,
+          39.8
+        ],
+        "native_s_inv": 0.053798902554169865,
+        "common_s_inv": 0.053798902554169865,
+        "native_below_common_s_inv": null,
+        "native_above_common_s_inv": null
+      },
+      "cosrad": {
+        "nodes": 59,
+        "native_range": [
+          0.00126,
+          794.0
+        ],
+        "native_s_inv": 0.22118213366567943,
+        "common_s_inv": 0.22118213366567943,
+        "native_below_common_s_inv": 0.0,
+        "native_above_common_s_inv": 0.0
+      }
+    },
+    "Л.3.2.2": {
+      "export": "gp_x.txt",
+      "variable": "E_MeV",
+      "common_range": [
+        1.0,
+        50100.0
+      ],
+      "ost": {
+        "nodes": 48,
+        "native_range": [
+          1.0,
+          50100.0
+        ],
+        "native_s_inv": 7.087229251228291e-06,
+        "common_s_inv": 7.087229251228291e-06,
+        "native_below_common_s_inv": null,
+        "native_above_common_s_inv": null,
+        "H_1_to_5_MeV_s_inv": 1.1005045682279773e-07,
+        "H_5_to_max_MeV_s_inv": 6.977178794405492e-06
+      },
+      "cosrad": {
+        "nodes": 57,
+        "native_range": [
+          0.126,
+          50100.0
+        ],
+        "native_s_inv": 7.047621060331916e-06,
+        "common_s_inv": 7.047355485374755e-06,
+        "native_below_common_s_inv": 2.655749571611041e-10,
+        "native_above_common_s_inv": null,
+        "H_1_to_5_MeV_s_inv": 1.0941813121795872e-07,
+        "H_5_to_max_MeV_s_inv": 6.937937354156795e-06
+      }
+    },
+    "Л.3.2.4": {
+      "export": "gl_x.txt",
+      "variable": "LET_MeV_cm2_mg",
+      "common_range": [
+        0.00158,
+        126.0
+      ],
+      "ost": {
+        "nodes": 50,
+        "native_range": [
+          0.00158,
+          126.0
+        ],
+        "native_s_inv": 0.00015213734155565336,
+        "common_s_inv": 0.00015213734155565336,
+        "native_below_common_s_inv": null,
+        "native_above_common_s_inv": null
+      },
+      "cosrad": {
+        "nodes": 51,
+        "native_range": [
+          0.00126,
+          126.0
+        ],
+        "native_s_inv": 0.00015155048211212683,
+        "common_s_inv": 0.00015155048211212683,
+        "native_below_common_s_inv": 0.0,
+        "native_above_common_s_inv": null
+      }
+    }
+  },
+  "ost_tabulated": {
+    "b": 0.00015922457080688165,
+    "solar_H": 0.7603177527745365,
+    "solar_LET": 0.053798902554169865,
+    "solar_excess_peak": 0.8141166553287064,
+    "B": 0.8142758798995132
+  },
+  "cosrad_common": {
+    "b": 0.0001585978375975016,
+    "solar_H": 0.7585110798148776,
+    "solar_LET": 0.22118213366567943,
+    "solar_excess_peak": 0.979693213480557,
+    "B": 0.9798518113181546
+  },
+  "cosrad_full_export": {
+    "b": 0.00015859810317245875,
+    "solar_H": 0.7599601179303638,
+    "solar_LET": 0.22118213366567943,
+    "solar_excess_peak": 0.9811422515960432,
+    "B": 0.9813008496992157
+  },
+  "ost_plus_cosrad_sub1_scenario": {
+    "b": 0.0001592248363818388,
+    "B": 0.8157249182805744
+  },
+  "unknown": {
+    "ost_sub1_solar_and_galactic_physical_spectra": null,
+    "trapped_proton_post_Al_GEO_rate_history": null,
+    "physical_joint_quantile": null
+  },
+  "bank_inversions_per_s_conditional": {
+    "32768": {
+      "ost_tabulated": {
+        "b": 9.951535675430103e-06,
+        "B": 0.050892242493719576
+      },
+      "cosrad_full_export": {
+        "b": 9.912381448278672e-06,
+        "B": 0.06133130310620098
+      }
+    },
+    "44529": {
+      "ost_tabulated": {
+        "b": 1.3523313357276217e-05,
+        "B": 0.06915834552010618
+      },
+      "cosrad_full_export": {
+        "b": 1.347010600312503e-05,
+        "B": 0.08334416491748119
+      }
+    }
+  },
+  "archive": {
+    "old_limits": {
+      "b": 0.00015859810317245875,
+      "B": 0.9813008496992157,
+      "S1": 187464,
+      "S2": 134874.44680746374,
+      "F": 137414.24499324814,
+      "g": 0.004392116,
+      "U": 28.855
+    },
+    "old_archive": {
+      "SEPEM_S1_max": 187463.23248858593,
+      "SEPEM_windows": 3313873,
+      "SEPEM_peak_mean": 0.5444160302406303,
+      "GOES_decisive_minute_slope": 0.0021960576940522137,
+      "max_J": 28.854776284015777
+    },
+    "beta_cosrad": 0.29104439620862665,
+    "beta_ost_tabulated": 0.07075844587062183,
+    "excess_multiplier": 0.8293738379679954,
+    "background_shift": 6.264676344229015e-07,
+    "background_shift_times_T": 197.69815020064155,
+    "accepted_excess_quota_in_new_background_coordinates": 137216.54684304752,
+    "observed_max_upward_mean_slope_new": 0.0018213527981152302,
+    "archives_on_transferred_profiles": {
+      "SEPEM_archive": {
+        "S1_on_accepted_windows_or_gap_completion": 164214.5963645899,
+        "peak_of_transferred_construction": 0.5244974628211125,
+        "max_upward_slope_inside_bins": 0.0005515002913134225,
+        "J_in_old_background_coordinates": 23.931397176849693,
+        "S1_any_start_upper": 164371.897836065
+      },
+      "GOES_composite_5min_East": {
+        "S1_on_accepted_windows_or_gap_completion": 57668.96044944397,
+        "peak_of_transferred_construction": 0.19628586291279637,
+        "max_upward_slope_inside_bins": 0.0004564659387779844,
+        "J_in_old_background_coordinates": 2.4056654684534484,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "GOES_composite_5min_West": {
+        "S1_on_accepted_windows_or_gap_completion": 62463.777323981136,
+        "peak_of_transferred_construction": 0.2737669150038417,
+        "max_upward_slope_inside_bins": 0.0002575723063171577,
+        "J_in_old_background_coordinates": 3.3588780204336297,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "G16_1min_East": {
+        "S1_on_accepted_windows_or_gap_completion": 52420.956629503344,
+        "peak_of_transferred_construction": 0.025602860588785664,
+        "max_upward_slope_inside_bins": 0.00011903531536356812,
+        "J_in_old_background_coordinates": 2.986828227151203,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "G16_1min_West": {
+        "S1_on_accepted_windows_or_gap_completion": 53348.00937711174,
+        "peak_of_transferred_construction": 0.038516185749557064,
+        "max_upward_slope_inside_bins": 0.00010219203994798729,
+        "J_in_old_background_coordinates": 4.109818124208971,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "G18_1min_East": {
+        "S1_on_accepted_windows_or_gap_completion": 53767.76087735642,
+        "peak_of_transferred_construction": 0.21210487795380625,
+        "max_upward_slope_inside_bins": 0.0019534080684121425,
+        "J_in_old_background_coordinates": 5.338808675614935,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "G18_1min_West": {
+        "S1_on_accepted_windows_or_gap_completion": 58520.620684309986,
+        "peak_of_transferred_construction": 0.3718128151543497,
+        "max_upward_slope_inside_bins": 0.0016858398984449221,
+        "J_in_old_background_coordinates": 8.60067349711047,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "G19_1min_East": {
+        "S1_on_accepted_windows_or_gap_completion": 53336.865409439444,
+        "peak_of_transferred_construction": 0.41799475256737356,
+        "max_upward_slope_inside_bins": 0.003642705596230459,
+        "J_in_old_background_coordinates": 3.108571332856425,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      },
+      "G19_1min_West": {
+        "S1_on_accepted_windows_or_gap_completion": 53630.65437636497,
+        "peak_of_transferred_construction": 0.2993746698845207,
+        "max_upward_slope_inside_bins": 0.0013444964716781208,
+        "J_in_old_background_coordinates": 3.2213108542220636,
+        "growth_bound_on_gap_ramps": 0.0036427061037206396
+      }
+    },
+    "GOES_5min_gap_budgets": {
+      "East": {
+        "observed_s": 120433800,
+        "missing_s_including_tail": 195142200,
+        "observed_S1": 26597.503196628993,
+        "allowed_excess_integral_on_gaps_above_new_b": 129795.06376206034,
+        "allowed_mean_excess_on_gaps_s_inv": 0.0006651306778444659
+      },
+      "West": {
+        "observed_s": 158476800,
+        "missing_s_including_tail": 157099200,
+        "observed_S1": 37449.66467684109,
+        "allowed_excess_integral_on_gaps_above_new_b": 125000.28262905445,
+        "allowed_mean_excess_on_gaps_s_inv": 0.000795677397651003
+      }
+    },
+    "conditional_class_covers": true,
+    "sufficient_joint_residual_budgets": {
+      "peak_s_inv": 0.1670249697997025,
+      "ten_year_expected_inversions": 23092.102163934993,
+      "upward_slope_s_inv2": 0.0007494098962793601,
+      "initial_plus_positive_variation_s_inv": 4.923417278965861
+    },
+    "constant_uncovered_rate_budget_from_exposure_s_inv": 7.317445611813e-05,
+    "if_only_background_replaced": {
+      "SEPEM_S1": 187660.93063878658,
+      "excess_over_accepted_S1": 196.93063878657995,
+      "lower_integer_cap_required_by_these_windows": 187661,
+      "max_excess_multiplier_from_SEPEM_S1": 0.9985668753720858
+    }
+  }
+}
