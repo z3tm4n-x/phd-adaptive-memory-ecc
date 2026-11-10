@@ -1,0 +1,102 @@
+{
+  "read_port_ns": 100,
+  "repair_additional_port_ns": 100,
+  "repaired_visit_port_ns": 200,
+  "read_or_additional_write_lower_upper_ns": [
+    "98.999",
+    "101.001"
+  ],
+  "maximum_physical_aperture_ns": "201.502",
+  "timing_margins_ns": {
+    "read_address_ce_dq_capture_or_address_ce_err_capture": "13.9994",
+    "read_oe_capture": "36.9994",
+    "sample_to_control_change": "8.9999",
+    "oe_high_to_fpga_drive": "10.9997",
+    "read_cycle": "23.9993",
+    "write_cycle": "33.9992",
+    "address_setup_to_write_start": "8.9999",
+    "write_enable_low": "13.9995",
+    "address_select_byte_setup_to_write_end": "23.9994",
+    "write_data_setup": "33.9994",
+    "data_address_hold": "18.9998",
+    "fpga_drive_off_to_release": "18.9998"
+  },
+  "banks": [
+    {
+      "payload_bytes": 131072,
+      "scan": "all_half_addresses",
+      "read_count": 65536,
+      "internal_words_lower_upper": [
+        32768,
+        65536
+      ],
+      "period_ns": 22937600,
+      "last_start_ns": 22936960,
+      "report_cut_ns": 22937300,
+      "period_physical_lower_upper_ns": [
+        "22937369.624",
+        "22937830.376"
+      ],
+      "port_clean_ns": 6553600,
+      "port_one_isolated_repair_ns": 6553700,
+      "port_all_writes_ns": 13107200
+    },
+    {
+      "payload_bytes": 131072,
+      "scan": "verified_representatives",
+      "read_count": 32768,
+      "internal_words_lower_upper": [
+        32768,
+        32768
+      ],
+      "period_ns": 11468800,
+      "last_start_ns": 11468160,
+      "report_cut_ns": 11468500,
+      "period_physical_lower_upper_ns": [
+        "11468684.312",
+        "11468915.688"
+      ],
+      "port_clean_ns": 3276800,
+      "port_one_isolated_repair_ns": 3276900,
+      "port_all_writes_ns": 6553600
+    },
+    {
+      "payload_bytes": 262144,
+      "scan": "all_half_addresses",
+      "read_count": 131072,
+      "internal_words_lower_upper": [
+        65536,
+        131072
+      ],
+      "period_ns": 45875200,
+      "last_start_ns": 45874560,
+      "report_cut_ns": 45874900,
+      "period_physical_lower_upper_ns": [
+        "45874740.248",
+        "45875659.752"
+      ],
+      "port_clean_ns": 13107200,
+      "port_one_isolated_repair_ns": 13107300,
+      "port_all_writes_ns": 26214400
+    },
+    {
+      "payload_bytes": 262144,
+      "scan": "verified_representatives",
+      "read_count": 65536,
+      "internal_words_lower_upper": [
+        65536,
+        65536
+      ],
+      "period_ns": 22937600,
+      "last_start_ns": 22936960,
+      "report_cut_ns": 22937300,
+      "period_physical_lower_upper_ns": [
+        "22937369.624",
+        "22937830.376"
+      ],
+      "port_clean_ns": 6553600,
+      "port_one_isolated_repair_ns": 6553700,
+      "port_all_writes_ns": 13107200
+    }
+  ]
+}
