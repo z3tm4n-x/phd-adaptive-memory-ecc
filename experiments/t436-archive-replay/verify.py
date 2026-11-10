@@ -1,5 +1,8 @@
 """Independent chronological word-by-word reference and directed edge cases."""
+from itertools import combinations
+from pathlib import Path
 from random import Random
+import sys
 import unittest
 
 import numpy as np
@@ -7,6 +10,19 @@ import numpy as np
 from histories import D, DT, T, W, WIDTH, Profile
 from replay import Calendar, decode, simulate
 from risk import pair_upper, triangle
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "t186-method-comparison" / "code-strength"))
+from codec import Code
+
+FULL39 = Code(1)
+
+
+def decode_full39(mask):
+    result = FULL39.decode(mask)
+    if result["corrected_word"] is None:
+        return mask, False, True
+    return result["corrected_word"], result["ERR"], False
 
 
 def stepped(marks, adaptive, end, cal):
@@ -41,7 +57,7 @@ def stepped(marks, adaptive, end, cal):
                 break
             births_before(start)
             snapshot = memory[w]
-            corrected,repair,due = decode(snapshot)
+            corrected,repair,due = decode_full39(snapshot)
             release = start+68+56*repair
             in_pass += 1
             reads += 1
@@ -96,6 +112,14 @@ def stepped(marks, adaptive, end, cal):
 
 
 class ReplayChecks(unittest.TestCase):
+    def test_decoder_uses_full39_positions(self):
+        for weight in range(4):
+            for positions in combinations(range(39), weight):
+                mask = sum(1 << i for i in positions)
+                self.assertEqual(decode(mask), decode_full39(mask), positions)
+        # An undetected weight-four codeword in the accepted physical numbering.
+        self.assertEqual(decode(0b1111), decode_full39(0b1111))
+
     def compare(self,marks,end,c):
         marks = sorted(marks,key=lambda m:m[0])
         for adaptive in (False,True):

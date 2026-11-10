@@ -6,9 +6,19 @@ import sys
 
 REF = Path(__file__).resolve().parents[1] / "RE-CY62167-EXECUTOR-TIMING-GATE-01/reference-continuation-01"
 sys.path.insert(0, str(REF))
-from witness import decode
+from witness import decode as decode_reference
 
 NS = 10**9
+LOW_38_BITS = (1 << 38) - 1
+
+
+def decode(mask):
+    """Decode a mask in the accepted T187 full39 bit order, including after failure."""
+    # Lower syndrome columns are 0..38 in T187 and 1..38,0 in the reference.
+    reference_mask = (mask >> 1) | ((mask & 1) << 38)
+    corrected, repair, detected = decode_reference(reference_mask)
+    canonical_mask = ((corrected & LOW_38_BITS) << 1) | (corrected >> 38)
+    return canonical_mask, repair, detected
 
 
 @dataclass(frozen=True)
