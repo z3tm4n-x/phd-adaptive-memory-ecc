@@ -1,0 +1,55 @@
+budget
+32768 E[parents] <= 5858.25 illustrative direct fraction <= 1.7069944095933084e-08 decade bus upper (s) 843839.613
+44529 E[parents] <= 7960.876899719238 illustrative direct fraction <= 1.2561430261976136e-08 decade bus upper (s) 1018620.684
+Controller limit (1/h): 6.844626967830253e-11
+
+decade
+{
+  "trials": 128,
+  "words": 32768,
+  "seed": 462,
+  "stopped": 0,
+  "mean_lower_s": 476298.028,
+  "mean_upper_s": 476298.028,
+  "sample_se_lower_s": 144.527,
+  "sample_se_upper_s": 144.527,
+  "average_scans_before_stop": 72677311.21875
+}
+
+inject
+CHECK_LOCAL = 0
+case=0 reads=8 writes=0 next_start=1282
+case=1 reads=8 writes=1 next_start=1281
+case=2 reads=8 writes=0 next_start=1281
+case=3 reads=8 writes=0 next_start=1281
+case=4 reads=8 writes=1 next_start=1282
+case=5 reads=8 writes=0 next_start=1281
+case=6 reads=8 writes=1 next_start=1283
+case=7 reads=8 writes=1 next_start=1283
+case=8 reads=8 writes=0 next_start=1284
+CHECK_LOCAL = 1
+case=0 reads=8 writes=0 next_start=1282
+case=1 reads=8 writes=1 next_start=1281
+case=2 reads=8 writes=0 next_start=1281
+case=3 reads=8 writes=0 next_start=1281
+case=4 reads=8 writes=1 next_start=1281
+case=5 reads=8 writes=0 next_start=1281
+case=6 reads=8 writes=1 next_start=1281
+case=7 reads=8 writes=1 next_start=1281
+case=8 reads=8 writes=0 next_start=1282
+
+synth
+CHECK_LOCAL = 0
+NATIVE8_PART xc7z020clg484-1
+NATIVE8_VIVADO 2025.2
+NATIVE8_FF 93
+NATIVE8_LUT 185
+NATIVE8_CARRY 2
+NATIVE8_DATA_SETUP_SLACK 3.281
+CHECK_LOCAL = 1
+NATIVE8_PART xc7z020clg484-1
+NATIVE8_VIVADO 2025.2
+NATIVE8_FF 94
+NATIVE8_LUT 219
+NATIVE8_CARRY 2
+NATIVE8_DATA_SETUP_SLACK 3.988
