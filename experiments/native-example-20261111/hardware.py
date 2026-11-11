@@ -36,6 +36,9 @@ def synth(work, checked, reports):
     slice_luts = re.search(r"^\|\s*Slice LUTs\*?\s*\|\s*(\d+)\s*\|", utilization, re.MULTILINE)
     if not slice_luts:
         raise ValueError("missing Slice LUTs in the Vivado utilization report")
+    lut_line = next(line for line in result if line.startswith("NATIVE8_LUT "))
+    if int(lut_line.split()[1]) <= 0 or int(slice_luts[1]) <= 0:
+        raise ValueError("expected positive LUT usage for the native8 controller")
     result.append("NATIVE8_SLICE_LUTS " + slice_luts[1])
     if reports:
         destination = reports/f"check_local_{checked}"
