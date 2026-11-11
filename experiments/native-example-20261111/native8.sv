@@ -24,12 +24,20 @@ module native8 #(parameter CHECK_LOCAL = 1) (
     wire [1:0] lane = phase < 24 ? 0 : phase < 52 ? 1 : phase < 76 ? 2 : 3;
     wire [7:0] age = phase - (lane==0 ? 8'd0 : lane==1 ? 8'd24 :
                               lane==2 ? 8'd52 : 8'd76);
+    localparam [7:0] SAMPLE_TICK=6, READ_RELEASE_TICK=10, WRITE_RELEASE_TICK=20;
+    localparam [7:0] CUT_TICK=110, INSTALL_TICK=130;  // in the second frame
     assign addr = {frame,lane};
-    assign selected = active && (age<10 || (hit && age<20));
+    assign selected = active && (age<READ_RELEASE_TICK || (hit && age<WRITE_RELEASE_TICK));
     assign oe_n = !(active && age<7);
-    assign drive = active && hit && age>=10 && age<18;
+    assign drive = active && hit && age>=READ_RELEASE_TICK && age<18;
     assign we_n = !(drive && age>=11 && age<16);
-    wire release_visit = active && (hit ? age==20 : age==10);
+    // Pins decode the current tick. A clocked update entering tick k
+    // sees k-1 before the phase register advances on that same edge.
+    wire sample_visit = active && (age == SAMPLE_TICK - 8'd1);
+    wire release_visit = active && (hit ? age == WRITE_RELEASE_TICK - 8'd1 :
+                                          age == READ_RELEASE_TICK - 8'd1);
+    wire cut_report = active && frame && (phase == CUT_TICK - 8'd1);
+    wire install_command = active && frame && (phase == INSTALL_TICK - 8'd1);
     wire good_zero = report_ok && sealed && !poisoned && count==0 &&
                      (!CHECK_LOCAL || !any_err);
 
@@ -89,7 +97,7 @@ module native8 #(parameter CHECK_LOCAL = 1) (
                 end
             end else phase<=phase+1'b1;
             if (active && age==0) hit<=0;
-            if (active && age==6) begin
+            if (sample_visit) begin
                 hit<=err_in; dq_out<=dq_in;
                 if (err_in) any_err<=1;
             end
@@ -102,7 +110,7 @@ module native8 #(parameter CHECK_LOCAL = 1) (
                     if (addr==7 && !poisoned) sealed<=1;
                 end
             end
-            if (active && frame && phase==110) begin // cut at L-300 ns
+            if (cut_report) begin // cut at L-300 ns
                 if (!good_zero) begin
                     proposed<=1; quiet<=0; spoiled<=!common_end;
                 end else if (common_end) begin
@@ -111,7 +119,7 @@ module native8 #(parameter CHECK_LOCAL = 1) (
                 end else proposed<=step;
                 if (common_end) started<=1;
             end
-            if (active && frame && phase==130) begin // install 200 ns later
+            if (install_command) begin // install 200 ns later
                 if (install_ok && valid_proposal) begin step<=proposed; gap<=proposed; end
                 else begin step<=1; gap<=1; quiet<=0; spoiled<=!common_end; end
             end

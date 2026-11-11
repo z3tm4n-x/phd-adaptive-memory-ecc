@@ -12,4 +12,11 @@ puts "NATIVE8_VIVADO [version -short]"
 puts "NATIVE8_FF [llength [get_cells -hier -filter {REF_NAME =~ FD*}]]"
 puts "NATIVE8_LUT [llength [get_cells -hier -filter {REF_NAME =~ LUT*}]]"
 puts "NATIVE8_CARRY [llength [get_cells -hier -filter {REF_NAME == CARRY4}]]"
-puts "NATIVE8_DATA_SETUP_SLACK [get_property SLACK [get_timing_paths -from [all_registers] -to [all_registers] -max_paths 1]]"
+set path [get_timing_paths -from [all_registers] -to [all_registers] -delay_type max -max_paths 1]
+if {[llength $path] != 1} {error "missing register-to-register setup path"}
+puts "NATIVE8_DATA_SETUP_SLACK [get_property SLACK $path]"
+puts "NATIVE8_CRITICAL_FROM [get_property STARTPOINT_PIN $path]"
+puts "NATIVE8_CRITICAL_TO [get_property ENDPOINT_PIN $path]"
+set hold_path [get_timing_paths -from [all_registers] -to [all_registers] -delay_type min -max_paths 1]
+if {[llength $hold_path] != 1} {error "missing register-to-register hold path"}
+puts "NATIVE8_DATA_HOLD_SLACK [get_property SLACK $hold_path]"

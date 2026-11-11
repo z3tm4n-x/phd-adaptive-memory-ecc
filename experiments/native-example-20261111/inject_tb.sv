@@ -8,6 +8,8 @@ module inject_tb #(parameter CHECK_LOCAL=1);
     wire [15:0] dq;
     wire [3:0] count;
     wire [8:0] step;
+    wire reading=sel && !oe_n;
+    reg was_reading=0, was_we_n=1;
     native8 #(.CHECK_LOCAL(CHECK_LOCAL)) d(clk,reset,err,16'h5aa5,release_ok,report_ok,install_ok,
               addr,sel,oe_n,we_n,drive,dq,sealed,count,step);
     integer sc, r, k, reads, writes, expected, next_start, checked;
@@ -24,16 +26,23 @@ module inject_tb #(parameter CHECK_LOCAL=1);
                 report_ok=!(sc==3 && r==1280);
                 install_ok=!(sc==5 && r==1280);
                 #1;
-                if (k==0 && sel && !oe_n) begin
-                    if(r>1280 && next_start<0) next_start=r;
+                if (r>1280 && next_start<0 && (sel || !oe_n || !we_n || drive)) begin
+                    if (k!=0 || addr!==0 || !reading || !we_n || drive)
+                        $fatal(1,"first subsequent bus activity is not a scan start");
+                    next_start=r;
                 end
                 if (r==1280) begin
-                    if (d.active && d.age==6) reads=reads+1;
-                    if (!we_n && d.age==11) begin
-                        writes=writes+1;
-                        if(addr!=7 || dq!=16'h5aa5 || !drive) $fatal(1,"incorrect repair");
+                    if (reading && !was_reading) begin
+                        if (addr!==reads[2:0]) $fatal(1,"out-of-sequence read");
+                        reads=reads+1;
                     end
-                    if (k==237 && (sc==1 || sc==4 || sc==6) && (count!=1 || !sealed))
+                    if (!we_n && was_we_n) begin
+                        writes=writes+1;
+                        if(addr!==7 || dq!==16'h5aa5 || !drive || !sel || !oe_n)
+                            $fatal(1,"incorrect repair");
+                    end
+                    if (k==237 && (sc==1 || sc==4 || sc==6 || sc==7) &&
+                        (count!==1 || sealed!==1))
                         $fatal(1,"last repair not sealed");
                     if(k==245 && sc==4) d.count[0]=1'b0; // actual 1 -> 0
                     if(k==265 && sc==6) d.proposed[1]=1'b1; // 1 -> 3 before latch
@@ -46,6 +55,8 @@ module inject_tb #(parameter CHECK_LOCAL=1);
                     if (k==275 && sc==7) d.gap[1]=1'b1; // after install, before use
                 end
                 if(r==1281 && k==20 && sc==8) d.remaining[1]=1'b1;
+                was_reading=reading;
+                was_we_n=we_n;
                 @(negedge clk);
             end
         end
