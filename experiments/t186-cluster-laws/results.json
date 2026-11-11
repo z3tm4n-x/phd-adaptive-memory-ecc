@@ -1,0 +1,5468 @@
+{
+  "basis_sha": "68d128011f19265f4bdbcf4da140a92c4704c8fe",
+  "protocol_commit": "c6a54e0d02233a21015d8429efd329ed7a4ce444",
+  "inputs_sha256_lf": "b16816a3af41ec14a2a8f60ef0c68cf59d1701cfd8f3877e52aa432d6be89754",
+  "family_rows": 136,
+  "geometry_P_intersection": {
+    "single": {
+      "1": "1/16",
+      "4": "1/4",
+      "8": "1/2"
+    },
+    "two_uniform": {
+      "1": "1/8",
+      "4": "9/20",
+      "8": "23/30"
+    },
+    "compact_1p2": {
+      "1": "3/40",
+      "4": "21/80",
+      "8": "41/80"
+    },
+    "compact_5": {
+      "1": "5/16",
+      "4": "1/2",
+      "8": "3/4"
+    }
+  },
+  "profiles": {
+    "class_plateau": {
+      "input": {
+        "plateau_duration_ns": 140055373998738,
+        "S1_reference": 187463.9999999996,
+        "S2_reference_per_s": 134874.44680746333,
+        "bank_inversions_expected": 5.720947265624988
+      },
+      "cases": [
+        {
+          "law": "single",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            750405,
+            0,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "e2ae792e7ab7e6060703cf90f6fe943891e2b0b65f5a926383ad1cdec4ac12b9",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.4622515627,
+              "port_pct_mean": 0.11160717616408178,
+              "resets_mean": 5.725303649902344,
+              "reset_cells_mean": 5.725303649902344,
+              "positive_reports_mean": 5.725303649902344,
+              "downshifts_mean": 5.725128173828125,
+              "switches_mean": 59.525596618652344,
+              "fast_s_mean": 0.09642338959960937,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426335733800556,
+                "read_ns": 46164274348161779200,
+                "write_ns": 75044300,
+                "positive_reports": 750427,
+                "resets": 750427,
+                "reset_cells": 750427,
+                "downshifts": 750404,
+                "switches": 7802139,
+                "fast_ns": 12638406521600,
+                "completed_writes": 750443,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857212,
+              "port_pct_mean": 28.57142857142879,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.755683898925781,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 75848600,
+                "positive_reports": 754409,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 758486,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.35714617255,
+              "port_pct_mean": 0.11160714285819344,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.725303649902344,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 75044300,
+                "positive_reports": 750427,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750443,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 54,
+              "Q_estimate": 0.0004119873046875,
+              "CP95": [
+                0.00030951222467887117,
+                0.0005375203135091023
+              ],
+              "CP95_family": [
+                0.00024132947190442806,
+                0.0006513162836860284
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458172472382,
+              "port_pct_mean": 3.40598086434722e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.719352722167969,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 54,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 75035100,
+                "positive_reports": 749647,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750351,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 100,
+              "Q_estimate": 0.000762939453125,
+              "CP95": [
+                0.0006207997620872174,
+                0.0009278622308228627
+              ],
+              "CP95_family": [
+                0.0005204639784018029,
+                0.0010736451160672702
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 5.37423097243576,
+              "port_pct_mean": 1.7029910298741854e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.713783264160156,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 100,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 75030300,
+                "positive_reports": 748917,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750303,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 199,
+              "Q_estimate": 0.00151824951171875,
+              "CP95": [
+                0.0013147520996609433,
+                0.0017442845840078018
+              ],
+              "CP95_family": [
+                0.0011644546548810102,
+                0.0019398324143388244
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 2.6871173723571777,
+              "port_pct_mean": 8.514961126185697e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.701820373535156,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 199,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 75020000,
+                "positive_reports": 747349,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750200,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 393,
+              "Q_estimate": 0.00299835205078125,
+              "CP95": [
+                0.0027095863626356268,
+                0.0033094395370231937
+              ],
+              "CP95_family": [
+                0.002489691632023089,
+                0.003574350403027634
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 1.3435589721961976,
+              "port_pct_mean": 4.2574814694279585e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.67864990234375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 393,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 74998900,
+                "positive_reports": 744312,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749989,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 727,
+              "Q_estimate": 0.00554656982421875,
+              "CP95": [
+                0.005151659516880896,
+                0.005963590233860469
+              ],
+              "CP95_family": [
+                0.004845019328607737,
+                0.006314946418676092
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.6717797719291687,
+              "port_pct_mean": 2.1287416404579837e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.6325531005859375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 727,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 74963900,
+                "positive_reports": 738270,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749639,
+                "terminal_wrong_bits": 4
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 1485,
+              "Q_estimate": 0.01132965087890625,
+              "CP95": [
+                0.010763702925911523,
+                0.011917370030981303
+              ],
+              "CP95_family": [
+                0.010317164348467283,
+                0.012408041958174541
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.335891771307373,
+              "port_pct_mean": 1.0643767945197767e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.542274475097656,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1485,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 74882400,
+                "positive_reports": 726437,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 748824,
+                "terminal_wrong_bits": 4
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 2981,
+              "Q_estimate": 0.02274322509765625,
+              "CP95": [
+                0.021942888647441126,
+                0.02356477056963987
+              ],
+              "CP95_family": [
+                0.021304486774389248,
+                0.024246233917434756
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.16794617007904053,
+              "port_pct_mean": 5.321892985494477e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.370994567871094,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 2981,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 74721400,
+                "positive_reports": 703987,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 747214,
+                "terminal_wrong_bits": 7
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 5770,
+              "Q_estimate": 0.0440216064453125,
+              "CP95": [
+                0.04291730877954841,
+                0.045146133170501375
+              ],
+              "CP95_family": [
+                0.04202988595476994,
+                0.046074670772801384
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.08397496774826049,
+              "port_pct_mean": 2.6610061521871274e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.062416076660156,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 5770,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 74415900,
+                "positive_reports": 663541,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 744159,
+                "terminal_wrong_bits": 7
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 11016,
+              "Q_estimate": 0.08404541015625,
+              "CP95": [
+                0.08254874916621756,
+                0.08556050283255938
+              ],
+              "CP95_family": [
+                0.0813395225439851,
+                0.08680721816294598
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198776312561035,
+              "port_pct_mean": 1.3305119250389875e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.5407257080078125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 11016,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 73810000,
+                "positive_reports": 595162,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 738100,
+                "terminal_wrong_bits": 14
+              }
+            }
+          ],
+          "largest_tested_below_ns": 93952409600,
+          "smallest_tested_above_ns": 375809638400,
+          "unresolved_fixed_ns": [
+            187904819200
+          ]
+        },
+        {
+          "law": "two_uniform",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            0,
+            374651,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "a589b23f948ee1abb2b72c816c60c14020501dd4c2a6fec739f688c9df8f70f1",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.4174492289,
+              "port_pct_mean": 0.11160716196707887,
+              "resets_mean": 2.8603744506835938,
+              "reset_cells_mean": 2.8603744506835938,
+              "positive_reports_mean": 2.8603744506835938,
+              "downshifts_mean": 2.8583602905273438,
+              "switches_mean": 33.72509765625,
+              "fast_s_mean": 0.055330404345703126,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426333898696999,
+                "read_ns": 46164268475830396800,
+                "write_ns": 74933600,
+                "positive_reports": 374915,
+                "resets": 374915,
+                "reset_cells": 374915,
+                "downshifts": 374651,
+                "switches": 4420416,
+                "fast_ns": 7252266758400,
+                "completed_writes": 749336,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857212,
+              "port_pct_mean": 28.57142857142879,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.3743362426757812,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 75720500,
+                "positive_reports": 442281,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 757205,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.3571461717,
+              "port_pct_mean": 0.11160714285819318,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8603744506835938,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 74933600,
+                "positive_reports": 374915,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749336,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 48,
+              "Q_estimate": 0.0003662109375,
+              "CP95": [
+                0.0002700269948209132,
+                0.00048551360172900546
+              ],
+              "CP95_family": [
+                0.00020692203352437542,
+                0.0005942627161370086
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458171633912,
+              "port_pct_mean": 3.405980864081524e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8568496704101562,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 48,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 74925200,
+                "positive_reports": 374453,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749252,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 84,
+              "Q_estimate": 0.000640869140625,
+              "CP95": [
+                0.0005112135284992552,
+                0.0007933790699350369
+              ],
+              "CP95_family": [
+                0.0004210167430896325,
+                0.0009290705421150164
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 5.37423097160263,
+              "port_pct_mean": 1.7029910296101828e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8554229736328125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 84,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 74921100,
+                "positive_reports": 374266,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749211,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 170,
+              "Q_estimate": 0.0012969970703125,
+              "CP95": [
+                0.0011094529236734063,
+                0.0015071311621611292
+              ],
+              "CP95_family": [
+                0.0009721602114809519,
+                0.001689721281156189
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 2.6871173715293883,
+              "port_pct_mean": 8.514961123562592e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8525161743164062,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 170,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 74911500,
+                "positive_reports": 373885,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749115,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 344,
+              "Q_estimate": 0.00262451171875,
+              "CP95": [
+                0.0023547731530144146,
+                0.0029166142579892997
+              ],
+              "CP95_family": [
+                0.0021504179806459043,
+                0.0031660369950687038
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 1.3435589713806153,
+              "port_pct_mean": 4.2574814668435345e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8467330932617188,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 344,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 74892000,
+                "positive_reports": 373127,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 748920,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 683,
+              "Q_estimate": 0.00521087646484375,
+              "CP95": [
+                0.004828266116988872,
+                0.0056156205058970725
+              ],
+              "CP95_family": [
+                0.004531681710509684,
+                0.0059569575128257425
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.6717797710876465,
+              "port_pct_mean": 2.128741637791361e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8356781005859375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 683,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 74853600,
+                "positive_reports": 371678,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 748536,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 1407,
+              "Q_estimate": 0.01073455810546875,
+              "CP95": [
+                0.010183706715414376,
+                0.011307212329494087
+              ],
+              "CP95_family": [
+                0.009749520426350949,
+                0.01178558958221944
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.3358917704849243,
+              "port_pct_mean": 1.0643767919135938e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8125381469726562,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1407,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 74774600,
+                "positive_reports": 368645,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 747746,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 2781,
+              "Q_estimate": 0.02121734619140625,
+              "CP95": [
+                0.020443980227385018,
+                0.022011993541345184
+              ],
+              "CP95_family": [
+                0.0198276629138755,
+                0.022671513528414525
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.1679461692993164,
+              "port_pct_mean": 5.321892960786512e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.7673721313476562,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 2781,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 74619200,
+                "positive_reports": 362725,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 746192,
+                "terminal_wrong_bits": 2
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 5356,
+              "Q_estimate": 0.040863037109375,
+              "CP95": [
+                0.039797627102377095,
+                0.0419488196377975
+              ],
+              "CP95_family": [
+                0.03894207594541272,
+                0.042845772995052704
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.0839749669845581,
+              "port_pct_mean": 2.661006127986859e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.6833419799804688,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 5356,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 74315800,
+                "positive_reports": 351711,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 743158,
+                "terminal_wrong_bits": 2
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 10179,
+              "Q_estimate": 0.07765960693359375,
+              "CP95": [
+                0.0762162532370554,
+                0.07912167758306003
+              ],
+              "CP95_family": [
+                0.07505077385892882,
+                0.08032522302864079
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198776238021851,
+              "port_pct_mean": 1.3305119014189453e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.530120849609375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 10179,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 73712300,
+                "positive_reports": 331628,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 737123,
+                "terminal_wrong_bits": 4
+              }
+            }
+          ],
+          "largest_tested_below_ns": 187904819200,
+          "smallest_tested_above_ns": 751619276800,
+          "unresolved_fixed_ns": [
+            375809638400
+          ]
+        },
+        {
+          "law": "compact_1p2",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            498982,
+            125178,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "c387f9e834d74a9bd580cb769d7e8b76a2f563ecdbc58863c92f79f5c45abc10",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.4471987875,
+              "port_pct_mean": 0.11160717139414514,
+              "resets_mean": 4.762306213378906,
+              "reset_cells_mean": 4.762306213378906,
+              "positive_reports_mean": 4.762306213378906,
+              "downshifts_mean": 4.761962890625,
+              "switches_mean": 50.85731506347656,
+              "fast_s_mean": 0.082615729296875,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426335117238918,
+                "read_ns": 46164272375164537600,
+                "write_ns": 74936400,
+                "positive_reports": 624205,
+                "resets": 624205,
+                "reset_cells": 624205,
+                "downshifts": 624160,
+                "switches": 6665970,
+                "fast_ns": 10828608870400,
+                "completed_writes": 749364,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857212,
+              "port_pct_mean": 28.57142857142879,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.8411865234375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 75737800,
+                "positive_reports": 634544,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 757378,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.35714617174,
+              "port_pct_mean": 0.11160714285819318,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.762306213378906,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 74936400,
+                "positive_reports": 624205,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749364,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 47,
+              "Q_estimate": 0.00035858154296875,
+              "CP95": [
+                0.000263483755949299,
+                0.0004768092397343214
+              ],
+              "CP95_family": [
+                0.00020125455852744597,
+                0.0005846880753371719
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458171659088,
+              "port_pct_mean": 3.4059808640895023e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.7577362060546875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 47,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 74928500,
+                "positive_reports": 623606,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749285,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 97,
+              "Q_estimate": 0.00074005126953125,
+              "CP95": [
+                0.0006001714309373044,
+                0.0009027263150632626
+              ],
+              "CP95_family": [
+                0.0005016719521368363,
+                0.0010466812450580897
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 5.3742309716156,
+              "port_pct_mean": 1.7029910296142927e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.7537841796875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 97,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 74922800,
+                "positive_reports": 623088,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749228,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 191,
+              "Q_estimate": 0.00145721435546875,
+              "CP95": [
+                0.0012579940415996965,
+                0.0016789857894296846
+              ],
+              "CP95_family": [
+                0.0011111839119556978,
+                0.0018710587221606768
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 2.6871173715400696,
+              "port_pct_mean": 8.514961123596439e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.74554443359375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 191,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 74912900,
+                "positive_reports": 622008,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749129,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 360,
+              "Q_estimate": 0.00274658203125,
+              "CP95": [
+                0.002470488494634668,
+                0.003045025200633773
+              ],
+              "CP95_family": [
+                0.0022609436398710937,
+                0.0032996204579842916
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 1.3435589714027405,
+              "port_pct_mean": 4.257481466913645e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.729156494140625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 360,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 74894900,
+                "positive_reports": 619860,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 748949,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 701,
+              "Q_estimate": 0.00534820556640625,
+              "CP95": [
+                0.004960516141775598,
+                0.005758018934689032
+              ],
+              "CP95_family": [
+                0.004659779455164309,
+                0.006103493178559017
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.6717797711265564,
+              "port_pct_mean": 2.1287416379146588e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.6972198486328125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 701,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 74858700,
+                "positive_reports": 615674,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 748587,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 1440,
+              "Q_estimate": 0.010986328125,
+              "CP95": [
+                0.010429038274660232,
+                0.011565407373001034
+              ],
+              "CP95_family": [
+                0.009989584004837973,
+                0.01204902819291448
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.33589177051467894,
+              "port_pct_mean": 1.0643767920078807e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.635734558105469,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1440,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 74778500,
+                "positive_reports": 607615,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 747785,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 2804,
+              "Q_estimate": 0.021392822265625,
+              "CP95": [
+                0.020616303120863724,
+                0.022190614448111916
+              ],
+              "CP95_family": [
+                0.01999740394577636,
+                0.022852700038906385
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.16794616933059692,
+              "port_pct_mean": 5.3218929617777315e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.5170135498046875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 2804,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 74623300,
+                "positive_reports": 592054,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 746233,
+                "terminal_wrong_bits": 3
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 5435,
+              "Q_estimate": 0.04146575927734375,
+              "CP95": [
+                0.04039279996615449,
+                0.04255906370106994
+              ],
+              "CP95_family": [
+                0.039531061827691644,
+                0.04346214916760258
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.08397496704559326,
+              "port_pct_mean": 2.6610061299209466e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.299858093261719,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 5435,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 74323800,
+                "positive_reports": 563591,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 743238,
+                "terminal_wrong_bits": 3
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 10434,
+              "Q_estimate": 0.0796051025390625,
+              "CP95": [
+                0.07814521753335107,
+                0.08108361755086958
+              ],
+              "CP95_family": [
+                0.0769661725040771,
+                0.08230055271993063
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198776251449585,
+              "port_pct_mean": 1.3305119056739373e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.9158782958984375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 10434,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 73729900,
+                "positive_reports": 513262,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 737299,
+                "terminal_wrong_bits": 4
+              }
+            }
+          ],
+          "largest_tested_below_ns": 93952409600,
+          "smallest_tested_above_ns": 375809638400,
+          "unresolved_fixed_ns": [
+            187904819200
+          ]
+        },
+        {
+          "law": "compact_5",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            150182
+          ],
+          "shared_input_sha256": "79f4091f1f9ecce42b50ead9228c99f8094d63751671515e5e075a98ac13b2e0",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.39068323356,
+              "port_pct_mean": 0.1116071534854468,
+              "resets_mean": 1.1468124389648438,
+              "reset_cells_mean": 1.1468124389648438,
+              "positive_reports_mean": 1.1468124389648438,
+              "downshifts_mean": 1.1457977294921875,
+              "switches_mean": 18.312164306640625,
+              "fast_s_mean": 0.030776165625,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426332802361779,
+                "read_ns": 46164264967557692800,
+                "write_ns": 75094000,
+                "positive_reports": 150315,
+                "resets": 150315,
+                "reset_cells": 150315,
+                "downshifts": 150182,
+                "switches": 2400212,
+                "fast_ns": 4033893580800,
+                "completed_writes": 750940,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857212,
+              "port_pct_mean": 28.57142857142879,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.3850784301757812,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 75891300,
+                "positive_reports": 181545,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 758913,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.35714617296,
+              "port_pct_mean": 0.11160714285819358,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1468124389648438,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 75094000,
+                "positive_reports": 150315,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750940,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 18,
+              "Q_estimate": 0.0001373291015625,
+              "CP95": [
+                8.139189511650369e-05,
+                0.00021703053645714113
+              ],
+              "CP95_family": [
+                5.040896751186824e-05,
+                0.00029387363862360343
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458172859191,
+              "port_pct_mean": 3.405980864469792e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1455535888671875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 18,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 75085800,
+                "positive_reports": 150150,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750858,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 37,
+              "Q_estimate": 0.00028228759765625,
+              "CP95": [
+                0.00019876406355040835,
+                0.0003890754886983802
+              ],
+              "CP95_family": [
+                0.00014584672785763897,
+                0.0004877034614186911
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 5.374230972814941,
+              "port_pct_mean": 1.702991029994341e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1452178955078125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 37,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 75080000,
+                "positive_reports": 150106,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750800,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 76,
+              "Q_estimate": 0.000579833984375,
+              "CP95": [
+                0.0004568695862371726,
+                0.0007256957415543069
+              ],
+              "CP95_family": [
+                0.00037210106737624007,
+                0.0008559860568503151
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 2.6871173727363584,
+              "port_pct_mean": 8.514961127387249e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.144744873046875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 76,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 75069700,
+                "positive_reports": 150044,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750697,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 144,
+              "Q_estimate": 0.0010986328125,
+              "CP95": [
+                0.0009266007372394992,
+                0.0012933120467544814
+              ],
+              "CP95_family": [
+                0.000801944976172198,
+                0.0014633131766019342
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 1.3435589725852966,
+              "port_pct_mean": 4.2574814706609394e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1438217163085938,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 144,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 75049900,
+                "positive_reports": 149923,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750499,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 284,
+              "Q_estimate": 0.002166748046875,
+              "CP95": [
+                0.0019222800456263343,
+                0.0024336402255952516
+              ],
+              "CP95_family": [
+                0.0017385564238636417,
+                0.002662499869055557
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.6717797723114014,
+              "port_pct_mean": 2.1287416416692064e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1418380737304688,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 284,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 75014000,
+                "positive_reports": 149663,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 750140,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 595,
+              "Q_estimate": 0.00453948974609375,
+              "CP95": [
+                0.00418275016401207,
+                0.004918413007780311
+              ],
+              "CP95_family": [
+                0.003907313499132722,
+                0.005238677427137928
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.3358917716217041,
+              "port_pct_mean": 1.0643767955158316e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.137786865234375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 595,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 74923600,
+                "positive_reports": 149132,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 749236,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 1133,
+              "Q_estimate": 0.00864410400390625,
+              "CP95": [
+                0.008150032951319315,
+                0.009160093155305202
+              ],
+              "CP95_family": [
+                0.007762298726092722,
+                0.009592223757120856
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.16794617041397095,
+              "port_pct_mean": 5.321892996107783e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1300506591796875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1133,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 74765300,
+                "positive_reports": 148118,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 747653,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 2144,
+              "Q_estimate": 0.016357421875,
+              "CP95": [
+                0.0156776188235368,
+                0.017058741083899914
+              ],
+              "CP95_family": [
+                0.015137900341681826,
+                0.017642115204861367
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.0839749681213379,
+              "port_pct_mean": 2.661006164009237e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.1158447265625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 2144,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 74464800,
+                "positive_reports": 146256,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 744648,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 4012,
+              "Q_estimate": 0.030609130859375,
+              "CP95": [
+                0.029683170268362185,
+                0.031555933508737456
+              ],
+              "CP95_family": [
+                0.028941878291236515,
+                0.03233956371422894
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198776358566284,
+              "port_pct_mean": 1.3305119396171711e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0890960693359375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 4012,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 73870300,
+                "positive_reports": 142750,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 738703,
+                "terminal_wrong_bits": 0
+              }
+            }
+          ],
+          "largest_tested_below_ns": 375809638400,
+          "smallest_tested_above_ns": 1503238553600,
+          "unresolved_fixed_ns": [
+            751619276800
+          ]
+        }
+      ]
+    },
+    "sepem": {
+      "input": {
+        "start_utc": "1996-12-16T07:20:00Z",
+        "end_utc": "2006-12-16T19:20:00Z",
+        "bands_sha256": "8f90fa5773d75cc0aa5ce836bd3478fddb5d6fd96cd1c9e0d4752e0e65529189",
+        "S1_reference": 164214.59636458987,
+        "S2_reference_per_s": 15631.39518304798,
+        "bank_inversions_expected": 5.0114317738217125
+      },
+      "cases": [
+        {
+          "law": "single",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            658168,
+            0,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "15ab5d679cbebcfe892a354eeb07ded634f3e7c58c9e928a247e49cbb2b05e3c",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.45125376125,
+              "port_pct_mean": 0.1116071726790888,
+              "resets_mean": 5.021507263183594,
+              "reset_cells_mean": 5.021507263183594,
+              "positive_reports_mean": 5.021507263183594,
+              "downshifts_mean": 5.02142333984375,
+              "switches_mean": 53.19276428222656,
+              "fast_s_mean": 0.086334484765625,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426335283333493,
+                "read_ns": 46164272906667177600,
+                "write_ns": 65819200,
+                "positive_reports": 658179,
+                "resets": 658179,
+                "reset_cells": 658179,
+                "downshifts": 658168,
+                "switches": 6972082,
+                "fast_ns": 11316033587200,
+                "completed_writes": 658192,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857204,
+              "port_pct_mean": 28.571428571428765,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.047981262207031,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 66520500,
+                "positive_reports": 661649,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 665205,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.3571461022,
+              "port_pct_mean": 0.11160714285817115,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.021507263183594,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 65819200,
+                "positive_reports": 658179,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658192,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 7,
+              "Q_estimate": 5.340576171875e-05,
+              "CP95": [
+                2.147214701146763e-05,
+                0.00011003316484570586
+              ],
+              "CP95_family": [
+                8.691260324059281e-06,
+                0.00016860485406655645
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458102136993,
+              "port_pct_mean": 3.4059808420592794e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.020652770996094,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 7,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 65816100,
+                "positive_reports": 658067,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658161,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 11,
+              "Q_estimate": 8.392333984375e-05,
+              "CP95": [
+                4.189494947484989e-05,
+                0.00015015706374190132
+              ],
+              "CP95_family": [
+                2.16567765326718e-05,
+                0.00021628283754209808
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 5.374230902133942,
+              "port_pct_mean": 1.7029910075968837e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.0198974609375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 11,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 65815700,
+                "positive_reports": 657968,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658157,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 28,
+              "Q_estimate": 0.000213623046875,
+              "CP95": [
+                0.00014195550906620003,
+                0.0003087300966151118
+              ],
+              "CP95_family": [
+                9.85246653276789e-05,
+                0.0003979377828647702
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 2.6871173021209716,
+              "port_pct_mean": 8.514960903620591e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.018524169921875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 28,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 65814000,
+                "positive_reports": 657788,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658140,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 48,
+              "Q_estimate": 0.0003662109375,
+              "CP95": [
+                0.0002700269948209132,
+                0.00048551360172900546
+              ],
+              "CP95_family": [
+                0.00020692203352437542,
+                0.0005942627161370086
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.343558902103424,
+              "port_pct_mean": 4.257481247317363e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.015777587890625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 48,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 65811700,
+                "positive_reports": 657428,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658117,
+                "terminal_wrong_bits": 1
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 88,
+              "Q_estimate": 0.00067138671875,
+              "CP95": [
+                0.0005385055195384983,
+                0.0008271027799119535
+              ],
+              "CP95_family": [
+                0.0004456903597677493,
+                0.000965399977096194
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.6717797020713806,
+              "port_pct_mean": 2.1287414190920115e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.010337829589844,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 88,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 65807500,
+                "positive_reports": 656715,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658075,
+                "terminal_wrong_bits": 1
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 163,
+              "Q_estimate": 0.00124359130859375,
+              "CP95": [
+                0.001060098798571507,
+                0.0014496880313746585
+              ],
+              "CP95_family": [
+                0.0009261076170041365,
+                0.0016289889046103567
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.3358917020111084,
+              "port_pct_mean": 1.0643765749331648e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.000030517578125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 163,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 65799600,
+                "positive_reports": 655364,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657996,
+                "terminal_wrong_bits": 1
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 341,
+              "Q_estimate": 0.00260162353515625,
+              "CP95": [
+                0.0023330929960309102,
+                0.0028925208058152665
+              ],
+              "CP95_family": [
+                0.002129724283442141,
+                0.0031409603455314844
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.16794610186691283,
+              "port_pct_mean": 5.321890823982585e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.9789581298828125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 341,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 65780700,
+                "positive_reports": 652602,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657807,
+                "terminal_wrong_bits": 4
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 695,
+              "Q_estimate": 0.00530242919921875,
+              "CP95": [
+                0.004916425361257766,
+                0.005710560214912704
+              ],
+              "CP95_family": [
+                0.004617066702082699,
+                0.006054661434759365
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.08397490158615112,
+              "port_pct_mean": 2.6610040556363954e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.9393310546875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 695,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 65743900,
+                "positive_reports": 647408,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657439,
+                "terminal_wrong_bits": 4
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 1306,
+              "Q_estimate": 0.0099639892578125,
+              "CP95": [
+                0.009433342974012219,
+                0.010516480029164096
+              ],
+              "CP95_family": [
+                0.009015687744318006,
+                0.010978401331645342
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.0419877010848999,
+              "port_pct_mean": 1.3305099590875067e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.871925354003906,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1306,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 65678200,
+                "positive_reports": 638573,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 656782,
+                "terminal_wrong_bits": 15
+              }
+            }
+          ],
+          "largest_tested_below_ns": 1503238553600,
+          "smallest_tested_above_ns": 6012954214400,
+          "unresolved_fixed_ns": [
+            3006477107200
+          ]
+        },
+        {
+          "law": "two_uniform",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            0,
+            328886,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "abcf39c9727fbcc941683577c5dc0b3646d33566bbf62c90caf56b12b7a27761",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.4119922098,
+              "port_pct_mean": 0.11160716023785389,
+              "resets_mean": 2.51104736328125,
+              "reset_cells_mean": 2.51104736328125,
+              "positive_reports_mean": 2.51104736328125,
+              "downshifts_mean": 2.5092010498046875,
+              "switches_mean": 30.582809448242188,
+              "fast_s_mean": 0.0503243,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426333675180358,
+                "read_ns": 46164267760577145600,
+                "write_ns": 65780100,
+                "positive_reports": 329128,
+                "resets": 329128,
+                "reset_cells": 329128,
+                "downshifts": 328886,
+                "switches": 4008550,
+                "fast_ns": 6596106649600,
+                "completed_writes": 657801,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857204,
+              "port_pct_mean": 28.571428571428765,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.9614715576171875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 66485200,
+                "positive_reports": 388166,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 664852,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.3571461019,
+              "port_pct_mean": 0.11160714285817105,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.51104736328125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 65780100,
+                "positive_reports": 329128,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657801,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 10,
+              "Q_estimate": 7.62939453125e-05,
+              "CP95": [
+                3.6586499124563896e-05,
+                0.00014030279106308624
+              ],
+              "CP95_family": [
+                1.8098341114634357e-05,
+                0.00020467056246384498
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458101831055,
+              "port_pct_mean": 3.4059808419623335e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.5089874267578125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 10,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 65776000,
+                "positive_reports": 328858,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657760,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 18,
+              "Q_estimate": 0.0001373291015625,
+              "CP95": [
+                8.139189511650369e-05,
+                0.00021703053645714113
+              ],
+              "CP95_family": [
+                5.040896751186824e-05,
+                0.00029387363862360343
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 5.3742309018249514,
+              "port_pct_mean": 1.7029910074989705e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.5088043212890625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 18,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 65775200,
+                "positive_reports": 328834,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657752,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 27,
+              "Q_estimate": 0.00020599365234375,
+              "CP95": [
+                0.00013575536511547742,
+                0.00029969590497645645
+              ],
+              "CP95_family": [
+                9.346330192302568e-05,
+                0.0003877728744751197
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 2.6871173018180845,
+              "port_pct_mean": 8.514960902660799e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.5084609985351562,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 27,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 65774300,
+                "positive_reports": 328789,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657743,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 48,
+              "Q_estimate": 0.0003662109375,
+              "CP95": [
+                0.0002700269948209132,
+                0.00048551360172900546
+              ],
+              "CP95_family": [
+                0.00020692203352437542,
+                0.0005942627161370086
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.3435589017967224,
+              "port_pct_mean": 4.257481246345484e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.507720947265625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 48,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 65771500,
+                "positive_reports": 328692,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657715,
+                "terminal_wrong_bits": 2
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 94,
+              "Q_estimate": 0.0007171630859375,
+              "CP95": [
+                0.000579578451205515,
+                0.0008775555680837643
+              ],
+              "CP95_family": [
+                0.00048294359510865935,
+                0.0010196544700576049
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.6717797017593384,
+              "port_pct_mean": 2.1287414181032094e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.5063018798828125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 94,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 65766600,
+                "positive_reports": 328506,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657666,
+                "terminal_wrong_bits": 2
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 166,
+              "Q_estimate": 0.0012664794921875,
+              "CP95": [
+                0.0010812400742305343,
+                0.0014743169170225855
+              ],
+              "CP95_family": [
+                0.0009458254701976612,
+                0.001655035896733079
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.3358917016975403,
+              "port_pct_mean": 1.0643765739395274e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.5036773681640625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 166,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 65758500,
+                "positive_reports": 328162,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657585,
+                "terminal_wrong_bits": 2
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 342,
+              "Q_estimate": 0.0026092529296875,
+              "CP95": [
+                0.0023403191220747483,
+                0.0029005525469590013
+              ],
+              "CP95_family": [
+                0.002136621107370946,
+                0.0031493202996920057
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.1679461015449524,
+              "port_pct_mean": 5.3218908137802757e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.498199462890625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 342,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 65738500,
+                "positive_reports": 327444,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657385,
+                "terminal_wrong_bits": 8
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 648,
+              "Q_estimate": 0.00494384765625,
+              "CP95": [
+                0.004571311687614684,
+                0.005338536706012298
+              ],
+              "CP95_family": [
+                0.004282962928219227,
+                0.005671667615731732
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.08397490128250122,
+              "port_pct_mean": 2.6610040460143112e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.4880294799804688,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 648,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 65704100,
+                "positive_reports": 326111,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657041,
+                "terminal_wrong_bits": 8
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 1209,
+              "Q_estimate": 0.00922393798828125,
+              "CP95": [
+                0.008713469084489125,
+                0.009756292253362503
+              ],
+              "CP95_family": [
+                0.008312320883033441,
+                0.010201779297512627
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198770078659057,
+              "port_pct_mean": 1.3305099496346546e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.4706878662109375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1209,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 65639100,
+                "positive_reports": 323838,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 656391,
+                "terminal_wrong_bits": 20
+              }
+            }
+          ],
+          "largest_tested_below_ns": 751619276800,
+          "smallest_tested_above_ns": 6012954214400,
+          "unresolved_fixed_ns": [
+            1503238553600,
+            3006477107200
+          ]
+        },
+        {
+          "law": "compact_1p2",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            436675,
+            109292,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "b180c210765208453a59c76476290e306a16c9fa038f0f5e1803f3e60c9f5407",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.4378751732,
+              "port_pct_mean": 0.11160716843967006,
+              "resets_mean": 4.165672302246094,
+              "reset_cells_mean": 4.165672302246094,
+              "positive_reports_mean": 4.165672302246094,
+              "downshifts_mean": 4.1653900146484375,
+              "switches_mean": 45.48847961425781,
+              "fast_s_mean": 0.074063028125,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426334735346616,
+                "read_ns": 46164271153109171200,
+                "write_ns": 65528500,
+                "positive_reports": 546003,
+                "resets": 546003,
+                "reset_cells": 546003,
+                "downshifts": 545966,
+                "switches": 5962266,
+                "fast_ns": 9707589222400,
+                "completed_writes": 655285,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857204,
+              "port_pct_mean": 28.571428571428765,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.233833312988281,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 66240100,
+                "positive_reports": 554937,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 662401,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.35714609997,
+              "port_pct_mean": 0.11160714285817044,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.165672302246094,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 65528500,
+                "positive_reports": 546003,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655285,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 3,
+              "Q_estimate": 2.288818359375e-05,
+              "CP95": [
+                4.720118583099397e-06,
+                6.688751364186625e-05
+              ],
+              "CP95_family": [
+                8.09403552102735e-07,
+                0.00011574304839014873
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.748458099920654,
+              "port_pct_mean": 3.405980841356964e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.164970397949219,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 3,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 65525600,
+                "positive_reports": 545911,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655256,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 9,
+              "Q_estimate": 6.866455078125e-05,
+              "CP95": [
+                3.139827028999411e-05,
+                0.00013034268600621552
+              ],
+              "CP95_family": [
+                1.473105435643465e-05,
+                0.00019287381283893403
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 5.374230899916077,
+              "port_pct_mean": 1.7029910068940846e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.164512634277344,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 9,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 65525000,
+                "positive_reports": 545851,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655250,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 19,
+              "Q_estimate": 0.00014495849609375,
+              "CP95": [
+                8.727666834559262e-05,
+                0.00022636143325278923
+              ],
+              "CP95_family": [
+                5.4924464533765e-05,
+                0.00030456573473613605
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 2.6871172999069213,
+              "port_pct_mean": 8.514960896604688e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.163543701171875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 19,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 65523800,
+                "positive_reports": 545724,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655238,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 39,
+              "Q_estimate": 0.00029754638671875,
+              "CP95": [
+                0.00021159285576530227,
+                0.000406733494239835
+              ],
+              "CP95_family": [
+                0.0001567239760550517,
+                0.0005072998365673714
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.3435588998901367,
+              "port_pct_mean": 4.257481240303878e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.1616973876953125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 39,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 65521600,
+                "positive_reports": 545482,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655216,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 74,
+              "Q_estimate": 0.0005645751953125,
+              "CP95": [
+                0.00044333815169513827,
+                0.0007087213511100701
+              ],
+              "CP95_family": [
+                0.00035997015359704983,
+                0.0008376183458968181
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.671779699861908,
+              "port_pct_mean": 2.1287414120906153e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.157958984375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 74,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 65517900,
+                "positive_reports": 544992,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655179,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 138,
+              "Q_estimate": 0.0010528564453125,
+              "CP95": [
+                0.0008845995341509269,
+                0.0012437755997635551
+              ],
+              "CP95_family": [
+                0.0007630177655751503,
+                0.0014107148294814293
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.3358916998085022,
+              "port_pct_mean": 1.064376567953527e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.1501007080078125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 138,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 65510900,
+                "positive_reports": 543962,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 655109,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 304,
+              "Q_estimate": 0.0023193359375,
+              "CP95": [
+                0.002066169323673616,
+                0.0025949053629644907
+              ],
+              "CP95_family": [
+                0.001875344945851795,
+                0.0028308421225514847
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.16794609966506957,
+              "port_pct_mean": 5.321890754210383e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.1361236572265625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 304,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 65492100,
+                "positive_reports": 542130,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 654921,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 645,
+              "Q_estimate": 0.00492095947265625,
+              "CP95": [
+                0.004549299731910646,
+                0.005314773984700298
+              ],
+              "CP95_family": [
+                0.004261667247580912,
+                0.005647191171855329
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.08397489938354492,
+              "port_pct_mean": 2.6610039858400173e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.108245849609375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 645,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 65455200,
+                "positive_reports": 538476,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 654552,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 1170,
+              "Q_estimate": 0.0089263916015625,
+              "CP95": [
+                0.008424269097385643,
+                0.009450416180813272
+              ],
+              "CP95_family": [
+                0.008029948641399366,
+                0.00988910494126716
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198769893798828,
+              "port_pct_mean": 1.3305098910559828e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.060951232910156,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1170,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 65396800,
+                "positive_reports": 532277,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 653968,
+                "terminal_wrong_bits": 7
+              }
+            }
+          ],
+          "largest_tested_below_ns": 1503238553600,
+          "smallest_tested_above_ns": 6012954214400,
+          "unresolved_fixed_ns": [
+            3006477107200
+          ]
+        },
+        {
+          "law": "compact_5",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            131655
+          ],
+          "shared_input_sha256": "c410e66bda6da0ec97d1cf1ff1f71907b03b791262e124f347304475522fcf06",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.38847387186,
+              "port_pct_mean": 0.11160715278534232,
+              "resets_mean": 1.0052490234375,
+              "reset_cells_mean": 1.0052490234375,
+              "positive_reports_mean": 1.0052490234375,
+              "downshifts_mean": 1.0044479370117188,
+              "switches_mean": 17.04003143310547,
+              "fast_s_mean": 0.0287491625,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426332711869219,
+                "read_ns": 46164264677981500800,
+                "write_ns": 65829800,
+                "positive_reports": 131760,
+                "resets": 131760,
+                "reset_cells": 131760,
+                "downshifts": 131655,
+                "switches": 2233471,
+                "fast_ns": 3768210227200,
+                "completed_writes": 658298,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 90164571.42857204,
+              "port_pct_mean": 28.571428571428765,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.2166366577148438,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 315576000.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3693140845714341888,
+                "read_ns": 11818050706285728890880,
+                "write_ns": 66528900,
+                "positive_reports": 159467,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 41363177472000000000000,
+                "completed_writes": 665289,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 352205.35714610224,
+              "port_pct_mean": 0.11160714285817118,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0052490234375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 14426331428683776,
+                "read_ns": 46164260571788083200,
+                "write_ns": 65829800,
+                "positive_reports": 131760,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658298,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8388608L",
+              "period_ns": 93952409600,
+              "first_exceedances": 0,
+              "Q_estimate": 0.0,
+              "CP95": [
+                0.0,
+                2.814352069734814e-05
+              ],
+              "CP95_family": [
+                0.0,
+                6.562234581247465e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 10.74845810222397,
+              "port_pct_mean": 3.405980842086841e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0044479370117188,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 440256823296,
+                "read_ns": 1408821834547200,
+                "write_ns": 65827500,
+                "positive_reports": 131655,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658275,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16777216L",
+              "period_ns": 187904819200,
+              "first_exceedances": 1,
+              "Q_estimate": 7.62939453125e-06,
+              "CP95": [
+                1.931595271232749e-07,
+                4.250752430414421e-05
+              ],
+              "CP95_family": [
+                1.4025911476031412e-09,
+                8.463927143505975e-05
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 5.3742309022201535,
+              "port_pct_mean": 1.7029910076242026e-06,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0044326782226562,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 220128477184,
+                "read_ns": 704411126988800,
+                "write_ns": 65827000,
+                "positive_reports": 131653,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658270,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_33554432L",
+              "period_ns": 375809638400,
+              "first_exceedances": 4,
+              "Q_estimate": 3.0517578125e-05,
+              "CP95": [
+                8.31507351015666e-06,
+                7.813526022128771e-05
+              ],
+              "CP95_family": [
+                2.0757271911611463e-06,
+                0.00012973969364123836
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 2.6871173022163393,
+              "port_pct_mean": 8.514960903922792e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0043716430664062,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 4,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 110064304128,
+                "read_ns": 352205773209600,
+                "write_ns": 65826500,
+                "positive_reports": 131645,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658265,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_67108864L",
+              "period_ns": 751619276800,
+              "first_exceedances": 9,
+              "Q_estimate": 6.866455078125e-05,
+              "CP95": [
+                3.139827028999411e-05,
+                0.00013034268600621552
+              ],
+              "CP95_family": [
+                1.473105435643465e-05,
+                0.00019287381283893403
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.3435589022033692,
+              "port_pct_mean": 4.257481247634069e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0042343139648438,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 9,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 55032152064,
+                "read_ns": 176102886604800,
+                "write_ns": 65824800,
+                "positive_reports": 131627,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658248,
+                "terminal_wrong_bits": 5
+              }
+            },
+            {
+              "mode": "fixed_134217728L",
+              "period_ns": 1503238553600,
+              "first_exceedances": 17,
+              "Q_estimate": 0.00012969970703125,
+              "CP95": [
+                7.555661625050766e-05,
+                0.00020765370025678217
+              ],
+              "CP95_family": [
+                4.5977918567847325e-05,
+                0.0002831002628493055
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.6717797021850586,
+              "port_pct_mean": 2.1287414194522353e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0040740966796875,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 17,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 27516076032,
+                "read_ns": 88051443302400,
+                "write_ns": 65822400,
+                "positive_reports": 131606,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658224,
+                "terminal_wrong_bits": 5
+              }
+            },
+            {
+              "mode": "fixed_268435456L",
+              "period_ns": 3006477107200,
+              "first_exceedances": 47,
+              "Q_estimate": 0.00035858154296875,
+              "CP95": [
+                0.000263483755949299,
+                0.0004768092397343214
+              ],
+              "CP95_family": [
+                0.00020125455852744597,
+                0.0005846880753371719
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.33589170212631225,
+              "port_pct_mean": 1.0643765752982237e-07,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0036392211914062,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 47,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 13758103552,
+                "read_ns": 44025931366400,
+                "write_ns": 65814700,
+                "positive_reports": 131549,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 658147,
+                "terminal_wrong_bits": 5
+              }
+            },
+            {
+              "mode": "fixed_536870912L",
+              "period_ns": 6012954214400,
+              "first_exceedances": 110,
+              "Q_estimate": 0.0008392333984375,
+              "CP95": [
+                0.0006897967235405484,
+                0.0010114160584524037
+              ],
+              "CP95_family": [
+                0.0005835290679420742,
+                0.0011631045699229397
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.16794610199890136,
+              "port_pct_mean": 5.32189082816505e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0027542114257812,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 110,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 6879051776,
+                "read_ns": 22012965683200,
+                "write_ns": 65798000,
+                "positive_reports": 131433,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657980,
+                "terminal_wrong_bits": 10
+              }
+            },
+            {
+              "mode": "fixed_1073741824L",
+              "period_ns": 12025908428800,
+              "first_exceedances": 232,
+              "Q_estimate": 0.00177001953125,
+              "CP95": [
+                0.0015497320634900833,
+                0.0020127951353200797
+              ],
+              "CP95_family": [
+                0.0013857405057932765,
+                0.0022219893821824595
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.0839749017150879,
+              "port_pct_mean": 2.6610040597221554e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.0011215209960938,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 232,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 3439591424,
+                "read_ns": 11006692556800,
+                "write_ns": 65760800,
+                "positive_reports": 131219,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 657608,
+                "terminal_wrong_bits": 10
+              }
+            },
+            {
+              "mode": "fixed_2147483648L",
+              "period_ns": 24051816857600,
+              "first_exceedances": 457,
+              "Q_estimate": 0.00348663330078125,
+              "CP95": [
+                0.0031747379992992457,
+                0.0038208017005944297
+              ],
+              "CP95_family": [
+                0.0029359481696640626,
+                0.004104544674410152
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04198770120162964,
+              "port_pct_mean": 1.3305099627864488e-08,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 0.9981231689453125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 457,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1719795712,
+                "read_ns": 5503346278400,
+                "write_ns": 65693500,
+                "positive_reports": 130826,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 656935,
+                "terminal_wrong_bits": 15
+              }
+            }
+          ],
+          "largest_tested_below_ns": 3006477107200,
+          "smallest_tested_above_ns": 12025908428800,
+          "unresolved_fixed_ns": [
+            6012954214400
+          ]
+        }
+      ]
+    },
+    "stress": {
+      "input": {
+        "bank_inversions_expected": 6.4
+      },
+      "cases": [
+        {
+          "law": "single",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            840488,
+            0,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "5f0c493b549c7d9a2347ae84941a2300329050777215197fcb16612255fdb744",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 3979,
+              "Q_estimate": 0.03035736083984375,
+              "CP95": [
+                0.029435128407896225,
+                0.03130044695856432
+              ],
+              "CP95_family": [
+                0.028696890470817044,
+                0.03208104618366415
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.05736496688232422,
+              "port_pct_mean": 0.9560827813720704,
+              "resets_mean": 5.991363525390625,
+              "reset_cells_mean": 5.19342041015625,
+              "positive_reports_mean": 5.991363525390625,
+              "downshifts_mean": 1.952056884765625,
+              "switches_mean": 25.34650421142578,
+              "fast_s_mean": 0.05951300927734375,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 2349642733,
+                "read_ns": 7518856745600,
+                "write_ns": 84193600,
+                "positive_reports": 785300,
+                "resets": 785300,
+                "reset_cells": 680712,
+                "downshifts": 255860,
+                "switches": 3322217,
+                "fast_ns": 7800489152000,
+                "completed_writes": 841936,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 29,
+              "Q_estimate": 0.00022125244140625,
+              "CP95": [
+                0.00014818108164978407,
+                0.00031774008010589393
+              ],
+              "CP95_family": [
+                0.00010363056226102533,
+                0.0004080595133165443
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.7142864481529236,
+              "port_pct_mean": 28.571440802548725,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.441169738769531,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 6.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 3950,
+              "totals": {
+                "passes": 70217236480,
+                "read_ns": 224694868377600,
+                "write_ns": 84954700,
+                "positive_reports": 844257,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 786432000000000,
+                "completed_writes": 849547,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_2L",
+              "period_ns": 22400,
+              "first_exceedances": 69,
+              "Q_estimate": 0.00052642822265625,
+              "CP95": [
+                0.0004096149482072037,
+                0.0006661820346580099
+              ],
+              "CP95_family": [
+                0.00032983203342822016,
+                0.0007915127870389082
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.8571440446136475,
+              "port_pct_mean": 14.285734076894125,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.417724609375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 24,
+              "failed_only_ladder_vs_here": 3934,
+              "totals": {
+                "passes": 35108683776,
+                "read_ns": 112347499724800,
+                "write_ns": 84490800,
+                "positive_reports": 841184,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 844908,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_4L",
+              "period_ns": 44800,
+              "first_exceedances": 167,
+              "Q_estimate": 0.00127410888671875,
+              "CP95": [
+                0.0010882906949821825,
+                0.0014825230475638328
+              ],
+              "CP95_family": [
+                0.0009524044689334817,
+                0.001663711894536773
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.4285734428161621,
+              "port_pct_mean": 7.142890713602703,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.397590637207031,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 79,
+              "failed_only_ladder_vs_here": 3891,
+              "totals": {
+                "passes": 17554341888,
+                "read_ns": 56173894041600,
+                "write_ns": 84255200,
+                "positive_reports": 838545,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 842552,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8L",
+              "period_ns": 89600,
+              "first_exceedances": 372,
+              "Q_estimate": 0.002838134765625,
+              "CP95": [
+                0.0025573679484802887,
+                0.0031412408391768886
+              ],
+              "CP95_family": [
+                0.0023440064358287126,
+                0.0033996401279690293
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.21428864181213378,
+              "port_pct_mean": 3.5714773635355628,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.369903564453125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 208,
+              "failed_only_ladder_vs_here": 3815,
+              "totals": {
+                "passes": 8777236480,
+                "read_ns": 28087156736000,
+                "write_ns": 84123600,
+                "positive_reports": 834916,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 841236,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16L",
+              "period_ns": 179200,
+              "first_exceedances": 750,
+              "Q_estimate": 0.0057220458984375,
+              "CP95": [
+                0.005320856550893252,
+                0.0061453333239951296
+              ],
+              "CP95_family": [
+                0.005009082652619348,
+                0.006501804299740737
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.10714624105911255,
+              "port_pct_mean": 1.7857706843185426,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.321022033691406,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 452,
+              "failed_only_ladder_vs_here": 3681,
+              "totals": {
+                "passes": 4388683776,
+                "read_ns": 14043788083200,
+                "write_ns": 84024900,
+                "positive_reports": 828509,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 840249,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_32L",
+              "period_ns": 358400,
+              "first_exceedances": 1499,
+              "Q_estimate": 0.01143646240234375,
+              "CP95": [
+                0.01086784855612844,
+                0.012026841813470154
+              ],
+              "CP95_family": [
+                0.010419128621815234,
+                0.012519684788856593
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.05357504026489258,
+              "port_pct_mean": 0.8929173377482096,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.231719970703125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 939,
+              "failed_only_ladder_vs_here": 3419,
+              "totals": {
+                "passes": 2194407424,
+                "read_ns": 7022103756800,
+                "write_ns": 83920800,
+                "positive_reports": 816804,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 839208,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_64L",
+              "period_ns": 716800,
+              "first_exceedances": 2912,
+              "Q_estimate": 0.022216796875,
+              "CP95": [
+                0.02142565282109028,
+                0.023029174859681915
+              ],
+              "CP95_family": [
+                0.020794778270778136,
+                0.023703159555293323
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.026787838987731932,
+              "port_pct_mean": 0.44646398312886554,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 6.0584564208984375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1788,
+              "failed_only_ladder_vs_here": 2855,
+              "totals": {
+                "passes": 1097203712,
+                "read_ns": 3511051878400,
+                "write_ns": 83753400,
+                "positive_reports": 794094,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 837534,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_128L",
+              "period_ns": 1433600,
+              "first_exceedances": 5679,
+              "Q_estimate": 0.04332733154296875,
+              "CP95": [
+                0.04223144166327799,
+                0.044443481980348226
+              ],
+              "CP95_family": [
+                0.04135091004427811,
+                0.04536519152664365
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.013395836621856689,
+              "port_pct_mean": 0.2232639436976115,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.7340087890625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 3484,
+              "failed_only_ladder_vs_here": 1784,
+              "totals": {
+                "passes": 548667392,
+                "read_ns": 1755735654400,
+                "write_ns": 83443300,
+                "positive_reports": 751568,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 834433,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 10609,
+              "Q_estimate": 0.08094024658203125,
+              "CP95": [
+                0.07946916656249095,
+                0.0824298969579593
+              ],
+              "CP95_family": [
+                0.07828093437918036,
+                0.08365589856190139
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.0066982323211669925,
+              "port_pct_mean": 0.11163720535278321,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.1925201416015625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 6630,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 274333696,
+                "read_ns": 877867827200,
+                "write_ns": 82879600,
+                "positive_reports": 680594,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 828796,
+                "terminal_wrong_bits": 0
+              }
+            }
+          ],
+          "largest_tested_below_ns": 22400,
+          "smallest_tested_above_ns": 89600,
+          "unresolved_fixed_ns": [
+            44800
+          ]
+        },
+        {
+          "law": "two_uniform",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            0,
+            420259,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "37a9b653f2cf677ff7c16faf24babee5e8e0ca986d22bc628b657863d17d28a9",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 5700,
+              "Q_estimate": 0.043487548828125,
+              "CP95": [
+                0.04238971189243093,
+                0.044605639050983616
+              ],
+              "CP95_family": [
+                0.04150758443972864,
+                0.045528929856639866
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.04963441246948242,
+              "port_pct_mean": 0.827240207824707,
+              "resets_mean": 3.2786712646484375,
+              "reset_cells_mean": 2.8803558349609375,
+              "positive_reports_mean": 3.2786712646484375,
+              "downshifts_mean": 1.6279754638671875,
+              "switches_mean": 22.444725036621094,
+              "fast_s_mean": 0.04541446291503906,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 2032999347,
+                "read_ns": 6505597910400,
+                "write_ns": 83800800,
+                "positive_reports": 429742,
+                "resets": 429742,
+                "reset_cells": 377534,
+                "downshifts": 213382,
+                "switches": 2941875,
+                "fast_ns": 5952564483200,
+                "completed_writes": 838008,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 19,
+              "Q_estimate": 0.00014495849609375,
+              "CP95": [
+                8.727666834559262e-05,
+                0.00022636143325278923
+              ],
+              "CP95_family": [
+                5.4924464533765e-05,
+                0.00030456573473613605
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.7142864481422424,
+              "port_pct_mean": 28.571440802370706,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.7784423828125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 6.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 5681,
+              "totals": {
+                "passes": 70217236480,
+                "read_ns": 224694868377600,
+                "write_ns": 84953300,
+                "positive_reports": 495248,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 786432000000000,
+                "completed_writes": 849533,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_2L",
+              "period_ns": 22400,
+              "first_exceedances": 45,
+              "Q_estimate": 0.00034332275390625,
+              "CP95": [
+                0.0002504326507341195,
+                0.0004593661945299079
+              ],
+              "CP95_family": [
+                0.00018998259104661708,
+                0.0005654771715426553
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.8571440446266174,
+              "port_pct_mean": 14.285734077110291,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.4880218505859375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 15,
+              "failed_only_ladder_vs_here": 5670,
+              "totals": {
+                "passes": 35108683776,
+                "read_ns": 112347499724800,
+                "write_ns": 84492500,
+                "positive_reports": 457182,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 844925,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_4L",
+              "period_ns": 44800,
+              "first_exceedances": 134,
+              "Q_estimate": 0.0010223388671875,
+              "CP95": [
+                0.0008566446894912443,
+                0.0012107058219376523
+              ],
+              "CP95_family": [
+                0.0007371493049932912,
+                0.001375566983588971
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.4285734428314209,
+              "port_pct_mean": 7.142890713857015,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.342681884765625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 51,
+              "failed_only_ladder_vs_here": 5617,
+              "totals": {
+                "passes": 17554341888,
+                "read_ns": 56173894041600,
+                "write_ns": 84257200,
+                "positive_reports": 438132,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 842572,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8L",
+              "period_ns": 89600,
+              "first_exceedances": 307,
+              "Q_estimate": 0.00234222412109375,
+              "CP95": [
+                0.0020877778644563466,
+                0.0026190701075992856
+              ],
+              "CP95_family": [
+                0.0018959088076406843,
+                0.002856048077614973
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.21428864183502197,
+              "port_pct_mean": 3.5714773639170327,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.2660064697265625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 126,
+              "failed_only_ladder_vs_here": 5519,
+              "totals": {
+                "passes": 8777236480,
+                "read_ns": 28087156736000,
+                "write_ns": 84126600,
+                "positive_reports": 428082,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 841266,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16L",
+              "period_ns": 179200,
+              "first_exceedances": 634,
+              "Q_estimate": 0.0048370361328125,
+              "CP95": [
+                0.004468607047783348,
+                0.005227626227175099
+              ],
+              "CP95_family": [
+                0.004183615433471325,
+                0.005557411931663894
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.10714624114837647,
+              "port_pct_mean": 1.7857706858062745,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.2185897827148438,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 267,
+              "failed_only_ladder_vs_here": 5333,
+              "totals": {
+                "passes": 4388683776,
+                "read_ns": 14043788083200,
+                "write_ns": 84036600,
+                "positive_reports": 421867,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 840366,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_32L",
+              "period_ns": 358400,
+              "first_exceedances": 1343,
+              "Q_estimate": 0.01024627685546875,
+              "CP95": [
+                0.009708138214069933,
+                0.010806244626856323
+              ],
+              "CP95_family": [
+                0.009284353172942624,
+                0.011274268153557135
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.05357504035720825,
+              "port_pct_mean": 0.8929173392868042,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.1786422729492188,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 573,
+              "failed_only_ladder_vs_here": 4930,
+              "totals": {
+                "passes": 2194407424,
+                "read_ns": 7022103756800,
+                "write_ns": 83932900,
+                "positive_reports": 416631,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 839329,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_64L",
+              "period_ns": 716800,
+              "first_exceedances": 2780,
+              "Q_estimate": 0.021209716796875,
+              "CP95": [
+                0.02043648824236178,
+                0.022004227100435123
+              ],
+              "CP95_family": [
+                0.019820283440807933,
+                0.022663635282536787
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.02678783904724121,
+              "port_pct_mean": 0.44646398412068683,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.1258926391601562,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1206,
+              "failed_only_ladder_vs_here": 4126,
+              "totals": {
+                "passes": 1097203712,
+                "read_ns": 3511051878400,
+                "write_ns": 83761200,
+                "positive_reports": 409717,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 837612,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_128L",
+              "period_ns": 1433600,
+              "first_exceedances": 5456,
+              "Q_estimate": 0.0416259765625,
+              "CP95": [
+                0.0405510209673722,
+                0.04272126998702504
+              ],
+              "CP95_family": [
+                0.03968764676368895,
+                0.04362597693463882
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.013395836616516114,
+              "port_pct_mean": 0.2232639436086019,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 3.0350418090820312,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 2345,
+              "failed_only_ladder_vs_here": 2589,
+              "totals": {
+                "passes": 548667392,
+                "read_ns": 1755735654400,
+                "write_ns": 83442600,
+                "positive_reports": 397809,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 834426,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 10074,
+              "Q_estimate": 0.0768585205078125,
+              "CP95": [
+                0.07542205097658859,
+                0.07831374280392144
+              ],
+              "CP95_family": [
+                0.07426222051894428,
+                0.07951171177795463
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.006698232297515869,
+              "port_pct_mean": 0.11163720495859782,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 2.8803558349609375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 4374,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 274333696,
+                "read_ns": 877867827200,
+                "write_ns": 82876500,
+                "positive_reports": 377534,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 828765,
+                "terminal_wrong_bits": 0
+              }
+            }
+          ],
+          "largest_tested_below_ns": 22400,
+          "smallest_tested_above_ns": 89600,
+          "unresolved_fixed_ns": [
+            44800
+          ]
+        },
+        {
+          "law": "compact_1p2",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            559878,
+            139920,
+            0,
+            0,
+            0
+          ],
+          "shared_input_sha256": "f4873f4d3b4031da8dbad5d7a1479e3a68d69aeaa8c0012b2a520b4b1485cded",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 4369,
+              "Q_estimate": 0.03333282470703125,
+              "CP95": [
+                0.03236756549144762,
+                0.03431880054479744
+              ],
+              "CP95_family": [
+                0.031594078709235446,
+                0.03513437637063286
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.05564203592681885,
+              "port_pct_mean": 0.9273672654469808,
+              "resets_mean": 5.033164978027344,
+              "reset_cells_mean": 4.473472595214844,
+              "positive_reports_mean": 5.033164978027344,
+              "downshifts_mean": 1.8959274291992188,
+              "switches_mean": 24.82013702392578,
+              "fast_s_mean": 0.05585752263183594,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 2279071539,
+                "read_ns": 7293028924800,
+                "write_ns": 84008200,
+                "positive_reports": 659707,
+                "resets": 659707,
+                "reset_cells": 586347,
+                "downshifts": 248503,
+                "switches": 3253225,
+                "fast_ns": 7321357206400,
+                "completed_writes": 840082,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 27,
+              "Q_estimate": 0.00020599365234375,
+              "CP95": [
+                0.00013575536511547742,
+                0.00029969590497645645
+              ],
+              "CP95_family": [
+                9.346330192302568e-05,
+                0.0003877728744751197
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.7142864475471498,
+              "port_pct_mean": 28.571440792452496,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.422477722167969,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 6.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 4342,
+              "totals": {
+                "passes": 70217236480,
+                "read_ns": 224694868377600,
+                "write_ns": 84875300,
+                "positive_reports": 710735,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 786432000000000,
+                "completed_writes": 848753,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_2L",
+              "period_ns": 22400,
+              "first_exceedances": 68,
+              "Q_estimate": 0.000518798828125,
+              "CP95": [
+                0.00040288940932927867,
+                0.0006576554532224252
+              ],
+              "CP95_family": [
+                0.00032383867965307087,
+                0.0007822579432514686
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.8571440439941406,
+              "port_pct_mean": 14.285734066569008,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.3743896484375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 16,
+              "failed_only_ladder_vs_here": 4317,
+              "totals": {
+                "passes": 35108683776,
+                "read_ns": 112347499724800,
+                "write_ns": 84409600,
+                "positive_reports": 704432,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 844096,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_4L",
+              "period_ns": 44800,
+              "first_exceedances": 164,
+              "Q_estimate": 0.001251220703125,
+              "CP95": [
+                0.0010671441099413207,
+                0.001457899424778855
+              ],
+              "CP95_family": [
+                0.0009326770152562291,
+                0.001637674430396649
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.42857344221191407,
+              "port_pct_mean": 7.142890703531901,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.344184875488281,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 65,
+              "failed_only_ladder_vs_here": 4270,
+              "totals": {
+                "passes": 17554341888,
+                "read_ns": 56173894041600,
+                "write_ns": 84176000,
+                "positive_reports": 700473,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 841760,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8L",
+              "period_ns": 89600,
+              "first_exceedances": 323,
+              "Q_estimate": 0.00246429443359375,
+              "CP95": [
+                0.0022031273391279944,
+                0.002747845309393796
+              ],
+              "CP95_family": [
+                0.002005771125138979,
+                0.0029902922462987365
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.21428864125366212,
+              "port_pct_mean": 3.5714773542277016,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.317176818847656,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 147,
+              "failed_only_ladder_vs_here": 4193,
+              "totals": {
+                "passes": 8777236480,
+                "read_ns": 28087156736000,
+                "write_ns": 84050400,
+                "positive_reports": 696933,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 840504,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16L",
+              "period_ns": 179200,
+              "first_exceedances": 678,
+              "Q_estimate": 0.0051727294921875,
+              "CP95": [
+                0.00479154202759188,
+                0.0055760533838962074
+              ],
+              "CP95_family": [
+                0.004496120840561995,
+                0.005916231367934104
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.10714624050064087,
+              "port_pct_mean": 1.7857706750106812,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.280303955078125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 338,
+              "failed_only_ladder_vs_here": 4029,
+              "totals": {
+                "passes": 4388683776,
+                "read_ns": 14043788083200,
+                "write_ns": 83951700,
+                "positive_reports": 692100,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 839517,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_32L",
+              "period_ns": 358400,
+              "first_exceedances": 1336,
+              "Q_estimate": 0.01019287109375,
+              "CP95": [
+                0.009656141690677888,
+                0.010751432523191544
+              ],
+              "CP95_family": [
+                0.009233509620446992,
+                0.011218308291540096
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.053575039753723144,
+              "port_pct_mean": 0.8929173292287191,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.2158203125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 701,
+              "failed_only_ladder_vs_here": 3734,
+              "totals": {
+                "passes": 2194407424,
+                "read_ns": 7022103756800,
+                "write_ns": 83853800,
+                "positive_reports": 683648,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 838538,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_64L",
+              "period_ns": 716800,
+              "first_exceedances": 2724,
+              "Q_estimate": 0.020782470703125,
+              "CP95": [
+                0.0200169795312564,
+                0.02156926398167551
+              ],
+              "CP95_family": [
+                0.019407110080818555,
+                0.02222237642097438
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.026787838475036622,
+              "port_pct_mean": 0.44646397458394366,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 5.0943145751953125,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 1470,
+              "failed_only_ladder_vs_here": 3115,
+              "totals": {
+                "passes": 1097203712,
+                "read_ns": 3511051878400,
+                "write_ns": 83686200,
+                "positive_reports": 667722,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 836862,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_128L",
+              "period_ns": 1433600,
+              "first_exceedances": 5366,
+              "Q_estimate": 0.0409393310546875,
+              "CP95": [
+                0.039872961964251274,
+                0.04202606919614697
+              ],
+              "CP95_family": [
+                0.03901662480490243,
+                0.04292380160922076
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.013395836103057862,
+              "port_pct_mean": 0.22326393505096434,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.864723205566406,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 3021,
+              "failed_only_ladder_vs_here": 2024,
+              "totals": {
+                "passes": 548667392,
+                "read_ns": 1755735654400,
+                "write_ns": 83375300,
+                "positive_reports": 637629,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 833753,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 10167,
+              "Q_estimate": 0.07756805419921875,
+              "CP95": [
+                0.07612548495918559,
+                0.07902934448466367
+              ],
+              "CP95_family": [
+                0.07496064928775145,
+                0.08023225450318514
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.006698231776428223,
+              "port_pct_mean": 0.11163719627380371,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 4.4730224609375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 5798,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 274333696,
+                "read_ns": 877867827200,
+                "write_ns": 82808200,
+                "positive_reports": 586288,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 828082,
+                "terminal_wrong_bits": 0
+              }
+            }
+          ],
+          "largest_tested_below_ns": 22400,
+          "smallest_tested_above_ns": 89600,
+          "unresolved_fixed_ns": [
+            44800
+          ]
+        },
+        {
+          "law": "compact_5",
+          "n": 131072,
+          "parents_by_size_0_to_5": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            167319
+          ],
+          "shared_input_sha256": "d1f76fc63162138acf3c5471463856e154e181200fd9f86ce6286ece496e26ad",
+          "rows": [
+            {
+              "mode": "ladder",
+              "period_ns": null,
+              "first_exceedances": 2998,
+              "Q_estimate": 0.0228729248046875,
+              "CP95": [
+                0.022070341092450926,
+                0.023696711410298863
+              ],
+              "CP95_family": [
+                0.021430098985193456,
+                0.02438000300755064
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.03764886555709839,
+              "port_pct_mean": 0.6274810926183065,
+              "resets_mean": 1.2954788208007812,
+              "reset_cells_mean": 1.2233734130859375,
+              "positive_reports_mean": 1.2954788208007812,
+              "downshifts_mean": 0.9551315307617188,
+              "switches_mean": 16.520401000976562,
+              "fast_s_mean": 0.029856780053710938,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 1542071606,
+                "read_ns": 4934629139200,
+                "write_ns": 82967100,
+                "positive_reports": 169801,
+                "resets": 169801,
+                "reset_cells": 160350,
+                "downshifts": 125191,
+                "switches": 2165362,
+                "fast_ns": 3913387875200,
+                "completed_writes": 829671,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_1L",
+              "period_ns": 11200,
+              "first_exceedances": 10,
+              "Q_estimate": 7.62939453125e-05,
+              "CP95": [
+                3.6586499124563896e-05,
+                0.00014030279106308624
+              ],
+              "CP95_family": [
+                1.8098341114634357e-05,
+                0.00020467056246384498
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 1.7142864451278688,
+              "port_pct_mean": 28.57144075213115,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.5428314208984375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 6.0,
+              "failed_only_here_vs_ladder": 0,
+              "failed_only_ladder_vs_here": 2988,
+              "totals": {
+                "passes": 70217236480,
+                "read_ns": 224694868377600,
+                "write_ns": 84558200,
+                "positive_reports": 202222,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 786432000000000,
+                "completed_writes": 845582,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_2L",
+              "period_ns": 22400,
+              "first_exceedances": 25,
+              "Q_estimate": 0.00019073486328125,
+              "CP95": [
+                0.00012343722982737827,
+                0.0002815494970927791
+              ],
+              "CP95_family": [
+                8.348412765619069e-05,
+                0.00036730400140507375
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.8571440416244507,
+              "port_pct_mean": 14.285734027074177,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.4089126586914062,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 4,
+              "failed_only_ladder_vs_here": 2977,
+              "totals": {
+                "passes": 35108683776,
+                "read_ns": 112347499724800,
+                "write_ns": 84099000,
+                "positive_reports": 184669,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 840990,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_4L",
+              "period_ns": 44800,
+              "first_exceedances": 57,
+              "Q_estimate": 0.00043487548828125,
+              "CP95": [
+                0.0003293865690305279,
+                0.0005633954175394038
+              ],
+              "CP95_family": [
+                0.0002587683754939395,
+                0.000679612507596207
+              ],
+              "against_0p001_family": "below",
+              "port_s_mean": 0.42857343983078006,
+              "port_pct_mean": 7.142890663846334,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.3417816162109375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 9,
+              "failed_only_ladder_vs_here": 2950,
+              "totals": {
+                "passes": 17554341888,
+                "read_ns": 56173894041600,
+                "write_ns": 83863900,
+                "positive_reports": 175870,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 838639,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_8L",
+              "period_ns": 89600,
+              "first_exceedances": 126,
+              "Q_estimate": 0.0009613037109375,
+              "CP95": [
+                0.0008008528952372693,
+                0.0011444496508523842
+              ],
+              "CP95_family": [
+                0.0006856252737354401,
+                0.001305060354293749
+              ],
+              "against_0p001_family": "unresolved",
+              "port_s_mean": 0.21428863886184693,
+              "port_pct_mean": 3.5714773143641154,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.308258056640625,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 30,
+              "failed_only_ladder_vs_here": 2902,
+              "totals": {
+                "passes": 8777236480,
+                "read_ns": 28087156736000,
+                "write_ns": 83736900,
+                "positive_reports": 171476,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 837369,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_16L",
+              "period_ns": 179200,
+              "first_exceedances": 255,
+              "Q_estimate": 0.00194549560546875,
+              "CP95": [
+                0.001714208146100882,
+                0.002199241177355948
+              ],
+              "CP95_family": [
+                0.0015412415848432282,
+                0.002417379877406981
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.10714623811187744,
+              "port_pct_mean": 1.7857706351979574,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.2896347045898438,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 66,
+              "failed_only_ladder_vs_here": 2809,
+              "totals": {
+                "passes": 4388683776,
+                "read_ns": 14043788083200,
+                "write_ns": 83638600,
+                "positive_reports": 169035,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 836386,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_32L",
+              "period_ns": 358400,
+              "first_exceedances": 520,
+              "Q_estimate": 0.00396728515625,
+              "CP95": [
+                0.003634172363078193,
+                0.004322628125371521
+              ],
+              "CP95_family": [
+                0.0033780454068228355,
+                0.004623649560774812
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.05357503731918335,
+              "port_pct_mean": 0.8929172886530559,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.2778244018554688,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 129,
+              "failed_only_ladder_vs_here": 2607,
+              "totals": {
+                "passes": 2194407424,
+                "read_ns": 7022103756800,
+                "write_ns": 83534700,
+                "positive_reports": 167487,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 835347,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_64L",
+              "period_ns": 716800,
+              "first_exceedances": 1059,
+              "Q_estimate": 0.00807952880859375,
+              "CP95": [
+                0.00760197563165531,
+                0.00857903267645879
+              ],
+              "CP95_family": [
+                0.007227752583736456,
+                0.008997708639168534
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.02678783600997925,
+              "port_pct_mean": 0.44646393349965413,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.2661819458007812,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 228,
+              "failed_only_ladder_vs_here": 2167,
+              "totals": {
+                "passes": 1097203712,
+                "read_ns": 3511051878400,
+                "write_ns": 83363100,
+                "positive_reports": 165961,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 833631,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_128L",
+              "period_ns": 1433600,
+              "first_exceedances": 2082,
+              "Q_estimate": 0.0158843994140625,
+              "CP95": [
+                0.015214446278713486,
+                0.016575892027465716
+              ],
+              "CP95_family": [
+                0.014682790472404162,
+                0.017151247914399013
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.013395833629608155,
+              "port_pct_mean": 0.2232638938268026,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.2500076293945312,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 446,
+              "failed_only_ladder_vs_here": 1362,
+              "totals": {
+                "passes": 548667392,
+                "read_ns": 1755735654400,
+                "write_ns": 83051100,
+                "positive_reports": 163841,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 830511,
+                "terminal_wrong_bits": 0
+              }
+            },
+            {
+              "mode": "fixed_256L",
+              "period_ns": 2867200,
+              "first_exceedances": 3853,
+              "Q_estimate": 0.02939605712890625,
+              "CP95": [
+                0.028488217558306845,
+                0.03032479484356371
+              ],
+              "CP95_family": [
+                0.02776176966969075,
+                0.0310936921106181
+              ],
+              "against_0p001_family": "above",
+              "port_s_mean": 0.006698229443359375,
+              "port_pct_mean": 0.11163715738932291,
+              "resets_mean": 0.0,
+              "reset_cells_mean": 0.0,
+              "positive_reports_mean": 1.2233734130859375,
+              "downshifts_mean": 0.0,
+              "switches_mean": 0.0,
+              "fast_s_mean": 0.0,
+              "failed_only_here_vs_ladder": 855,
+              "failed_only_ladder_vs_here": 0,
+              "totals": {
+                "passes": 274333696,
+                "read_ns": 877867827200,
+                "write_ns": 82502400,
+                "positive_reports": 160350,
+                "resets": 0,
+                "reset_cells": 0,
+                "downshifts": 0,
+                "switches": 0,
+                "fast_ns": 0,
+                "completed_writes": 825024,
+                "terminal_wrong_bits": 0
+              }
+            }
+          ],
+          "largest_tested_below_ns": 44800,
+          "smallest_tested_above_ns": 179200,
+          "unresolved_fixed_ns": [
+            89600
+          ]
+        }
+      ]
+    }
+  }
+}
