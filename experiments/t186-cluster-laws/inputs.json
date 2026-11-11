@@ -1,0 +1,34 @@
+{
+  "base": "68d128011f19265f4bdbcf4da140a92c4704c8fe",
+  "words": 16,
+  "bits_per_word": 38,
+  "addresses": 32,
+  "reference_bits": 19922944,
+  "frame_ns": 1400,
+  "phases_ns": [0, 240, 520, 760],
+  "sample_ns": 60,
+  "write_edge_ns": 160,
+  "read_ns": 100,
+  "repair_extra_ns": 100,
+  "cut_before_end_ns": 300,
+  "install_before_end_ns": 100,
+  "cell_rounds": 256,
+  "clean_cells": [5, 10, 19, 38, 75, 149, 298, 596],
+  "laws": [
+    {"id":"single", "mean":[1,1]},
+    {"id":"two_uniform", "mean":[2,1]},
+    {"id":"compact_1p2", "mean":[6,5]},
+    {"id":"compact_5", "mean":[5,1]}
+  ],
+  "profiles": [
+    {"id":"class_plateau", "T_s":315576000, "fixed_log2_L":[0,8,23,24,25,26,27,28,29,30,31]},
+    {"id":"sepem", "T_s":315576000, "fixed_log2_L":[0,8,23,24,25,26,27,28,29,30,31], "start_bin":2362840, "bin_s":300},
+    {"id":"stress", "T_s":6, "fixed_log2_L":[0,1,2,3,4,5,6,7,8], "pulse_start_s":[2,4], "pulse_duration_ns":20000000, "bank_inversions_per_s_during_pulse":160}
+  ],
+  "trials_per_law_profile": 131072,
+  "batch_size": 2048,
+  "seed": 2026111101,
+  "generator": "numpy.random.PCG64",
+  "alpha": 0.05,
+  "comparison_probability": 0.001
+}
