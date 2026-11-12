@@ -1,0 +1,159 @@
+budget
+32768 E[parents] <= 5858.25 illustrative direct fraction <= 1.7069944095933084e-08 decade bus upper (s) 843839.613
+44529 E[parents] <= 7960.876899719238 illustrative direct fraction <= 1.2561430261976136e-08 decade bus upper (s) 1018620.684
+Controller limit (1/h): 6.844626967830253e-11
+
+decade
+{
+  "trials": 128,
+  "words": 32768,
+  "seed": 462,
+  "stopped": 0,
+  "mean_lower_s": 476298.028,
+  "mean_upper_s": 476298.028,
+  "sample_se_lower_s": 144.527,
+  "sample_se_upper_s": 144.527,
+  "average_scans_before_stop": 72677311.21875
+}
+
+RTL and verification sources: 64fe5bb6745672ecf0d861fe6bc65e06428cdfb1
+Fresh git archive replay. Icarus/vvp 12.0, Python 3.14.4, Vivado 2025.2 (lin64 build 6299465).
+inject / timing / synth exit status: 0 / 0 / 0.
+
+inject
+CHECK_LOCAL = 0
+case=0 reads=8 writes=0 next_start=1282
+case=1 reads=8 writes=1 next_start=1281
+case=2 reads=8 writes=0 next_start=1281
+case=3 reads=8 writes=0 next_start=1281
+case=4 reads=8 writes=1 next_start=1282
+case=5 reads=8 writes=0 next_start=1281
+case=6 reads=8 writes=1 next_start=1283
+case=7 reads=8 writes=1 next_start=1283
+case=8 reads=8 writes=0 next_start=1284
+CHECK_LOCAL = 1
+case=0 reads=8 writes=0 next_start=1282
+case=1 reads=8 writes=1 next_start=1281
+case=2 reads=8 writes=0 next_start=1281
+case=3 reads=8 writes=0 next_start=1281
+case=4 reads=8 writes=1 next_start=1281
+case=5 reads=8 writes=0 next_start=1281
+case=6 reads=8 writes=1 next_start=1281
+case=7 reads=8 writes=1 next_start=1281
+case=8 reads=8 writes=0 next_start=1282
+
+timing
+Times in ns. Sample, OE, drive, WE, release and sealed are relative to the address 7 read.
+Confirmation, proposed, installed and next_ns are relative to the address 0 read of scan 1280.
+A dash denotes no transition. The checker verifies both the step output and active gap register.
+CHECK_LOCAL = 0
+arrival=2495 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=2500 installed=2700 next_ns=5600 next_round=1282
+arrival=2500 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=2500 installed=2700 next_ns=5600 next_round=1282
+arrival=2505 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=- installed=- next_ns=2800 next_round=1281
+arrival=2515 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=- installed=- next_ns=2800 next_round=1281
+arrival=2500 repair=1 aperture=0 sample=60 dq=5aa5 err=1 oe_off=70 drive=100,180 we=110,160 release=200 sealed=200 count=1 proposed=- installed=- next_ns=2800 next_round=1281
+arrival=2500 repair=0 aperture=1 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=2500 installed=2700 next_ns=5600 next_round=1282
+arrival=2500 repair=1 aperture=1 sample=60 dq=5aa5 err=1 oe_off=70 drive=100,180 we=110,160 release=200 sealed=200 count=1 proposed=- installed=- next_ns=2800 next_round=1281
+CHECK_LOCAL = 1
+arrival=2495 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=2500 installed=2700 next_ns=5600 next_round=1282
+arrival=2500 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=2500 installed=2700 next_ns=5600 next_round=1282
+arrival=2505 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=- installed=- next_ns=2800 next_round=1281
+arrival=2515 repair=0 aperture=0 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=- installed=- next_ns=2800 next_round=1281
+arrival=2500 repair=1 aperture=0 sample=60 dq=5aa5 err=1 oe_off=70 drive=100,180 we=110,160 release=200 sealed=200 count=1 proposed=- installed=- next_ns=2800 next_round=1281
+arrival=2500 repair=0 aperture=1 sample=60 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=100 count=0 proposed=2500 installed=2700 next_ns=5600 next_round=1282
+arrival=2500 repair=1 aperture=1 sample=60 dq=5aa5 err=1 oe_off=70 drive=100,180 we=110,160 release=200 sealed=200 count=1 proposed=- installed=- next_ns=2800 next_round=1281
+
+synth
+CHECK_LOCAL = 0
+NATIVE8_PART xc7z020clg484-1
+NATIVE8_VIVADO 2025.2
+NATIVE8_FF 93
+NATIVE8_LUT 186
+NATIVE8_CARRY 2
+NATIVE8_DATA_SETUP_SLACK 3.532
+NATIVE8_CRITICAL_FROM phase_reg[3]/C
+NATIVE8_CRITICAL_TO count_reg[0]/CE
+NATIVE8_DATA_HOLD_SLACK 0.211
+NATIVE8_SLICE_LUTS 158
+CHECK_LOCAL = 1
+NATIVE8_PART xc7z020clg484-1
+NATIVE8_VIVADO 2025.2
+NATIVE8_FF 94
+NATIVE8_LUT 220
+NATIVE8_CARRY 2
+NATIVE8_DATA_SETUP_SLACK 3.293
+NATIVE8_CRITICAL_FROM phase_reg[3]/C
+NATIVE8_CRITICAL_TO count_reg[0]/CE
+NATIVE8_DATA_HOLD_SLACK 0.262
+NATIVE8_SLICE_LUTS 182
+
+Raw vvp excerpts, CHECK_LOCAL=1 (all pin times are relative to address 0 of round 1280).
+PIN ns addr selected oe_n we_n drive dq_out captured_err sealed count report_ok proposed step gap
+NEXT ns addr selected oe_n we_n drive
+
+arrival=2500 repair=0 aperture=0
+PIN 2250 7 1 1 1 0 23205 0 0 0 0 1 1 1
+PIN 2260 7 0 1 1 0 23205 0 1 0 0 1 1 1
+PIN 2490 7 0 1 1 0 23205 0 1 0 0 1 1 1
+CONFIRM 2500
+PIN 2500 7 0 1 1 0 23205 0 1 0 1 2 1 1
+PIN 2510 7 0 1 1 0 23205 0 1 0 1 2 1 1
+PIN 2690 7 0 1 1 0 23205 0 1 0 1 2 1 1
+PIN 2700 7 0 1 1 0 23205 0 1 0 1 2 2 2
+NEXT 5600 0 1 0 1 0
+
+arrival=2505 repair=0 aperture=0
+PIN 2250 7 1 1 1 0 23205 0 0 0 0 1 1 1
+PIN 2260 7 0 1 1 0 23205 0 1 0 0 1 1 1
+PIN 2490 7 0 1 1 0 23205 0 1 0 0 1 1 1
+PIN 2500 7 0 1 1 0 23205 0 1 0 0 1 1 1
+CONFIRM 2505
+PIN 2510 7 0 1 1 0 23205 0 1 0 1 1 1 1
+PIN 2690 7 0 1 1 0 23205 0 1 0 1 1 1 1
+PIN 2700 7 0 1 1 0 23205 0 1 0 1 1 1 1
+NEXT 2800 0 1 0 1 0
+
+arrival=2500 repair=1 aperture=1
+PIN 2160 7 1 0 1 0 4660 0 0 0 0 1 1 1
+PIN 2210 7 1 0 1 0 4660 0 0 0 0 1 1 1
+PIN 2220 7 1 0 1 0 23205 1 0 0 0 1 1 1
+PIN 2230 7 1 1 1 0 23205 1 0 0 0 1 1 1
+PIN 2260 7 1 1 1 1 23205 1 0 0 0 1 1 1
+PIN 2270 7 1 1 0 1 23205 1 0 0 0 1 1 1
+PIN 2320 7 1 1 1 1 23205 1 0 0 0 1 1 1
+PIN 2340 7 1 1 1 0 23205 1 0 0 0 1 1 1
+PIN 2350 7 1 1 1 0 23205 1 0 0 0 1 1 1
+PIN 2360 7 0 1 1 0 23205 1 1 1 0 1 1 1
+CONFIRM 2500
+PIN 2500 7 0 1 1 0 23205 1 1 1 1 1 1 1
+PIN 2700 7 0 1 1 0 23205 1 1 1 1 1 1 1
+NEXT 2800 0 1 0 1 0
+
+Excerpts from native8_utilization.rpt and native8_timing.rpt (clock row):
+clock, WNS, TNS, failing/total setup endpoints, WHS, THS, failing/total hold endpoints, WPWS, TPWS, failing/total pulse endpoints.
+CHECK_LOCAL = 0
+| Slice LUTs*             |  158 |     0 |          0 |     53200 |  0.30 |
+| Slice Registers         |   93 |     0 |          0 |    106400 |  0.09 |
+| CARRY4   |    2 |          CarryLogic |
+| Design State : Synthesized
+ There are 21 input ports with no input delay specified. (HIGH)
+ There are 37 ports with no output delay specified. (HIGH)
+clk                 3.532        0.000                      0                  172        0.211        0.000                      0                  172        4.500        0.000                       0                    93
+CHECK_LOCAL = 1
+| Slice LUTs*             |  182 |     0 |          0 |     53200 |  0.34 |
+| Slice Registers         |   94 |     0 |          0 |    106400 |  0.09 |
+| CARRY4   |    2 |          CarryLogic |
+| Design State : Synthesized
+ There are 21 input ports with no input delay specified. (HIGH)
+ There are 37 ports with no output delay specified. (HIGH)
+clk                 3.293        0.000                      0                  177        0.262        0.000                      0                  177        4.500        0.000                       0                    94
+
+timing --rtl (negative control; selected output)
+Testbench/checker: 64fe5bb6745672ecf0d861fe6bc65e06428cdfb1.
+Reviewed RTL: 348f2a4b093d6966fc6441f6f665895a95aeea61. Expected and observed exit status: 1.
+CHECK_LOCAL = 0
+arrival=2505 repair=0 aperture=0 sample=70 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=110 count=0 proposed=2510 installed=2710 next_ns=5600 next_round=1282
+arrival=2500 repair=1 aperture=0 sample=70 dq=5aa5 err=1 oe_off=70 drive=100,180 we=110,160 release=200 sealed=210 count=1 proposed=- installed=- next_ns=2800 next_round=1281
+CHECK_LOCAL = 1
+arrival=2505 repair=0 aperture=0 sample=70 dq=5aa5 err=0 oe_off=70 drive=- we=- release=100 sealed=110 count=0 proposed=2510 installed=2710 next_ns=5600 next_round=1282
+arrival=2500 repair=1 aperture=0 sample=70 dq=5aa5 err=1 oe_off=70 drive=100,180 we=110,160 release=200 sealed=210 count=1 proposed=- installed=- next_ns=2800 next_round=1281
