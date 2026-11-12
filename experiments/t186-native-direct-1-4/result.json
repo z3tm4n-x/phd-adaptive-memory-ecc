@@ -1,0 +1,977 @@
+{
+  "series": {
+    "clust_p1.5MeV.txt": {
+      "clusters": 3214,
+      "cell_rows": 3224,
+      "unique_occurrences": 3224,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {
+        "1": 4,
+        "2": 1,
+        "3": 2
+      },
+      "Y": {
+        "1": 1,
+        "2": 1
+      }
+    },
+    "clust_p40MeV.txt": {
+      "clusters": 12441,
+      "cell_rows": 16401,
+      "unique_occurrences": 16398,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 13,
+      "A_div_4": 0,
+      "X": {
+        "1": 479,
+        "2": 13,
+        "3": 7,
+        "4": 1
+      },
+      "Y": {
+        "1": 2080,
+        "2": 788,
+        "3": 483,
+        "4": 127,
+        "5": 66,
+        "6": 15,
+        "7": 10,
+        "8": 6,
+        "9": 3,
+        "10": 2,
+        "11": 1,
+        "12": 1,
+        "13": 1
+      }
+    },
+    "clust_p0.9MeV.txt": {
+      "clusters": 7455,
+      "cell_rows": 7507,
+      "unique_occurrences": 7507,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {
+        "1": 4,
+        "3": 2
+      },
+      "Y": {
+        "1": 8,
+        "3": 1
+      }
+    },
+    "clust_C1080MeV.txt": {
+      "clusters": 1406,
+      "cell_rows": 1478,
+      "unique_occurrences": 1478,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 5,
+      "A_div_4": 0,
+      "X": {},
+      "Y": {
+        "1": 51,
+        "2": 17,
+        "3": 13,
+        "4": 1,
+        "5": 1
+      }
+    },
+    "clust_XeLET57.txt": {
+      "clusters": 1060,
+      "cell_rows": 21219,
+      "unique_occurrences": 21185,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 20,
+      "A_div_4": 3,
+      "X": {
+        "1": 953,
+        "2": 857,
+        "3": 692,
+        "4": 502,
+        "5": 301,
+        "6": 50,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1
+      },
+      "Y": {
+        "1": 1028,
+        "2": 1014,
+        "3": 992,
+        "4": 981,
+        "5": 957,
+        "6": 940,
+        "7": 886,
+        "8": 801,
+        "9": 634,
+        "10": 209,
+        "11": 76,
+        "12": 17,
+        "13": 9,
+        "14": 4,
+        "15": 4,
+        "16": 3,
+        "17": 2,
+        "18": 1,
+        "19": 1
+      }
+    },
+    "clust_p5MeV.txt": {
+      "clusters": 1994,
+      "cell_rows": 2053,
+      "unique_occurrences": 2053,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {
+        "1": 1
+      },
+      "Y": {
+        "1": 51,
+        "2": 4
+      }
+    },
+    "clust_Xe2700MeV.txt": {
+      "clusters": 1041,
+      "cell_rows": 16756,
+      "unique_occurrences": 16735,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 14,
+      "A_div_4": 0,
+      "X": {
+        "1": 931,
+        "2": 794,
+        "3": 563,
+        "4": 315,
+        "5": 46,
+        "6": 3,
+        "7": 2,
+        "8": 2
+      },
+      "Y": {
+        "1": 1011,
+        "2": 993,
+        "3": 974,
+        "4": 951,
+        "5": 925,
+        "6": 861,
+        "7": 802,
+        "8": 576,
+        "9": 350,
+        "10": 6,
+        "11": 2,
+        "12": 1,
+        "13": 1,
+        "14": 1
+      }
+    },
+    "clust_XeLET42.txt": {
+      "clusters": 1119,
+      "cell_rows": 17021,
+      "unique_occurrences": 17012,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 18,
+      "A_div_4": 1,
+      "X": {
+        "1": 973,
+        "2": 809,
+        "3": 597,
+        "4": 321,
+        "5": 32,
+        "6": 2,
+        "7": 2
+      },
+      "Y": {
+        "1": 1074,
+        "2": 1059,
+        "3": 1016,
+        "4": 997,
+        "5": 935,
+        "6": 886,
+        "7": 777,
+        "8": 545,
+        "9": 306,
+        "10": 10,
+        "11": 3,
+        "12": 2,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 1
+      }
+    },
+    "clust_U35.7GeV.txt": {
+      "clusters": 476,
+      "cell_rows": 6230,
+      "unique_occurrences": 6230,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 9,
+      "A_div_4": 0,
+      "X": {
+        "1": 425,
+        "2": 311,
+        "3": 192,
+        "4": 48
+      },
+      "Y": {
+        "1": 459,
+        "2": 451,
+        "3": 439,
+        "4": 428,
+        "5": 406,
+        "6": 355,
+        "7": 320,
+        "8": 153,
+        "9": 73
+      }
+    },
+    "clust_p164MeV.txt": {
+      "clusters": 8667,
+      "cell_rows": 13357,
+      "unique_occurrences": 13353,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 21,
+      "A_div_4": 0,
+      "X": {
+        "1": 650,
+        "2": 38,
+        "3": 11,
+        "4": 2,
+        "5": 2,
+        "6": 1
+      },
+      "Y": {
+        "1": 1876,
+        "2": 898,
+        "3": 607,
+        "4": 248,
+        "5": 147,
+        "6": 53,
+        "7": 35,
+        "8": 16,
+        "9": 13,
+        "10": 6,
+        "11": 5,
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 2,
+        "16": 1
+      }
+    },
+    "clust_U190.4GeV.txt": {
+      "clusters": 924,
+      "cell_rows": 5484,
+      "unique_occurrences": 5484,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 10,
+      "A_div_4": 0,
+      "X": {
+        "1": 610,
+        "2": 104,
+        "3": 1
+      },
+      "Y": {
+        "1": 832,
+        "2": 760,
+        "3": 688,
+        "4": 530,
+        "5": 438,
+        "6": 201,
+        "7": 108
+      }
+    },
+    "clust_p1MeV.txt": {
+      "clusters": 4690,
+      "cell_rows": 4710,
+      "unique_occurrences": 4710,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {
+        "1": 3,
+        "3": 2
+      },
+      "Y": {
+        "1": 4,
+        "3": 2
+      }
+    },
+    "clust_XeLET27.txt": {
+      "clusters": 998,
+      "cell_rows": 10877,
+      "unique_occurrences": 10876,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 16,
+      "A_div_4": 0,
+      "X": {
+        "1": 848,
+        "2": 598,
+        "3": 289,
+        "4": 5
+      },
+      "Y": {
+        "1": 962,
+        "2": 941,
+        "3": 891,
+        "4": 846,
+        "5": 770,
+        "6": 671,
+        "7": 489,
+        "8": 153,
+        "9": 57,
+        "10": 1,
+        "11": 1,
+        "12": 1
+      }
+    },
+    "clust_p29MeV.txt": {
+      "clusters": 1164,
+      "cell_rows": 1182,
+      "unique_occurrences": 1182,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {},
+      "Y": {
+        "1": 14
+      }
+    },
+    "clust_C360MeV.txt": {
+      "clusters": 16871,
+      "cell_rows": 17148,
+      "unique_occurrences": 17148,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 7,
+      "A_div_4": 0,
+      "X": {
+        "1": 40,
+        "2": 15,
+        "3": 15
+      },
+      "Y": {
+        "1": 40,
+        "2": 14,
+        "3": 17,
+        "4": 3,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      }
+    },
+    "clust_p1.1MeV.txt": {
+      "clusters": 14012,
+      "cell_rows": 14090,
+      "unique_occurrences": 14090,
+      "excluded_origin": 2,
+      "ambiguous_zero": 0,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {
+        "1": 8,
+        "2": 2,
+        "3": 2
+      },
+      "Y": {
+        "1": 8,
+        "2": 3,
+        "3": 1
+      }
+    },
+    "clust_Ar548MeV.txt": {
+      "clusters": 1050,
+      "cell_rows": 4368,
+      "unique_occurrences": 4368,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 12,
+      "A_div_4": 0,
+      "X": {
+        "1": 459,
+        "2": 8
+      },
+      "Y": {
+        "1": 865,
+        "2": 728,
+        "3": 592,
+        "4": 397,
+        "5": 287,
+        "6": 52,
+        "7": 13
+      }
+    },
+    "clust_p3MeV.txt": {
+      "clusters": 24703,
+      "cell_rows": 25040,
+      "unique_occurrences": 25040,
+      "excluded_origin": 2,
+      "ambiguous_zero": 0,
+      "max_dinf": 10,
+      "A_div_4": 0,
+      "X": {
+        "1": 36,
+        "2": 14,
+        "3": 11
+      },
+      "Y": {
+        "1": 57,
+        "2": 16,
+        "3": 10,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "10": 1
+      }
+    },
+    "clust_C720MeV.txt": {
+      "clusters": 5088,
+      "cell_rows": 5122,
+      "unique_occurrences": 5122,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 3,
+      "A_div_4": 0,
+      "X": {
+        "1": 4,
+        "2": 2
+      },
+      "Y": {
+        "1": 12,
+        "2": 2,
+        "3": 2
+      }
+    },
+    "clust_p124MeV.txt": {
+      "clusters": 9403,
+      "cell_rows": 13631,
+      "unique_occurrences": 13631,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 12,
+      "A_div_4": 0,
+      "X": {
+        "1": 553,
+        "2": 19,
+        "3": 7,
+        "4": 1,
+        "5": 1
+      },
+      "Y": {
+        "1": 1896,
+        "2": 864,
+        "3": 615,
+        "4": 206,
+        "5": 109,
+        "6": 31,
+        "7": 18,
+        "8": 8,
+        "9": 4
+      }
+    },
+    "clust_U45.2GeV.txt": {
+      "clusters": 1050,
+      "cell_rows": 12353,
+      "unique_occurrences": 12340,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 15,
+      "A_div_4": 0,
+      "X": {
+        "1": 875,
+        "2": 632,
+        "3": 341,
+        "4": 21,
+        "5": 4,
+        "6": 3,
+        "7": 1,
+        "8": 1
+      },
+      "Y": {
+        "1": 1013,
+        "2": 985,
+        "3": 946,
+        "4": 907,
+        "5": 838,
+        "6": 737,
+        "7": 606,
+        "8": 221,
+        "9": 89,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 2
+      }
+    },
+    "clust_p2.5MeV.txt": {
+      "clusters": 28782,
+      "cell_rows": 29008,
+      "unique_occurrences": 29008,
+      "excluded_origin": 4,
+      "ambiguous_zero": 0,
+      "max_dinf": 6,
+      "A_div_4": 0,
+      "X": {
+        "1": 30,
+        "2": 9,
+        "3": 17
+      },
+      "Y": {
+        "1": 28,
+        "2": 8,
+        "3": 4,
+        "4": 1
+      }
+    },
+    "clust_Ar1050MeV.txt": {
+      "clusters": 637,
+      "cell_rows": 1628,
+      "unique_occurrences": 1628,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 7,
+      "A_div_4": 0,
+      "X": {
+        "1": 81,
+        "2": 4
+      },
+      "Y": {
+        "1": 441,
+        "2": 288,
+        "3": 201,
+        "4": 83,
+        "5": 43,
+        "6": 2,
+        "7": 3
+      }
+    },
+    "clust_p4MeV.txt": {
+      "clusters": 4336,
+      "cell_rows": 4406,
+      "unique_occurrences": 4406,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 6,
+      "A_div_4": 0,
+      "X": {
+        "1": 5,
+        "3": 1
+      },
+      "Y": {
+        "1": 49,
+        "2": 3
+      }
+    },
+    "clust_U78.5GeV.txt": {
+      "clusters": 1026,
+      "cell_rows": 9822,
+      "unique_occurrences": 9822,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 14,
+      "A_div_4": 0,
+      "X": {
+        "1": 866,
+        "2": 530,
+        "3": 77,
+        "4": 3,
+        "5": 2
+      },
+      "Y": {
+        "1": 986,
+        "2": 967,
+        "3": 902,
+        "4": 841,
+        "5": 766,
+        "6": 575,
+        "7": 418,
+        "8": 37,
+        "9": 4,
+        "10": 2,
+        "11": 2
+      }
+    },
+    "clust_U142.8GeV.txt": {
+      "clusters": 950,
+      "cell_rows": 6710,
+      "unique_occurrences": 6707,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 15,
+      "A_div_4": 0,
+      "X": {
+        "1": 682,
+        "2": 226,
+        "3": 2,
+        "4": 1,
+        "5": 1
+      },
+      "Y": {
+        "1": 867,
+        "2": 825,
+        "3": 752,
+        "4": 636,
+        "5": 575,
+        "6": 312,
+        "7": 188,
+        "8": 3,
+        "9": 2,
+        "10": 1,
+        "11": 1,
+        "12": 1
+      }
+    },
+    "clust_p80MeV.txt": {
+      "clusters": 10889,
+      "cell_rows": 15324,
+      "unique_occurrences": 15320,
+      "excluded_origin": 1,
+      "ambiguous_zero": 1,
+      "max_dinf": 12,
+      "A_div_4": 0,
+      "X": {
+        "1": 564,
+        "2": 23,
+        "3": 12,
+        "4": 2
+      },
+      "Y": {
+        "1": 2050,
+        "2": 909,
+        "3": 556,
+        "4": 176,
+        "5": 106,
+        "6": 20,
+        "7": 11,
+        "8": 7,
+        "9": 3,
+        "10": 2,
+        "11": 2,
+        "12": 1
+      }
+    },
+    "clust_p186MeV.txt": {
+      "clusters": 8356,
+      "cell_rows": 12972,
+      "unique_occurrences": 12969,
+      "excluded_origin": 1,
+      "ambiguous_zero": 0,
+      "max_dinf": 13,
+      "A_div_4": 0,
+      "X": {
+        "1": 628,
+        "2": 33,
+        "3": 10
+      },
+      "Y": {
+        "1": 1888,
+        "2": 871,
+        "3": 597,
+        "4": 234,
+        "5": 140,
+        "6": 56,
+        "7": 36,
+        "8": 17,
+        "9": 10,
+        "10": 3,
+        "11": 2,
+        "12": 1
+      }
+    }
+  },
+  "populations": {
+    "p": {
+      "clusters": 140106,
+      "cell_rows": 162905,
+      "unique_occurrences": 162891,
+      "excluded_origin": 19,
+      "ambiguous_zero": 5,
+      "A_div_4": 0,
+      "max_dinf": 21,
+      "X": {
+        "counts_from_step_1": [
+          2965,
+          152,
+          84,
+          6,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "first_zero": 7,
+        "all_zero_from": 7
+      },
+      "Y": {
+        "counts_from_step_1": [
+          10010,
+          4365,
+          2876,
+          993,
+          569,
+          176,
+          111,
+          55,
+          33,
+          14,
+          10,
+          6,
+          4,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "first_zero": 17,
+        "all_zero_from": 17
+      }
+    },
+    "HI": {
+      "clusters": 33696,
+      "cell_rows": 136216,
+      "unique_occurrences": 136135,
+      "excluded_origin": 14,
+      "ambiguous_zero": 8,
+      "A_div_4": 4,
+      "max_dinf": 20,
+      "X": {
+        "counts_from_step_1": [
+          7747,
+          4890,
+          2769,
+          1216,
+          386,
+          58,
+          6,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "first_zero": 14,
+        "all_zero_from": 14
+      },
+      "Y": {
+        "counts_from_step_1": [
+          9641,
+          9044,
+          8425,
+          7601,
+          6942,
+          5593,
+          4611,
+          2489,
+          1515,
+          230,
+          86,
+          23,
+          13,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "first_zero": 20,
+        "all_zero_from": 20
+      }
+    },
+    "all": {
+      "clusters": 173802,
+      "cell_rows": 299121,
+      "unique_occurrences": 299026,
+      "excluded_origin": 33,
+      "ambiguous_zero": 13,
+      "A_div_4": 4,
+      "max_dinf": 21,
+      "X": {
+        "counts_from_step_1": [
+          10712,
+          5042,
+          2853,
+          1222,
+          389,
+          59,
+          6,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "first_zero": 14,
+        "all_zero_from": 14
+      },
+      "Y": {
+        "counts_from_step_1": [
+          19651,
+          13409,
+          11301,
+          8594,
+          7511,
+          5769,
+          4722,
+          2544,
+          1548,
+          244,
+          96,
+          29,
+          17,
+          9,
+          7,
+          5,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "first_zero": 20,
+        "all_zero_from": 20
+      }
+    }
+  },
+  "parent_budgets": [
+    {
+      "mean_bits": "6/5",
+      "W": 32768,
+      "N_plus": "39055/4",
+      "exact_target": "1/97637500",
+      "N_for_exact_target": 292495809
+    },
+    {
+      "mean_bits": "6/5",
+      "W": 44529,
+      "N_plus": "1739080095/131072",
+      "exact_target": "8192/1086925059375",
+      "N_for_exact_target": 397477597
+    },
+    {
+      "mean_bits": "2",
+      "W": 32768,
+      "N_plus": "23433/4",
+      "exact_target": "1/58582500",
+      "N_for_exact_target": 175497485,
+      "issued_target": "17/1000000000",
+      "N_for_issued_target": 176219545
+    },
+    {
+      "mean_bits": "2",
+      "W": 44529,
+      "N_plus": "1043448057/131072",
+      "exact_target": "8192/652155035625",
+      "N_for_exact_target": 238486558,
+      "issued_target": "1/80000000",
+      "N_for_issued_target": 239658581
+    },
+    {
+      "mean_bits": "4",
+      "W": 32768,
+      "N_plus": "23433/8",
+      "exact_target": "1/29291250",
+      "N_for_exact_target": 87748742
+    },
+    {
+      "mean_bits": "4",
+      "W": 44529,
+      "N_plus": "1043448057/262144",
+      "exact_target": "16384/652155035625",
+      "N_for_exact_target": 119243278
+    },
+    {
+      "mean_bits": "5",
+      "W": 32768,
+      "N_plus": "23433/10",
+      "exact_target": "1/23433000",
+      "N_for_exact_target": 70198993
+    },
+    {
+      "mean_bits": "5",
+      "W": 44529,
+      "N_plus": "1043448057/327680",
+      "exact_target": "4096/130431007125",
+      "N_for_exact_target": 95394622
+    },
+    {
+      "mean_bits": "8",
+      "W": 32768,
+      "N_plus": "23433/16",
+      "exact_target": "1/14645625",
+      "N_for_exact_target": 43874370
+    },
+    {
+      "mean_bits": "8",
+      "W": 44529,
+      "N_plus": "1043448057/524288",
+      "exact_target": "32768/652155035625",
+      "N_for_exact_target": 59621639
+    }
+  ]
+}
