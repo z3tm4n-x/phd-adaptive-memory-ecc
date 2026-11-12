@@ -1,0 +1,68 @@
+{
+  "trials_per_law": 65536,
+  "simultaneous_confidence": 0.95,
+  "hoeffding_halfwidth_upper": "0.006864",
+  "adjacent_2_partial_hit_control": "5/16",
+  "laws": {
+    "single": {
+      "p_partial_p_masked_p_two_parents": [
+        "1/4",
+        "15/16",
+        "37/608"
+      ],
+      "partial_visible_rate_over_bank_inversions": "1/4",
+      "partial_maximum_rate_over_bank_inversions": "1/4",
+      "nominal_timely_detection_with_next_full_scan": "1",
+      "MC_counts_in_same_order": [
+        16432,
+        61392,
+        4018
+      ]
+    },
+    "two_uniform": {
+      "p_partial_p_masked_p_two_parents": [
+        "9/20",
+        "1",
+        "40811/173280"
+      ],
+      "partial_visible_rate_over_bank_inversions": "9/40",
+      "partial_maximum_rate_over_bank_inversions": "1/8",
+      "nominal_timely_detection_with_next_full_scan": "1",
+      "MC_counts_in_same_order": [
+        29561,
+        65536,
+        15241
+      ]
+    },
+    "compact_1p2": {
+      "p_partial_p_masked_p_two_parents": [
+        "21/80",
+        "19/20",
+        "49247/577600"
+      ],
+      "partial_visible_rate_over_bank_inversions": "7/32",
+      "partial_maximum_rate_over_bank_inversions": "1/8",
+      "nominal_timely_detection_with_next_full_scan": "1",
+      "MC_counts_in_same_order": [
+        17355,
+        62213,
+        5534
+      ]
+    },
+    "compact_5": {
+      "p_partial_p_masked_p_two_parents": [
+        "1/2",
+        "1",
+        "708833531/1267762688"
+      ],
+      "partial_visible_rate_over_bank_inversions": "1/10",
+      "partial_maximum_rate_over_bank_inversions": "1/20",
+      "nominal_timely_detection_with_next_full_scan": "1",
+      "MC_counts_in_same_order": [
+        32790,
+        65536,
+        36460
+      ]
+    }
+  }
+}

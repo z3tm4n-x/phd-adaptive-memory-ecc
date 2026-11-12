@@ -1,0 +1,287 @@
+{
+  "W_min": 32768,
+  "W_max": 44529,
+  "T_s": 315576000,
+  "reference_words": 524288,
+  "seconds_dead_upper": "11469015439/500000000000",
+  "guaranteed_history_s_lower": [
+    "29.336897327",
+    "58.696731725",
+    "111.544433643",
+    "223.111804358",
+    "440.374578909",
+    "874.900128010",
+    "1749.823193092",
+    "3499.669323255"
+  ],
+  "geo_witness_S2_lower_per_s": 134874,
+  "archive_witness": "1996-12-16T07:20:00Z",
+  "archive_S2_lower_per_s": 15624,
+  "fixed_0p0934444s_Q_upper": "0.000999990043",
+  "laws": {
+    "single": {
+      "mean": "1",
+      "maximum": 1,
+      "one_excluded_Wmin": {
+        "rate_over_reference_rate": "32767/524288",
+        "cap_rate_over_reference_rate": "32767/524288",
+        "visible_parents_per_s_at_b_lower": "0.000009912078",
+        "visible_parents_per_s_at_B_lower": "0.061329431423",
+        "live_admission_first_level_at_B_upper": "0.169588",
+        "live_admission_top_level_at_b_upper": "0.965915"
+      },
+      "W_times_two_parent_success_at_Wmin": "37/38",
+      "W_times_overlap_correction_at_Wmin": "0",
+      "shared_rate_over_word_rate_d1_to_5": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "geo": {
+        "K_word_s": 6190,
+        "Q_lower": "0.001000010532",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "0.188903809",
+            "bus_s_lower": "10838554.905",
+            "bus_percent_lower": "3.434530"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.139010533",
+            "bus_s_lower": "14728699.083",
+            "bus_percent_lower": "4.667243"
+          }
+        ]
+      },
+      "archives": {
+        "K_word_s": 41783,
+        "Q_lower": "0.001000006557",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "1.275115967",
+            "bus_s_lower": "1605692.621",
+            "bus_percent_lower": "0.508813"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.938332323",
+            "bus_s_lower": "2182003.384",
+            "bus_percent_lower": "0.691435"
+          }
+        ]
+      },
+      "archives_word_phase_bound_462": {
+        "K_word_s": 37200,
+        "Q_lower": "0.001000407544",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "1.135253907",
+            "bus_s_lower": "1803512.227",
+            "bus_percent_lower": "0.571498"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.835410632",
+            "bus_s_lower": "2450823.856",
+            "bus_percent_lower": "0.776619"
+          }
+        ]
+      }
+    },
+    "two_uniform": {
+      "mean": "2",
+      "maximum": 2,
+      "one_excluded_Wmin": {
+        "rate_over_reference_rate": "1/32",
+        "cap_rate_over_reference_rate": "32767/1048576",
+        "visible_parents_per_s_at_b_lower": "0.000004956190",
+        "visible_parents_per_s_at_B_lower": "0.030665651553",
+        "live_admission_first_level_at_B_upper": "0.409274",
+        "live_admission_top_level_at_b_upper": "0.982807"
+      },
+      "W_times_two_parent_success_at_Wmin": "92139435/23657774",
+      "W_times_overlap_correction_at_Wmin": "1369/23657774",
+      "shared_rate_over_word_rate_d1_to_5": [
+        "1/32767",
+        "1/32767",
+        "1/32767",
+        "1/32767",
+        "1/32767"
+      ],
+      "geo": {
+        "K_word_s": 6138,
+        "Q_lower": "0.001000098040",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "0.187316895",
+            "bus_s_lower": "10930377.136",
+            "bus_percent_lower": "3.463627"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.137842755",
+            "bus_s_lower": "14853477.894",
+            "bus_percent_lower": "4.706783"
+          }
+        ]
+      },
+      "archives": {
+        "K_word_s": 39973,
+        "Q_lower": "0.001000022709",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "1.219879151",
+            "bus_s_lower": "1678399.290",
+            "bus_percent_lower": "0.531852"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.897684655",
+            "bus_s_lower": "2280805.729",
+            "bus_percent_lower": "0.722743"
+          }
+        ]
+      },
+      "archives_word_phase_bound_462": {
+        "K_word_s": 37200,
+        "Q_lower": "0.001000407544",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "1.135253907",
+            "bus_s_lower": "1803512.227",
+            "bus_percent_lower": "0.571498"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.835410632",
+            "bus_s_lower": "2450823.856",
+            "bus_percent_lower": "0.776619"
+          }
+        ]
+      }
+    },
+    "compact_1p2": {
+      "mean": "6/5",
+      "maximum": 2,
+      "one_excluded_Wmin": {
+        "rate_over_reference_rate": "13653/262144",
+        "cap_rate_over_reference_rate": "32767/1048576",
+        "visible_parents_per_s_at_b_lower": "0.000008260116",
+        "visible_parents_per_s_at_B_lower": "0.051108171466",
+        "live_admission_first_level_at_B_upper": "0.227169",
+        "live_admission_top_level_at_b_upper": "0.971513"
+      },
+      "W_times_two_parent_success_at_Wmin": "49247/36100",
+      "W_times_overlap_correction_at_Wmin": "1369/36100",
+      "shared_rate_over_word_rate_d1_to_5": [
+        "1/6",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "geo": {
+        "K_word_s": 6297,
+        "Q_lower": "0.001000039611",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "0.192169190",
+            "bus_s_lower": "10654383.813",
+            "bus_percent_lower": "3.376170"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.141413461",
+            "bus_s_lower": "14478425.811",
+            "bus_percent_lower": "4.587936"
+          }
+        ]
+      },
+      "archives": {
+        "K_word_s": 42315,
+        "Q_lower": "0.001000005812",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "1.291351319",
+            "bus_s_lower": "1585505.253",
+            "bus_percent_lower": "0.502416"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.950279594",
+            "bus_s_lower": "2154570.422",
+            "bus_percent_lower": "0.682742"
+          }
+        ]
+      }
+    },
+    "compact_5": {
+      "mean": "5",
+      "maximum": 5,
+      "one_excluded_Wmin": {
+        "rate_over_reference_rate": "1/80",
+        "cap_rate_over_reference_rate": "32767/2621440",
+        "visible_parents_per_s_at_b_lower": "0.000001982476",
+        "visible_parents_per_s_at_B_lower": "0.012266260621",
+        "live_admission_first_level_at_B_upper": "0.698482",
+        "live_admission_top_level_at_b_upper": "0.993087"
+      },
+      "W_times_two_parent_success_at_Wmin": "708833531/79235168",
+      "W_times_overlap_correction_at_Wmin": "1219917269/79235168",
+      "shared_rate_over_word_rate_d1_to_5": [
+        "4/5",
+        "3/5",
+        "2/5",
+        "1/5",
+        "0"
+      ],
+      "geo": {
+        "K_word_s": 13555,
+        "Q_lower": "0.001000045788",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "0.413665772",
+            "bus_s_lower": "4949513.466",
+            "bus_percent_lower": "1.568406"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "0.304408364",
+            "bus_s_lower": "6725979.165",
+            "bus_percent_lower": "2.131334"
+          }
+        ]
+      },
+      "archives": {
+        "K_word_s": 105743,
+        "Q_lower": "0.001000007445",
+        "endpoints": [
+          {
+            "W": 32768,
+            "P0_s_upper": "3.227020264",
+            "bus_s_lower": "634468.986",
+            "bus_percent_lower": "0.201051"
+          },
+          {
+            "W": 44529,
+            "P0_s_upper": "2.374699634",
+            "bus_s_lower": "862190.846",
+            "bus_percent_lower": "0.273211"
+          }
+        ]
+      }
+    }
+  }
+}
