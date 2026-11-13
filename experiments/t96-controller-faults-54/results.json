@@ -1,0 +1,2328 @@
+{
+  "0": {
+    "clean": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": null,
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        11200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        11200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "control",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "0dc6509d2260d287a51ab459a200f8d3c5c194d887a5d67ab641a450b325cb02",
+      "writes_in_target": []
+    },
+    "count_extra": {
+      "cut": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2445,
+        "count",
+        2,
+        0,
+        4
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "8d81b28fb9e1ec216af100a55be278c43a804437ef0fcf8b2f40b00b4aca1c60",
+      "writes_in_target": []
+    },
+    "gap_zero": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2745,
+        "gap",
+        1,
+        2,
+        0
+      ],
+      "end_ns": 1439200,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 5600,
+        "observed_ns": 1433600,
+        "off_grid": false,
+        "preceding_ns": 0
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        1433600,
+        1439200
+      ],
+      "first_two_reads_ns": [
+        1433600,
+        1439200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 800,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "0ee17256dee53f996fb84375928a2d9a82e91338f1209c098ce2bc53c3394352",
+      "writes_in_target": []
+    },
+    "hit_before": {
+      "cut": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2215,
+        "hit",
+        0,
+        0,
+        1
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        2320,
+        7,
+        42431,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "masked",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2360,
+          1
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "eb6735ca797644369e46a916993be2bea002f47b22a86db1f1d09beea61d0214",
+      "writes_in_target": [
+        [
+          2320,
+          7,
+          42431,
+          137438953472
+        ]
+      ]
+    },
+    "hit_lost": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5600,
+          1
+        ],
+        [
+          8400,
+          1
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2225,
+        "hit",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        6520,
+        3,
+        13331,
+        137438953472
+      ],
+      "first_missed_scan": {
+        "due_ns": 2800,
+        "observed_ns": 5600,
+        "off_grid": false,
+        "preceding_ns": 0
+      },
+      "first_service_difference": [
+        2260,
+        [
+          7,
+          1,
+          1,
+          1,
+          1,
+          42431
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "first_two_after_focus_ns": [
+        5600,
+        8400
+      ],
+      "first_two_reads_ns": [
+        5600,
+        8400
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": true,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 2400,
+        "write": 100
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": true,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "0a26fd71b5d19d8c497497bf1c0a9f8471d8e80c955c74b9215c6d1d85693996",
+      "writes_in_target": []
+    },
+    "hit_spent": {
+      "cut": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2365,
+        "hit",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        2320,
+        7,
+        42431,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "masked",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2360,
+          1
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "dc3aa3a68ced8401051d68f9fcaae13a9a0080721df5060c6dbb6c2e7601d288",
+      "writes_in_target": [
+        [
+          2320,
+          7,
+          42431,
+          137438953472
+        ]
+      ]
+    },
+    "last_err": {
+      "cut": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deposit": null,
+      "end_ns": 11200,
+      "first_actual_repair": [
+        2320,
+        7,
+        42431,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "control",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2360,
+          1
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "ffe5ef8d5ab5699d5f7be55836cbfd986f989149f73c357f667227b82030ef74",
+      "writes_in_target": [
+        [
+          2320,
+          7,
+          42431,
+          137438953472
+        ]
+      ]
+    },
+    "proposal_zero": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2655,
+        "proposed",
+        1,
+        2,
+        0
+      ],
+      "end_ns": 1439200,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 5600,
+        "observed_ns": 1433600,
+        "off_grid": false,
+        "preceding_ns": 0
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        1433600,
+        1439200
+      ],
+      "first_two_reads_ns": [
+        1433600,
+        1439200
+      ],
+      "install": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 800,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "6f6bfb529a806bb5537505513a3bff4b10a5edf0a8ae54415dc05ec944c2ecfb",
+      "writes_in_target": []
+    },
+    "quiet_after": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5600,
+          2
+        ],
+        [
+          705600,
+          2
+        ],
+        [
+          711200,
+          2
+        ],
+        [
+          716800,
+          4
+        ],
+        [
+          728000,
+          4
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2505,
+        "quiet",
+        3,
+        5,
+        13
+      ],
+      "end_ns": 739200,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 722400,
+        "observed_ns": 728000,
+        "off_grid": false,
+        "preceding_ns": 716800
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        728000,
+        739200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        11200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "ccfe11fda66480acbf8c727976362f60ac3a57c247b2cf40b3cb24beb65d7425",
+      "writes_in_target": []
+    },
+    "quiet_before": {
+      "cut": [
+        1,
+        0,
+        4,
+        1,
+        1
+      ],
+      "deposit": [
+        2495,
+        "quiet",
+        3,
+        4,
+        12
+      ],
+      "end_ns": 22400,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 5600,
+        "observed_ns": 11200,
+        "off_grid": false,
+        "preceding_ns": 0
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        11200,
+        22400
+      ],
+      "first_two_reads_ns": [
+        11200,
+        22400
+      ],
+      "install": [
+        1,
+        0,
+        4,
+        4,
+        4
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 800,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "632d4d5fca9cb2ad704ee9d34314b87831d0a4b5b86ef7f00d3d6a41a2c7d2e5",
+      "writes_in_target": []
+    },
+    "sealed_early": {
+      "cut": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2245,
+        "sealed",
+        0,
+        0,
+        1
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2245,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "413b3af503b492985f9bcba5570fd1202aec36297c5d4c5d9352df1e7fae317c",
+      "writes_in_target": []
+    },
+    "sealed_lost": {
+      "cut": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2445,
+        "sealed",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "92625320670defc87539b5dc4461ab33c0a0887dec2d30f60bd8939ce5e87476",
+      "writes_in_target": []
+    },
+    "seen_last": {
+      "cut": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2205,
+        "seen",
+        0,
+        7,
+        6
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "4cd1242cb3046bff16d1cae5db3ef67b4195a352785bf23bb9d06ffab839eace",
+      "writes_in_target": []
+    },
+    "step_zero": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5600,
+          0
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2745,
+        "step",
+        1,
+        2,
+        0
+      ],
+      "end_ns": 1439200,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 11200,
+        "observed_ns": 1439200,
+        "off_grid": false,
+        "preceding_ns": 5600
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        1439200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        1439200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "7b54d44b7746cccfdf6fa225755224511df189ecbec66956c83d334fb3bc9488",
+      "writes_in_target": []
+    },
+    "timer_skip": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5580,
+          1
+        ],
+        [
+          8380,
+          1
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2205,
+        "phase",
+        1,
+        80,
+        82
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        6500,
+        3,
+        13331,
+        137438953472
+      ],
+      "first_missed_scan": {
+        "due_ns": 2800,
+        "observed_ns": 5580,
+        "off_grid": true,
+        "preceding_ns": 0
+      },
+      "first_service_difference": [
+        2210,
+        [
+          7,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          7,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "first_two_after_focus_ns": [
+        5580,
+        8380
+      ],
+      "first_two_reads_ns": [
+        5580,
+        8380
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        0,
+        57005,
+        42430
+      ],
+      "memory_dirty_at_2320": true,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 2400,
+        "write": 100
+      },
+      "publications": [
+        [
+          2240,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": true,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "5672d5af0cacc0ef9aa2ce6ec1cad54559feeef8cfc63f7247beeea192b18b6f",
+      "writes_in_target": []
+    },
+    "wait_check": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        3005,
+        "remaining_parity",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        11200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        11200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "masked",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "86b4117f6f6510d2b657f7d2cba1c95a7b23db820e63dc02fcbaacc7a3938ac6",
+      "writes_in_target": []
+    },
+    "wait_short": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        3005,
+        "remaining",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        11200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        11200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "masked",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "9247d85813749fc33fae6d939a9ba269bd23796872f338333ce629ecd3a618e7",
+      "writes_in_target": []
+    }
+  },
+  "1": {
+    "clean": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": null,
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        11200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        11200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "control",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "0dc6509d2260d287a51ab459a200f8d3c5c194d887a5d67ab641a450b325cb02",
+      "writes_in_target": []
+    },
+    "count_extra": {
+      "cut": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2445,
+        "count",
+        2,
+        0,
+        4
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        4,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "8d81b28fb9e1ec216af100a55be278c43a804437ef0fcf8b2f40b00b4aca1c60",
+      "writes_in_target": []
+    },
+    "gap_zero": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2745,
+        "gap",
+        1,
+        2,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "77ccc2176976d6f97cd0e7943f341c54d88369cca1a424b77347a4c895526003",
+      "writes_in_target": []
+    },
+    "hit_before": {
+      "cut": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2215,
+        "hit",
+        0,
+        0,
+        1
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        2320,
+        7,
+        42431,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "masked",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2360,
+          1
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "eb6735ca797644369e46a916993be2bea002f47b22a86db1f1d09beea61d0214",
+      "writes_in_target": [
+        [
+          2320,
+          7,
+          42431,
+          137438953472
+        ]
+      ]
+    },
+    "hit_lost": {
+      "commands_near_decision": [
+        [
+          0,
+          1
+        ],
+        [
+          2800,
+          1
+        ],
+        [
+          5600,
+          1
+        ],
+        [
+          8400,
+          1
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2225,
+        "hit",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        3720,
+        3,
+        13331,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": [
+        2260,
+        [
+          7,
+          1,
+          1,
+          1,
+          1,
+          42431
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": true,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": true,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "e4831285563b2fd6484304e623bbe29877a8499bda60e48e789687893d84d530",
+      "writes_in_target": []
+    },
+    "hit_spent": {
+      "cut": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2365,
+        "hit",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        2320,
+        7,
+        42431,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "masked",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2360,
+          1
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "dc3aa3a68ced8401051d68f9fcaae13a9a0080721df5060c6dbb6c2e7601d288",
+      "writes_in_target": [
+        [
+          2320,
+          7,
+          42431,
+          137438953472
+        ]
+      ]
+    },
+    "last_err": {
+      "cut": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deposit": null,
+      "end_ns": 11200,
+      "first_actual_repair": [
+        2320,
+        7,
+        42431,
+        137438953472
+      ],
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        1,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "control",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 100
+      },
+      "publications": [
+        [
+          2360,
+          1
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "ffe5ef8d5ab5699d5f7be55836cbfd986f989149f73c357f667227b82030ef74",
+      "writes_in_target": [
+        [
+          2320,
+          7,
+          42431,
+          137438953472
+        ]
+      ]
+    },
+    "proposal_zero": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2655,
+        "proposed",
+        1,
+        2,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "aec3bec75c3b0554272d656f0a04f257578111f0c99105ab337d4a0eb7d7e281",
+      "writes_in_target": []
+    },
+    "quiet_after": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5600,
+          2
+        ],
+        [
+          705600,
+          2
+        ],
+        [
+          711200,
+          2
+        ],
+        [
+          716800,
+          4
+        ],
+        [
+          728000,
+          4
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2505,
+        "quiet",
+        3,
+        5,
+        13
+      ],
+      "end_ns": 739200,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 722400,
+        "observed_ns": 728000,
+        "off_grid": false,
+        "preceding_ns": 716800
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        728000,
+        739200
+      ],
+      "first_two_reads_ns": [
+        5600,
+        11200
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 1600,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "ccfe11fda66480acbf8c727976362f60ac3a57c247b2cf40b3cb24beb65d7425",
+      "writes_in_target": []
+    },
+    "quiet_before": {
+      "cut": [
+        1,
+        0,
+        4,
+        1,
+        1
+      ],
+      "deposit": [
+        2495,
+        "quiet",
+        3,
+        4,
+        12
+      ],
+      "end_ns": 22400,
+      "first_actual_repair": null,
+      "first_missed_scan": {
+        "due_ns": 5600,
+        "observed_ns": 11200,
+        "off_grid": false,
+        "preceding_ns": 0
+      },
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        11200,
+        22400
+      ],
+      "first_two_reads_ns": [
+        11200,
+        22400
+      ],
+      "install": [
+        1,
+        0,
+        4,
+        4,
+        4
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 800,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "632d4d5fca9cb2ad704ee9d34314b87831d0a4b5b86ef7f00d3d6a41a2c7d2e5",
+      "writes_in_target": []
+    },
+    "sealed_early": {
+      "cut": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2245,
+        "sealed",
+        0,
+        0,
+        1
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2245,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "413b3af503b492985f9bcba5570fd1202aec36297c5d4c5d9352df1e7fae317c",
+      "writes_in_target": []
+    },
+    "sealed_lost": {
+      "cut": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2445,
+        "sealed",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "92625320670defc87539b5dc4461ab33c0a0887dec2d30f60bd8939ce5e87476",
+      "writes_in_target": []
+    },
+    "seen_last": {
+      "cut": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "deposit": [
+        2205,
+        "seen",
+        0,
+        7,
+        6
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        2800,
+        5600
+      ],
+      "first_two_reads_ns": [
+        2800,
+        5600
+      ],
+      "install": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 3200,
+        "write": 0
+      },
+      "publications": [],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "4cd1242cb3046bff16d1cae5db3ef67b4195a352785bf23bb9d06ffab839eace",
+      "writes_in_target": []
+    },
+    "step_zero": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5600,
+          1
+        ],
+        [
+          8400,
+          1
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2745,
+        "step",
+        1,
+        2,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        8400
+      ],
+      "first_two_reads_ns": [
+        5600,
+        8400
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 2400,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "f015af1ef1bbabdfb1f0d16f9ad46b14b9354e911cedb2870e66878118f6829d",
+      "writes_in_target": []
+    },
+    "timer_skip": {
+      "commands_near_decision": [
+        [
+          0,
+          2
+        ],
+        [
+          5580,
+          1
+        ],
+        [
+          8380,
+          1
+        ]
+      ],
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        2205,
+        "phase",
+        1,
+        80,
+        82
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": [
+        6500,
+        3,
+        13331,
+        137438953472
+      ],
+      "first_missed_scan": {
+        "due_ns": 2800,
+        "observed_ns": 5580,
+        "off_grid": true,
+        "preceding_ns": 0
+      },
+      "first_service_difference": [
+        2210,
+        [
+          7,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          7,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "first_two_after_focus_ns": [
+        5580,
+        8380
+      ],
+      "first_two_reads_ns": [
+        5580,
+        8380
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        1,
+        0,
+        57005,
+        42430
+      ],
+      "memory_dirty_at_2320": true,
+      "outcome": "dangerous",
+      "port_first_4_rounds_ns": {
+        "read": 2400,
+        "write": 100
+      },
+      "publications": [
+        [
+          2240,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": true,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "5672d5af0cacc0ef9aa2ce6ec1cad54559feeef8cfc63f7247beeea192b18b6f",
+      "writes_in_target": []
+    },
+    "wait_check": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        3005,
+        "remaining_parity",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        8400
+      ],
+      "first_two_reads_ns": [
+        5600,
+        8400
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 2400,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "191872f0a07013e90ffda474ea0dcddbc71149b8e60fe195542ca2f4beb8c80b",
+      "writes_in_target": []
+    },
+    "wait_short": {
+      "cut": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "deposit": [
+        3005,
+        "remaining",
+        0,
+        1,
+        0
+      ],
+      "end_ns": 11200,
+      "first_actual_repair": null,
+      "first_missed_scan": null,
+      "first_service_difference": null,
+      "first_two_after_focus_ns": [
+        5600,
+        8400
+      ],
+      "first_two_reads_ns": [
+        5600,
+        8400
+      ],
+      "install": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "last_sample": [
+        2220,
+        7,
+        0,
+        0,
+        42431,
+        42431
+      ],
+      "memory_dirty_at_2320": false,
+      "outcome": "fast_return",
+      "port_first_4_rounds_ns": {
+        "read": 2400,
+        "write": 0
+      },
+      "publications": [
+        [
+          2260,
+          0
+        ]
+      ],
+      "repair_missed_by_2320_ns": false,
+      "terminal_word3_mask": 0,
+      "trace_sha256": "990bb2eed0078674559bdc12ef5439c2f0375a965bbf8b1b9e0370af840d6a9b",
+      "writes_in_target": []
+    }
+  }
+}
