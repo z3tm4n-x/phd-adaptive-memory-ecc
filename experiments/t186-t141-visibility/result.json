@@ -1,0 +1,159 @@
+{
+  "fraction_limit": "8715/32768",
+  "ion_projection": {
+    "low": {
+      "cells": 8461,
+      "large": "4042/8461",
+      "small_direct": "374/8461"
+    },
+    "pin": {
+      "cells": 8640,
+      "large": "59/576",
+      "small_direct": "0"
+    }
+  },
+  "phases": {
+    "background": {
+      "reference_s_inv": "7929905158622937241/50000000000000000000000",
+      "bank_s_inv": "7929905158622937241/800000000000000000000000",
+      "component_fractions": {
+        "LET_exclusive": "7577524105606341500/7929905158622937241",
+        "H_low": "5484185308755991/7929905158622937241",
+        "H_high": "346896867707839750/7929905158622937241"
+      },
+      "max_bad_fraction_of_ions_if_H_safe": "13821824691479779611063/49660061978501719654400",
+      "max_bad_fraction_of_ions_if_all_H_bad": "57562301112151088814227/248300309892508598272000",
+      "room_if_all_ions_bad": "-179191186435109700216685/259847132237756407513088",
+      "max_bad_H_if_all_ions_bad": null,
+      "by_address": {
+        "low": {
+          "ion_large_share_of_total": "30628352434860832343000/67094927547108671996101",
+          "ion_small_direct_share_of_total": "2833994015496771721000/67094927547108671996101",
+          "room_after_large": "-418897559012467677769403785/2198566585863656963968237568",
+          "ion_large_plus_small_direct_share_of_total": "33462346450357604064000/67094927547108671996101",
+          "room_after_large_and_small_direct": "-511761874912265893523131785/2198566585863656963968237568",
+          "max_bad_fraction_of_all_H_if_only_extra": null,
+          "max_unclassified_fraction_of_true_ions_if_H_safe": null,
+          "max_unclassified_fraction_of_true_total_if_rest_keeps_table_mix": null,
+          "max_bad_fraction_within_one_H_band_if_only_extra": {
+            "H_low": null,
+            "H_high": null
+          }
+        },
+        "pin": {
+          "ion_large_share_of_total": "111768480557693537125/1141906342841702962704",
+          "ion_small_direct_share_of_total": "0",
+          "room_after_large": "393080262934433718465835/2338624190139807667617792",
+          "ion_large_plus_small_direct_share_of_total": "111768480557693537125/1141906342841702962704",
+          "room_after_large_and_small_direct": "393080262934433718465835/2338624190139807667617792",
+          "max_bad_fraction_of_all_H_if_only_extra": "1",
+          "max_unclassified_fraction_of_true_ions_if_H_safe": "78616052586886743693167/401160188170084204083200",
+          "max_unclassified_fraction_of_true_total_if_rest_keeps_table_mix": "393080262934433718465835/2109722341957651303585792",
+          "max_bad_fraction_within_one_H_band_if_only_extra": {
+            "H_low": "1",
+            "H_high": "1"
+          }
+        }
+      }
+    },
+    "solar": {
+      "reference_s_inv": "12264278144950541/12500000000000000",
+      "bank_s_inv": "12264278144950541/200000000000000000",
+      "component_fractions": {
+        "LET_exclusive": "22118213366567943/98114225159604328",
+        "H_low": "30298547142497385/49057112579802164",
+        "H_high": "15398917508041615/98114225159604328"
+      },
+      "max_bad_fraction_of_ions_if_H_safe": "1",
+      "max_bad_fraction_of_ions_if_all_H_bad": null,
+      "room_if_all_ions_bad": "16286982083781670287/401875866253739327488",
+      "max_bad_H_if_all_ions_bad": "16286982083781670287/311279664304277032960",
+      "by_address": {
+        "low": {
+          "ion_large_share_of_total": "44700909213833812803/415072229537706109604",
+          "ion_small_direct_share_of_total": "4136105899548205341/415072229537706109604",
+          "room_after_large": "538148771825550591817539/3400271704372888449875968",
+          "ion_large_plus_small_direct_share_of_total": "530837120797630632/4511654668888109887",
+          "room_after_large_and_small_direct": "21924599665063117115829/147837900190125584777216",
+          "max_bad_fraction_of_all_H_if_only_extra": "504265792296451693664067/2633737239678487975874560",
+          "max_unclassified_fraction_of_true_ions_if_H_safe": "1",
+          "max_unclassified_fraction_of_true_total_if_rest_keeps_table_mix": "21924599665063117115829/130443429415828824227840",
+          "max_bad_fraction_within_one_H_band_if_only_extra": {
+            "H_low": "168088597432150564554689/700022804132305235927040",
+            "H_high": "504265792296451693664067/533668827281572268093440"
+          }
+        },
+        "pin": {
+          "ion_large_share_of_total": "434991529542502879/18837931230644030976",
+          "ion_small_direct_share_of_total": "0",
+          "room_after_large": "292810094209011710189/1205627598761217982464",
+          "ion_large_plus_small_direct_share_of_total": "434991529542502879/18837931230644030976",
+          "room_after_large_and_small_direct": "292810094209011710189/1205627598761217982464",
+          "max_bad_fraction_of_all_H_if_only_extra": "292810094209011710189/933838992912831098880",
+          "max_unclassified_fraction_of_true_ions_if_H_safe": "1",
+          "max_unclassified_fraction_of_true_total_if_rest_keeps_table_mix": "292810094209011710189/1177788140870497798208",
+          "max_bad_fraction_within_one_H_band_if_only_extra": {
+            "H_low": "292810094209011710189/744617094574015733760",
+            "H_high": "1"
+          }
+        }
+      }
+    },
+    "storm_peak": {
+      "reference_s_inv": "49065042484960786937241/50000000000000000000000",
+      "bank_s_inv": "49065042484960786937241/800000000000000000000000",
+      "component_fractions": {
+        "H_low": "30298552626682693755991/49065042484960786937241",
+        "H_high": "855533961209835037750/5451671387217865215249",
+        "LET_exclusive": "11066684207389577841500/49065042484960786937241"
+      },
+      "max_bad_fraction_of_ions_if_H_safe": "1",
+      "max_bad_fraction_of_ions_if_all_H_bad": null,
+      "room_if_all_ions_bad": "64968737148691571447783315/1607763312147195066359513088",
+      "max_bad_H_if_all_ions_bad": "64968737148691571447783315/1245130204039453379649241088",
+      "by_address": {
+        "low": {
+          "ion_large_share_of_total": "44731537566268673635343000/415139324465253218275996101",
+          "ion_small_direct_share_of_total": "4138939893563702112721000/415139324465253218275996101",
+          "room_after_large": "2152176189743189899592386596215/13603285384077417456467840237568",
+          "ion_large_plus_small_direct_share_of_total": "16290159153277458582688000/138379774821751072758665367",
+          "room_after_large_and_small_direct": "672183802436964836254248289405/4534428461359139152155946745856",
+          "max_bad_fraction_of_all_H_if_only_extra": "2016551407310894508762744868215/10535046656377815045212228845568",
+          "max_unclassified_fraction_of_true_ions_if_H_safe": "1",
+          "max_unclassified_fraction_of_true_total_if_rest_keeps_table_mix": "672183802436964836254248289405/4000632526224543389318426361856",
+          "max_bad_fraction_within_one_H_band_if_only_extra": {
+            "H_low": "106134284595310237303302361485/442119745793594890769358159872",
+            "H_high": "134436760487392967250849657881/142318099086634141372961587200"
+          }
+        },
+        "pin": {
+          "ion_large_share_of_total": "163233592058996273162125/7065366117834353318962704",
+          "ion_small_direct_share_of_total": "0",
+          "room_after_large": "3514114210771074955986465835/14469869809324755597235617792",
+          "ion_large_plus_small_direct_share_of_total": "163233592058996273162125/7065366117834353318962704",
+          "room_after_large_and_small_direct": "3514114210771074955986465835/14469869809324755597235617792",
+          "max_bad_fraction_of_all_H_if_only_extra": "3514114210771074955986465835/11206171836355080416843169792",
+          "max_unclassified_fraction_of_true_ions_if_H_safe": "1",
+          "max_unclassified_fraction_of_true_total_if_rest_keeps_table_mix": "3514114210771074955986465835/14135567412787931229799585792",
+          "max_bad_fraction_within_one_H_band_if_only_extra": {
+            "H_low": "3514114210771074955986465835/8935406752240246580966817792",
+            "H_high": "1"
+          }
+        }
+      }
+    }
+  },
+  "solar_fraction_of_peak_exposure": "49057112579802164000000/49065042484960786937241",
+  "mixed_windows": {
+    "low": {
+      "max_ion_fraction_if_H_safe_and_projected_ion_shares_hold": "24579205/48234496",
+      "first_admissible_solar_exposure_fraction_if_no_extra": "90962173592832103765121107882646061594865/148915505587741015244372578820304859824128",
+      "first_admissible_solar_to_background_exposure_ratio_if_no_extra": "90962173592832103765121107882646061594865/57953331994908911479251470937658798229263"
+    },
+    "pin": {
+      "max_ion_fraction_if_H_safe_and_projected_ion_shares_hold": "1",
+      "first_admissible_solar_exposure_fraction_if_no_extra": "0",
+      "first_admissible_solar_to_background_exposure_ratio_if_no_extra": "0"
+    }
+  }
+}
