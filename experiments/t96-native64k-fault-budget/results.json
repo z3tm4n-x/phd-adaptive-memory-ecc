@@ -1,0 +1,69 @@
+{
+  "FF_by_site_type": {
+    "ILOGIC": 1,
+    "OLOGIC": 52,
+    "SLICE": 273
+  },
+  "FF_groups": {
+    "application_startup_monitors": 76,
+    "completeness": 22,
+    "count": 32,
+    "dq_image": 16,
+    "err_capture": 1,
+    "history": 22,
+    "obligation": 6,
+    "period": 11,
+    "phase": 58,
+    "port": 70,
+    "wait": 12
+  },
+  "GEO_physical_dangerous_rate_upper": null,
+  "T_s": 315576000,
+  "all_budget_dangerous_FIT": "0.0684462696783025325119780971937029433",
+  "all_budget_dangerous_rate_ceiling_per_s": "1.90128526884173701422161381093619287E-14",
+  "basis": "conditional bounds, not mission measurements",
+  "conditional_register_rate_ceiling_after_1e_6_other_and_common_each": "1.26752351256115800948107587395746191E-14",
+  "delta": "0.000006",
+  "illustration": {
+    "reserve": "8.44240000E-7",
+    "sufficient": true,
+    "union_upper": "0.000005155760000"
+  },
+  "illustrative_hot_CLB_FF_150MeV_only": {
+    "budget_flux_ceiling_cm-2_s-1_if_all_273_FFs_dangerous": "0.00696441490418218686528063667009594458",
+    "count": 273,
+    "plot_estimate_cm2_per_bit": "1e-14"
+  },
+  "next_eligible_common_cell_ns": 5872025600,
+  "physical_delta_established": false,
+  "proposal_specification": {
+    "double_installed_command_rejected": 280,
+    "invisible_common_ERR_witness": true,
+    "missing_capture_combinations": 36,
+    "precommit_guard_cases": 640,
+    "single_installed_command_corrected": 80,
+    "single_replica_cases": 306
+  },
+  "rebuild_three_full_clean_cells_ns": 17616076800,
+  "recovery_price_seconds_per_additional_cell": "20.397479",
+  "single_path_limits": {
+    "ERR": {
+      "maximum_duty_over_T": "0.0314291714357449700509544452049585520",
+      "nominal_ns": 10,
+      "sole_path_pointwise_per_bit_rate_ceiling": "6.04942854675249437829928270744454805E-13",
+      "upper_active_s_per_bit": "9918292.2050066546688",
+      "upper_physical_ns": "11.00010"
+    },
+    "repair_image": {
+      "maximum_duty_over_T": "0.345721171510337566942986792404999113",
+      "nominal_ns": 120,
+      "sole_path_pointwise_per_bit_rate_ceiling": "3.43717247004224510845398329263267497E-15",
+      "upper_active_s_per_bit": "109101304.4205462880256",
+      "upper_physical_ns": "121.00120"
+    }
+  },
+  "total_FF": 326,
+  "uniform_raw_rate_ceiling_326_FF_p_equals_1": "5.83216340135502151601722027894537690E-17",
+  "upper_possible_active_scans": "27516318691",
+  "verified_traces": 15
+}
