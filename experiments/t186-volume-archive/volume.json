@@ -1,0 +1,94 @@
+{
+  "v21_sha256": "0b52ee0648f23a5cd8fa1f431e6e38e20f21cd271cf0662bf03f602b0fbd5918",
+  "H_pin": {
+    "pure_pins": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "whole_row_choices": [
+      [
+        0,
+        1,
+        5,
+        7
+      ]
+    ],
+    "sets_checked": 210,
+    "rows_per_winning_block": 256,
+    "information_cells_per_row": 4096,
+    "lane_raw_xor": 1048576,
+    "lane_example_xy_xor": [
+      3983,
+      0
+    ],
+    "byte_kernel_x": [
+      0,
+      16,
+      32,
+      48,
+      64,
+      80,
+      96,
+      112
+    ]
+  },
+  "H_low": {
+    "pure_pins": [
+      0,
+      4,
+      6,
+      9
+    ],
+    "whole_row_choices": [
+      [
+        0,
+        4,
+        6,
+        9
+      ]
+    ],
+    "sets_checked": 210,
+    "rows_per_winning_block": 256,
+    "information_cells_per_row": 4096,
+    "lane_raw_xor": 1,
+    "lane_example_xy_xor": [
+      0,
+      16
+    ],
+    "byte_kernel_x": [
+      0,
+      16,
+      32,
+      48,
+      64,
+      80,
+      96,
+      112
+    ]
+  },
+  "common": [],
+  "counterexample": {
+    "fixed_pins": [
+      0,
+      4,
+      6,
+      9
+    ],
+    "fixed_value": 0,
+    "projection": "H_pin",
+    "x_xor": 256,
+    "y_xor": 0,
+    "partner_halfword_xor": 787280,
+    "distinct_halfwords": 65536,
+    "full_pairs": 0,
+    "data_cells_per_word": 32
+  },
+  "board": {
+    "controlled": "A0..A18",
+    "A19": "GND",
+    "BYTE": "VADJ",
+    "same_block_halfwords_available": 32768
+  }
+}
