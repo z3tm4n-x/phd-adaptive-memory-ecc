@@ -1,0 +1,191 @@
+{
+  "base": "67d35ff60a8804de5ae6edd27cbc818e3d2b880c",
+  "rtl_blob": "27f651fcea5b8ef677ccbad13fcfbb9f502c4296",
+  "check_local": [
+    0,
+    1
+  ],
+  "tick_ns": 10,
+  "round_ns": 2800,
+  "target_round": 1280,
+  "common_rounds": 256,
+  "read_offsets_ns": [
+    0,
+    240,
+    520,
+    760,
+    1400,
+    1640,
+    1920,
+    2160
+  ],
+  "sample_ns": 60,
+  "write_on_ns": 110,
+  "write_off_ns": 160,
+  "release_clean_ns": 100,
+  "release_write_ns": 200,
+  "cut_ns": 2500,
+  "install_ns": 2700,
+  "dirty_ns": 2101,
+  "dirty_word": 3,
+  "dirty_position": 37,
+  "price_window_rounds": 4,
+  "max_rounds": 522,
+  "mission_seconds": 315576000,
+  "exception_quota": "0.000006",
+  "cases": [
+    {
+      "id": "clean",
+      "memory": "clean",
+      "register": "none",
+      "bit": 0,
+      "offset_ns": 0,
+      "expected_before": -1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "last_err",
+      "memory": "dirty",
+      "register": "none",
+      "bit": 0,
+      "offset_ns": 0,
+      "expected_before": -1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "count_extra",
+      "memory": "clean",
+      "register": "count",
+      "bit": 2,
+      "offset_ns": 2445,
+      "expected_before": 0,
+      "look_after_round": 1280
+    },
+    {
+      "id": "sealed_early",
+      "memory": "clean",
+      "register": "sealed",
+      "bit": 0,
+      "offset_ns": 2245,
+      "expected_before": 0,
+      "look_after_round": 1280
+    },
+    {
+      "id": "sealed_lost",
+      "memory": "clean",
+      "register": "sealed",
+      "bit": 0,
+      "offset_ns": 2445,
+      "expected_before": 1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "seen_last",
+      "memory": "clean",
+      "register": "seen",
+      "bit": 0,
+      "offset_ns": 2205,
+      "expected_before": 7,
+      "look_after_round": 1280
+    },
+    {
+      "id": "proposal_zero",
+      "memory": "clean",
+      "register": "proposed",
+      "bit": 1,
+      "offset_ns": 2655,
+      "expected_before": 2,
+      "look_after_round": 1280
+    },
+    {
+      "id": "gap_zero",
+      "memory": "clean",
+      "register": "gap",
+      "bit": 1,
+      "offset_ns": 2745,
+      "expected_before": 2,
+      "look_after_round": 1280
+    },
+    {
+      "id": "step_zero",
+      "memory": "clean",
+      "register": "step",
+      "bit": 1,
+      "offset_ns": 2745,
+      "expected_before": 2,
+      "look_after_round": 1280
+    },
+    {
+      "id": "wait_short",
+      "memory": "clean",
+      "register": "remaining",
+      "bit": 0,
+      "offset_ns": 3005,
+      "expected_before": 1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "wait_check",
+      "memory": "clean",
+      "register": "remaining_parity",
+      "bit": 0,
+      "offset_ns": 3005,
+      "expected_before": 1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "quiet_before",
+      "memory": "clean",
+      "register": "quiet",
+      "bit": 3,
+      "offset_ns": 2495,
+      "expected_before": 4,
+      "look_after_round": 1280
+    },
+    {
+      "id": "quiet_after",
+      "memory": "clean",
+      "register": "quiet",
+      "bit": 3,
+      "offset_ns": 2505,
+      "expected_before": 5,
+      "look_after_round": 1536
+    },
+    {
+      "id": "hit_before",
+      "memory": "dirty",
+      "register": "hit",
+      "bit": 0,
+      "offset_ns": 2215,
+      "expected_before": 0,
+      "look_after_round": 1280
+    },
+    {
+      "id": "hit_lost",
+      "memory": "dirty",
+      "register": "hit",
+      "bit": 0,
+      "offset_ns": 2225,
+      "expected_before": 1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "hit_spent",
+      "memory": "dirty",
+      "register": "hit",
+      "bit": 0,
+      "offset_ns": 2365,
+      "expected_before": 1,
+      "look_after_round": 1280
+    },
+    {
+      "id": "timer_skip",
+      "memory": "dirty",
+      "register": "phase",
+      "bit": 1,
+      "offset_ns": 2205,
+      "expected_before": 80,
+      "look_after_round": 1280
+    }
+  ]
+}
