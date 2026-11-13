@@ -126,6 +126,22 @@ def check_spacing(r):
     return q
 
 
+def check_two_touch_marks():
+    positions = calendar["inner_data_bits"] + calendar["inner_check_bits"]
+    flips = [1 << i for i in range(positions)]
+    for initial in [0, *flips]:
+        successes = 0
+        for first in flips:
+            after_first = initial ^ first
+            for second in flips:
+                after_second = after_first ^ second
+                crossed = max(after_first.bit_count(), after_second.bit_count()) >= 2
+                witness = (first != second) if initial == 0 else (first != initial)
+                assert crossed == witness
+                successes += crossed
+        assert F(successes, positions**2) == F(37, 38)
+
+
 def check_ladder(r, common):
     w, L = r["words"], F(r["L_local_s"])
     levels = list(map(F, r["levels_local_s"]))
@@ -176,6 +192,7 @@ def check_table():
 
 def main():
     assert [F(r["MiB"]) for r in data["rows"]] == [F(1, 4), F(1, 2), 1, 2, 4]
+    check_two_touch_marks()
     visits = 0
     for r in data["rows"]:
         visits += check_addresses(r)
@@ -190,7 +207,7 @@ def main():
     rounded(port["aligned_frame_peak_pct_upper"], 4*100*(cr+cw)/fl)
     rounded(port["sliding_1400ns_peak_pct_upper"], 4*100*((cr+cw)/frame+1-fl/frame))
     check_table()
-    print(f"{visits} x16 addresses, five calendars, risk, cost, plateau edges and printed table verified.")
+    print(f"{visits} x16 addresses, five calendars, both entrance cases for 37/38, probability bounds, cost, plateau edges and printed table verified.")
 
 
 if __name__ == "__main__":
