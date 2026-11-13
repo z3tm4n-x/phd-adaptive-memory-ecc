@@ -1,0 +1,363 @@
+{
+  "risk_cache_witness": {
+    "32768_addresses": "0.000463398671",
+    "65536_addresses": "0.000513898181"
+  },
+  "32768": {
+    "nominal_L_s": "896/78125",
+    "top_s": "458752/78125",
+    "history_counts": [
+      3,
+      5,
+      10,
+      19,
+      38,
+      75,
+      149,
+      298,
+      596
+    ],
+    "period_fixed_s": "233611/2500000",
+    "geo": {
+      "all_maps": {
+        "q_upper": "0.000552582076",
+        "fixed_q_upper": "0.000737457381",
+        "continuous_q_over_epsilon_upper": "0.095780",
+        "fixed_lower_s": "3452586.199",
+        "fixed_candidate_upper_s": "11186561.079",
+        "stairs_upper_s": "472646.894",
+        "same_map_ratio_lower": "8.5619",
+        "same_map_extra_room_s_lower": "1323044.327",
+        "reset_fee_s_upper": "20.397479"
+      },
+      "all_partners_outside": {
+        "q_upper": "0.000463398671",
+        "fixed_q_upper": "0.000737457381",
+        "continuous_q_over_epsilon_upper": "0.095780",
+        "fixed_lower_s": "6541600.520",
+        "fixed_candidate_upper_s": "11186561.079",
+        "stairs_upper_s": "461834.858",
+        "same_map_ratio_lower": "14.1643",
+        "same_map_extra_room_s_lower": "2808965.402",
+        "reset_fee_s_upper": "20.397479"
+      },
+      "quarter_max_W": 32768,
+      "witness_blocks": [
+        [
+          16384,
+          20480,
+          4858,
+          "0.001000009860"
+        ],
+        [
+          20481,
+          24576,
+          4949,
+          "0.001000119688"
+        ],
+        [
+          24577,
+          28672,
+          5039,
+          "0.001000165693"
+        ],
+        [
+          28673,
+          32768,
+          5128,
+          "0.001000140406"
+        ],
+        [
+          32768,
+          32768,
+          5128,
+          "0.001000141339"
+        ]
+      ]
+    },
+    "archive": {
+      "all_maps": {
+        "q_upper": "0.000452525056",
+        "fixed_q_upper": "0.000331640287",
+        "continuous_q_over_epsilon_upper": "0.045970",
+        "fixed_lower_s": "412236.428",
+        "fixed_candidate_upper_s": "11181902.630",
+        "stairs_upper_s": "429798.746",
+        "same_map_ratio_lower": "1.1151",
+        "same_map_extra_room_s_lower": "-163543.903",
+        "reset_fee_s_upper": "20.397479"
+      },
+      "all_partners_outside": {
+        "q_upper": "0.000372960634",
+        "fixed_q_upper": "0.000331640287",
+        "continuous_q_over_epsilon_upper": "0.045970",
+        "fixed_lower_s": "819337.780",
+        "fixed_candidate_upper_s": "11181902.630",
+        "stairs_upper_s": "420782.567",
+        "same_map_ratio_lower": "1.9471",
+        "same_map_extra_room_s_lower": "-11113.677",
+        "reset_fee_s_upper": "20.397479"
+      },
+      "quarter_max_W": 32768,
+      "witness_blocks": [
+        [
+          16384,
+          20480,
+          40687,
+          "0.001000006487"
+        ],
+        [
+          20481,
+          24576,
+          40769,
+          "0.001000011015"
+        ],
+        [
+          24577,
+          28672,
+          40857,
+          "0.001000011464"
+        ],
+        [
+          28673,
+          32768,
+          40948,
+          "0.001000000973"
+        ],
+        [
+          32768,
+          32768,
+          40942,
+          "0.001000022368"
+        ]
+      ]
+    }
+  },
+  "65536": {
+    "nominal_L_s": "1792/78125",
+    "top_s": "458752/78125",
+    "history_counts": [
+      5,
+      10,
+      19,
+      38,
+      75,
+      149,
+      298,
+      596
+    ],
+    "period_fixed_s": "3584/78125",
+    "geo": {
+      "all_maps": {
+        "q_upper": "0.000715389615",
+        "fixed_q_upper": "0.000724203204",
+        "continuous_q_over_epsilon_upper": "0.365108",
+        "fixed_lower_s": "11204184.191",
+        "fixed_candidate_upper_s": "45568421.632",
+        "stairs_upper_s": "1152928.709",
+        "same_map_ratio_lower": "13.4014",
+        "same_map_extra_room_s_lower": "4766051.018",
+        "reset_fee_s_upper": "34.016758"
+      },
+      "all_partners_outside": {
+        "q_upper": "0.000696162438",
+        "fixed_q_upper": "0.000724203204",
+        "continuous_q_over_epsilon_upper": "0.365108",
+        "fixed_lower_s": "18843043.046",
+        "fixed_candidate_upper_s": "45568421.632",
+        "stairs_upper_s": "1149426.747",
+        "same_map_ratio_lower": "16.3934",
+        "same_map_extra_room_s_lower": "8272094.777",
+        "reset_fee_s_upper": "34.016758"
+      },
+      "quarter_max_W": 44529,
+      "witness_blocks": [
+        [
+          32768,
+          36864,
+          5988,
+          "0.001000203195"
+        ],
+        [
+          36865,
+          40960,
+          6154,
+          "0.001000156341"
+        ],
+        [
+          40961,
+          45056,
+          6318,
+          "0.001000020784"
+        ],
+        [
+          45057,
+          49152,
+          6482,
+          "0.001000209119"
+        ],
+        [
+          49153,
+          53248,
+          6643,
+          "0.001000048078"
+        ],
+        [
+          53249,
+          57344,
+          6804,
+          "0.001000169843"
+        ],
+        [
+          57345,
+          61440,
+          6963,
+          "0.001000125541"
+        ],
+        [
+          61441,
+          65536,
+          7121,
+          "0.001000115961"
+        ],
+        [
+          65536,
+          65536,
+          7121,
+          "0.001000116379"
+        ]
+      ],
+      "W_at_most_44529": {
+        "q_upper": "0.000609394852",
+        "fixed_q_upper": "0.000499764703",
+        "continuous_q_over_epsilon_upper": "0.249999",
+        "fixed_lower_s": "11204184.191",
+        "fixed_candidate_upper_s": "45557925.920",
+        "stairs_upper_s": "925228.885",
+        "same_map_ratio_lower": "13.4014",
+        "same_map_extra_room_s_lower": "4766051.018",
+        "reset_fee_s_upper": "34.016758"
+      }
+    },
+    "archive": {
+      "all_maps": {
+        "q_upper": "0.000460210665",
+        "fixed_q_upper": "0.000325739714",
+        "continuous_q_over_epsilon_upper": "0.165873",
+        "fixed_lower_s": "1599567.384",
+        "fixed_candidate_upper_s": "45549787.752",
+        "stairs_upper_s": "1024306.445",
+        "same_map_ratio_lower": "2.0983",
+        "same_map_extra_room_s_lower": "37474.420",
+        "reset_fee_s_upper": "34.016758"
+      },
+      "all_partners_outside": {
+        "q_upper": "0.000440691041",
+        "fixed_q_upper": "0.000325739714",
+        "continuous_q_over_epsilon_upper": "0.165873",
+        "fixed_lower_s": "3098875.521",
+        "fixed_candidate_upper_s": "45549787.752",
+        "stairs_upper_s": "1020751.218",
+        "same_map_ratio_lower": "3.0358",
+        "same_map_extra_room_s_lower": "528686.543",
+        "reset_fee_s_upper": "34.016758"
+      },
+      "quarter_max_W": 65536,
+      "witness_blocks": [
+        [
+          32768,
+          36864,
+          41943,
+          "0.001000000116"
+        ],
+        [
+          36865,
+          40960,
+          42137,
+          "0.001000020447"
+        ],
+        [
+          40961,
+          45056,
+          42330,
+          "0.001000002675"
+        ],
+        [
+          45057,
+          49152,
+          42525,
+          "0.001000022636"
+        ],
+        [
+          49153,
+          53248,
+          42719,
+          "0.001000015302"
+        ],
+        [
+          53249,
+          57344,
+          42913,
+          "0.001000006701"
+        ],
+        [
+          57345,
+          61440,
+          43108,
+          "0.001000021955"
+        ],
+        [
+          61441,
+          65536,
+          43302,
+          "0.001000016391"
+        ],
+        [
+          65536,
+          65536,
+          43300,
+          "0.001000011963"
+        ]
+      ],
+      "W_at_most_44529": {
+        "q_upper": "0.000431118997",
+        "fixed_q_upper": "0.000225821054",
+        "continuous_q_over_epsilon_upper": "0.114627",
+        "fixed_lower_s": "1599567.384",
+        "fixed_candidate_upper_s": "45545115.127",
+        "stairs_upper_s": "836283.753",
+        "same_map_ratio_lower": "2.0983",
+        "same_map_extra_room_s_lower": "37474.420",
+        "reset_fee_s_upper": "34.016758"
+      }
+    }
+  },
+  "closed_forced_write": {
+    "geo": {
+      "q_fixed_weak_upper": "0.000737457381",
+      "q_ladder_weak_upper": "0.000581632071",
+      "continuous_q_over_epsilon_upper": "0.185554",
+      "forced_fixed_candidate_s_upper": "44709379.735",
+      "forced_fixed_s_lower": "23055207.894",
+      "forced_ladder_s_upper": "1484335.161",
+      "same_forced_ratio_lower": "15.5323",
+      "same_forced_extra_room_s_lower": "10043268.786",
+      "if_comparator_can_skip_clean_write_ratio_lower": "7.7661",
+      "max_extra_probability_for_ladder_price_and_fixed_admissibility_down": "0.000262542619",
+      "max_conditional_danger_per_target_contact_both_policies_down": "0.000734263"
+    },
+    "archive": {
+      "q_fixed_weak_upper": "0.000331640287",
+      "q_ladder_weak_upper": "0.000441109593",
+      "continuous_q_over_epsilon_upper": "0.085937",
+      "forced_fixed_candidate_s_upper": "44709379.735",
+      "forced_fixed_s_lower": "3171010.506",
+      "forced_ladder_s_upper": "1376595.976",
+      "same_forced_ratio_lower": "2.3035",
+      "same_forced_extra_room_s_lower": "208909.277",
+      "if_comparator_can_skip_clean_write_ratio_lower": "1.1517",
+      "max_extra_probability_for_ladder_price_and_fixed_admissibility_down": "0.000558890407",
+      "max_conditional_danger_per_target_contact_both_policies_down": "0.001782660"
+    }
+  }
+}
