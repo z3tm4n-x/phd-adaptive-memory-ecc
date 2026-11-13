@@ -1,0 +1,185 @@
+{
+  "GENEPI_65nm": {
+    "0.8V.csv": {
+      "rows": 1283,
+      "unique_addresses": 1283,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1283
+    },
+    "0.9V.csv": {
+      "rows": 1112,
+      "unique_addresses": 1112,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1113
+    },
+    "1.0V.csv": {
+      "rows": 879,
+      "unique_addresses": 879,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 879
+    },
+    "1.1V.csv": {
+      "rows": 888,
+      "unique_addresses": 888,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 888
+    },
+    "1.3V (1).csv": {
+      "rows": 652,
+      "unique_addresses": 652,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 652
+    },
+    "1.3V (2).csv": {
+      "rows": 1859,
+      "unique_addresses": 1859,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1859
+    },
+    "1.5V.csv": {
+      "rows": 736,
+      "unique_addresses": 736,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 736
+    },
+    "2.0V.csv": {
+      "rows": 1757,
+      "unique_addresses": 1756,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1760
+    },
+    "2.5V.csv": {
+      "rows": 1711,
+      "unique_addresses": 1711,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1712
+    },
+    "3.3V - 0x00.csv": {
+      "rows": 1923,
+      "unique_addresses": 1922,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1924
+    },
+    "3.3V - 0x55.csv": {
+      "rows": 1850,
+      "unique_addresses": 1850,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1850
+    },
+    "3.3V - 0xAA.csv": {
+      "rows": 1660,
+      "unique_addresses": 1660,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1661
+    },
+    "3.3V - 0xFF.csv": {
+      "rows": 1697,
+      "unique_addresses": 1697,
+      "matching_DQ": 0,
+      "DQ_pattern_bit_differences": 1697
+    }
+  },
+  "synthetic_groups": {
+    "one_y": {
+      "synthetic_x8_raw_addresses": [
+        "0x2c",
+        "0x12c",
+        "0xc027c",
+        "0xc037c"
+      ],
+      "distinct_y": [
+        0
+      ]
+    },
+    "two_y": {
+      "synthetic_x8_raw_addresses": [
+        "0xc027c",
+        "0xc027d",
+        "0xc037c",
+        "0xc037d"
+      ],
+      "distinct_y": [
+        0,
+        16
+      ]
+    },
+    "four_y": {
+      "synthetic_x8_raw_addresses": [
+        "0xc037c",
+        "0xc037d",
+        "0xc0b7c",
+        "0xc0b7d"
+      ],
+      "distinct_y": [
+        0,
+        16,
+        32,
+        48
+      ]
+    }
+  },
+  "recorded_data_cell_intersections": {
+    "p": {
+      "records": 140106,
+      "one_y": 0,
+      "two_y": 0,
+      "four_y": 1,
+      "axis_y_step16": 1
+    },
+    "HI": {
+      "records": 33696,
+      "one_y": 0,
+      "two_y": 4,
+      "four_y": 4,
+      "axis_y_step16": 4
+    }
+  },
+  "first_examples": {
+    "p": {
+      "four_y": {
+        "file": "clust_p164MeV.txt",
+        "record_1_based": 5481,
+        "xy": [
+          [
+            2881,
+            2065
+          ],
+          [
+            2881,
+            2081
+          ]
+        ]
+      }
+    },
+    "HI": {
+      "two_y": {
+        "file": "clust_XeLET57.txt",
+        "record_1_based": 253,
+        "xy": [
+          [
+            1699,
+            649
+          ],
+          [
+            1699,
+            665
+          ]
+        ]
+      },
+      "four_y": {
+        "file": "clust_XeLET57.txt",
+        "record_1_based": 253,
+        "xy": [
+          [
+            1699,
+            649
+          ],
+          [
+            1699,
+            665
+          ]
+        ]
+      }
+    }
+  }
+}
