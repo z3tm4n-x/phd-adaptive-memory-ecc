@@ -1,0 +1,63 @@
+{
+  "base": "cea685d4dd4b0fa1ec708262eb52a962e9326c7e",
+  "rtl_blob": "27f651fcea5b8ef677ccbad13fcfbb9f502c4296",
+  "words": 4,
+  "positions": 38,
+  "addresses": 8,
+  "data0_hex": "a5bc3410",
+  "data_stride_hex": "00010001",
+  "tick_ns": 10,
+  "frame_ns": 1400,
+  "phases_ns": [
+    0,
+    240,
+    520,
+    760
+  ],
+  "L_ns": 2800,
+  "sample_ns": 60,
+  "read_ns": 100,
+  "write_edge_ns": 160,
+  "write_release_ns": 200,
+  "cut_ns": 2500,
+  "install_ns": 2700,
+  "clean_cells": [
+    5,
+    10,
+    19,
+    38,
+    75,
+    149,
+    298,
+    596
+  ],
+  "rounds_per_cell": 256,
+  "checkpoint_round": 1280,
+  "T_ns": 3614957,
+  "pulse_rounds": [
+    [
+      1281,
+      1283
+    ],
+    [
+      1285,
+      1287
+    ]
+  ],
+  "per_word_hits_per_pulse": "1/5",
+  "single_probability": "4/5",
+  "trials": 8192,
+  "seed": 20261113052,
+  "alpha": "1/20",
+  "max_cp95_half_width": 0.011,
+  "literal_random_ids": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "both_check_local": [
+    0,
+    1
+  ]
+}
