@@ -1,0 +1,465 @@
+{
+  "ost_class": {
+    "b": "3184491416137633/20000000000000000000",
+    "B": "2035689699748783/2500000000000000",
+    "S1": "32874379567213/200000000",
+    "S2": "1161936933175166521590748014871927359/12500000000000000000000000000000",
+    "U": "23931582094566507267/1000000000000000000",
+    "g": "4553382629650800105333/1250000000000000000000000",
+    "k": "4146869189839977/5000000000000000",
+    "plateau_s": "2282488893582250328392000/16282333106574126367",
+    "affine_cap": "5131726028702409545979693466981309271721/31250000000000000000000000000000000",
+    "shifted_archive_cap": "32874379567213/200000000"
+  },
+  "hard_post_stop_port_s": "182136058.937735",
+  "baseline_threshold": {
+    "pass": "2929/8192",
+    "fail": "5857/16384",
+    "q_at_pass_upper": "0.000999903055",
+    "q_at_fail_lower": "0.001000069967"
+  },
+  "U_multiplier_passing_lower": "3.349586543",
+  "U_multiplier_failing_upper": "3.349586544",
+  "rows": [
+    {
+      "name": "COSRAD",
+      "allocation": "1/1000",
+      "direct_upper": "0",
+      "total": "1/1000",
+      "eta": "20479/24576",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "5771/200",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.000443265661",
+      "q_plus_direct_upper": "0.000443265661",
+      "ladder_pass": true,
+      "ladder_before_direct_s_upper": "358395.112",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000200311286675",
+        "0.000000004458866",
+        "0.000236949914470"
+      ],
+      "additional_direct_tail_s_upper": "0.000",
+      "ladder_s_upper": "358395.112",
+      "ladder_pct_upper": "0.113569",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "4767/16384",
+        "exclusion_Q_lower": "0.001000072831960112",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 4767
+        },
+        "s_lower": "3518494.602",
+        "pct_lower": "1.114943",
+        "candidate": {
+          "period_s": "1298521/5000000",
+          "physical_Q_upper": "0.000999998247",
+          "stop_upper": "0.001049911724",
+          "ordinary_slots_upper": 39817984590993,
+          "read_s_upper": "4022178.539915",
+          "repair_s_upper": "4744.662889",
+          "s_upper": "4026923.203",
+          "pct_upper": "1.276055",
+          "s_upper_with_direct": "4026923.203",
+          "q_plus_direct_upper": "0.000999998247"
+        }
+      },
+      "componentwise_fixed_lower_s": null,
+      "twofold_margin_s_lower": "1400852.189",
+      "twofold_resets_X0": 68677,
+      "factor_lower_if_admissible": "9.817362"
+    },
+    {
+      "name": "OST",
+      "allocation": "1/1000",
+      "direct_upper": "0",
+      "total": "1/1000",
+      "eta": "20479/24576",
+      "B": "2035689699748783/2500000000000000",
+      "U": "23931582094566507267/1000000000000000000",
+      "S1": "32874379567213/200000000",
+      "S2": "1161936933175166521590748014871927359/12500000000000000000000000000000",
+      "q_ladder_upper": "0.000366664781",
+      "q_plus_direct_upper": "0.000366664781",
+      "ladder_pass": true,
+      "ladder_before_direct_s_upper": "332153.147",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000166620523977",
+        "0.000000003073030",
+        "0.000194041183808"
+      ],
+      "additional_direct_tail_s_upper": "0.000",
+      "ladder_s_upper": "332153.147",
+      "ladder_pct_upper": "0.105253",
+      "fixed": {
+        "class_empty": false,
+        "s_lower": "2477498.341",
+        "K_word_s": 6770,
+        "exclusion_Q_lower": "0.001000055102241",
+        "plateau_s": "2282488893582250328392000/16282333106574126367",
+        "plateau_S2_lower": 92954,
+        "candidate": {
+          "period_s": "116949/312500",
+          "physical_Q_upper": "0.000999999957",
+          "stop_upper": "0.001042749784",
+          "ordinary_slots_upper": 27631964117736,
+          "read_s_upper": "2791385.670897",
+          "repair_s_upper": "3439.828058",
+          "s_upper": "2794825.499",
+          "pct_upper": "0.885627",
+          "s_upper_with_direct": "2794825.499",
+          "q_plus_direct_upper": "0.000999999957"
+        }
+      },
+      "componentwise_fixed_lower_s": null,
+      "twofold_margin_s_lower": "906596.023",
+      "twofold_resets_X0": 44446,
+      "factor_lower_if_admissible": "7.458903"
+    },
+    {
+      "name": "3U",
+      "allocation": "1/1000",
+      "direct_upper": "0",
+      "total": "1/1000",
+      "eta": "20479/24576",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "17313/200",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.000917165497",
+      "q_plus_direct_upper": "0.000917165497",
+      "ladder_pass": true,
+      "ladder_before_direct_s_upper": "444710.064",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000200311286675",
+        "0.000000004466854",
+        "0.000710849743408"
+      ],
+      "additional_direct_tail_s_upper": "0.000",
+      "ladder_s_upper": "444710.064",
+      "ladder_pct_upper": "0.140921",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "4767/16384",
+        "exclusion_Q_lower": "0.001000072831960112",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 4767
+        },
+        "s_lower": "3518494.602",
+        "pct_lower": "1.114943",
+        "candidate": {
+          "period_s": "1298521/5000000",
+          "physical_Q_upper": "0.000999998247",
+          "stop_upper": "0.001049911724",
+          "ordinary_slots_upper": 39817984590993,
+          "read_s_upper": "4022178.539915",
+          "repair_s_upper": "4744.662890",
+          "s_upper": "4026923.203",
+          "pct_upper": "1.276055",
+          "s_upper_with_direct": "4026923.203",
+          "q_plus_direct_upper": "0.000999998247"
+        }
+      },
+      "componentwise_fixed_lower_s": null,
+      "twofold_margin_s_lower": "1314537.237",
+      "twofold_resets_X0": 64446,
+      "factor_lower_if_admissible": "7.911884"
+    },
+    {
+      "name": "10U",
+      "allocation": "1/1000",
+      "direct_upper": "0",
+      "total": "1/1000",
+      "eta": "20479/24576",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "5771/20",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.002575814927",
+      "q_plus_direct_upper": "0.002575814927",
+      "ladder_pass": false,
+      "ladder_before_direct_s_upper": "746812.395",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000200311286675",
+        "0.000000004494812",
+        "0.002369499144693"
+      ],
+      "additional_direct_tail_s_upper": "0.000",
+      "ladder_s_upper": "746812.395",
+      "ladder_pct_upper": "0.236651",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "4767/16384",
+        "exclusion_Q_lower": "0.001000072831960112",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 4767
+        },
+        "s_lower": "3518494.602",
+        "pct_lower": "1.114943",
+        "candidate": {
+          "period_s": "1298521/5000000",
+          "physical_Q_upper": "0.000999998247",
+          "stop_upper": "0.001049911726",
+          "ordinary_slots_upper": 39817984590993,
+          "read_s_upper": "4022178.539915",
+          "repair_s_upper": "4744.662895",
+          "s_upper": "4026923.203",
+          "pct_upper": "1.276055",
+          "s_upper_with_direct": "4026923.203",
+          "q_plus_direct_upper": "0.000999998247"
+        }
+      },
+      "componentwise_fixed_lower_s": null,
+      "twofold_margin_s_lower": "1012434.906",
+      "twofold_resets_X0": null,
+      "factor_lower_if_admissible": null
+    },
+    {
+      "name": "eta_sufficient",
+      "allocation": "1/1000",
+      "direct_upper": "0",
+      "total": "1/1000",
+      "eta": "2929/8192",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "5771/200",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.000999903055",
+      "q_plus_direct_upper": "0.000999903055",
+      "ladder_pass": true,
+      "ladder_before_direct_s_upper": "459778.853",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000464809150455",
+        "0.000000004458866",
+        "0.000529089445046"
+      ],
+      "additional_direct_tail_s_upper": "0.000",
+      "ladder_s_upper": "459778.853",
+      "ladder_pct_upper": "0.145696",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "4767/16384",
+        "exclusion_Q_lower": "0.001000072831960112",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 4767
+        },
+        "s_lower": "3518494.602",
+        "pct_lower": "1.114943",
+        "candidate": {
+          "period_s": "1298521/5000000",
+          "physical_Q_upper": "0.000999998247",
+          "stop_upper": "0.001049911724",
+          "ordinary_slots_upper": 39817984590993,
+          "read_s_upper": "4022178.539915",
+          "repair_s_upper": "4744.662889",
+          "s_upper": "4026923.203",
+          "pct_upper": "1.276055",
+          "s_upper_with_direct": "4026923.203",
+          "q_plus_direct_upper": "0.000999998247"
+        }
+      },
+      "componentwise_fixed_lower_s": null,
+      "twofold_margin_s_lower": "1299468.448",
+      "twofold_resets_X0": 63707,
+      "factor_lower_if_admissible": "7.652580"
+    },
+    {
+      "name": "eta_adjacent",
+      "allocation": "1/1000",
+      "direct_upper": "0",
+      "total": "1/1000",
+      "eta": "5857/16384",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "5771/200",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.001000069968",
+      "q_plus_direct_upper": "0.001000069968",
+      "ladder_pass": false,
+      "ladder_before_direct_s_upper": "459809.254",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000464888658932",
+        "0.000000004458866",
+        "0.000529176849615"
+      ],
+      "additional_direct_tail_s_upper": "0.000",
+      "ladder_s_upper": "459809.254",
+      "ladder_pct_upper": "0.145705",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "4767/16384",
+        "exclusion_Q_lower": "0.001000072831960112",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 4767
+        },
+        "s_lower": "3518494.602",
+        "pct_lower": "1.114943",
+        "candidate": {
+          "period_s": "1298521/5000000",
+          "physical_Q_upper": "0.000999998247",
+          "stop_upper": "0.001049911724",
+          "ordinary_slots_upper": 39817984590993,
+          "read_s_upper": "4022178.539915",
+          "repair_s_upper": "4744.662889",
+          "s_upper": "4026923.203",
+          "pct_upper": "1.276055",
+          "s_upper_with_direct": "4026923.203",
+          "q_plus_direct_upper": "0.000999998247"
+        }
+      },
+      "componentwise_fixed_lower_s": null,
+      "twofold_margin_s_lower": "1299438.047",
+      "twofold_resets_X0": null,
+      "factor_lower_if_admissible": null
+    },
+    {
+      "name": "direct_separate",
+      "allocation": "1/1000",
+      "direct_upper": "1/10000",
+      "total": "11/10000",
+      "eta": "20479/24576",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "5771/200",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.000443265661",
+      "q_plus_direct_upper": "0.000543265661",
+      "ladder_pass": true,
+      "ladder_before_direct_s_upper": "358395.112",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000200311286675",
+        "0.000000004458866",
+        "0.000236949914470"
+      ],
+      "additional_direct_tail_s_upper": "18213.606",
+      "ladder_s_upper": "376608.718",
+      "ladder_pct_upper": "0.119341",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "1303/4096",
+        "exclusion_Q_lower": "0.001100038818167030",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 5212
+        },
+        "s_lower": "3218085.911",
+        "pct_lower": "1.019749",
+        "candidate": {
+          "period_s": "1298521/5000000",
+          "physical_Q_upper": "0.000999998247",
+          "stop_upper": "0.001049911724",
+          "ordinary_slots_upper": 39817984590993,
+          "read_s_upper": "4022178.539915",
+          "repair_s_upper": "4744.662889",
+          "s_upper": "4026923.203",
+          "pct_upper": "1.276055",
+          "s_upper_with_direct": "4045136.809",
+          "q_plus_direct_upper": "0.001099998247"
+        }
+      },
+      "componentwise_fixed_lower_s": "3518494.602",
+      "twofold_margin_s_lower": "1232434.237",
+      "twofold_resets_X0": 60420,
+      "factor_lower_if_admissible": "8.544905"
+    },
+    {
+      "name": "direct_shared",
+      "allocation": "9/10000",
+      "direct_upper": "1/10000",
+      "total": "1/1000",
+      "eta": "20479/24576",
+      "B": "49065042484960786937241/50000000000000000000000",
+      "U": "5771/200",
+      "S1": "187464",
+      "S2": "42148264627332419521724950021814644369343480793/312500000000000000000000000000000000000000",
+      "q_ladder_upper": "0.000443265661",
+      "q_plus_direct_upper": "0.000543265661",
+      "ladder_pass": true,
+      "ladder_before_direct_s_upper": "358395.112",
+      "q_parts": [
+        "0.000006000000000",
+        "0.000200311286675",
+        "0.000000004458866",
+        "0.000236949914470"
+      ],
+      "additional_direct_tail_s_upper": "18213.606",
+      "ladder_s_upper": "376608.718",
+      "ladder_pct_upper": "0.119341",
+      "fixed": {
+        "class_empty": false,
+        "fast_witness": {
+          "Q_lower": "0.000009471619",
+          "subset": "all",
+          "max_block_s": "1/32"
+        },
+        "cutoff_physical_s": "4767/16384",
+        "exclusion_Q_lower": "0.001000072831960112",
+        "witness": {
+          "method": "two_parents",
+          "K_word_s": 4767
+        },
+        "s_lower": "3518494.602",
+        "pct_lower": "1.114943",
+        "candidate": {
+          "period_s": "1170771/5000000",
+          "physical_Q_upper": "0.000899999822",
+          "stop_upper": "0.000947210639",
+          "ordinary_slots_upper": 44162768963728,
+          "read_s_upper": "4461003.473380",
+          "repair_s_upper": "4744.663601",
+          "s_upper": "4465748.137",
+          "pct_upper": "1.415111",
+          "s_upper_with_direct": "4483961.743",
+          "q_plus_direct_upper": "0.000999999822"
+        }
+      },
+      "componentwise_fixed_lower_s": "3879866.705",
+      "twofold_margin_s_lower": "1382638.583",
+      "twofold_resets_X0": 67784,
+      "factor_lower_if_admissible": "9.342573"
+    }
+  ]
+}
