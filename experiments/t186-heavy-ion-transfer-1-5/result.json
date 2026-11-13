@@ -1,0 +1,571 @@
+{
+  "series": {
+    "C1080MeV": {
+      "LET_from_T68": "0.23",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 1406,
+        "unique_cells": 1478,
+        "singles": 1354,
+        "doubles": 37,
+        "large_records": 15,
+        "cells_in_large": 50,
+        "max_size": 4
+      },
+      "low": {
+        "nonempty": 86,
+        "unique_cells": 88,
+        "singles": 84,
+        "doubles": 2,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      },
+      "pin": {
+        "nonempty": 92,
+        "unique_cells": 95,
+        "singles": 89,
+        "doubles": 3,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "C720MeV": {
+      "LET_from_T68": "0.31",
+      "readout_timed_records": 5088,
+      "die": {
+        "nonempty": 5088,
+        "unique_cells": 5122,
+        "singles": 5057,
+        "doubles": 28,
+        "large_records": 3,
+        "cells_in_large": 9,
+        "max_size": 3
+      },
+      "low": {
+        "nonempty": 365,
+        "unique_cells": 366,
+        "singles": 364,
+        "doubles": 1,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      },
+      "pin": {
+        "nonempty": 327,
+        "unique_cells": 327,
+        "singles": 327,
+        "doubles": 0,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 1,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "C360MeV": {
+      "LET_from_T68": "0.53",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 16871,
+        "unique_cells": 17148,
+        "singles": 16617,
+        "doubles": 242,
+        "large_records": 12,
+        "cells_in_large": 47,
+        "max_size": 9
+      },
+      "low": {
+        "nonempty": 1051,
+        "unique_cells": 1051,
+        "singles": 1051,
+        "doubles": 0,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 1,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      },
+      "pin": {
+        "nonempty": 1123,
+        "unique_cells": 1123,
+        "singles": 1123,
+        "doubles": 0,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 1,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "Ar1050MeV": {
+      "LET_from_T68": "5.2",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 637,
+        "unique_cells": 1628,
+        "singles": 188,
+        "doubles": 173,
+        "large_records": 276,
+        "cells_in_large": 1094,
+        "max_size": 12
+      },
+      "low": {
+        "nonempty": 78,
+        "unique_cells": 118,
+        "singles": 44,
+        "doubles": 28,
+        "large_records": 6,
+        "cells_in_large": 18,
+        "max_size": 3,
+        "two_cell_same_word": 2,
+        "any_same_word": 6
+      },
+      "pin": {
+        "nonempty": 94,
+        "unique_cells": 117,
+        "singles": 71,
+        "doubles": 23,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "Ar548MeV": {
+      "LET_from_T68": "7.9",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 1050,
+        "unique_cells": 4368,
+        "singles": 160,
+        "doubles": 146,
+        "large_records": 744,
+        "cells_in_large": 3916,
+        "max_size": 14
+      },
+      "low": {
+        "nonempty": 154,
+        "unique_cells": 267,
+        "singles": 76,
+        "doubles": 50,
+        "large_records": 28,
+        "cells_in_large": 91,
+        "max_size": 4,
+        "two_cell_same_word": 8,
+        "any_same_word": 23
+      },
+      "pin": {
+        "nonempty": 221,
+        "unique_cells": 280,
+        "singles": 162,
+        "doubles": 59,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "U190.4GeV": {
+      "LET_from_T68": "15",
+      "readout_timed_records": 924,
+      "die": {
+        "nonempty": 924,
+        "unique_cells": 5484,
+        "singles": 79,
+        "doubles": 71,
+        "large_records": 774,
+        "cells_in_large": 5263,
+        "max_size": 16
+      },
+      "low": {
+        "nonempty": 199,
+        "unique_cells": 352,
+        "singles": 79,
+        "doubles": 91,
+        "large_records": 29,
+        "cells_in_large": 91,
+        "max_size": 4,
+        "two_cell_same_word": 9,
+        "any_same_word": 24
+      },
+      "pin": {
+        "nonempty": 260,
+        "unique_cells": 337,
+        "singles": 183,
+        "doubles": 77,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "U142.8GeV": {
+      "LET_from_T68": "17",
+      "readout_timed_records": 950,
+      "die": {
+        "nonempty": 950,
+        "unique_cells": 6707,
+        "singles": 59,
+        "doubles": 68,
+        "large_records": 823,
+        "cells_in_large": 6512,
+        "max_size": 25
+      },
+      "low": {
+        "nonempty": 227,
+        "unique_cells": 436,
+        "singles": 77,
+        "doubles": 97,
+        "large_records": 53,
+        "cells_in_large": 165,
+        "max_size": 4,
+        "two_cell_same_word": 13,
+        "any_same_word": 43
+      },
+      "pin": {
+        "nonempty": 329,
+        "unique_cells": 434,
+        "singles": 224,
+        "doubles": 105,
+        "large_records": 0,
+        "cells_in_large": 0,
+        "max_size": 2,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "U78.5GeV": {
+      "LET_from_T68": "22",
+      "readout_timed_records": 1026,
+      "die": {
+        "nonempty": 1026,
+        "unique_cells": 9822,
+        "singles": 32,
+        "doubles": 34,
+        "large_records": 960,
+        "cells_in_large": 9722,
+        "max_size": 25
+      },
+      "low": {
+        "nonempty": 298,
+        "unique_cells": 604,
+        "singles": 100,
+        "doubles": 108,
+        "large_records": 90,
+        "cells_in_large": 288,
+        "max_size": 4,
+        "two_cell_same_word": 20,
+        "any_same_word": 63
+      },
+      "pin": {
+        "nonempty": 436,
+        "unique_cells": 586,
+        "singles": 288,
+        "doubles": 146,
+        "large_records": 2,
+        "cells_in_large": 6,
+        "max_size": 3,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "XeLET27": {
+      "LET_from_T68": "27",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 998,
+        "unique_cells": 10876,
+        "singles": 28,
+        "doubles": 29,
+        "large_records": 941,
+        "cells_in_large": 10790,
+        "max_size": 34
+      },
+      "low": {
+        "nonempty": 329,
+        "unique_cells": 682,
+        "singles": 105,
+        "doubles": 123,
+        "large_records": 101,
+        "cells_in_large": 331,
+        "max_size": 5,
+        "two_cell_same_word": 29,
+        "any_same_word": 85
+      },
+      "pin": {
+        "nonempty": 539,
+        "unique_cells": 724,
+        "singles": 364,
+        "doubles": 167,
+        "large_records": 8,
+        "cells_in_large": 26,
+        "max_size": 4,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "U45.2GeV": {
+      "LET_from_T68": "29",
+      "readout_timed_records": 1050,
+      "die": {
+        "nonempty": 1050,
+        "unique_cells": 12340,
+        "singles": 30,
+        "doubles": 32,
+        "large_records": 988,
+        "cells_in_large": 12246,
+        "max_size": 39
+      },
+      "low": {
+        "nonempty": 344,
+        "unique_cells": 765,
+        "singles": 97,
+        "doubles": 123,
+        "large_records": 124,
+        "cells_in_large": 422,
+        "max_size": 5,
+        "two_cell_same_word": 20,
+        "any_same_word": 89
+      },
+      "pin": {
+        "nonempty": 570,
+        "unique_cells": 790,
+        "singles": 365,
+        "doubles": 192,
+        "large_records": 13,
+        "cells_in_large": 41,
+        "max_size": 4,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "U35.7GeV": {
+      "LET_from_T68": "33",
+      "readout_timed_records": 476,
+      "die": {
+        "nonempty": 476,
+        "unique_cells": 6230,
+        "singles": 13,
+        "doubles": 11,
+        "large_records": 452,
+        "cells_in_large": 6195,
+        "max_size": 29
+      },
+      "low": {
+        "nonempty": 177,
+        "unique_cells": 414,
+        "singles": 44,
+        "doubles": 65,
+        "large_records": 68,
+        "cells_in_large": 240,
+        "max_size": 5,
+        "two_cell_same_word": 11,
+        "any_same_word": 55
+      },
+      "pin": {
+        "nonempty": 275,
+        "unique_cells": 388,
+        "singles": 178,
+        "doubles": 82,
+        "large_records": 15,
+        "cells_in_large": 46,
+        "max_size": 4,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "XeLET42": {
+      "LET_from_T68": "42",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 1119,
+        "unique_cells": 17012,
+        "singles": 40,
+        "doubles": 28,
+        "large_records": 1051,
+        "cells_in_large": 16916,
+        "max_size": 52
+      },
+      "low": {
+        "nonempty": 414,
+        "unique_cells": 1048,
+        "singles": 81,
+        "doubles": 143,
+        "large_records": 190,
+        "cells_in_large": 681,
+        "max_size": 8,
+        "two_cell_same_word": 36,
+        "any_same_word": 145
+      },
+      "pin": {
+        "nonempty": 722,
+        "unique_cells": 1077,
+        "singles": 432,
+        "doubles": 235,
+        "large_records": 55,
+        "cells_in_large": 175,
+        "max_size": 4,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "Xe2700MeV": {
+      "LET_from_T68": "44",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 1041,
+        "unique_cells": 16735,
+        "singles": 23,
+        "doubles": 25,
+        "large_records": 993,
+        "cells_in_large": 16662,
+        "max_size": 45
+      },
+      "low": {
+        "nonempty": 368,
+        "unique_cells": 960,
+        "singles": 77,
+        "doubles": 105,
+        "large_records": 186,
+        "cells_in_large": 673,
+        "max_size": 7,
+        "two_cell_same_word": 20,
+        "any_same_word": 134
+      },
+      "pin": {
+        "nonempty": 671,
+        "unique_cells": 1027,
+        "singles": 370,
+        "doubles": 253,
+        "large_records": 48,
+        "cells_in_large": 151,
+        "max_size": 5,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    },
+    "XeLET57": {
+      "LET_from_T68": "57",
+      "readout_timed_records": 0,
+      "die": {
+        "nonempty": 1060,
+        "unique_cells": 21185,
+        "singles": 30,
+        "doubles": 26,
+        "large_records": 1004,
+        "cells_in_large": 21103,
+        "max_size": 58
+      },
+      "low": {
+        "nonempty": 418,
+        "unique_cells": 1310,
+        "singles": 58,
+        "doubles": 105,
+        "large_records": 255,
+        "cells_in_large": 1042,
+        "max_size": 11,
+        "two_cell_same_word": 19,
+        "any_same_word": 185
+      },
+      "pin": {
+        "nonempty": 754,
+        "unique_cells": 1335,
+        "singles": 351,
+        "doubles": 272,
+        "large_records": 131,
+        "cells_in_large": 440,
+        "max_size": 7,
+        "two_cell_same_word": 0,
+        "any_same_word": 0
+      }
+    }
+  },
+  "total": {
+    "die": {
+      "nonempty": 33696,
+      "unique_cells": 136135,
+      "singles": 23710,
+      "doubles": 950,
+      "large_records": 9036,
+      "cells_in_large": 110525,
+      "max_size": 58
+    },
+    "low": {
+      "nonempty": 4508,
+      "unique_cells": 8461,
+      "singles": 2337,
+      "doubles": 1041,
+      "large_records": 1130,
+      "cells_in_large": 4042,
+      "max_size": 11,
+      "two_cell_same_word": 187,
+      "any_same_word": 852
+    },
+    "pin": {
+      "nonempty": 6413,
+      "unique_cells": 8640,
+      "singles": 4527,
+      "doubles": 1614,
+      "large_records": 272,
+      "cells_in_large": 885,
+      "max_size": 7,
+      "two_cell_same_word": 0,
+      "any_same_word": 0
+    }
+  },
+  "visibility": {
+    "geo": {
+      "eta": "6013/16384",
+      "min_visible_fraction_of_small_parents_if_no_large_and_m2": "6013/8192",
+      "max_large_inversion_fraction_if_all_small_visible_and_m2": "2179/8192",
+      "lifetime_large_inversions_upper_from_total": "23433/2",
+      "lifetime_large_parents_upper_from_total": "7811/2"
+    },
+    "reconstructions": {
+      "eta": "2435/8192",
+      "min_visible_fraction_of_small_parents_if_no_large_and_m2": "2435/4096",
+      "max_large_inversion_fraction_if_all_small_visible_and_m2": "1661/4096",
+      "lifetime_large_inversions_upper_from_total": "41093/4",
+      "lifetime_large_parents_upper_from_total": "41093/12"
+    }
+  },
+  "illustrative_direct_allocation": "1/10000",
+  "direct": {
+    "6/5": {
+      "parent_cap": "39055/4",
+      "direct_fraction_exact": "1/97637500",
+      "direct_fraction_sufficient_12_places": "0.000000010241"
+    },
+    "2": {
+      "parent_cap": "23433/4",
+      "direct_fraction_exact": "1/58582500",
+      "direct_fraction_sufficient_12_places": "0.000000017069"
+    },
+    "4": {
+      "parent_cap": "23433/8",
+      "direct_fraction_exact": "1/29291250",
+      "direct_fraction_sufficient_12_places": "0.000000034139"
+    },
+    "5": {
+      "parent_cap": "23433/10",
+      "direct_fraction_exact": "1/23433000",
+      "direct_fraction_sufficient_12_places": "0.000000042674"
+    },
+    "8": {
+      "parent_cap": "23433/16",
+      "direct_fraction_exact": "1/14645625",
+      "direct_fraction_sufficient_12_places": "0.000000068279"
+    }
+  }
+}
