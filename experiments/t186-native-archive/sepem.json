@@ -45,12 +45,20 @@
       "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
       "average_scans_before_coarse_stop": 81675020.7890625,
       "average_completed_writes_before_coarse_stop": 10048.234375,
+      "mean_full_horizon_scans_range": [
+        83293070.46875,
+        83293070.4921875
+      ],
+      "mean_full_horizon_repairs_range": [
+        10265.65625,
+        10265.6796875
+      ],
       "average_read_prefix_s": 535265.416243,
       "average_write_prefix_s": 0.001004823,
       "mean_parents": 8552.25,
       "mean_inversions": 10265.65625,
       "marks_sha256": "38d6e6240f86d1f54070b2b597ce006682d4279497f1f5bec19b96c9e582a64b",
-      "trials_sha256": "d06937a14309143423dba33667311c289bda1bfd7262ca78070516676f651287",
+      "trials_sha256": "e2e2d1e75d2b50a82b371e1b8b796b2ffa1a2a6f5d671425504645e18b8a3548",
       "stopped_trials": [
         {
           "rep": 2,

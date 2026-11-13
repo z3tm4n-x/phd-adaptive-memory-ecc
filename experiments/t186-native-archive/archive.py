@@ -42,10 +42,10 @@ def simulate(hist, idx):
             marks.update(a.astype("<i8",copy=False).tobytes())
         coarse = replay(ticks,words,bits,T)
         read,write,scans,repairs,tail,stop,_ = coarse
-        low,high,splits,leaves,open_leaves = branch_envelope((ticks,words,bits),T,coarse)
-        assert read+write<=low<=high<=read+write+tail
+        bounds = branch_envelope((ticks,words,bits),T,coarse)
+        assert read+write<=bounds[0]<=bounds[1]<=read+write+tail
         results.append((read,write,scans,repairs,tail,stop,parents,len(words),
-                        low,high,splits,leaves,open_leaves))
+                        *bounds))
     counts = np.array(results,dtype=np.int64)
     coarse_lo = (counts[:,0]+counts[:,1])/1e9
     coarse_hi = coarse_lo+counts[:,4]/1e9
@@ -69,6 +69,8 @@ def simulate(hist, idx):
                   unresolved_rate_one_sided_CP95_upper=float(beta.ppf(.95,open_end+1,N-open_end)) if open_end<N else 1.,
                   average_scans_before_coarse_stop=float(counts[:,2].mean()),
                   average_completed_writes_before_coarse_stop=float(counts[:,3].mean()),
+                  mean_full_horizon_scans_range=counts[:,13:15].mean(axis=0).tolist() if not open_end else None,
+                  mean_full_horizon_repairs_range=counts[:,15:17].mean(axis=0).tolist() if not open_end else None,
                   average_read_prefix_s=round(float(counts[:,0].mean()/1e9),6),
                   average_write_prefix_s=round(float(counts[:,1].mean()/1e9),9),
                   mean_parents=float(counts[:,6].mean()),mean_inversions=float(counts[:,7].mean()),

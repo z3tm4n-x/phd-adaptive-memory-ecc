@@ -28,6 +28,9 @@ def replay(ticks, words, bits, horizon, skip=True, split_halves=True, choices=NO
         nxt = pos
         while nxt<len(ticks) and ticks[nxt]<end:
             nxt += 1
+        # This batch may start in the quiet gap after the previous charged scan.
+        # Word-by-word traversal does not establish the earliest stop across words.
+        unpriced = horizon-min(start,ticks[pos]) if pos<nxt else horizon-start
         empty = ncarry==0 and pos==nxt
         n = ncarry
         for j in range(ncarry):
@@ -51,7 +54,7 @@ def replay(ticks, words, bits, horizon, skip=True, split_halves=True, choices=NO
                     if words[k]==w:
                         mask ^= np.int64(1)<<bits[k]
                         if mask & (mask-1):
-                            return reads_ns,writes_ns,scans,repairs,horizon-start,1,0
+                            return reads_ns,writes_ns,scans,repairs,unpriced,1,0
                     k += 1
                 if half==2 or visit>=end:
                     continue
@@ -68,11 +71,11 @@ def replay(ticks, words, bits, horizon, skip=True, split_halves=True, choices=NO
                         if aperture_hit or mask:
                             # Several births or an old live defect at this visit:
                             # retain the full remaining interval as an outer bound.
-                            return reads_ns,writes_ns,scans,repairs,horizon-start,3,0
+                            return reads_ns,writes_ns,scans,repairs,unpriced,3,0
                         aperture_hit = True
                         options = 3 if ticks[k]<=visit+60 else 1
                         if used>=len(choices):
-                            return reads_ns,writes_ns,scans,repairs,horizon-start,2,options
+                            return reads_ns,writes_ns,scans,repairs,unpriced,2,options
                         choice = choices[used]
                         used += 1
                         assert 0<=choice<options
@@ -145,7 +148,9 @@ def branch_envelope(data, horizon, coarse):
                 paths.append((child,result))
         else:
             leaves.append((read+write,read+write+tail,scans,repairs,reason))
-    return min(r[0] for r in leaves),max(r[1] for r in leaves),splits,len(leaves),sum(r[-1]!=0 for r in leaves)
+    return (min(r[0] for r in leaves),max(r[1] for r in leaves),splits,len(leaves),
+            sum(r[-1]!=0 for r in leaves),min(r[2] for r in leaves),max(r[2] for r in leaves),
+            min(r[3] for r in leaves),max(r[3] for r in leaves))
 
 
 def selftest():
@@ -163,11 +168,12 @@ def selftest():
     assert trial([L//4,L//4],[W-1,0],[37,32],L)[1]==200
     edge = 5*CAP*L+L
     assert trial([edge+201,edge+205],[0,0],[1,0],edge+210)[-3:]==(5,1,0)
+    assert trial([edge+201,edge+205],[0,0],[1,0],edge+2*L)[-3:]==(2*L-201,1,0)
     assert trial([L//4],[0],[1],L//2+150)[1]==50
     assert trial([],[],[],300)[0]==160
     for offset,leaves in [(30,3),(70,1)]:
         data = tuple(np.array(x,dtype=np.int64) for x in ([offset],[0],[37]))
         coarse = replay(*data,L)
-        lo,hi,_,n,unresolved = branch_envelope(data,L,coarse)
+        lo,hi,_,n,unresolved,*_ = branch_envelope(data,L,coarse)
         assert (lo,hi)==(A*100+100,A*100+(200 if leaves==3 else 100))
         assert n==leaves and unresolved==0

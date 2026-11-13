@@ -1,0 +1,738 @@
+[
+  {
+    "name": "GOES_composite_5min_East",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2017-09-01T00:00:00Z",
+      "measured_last_end_utc": "2026-11-09T00:00:00Z",
+      "bins": 401446,
+      "dt_s": 300,
+      "source_files": 4761,
+      "measured_s": 120433800,
+      "unobserved_s": 195142200,
+      "terminal_gap_s": 4622400,
+      "S1_measured": 26597.503196629,
+      "S1": 57668.960449444,
+      "S2_per_s": 142.838614258,
+      "peak_per_s": 0.196285862913,
+      "J_old_floor_per_s": 2.4056654685,
+      "piece_count": 401911,
+      "profile_sha256": "c2d9ad360092ac43719d9635e9058f83fb8a1b2c305c476150f578c9ece0d1a8"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 1,
+      "coarse_double": 0,
+      "coarse_single_aperture": 1,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        445837.97,
+        726225.298
+      ],
+      "mean_lower_s": 446240.320054,
+      "mean_upper_s": 446240.320054,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.141405024,
+      "mean_upper_pct": 0.141405024,
+      "se_lower_s": 131.945,
+      "se_upper_s": 131.945,
+      "nominal_t95_s": [
+        445979.225,
+        446501.415
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 68029475.3828125,
+      "average_completed_writes_before_coarse_stop": 3603.6953125,
+      "mean_full_horizon_scans_range": [
+        68090869.09375,
+        68090869.09375
+      ],
+      "mean_full_horizon_repairs_range": [
+        3607.21875,
+        3607.21875
+      ],
+      "average_read_prefix_s": 445837.969869,
+      "average_write_prefix_s": 0.00036037,
+      "mean_parents": 3007.390625,
+      "mean_inversions": 3607.21875,
+      "marks_sha256": "15c0646d4b5c6fac720e6e9354b58dcf4b86c55a72624dd6efd42b40f882eb2f",
+      "trials_sha256": "ffe2081a028512bdbf4d3218caf6dce51c162f40f1136acdd1cdf49ea8964e09",
+      "stopped_trials": [
+        {
+          "rep": 73,
+          "prefix_ns": 393683403065700,
+          "unpriced_ns_upper": 35889577956966400,
+          "reason": 2,
+          "branched_lo_ns": 445184180582800,
+          "branched_hi_ns": 445184180582800,
+          "branch_nodes": 1,
+          "leaves": 1,
+          "open_leaves": 0
+        }
+      ]
+    },
+    "analytic": {
+      "S1_upper": 57669,
+      "S2_upper_per_s": 143,
+      "peak_upper": "197/1000",
+      "J_upper": "3",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000043308882",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000013799318289",
+        "0.000000000008758",
+        "0.000023509554393"
+      ],
+      "s_lower": "348661.180",
+      "s_upper": "466228.540",
+      "pct_lower": "0.110484",
+      "pct_upper": "0.147739",
+      "repair_events_upper": "3604.422495",
+      "parents_upper": "3003.593750",
+      "true_cells_upper": "3015.334516",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "458340.430188",
+      "pre_repair_s_upper": "0.000365",
+      "post_stop_s_upper": "7888.108982"
+    }
+  },
+  {
+    "name": "GOES_composite_5min_West",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2017-09-01T00:00:00Z",
+      "measured_last_end_utc": "2026-11-09T00:00:00Z",
+      "bins": 528256,
+      "dt_s": 300,
+      "source_files": 4761,
+      "measured_s": 158476800,
+      "unobserved_s": 157099200,
+      "terminal_gap_s": 4622400,
+      "S1_measured": 37449.664676841,
+      "S1": 62463.777323981,
+      "S2_per_s": 408.798023397,
+      "peak_per_s": 0.273766915004,
+      "J_old_floor_per_s": 3.3588780204,
+      "piece_count": 529323,
+      "profile_sha256": "51fe107e2716e83bbf7205df83966e2eb78b0ed6455c1ed7fb2b78702ae824b3"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 0,
+      "coarse_double": 0,
+      "coarse_single_aperture": 0,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        451996.784,
+        451996.784
+      ],
+      "mean_lower_s": 451996.783852,
+      "mean_upper_s": 451996.783852,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.143229138,
+      "mean_upper_pct": 0.143229138,
+      "se_lower_s": 152.55,
+      "se_upper_s": 152.55,
+      "nominal_t95_s": [
+        451694.914,
+        452298.654
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 68969235.7578125,
+      "average_completed_writes_before_coarse_stop": 3899.6796875,
+      "mean_full_horizon_scans_range": [
+        68969235.7578125,
+        68969235.7578125
+      ],
+      "mean_full_horizon_repairs_range": [
+        3899.6796875,
+        3899.6796875
+      ],
+      "average_read_prefix_s": 451996.783462,
+      "average_write_prefix_s": 0.000389968,
+      "mean_parents": 3252.875,
+      "mean_inversions": 3899.6796875,
+      "marks_sha256": "70076a83cab4fb35ad0c217dfa83684fb1f96c1fcb9ed6e1f16d2758727a8d0c",
+      "trials_sha256": "11cc32a50546998e82976df1c96cf7165f3778a9c0e53ea782580440ab14d3ae",
+      "stopped_trials": []
+    },
+    "analytic": {
+      "S1_upper": 62464,
+      "S2_upper_per_s": 409,
+      "peak_upper": "137/500",
+      "J_upper": "4",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000058489464",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000020768455354",
+        "0.000000000024877",
+        "0.000031720983678"
+      ],
+      "s_lower": "348655.887",
+      "s_upper": "477522.076",
+      "pct_lower": "0.110482",
+      "pct_upper": "0.151318",
+      "repair_events_upper": "3904.119141",
+      "parents_upper": "3253.333334",
+      "true_cells_upper": "3266.052246",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "466869.034449",
+      "pre_repair_s_upper": "0.000395",
+      "post_stop_s_upper": "10653.040446"
+    }
+  },
+  {
+    "name": "G16_1min_East",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2023-12-12T00:00:00Z",
+      "measured_last_end_utc": "2025-04-04T00:00:00Z",
+      "bins": 176829,
+      "dt_s": 60,
+      "source_files": 219,
+      "measured_s": 10609740,
+      "unobserved_s": 304966260,
+      "terminal_gap_s": 55080000,
+      "S1_measured": 3862.834467946,
+      "S1": 52420.956629503,
+      "S2_per_s": 18.696237846,
+      "peak_per_s": 0.025602860589,
+      "J_old_floor_per_s": 2.9868282272,
+      "piece_count": 177019,
+      "profile_sha256": "9c785fa303c1fa83776a47ad8ba38f3ccebab4519efd58d03cb07563d6accca1"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 0,
+      "coarse_double": 0,
+      "coarse_single_aperture": 0,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        439207.48,
+        439207.48
+      ],
+      "mean_lower_s": 439207.480494,
+      "mean_upper_s": 439207.480494,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.139176452,
+      "mean_upper_pct": 0.139176452,
+      "se_lower_s": 162.62,
+      "se_upper_s": 162.62,
+      "nominal_t95_s": [
+        438885.684,
+        439529.277
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 67017742.9453125,
+      "average_completed_writes_before_coarse_stop": 3279.0234375,
+      "mean_full_horizon_scans_range": [
+        67017742.9453125,
+        67017742.9453125
+      ],
+      "mean_full_horizon_repairs_range": [
+        3279.0234375,
+        3279.0234375
+      ],
+      "average_read_prefix_s": 439207.480166,
+      "average_write_prefix_s": 0.000327902,
+      "mean_parents": 2733.296875,
+      "mean_inversions": 3279.0234375,
+      "marks_sha256": "5edaf717b828c8027ee0c7909c12c88c16ca56d7688e909595dc6261df1db236",
+      "trials_sha256": "d734f596b445593467fe94d68ced13c05f7c3a56810571500e5e6a8c7b55ebf1",
+      "stopped_trials": []
+    },
+    "analytic": {
+      "S1_upper": 52421,
+      "S2_upper_per_s": 19,
+      "peak_upper": "13/500",
+      "J_upper": "3",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000035012491",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000006119857924",
+        "0.000000000001164",
+        "0.000022892631607"
+      ],
+      "s_lower": "348664.073",
+      "s_upper": "455383.219",
+      "pct_lower": "0.110484",
+      "pct_upper": "0.144303",
+      "repair_events_upper": "3276.412486",
+      "parents_upper": "2730.260417",
+      "true_cells_upper": "2740.933035",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "449006.181510",
+      "pre_repair_s_upper": "0.000331",
+      "post_stop_s_upper": "6377.037069"
+    }
+  },
+  {
+    "name": "G16_1min_West",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2021-10-25T00:00:00Z",
+      "measured_last_end_utc": "2025-04-04T00:00:00Z",
+      "bins": 212580,
+      "dt_s": 60,
+      "source_files": 219,
+      "measured_s": 12754800,
+      "unobserved_s": 302821200,
+      "terminal_gap_s": 55080000,
+      "S1_measured": 5131.432805793,
+      "S1": 53348.009377112,
+      "S2_per_s": 26.335073872,
+      "peak_per_s": 0.03851618575,
+      "J_old_floor_per_s": 4.1098181242,
+      "piece_count": 212815,
+      "profile_sha256": "452c5fecc5ae533b58f8f4d1abe6fd492ee18b612c20e4e7c5219fdddfa53387"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 0,
+      "coarse_double": 0,
+      "coarse_single_aperture": 0,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        440876.226,
+        440876.226
+      ],
+      "mean_lower_s": 440876.225973,
+      "mean_upper_s": 440876.225973,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.139705246,
+      "mean_upper_pct": 0.139705246,
+      "se_lower_s": 147.101,
+      "se_upper_s": 147.101,
+      "nominal_t95_s": [
+        440585.139,
+        441167.313
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 67272373.296875,
+      "average_completed_writes_before_coarse_stop": 3346.1328125,
+      "mean_full_horizon_scans_range": [
+        67272373.296875,
+        67272373.296875
+      ],
+      "mean_full_horizon_repairs_range": [
+        3346.1328125,
+        3346.1328125
+      ],
+      "average_read_prefix_s": 440876.225638,
+      "average_write_prefix_s": 0.000334613,
+      "mean_parents": 2789.890625,
+      "mean_inversions": 3346.1328125,
+      "marks_sha256": "3a6d655fdc08ae5d19055d1939726cabe2e4467ad78eebde8a53827d09b26c14",
+      "trials_sha256": "bdb51d0ce01016bce65d972aef205e6cdb53ca13a9e7dc3a517dfff4f0f867ee",
+      "stopped_trials": []
+    },
+    "analytic": {
+      "S1_upper": 53349,
+      "S2_upper_per_s": 27,
+      "peak_upper": "39/1000",
+      "J_upper": "5",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000051741128",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000007509180171",
+        "0.000000000001677",
+        "0.000038231945839"
+      ],
+      "s_lower": "348658.240",
+      "s_upper": "460080.837",
+      "pct_lower": "0.110483",
+      "pct_upper": "0.145791",
+      "repair_events_upper": "3334.414256",
+      "parents_upper": "2778.593750",
+      "true_cells_upper": "2789.459985",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "450656.911030",
+      "pre_repair_s_upper": "0.000337",
+      "post_stop_s_upper": "9423.925082"
+    }
+  },
+  {
+    "name": "G18_1min_East",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2023-03-11T00:00:00Z",
+      "measured_last_end_utc": "2026-08-02T00:00:00Z",
+      "bins": 271940,
+      "dt_s": 60,
+      "source_files": 220,
+      "measured_s": 16316400,
+      "unobserved_s": 299259600,
+      "terminal_gap_s": 13176000,
+      "S1_measured": 6118.251606929,
+      "S1": 53767.760877356,
+      "S2_per_s": 84.907399546,
+      "peak_per_s": 0.212104877954,
+      "J_old_floor_per_s": 5.3388086756,
+      "piece_count": 272108,
+      "profile_sha256": "bf1ce1dbb724c0e58be00fdb7dfc34cc3929babcb44711fc8be0feaaad4bfe3d"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 0,
+      "coarse_double": 0,
+      "coarse_single_aperture": 0,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        440655.24,
+        440655.24
+      ],
+      "mean_lower_s": 440655.23976,
+      "mean_upper_s": 440655.23976,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.139635219,
+      "mean_upper_pct": 0.139635219,
+      "se_lower_s": 144.78,
+      "se_upper_s": 144.78,
+      "nominal_t95_s": [
+        440368.747,
+        440941.733
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 67238653.4765625,
+      "average_completed_writes_before_coarse_stop": 3360.1953125,
+      "mean_full_horizon_scans_range": [
+        67238653.4765625,
+        67238653.4765625
+      ],
+      "mean_full_horizon_repairs_range": [
+        3360.1953125,
+        3360.1953125
+      ],
+      "average_read_prefix_s": 440655.239424,
+      "average_write_prefix_s": 0.00033602,
+      "mean_parents": 2798.9296875,
+      "mean_inversions": 3360.1953125,
+      "marks_sha256": "bee907b6eca1b6a70bb11f407ab9828ef97c9d17ab6b8c2a762d997547bd3bdd",
+      "trials_sha256": "8ee9bf5ff0cfb42bf425b985727f9a67c308e1bc0ffc4a2a4c3b33dc252099e9",
+      "stopped_trials": []
+    },
+    "analytic": {
+      "S1_upper": 53768,
+      "S2_upper_per_s": 85,
+      "peak_upper": "213/1000",
+      "J_upper": "6",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000061265161",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000008129536496",
+        "0.000000000005469",
+        "0.000047135618141"
+      ],
+      "s_lower": "348654.920",
+      "s_upper": "462560.847",
+      "pct_lower": "0.110482",
+      "pct_upper": "0.146577",
+      "repair_events_upper": "3360.602555",
+      "parents_upper": "2800.416667",
+      "true_cells_upper": "2811.370955",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "451402.251187",
+      "pre_repair_s_upper": "0.000340",
+      "post_stop_s_upper": "11158.594812"
+    }
+  },
+  {
+    "name": "G18_1min_West",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2023-02-22T00:00:00Z",
+      "measured_last_end_utc": "2026-08-02T00:00:00Z",
+      "bins": 296320,
+      "dt_s": 60,
+      "source_files": 220,
+      "measured_s": 17779200,
+      "unobserved_s": 297796800,
+      "terminal_gap_s": 13176000,
+      "S1_measured": 11104.011434071,
+      "S1": 58520.62068431,
+      "S2_per_s": 330.437476207,
+      "peak_per_s": 0.371812815154,
+      "J_old_floor_per_s": 8.6006734971,
+      "piece_count": 296536,
+      "profile_sha256": "d18b332da303161057224499263f82234db72f1245d7853bb81e819366b4c462"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 1,
+      "coarse_double": 0,
+      "coarse_single_aperture": 1,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        446348.175,
+        680378.028
+      ],
+      "mean_lower_s": 446679.504135,
+      "mean_upper_s": 446679.504135,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.141544194,
+      "mean_upper_pct": 0.141544194,
+      "se_lower_s": 136.394,
+      "se_upper_s": 136.394,
+      "nominal_t95_s": [
+        446409.605,
+        446949.403
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 68107326.4921875,
+      "average_completed_writes_before_coarse_stop": 3651.6015625,
+      "mean_full_horizon_scans_range": [
+        68157883.265625,
+        68157883.265625
+      ],
+      "mean_full_horizon_repairs_range": [
+        3654.5078125,
+        3654.5078125
+      ],
+      "average_read_prefix_s": 446348.174899,
+      "average_write_prefix_s": 0.00036516,
+      "mean_parents": 3046.9140625,
+      "mean_inversions": 3654.5078125,
+      "marks_sha256": "c6f3ec20367609fa3d027c95fe8ef6a3c7f3de1c960646534eb02430c102b180",
+      "trials_sha256": "e68daa171fbe1e1e256cf3016d6a59256509c1f232c934ecd66379a5ef188944",
+      "stopped_trials": [
+        {
+          "rep": 63,
+          "prefix_ns": 403282677264700,
+          "unpriced_ns_upper": 29955821196902400,
+          "reason": 2,
+          "branched_lo_ns": 445692772713100,
+          "branched_hi_ns": 445692772713100,
+          "branch_nodes": 1,
+          "leaves": 1,
+          "open_leaves": 0
+        }
+      ]
+    },
+    "analytic": {
+      "S1_upper": 58521,
+      "S2_upper_per_s": 331,
+      "peak_upper": "93/250",
+      "J_upper": "9",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000093492590",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000015037630026",
+        "0.000000000020832",
+        "0.000072454938176"
+      ],
+      "s_lower": "348643.683",
+      "s_upper": "476884.695",
+      "pct_lower": "0.110478",
+      "pct_upper": "0.151116",
+      "repair_events_upper": "3657.674120",
+      "parents_upper": "3047.968750",
+      "true_cells_upper": "3059.897615",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "459856.322335",
+      "pre_repair_s_upper": "0.000370",
+      "post_stop_s_upper": "17028.371707"
+    }
+  },
+  {
+    "name": "G19_1min_East",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2025-04-03T00:00:00Z",
+      "measured_last_end_utc": "2026-08-02T00:00:00Z",
+      "bins": 56128,
+      "dt_s": 60,
+      "source_files": 109,
+      "measured_s": 3367680,
+      "unobserved_s": 312208320,
+      "terminal_gap_s": 13176000,
+      "S1_measured": 3625.628915484,
+      "S1": 53336.865409439,
+      "S2_per_s": 250.351688745,
+      "peak_per_s": 0.417994752567,
+      "J_old_floor_per_s": 3.1085713329,
+      "piece_count": 56151,
+      "profile_sha256": "2154659a5bf1dcff6d89eb9068c8691447613a9dc1b4422ef16962aaeeb9fea4"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 0,
+      "coarse_double": 0,
+      "coarse_single_aperture": 0,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        439090.901,
+        439090.901
+      ],
+      "mean_lower_s": 439090.900967,
+      "mean_upper_s": 439090.900967,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.13913951,
+      "mean_upper_pct": 0.13913951,
+      "se_lower_s": 142.538,
+      "se_upper_s": 142.538,
+      "nominal_t95_s": [
+        438808.845,
+        439372.957
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 66999954.3203125,
+      "average_completed_writes_before_coarse_stop": 3331.5,
+      "mean_full_horizon_scans_range": [
+        66999954.3203125,
+        66999954.3203125
+      ],
+      "mean_full_horizon_repairs_range": [
+        3331.5,
+        3331.5
+      ],
+      "average_read_prefix_s": 439090.900634,
+      "average_write_prefix_s": 0.00033315,
+      "mean_parents": 2776.2890625,
+      "mean_inversions": 3331.5,
+      "marks_sha256": "b888c2d54be6ef76fd2d3981002da1e335b02ff0eeaf8b7ffb5117a9b3a50732",
+      "trials_sha256": "122122cc15a4551679b1fe8a9705faaad88496a879eed18a174880c18a4d8fe0",
+      "stopped_trials": []
+    },
+    "analytic": {
+      "S1_upper": 53337,
+      "S2_upper_per_s": 251,
+      "peak_upper": "209/500",
+      "J_upper": "4",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000045956757",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000007527108293",
+        "0.000000000015558",
+        "0.000032429632640"
+      ],
+      "s_lower": "348660.257",
+      "s_upper": "459005.900",
+      "pct_lower": "0.110483",
+      "pct_upper": "0.145451",
+      "repair_events_upper": "3333.664233",
+      "parents_upper": "2777.968750",
+      "true_cells_upper": "2788.831060",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "450635.517032",
+      "pre_repair_s_upper": "0.000337",
+      "post_stop_s_upper": "8370.382509"
+    }
+  },
+  {
+    "name": "G19_1min_West",
+    "history": {
+      "start_utc": "2017-01-01T00:00:00Z",
+      "stop_utc": "2027-01-01T12:00:00Z",
+      "cutoff_utc": "2026-11-09T00:00:00Z",
+      "measured_first_utc": "2025-04-03T00:00:00Z",
+      "measured_last_end_utc": "2026-08-02T00:00:00Z",
+      "bins": 56129,
+      "dt_s": 60,
+      "source_files": 109,
+      "measured_s": 3367740,
+      "unobserved_s": 312208260,
+      "terminal_gap_s": 13176000,
+      "S1_measured": 3919.425631431,
+      "S1": 53630.654376365,
+      "S2_per_s": 227.753613045,
+      "peak_per_s": 0.299374669885,
+      "J_old_floor_per_s": 3.2213108542,
+      "piece_count": 56156,
+      "profile_sha256": "da504ca64265dfad7729837e495b5f689e8a4241c2f5675c1e9b59ca87d38cb6"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 0,
+      "coarse_double": 0,
+      "coarse_single_aperture": 0,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        439730.932,
+        439730.932
+      ],
+      "mean_lower_s": 439730.932304,
+      "mean_upper_s": 439730.932304,
+      "sample_mean_branch_width_s": 0.0,
+      "mean_lower_pct": 0.139342324,
+      "mean_upper_pct": 0.139342324,
+      "se_lower_s": 142.835,
+      "se_upper_s": 142.835,
+      "nominal_t95_s": [
+        439448.287,
+        440013.577
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 67097615.3515625,
+      "average_completed_writes_before_coarse_stop": 3355.75,
+      "mean_full_horizon_scans_range": [
+        67097615.3515625,
+        67097615.3515625
+      ],
+      "mean_full_horizon_repairs_range": [
+        3355.75,
+        3355.75
+      ],
+      "average_read_prefix_s": 439730.931968,
+      "average_write_prefix_s": 0.000335575,
+      "mean_parents": 2796.015625,
+      "mean_inversions": 3355.75,
+      "marks_sha256": "9a5511c0ef407c4866b822db5e752ca6a3bed7de1910a7927ec3dde7d6b73c43",
+      "trials_sha256": "fd389c6a0cb53796ddc0047a7818ae4a1ad9d354da4a87646de71bed0bea9666",
+      "stopped_trials": []
+    },
+    "analytic": {
+      "S1_upper": 53631,
+      "S2_upper_per_s": 228,
+      "peak_upper": "3/10",
+      "J_upper": "4",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000045778643",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000007930418294",
+        "0.000000000014038",
+        "0.000031848209880"
+      ],
+      "s_lower": "348660.319",
+      "s_upper": "459496.366",
+      "pct_lower": "0.110483",
+      "pct_upper": "0.145606",
+      "repair_events_upper": "3352.039794",
+      "parents_upper": "2793.281250",
+      "true_cells_upper": "2804.203094",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "451158.423794",
+      "pre_repair_s_upper": "0.000339",
+      "post_stop_s_upper": "8337.941476"
+    }
+  }
+]

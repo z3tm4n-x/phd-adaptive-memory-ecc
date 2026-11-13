@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 import gzip
 import hashlib
+from importlib.util import module_from_spec, spec_from_file_location
 import json
 from pathlib import Path
 from runpy import run_path
@@ -138,17 +139,28 @@ def completed(name, times, values, dt, ref, nfiles):
 def goes(cache):
     obs = run_path(str(EXP/"c1-repeat-quota-20261109/observations.py"))
     common, previous = obs["setup"](EXP.parent,EXP.parent)
-    # Load the project-local readers, independent of an installed coverage.py package.
-    local = run_path(str(common/"coverage.py"))
-    from cadence import samples
-    from minute_sources import selected
+    # The published cadence reader imports its sibling under the name "coverage".
+    # Numba may already have loaded the unrelated test-coverage package.
+    spec = spec_from_file_location("coverage",common/"coverage.py")
+    local = module_from_spec(spec)
+    previous_module = sys.modules.get("coverage")
+    sys.modules["coverage"] = local
+    try:
+        spec.loader.exec_module(local)
+        samples = run_path(str(common/"cadence.py"))["samples"]
+    finally:
+        if previous_module is None:
+            del sys.modules["coverage"]
+        else:
+            sys.modules["coverage"] = previous_module
+    selected = run_path(str(common/"minute_sources.py"))["selected"]
     growth = json.loads((common/"growth.json").read_bytes())["profiles"]
     gc = cache/"c1-goes"
     with gzip.open(previous/"goes-sources.json.gz","rt",encoding="utf-8") as f:
         manifest = json.load(f)["receipt"]["folded"]
     saved = json.loads((gc/"receipt.json").read_bytes())["folded"]
     assert len(saved)==len(manifest)==4761 and {r["name"]:r for r in saved}=={r["name"]:r for r in manifest}
-    rates,_,_,info = local["goes_observed"](gc,previous)
+    rates,_,_,info = local.goes_observed(gc,previous)
     for d,name in enumerate(NAMES[1:3]):
         yield completed(name,np.arange(len(rates))*300,rates[:,d],300,growth[name],len(manifest))
     mc = cache/"c1-common-minutes"
