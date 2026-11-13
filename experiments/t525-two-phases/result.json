@@ -1,0 +1,52 @@
+{
+  "base": "b2b9871e4e810411d9f078881248d1322f79f388",
+  "registered": "e41909cb667584149217b2a80945f7e3fba552ec",
+  "word_count": 65536,
+  "local_scan_s": "3584/78125",
+  "zero_cell_counts": [
+    10,
+    19,
+    38,
+    75,
+    149,
+    298,
+    596
+  ],
+  "visibility_parents_per_inversion": "81919/98304",
+  "old_stop_upper": "0.001044023744",
+  "old_terms_upper": [
+    "0.000006000000000",
+    "0.000745485350564",
+    "0.000000014595549",
+    "0.000292523797051"
+  ],
+  "new_terms_upper": [
+    "0.000006000000000",
+    "0.000377971267716",
+    "0.000000016215500",
+    "0.000293675465544"
+  ],
+  "physical_Q_lower_from_plateau": "0.000241506317",
+  "stop_upper_also_bounds_physical_Q": "0.000677662949",
+  "certified": true,
+  "epsilon_minus_stop_lower": "0.000322337051",
+  "reduction_of_certificate_lower": "0.000366360794",
+  "pre_stop_read_s_upper": "1850354.158189",
+  "pre_stop_write_s_upper": "0.002367",
+  "post_stop_bus_s_upper": "123426.858775",
+  "price_s_lower": "696879.993",
+  "price_s_upper": "1973781.020",
+  "price_percent_upper": "0.625454",
+  "reset_bus_s_upper": "57.866218",
+  "true_cells_upper": "19680.347478",
+  "fast_s_upper": "1485130.061",
+  "fast_percent_upper": "0.470610",
+  "extra_fast_s_per_reset_upper": "64.592928",
+  "peak_sliding_1400ns_percent_upper": "58.004572",
+  "best_fixed_s_lower": "28156816.664",
+  "sufficient_fixed_candidate_s_upper": "48405502.012",
+  "saved_s_lower": "26183035.644",
+  "fixed_over_ladder_lower": "14.265420",
+  "twofold_extra_s_lower": "12104627.312",
+  "twofold_whole_resets_X0": 209182
+}
