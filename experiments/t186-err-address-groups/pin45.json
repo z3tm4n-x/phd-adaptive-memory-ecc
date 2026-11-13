@@ -1,0 +1,525 @@
+{
+  "synthetic_seam": {
+    "xy": [
+      [
+        2047,
+        1024
+      ],
+      [
+        2048,
+        1024
+      ]
+    ],
+    "a": [
+      787264,
+      1835840
+    ],
+    "xor": 1048576,
+    "x16_pin": 787264,
+    "registered_together": 0
+  },
+  "totals": {
+    "p": {
+      "records": 140106,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 2970,
+      "block_candidates": 231
+    },
+    "HI": {
+      "records": 33696,
+      "low": 4,
+      "pin": 0,
+      "row_candidates": 7749,
+      "block_candidates": 951,
+      "merged": 33160,
+      "merged_low": 6,
+      "merged_pin": 0
+    }
+  },
+  "rows": {
+    "Ar1050MeV": {
+      "records": 637,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 81,
+      "block_candidates": 5,
+      "fields": [
+        2
+      ],
+      "merged": 621,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "Ar548MeV": {
+      "records": 1050,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 459,
+      "block_candidates": 33,
+      "fields": [
+        2
+      ],
+      "merged": 1007,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "C1080MeV": {
+      "records": 1406,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 0,
+      "block_candidates": 0,
+      "fields": [
+        2
+      ],
+      "merged": 1405,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "C360MeV": {
+      "records": 16871,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 42,
+      "block_candidates": 2,
+      "fields": [
+        2
+      ],
+      "merged": 16627,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "C720MeV": {
+      "records": 5088,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 4,
+      "block_candidates": 0,
+      "fields": [
+        3
+      ],
+      "merged": 5065,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "U142.8GeV": {
+      "records": 950,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 682,
+      "block_candidates": 68,
+      "fields": [
+        3
+      ],
+      "merged": 925,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "U190.4GeV": {
+      "records": 924,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 610,
+      "block_candidates": 61,
+      "fields": [
+        3
+      ],
+      "merged": 904,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "U35.7GeV": {
+      "records": 476,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 425,
+      "block_candidates": 57,
+      "fields": [
+        3
+      ],
+      "merged": 465,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "U45.2GeV": {
+      "records": 1050,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 875,
+      "block_candidates": 106,
+      "fields": [
+        3
+      ],
+      "merged": 1021,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "U78.5GeV": {
+      "records": 1026,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 866,
+      "block_candidates": 107,
+      "fields": [
+        3
+      ],
+      "merged": 1008,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "Xe2700MeV": {
+      "records": 1041,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 931,
+      "block_candidates": 130,
+      "fields": [
+        2
+      ],
+      "merged": 1014,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "XeLET27": {
+      "records": 998,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 848,
+      "block_candidates": 99,
+      "fields": [
+        2
+      ],
+      "merged": 981,
+      "merged_low": 0,
+      "merged_pin": 0
+    },
+    "XeLET42": {
+      "records": 1119,
+      "low": 1,
+      "pin": 0,
+      "row_candidates": 973,
+      "block_candidates": 134,
+      "fields": [
+        2
+      ],
+      "merged": 1086,
+      "merged_low": 2,
+      "merged_pin": 0
+    },
+    "XeLET57": {
+      "records": 1060,
+      "low": 3,
+      "pin": 0,
+      "row_candidates": 953,
+      "block_candidates": 149,
+      "fields": [
+        2
+      ],
+      "merged": 1031,
+      "merged_low": 4,
+      "merged_pin": 0
+    },
+    "p0.9MeV": {
+      "records": 7455,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 5,
+      "block_candidates": 0,
+      "fields": [
+        3
+      ]
+    },
+    "p1.1MeV": {
+      "records": 14012,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 8,
+      "block_candidates": 2,
+      "fields": [
+        3
+      ]
+    },
+    "p1.5MeV": {
+      "records": 3214,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 4,
+      "block_candidates": 0,
+      "fields": [
+        3
+      ]
+    },
+    "p124MeV": {
+      "records": 9403,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 553,
+      "block_candidates": 48,
+      "fields": [
+        2
+      ]
+    },
+    "p164MeV": {
+      "records": 8667,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 650,
+      "block_candidates": 63,
+      "fields": [
+        2
+      ]
+    },
+    "p186MeV": {
+      "records": 8356,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 628,
+      "block_candidates": 38,
+      "fields": [
+        3
+      ]
+    },
+    "p1MeV": {
+      "records": 4690,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 3,
+      "block_candidates": 0,
+      "fields": [
+        3
+      ]
+    },
+    "p2.5MeV": {
+      "records": 28782,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 32,
+      "block_candidates": 3,
+      "fields": [
+        3
+      ]
+    },
+    "p29MeV": {
+      "records": 1164,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 0,
+      "block_candidates": 0,
+      "fields": [
+        2
+      ]
+    },
+    "p3MeV": {
+      "records": 24703,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 38,
+      "block_candidates": 2,
+      "fields": [
+        3
+      ]
+    },
+    "p40MeV": {
+      "records": 12441,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 479,
+      "block_candidates": 35,
+      "fields": [
+        2
+      ]
+    },
+    "p4MeV": {
+      "records": 4336,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 5,
+      "block_candidates": 1,
+      "fields": [
+        3
+      ]
+    },
+    "p5MeV": {
+      "records": 1994,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 1,
+      "block_candidates": 0,
+      "fields": [
+        3
+      ]
+    },
+    "p80MeV": {
+      "records": 10889,
+      "low": 0,
+      "pin": 0,
+      "row_candidates": 564,
+      "block_candidates": 39,
+      "fields": [
+        2
+      ]
+    }
+  },
+  "low_examples": {
+    "XeLET42": [
+      {
+        "line": 10108,
+        "xy": [
+          [
+            444,
+            1479
+          ],
+          [
+            444,
+            1495
+          ]
+        ],
+        "a": [
+          210892,
+          210893
+        ]
+      }
+    ],
+    "XeLET57": [
+      {
+        "line": 6678,
+        "xy": [
+          [
+            1699,
+            649
+          ],
+          [
+            1699,
+            665
+          ]
+        ],
+        "a": [
+          58096,
+          58097
+        ]
+      },
+      {
+        "line": 11536,
+        "xy": [
+          [
+            1886,
+            3467
+          ],
+          [
+            1886,
+            3483
+          ]
+        ],
+        "a": [
+          681698,
+          681699
+        ]
+      },
+      {
+        "line": 25244,
+        "xy": [
+          [
+            3268,
+            3137
+          ],
+          [
+            3268,
+            3153
+          ]
+        ],
+        "a": [
+          1839334,
+          1839335
+        ]
+      }
+    ]
+  },
+  "fixed_block_pair": {
+    "x16": [
+      548696,
+      810840
+    ],
+    "matching_records": 3,
+    "witnesses": [
+      {
+        "file": "clust_Xe2700MeV.txt",
+        "line": 1434,
+        "cluster": 64,
+        "xy": [
+          [
+            1137,
+            1384
+          ],
+          [
+            1136,
+            1384
+          ]
+        ]
+      },
+      {
+        "file": "clust_Xe2700MeV.txt",
+        "line": 12635,
+        "cluster": 559,
+        "xy": [
+          [
+            2990,
+            1384
+          ],
+          [
+            2991,
+            1384
+          ]
+        ]
+      },
+      {
+        "file": "clust_XeLET27.txt",
+        "line": 6349,
+        "cluster": 354,
+        "xy": [
+          [
+            1041,
+            1384
+          ],
+          [
+            1040,
+            1384
+          ]
+        ]
+      }
+    ]
+  },
+  "t68_scripts": [
+    "build_refs.py",
+    "build_refs17.py",
+    "build_refs18.py",
+    "check_cosrad.py",
+    "clump.py",
+    "cosrad.py",
+    "figs.py",
+    "figs17.py",
+    "figs18.py",
+    "first_type.py",
+    "gapstats.py",
+    "geo.py",
+    "geom.py",
+    "mapping_lib.py",
+    "merged.py",
+    "norm.py",
+    "orbital.py",
+    "parse.py",
+    "pileup.py",
+    "protons.py",
+    "req.py",
+    "review_check.py",
+    "sep.py",
+    "spectra_lib.py",
+    "split_check.py",
+    "tails.py",
+    "tau.py",
+    "thin.py",
+    "v17calc.py",
+    "v18calc.py",
+    "validate_map.py"
+  ]
+}
