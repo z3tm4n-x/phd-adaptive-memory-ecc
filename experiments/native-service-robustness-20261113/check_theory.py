@@ -1,5 +1,6 @@
 """Directed checks for the proposed service changes. Run with python -B check_theory.py."""
 import json
+from dataclasses import dataclass
 from fractions import Fraction as F
 from functools import cached_property
 from math import ceil
@@ -54,10 +55,10 @@ def costs(ladder, w_high, env, q, force):
     return (1+WRITE/READ)*pre_read+post if force else pre_read+WRITE*hits+post
 
 
+@dataclass(frozen=True)
 class AnyPairs(M["Ladder"]):
-    def __init__(self, words, addresses):
-        super().__init__(words)
-        object.__setattr__(self, "addresses", addresses)
+    # Equal W can have different periods and price when A differs.
+    addresses: int
 
     @cached_property
     def scan(self):
@@ -96,6 +97,15 @@ def common_witness(ladder, lo, hi, witness):
     return cost
 
 
+def check_distinct_calendars():
+    # The shared W=32768 occurs at the edge of one map and inside the other.
+    for addresses in (32768, 65536):
+        ladder = AnyPairs(32768, addresses)
+        for env in (GEO, ARCHIVE):
+            assert ladder.risk(ladder.eta, env) == M["Ladder"].risk.__wrapped__(
+                ladder, ladder.eta, env)
+
+
 def map_rows(addresses):
     # Analytic grouping for all integer W; these are not sampled maps.
     half = addresses//2
@@ -127,6 +137,7 @@ def map_rows(addresses):
 
 
 def main():
+    check_distinct_calendars()
     h = XI*OLD.levels[-1]+2*J+DE
     cases = {}
     floor_full = F("11527603.947")
