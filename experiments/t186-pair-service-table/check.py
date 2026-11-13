@@ -9,7 +9,7 @@ from runpy import run_path
 
 HERE = Path(__file__).resolve().parent
 EXP = HERE.parent
-THEORY = "4e328390d1a5eec38e33f8e98b641855277dcce5"
+THEORY = "279181a12a1955f14946fad83ec2728cd50ada7f"
 THEORY_FILE = "experiments/native-service-robustness-20261113/check_theory.py"
 M = run_path(str(EXP / "t186-native-cost-map/calculate.py"))
 T, C, DELTA, XP, XM, J, DE = (M[k] for k in ("T", "C", "DELTA", "XP", "XM", "J", "DE"))
@@ -93,19 +93,18 @@ def result(source):
     if subprocess.check_output(["git","rev-parse","HEAD"],cwd=source,text=True).strip() != THEORY:
         raise ValueError("Use a checkout at the specified PR 488 commit")
     theory = run_path(str(source/rel))
-    # PR 488 subclasses a frozen dataclass whose equality includes W only.
-    # Use the original uncached risk formula with the actual address schedule.
-    old_class = theory["AnyPairs"]
-    short, long = old_class(32768,32768), old_class(32768,65536)
-    raw = old_class.risk.__wrapped__
+    # Compare both cache orders with separate evaluations of the source formula.
+    pairs = theory["AnyPairs"]
+    short, long = pairs(32768,32768), pairs(32768,65536)
+    raw = pairs.risk.__wrapped__
     witness = {"32768_addresses":UP(sum(raw(short,short.eta,M["GEO"])),12),
                "65536_addresses":UP(sum(raw(long,long.eta,M["GEO"])),12)}
-    assert short == long and short.scan.L != long.scan.L and len(set(witness.values())) == 2
-    class CalendarPairs(old_class):
-        risk = raw
-
-    theory["AnyPairs"] = CalendarPairs
-    theory["map_rows"].__globals__["AnyPairs"] = CalendarPairs
+    assert short != long and short.scan.L != long.scan.L and len(set(witness.values())) == 2
+    for order in ((short,long),(long,short)):
+        pairs.risk.cache_clear()
+        for ladder in order:
+            for env in (M["GEO"], M["ARCHIVE"]):
+                assert ladder.risk(ladder.eta,env) == raw(ladder,ladder.eta,env)
     assert CAL["visit_offsets_ns"] == [0,240,520,760] and CAL["frame_ns"] == 1400
     out = {"risk_cache_witness":witness}
     for a in (32768,65536):
