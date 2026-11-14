@@ -1,0 +1,61 @@
+{
+  "base_main": "35e537c11eb674db45a22d1c7b8e7f44f256adb3",
+  "historical_sources": {
+    "adapter.py": {
+      "commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+      "path": "experiments/t186-method-comparison/stage4/adapter.py",
+      "sha256": "cb50faad9ddc0b3754c53cea0ae67b0a0a509c11f0015aed24f0a6f0b82b07cd"
+    },
+    "binding_PRICE.md": {
+      "commit": "ed85cdecfcd6599691b7fb8e4c5424120fa7fadf",
+      "path": "experiments/hybrid-p-r-20261026/interface-price/PRICE.md",
+      "sha256": "ac6e08e6645f1f25731edceeaff436752648c27dcc343323bcbd8080b55492ab"
+    },
+    "binding_interface.py": {
+      "commit": "ed85cdecfcd6599691b7fb8e4c5424120fa7fadf",
+      "path": "experiments/hybrid-p-r-20261026/interface-price/interface.py",
+      "sha256": "2d275d13cbcbc81d285467af2d350b78c176a06e67fbe3f2180aeadce145fda7"
+    },
+    "binding_result.json": {
+      "commit": "ed85cdecfcd6599691b7fb8e4c5424120fa7fadf",
+      "path": "experiments/hybrid-p-r-20261026/interface-price/result.json",
+      "sha256": "8021de9c96c93545eda8f3e1b95482ed143add15ead3395106dccbfea20d07df"
+    },
+    "theory.md": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "theory/hybrid-p-r-accumulated-reserve-20261026.md",
+      "sha256": "b3c886c732231bd9db53df9a4f5dd552a5c99ad68eeb8a46998a6713e3e4c6ea"
+    },
+    "theory_CANDIDATE.md": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/CANDIDATE.md",
+      "sha256": "f0db49e854f2f125521e34599d6264c24c369ef56b565694a2091b433098c38f"
+    },
+    "theory_PR272_APPLICABILITY.md": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/PR272_APPLICABILITY.md",
+      "sha256": "3f49d27ac0db1af79ee315b473871cb2726f4d8c5034d793ef1ccacb08b57d96"
+    },
+    "theory_check.py": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/check.py",
+      "sha256": "a40da0a82b3aa07e3b6077352863f94b1d027e184fa9cc2d092b515e87ba58c1"
+    },
+    "theory_result.json": {
+      "commit": "cd7285cac6205efc80e1514d6b64c73474733e6e",
+      "path": "experiments/hybrid-p-r-theory-20261026/accumulated/result.json",
+      "sha256": "62ad6417753c2a82168cf2118028ad76577785696491416d55ea813bda822da3"
+    }
+  },
+  "input_commit": "2cc92407863317385f2c840242675f6c59aec5e8",
+  "input_sha256_raw": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+  "normalization": "CRLF to LF only; canonical inputs.json additionally checked byte-for-byte",
+  "plan_commit": "858ae5f0260560c70badc6dd20d6ed04ab560e26",
+  "source_sha256": {
+    "experiments/hybrid-p-r-20261026/inputs.json": "cc72a44914b0aa5547fe1e2b5a2a654c84573ab1c5fe6e35a4f4122831ec86c6",
+    "experiments/hybrid-p-r-20261026/single-pilot/PLAN.md": "d794e22ea5cdf973b138f48dd8e1857cfbc7abdc6eebcea94e37b0b8ff8ed444",
+    "experiments/t186-method-comparison/code-strength/SERVICE.md": "b6a93bf0722358619a5c54f4a5587be7852b79bba8a2d4160e313a4b69e9906c",
+    "experiments/t186-method-comparison/code-strength/common-input.json": "e635327d07e74742247c5ad56cbf865c1bf05c362910dad5e56ce94b8d4c550e",
+    "theory/hybrid-p-r-20261026.md": "b40fea37e02e2650d6aaff3a0c91bd211112324909e1f8783b2a938dd33633fb"
+  }
+}
