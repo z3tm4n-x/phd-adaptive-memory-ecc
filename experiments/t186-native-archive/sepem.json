@@ -1,0 +1,135 @@
+[
+  {
+    "name": "SEPEM",
+    "history": {
+      "start_utc": "1996-12-16T07:20:00Z",
+      "stop_utc": "2006-12-16T19:20:00Z",
+      "dt_s": 300,
+      "measured_first_utc": "1996-12-16T07:20:00Z",
+      "measured_last_end_utc": "2006-12-16T19:20:00Z",
+      "measured_s": 315576000,
+      "unobserved_s": 0,
+      "terminal_gap_s": 0,
+      "bins": 1051920,
+      "S1_measured": 164214.59636459,
+      "start_bin": 2362840,
+      "S1": 164214.59636459,
+      "S2_per_s": 15631.395183048,
+      "peak_per_s": 0.445151036904,
+      "J_old_floor_per_s": 23.9311391605,
+      "piece_count": 1051920,
+      "profile_sha256": "ec3284da41d002e3730ded137bd0e7c0b9c9197937c31993c6f7466e4737bbef"
+    },
+    "sample": {
+      "realizations": 128,
+      "coarse_stops": 4,
+      "coarse_double": 0,
+      "coarse_single_aperture": 4,
+      "coarse_complex_aperture": 0,
+      "unresolved_trials": 0,
+      "coarse_mean_s": [
+        535265.417,
+        6466657.649
+      ],
+      "mean_lower_s": 545869.467651,
+      "mean_upper_s": 545869.467804,
+      "sample_mean_branch_width_s": 0.00015360234375,
+      "mean_lower_pct": 0.172975596,
+      "mean_upper_pct": 0.172975596,
+      "se_lower_s": 206.148,
+      "se_upper_s": 206.148,
+      "nominal_t95_s": [
+        545461.538,
+        546277.398
+      ],
+      "unresolved_rate_one_sided_CP95_upper": 0.023132405251746743,
+      "average_scans_before_coarse_stop": 81675020.7890625,
+      "average_completed_writes_before_coarse_stop": 10048.234375,
+      "mean_full_horizon_scans_range": [
+        83293070.46875,
+        83293070.4921875
+      ],
+      "mean_full_horizon_repairs_range": [
+        10265.65625,
+        10265.6796875
+      ],
+      "average_read_prefix_s": 535265.416243,
+      "average_write_prefix_s": 0.001004823,
+      "mean_parents": 8552.25,
+      "mean_inversions": 10265.65625,
+      "marks_sha256": "38d6e6240f86d1f54070b2b597ce006682d4279497f1f5bec19b96c9e582a64b",
+      "trials_sha256": "e2e2d1e75d2b50a82b371e1b8b796b2ffa1a2a6f5d671425504645e18b8a3548",
+      "stopped_trials": [
+        {
+          "rep": 2,
+          "prefix_ns": 174460043469000,
+          "unpriced_ns_upper": 202688872332492800,
+          "reason": 2,
+          "branched_lo_ns": 543151470373900,
+          "branched_hi_ns": 543151470374000,
+          "branch_nodes": 1,
+          "leaves": 3,
+          "open_leaves": 0
+        },
+        {
+          "rep": 13,
+          "prefix_ns": 201804264580000,
+          "unpriced_ns_upper": 192551092403404800,
+          "reason": 2,
+          "branched_lo_ns": 546993413546100,
+          "branched_hi_ns": 546993413546100,
+          "branch_nodes": 1,
+          "leaves": 1,
+          "open_leaves": 0
+        },
+        {
+          "rep": 37,
+          "prefix_ns": 179157047956700,
+          "unpriced_ns_upper": 202654127946956800,
+          "reason": 2,
+          "branched_lo_ns": 547689805627300,
+          "branched_hi_ns": 547689825288200,
+          "branch_nodes": 1,
+          "leaves": 3,
+          "open_leaves": 0
+        },
+        {
+          "rep": 64,
+          "prefix_ns": 268095272261000,
+          "unpriced_ns_upper": 161324113027891200,
+          "reason": 2,
+          "branched_lo_ns": 543000390244800,
+          "branched_hi_ns": 543000390244900,
+          "branch_nodes": 1,
+          "leaves": 3,
+          "open_leaves": 0
+        }
+      ]
+    },
+    "analytic": {
+      "S1_upper": 164215,
+      "S2_upper_per_s": 15632,
+      "peak_upper": "223/500",
+      "J_upper": "24",
+      "background_lower": "7929905158622937241/50000000000000000000000",
+      "q": "0.000372393392",
+      "q_terms_upper": [
+        "0.000006000000000",
+        "0.000170981079889",
+        "0.000000000941792",
+        "0.000195411370242"
+      ],
+      "s_lower": "348546.436",
+      "s_upper": "715674.022",
+      "pct_lower": "0.110447",
+      "pct_upper": "0.226784",
+      "repair_events_upper": "10263.750716",
+      "parents_upper": "8552.864584",
+      "true_cells_upper": "8586.333585",
+      "reset_fee_s_upper": "34.016758",
+      "pre_read_s_upper": "647847.755376",
+      "pre_repair_s_upper": "0.001037",
+      "post_stop_s_upper": "67826.264780"
+    }
+  }
+]
