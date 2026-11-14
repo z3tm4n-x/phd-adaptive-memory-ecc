@@ -52,3 +52,7 @@ x16-обращений: при прежней сетке число операц
 [Паспорт CY62167G30/GE30, 002-20054 Rev.*F, с.10–12](https://www.infineon.com/assets/row/public/documents/10/49/infineon-cy62167g30-cy62167ge30-16-mbit-1m-words-x-16-bit-2m-words-x-8-bit-static-ram-with-error-correcting-code-ecc-datasheet-en.pdf)
 задаёт окна валидности ERR/DQ. Перенос к конкретной партии остаётся условием
 применимости; Б может быть завершён без выполнения этого опыта.
+
+## Вопрос в техническую поддержку Infineon
+
+For the CY62167GE30-45 in ×16 mode, which external address input (A0–A19), if any, can be toggled with all other address inputs held constant to select the other 16-bit half of the same internal ECC word at every address, as illustrated by locations XXXXXh and YYYYYh in Figure 5 of AN88889?
