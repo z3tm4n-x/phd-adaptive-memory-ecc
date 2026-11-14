@@ -1,0 +1,2223 @@
+{
+  "builds": {
+    "F0": {
+      "route": {
+        "part": "xc7z020clg484-1",
+        "clock_MHz": 100,
+        "wns_ns": "0.054",
+        "whs_ns": "0.060",
+        "wpws_ns": "3.000",
+        "wns_failing": 0,
+        "whs_failing": 0,
+        "wpws_failing": 0,
+        "resources": {
+          "Slice LUTs": 221,
+          "Slice Registers": 201,
+          "ILOGIC": 0,
+          "OLOGIC": 38,
+          "Block RAM Tile": 0,
+          "DSPs": 0,
+          "BUFGCTRL": 2,
+          "MMCME2_ADV": 1
+        },
+        "internal_sta_model": {
+          "clock": "clk_i",
+          "wns_ns": "0.704",
+          "whs_ns": "0.060",
+          "user_setup_uncertainty_ns": "0.500",
+          "user_hold_uncertainty_ns": "0.100",
+          "scope": "Relative clock timing at the registers must meet this STA model, including the source and MMCM."
+        },
+        "routable_nets": 471,
+        "fully_routed_nets": 471,
+        "routing_errors": 0,
+        "drc_errors": [],
+        "drc_warnings": [
+          "ZPS7-1#1"
+        ],
+        "pad_counts": {
+          "input": 17,
+          "output": 36
+        },
+        "independent_input_capture_paths": 17,
+        "extrema_ns": {
+          "input_min": "0.507",
+          "input_max": "2.407",
+          "output_min": "1.016",
+          "output_max": "3.787",
+          "clock_spread": "0.965",
+          "uncertainty": "0.575",
+          "setup": "0.093",
+          "hold": "0.331"
+        },
+        "external_clock_budget": {
+          "minimum_clock_scale": "0.99999",
+          "per_edge_J_ns": "0.5",
+          "distinct_edge_shortening_2J_ns": "1.0",
+          "retained_STA_uncertainty_ns": "0.575",
+          "combined_allowance_ns": "1.575",
+          "FMC_round_trip_max_ns": "1.0",
+          "minimum_60ns_edge_separation_ns": "58.99940",
+          "available_SRAM_read_access_ns": "50.17240"
+        },
+        "external_margin_ns": {
+          "address_CE_ERR_read_access_45": "5.17240",
+          "OE_read_access_22": "28.17240",
+          "capture_hold_until_OE_high": "8.85190",
+          "WE_low_50_min35": "9.28850",
+          "address_CE_to_end_160_min35": "119.28740",
+          "write_data_setup_60_min25": "29.28840",
+          "write_data_hold_20_min0": "14.28880",
+          "write_address_setup_110_min0": "104.28790",
+          "write_address_hold_to_release_40": "34.28860",
+          "access_spacing_min240_cycle45": "189.28660",
+          "OE_high_to_FPGA_drive_30_min18": "6.28870",
+          "drive_off_to_next_OE_60_min0": "54.28840",
+          "WE_rise_before_release": "33.17260",
+          "last_repair_release_to_cut_140": "133.17160"
+        },
+        "notes": [
+          "High three SRAM address lines and both byte enables are static on this board top.",
+          "Conditional 15 pF and 0.1..0.5 ns adapter, 3 ns SRAM edges, clocks and primed memory."
+        ],
+        "pass": true
+      },
+      "placement": {
+        "capture_sites_and_bels": [
+          [
+            "core/lane[0].u/repair_image_reg[0]",
+            "FDRE",
+            "SLICE_X112Y123",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[10]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[11]",
+            "FDRE",
+            "SLICE_X112Y110",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[12]",
+            "FDRE",
+            "SLICE_X112Y143",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[13]",
+            "FDRE",
+            "SLICE_X112Y144",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[14]",
+            "FDRE",
+            "SLICE_X112Y129",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[15]",
+            "FDRE",
+            "SLICE_X112Y130",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[1]",
+            "FDRE",
+            "SLICE_X112Y124",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[2]",
+            "FDRE",
+            "SLICE_X112Y121",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[3]",
+            "FDRE",
+            "SLICE_X112Y122",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[4]",
+            "FDRE",
+            "SLICE_X112Y141",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[5]",
+            "FDRE",
+            "SLICE_X112Y142",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[6]",
+            "FDRE",
+            "SLICE_X112Y105",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[7]",
+            "FDRE",
+            "SLICE_X112Y106",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[8]",
+            "FDRE",
+            "SLICE_X112Y107",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[9]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[0].u/sampled_err_reg",
+            "FDRE",
+            "SLICE_X112Y116",
+            "SLICEM.A5FF"
+          ]
+        ],
+        "primitives_in_inventory": {
+          "FDRE": 238,
+          "FDSE": 17
+        },
+        "placed_FF": 255
+      },
+      "essential_mask": {
+        "payload_bits": 25697632,
+        "marked_bits": 63878,
+        "words32": 803051,
+        "ascii_payload_sha256": "9b15d42eca0b8c76692e15a0af9884f8a8b409aa655638aa17ff78cab004f197"
+      },
+      "vectorless_power": {
+        "Total On-Chip Power (W)": "0.286",
+        "Dynamic (W)": "0.178",
+        "Device Static (W)": "0.109",
+        "Confidence Level": "Low"
+      },
+      "pin_observations": [
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "clean",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "last",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "edges",
+          "reads": 131072,
+          "writes": 6,
+          "owner_ns": 13107800,
+          "peak_1ms_ns": 286000,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107730,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "all",
+          "reads": 131072,
+          "writes": 131072,
+          "owner_ns": 26214400,
+          "peak_1ms_ns": 571560,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 26214330,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "one_err",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "one_data",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107230,
+          "wrong_write": 1,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 0,
+          "case": "common_err",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        }
+      ]
+    },
+    "F1": {
+      "route": {
+        "part": "xc7z020clg484-1",
+        "clock_MHz": 100,
+        "wns_ns": "0.043",
+        "whs_ns": "0.035",
+        "wpws_ns": "3.000",
+        "wns_failing": 0,
+        "whs_failing": 0,
+        "wpws_failing": 0,
+        "resources": {
+          "Slice LUTs": 1024,
+          "Slice Registers": 970,
+          "ILOGIC": 17,
+          "OLOGIC": 38,
+          "Block RAM Tile": "1.5",
+          "DSPs": 0,
+          "BUFGCTRL": 3,
+          "MMCME2_ADV": 1
+        },
+        "internal_sta_model": {
+          "clock": "clk_i",
+          "wns_ns": "0.178",
+          "whs_ns": "0.035",
+          "user_setup_uncertainty_ns": "0.500",
+          "user_hold_uncertainty_ns": "0.100",
+          "scope": "Relative clock timing at the registers must meet this STA model, including the source and MMCM."
+        },
+        "routable_nets": 2221,
+        "fully_routed_nets": 2221,
+        "routing_errors": 0,
+        "drc_errors": [],
+        "drc_warnings": [
+          "RTSTAT-10#1",
+          "ZPS7-1#1"
+        ],
+        "pad_counts": {
+          "input": 17,
+          "output": 36
+        },
+        "independent_input_capture_paths": 51,
+        "extrema_ns": {
+          "input_min": "0.211",
+          "input_max": "2.418",
+          "output_min": "1.016",
+          "output_max": "3.787",
+          "clock_spread": "0.965",
+          "uncertainty": "0.575",
+          "setup": "0.094",
+          "hold": "0.331"
+        },
+        "external_clock_budget": {
+          "minimum_clock_scale": "0.99999",
+          "per_edge_J_ns": "0.5",
+          "distinct_edge_shortening_2J_ns": "1.0",
+          "retained_STA_uncertainty_ns": "0.575",
+          "combined_allowance_ns": "1.575",
+          "FMC_round_trip_max_ns": "1.0",
+          "minimum_60ns_edge_separation_ns": "58.99940",
+          "available_SRAM_read_access_ns": "50.16040"
+        },
+        "external_margin_ns": {
+          "address_CE_ERR_read_access_45": "5.16040",
+          "OE_read_access_22": "28.16040",
+          "capture_hold_until_OE_high": "8.55590",
+          "WE_low_50_min35": "9.28850",
+          "address_CE_to_end_160_min35": "119.28740",
+          "write_data_setup_60_min25": "29.28840",
+          "write_data_hold_20_min0": "14.28880",
+          "write_address_setup_110_min0": "104.28790",
+          "write_address_hold_to_release_40": "34.28860",
+          "access_spacing_min240_cycle45": "189.28660",
+          "OE_high_to_FPGA_drive_30_min18": "6.28870",
+          "drive_off_to_next_OE_60_min0": "54.28840",
+          "WE_rise_before_release": "33.17260",
+          "last_repair_release_to_cut_140": "133.17160"
+        },
+        "notes": [
+          "High three SRAM address lines and both byte enables are static on this board top.",
+          "Conditional 15 pF and 0.1..0.5 ns adapter, 3 ns SRAM edges, clocks and primed memory."
+        ],
+        "pass": true
+      },
+      "placement": {
+        "capture_sites_and_bels": [
+          [
+            "core/lane[0].u/repair_image_reg[0]",
+            "FDRE",
+            "ILOGIC_X1Y123",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[10]",
+            "FDRE",
+            "ILOGIC_X1Y109",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[11]",
+            "FDRE",
+            "ILOGIC_X1Y110",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[12]",
+            "FDRE",
+            "ILOGIC_X1Y143",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[13]",
+            "FDRE",
+            "ILOGIC_X1Y144",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[14]",
+            "FDRE",
+            "ILOGIC_X1Y129",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[15]",
+            "FDRE",
+            "ILOGIC_X1Y130",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[1]",
+            "FDRE",
+            "ILOGIC_X1Y124",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[2]",
+            "FDRE",
+            "ILOGIC_X1Y121",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[3]",
+            "FDRE",
+            "ILOGIC_X1Y122",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[4]",
+            "FDRE",
+            "ILOGIC_X1Y141",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[5]",
+            "FDRE",
+            "ILOGIC_X1Y142",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[6]",
+            "FDRE",
+            "ILOGIC_X1Y105",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[7]",
+            "FDRE",
+            "ILOGIC_X1Y106",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[8]",
+            "FDRE",
+            "ILOGIC_X1Y107",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[9]",
+            "FDRE",
+            "ILOGIC_X1Y108",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/sampled_err_reg",
+            "FDRE",
+            "ILOGIC_X1Y116",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[0]",
+            "FDRE",
+            "SLICE_X112Y123",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[10]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[11]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[12]",
+            "FDRE",
+            "SLICE_X113Y142",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[13]",
+            "FDRE",
+            "SLICE_X112Y144",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[14]",
+            "FDRE",
+            "SLICE_X113Y129",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[15]",
+            "FDRE",
+            "SLICE_X113Y129",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[1]",
+            "FDRE",
+            "SLICE_X113Y123",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[2]",
+            "FDRE",
+            "SLICE_X113Y121",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[3]",
+            "FDRE",
+            "SLICE_X113Y121",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[4]",
+            "FDRE",
+            "SLICE_X113Y140",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[5]",
+            "FDRE",
+            "SLICE_X113Y142",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[6]",
+            "FDRE",
+            "SLICE_X113Y105",
+            "SLICEL.CFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[7]",
+            "FDRE",
+            "SLICE_X113Y105",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[8]",
+            "FDRE",
+            "SLICE_X113Y105",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[9]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/sampled_err_reg",
+            "FDRE",
+            "SLICE_X112Y116",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[0]",
+            "FDRE",
+            "SLICE_X112Y122",
+            "SLICEM.DFF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[10]",
+            "FDRE",
+            "SLICE_X112Y109",
+            "SLICEM.B5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[11]",
+            "FDRE",
+            "SLICE_X113Y110",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[12]",
+            "FDRE",
+            "SLICE_X112Y143",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[13]",
+            "FDRE",
+            "SLICE_X113Y145",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[14]",
+            "FDRE",
+            "SLICE_X112Y129",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[15]",
+            "FDRE",
+            "SLICE_X112Y130",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[1]",
+            "FDRE",
+            "SLICE_X112Y124",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[2]",
+            "FDRE",
+            "SLICE_X112Y121",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[3]",
+            "FDRE",
+            "SLICE_X112Y122",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[4]",
+            "FDRE",
+            "SLICE_X112Y141",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[5]",
+            "FDRE",
+            "SLICE_X112Y142",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[6]",
+            "FDRE",
+            "SLICE_X112Y105",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[7]",
+            "FDRE",
+            "SLICE_X111Y105",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[8]",
+            "FDRE",
+            "SLICE_X111Y106",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[9]",
+            "FDRE",
+            "SLICE_X112Y109",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/sampled_err_reg",
+            "FDRE",
+            "SLICE_X113Y115",
+            "SLICEL.D5FF"
+          ]
+        ],
+        "primitives_in_inventory": {
+          "FDPE": 5,
+          "FDRE": 982,
+          "FDSE": 54,
+          "FRAME_ECCE2": 1,
+          "ICAPE2": 1,
+          "RAMB18E1": 3
+        },
+        "placed_FF": 1041
+      },
+      "essential_mask": {
+        "payload_bits": 25697632,
+        "marked_bits": 268126,
+        "words32": 803051,
+        "ascii_payload_sha256": "bdd897b82c1675c45cc70525401199c6546bec5a7f8a7fe98a182cb29177c99e"
+      },
+      "vectorless_power": {
+        "Total On-Chip Power (W)": "0.301",
+        "Dynamic (W)": "0.192",
+        "Device Static (W)": "0.109",
+        "Confidence Level": "Low"
+      },
+      "pin_observations": [
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "clean",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "last",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "edges",
+          "reads": 131072,
+          "writes": 6,
+          "owner_ns": 13107800,
+          "peak_1ms_ns": 286000,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107730,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "all",
+          "reads": 131072,
+          "writes": 131072,
+          "owner_ns": 26214400,
+          "peak_1ms_ns": 571560,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 26214330,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "one_err",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 4055437
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "one_data",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 17246
+        },
+        {
+          "test": "FULL",
+          "mode": 0,
+          "protected": 1,
+          "case": "common_err",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 87,
+          "app_reserved_ns": 20880,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": -1,
+          "install_tick": -1,
+          "next_ns": 86429000,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        }
+      ]
+    },
+    "A0": {
+      "route": {
+        "part": "xc7z020clg484-1",
+        "clock_MHz": 100,
+        "wns_ns": "0.125",
+        "whs_ns": "0.060",
+        "wpws_ns": "3.000",
+        "wns_failing": 0,
+        "whs_failing": 0,
+        "wpws_failing": 0,
+        "resources": {
+          "Slice LUTs": 405,
+          "Slice Registers": 284,
+          "ILOGIC": 0,
+          "OLOGIC": 38,
+          "Block RAM Tile": 0,
+          "DSPs": 0,
+          "BUFGCTRL": 2,
+          "MMCME2_ADV": 1
+        },
+        "internal_sta_model": {
+          "clock": "clk_i",
+          "wns_ns": "0.566",
+          "whs_ns": "0.060",
+          "user_setup_uncertainty_ns": "0.500",
+          "user_hold_uncertainty_ns": "0.100",
+          "scope": "Relative clock timing at the registers must meet this STA model, including the source and MMCM."
+        },
+        "routable_nets": 745,
+        "fully_routed_nets": 745,
+        "routing_errors": 0,
+        "drc_errors": [],
+        "drc_warnings": [
+          "ZPS7-1#1"
+        ],
+        "pad_counts": {
+          "input": 17,
+          "output": 36
+        },
+        "independent_input_capture_paths": 17,
+        "extrema_ns": {
+          "input_min": "0.518",
+          "input_max": "2.336",
+          "output_min": "1.016",
+          "output_max": "3.787",
+          "clock_spread": "0.965",
+          "uncertainty": "0.575",
+          "setup": "0.041",
+          "hold": "0.331"
+        },
+        "external_clock_budget": {
+          "minimum_clock_scale": "0.99999",
+          "per_edge_J_ns": "0.5",
+          "distinct_edge_shortening_2J_ns": "1.0",
+          "retained_STA_uncertainty_ns": "0.575",
+          "combined_allowance_ns": "1.575",
+          "FMC_round_trip_max_ns": "1.0",
+          "minimum_60ns_edge_separation_ns": "58.99940",
+          "available_SRAM_read_access_ns": "50.29540"
+        },
+        "external_margin_ns": {
+          "address_CE_ERR_read_access_45": "5.29540",
+          "OE_read_access_22": "28.29540",
+          "capture_hold_until_OE_high": "8.86290",
+          "WE_low_50_min35": "9.28850",
+          "address_CE_to_end_160_min35": "119.28740",
+          "write_data_setup_60_min25": "29.28840",
+          "write_data_hold_20_min0": "14.28880",
+          "write_address_setup_110_min0": "104.28790",
+          "write_address_hold_to_release_40": "34.28860",
+          "access_spacing_min240_cycle45": "189.28660",
+          "OE_high_to_FPGA_drive_30_min18": "6.28870",
+          "drive_off_to_next_OE_60_min0": "54.28840",
+          "WE_rise_before_release": "33.17260",
+          "last_repair_release_to_cut_140": "133.17160"
+        },
+        "notes": [
+          "High three SRAM address lines and both byte enables are static on this board top.",
+          "Conditional 15 pF and 0.1..0.5 ns adapter, 3 ns SRAM edges, clocks and primed memory."
+        ],
+        "pass": true
+      },
+      "placement": {
+        "capture_sites_and_bels": [
+          [
+            "core/lane[0].u/repair_image_reg[0]",
+            "FDRE",
+            "SLICE_X112Y123",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[10]",
+            "FDRE",
+            "SLICE_X112Y109",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[11]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[12]",
+            "FDRE",
+            "SLICE_X112Y143",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[13]",
+            "FDRE",
+            "SLICE_X112Y144",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[14]",
+            "FDRE",
+            "SLICE_X112Y129",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[15]",
+            "FDRE",
+            "SLICE_X112Y130",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[1]",
+            "FDRE",
+            "SLICE_X112Y124",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[2]",
+            "FDRE",
+            "SLICE_X112Y121",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[3]",
+            "FDRE",
+            "SLICE_X112Y122",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[4]",
+            "FDRE",
+            "SLICE_X112Y141",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[5]",
+            "FDRE",
+            "SLICE_X112Y142",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[6]",
+            "FDRE",
+            "SLICE_X112Y105",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[7]",
+            "FDRE",
+            "SLICE_X112Y106",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[8]",
+            "FDRE",
+            "SLICE_X112Y107",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[9]",
+            "FDRE",
+            "SLICE_X112Y108",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[0].u/sampled_err_reg",
+            "FDRE",
+            "SLICE_X112Y116",
+            "SLICEM.A5FF"
+          ]
+        ],
+        "primitives_in_inventory": {
+          "FDRE": 320,
+          "FDSE": 18
+        },
+        "placed_FF": 338
+      },
+      "essential_mask": {
+        "payload_bits": 25697632,
+        "marked_bits": 101312,
+        "words32": 803051,
+        "ascii_payload_sha256": "7759fa5b53cce69f6c194f7d6ecec830ea178b198846d3ea4588cab4d9cb1c69"
+      },
+      "vectorless_power": {
+        "Total On-Chip Power (W)": "0.289",
+        "Dynamic (W)": "0.180",
+        "Device Static (W)": "0.109",
+        "Confidence Level": "Low"
+      },
+      "pin_observations": [
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "clean",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": 4587490,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "last",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "edges",
+          "reads": 131072,
+          "writes": 6,
+          "owner_ns": 13107800,
+          "peak_1ms_ns": 286000,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107730,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "all",
+          "reads": 131072,
+          "writes": 131072,
+          "owner_ns": 26214400,
+          "peak_1ms_ns": 571560,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 26214330,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "one_err",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": 4587490,
+          "install_tick": 4587510,
+          "next_ns": 91750400,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "one_data",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107230,
+          "wrong_write": 1,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 0,
+          "case": "common_err",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": 4587490,
+          "install_tick": 4587510,
+          "next_ns": 91750400,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 1,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 1
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 2,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 2,
+          "actual_round": 4,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 3,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 3,
+          "actual_round": 8,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 4,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 4,
+          "actual_round": 16,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 5,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 5,
+          "actual_round": 32,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 6,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 6,
+          "actual_round": 64,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 7,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 7,
+          "actual_round": 128,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 1,
+          "defect": 1,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 1,
+          "defect": 2,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 0,
+          "installed": 0,
+          "actual_round": 1,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 1,
+          "defect": 3,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 0,
+          "installed": 0,
+          "actual_round": 1,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 1,
+          "defect": 4,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 8,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 0,
+          "level": 1,
+          "defect": 5,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "RECOVERY",
+          "protected": 0,
+          "loss_case": 0,
+          "first_2L_epoch": 2560,
+          "next_2L_epoch": 2562,
+          "starts": 1346,
+          "commands": 1346,
+          "common_checks": 12
+        },
+        {
+          "test": "RECOVERY",
+          "protected": 0,
+          "loss_case": 1,
+          "first_2L_epoch": 2688,
+          "next_2L_epoch": 2690,
+          "starts": 1410,
+          "commands": 1410,
+          "common_checks": 12
+        },
+        {
+          "test": "RECOVERY",
+          "protected": 0,
+          "loss_case": 2,
+          "first_2L_epoch": -1,
+          "next_2L_epoch": -1,
+          "starts": 1411,
+          "commands": 1411,
+          "common_checks": 12
+        }
+      ]
+    },
+    "A1": {
+      "route": {
+        "part": "xc7z020clg484-1",
+        "clock_MHz": 100,
+        "wns_ns": "0.043",
+        "whs_ns": "0.044",
+        "wpws_ns": "3.000",
+        "wns_failing": 0,
+        "whs_failing": 0,
+        "wpws_failing": 0,
+        "resources": {
+          "Slice LUTs": 1582,
+          "Slice Registers": 1156,
+          "ILOGIC": 17,
+          "OLOGIC": 38,
+          "Block RAM Tile": "1.5",
+          "DSPs": 0,
+          "BUFGCTRL": 3,
+          "MMCME2_ADV": 1
+        },
+        "internal_sta_model": {
+          "clock": "clk_i",
+          "wns_ns": "0.115",
+          "whs_ns": "0.044",
+          "user_setup_uncertainty_ns": "0.500",
+          "user_hold_uncertainty_ns": "0.100",
+          "scope": "Relative clock timing at the registers must meet this STA model, including the source and MMCM."
+        },
+        "routable_nets": 2922,
+        "fully_routed_nets": 2922,
+        "routing_errors": 0,
+        "drc_errors": [],
+        "drc_warnings": [
+          "RTSTAT-10#1",
+          "ZPS7-1#1"
+        ],
+        "pad_counts": {
+          "input": 17,
+          "output": 36
+        },
+        "independent_input_capture_paths": 51,
+        "extrema_ns": {
+          "input_min": "0.211",
+          "input_max": "2.418",
+          "output_min": "1.016",
+          "output_max": "3.787",
+          "clock_spread": "0.965",
+          "uncertainty": "0.575",
+          "setup": "0.094",
+          "hold": "0.331"
+        },
+        "external_clock_budget": {
+          "minimum_clock_scale": "0.99999",
+          "per_edge_J_ns": "0.5",
+          "distinct_edge_shortening_2J_ns": "1.0",
+          "retained_STA_uncertainty_ns": "0.575",
+          "combined_allowance_ns": "1.575",
+          "FMC_round_trip_max_ns": "1.0",
+          "minimum_60ns_edge_separation_ns": "58.99940",
+          "available_SRAM_read_access_ns": "50.16040"
+        },
+        "external_margin_ns": {
+          "address_CE_ERR_read_access_45": "5.16040",
+          "OE_read_access_22": "28.16040",
+          "capture_hold_until_OE_high": "8.55590",
+          "WE_low_50_min35": "9.28850",
+          "address_CE_to_end_160_min35": "119.28740",
+          "write_data_setup_60_min25": "29.28840",
+          "write_data_hold_20_min0": "14.28880",
+          "write_address_setup_110_min0": "104.28790",
+          "write_address_hold_to_release_40": "34.28860",
+          "access_spacing_min240_cycle45": "189.28660",
+          "OE_high_to_FPGA_drive_30_min18": "6.28870",
+          "drive_off_to_next_OE_60_min0": "54.28840",
+          "WE_rise_before_release": "33.17260",
+          "last_repair_release_to_cut_140": "133.17160"
+        },
+        "notes": [
+          "High three SRAM address lines and both byte enables are static on this board top.",
+          "Conditional 15 pF and 0.1..0.5 ns adapter, 3 ns SRAM edges, clocks and primed memory."
+        ],
+        "pass": true
+      },
+      "placement": {
+        "capture_sites_and_bels": [
+          [
+            "core/lane[0].u/repair_image_reg[0]",
+            "FDRE",
+            "ILOGIC_X1Y123",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[10]",
+            "FDRE",
+            "ILOGIC_X1Y109",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[11]",
+            "FDRE",
+            "ILOGIC_X1Y110",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[12]",
+            "FDRE",
+            "ILOGIC_X1Y143",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[13]",
+            "FDRE",
+            "ILOGIC_X1Y144",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[14]",
+            "FDRE",
+            "ILOGIC_X1Y129",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[15]",
+            "FDRE",
+            "ILOGIC_X1Y130",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[1]",
+            "FDRE",
+            "ILOGIC_X1Y124",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[2]",
+            "FDRE",
+            "ILOGIC_X1Y121",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[3]",
+            "FDRE",
+            "ILOGIC_X1Y122",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[4]",
+            "FDRE",
+            "ILOGIC_X1Y141",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[5]",
+            "FDRE",
+            "ILOGIC_X1Y142",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[6]",
+            "FDRE",
+            "ILOGIC_X1Y105",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[7]",
+            "FDRE",
+            "ILOGIC_X1Y106",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[8]",
+            "FDRE",
+            "ILOGIC_X1Y107",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/repair_image_reg[9]",
+            "FDRE",
+            "ILOGIC_X1Y108",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[0].u/sampled_err_reg",
+            "FDRE",
+            "ILOGIC_X1Y116",
+            "ILOGICE2.IFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[0]",
+            "FDRE",
+            "SLICE_X112Y123",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[10]",
+            "FDRE",
+            "SLICE_X113Y108",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[11]",
+            "FDRE",
+            "SLICE_X112Y110",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[12]",
+            "FDRE",
+            "SLICE_X113Y142",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[13]",
+            "FDRE",
+            "SLICE_X112Y144",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[14]",
+            "FDRE",
+            "SLICE_X112Y129",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[15]",
+            "FDRE",
+            "SLICE_X112Y130",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[1]",
+            "FDRE",
+            "SLICE_X112Y124",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[2]",
+            "FDRE",
+            "SLICE_X113Y121",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[3]",
+            "FDRE",
+            "SLICE_X113Y121",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[4]",
+            "FDRE",
+            "SLICE_X112Y141",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[5]",
+            "FDRE",
+            "SLICE_X113Y142",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[6]",
+            "FDRE",
+            "SLICE_X112Y105",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[7]",
+            "FDRE",
+            "SLICE_X113Y106",
+            "SLICEL.CFF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[8]",
+            "FDRE",
+            "SLICE_X113Y106",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[1].u/repair_image_reg[9]",
+            "FDRE",
+            "SLICE_X113Y108",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[1].u/sampled_err_reg",
+            "FDRE",
+            "SLICE_X112Y116",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[0]",
+            "FDRE",
+            "SLICE_X112Y122",
+            "SLICEM.DFF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[10]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[11]",
+            "FDRE",
+            "SLICE_X113Y110",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[12]",
+            "FDRE",
+            "SLICE_X112Y143",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[13]",
+            "FDRE",
+            "SLICE_X112Y145",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[14]",
+            "FDRE",
+            "SLICE_X113Y129",
+            "SLICEL.DFF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[15]",
+            "FDRE",
+            "SLICE_X113Y129",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[1]",
+            "FDRE",
+            "SLICE_X113Y124",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[2]",
+            "FDRE",
+            "SLICE_X113Y120",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[3]",
+            "FDRE",
+            "SLICE_X112Y122",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[4]",
+            "FDRE",
+            "SLICE_X113Y140",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[5]",
+            "FDRE",
+            "SLICE_X112Y142",
+            "SLICEM.A5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[6]",
+            "FDRE",
+            "SLICE_X113Y104",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[7]",
+            "FDRE",
+            "SLICE_X113Y105",
+            "SLICEL.C5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[8]",
+            "FDRE",
+            "SLICE_X111Y106",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/repair_image_reg[9]",
+            "FDRE",
+            "SLICE_X113Y109",
+            "SLICEL.D5FF"
+          ],
+          [
+            "core/lane[2].u/sampled_err_reg",
+            "FDRE",
+            "SLICE_X113Y115",
+            "SLICEL.D5FF"
+          ]
+        ],
+        "primitives_in_inventory": {
+          "FDPE": 5,
+          "FDRE": 1165,
+          "FDSE": 57,
+          "FRAME_ECCE2": 1,
+          "ICAPE2": 1,
+          "RAMB18E1": 3
+        },
+        "placed_FF": 1227
+      },
+      "essential_mask": {
+        "payload_bits": 25697632,
+        "marked_bits": 374655,
+        "words32": 803051,
+        "ascii_payload_sha256": "f63bee963359146765a91ecb6113de5f5470f75893e91b589dacffc241be3b96"
+      },
+      "vectorless_power": {
+        "Total On-Chip Power (W)": "0.307",
+        "Dynamic (W)": "0.198",
+        "Device Static (W)": "0.109",
+        "Confidence Level": "Low"
+      },
+      "pin_observations": [
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "clean",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": 4587490,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "last",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "edges",
+          "reads": 131072,
+          "writes": 6,
+          "owner_ns": 13107800,
+          "peak_1ms_ns": 286000,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107730,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "all",
+          "reads": 131072,
+          "writes": 131072,
+          "owner_ns": 26214400,
+          "peak_1ms_ns": 571560,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 26214330,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "one_err",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 57
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "one_data",
+          "reads": 131072,
+          "writes": 1,
+          "owner_ns": 13107300,
+          "peak_1ms_ns": 285860,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": 45874720,
+          "release_last_ns": 45874760,
+          "publication_ns": 45874760,
+          "zero_tick": -1,
+          "install_tick": 4587510,
+          "next_ns": 45875200,
+          "partial_ns": 13107230,
+          "wrong_write": 0,
+          "disagreement_ticks": 57
+        },
+        {
+          "test": "FULL",
+          "mode": 1,
+          "protected": 1,
+          "case": "common_err",
+          "reads": 131072,
+          "writes": 0,
+          "owner_ns": 13107200,
+          "peak_1ms_ns": 285800,
+          "app_reads": 46,
+          "app_reserved_ns": 11040,
+          "sample_last_ns": 45874620,
+          "we_last_ns": -1,
+          "release_last_ns": 45874660,
+          "publication_ns": 45874660,
+          "zero_tick": 4587490,
+          "install_tick": 4587510,
+          "next_ns": 91750400,
+          "partial_ns": -1,
+          "wrong_write": 0,
+          "disagreement_ticks": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 1,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 1
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 2,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 2,
+          "actual_round": 4,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 3,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 3,
+          "actual_round": 8,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 4,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 4,
+          "actual_round": 16,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 5,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 5,
+          "actual_round": 32,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 6,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 6,
+          "actual_round": 64,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 7,
+          "defect": 0,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 7,
+          "actual_round": 128,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 1,
+          "defect": 1,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 1,
+          "defect": 2,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 0,
+          "installed": 0,
+          "actual_round": 1,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 1,
+          "defect": 3,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 0,
+          "installed": 0,
+          "actual_round": 1,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 1,
+          "defect": 4,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "BOUNDARY",
+          "protected": 1,
+          "level": 1,
+          "defect": 5,
+          "reads": 131072,
+          "packet_tick": 4587466,
+          "accepted": 1,
+          "installed": 1,
+          "actual_round": 2,
+          "literal_idle_apps": 0
+        },
+        {
+          "test": "RECOVERY",
+          "protected": 1,
+          "loss_case": 0,
+          "first_2L_epoch": 2560,
+          "next_2L_epoch": 2562,
+          "starts": 1346,
+          "commands": 1346,
+          "common_checks": 12
+        },
+        {
+          "test": "RECOVERY",
+          "protected": 1,
+          "loss_case": 1,
+          "first_2L_epoch": 2688,
+          "next_2L_epoch": 2690,
+          "starts": 1410,
+          "commands": 1410,
+          "common_checks": 12
+        },
+        {
+          "test": "RECOVERY",
+          "protected": 1,
+          "loss_case": 2,
+          "first_2L_epoch": -1,
+          "next_2L_epoch": -1,
+          "starts": 1411,
+          "commands": 1411,
+          "common_checks": 12
+        }
+      ]
+    }
+  },
+  "rule": "POLICY levels_mask=255 saturation=596 samples=47474 report_cases=15 post_install_loss=1",
+  "sem_board_status_tests": [
+    "SEM_LINK adaptive=0 commissioning_wait=1 correction_spans_write=1 captured=1 committed=1 first_next_address=1 fail_status=1 runtime_cold=0",
+    "SEM_LINK adaptive=1 commissioning_wait=1 correction_spans_write=1 captured=1 committed=1 first_next_address=1 fail_status=1 runtime_cold=0"
+  ]
+}

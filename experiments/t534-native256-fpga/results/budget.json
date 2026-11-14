@@ -1,0 +1,61 @@
+{
+  "conditions": {
+    "horizon_s": "315576000",
+    "exception_allowance": "0.000006",
+    "exception_rate_if_all_other_zero_s-1": "1.9012852688417370142216138109362E-14",
+    "physical_common_cell_lower_s": "5.871966878744",
+    "longest_committed_gap_upper_s": "5.872084321256",
+    "status_pulse_extension_upper_s": "3.10003E-8",
+    "ICAP_edge_peak_bytes_per_s_at_nominal_clock": 200000000,
+    "clean_ICAP_SRAM_transactions": 0,
+    "additional_SRAM_access_directly_from_SEM": 0,
+    "correctable_single_latency_upper_s_conditional": "0.0172202032003",
+    "crc_only_detection_upper_s_conditional": "0.0320003510003",
+    "commissioning_boot_initialization_upper_s_conditional": "0.2684026840000",
+    "I_upper_if_X_zero": 209182,
+    "two_cell_short_episodes_whole_if_X_zero": 104591,
+    "two_cell_short_episode_mean_rate_ceiling_if_X_zero_s-1": "0.00033143041525432784271282827683351"
+  },
+  "builds": {
+    "F0": {
+      "placed_FF": 255,
+      "essential_CRAM": 63878,
+      "one_FF_per_bit_s-1_IF_only_term_all_harmful": "7.4560206621244588793004463173968E-17",
+      "one_essential_CRAM_per_bit_s-1_IF_only_term_all_harmful": "2.9764320561722925173324365367360E-19",
+      "conditional_modeled_Q_with_execution_allocation": "0.000999990641",
+      "ten_year_port_upper_s_IF_extra_zero": "48405502.012",
+      "physical_execution_probability_upper": "unknown",
+      "observed_flight_power_W": "unknown"
+    },
+    "F1": {
+      "placed_FF": 1041,
+      "essential_CRAM": 268126,
+      "one_FF_per_bit_s-1_IF_only_term_all_harmful": "1.8264027558518126937767663889877E-17",
+      "one_essential_CRAM_per_bit_s-1_IF_only_term_all_harmful": "7.0910141830398283427254865657795E-20",
+      "conditional_modeled_Q_with_execution_allocation": "0.000999990641",
+      "ten_year_port_upper_s_IF_extra_zero": "48405502.012",
+      "physical_execution_probability_upper": "unknown",
+      "observed_flight_power_W": "unknown"
+    },
+    "A0": {
+      "placed_FF": 338,
+      "essential_CRAM": 101312,
+      "one_FF_per_bit_s-1_IF_only_term_all_harmful": "5.6251043456856124681112834643083E-17",
+      "one_essential_CRAM_per_bit_s-1_IF_only_term_all_harmful": "1.8766634444505458526350420591205E-19",
+      "conditional_modeled_Q_with_execution_allocation": "0.000677662949",
+      "ten_year_port_upper_s_IF_extra_zero": "1973781.020",
+      "physical_execution_probability_upper": "unknown",
+      "observed_flight_power_W": "unknown"
+    },
+    "A1": {
+      "placed_FF": 1227,
+      "essential_CRAM": 374655,
+      "one_FF_per_bit_s-1_IF_only_term_all_harmful": "1.5495397464072836301724643935910E-17",
+      "one_essential_CRAM_per_bit_s-1_IF_only_term_all_harmful": "5.0747628320501181466191931535311E-20",
+      "conditional_modeled_Q_with_execution_allocation": "0.000677662949",
+      "ten_year_port_upper_s_IF_extra_zero": "1973781.020",
+      "physical_execution_probability_upper": "unknown",
+      "observed_flight_power_W": "unknown"
+    }
+  }
+}

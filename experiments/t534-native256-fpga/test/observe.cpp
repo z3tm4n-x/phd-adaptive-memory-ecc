@@ -28,7 +28,13 @@ struct Check {
         d.app=app_address; d.edit=0; d.action=0; d.prior_level=0;
         d.prefix=0; d.prefix_epoch=0; d.eval(); tick(); tick(); d.cold=0;
     }
-    void tick() { d.clk=0;d.eval();d.clk=1;d.eval();d.clk=0;d.eval();++time; }
+    // The observation point is the falling edge, 5 ns after the deciding
+    // rising edge. Test deposits at this point cannot change that decision.
+    void tick() {
+        d.clk=0;d.eval();Verilated::timeInc(5);
+        d.clk=1;d.eval();Verilated::timeInc(5);
+        d.clk=0;d.eval();++time;
+    }
     void edit(int code) { d.action=code;d.edit=1;d.eval();d.edit=0;d.eval(); }
     void need(bool ok,const char* what) {
         if(!ok) throw std::runtime_error(std::string(what)+" at observed tick "+std::to_string(time));
@@ -61,7 +67,10 @@ void physical_run(bool adaptive,bool triple,const std::string& test) {
         bool app_cs=app_frame&&h>=102&&h<112;
         bool drives=owner&&write&&a>=10&&a<18;
         d.req=app_frame&&h==102;
-        d.err=(a==6)?hit:!hit;
+        // In common_err the modeled defect exists but the shared input pin
+        // stays LOW on the sample edge. Every undamaged lane sees that pin.
+        bool observed_err=hit&&!(common&&last);
+        d.err=(a==6)?observed_err:!hit;
         d.dq=(h==108)?datum(app_address):(a==6)?datum(j):(datum(j)^65535);
         c.tick();
         if(t==0&&seeded) {
@@ -74,10 +83,10 @@ void physical_run(bool adaptive,bool triple,const std::string& test) {
         if(d.grant){c.need(t-last_grant>=100003,"application envelope");last_grant=t;}
         if(d.valid){c.need(d.app_data==datum(app_address),"application DQ");++app_reads;}
         if(active&&a==6) {
-            c.need(d.image0==datum(j)&&d.err_trace==(hit?(triple?7:1):0),"DQ/ERR sampling aperture");
+            c.need(d.image0==datum(j)&&d.err_trace==(observed_err?(triple?7:1):0),"DQ/ERR sampling aperture");
             if(j<half)first_sample[j]=t;
             else c.need(t-first_sample[j-half]==L/2&&((physical(j)^physical(j-half))==32),"half-word sampling gap");
-            if(last&&inject)c.edit(fault_err?4:fault_data?5:6);
+            if(last&&(fault_err||fault_data))c.edit(fault_err?4:5);
         }
         if(drives) {
             bool damaged=fault_data&&!triple&&last;

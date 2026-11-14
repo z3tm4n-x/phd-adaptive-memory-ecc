@@ -1,5 +1,6 @@
 // Test-only deposits at stable idle points. All transactions and decisions
 // run in the unchanged controller; probes do not supply a production input.
+`timescale 1ns/1ns
 module harness #(parameter ADAPTIVE=1, PROTECTED=0) (
     input wire clk,cold,loss,err,req,input wire [15:0] dq,input wire [16:0] app,
     input wire edit,input wire [3:0] action,input wire [9:0] prefix,
@@ -36,7 +37,6 @@ module harness #(parameter ADAPTIVE=1, PROTECTED=0) (
                 end
                 4: if(i==0) dut.lane[i].u.sampled_err<=0;
                 5: if(i==0) dut.lane[i].u.repair_image<=dut.lane[i].u.repair_image ^ 16'h1;
-                6: dut.lane[i].u.sampled_err<=0; // shared observation sentinel
                 7: dut.lane[i].u.report_send<=0;
                 8: dut.lane[i].u.report_send<=1;
                 default: ;
