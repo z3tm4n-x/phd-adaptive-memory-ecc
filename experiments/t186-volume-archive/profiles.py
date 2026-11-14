@@ -63,9 +63,9 @@ class History:
                          J_old_floor_per_s=round(j,10), piece_count=len(self.length),
                          profile_sha256=h.hexdigest())
 
-    def draw(self, idx, rep):
+    def draw(self, idx, rep, word_count=W):
         rng = np.random.Generator(np.random.PCG64(np.random.SeedSequence([186,34,idx,rep])))
-        n = rng.poisson(self.mass[-1]*W/(524288*1.2))
+        n = rng.poisson(self.mass[-1]*word_count/(524288*1.2))
         target = np.sort(rng.random(n)*self.mass[-1])
         pieces = np.searchsorted(self.mass,target,side="right")
         previous = np.where(pieces>0,self.mass[pieces-1],0.)
@@ -79,12 +79,12 @@ class History:
         offset_ns = np.floor((edge-whole_s+fraction*self.length[pieces])*1.e9).astype(np.int64)
         ts = whole_s*10**9+offset_ns
         assert np.all(np.diff(ts)>0) and ts[-1]<T
-        first = rng.integers(W,size=n)
+        first = rng.integers(word_count,size=n)
         double = rng.integers(5,size=n)==4
         counts = 1+double.astype(np.int64)
         words = np.repeat(first,counts)
         second_at = np.cumsum(counts)[double]-1
-        words[second_at] = (words[second_at]+1)%W
+        words[second_at] = (words[second_at]+1)%word_count
         bits = rng.integers(38,size=len(words))
         return np.repeat(ts,counts),words,bits,n
 
