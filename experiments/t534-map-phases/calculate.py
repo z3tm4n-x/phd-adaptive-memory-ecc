@@ -60,6 +60,51 @@ def plateau_one_visit(words, blocked):
     return max(0, z/(1+z)-delta)
 
 
+def rise_refinement():
+    """Cost of one rise, using the registered high/low split at its actual time."""
+    B, weight = geo.peak, ref["weight"]
+    g = F(ref["BASE"]["C1"]["growth_s_inv2"])
+    step = xp*ladder.levels[-1]
+    shift = xp*ladder.scan.phase_max
+    s = W*c*ladder.eta
+    def fee(peak):
+        mass = peak*step
+        return mass/(1-weight(s*mass))
+
+    split, middle = B/2, 3*B/4
+    width = xm*ladder.levels[-1]
+    assert min(ladder.history) > width
+    local_floor = split-g*(2*step+shift+edge)
+    assert 0 < local_floor < B
+    z = s*local_floor*width
+    # Lower bounds on 1-exp(-s*local_floor*width) and exp(-s*B*width).
+    high_discount = min(z/(1+z), 1-s*B*width)
+    assert 0 < high_discount < 1
+    high_fee = (1-high_discount)*(fee(B)+B*shift)
+
+    accumulated = split*((middle-split)/g-step)
+    assert accumulated > 0
+    low_fee = fee(middle) + (fee(B)-fee(middle))*weight(s*accumulated) + B*shift
+    peak_fee = max(high_fee,low_fee)
+    old_terms = ladder.risk(ladder.eta,geo)
+    rise = W*c**2/2*geo.rise*sum(ladder.amplitude)*peak_fee
+    q = sum(old_terms[:3])+rise
+    # #473 fees before proof stop are independent of the order of the two halves.
+    ordinary, old_stop = ladder.cost(geo, ref["MEAN"], ladder.eta)
+    tail_tariff = (ref["READ"]+ref["WRITE"])*ref["HARD"]
+    price = F(ordinary["s_upper"])-(old_stop-q)*tail_tariff
+    return q, {
+        "registered":"0a4ec0b75c0cfa1bda830040edab48b2bd07bc35",
+        "local_rate_floor_s-1_lower":down(local_floor,12),
+        "high_discount_lower":down(high_discount,12),
+        "low_accumulated_mass_lower":down(accumulated,12),
+        "high_rise_fee_upper":up(high_fee,12), "low_rise_fee_upper":up(low_fee,12),
+        "rise_term_upper":up(rise,15), "closed_one_phase_stop_upper":up(q,12),
+        "epsilon_room_lower":down(eps-q,12),
+        "closed_bus_s_upper_I0_X0":up(price,3), "closed_bus_percent_upper":up(100*price/T,6),
+    }
+
+
 def archive_fixed():
     # Same fixed clock and same SEPEM decade as the accepted two-parent witness.
     B, U, second = maps["WITNESSES"]["archive"]
@@ -100,6 +145,28 @@ def archive_fixed():
             "percent_lower":down(100*cost/T,6)}
 
 
+def closed_fixed(price_upper):
+    # For every map the chosen ordinary scan lies within the same deleted band.
+    fixed = large["rows"][0]["fixed"]
+    k = fixed["prior_floor"]["witness"]["K_word_s"]
+    witness = ref["common_floor"](ladder,k)
+    floor_cost = maps["common_witness"](ladder,W,W,maps["WITNESSES"]["geo"])
+    assert witness > eps and down(floor_cost,3) == fixed["s_lower"]
+    candidate = F(fixed["quote"]["period_s"])-L/2
+    frames = candidate/ref["FRAME"]
+    assert frames.denominator == 1 and candidate >= L
+    at_candidate = ref["physical"](ladder.scan,W,candidate,both=False)
+    at_l = ref["physical"](ladder.scan,W,L,both=False)
+    assert at_l <= at_candidate <= eps
+    public_floor = F(fixed["s_lower"])
+    return {"K_word_s":k, "exclusion_Q_lower":down(witness,15),
+            "per_map_constant_reads_s_lower":down(floor_cost,3),
+            "one_phase_candidate_s":str(candidate),"candidate_frames":int(frames),
+            "candidate_Q_upper":up(at_candidate,12),"continuous_Q_upper":up(at_l,12),
+            "per_map_saving_s_lower":down(public_floor-price_upper,3),
+            "per_map_ratio_lower":down(public_floor/price_upper,6)}
+
+
 def calculate():
     assert [int(p/L) for p in ladder.levels] == [1,2,4,8,16,32,64,128]
     assert ladder.counts == accepted["zero_cell_counts"] and ladder.scan.addresses == A
@@ -117,6 +184,8 @@ def calculate():
     one_phase = sum(ladder.risk(ladder.eta,geo))
     close_lower = plateau_one_visit(W, edge+xp*tight)
     outside_lower = plateau_one_visit(A, edge)
+    closed_q, sharper = rise_refinement()
+    assert close_lower <= closed_q
     all_outside = maps["AnyPairs"](A,A)
     outside_upper = sum(all_outside.risk(all_outside.eta,geo))
     assert up(one_phase,12) == accepted["old_stop_upper"]
@@ -140,6 +209,8 @@ def calculate():
         "all_external_physical_lower":down(outside_lower,12),
         "all_external_one_phase_upper":up(outside_upper,12),
         "all_maps_one_phase_upper":up(uniform_upper,12),
+        "one_phase_growth":sharper,
+        "closed_fixed_class":closed_fixed(F(sharper["closed_bus_s_upper_I0_X0"])),
         "registered_fixed_candidate_s":p_same["period_s"], "archive_fixed":archive_fixed(),
     }
 
