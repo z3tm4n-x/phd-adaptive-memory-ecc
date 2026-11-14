@@ -28,13 +28,13 @@ def inputs_on_history(meta):
         F(ceil(meta["S1"]+1e-5)), F(ceil(meta["S2_per_s"]+1e-5)))
 
 
-def fixed_period(env):
+def fixed_period(env, rule=RULE):
     q = MODEL["physical"]
     frame = MODEL["FRAME"]
-    base = q(RULE.scan,W,RULE.scan.L,env=env)
-    increment = W*MODEL["C"]**2*F(37,76)*MODEL["XP"]*frame*env.second
-    p = RULE.scan.L + frame*floor((EPS-base)/increment)
-    assert p >= RULE.scan.L and q(RULE.scan,W,p,env=env)<=EPS<q(RULE.scan,W,p+frame,env=env)
+    base = q(rule.scan,rule.words,rule.scan.L,env=env)
+    increment = rule.words*MODEL["C"]**2*F(37,76)*MODEL["XP"]*frame*env.second
+    p = rule.scan.L + frame*floor((EPS-base)/increment)
+    assert p >= rule.scan.L and q(rule.scan,rule.words,p,env=env)<=EPS<q(rule.scan,rule.words,p+frame,env=env)
     return p
 
 
@@ -49,7 +49,7 @@ def series_summary(low, high, scale=1):
                 nominal_t95=[round(float(x.mean()-crit*se[0]),8),round(float(y.mean()+crit*se[1]),8)])
 
 
-def summarize(data, stats, period):
+def summarize(data, stats, period, addresses=A, scan_ns=L):
     # [trial, lower/upper, cost_ns / passes / writes / reset cells / returns]
     result = dict(period_ns=period)
     for j,name in enumerate(("busy_s","scans","completed_writes","dirty_cells","returns_to_fast")):
@@ -59,9 +59,9 @@ def summarize(data, stats, period):
         # The fixed schedule has a known read prefix even past a proof stop.
         # Evaluate the four-address frame independently of the replay.
         complete, remainder = divmod(T,period)
-        frames, rem_ns = divmod(min(remainder,L),1400)
+        frames, rem_ns = divmod(min(remainder,scan_ns),1400)
         prefix = frames*400+sum(max(0,min(100,rem_ns-offset)) for offset in (0,240,520,760))
-        exact_read = complete*A*100+prefix
+        exact_read = complete*addresses*100+prefix
         assert np.all(data[:,:,1] == complete+int(remainder>0))
         closed = stats[:,2] == 0
         # At most one clipped final write can contribute fractional slot time.

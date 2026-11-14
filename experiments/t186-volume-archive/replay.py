@@ -1,4 +1,4 @@
-"""Paired native-x16 calendars for the registered 64 KiB example, derived from PR 484."""
+"""Paired native-x16 service with the accepted 64 KiB layout as the default."""
 from pathlib import Path
 from runpy import run_path
 
@@ -17,16 +17,21 @@ L = int(RULE.scan.L * 10**9)
 CAP = 2**(len(RULE.levels)-1)
 THRESHOLDS = np.asarray(RULE.counts, dtype=np.int64)
 NO_CHOICES = np.empty(0,dtype=np.int64)
-OLD_READ = OLD["read_ns_until"]
+LAYOUT = (W, A, L, CAP, THRESHOLDS)
 
 
 @njit
-def read_ns_until(length):
-    return OLD_READ(min(length,L))
+def read_ns_until(length, scan_ns=L):
+    frames, remainder = divmod(min(length,scan_ns),1400)
+    total = frames*400
+    for offset in PHASE:
+        total += min(100,max(0,remainder-offset))
+    return total
 
 
 @njit
-def replay(ticks, words, bits, horizon, fixed_ns=0, skip=True, choices=NO_CHOICES):
+def replay(ticks, words, bits, horizon, fixed_ns=0, skip=True, choices=NO_CHOICES, layout=LAYOUT):
+    W, A, L, CAP, THRESHOLDS = layout
     masks = np.zeros(W,dtype=np.int64)
     marked = np.zeros(W,dtype=np.bool_)
     touched = np.empty(W,dtype=np.int64)
@@ -136,7 +141,7 @@ def replay(ticks, words, bits, horizon, fixed_ns=0, skip=True, choices=NO_CHOICE
                     level += 1
                 next_gate = (bad+THRESHOLDS[level])*CAP
                 groups = min(groups,max(1,(next_gate-rnd+step-1)//step))
-        reads_ns += (groups-1)*A*100+read_ns_until(end-start)
+        reads_ns += (groups-1)*A*100+read_ns_until(end-start,L)
         writes_ns += extra
         repairs += complete
         scans += groups
@@ -153,8 +158,9 @@ def replay(ticks, words, bits, horizon, fixed_ns=0, skip=True, choices=NO_CHOICE
     return reads_ns,writes_ns,scans,repairs,0,0,0,resets,returns
 
 
-def branch_envelope(data, horizon, fixed_ns=0, skip=True):
+def branch_envelope(data, horizon, fixed_ns=0, skip=True, layout=LAYOUT):
     """Bounds on occupied ns, scans, writes, distinct dirty cells and slow-to-fast returns."""
+    _, A, L, _, _ = layout
     pending = [()]
     minima = np.full(5, np.iinfo(np.int64).max, dtype=np.int64)
     maxima = np.zeros(5, dtype=np.int64)
@@ -163,7 +169,7 @@ def branch_envelope(data, horizon, fixed_ns=0, skip=True):
         route = pending.pop()
         choices = np.asarray(route,dtype=np.int64)
         read,write,scans,repairs,tail,reason,options,resets,returns = replay(
-            *data, horizon, fixed_ns, skip, choices)
+            *data, horizon, fixed_ns, skip, choices, layout)
         if reason == 2 and len(route) < 12:
             pending.extend(route+(choice,) for choice in range(options))
             splits += 1
@@ -181,7 +187,7 @@ def branch_envelope(data, horizon, fixed_ns=0, skip=True):
                 # Both the address calendar and all read slots are independent
                 # of every report, even after an uncorrectable word.
                 full, rem = divmod(horizon, fixed_ns)
-                all_reads = full*A*100+read_ns_until(min(rem,L))
+                all_reads = full*A*100+read_ns_until(rem,L)
                 all_scans = full+int(rem>0)
                 lower[0] = all_reads+write
                 upper[0] = min(upper[0], all_reads+write+(all_scans-scans)*A*100)
@@ -192,11 +198,12 @@ def branch_envelope(data, horizon, fixed_ns=0, skip=True):
     return minima, maxima, (splits, leaves, open_leaves)
 
 
-def selftest():
+def selftest(layout=LAYOUT):
+    _, A, L, CAP, THRESHOLDS = layout
     def case(events, end, fixed=0):
         data = tuple(np.asarray([e[i] for e in events],dtype=np.int64) for i in range(3))
-        result = branch_envelope(data,end,fixed)
-        slow = branch_envelope(data,end,fixed,False)
+        result = branch_envelope(data,end,fixed,layout=layout)
+        slow = branch_envelope(data,end,fixed,False,layout=layout)
         assert all(np.array_equal(a,b) for a,b in zip(result,slow))
         return result
 
@@ -204,7 +211,7 @@ def selftest():
         for end in (60,300,L-30,L,L+50,7*L+1700):
             lo,hi,_ = case([], end,p)
             full,remainder = divmod(end,p or L)
-            expected = full*A*100+read_ns_until(min(L,remainder))
+            expected = full*A*100+read_ns_until(remainder,L)
             assert lo[0]==hi[0]==expected
             assert lo[1]==hi[1]==full+int(remainder>0)
         lo,hi,_ = case([(L//4,0,37),(L//4,1,0)],L,p)
