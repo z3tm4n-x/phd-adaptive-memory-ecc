@@ -1,0 +1,59 @@
+{
+  "status": "OWN RESULT / clean resumed replay matched after R1/R2; pending review",
+  "checked_utc": "2026-10-19T05:37:45.745580+00:00",
+  "source_commit": "251ce32ad48e7da35e5533cdb8603309679b1749",
+  "code_commit": "65dcceb57810b5ebf4ed393639c927a573ea6ecf",
+  "handler_commit": "8c90809259304485748dc274ffa0ebeea0e5563d",
+  "clean_checkout_status_before_and_after": "",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "signature": "fb59a7026aa2182b595c7381c2174e2e6a8bfcea28dc553e7bf0aab44106f12e",
+  "deterministic_sha256": {
+    "validation.json": "2e1987795816da0e706a207edfd69a7f1da7493683a6dced499be99a75e4c342",
+    "results.json": "24f820beb808c79d5501f71af4b465659bd6aca4c4a5340ca7b673a6a40b22f8",
+    "inputs.json": "bf27380a833d435d56055e800cfbdb3ee4a7013b6a6d155ad1e5da2aeebd09d4",
+    "bounds.json": "ad9540831f7f8a77db353c8505e34e25f7d6e8d8d31d981fea3ffa5fceec8bb6",
+    "table.md": "874b980694a50b0e95d82d68325e0e4407e026e1ec7f0e5d6d744d8be853448e"
+  },
+  "complete_rows": 60,
+  "stage4_checks": 77,
+  "acceptance_directed_checks": 32,
+  "JSON_roundtrip_check": 1,
+  "accepted_unchanged_checks": 59,
+  "main_replay_exit_code": 0,
+  "operational_budget_s": 180,
+  "main_replay_elapsed_s": 139.20794699999897,
+  "sum_solver_s": 94.11850330000198,
+  "resumption": {
+    "initial_complete_rows": 1,
+    "first_partial_exit_code": 3,
+    "reused_rows": 1,
+    "new_rows": 59,
+    "preserved_row_name": "s4_quiet__uniform__constant_1.json",
+    "preserved_row_sha256": "4192c2e1bec4ab997d6d7dddea5f9332b03cfe0a8b608091a9ee2ed7fc24622e",
+    "preserved_row_mtime": true
+  },
+  "negative_checks": {
+    "changed_input_rejected": true,
+    "corrupt_checkpoint_rejected": true,
+    "stale_signature_rejected": true,
+    "one_microsecond_budget_exit_code": 3,
+    "one_microsecond_budget_completed_rows": 0
+  },
+  "prior_attempt": {
+    "snapshot": "992c8da3128d04c8b03372e8b61af3792ac12a47",
+    "completed_rows": 60,
+    "validation_serialized_bytes_matched": true,
+    "return_code": 1,
+    "reason": "diagnostic Python tuple/int-key containers did not equal JSON list/string-key containers; repaired by 65dcceb without handler/science change"
+  },
+  "commands": [
+    "git clone --local --shared --no-checkout . .cache/t186-loss-clean",
+    "git -C .cache/t186-loss-clean sparse-checkout init --cone",
+    "git -C .cache/t186-loss-clean sparse-checkout set experiments/t186-method-comparison experiments/t104-rtl-resume",
+    "git -C .cache/t186-loss-clean checkout --detach 251ce32ad48e7da35e5533cdb8603309679b1749",
+    "python -B <clean>/experiments/t186-method-comparison/stage4/reproduce.py --output <clean>/.cache/replay --max-new-rows 1",
+    "python -B <clean>/experiments/t186-method-comparison/stage4/reproduce.py --output <clean>/.cache/replay --budget-seconds 180"
+  ],
+  "scope": "separate clean checkout; code65dcceb uses a new empty signature cache, no rows imported from the earlier failed replay; same Windows host/Python, not independent scientific review or WCET"
+}

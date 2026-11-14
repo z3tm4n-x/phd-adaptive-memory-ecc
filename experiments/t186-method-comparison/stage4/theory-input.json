@@ -1,0 +1,90 @@
+{
+  "task": 196,
+  "revision": 1,
+  "base_sha": "07802ad4872a880bf34eb69e3bffaae57d3b8413",
+  "plan_sha": "09956ccdb6e250b1f0e9e467824541d9f2224edb",
+  "sync_plan_sha": "2e281b531eb68a68e74effc25ce1cad91c92c51b",
+  "engineer_stage2_sha": "d7369a2ab307b063a11c36f258d09b31bad06aad",
+  "engineer_stage3_proposal_sha": "42f839b827b91019c335a40e3ab1dcea8990de15",
+  "engineer_stage3_legacy_numeric_sha": "06509cf85c9559ce3ae1881354d493a2c45e3ded",
+  "scope": "conditional full R0-A/r4 mathematical comparison; not physical qualification, hardware WCET or final method ranking",
+  "runtime_sources": {
+    "experiments/t135-demo-operating-point/report-r4.json": "70eacaf0e9778a6773a181e7f154d137a0970c65",
+    "experiments/t135-demo-operating-point/common-contract.json": "8516fec2ba82bab6ee31bcac95cb7440ba5778f6",
+    "experiments/t126-regime-map/bounds.py": "5a71c8b0674c0b5c6a9e0446bae2e3a63440395f"
+  },
+  "delivery": {
+    "cut_ticks": 4000,
+    "ingress_budget_ns": 1000,
+    "batch_compute_and_local_install_budget_ns": 3900,
+    "freeze_ticks": 320,
+    "maximum_control_gap_ticks": 420,
+    "dispatch_included_in_ready_to_freeze": true,
+    "endpoint_jitter_ns": "0.5",
+    "legacy_cut_ticks": 188160,
+    "source_min_spacing_ticks": 4,
+    "max_records_per_source_edge": 1,
+    "bank_records": 2048,
+    "banks": 2,
+    "record_bytes": 32,
+    "expiry": "precomputed absolute deadline, no extra cut wait",
+    "hardware_WCET": null
+  },
+  "application": {
+    "first_ns": 100000,
+    "mean_each_per_s": 1000,
+    "joint_burst": 1,
+    "joint_rate_per_s": 10000,
+    "delay_s": "0.000003",
+    "quiet_fraction": "0.9",
+    "quiet_components": 1000,
+    "quiet_mean_scope": "aggregate offers in the union of 3us-left-expanded components, divided by total T_Q; not a cap for each individual component",
+    "address_multiplier": 5,
+    "profiles": {
+      "none": {
+        "per_epoch": 0,
+        "epoch_ns": 1000000,
+        "burst_each": 0
+      },
+      "uniform": {
+        "per_epoch": 1,
+        "epoch_ns": 1000000,
+        "burst_each": 1
+      },
+      "bursty": {
+        "per_epoch": 5,
+        "epoch_ns": 5000000,
+        "burst_each": 5
+      }
+    },
+    "strict_cap_epoch_extra_ns": 20,
+    "selected_profile_status": "original stage3 is diagnostic until exact quiet caps or explicit boundary extension accepted; strict20ns variant is a separate proposed common input"
+  },
+  "necessary": {
+    "first_split_s": "0.2",
+    "tail_split_s": "2",
+    "period_search_quantum_s": "0.000000001",
+    "delta_exec": "0.000001"
+  },
+  "errors": {
+    "rho0": "0.000001",
+    "delta_exec": "0.000001",
+    "delta_svc": "0.000001",
+    "delta_E": "0.000001",
+    "delta_M": "0.000001",
+    "alpha_M": "0.000001",
+    "ordinary_outage_fraction_pathwise": "0.0001",
+    "recovery_starts_pathwise": 1000,
+    "loss_rises_pathwise": 1001,
+    "false_flags_expected_rate_per_s": "0.000001"
+  },
+  "price": {
+    "X_rate": "0.0001",
+    "X_burst_s": "0.000000209",
+    "CPU_seconds_per_action": null,
+    "transport_seconds_per_record": null,
+    "energy_per_action_J": null,
+    "extra_shared_bus_work_must_fit_existing_X": true
+  },
+  "scientific_status": "author's proven limited transfer/certificate, pending numerical developer agreement and independent full-comparison review"
+}

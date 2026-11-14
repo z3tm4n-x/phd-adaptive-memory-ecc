@@ -1,0 +1,339 @@
+{
+  "last_invocation": {
+    "budget_seconds": 180.0,
+    "complete": true,
+    "completed_rows": 60,
+    "elapsed_s": 138.65710840000065,
+    "expected_rows": 60,
+    "new_rows": 60,
+    "reason": null,
+    "reused_rows": 0,
+    "signature": "fb59a7026aa2182b595c7381c2174e2e6a8bfcea28dc553e7bf0aab44106f12e",
+    "timings": [
+      {
+        "episode": "s4_quiet",
+        "generation_s": 0.002090199999656761
+      },
+      {
+        "row": "s4_quiet__uniform__constant_1",
+        "solver_s": 0.0008421000002272194
+      },
+      {
+        "row": "s4_quiet__uniform__constant_sufficient",
+        "solver_s": 0.0009372000004077563
+      },
+      {
+        "row": "s4_quiet__uniform__our_r4",
+        "solver_s": 0.0011849999991682125
+      },
+      {
+        "row": "s4_quiet__uniform__krasnikov_0.001_longest",
+        "solver_s": 0.0018860999989556149
+      },
+      {
+        "row": "s4_quiet__uniform__patent_60",
+        "solver_s": 0.0019625999993877485
+      },
+      {
+        "row": "s4_quiet__uniform__chen_0.1",
+        "solver_s": 0.0023290999997698236
+      },
+      {
+        "row": "s4_quiet__bursty__constant_1",
+        "solver_s": 0.0012299000009079464
+      },
+      {
+        "row": "s4_quiet__bursty__constant_sufficient",
+        "solver_s": 0.0012305000000196742
+      },
+      {
+        "row": "s4_quiet__bursty__our_r4",
+        "solver_s": 0.0011796999988291645
+      },
+      {
+        "row": "s4_quiet__bursty__krasnikov_0.001_longest",
+        "solver_s": 0.0026486999995540828
+      },
+      {
+        "row": "s4_quiet__bursty__patent_60",
+        "solver_s": 0.0032446000004711095
+      },
+      {
+        "row": "s4_quiet__bursty__chen_0.1",
+        "solver_s": 0.0019888999995600898
+      },
+      {
+        "episode": "s4_initial_peak",
+        "generation_s": 0.04355360000045039
+      },
+      {
+        "row": "s4_initial_peak__uniform__constant_1",
+        "solver_s": 0.031018600000606966
+      },
+      {
+        "row": "s4_initial_peak__uniform__constant_sufficient",
+        "solver_s": 0.035840799999277806
+      },
+      {
+        "row": "s4_initial_peak__uniform__our_r4",
+        "solver_s": 0.03566520000094897
+      },
+      {
+        "row": "s4_initial_peak__uniform__krasnikov_0.001_longest",
+        "solver_s": 0.10820439999952214
+      },
+      {
+        "row": "s4_initial_peak__uniform__patent_60",
+        "solver_s": 0.04270100000030652
+      },
+      {
+        "row": "s4_initial_peak__uniform__chen_0.1",
+        "solver_s": 0.03412469999966561
+      },
+      {
+        "row": "s4_initial_peak__bursty__constant_1",
+        "solver_s": 0.0323195000000851
+      },
+      {
+        "row": "s4_initial_peak__bursty__constant_sufficient",
+        "solver_s": 0.036126700000750134
+      },
+      {
+        "row": "s4_initial_peak__bursty__our_r4",
+        "solver_s": 0.036767500001587905
+      },
+      {
+        "row": "s4_initial_peak__bursty__krasnikov_0.001_longest",
+        "solver_s": 0.11164579999967827
+      },
+      {
+        "row": "s4_initial_peak__bursty__patent_60",
+        "solver_s": 0.047832099999141064
+      },
+      {
+        "row": "s4_initial_peak__bursty__chen_0.1",
+        "solver_s": 0.03404729999965639
+      },
+      {
+        "episode": "s4_rise_fall",
+        "generation_s": 0.06218270000135817
+      },
+      {
+        "row": "s4_rise_fall__uniform__constant_1",
+        "solver_s": 0.04452889999993204
+      },
+      {
+        "row": "s4_rise_fall__uniform__constant_sufficient",
+        "solver_s": 0.05032829999981914
+      },
+      {
+        "row": "s4_rise_fall__uniform__our_r4",
+        "solver_s": 0.05017790000056266
+      },
+      {
+        "row": "s4_rise_fall__uniform__krasnikov_0.001_longest",
+        "solver_s": 0.15085809999982303
+      },
+      {
+        "row": "s4_rise_fall__uniform__patent_60",
+        "solver_s": 0.06082749999950465
+      },
+      {
+        "row": "s4_rise_fall__uniform__chen_0.1",
+        "solver_s": 0.11890070000117703
+      },
+      {
+        "row": "s4_rise_fall__bursty__constant_1",
+        "solver_s": 0.04628729999967618
+      },
+      {
+        "row": "s4_rise_fall__bursty__constant_sufficient",
+        "solver_s": 0.052547200000844896
+      },
+      {
+        "row": "s4_rise_fall__bursty__our_r4",
+        "solver_s": 0.05083100000047125
+      },
+      {
+        "row": "s4_rise_fall__bursty__krasnikov_0.001_longest",
+        "solver_s": 0.15552980000029493
+      },
+      {
+        "row": "s4_rise_fall__bursty__patent_60",
+        "solver_s": 0.06318650000139314
+      },
+      {
+        "row": "s4_rise_fall__bursty__chen_0.1",
+        "solver_s": 0.12262510000073235
+      },
+      {
+        "episode": "s4_repeat_rise",
+        "generation_s": 0.13440190000073926
+      },
+      {
+        "row": "s4_repeat_rise__uniform__constant_1",
+        "solver_s": 0.09259519999977783
+      },
+      {
+        "row": "s4_repeat_rise__uniform__constant_sufficient",
+        "solver_s": 0.10492169999997714
+      },
+      {
+        "row": "s4_repeat_rise__uniform__our_r4",
+        "solver_s": 0.10430219999943802
+      },
+      {
+        "row": "s4_repeat_rise__uniform__krasnikov_0.001_longest",
+        "solver_s": 0.3198521000012988
+      },
+      {
+        "row": "s4_repeat_rise__uniform__patent_60",
+        "solver_s": 0.1273880000007921
+      },
+      {
+        "row": "s4_repeat_rise__uniform__chen_0.1",
+        "solver_s": 0.22271849999924598
+      },
+      {
+        "row": "s4_repeat_rise__bursty__constant_1",
+        "solver_s": 0.10843229999954929
+      },
+      {
+        "row": "s4_repeat_rise__bursty__constant_sufficient",
+        "solver_s": 0.10888199999862991
+      },
+      {
+        "row": "s4_repeat_rise__bursty__our_r4",
+        "solver_s": 0.10427619999973103
+      },
+      {
+        "row": "s4_repeat_rise__bursty__krasnikov_0.001_longest",
+        "solver_s": 0.3276583999995637
+      },
+      {
+        "row": "s4_repeat_rise__bursty__patent_60",
+        "solver_s": 0.1311050999993313
+      },
+      {
+        "row": "s4_repeat_rise__bursty__chen_0.1",
+        "solver_s": 0.22912250000081258
+      },
+      {
+        "episode": "s4_mission",
+        "generation_s": 3.8935469999996712
+      },
+      {
+        "row": "s4_mission__uniform__constant_1",
+        "solver_s": 3.456472500000018
+      },
+      {
+        "row": "s4_mission__uniform__constant_sufficient",
+        "solver_s": 4.03576989999965
+      },
+      {
+        "row": "s4_mission__uniform__our_r4",
+        "solver_s": 5.095137199999954
+      },
+      {
+        "row": "s4_mission__uniform__krasnikov_0.001_longest",
+        "solver_s": 12.173768200000268
+      },
+      {
+        "row": "s4_mission__uniform__patent_60",
+        "solver_s": 8.997725199998968
+      },
+      {
+        "row": "s4_mission__uniform__chen_0.1",
+        "solver_s": 10.657771299998785
+      },
+      {
+        "row": "s4_mission__bursty__constant_1",
+        "solver_s": 3.837157699999807
+      },
+      {
+        "row": "s4_mission__bursty__constant_sufficient",
+        "solver_s": 4.227144799999223
+      },
+      {
+        "row": "s4_mission__bursty__our_r4",
+        "solver_s": 5.284138400000302
+      },
+      {
+        "row": "s4_mission__bursty__krasnikov_0.001_longest",
+        "solver_s": 12.63493550000021
+      },
+      {
+        "row": "s4_mission__bursty__patent_60",
+        "solver_s": 9.323875399999451
+      },
+      {
+        "row": "s4_mission__bursty__chen_0.1",
+        "solver_s": 10.480138599999918
+      }
+    ]
+  },
+  "scope": "host/run-specific Python wall time; resumable budget, no ARM/WCET inference",
+  "solver_seconds_by_row": {
+    "s4_initial_peak__bursty__chen_0.1": 0.03404729999965639,
+    "s4_initial_peak__bursty__constant_1": 0.0323195000000851,
+    "s4_initial_peak__bursty__constant_sufficient": 0.036126700000750134,
+    "s4_initial_peak__bursty__krasnikov_0.001_longest": 0.11164579999967827,
+    "s4_initial_peak__bursty__our_r4": 0.036767500001587905,
+    "s4_initial_peak__bursty__patent_60": 0.047832099999141064,
+    "s4_initial_peak__uniform__chen_0.1": 0.03412469999966561,
+    "s4_initial_peak__uniform__constant_1": 0.031018600000606966,
+    "s4_initial_peak__uniform__constant_sufficient": 0.035840799999277806,
+    "s4_initial_peak__uniform__krasnikov_0.001_longest": 0.10820439999952214,
+    "s4_initial_peak__uniform__our_r4": 0.03566520000094897,
+    "s4_initial_peak__uniform__patent_60": 0.04270100000030652,
+    "s4_mission__bursty__chen_0.1": 10.480138599999918,
+    "s4_mission__bursty__constant_1": 3.837157699999807,
+    "s4_mission__bursty__constant_sufficient": 4.227144799999223,
+    "s4_mission__bursty__krasnikov_0.001_longest": 12.63493550000021,
+    "s4_mission__bursty__our_r4": 5.284138400000302,
+    "s4_mission__bursty__patent_60": 9.323875399999451,
+    "s4_mission__uniform__chen_0.1": 10.657771299998785,
+    "s4_mission__uniform__constant_1": 3.456472500000018,
+    "s4_mission__uniform__constant_sufficient": 4.03576989999965,
+    "s4_mission__uniform__krasnikov_0.001_longest": 12.173768200000268,
+    "s4_mission__uniform__our_r4": 5.095137199999954,
+    "s4_mission__uniform__patent_60": 8.997725199998968,
+    "s4_quiet__bursty__chen_0.1": 0.0019888999995600898,
+    "s4_quiet__bursty__constant_1": 0.0012299000009079464,
+    "s4_quiet__bursty__constant_sufficient": 0.0012305000000196742,
+    "s4_quiet__bursty__krasnikov_0.001_longest": 0.0026486999995540828,
+    "s4_quiet__bursty__our_r4": 0.0011796999988291645,
+    "s4_quiet__bursty__patent_60": 0.0032446000004711095,
+    "s4_quiet__uniform__chen_0.1": 0.0023290999997698236,
+    "s4_quiet__uniform__constant_1": 0.0008421000002272194,
+    "s4_quiet__uniform__constant_sufficient": 0.0009372000004077563,
+    "s4_quiet__uniform__krasnikov_0.001_longest": 0.0018860999989556149,
+    "s4_quiet__uniform__our_r4": 0.0011849999991682125,
+    "s4_quiet__uniform__patent_60": 0.0019625999993877485,
+    "s4_repeat_rise__bursty__chen_0.1": 0.22912250000081258,
+    "s4_repeat_rise__bursty__constant_1": 0.10843229999954929,
+    "s4_repeat_rise__bursty__constant_sufficient": 0.10888199999862991,
+    "s4_repeat_rise__bursty__krasnikov_0.001_longest": 0.3276583999995637,
+    "s4_repeat_rise__bursty__our_r4": 0.10427619999973103,
+    "s4_repeat_rise__bursty__patent_60": 0.1311050999993313,
+    "s4_repeat_rise__uniform__chen_0.1": 0.22271849999924598,
+    "s4_repeat_rise__uniform__constant_1": 0.09259519999977783,
+    "s4_repeat_rise__uniform__constant_sufficient": 0.10492169999997714,
+    "s4_repeat_rise__uniform__krasnikov_0.001_longest": 0.3198521000012988,
+    "s4_repeat_rise__uniform__our_r4": 0.10430219999943802,
+    "s4_repeat_rise__uniform__patent_60": 0.1273880000007921,
+    "s4_rise_fall__bursty__chen_0.1": 0.12262510000073235,
+    "s4_rise_fall__bursty__constant_1": 0.04628729999967618,
+    "s4_rise_fall__bursty__constant_sufficient": 0.052547200000844896,
+    "s4_rise_fall__bursty__krasnikov_0.001_longest": 0.15552980000029493,
+    "s4_rise_fall__bursty__our_r4": 0.05083100000047125,
+    "s4_rise_fall__bursty__patent_60": 0.06318650000139314,
+    "s4_rise_fall__uniform__chen_0.1": 0.11890070000117703,
+    "s4_rise_fall__uniform__constant_1": 0.04452889999993204,
+    "s4_rise_fall__uniform__constant_sufficient": 0.05032829999981914,
+    "s4_rise_fall__uniform__krasnikov_0.001_longest": 0.15085809999982303,
+    "s4_rise_fall__uniform__our_r4": 0.05017790000056266,
+    "s4_rise_fall__uniform__patent_60": 0.06082749999950465
+  },
+  "sum_solver_s": 93.75887519999742
+}
