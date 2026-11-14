@@ -1,0 +1,33 @@
+{
+  "base": "582f57e2a3bc27102876d110134e829e13b6f63e",
+  "registration": "29762d36bbc045a76111909b3b311c3d9551d585",
+  "words_closed": 65536,
+  "addresses": 131072,
+  "L_local_s": "3584/78125",
+  "strips": 416,
+  "common_separation_ns_ceiling": 2890005,
+  "common_separation_percent_upper": "6.299711",
+  "certificate_at_previous_ns_lower": "0.001000000005704",
+  "stop_upper_at_issued_ns": "0.000999999989626",
+  "stop_upper_at_3ms": "0.000998231426",
+  "stop_upper_at_L_over_2_general_masks": "0.000677662949",
+  "stop_upper_at_L_over_2_exact_masks": "0.000677662949",
+  "one_phase_closed_upper": "0.001044023744",
+  "tight_separation_ns": 240,
+  "tight_two_phase_upper": "0.001046463334",
+  "tight_physical_lower": "0.000534299743",
+  "closed_worst_Q_lower": "0.000534299743",
+  "all_external_physical_lower": "0.001074030302",
+  "all_external_one_phase_upper": "0.001870507075",
+  "all_maps_one_phase_upper": "0.002082047487",
+  "registered_fixed_candidate_s": "86429/1000000",
+  "archive_fixed": {
+    "old_K_word_s": 46397,
+    "old_compulsory_reads_s_lower": "5784051.126",
+    "K_word_s": 46259,
+    "forbidden_physical_period_s": "46259/65536",
+    "exclusion_Q_lower": "0.001000007516440",
+    "compulsory_reads_s_lower": "5801306.127",
+    "percent_lower": "1.838322"
+  }
+}
