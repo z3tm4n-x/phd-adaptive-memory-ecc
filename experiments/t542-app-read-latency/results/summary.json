@@ -1,0 +1,151 @@
+{
+  "built_in_and_core": {
+    "F": {
+      "startup": [
+        [
+          2,
+          6,
+          7
+        ],
+        [
+          37,
+          39,
+          40
+        ],
+        [
+          157,
+          159,
+          160
+        ]
+      ],
+      "board_rows_per_data_function": 100,
+      "read_requests_during_pause_in_long_run": 41,
+      "external_requests_per_data_function": 1267,
+      "silent_wrong_address_traces_per_data_function": 3,
+      "mandatory_repairs_external_suite": 5064,
+      "four_pending_arrival_to_valid_ticks": [
+        111,
+        251,
+        391,
+        531
+      ],
+      "counterexample_active": {
+        "0": [
+          "active_clean",
+          102162,
+          102162,
+          102172,
+          123178,
+          65568,
+          33689,
+          28631
+        ],
+        "1": [
+          "active_clean",
+          102162,
+          102162,
+          102172,
+          123178,
+          65568,
+          10003,
+          50713
+        ]
+      }
+    },
+    "A": {
+      "startup": [
+        [
+          2,
+          6,
+          7
+        ],
+        [
+          37,
+          39,
+          40
+        ],
+        [
+          157,
+          159,
+          160
+        ]
+      ],
+      "board_rows_per_data_function": 100,
+      "read_requests_during_pause_in_long_run": 46,
+      "external_requests_per_data_function": 1273,
+      "silent_wrong_address_traces_per_data_function": 3,
+      "mandatory_repairs_external_suite": 5064,
+      "four_pending_arrival_to_valid_ticks": [
+        111,
+        251,
+        391,
+        531
+      ],
+      "counterexample_active": {
+        "0": [
+          "active_clean",
+          102162,
+          102162,
+          102172,
+          123178,
+          65568,
+          33689,
+          28631
+        ],
+        "1": [
+          "active_clean",
+          102162,
+          102162,
+          102172,
+          123178,
+          65568,
+          10003,
+          50713
+        ]
+      }
+    }
+  },
+  "clock_tick_ns": 10,
+  "grant_to_sample_data_register_valid_consumer_ticks": [
+    6,
+    7,
+    10,
+    11
+  ],
+  "first_E0_to_grant_valid_ticks": [
+    102,
+    112
+  ],
+  "from_cold_deassertion_to_grant_valid_ticks": [
+    103,
+    113
+  ],
+  "recurring_from_req_publication_ticks": [
+    96,
+    106
+  ],
+  "recurring_from_first_eligible_ticks": [
+    95,
+    105
+  ],
+  "intergrant_ticks": 100100,
+  "early_address_req_to_grant_ticks": [
+    0,
+    139
+  ],
+  "early_address_req_to_valid_ticks": [
+    10,
+    149
+  ],
+  "late_address_suppressed_req_to_grant_ticks": [
+    1,
+    140
+  ],
+  "late_address_suppressed_req_to_valid_ticks": [
+    11,
+    150
+  ],
+  "rows_checked": 5480,
+  "independent_icarus_reads": 8,
+  "paired_modes_identical_on_common_stimulus": true
+}
