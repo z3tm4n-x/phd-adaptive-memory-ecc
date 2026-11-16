@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 725" role="img" aria-labelledby="title description">
+  <title id="title">Исполнитель прохода и его соединения в защищённом контроллере</title>
+  <desc id="description">Внутри каждой копии календарь запускает чтения. Совместная выборка данных и ERR при необходимости приводит к записи по прежнему адресу. Проверка завершённых обращений выдаёт отчёт обратной связи для лестницы. Три копии получают общие входы памяти, а их команды и данные проходят голосование. Прикладной клиент читает в отдельном слоте. Ядро SEM исправляет конфигурацию ПЛИС через внутренний ICAP и передаёт состояние наблюдения в контроллер.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#253a49"/>
+    </marker>
+    <style>
+      text { font-family: "DejaVu Sans", Arial, sans-serif; fill: #172a36 }
+      .heading {font-size:23px;font-weight:bold}
+      .title {font-size:20px;font-weight:bold;text-anchor:middle}
+      .body {font-size:18px;text-anchor:middle}
+      .label {font-size:17px;text-anchor:middle}
+      .box {stroke:#3b5363;stroke-width:1.8;fill:#fff}
+      .policy {stroke:#3b5363;stroke-width:1.8;fill:#eaf1f5}
+      .line {fill:none;stroke:#253a49;stroke-width:2;stroke-linejoin:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1000" height="725" fill="white"/>
+  <text class="heading" x="19" y="32">А. Обслуживание памяти внутри одной копии контроллера</text>
+  <rect class="policy" x="21" y="74" width="245" height="108" rx="6"/>
+  <text class="title" x="143" y="103">Календарь проходов</text>
+  <text class="body" x="143" y="132">Постоянный период</text>
+  <text class="body" x="143" y="158">или восемь ступеней</text>
+  <path class="line" d="M266 128 H373"/>
+  <text class="label" x="320" y="114">пуск</text>
+  <rect class="box" x="376" y="74" width="251" height="108" rx="6"/>
+  <text class="title" x="501" y="103">Обращение к слову</text>
+  <text class="body" x="501" y="132">Чтение данных и ERR</text>
+  <text class="body" x="501" y="158">При ERR — запись</text>
+  <path class="line" d="M627 128 H726"/>
+  <text class="label" x="676" y="114">завершено</text>
+  <rect class="box" x="729" y="74" width="250" height="108" rx="6"/>
+  <text class="title" x="854" y="103">Проверка прохода</text>
+  <text class="body" x="854" y="132">Адреса, завершение</text>
+  <text class="body" x="854" y="158">чтений и записей</text>
+  <path class="line" d="M854 182 V228 H143 V186"/>
+  <text class="body" x="500" y="217">Для лестницы — номер, полнота и число исправлений в отчёте</text>
+  <path d="M20 265H980" stroke="#93a3ad" stroke-width="1"/>
+  <text class="heading" x="19" y="303">Б. Защищённое исполнение и два порта памяти</text>
+  <path class="line" d="M646 398 V350 H125 V394"/>
+  <text class="label" x="380" y="339">Подтверждение чтения, готовность и данные</text>
+  <rect class="box" x="21" y="398" width="208" height="88" rx="6"/>
+  <text class="title" x="125" y="431">Приложение</text>
+  <text class="body" x="125" y="460">Только чтение</text>
+  <path class="line" d="M229 444H325"/>
+  <text class="label" x="277" y="416">адрес,</text>
+  <text class="label" x="277" y="436">запрос</text>
+  <rect class="box" x="338" y="387" width="202" height="90" rx="5"/>
+  <rect class="box" x="333" y="392" width="202" height="90" rx="5"/>
+  <rect class="policy" x="328" y="398" width="202" height="88" rx="5"/>
+  <text class="title" x="429" y="432">Три копии</text>
+  <text class="body" x="429" y="460">См. панель А</text>
+  <path class="line" d="M530 444H585"/>
+  <rect class="box" x="588" y="398" width="159" height="88" rx="6"/>
+  <text class="title" x="668" y="432">Голосование</text>
+  <text class="body" x="668" y="460">2 из 3 по битам</text>
+  <path class="line" d="M747 444H819"/>
+  <rect class="policy" x="822" y="393" width="156" height="98" rx="6"/>
+  <text class="title" x="900" y="424">SRAM ×16</text>
+  <text class="body" x="900" y="451">Один общий</text>
+  <text class="body" x="900" y="475">порт выводов</text>
+  <text class="label" x="784" y="389">адрес, данные, управление</text>
+  <path class="line" d="M900 491V535H454V490"/>
+  <text class="label" x="685" y="524">Общие входы данных и ERR для трёх копий</text>
+  <rect class="box" x="21" y="593" width="287" height="95" rx="6"/>
+  <text class="title" x="164" y="624">Наблюдение и ремонт</text>
+  <text class="body" x="164" y="652">конфигурации (SEM)</text>
+  <text class="body" x="164" y="676">50 МГц</text>
+  <path class="line" d="M162 593V561H354V490"/>
+  <text class="label" x="413" y="585">Готовность к пуску, потеря достоверности</text>
+  <path class="line" d="M313 647H683" marker-start="url(#arrow)"/>
+  <text class="label" x="498" y="636">Внутренний порт ICAP</text>
+  <rect class="policy" x="688" y="602" width="290" height="84" rx="6"/>
+  <text class="title" x="833" y="634">Память конфигурации</text>
+  <text class="body" x="833" y="662">ПЛИС XC7Z020</text>
+</svg>
